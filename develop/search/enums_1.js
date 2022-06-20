@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['seek_0',['Seek',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22',1,'AFileInputStream']]]
+  ['defaultpath_0',['DefaultPath',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3',1,'APath']]]
 ];

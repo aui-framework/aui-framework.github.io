@@ -37,5 +37,6 @@ var searchData=
   ['gettotalfieldvertical_34',['getTotalFieldVertical',['../classAView.html#a274972d0e96c9ad2779fe5dfdeb71727',1,'AView']]],
   ['gettotaloccupiedheight_35',['getTotalOccupiedHeight',['../classAView.html#acaef54d28990d25a3edf594e163c1a8b',1,'AView']]],
   ['gettotaloccupiedwidth_36',['getTotalOccupiedWidth',['../classAView.html#a521f58942c69ff63566ada3e3d774f32',1,'AView']]],
-  ['getwindow_37',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]]
+  ['getwindow_37',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
+  ['global_38',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool']]]
 ];

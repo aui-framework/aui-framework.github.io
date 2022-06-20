@@ -11,7 +11,7 @@ var searchData=
   ['declaration_3c_20backgroundsolid_20_3e_8',['Declaration&lt; BackgroundSolid &gt;',['../structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html',1,'ass::decl']]],
   ['declaration_3c_20border_20_3e_9',['Declaration&lt; Border &gt;',['../structass_1_1decl_1_1Declaration_3_01Border_01_4.html',1,'ass::decl']]],
   ['declaration_3c_20borderbottom_20_3e_10',['Declaration&lt; BorderBottom &gt;',['../structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html',1,'ass::decl']]],
-  ['declaration_3c_20borderleft_20_3e_11',['Declaration&lt; BorderLeft &gt;',['../structass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html',1,'ass::decl']]],
+  ['declaration_3c_20borderleft_20_3e_11',['Declaration&lt; BorderLeft &gt;',['../structass_1_1ass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html',1,'ass::ass::decl']]],
   ['declaration_3c_20borderradius_20_3e_12',['Declaration&lt; BorderRadius &gt;',['../structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html',1,'ass::decl']]],
   ['declaration_3c_20boxshadow_20_3e_13',['Declaration&lt; BoxShadow &gt;',['../structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html',1,'ass::decl']]],
   ['declaration_3c_20expanding_20_3e_14',['Declaration&lt; Expanding &gt;',['../structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html',1,'ass::decl']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['signal_2dslot_0',['Signal-slot',['../group__signal__slot.html',1,'']]]
+  ['layout_20managers_0',['Layout Managers',['../group__layout__managers.html',1,'']]]
 ];

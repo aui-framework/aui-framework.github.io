@@ -23,14 +23,9 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Main Page",url:"index.html"},
-{text:"Related Pages",url:"pages.html"},
-{text:"Modules",url:"modules.html"},
-{text:"Namespaces",url:"namespaces.html",children:[
-{text:"Namespace List",url:"namespaces.html"}]},
-{text:"Classes",url:"annotated.html",children:[
+{text:"glossary",url:"usergroup0.html",children:[
+{text:"Namespace List",url:"namespaces.html"},
 {text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"},
 {text:"Class Hierarchy",url:"inherits.html"},
 {text:"Class Members",url:"functions.html",children:[
 {text:"All",url:"functions.html",children:[
@@ -94,6 +89,15 @@ var menudata={children:[
 {text:"Typedefs",url:"functions_type.html"},
 {text:"Enumerations",url:"functions_enum.html"},
 {text:"Enumerator",url:"functions_eval.html"}]}]},
-{text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"}]},
-{text:"Examples",url:"examples.html"}]}
+{text:"Main page",url:"index.html"},
+{text:"Getting started",url:"usergroup1.html",children:[
+{text:"Getting started with AUI",url:"md_docs_Getting_started_with_AUI.html"},
+{text:"AUI Boot",url:"md_docs_AUI_Boot.html"},
+{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"},
+{text:"Getting started with AUI",url:"@ref md_docs_AUI_Getting_started_with_AUI"}]},
+{text:"Reference",url:"usergroup2.html",children:[
+{text:"All AUI Modules",url:"modules.html"},
+{text:"All AUI Classes",url:"classes.html"},
+{text:"All AUI CMake commands",url:"usergroup3.html",children:[
+{text:"aui_app",url:"md_docs_aui_app.html"},
+{text:"aui_executable",url:"md_docs_aui_executable.html"}]}]}]}

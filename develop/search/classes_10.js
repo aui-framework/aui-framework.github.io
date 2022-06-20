@@ -13,9 +13,8 @@ var searchData=
   ['resource_3c_20resourcekind_3a_3avertex_5fbuffer_20_3e_10',['resource&lt; ResourceKind::VERTEX_BUFFER &gt;',['../structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html',1,'gl::impl']]],
   ['resource_5fbasic_5fbuffer_11',['resource_basic_buffer',['../structgl_1_1impl_1_1resource__basic__buffer.html',1,'gl::impl']]],
   ['resourcepool_12',['ResourcePool',['../classgl_1_1ResourcePool.html',1,'gl']]],
-  ['result_13',['Result',['../structResult.html',1,'']]],
-  ['reverse_5fiterator_5fwrap_14',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
-  ['roundedrect_15',['RoundedRect',['../structRoundedRect.html',1,'']]],
-  ['rule_16',['Rule',['../structRule.html',1,'']]],
-  ['rulewithoutselector_17',['RuleWithoutSelector',['../structRuleWithoutSelector.html',1,'']]]
+  ['reverse_5fiterator_5fwrap_13',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
+  ['roundedrect_14',['RoundedRect',['../structRoundedRect.html',1,'']]],
+  ['rule_15',['Rule',['../structRule.html',1,'']]],
+  ['rulewithoutselector_16',['RuleWithoutSelector',['../structRuleWithoutSelector.html',1,'']]]
 ];
