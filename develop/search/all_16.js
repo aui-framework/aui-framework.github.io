@@ -29,5 +29,6 @@ var searchData=
   ['viewpropertiesview_26',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
   ['views_27',['Views',['../group__useful__views.html',1,'']]],
   ['visibility_28',['Visibility',['../group__views.html#ga53d6f8ccb0015ea020228de41cfd2162',1,'Visibility.h']]],
-  ['visible_29',['VISIBLE',['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'Visibility.h']]]
+  ['visible_29',['VISIBLE',['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'Visibility.h']]],
+  ['visitheader_30',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]]
 ];

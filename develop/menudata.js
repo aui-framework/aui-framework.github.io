@@ -25,6 +25,9 @@
 var menudata={children:[
 {text:"glossary",url:"usergroup0.html",children:[
 {text:"Namespace List",url:"namespaces.html"},
+{text:"Namespace Members",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html"},
+{text:"Functions",url:"namespacemembers_func.html"}]},
 {text:"Class List",url:"annotated.html"},
 {text:"Class Hierarchy",url:"inherits.html"},
 {text:"Class Members",url:"functions.html",children:[
@@ -74,6 +77,7 @@ var menudata={children:[
 {text:"s",url:"functions_func_s.html#index_s"},
 {text:"t",url:"functions_func_t.html#index_t"},
 {text:"u",url:"functions_func_u.html#index_u"},
+{text:"v",url:"functions_func_v.html#index_v"},
 {text:"w",url:"functions_func_w.html#index_w"}]},
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"c",url:"functions_vars.html#index_c"},
@@ -93,8 +97,7 @@ var menudata={children:[
 {text:"Getting started",url:"usergroup1.html",children:[
 {text:"Getting started with AUI",url:"md_docs_Getting_started_with_AUI.html"},
 {text:"AUI Boot",url:"md_docs_AUI_Boot.html"},
-{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"},
-{text:"Getting started with AUI",url:"@ref md_docs_AUI_Getting_started_with_AUI"}]},
+{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"}]},
 {text:"Reference",url:"usergroup2.html",children:[
 {text:"All AUI Modules",url:"modules.html"},
 {text:"All AUI Classes",url:"classes.html"},

@@ -27,6 +27,10 @@ var NAVTREE =
   [ "AUI Framework", "index.html", [
     [ "glossary", "usergroup0.html", [
       [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ],
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
@@ -41,8 +45,7 @@ var NAVTREE =
     [ "Getting started", "usergroup1.html", [
       [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
-      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
-      [ "Getting started with AUI", "@ref md_docs_AUI_Getting_started_with_AUI", null ]
+      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ]
     ] ],
     [ "Reference", "usergroup2.html", [
       [ "All AUI Modules", "modules.html", "modules" ],
@@ -57,12 +60,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"@ref md_docs_AUI_Getting_started_with_AUI",
-"classAMutex.html",
-"classAVector.html#a7f05b8b5f57830f4755ebc0b55831f46",
-"classRenderHints_1_1PushState.html",
-"structAFingerDragEvent.html",
-"structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html"
+"annotated.html",
+"classANoSpaceLeftException.html",
+"classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151",
+"classRenderHints_1_1PushColor.html",
+"namespacemembers_func.html",
+"structass_1_1type__of.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -3,20 +3,19 @@ var namespaces =
     [ "AAndroid", null, [
       [ "Ref", "classAAndroid_1_1Ref.html", null ]
     ] ],
+    [ "ACrypto", null, [
+      [ "safeRandom", "group__crypt.html#ga1f2f918870c930b7b3ac48302beb57cc", null ]
+    ] ],
     [ "ADesktop", null, [
       [ "FileExtension", "structADesktop_1_1FileExtension.html", null ]
     ] ],
+    [ "AHash", "namespaceAHash.html", null ],
     [ "AnimationCurves", null, [
       [ "CubicBezier", "classAnimationCurves_1_1CubicBezier.html", null ],
       [ "Linear", "classAnimationCurves_1_1Linear.html", null ],
       [ "Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
     [ "ass", null, [
-      [ "ass", null, [
-        [ "decl", null, [
-          [ "Declaration< BorderLeft >", "structass_1_1ass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ]
-        ] ]
-      ] ],
       [ "Button", null, [
         [ "Default", "structass_1_1Button_1_1Default.html", null ]
       ] ],
@@ -29,6 +28,7 @@ var namespaces =
         [ "Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
         [ "Declaration< Border >", "structass_1_1decl_1_1Declaration_3_01Border_01_4.html", null ],
         [ "Declaration< BorderBottom >", "structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html", null ],
+        [ "Declaration< BorderLeft >", "structass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ],
         [ "Declaration< BorderRadius >", "structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html", null ],
         [ "Declaration< BoxShadow >", "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html", null ],
         [ "Declaration< Expanding >", "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html", null ],
@@ -187,12 +187,18 @@ var namespaces =
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
-      [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ]
+      [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ],
+      [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
+      [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]
     ] ],
     [ "Autumn", "namespaceAutumn.html", "namespaceAutumn" ],
+    [ "AXml", "namespaceAXml.html", [
+      [ "read", "group__xml.html#ga06fdf594d32ebd9bf8a564fd832c6f28", null ]
+    ] ],
     [ "AzazaATest", null, [
       [ "ATest", "structAzazaATest_1_1ATest.html", null ]
     ] ],
+    [ "By", "namespaceBy.html", null ],
     [ "gl", null, [
       [ "detail", null, [
         [ "VboImpl", "classgl_1_1detail_1_1VboImpl.html", null ]

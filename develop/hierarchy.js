@@ -119,7 +119,6 @@ var hierarchy =
     [ "ARaiiHelper< Callback >", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", null ],
-    [ "ARsa", "classARsa.html", null ],
     [ "ASerializable< T, T2 >", "structASerializable.html", null ],
     [ "ASerializable< _< T > >", "structASerializable_3_01___3_01T_01_4_01_4.html", null ],
     [ "ASerializable< AByteBuffer >", "structASerializable_3_01AByteBuffer_01_4.html", null ],
@@ -162,8 +161,6 @@ var hierarchy =
     [ "AWatchable< T >", "classAWatchable.html", null ],
     [ "AWatchable< bool >", "classAWatchable_3_01bool_01_4.html", null ],
     [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
-    [ "AX509", "classAX509.html", null ],
-    [ "AX509Store", "classAX509Store.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
     [ "ass::BackgroundImage", "structass_1_1BackgroundImage.html", null ],
@@ -409,6 +406,7 @@ var hierarchy =
       [ "ass::decl::Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
       [ "ass::decl::Declaration< Border >", "structass_1_1decl_1_1Declaration_3_01Border_01_4.html", null ],
       [ "ass::decl::Declaration< BorderBottom >", "structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html", null ],
+      [ "ass::decl::Declaration< BorderLeft >", "structass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ],
       [ "ass::decl::Declaration< BorderRadius >", "structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html", null ],
       [ "ass::decl::Declaration< BoxShadow >", "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html", null ],
       [ "ass::decl::Declaration< Expanding >", "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html", null ],
@@ -435,9 +433,6 @@ var hierarchy =
       [ "ass::decl::Declaration< TransformScale >", "structass_1_1decl_1_1Declaration_3_01TransformScale_01_4.html", null ],
       [ "ass::decl::Declaration< VerticalAlign >", "structass_1_1decl_1_1Declaration_3_01VerticalAlign_01_4.html", null ],
       [ "ass::decl::Declaration< Visibility >", "structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html", null ]
-    ] ],
-    [ "IDeclarationBase", null, [
-      [ "ass::ass::decl::Declaration< BorderLeft >", "structass_1_1ass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ]
     ] ],
     [ "IDrawable", "classIDrawable.html", [
       [ "AImageDrawable", "classAImageDrawable.html", null ],
@@ -582,6 +577,9 @@ var hierarchy =
         [ "AOtherProcess", "classAOtherProcess.html", null ],
         [ "AOtherProcess", "classAOtherProcess.html", null ]
       ] ],
+      [ "ARsa", "classARsa.html", null ],
+      [ "AX509", "classAX509.html", null ],
+      [ "AX509Store", "classAX509Store.html", null ],
       [ "IInputStream", "classIInputStream.html", [
         [ "AByteBufferInputStream", "classAByteBufferInputStream.html", null ],
         [ "AFileInputStream", "classAFileInputStream.html", null ],

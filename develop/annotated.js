@@ -12,11 +12,6 @@ var annotated =
       [ "Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
     [ "ass", null, [
-      [ "ass", null, [
-        [ "decl", null, [
-          [ "Declaration< BorderLeft >", "structass_1_1ass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ]
-        ] ]
-      ] ],
       [ "Button", null, [
         [ "Default", "structass_1_1Button_1_1Default.html", null ]
       ] ],
@@ -29,6 +24,7 @@ var annotated =
         [ "Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
         [ "Declaration< Border >", "structass_1_1decl_1_1Declaration_3_01Border_01_4.html", null ],
         [ "Declaration< BorderBottom >", "structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html", null ],
+        [ "Declaration< BorderLeft >", "structass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ],
         [ "Declaration< BorderRadius >", "structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html", null ],
         [ "Declaration< BoxShadow >", "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html", null ],
         [ "Declaration< Expanding >", "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html", null ],
@@ -550,7 +546,7 @@ var annotated =
     [ "ITexture", "classITexture.html", null ],
     [ "ITreeModel", "classITreeModel.html", null ],
     [ "IValueMutableListModel", "classIValueMutableListModel.html", null ],
-    [ "IXmlDocumentVisitor", "classIXmlDocumentVisitor.html", null ],
+    [ "IXmlDocumentVisitor", "classIXmlDocumentVisitor.html", "classIXmlDocumentVisitor" ],
     [ "IXmlEntityVisitor", "classIXmlEntityVisitor.html", null ],
     [ "IXmlHeaderVisitor", "classIXmlHeaderVisitor.html", null ],
     [ "MacosApp", "classMacosApp.html", null ],

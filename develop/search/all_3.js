@@ -15,5 +15,6 @@ var searchData=
   ['boxshadow_12',['boxShadow',['../classRender.html#afd5b3c5b2e7399c2294566fda3ccebf0',1,'Render']]],
   ['brushhelper_13',['BrushHelper',['../structBrushHelper.html',1,'']]],
   ['builder_14',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder']]],
-  ['byid_15',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]
+  ['by_15',['By',['../namespaceBy.html',1,'']]],
+  ['byid_16',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]
 ];
