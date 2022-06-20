@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_0',['value',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aec5fa19e4895b61c34fb300ef048e236',1,'aui::impl::future::Future::Inner']]]
+  ['fail_0',['fail',['../classACurl.html#a91049f49ce8f754261b5795f40e88b94',1,'ACurl']]],
+  ['format_1',['format',['../structResult.html#a59c365a195d49b632b43c85dd48fde9a',1,'Result']]]
 ];

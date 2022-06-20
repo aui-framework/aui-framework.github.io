@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['temporary_0',['Temporary',['../classAutumn_1_1Temporary.html',1,'Autumn']]],
-  ['ternary_1',['ternary',['../structaui_1_1ternary.html',1,'aui::ternary&lt; boolean, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary.html',1,'aui::traits::ternary&lt; value, OnTrue, OnFalse &gt;']]],
-  ['ternary_3c_20std_3a_3afalse_5ftype_2c_20ontrue_2c_20onfalse_20_3e_2',['ternary&lt; std::false_type, OnTrue, OnFalse &gt;',['../structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::ternary&lt; std::false_type, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::traits::ternary&lt; std::false_type, OnTrue, OnFalse &gt;']]],
-  ['ternary_3c_20std_3a_3atrue_5ftype_2c_20ontrue_2c_20onfalse_20_3e_3',['ternary&lt; std::true_type, OnTrue, OnFalse &gt;',['../structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::ternary&lt; std::true_type, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::traits::ternary&lt; std::true_type, OnTrue, OnFalse &gt;']]],
-  ['trylaterexception_4',['TryLaterException',['../classAThreadPool_1_1TryLaterException.html',1,'AThreadPool']]],
-  ['type_5flength_5',['type_length',['../structaui_1_1detail_1_1format_1_1type__length.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20apath_20_3e_6',['type_length&lt; APath &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01APath_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20astring_20_3e_7',['type_length&lt; AString &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01AString_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20char_20_2a_20_3e_8',['type_length&lt; char * &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20std_3a_3astring_20_3e_9',['type_length&lt; std::string &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20wchar_5ft_20_2a_20_3e_10',['type_length&lt; wchar_t * &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html',1,'aui::detail::format']]]
+  ['range_0',['range',['../structaui_1_1range.html',1,'aui']]],
+  ['raw_5fserializable_1',['raw_serializable',['../structaui_1_1raw__serializable.html',1,'aui']]],
+  ['raw_5fserializable_3c_20auuid_20_3e_2',['raw_serializable&lt; AUuid &gt;',['../structaui_1_1raw__serializable.html',1,'aui']]],
+  ['receiverobject_3',['ReceiverObject',['../classReceiverObject.html',1,'']]],
+  ['rect_4',['Rect',['../classUtil_1_1Rect.html',1,'Util']]],
+  ['ref_5',['Ref',['../classAAndroid_1_1Ref.html',1,'AAndroid']]],
+  ['render_6',['Render',['../classRender.html',1,'']]],
+  ['resource_7',['resource',['../structgl_1_1impl_1_1resource.html',1,'gl::impl']]],
+  ['resource_3c_20resourcekind_3a_3aindex_5fbuffer_20_3e_8',['resource&lt; ResourceKind::INDEX_BUFFER &gt;',['../structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html',1,'gl::impl']]],
+  ['resource_3c_20resourcekind_3a_3atexture_20_3e_9',['resource&lt; ResourceKind::TEXTURE &gt;',['../structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html',1,'gl::impl']]],
+  ['resource_3c_20resourcekind_3a_3avertex_5fbuffer_20_3e_10',['resource&lt; ResourceKind::VERTEX_BUFFER &gt;',['../structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html',1,'gl::impl']]],
+  ['resource_5fbasic_5fbuffer_11',['resource_basic_buffer',['../structgl_1_1impl_1_1resource__basic__buffer.html',1,'gl::impl']]],
+  ['resourcepool_12',['ResourcePool',['../classgl_1_1ResourcePool.html',1,'gl']]],
+  ['result_13',['Result',['../structResult.html',1,'']]],
+  ['reverse_5fiterator_5fwrap_14',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
+  ['roundedrect_15',['RoundedRect',['../structRoundedRect.html',1,'']]],
+  ['rule_16',['Rule',['../structRule.html',1,'']]],
+  ['rulewithoutselector_17',['RuleWithoutSelector',['../structRuleWithoutSelector.html',1,'']]]
 ];

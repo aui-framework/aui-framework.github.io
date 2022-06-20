@@ -1,18 +1,12 @@
 var searchData=
 [
-  ['get_0',['get',['../classaui_1_1impl_1_1future_1_1Future.html#a71b869c1abeddf07d97c1206a6273733',1,'aui::impl::future::Future']]],
-  ['getavailabletowrite_1',['getAvailableToWrite',['../classAByteBuffer.html#a1e3c412ab50f0fd5ecc243dd8f269474',1,'AByteBuffer']]],
-  ['getcolumn_2',['getColumn',['../classATokenizer.html#a2a813067bd57c47452ec6750726b76d9',1,'ATokenizer']]],
-  ['getcurrenteventloop_3',['getCurrentEventLoop',['../classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d',1,'AAbstractThread']]],
-  ['getdefaultpath_4',['getDefaultPath',['../classAPath.html#ab2f4b551db0516babdaddc100517f8b6',1,'APath']]],
-  ['getdllextension_5',['getDllExtension',['../classAProgramModule.html#af20583af2e01529184b5e8431af86f6b',1,'AProgramModule']]],
-  ['getid_6',['getId',['../classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818',1,'AAbstractThread']]],
-  ['getlastcharacter_7',['getLastCharacter',['../classATokenizer.html#a29a7063cbeb2ec0537b3dd1ff430d5a9',1,'ATokenizer']]],
-  ['getmodulename_8',['getModuleName',['../classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9',1,'AProcess::getModuleName()'],['../classAChildProcess.html#a9a6a20a905d730dc30ddf1f7501331fd',1,'AChildProcess::getModuleName()'],['../classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b',1,'AOtherProcess::getModuleName() override'],['../classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b',1,'AOtherProcess::getModuleName() override']]],
-  ['getorinsert_9',['getOrInsert',['../classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc',1,'AMap']]],
-  ['getpathtoexecutable_10',['getPathToExecutable',['../classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2',1,'AProcess::getPathToExecutable()'],['../classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24',1,'AChildProcess::getPathToExecutable()'],['../classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5',1,'AOtherProcess::getPathToExecutable() override'],['../classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5',1,'AOtherProcess::getPathToExecutable() override']]],
-  ['getpid_11',['getPid',['../classAProcess.html#a199a0e08befd7915cef239cc2f21c432',1,'AProcess::getPid()'],['../classAChildProcess.html#ac2ca351abb4d5f0f6e1e0f3e448321b6',1,'AChildProcess::getPid()'],['../classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417',1,'AOtherProcess::getPid() const noexcept override'],['../classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417',1,'AOtherProcess::getPid() const noexcept override']]],
-  ['getreserved_12',['getReserved',['../classAByteBuffer.html#ac2aa13b29f5c79483b061523f02d4697',1,'AByteBuffer']]],
-  ['getrow_13',['getRow',['../classATokenizer.html#a625a7a1b1294e807e25bc81149856ace',1,'ATokenizer']]],
-  ['getsize_14',['getSize',['../classAByteBuffer.html#ac5a81b7824aa11a2c08d09475de10d60',1,'AByteBuffer']]]
+  ['fake_0',['fake',['../structaui_1_1ptr.html#aa485b42e18d08baafadb85787b393606',1,'aui::ptr']]],
+  ['finalize_1',['finalize',['../classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8',1,'OpenGLMultiStringCanvas::finalize()'],['../classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28',1,'IRenderer::IMultiStringCanvas::finalize()'],['../classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0',1,'SoftwareMultiStringCanvas::finalize()']]],
+  ['find_2',['find',['../classAPath.html#ae9c1a9e3b0a2a081b9e8238e543d4dea',1,'APath']]],
+  ['findanotherselfinstance_3',['findAnotherSelfInstance',['../classAProcess.html#a4c6537f6e1dc7d0538ee98d6f3d2fd59',1,'AProcess']]],
+  ['first_4',['first',['../classAVector.html#a8321410937da08da17695a9a1403debd',1,'AVector::first()'],['../classASqlModel_1_1IncompleteSelectRequest.html#a2b9748e316f1ca163dfd5879faadaf39',1,'ASqlModel::IncompleteSelectRequest::first()'],['../structaui_1_1sequence__traits_1_1of.html#a44071896ec7d04637861f46a8f2793ea',1,'aui::sequence_traits::of::first()'],['../classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f',1,'AVector::first()'],['../classADeque.html#ad1396ac646b307ff34e8e9d594d27181',1,'ADeque::first() const noexcept'],['../classADeque.html#ad84c3c72732daf6c6b4da9ed3e3671c2',1,'ADeque::first() noexcept']]],
+  ['focus_5',['focus',['../classAView.html#adf2e35644a76131fed2a0319bc28bcd2',1,'AView::focus()'],['../classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a',1,'AViewContainer::focus()']]],
+  ['frompid_6',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
+  ['fromstring_7',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
+  ['future_8',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
 ];

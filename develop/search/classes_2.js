@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['cache_0',['Cache',['../classCache.html',1,'']]],
-  ['call_5fwrapper_1',['call_wrapper',['../structASignal_1_1call__wrapper.html',1,'ASignal']]],
-  ['cancellationwrapper_2',['CancellationWrapper',['../structaui_1_1impl_1_1future_1_1CancellationWrapper.html',1,'aui::impl::future']]],
-  ['const_5fcontains_5fiterator_3',['const_contains_iterator',['../structAMap_1_1const__contains__iterator.html',1,'AMap']]],
-  ['construct_4',['construct',['../structAutumn_1_1construct.html',1,'Autumn']]],
-  ['contains_5fiterator_5',['contains_iterator',['../structAMap_1_1contains__iterator.html',1,'AMap']]],
-  ['currentthread_6',['CurrentThread',['../classCurrentThread.html',1,'']]]
+  ['backgroundcropping_0',['BackgroundCropping',['../structass_1_1BackgroundCropping.html',1,'ass']]],
+  ['backgroundgradient_1',['BackgroundGradient',['../structass_1_1BackgroundGradient.html',1,'ass']]],
+  ['backgroundimage_2',['BackgroundImage',['../structass_1_1BackgroundImage.html',1,'ass']]],
+  ['backgroundsolid_3',['BackgroundSolid',['../structass_1_1BackgroundSolid.html',1,'ass']]],
+  ['border_4',['Border',['../structass_1_1Border.html',1,'ass']]],
+  ['borderbottom_5',['BorderBottom',['../structBorderBottom.html',1,'']]],
+  ['borderleft_6',['BorderLeft',['../structBorderLeft.html',1,'']]],
+  ['borderradius_7',['BorderRadius',['../structass_1_1BorderRadius.html',1,'ass']]],
+  ['both_8',['both',['../structuitest_1_1impl_1_1both.html',1,'uitest::impl']]],
+  ['boxshadow_9',['BoxShadow',['../structass_1_1BoxShadow.html',1,'ass']]],
+  ['brushhelper_10',['BrushHelper',['../structBrushHelper.html',1,'']]],
+  ['builder_11',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder']]]
 ];

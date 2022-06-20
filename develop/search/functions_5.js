@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['fake_0',['fake',['../structaui_1_1ptr.html#aa485b42e18d08baafadb85787b393606',1,'aui::ptr']]],
-  ['find_1',['find',['../classAPath.html#ae9c1a9e3b0a2a081b9e8238e543d4dea',1,'APath']]],
-  ['findanotherselfinstance_2',['findAnotherSelfInstance',['../classAProcess.html#a4c6537f6e1dc7d0538ee98d6f3d2fd59',1,'AProcess']]],
-  ['first_3',['first',['../classADeque.html#ad84c3c72732daf6c6b4da9ed3e3671c2',1,'ADeque::first() noexcept'],['../classADeque.html#ad1396ac646b307ff34e8e9d594d27181',1,'ADeque::first() const noexcept'],['../classAVector.html#a8321410937da08da17695a9a1403debd',1,'AVector::first() noexcept'],['../classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f',1,'AVector::first() const noexcept'],['../structaui_1_1sequence__traits_1_1of.html#a44071896ec7d04637861f46a8f2793ea',1,'aui::sequence_traits::of::first()']]],
-  ['frompid_4',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
-  ['fromstring_5',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['future_6',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
+  ['enablecachingfortextlayouthelper_0',['enableCachingForTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#a66f353bfd4c56f9092cb13b29316bdf1',1,'IRenderer::IMultiStringCanvas']]],
+  ['enqueue_1',['enqueue',['../classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf',1,'AAbstractThread']]],
+  ['ensurereserved_2',['ensureReserved',['../classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae',1,'AByteBuffer']]],
+  ['enterchar_3',['enterChar',['../classAAbstractTypeableView.html#a49de5a96d5a4cb3215d804e38c5fbf42',1,'AAbstractTypeableView']]],
+  ['execute_4',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
+  ['executeasadministrator_5',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
+  ['executewaitforexit_6',['executeWaitForExit',['../classAProcess.html#aa636c40424103381cb9fdacbdad265d8',1,'AProcess']]],
+  ['exists_7',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]]
 ];
