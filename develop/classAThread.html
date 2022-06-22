@@ -94,11 +94,11 @@ $(document).ready(function(){initNavTree('classAThread.html',''); initResizable(
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classAThread-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">AThread Class Reference</div></div>
+  <div class="headertitle"><div class="title">AThread Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Thread.  
+<p>Represents a user-defined thread.  
  <a href="classAThread.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="AThread_8h_source.html">AThread.h</a>&gt;</code></p>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('classAThread.html',''); initResizable(
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread_1_1Interrupted.html">Interrupted</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception that is thrown by <code><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point. It&#39;s required for AThread::interrupt.">AThread::interruptionPoint()</a></code>, if interruption is requested for this thread. Handled by <code><a class="el" href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329" title="Start thread execution.">AThread::start</a>&lt;/code. </code> <a href="classAThread_1_1Interrupted.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exception that is thrown by <code><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point.">AThread::interruptionPoint()</a></code>, if interruption is requested for this thread. Handled by <code><a class="el" href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329" title="Start thread execution.">AThread::start</a></code>.  <a href="classAThread_1_1Interrupted.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -127,7 +127,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr
 <tr class="memdesc:a03d72a0f366a3c019e8c6b5a0c652442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset interruption flag.  <a href="classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442">More...</a><br /></td></tr>
 <tr class="separator:a03d72a0f366a3c019e8c6b5a0c652442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef367f786f1482c7dd5246eadd994ce5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">interrupt</a> () override</td></tr>
-<tr class="memdesc:aef367f786f1482c7dd5246eadd994ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt thread's execution. This function requires the interrupted code contain calls to the <code><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point. It&#39;s required for AThread::interrupt.">AThread::interruptionPoint()</a></code> function since C++ is native programming language (not managed)  <a href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">More...</a><br /></td></tr>
+<tr class="memdesc:aef367f786f1482c7dd5246eadd994ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt thread's execution.  <a href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">More...</a><br /></td></tr>
 <tr class="separator:aef367f786f1482c7dd5246eadd994ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681dd637685f0e11d5993d4ccd5defb2"><td class="memItemLeft" align="right" valign="top"><a id="a681dd637685f0e11d5993d4ccd5defb2" name="a681dd637685f0e11d5993d4ccd5defb2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>join</b> ()</td></tr>
@@ -186,13 +186,12 @@ template&lt;typename T &gt; </td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a021e7f42706eeef73a1dc6cdbeac2b12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">sleep</a> (unsigned durationInMs)</td></tr>
-<tr class="memdesc:a021e7f42706eeef73a1dc6cdbeac2b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than specified. <code><a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread&#39;s execution. This function requires the interrupted code contain calls to the AThrea...">AThread::interrupt()</a></code> is supported.  <a href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">More...</a><br /></td></tr>
+<tr class="memdesc:a021e7f42706eeef73a1dc6cdbeac2b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than specified. <code><a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread&#39;s execution.">AThread::interrupt()</a></code> is supported.  <a href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">More...</a><br /></td></tr>
 <tr class="separator:a021e7f42706eeef73a1dc6cdbeac2b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d09d7332e61f6ef39e93d4a1fdc2574"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">current</a> ()</td></tr>
 <tr class="separator:a1d09d7332e61f6ef39e93d4a1fdc2574"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="memItemLeft" align="right" valign="top"><a id="a64c8a94e0bddd90ca609b3cfb5ba007f" name="a64c8a94e0bddd90ca609b3cfb5ba007f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>interruptionPoint</b> ()</td></tr>
-<tr class="memdesc:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interruption point. It's required for <code><a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread&#39;s execution. This function requires the interrupted code contain calls to the AThrea...">AThread::interrupt</a></code>. <br /></td></tr>
+<tr class="memitem:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">interruptionPoint</a> ()</td></tr>
+<tr class="memdesc:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interruption point.  <a href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">More...</a><br /></td></tr>
 <tr class="separator:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf8612808d1257e33fdde6b95c5b390"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">setName</a> (<a class="el" href="classAString.html">AString</a> name) noexcept</td></tr>
 <tr class="separator:a2cf8612808d1257e33fdde6b95c5b390"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,7 +252,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b>
 <tr class="separator:a35d8618d61be04cf3afc68f0023023ee inherit pro_attribs_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Thread. </p>
+<div class="textblock"><p >Represents a user-defined thread. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1d09d7332e61f6ef39e93d4a1fdc2574" name="a1d09d7332e61f6ef39e93d4a1fdc2574"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d09d7332e61f6ef39e93d4a1fdc2574">&#9670;&nbsp;</a></span>current()</h2>
@@ -304,9 +303,39 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b>
 </table>
 </div><div class="memdoc">
 
-<p>Interrupt thread's execution. This function requires the interrupted code contain calls to the <code><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point. It&#39;s required for AThread::interrupt.">AThread::interruptionPoint()</a></code> function since C++ is native programming language (not managed) </p>
+<p>Interrupt thread's execution. </p>
+<p >Raises the interruption flag of the thread. In order to check whether thread interrupted use <a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point.">AThread::interruptionPoint()</a> or <a class="el" href="classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a">AAbstractThread::isInterrupted()</a>. </p>
 
 <p>Reimplemented from <a class="el" href="classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43">AAbstractThread</a>.</p>
+
+</div>
+</div>
+<a id="a64c8a94e0bddd90ca609b3cfb5ba007f" name="a64c8a94e0bddd90ca609b3cfb5ba007f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c8a94e0bddd90ca609b3cfb5ba007f">&#9670;&nbsp;</a></span>interruptionPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AThread::interruptionPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interruption point. </p>
+<p >If the interruption flag is raised for the caller thread then flag is reset and <a class="el" href="classAThread_1_1Interrupted.html" title="Exception that is thrown by AThread::interruptionPoint(), if interruption is requested for this threa...">AThread::Interrupted</a> exception is thrown, efficiently stopping the task execution and safely freeing resources with C++'s RAII feature.</p>
+<p >async, asyncX, AThreadPool::enqueue, AUI_ENTRY handle <a class="el" href="classAThread_1_1Interrupted.html" title="Exception that is thrown by AThread::interruptionPoint(), if interruption is requested for this threa...">AThread::Interrupted</a>, so throwing <a class="el" href="classAThread_1_1Interrupted.html" title="Exception that is thrown by AThread::interruptionPoint(), if interruption is requested for this threa...">AThread::Interrupted</a> is safe. </p>
 
 </div>
 </div>
@@ -423,7 +452,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b>
 </table>
 </div><div class="memdoc">
 
-<p>Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than specified. <code><a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread&#39;s execution. This function requires the interrupted code contain calls to the AThrea...">AThread::interrupt()</a></code> is supported. </p>
+<p>Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than specified. <code><a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread&#39;s execution.">AThread::interrupt()</a></code> is supported. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">durationInMs</td><td>duration in milliseconds. </td></tr>
@@ -442,8 +471,8 @@ Inheritance diagram for AThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAThread__inherit__graph.png" border="0" usemap="#aAThread_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAThread_inherit__map" id="aAThread_inherit__map">
-<area shape="rect" title="Thread." alt="" coords="89,169,159,196"/>
-<area shape="rect" href="classAAbstractThread.html" title="Abstract thread. Not all threads are created through AThread &#45; these are interfaced with AAbstractThr..." alt="" coords="5,95,125,121"/>
+<area shape="rect" title="Represents a user&#45;defined thread." alt="" coords="89,169,159,196"/>
+<area shape="rect" href="classAAbstractThread.html" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="5,95,125,121"/>
 <area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="149,95,219,121"/>
 <area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="45,13,163,39"/>
 <area shape="rect" title=" " alt="" coords="187,5,339,47"/>
@@ -454,13 +483,13 @@ Collaboration diagram for AThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAThread__coll__graph.png" border="0" usemap="#aAThread_coll__map" alt="Collaboration graph"/></div>
 <map name="aAThread_coll__map" id="aAThread_coll__map">
-<area shape="rect" title="Thread." alt="" coords="601,137,672,164"/>
-<area shape="rect" href="classAAbstractThread.html" title="Abstract thread. Not all threads are created through AThread &#45; these are interfaced with AAbstractThr..." alt="" coords="432,88,552,115"/>
+<area shape="rect" title="Represents a user&#45;defined thread." alt="" coords="601,137,672,164"/>
+<area shape="rect" href="classAAbstractThread.html" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="432,88,552,115"/>
 <area shape="rect" href="classAString.html" title="Represents a wide char string." alt="" coords="186,5,251,32"/>
 <area shape="rect" title=" " alt="" coords="5,5,93,32"/>
 <area shape="rect" href="classAMutex.html" title=" " alt="" coords="185,60,252,87"/>
 <area shape="rect" title=" " alt="" coords="9,60,90,87"/>
-<area shape="rect" href="classAConditionVariable.html" title=" " alt="" coords="153,111,285,137"/>
+<area shape="rect" href="classAConditionVariable.html" title="Represents a condition variable." alt="" coords="153,111,285,137"/>
 <area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="457,161,527,188"/>
 <area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="160,161,277,188"/>
 <area shape="rect" title=" " alt="" coords="143,213,295,254"/>

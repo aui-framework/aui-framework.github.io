@@ -151,7 +151,7 @@ Macros</h2></td></tr>
 
 <p>Executes following {} block asynchronously in the <a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">global</a> thread pool. Unlike asyncX, does now allow to set lambda's capture. Lambda's capture is <code>[=]</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>AFuture&lt;T&gt;</code> where <code>T</code> is the return type of the lambda. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds set of futures keeping them valid. Guarantees that held futures will never be executed or be du...">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
@@ -184,7 +184,7 @@ Macros</h2></td></tr>
 
 <p>Executes following {} block asynchronously in the <a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">global</a> thread pool. Unlike async, allows to set lambda's capture but you should always specify lambda's capture. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>AFuture&lt;T&gt;</code> where <code>T</code> is the return type of the lambda. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds set of futures keeping them valid. Guarantees that held futures will never be executed or be du...">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>

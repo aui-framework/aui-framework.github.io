@@ -272,7 +272,7 @@ var searchData=
   ['aui_3a_3aviews_269',['aui::views',['../group__views.html',1,'']]],
   ['aui_3a_3axml_270',['aui::xml',['../group__xml.html',1,'']]],
   ['aui_5fapp_271',['aui_app',['../md_docs_aui_app.html',1,'']]],
-  ['aui_5fenum_5fflag_272',['AUI_ENUM_FLAG',['../group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5',1,'AUI_ENUM_FLAG(ASide):&#160;ASide.h'],['../group__core.html#ga87f7361faaeb6e043938f79698edf5d0',1,'AUI_ENUM_FLAG(APathFinder):&#160;APath.h']]],
+  ['aui_5fenum_5fflag_272',['AUI_ENUM_FLAG',['../group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5',1,'AUI_ENUM_FLAG(ASide):&#160;ASide.h'],['../group__io.html#ga87f7361faaeb6e043938f79698edf5d0',1,'AUI_ENUM_FLAG(APathFinder):&#160;APath.h']]],
   ['aui_5fexecutable_273',['aui_executable',['../md_docs_aui_executable.html',1,'']]],
   ['auinsapplication_274',['AUINSApplication',['../interfaceAUINSApplication.html',1,'']]],
   ['auiviewcontroller_275',['AUIViewController',['../interfaceAUIViewController.html',1,'']]],
