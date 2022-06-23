@@ -46,7 +46,8 @@ var NAVTREE =
       [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
       [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
-      [ "Writing tests", "md_docs_Writing_tests.html", null ]
+      [ "Writing tests", "md_docs_Writing_tests.html", null ],
+      [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ]
     ] ],
     [ "Reference", "usergroup2.html", [
       [ "All AUI Modules", "modules.html", "modules" ],

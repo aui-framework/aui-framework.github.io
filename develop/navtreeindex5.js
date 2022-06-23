@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1decl_1_1IDeclarationBase.html":[0,0,5,1,35],
 "structass_1_1decl_1_1IDeclarationBase.html":[0,2,3,1,35],
 "structass_1_1detail_1_1ClassOf.html":[0,2,3,2,0],
 "structass_1_1detail_1_1ClassOf.html":[0,0,5,2,0],
