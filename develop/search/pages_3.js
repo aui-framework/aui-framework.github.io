@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getting_20started_20with_20aui_0',['Getting started with AUI',['../md_docs_Getting_started_with_AUI.html',1,'']]]
+  ['readme_0',['README',['../md_aui_data_README.html',1,'']]]
 ];

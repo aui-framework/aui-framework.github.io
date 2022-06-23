@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['code_20style_0',['Code style',['../md_docs_Code_style_and_recommendations.html',1,'']]]
+  ['getting_20started_20with_20aui_0',['Getting started with AUI',['../md_docs_Getting_started_with_AUI.html',1,'']]]
 ];
