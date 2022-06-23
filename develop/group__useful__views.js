@@ -131,6 +131,8 @@ var group__useful__views =
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
       [ "render", "classAView.html#afb763553515ae0d443c7a1ebc4847f10", null ],
+      [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],
+      [ "setPadding", "classAView.html#af409baa975fcd918472e42462b1955b6", null ],
       [ "setSizeForced", "classAView.html#a0e6f503e884662b82c393eec7310cc3b", null ],
       [ "transformGestureEventsToDesktop", "classAView.html#a1b273cbe961c8633b17171b750762135", null ],
       [ "updateAssState", "classAView.html#aa7fa638bb2766abc0914d3268f98e9e5", null ],
