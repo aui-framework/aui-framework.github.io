@@ -1,6 +1,7 @@
 var NAVTREEINDEX4 =
 {
 "md_docs_Getting_started_with_AUI.html":[1,0],
+"md_docs_Writing_tests.html":[1,3],
 "md_docs_aui_app.html":[2,2,0],
 "md_docs_aui_executable.html":[2,2,1],
 "modules.html":[2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html":[0,0,5,1,34],
 "structass_1_1decl_1_1IDeclarationBase.html":[0,0,5,1,35],
 "structass_1_1decl_1_1IDeclarationBase.html":[0,2,3,1,35],
-"structass_1_1detail_1_1ClassOf.html":[0,0,5,2,0],
-"structass_1_1detail_1_1ClassOf.html":[0,2,3,2,0]
+"structass_1_1detail_1_1ClassOf.html":[0,0,5,2,0]
 };

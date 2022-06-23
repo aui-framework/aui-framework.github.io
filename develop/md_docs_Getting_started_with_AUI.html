@@ -129,8 +129,10 @@ Basic hello world</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;AUI/Platform/Entry.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Logging/ALogger.h&gt;</span></div>
 <div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">&quot;MyApp&quot;</span>;</div>
+<div class="line"> </div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
-<div class="line">    ALogger::info(<span class="stringliteral">&quot;Hello world!&quot;</span>);</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;Hello world!&quot;</span>;</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition:</b> Entry.h:102</div></div>
@@ -143,8 +145,8 @@ Basic hello world</h1>
 <li>Build your project: <code>cmake . --build</code></li>
 <li>Run your project: <code>bin/project_template</code></li>
 </ol>
-<p >Output:</p>
-<div class="fragment"><div class="line">[13:58:33] INFO: Hello world!</div>
+<p >Possible output:</p>
+<div class="fragment"><div class="line">[13:24:02][UI Thread][Logger][INFO]: Hello world!</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md45"></a>
 Graphical hello world</h1>
 <p ><b>Project:</b> <code>docs/projects/hello_world/ui</code></p>

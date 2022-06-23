@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "adfiostv",
   7: "abcdeghiptv",
   8: "ailsuv",
-  9: "<acgrt"
+  9: "<acgrtw"
 };
 
 var indexSectionNames =

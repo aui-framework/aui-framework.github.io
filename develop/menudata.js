@@ -97,7 +97,8 @@ var menudata={children:[
 {text:"Getting started",url:"usergroup1.html",children:[
 {text:"Getting started with AUI",url:"md_docs_Getting_started_with_AUI.html"},
 {text:"AUI Boot",url:"md_docs_AUI_Boot.html"},
-{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"}]},
+{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"},
+{text:"Writing tests",url:"md_docs_Writing_tests.html"}]},
 {text:"Reference",url:"usergroup2.html",children:[
 {text:"All AUI Modules",url:"modules.html"},
 {text:"All AUI Classes",url:"classes.html"},
