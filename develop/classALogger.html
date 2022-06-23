@@ -146,11 +146,22 @@ static <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;<
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A logger class. </p>
-<p >A logger is used to journal application events like errors or some user actions.</p>
+<p >Logger is used for journaling application events like errors or some user actions.</p>
 <p >It provides some extra functions like logging to file and output formatting.</p>
 <p >It provides <code>std::cout</code>-like API.</p>
 <p >Example: </p><div class="fragment"><div class="line">ALogger::info(<span class="stringliteral">&quot;MyApp&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;Hello world!&quot;</span>;</div>
 </div><!-- fragment --><p> Possible output: </p><div class="fragment"><div class="line">[00:47:02][UI Thread][Logger][INFO]: Hello world</div>
+</div><!-- fragment --><p >It's convenient to define <code>LOG_TAG</code> variable for your class: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">&quot;MyDownloader&quot;</span>;</div>
+<div class="line"><span class="keyword">class </span>MyDownloader {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <span class="keywordtype">void</span> someAction() {</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;someAction() called&quot;</span>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> downloadFile(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; name) {</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;Downloading file: &quot;</span> &lt;&lt; name;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:38</div></div>
 </div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/Logging/<a class="el" href="ALogger_8h_source.html">ALogger.h</a></li>
 <li>aui.core/src/AUI/Logging/ALogger.cpp</li>
