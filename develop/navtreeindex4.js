@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"md_docs_aui_executable.html":[2,2,1],
+"modules.html":[2,0],
 "namespaceAHash.html":[2,0,1,0],
 "namespaceAXml.html":[2,0,7,0],
 "namespaceAutumn.html":[2,0,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1detail_1_1ClassOf.html":[0,2,3,2,0],
 "structass_1_1detail_1_1ClassOf.html":[0,0,5,2,0],
 "structass_1_1detail_1_1Type.html":[0,2,3,2,2],
-"structass_1_1detail_1_1Type.html":[0,0,5,2,2],
-"structass_1_1detail_1_1debug__selector.html":[0,2,3,2,1],
-"structass_1_1detail_1_1debug__selector.html":[0,0,5,2,1]
+"structass_1_1detail_1_1Type.html":[0,0,5,2,2]
 };
