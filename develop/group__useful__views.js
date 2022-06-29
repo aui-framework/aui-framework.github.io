@@ -4,6 +4,8 @@ var group__useful__views =
       [ "getContentMinimumHeight", "classAAbstractTextField.html#a2f9874d44a8bbe4e9a38cd659994ad16", null ],
       [ "handlesNonMouseNavigation", "classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2", null ],
       [ "render", "classAAbstractTextField.html#a9681178b8f4e95e3aba53b96d4d1302c", null ],
+      [ "text", "classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d", null ],
+      [ "textLength", "classAAbstractTextField.html#a6d41e754abc7f9e2432508a53287e3b4", null ],
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
       [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
       [ "typeableInsert", "classAAbstractTextField.html#a627a137628b73f9139838408234ff47c", null ]
@@ -78,8 +80,9 @@ var group__useful__views =
     ] ],
     [ "ATextArea", "classATextArea.html", [
       [ "TextAreaField", "classATextArea_1_1TextAreaField.html", [
-        [ "getText", "classATextArea_1_1TextAreaField.html#a5a3655d343a329b17002f323b6c9877b", null ],
         [ "render", "classATextArea_1_1TextAreaField.html#a8f0b9bca88e77c4f15f707b85a3ac174", null ],
+        [ "text", "classATextArea_1_1TextAreaField.html#ae47ef9fd771cfa707ef5894515c209e6", null ],
+        [ "textLength", "classATextArea_1_1TextAreaField.html#a7c706e015165ddfe881436dc498e9ef8", null ],
         [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a8ed301f96db4c7251998fe398b89b423", null ],
         [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a755c9bf00449be4736faaf8096634dd9", null ]
       ] ],

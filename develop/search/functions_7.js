@@ -31,12 +31,11 @@ var searchData=
   ['getrow_28',['getRow',['../classATokenizer.html#a625a7a1b1294e807e25bc81149856ace',1,'ATokenizer']]],
   ['getsize_29',['getSize',['../classAByteBuffer.html#ac5a81b7824aa11a2c08d09475de10d60',1,'AByteBuffer::getSize()'],['../classAView.html#a1934c219a3411ec2917c9cd05f0fe453',1,'AView::getSize()']]],
   ['getsizehint_30',['getSizeHint',['../classIDrawable.html#ae3f0cc5cdd0c449a8953b2ad37223752',1,'IDrawable::getSizeHint()'],['../classAImageDrawable.html#a0eec89e7bd08616fed61cd7ec2a97ff7',1,'AImageDrawable::getSizeHint()'],['../classAVectorDrawable.html#ab6cde54ab4d319a082bfdde8d5294e6a',1,'AVectorDrawable::getSizeHint()']]],
-  ['gettext_31',['getText',['../classATextArea_1_1TextAreaField.html#a5a3655d343a329b17002f323b6c9877b',1,'ATextArea::TextAreaField']]],
-  ['gettextlayouthelper_32',['getTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8',1,'IRenderer::IMultiStringCanvas']]],
-  ['gettotalfieldhorizontal_33',['getTotalFieldHorizontal',['../classAView.html#a3f2e024a5acecec85af1aedaa67066e5',1,'AView']]],
-  ['gettotalfieldvertical_34',['getTotalFieldVertical',['../classAView.html#a274972d0e96c9ad2779fe5dfdeb71727',1,'AView']]],
-  ['gettotaloccupiedheight_35',['getTotalOccupiedHeight',['../classAView.html#acaef54d28990d25a3edf594e163c1a8b',1,'AView']]],
-  ['gettotaloccupiedwidth_36',['getTotalOccupiedWidth',['../classAView.html#a521f58942c69ff63566ada3e3d774f32',1,'AView']]],
-  ['getwindow_37',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
-  ['global_38',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool']]]
+  ['gettextlayouthelper_31',['getTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8',1,'IRenderer::IMultiStringCanvas']]],
+  ['gettotalfieldhorizontal_32',['getTotalFieldHorizontal',['../classAView.html#a3f2e024a5acecec85af1aedaa67066e5',1,'AView']]],
+  ['gettotalfieldvertical_33',['getTotalFieldVertical',['../classAView.html#a274972d0e96c9ad2779fe5dfdeb71727',1,'AView']]],
+  ['gettotaloccupiedheight_34',['getTotalOccupiedHeight',['../classAView.html#acaef54d28990d25a3edf594e163c1a8b',1,'AView']]],
+  ['gettotaloccupiedwidth_35',['getTotalOccupiedWidth',['../classAView.html#a521f58942c69ff63566ada3e3d774f32',1,'AView']]],
+  ['getwindow_36',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
+  ['global_37',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool']]]
 ];
