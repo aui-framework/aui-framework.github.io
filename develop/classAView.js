@@ -41,6 +41,7 @@ var classAView =
     [ "clicked", "classAView.html#af2361cde3ebf9e0b410c28dab746029d", null ],
     [ "clickedButton", "classAView.html#a5812c5a904c1d23c711e0075e1b2be5d", null ],
     [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
+    [ "focusState", "classAView.html#a96f3c6e2b8c960c5081866e26baa828e", null ],
     [ "mAss", "classAView.html#a0da9806bf1d6524ef717abe66f41d269", null ],
     [ "mAssNames", "classAView.html#a0606dba2cdd6c1974f501952518af658", null ],
     [ "mCursor", "classAView.html#a448c7992afd25631e42da434c2f9796d", null ],

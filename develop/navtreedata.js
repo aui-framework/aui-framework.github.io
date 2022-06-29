@@ -65,9 +65,9 @@ var NAVTREEINDEX =
 "annotated.html",
 "classAModelRange.html",
 "classAUuid.html#aee525a073efbd38f36f1d8db45160c0c",
-"classPipeInputStream.html",
-"md_docs_AUI_Boot.html",
-"structass_1_1decl_1_1IDeclarationBase.html"
+"classPipe.html",
+"interfaceWindowDelegate.html",
+"structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
