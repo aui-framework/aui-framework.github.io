@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['useful_20macros_0',['Useful macros',['../group__useful__macros.html',1,'']]]
+  ['signal_2dslot_0',['Signal-slot',['../group__signal__slot.html',1,'']]]
 ];

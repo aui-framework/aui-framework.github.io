@@ -2,6 +2,7 @@ var group__core =
 [
     [ "Signal-slot", "group__signal__slot.html", "group__signal__slot" ],
     [ "Useful macros", "group__useful__macros.html", "group__useful__macros" ],
+    [ "IO streams", "group__io.html", "group__io" ],
     [ "Autumn", "namespaceAutumn.html", null ],
     [ "AAbstractSignal", "classAAbstractSignal.html", null ],
     [ "ABoxFields", "structABoxFields.html", null ],
@@ -109,66 +110,53 @@ var group__core =
     ] ],
     [ "AI18n", "classAI18n.html", null ],
     [ "ALanguageCode", "classALanguageCode.html", null ],
-    [ "AByteBufferInputStream", "classAByteBufferInputStream.html", [
-      [ "read", "classAByteBufferInputStream.html#aa43ec19c84d7a04f84b69fc1009f5dbc", null ]
-    ] ],
-    [ "AEOFException", "classAEOFException.html", null ],
-    [ "AFileInputStream", "classAFileInputStream.html", [
-      [ "Seek", "classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22", [
-        [ "BEGIN", "classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22a19aad9f2fe3ce0023298ab83f7e75775", null ],
-        [ "CURRENT", "classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df", null ],
-        [ "END", "classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22ab1a326c06d88bf042f73d70f50197905", null ]
-      ] ],
-      [ "read", "classAFileInputStream.html#a21ca24d981fe73be575335c3463aa611", null ]
-    ] ],
-    [ "AFileOutputStream", "classAFileOutputStream.html", [
-      [ "WriteException", "classAFileOutputStream_1_1WriteException.html", null ],
-      [ "write", "classAFileOutputStream.html#abd4ca9831b7176689a9bbe7cf10f62b4", null ]
-    ] ],
-    [ "AIOException", "classAIOException.html", null ],
-    [ "ALimitedInputStream", "classALimitedInputStream.html", [
-      [ "read", "classALimitedInputStream.html#a18091fc98b1fa65c7e2a9ea7c54cd85f", null ]
-    ] ],
-    [ "APath", "classAPath.html", [
-      [ "DefaultPath", "classAPath.html#a38597cac45847bf6ce74272ea0b72ef3", [
-        [ "APPDATA", "classAPath.html#a38597cac45847bf6ce74272ea0b72ef3af11a27bb7f92685193a8b9bb47c6a57f", null ],
-        [ "TEMP", "classAPath.html#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b", null ],
-        [ "HOME", "classAPath.html#a38597cac45847bf6ce74272ea0b72ef3a3c86b6ae365e77ad726cfebf62d7077a", null ]
-      ] ],
-      [ "absolute", "classAPath.html#aaa8ac6cdefdbb7c5b0a53b0f7255a639", null ],
-      [ "exists", "classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c", null ],
-      [ "isAbsolute", "classAPath.html#a0de41be67e8b34561c29203172e6b58b", null ],
-      [ "isDirectoryExists", "classAPath.html#ab2157a1af5be806cc4b8570ddc0fca54", null ],
-      [ "isRegularFileExists", "classAPath.html#a7c1302777d5b748bf87a24d078c090e1", null ],
-      [ "isRelative", "classAPath.html#ac6fe94d839c51484b6415feb8f1737c0", null ],
-      [ "listDir", "classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5", null ],
-      [ "makeDir", "classAPath.html#a3086272262834a19139e1324aed5285b", null ],
-      [ "makeDirs", "classAPath.html#a248a0d9584a2b112f2be2a194c9d1a88", null ],
-      [ "operator/", "classAPath.html#abafaeb035c4406f106cb9e556e6360ac", null ],
-      [ "removeFile", "classAPath.html#a4512a1474619f7a6ccb773dc2ee7fbef", null ],
-      [ "removeFileRecursive", "classAPath.html#a1b5343e5010302e4dd86a28eecc4eb19", null ],
-      [ "systemSlashDirection", "classAPath.html#a009bf83be30970d6b00af798b2445035", null ],
-      [ "touch", "classAPath.html#abb7e0d8f6c632d915f41a31a52036b00", null ]
-    ] ],
-    [ "ARandomInputStream", "classARandomInputStream.html", [
-      [ "read", "classARandomInputStream.html#ae6deddbadfbc0ae88aa4b9c62d962f50", null ]
-    ] ],
-    [ "AStringStream", "classAStringStream.html", [
-      [ "read", "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c", null ],
-      [ "write", "classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b", null ]
-    ] ],
-    [ "IInputStream", "classIInputStream.html", [
-      [ "deserialize", "classIInputStream.html#a36c4cf58fa8466b92d9af1eb09e25d47", null ],
-      [ "operator>>", "classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2", null ],
-      [ "operator>>", "classIInputStream.html#a1840a69ad7ecad3ab4cdf58aed3823e2", null ],
-      [ "read", "classIInputStream.html#a2eeb1071827ea8a9ca61bfd414639588", null ],
-      [ "readExact", "classIInputStream.html#a2d3fbd41d7e0d03c043d51f27353f9a3", null ]
-    ] ],
-    [ "InputStreamAsync", "classInputStreamAsync.html", null ],
     [ "ALogger", "classALogger.html", [
       [ "LogWriter", "structALogger_1_1LogWriter.html", null ]
     ] ],
-    [ "AUI_ENUM_FLAG", "group__core.html#ga87f7361faaeb6e043938f79698edf5d0", null ],
+    [ "AAsyncHolder", "classAAsyncHolder.html", null ],
+    [ "AConditionVariable", "classAConditionVariable.html", [
+      [ "notify_all", "classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303", null ],
+      [ "notify_one", "classAConditionVariable.html#a0f01b279878a7a39c713b08d8e9e0674", null ],
+      [ "wait", "classAConditionVariable.html#a9642386005b00d1278e87d78d1082acb", null ],
+      [ "wait_for", "classAConditionVariable.html#af49e24fddafa4d3cf29c0dcef892258e", null ],
+      [ "wait_for", "classAConditionVariable.html#aafb373b5d011972ad21031a8a26bcc9b", null ]
+    ] ],
+    [ "ACutoffSignal", "classACutoffSignal.html", [
+      [ "makeSignal", "classACutoffSignal.html#a846f87917ee35414834b624c281ffd06", null ],
+      [ "resetSignal", "classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783", null ],
+      [ "waitForSignal", "classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488", null ]
+    ] ],
+    [ "AFuture< T >", "classAFuture.html", null ],
+    [ "AAbstractThread", "classAAbstractThread.html", [
+      [ "Message", "structAAbstractThread_1_1Message.html", null ],
+      [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],
+      [ "enqueue", "classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf", null ],
+      [ "getCurrentEventLoop", "classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d", null ],
+      [ "getId", "classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818", null ],
+      [ "interrupt", "classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43", null ],
+      [ "isInterrupted", "classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a", null ],
+      [ "operator*", "classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7", null ],
+      [ "operator<<", "classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c", null ],
+      [ "resetInterruptFlag", "classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206", null ],
+      [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ],
+      [ "mMessageQueue", "classAAbstractThread.html#a35d8618d61be04cf3afc68f0023023ee", null ],
+      [ "mQueueLock", "classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20", null ]
+    ] ],
+    [ "AThread", "classAThread.html", [
+      [ "Interrupted", "classAThread_1_1Interrupted.html", [
+        [ "needRethrow", "classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf", null ]
+      ] ],
+      [ "interrupt", "classAThread.html#aef367f786f1482c7dd5246eadd994ce5", null ],
+      [ "isInterrupted", "classAThread.html#af43a40837f9a3192aaa49b0c4db7c0ee", null ],
+      [ "join", "classAThread.html#a681dd637685f0e11d5993d4ccd5defb2", null ],
+      [ "resetInterruptFlag", "classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442", null ],
+      [ "start", "classAThread.html#a9234a95574195c1ed42364fe8a7a8329", null ]
+    ] ],
+    [ "AFutureSet< T >", "classAFutureSet.html", [
+      [ "checkForExceptions", "classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417", null ],
+      [ "waitForAll", "classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a", null ]
+    ] ],
+    [ "AUrl", "classAUrl.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]

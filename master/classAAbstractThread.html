@@ -97,11 +97,11 @@ $(document).ready(function(){initNavTree('classAAbstractThread.html',''); initRe
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classAAbstractThread-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">AAbstractThread Class Reference</div></div>
+  <div class="headertitle"><div class="title">AAbstractThread Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract thread. Not all threads are created through <a class="el" href="classAThread.html" title="Thread.">AThread</a> - these are interfaced with <a class="el" href="classAAbstractThread.html" title="Abstract thread. Not all threads are created through AThread - these are interfaced with AAbstractThr...">AAbstractThread</a>.  
+<p>Represents an abstract thread. Not all threads are created through <a class="el" href="classAThread.html" title="Represents a user-defined thread.">AThread</a> - these are interfaced with <a class="el" href="classAAbstractThread.html" title="Represents an abstract thread. Not all threads are created through AThread - these are interfaced wit...">AAbstractThread</a>.  
  <a href="classAAbstractThread.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="AThread_8h_source.html">AThread.h</a>&gt;</code></p>
@@ -132,7 +132,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (std::fun
 <tr class="memdesc:afebdbf7af6b433d73ae13ac1ef19d206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset interruption flag.  <a href="classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206">More...</a><br /></td></tr>
 <tr class="separator:afebdbf7af6b433d73ae13ac1ef19d206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26b94864a9fcc9ba3749466dd7e9ba43"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43">interrupt</a> ()</td></tr>
-<tr class="memdesc:a26b94864a9fcc9ba3749466dd7e9ba43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt thread's execution. This function requires the interrupted code contain calls to the <code><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point. It&#39;s required for AThread::interrupt.">AThread::interruptionPoint()</a></code> function since C++ is native programming language (not managed)  <a href="classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43">More...</a><br /></td></tr>
+<tr class="memdesc:a26b94864a9fcc9ba3749466dd7e9ba43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt thread's execution.  <a href="classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43">More...</a><br /></td></tr>
 <tr class="separator:a26b94864a9fcc9ba3749466dd7e9ba43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a987230f54ff5e4e61ce86538e96e4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIEventLoop.html">IEventLoop</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">getCurrentEventLoop</a> () const</td></tr>
 <tr class="memdesc:a8a987230f54ff5e4e61ce86538e96e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current event loop for this thread.  <a href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">More...</a><br /></td></tr>
@@ -195,7 +195,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setupUIThread</b> () 
 <tr class="separator:ae4732880cb319389d39f327d0959ef19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Abstract thread. Not all threads are created through <a class="el" href="classAThread.html" title="Thread.">AThread</a> - these are interfaced with <a class="el" href="classAAbstractThread.html" title="Abstract thread. Not all threads are created through AThread - these are interfaced with AAbstractThr...">AAbstractThread</a>. </p>
+<div class="textblock"><p >Represents an abstract thread. Not all threads are created through <a class="el" href="classAThread.html" title="Represents a user-defined thread.">AThread</a> - these are interfaced with <a class="el" href="classAAbstractThread.html" title="Represents an abstract thread. Not all threads are created through AThread - these are interfaced wit...">AAbstractThread</a>. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Common_2AObject_8h-example.html#_a2">/github/workspace/aui.core/src/AUI/Common/AObject.h</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -268,7 +268,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setupUIThread</b> () 
 </table>
 </div><div class="memdoc">
 
-<p>Interrupt thread's execution. This function requires the interrupted code contain calls to the <code><a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point. It&#39;s required for AThread::interrupt.">AThread::interruptionPoint()</a></code> function since C++ is native programming language (not managed) </p>
+<p>Interrupt thread's execution. </p>
+<p >Raises the interruption flag of the thread. In order to check whether thread interrupted use <a class="el" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point.">AThread::interruptionPoint()</a> or <a class="el" href="classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a">AAbstractThread::isInterrupted()</a>. </p>
 
 <p>Reimplemented in <a class="el" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">AThread</a>.</p>
 
@@ -424,8 +425,8 @@ Inheritance diagram for AAbstractThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAAbstractThread__inherit__graph.png" border="0" usemap="#aAAbstractThread_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAAbstractThread_inherit__map" id="aAAbstractThread_inherit__map">
-<area shape="rect" title="Abstract thread. Not all threads are created through AThread &#45; these are interfaced with AAbstractThr..." alt="" coords="93,5,213,32"/>
-<area shape="rect" href="classAThread.html" title="Thread." alt="" coords="5,80,76,107"/>
+<area shape="rect" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="93,5,213,32"/>
+<area shape="rect" href="classAThread.html" title="Represents a user&#45;defined thread." alt="" coords="5,80,76,107"/>
 <area shape="rect" href="classCurrentThread.html" title=" " alt="" coords="101,80,205,107"/>
 <area shape="rect" href="classUIThread.html" title=" " alt="" coords="229,80,305,107"/>
 </map>
@@ -435,12 +436,12 @@ Collaboration diagram for AAbstractThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAAbstractThread__coll__graph.png" border="0" usemap="#aAAbstractThread_coll__map" alt="Collaboration graph"/></div>
 <map name="aAAbstractThread_coll__map" id="aAAbstractThread_coll__map">
-<area shape="rect" title="Abstract thread. Not all threads are created through AThread &#45; these are interfaced with AAbstractThr..." alt="" coords="109,185,229,212"/>
+<area shape="rect" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="109,185,229,212"/>
 <area shape="rect" href="classAString.html" title="Represents a wide char string." alt="" coords="17,81,82,108"/>
 <area shape="rect" title=" " alt="" coords="5,5,93,32"/>
 <area shape="rect" href="classAMutex.html" title=" " alt="" coords="131,81,197,108"/>
 <area shape="rect" title=" " alt="" coords="123,5,205,32"/>
-<area shape="rect" href="classAConditionVariable.html" title=" " alt="" coords="222,81,354,108"/>
+<area shape="rect" href="classAConditionVariable.html" title="Represents a condition variable." alt="" coords="222,81,354,108"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

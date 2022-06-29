@@ -45,7 +45,9 @@ var NAVTREE =
     [ "Getting started", "usergroup1.html", [
       [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
-      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ]
+      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
+      [ "Writing tests", "md_docs_Writing_tests.html", null ],
+      [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ]
     ] ],
     [ "Reference", "usergroup2.html", [
       [ "All AUI Modules", "modules.html", "modules" ],
@@ -61,11 +63,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classANoSpaceLeftException.html",
-"classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151",
-"classRenderHints_1_1PushColor.html",
-"namespacemembers_func.html",
-"structass_1_1type__of.html"
+"classAModelRange.html",
+"classAUuid.html#aee525a073efbd38f36f1d8db45160c0c",
+"classPipeInputStream.html",
+"md_docs_AUI_Boot.html",
+"structass_1_1decl_1_1IDeclarationBase.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

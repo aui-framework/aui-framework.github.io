@@ -109,6 +109,9 @@ Collaboration diagram for Useful macros:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:ga9fb2be9313369673815a6892aa7f3a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></td></tr>
+<tr class="memdesc:ga9fb2be9313369673815a6892aa7f3a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application entry point.  <a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">More...</a><br /></td></tr>
+<tr class="separator:ga9fb2be9313369673815a6892aa7f3a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">me</a>&#160;&#160;&#160;this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</td></tr>
 <tr class="memdesc:gac83b72d92d1105a82cd5590c0f65d48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes the current class and type of the current class separated by comma. It's convenient to use with the connect function:  <a href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">More...</a><br /></td></tr>
 <tr class="separator:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +154,7 @@ Macros</h2></td></tr>
 
 <p>Executes following {} block asynchronously in the <a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">global</a> thread pool. Unlike asyncX, does now allow to set lambda's capture. Lambda's capture is <code>[=]</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>AFuture&lt;T&gt;</code> where <code>T</code> is the return type of the lambda. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds set of futures keeping them valid. Guarantees that held futures will never be executed or be du...">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
@@ -184,7 +187,7 @@ Macros</h2></td></tr>
 
 <p>Executes following {} block asynchronously in the <a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">global</a> thread pool. Unlike async, allows to set lambda's capture but you should always specify lambda's capture. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>AFuture&lt;T&gt;</code> where <code>T</code> is the return type of the lambda. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds set of futures keeping them valid. Guarantees that held futures will never be executed or be du...">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
@@ -200,6 +203,33 @@ Macros</h2></td></tr>
 <div class="line">};</div>
 <div class="line"><span class="keywordtype">int</span> status = *futureStatus;</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="ga9fb2be9313369673815a6892aa7f3a1f" name="ga9fb2be9313369673815a6892aa7f3a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fb2be9313369673815a6892aa7f3a1f">&#9670;&nbsp;</a></span>AUI_ENTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_ENTRY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<a class="code hl_class" href="classAStringVector.html">AStringVector</a> args); \</div>
+<div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, <span class="keywordtype">int</span>(*aui_entry)(<a class="code hl_class" href="classAStringVector.html">AStringVector</a>)); \</div>
+<div class="line">    int main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {                               \</div>
+<div class="line">        return aui_main(argc, argv, aui_entry);\</div>
+<div class="line">    } \</div>
+<div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<a class="code hl_class" href="classAStringVector.html">AStringVector</a> args)</div>
+<div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition:</b> AStringVector.h:32</div></div>
+</div><!-- fragment -->
+<p>Application entry point. </p>
+<p >Native entry point varies platform to platform (i.e. Windows requires <code>int main</code> entry point for console applications and <code>WinMain</code> for graphical applications; entry point of an Android application is located in Java code). AUI_ENTRY unifies your entry point, efficiently supporting every platform.</p>
+<p >AUI_ENTRY of a graphical application should be non-blocking since on mobile platforms application's event loop is located outsize of the entry point. On desktop platforms an event loop is created outside AUI_ENTRY in order to unify the mobile and desktop behaviour. If there are no open windows, the event loop breaks causing the application to exit.</p>
+<p >Application arguments (int argc, char** argv) are forwarded to AUI_ENTRY as <code><a class="el" href="classAStringVector.html" title="An AVector with string-related functions.">AStringVector</a> args</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>On Android, iOS and macOS only the main thread is able to initialize graphics context. </dd></dl>
+
 </div>
 </div>
 <a id="gacba25f2657a42c1c6a786d5b537b6a7e" name="gacba25f2657a42c1c6a786d5b537b6a7e"></a>

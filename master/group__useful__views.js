@@ -29,13 +29,7 @@ var group__useful__views =
       [ "consumesClick", "classAGridSplitter.html#ad7c71f294a8283c3c396d09eb4228594", null ]
     ] ],
     [ "AHDividerView", "classAHDividerView.html", null ],
-    [ "ALabel", "classALabel.html", [
-      [ "consumesClick", "classALabel.html#a5b9e27af839e3ae5ca63948994cb6a56", null ],
-      [ "getContentMinimumHeight", "classALabel.html#aafda982e6f9d168795ee9919d4be8445", null ],
-      [ "getContentMinimumWidth", "classALabel.html#a5b523f1f66d4cdb249541ad3588ea1e1", null ],
-      [ "render", "classALabel.html#a8098f68638159f8a87b23fb5fa75e074", null ],
-      [ "toString", "classALabel.html#a5afbd7c46f1212002ac1c48729d4bc39", null ]
-    ] ],
+    [ "ALabel", "classALabel.html", null ],
     [ "AListView", "classAListView.html", [
       [ "getContentMinimumHeight", "classAListView.html#a550de62990e05741c064fdd0014f13a1", null ],
       [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ],
@@ -137,6 +131,8 @@ var group__useful__views =
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
       [ "render", "classAView.html#afb763553515ae0d443c7a1ebc4847f10", null ],
+      [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],
+      [ "setPadding", "classAView.html#af409baa975fcd918472e42462b1955b6", null ],
       [ "setSizeForced", "classAView.html#a0e6f503e884662b82c393eec7310cc3b", null ],
       [ "transformGestureEventsToDesktop", "classAView.html#a1b273cbe961c8633b17171b750762135", null ],
       [ "updateAssState", "classAView.html#aa7fa638bb2766abc0914d3268f98e9e5", null ],

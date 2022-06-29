@@ -46,8 +46,8 @@ var hierarchy =
     ] ],
     [ "ACutoffSignal", "classACutoffSignal.html", null ],
     [ "ADataBindingDefault< View, FieldType >", "structADataBindingDefault.html", null ],
+    [ "ADataBindingDefault< AAbstractLabel, AString >", "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html", null ],
     [ "ADataBindingDefault< ACheckBox, bool >", "structADataBindingDefault_3_01ACheckBox_00_01bool_01_4.html", null ],
-    [ "ADataBindingDefault< ALabel, AString >", "structADataBindingDefault_3_01ALabel_00_01AString_01_4.html", null ],
     [ "ADataBindingDefault< APathChooserView, APath >", "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html", null ],
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
     [ "aui::impl::ADataBindingDefaultNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
@@ -234,6 +234,17 @@ var hierarchy =
         [ "AThread", "classAThread.html", null ],
         [ "ATimer", "classATimer.html", null ],
         [ "AView", "classAView.html", [
+          [ "AAbstractLabel", "classAAbstractLabel.html", [
+            [ "AButton", "classAButton.html", [
+              [ "AComboBox", "classAComboBox.html", null ]
+            ] ],
+            [ "ALabel", "classALabel.html", [
+              [ "AListItem", "classAListItem.html", null ],
+              [ "APageSwitch", "classAPageSwitch.html", null ],
+              [ "ASelectableLabel", "classASelectableLabel.html", null ],
+              [ "ATabButtonView", "classATabButtonView.html", null ]
+            ] ]
+          ] ],
           [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
           [ "ACheckBoxInner", "classACheckBoxInner.html", null ],
           [ "ADividerView", "classADividerView.html", [
@@ -241,15 +252,6 @@ var hierarchy =
             [ "AVDividerView", "classAVDividerView.html", null ]
           ] ],
           [ "ADrawableView", "classADrawableView.html", null ],
-          [ "ALabel", "classALabel.html", [
-            [ "AButton", "classAButton.html", [
-              [ "AComboBox", "classAComboBox.html", null ]
-            ] ],
-            [ "AListItem", "classAListItem.html", null ],
-            [ "APageSwitch", "classAPageSwitch.html", null ],
-            [ "ASelectableLabel", "classASelectableLabel.html", null ],
-            [ "ATabButtonView", "classATabButtonView.html", null ]
-          ] ],
           [ "AProgressBar::Inner", "classAProgressBar_1_1Inner.html", null ],
           [ "ARadioButtonInner", "classARadioButtonInner.html", null ],
           [ "ARulerView", "classARulerView.html", null ],
@@ -513,8 +515,8 @@ var hierarchy =
     [ "ISqlDriverResult", "classISqlDriverResult.html", null ],
     [ "ISqlDriverRow", "classISqlDriverRow.html", null ],
     [ "IStringable", "classIStringable.html", [
-      [ "AAbstractTextField", "classAAbstractTextField.html", null ],
-      [ "ALabel", "classALabel.html", null ]
+      [ "AAbstractLabel", "classAAbstractLabel.html", null ],
+      [ "AAbstractTextField", "classAAbstractTextField.html", null ]
     ] ],
     [ "AModelRange< T >::Iterator", "classAModelRange_1_1Iterator.html", null ],
     [ "AModelSelection< T >::Iterator", "classAModelSelection_1_1Iterator.html", null ],

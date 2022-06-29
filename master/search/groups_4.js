@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['views_0',['Views',['../group__useful__views.html',1,'']]]
+  ['useful_20macros_0',['Useful macros',['../group__useful__macros.html',1,'']]]
 ];
