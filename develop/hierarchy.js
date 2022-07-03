@@ -544,6 +544,7 @@ var hierarchy =
     [ "aui::impl::parallel::LambdaCapturer< Container >", "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html", null ],
     [ "ass::LayoutSpacing", "structass_1_1LayoutSpacing.html", null ],
     [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
+    [ "aui::lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
     [ "uitest::impl::less_of< side >", "structuitest_1_1impl_1_1less__of.html", null ],
     [ "AnimationCurves::Linear", "classAnimationCurves_1_1Linear.html", null ],
     [ "ass::LineHeight", "structass_1_1LineHeight.html", null ],

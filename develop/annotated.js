@@ -164,6 +164,7 @@ var annotated =
       [ "joined_range", "structaui_1_1joined__range.html", "structaui_1_1joined__range" ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
+      [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
       [ "member", "structaui_1_1member.html", null ],
       [ "member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
       [ "no_escape", "structaui_1_1no__escape.html", null ],
