@@ -17,6 +17,7 @@ var NAVTREEINDEX4 =
 "md_docs_AUI_configure_flags.html":[1,2],
 "md_docs_Code_style_and_recommendations.html":[1,4],
 "md_docs_Getting_started_with_AUI.html":[1,0],
+"md_docs_Troubleshoot_list.html":[1,5],
 "md_docs_Writing_tests.html":[1,3],
 "md_docs_aui_app.html":[2,2,0],
 "md_docs_aui_executable.html":[2,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html":[0,0,5,1,26],
 "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html":[0,2,3,1,26],
 "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html":[0,0,5,1,27],
-"structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html":[0,2,3,1,27],
-"structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html":[0,2,3,1,28]
+"structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html":[0,2,3,1,27]
 };

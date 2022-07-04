@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html":[0,2,3,1,28],
 "structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html":[0,0,5,1,28],
 "structass_1_1decl_1_1Declaration_3_01TextShadow_01_4.html":[0,0,5,1,29],
 "structass_1_1decl_1_1Declaration_3_01TextShadow_01_4.html":[0,2,3,1,29],
