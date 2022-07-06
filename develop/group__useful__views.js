@@ -106,6 +106,7 @@ var group__useful__views =
       [ "consumesClick", "classAView.html#a2710b009c20a283c5ed12634ee6c3c8f", null ],
       [ "focus", "classAView.html#adf2e35644a76131fed2a0319bc28bcd2", null ],
       [ "getBorderRadius", "classAView.html#a56b5b208d3138683ae18dfe8d8edbdae", null ],
+      [ "getCenterPointInWindow", "classAView.html#abb924b63a9acdb4c837b4ee2e15cd986", null ],
       [ "getContentMinimumHeight", "classAView.html#a21c9fd89567b6841cac56cef63312e71", null ],
       [ "getContentMinimumWidth", "classAView.html#a71ecfca653416e23d3490746ff1c9fc8", null ],
       [ "getCursor", "classAView.html#a9421ddb66b17c1b36f0813bc9d16d919", null ],

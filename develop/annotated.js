@@ -598,7 +598,7 @@ var annotated =
     [ "State", "structState.html", null ],
     [ "TexturedShaderHelper", "structTexturedShaderHelper.html", null ],
     [ "UIClick", "classUIClick.html", null ],
-    [ "UIMatcher", "classUIMatcher.html", null ],
+    [ "UIMatcher", "classUIMatcher.html", "classUIMatcher" ],
     [ "UIScrollTest", "classUIScrollTest.html", "classUIScrollTest" ],
     [ "UITestRenderingContext", "classUITestRenderingContext.html", null ],
     [ "UITestWindowManager", "classUITestWindowManager.html", null ],
