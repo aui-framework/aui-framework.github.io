@@ -189,7 +189,12 @@ var hierarchy =
     [ "CharEntry", "structCharEntry.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
     [ "Autumn::construct< T >", "structAutumn_1_1construct.html", null ],
-    [ "aui::detail::container_helper< Layout >", "structaui_1_1detail_1_1container__helper.html", null ],
+    [ "aui::ui_building::container_helper< ContainerFactory >", "structaui_1_1ui__building_1_1container__helper.html", null ],
+    [ "aui::ui_building::container_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1container__helper.html", [
+      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+        [ "aui::ui_building::layouted_container_factory< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory_1_1Expanding.html", null ]
+      ] ]
+    ] ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
@@ -272,6 +277,7 @@ var hierarchy =
               ] ]
             ] ],
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
+            [ "AButtonEx", "classAButtonEx.html", null ],
             [ "ACheckBox", "classACheckBox.html", null ],
             [ "ADragArea", "classADragArea.html", null ],
             [ "ADragArea::ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ],
@@ -356,7 +362,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "ass::Expanding", "structass_1_1Expanding.html", null ],
-    [ "aui::detail::container_helper< Layout >::Expanding", "structaui_1_1detail_1_1container__helper_1_1Expanding.html", null ],
     [ "Factory< BaseType >", "classFactory.html", null ],
     [ "FailsOnCopy", "classFailsOnCopy.html", null ],
     [ "aui::fast_pimpl< T, storageSize, storageAlignment >", "structaui_1_1fast__pimpl.html", null ],
@@ -385,10 +390,10 @@ var hierarchy =
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
     [ "std::hash< AString >", "structstd_1_1hash_3_01AString_01_4.html", null ],
     [ "ass::IAssSubSelector", "classass_1_1IAssSubSelector.html", [
-      [ "ass::Button::Default", "structass_1_1Button_1_1Default.html", null ],
       [ "ass::DirectParentSubSelector< L, R >", "structass_1_1DirectParentSubSelector.html", null ],
       [ "ass::ParentSubSelector< L, R >", "structass_1_1ParentSubSelector.html", null ],
       [ "ass::Selected", "structass_1_1Selected.html", null ],
+      [ "ass::button::Default", "structass_1_1button_1_1Default.html", null ],
       [ "ass::detail::ClassOf", "structass_1_1detail_1_1ClassOf.html", [
         [ "ass::class_of", "structass_1_1class__of.html", null ]
       ] ],
@@ -804,6 +809,7 @@ var hierarchy =
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
+    [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ],
     [ "ViewActionClick", "structViewActionClick.html", [
       [ "ViewActionType", "structViewActionType.html", null ]
     ] ],
