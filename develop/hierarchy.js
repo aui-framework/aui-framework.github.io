@@ -602,6 +602,9 @@ var hierarchy =
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
       [ "Pipe", "classPipe.html", null ],
+      [ "RuleWithoutSelector", "structRuleWithoutSelector.html", [
+        [ "Rule", "structRule.html", null ]
+      ] ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ]
     ] ],
@@ -666,9 +669,6 @@ var hierarchy =
     [ "gl::ResourcePool< T >", "classgl_1_1ResourcePool.html", null ],
     [ "aui::reverse_iterator_wrap< T >", "structaui_1_1reverse__iterator__wrap.html", null ],
     [ "RoundedRect", "structRoundedRect.html", null ],
-    [ "RuleWithoutSelector", "structRuleWithoutSelector.html", [
-      [ "Rule", "structRule.html", null ]
-    ] ],
     [ "std::runtime_error", null, [
       [ "AXmlParseError", "classAXmlParseError.html", null ]
     ] ],

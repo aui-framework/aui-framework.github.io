@@ -521,8 +521,8 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a2e165a5ec3215923b01afe708ab55d8e">mCustomAssRule</a>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setCustomAss(<span class="keyword">const</span> <a class="code hl_struct" href="structRuleWithoutSelector.html">RuleWithoutSelector</a>&amp; rule) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a2e165a5ec3215923b01afe708ab55d8e">mCustomAssRule</a> = rule;</div>
+<div class="line">    <span class="keywordtype">void</span> setCustomAss(<a class="code hl_struct" href="structRuleWithoutSelector.html">RuleWithoutSelector</a> rule) {</div>
+<div class="line">        <a class="code hl_variable" href="classAView.html#a2e165a5ec3215923b01afe708ab55d8e">mCustomAssRule</a> = std::move(rule);</div>
 <div class="line">        mAssHelper = <span class="keyword">nullptr</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -577,8 +577,8 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        setEnabled(<span class="keyword">false</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a76" name="a76"></a><a class="code hl_function" href="classAView.html#a5008a9cb34d27a5a87f379da9583c092">operator+</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structRuleWithoutSelector.html">RuleWithoutSelector</a>&amp; rule) {</div>
-<div class="line">        setCustomAss(rule);</div>
+<div class="line">    <span class="keywordtype">void</span> <a id="a76" name="a76"></a><a class="code hl_function" href="classAView.html#a6f62c8da04a69c4cb3e32d4f576b274b">operator+</a>(<a class="code hl_struct" href="structRuleWithoutSelector.html">RuleWithoutSelector</a> rule) {</div>
+<div class="line">        setCustomAss(std::move(rule));</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">signals:</div>
@@ -648,7 +648,6 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="ttc" id="aclassAView_html_a3f2e024a5acecec85af1aedaa67066e5"><div class="ttname"><a href="classAView.html#a3f2e024a5acecec85af1aedaa67066e5">AView::getTotalFieldHorizontal</a></div><div class="ttdeci">float getTotalFieldHorizontal() const</div><div class="ttdef"><b>Definition:</b> AView.cpp:201</div></div>
 <div class="ttc" id="aclassAView_html_a40d1a378258fac515816c3c1a9028473"><div class="ttname"><a href="classAView.html#a40d1a378258fac515816c3c1a9028473">AView::mPosition</a></div><div class="ttdeci">glm::ivec2 mPosition</div><div class="ttdoc">Top left corner's position relative to top left corner's position of the parent AView.</div><div class="ttdef"><b>Definition:</b> AView.h:149</div></div>
 <div class="ttc" id="aclassAView_html_a448c7992afd25631e42da434c2f9796d"><div class="ttname"><a href="classAView.html#a448c7992afd25631e42da434c2f9796d">AView::mCursor</a></div><div class="ttdeci">ACursor mCursor</div><div class="ttdoc">Determines shape which should pointer take when it's above this AView.</div><div class="ttdef"><b>Definition:</b> AView.h:144</div></div>
-<div class="ttc" id="aclassAView_html_a5008a9cb34d27a5a87f379da9583c092"><div class="ttname"><a href="classAView.html#a5008a9cb34d27a5a87f379da9583c092">AView::operator+</a></div><div class="ttdeci">void operator+(const RuleWithoutSelector &amp;rule)</div><div class="ttdef"><b>Definition:</b> AView.h:712</div></div>
 <div class="ttc" id="aclassAView_html_a5122d5846227520294bda27e6b45ea4a"><div class="ttname"><a href="classAView.html#a5122d5846227520294bda27e6b45ea4a">AView::mExpanding</a></div><div class="ttdeci">glm::ivec2 mExpanding</div><div class="ttdoc">Expansion coefficient. Hints layout manager how much this AView should be extended relative to other ...</div><div class="ttdef"><b>Definition:</b> AView.h:160</div></div>
 <div class="ttc" id="aclassAView_html_a521f58942c69ff63566ada3e3d774f32"><div class="ttname"><a href="classAView.html#a521f58942c69ff63566ada3e3d774f32">AView::getTotalOccupiedWidth</a></div><div class="ttdeci">float getTotalOccupiedWidth() const</div><div class="ttdef"><b>Definition:</b> AView.h:324</div></div>
 <div class="ttc" id="aclassAView_html_a546a17cc5d955dfa75928d48337c65a7"><div class="ttname"><a href="classAView.html#a546a17cc5d955dfa75928d48337c65a7">AView::getMinSize</a></div><div class="ttdeci">const glm::ivec2 &amp; getMinSize() const</div><div class="ttdef"><b>Definition:</b> AView.h:281</div></div>
@@ -660,6 +659,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="ttc" id="aclassAView_html_a646fbebc295c3a2d36ba3fad6cf80a71"><div class="ttname"><a href="classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71">AView::pack</a></div><div class="ttdeci">void pack()</div><div class="ttdoc">Sets minimal size.</div><div class="ttdef"><b>Definition:</b> AView.cpp:249</div></div>
 <div class="ttc" id="aclassAView_html_a65a8d1574db7e833c6481aecfbf9cadb"><div class="ttname"><a href="classAView.html#a65a8d1574db7e833c6481aecfbf9cadb">AView::mMaxSize</a></div><div class="ttdeci">glm::ivec2 mMaxSize</div><div class="ttdoc">Maximal size.</div><div class="ttdef"><b>Definition:</b> AView.h:170</div></div>
 <div class="ttc" id="aclassAView_html_a6af1dde86c744d781a729568c7a595a2"><div class="ttname"><a href="classAView.html#a6af1dde86c744d781a729568c7a595a2">AView::getParent</a></div><div class="ttdeci">AViewContainer * getParent() const</div><div class="ttdoc">Parent AView.</div><div class="ttdef"><b>Definition:</b> AView.h:398</div></div>
+<div class="ttc" id="aclassAView_html_a6f62c8da04a69c4cb3e32d4f576b274b"><div class="ttname"><a href="classAView.html#a6f62c8da04a69c4cb3e32d4f576b274b">AView::operator+</a></div><div class="ttdeci">void operator+(RuleWithoutSelector rule)</div><div class="ttdoc">Helper function for kAUI.h:with_style.</div><div class="ttdef"><b>Definition:</b> AView.h:712</div></div>
 <div class="ttc" id="aclassAView_html_a83eb2cea2f2ca2d86351fc34f7ffdf33"><div class="ttname"><a href="classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33">AView::addAssName</a></div><div class="ttdeci">void addAssName(const AString &amp;assName)</div><div class="ttdoc">Adds an ASS class to this AView.</div><div class="ttdef"><b>Definition:</b> AView.cpp:259</div></div>
 <div class="ttc" id="aclassAView_html_a9421ddb66b17c1b36f0813bc9d16d919"><div class="ttname"><a href="classAView.html#a9421ddb66b17c1b36f0813bc9d16d919">AView::getCursor</a></div><div class="ttdeci">ACursor getCursor() const</div><div class="ttdoc">Determines shape which should pointer take when it's above this AView.</div><div class="ttdef"><b>Definition:</b> AView.h:406</div></div>
 <div class="ttc" id="aclassAView_html_a94e793bd34bdbd3b47a5bd5660747e18"><div class="ttname"><a href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">AView::mPadding</a></div><div class="ttdeci">ABoxFields mPadding</div><div class="ttdoc">Padding, which defines the spacing around content area inside the view. Processed by AView implementa...</div><div class="ttdef"><b>Definition:</b> AView.h:185</div></div>
