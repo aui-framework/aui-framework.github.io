@@ -67,8 +67,8 @@ var NAVTREEINDEX =
 "classAListViewContainer.html#a8fdab774e73fa90e2a490abf80225c1d",
 "classATreeView_1_1ContainerView.html",
 "classOpenGLRenderer.html#a504179fb0d78b3ea69eda47129e3e886",
-"group__views.html#ga6cfde77b0c6e1bcd1b601d598c152e34",
-"structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html"
+"group__views.html#ga2df3ac3578c22f7d1b4efc6079a13db3",
+"structass_1_1decl_1_1Declaration_3_01Overflow_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

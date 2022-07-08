@@ -674,6 +674,7 @@ var hierarchy =
     ] ],
     [ "_< T >::SafeCallWrapper", "class___1_1SafeCallWrapper.html", null ],
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
+    [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
     [ "aui::sequence_traits< T >", "structaui_1_1sequence__traits.html", null ],
@@ -721,6 +722,7 @@ var hierarchy =
       [ "SignalSlot", "classSignalSlot.html", null ],
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
+        [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
         [ "UITextField", "classUITextField.html", null ],
         [ "UIType", "classUIType.html", null ]
@@ -816,6 +818,7 @@ var hierarchy =
     [ "ViewActionDoubleClick", "structViewActionDoubleClick.html", null ],
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
+    [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
     [ "ViewAssertionGone", "structViewAssertionGone.html", null ],
     [ "ViewAssertionNotVisible", "structViewAssertionNotVisible.html", null ],
