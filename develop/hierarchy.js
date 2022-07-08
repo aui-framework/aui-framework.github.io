@@ -189,12 +189,6 @@ var hierarchy =
     [ "CharEntry", "structCharEntry.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
     [ "Autumn::construct< T >", "structAutumn_1_1construct.html", null ],
-    [ "aui::ui_building::container_helper< ContainerFactory >", "structaui_1_1ui__building_1_1container__helper.html", null ],
-    [ "aui::ui_building::container_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1container__helper.html", [
-      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
-        [ "aui::ui_building::layouted_container_factory< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory_1_1Expanding.html", null ]
-      ] ]
-    ] ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
@@ -810,6 +804,12 @@ var hierarchy =
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
     [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ],
+    [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", null ],
+    [ "aui::ui_building::view_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1view__helper.html", [
+      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+        [ "aui::ui_building::layouted_container_factory< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory_1_1Expanding.html", null ]
+      ] ]
+    ] ],
     [ "ViewActionClick", "structViewActionClick.html", [
       [ "ViewActionType", "structViewActionType.html", null ]
     ] ],
