@@ -142,7 +142,8 @@ var annotated =
         [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ]
       ] ],
       [ "ui_building", null, [
-        [ "layouted_container_factory", "structaui_1_1ui__building_1_1layouted__container__factory.html", "structaui_1_1ui__building_1_1layouted__container__factory" ],
+        [ "layouted_container_factory", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
+        [ "layouted_container_factory_impl", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", "structaui_1_1ui__building_1_1layouted__container__factory__impl" ],
         [ "view", "structaui_1_1ui__building_1_1view.html", null ],
         [ "view_helper", "structaui_1_1ui__building_1_1view__helper.html", null ]
       ] ],

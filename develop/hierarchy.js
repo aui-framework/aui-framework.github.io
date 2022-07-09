@@ -541,6 +541,13 @@ var hierarchy =
       [ "uitest::impl::both< L, R >", "structuitest_1_1impl_1_1both.html", null ]
     ] ],
     [ "aui::impl::parallel::LambdaCapturer< Container >", "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html", null ],
+    [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", null ],
+    [ "aui::ui_building::layouted_container_factory_impl< Layout, AViewContainer >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
+      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+    ] ],
+    [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
+      [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
+    ] ],
     [ "ass::LayoutSpacing", "structass_1_1LayoutSpacing.html", null ],
     [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
     [ "aui::lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
@@ -602,9 +609,6 @@ var hierarchy =
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
       [ "Pipe", "classPipe.html", null ],
-      [ "RuleWithoutSelector", "structRuleWithoutSelector.html", [
-        [ "Rule", "structRule.html", null ]
-      ] ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ]
     ] ],
@@ -669,6 +673,9 @@ var hierarchy =
     [ "gl::ResourcePool< T >", "classgl_1_1ResourcePool.html", null ],
     [ "aui::reverse_iterator_wrap< T >", "structaui_1_1reverse__iterator__wrap.html", null ],
     [ "RoundedRect", "structRoundedRect.html", null ],
+    [ "RuleWithoutSelector", "structRuleWithoutSelector.html", [
+      [ "Rule", "structRule.html", null ]
+    ] ],
     [ "std::runtime_error", null, [
       [ "AXmlParseError", "classAXmlParseError.html", null ]
     ] ],
@@ -807,10 +814,11 @@ var hierarchy =
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
     [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ],
     [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", null ],
+    [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
+      [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
+    ] ],
     [ "aui::ui_building::view_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1view__helper.html", [
-      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
-        [ "aui::ui_building::layouted_container_factory< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory_1_1Expanding.html", null ]
-      ] ]
+      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
     ] ],
     [ "ViewActionClick", "structViewActionClick.html", [
       [ "ViewActionType", "structViewActionType.html", null ]
