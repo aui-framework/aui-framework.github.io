@@ -112,6 +112,9 @@ var namespaces =
           [ "type_length< char * >", "structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html", null ],
           [ "type_length< std::string >", "structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html", null ],
           [ "type_length< wchar_t * >", "structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html", null ]
+        ] ],
+        [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", [
+          [ "with_args", "structaui_1_1detail_1_1pointer__to__member_1_1with__args.html", null ]
         ] ]
       ] ],
       [ "impl", null, [
@@ -176,6 +179,7 @@ var namespaces =
       [ "lazy", "structaui_1_1lazy.html", null ],
       [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
       [ "member", "structaui_1_1member.html", null ],
+      [ "member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
       [ "member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
       [ "no_escape", "structaui_1_1no__escape.html", null ],
       [ "non_null", "structaui_1_1non__null.html", null ],
@@ -193,6 +197,7 @@ var namespaces =
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
+      [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]
@@ -205,6 +210,9 @@ var namespaces =
       [ "ATest", "structAzazaATest_1_1ATest.html", null ]
     ] ],
     [ "By", "namespaceBy.html", null ],
+    [ "declarative", null, [
+      [ "Button", "structdeclarative_1_1Button.html", null ]
+    ] ],
     [ "gl", null, [
       [ "detail", null, [
         [ "VboImpl", "classgl_1_1detail_1_1VboImpl.html", null ]

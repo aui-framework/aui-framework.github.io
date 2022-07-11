@@ -14,13 +14,14 @@ var searchData=
   ['winioasync_11',['WinIoAsync',['../classWinIoAsync.html',1,'']]],
   ['winiocompletionport_12',['WinIoCompletionPort',['../classWinIoCompletionPort.html',1,'']]],
   ['winiothread_13',['WinIoThread',['../classWinIoThread.html',1,'']]],
-  ['with_5fstyle_14',['with_style',['../group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c',1,'kAUI.h']]],
-  ['witherrorcallback_15',['withErrorCallback',['../classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b',1,'ACurl::Builder']]],
-  ['withranges_16',['withRanges',['../classACurl_1_1Builder.html#a90b64fd21369dd52ce7c80275d383946',1,'ACurl::Builder']]],
-  ['workingdir_17',['workingDir',['../classAPath.html#acbab419c42de05805a235465d2d34f20',1,'APath']]],
-  ['wrappercontainer_18',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
-  ['wrapviewtowindow_19',['wrapViewToWindow',['../classAWindow.html#abdd54036e99753f3c55726bf2232a90e',1,'AWindow']]],
-  ['write_20',['write',['../classAByteBuffer.html#a792971058a98e6c3b0b02de5369ea8e3',1,'AByteBuffer::write()'],['../classAUdpSocket.html#ae5aa39aacf566e551a6c10bfd87a04e1',1,'AUdpSocket::write()'],['../classATcpSocket.html#a12c9f8ebd57f0189bd2bda6103d1718e',1,'ATcpSocket::write()'],['../classPipeOutputStream.html#a9a4834908d84520e7b9eb8a28848ea43',1,'PipeOutputStream::write()'],['../classIOutputStream.html#a93b76426e175a9eb9b28151b0ec7086e',1,'IOutputStream::write(const T &amp;t)'],['../classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72',1,'IOutputStream::write(const char *src, size_t size)=0'],['../classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b',1,'AStringStream::write()'],['../classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279',1,'APipe::write()'],['../classAFileOutputStream.html#abd4ca9831b7176689a9bbe7cf10f62b4',1,'AFileOutputStream::write()'],['../classAByteBuffer.html#ac2a3dab90d185a33804a0b855d732f07',1,'AByteBuffer::write()']]],
-  ['writeexception_21',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]],
-  ['writing_20tests_22',['Writing tests',['../md_docs_Writing_tests.html',1,'']]]
+  ['with_5fargs_14',['with_args',['../structaui_1_1detail_1_1pointer__to__member_1_1with__args.html',1,'aui::detail::pointer_to_member']]],
+  ['with_5fstyle_15',['with_style',['../group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c',1,'kAUI.h']]],
+  ['witherrorcallback_16',['withErrorCallback',['../classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b',1,'ACurl::Builder']]],
+  ['withranges_17',['withRanges',['../classACurl_1_1Builder.html#a90b64fd21369dd52ce7c80275d383946',1,'ACurl::Builder']]],
+  ['workingdir_18',['workingDir',['../classAPath.html#acbab419c42de05805a235465d2d34f20',1,'APath']]],
+  ['wrappercontainer_19',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
+  ['wrapviewtowindow_20',['wrapViewToWindow',['../classAWindow.html#abdd54036e99753f3c55726bf2232a90e',1,'AWindow']]],
+  ['write_21',['write',['../classAByteBuffer.html#a792971058a98e6c3b0b02de5369ea8e3',1,'AByteBuffer::write(const char *src, size_t size) override'],['../classAByteBuffer.html#ac2a3dab90d185a33804a0b855d732f07',1,'AByteBuffer::write(IInputStream &amp;stream, size_t size)'],['../classAFileOutputStream.html#abd4ca9831b7176689a9bbe7cf10f62b4',1,'AFileOutputStream::write()'],['../classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279',1,'APipe::write()'],['../classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b',1,'AStringStream::write()'],['../classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72',1,'IOutputStream::write(const char *src, size_t size)=0'],['../classIOutputStream.html#a93b76426e175a9eb9b28151b0ec7086e',1,'IOutputStream::write(const T &amp;t)'],['../classPipeOutputStream.html#a9a4834908d84520e7b9eb8a28848ea43',1,'PipeOutputStream::write()'],['../classATcpSocket.html#a12c9f8ebd57f0189bd2bda6103d1718e',1,'ATcpSocket::write()'],['../classAUdpSocket.html#ae5aa39aacf566e551a6c10bfd87a04e1',1,'AUdpSocket::write()']]],
+  ['writeexception_22',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]],
+  ['writing_20tests_23',['Writing tests',['../md_docs_Writing_tests.html',1,'']]]
 ];

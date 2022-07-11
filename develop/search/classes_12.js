@@ -29,5 +29,6 @@ var searchData=
   ['type_5flength_3c_20char_20_2a_20_3e_26',['type_length&lt; char * &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html',1,'aui::detail::format']]],
   ['type_5flength_3c_20std_3a_3astring_20_3e_27',['type_length&lt; std::string &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html',1,'aui::detail::format']]],
   ['type_5flength_3c_20wchar_5ft_20_2a_20_3e_28',['type_length&lt; wchar_t * &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html',1,'aui::detail::format']]],
-  ['type_5fof_29',['type_of',['../structass_1_1type__of.html',1,'ass']]]
+  ['type_5flist_29',['type_list',['../structaui_1_1type__list.html',1,'aui']]],
+  ['type_5fof_30',['type_of',['../structass_1_1type__of.html',1,'ass']]]
 ];

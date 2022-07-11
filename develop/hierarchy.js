@@ -541,7 +541,11 @@ var hierarchy =
       [ "uitest::impl::both< L, R >", "structuitest_1_1impl_1_1both.html", null ]
     ] ],
     [ "aui::impl::parallel::LambdaCapturer< Container >", "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html", null ],
-    [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", null ],
+    [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
+      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+        [ "declarative::Button", "structdeclarative_1_1Button.html", null ]
+      ] ]
+    ] ],
     [ "aui::ui_building::layouted_container_factory_impl< Layout, AViewContainer >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
       [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
     ] ],
@@ -563,6 +567,7 @@ var hierarchy =
     [ "ass::Margin", "structass_1_1Margin.html", null ],
     [ "ass::MaxSize", "structass_1_1MaxSize.html", null ],
     [ "aui::member< Type >", "structaui_1_1member.html", null ],
+    [ "aui::member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "MenuItem", "structMenuItem.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
@@ -640,6 +645,7 @@ var hierarchy =
     [ "aui::parameter_pack", "structaui_1_1parameter__pack.html", null ],
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
+    [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
     [ "aui::ptr", "structaui_1_1ptr.html", null ],
     [ "RenderHints::PushColor", "classRenderHints_1_1PushColor.html", [
       [ "RenderHints::PushState", "classRenderHints_1_1PushState.html", null ]
@@ -764,6 +770,7 @@ var hierarchy =
     [ "aui::detail::format::type_length< char * >", "structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html", null ],
     [ "aui::detail::format::type_length< std::string >", "structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html", null ],
     [ "aui::detail::format::type_length< wchar_t * >", "structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html", null ],
+    [ "aui::type_list< Types >", "structaui_1_1type__list.html", null ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],
@@ -813,7 +820,9 @@ var hierarchy =
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
     [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ],
-    [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", null ],
+    [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", [
+      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+    ] ],
     [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
     ] ],
@@ -843,6 +852,7 @@ var hierarchy =
     [ "WinEventHandle", "classWinEventHandle.html", null ],
     [ "WinIoAsync", "classWinIoAsync.html", null ],
     [ "WinIoThread", "classWinIoThread.html", null ],
+    [ "aui::detail::pointer_to_member< ForcedClazz, Type >::with_args< Args >", "structaui_1_1detail_1_1pointer__to__member_1_1with__args.html", null ],
     [ "std::wstring", null, [
       [ "AString", "classAString.html", [
         [ "APath", "classAPath.html", null ]
