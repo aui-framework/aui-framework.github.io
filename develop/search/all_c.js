@@ -18,7 +18,7 @@ var searchData=
   ['maximized_15',['maximized',['../classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177',1,'AWindow']]],
   ['maxsize_16',['MaxSize',['../structass_1_1MaxSize.html',1,'ass']]],
   ['mcursor_17',['mCursor',['../classAView.html#a448c7992afd25631e42da434c2f9796d',1,'AView']]],
-  ['mcustomassrule_18',['mCustomAssRule',['../classAView.html#a2e165a5ec3215923b01afe708ab55d8e',1,'AView']]],
+  ['mcustomstylerule_18',['mCustomStyleRule',['../classAView.html#aaea3fc721d08603a1a3cbc9c11729142',1,'AView']]],
   ['me_19',['me',['../group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b',1,'kAUI.h']]],
   ['member_20',['member',['../structaui_1_1member.html',1,'aui']]],
   ['member_3c_20type_28clazz_3a_3a_2a_29_28args_2e_2e_2e_29_3e_21',['member&lt; Type(Clazz::*)(Args...)&gt;',['../structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html',1,'aui']]],

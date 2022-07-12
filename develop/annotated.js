@@ -180,7 +180,6 @@ var annotated =
       [ "non_null", "structaui_1_1non__null.html", null ],
       [ "non_null_lateinit", "structaui_1_1non__null__lateinit.html", null ],
       [ "noncopyable", "structaui_1_1noncopyable.html", null ],
-      [ "parameter_pack", "structaui_1_1parameter__pack.html", null ],
       [ "ptr", "structaui_1_1ptr.html", null ],
       [ "range", "structaui_1_1range.html", null ],
       [ "raw_serializable", "structaui_1_1raw__serializable.html", null ],

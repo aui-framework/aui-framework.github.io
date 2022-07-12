@@ -642,7 +642,6 @@ var hierarchy =
       [ "uitest::impl::not$< P >", "structuitest_1_1impl_1_1not_0b.html", null ]
     ] ],
     [ "ass::Padding", "structass_1_1Padding.html", null ],
-    [ "aui::parameter_pack", "structaui_1_1parameter__pack.html", null ],
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],

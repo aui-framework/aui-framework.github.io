@@ -140,6 +140,7 @@ var namespaces =
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
         [ "first", "structaui_1_1impl_1_1first.html", null ]
       ] ],
+      [ "parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
       [ "promise", null, [
         [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
       ] ],
@@ -185,7 +186,6 @@ var namespaces =
       [ "non_null", "structaui_1_1non__null.html", null ],
       [ "non_null_lateinit", "structaui_1_1non__null__lateinit.html", null ],
       [ "noncopyable", "structaui_1_1noncopyable.html", null ],
-      [ "parameter_pack", "structaui_1_1parameter__pack.html", null ],
       [ "ptr", "structaui_1_1ptr.html", null ],
       [ "range", "structaui_1_1range.html", null ],
       [ "raw_serializable", "structaui_1_1raw__serializable.html", null ],

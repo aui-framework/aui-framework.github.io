@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AUI Framework: aui::parameter_pack Struct Reference</title>
+<title>AUI Framework: aui::parameter_pack Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('structaui_1_1parameter__pack.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('namespaceaui_1_1parameter__pack.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,31 +90,47 @@ $(document).ready(function(){initNavTree('structaui_1_1parameter__pack.html','')
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="structaui_1_1parameter__pack-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">aui::parameter_pack Struct Reference</div></div>
+<a href="#typedef-members">Typedefs</a>  </div>
+  <div class="headertitle"><div class="title">aui::parameter_pack Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Provides an easy way to iterate over a parameter pack.  
+<a href="namespaceaui_1_1parameter__pack.html#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a7f1e1f0451c19dae9c08d80cf5f4ef03"><td class="memTemplParams" colspan="2"><a id="a7f1e1f0451c19dae9c08d80cf5f4ef03" name="a7f1e1f0451c19dae9c08d80cf5f4ef03"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ae722120900e4db88da73966caf3eaa52"><td class="memTemplParams" colspan="2"><a id="ae722120900e4db88da73966caf3eaa52" name="ae722120900e4db88da73966caf3eaa52"></a>
 template&lt;typename... Types&gt; </td></tr>
-<tr class="memitem:a7f1e1f0451c19dae9c08d80cf5f4ef03"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>first</b> = typename <a class="el" href="structaui_1_1impl_1_1first.html">impl::first</a>&lt; Types... &gt;::<a class="el" href="structViewActionType.html">type</a></td></tr>
-<tr class="separator:a7f1e1f0451c19dae9c08d80cf5f4ef03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4ea892532e0558ca058bfb69f4ad5e7d"><td class="memTemplParams" colspan="2"><a id="a4ea892532e0558ca058bfb69f4ad5e7d" name="a4ea892532e0558ca058bfb69f4ad5e7d"></a>
-template&lt;typename Callable , typename... Args&gt; </td></tr>
-<tr class="memitem:a4ea892532e0558ca058bfb69f4ad5e7d"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>for_each</b> (Callable c, Args &amp;&amp;... args)</td></tr>
-<tr class="separator:a4ea892532e0558ca058bfb69f4ad5e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae722120900e4db88da73966caf3eaa52"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>first</b> = typename <a class="el" href="structaui_1_1impl_1_1first.html">impl::first</a>&lt; Types... &gt;::<a class="el" href="structViewActionType.html">type</a></td></tr>
+<tr class="separator:ae722120900e4db88da73966caf3eaa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>aui.core/src/AUI/Traits/<a class="el" href="parameter__pack_8h_source.html">parameter_pack.h</a></li>
-</ul>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Provides an easy way to iterate over a parameter pack. </p>
+<table class="doxtable">
+<tr>
+<td>without </td><td>with  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Arg, <span class="keyword">typename</span>... Args&gt; <span class="keywordtype">void</span> helperFunc(Arg&amp;&amp; arg, Args&amp;&amp;... args) {</div>
+<div class="line">   <span class="comment">// do something with arg</span></div>
+<div class="line">   std::cout &lt;&lt; std::forward&lt;Arg&gt;(arg) &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">   <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>...(args) &gt; 0) {</div>
+<div class="line">       helperFunc(std::forward&lt;Args&gt;(args)...); <span class="comment">// continue iteration</span></div>
+<div class="line">   }</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt; <span class="keywordtype">void</span> yourFunc(Args&amp;&amp;... args) {</div>
+<div class="line">    helperFunc(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line">}</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt; <span class="keywordtype">void</span> yourFunc(Args&amp;&amp;... args) {</div>
+<div class="line">    aui::parameter_pack::for_each([](<span class="keyword">auto</span>&amp;&amp; i) {</div>
+<div class="line">        <span class="comment">// do something with arg</span></div>
+<div class="line">        std::cout &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line">    }, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line">}</div>
+</div><!-- fragment -->   </td></tr>
+</table>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->

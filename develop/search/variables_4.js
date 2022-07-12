@@ -4,7 +4,7 @@ var searchData=
   ['massnames_1',['mAssNames',['../classAView.html#a0606dba2cdd6c1974f501952518af658',1,'AView']]],
   ['maximized_2',['maximized',['../classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177',1,'AWindow']]],
   ['mcursor_3',['mCursor',['../classAView.html#a448c7992afd25631e42da434c2f9796d',1,'AView']]],
-  ['mcustomassrule_4',['mCustomAssRule',['../classAView.html#a2e165a5ec3215923b01afe708ab55d8e',1,'AView']]],
+  ['mcustomstylerule_4',['mCustomStyleRule',['../classAView.html#aaea3fc721d08603a1a3cbc9c11729142',1,'AView']]],
   ['mexpanding_5',['mExpanding',['../classAView.html#a5122d5846227520294bda27e6b45ea4a',1,'AView']]],
   ['mfixedsize_6',['mFixedSize',['../classAView.html#a5d5732f8af15828f75729ba5bde0d4c9',1,'AView']]],
   ['mid_7',['mId',['../classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea',1,'AAbstractThread']]],
