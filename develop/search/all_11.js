@@ -46,13 +46,14 @@ var searchData=
   ['resourcepool_43',['ResourcePool',['../classgl_1_1ResourcePool.html',1,'gl']]],
   ['restore_44',['restore',['../classAWindow.html#a633a616c5964b3fd3805363375442753',1,'AWindow']]],
   ['restored_45',['restored',['../classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac',1,'AWindow']]],
-  ['reverse_5fiterator_5fwrap_46',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
-  ['reversebyte_47',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
-  ['rotate_48',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
-  ['roundedrect_49',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
-  ['roundedrect_50',['RoundedRect',['../structRoundedRect.html',1,'']]],
-  ['roundedrectantialiased_51',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
-  ['rule_52',['Rule',['../structRule.html',1,'']]],
-  ['rulewithoutselector_53',['RuleWithoutSelector',['../structRuleWithoutSelector.html',1,'']]],
-  ['run_54',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
+  ['reverse_5fiterator_5fdirection_46',['reverse_iterator_direction',['../group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84',1,'aui']]],
+  ['reverse_5fiterator_5fwrap_47',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
+  ['reversebyte_48',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
+  ['rotate_49',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
+  ['roundedrect_50',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
+  ['roundedrect_51',['RoundedRect',['../structRoundedRect.html',1,'']]],
+  ['roundedrectantialiased_52',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
+  ['rule_53',['Rule',['../structRule.html',1,'']]],
+  ['rulewithoutselector_54',['RuleWithoutSelector',['../structRuleWithoutSelector.html',1,'']]],
+  ['run_55',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
 ];

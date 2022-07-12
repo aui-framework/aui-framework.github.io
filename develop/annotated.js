@@ -169,7 +169,6 @@ var annotated =
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
-      [ "joined_range", "structaui_1_1joined__range.html", "structaui_1_1joined__range" ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
       [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],

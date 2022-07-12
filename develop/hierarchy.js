@@ -533,7 +533,6 @@ var hierarchy =
       [ "IXmlDocumentVisitor", "classIXmlDocumentVisitor.html", null ]
     ] ],
     [ "IXmlHeaderVisitor", "classIXmlHeaderVisitor.html", null ],
-    [ "aui::joined_range< Items >", "structaui_1_1joined__range.html", null ],
     [ "aui::impl::JsonVariant", null, [
       [ "AJson", "classAJson.html", null ]
     ] ],
@@ -576,7 +575,6 @@ var hierarchy =
     [ "std::mutex", null, [
       [ "AMutex", "classAMutex.html", null ]
     ] ],
-    [ "aui::joined_range< Items >::my_iterator", "structaui_1_1joined__range_1_1my__iterator.html", null ],
     [ "MyStruct", "structMyStruct.html", null ],
     [ "aui::promise::no_copy< T >", "classaui_1_1promise_1_1no__copy.html", null ],
     [ "aui::no_escape< T >", "structaui_1_1no__escape.html", null ],

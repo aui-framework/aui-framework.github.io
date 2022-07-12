@@ -67,8 +67,8 @@ var NAVTREEINDEX =
 "classAListViewContainer.html#a8fdab774e73fa90e2a490abf80225c1d",
 "classATreeView_1_1ContainerView.html",
 "classOpenGLRenderer.html",
-"group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e",
-"structass_1_1decl_1_1Declaration_3_01MinSize_01_4.html",
+"group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b",
+"structass_1_1decl_1_1Declaration_3_01MaxSize_01_4.html",
 ""
 ];
 

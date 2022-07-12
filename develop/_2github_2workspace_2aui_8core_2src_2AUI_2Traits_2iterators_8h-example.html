@@ -171,77 +171,11 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>...Items&gt;</div>
-<div class="line">    <span class="keyword">struct </span>joined_range {</div>
-<div class="line">    <span class="keyword">private</span>:</div>
-<div class="line">        std::tuple&lt;Items*...&gt; mItems;</div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="line">    <span class="keyword">using</span> const_iterator_if_const = std::conditional_t&lt;std::is_const_v&lt;Container&gt;,</div>
+<div class="line">                                                       <span class="keyword">typename</span> Container::const_iterator,</div>
+<div class="line">                                                       <span class="keyword">typename</span> Container::iterator&gt;;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        joined_range(<span class="keyword">const</span> std::tuple&lt;Items*...&gt;&amp; items) : mItems(items) {}</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        <span class="keyword">using</span> joined_range_t = joined_range&lt;Items...&gt;;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">struct </span>my_iterator {</div>
-<div class="line">        <span class="keyword">friend</span> joined_range_t;</div>
-<div class="line">        <span class="keyword">private</span>:</div>
-<div class="line">            joined_range_t&amp; mJoinedRange;</div>
-<div class="line">            std::variant&lt;<span class="keyword">typename</span> Items::iterator...&gt; mIterator;</div>
-<div class="line">            std::size_t mIndex = 0;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">public</span>:</div>
-<div class="line">            my_iterator(joined_range_t&amp; mJoinedRange) :</div>
-<div class="line">                mJoinedRange(mJoinedRange),</div>
-<div class="line">                mIterator(std::get&lt;0&gt;(mJoinedRange.mItems)-&gt;begin()),</div>
-<div class="line">                mIndex(0)</div>
-<div class="line">                {}</div>
-<div class="line"> </div>
-<div class="line">            my_iterator&amp; operator++()</div>
-<div class="line">            {</div>
-<div class="line">                std::visit([](<span class="keyword">auto</span>&amp;&amp; arg){</div>
-<div class="line">                    ++arg;</div>
-<div class="line">                }, mIterator);</div>
-<div class="line">                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> my_iterator&amp; other)<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">            </span>{</div>
-<div class="line">                <span class="keywordflow">return</span> mIterator != other.mIterator;</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> my_iterator&amp; other)<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">            </span>{</div>
-<div class="line">                <span class="keywordflow">return</span> mIterator == other.mIterator;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keyword">auto</span> operator-&gt;()</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">return</span> std::visit([](<span class="keyword">auto</span>&amp;&amp; arg){</div>
-<div class="line">                    <span class="keywordflow">return</span> &amp;*arg;</div>
-<div class="line">                }, mIterator);</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keyword">auto</span> operator*()</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keyword">auto</span> operator*()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">            </span>{</div>
-<div class="line">                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line">            }</div>
-<div class="line">        };</div>
-<div class="line"> </div>
-<div class="line">        my_iterator begin() {</div>
-<div class="line">            <span class="keywordflow">return</span> my_iterator{*<span class="keyword">this</span> };</div>
-<div class="line">        }</div>
-<div class="line">        my_iterator end() {</div>
-<div class="line">            <span class="keywordflow">return</span> my_iterator{*<span class="keyword">this</span> };</div>
-<div class="line">        }</div>
-<div class="line">    };</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Items&gt;</div>
-<div class="line">    joined_range&lt;Items...&gt; join(Items... items) {</div>
-<div class="line">        <span class="keywordflow">return</span> { (&amp;items)... };</div>
-<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Containers&gt;</div>
 <div class="line">    <span class="keyword">struct </span>zip {</div>
@@ -259,9 +193,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line"> </div>
 <div class="line">            iterator&amp; operator++() <span class="keyword">noexcept</span> {</div>
 <div class="line">                std::apply([](<span class="keyword">auto</span>&amp;&amp;... v) {</div>
-<div class="line">                    aui::parameter_pack::for_each([](<span class="keyword">auto</span>&amp; i) {</div>
-<div class="line">                        ++i;</div>
-<div class="line">                    }, v...);</div>
+<div class="line">                    (++v, ...);</div>
 <div class="line">                }, iterators_);</div>
 <div class="line">                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line">            }</div>
@@ -302,7 +234,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line">    <span class="keyword">auto</span> reverse_iterator_direction(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
+<div class="line">    <span class="keyword">auto</span> <a id="a0" name="a0"></a><a class="code hl_function" href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">reverse_iterator_direction</a>(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
 <div class="line">        std::enable_if_t&lt;!impl::is_forward_iterator&lt;Iterator&gt;,</div>
 <div class="line">                         <span class="keyword">decltype</span>((iterator + 1).base())</div>
 <div class="line">                         &gt; {</div>
@@ -310,7 +242,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line">    <span class="keyword">auto</span> reverse_iterator_direction(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code hl_function" href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">reverse_iterator_direction</a>(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
 <div class="line">        std::enable_if_t&lt;impl::is_forward_iterator&lt;Iterator&gt;,</div>
 <div class="line">                         <span class="keyword">decltype</span>(std::make_reverse_iterator(std::declval&lt;Iterator&gt;()))</div>
 <div class="line">                         &gt; {</div>
@@ -318,6 +250,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        <span class="keywordflow">return</span> std::make_reverse_iterator(iterator + 1);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="agroup__useful__macros_html_gac5abe2e70dfe9c5b9124860b8c74cc84"><div class="ttname"><a href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">aui::reverse_iterator_direction</a></div><div class="ttdeci">auto reverse_iterator_direction(Iterator iterator) noexcept -&gt; std::enable_if_t&lt;!impl::is_forward_iterator&lt; Iterator &gt;, decltype((iterator+1).base()) &gt;</div><div class="ttdoc">Reverses iterator direction (i.e. converts iterator to reverse_iterator, reverse_iterator to iterator...</div><div class="ttdef"><b>Definition:</b> iterators.h:174</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

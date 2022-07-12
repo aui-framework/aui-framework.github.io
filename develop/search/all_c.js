@@ -6,7 +6,7 @@ var searchData=
   ['makedir_3',['makeDir',['../classAPath.html#a3086272262834a19139e1324aed5285b',1,'APath']]],
   ['makedirs_4',['makeDirs',['../classAPath.html#a248a0d9584a2b112f2be2a194c9d1a88',1,'APath']]],
   ['makesignal_5',['makeSignal',['../classACutoffSignal.html#a846f87917ee35414834b624c281ffd06',1,'ACutoffSignal']]],
-  ['manage_6',['manage',['../structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776',1,'aui::ptr::manage(T *raw)'],['../structaui_1_1ptr.html#ad6e812de50ef39005c493b5b155fa6f6',1,'aui::ptr::manage(T *raw, Deleter deleter)']]],
+  ['manage_6',['manage',['../structaui_1_1ptr.html#ad6e812de50ef39005c493b5b155fa6f6',1,'aui::ptr::manage(T *raw, Deleter deleter)'],['../structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776',1,'aui::ptr::manage(T *raw)']]],
   ['manager_7',['Manager',['../classManager.html',1,'']]],
   ['mapposition_8',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_9',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
@@ -47,10 +47,9 @@ var searchData=
   ['msize_44',['mSize',['../classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b',1,'AView']]],
   ['mul_45',['mul',['../classAColor.html#a2e34705fa6c1a668fe986868b280f7ce',1,'AColor::mul()'],['../structtuples_1_1detail_1_1functor_1_1mul.html',1,'tuples::detail::functor::mul']]],
   ['multipleinputstream_46',['MultipleInputStream',['../classMultipleInputStream.html',1,'']]],
-  ['my_5fiterator_47',['my_iterator',['../structaui_1_1joined__range_1_1my__iterator.html',1,'aui::joined_range']]],
-  ['my_5ftuple_48',['my_tuple',['../structaui_1_1impl_1_1json_1_1my__tuple.html',1,'aui::impl::json']]],
-  ['myentry_49',['MyEntry',['../classMyEntry.html',1,'']]],
-  ['myeventloop_50',['MyEventLoop',['../classMyEventLoop.html',1,'']]],
-  ['mylistener_51',['MyListener',['../classMyListener.html',1,'']]],
-  ['mystruct_52',['MyStruct',['../structMyStruct.html',1,'']]]
+  ['my_5ftuple_47',['my_tuple',['../structaui_1_1impl_1_1json_1_1my__tuple.html',1,'aui::impl::json']]],
+  ['myentry_48',['MyEntry',['../classMyEntry.html',1,'']]],
+  ['myeventloop_49',['MyEventLoop',['../classMyEventLoop.html',1,'']]],
+  ['mylistener_50',['MyListener',['../classMyListener.html',1,'']]],
+  ['mystruct_51',['MyStruct',['../structMyStruct.html',1,'']]]
 ];

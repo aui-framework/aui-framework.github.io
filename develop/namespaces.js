@@ -175,7 +175,6 @@ var namespaces =
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
-      [ "joined_range", "structaui_1_1joined__range.html", "structaui_1_1joined__range" ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
       [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
@@ -200,7 +199,8 @@ var namespaces =
       [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
-      [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]
+      [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
+      [ "reverse_iterator_direction", "group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84", null ]
     ] ],
     [ "Autumn", "namespaceAutumn.html", "namespaceAutumn" ],
     [ "AXml", "namespaceAXml.html", [
