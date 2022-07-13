@@ -12,8 +12,8 @@ var annotated =
       [ "Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
     [ "ass", null, [
-      [ "Button", null, [
-        [ "Default", "structass_1_1Button_1_1Default.html", null ]
+      [ "button", null, [
+        [ "Default", "structass_1_1button_1_1Default.html", null ]
       ] ],
       [ "decl", null, [
         [ "Declaration", "structass_1_1decl_1_1Declaration.html", null ],
@@ -109,7 +109,9 @@ var annotated =
           [ "type_length< std::string >", "structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html", null ],
           [ "type_length< wchar_t * >", "structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html", null ]
         ] ],
-        [ "container_helper", "structaui_1_1detail_1_1container__helper.html", "structaui_1_1detail_1_1container__helper" ]
+        [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", [
+          [ "with_args", "structaui_1_1detail_1_1pointer__to__member_1_1with__args.html", null ]
+        ] ]
       ] ],
       [ "impl", null, [
         [ "future", null, [
@@ -142,6 +144,12 @@ var annotated =
         [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
         [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ]
       ] ],
+      [ "ui_building", null, [
+        [ "layouted_container_factory", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
+        [ "layouted_container_factory_impl", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", "structaui_1_1ui__building_1_1layouted__container__factory__impl" ],
+        [ "view", "structaui_1_1ui__building_1_1view.html", null ],
+        [ "view_helper", "structaui_1_1ui__building_1_1view__helper.html", null ]
+      ] ],
       [ "valid", null, [
         [ "chars", null, [
           [ "latin", "structaui_1_1valid_1_1chars_1_1latin.html", null ],
@@ -161,16 +169,16 @@ var annotated =
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
-      [ "joined_range", "structaui_1_1joined__range.html", "structaui_1_1joined__range" ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
+      [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
       [ "member", "structaui_1_1member.html", null ],
+      [ "member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
       [ "member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
       [ "no_escape", "structaui_1_1no__escape.html", null ],
       [ "non_null", "structaui_1_1non__null.html", null ],
       [ "non_null_lateinit", "structaui_1_1non__null__lateinit.html", null ],
       [ "noncopyable", "structaui_1_1noncopyable.html", null ],
-      [ "parameter_pack", "structaui_1_1parameter__pack.html", null ],
       [ "ptr", "structaui_1_1ptr.html", null ],
       [ "range", "structaui_1_1range.html", null ],
       [ "raw_serializable", "structaui_1_1raw__serializable.html", null ],
@@ -182,6 +190,7 @@ var annotated =
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
+      [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ]
     ] ],
     [ "Autumn", "namespaceAutumn.html", [
@@ -190,6 +199,9 @@ var annotated =
     ] ],
     [ "AzazaATest", null, [
       [ "ATest", "structAzazaATest_1_1ATest.html", null ]
+    ] ],
+    [ "declarative", null, [
+      [ "Button", "structdeclarative_1_1Button.html", null ]
     ] ],
     [ "gl", null, [
       [ "detail", null, [
@@ -276,6 +288,7 @@ var annotated =
     [ "ABoxFields", "structABoxFields.html", null ],
     [ "ABuiltinFiles", "classABuiltinFiles.html", null ],
     [ "AButton", "classAButton.html", "classAButton" ],
+    [ "AButtonEx", "classAButtonEx.html", null ],
     [ "AByteBuffer", "classAByteBuffer.html", "classAByteBuffer" ],
     [ "AByteBufferInputStream", "classAByteBufferInputStream.html", "classAByteBufferInputStream" ],
     [ "AByteBufferView", "classAByteBufferView.html", null ],
@@ -578,6 +591,7 @@ var annotated =
     [ "RuleWithoutSelector", "structRuleWithoutSelector.html", null ],
     [ "SceneDelegate", "interfaceSceneDelegate.html", null ],
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
+    [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
     [ "SendObject", "classSendObject.html", null ],
     [ "SignalSlot", "classSignalSlot.html", "classSignalSlot" ],
@@ -597,7 +611,8 @@ var annotated =
     [ "State", "structState.html", null ],
     [ "TexturedShaderHelper", "structTexturedShaderHelper.html", null ],
     [ "UIClick", "classUIClick.html", null ],
-    [ "UIMatcher", "classUIMatcher.html", null ],
+    [ "UIMatcher", "classUIMatcher.html", "classUIMatcher" ],
+    [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
     [ "UIScrollTest", "classUIScrollTest.html", "classUIScrollTest" ],
     [ "UITestRenderingContext", "classUITestRenderingContext.html", null ],
     [ "UITestWindowManager", "classUITestWindowManager.html", null ],
@@ -613,6 +628,7 @@ var annotated =
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewActionType", "structViewActionType.html", null ],
+    [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
     [ "ViewAssertionGone", "structViewAssertionGone.html", null ],
     [ "ViewAssertionNotVisible", "structViewAssertionNotVisible.html", null ],

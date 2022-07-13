@@ -40,7 +40,7 @@ var searchData=
   ['declaration_3c_20visibility_20_3e_37',['Declaration&lt; Visibility &gt;',['../structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html',1,'ass::decl']]],
   ['decode_5ftype_38',['decode_type',['../structaui_1_1impl_1_1slot_1_1decode__type.html',1,'aui::impl::slot']]],
   ['decode_5ftype_3c_20_5f_3c_20t_20_3e_20_3e_39',['decode_type&lt; _&lt; T &gt; &gt;',['../structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html',1,'aui::impl::slot']]],
-  ['default_40',['Default',['../structass_1_1Button_1_1Default.html',1,'ass::Button']]],
+  ['default_40',['Default',['../structass_1_1button_1_1Default.html',1,'ass::button']]],
   ['delete_41',['Delete',['../classASqlBuilder_1_1Delete.html',1,'ASqlBuilder']]],
   ['devtoolspanel_42',['DevtoolsPanel',['../classDevtoolsPanel.html',1,'']]],
   ['directparentsubselector_43',['DirectParentSubSelector',['../structass_1_1DirectParentSubSelector.html',1,'ass']]],

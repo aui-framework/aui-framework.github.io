@@ -15,5 +15,5 @@ var searchData=
   ['executeasadministrator_12',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
   ['executewaitforexit_13',['executeWaitForExit',['../classAProcess.html#aa636c40424103381cb9fdacbdad265d8',1,'AProcess']]],
   ['exists_14',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
-  ['expanding_15',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1detail_1_1container__helper_1_1Expanding.html',1,'aui::detail::container_helper&lt; Layout &gt;::Expanding']]]
+  ['expanding_15',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html',1,'aui::ui_building::layouted_container_factory_impl&lt; Layout, Container &gt;::Expanding']]]
 ];

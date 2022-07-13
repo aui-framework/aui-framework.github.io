@@ -90,7 +90,8 @@ $(document).ready(function(){initNavTree('group__useful__macros.html',''); initR
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Useful macros<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -136,6 +137,13 @@ Macros</h2></td></tr>
 <tr class="memitem:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a>&#160;&#160;&#160;static uint8_t _aui_once = 0; if(!_aui_once++)</td></tr>
 <tr class="memdesc:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes following function call or {} block once per program execution.  <a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">More...</a><br /></td></tr>
 <tr class="separator:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac5abe2e70dfe9c5b9124860b8c74cc84"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:gac5abe2e70dfe9c5b9124860b8c74cc84"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">aui::reverse_iterator_direction</a> (Iterator iterator) noexcept -&gt; std::enable_if_t&lt;!impl::is_forward_iterator&lt; Iterator &gt;, decltype((iterator+1).base()) &gt;</td></tr>
+<tr class="memdesc:gac5abe2e70dfe9c5b9124860b8c74cc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses iterator direction (i.e. converts iterator to reverse_iterator, reverse_iterator to iterators).  <a href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">More...</a><br /></td></tr>
+<tr class="separator:gac5abe2e70dfe9c5b9124860b8c74cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >A set of functionality that introduces non-standard syntax which seems like the C++ features. </p>
@@ -305,12 +313,12 @@ Macros</h2></td></tr>
 <div class="line"><span class="keyword">auto</span> tf2 = _new&lt;ATextField&gt;();</div>
 <div class="line">tf2-&gt;setText(<span class="stringliteral">&quot;World!&quot;</span>);</div>
 <div class="line">...</div>
-<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1detail_1_1container__helper.html">Vertical</a> { <span class="comment">// confusing</span></div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> { <span class="comment">// confusing</span></div>
 <div class="line">    tf1,</div>
 <div class="line">    tf2,</div>
 <div class="line">});</div>
-<div class="ttc" id="astructaui_1_1detail_1_1container__helper_html"><div class="ttname"><a href="structaui_1_1detail_1_1container__helper.html">aui::detail::container_helper</a></div><div class="ttdef"><b>Definition:</b> UIBuildingHelpers.h:79</div></div>
-</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">setContents(<a class="code hl_struct" href="structaui_1_1detail_1_1container__helper.html">Vertical</a> { <span class="comment">// clean, less code and easy to understand</span></div>
+<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:139</div></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> { <span class="comment">// clean, less code and easy to understand</span></div>
 <div class="line">    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>) },</div>
 <div class="line">    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;World!&quot;</span>) },</div>
 <div class="line">});</div>
@@ -463,11 +471,61 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;AUI/ASS/ASS.h&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span>ass;</div>
 <div class="line">...</div>
-<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1detail_1_1container__helper.html">Centered</a> {</div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
 <div class="line">  _new&lt;ALabel&gt;(<span class="stringliteral">&quot;Red text!&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { TextColor { AColor::RED } },</div>
 <div class="line">});</div>
 <div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:231</div></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gac5abe2e70dfe9c5b9124860b8c74cc84" name="gac5abe2e70dfe9c5b9124860b8c74cc84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5abe2e70dfe9c5b9124860b8c74cc84">&#9670;&nbsp;</a></span>reverse_iterator_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto aui::reverse_iterator_direction </td>
+          <td>(</td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>iterator</em></td><td>)</td>
+          <td> -&gt; std::enable_if_t&lt;!impl::is_forward_iterator&lt;Iterator&gt;,
+                         decltype((iterator + 1).base())
+                         &gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverses iterator direction (i.e. converts iterator to reverse_iterator, reverse_iterator to iterators). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Iterator</td><td>iterator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterator</td><td>iterator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>same iterator but reverse direction</dd></dl>
+<p>A reversed iterator points to the same element of the container.</p>
+<p >Works on <a class="el" href="classAVector.html" title="A std::vector with AUI extensions.">AVector</a>. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a0">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->
