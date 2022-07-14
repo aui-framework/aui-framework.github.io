@@ -164,13 +164,13 @@ $(document).ready(function(){initNavTree('Declarative_8h_source.html',''); initR
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    };</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> View&gt;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structaui_1_1ui__building_1_1view.html">   73</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1ui__building_1_1view.html">view</a> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structaui_1_1ui__building_1_1view.html">   73</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1ui__building_1_1view.html">view</a>: <a class="code hl_struct" href="structaui_1_1ui__building_1_1view__helper.html">view_helper</a>&lt;view&lt;View&gt;&gt; {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_struct" href="structaui_1_1ui__building_1_1view.html">view</a>(Args&amp;&amp;... args): mView(_new&lt;View&gt;(std::forward&lt;Args&gt;(args)...)) {}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_struct" href="structaui_1_1ui__building_1_1view.html">view</a>(Args&amp;&amp;... args): <a class="code hl_struct" href="structaui_1_1ui__building_1_1view__helper.html">view_helper&lt;view&lt;View&gt;</a>&gt;(*this), mView(_new&lt;View&gt;(std::forward&lt;Args&gt;(args)...)) {}</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">operator</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>() {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> operator()() {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">return</span> std::move(mView);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
@@ -208,41 +208,44 @@ $(document).ready(function(){initNavTree('Declarative_8h_source.html',''); initR
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keyword">using</span> <a class="code hl_struct" href="structViewActionType.html">type</a> = <span class="keyword">decltype</span>(item);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> isViewGroup = std::is_convertible_v&lt;type, ViewGroup&gt;;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> isView = std::is_convertible_v&lt;type, View&gt;;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keyword">static_assert</span>(isViewGroup || isView, <span class="stringliteral">&quot;the item is neither convertible to View nor ViewGroup&quot;</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (isViewGroup) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <span class="keyword">auto</span> asViewGroup = <a class="code hl_class" href="classAVector.html">ViewGroup</a>(item);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    mViews &lt;&lt; std::move(asViewGroup);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (isView) {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    <span class="keyword">auto</span> asView = <a class="code hl_class" href="class__.html">View</a>(item);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    mViews &lt;&lt; std::move(asView);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }, std::forward&lt;Views&gt;(views)...);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        ViewContainer operator()() {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keyword">auto</span> c = _new&lt;Container&gt;();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            c-&gt;setLayout(_new&lt;Layout&gt;());</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            c-&gt;setViews(std::move(mViews));</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">return</span> c;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    };</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Layout, <span class="keyword">typename</span> Container = AViewContainer&gt;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="structaui_1_1ui__building_1_1layouted__container__factory.html">  140</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">layouted_container_factory</a>: <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory__impl.html">layouted_container_factory_impl</a>&lt;Layout, Container&gt;, <a class="code hl_struct" href="structaui_1_1ui__building_1_1view__helper.html">view_helper</a>&lt;layouted_container_factory&lt;Layout, Container&gt;&gt; {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> isInvokable = std::is_invocable_v&lt;type&gt;;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <span class="keyword">static_assert</span>(isViewGroup || isView || isInvokable, <span class="stringliteral">&quot;the item is neither convertible to View nor ViewGroup, nor invokable&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (isViewGroup) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    <span class="keyword">auto</span> asViewGroup = <a class="code hl_class" href="classAVector.html">ViewGroup</a>(item);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    mViews &lt;&lt; std::move(asViewGroup);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (isView) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    <span class="keyword">auto</span> asView = <a class="code hl_class" href="class__.html">View</a>(item);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    mViews &lt;&lt; std::move(asView);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(isInvokable) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    mViews &lt;&lt; item();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }, std::forward&lt;Views&gt;(views)...);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        ViewContainer operator()() {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">auto</span> c = _new&lt;Container&gt;();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            c-&gt;setLayout(_new&lt;Layout&gt;());</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            c-&gt;setViews(std::move(mViews));</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span> c;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    };</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Views&gt;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">layouted_container_factory</a>(Views&amp;&amp;... views): <a class="code hl_class" href="structaui_1_1ui__building_1_1layouted__container__factory__impl.html">layouted_container_factory_impl&lt;Layout, Container&gt;</a>(std::forward&lt;Views&gt;(views)...),</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                                      <a class="code hl_struct" href="structaui_1_1ui__building_1_1view__helper.html">view_helper&lt;layouted_container_factory&lt;Layout, Container&gt;</a>&gt;(*this) {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    };</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Layout, <span class="keyword">typename</span> Container = AViewContainer&gt;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="structaui_1_1ui__building_1_1layouted__container__factory.html">  143</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">layouted_container_factory</a>: <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory__impl.html">layouted_container_factory_impl</a>&lt;Layout, Container&gt;, <a class="code hl_struct" href="structaui_1_1ui__building_1_1view__helper.html">view_helper</a>&lt;layouted_container_factory&lt;Layout, Container&gt;&gt; {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Views&gt;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">layouted_container_factory</a>(Views&amp;&amp;... views): <a class="code hl_class" href="structaui_1_1ui__building_1_1layouted__container__factory__impl.html">layouted_container_factory_impl&lt;Layout, Container&gt;</a>(std::forward&lt;Views&gt;(views)...),</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                                                      <a class="code hl_struct" href="structaui_1_1ui__building_1_1view__helper.html">view_helper&lt;layouted_container_factory&lt;Layout, Container&gt;</a>&gt;(*this) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    };</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:38</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:41</div></div>
 <div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition:</b> AView.h:785</div></div>
@@ -251,7 +254,7 @@ $(document).ready(function(){initNavTree('Declarative_8h_source.html',''); initR
 <div class="ttc" id="astructViewActionType_html"><div class="ttname"><a href="structViewActionType.html">ViewActionType</a></div><div class="ttdef"><b>Definition:</b> Type.h:5</div></div>
 <div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html">aui::ui_building::layouted_container_factory_impl::Expanding</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:95</div></div>
 <div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory__impl_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory__impl.html">aui::ui_building::layouted_container_factory_impl</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:90</div></div>
-<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:140</div></div>
+<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:143</div></div>
 <div class="ttc" id="astructaui_1_1ui__building_1_1view__helper_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1view__helper.html">aui::ui_building::view_helper</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:17</div></div>
 <div class="ttc" id="astructaui_1_1ui__building_1_1view_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1view.html">aui::ui_building::view</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:73</div></div>
 </div><!-- fragment --></div><!-- contents -->

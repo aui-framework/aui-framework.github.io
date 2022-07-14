@@ -278,6 +278,7 @@ var hierarchy =
             [ "AEmbedMenuProvider::MenuContainer", "classAEmbedMenuProvider_1_1MenuContainer.html", null ],
             [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
             [ "AGridSplitter", "classAGridSplitter.html", null ],
+            [ "AGroupBox", "classAGroupBox.html", null ],
             [ "AListView", "classAListView.html", null ],
             [ "AListViewContainer", "classAListViewContainer.html", null ],
             [ "AMenuContainer", "classAMenuContainer.html", null ],
@@ -816,7 +817,6 @@ var hierarchy =
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
-    [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ],
     [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
     ] ],
@@ -825,6 +825,9 @@ var hierarchy =
     ] ],
     [ "aui::ui_building::view_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+    ] ],
+    [ "aui::ui_building::view_helper< view< View > >", "structaui_1_1ui__building_1_1view__helper.html", [
+      [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ]
     ] ],
     [ "ViewActionClick", "structViewActionClick.html", [
       [ "ViewActionType", "structViewActionType.html", null ]
