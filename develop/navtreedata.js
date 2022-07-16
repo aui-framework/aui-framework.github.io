@@ -64,11 +64,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classAListView.html#ac2f25dd7b76be8005b3308b864fdf28e",
-"classATreeView.html#a6b0048f8907409c867e9c31bbd9b3ac1",
-"classOpenGLMultiStringCanvas.html#accc6538195ae7080fe2af34720619532",
-"group__useful__macros.html#gaaaa072876366972108aef016e7882a99",
-"structass_1_1decl_1_1Declaration_3_01Margin_01_4.html",
+"classAListView.html#a550de62990e05741c064fdd0014f13a1",
+"classATreeView.html",
+"classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8",
+"group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f",
+"structass_1_1decl_1_1Declaration_3_01LineHeight_01_4.html",
 ""
 ];
 

@@ -32,6 +32,7 @@ var hierarchy =
     [ "AByteBufferView", "classAByteBufferView.html", null ],
     [ "AChar", "classAChar.html", null ],
     [ "AClass< T >", "classAClass.html", null ],
+    [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],

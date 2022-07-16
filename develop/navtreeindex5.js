@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1decl_1_1Declaration_3_01LineHeight_01_4.html":[0,0,5,1,19],
 "structass_1_1decl_1_1Declaration_3_01Margin_01_4.html":[0,2,3,1,20],
 "structass_1_1decl_1_1Declaration_3_01Margin_01_4.html":[0,0,5,1,20],
 "structass_1_1decl_1_1Declaration_3_01MaxSize_01_4.html":[0,2,3,1,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "":[0,0,17,0],
 "":[0,0,17],
 "":[0,0,6,1,1],
-"":[0,0,5,2],
-"":[0,0,6,1,3]
+"":[0,0,5,2]
 };

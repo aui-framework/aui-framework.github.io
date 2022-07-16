@@ -161,6 +161,7 @@ var group__core =
       [ "waitForAll", "classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a", null ]
     ] ],
     [ "AUrl", "classAUrl.html", null ],
+    [ "ACleanup", "classACleanup.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]
