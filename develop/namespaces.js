@@ -212,7 +212,8 @@ var namespaces =
     [ "By", "namespaceBy.html", null ],
     [ "declarative", null, [
       [ "Button", "structdeclarative_1_1Button.html", null ],
-      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
+      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ],
+      [ "Style", "structdeclarative_1_1Style.html", null ]
     ] ],
     [ "gl", null, [
       [ "detail", null, [

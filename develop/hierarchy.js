@@ -720,6 +720,7 @@ var hierarchy =
         [ "ASqlBuilder::Update", "classASqlBuilder_1_1Update.html", null ]
       ] ]
     ] ],
+    [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
     [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
     [ "Autumn::Temporary< T >", "classAutumn_1_1Temporary.html", null ],
