@@ -278,13 +278,21 @@ $(document).ready(function(){initNavTree('AListModel_8h_source.html',''); initRe
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">return</span> list;</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keyword">auto</span> map(UnaryOperation&amp;&amp; transformer) {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordflow">return</span> mVector.map(std::forward&lt;UnaryOperation&gt;(transformer));</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    }</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>};</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> V&gt;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb">  246</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AListModel&lt;StoredType&gt;</a>&gt; <a class="code hl_function" href="classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb">fromVector</a>(<a class="code hl_class" href="classAVector.html">AVector&lt;V&gt;</a> t) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keyword">auto</span> list = _new&lt;AListModel&lt;StoredType&gt;&gt;();</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        list-&gt;mVector = std::move(t);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordflow">return</span> list;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keyword">auto</span> map(UnaryOperation&amp;&amp; transformer) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">return</span> mVector.map(std::forward&lt;UnaryOperation&gt;(transformer));</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>};</div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:39</div></div>
 <div class="ttc" id="aclassAListModel_html"><div class="ttname"><a href="classAListModel.html">AListModel</a></div><div class="ttdef"><b>Definition:</b> AListModel.h:37</div></div>
+<div class="ttc" id="aclassAListModel_html_a1e533fa4d29b2861c76fcd00c297c5fb"><div class="ttname"><a href="classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb">AListModel::fromVector</a></div><div class="ttdeci">static _&lt; AListModel&lt; StoredType &gt; &gt; fromVector(AVector&lt; V &gt; t)</div><div class="ttdef"><b>Definition:</b> AListModel.h:246</div></div>
 <div class="ttc" id="aclassAListModel_html_a2c19b8f7c2ca98f55765fe5b02a6b1c4"><div class="ttname"><a href="classAListModel.html#a2c19b8f7c2ca98f55765fe5b02a6b1c4">AListModel::removeAt</a></div><div class="ttdeci">void removeAt(size_t index) noexcept</div><div class="ttdef"><b>Definition:</b> AListModel.h:202</div></div>
 <div class="ttc" id="aclassAListModel_html_aa9325393ec83591d1700fca9f30a8046"><div class="ttname"><a href="classAListModel.html#aa9325393ec83591d1700fca9f30a8046">AListModel::at</a></div><div class="ttdeci">StoredType &amp; at(size_t index)</div><div class="ttdef"><b>Definition:</b> AListModel.h:177</div></div>
 <div class="ttc" id="aclassAListModel_html_ac65199711ed9f613d8b3a9d4d385a1d0"><div class="ttname"><a href="classAListModel.html#ac65199711ed9f613d8b3a9d4d385a1d0">AListModel::operator[]</a></div><div class="ttdeci">const StoredType &amp; operator[](size_t index) const</div><div class="ttdef"><b>Definition:</b> AListModel.h:189</div></div>

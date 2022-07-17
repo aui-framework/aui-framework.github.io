@@ -201,7 +201,8 @@ var annotated =
       [ "ATest", "structAzazaATest_1_1ATest.html", null ]
     ] ],
     [ "declarative", null, [
-      [ "Button", "structdeclarative_1_1Button.html", null ]
+      [ "Button", "structdeclarative_1_1Button.html", null ],
+      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
     ] ],
     [ "gl", null, [
       [ "detail", null, [

@@ -819,7 +819,10 @@ var hierarchy =
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
     [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", [
-      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
+      [ "aui::ui_building::view< ARadioGroup >", "structaui_1_1ui__building_1_1view.html", [
+        [ "declarative::RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
+      ] ]
     ] ],
     [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
