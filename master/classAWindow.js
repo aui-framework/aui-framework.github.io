@@ -1,6 +1,7 @@
 var classAWindow =
 [
     [ "AWindow", "classAWindow.html#a9ad06bbd233087b0b325878a0fef2b35", null ],
+    [ "blockUserInput", "classAWindow.html#a82eed4e2cd2f8c03c0559ae3c4aade19", null ],
     [ "consumesClick", "classAWindow.html#a607d322db574df5c957a7b19aede61ce", null ],
     [ "createOverlappingSurfaceImpl", "classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0", null ],
     [ "isMaximized", "classAWindow.html#a46e22a189bd7f29e08adcfac5aa13ea3", null ],

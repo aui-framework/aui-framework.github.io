@@ -79,7 +79,12 @@ var group__core =
       [ "AString", "classAString.html#ac5366542c9f6fc7e9ebedd03f3926619", null ],
       [ "AString", "classAString.html#a0949c4d7c858e1c4c7c815450ca3eb38", null ],
       [ "AString", "classAString.html#a1eb7e24ca17238ab4db2f302ac41ef51", null ],
-      [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ]
+      [ "toBool", "classAString.html#a4a5c7b21fc8b2cce2fb88eccbe4bc122", null ],
+      [ "toDouble", "classAString.html#a4a03bb8003872b849695577f0c5b7658", null ],
+      [ "toFloat", "classAString.html#a105ddcfb0ce59113da4a2e7e339f2698", null ],
+      [ "toInt", "classAString.html#aec0f5c27b5f9b1f0066231cbe35272bc", null ],
+      [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ],
+      [ "toUInt", "classAString.html#a2a3444642bfe44cbeacd9e2287169c70", null ]
     ] ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "ATimer", "classATimer.html", null ],
@@ -161,6 +166,7 @@ var group__core =
       [ "waitForAll", "classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a", null ]
     ] ],
     [ "AUrl", "classAUrl.html", null ],
+    [ "ACleanup", "classACleanup.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]

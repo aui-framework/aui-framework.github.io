@@ -32,6 +32,7 @@ var hierarchy =
     [ "AByteBufferView", "classAByteBufferView.html", null ],
     [ "AChar", "classAChar.html", null ],
     [ "AClass< T >", "classAClass.html", null ],
+    [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
@@ -278,6 +279,7 @@ var hierarchy =
             [ "AEmbedMenuProvider::MenuContainer", "classAEmbedMenuProvider_1_1MenuContainer.html", null ],
             [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
             [ "AGridSplitter", "classAGridSplitter.html", null ],
+            [ "AGroupBox", "classAGroupBox.html", null ],
             [ "AListView", "classAListView.html", null ],
             [ "AListViewContainer", "classAListViewContainer.html", null ],
             [ "AMenuContainer", "classAMenuContainer.html", null ],
@@ -718,6 +720,7 @@ var hierarchy =
         [ "ASqlBuilder::Update", "classASqlBuilder_1_1Update.html", null ]
       ] ]
     ] ],
+    [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
     [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
     [ "Autumn::Temporary< T >", "classAutumn_1_1Temporary.html", null ],
@@ -816,15 +819,20 @@ var hierarchy =
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
-    [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ],
     [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", [
-      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
+      [ "aui::ui_building::view< ARadioGroup >", "structaui_1_1ui__building_1_1view.html", [
+        [ "declarative::RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
+      ] ]
     ] ],
     [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
     ] ],
     [ "aui::ui_building::view_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+    ] ],
+    [ "aui::ui_building::view_helper< view< View > >", "structaui_1_1ui__building_1_1view__helper.html", [
+      [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ]
     ] ],
     [ "ViewActionClick", "structViewActionClick.html", [
       [ "ViewActionType", "structViewActionType.html", null ]

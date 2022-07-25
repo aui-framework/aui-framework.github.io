@@ -201,7 +201,9 @@ var annotated =
       [ "ATest", "structAzazaATest_1_1ATest.html", null ]
     ] ],
     [ "declarative", null, [
-      [ "Button", "structdeclarative_1_1Button.html", null ]
+      [ "Button", "structdeclarative_1_1Button.html", null ],
+      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ],
+      [ "Style", "structdeclarative_1_1Style.html", null ]
     ] ],
     [ "gl", null, [
       [ "detail", null, [
@@ -297,6 +299,7 @@ var annotated =
     [ "ACheckBoxInner", "classACheckBoxInner.html", null ],
     [ "AChildProcess", "classAChildProcess.html", "classAChildProcess" ],
     [ "AClass", "classAClass.html", null ],
+    [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
     [ "AColor", "classAColor.html", "classAColor" ],
     [ "AComboBox", "classAComboBox.html", "classAComboBox" ],
@@ -350,6 +353,7 @@ var annotated =
     [ "AGLEmbedAuiWrap", "classAGLEmbedAuiWrap.html", null ],
     [ "AGridLayout", "classAGridLayout.html", null ],
     [ "AGridSplitter", "classAGridSplitter.html", "classAGridSplitter" ],
+    [ "AGroupBox", "classAGroupBox.html", "classAGroupBox" ],
     [ "AHDividerView", "classAHDividerView.html", null ],
     [ "AHorizontalLayout", "classAHorizontalLayout.html", "classAHorizontalLayout" ],
     [ "AI18n", "classAI18n.html", null ],

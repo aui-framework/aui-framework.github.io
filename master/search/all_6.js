@@ -7,11 +7,11 @@ var searchData=
   ['fast_5fpimpl_4',['fast_pimpl',['../structaui_1_1fast__pimpl.html',1,'aui']]],
   ['field_5',['Field',['../structaui_1_1impl_1_1json_1_1Field.html',1,'aui::impl::json']]],
   ['fileextension_6',['FileExtension',['../structADesktop_1_1FileExtension.html',1,'ADesktop']]],
-  ['finalize_7',['finalize',['../classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0',1,'SoftwareMultiStringCanvas::finalize()'],['../classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28',1,'IRenderer::IMultiStringCanvas::finalize()'],['../classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8',1,'OpenGLMultiStringCanvas::finalize()']]],
+  ['finalize_7',['finalize',['../classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8',1,'OpenGLMultiStringCanvas::finalize()'],['../classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0',1,'SoftwareMultiStringCanvas::finalize()'],['../classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28',1,'IRenderer::IMultiStringCanvas::finalize()']]],
   ['find_8',['find',['../classAPath.html#a6b512292d327d2170ac191b446e86d98',1,'APath']]],
   ['findanotherselfinstance_9',['findAnotherSelfInstance',['../classAProcess.html#a4c6537f6e1dc7d0538ee98d6f3d2fd59',1,'AProcess']]],
   ['findnearestto_10',['findNearestTo',['../classUIMatcher.html#a0936b37e3fc29a29a362897775cfb550',1,'UIMatcher']]],
-  ['first_11',['first',['../structaui_1_1impl_1_1first.html',1,'aui::impl::first&lt; First, Up &gt;'],['../classASqlModel_1_1IncompleteSelectRequest.html#a2b9748e316f1ca163dfd5879faadaf39',1,'ASqlModel::IncompleteSelectRequest::first()'],['../structaui_1_1sequence__traits_1_1of.html#a44071896ec7d04637861f46a8f2793ea',1,'aui::sequence_traits::of::first()'],['../classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f',1,'AVector::first() const noexcept'],['../classAVector.html#a8321410937da08da17695a9a1403debd',1,'AVector::first() noexcept'],['../classADeque.html#ad1396ac646b307ff34e8e9d594d27181',1,'ADeque::first() const noexcept'],['../classADeque.html#ad84c3c72732daf6c6b4da9ed3e3671c2',1,'ADeque::first() noexcept']]],
+  ['first_11',['first',['../structaui_1_1impl_1_1first.html',1,'aui::impl::first&lt; First, Up &gt;'],['../classAVector.html#a8321410937da08da17695a9a1403debd',1,'AVector::first()'],['../classADeque.html#ad1396ac646b307ff34e8e9d594d27181',1,'ADeque::first() const noexcept'],['../classADeque.html#ad84c3c72732daf6c6b4da9ed3e3671c2',1,'ADeque::first() noexcept'],['../classASqlModel_1_1IncompleteSelectRequest.html#a2b9748e316f1ca163dfd5879faadaf39',1,'ASqlModel::IncompleteSelectRequest::first()'],['../structaui_1_1sequence__traits_1_1of.html#a44071896ec7d04637861f46a8f2793ea',1,'aui::sequence_traits::of::first()'],['../classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f',1,'AVector::first()']]],
   ['fixedsize_12',['FixedSize',['../structass_1_1FixedSize.html',1,'ass']]],
   ['floatingentry_13',['FloatingEntry',['../classFloatingEntry.html',1,'']]],
   ['focus_14',['focus',['../structass_1_1focus.html',1,'ass::focus&lt; Base &gt;'],['../classAView.html#adf2e35644a76131fed2a0319bc28bcd2',1,'AView::focus()'],['../classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a',1,'AViewContainer::focus()']]],
@@ -26,6 +26,7 @@ var searchData=
   ['freetype_23',['FreeType',['../classFreeType.html',1,'']]],
   ['frompid_24',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
   ['fromstring_25',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['future_26',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
-  ['future_3c_20void_20_3e_27',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
+  ['fromvector_26',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
+  ['future_27',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
+  ['future_3c_20void_20_3e_28',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
 ];

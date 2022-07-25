@@ -104,6 +104,9 @@ $(document).ready(function(){initNavTree('classABaseWindow.html',''); initResiza
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aecd6330bd485121e21ff2d49e7c383f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classABaseWindow.html#aecd6330bd485121e21ff2d49e7c383f4">blockUserInput</a> (bool blockUserInput=true)</td></tr>
+<tr class="memdesc:aecd6330bd485121e21ff2d49e7c383f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables user input for this window.  <a href="classABaseWindow.html#aecd6330bd485121e21ff2d49e7c383f4">More...</a><br /></td></tr>
+<tr class="separator:aecd6330bd485121e21ff2d49e7c383f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e564f002d05534d26825497708a22c6"><td class="memItemLeft" align="right" valign="top"><a id="a9e564f002d05534d26825497708a22c6" name="a9e564f002d05534d26825497708a22c6"></a>
 const _unique&lt; <a class="el" href="classIRenderingContext.html">IRenderingContext</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRenderingContext</b> () const</td></tr>
 <tr class="separator:a9e564f002d05534d26825497708a22c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -780,6 +783,45 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>IRenderingContext::
 <div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a2">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aecd6330bd485121e21ff2d49e7c383f4" name="aecd6330bd485121e21ff2d49e7c383f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd6330bd485121e21ff2d49e7c383f4">&#9670;&nbsp;</a></span>blockUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ABaseWindow::blockUserInput </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>blockUserInput</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enables or disables user input for this window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">blockUserInput</td><td>whether block user input or not.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Visually nothing changes, but when the user tries to interact with the window, nothing happens with the window and on some platforms a system sound played notifying the user that the window is blocked.</p>
+<p >It is userful when you open a modal window and you want the user to complete the action in the modal window first in order to continue interacting with the parent window.</p>
+<dl class="section note"><dt>Note</dt><dd>When displaying a modal dialog and has blocked the parent window, the application must unblock the parent window before the modal dialog destroyed, otherwise, another window will receive the keyboard focus and be activated. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classAWindow.html#a82eed4e2cd2f8c03c0559ae3c4aade19">AWindow</a>.</p>
+
+</div>
+</div>
 <a id="aac234fdc6c88229140ba7d834eb893e9" name="aac234fdc6c88229140ba7d834eb893e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac234fdc6c88229140ba7d834eb893e9">&#9670;&nbsp;</a></span>createOverlappingSurface() <span class="overload">[1/2]</span></h2>
 

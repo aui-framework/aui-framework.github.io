@@ -34,8 +34,8 @@ var searchData=
   ['createoverlappingsurfaceimpl_31',['createOverlappingSurfaceImpl',['../classABaseWindow.html#ad4d622457e75f3b5dd537430563c6369',1,'ABaseWindow::createOverlappingSurfaceImpl()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#af952fdcda95705dde271cfa0c6535c01',1,'AEmbedAuiWrap::EmbedWindow::createOverlappingSurfaceImpl()'],['../classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0',1,'AWindow::createOverlappingSurfaceImpl()']]],
   ['createsocket_32',['createSocket',['../classAAbstractSocket.html#aacd9223f413ec487d2d9ea2707360b08',1,'AAbstractSocket::createSocket()'],['../classAUdpSocket.html#aba1eaf99104b3816702bf5ccda32cf5a',1,'AUdpSocket::createSocket()'],['../classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0',1,'ATcpSocket::createSocket()'],['../classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7',1,'ATcpServerSocket::createSocket()']]],
   ['cubicbezier_33',['CubicBezier',['../classAnimationCurves_1_1CubicBezier.html',1,'AnimationCurves']]],
-  ['current_34',['CURRENT',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df',1,'AFileInputStream']]],
-  ['current_35',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow::current()']]],
+  ['current_34',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow::current()']]],
+  ['current_35',['CURRENT',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df',1,'AFileInputStream']]],
   ['currentthread_36',['CurrentThread',['../classCurrentThread.html',1,'']]],
   ['cursorindexbypos_37',['cursorIndexByPos',['../classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e',1,'ACursorSelectable']]],
   ['customcaptionwindowimplwin32_38',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]]

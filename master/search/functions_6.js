@@ -9,5 +9,6 @@ var searchData=
   ['focus_6',['focus',['../classAView.html#adf2e35644a76131fed2a0319bc28bcd2',1,'AView::focus()'],['../classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a',1,'AViewContainer::focus()']]],
   ['frompid_7',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
   ['fromstring_8',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['future_9',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
+  ['fromvector_9',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
+  ['future_10',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
 ];
