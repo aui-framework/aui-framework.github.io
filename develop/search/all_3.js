@@ -38,8 +38,8 @@ var searchData=
   ['createsocket_35',['createSocket',['../classAAbstractSocket.html#aacd9223f413ec487d2d9ea2707360b08',1,'AAbstractSocket::createSocket()'],['../classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7',1,'ATcpServerSocket::createSocket()'],['../classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0',1,'ATcpSocket::createSocket()'],['../classAUdpSocket.html#aba1eaf99104b3816702bf5ccda32cf5a',1,'AUdpSocket::createSocket()']]],
   ['cropped_36',['CROPPED',['../group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca',1,'ass']]],
   ['cubicbezier_37',['CubicBezier',['../classAnimationCurves_1_1CubicBezier.html',1,'AnimationCurves']]],
-  ['current_38',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow::current()']]],
-  ['current_39',['CURRENT',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df',1,'AFileInputStream']]],
+  ['current_38',['CURRENT',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df',1,'AFileInputStream']]],
+  ['current_39',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow::current()']]],
   ['currentthread_40',['CurrentThread',['../classCurrentThread.html',1,'']]],
   ['cursorindexbypos_41',['cursorIndexByPos',['../classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e',1,'ACursorSelectable']]],
   ['customcaptionwindowimplwin32_42',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]]
