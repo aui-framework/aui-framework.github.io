@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,0,5,1,10],
+"structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,2,3,1,11],
 "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,0,5,1,11],
 "structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html":[0,0,5,1,12],
 "structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html":[0,2,3,1,12],
@@ -55,8 +57,8 @@ var NAVTREEINDEX5 =
 "structass_1_1detail_1_1Type.html":[0,0,5,2,2],
 "structass_1_1detail_1_1debug__selector.html":[0,2,3,2,1],
 "structass_1_1detail_1_1debug__selector.html":[0,0,5,2,1],
-"structass_1_1disabled.html":[0,0,5,17],
 "structass_1_1disabled.html":[0,2,3,17],
+"structass_1_1disabled.html":[0,0,5,17],
 "structass_1_1focus.html":[0,2,3,20],
 "structass_1_1focus.html":[0,0,5,20],
 "structass_1_1hovered.html":[0,0,5,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "":[0,0,5],
 "":[0,0,4],
 "":[0,0,2],
-"":[0,0,1],
-"":[0,0,0],
-"":[0,0,17,0]
+"":[0,0,1]
 };

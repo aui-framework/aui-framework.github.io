@@ -6,6 +6,8 @@ var NAVTREEINDEX1 =
 "classAListViewContainer.html":[0,2,135],
 "classAListViewContainer.html#a8fdab774e73fa90e2a490abf80225c1d":[0,2,135,0],
 "classALogger.html":[2,0,0,26],
+"classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b":[2,0,0,26,2],
+"classALogger.html#afc8ce009869391c05cf8443081c2989d":[2,0,0,26,1],
 "classAMap.html":[2,0,0,12],
 "classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc":[2,0,0,12,2],
 "classAMenu.html":[0,2,139],
@@ -33,8 +35,8 @@ var NAVTREEINDEX1 =
 "classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5":[0,2,154,2],
 "classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417":[0,2,154,5],
 "classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417":[0,2,154,4],
-"classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b":[0,2,154,0],
 "classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b":[0,2,154,1],
+"classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b":[0,2,154,0],
 "classAOverlappingSurface.html":[0,2,155],
 "classAPageSwitch.html":[0,2,156],
 "classAPageSwitch.html#a1312c2d5b3c8af396d86fd84bb91fa2a":[0,2,156,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "classATokenizer.html#a625a7a1b1294e807e25bc81149856ace":[0,2,242,2],
 "classATokenizer.html#a76ae13d353b798c16d4437f5156f2c68":[0,2,242,13],
 "classATokenizer.html#a7bd4ef219817595f1fcef2e8300a92b4":[0,2,242,8],
-"classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70":[0,2,242,17],
-"classATokenizer.html#ab4bbceb29e8739782d77795587389d11":[0,2,242,6],
-"classATokenizer.html#ac9d3f9ecae488a601fd4f8200e1a6bb3":[0,2,242,12]
+"classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70":[0,2,242,17]
 };

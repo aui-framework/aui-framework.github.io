@@ -120,7 +120,9 @@ var group__core =
     [ "AI18n", "classAI18n.html", null ],
     [ "ALanguageCode", "classALanguageCode.html", null ],
     [ "ALogger", "classALogger.html", [
-      [ "LogWriter", "structALogger_1_1LogWriter.html", null ]
+      [ "LogWriter", "structALogger_1_1LogWriter.html", null ],
+      [ "ALogger", "classALogger.html#afc8ce009869391c05cf8443081c2989d", null ],
+      [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ]
     ] ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", [

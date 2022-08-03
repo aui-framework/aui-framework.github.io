@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"group__core.html#ga0088806c40549a1bc72ea08cdb864be9":[2,0,0,38],
+"group__core.html#ga2305696ff6358034fab947ca8cd7812a":[2,0,0,37],
 "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5":[2,0,0,36],
 "group__crypt.html":[2,0,2],
 "group__crypt.html#ga1f2f918870c930b7b3ac48302beb57cc":[2,0,2,4],
@@ -80,8 +82,8 @@ var NAVTREEINDEX4 =
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,65],
 "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html":[0,2,66],
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,67],
-"structADesktop_1_1FileExtension.html":[0,2,1,0],
 "structADesktop_1_1FileExtension.html":[0,0,2,0],
+"structADesktop_1_1FileExtension.html":[0,2,1,0],
 "structAEnumerateAllValues.html":[0,2,77],
 "structAEnumerate_1_1Values.html":[0,2,76,0],
 "structAFingerDragEvent.html":[0,2,84],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html":[0,0,5,1,9],
 "structass_1_1decl_1_1Declaration_3_01Border_01_4.html":[0,2,3,1,6],
 "structass_1_1decl_1_1Declaration_3_01Border_01_4.html":[0,0,5,1,6],
-"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,2,3,1,10],
-"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,0,5,1,10],
-"structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,2,3,1,11]
+"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,2,3,1,10]
 };

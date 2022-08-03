@@ -19,9 +19,10 @@ var searchData=
   ['line_16',['line',['../classRender.html#a9500eb550eac35ae73663faef58d5f78',1,'Render']]],
   ['linear_17',['Linear',['../classAnimationCurves_1_1Linear.html',1,'AnimationCurves']]],
   ['lineheight_18',['LineHeight',['../structass_1_1LineHeight.html',1,'ass']]],
-  ['lines_19',['lines',['../classRender.html#a9111e3cb6c75f8119b30ec81e0011666',1,'Render::lines(const ABrush &amp;brush, AArrayView&lt; glm::vec2 &gt; points)'],['../classRender.html#aa2463e440d7ae683f7f8eec673a6abd1',1,'Render::lines(const ABrush &amp;brush, AArrayView&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points)']]],
+  ['lines_19',['lines',['../classRender.html#aa2463e440d7ae683f7f8eec673a6abd1',1,'Render::lines(const ABrush &amp;brush, AArrayView&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points)'],['../classRender.html#a9111e3cb6c75f8119b30ec81e0011666',1,'Render::lines(const ABrush &amp;brush, AArrayView&lt; glm::vec2 &gt; points)']]],
   ['listdir_20',['listDir',['../classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5',1,'APath']]],
   ['load_21',['load',['../classAProgramModule.html#ad7054588a9c6e5e6c4b9e0b3ccd88041',1,'AProgramModule']]],
-  ['logwriter_22',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
-  ['loop_23',['loop',['../classMyEventLoop.html#a45d9ecc6865823837f8d935e09499066',1,'MyEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()']]]
+  ['log_22',['log',['../classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b',1,'ALogger']]],
+  ['logwriter_23',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
+  ['loop_24',['loop',['../classMyEventLoop.html#a45d9ecc6865823837f8d935e09499066',1,'MyEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()']]]
 ];
