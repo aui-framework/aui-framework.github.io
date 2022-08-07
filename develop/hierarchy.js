@@ -857,7 +857,6 @@ var hierarchy =
     [ "WinEventHandle", "classWinEventHandle.html", null ],
     [ "WinIoAsync", "classWinIoAsync.html", null ],
     [ "WinIoThread", "classWinIoThread.html", null ],
-    [ "aui::detail::pointer_to_member< ForcedClazz, Type >::with_args< Args >", "structaui_1_1detail_1_1pointer__to__member_1_1with__args.html", null ],
     [ "std::wstring", null, [
       [ "AString", "classAString.html", [
         [ "APath", "classAPath.html", null ]

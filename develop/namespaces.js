@@ -123,9 +123,7 @@ var namespaces =
           [ "type_length< std::string >", "structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html", null ],
           [ "type_length< wchar_t * >", "structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html", null ]
         ] ],
-        [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", [
-          [ "with_args", "structaui_1_1detail_1_1pointer__to__member_1_1with__args.html", null ]
-        ] ]
+        [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ]
       ] ],
       [ "impl", null, [
         [ "future", null, [
