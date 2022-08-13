@@ -99,6 +99,7 @@ var menudata={children:[
 {text:"AUI Boot",url:"md_docs_AUI_Boot.html"},
 {text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"},
 {text:"Writing tests",url:"md_docs_Writing_tests.html"},
+{text:"Writing platform dependent code",url:"md_docs_Writing_platform_dependent_code.html"},
 {text:"Code style and recommendations",url:"md_docs_Code_style_and_recommendations.html"},
 {text:"Troubleshoot list",url:"md_docs_Troubleshoot_list.html"}]},
 {text:"Reference",url:"usergroup2.html",children:[

@@ -47,6 +47,7 @@ var NAVTREE =
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
       [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
       [ "Writing tests", "md_docs_Writing_tests.html", null ],
+      [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ]
     ] ],

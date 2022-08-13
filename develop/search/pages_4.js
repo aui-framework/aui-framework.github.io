@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_0',['README',['../md_aui_data_README.html',1,'']]]
+  ['platform_20checks_0',['Platform checks',['../md_docs_Writing_platform_dependent_code.html',1,'']]]
 ];
