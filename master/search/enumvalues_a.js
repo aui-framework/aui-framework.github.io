@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visible_0',['VISIBLE',['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'Visibility.h']]]
+  ['pointer_0',['POINTER',['../group__ass.html#gga5246afc4bdd66935850032716ae2a5beaa5f41c79d3f86121f0f658eba49128d5',1,'ACursor.h']]]
 ];

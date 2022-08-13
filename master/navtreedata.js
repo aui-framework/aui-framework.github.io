@@ -47,6 +47,7 @@ var NAVTREE =
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
       [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
       [ "Writing tests", "md_docs_Writing_tests.html", null ],
+      [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ]
     ] ],
@@ -65,10 +66,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classAListView.html#a1fe6ab723b7168060e837126b374043a",
-"classATokenizer.html#af0d897961e2dcc5b50de93b095508492",
-"classMultipleInputStream.html#aa60064456d79879da0b973ef230a6b84",
-"group__signal__slot.html",
-"structass_1_1decl_1_1Declaration_3_01Font_01_4.html",
+"classATokenizer.html#ab4bbceb29e8739782d77795587389d11",
+"classMockedViewContainer.html",
+"group__core.html#ga0088806c40549a1bc72ea08cdb864be9",
+"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html",
 ""
 ];
 
