@@ -476,6 +476,7 @@ var annotated =
     [ "ASqlQueryResult", "classASqlQueryResult.html", "classASqlQueryResult" ],
     [ "AStackedLayout", "classAStackedLayout.html", null ],
     [ "AStacktrace", "classAStacktrace.html", "classAStacktrace" ],
+    [ "AStdIStream", "classAStdIStream.html", "classAStdIStream" ],
     [ "AStdOutputRecorder", "classAStdOutputRecorder.html", null ],
     [ "AString", "classAString.html", "classAString" ],
     [ "AStringFormatHelper", "structAStringFormatHelper.html", null ],

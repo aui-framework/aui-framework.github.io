@@ -36,7 +36,8 @@ var searchData=
   ['standard_33',['Standard',['../classAnimationCurves_1_1Standard.html',1,'AnimationCurves']]],
   ['state_34',['State',['../structAAssHelper_1_1State.html',1,'AAssHelper::State'],['../classgl_1_1State.html',1,'gl::State'],['../structState.html',1,'State']]],
   ['statement_35',['Statement',['../classASqlBuilder_1_1Statement.html',1,'ASqlBuilder']]],
-  ['style_36',['Style',['../structdeclarative_1_1Style.html',1,'declarative']]],
-  ['sub_37',['sub',['../structtuples_1_1detail_1_1functor_1_1sub.html',1,'tuples::detail::functor']]],
-  ['symbol_38',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]]
+  ['streambuf_36',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
+  ['style_37',['Style',['../structdeclarative_1_1Style.html',1,'declarative']]],
+  ['sub_38',['sub',['../structtuples_1_1detail_1_1functor_1_1sub.html',1,'tuples::detail::functor']]],
+  ['symbol_39',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]]
 ];

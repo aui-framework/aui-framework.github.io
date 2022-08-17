@@ -66,10 +66,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classAListView.html#a1fe6ab723b7168060e837126b374043a",
-"classATokenizer.html#ab4bbceb29e8739782d77795587389d11",
-"classMockedViewContainer.html",
-"group__core.html#ga0088806c40549a1bc72ea08cdb864be9",
-"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html",
+"classATokenizer.html#a7bd4ef219817595f1fcef2e8300a92b4",
+"classManager.html",
+"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ac397289ee45877be0cd49811fe245b4e",
+"structass_1_1decl_1_1Declaration_3_01Border_01_4.html",
 ""
 ];
 

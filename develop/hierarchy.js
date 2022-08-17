@@ -515,6 +515,9 @@ var hierarchy =
     [ "ISqlDriver", "classISqlDriver.html", null ],
     [ "ISqlDriverResult", "classISqlDriverResult.html", null ],
     [ "ISqlDriverRow", "classISqlDriverRow.html", null ],
+    [ "std::istream", null, [
+      [ "AStdIStream", "classAStdIStream.html", null ]
+    ] ],
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
       [ "AAbstractTextField", "classAAbstractTextField.html", null ]
@@ -719,6 +722,9 @@ var hierarchy =
         [ "ASqlBuilder::Select", "classASqlBuilder_1_1Select.html", null ],
         [ "ASqlBuilder::Update", "classASqlBuilder_1_1Update.html", null ]
       ] ]
+    ] ],
+    [ "std::streambuf", null, [
+      [ "AStdIStream::StreamBuf", "classAStdIStream_1_1StreamBuf.html", null ]
     ] ],
     [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
