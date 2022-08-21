@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1decl_1_1Declaration_3_01Border_01_4.html":[0,2,3,1,6],
+"structass_1_1decl_1_1Declaration_3_01Border_01_4.html":[0,0,5,1,6],
 "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,0,5,1,10],
 "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,2,3,1,10],
 "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,2,3,1,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "":[0,0,5,0],
 "":[0,0,5],
 "":[0,0,4],
-"":[0,0,2],
-"":[0,0,1],
-"":[0,0,0]
+"":[0,0,2]
 };

@@ -44,6 +44,9 @@ var group__io =
     [ "ARandomInputStream", "classARandomInputStream.html", [
       [ "read", "classARandomInputStream.html#ae6deddbadfbc0ae88aa4b9c62d962f50", null ]
     ] ],
+    [ "AStdIStream", "classAStdIStream.html", [
+      [ "StreamBuf", "classAStdIStream_1_1StreamBuf.html", null ]
+    ] ],
     [ "AStringStream", "classAStringStream.html", [
       [ "read", "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c", null ],
       [ "write", "classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b", null ]
