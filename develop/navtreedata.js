@@ -49,7 +49,8 @@ var NAVTREE =
       [ "Writing tests", "md_docs_Writing_tests.html", null ],
       [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
-      [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ]
+      [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ],
+      [ "", "@ref md_docs_Crosscompiling.html", null ]
     ] ],
     [ "Reference", "usergroup2.html", [
       [ "All AUI Modules", "modules.html", "modules" ],
@@ -64,12 +65,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classAListView.html#a1fe6ab723b7168060e837126b374043a",
-"classATokenizer.html#a7bd4ef219817595f1fcef2e8300a92b4",
-"classManager.html",
-"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ac397289ee45877be0cd49811fe245b4e",
-"structass_1_1decl_1_1Declaration_3_01Border_01_4.html",
+"@ref md_docs_Crosscompiling.html",
+"classAListView.html",
+"classATokenizer.html#a76ae13d353b798c16d4437f5156f2c68",
+"classMacosApp.html",
+"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693",
+"structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html",
 ""
 ];
 

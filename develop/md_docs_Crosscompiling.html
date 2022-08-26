@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AUI Framework: Troubleshoot list</title>
+<title>AUI Framework: Crosscompiling (Android and iOS)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('md_docs_Troubleshoot_list.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('md_docs_Crosscompiling.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -89,30 +89,37 @@ $(document).ready(function(){initNavTree('md_docs_Troubleshoot_list.html',''); i
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Troubleshoot list </div></div>
+  <div class="headertitle"><div class="title">Crosscompiling (Android and iOS) </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >If neither of these suggestions helped and you think you encountered an AUI's issue, consider <a href="https://github.com/aui-framework/aui/issues">reporting it on GitHub</a>.</p>
-<h1><a class="anchor" id="autotoc_md63"></a>
-Linking problems</h1>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md56"></a>
+The CMAKE_TOOLCHAIN_FILE way</h1>
+<p >That's the common way of crosscompiling with CMake. You need a toolchain file which describes your target platform.</p>
+<p >In Android, a Gradle-driven project provides the toolchain for you. You don't even need to specify CMAKE_TOOLCHAIN_FILE, Gradle does it for you.</p>
+<p >In iOS, there's no "official" toolchain so there are community-provided toolchains (like the <a href="https://raw.githubusercontent.com/aui-framework/aui/master/cmake/toolchains/arm64-ios.cmake">one used in AUI</a>).</p>
+<p >AUI.Boot forwards <code>CMAKE_TOOLCHAIN_FILE</code> across all the dependencies.</p>
+<h1><a class="anchor" id="autotoc_md57"></a>
+The AUI_BUILD_FOR way</h1>
+<p >AUI provides the unified way to cross-compile your application with AUI_BUILD_FOR CMake configure variable. When specified, CMake does the whole configure routine as if the project is compiled for the host system but it generates extra project directory for the target platform's development environment.</p>
+<p >To build target platform's final application package, run build the <code>apps</code> target.</p>
+<p >Example (assuming working directory is the build directory):</p>
+<p >To configure the project use </p><div class="fragment"><div class="line">cmake -DAUI_BUILD_FOR=android ..</div>
+</div><!-- fragment --><p >To build the project use </p><div class="fragment"><div class="line">cmake --build . -t apps</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md58"></a>
+Supported platforms</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><code>AUI_BUILD_FOR</code> value   </th><th class="markdownTableHeadNone">Target platform   </th><th class="markdownTableHeadNone">Project environment   </th><th class="markdownTableHeadNone">Project dir    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>android</code>   </td><td class="markdownTableBodyNone">Android   </td><td class="markdownTableBodyNone">Gradle (can be opened with Android Studio)   </td><td class="markdownTableBodyNone"><code>${CMAKE_CURRENT_BINARY_DIR}/gradle_project</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>ios</code>   </td><td class="markdownTableBodyNone">iOS   </td><td class="markdownTableBodyNone">Xcode   </td><td class="markdownTableBodyNone"><code>${CMAKE_CURRENT_BINARY_DIR}/xcode_project</code>   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md59"></a>
+Limitations</h2>
 <ol type="1">
-<li>Make sure you are using <code>aui_link</code> instead of <code>target_link_libraries</code> at least for AUI's components.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md64"></a>
-Assets</h1>
-<ol type="1">
-<li>Ensure you have called <code>aui_compile_assets()</code> in your <code>CMakeLists.txt</code>.</li>
-<li>Make sure you are using <code>aui_link</code> instead of <code>target_link_libraries</code> at least for AUI's components.</li>
-<li>If you are <code>aui_link</code>'ing asset-containing modules (i.e. <code>aui::views</code>) against static library, consider link them also with the final executable (<code>PUBLIC</code> linking does not solve this issue on Linux).</li>
-<li>Try using <a class="el" href="md_docs_aui_app.html">WHOLEARCHIVE</a> flag.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md66"></a>
-Common script</h1>
-<ol type="1">
-<li>Delete <code>CMakeCache.txt</code> from your CMake binary dir (<code>cmake-build-debug</code> or <code>cmake-build-release</code> in CLion).</li>
-<li>Delete your CMake binary dir.</li>
-<li>Change AUI version (also needs <code>CMakeCache.txt</code> to be deleted)</li>
-<li>Delete aui.boot cache dir (<code>~/.aui</code> unless otherwise specified) </li>
+<li>Variables defined in the configure step (including the ones specified with command line by <code>-DVAR=VALUE</code> syntax) are not forwarded to the child CMake configure process. To bypass the limitation, use <code>auib_mark_var_forwardable(VAR)</code> function, where <code>VAR</code> is your variable name.</li>
+<li>As like CMake's generated projects, the project generated by AUI are not portable too. </li>
 </ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
