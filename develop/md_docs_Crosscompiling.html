@@ -102,10 +102,12 @@ The CMAKE_TOOLCHAIN_FILE way</h1>
 The AUI_BUILD_FOR way</h1>
 <p >AUI provides the unified way to cross-compile your application with AUI_BUILD_FOR CMake configure variable. When specified, CMake does the whole configure routine as if the project is compiled for the host system but it generates extra project directory for the target platform's development environment.</p>
 <p >To build target platform's final application package, run build the <code>apps</code> target.</p>
-<p >Example (assuming working directory is the build directory):</p>
+<h2><a class="anchor" id="autotoc_md58"></a>
+Example</h2>
+<p >Assuming working directory is the build directory:</p>
 <p >To configure the project use </p><div class="fragment"><div class="line">cmake -DAUI_BUILD_FOR=android ..</div>
 </div><!-- fragment --><p >To build the project use </p><div class="fragment"><div class="line">cmake --build . -t apps</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md58"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md59"></a>
 Supported platforms</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -115,7 +117,7 @@ Supported platforms</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>ios</code>   </td><td class="markdownTableBodyNone">iOS   </td><td class="markdownTableBodyNone">Xcode   </td><td class="markdownTableBodyNone"><code>${CMAKE_CURRENT_BINARY_DIR}/xcode_project</code>   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md60"></a>
 Limitations</h2>
 <ol type="1">
 <li>Variables defined in the configure step (including the ones specified with command line by <code>-DVAR=VALUE</code> syntax) are not forwarded to the child CMake configure process. To bypass the limitation, use <code>auib_mark_var_forwardable(VAR)</code> function, where <code>VAR</code> is your variable name.</li>

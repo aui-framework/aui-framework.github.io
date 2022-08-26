@@ -50,7 +50,7 @@ var NAVTREE =
       [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ],
-      [ "", "@ref md_docs_Crosscompiling.html", null ]
+      [ "Crosscompiling (Android and iOS)", "@ref md_docs_Crosscompiling.html", null ]
     ] ],
     [ "Reference", "usergroup2.html", [
       [ "All AUI Modules", "modules.html", "modules" ],
