@@ -7,5 +7,6 @@ var searchData=
   ['execute_4',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
   ['executeasadministrator_5',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
   ['executewaitforexit_6',['executeWaitForExit',['../classAProcess.html#aa636c40424103381cb9fdacbdad265d8',1,'AProcess']]],
-  ['exists_7',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]]
+  ['exists_7',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
+  ['extrastylesheet_8',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
 ];

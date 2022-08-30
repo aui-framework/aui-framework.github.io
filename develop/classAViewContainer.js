@@ -2,8 +2,8 @@ var classAViewContainer =
 [
     [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
     [ "focus", "classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a", null ],
-    [ "getContentMinimumHeight", "classAViewContainer.html#a647d753ecc7efe646be8ab4bcc2522a0", null ],
-    [ "getContentMinimumWidth", "classAViewContainer.html#afbab990d949c3e95e4471260fe7ceedb", null ],
+    [ "getContentMinimumHeight", "classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec", null ],
+    [ "getContentMinimumWidth", "classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0", null ],
     [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
     [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
     [ "onMouseWheel", "classAViewContainer.html#a4f68141aeb4a2d915c5b0cd0e98e5bb1", null ],

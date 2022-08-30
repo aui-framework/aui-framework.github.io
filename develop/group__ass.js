@@ -1,6 +1,7 @@
 var group__ass =
 [
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
+    [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
     [ "ass::BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
     [ "ass::BackgroundImage", "structass_1_1BackgroundImage.html", null ],
     [ "ass::BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],

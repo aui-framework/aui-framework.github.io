@@ -163,6 +163,7 @@ var hierarchy =
     [ "AWatchable< bool >", "classAWatchable_3_01bool_01_4.html", null ],
     [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
+    [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
     [ "ass::BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
     [ "ass::BackgroundImage", "structass_1_1BackgroundImage.html", null ],
     [ "ass::BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],
@@ -257,9 +258,10 @@ var hierarchy =
           [ "ARulerView", "classARulerView.html", null ],
           [ "AScrollbarButton", "classAScrollbarButton.html", null ],
           [ "AScrollbarHandle", "classAScrollbarHandle.html", null ],
-          [ "ASpacer", "classASpacer.html", [
+          [ "ASpacerExpanding", "classASpacerExpanding.html", [
             [ "AScrollbarOffsetSpacer", "classAScrollbarOffsetSpacer.html", null ]
           ] ],
+          [ "ASpacerFixed", "classASpacerFixed.html", null ],
           [ "ASpinner", "classASpinner.html", null ],
           [ "AViewContainer", "classAViewContainer.html", [
             [ "ABaseWindow", "classABaseWindow.html", [
@@ -400,10 +402,16 @@ var hierarchy =
         [ "ass::debug_selector", "structass_1_1debug__selector.html", null ]
       ] ]
     ] ],
+    [ "IBackgroundEffect", "classIBackgroundEffect.html", [
+      [ "EffectShimmer", "classEffectShimmer.html", null ]
+    ] ],
     [ "APlaceholderAnimator::ICustomWidth", "classAPlaceholderAnimator_1_1ICustomWidth.html", null ],
     [ "ass::decl::IDeclarationBase", "structass_1_1decl_1_1IDeclarationBase.html", [
       [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", null ],
+      [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
+      [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
+      [ "ass::decl::Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
@@ -425,7 +433,6 @@ var hierarchy =
       [ "ass::decl::Declaration< MaxSize >", "structass_1_1decl_1_1Declaration_3_01MaxSize_01_4.html", null ],
       [ "ass::decl::Declaration< MinSize >", "structass_1_1decl_1_1Declaration_3_01MinSize_01_4.html", null ],
       [ "ass::decl::Declaration< Opacity >", "structass_1_1decl_1_1Declaration_3_01Opacity_01_4.html", null ],
-      [ "ass::decl::Declaration< Overflow >", "structass_1_1decl_1_1Declaration_3_01Overflow_01_4.html", null ],
       [ "ass::decl::Declaration< Padding >", "structass_1_1decl_1_1Declaration_3_01Padding_01_4.html", null ],
       [ "ass::decl::Declaration< TextAlign >", "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html", null ],
       [ "ass::decl::Declaration< TextBorder >", "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html", null ],
@@ -507,9 +514,6 @@ var hierarchy =
       [ "ARadioButton", "classARadioButton.html", null ],
       [ "ATabButtonView", "classATabButtonView.html", null ],
       [ "ATreeView::ItemView", "classATreeView_1_1ItemView.html", null ]
-    ] ],
-    [ "IShadingEffect", "classIShadingEffect.html", [
-      [ "SimpleShadingEffect", "classSimpleShadingEffect.html", null ]
     ] ],
     [ "ISqlDatabase", "classISqlDatabase.html", null ],
     [ "ISqlDriver", "classISqlDriver.html", null ],

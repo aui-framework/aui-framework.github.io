@@ -8,5 +8,6 @@ var modules =
     [ "aui::network", "group__network.html", "group__network" ],
     [ "aui::uitests", "group__uitests.html", "group__uitests" ],
     [ "aui::views", "group__views.html", "group__views" ],
+    [ "Background_effect", "group__background__effect.html", null ],
     [ "aui::xml", "group__xml.html", "group__xml" ]
 ];
