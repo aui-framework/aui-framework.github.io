@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"group__ass.html#gga5246afc4bdd66935850032716ae2a5beaa5f41c79d3f86121f0f658eba49128d5":[2,0,7,0,27,1],
 "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a12197f0373bd373681e99d73fd509954":[2,0,7,0,28,1],
 "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a1a0b4e0e6c6c1a6a5958518f4e8d6178":[2,0,7,0,28,3],
 "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a6c8c93b0cd657e2fd400f2c61acc6f42":[2,0,7,0,28,5],
@@ -63,6 +62,7 @@ var NAVTREEINDEX4 =
 "md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_configure_flags.html":[1,2],
 "md_docs_Code_style_and_recommendations.html":[1,5],
+"md_docs_Crosscompiling.html":[1,7],
 "md_docs_Getting_started_with_AUI.html":[1,0],
 "md_docs_Troubleshoot_list.html":[1,6],
 "md_docs_Writing_platform_dependent_code.html":[1,4],
