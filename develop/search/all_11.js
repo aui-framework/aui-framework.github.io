@@ -24,7 +24,7 @@ var searchData=
   ['redraw_21',['redraw',['../classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f',1,'AView']]],
   ['ref_22',['Ref',['../classAAndroid_1_1Ref.html',1,'AAndroid']]],
   ['remove_23',['remove',['../structASqlModel.html#a2e8dd259c05d058fb4216f9bff8ee143',1,'ASqlModel::remove()'],['../classASqlBuilder.html#a629d9a4a1bd80a780aa909128b4dd5e2',1,'ASqlBuilder::remove()']]],
-  ['removeall_24',['removeAll',['../classADeque.html#abfcf39b922cfefa8e8b26c48f6b3564a',1,'ADeque::removeAll()'],['../classAVector.html#af1feec53844fa47cdcd75c46ca371556',1,'AVector::removeAll()'],['../classASet.html#a12d4b33b6151c4603efafc6f90498c38',1,'ASet::removeAll()'],['../classAQueue.html#a6e2176bb102251379725563048f66fc6',1,'AQueue::removeAll()']]],
+  ['removeall_24',['removeAll',['../classADeque.html#abfcf39b922cfefa8e8b26c48f6b3564a',1,'ADeque::removeAll()'],['../classAVector.html#af1feec53844fa47cdcd75c46ca371556',1,'AVector::removeAll()'],['../classAQueue.html#a6e2176bb102251379725563048f66fc6',1,'AQueue::removeAll()']]],
   ['removeassname_25',['removeAssName',['../classAView.html#a11d7426c20f9ef791040935a846960e6',1,'AView']]],
   ['removeat_26',['removeAt',['../classAListModel.html#a2c19b8f7c2ca98f55765fe5b02a6b1c4',1,'AListModel::removeAt()'],['../classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8',1,'AVector::removeAt()'],['../classADeque.html#a1ea78cc2ae00c653dcfb9ad5484356e6',1,'ADeque::removeAt()']]],
   ['removefile_27',['removeFile',['../classAPath.html#a4512a1474619f7a6ccb773dc2ee7fbef',1,'APath']]],

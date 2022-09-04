@@ -74,6 +74,7 @@ var group__useful__views =
       [ "getContentMinimumWidth", "classASpacerExpanding.html#ab4513747d883438e3ca526295cfbecf8", null ]
     ] ],
     [ "ASpacerFixed", "classASpacerFixed.html", [
+      [ "consumesClick", "classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35", null ],
       [ "getContentMinimumHeight", "classASpacerFixed.html#adecb4adaba29315c52692e32d886ed62", null ],
       [ "getContentMinimumWidth", "classASpacerFixed.html#ac51602087565fd27e0c4567cce1a8f48", null ]
     ] ],
@@ -136,6 +137,7 @@ var group__useful__views =
       [ "getWindow", "classAView.html#a03245e11f856a8ece49da1d7032c0203", null ],
       [ "handlesNonMouseNavigation", "classAView.html#a9c3deb7023947adc4c698540db4086c8", null ],
       [ "invalidateAllStyles", "classAView.html#ad461e812a51a1d556ec8219399e659c9", null ],
+      [ "invalidateAssHelper", "classAView.html#a2fe107662aec06c7c1ad7aa2eda71c0c", null ],
       [ "invalidateStateStyles", "classAView.html#aae643e27fa9578fecad36519f30ed043", null ],
       [ "onGesture", "classAView.html#a2b74937853928a68e0f7ec4cae7adb3b", null ],
       [ "onMousePressed", "classAView.html#ae00b0a186ecc94d89bf77cb384f3cc6c", null ],
@@ -155,7 +157,7 @@ var group__useful__views =
       [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
       [ "focusState", "classAView.html#a96f3c6e2b8c960c5081866e26baa828e", null ],
       [ "mAss", "classAView.html#a0da9806bf1d6524ef717abe66f41d269", null ],
-      [ "mAssNames", "classAView.html#a0606dba2cdd6c1974f501952518af658", null ],
+      [ "mAssNames", "classAView.html#a13f1450f43fb867bcff67b1d7284bd46", null ],
       [ "mCursor", "classAView.html#a448c7992afd25631e42da434c2f9796d", null ],
       [ "mCustomStyleRule", "classAView.html#aaea3fc721d08603a1a3cbc9c11729142", null ],
       [ "mExpanding", "classAView.html#a5122d5846227520294bda27e6b45ea4a", null ],
@@ -174,6 +176,7 @@ var group__useful__views =
       [ "getContentMinimumHeight", "classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec", null ],
       [ "getContentMinimumWidth", "classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0", null ],
       [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
+      [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
       [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
       [ "onMouseWheel", "classAViewContainer.html#a4f68141aeb4a2d915c5b0cd0e98e5bb1", null ],
       [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],

@@ -5,6 +5,7 @@ var classAViewContainer =
     [ "getContentMinimumHeight", "classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec", null ],
     [ "getContentMinimumWidth", "classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0", null ],
     [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
+    [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
     [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
     [ "onMouseWheel", "classAViewContainer.html#a4f68141aeb4a2d915c5b0cd0e98e5bb1", null ],
     [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
