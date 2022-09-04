@@ -10,8 +10,8 @@ var NAVTREEINDEX0 =
 "classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f":[0,2,17,0],
 "classAAbstractLabel.html#a22381e7341ee6552c31a812fab25e95c":[0,2,17,2],
 "classAAbstractLabel.html#a65949d4523eac52912a0fd63a25854d4":[0,2,17,1],
-"classAAbstractSignal.html":[2,0,0,4],
 "classAAbstractSignal.html":[2,0,0,0,0],
+"classAAbstractSignal.html":[2,0,0,4],
 "classAAbstractSocket.html":[2,0,5,0],
 "classAAbstractSocket.html#a483fb86e9871014cf45759f8fc190269":[2,0,5,0,0],
 "classAAbstractSocket.html#aacd9223f413ec487d2d9ea2707360b08":[2,0,5,0,1],
@@ -48,8 +48,8 @@ var NAVTREEINDEX0 =
 "classAAbstractTypeableView.html#af71ef7dc24756d6681856c07e5d5ac6a":[0,2,22,3],
 "classAAccessDeniedException.html":[0,2,23],
 "classAAdvancedGridLayout.html":[2,0,7,1,0],
-"classAAndroid_1_1Ref.html":[0,2,0,0],
 "classAAndroid_1_1Ref.html":[0,0,0,0],
+"classAAndroid_1_1Ref.html":[0,2,0,0],
 "classAAnimator.html":[0,2,25],
 "classAAnimator.html#af941b29a3b3614c83087fafdd77f8338":[0,2,25,0],
 "classAArrayView.html":[0,2,26],
@@ -207,8 +207,6 @@ var NAVTREEINDEX0 =
 "classAForEachUI.html":[0,2,90],
 "classAFraction.html":[0,2,91],
 "classAFuture.html":[2,0,0,30],
-"classAFuture.html#a53c15992019e08d8952308c1f2449e1e":[2,0,0,30,0],
-"classAFuture.html#a5c86cd3b59488ceba19458a5a1683fa5":[2,0,0,30,1],
 "classAFutureSet.html":[2,0,0,33],
 "classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a":[2,0,0,33,1],
 "classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417":[2,0,0,33,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX0 =
 "classAListModel.html#aa9325393ec83591d1700fca9f30a8046":[0,2,130,0],
 "classAListModel.html#ac65199711ed9f613d8b3a9d4d385a1d0":[0,2,130,2],
 "classAListModel.html#ad137f7562f4b4a6cb97b157c764ae81b":[0,2,130,1],
-"classAListModelAdapter.html":[0,2,131]
+"classAListModelAdapter.html":[0,2,131],
+"classAListModelFilter.html":[0,2,132],
+"classAListModelFilter.html#a0bcfdf3c6426304303051e63b0f9d001":[0,2,132,0]
 };

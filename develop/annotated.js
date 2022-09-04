@@ -348,7 +348,7 @@ var annotated =
     [ "AFontStyle", "structAFontStyle.html", null ],
     [ "AForEachUI", "classAForEachUI.html", null ],
     [ "AFraction", "classAFraction.html", null ],
-    [ "AFuture", "classAFuture.html", "classAFuture" ],
+    [ "AFuture", "classAFuture.html", null ],
     [ "AFuture< void >", "classAFuture_3_01void_01_4.html", "classAFuture_3_01void_01_4" ],
     [ "AFutureSet", "classAFutureSet.html", "classAFutureSet" ],
     [ "AGLEmbedAuiWrap", "classAGLEmbedAuiWrap.html", null ],
