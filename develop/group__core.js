@@ -139,7 +139,10 @@ var group__core =
       [ "resetSignal", "classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783", null ],
       [ "waitForSignal", "classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488", null ]
     ] ],
-    [ "AFuture< T >", "classAFuture.html", null ],
+    [ "AFuture< T >", "classAFuture.html", [
+      [ "onError", "classAFuture.html#a53c15992019e08d8952308c1f2449e1e", null ],
+      [ "onSuccess", "classAFuture.html#a5c86cd3b59488ceba19458a5a1683fa5", null ]
+    ] ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "Message", "structAAbstractThread_1_1Message.html", null ],
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],

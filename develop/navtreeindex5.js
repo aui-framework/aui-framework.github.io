@@ -1,10 +1,14 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1decl_1_1Declaration.html":[0,2,3,1,0],
+"structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html":[0,0,5,1,1],
+"structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html":[0,2,3,1,1],
+"structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html":[0,2,3,1,3],
 "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html":[0,0,5,1,3],
 "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html":[0,2,3,1,2],
 "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html":[0,0,5,1,2],
-"structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html":[0,0,5,1,4],
 "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html":[0,2,3,1,4],
+"structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html":[0,0,5,1,4],
 "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html":[0,2,3,1,5],
 "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html":[0,0,5,1,5],
 "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html":[0,0,5,1,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX5 =
 "structuitest_1_1impl_1_1greater__of.html":[0,2,13,0,2],
 "structuitest_1_1impl_1_1less__of.html":[0,0,17,0,3],
 "structuitest_1_1impl_1_1less__of.html":[0,2,13,0,3],
-"structuitest_1_1impl_1_1not_0b.html":[0,0,17,0,4],
-"structuitest_1_1impl_1_1not_0b.html":[0,2,13,0,4],
-"structuitest_1_1impl_1_1side__value.html":[0,0,17,0,5],
-"structuitest_1_1impl_1_1side__value.html":[0,2,13,0,5],
-"structuitest_1_1impl_1_1side__value_3_01ASide_1_1BOTTOM_01_4.html":[0,0,17,0,6]
+"structuitest_1_1impl_1_1not_0b.html":[0,0,17,0,4]
 };

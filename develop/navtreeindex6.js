@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"structuitest_1_1impl_1_1not_0b.html":[0,2,13,0,4],
+"structuitest_1_1impl_1_1side__value.html":[0,0,17,0,5],
+"structuitest_1_1impl_1_1side__value.html":[0,2,13,0,5],
+"structuitest_1_1impl_1_1side__value_3_01ASide_1_1BOTTOM_01_4.html":[0,0,17,0,6],
 "structuitest_1_1impl_1_1side__value_3_01ASide_1_1BOTTOM_01_4.html":[0,2,13,0,6],
 "structuitest_1_1impl_1_1side__value_3_01ASide_1_1LEFT_01_4.html":[0,2,13,0,7],
 "structuitest_1_1impl_1_1side__value_3_01ASide_1_1LEFT_01_4.html":[0,0,17,0,7],
