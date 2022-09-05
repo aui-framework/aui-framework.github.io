@@ -454,6 +454,7 @@ var hierarchy =
         [ "AGLEmbedAuiWrap", "classAGLEmbedAuiWrap.html", null ],
         [ "ASoftwareEmbedAuiWrap", "classASoftwareEmbedAuiWrap.html", null ]
       ] ],
+      [ "AEventLoop", "classAEventLoop.html", null ],
       [ "AWindowManager", "classAWindowManager.html", [
         [ "UITestWindowManager", "classUITestWindowManager.html", null ]
       ] ],

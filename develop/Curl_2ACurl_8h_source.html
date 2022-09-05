@@ -255,113 +255,123 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        Builder&amp; withRanges(<span class="keywordtype">size_t</span> begin, <span class="keywordtype">size_t</span> end);</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <a class="code hl_class" href="class__.html">_&lt;IInputStream&gt;</a> toInputStream();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>         <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> toByteBuffer();</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    };</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classACurl.html">ACurl</a>(Builder&amp; builder):</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <a class="code hl_class" href="classACurl.html">ACurl</a>(std::move(builder))</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classACurl.html">ACurl</a>(Builder&amp;&amp; builder) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        operator=(std::move(builder));</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>(<a class="code hl_class" href="classACurl.html">ACurl</a>&amp;&amp; o) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        operator=(std::move(o));</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>() noexcept: mCURL(<span class="keywordtype">nullptr</span>) {}</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <a class="code hl_class" href="classACurl.html">~ACurl</a>();</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>&amp; operator=(Builder&amp;&amp; o) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>&amp; operator=(<a class="code hl_class" href="classACurl.html">ACurl</a>&amp;&amp; o) <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    int64_t getContentLength() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordtype">void</span>* handle() const noexcept {</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">return</span> mCURL;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        Builder&amp; withHeaders(<a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> headers) {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            mHeaders = std::move(headers);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <a class="code hl_class" href="class__.html">_&lt;IInputStream&gt;</a> toInputStream();</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>         <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> toByteBuffer();</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> mHeaders;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    };</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classACurl.html">ACurl</a>(Builder&amp; builder):</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_class" href="classACurl.html">ACurl</a>(std::move(builder))</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classACurl.html">ACurl</a>(Builder&amp;&amp; builder) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        operator=(std::move(builder));</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>(<a class="code hl_class" href="classACurl.html">ACurl</a>&amp;&amp; o) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        operator=(std::move(o));</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>() noexcept: mCURL(<span class="keywordtype">nullptr</span>) {}</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <a class="code hl_class" href="classACurl.html">~ACurl</a>();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>&amp; operator=(Builder&amp;&amp; o) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_class" href="classACurl.html">ACurl</a>&amp; operator=(<a class="code hl_class" href="classACurl.html">ACurl</a>&amp;&amp; o) <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    ResponseCode getResponseCode() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordtype">void</span>* mCURL;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">char</span> mErrorBuffer[256];</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">static</span> <span class="keywordtype">size_t</span> writeCallback(<span class="keywordtype">char</span>* ptr, <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">void</span>* userdata) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    int64_t getContentLength() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">void</span>* handle() const noexcept {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">return</span> mCURL;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    WriteCallback mWriteCallback;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordtype">void</span> reportSuccess() {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        emit <a class="code hl_variable" href="classACurl.html#a8059c18f914594da57c24286a17674ff">success</a>;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordtype">void</span> reportFail(<span class="keywordtype">int</span> statusCode) {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        emit <a class="code hl_variable" href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">fail</a>(ErrorDescription{statusCode, AString::fromLatin1(mErrorBuffer)});</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    ResponseCode getResponseCode() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordtype">void</span>* mCURL;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keyword">struct </span>curl_slist* mCurlHeaders = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordtype">char</span> mErrorBuffer[256];</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keyword">static</span> <span class="keywordtype">size_t</span> writeCallback(<span class="keywordtype">char</span>* ptr, <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">void</span>* userdata) <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ret&gt;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    Ret getInfo(<span class="keywordtype">int</span> curlInfo) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>signals:</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    WriteCallback mWriteCallback;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordtype">void</span> reportSuccess() {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        emit success;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">  251</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;ErrorDescription&gt;</a> <a class="code hl_variable" href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">fail</a>;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordtype">void</span> reportFail(<span class="keywordtype">int</span> statusCode) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        emit fail(ErrorDescription{statusCode, AString::fromLatin1(mErrorBuffer)});</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Ret&gt;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    Ret getInfo(<span class="keywordtype">int</span> curlInfo) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="classACurl.html#a8059c18f914594da57c24286a17674ff">  258</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> <a class="code hl_variable" href="classACurl.html#a8059c18f914594da57c24286a17674ff">success</a>;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>};</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>AUI_ENUM_VALUES(ACurl::ResponseCode,</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                ACurl::ResponseCode::HTTP_100_CONTINUE,</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                ACurl::ResponseCode::HTTP_101_SWITCHING_PROTOCOL,</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                ACurl::ResponseCode::HTTP_102_PROCESSING,</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                ACurl::ResponseCode::HTTP_103_EARLY_HINTS,</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                ACurl::ResponseCode::HTTP_200_OK,</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                ACurl::ResponseCode::HTTP_201_CREATED,</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                ACurl::ResponseCode::HTTP_202_ACCEPTED,</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                ACurl::ResponseCode::HTTP_203_NON_AUTHORITATIVE_INFORMATION,</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                ACurl::ResponseCode::HTTP_204_NO_CONTENT,</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                ACurl::ResponseCode::HTTP_205_RESET_CONTENT,</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                ACurl::ResponseCode::HTTP_206_PARTIAL_CONTENT,</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                ACurl::ResponseCode::HTTP_300_MULTIPLE_CHOICE,</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                ACurl::ResponseCode::HTTP_301_MOVED_PERMANENTLY,</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                ACurl::ResponseCode::HTTP_302_FOUND,</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                ACurl::ResponseCode::HTTP_303_SEE_OTHER,</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                ACurl::ResponseCode::HTTP_304_NOT_MODIFIED,</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                ACurl::ResponseCode::HTTP_305_USE_PROXY,</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                ACurl::ResponseCode::HTTP_306_SWITCH_PROXY,</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                ACurl::ResponseCode::HTTP_307_TEMPORARY_REDIRECT,</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                ACurl::ResponseCode::HTTP_308_PERMANENT_REDIRECT,</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                ACurl::ResponseCode::HTTP_400_BAD_REQUEST,</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                ACurl::ResponseCode::HTTP_401_UNAUTHORIZED,</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                ACurl::ResponseCode::HTTP_402_PAYMENT_REQUIRED,</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                ACurl::ResponseCode::HTTP_403_FORBIDDEN,</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                ACurl::ResponseCode::HTTP_404_NOT_FOUND,</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                ACurl::ResponseCode::HTTP_405_METHOD_NOT_ALLOWED,</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                ACurl::ResponseCode::HTTP_406_NOT_ACCEPTABLE,</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                ACurl::ResponseCode::HTTP_407_PROXY_AUTHENTICATION_REQUIRED,</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                ACurl::ResponseCode::HTTP_408_REQUEST_TIMEOUT,</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                ACurl::ResponseCode::HTTP_409_CONFLICT,</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                ACurl::ResponseCode::HTTP_410_GONE,</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                ACurl::ResponseCode::HTTP_411_LENGTH_REQUIRED,</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                ACurl::ResponseCode::HTTP_412_PRECONDITION_FAILED,</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                ACurl::ResponseCode::HTTP_413_REQUEST_ENTITY_TOO_LARGE,</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                ACurl::ResponseCode::HTTP_414_REQUEST_URI_TOO_LONG,</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                ACurl::ResponseCode::HTTP_415_UNSUPPORTED_MEDIA_TYPE,</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                ACurl::ResponseCode::HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE,</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                ACurl::ResponseCode::HTTP_417_EXPECTATION_FAILED,</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                ACurl::ResponseCode::HTTP_500_INTERNAL_SERVER_ERROR,</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                ACurl::ResponseCode::HTTP_501_NOT_IMPLEMENTED,</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                ACurl::ResponseCode::HTTP_502_BAD_GATEWAY,</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                ACurl::ResponseCode::HTTP_503_SERVICE_UNAVAILABLE,</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                ACurl::ResponseCode::HTTP_504_GATEWAY_TIMEOUT,</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                ACurl::ResponseCode::HTTP_505_HTTP_VERSION_NOT_SUPPORTED)</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>signals:</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">  261</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;ErrorDescription&gt;</a> <a class="code hl_variable" href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">fail</a>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="classACurl.html#a8059c18f914594da57c24286a17674ff">  268</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> <a class="code hl_variable" href="classACurl.html#a8059c18f914594da57c24286a17674ff">success</a>;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>};</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>AUI_ENUM_VALUES(ACurl::ResponseCode,</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                ACurl::ResponseCode::HTTP_100_CONTINUE,</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                ACurl::ResponseCode::HTTP_101_SWITCHING_PROTOCOL,</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                ACurl::ResponseCode::HTTP_102_PROCESSING,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                ACurl::ResponseCode::HTTP_103_EARLY_HINTS,</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                ACurl::ResponseCode::HTTP_200_OK,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                ACurl::ResponseCode::HTTP_201_CREATED,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                ACurl::ResponseCode::HTTP_202_ACCEPTED,</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                ACurl::ResponseCode::HTTP_203_NON_AUTHORITATIVE_INFORMATION,</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                ACurl::ResponseCode::HTTP_204_NO_CONTENT,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                ACurl::ResponseCode::HTTP_205_RESET_CONTENT,</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                ACurl::ResponseCode::HTTP_206_PARTIAL_CONTENT,</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                ACurl::ResponseCode::HTTP_300_MULTIPLE_CHOICE,</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                ACurl::ResponseCode::HTTP_301_MOVED_PERMANENTLY,</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                ACurl::ResponseCode::HTTP_302_FOUND,</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                ACurl::ResponseCode::HTTP_303_SEE_OTHER,</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                ACurl::ResponseCode::HTTP_304_NOT_MODIFIED,</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                ACurl::ResponseCode::HTTP_305_USE_PROXY,</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                ACurl::ResponseCode::HTTP_306_SWITCH_PROXY,</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                ACurl::ResponseCode::HTTP_307_TEMPORARY_REDIRECT,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                ACurl::ResponseCode::HTTP_308_PERMANENT_REDIRECT,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                ACurl::ResponseCode::HTTP_400_BAD_REQUEST,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                ACurl::ResponseCode::HTTP_401_UNAUTHORIZED,</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                ACurl::ResponseCode::HTTP_402_PAYMENT_REQUIRED,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                ACurl::ResponseCode::HTTP_403_FORBIDDEN,</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                ACurl::ResponseCode::HTTP_404_NOT_FOUND,</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                ACurl::ResponseCode::HTTP_405_METHOD_NOT_ALLOWED,</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                ACurl::ResponseCode::HTTP_406_NOT_ACCEPTABLE,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                ACurl::ResponseCode::HTTP_407_PROXY_AUTHENTICATION_REQUIRED,</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                ACurl::ResponseCode::HTTP_408_REQUEST_TIMEOUT,</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                ACurl::ResponseCode::HTTP_409_CONFLICT,</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                ACurl::ResponseCode::HTTP_410_GONE,</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                ACurl::ResponseCode::HTTP_411_LENGTH_REQUIRED,</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                ACurl::ResponseCode::HTTP_412_PRECONDITION_FAILED,</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                ACurl::ResponseCode::HTTP_413_REQUEST_ENTITY_TOO_LARGE,</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                ACurl::ResponseCode::HTTP_414_REQUEST_URI_TOO_LONG,</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                ACurl::ResponseCode::HTTP_415_UNSUPPORTED_MEDIA_TYPE,</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                ACurl::ResponseCode::HTTP_416_REQUESTED_RANGE_NOT_SATISFIABLE,</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                ACurl::ResponseCode::HTTP_417_EXPECTATION_FAILED,</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                ACurl::ResponseCode::HTTP_500_INTERNAL_SERVER_ERROR,</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                ACurl::ResponseCode::HTTP_501_NOT_IMPLEMENTED,</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                ACurl::ResponseCode::HTTP_502_BAD_GATEWAY,</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                ACurl::ResponseCode::HTTP_503_SERVICE_UNAVAILABLE,</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                ACurl::ResponseCode::HTTP_504_GATEWAY_TIMEOUT,</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                ACurl::ResponseCode::HTTP_505_HTTP_VERSION_NOT_SUPPORTED)</div>
 <div class="ttc" id="aclassAByteBufferView_html"><div class="ttname"><a href="classAByteBufferView.html">AByteBufferView</a></div><div class="ttdoc">Acts like std::string_view but for AByteBuffer.</div><div class="ttdef"><b>Definition:</b> AByteBufferView.h:11</div></div>
 <div class="ttc" id="aclassAByteBuffer_html"><div class="ttname"><a href="classAByteBuffer.html">AByteBuffer</a></div><div class="ttdoc">std::vector-like growing array for byte storage.</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:39</div></div>
 <div class="ttc" id="aclassACurlMulti_html"><div class="ttname"><a href="classACurlMulti.html">ACurlMulti</a></div><div class="ttdoc">Multi curl instance.</div><div class="ttdef"><b>Definition:</b> ACurlMulti.h:12</div></div>
@@ -369,12 +379,13 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 <div class="ttc" id="aclassACurl_1_1Builder_html_a7832c941b60e76f7e141bd2e9127f82b"><div class="ttname"><a href="classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b">ACurl::Builder::withErrorCallback</a></div><div class="ttdeci">Builder &amp; withErrorCallback(ErrorCallback callback)</div><div class="ttdef"><b>Definition:</b> ACurl.h:146</div></div>
 <div class="ttc" id="aclassACurl_1_1Exception_html"><div class="ttname"><a href="classACurl_1_1Exception.html">ACurl::Exception</a></div><div class="ttdef"><b>Definition:</b> ACurl.h:107</div></div>
 <div class="ttc" id="aclassACurl_html"><div class="ttname"><a href="classACurl.html">ACurl</a></div><div class="ttdoc">Easy curl instance.</div><div class="ttdef"><b>Definition:</b> ACurl.h:43</div></div>
-<div class="ttc" id="aclassACurl_html_a8059c18f914594da57c24286a17674ff"><div class="ttname"><a href="classACurl.html#a8059c18f914594da57c24286a17674ff">ACurl::success</a></div><div class="ttdeci">emits success</div><div class="ttdoc">Emitted on success.</div><div class="ttdef"><b>Definition:</b> ACurl.h:258</div></div>
-<div class="ttc" id="aclassACurl_html_a91049f49ce8f754261b5795f40e88b94"><div class="ttname"><a href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">ACurl::fail</a></div><div class="ttdeci">emits&lt; ErrorDescription &gt; fail</div><div class="ttdoc">Emitted on network error.</div><div class="ttdef"><b>Definition:</b> ACurl.h:251</div></div>
+<div class="ttc" id="aclassACurl_html_a8059c18f914594da57c24286a17674ff"><div class="ttname"><a href="classACurl.html#a8059c18f914594da57c24286a17674ff">ACurl::success</a></div><div class="ttdeci">emits success</div><div class="ttdoc">Emitted on success.</div><div class="ttdef"><b>Definition:</b> ACurl.h:268</div></div>
+<div class="ttc" id="aclassACurl_html_a91049f49ce8f754261b5795f40e88b94"><div class="ttname"><a href="classACurl.html#a91049f49ce8f754261b5795f40e88b94">ACurl::fail</a></div><div class="ttdeci">emits&lt; ErrorDescription &gt; fail</div><div class="ttdoc">Emitted on network error.</div><div class="ttdef"><b>Definition:</b> ACurl.h:261</div></div>
 <div class="ttc" id="aclassAIOException_html"><div class="ttname"><a href="classAIOException.html">AIOException</a></div><div class="ttdoc">Exception caused by input/output stream.</div><div class="ttdef"><b>Definition:</b> AIOException.h:32</div></div>
 <div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition:</b> AObject.h:44</div></div>
 <div class="ttc" id="aclassASignal_html"><div class="ttname"><a href="classASignal.html">ASignal&lt; Args... &gt;</a></div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:39</div></div>
+<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector&lt; AString &gt;</a></div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:129</div></div>
 <div class="ttc" id="aclassaui_1_1promise_1_1no__copy_html"><div class="ttname"><a href="classaui_1_1promise_1_1no__copy.html">aui::promise::no_copy</a></div><div class="ttdef"><b>Definition:</b> values.h:358</div></div>
 <div class="ttc" id="astructACurl_1_1ErrorDescription_html"><div class="ttname"><a href="structACurl_1_1ErrorDescription.html">ACurl::ErrorDescription</a></div><div class="ttdef"><b>Definition:</b> ACurl.h:96</div></div>

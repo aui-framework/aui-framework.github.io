@@ -335,6 +335,7 @@ var annotated =
     [ "AEnumerate", "classAEnumerate.html", "classAEnumerate" ],
     [ "AEnumerateAllValues", "structAEnumerateAllValues.html", null ],
     [ "AEOFException", "classAEOFException.html", null ],
+    [ "AEventLoop", "classAEventLoop.html", "classAEventLoop" ],
     [ "AException", "classAException.html", null ],
     [ "AFakeWindowInitializer", "classAFakeWindowInitializer.html", null ],
     [ "AFileInputStream", "classAFileInputStream.html", "classAFileInputStream" ],

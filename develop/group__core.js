@@ -139,6 +139,10 @@ var group__core =
       [ "resetSignal", "classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783", null ],
       [ "waitForSignal", "classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488", null ]
     ] ],
+    [ "AEventLoop", "classAEventLoop.html", [
+      [ "loop", "classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e", null ],
+      [ "notifyProcessMessages", "classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f", null ]
+    ] ],
     [ "AFuture< T >", "classAFuture.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "Message", "structAAbstractThread_1_1Message.html", null ],
