@@ -187,6 +187,7 @@ var annotated =
       [ "sequence_traits", "structaui_1_1sequence__traits.html", [
         [ "of", "structaui_1_1sequence__traits_1_1of.html", null ]
       ] ],
+      [ "serialize_raw", "structaui_1_1serialize__raw.html", null ],
       [ "serialize_sized", "structaui_1_1serialize__sized.html", null ],
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
@@ -455,6 +456,7 @@ var annotated =
     [ "ASerializable< AJson >", "structASerializable_3_01AJson_01_4.html", null ],
     [ "ASerializable< APath >", "structASerializable_3_01APath_01_4.html", null ],
     [ "ASerializable< AString >", "structASerializable_3_01AString_01_4.html", null ],
+    [ "ASerializable< aui::serialize_raw< T > >", "structASerializable_3_01aui_1_1serialize__raw_3_01T_01_4_01_4.html", null ],
     [ "ASerializable< aui::serialize_sized< T > >", "structASerializable_3_01aui_1_1serialize__sized_3_01T_01_4_01_4.html", null ],
     [ "ASerializable< AUuid >", "structASerializable_3_01AUuid_01_4.html", null ],
     [ "ASerializable< char[L]>", "structASerializable_3_01char_0fL_0e_4.html", null ],
@@ -524,6 +526,7 @@ var annotated =
     [ "AViewsInit", "structAViewsInit.html", null ],
     [ "AWatchable", "classAWatchable.html", null ],
     [ "AWatchable< bool >", "classAWatchable_3_01bool_01_4.html", null ],
+    [ "AWebsocket", "classAWebsocket.html", "classAWebsocket" ],
     [ "AWindow", "classAWindow.html", "classAWindow" ],
     [ "AWindowManager", "classAWindowManager.html", "classAWindowManager" ],
     [ "AWindowMenuProvider", "classAWindowMenuProvider.html", null ],

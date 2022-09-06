@@ -128,6 +128,7 @@ var hierarchy =
     [ "ASerializable< AString >", "structASerializable_3_01AString_01_4.html", [
       [ "ASerializable< APath >", "structASerializable_3_01APath_01_4.html", null ]
     ] ],
+    [ "ASerializable< aui::serialize_raw< T > >", "structASerializable_3_01aui_1_1serialize__raw_3_01T_01_4_01_4.html", null ],
     [ "ASerializable< aui::serialize_sized< T > >", "structASerializable_3_01aui_1_1serialize__sized_3_01T_01_4_01_4.html", null ],
     [ "ASerializable< char[L]>", "structASerializable_3_01char_0fL_0e_4.html", null ],
     [ "ASerializable< const char * >", "structASerializable_3_01const_01char_01_5_01_4.html", null ],
@@ -216,7 +217,9 @@ var hierarchy =
       [ "AObject", "classAObject.html", [
         [ "AAssHelper", "classAAssHelper.html", null ],
         [ "AChildProcess", "classAChildProcess.html", null ],
-        [ "ACurl", "classACurl.html", null ],
+        [ "ACurl", "classACurl.html", [
+          [ "AWebsocket", "classAWebsocket.html", null ]
+        ] ],
         [ "ADataBinding< Model >", "classADataBinding.html", null ],
         [ "ALayout", "classALayout.html", [
           [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", null ],
@@ -619,6 +622,7 @@ var hierarchy =
         [ "APipe", "classAPipe.html", null ],
         [ "AStringStream", "classAStringStream.html", null ],
         [ "ATcpSocket", "classATcpSocket.html", null ],
+        [ "AWebsocket", "classAWebsocket.html", null ],
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
       [ "Pipe", "classPipe.html", null ],
@@ -698,6 +702,7 @@ var hierarchy =
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
     [ "aui::sequence_traits< T >", "structaui_1_1sequence__traits.html", null ],
+    [ "aui::serialize_raw< T >", "structaui_1_1serialize__raw.html", null ],
     [ "aui::serialize_sized< T >", "structaui_1_1serialize__sized.html", null ],
     [ "std::set", null, [
       [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", null ]
