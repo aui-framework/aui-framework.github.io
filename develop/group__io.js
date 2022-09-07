@@ -3,6 +3,10 @@ var group__io =
     [ "AByteBufferInputStream", "classAByteBufferInputStream.html", [
       [ "read", "classAByteBufferInputStream.html#aa43ec19c84d7a04f84b69fc1009f5dbc", null ]
     ] ],
+    [ "ADynamicPipe", "classADynamicPipe.html", [
+      [ "read", "classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e", null ],
+      [ "write", "classADynamicPipe.html#a636751385ea48b6f010f7f794c282602", null ]
+    ] ],
     [ "AEOFException", "classAEOFException.html", null ],
     [ "AFileInputStream", "classAFileInputStream.html", [
       [ "Seek", "classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22", [
@@ -40,6 +44,10 @@ var group__io =
       [ "removeFileRecursive", "classAPath.html#a1b5343e5010302e4dd86a28eecc4eb19", null ],
       [ "systemSlashDirection", "classAPath.html#a009bf83be30970d6b00af798b2445035", null ],
       [ "touch", "classAPath.html#abb7e0d8f6c632d915f41a31a52036b00", null ]
+    ] ],
+    [ "APipe", "classAPipe.html", [
+      [ "read", "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3", null ],
+      [ "write", "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279", null ]
     ] ],
     [ "ARandomInputStream", "classARandomInputStream.html", [
       [ "read", "classARandomInputStream.html#ae6deddbadfbc0ae88aa4b9c62d962f50", null ]

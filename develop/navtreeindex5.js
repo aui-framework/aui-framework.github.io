@@ -1,5 +1,15 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1ParentSubSelector.html":[0,2,3,35],
+"structass_1_1ParentSubSelector.html":[0,0,5,35],
+"structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8":[0,2,3,35,0],
+"structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8":[0,0,5,35,0],
+"structass_1_1Selected.html":[0,2,3,36],
+"structass_1_1Selected.html":[0,0,5,36],
+"structass_1_1TextBorder.html":[2,0,7,0,22],
+"structass_1_1TextColor.html":[2,0,7,0,23],
+"structass_1_1TextShadow.html":[2,0,7,0,24],
+"structass_1_1TransformOffset.html":[2,0,7,0,25],
 "structass_1_1TransformScale.html":[2,0,7,0,26],
 "structass_1_1active.html":[0,0,5,4],
 "structass_1_1active.html":[0,2,3,4],
@@ -239,15 +249,5 @@ var NAVTREEINDEX5 =
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html":[0,2,8,1,1],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html":[0,0,12,1,2],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html":[0,2,8,1,2],
-"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html":[0,2,8,1,3],
-"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html":[0,0,12,1,3],
-"structgl_1_1impl_1_1resource__basic__buffer.html":[0,2,8,1,4],
-"structgl_1_1impl_1_1resource__basic__buffer.html":[0,0,12,1,4],
-"structstd_1_1hash_3_01AString_01_4.html":[0,2,10,0],
-"structstd_1_1hash_3_01AString_01_4.html":[0,0,14,0],
-"structtuples_1_1detail_1_1functor_1_1add.html":[0,2,12,0,0,0],
-"structtuples_1_1detail_1_1functor_1_1add.html":[0,0,16,0,0,0],
-"structtuples_1_1detail_1_1functor_1_1div.html":[0,2,12,0,0,1],
-"structtuples_1_1detail_1_1functor_1_1div.html":[0,0,16,0,0,1],
-"structtuples_1_1detail_1_1functor_1_1mul.html":[0,2,12,0,0,2]
+"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html":[0,2,8,1,3]
 };

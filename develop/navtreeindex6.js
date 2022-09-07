@@ -1,5 +1,15 @@
 var NAVTREEINDEX6 =
 {
+"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html":[0,0,12,1,3],
+"structgl_1_1impl_1_1resource__basic__buffer.html":[0,2,8,1,4],
+"structgl_1_1impl_1_1resource__basic__buffer.html":[0,0,12,1,4],
+"structstd_1_1hash_3_01AString_01_4.html":[0,2,10,0],
+"structstd_1_1hash_3_01AString_01_4.html":[0,0,14,0],
+"structtuples_1_1detail_1_1functor_1_1add.html":[0,2,12,0,0,0],
+"structtuples_1_1detail_1_1functor_1_1add.html":[0,0,16,0,0,0],
+"structtuples_1_1detail_1_1functor_1_1div.html":[0,2,12,0,0,1],
+"structtuples_1_1detail_1_1functor_1_1div.html":[0,0,16,0,0,1],
+"structtuples_1_1detail_1_1functor_1_1mul.html":[0,2,12,0,0,2],
 "structtuples_1_1detail_1_1functor_1_1mul.html":[0,0,16,0,0,2],
 "structtuples_1_1detail_1_1functor_1_1sub.html":[0,0,16,0,0,3],
 "structtuples_1_1detail_1_1functor_1_1sub.html":[0,2,12,0,0,3],

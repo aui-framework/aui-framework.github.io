@@ -24,7 +24,9 @@ var group__core =
       [ "write", "classAByteBuffer.html#a792971058a98e6c3b0b02de5369ea8e3", null ],
       [ "write", "classAByteBuffer.html#ac2a3dab90d185a33804a0b855d732f07", null ]
     ] ],
-    [ "AByteBufferView", "classAByteBufferView.html", null ],
+    [ "AByteBufferView", "classAByteBufferView.html", [
+      [ "at", "classAByteBufferView.html#a795996e31fb1752c40c7dd250064254e", null ]
+    ] ],
     [ "AChar", "classAChar.html", null ],
     [ "AColor", "classAColor.html", [
       [ "mul", "classAColor.html#a2e34705fa6c1a668fe986868b280f7ce", null ],
@@ -121,6 +123,10 @@ var group__core =
     ] ],
     [ "AI18n", "classAI18n.html", null ],
     [ "ALanguageCode", "classALanguageCode.html", null ],
+    [ "ADynamicPipe", "classADynamicPipe.html", [
+      [ "read", "classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e", null ],
+      [ "write", "classADynamicPipe.html#a636751385ea48b6f010f7f794c282602", null ]
+    ] ],
     [ "APipe", "classAPipe.html", [
       [ "read", "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3", null ],
       [ "write", "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279", null ]

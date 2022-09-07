@@ -607,6 +607,7 @@ var hierarchy =
       [ "AX509Store", "classAX509Store.html", null ],
       [ "IInputStream", "classIInputStream.html", [
         [ "AByteBufferInputStream", "classAByteBufferInputStream.html", null ],
+        [ "ADynamicPipe", "classADynamicPipe.html", null ],
         [ "AFileInputStream", "classAFileInputStream.html", null ],
         [ "ALimitedInputStream", "classALimitedInputStream.html", null ],
         [ "APipe", "classAPipe.html", null ],
@@ -618,6 +619,7 @@ var hierarchy =
       ] ],
       [ "IOutputStream", "classIOutputStream.html", [
         [ "AByteBuffer", "classAByteBuffer.html", null ],
+        [ "ADynamicPipe", "classADynamicPipe.html", null ],
         [ "AFileOutputStream", "classAFileOutputStream.html", null ],
         [ "APipe", "classAPipe.html", null ],
         [ "AStringStream", "classAStringStream.html", null ],
