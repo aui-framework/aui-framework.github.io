@@ -220,6 +220,7 @@ var hierarchy =
         [ "ACurl", "classACurl.html", [
           [ "AWebsocket", "classAWebsocket.html", null ]
         ] ],
+        [ "ACurlMulti", "classACurlMulti.html", null ],
         [ "ADataBinding< Model >", "classADataBinding.html", null ],
         [ "ALayout", "classALayout.html", [
           [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", null ],
@@ -319,6 +320,7 @@ var hierarchy =
         [ "ProcessSignalReceiver", "classProcessSignalReceiver.html", null ],
         [ "ReceiverObject", "classReceiverObject.html", null ],
         [ "SendObject", "classSendObject.html", null ],
+        [ "Slave", "classSlave.html", null ],
         [ "Slave", "classSlave.html", null ]
       ] ],
       [ "UnixIoAsync::Impl", "classUnixIoAsync_1_1Impl.html", null ],
@@ -595,7 +597,6 @@ var hierarchy =
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
     ] ],
     [ "aui::noncopyable", "structaui_1_1noncopyable.html", [
-      [ "ACurlMulti", "classACurlMulti.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
         [ "AChildProcess", "classAChildProcess.html", null ],

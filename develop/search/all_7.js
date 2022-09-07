@@ -41,7 +41,7 @@ var searchData=
   ['gettotaloccupiedwidth_38',['getTotalOccupiedWidth',['../classAView.html#a521f58942c69ff63566ada3e3d774f32',1,'AView']]],
   ['getwindow_39',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
   ['glcontext_40',['GLContext',['../classGLContext.html',1,'']]],
-  ['global_41',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool']]],
+  ['global_41',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool::global()'],['../classACurlMulti.html#a2f2680b1a852dc231c07d30f3f68a730',1,'ACurlMulti::global()']]],
   ['gone_42',['GONE',['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74',1,'Visibility.h']]],
   ['gradientshaderhelper_43',['GradientShaderHelper',['../structGradientShaderHelper.html',1,'']]],
   ['greater_5fof_44',['greater_of',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],

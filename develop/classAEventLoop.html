@@ -107,8 +107,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4dd0b3afb4cd66af956d5a38b25b5a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies this <a class="el" href="classIEventLoop.html">IEventLoop</a> that its thread got a new message to process.  <a href="classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f">More...</a><br /></td></tr>
 <tr class="separator:a4dd0b3afb4cd66af956d5a38b25b5a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0012f3f10188a0e93cf567c7018dae9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e">loop</a> () override</td></tr>
-<tr class="memdesc:a0012f3f10188a0e93cf567c7018dae9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do message processing loop.  <a href="classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e">More...</a><br /></td></tr>
+<tr class="memdesc:a0012f3f10188a0e93cf567c7018dae9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default loop.  <a href="classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e">More...</a><br /></td></tr>
 <tr class="separator:a0012f3f10188a0e93cf567c7018dae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ea0a4ad72ac2a585608d874a036ea1"><td class="memItemLeft" align="right" valign="top"><a id="a15ea0a4ad72ac2a585608d874a036ea1" name="a15ea0a4ad72ac2a585608d874a036ea1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="separator:a15ea0a4ad72ac2a585608d874a036ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f40b720c52b4d5f0083d1f97bc76ea7"><td class="memItemLeft" align="right" valign="top"><a id="a9f40b720c52b4d5f0083d1f97bc76ea7" name="a9f40b720c52b4d5f0083d1f97bc76ea7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>iteration</b> ()</td></tr>
+<tr class="separator:a9f40b720c52b4d5f0083d1f97bc76ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Default event loop implementation. </p>
@@ -136,7 +142,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Do message processing loop. </p>
+<p>Default loop. </p>
+<p >Until mRunning = true, calls iteraton() infinitely. The loop can be broken via stop() method. </p>
 
 <p>Implements <a class="el" href="classIEventLoop.html#a790b37b3115b15f1224c85749d352d04">IEventLoop</a>.</p>
 

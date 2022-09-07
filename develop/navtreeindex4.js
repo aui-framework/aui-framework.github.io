@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"functions_h.html":[0,4,0,8],
 "functions_i.html":[0,4,0,9],
 "functions_j.html":[0,4,0,10],
 "functions_l.html":[0,4,0,11],
@@ -170,8 +171,8 @@ var NAVTREEINDEX4 =
 "structASerializable_3_01char_0fL_0e_4.html":[0,2,203],
 "structASerializable_3_01const_01char_01_5_01_4.html":[0,2,204],
 "structASerializable_3_01std_1_1string_01_4.html":[0,2,205],
-"structASignal_1_1call__wrapper.html":[2,0,0,17,0],
 "structASignal_1_1call__wrapper.html":[2,0,0,0,1,0],
+"structASignal_1_1call__wrapper.html":[2,0,0,17,0],
 "structASolidBrush.html":[0,2,213],
 "structASqlModel.html":[0,2,223],
 "structASqlModel.html#a2e8dd259c05d058fb4216f9bff8ee143":[0,2,223,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1Margin.html":[2,0,7,0,17],
 "structass_1_1MaxSize.html":[2,0,7,0,18],
 "structass_1_1MinSize.html":[2,0,7,0,19],
-"structass_1_1Opacity.html":[2,0,7,0,20],
-"structass_1_1Padding.html":[2,0,7,0,21]
+"structass_1_1Opacity.html":[2,0,7,0,20]
 };

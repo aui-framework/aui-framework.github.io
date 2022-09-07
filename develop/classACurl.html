@@ -223,7 +223,7 @@ int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>getContentLength</
 <tr class="memitem:a06ac6677252da980639aed713b3bddae"><td class="memItemLeft" align="right" valign="top"><a id="a06ac6677252da980639aed713b3bddae" name="a06ac6677252da980639aed713b3bddae"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
 <tr class="separator:a06ac6677252da980639aed713b3bddae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a092938995093d4a863d6dd01d23990f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACurl.html#a092938995093d4a863d6dd01d23990f4">close</a> ()</td></tr>
+<tr class="memitem:a092938995093d4a863d6dd01d23990f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACurl.html#a092938995093d4a863d6dd01d23990f4">close</a> ()</td></tr>
 <tr class="memdesc:a092938995093d4a863d6dd01d23990f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breaks curl loop in the run() method, closing underlying curl connection.  <a href="classACurl.html#a092938995093d4a863d6dd01d23990f4">More...</a><br /></td></tr>
 <tr class="separator:a092938995093d4a863d6dd01d23990f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4bf7818161e21fc646e44602c92798e"><td class="memItemLeft" align="right" valign="top"><a id="ac4bf7818161e21fc646e44602c92798e" name="ac4bf7818161e21fc646e44602c92798e"></a>
@@ -269,6 +269,9 @@ Signals and public fields</h2></td></tr>
 <tr class="memitem:a8059c18f914594da57c24286a17674ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACurl.html#a8059c18f914594da57c24286a17674ff">success</a></td></tr>
 <tr class="memdesc:a8059c18f914594da57c24286a17674ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted on success.  <a href="classACurl.html#a8059c18f914594da57c24286a17674ff">More...</a><br /></td></tr>
 <tr class="separator:a8059c18f914594da57c24286a17674ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a659919139e860bc723e4fc36f774c7"><td class="memItemLeft" align="right" valign="top"><a id="a9a659919139e860bc723e4fc36f774c7" name="a9a659919139e860bc723e4fc36f774c7"></a>
+<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>closeRequested</b></td></tr>
+<tr class="separator:a9a659919139e860bc723e4fc36f774c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -297,7 +300,8 @@ template&lt;class Signal , class Object , typename Function &gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Easy curl instance. </p>
-<p ><a class="el" href="classACurl_1_1Builder.html">ACurl::Builder</a> is used to construct <a class="el" href="classACurl.html" title="Easy curl instance.">ACurl</a>. </p>
+<p ><a class="el" href="classACurl_1_1Builder.html">ACurl::Builder</a> is used to construct <a class="el" href="classACurl.html" title="Easy curl instance.">ACurl</a>.</p>
+<p >Analogous to Qt's QNetworkRequest. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ab1db17bc7f80a4776b8ca50a8f1af8d7" name="ab1db17bc7f80a4776b8ca50a8f1af8d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1db17bc7f80a4776b8ca50a8f1af8d7">&#9670;&nbsp;</a></span>ReadCallback</h2>
@@ -354,6 +358,9 @@ template&lt;class Signal , class Object , typename Function &gt; </td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ACurl::close </td>
@@ -362,6 +369,11 @@ template&lt;class Signal , class Object , typename Function &gt; </td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Breaks curl loop in the run() method, closing underlying curl connection. </p>
@@ -369,6 +381,8 @@ template&lt;class Signal , class Object , typename Function &gt; </td></tr>
 <p >After calling <a class="el" href="classACurl.html#a092938995093d4a863d6dd01d23990f4" title="Breaks curl loop in the run() method, closing underlying curl connection.">close()</a> method, none of the result signals (like fail, success) will be called.</p>
 <p ><a class="el" href="classACurl.html#a092938995093d4a863d6dd01d23990f4" title="Breaks curl loop in the run() method, closing underlying curl connection.">close()</a> is non-blocking function.</p>
 <p ><a class="el" href="classACurl.html#a092938995093d4a863d6dd01d23990f4" title="Breaks curl loop in the run() method, closing underlying curl connection.">close()</a> is thread-safe. </p>
+
+<p>Reimplemented in <a class="el" href="classAWebsocket.html#a336b44b6dea5ddc38a4efd322f676612">AWebsocket</a>.</p>
 
 </div>
 </div>
@@ -428,7 +442,7 @@ Collaboration diagram for ACurl:</div>
 <div class="dyncontent">
 <div class="center"><img src="classACurl__coll__graph.png" border="0" usemap="#aACurl_coll__map" alt="Collaboration graph"/></div>
 <map name="aACurl_coll__map" id="aACurl_coll__map">
-<area shape="rect" title="Easy curl instance." alt="" coords="274,185,329,212"/>
+<area shape="rect" title="Easy curl instance." alt="" coords="274,200,329,227"/>
 <area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="188,96,257,123"/>
 <area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="5,13,123,39"/>
 <area shape="rect" title=" " alt="" coords="147,5,299,47"/>
