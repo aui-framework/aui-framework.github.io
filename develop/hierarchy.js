@@ -113,6 +113,7 @@ var hierarchy =
     [ "AModelRange< T >", "classAModelRange.html", null ],
     [ "AModelSelection< T >", "classAModelSelection.html", null ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
+    [ "AOptional< T >", "classAOptional.html", null ],
     [ "APool< T >", "classAPool.html", null ],
     [ "APool< T >::APoolDeleter", "structAPool_1_1APoolDeleter.html", null ],
     [ "AppDelegate()", "categoryAppDelegate_07_08.html", null ],

@@ -84,11 +84,11 @@ var group__core =
       [ "AString", "classAString.html#a0949c4d7c858e1c4c7c815450ca3eb38", null ],
       [ "AString", "classAString.html#a1eb7e24ca17238ab4db2f302ac41ef51", null ],
       [ "toBool", "classAString.html#a4a5c7b21fc8b2cce2fb88eccbe4bc122", null ],
-      [ "toDouble", "classAString.html#a4a03bb8003872b849695577f0c5b7658", null ],
-      [ "toFloat", "classAString.html#a105ddcfb0ce59113da4a2e7e339f2698", null ],
-      [ "toInt", "classAString.html#aec0f5c27b5f9b1f0066231cbe35272bc", null ],
+      [ "toDouble", "classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d", null ],
+      [ "toFloat", "classAString.html#abb60406e99380d9ac93b2a62f2308228", null ],
+      [ "toInt", "classAString.html#a595b975b64130656d41f02b9103ad807", null ],
       [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ],
-      [ "toUInt", "classAString.html#a2a3444642bfe44cbeacd9e2287169c70", null ]
+      [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ]
     ] ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "ATimer", "classATimer.html", null ],

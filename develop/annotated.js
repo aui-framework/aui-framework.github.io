@@ -413,6 +413,7 @@ var annotated =
     [ "ANoSpaceLeftException", "classANoSpaceLeftException.html", null ],
     [ "ANumberPicker", "classANumberPicker.html", "classANumberPicker" ],
     [ "AObject", "classAObject.html", null ],
+    [ "AOptional", "classAOptional.html", "classAOptional" ],
     [ "AOtherProcess", "classAOtherProcess.html", "classAOtherProcess" ],
     [ "AOverlappingSurface", "classAOverlappingSurface.html", null ],
     [ "APageSwitch", "classAPageSwitch.html", "classAPageSwitch" ],
