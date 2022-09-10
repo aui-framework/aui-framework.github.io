@@ -52,6 +52,12 @@ var hierarchy =
     [ "ADataBindingDefault< APathChooserView, APath >", "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html", null ],
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
     [ "aui::impl::ADataBindingDefaultNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
+    [ "aui::impl::ADataBindingDefaultNumberPicker< double >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
+      [ "ADataBindingDefault< ADoubleNumberPicker, double >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01double_01_4.html", null ]
+    ] ],
+    [ "aui::impl::ADataBindingDefaultNumberPicker< float >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
+      [ "ADataBindingDefault< ADoubleNumberPicker, float >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01float_01_4.html", null ]
+    ] ],
     [ "aui::impl::ADataBindingDefaultNumberPicker< int16_t >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
       [ "ADataBindingDefault< ANumberPicker, int16_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int16__t_01_4.html", null ]
     ] ],
@@ -281,6 +287,7 @@ var hierarchy =
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
             [ "AButtonEx", "classAButtonEx.html", null ],
             [ "ACheckBox", "classACheckBox.html", null ],
+            [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", null ],
             [ "ADragArea", "classADragArea.html", null ],
             [ "ADragArea::ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ],
             [ "AEmbedMenuProvider::MenuContainer", "classAEmbedMenuProvider_1_1MenuContainer.html", null ],

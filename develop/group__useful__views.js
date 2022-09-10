@@ -20,6 +20,11 @@ var group__useful__views =
       [ "getContentMinimumWidth", "classAComboBox.html#a1ad36845afbb5b4ba117c7a7b97c88e9", null ],
       [ "render", "classAComboBox.html#ad974e5df3eb783e0ec7f20f7c15a9c44", null ]
     ] ],
+    [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", [
+      [ "getContentMinimumHeight", "classADoubleNumberPicker.html#a757efcfc6443b0daf81b7117446462c3", null ],
+      [ "valueChanged", "classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221", null ],
+      [ "valueChanging", "classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154", null ]
+    ] ],
     [ "ADragArea", "classADragArea.html", [
       [ "ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ]
     ] ],
