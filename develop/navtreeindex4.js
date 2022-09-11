@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"functions_func_q.html":[0,4,1,16],
 "functions_func_r.html":[0,4,1,17],
 "functions_func_s.html":[0,4,1,18],
 "functions_func_t.html":[0,4,1,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1BorderRadius.html":[2,0,7,0,8],
 "structass_1_1BoxShadow.html":[2,0,7,0,9],
 "structass_1_1DirectParentSubSelector.html":[0,2,3,17],
-"structass_1_1DirectParentSubSelector.html":[0,0,5,17],
-"structass_1_1Expanding.html":[2,0,7,0,10]
+"structass_1_1DirectParentSubSelector.html":[0,0,5,17]
 };
