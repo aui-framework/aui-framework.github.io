@@ -5,5 +5,5 @@ var classASet =
     [ "operator<<", "classASet.html#a040f7066c087baa6c33fce169d543dd9", null ],
     [ "operator<<", "classASet.html#a68c355f20fffdc1d2082f0eb29d8100b", null ],
     [ "operator<<", "classASet.html#ab7f59f0f32f0710d1810bcda4a878a89", null ],
-    [ "removeAll", "classASet.html#a12d4b33b6151c4603efafc6f90498c38", null ]
+    [ "operator>>", "classASet.html#aa353fe8fe00c1e866a48910256dcb9de", null ]
 ];

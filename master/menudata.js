@@ -101,7 +101,8 @@ var menudata={children:[
 {text:"Writing tests",url:"md_docs_Writing_tests.html"},
 {text:"Writing platform dependent code",url:"md_docs_Writing_platform_dependent_code.html"},
 {text:"Code style and recommendations",url:"md_docs_Code_style_and_recommendations.html"},
-{text:"Troubleshoot list",url:"md_docs_Troubleshoot_list.html"}]},
+{text:"Troubleshoot list",url:"md_docs_Troubleshoot_list.html"},
+{text:"Crosscompiling (Android and iOS)",url:"md_docs_Crosscompiling.html"}]},
 {text:"Reference",url:"usergroup2.html",children:[
 {text:"All AUI Modules",url:"modules.html"},
 {text:"All AUI Classes",url:"classes.html"},

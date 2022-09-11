@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classAPipe.html',''); initResizable();
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classAPipe-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">APipe Class Reference</div></div>
+  <div class="headertitle"><div class="title">APipe Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a> &#124; <a class="el" href="group__core.html">aui::core</a> &raquo; <a class="el" href="group__io.html">IO streams</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('classAPipe.html',''); initResizable();
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aee628cf7a29f35b048cf6fcfe4ec8eb3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3">read</a> (char *dst, size_t size) override</td></tr>
-<tr class="memdesc:aee628cf7a29f35b048cf6fcfe4ec8eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to <code>size</code> bytes from stream. Implementation must read at least one byte. Blocking (waiting for new data) is allowed.  <a href="classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3">More...</a><br /></td></tr>
+<tr class="memdesc:aee628cf7a29f35b048cf6fcfe4ec8eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed.  <a href="classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3">More...</a><br /></td></tr>
 <tr class="separator:aee628cf7a29f35b048cf6fcfe4ec8eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b86fe3324e01417be2a4b33c87e2279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279">write</a> (const char *src, size_t size) override</td></tr>
 <tr class="memdesc:a4b86fe3324e01417be2a4b33c87e2279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes exact <code>size</code> bytes to stream. Blocking (waiting for write all data) is allowed.  <a href="classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279">More...</a><br /></td></tr>
@@ -142,7 +142,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A thread safe buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise). </p>
-<p ><a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> is similar to the unix pipes. It's capable to store up to 65,536 bytes. It's implemented like a ring buffer. If this limit is reached, a <a class="el" href="classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279" title="Writes exact size bytes to stream. Blocking (waiting for write all data) is allowed.">write()</a> method blocks thread until buffer is read from. </p>
+<p ><a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> is similar to the unix pipes. It's capable to store up to 65,536 bytes. It's implemented like a ring buffer. If this limit is reached, a <a class="el" href="classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279" title="Writes exact size bytes to stream. Blocking (waiting for write all data) is allowed.">write()</a> method blocks thread until buffer is read from.</p>
+<p >If capacity may be not enough, consider to use <a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> instead. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aee628cf7a29f35b048cf6fcfe4ec8eb3" name="aee628cf7a29f35b048cf6fcfe4ec8eb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee628cf7a29f35b048cf6fcfe4ec8eb3">&#9670;&nbsp;</a></span>read()</h2>
@@ -178,7 +179,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr
 </table>
 </div><div class="memdoc">
 
-<p>Reads up to <code>size</code> bytes from stream. Implementation must read at least one byte. Blocking (waiting for new data) is allowed. </p>
+<p>Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>

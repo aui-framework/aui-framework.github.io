@@ -27,5 +27,5 @@ var searchData=
   ['pushmaskbefore_24',['pushMaskBefore',['../classOpenGLRenderer.html#a57e0d52dae4a4cd965915a7db177ef9d',1,'OpenGLRenderer::pushMaskBefore()'],['../classIRenderer.html#af7cfbbdf47bc406b224c299f1f7ebc33',1,'IRenderer::pushMaskBefore()'],['../classSoftwareRenderer.html#ab74c1992402f334c1e94b96c9cd0ad79',1,'SoftwareRenderer::pushMaskBefore()']]],
   ['pushmatrix_25',['PushMatrix',['../classRenderHints_1_1PushMatrix.html',1,'RenderHints']]],
   ['pushstate_26',['PushState',['../classRenderHints_1_1PushState.html',1,'RenderHints']]],
-  ['putpixel_27',['putPixel',['../classSoftwareRenderer.html#a20deeb0aae6bdf1994c69b9708a50493',1,'SoftwareRenderer']]]
+  ['putpixel_27',['putPixel',['../classSoftwareRenderer.html#a1d20a3adc33051ee4924c1bde58b9af7',1,'SoftwareRenderer']]]
 ];

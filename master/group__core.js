@@ -24,10 +24,14 @@ var group__core =
       [ "write", "classAByteBuffer.html#a792971058a98e6c3b0b02de5369ea8e3", null ],
       [ "write", "classAByteBuffer.html#ac2a3dab90d185a33804a0b855d732f07", null ]
     ] ],
-    [ "AByteBufferView", "classAByteBufferView.html", null ],
+    [ "AByteBufferView", "classAByteBufferView.html", [
+      [ "at", "classAByteBufferView.html#a795996e31fb1752c40c7dd250064254e", null ]
+    ] ],
     [ "AChar", "classAChar.html", null ],
     [ "AColor", "classAColor.html", [
-      [ "mul", "classAColor.html#a2e34705fa6c1a668fe986868b280f7ce", null ]
+      [ "mul", "classAColor.html#a2e34705fa6c1a668fe986868b280f7ce", null ],
+      [ "opacify", "classAColor.html#a6f3a5debba1dfa2577e80ed210ef9ba9", null ],
+      [ "transparentize", "classAColor.html#a61588fbcbbba8b205248fbd209d4ed0c", null ]
     ] ],
     [ "ADeque< StoredType, Allocator >", "classADeque.html", [
       [ "contains", "classADeque.html#a3fafe66b8456d6e36aca5940c5ae9673", null ],
@@ -68,7 +72,7 @@ var group__core =
       [ "operator<<", "classASet.html#a040f7066c087baa6c33fce169d543dd9", null ],
       [ "operator<<", "classASet.html#a68c355f20fffdc1d2082f0eb29d8100b", null ],
       [ "operator<<", "classASet.html#ab7f59f0f32f0710d1810bcda4a878a89", null ],
-      [ "removeAll", "classASet.html#a12d4b33b6151c4603efafc6f90498c38", null ]
+      [ "operator>>", "classASet.html#aa353fe8fe00c1e866a48910256dcb9de", null ]
     ] ],
     [ "ASignal< Args >", "classASignal.html", [
       [ "call_wrapper", "structASignal_1_1call__wrapper.html", null ],
@@ -80,11 +84,11 @@ var group__core =
       [ "AString", "classAString.html#a0949c4d7c858e1c4c7c815450ca3eb38", null ],
       [ "AString", "classAString.html#a1eb7e24ca17238ab4db2f302ac41ef51", null ],
       [ "toBool", "classAString.html#a4a5c7b21fc8b2cce2fb88eccbe4bc122", null ],
-      [ "toDouble", "classAString.html#a4a03bb8003872b849695577f0c5b7658", null ],
-      [ "toFloat", "classAString.html#a105ddcfb0ce59113da4a2e7e339f2698", null ],
-      [ "toInt", "classAString.html#aec0f5c27b5f9b1f0066231cbe35272bc", null ],
+      [ "toDouble", "classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d", null ],
+      [ "toFloat", "classAString.html#abb60406e99380d9ac93b2a62f2308228", null ],
+      [ "toInt", "classAString.html#a595b975b64130656d41f02b9103ad807", null ],
       [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ],
-      [ "toUInt", "classAString.html#a2a3444642bfe44cbeacd9e2287169c70", null ]
+      [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ]
     ] ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "ATimer", "classATimer.html", null ],
@@ -119,6 +123,14 @@ var group__core =
     ] ],
     [ "AI18n", "classAI18n.html", null ],
     [ "ALanguageCode", "classALanguageCode.html", null ],
+    [ "ADynamicPipe", "classADynamicPipe.html", [
+      [ "read", "classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e", null ],
+      [ "write", "classADynamicPipe.html#a636751385ea48b6f010f7f794c282602", null ]
+    ] ],
+    [ "APipe", "classAPipe.html", [
+      [ "read", "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3", null ],
+      [ "write", "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279", null ]
+    ] ],
     [ "ALogger", "classALogger.html", [
       [ "LogWriter", "structALogger_1_1LogWriter.html", null ],
       [ "ALogger", "classALogger.html#afc8ce009869391c05cf8443081c2989d", null ],
@@ -136,6 +148,10 @@ var group__core =
       [ "makeSignal", "classACutoffSignal.html#a846f87917ee35414834b624c281ffd06", null ],
       [ "resetSignal", "classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783", null ],
       [ "waitForSignal", "classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488", null ]
+    ] ],
+    [ "AEventLoop", "classAEventLoop.html", [
+      [ "loop", "classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e", null ],
+      [ "notifyProcessMessages", "classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f", null ]
     ] ],
     [ "AFuture< T >", "classAFuture.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [

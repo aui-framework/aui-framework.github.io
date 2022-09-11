@@ -22,7 +22,10 @@ var namespaces =
       [ "decl", null, [
         [ "Declaration", "structass_1_1decl_1_1Declaration.html", null ],
         [ "Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", null ],
+        [ "Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
+        [ "Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
         [ "Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
+        [ "Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
         [ "Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],
         [ "Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ],
         [ "Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
@@ -44,7 +47,6 @@ var namespaces =
         [ "Declaration< MaxSize >", "structass_1_1decl_1_1Declaration_3_01MaxSize_01_4.html", null ],
         [ "Declaration< MinSize >", "structass_1_1decl_1_1Declaration_3_01MinSize_01_4.html", null ],
         [ "Declaration< Opacity >", "structass_1_1decl_1_1Declaration_3_01Opacity_01_4.html", null ],
-        [ "Declaration< Overflow >", "structass_1_1decl_1_1Declaration_3_01Overflow_01_4.html", null ],
         [ "Declaration< Padding >", "structass_1_1decl_1_1Declaration_3_01Padding_01_4.html", null ],
         [ "Declaration< TextAlign >", "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html", null ],
         [ "Declaration< TextBorder >", "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html", null ],
@@ -65,6 +67,7 @@ var namespaces =
       [ "AAssSelector", "classass_1_1AAssSelector.html", null ],
       [ "active", "structass_1_1active.html", null ],
       [ "BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
+      [ "BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
       [ "BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
       [ "BackgroundImage", "structass_1_1BackgroundImage.html", null ],
       [ "BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],
@@ -144,6 +147,7 @@ var namespaces =
           [ "decode_type", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
           [ "decode_type< _< T > >", "structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html", null ]
         ] ],
+        [ "ADataBindingDefaultDoubleNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
         [ "ADataBindingDefaultNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
         [ "first", "structaui_1_1impl_1_1first.html", null ]
@@ -200,6 +204,7 @@ var namespaces =
       [ "sequence_traits", "structaui_1_1sequence__traits.html", [
         [ "of", "structaui_1_1sequence__traits_1_1of.html", null ]
       ] ],
+      [ "serialize_raw", "structaui_1_1serialize__raw.html", null ],
       [ "serialize_sized", "structaui_1_1serialize__sized.html", null ],
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],

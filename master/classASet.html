@@ -113,8 +113,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abfe9f1127b1811d332d6032d57e59544"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer &gt; </td></tr>
 <tr class="memitem:abfe9f1127b1811d332d6032d57e59544"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classASet.html#abfe9f1127b1811d332d6032d57e59544">insertAll</a> (const OtherContainer &amp;c) noexcept</td></tr>
 <tr class="separator:abfe9f1127b1811d332d6032d57e59544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d4b33b6151c4603efafc6f90498c38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASet.html#a12d4b33b6151c4603efafc6f90498c38">removeAll</a> (const KeyType &amp;item) noexcept</td></tr>
-<tr class="separator:a12d4b33b6151c4603efafc6f90498c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50dfbcda92792f0d9ae4404f08291519"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer &gt; </td></tr>
 <tr class="memitem:a50dfbcda92792f0d9ae4404f08291519"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">isSubsetOf</a> (const OtherContainer &amp;c) const noexcept</td></tr>
 <tr class="separator:a50dfbcda92792f0d9ae4404f08291519"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,6 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a040f7066c087baa6c33fce169d543dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f59f0f32f0710d1810bcda4a878a89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classASet.html">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">operator&lt;&lt;</a> (KeyType &amp;&amp;rhs) noexcept</td></tr>
 <tr class="separator:ab7f59f0f32f0710d1810bcda4a878a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa353fe8fe00c1e866a48910256dcb9de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classASet.html">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASet.html#aa353fe8fe00c1e866a48910256dcb9de">operator&gt;&gt;</a> (const KeyType &amp;rhs) noexcept</td></tr>
+<tr class="separator:aa353fe8fe00c1e866a48910256dcb9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68c355f20fffdc1d2082f0eb29d8100b"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer , std::enable_if_t&lt;!std::is_convertible_v&lt; OtherContainer, KeyType &gt;, bool &gt;  = true&gt; </td></tr>
 <tr class="memitem:a68c355f20fffdc1d2082f0eb29d8100b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classASet.html">self</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classASet.html#a68c355f20fffdc1d2082f0eb29d8100b">operator&lt;&lt;</a> (const OtherContainer &amp;c) noexcept</td></tr>
 <tr class="separator:a68c355f20fffdc1d2082f0eb29d8100b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +132,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains</b> (const K
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class KeyType, class Comparator = std::less&lt;KeyType&gt;, class Allocator = std::allocator&lt;KeyType&gt;&gt;<br />
 class ASet&lt; KeyType, Comparator, Allocator &gt;</div><p >A std::set with AUI extensions. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Common_2AObject_8h-example.html#_a7">/github/workspace/aui.core/src/AUI/Common/AObject.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Common_2AObject_8h-example.html#_a7">/github/workspace/aui.core/src/AUI/Common/AObject.h</a>, and <a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a27">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abfe9f1127b1811d332d6032d57e59544" name="abfe9f1127b1811d332d6032d57e59544"></a>
@@ -306,7 +306,7 @@ template&lt;class KeyType , class Comparator  = std::less&lt;KeyType&gt;, class 
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Shortcut to <code>push_back</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Shortcut to <code>insert</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rhs</td><td>value to push </td></tr>
   </table>
@@ -316,8 +316,8 @@ template&lt;class KeyType , class Comparator  = std::less&lt;KeyType&gt;, class 
 
 </div>
 </div>
-<a id="a12d4b33b6151c4603efafc6f90498c38" name="a12d4b33b6151c4603efafc6f90498c38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12d4b33b6151c4603efafc6f90498c38">&#9670;&nbsp;</a></span>removeAll()</h2>
+<a id="aa353fe8fe00c1e866a48910256dcb9de" name="aa353fe8fe00c1e866a48910256dcb9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa353fe8fe00c1e866a48910256dcb9de">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,10 +328,10 @@ template&lt;class KeyType , class Comparator  = std::less&lt;KeyType&gt;, class 
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classASet.html">ASet</a>&lt; KeyType, Comparator, Allocator &gt;::removeAll </td>
+          <td class="memname"><a class="el" href="classASet.html">self</a> &amp; <a class="el" href="classASet.html">ASet</a>&lt; KeyType, Comparator, Allocator &gt;::operator&gt;&gt; </td>
           <td>(</td>
           <td class="paramtype">const KeyType &amp;&#160;</td>
-          <td class="paramname"><em>item</em></td><td>)</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -341,12 +341,13 @@ template&lt;class KeyType , class Comparator  = std::less&lt;KeyType&gt;, class 
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Removes elements equal to <code>item</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Shortcut to <code>erase</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">item</td><td>element to remove. </td></tr>
+    <tr><td class="paramname">rhs</td><td>value to push </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
 
 </div>
 </div>

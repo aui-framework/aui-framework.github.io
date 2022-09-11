@@ -139,27 +139,26 @@ $(document).ready(function(){initNavTree('ASet_8h_source.html',''); initResizabl
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        p::insert(c.begin(), c.end());</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classASet.html#a12d4b33b6151c4603efafc6f90498c38">   62</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classASet.html#a12d4b33b6151c4603efafc6f90498c38">removeAll</a>(<span class="keyword">const</span> KeyType&amp; item) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherContainer&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">   62</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">isSubsetOf</a>(<span class="keyword">const</span> OtherContainer&amp; c) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        aui::container::remove_all(*<span class="keyword">this</span>, item);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> aui::container::is_subset(*<span class="keyword">this</span>, c);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> OtherContainer&gt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">   72</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">isSubsetOf</a>(<span class="keyword">const</span> OtherContainer&amp; c) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classASet.html#a040f7066c087baa6c33fce169d543dd9">   72</a></span>    <span class="keyword">inline</span> <span class="keyword">self</span>&amp; <a class="code hl_function" href="classASet.html#a040f7066c087baa6c33fce169d543dd9">operator&lt;&lt;</a>(<span class="keyword">const</span> KeyType&amp; rhs) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> aui::container::is_subset(*<span class="keyword">this</span>, c);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classASet.html#a040f7066c087baa6c33fce169d543dd9">   82</a></span>    <span class="keyword">inline</span> <span class="keyword">self</span>&amp; <a class="code hl_function" href="classASet.html#a040f7066c087baa6c33fce169d543dd9">operator&lt;&lt;</a>(<span class="keyword">const</span> KeyType&amp; rhs) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        p::insert(rhs);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">   93</a></span>    <span class="keyword">inline</span> <span class="keyword">self</span>&amp; <a class="code hl_function" href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">operator&lt;&lt;</a>(KeyType&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        p::insert(rhs);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">   83</a></span>    <span class="keyword">inline</span> <span class="keyword">self</span>&amp; <a class="code hl_function" href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">operator&lt;&lt;</a>(KeyType&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        p::insert(std::forward&lt;KeyType&gt;(rhs));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classASet.html#aa353fe8fe00c1e866a48910256dcb9de">   93</a></span>    <span class="keyword">inline</span> <span class="keyword">self</span>&amp; <a class="code hl_function" href="classASet.html#aa353fe8fe00c1e866a48910256dcb9de">operator&gt;&gt;</a>(<span class="keyword">const</span> KeyType&amp; rhs) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        p::insert(std::forward&lt;KeyType&gt;(rhs));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        p::erase(rhs);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
@@ -196,11 +195,11 @@ $(document).ready(function(){initNavTree('ASet_8h_source.html',''); initResizabl
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="ttc" id="aclassASet_html"><div class="ttname"><a href="classASet.html">ASet</a></div><div class="ttdoc">A std::set with AUI extensions.</div><div class="ttdef"><b>Definition:</b> ASet.h:36</div></div>
-<div class="ttc" id="aclassASet_html_a040f7066c087baa6c33fce169d543dd9"><div class="ttname"><a href="classASet.html#a040f7066c087baa6c33fce169d543dd9">ASet::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const KeyType &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:82</div></div>
-<div class="ttc" id="aclassASet_html_a12d4b33b6151c4603efafc6f90498c38"><div class="ttname"><a href="classASet.html#a12d4b33b6151c4603efafc6f90498c38">ASet::removeAll</a></div><div class="ttdeci">void removeAll(const KeyType &amp;item) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:62</div></div>
-<div class="ttc" id="aclassASet_html_a50dfbcda92792f0d9ae4404f08291519"><div class="ttname"><a href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">ASet::isSubsetOf</a></div><div class="ttdeci">bool isSubsetOf(const OtherContainer &amp;c) const noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:72</div></div>
+<div class="ttc" id="aclassASet_html_a040f7066c087baa6c33fce169d543dd9"><div class="ttname"><a href="classASet.html#a040f7066c087baa6c33fce169d543dd9">ASet::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const KeyType &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:72</div></div>
+<div class="ttc" id="aclassASet_html_a50dfbcda92792f0d9ae4404f08291519"><div class="ttname"><a href="classASet.html#a50dfbcda92792f0d9ae4404f08291519">ASet::isSubsetOf</a></div><div class="ttdeci">bool isSubsetOf(const OtherContainer &amp;c) const noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:62</div></div>
 <div class="ttc" id="aclassASet_html_a68c355f20fffdc1d2082f0eb29d8100b"><div class="ttname"><a href="classASet.html#a68c355f20fffdc1d2082f0eb29d8100b">ASet::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const OtherContainer &amp;c) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:105</div></div>
-<div class="ttc" id="aclassASet_html_ab7f59f0f32f0710d1810bcda4a878a89"><div class="ttname"><a href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">ASet::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(KeyType &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:93</div></div>
+<div class="ttc" id="aclassASet_html_aa353fe8fe00c1e866a48910256dcb9de"><div class="ttname"><a href="classASet.html#aa353fe8fe00c1e866a48910256dcb9de">ASet::operator&gt;&gt;</a></div><div class="ttdeci">self &amp; operator&gt;&gt;(const KeyType &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:93</div></div>
+<div class="ttc" id="aclassASet_html_ab7f59f0f32f0710d1810bcda4a878a89"><div class="ttname"><a href="classASet.html#ab7f59f0f32f0710d1810bcda4a878a89">ASet::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(KeyType &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:83</div></div>
 <div class="ttc" id="aclassASet_html_abfe9f1127b1811d332d6032d57e59544"><div class="ttname"><a href="classASet.html#abfe9f1127b1811d332d6032d57e59544">ASet::insertAll</a></div><div class="ttdeci">void insertAll(const OtherContainer &amp;c) noexcept</div><div class="ttdef"><b>Definition:</b> ASet.h:54</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

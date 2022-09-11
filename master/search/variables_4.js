@@ -1,7 +1,7 @@
 var searchData=
 [
   ['mass_0',['mAss',['../classAView.html#a0da9806bf1d6524ef717abe66f41d269',1,'AView']]],
-  ['massnames_1',['mAssNames',['../classAView.html#a0606dba2cdd6c1974f501952518af658',1,'AView']]],
+  ['massnames_1',['mAssNames',['../classAView.html#a13f1450f43fb867bcff67b1d7284bd46',1,'AView']]],
   ['maximized_2',['maximized',['../classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177',1,'AWindow']]],
   ['mcursor_3',['mCursor',['../classAView.html#a448c7992afd25631e42da434c2f9796d',1,'AView']]],
   ['mcustomstylerule_4',['mCustomStyleRule',['../classAView.html#aaea3fc721d08603a1a3cbc9c11729142',1,'AView']]],
