@@ -51,13 +51,14 @@ var hierarchy =
     [ "ADataBindingDefault< ACheckBox, bool >", "structADataBindingDefault_3_01ACheckBox_00_01bool_01_4.html", null ],
     [ "ADataBindingDefault< APathChooserView, APath >", "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html", null ],
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
-    [ "aui::impl::ADataBindingDefaultNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
-    [ "aui::impl::ADataBindingDefaultNumberPicker< double >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
+    [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
+    [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< double >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", [
       [ "ADataBindingDefault< ADoubleNumberPicker, double >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01double_01_4.html", null ]
     ] ],
-    [ "aui::impl::ADataBindingDefaultNumberPicker< float >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
+    [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< float >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", [
       [ "ADataBindingDefault< ADoubleNumberPicker, float >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01float_01_4.html", null ]
     ] ],
+    [ "aui::impl::ADataBindingDefaultNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
     [ "aui::impl::ADataBindingDefaultNumberPicker< int16_t >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
       [ "ADataBindingDefault< ANumberPicker, int16_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int16__t_01_4.html", null ]
     ] ],

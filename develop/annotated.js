@@ -133,6 +133,7 @@ var annotated =
           [ "decode_type", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
           [ "decode_type< _< T > >", "structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html", null ]
         ] ],
+        [ "ADataBindingDefaultDoubleNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
         [ "ADataBindingDefaultNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
         [ "first", "structaui_1_1impl_1_1first.html", null ]

@@ -1,10 +1,12 @@
 var NAVTREEINDEX6 =
 {
+"structdeclarative_1_1RadioGroup.html":[0,0,11,1],
+"structdeclarative_1_1Style.html":[0,0,11,2],
 "structdeclarative_1_1Style.html":[0,2,7,2],
 "structgl_1_1impl_1_1resource.html":[0,0,12,1,0],
 "structgl_1_1impl_1_1resource.html":[0,2,8,1,0],
-"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html":[0,2,8,1,1],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html":[0,0,12,1,1],
+"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html":[0,2,8,1,1],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html":[0,0,12,1,2],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html":[0,2,8,1,2],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html":[0,2,8,1,3],
