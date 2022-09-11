@@ -99,17 +99,17 @@ $(document).ready(function(){initNavTree('AEventLoop_8h_source.html',''); initRe
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;AMutex.h&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;AConditionVariable.h&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classAEventLoop.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classAEventLoop.html">AEventLoop</a>: <span class="keyword">public</span> <a class="code hl_class" href="classIEventLoop.html">IEventLoop</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classAEventLoop.html">   12</a></span><span class="keyword">class </span>API_AUI_CORE <a class="code hl_class" href="classAEventLoop.html">AEventLoop</a>: <span class="keyword">public</span> <a class="code hl_class" href="classIEventLoop.html">IEventLoop</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classAEventLoop.html">~AEventLoop</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f">notifyProcessMessages</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIEventLoop.html#af26f19c03393cca88b5bb4f183838305">notifyProcessMessages</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e">loop</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIEventLoop.html#a790b37b3115b15f1224c85749d352d04">loop</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> stop() {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        mRunning = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f">notifyProcessMessages</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="classIEventLoop.html#af26f19c03393cca88b5bb4f183838305">notifyProcessMessages</a>();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">/*</span></div>
@@ -129,10 +129,10 @@ $(document).ready(function(){initNavTree('AEventLoop_8h_source.html',''); initRe
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 <div class="ttc" id="aclassAConditionVariable_html"><div class="ttname"><a href="classAConditionVariable.html">AConditionVariable</a></div><div class="ttdoc">Represents a condition variable.</div><div class="ttdef"><b>Definition:</b> AConditionVariable.h:33</div></div>
 <div class="ttc" id="aclassAEventLoop_html"><div class="ttname"><a href="classAEventLoop.html">AEventLoop</a></div><div class="ttdoc">Default event loop implementation.</div><div class="ttdef"><b>Definition:</b> AEventLoop.h:12</div></div>
-<div class="ttc" id="aclassAEventLoop_html_a0012f3f10188a0e93cf567c7018dae9e"><div class="ttname"><a href="classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e">AEventLoop::loop</a></div><div class="ttdeci">void loop() override</div><div class="ttdoc">Default loop.</div><div class="ttdef"><b>Definition:</b> AEventLoop.cpp:18</div></div>
-<div class="ttc" id="aclassAEventLoop_html_a4dd0b3afb4cd66af956d5a38b25b5a3f"><div class="ttname"><a href="classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f">AEventLoop::notifyProcessMessages</a></div><div class="ttdeci">void notifyProcessMessages() override</div><div class="ttdoc">Notifies this IEventLoop that its thread got a new message to process.</div><div class="ttdef"><b>Definition:</b> AEventLoop.cpp:12</div></div>
 <div class="ttc" id="aclassAMutex_html"><div class="ttname"><a href="classAMutex.html">AMutex</a></div><div class="ttdef"><b>Definition:</b> AMutex.h:26</div></div>
 <div class="ttc" id="aclassIEventLoop_html"><div class="ttname"><a href="classIEventLoop.html">IEventLoop</a></div><div class="ttdef"><b>Definition:</b> IEventLoop.h:27</div></div>
+<div class="ttc" id="aclassIEventLoop_html_a790b37b3115b15f1224c85749d352d04"><div class="ttname"><a href="classIEventLoop.html#a790b37b3115b15f1224c85749d352d04">IEventLoop::loop</a></div><div class="ttdeci">virtual void loop()=0</div><div class="ttdoc">Do message processing loop.</div></div>
+<div class="ttc" id="aclassIEventLoop_html_af26f19c03393cca88b5bb4f183838305"><div class="ttname"><a href="classIEventLoop.html#af26f19c03393cca88b5bb4f183838305">IEventLoop::notifyProcessMessages</a></div><div class="ttdeci">virtual void notifyProcessMessages()=0</div><div class="ttdoc">Notifies this IEventLoop that its thread got a new message to process.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
