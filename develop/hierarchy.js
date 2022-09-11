@@ -401,6 +401,7 @@ var hierarchy =
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
     [ "std::hash< AString >", "structstd_1_1hash_3_01AString_01_4.html", null ],
+    [ "ATokenizer::Hexable< underlying_t >", "structATokenizer_1_1Hexable.html", null ],
     [ "ass::IAssSubSelector", "classass_1_1IAssSubSelector.html", [
       [ "ass::DirectParentSubSelector< L, R >", "structass_1_1DirectParentSubSelector.html", null ],
       [ "ass::ParentSubSelector< L, R >", "structass_1_1ParentSubSelector.html", null ],

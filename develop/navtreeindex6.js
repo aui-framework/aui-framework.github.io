@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"structdeclarative_1_1Button.html":[0,0,11,0],
+"structdeclarative_1_1RadioGroup.html":[0,2,7,1],
 "structdeclarative_1_1RadioGroup.html":[0,0,11,1],
 "structdeclarative_1_1Style.html":[0,0,11,2],
 "structdeclarative_1_1Style.html":[0,2,7,2],

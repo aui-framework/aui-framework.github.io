@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"structass_1_1FixedSize.html":[2,0,7,0,11],
+"structass_1_1Font.html":[2,0,7,0,12],
 "structass_1_1FontFamily.html":[2,0,7,0,13],
 "structass_1_1FontSize.html":[2,0,7,0,14],
 "structass_1_1LayoutSpacing.html":[2,0,7,0,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "structaui_1_1valid_1_1validator.html":[0,0,6,7,4],
 "structaui_1_1zip.html":[2,0,1,2],
 "structaui_1_1zip_1_1iterator.html":[2,0,1,2,0],
-"structdeclarative_1_1Button.html":[0,2,7,0],
-"structdeclarative_1_1Button.html":[0,0,11,0],
-"structdeclarative_1_1RadioGroup.html":[0,2,7,1]
+"structdeclarative_1_1Button.html":[0,2,7,0]
 };

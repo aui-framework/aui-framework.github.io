@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"functions_func_r.html":[0,4,1,17],
 "functions_func_s.html":[0,4,1,18],
 "functions_func_t.html":[0,4,1,19],
 "functions_func_u.html":[0,4,1,20],
@@ -194,6 +195,7 @@ var NAVTREEINDEX4 =
 "structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16":[0,2,247,2],
 "structATexturedBrush.html#a9759fd226e78d36217ce417caf320589":[0,2,247,1],
 "structATexturedBrush.html#aa0ac62633d7962576270733882033326":[0,2,247,0],
+"structATokenizer_1_1Hexable.html":[0,2,251,0],
 "structAViewsInit.html":[0,2,271],
 "structAutumn_1_1construct.html":[0,0,7,0],
 "structAutumn_1_1construct.html":[0,2,5,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "structass_1_1BoxShadow.html":[2,0,7,0,9],
 "structass_1_1DirectParentSubSelector.html":[0,2,3,17],
 "structass_1_1DirectParentSubSelector.html":[0,0,5,17],
-"structass_1_1Expanding.html":[2,0,7,0,10],
-"structass_1_1FixedSize.html":[2,0,7,0,11],
-"structass_1_1Font.html":[2,0,7,0,12]
+"structass_1_1Expanding.html":[2,0,7,0,10]
 };
