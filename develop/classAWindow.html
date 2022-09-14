@@ -106,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19cd0113a8279952fadf4fce7148c51a"><td class="memItemLeft" align="right" valign="top"><a id="a19cd0113a8279952fadf4fce7148c51a" name="a19cd0113a8279952fadf4fce7148c51a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AWindow</b> (const <a class="el" href="classAString.html">AString</a> &amp;name=&quot;My window&quot;, int <a class="el" href="structViewAssertionSize.html">width</a>=854_dp, int <a class="el" href="structViewAssertionSize.html">height</a>=500_dp, <a class="el" href="classAWindow.html">AWindow</a> *parent=nullptr, WindowStyle ws=WindowStyle::DEFAULT)</td></tr>
 <tr class="separator:a19cd0113a8279952fadf4fce7148c51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ee3bccf676f9aadf3f07bb03bc6a2a"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a">frameMillis</a> () const noexcept override</td></tr>
+<tr class="memdesc:ab7ee3bccf676f9aadf3f07bb03bc6a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns previous frame's rendering duration in millis.  <a href="classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a">More...</a><br /></td></tr>
+<tr class="separator:ab7ee3bccf676f9aadf3f07bb03bc6a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0da8f8c23a6b0ab91b59d865f71cd5f"><td class="memItemLeft" align="right" valign="top"><a id="af0da8f8c23a6b0ab91b59d865f71cd5f" name="af0da8f8c23a6b0ab91b59d865f71cd5f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>redraw</b> ()</td></tr>
 <tr class="separator:af0da8f8c23a6b0ab91b59d865f71cd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1220,6 +1223,37 @@ static _unique&lt; <a class="el" href="classAWindowManager.html">AWindowManager<
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classABaseWindow.html">ABaseWindow</a>.</p>
+
+</div>
+</div>
+<a id="ab7ee3bccf676f9aadf3f07bb03bc6a2a" name="ab7ee3bccf676f9aadf3f07bb03bc6a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ee3bccf676f9aadf3f07bb03bc6a2a">&#9670;&nbsp;</a></span>frameMillis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned AWindow::frameMillis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns previous frame's rendering duration in millis. </p>
+<p >Returns previous frame's rendering duration in millis, including native rendering preparation and buffer swapping. The value does not include the elapsed time between frames.</p>
+<p >The value is updated after native buffer swap. </p>
+
+<p>Implements <a class="el" href="classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0">ABaseWindow</a>.</p>
 
 </div>
 </div>

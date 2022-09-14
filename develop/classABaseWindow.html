@@ -107,6 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aecd6330bd485121e21ff2d49e7c383f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classABaseWindow.html#aecd6330bd485121e21ff2d49e7c383f4">blockUserInput</a> (bool blockUserInput=true)</td></tr>
 <tr class="memdesc:aecd6330bd485121e21ff2d49e7c383f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables user input for this window.  <a href="classABaseWindow.html#aecd6330bd485121e21ff2d49e7c383f4">More...</a><br /></td></tr>
 <tr class="separator:aecd6330bd485121e21ff2d49e7c383f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e16aeb25e748fcad5c1ebb6309ae2e0"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0">frameMillis</a> () const noexcept=0</td></tr>
+<tr class="memdesc:a6e16aeb25e748fcad5c1ebb6309ae2e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns previous frame's rendering duration in millis.  <a href="classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0">More...</a><br /></td></tr>
+<tr class="separator:a6e16aeb25e748fcad5c1ebb6309ae2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e564f002d05534d26825497708a22c6"><td class="memItemLeft" align="right" valign="top"><a id="a9e564f002d05534d26825497708a22c6" name="a9e564f002d05534d26825497708a22c6"></a>
 const _unique&lt; <a class="el" href="classIRenderingContext.html">IRenderingContext</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRenderingContext</b> () const</td></tr>
 <tr class="separator:a9e564f002d05534d26825497708a22c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -968,6 +971,37 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>IRenderingContext::
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classABaseWindow.html#aac234fdc6c88229140ba7d834eb893e9">ABaseWindow::createOverlappingSurface</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classAEmbedAuiWrap_1_1EmbedWindow.html#af952fdcda95705dde271cfa0c6535c01">AEmbedAuiWrap::EmbedWindow</a>, and <a class="el" href="classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0">AWindow</a>.</p>
+
+</div>
+</div>
+<a id="a6e16aeb25e748fcad5c1ebb6309ae2e0" name="a6e16aeb25e748fcad5c1ebb6309ae2e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e16aeb25e748fcad5c1ebb6309ae2e0">&#9670;&nbsp;</a></span>frameMillis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned ABaseWindow::frameMillis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns previous frame's rendering duration in millis. </p>
+<p >Returns previous frame's rendering duration in millis, including native rendering preparation and buffer swapping. The value does not include the elapsed time between frames.</p>
+<p >The value is updated after native buffer swap. </p>
+
+<p>Implemented in <a class="el" href="classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca">AEmbedAuiWrap::EmbedWindow</a>, and <a class="el" href="classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a">AWindow</a>.</p>
 
 </div>
 </div>

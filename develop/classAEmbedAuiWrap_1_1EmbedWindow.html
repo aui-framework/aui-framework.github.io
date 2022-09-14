@@ -103,6 +103,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a303251eee10da274f448be96aab2c695"><td class="memItemLeft" align="right" valign="top"><a id="a303251eee10da274f448be96aab2c695" name="a303251eee10da274f448be96aab2c695"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EmbedWindow</b> (<a class="el" href="classAEmbedAuiWrap.html">AEmbedAuiWrap</a> *theWrap)</td></tr>
 <tr class="separator:a303251eee10da274f448be96aab2c695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4397817f26735b74d6bb6d36f2294ca"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca">frameMillis</a> () const noexcept override</td></tr>
+<tr class="memdesc:ad4397817f26735b74d6bb6d36f2294ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns previous frame's rendering duration in millis.  <a href="classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca">More...</a><br /></td></tr>
+<tr class="separator:ad4397817f26735b74d6bb6d36f2294ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ce7597f85f5ae4e3efcb45eb50c6fe"><td class="memItemLeft" align="right" valign="top"><a id="a65ce7597f85f5ae4e3efcb45eb50c6fe" name="a65ce7597f85f5ae4e3efcb45eb50c6fe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrameMillis</b> (unsigned int <a class="el" href="classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca">frameMillis</a>)</td></tr>
+<tr class="separator:a65ce7597f85f5ae4e3efcb45eb50c6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af952fdcda95705dde271cfa0c6535c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAOverlappingSurface.html">AOverlappingSurface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAEmbedAuiWrap_1_1EmbedWindow.html#af952fdcda95705dde271cfa0c6535c01">createOverlappingSurfaceImpl</a> (const glm::ivec2 &amp;position, const glm::ivec2 &amp;size) override</td></tr>
 <tr class="separator:af952fdcda95705dde271cfa0c6535c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3155629b710a37156114a077fce0fe15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAEmbedAuiWrap_1_1EmbedWindow.html#a3155629b710a37156114a077fce0fe15">closeOverlappingSurfaceImpl</a> (<a class="el" href="classAOverlappingSurface.html">AOverlappingSurface</a> *surface) override</td></tr>
@@ -919,6 +925,37 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classABaseWindow.html">ABaseWindow</a>.</p>
+
+</div>
+</div>
+<a id="ad4397817f26735b74d6bb6d36f2294ca" name="ad4397817f26735b74d6bb6d36f2294ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4397817f26735b74d6bb6d36f2294ca">&#9670;&nbsp;</a></span>frameMillis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int AEmbedAuiWrap::EmbedWindow::frameMillis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns previous frame's rendering duration in millis. </p>
+<p >Returns previous frame's rendering duration in millis, including native rendering preparation and buffer swapping. The value does not include the elapsed time between frames.</p>
+<p >The value is updated after native buffer swap. </p>
+
+<p>Implements <a class="el" href="classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0">ABaseWindow</a>.</p>
 
 </div>
 </div>
