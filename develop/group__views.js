@@ -3,6 +3,12 @@ var group__views =
     [ "Aui Style Sheets", "group__ass.html", "group__ass" ],
     [ "Layout Managers", "group__layout__managers.html", "group__layout__managers" ],
     [ "Views", "group__useful__views.html", "group__useful__views" ],
+    [ "ADragNDrop", "classADragNDrop.html", [
+      [ "perform", "classADragNDrop.html#af2faade058d2f6067ceb19182a5e872f", null ]
+    ] ],
+    [ "AMimedData", "classAMimedData.html", [
+      [ "setText", "classAMimedData.html#aa02bc659384889d00a53001ecdd46046", null ]
+    ] ],
     [ "AOverflow", "group__views.html#ga0b5c15e7f44eba2c0eb1705539014892", null ],
     [ "AOverflowMask", "group__views.html#ga2fe2bd6a9b374df21a408aada64c46e2", [
       [ "AOverflowMask::ROUNDED_RECT", "group__views.html#gga2fe2bd6a9b374df21a408aada64c46e2a59cb0f4406cd7bfc96e0a1391f7b1f9f", null ],

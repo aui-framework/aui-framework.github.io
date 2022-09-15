@@ -80,6 +80,7 @@ var hierarchy =
     [ "ADataBindingLinker< Model, Klass, ModelField, Getter, Setter >", "classADataBindingLinker.html", null ],
     [ "ADataBindingLinker2< Model, Data >", "classADataBindingLinker2.html", null ],
     [ "tuples::detail::functor::add", "structtuples_1_1detail_1_1functor_1_1add.html", null ],
+    [ "ADragNDrop", "classADragNDrop.html", null ],
     [ "AEnumerate< enum_t >", "classAEnumerate.html", null ],
     [ "AEnumerateAllValues< enum_t >", "structAEnumerateAllValues.html", null ],
     [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
@@ -112,6 +113,7 @@ var hierarchy =
     [ "AMenu", "classAMenu.html", null ],
     [ "AMetric", "classAMetric.html", null ],
     [ "AMigrationManager", "classAMigrationManager.html", null ],
+    [ "AMimedData", "classAMimedData.html", null ],
     [ "AModel", "structAModel.html", null ],
     [ "AModelIndex", "classAModelIndex.html", null ],
     [ "AModelMetaBase< T >", "structAModelMetaBase.html", [
@@ -291,6 +293,7 @@ var hierarchy =
             [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", null ],
             [ "ADragArea", "classADragArea.html", null ],
             [ "ADragArea::ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ],
+            [ "ADragNDropView", "classADragNDropView.html", null ],
             [ "AEmbedMenuProvider::MenuContainer", "classAEmbedMenuProvider_1_1MenuContainer.html", null ],
             [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
             [ "AGridSplitter", "classAGridSplitter.html", null ],
@@ -658,6 +661,7 @@ var hierarchy =
       [ "WindowDelegate", "interfaceWindowDelegate.html", null ]
     ] ],
     [ "aui::sequence_traits< T >::of< first_, up_ >", "structaui_1_1sequence__traits_1_1of.html", null ],
+    [ "Ole", "classOle.html", null ],
     [ "aui::impl::future::OnSuccessCallback< T >", "structaui_1_1impl_1_1future_1_1OnSuccessCallback.html", null ],
     [ "aui::impl::future::OnSuccessCallback< Value >", "structaui_1_1impl_1_1future_1_1OnSuccessCallback.html", null ],
     [ "aui::impl::future::OnSuccessCallback< void >", "structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html", null ],
