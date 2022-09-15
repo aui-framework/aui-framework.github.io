@@ -179,6 +179,7 @@ var hierarchy =
     [ "ass::BackgroundImage", "structass_1_1BackgroundImage.html", null ],
     [ "ass::BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],
     [ "Base", null, [
+      [ "AComBase< Child, Base >", "classAComBase.html", null ],
       [ "ass::active< Base >", "structass_1_1active.html", null ],
       [ "ass::disabled< Base >", "structass_1_1disabled.html", null ],
       [ "ass::focus< Base >", "structass_1_1focus.html", null ],

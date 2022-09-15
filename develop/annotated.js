@@ -305,6 +305,7 @@ var annotated =
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
     [ "AColor", "classAColor.html", "classAColor" ],
+    [ "AComBase", "classAComBase.html", null ],
     [ "AComboBox", "classAComboBox.html", "classAComboBox" ],
     [ "AConditionVariable", "classAConditionVariable.html", "classAConditionVariable" ],
     [ "AContainerPrinter", "structAContainerPrinter.html", null ],
