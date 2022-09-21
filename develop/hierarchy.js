@@ -34,6 +34,7 @@ var hierarchy =
     [ "AClass< T >", "classAClass.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
+    [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
     [ "ACursorSelectable", "classACursorSelectable.html", [
@@ -467,6 +468,11 @@ var hierarchy =
       [ "AImageDrawable", "classAImageDrawable.html", null ],
       [ "AVectorDrawable", "classAVectorDrawable.html", null ]
     ] ],
+    [ "IEnumFORMATETC", null, [
+      [ "AComBase< FormatEtcEnumerator, IEnumFORMATETC >", "classAComBase.html", [
+        [ "FormatEtcEnumerator", "classFormatEtcEnumerator.html", null ]
+      ] ]
+    ] ],
     [ "IEventLoop", "classIEventLoop.html", [
       [ "MyEventLoop", "classMyEventLoop.html", null ],
       [ "AEmbedAuiWrap", "classAEmbedAuiWrap.html", [
@@ -716,6 +722,7 @@ var hierarchy =
     ] ],
     [ "_< T >::SafeCallWrapper", "class___1_1SafeCallWrapper.html", null ],
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
+    [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
