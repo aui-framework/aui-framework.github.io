@@ -221,6 +221,7 @@ var hierarchy =
     ] ],
     [ "ARenderingContextOptions::DirectX11", "structARenderingContextOptions_1_1DirectX11.html", null ],
     [ "tuples::detail::functor::div", "structtuples_1_1detail_1_1functor_1_1div.html", null ],
+    [ "ADragNDrop::DropEvent", "structADragNDrop_1_1DropEvent.html", null ],
     [ "aui::impl::json::empty_tuple", "structaui_1_1impl_1_1json_1_1empty__tuple.html", null ],
     [ "testing::EmptyTestEventListener", null, [
       [ "MyListener", "classMyListener.html", null ]
@@ -340,6 +341,7 @@ var hierarchy =
       [ "UnixIoAsync::Impl", "classUnixIoAsync_1_1Impl.html", null ],
       [ "WinIoAsync::Impl", "classWinIoAsync_1_1Impl.html", null ]
     ] ],
+    [ "ADragNDrop::EnterEvent", "structADragNDrop_1_1EnterEvent.html", null ],
     [ "AStacktrace::Entry", "classAStacktrace_1_1Entry.html", null ],
     [ "AWordWrappingEngine::Entry", "classAWordWrappingEngine_1_1Entry.html", [
       [ "AViewEntry", "classAViewEntry.html", null ],

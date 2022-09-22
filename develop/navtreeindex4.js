@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"functions_c.html":[0,4,0,3],
+"functions_d.html":[0,4,0,4],
 "functions_e.html":[0,4,0,5],
 "functions_enum.html":[0,4,4],
 "functions_eval.html":[0,4,5],
@@ -154,6 +156,8 @@ var NAVTREEINDEX4 =
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,71],
 "structADesktop_1_1FileExtension.html":[0,0,2,0],
 "structADesktop_1_1FileExtension.html":[0,2,1,0],
+"structADragNDrop_1_1DropEvent.html":[2,0,7,3,0],
+"structADragNDrop_1_1EnterEvent.html":[2,0,7,3,1],
 "structAEnumerateAllValues.html":[0,2,85],
 "structAEnumerate_1_1Values.html":[0,2,84,0],
 "structAFingerDragEvent.html":[0,2,93],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "structUnsupportedBrushHelper.html":[0,2,390],
 "structViewActionClick.html":[0,2,391],
 "structViewActionDoubleClick.html":[0,2,392],
-"structViewActionMouseMove.html":[0,2,393],
-"structViewActionScroll.html":[0,2,394],
-"structViewActionType.html":[0,2,395],
-"structViewAssertionAverageColor.html":[0,2,396],
-"structViewAssertionEmpty.html":[0,2,397]
+"structViewActionMouseMove.html":[0,2,393]
 };
