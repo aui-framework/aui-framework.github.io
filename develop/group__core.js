@@ -143,7 +143,9 @@ var group__core =
       [ "notify_one", "classAConditionVariable.html#a0f01b279878a7a39c713b08d8e9e0674", null ],
       [ "wait", "classAConditionVariable.html#a9642386005b00d1278e87d78d1082acb", null ],
       [ "wait_for", "classAConditionVariable.html#af49e24fddafa4d3cf29c0dcef892258e", null ],
-      [ "wait_for", "classAConditionVariable.html#aafb373b5d011972ad21031a8a26bcc9b", null ]
+      [ "wait_for", "classAConditionVariable.html#aafb373b5d011972ad21031a8a26bcc9b", null ],
+      [ "wait_until", "classAConditionVariable.html#a6e9a28278fc82d6fbe161ea330812119", null ],
+      [ "wait_until", "classAConditionVariable.html#a8feff787c9ae31ca8915ebbd2d4f69f6", null ]
     ] ],
     [ "ACutoffSignal", "classACutoffSignal.html", [
       [ "makeSignal", "classACutoffSignal.html#a846f87917ee35414834b624c281ffd06", null ],
@@ -186,6 +188,12 @@ var group__core =
     ] ],
     [ "AUrl", "classAUrl.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
+    [ "AScheduler", "classAScheduler.html", [
+      [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
+      [ "loop", "classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568", null ],
+      [ "notifyProcessMessages", "classAScheduler.html#a297b30aa7fe6ab8fbcfe80299de2e5bc", null ],
+      [ "timer", "classAScheduler.html#adcc8bfa4d75bc92bd37d3836cddc151a", null ]
+    ] ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]

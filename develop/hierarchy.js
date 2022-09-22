@@ -480,6 +480,7 @@ var hierarchy =
         [ "ASoftwareEmbedAuiWrap", "classASoftwareEmbedAuiWrap.html", null ]
       ] ],
       [ "AEventLoop", "classAEventLoop.html", null ],
+      [ "AScheduler", "classAScheduler.html", null ],
       [ "AWindowManager", "classAWindowManager.html", [
         [ "UITestWindowManager", "classUITestWindowManager.html", null ]
       ] ],

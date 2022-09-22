@@ -452,6 +452,7 @@ var annotated =
     [ "ARsa", "classARsa.html", null ],
     [ "ARulerArea", "classARulerArea.html", "classARulerArea" ],
     [ "ARulerView", "classARulerView.html", "classARulerView" ],
+    [ "AScheduler", "classAScheduler.html", "classAScheduler" ],
     [ "AScrollArea", "classAScrollArea.html", "classAScrollArea" ],
     [ "AScrollAreaContainer", "classAScrollAreaContainer.html", "classAScrollAreaContainer" ],
     [ "AScrollbar", "classAScrollbar.html", "classAScrollbar" ],
