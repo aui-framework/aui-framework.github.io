@@ -1,13 +1,15 @@
 var NAVTREEINDEX4 =
 {
+"functions_a.html":[0,4,0,1],
+"functions_b.html":[0,4,0,2],
 "functions_c.html":[0,4,0,3],
 "functions_d.html":[0,4,0,4],
 "functions_e.html":[0,4,0,5],
 "functions_enum.html":[0,4,4],
 "functions_eval.html":[0,4,5],
 "functions_f.html":[0,4,0,6],
-"functions_func.html":[0,4,1,0],
 "functions_func.html":[0,4,1],
+"functions_func.html":[0,4,1,0],
 "functions_func_a.html":[0,4,1,1],
 "functions_func_b.html":[0,4,1,2],
 "functions_func_c.html":[0,4,1,3],
@@ -154,8 +156,8 @@ var NAVTREEINDEX4 =
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,69],
 "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html":[0,2,70],
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,71],
-"structADesktop_1_1FileExtension.html":[0,0,2,0],
 "structADesktop_1_1FileExtension.html":[0,2,1,0],
+"structADesktop_1_1FileExtension.html":[0,0,2,0],
 "structADragNDrop_1_1DropEvent.html":[2,0,7,3,0],
 "structADragNDrop_1_1EnterEvent.html":[2,0,7,3,1],
 "structAEnumerateAllValues.html":[0,2,85],
@@ -225,8 +227,8 @@ var NAVTREEINDEX4 =
 "structAViewsInit.html":[0,2,277],
 "structAutumn_1_1construct.html":[0,2,5,0],
 "structAutumn_1_1construct.html":[0,0,7,0],
-"structAzazaATest_1_1ATest.html":[0,0,9,0],
 "structAzazaATest_1_1ATest.html":[0,2,6,0],
+"structAzazaATest_1_1ATest.html":[0,0,9,0],
 "structBrushHelper.html":[0,2,290],
 "structCharEntry.html":[0,2,292],
 "structData2.html":[0,2,296],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "structState.html":[0,2,376],
 "structTexturedShaderHelper.html":[0,2,377],
 "structUnsupportedBrushHelper.html":[0,2,390],
-"structViewActionClick.html":[0,2,391],
-"structViewActionDoubleClick.html":[0,2,392],
-"structViewActionMouseMove.html":[0,2,393]
+"structViewActionClick.html":[0,2,391]
 };
