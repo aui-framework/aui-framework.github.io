@@ -171,6 +171,10 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line"> </div>
+<div class="line">    <span class="comment">// deduction guide</span></div>
+<div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container&gt;</div>
+<div class="line">    range(Container&amp; c) -&gt; range&lt;<span class="keyword">decltype</span>(c.begin())&gt;;</div>
+<div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container&gt;</div>
 <div class="line">    <span class="keyword">using</span> const_iterator_if_const = std::conditional_t&lt;std::is_const_v&lt;Container&gt;,</div>
 <div class="line">                                                       <span class="keyword">typename</span> Container::const_iterator,</div>
@@ -250,7 +254,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        <span class="keywordflow">return</span> std::make_reverse_iterator(iterator + 1);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__useful__macros_html_gac5abe2e70dfe9c5b9124860b8c74cc84"><div class="ttname"><a href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">aui::reverse_iterator_direction</a></div><div class="ttdeci">auto reverse_iterator_direction(Iterator iterator) noexcept -&gt; std::enable_if_t&lt;!impl::is_forward_iterator&lt; Iterator &gt;, decltype((iterator+1).base()) &gt;</div><div class="ttdoc">Reverses iterator direction (i.e. converts iterator to reverse_iterator, reverse_iterator to iterator...</div><div class="ttdef"><b>Definition:</b> iterators.h:174</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gac5abe2e70dfe9c5b9124860b8c74cc84"><div class="ttname"><a href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">aui::reverse_iterator_direction</a></div><div class="ttdeci">auto reverse_iterator_direction(Iterator iterator) noexcept -&gt; std::enable_if_t&lt;!impl::is_forward_iterator&lt; Iterator &gt;, decltype((iterator+1).base()) &gt;</div><div class="ttdoc">Reverses iterator direction (i.e. converts iterator to reverse_iterator, reverse_iterator to iterator...</div><div class="ttdef"><b>Definition:</b> iterators.h:178</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
