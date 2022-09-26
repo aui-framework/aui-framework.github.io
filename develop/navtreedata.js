@@ -71,7 +71,7 @@ var NAVTREEINDEX =
 "classIEventLoop_1_1Handle.html",
 "functions_a.html",
 "structViewActionDoubleClick.html",
-"structaui_1_1ui__building_1_1layouted__container__factory.html"
+"structaui_1_1type__list.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

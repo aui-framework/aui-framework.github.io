@@ -186,6 +186,7 @@ var hierarchy =
       [ "ass::focus< Base >", "structass_1_1focus.html", null ],
       [ "ass::hovered< Base >", "structass_1_1hovered.html", null ]
     ] ],
+    [ "aui::BinarySearchNearestToZero< Predicate, Iterator >", "structaui_1_1BinarySearchNearestToZero.html", null ],
     [ "ass::Border", "structass_1_1Border.html", null ],
     [ "ass::BorderBottom", "structass_1_1BorderBottom.html", null ],
     [ "ass::BorderLeft", "structass_1_1BorderLeft.html", null ],
