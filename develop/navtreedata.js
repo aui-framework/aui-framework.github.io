@@ -67,10 +67,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classAHDividerView.html",
-"classATabButtonView.html",
-"classIEventLoop_1_1Handle.html",
-"functions_a.html",
-"structViewActionDoubleClick.html",
+"classATabButtonRow.html",
+"classIEventLoop.html#af26f19c03393cca88b5bb4f183838305",
+"functions.html",
+"structViewActionClick.html",
 "structaui_1_1type__list.html"
 ];
 

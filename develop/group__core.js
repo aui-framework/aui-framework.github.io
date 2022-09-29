@@ -196,6 +196,7 @@ var group__core =
       [ "notifyProcessMessages", "classAScheduler.html#a297b30aa7fe6ab8fbcfe80299de2e5bc", null ],
       [ "timer", "classAScheduler.html#adcc8bfa4d75bc92bd37d3836cddc151a", null ]
     ] ],
+    [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]

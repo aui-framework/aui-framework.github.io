@@ -478,6 +478,7 @@ var annotated =
     [ "ASerializable< T, std::enable_if_t< std::is_arithmetic_v< T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html", null ],
     [ "ASerializable< T, std::enable_if_t< std::is_base_of_v< IInputStream, T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html", null ],
     [ "ASet", "classASet.html", "classASet" ],
+    [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AShortcut", "classAShortcut.html", null ],
     [ "ASignal", "classASignal.html", "classASignal" ],
     [ "ASizeAnimator", "classASizeAnimator.html", "classASizeAnimator" ],

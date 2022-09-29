@@ -145,6 +145,7 @@ var hierarchy =
     [ "ASerializable< const char * >", "structASerializable_3_01const_01char_01_5_01_4.html", null ],
     [ "ASerializable< std::string >", "structASerializable_3_01std_1_1string_01_4.html", null ],
     [ "ASerializable< T, std::enable_if_t< std::is_base_of_v< IInputStream, T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html", null ],
+    [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AShortcut", "classAShortcut.html", null ],
     [ "ASolidBrush", "structASolidBrush.html", null ],
     [ "ASplitterHelper", "classASplitterHelper.html", null ],
