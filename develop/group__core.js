@@ -158,7 +158,9 @@ var group__core =
       [ "loop", "classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e", null ],
       [ "notifyProcessMessages", "classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f", null ]
     ] ],
-    [ "AFuture< T >", "classAFuture.html", null ],
+    [ "AFuture< T >", "classAFuture.html", [
+      [ "supplyException", "classAFuture.html#afb90c81c9ded0417533b721c34d3a139", null ]
+    ] ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "Message", "structAAbstractThread_1_1Message.html", null ],
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],

@@ -21,10 +21,10 @@ var searchData=
   ['setsizeforced_18',['setSizeForced',['../classAView.html#ac385fe5c95866dbe081aac74c7dba519',1,'AView']]],
   ['setspacing_19',['setSpacing',['../classAVerticalLayout.html#adb7dcbf1164714458e14cfec2944737a',1,'AVerticalLayout::setSpacing()'],['../classAHorizontalLayout.html#a6a09406b8f75bdb6452a633f8095325b',1,'AHorizontalLayout::setSpacing()'],['../classALayout.html#a82d60cb3ededc7d0c9e1444fa3175115',1,'ALayout::setSpacing()']]],
   ['settext_20',['setText',['../classAMimedData.html#aa02bc659384889d00a53001ecdd46046',1,'AMimedData']]],
-  ['settransform_21',['setTransform',['../classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7',1,'IRenderer::setTransform()'],['../classRender.html#ad3d5f6c8566729290636f9f439fb3334',1,'Render::setTransform()']]],
-  ['settransformforced_22',['setTransformForced',['../classIRenderer.html#abba373ab78eefb1063d9ddcfc37e7c95',1,'IRenderer::setTransformForced()'],['../classRender.html#a0b7ceabde073ee69fe5d59184a7bf238',1,'Render::setTransformForced()']]],
-  ['setup_23',['SetUp',['../classSignalSlot.html#a3f34f536b06b064d139e23563e4ecef8',1,'SignalSlot']]],
-  ['setup_24',['setup',['../structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf',1,'ADataBindingDefault']]],
+  ['settransform_21',['setTransform',['../classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7',1,'IRenderer::setTransform()'],['../classRender.html#ad3d5f6c8566729290636f9f439fb3334',1,'Render::setTransform(const glm::mat4 &amp;transform)']]],
+  ['settransformforced_22',['setTransformForced',['../classRender.html#a0b7ceabde073ee69fe5d59184a7bf238',1,'Render::setTransformForced()'],['../classIRenderer.html#abba373ab78eefb1063d9ddcfc37e7c95',1,'IRenderer::setTransformForced()']]],
+  ['setup_23',['setup',['../structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf',1,'ADataBindingDefault']]],
+  ['setup_24',['SetUp',['../classSignalSlot.html#a3f34f536b06b064d139e23563e4ecef8',1,'SignalSlot']]],
   ['setupconnections_25',['setupConnections',['../structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8',1,'ass::ParentSubSelector']]],
   ['setvalue_26',['setValue',['../classAProgressBar.html#a2243148b77840caa882e7181178438f8',1,'AProgressBar']]],
   ['shoulddisplayhoveranimations_27',['shouldDisplayHoverAnimations',['../classAWindow.html#a5bfce8bfb5c4642f03ddf6eb1ea15ece',1,'AWindow']]],
@@ -35,5 +35,6 @@ var searchData=
   ['sleep_32',['sleep',['../classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12',1,'AThread']]],
   ['start_33',['start',['../classAThread.html#a9234a95574195c1ed42364fe8a7a8329',1,'AThread']]],
   ['string_34',['string',['../classRender.html#a926bd615b7abde203b3a109869b59c79',1,'Render']]],
-  ['systemslashdirection_35',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
+  ['supplyexception_35',['supplyException',['../classAFuture.html#afb90c81c9ded0417533b721c34d3a139',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2',1,'AFuture&lt; void &gt;::supplyException()']]],
+  ['systemslashdirection_36',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];

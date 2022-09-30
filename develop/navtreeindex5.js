@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"structTexturedShaderHelper.html":[0,2,378],
+"structUnsupportedBrushHelper.html":[0,2,391],
 "structViewActionClick.html":[0,2,392],
 "structViewActionDoubleClick.html":[0,2,393],
 "structViewActionMouseMove.html":[0,2,394],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "structaui_1_1traits_1_1ternary.html":[0,2,4,3,0],
 "structaui_1_1traits_1_1ternary.html":[0,0,6,5,0],
 "structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,3,1],
-"structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,6,5,1],
-"structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,3,2],
-"structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,6,5,2]
+"structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,6,5,1]
 };

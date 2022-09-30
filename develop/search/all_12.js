@@ -35,8 +35,8 @@ var searchData=
   ['setsizeforced_32',['setSizeForced',['../classAView.html#ac385fe5c95866dbe081aac74c7dba519',1,'AView']]],
   ['setspacing_33',['setSpacing',['../classAVerticalLayout.html#adb7dcbf1164714458e14cfec2944737a',1,'AVerticalLayout::setSpacing()'],['../classALayout.html#a82d60cb3ededc7d0c9e1444fa3175115',1,'ALayout::setSpacing()'],['../classAHorizontalLayout.html#a6a09406b8f75bdb6452a633f8095325b',1,'AHorizontalLayout::setSpacing()']]],
   ['settext_34',['setText',['../classAMimedData.html#aa02bc659384889d00a53001ecdd46046',1,'AMimedData']]],
-  ['settransform_35',['setTransform',['../classRender.html#ad3d5f6c8566729290636f9f439fb3334',1,'Render::setTransform()'],['../classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7',1,'IRenderer::setTransform()']]],
-  ['settransformforced_36',['setTransformForced',['../classRender.html#a0b7ceabde073ee69fe5d59184a7bf238',1,'Render::setTransformForced()'],['../classIRenderer.html#abba373ab78eefb1063d9ddcfc37e7c95',1,'IRenderer::setTransformForced()']]],
+  ['settransform_35',['setTransform',['../classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7',1,'IRenderer::setTransform()'],['../classRender.html#ad3d5f6c8566729290636f9f439fb3334',1,'Render::setTransform()']]],
+  ['settransformforced_36',['setTransformForced',['../classIRenderer.html#abba373ab78eefb1063d9ddcfc37e7c95',1,'IRenderer::setTransformForced()'],['../classRender.html#a0b7ceabde073ee69fe5d59184a7bf238',1,'Render::setTransformForced()']]],
   ['setup_37',['SetUp',['../classSignalSlot.html#a3f34f536b06b064d139e23563e4ecef8',1,'SignalSlot']]],
   ['setup_38',['setup',['../structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf',1,'ADataBindingDefault']]],
   ['setupconnections_39',['setupConnections',['../structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8',1,'ass::ParentSubSelector']]],
@@ -81,6 +81,7 @@ var searchData=
   ['style_78',['Style',['../structdeclarative_1_1Style.html',1,'declarative']]],
   ['sub_79',['sub',['../structtuples_1_1detail_1_1functor_1_1sub.html',1,'tuples::detail::functor']]],
   ['success_80',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]],
-  ['symbol_81',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]],
-  ['systemslashdirection_82',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
+  ['supplyexception_81',['supplyException',['../classAFuture.html#afb90c81c9ded0417533b721c34d3a139',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2',1,'AFuture&lt; void &gt;::supplyException()']]],
+  ['symbol_82',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]],
+  ['systemslashdirection_83',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
