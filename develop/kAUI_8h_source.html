@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('kAUI_8h_source.html',''); initResizabl
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">   94</a></span><span class="preprocessor">#define slot(v) v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;decltype(v)&gt;&gt;</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga83ed206577a7d572aa5790d9807b7a02">  146</a></span><span class="preprocessor">#define perform_as_member(object, lambda)                                                  \</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">  146</a></span><span class="preprocessor">#define AUI_PERFORM_AS_MEMBER(object, lambda)                                                  \</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">    struct __apply ## __FUNCTION__ ## __LINE__   : std::decay_t&lt;decltype(object)&gt;::stored_t { \</span></div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">        void operator()() {                                                    \</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">            lambda;                                                            \</span></div>
@@ -146,22 +146,25 @@ $(document).ready(function(){initNavTree('kAUI_8h_source.html',''); initResizabl
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">    };                                                                         \</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">    (*reinterpret_cast&lt;__apply ## __FUNCTION__ ## __LINE__ *&gt;(object.get()))()</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">  216</a></span><span class="preprocessor">#define let ^ [&amp;](const auto&amp; it)</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">  231</a></span><span class="preprocessor">#define with_style + RuleWithoutSelector</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">  273</a></span><span class="preprocessor">#define async AThreadPool::global() * [=]()</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">  304</a></span><span class="preprocessor">#define asyncX AThreadPool::global() *</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">  335</a></span><span class="preprocessor">#define do_once if(static uint8_t _aui_once = 0; !_aui_once++)</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">#define ui_thread (*getThread()) * [=]()</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">#define ui_threadX (*getThread()) *</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="preprocessor">#define repeat(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex)</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">#define repeat_async(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex) AThreadPool::global() &lt;&lt; [=]()</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#define AUI_EMIT_FOREIGN_SIGNAL(object) (*object) ^ object</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">  253</a></span><span class="preprocessor">#define let ^ [&amp;](const auto&amp; it)</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">  268</a></span><span class="preprocessor">#define with_style + RuleWithoutSelector</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">  310</a></span><span class="preprocessor">#define async AThreadPool::global() * [=]()</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">  341</a></span><span class="preprocessor">#define asyncX AThreadPool::global() *</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">  372</a></span><span class="preprocessor">#define do_once if(static uint8_t _aui_once = 0; !_aui_once++)</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">#define ui_thread (*getThread()) * [=]()</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="preprocessor">#define ui_threadX (*getThread()) *</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="preprocessor">#define repeat(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex)</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="preprocessor">#define repeat_async(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex) AThreadPool::global() &lt;&lt; [=]()</span></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:129</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition:</b> kAUI.h:94</div></div>
 <div class="ttc" id="astructaui_1_1impl_1_1slot_1_1decode__type_html"><div class="ttname"><a href="structaui_1_1impl_1_1slot_1_1decode__type.html">aui::impl::slot::decode_type</a></div><div class="ttdef"><b>Definition:</b> kAUI.h:57</div></div>
