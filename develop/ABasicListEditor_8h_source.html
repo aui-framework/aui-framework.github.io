@@ -159,13 +159,13 @@ $(document).ready(function(){initNavTree('ABasicListEditor_8h_source.html',''); 
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (mModel-&gt;listSize() != 0) {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                list-&gt;selectItem(0);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                nullsafe(removeButton)-&gt;disable();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                nullsafe(modifyButton)-&gt;disable();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                AUI_NULLSAFE(removeButton)-&gt;disable();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                AUI_NULLSAFE(modifyButton)-&gt;disable();</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keyword">auto</span> updateEnabledState = [list, modifyButton, removeButton]() {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keyword">auto</span>&amp; s = list-&gt;getSelectionModel().getIndices();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                nullsafe(modifyButton)-&gt;setDisabled(s.empty());</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                nullsafe(removeButton)-&gt;setDisabled(s.empty());</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                AUI_NULLSAFE(modifyButton)-&gt;setDisabled(s.empty());</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                AUI_NULLSAFE(removeButton)-&gt;setDisabled(s.empty());</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            };</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            connect(list-&gt;selectionChanged, c, updateEnabledState);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            connect(mModel-&gt;dataRemoved, c, updateEnabledState);</div>
