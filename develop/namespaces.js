@@ -216,7 +216,6 @@ var namespaces =
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
       [ "reverse_iterator_direction", "group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84", null ]
     ] ],
-    [ "Autumn", "namespaceAutumn.html", "namespaceAutumn" ],
     [ "AXml", "namespaceAXml.html", [
       [ "read", "group__xml.html#ga06fdf594d32ebd9bf8a564fd832c6f28", null ]
     ] ],

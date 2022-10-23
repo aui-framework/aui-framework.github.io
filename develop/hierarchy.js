@@ -205,7 +205,6 @@ var hierarchy =
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
-    [ "Autumn::construct< T >", "structAutumn_1_1construct.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
@@ -769,7 +768,6 @@ var hierarchy =
     [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
     [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
-    [ "Autumn::Temporary< T >", "classAutumn_1_1Temporary.html", null ],
     [ "aui::ternary< boolean, OnTrue, OnFalse >", "structaui_1_1ternary.html", null ],
     [ "aui::traits::ternary< value, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary.html", null ],
     [ "aui::ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],

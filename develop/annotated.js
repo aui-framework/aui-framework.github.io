@@ -197,10 +197,6 @@ var annotated =
       [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ]
     ] ],
-    [ "Autumn", "namespaceAutumn.html", [
-      [ "construct", "structAutumn_1_1construct.html", null ],
-      [ "Temporary", "classAutumn_1_1Temporary.html", null ]
-    ] ],
     [ "AzazaATest", null, [
       [ "ATest", "structAzazaATest_1_1ATest.html", null ]
     ] ],

@@ -3,7 +3,6 @@ var group__core =
     [ "Signal-slot", "group__signal__slot.html", "group__signal__slot" ],
     [ "Useful macros", "group__useful__macros.html", "group__useful__macros" ],
     [ "IO streams", "group__io.html", "group__io" ],
-    [ "Autumn", "namespaceAutumn.html", null ],
     [ "AAbstractSignal", "classAAbstractSignal.html", null ],
     [ "ABoxFields", "structABoxFields.html", null ],
     [ "AByteBuffer", "classAByteBuffer.html", [
