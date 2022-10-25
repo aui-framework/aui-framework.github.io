@@ -58,7 +58,9 @@ var group__core =
       [ "contains_iterator", "structAMap_1_1contains__iterator.html", null ],
       [ "getOrInsert", "classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc", null ]
     ] ],
-    [ "AObject", "classAObject.html", null ],
+    [ "AObject", "classAObject.html", [
+      [ "setThread", "classAObject.html#a98cf3fa4ac279b30860bf228c44306b2", null ]
+    ] ],
     [ "AQueue< StoredType >", "classAQueue.html", [
       [ "contains", "classAQueue.html#aa03dc0318b8218de0a289fa8a8743852", null ],
       [ "isSubsetOf", "classAQueue.html#aba771ddfc85e646843b4cab514d2ac43", null ],

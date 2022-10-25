@@ -265,39 +265,40 @@ $(document).ready(function(){initNavTree('AMap_8h_source.html',''); initResizabl
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Factory&gt;</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc">  184</a></span>    ValueType&amp; <a class="code hl_function" href="classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc">getOrInsert</a>(<span class="keyword">const</span> KeyType&amp; keyType, <a class="code hl_class" href="classFactory.html">Factory</a>&amp;&amp; factory) <span class="keyword">noexcept</span>(<span class="keyword">noexcept</span>(factory())) {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keyword">auto</span>[it, isElementCreated] = parent::insert(<span class="keyword">typename</span> parent::value_type(keyType, ValueType{}));</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">decltype</span>(it), <span class="keyword">typename</span> parent::iterator&gt;, <span class="stringliteral">&quot;govno&quot;</span>);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">if</span> (isElementCreated) {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            it-&gt;second = factory();</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">return</span> it-&gt;second;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> BinaryOperation&gt;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">auto</span> toVector(BinaryOperation&amp;&amp; transformer) <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;KeyType&gt;</a>(), std::declval&lt;ValueType&gt;()))&gt; {</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;KeyType&gt;</a>(), std::declval&lt;ValueType&gt;()))&gt; result;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        result.reserve(parent::size());</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        std::transform(parent::begin(), parent::end(), std::back_inserter(result), [transformer = std::forward&lt;BinaryOperation&gt;(transformer)](<span class="keyword">const</span> <span class="keyword">typename</span> parent::value_type&amp; p){</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <span class="keywordflow">return</span> transformer(p.first, p.second);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        });</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>};</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keyword">static_assert</span>(std::is_constructible_v&lt;ValueType&gt;, <span class="stringliteral">&quot;ValueType is expected to be default-constructible&quot;</span>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keyword">auto</span>[it, isElementCreated] = parent::insert(<span class="keyword">typename</span> parent::value_type(keyType, ValueType{}));</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keyword">static_assert</span>(std::is_same_v&lt;<span class="keyword">decltype</span>(it), <span class="keyword">typename</span> parent::iterator&gt;, <span class="stringliteral">&quot;govno&quot;</span>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">if</span> (isElementCreated) {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            it-&gt;second = factory();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> BinaryOperation&gt;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keyword">auto</span> toVector(BinaryOperation&amp;&amp; transformer) <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;KeyType&gt;</a>(), std::declval&lt;ValueType&gt;()))&gt; {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;KeyType&gt;</a>(), std::declval&lt;ValueType&gt;()))&gt; result;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        result.reserve(parent::size());</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        std::transform(parent::begin(), parent::end(), std::back_inserter(result), [transformer = std::forward&lt;BinaryOperation&gt;(transformer)](<span class="keyword">const</span> <span class="keyword">typename</span> parent::value_type&amp; p){</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordflow">return</span> transformer(p.first, p.second);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        });</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>};</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> UnaryOperation&gt;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">inline</span> <span class="keyword">auto</span> aui::container::to_map(Iterator begin,</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                                   Iterator end,</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                                   UnaryOperation&amp;&amp; transformer) {</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <a class="code hl_class" href="classAMap.html">AMap</a>&lt;<span class="keyword">decltype</span>(transformer(*begin).first),</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>         <span class="keyword">decltype</span>(transformer(*begin).second)&gt; result;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = begin; it != end; ++it) {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keyword">auto</span>[key, value] = transformer(*it);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        result[std::move(key)] = std::move(value);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> UnaryOperation&gt;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keyword">inline</span> <span class="keyword">auto</span> aui::container::to_map(Iterator begin,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                                   Iterator end,</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                                   UnaryOperation&amp;&amp; transformer) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <a class="code hl_class" href="classAMap.html">AMap</a>&lt;<span class="keyword">decltype</span>(transformer(*begin).first),</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>         <span class="keyword">decltype</span>(transformer(*begin).second)&gt; result;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = begin; it != end; ++it) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keyword">auto</span>[key, value] = transformer(*it);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        result[std::move(key)] = std::move(value);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
 <div class="ttc" id="aclassAClass_html"><div class="ttname"><a href="classAClass.html">AClass</a></div><div class="ttdef"><b>Definition:</b> AClass.h:29</div></div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:39</div></div>
 <div class="ttc" id="aclassAMap_html"><div class="ttname"><a href="classAMap.html">AMap</a></div><div class="ttdoc">A std::map with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AMap.h:37</div></div>

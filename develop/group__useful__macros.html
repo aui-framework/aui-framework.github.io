@@ -113,6 +113,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga9fb2be9313369673815a6892aa7f3a1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></td></tr>
 <tr class="memdesc:ga9fb2be9313369673815a6892aa7f3a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application entry point.  <a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">More...</a><br /></td></tr>
 <tr class="separator:ga9fb2be9313369673815a6892aa7f3a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee1b2b611b51a8c6101ff769ed9b6a98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a>(object)&#160;&#160;&#160;{ auto unused = &amp;object ; }</td></tr>
+<tr class="memdesc:gaee1b2b611b51a8c6101ff769ed9b6a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forbids object from being optimized out by compiler.  <a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">More...</a><br /></td></tr>
+<tr class="separator:gaee1b2b611b51a8c6101ff769ed9b6a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">me</a>&#160;&#160;&#160;this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</td></tr>
 <tr class="memdesc:gac83b72d92d1105a82cd5590c0f65d48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes the current class and type of the current class separated by comma. It's convenient to use with the connect function:  <a href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">More...</a><br /></td></tr>
 <tr class="separator:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +248,47 @@ Functions</h2></td></tr>
 <p >AUI_ENTRY of a graphical application should be non-blocking since on mobile platforms application's event loop is located outsize of the entry point. On desktop platforms an event loop is created outside AUI_ENTRY in order to unify the mobile and desktop behaviour. If there are no open windows, the event loop breaks causing the application to exit.</p>
 <p >Application arguments (int argc, char** argv) are forwarded to AUI_ENTRY as <code><a class="el" href="classAStringVector.html" title="An AVector with string-related functions.">AStringVector</a> args</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>On Android, iOS and macOS only the main thread is able to initialize graphics context. </dd></dl>
+
+</div>
+</div>
+<a id="gaee1b2b611b51a8c6101ff769ed9b6a98" name="gaee1b2b611b51a8c6101ff769ed9b6a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee1b2b611b51a8c6101ff769ed9b6a98">&#9670;&nbsp;</a></span>AUI_NO_OPTIMIZE_OUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_NO_OPTIMIZE_OUT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">object</td><td>)</td>
+          <td>&#160;&#160;&#160;{ auto unused = &amp;object ; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forbids object from being optimized out by compiler. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>Target object. Can be pointer-to-function, pointer-to-member, any variable.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Performs compiler hacks in order to prevent the compiler/linker from optimizing out the specified object. It's useful for debugging purposes, when the function is expected to exist to be called.</p>
+<p >The macro should be called in any function/method which is not being optimized out (i.e. in destructor).</p>
+<p >Basic usage: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>SomeClass {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  ~SomeClass() {</div>
+<div class="line">      <a class="code hl_define" href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a>(SomeClass::debuggerMethod)</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">int</span> debuggerMethod() {</div>
+<div class="line">    ...</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__useful__macros_html_gaee1b2b611b51a8c6101ff769ed9b6a98"><div class="ttname"><a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a></div><div class="ttdeci">#define AUI_NO_OPTIMIZE_OUT(object)</div><div class="ttdoc">Forbids object from being optimized out by compiler.</div><div class="ttdef"><b>Definition:</b> macros.h:28</div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a0">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -531,7 +575,7 @@ template&lt;typename Iterator &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>same iterator but reverse direction</dd></dl>
 <p>A reversed iterator points to the same element of the container.</p>
 <p >Works on <a class="el" href="classAVector.html" title="A std::vector with AUI extensions.">AVector</a>. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a0">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a1">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
 </dl>
 
 </div>
