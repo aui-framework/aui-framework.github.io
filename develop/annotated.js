@@ -136,9 +136,11 @@ var annotated =
         [ "ADataBindingDefaultDoubleNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
         [ "ADataBindingDefaultNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
-        [ "first", "structaui_1_1impl_1_1first.html", null ]
+        [ "first", "structaui_1_1impl_1_1first.html", null ],
+        [ "select_overload", "structaui_1_1impl_1_1select__overload.html", null ]
       ] ],
       [ "promise", null, [
+        [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
         [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
       ] ],
       [ "traits", null, [

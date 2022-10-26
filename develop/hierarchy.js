@@ -612,6 +612,7 @@ var hierarchy =
     [ "MenuItem", "structMenuItem.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
+    [ "aui::promise::move_only< T >", "classaui_1_1promise_1_1move__only.html", null ],
     [ "tuples::detail::functor::mul", "structtuples_1_1detail_1_1functor_1_1mul.html", null ],
     [ "std::mutex", null, [
       [ "AMutex", "classAMutex.html", null ]
@@ -730,6 +731,7 @@ var hierarchy =
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
     [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
+    [ "aui::impl::select_overload< Args >", "structaui_1_1impl_1_1select__overload.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
     [ "aui::sequence_traits< T >", "structaui_1_1sequence__traits.html", null ],

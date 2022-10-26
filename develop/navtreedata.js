@@ -69,9 +69,9 @@ var NAVTREEINDEX =
 "classAGroupBox.html",
 "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c",
 "classIEventLoop.html#a790b37b3115b15f1224c85749d352d04",
-"functions.html",
-"structUnsupportedBrushHelper.html",
-"structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html"
+"classtesting_1_1UITest.html",
+"structState.html",
+"structaui_1_1traits_1_1ternary.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

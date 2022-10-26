@@ -9,7 +9,8 @@ var searchData=
   ['focus_6',['focus',['../classAView.html#adf2e35644a76131fed2a0319bc28bcd2',1,'AView::focus()'],['../classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a',1,'AViewContainer::focus()']]],
   ['framemillis_7',['frameMillis',['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()']]],
   ['frompid_8',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
-  ['fromstring_9',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['fromvector_10',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
-  ['future_11',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
+  ['fromrange_9',['fromRange',['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector']]],
+  ['fromstring_10',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
+  ['fromvector_11',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
+  ['future_12',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
 ];

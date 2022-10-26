@@ -300,57 +300,65 @@ $(document).ready(function(){initNavTree('AVector_8h_source.html',''); initResiz
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classASet.html">ASet&lt;StoredType&gt;</a>(p::begin(), p::end());</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    }</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keyword">auto</span> map(UnaryOperation&amp;&amp; transformer) <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()))&gt; {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()))&gt; result;</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        result.reserve(p::size());</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        std::transform(p::begin(), p::end(), std::back_inserter(result), std::forward&lt;UnaryOperation&gt;(transformer));</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keyword">auto</span> toMap(UnaryOperation&amp;&amp; transformer) <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classAMap.html">AMap&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()).<a class="code hl_function" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>),</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                                           <span class="keyword">decltype</span>(transformer(std::declval&lt;StoredType&gt;()).second)&gt; {</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <span class="keywordflow">return</span> aui::container::to_map(p::begin(), p::end(), transformer);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    }</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keyword">auto</span> toMap(UnaryOperation&amp;&amp; transformer) -&gt; <a class="code hl_class" href="classAMap.html">AMap&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()).<a class="code hl_function" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>),</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                                                     <span class="keyword">decltype</span>(transformer(std::declval&lt;StoredType&gt;()).second)&gt; {</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        <span class="keywordflow">return</span> aui::container::to_map(p::begin(), p::end(), transformer);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> UnaryOperation&gt;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">  324</a></span>    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">fromRange</a>(<a class="code hl_struct" href="structaui_1_1range.html">aui::range&lt;Iterator&gt;</a> range, UnaryOperation&amp;&amp; transformer) -&gt; <a class="code hl_class" href="classAVector.html">AVector</a>&lt;<span class="keyword">decltype</span>(transformer(range.first()))&gt; {</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <a class="code hl_class" href="classAVector.html">AVector</a>&lt;<span class="keyword">decltype</span>(transformer(range.first()))&gt; result;</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        result.reserve(range.size());</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        std::transform(range.begin(), range.end(), std::back_inserter(result), std::forward&lt;UnaryOperation&gt;(transformer));</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    }</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">auto</span> map(UnaryOperation&amp;&amp; transformer) <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()))&gt; {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()))&gt; result;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        result.reserve(p::size());</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        std::transform(p::begin(), p::end(), std::back_inserter(result), std::forward&lt;UnaryOperation&gt;(transformer));</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    }</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Predicate&gt;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <a class="code hl_class" href="classAVector.html">AVector</a> filter(Predicate&amp;&amp; predicate) {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        <a class="code hl_class" href="classAVector.html">AVector</a> result;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        result.reserve(p::size());</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; element : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            <span class="keywordflow">if</span> (predicate(element)) {</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                result.push_back(element);</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            }</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        }</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    }</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>};</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keyword">auto</span> toMap(UnaryOperation&amp;&amp; transformer) <span class="keyword">const</span> -&gt; <a class="code hl_class" href="classAMap.html">AMap&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()).<a class="code hl_function" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>),</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                                                           <span class="keyword">decltype</span>(transformer(std::declval&lt;StoredType&gt;()).second)&gt; {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">return</span> aui::container::to_map(p::begin(), p::end(), transformer);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> UnaryOperation&gt;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keyword">auto</span> toMap(UnaryOperation&amp;&amp; transformer) -&gt; <a class="code hl_class" href="classAMap.html">AMap&lt;decltype(transformer(std::declval&lt;StoredType&gt;</a>()).<a class="code hl_function" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>),</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                                                     <span class="keyword">decltype</span>(transformer(std::declval&lt;StoredType&gt;()).second)&gt; {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">return</span> aui::container::to_map(p::begin(), p::end(), transformer);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    }</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <span class="keyword">const</span> <a class="code hl_class" href="classAVector.html">AVector&lt;T&gt;</a>&amp; v) {</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keywordflow">if</span> (v.empty()) {</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        o &lt;&lt; <span class="stringliteral">&quot;[empty]&quot;</span>;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        o &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span> &lt;&lt; v.<a class="code hl_function" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>();</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = v.begin() + 1; it != v.end(); ++it) {</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            o &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; *it;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Predicate&gt;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <a class="code hl_class" href="classAVector.html">AVector</a> filter(Predicate&amp;&amp; predicate) {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <a class="code hl_class" href="classAVector.html">AVector</a> result;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        result.reserve(p::size());</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; element : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">if</span> (predicate(element)) {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                result.push_back(element);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            }</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        o &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    }</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>};</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <span class="keyword">const</span> <a class="code hl_class" href="classAVector.html">AVector&lt;T&gt;</a>&amp; v) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">if</span> (v.empty()) {</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        o &lt;&lt; <span class="stringliteral">&quot;[empty]&quot;</span>;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        o &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span> &lt;&lt; v.<a class="code hl_function" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>();</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = v.begin() + 1; it != v.end(); ++it) {</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            o &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; *it;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        }</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        o &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    }</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>}</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
 <div class="ttc" id="aclassAMap_html"><div class="ttname"><a href="classAMap.html">AMap</a></div><div class="ttdoc">A std::map with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AMap.h:37</div></div>
 <div class="ttc" id="aclassASet_html"><div class="ttname"><a href="classASet.html">ASet</a></div><div class="ttdoc">A std::set with AUI extensions.</div><div class="ttdef"><b>Definition:</b> ASet.h:36</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:46</div></div>
@@ -360,6 +368,7 @@ $(document).ready(function(){initNavTree('AVector_8h_source.html',''); initResiz
 <div class="ttc" id="aclassAVector_html_a14da8bd35be2e570afb6bfb6ace6b888"><div class="ttname"><a href="classAVector.html#a14da8bd35be2e570afb6bfb6ace6b888">AVector::insertAll</a></div><div class="ttdeci">iterator insertAll(iterator at, const OtherContainer &amp;c) noexcept</div><div class="ttdef"><b>Definition:</b> AVector.h:91</div></div>
 <div class="ttc" id="aclassAVector_html_a1b7c4beb3e4cffab55cd05fe2afec669"><div class="ttname"><a href="classAVector.html#a1b7c4beb3e4cffab55cd05fe2afec669">AVector::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(OtherContainer &amp;&amp;c) noexcept</div><div class="ttdef"><b>Definition:</b> AVector.h:201</div></div>
 <div class="ttc" id="aclassAVector_html_a22b060a2d6cc3fe72aeaa34bcf7188af"><div class="ttname"><a href="classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af">AVector::removeIf</a></div><div class="ttdeci">void removeIf(Predicate &amp;&amp;predicate) noexcept</div><div class="ttdef"><b>Definition:</b> AVector.h:298</div></div>
+<div class="ttc" id="aclassAVector_html_a275203bce2c8afcff4fcd321058703b8"><div class="ttname"><a href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">AVector::fromRange</a></div><div class="ttdeci">static auto fromRange(aui::range&lt; Iterator &gt; range, UnaryOperation &amp;&amp;transformer) -&gt; AVector&lt; decltype(transformer(range.first()))&gt;</div><div class="ttdoc">Constructs a new vector of transformed items of the range.</div><div class="ttdef"><b>Definition:</b> AVector.h:324</div></div>
 <div class="ttc" id="aclassAVector_html_a2915d448c360ac07de6d3c9db5e138d2"><div class="ttname"><a href="classAVector.html#a2915d448c360ac07de6d3c9db5e138d2">AVector::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const StoredType &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> AVector.h:166</div></div>
 <div class="ttc" id="aclassAVector_html_a564421f04219ef42aeef06f2809b69ea"><div class="ttname"><a href="classAVector.html#a564421f04219ef42aeef06f2809b69ea">AVector::insertAll</a></div><div class="ttdeci">iterator insertAll(iterator at, OtherContainer &amp;&amp;c) noexcept</div><div class="ttdef"><b>Definition:</b> AVector.h:104</div></div>
 <div class="ttc" id="aclassAVector_html_a7f05b8b5f57830f4755ebc0b55831f46"><div class="ttname"><a href="classAVector.html#a7f05b8b5f57830f4755ebc0b55831f46">AVector::last</a></div><div class="ttdeci">const StoredType &amp; last() const noexcept</div><div class="ttdef"><b>Definition:</b> AVector.h:254</div></div>

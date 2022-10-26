@@ -29,8 +29,9 @@ var searchData=
   ['framemillis_26',['frameMillis',['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()']]],
   ['freetype_27',['FreeType',['../classFreeType.html',1,'']]],
   ['frompid_28',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
-  ['fromstring_29',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['fromvector_30',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
-  ['future_31',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
-  ['future_3c_20void_20_3e_32',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
+  ['fromrange_29',['fromRange',['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector']]],
+  ['fromstring_30',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
+  ['fromvector_31',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
+  ['future_32',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
+  ['future_3c_20void_20_3e_33',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
 ];

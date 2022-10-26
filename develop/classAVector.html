@@ -201,6 +201,10 @@ Static Public Member Functions</h2></td></tr>
 template&lt;typename Callable &gt; </td></tr>
 <tr class="memitem:a78a41e21a4537be5f255364b6f8582cc"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classAVector.html">AVector</a>&lt; StoredType, Allocator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>generate</b> (size_t size, Callable &amp;&amp;callable) noexcept</td></tr>
 <tr class="separator:a78a41e21a4537be5f255364b6f8582cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275203bce2c8afcff4fcd321058703b8"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename UnaryOperation &gt; </td></tr>
+<tr class="memitem:a275203bce2c8afcff4fcd321058703b8"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">fromRange</a> (<a class="el" href="structaui_1_1range.html">aui::range</a>&lt; Iterator &gt; range, UnaryOperation &amp;&amp;transformer) -&gt; <a class="el" href="classAVector.html">AVector</a>&lt; decltype(transformer(range.first()))&gt;</td></tr>
+<tr class="memdesc:a275203bce2c8afcff4fcd321058703b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new vector of transformed items of the range.  <a href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">More...</a><br /></td></tr>
+<tr class="separator:a275203bce2c8afcff4fcd321058703b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -307,6 +311,56 @@ template&lt;class StoredType , class Allocator &gt; </div>
 <dd>Container is not empty. </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the first element. </dd></dl>
+
+</div>
+</div>
+<a id="a275203bce2c8afcff4fcd321058703b8" name="a275203bce2c8afcff4fcd321058703b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275203bce2c8afcff4fcd321058703b8">&#9670;&nbsp;</a></span>fromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class StoredType , class Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename Iterator , typename UnaryOperation &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="classAVector.html">AVector</a>&lt; StoredType, Allocator &gt;::fromRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structaui_1_1range.html">aui::range</a>&lt; Iterator &gt;&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnaryOperation &amp;&amp;&#160;</td>
+          <td class="paramname"><em>transformer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt; <a class="el" href="classAVector.html">AVector</a>&lt;decltype(transformer(range.first()))&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a new vector of transformed items of the range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>items to transform from. </td></tr>
+    <tr><td class="paramname">transformer</td><td>transformer function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new vector. </dd></dl>
 
 </div>
 </div>
