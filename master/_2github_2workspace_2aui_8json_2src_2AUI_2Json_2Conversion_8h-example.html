@@ -127,6 +127,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8json_2src_2A
 <div class="line"><span class="preprocessor">#include &quot;AUI/Traits/parameter_pack.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;AUI/Traits/members.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Util/EnumUtil.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Reflect/AEnumerate.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Traits/strings.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Specialization = <span class="keywordtype">void</span>&gt;</div>
@@ -286,6 +287,16 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8json_2src_2A
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;double&gt; {</div>
+<div class="line">    <span class="keyword">static</span> <a class="code hl_class" href="classAJson.html">AJson</a> toJson(<span class="keywordtype">double</span> v) {</div>
+<div class="line">        <span class="keywordflow">return</span> v;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> <a class="code hl_class" href="classAJson.html">AJson</a>&amp; json, <span class="keywordtype">double</span>&amp; dst) {</div>
+<div class="line">        dst = json.asNumber();</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;bool&gt; {</div>
 <div class="line">    <span class="keyword">static</span> <a class="code hl_class" href="classAJson.html">AJson</a> toJson(<span class="keywordtype">bool</span> v) {</div>
 <div class="line">        <span class="keywordflow">return</span> v;</div>
@@ -364,16 +375,28 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8json_2src_2A
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;T, typename std::enable_if_t&lt;std::is_enum_v&lt;T&gt;&gt;&gt; {</div>
+<div class="line">    <span class="keyword">static</span> <a class="code hl_class" href="classAJson.html">AJson</a> toJson(<span class="keyword">const</span> T&amp; v) {</div>
+<div class="line">        <span class="keywordflow">return</span> <a id="_a16" name="_a16"></a><a class="code hl_class" href="classAEnumerate.html">AEnumerate&lt;T&gt;::names</a>()[v];</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> <a class="code hl_class" href="classAJson.html">AJson</a>&amp; json, T&amp; dst) {</div>
+<div class="line">        dst = <a class="code hl_class" href="classAEnumerate.html">AEnumerate&lt;T&gt;::byName</a>(json.asString());</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="ttc" id="aclassAEnumerate_html"><div class="ttname"><a href="classAEnumerate.html">AEnumerate</a></div><div class="ttdef"><b>Definition:</b> AEnumerate.h:14</div></div>
 <div class="ttc" id="aclassAJsonException_html"><div class="ttname"><a href="classAJsonException.html">AJsonException</a></div><div class="ttdef"><b>Definition:</b> Exception.h:6</div></div>
-<div class="ttc" id="aclassAJson_html"><div class="ttname"><a href="classAJson.html">AJson</a></div><div class="ttdoc">Json atom.</div><div class="ttdef"><b>Definition:</b> AJson.h:47</div></div>
+<div class="ttc" id="aclassAJson_html"><div class="ttname"><a href="classAJson.html">AJson</a></div><div class="ttdoc">Json atom.</div><div class="ttdef"><b>Definition:</b> AJson.h:48</div></div>
 <div class="ttc" id="aclassAMap_html"><div class="ttname"><a href="classAMap.html">AMap</a></div><div class="ttdoc">A std::map with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AMap.h:37</div></div>
 <div class="ttc" id="aclassAPath_html"><div class="ttname"><a href="classAPath.html">APath</a></div><div class="ttdoc">An add-on to AString with functions for working with the path.</div><div class="ttdef"><b>Definition:</b> APath.h:115</div></div>
-<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:45</div></div>
+<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:46</div></div>
 <div class="ttc" id="agroup__core_html_gaaf899fee232b3bc2862a3b0302a79ff5"><div class="ttname"><a href="group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5">AUI_ENUM_FLAG</a></div><div class="ttdeci">AUI_ENUM_FLAG(ASide)</div><div class="ttdoc">Describes sides of a 2D rectangle.</div><div class="ttdef"><b>Definition:</b> ASide.h:35</div></div>
-<div class="ttc" id="astructAJsonConvFieldDescriptor_html"><div class="ttname"><a href="structAJsonConvFieldDescriptor.html">AJsonConvFieldDescriptor</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:124</div></div>
-<div class="ttc" id="astructAJsonConv_html"><div class="ttname"><a href="structAJsonConv.html">AJsonConv</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:31</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1json_1_1Field_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1Field.html">aui::impl::json::Field</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:75</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1json_1_1my__tuple_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1my__tuple.html">aui::impl::json::my_tuple</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:97</div></div>
+<div class="ttc" id="astructAJsonConvFieldDescriptor_html"><div class="ttname"><a href="structAJsonConvFieldDescriptor.html">AJsonConvFieldDescriptor</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:125</div></div>
+<div class="ttc" id="astructAJsonConv_html"><div class="ttname"><a href="structAJsonConv.html">AJsonConv</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:32</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1json_1_1Field_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1Field.html">aui::impl::json::Field</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:76</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1json_1_1my__tuple_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1my__tuple.html">aui::impl::json::my_tuple</a></div><div class="ttdef"><b>Definition:</b> Conversion.h:98</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -15,7 +15,8 @@ var searchData=
   ['fontfamily_12',['FontFamily',['../structass_1_1FontFamily.html',1,'ass']]],
   ['fontkey_13',['FontKey',['../structAFont_1_1FontKey.html',1,'AFont']]],
   ['fontsize_14',['FontSize',['../structass_1_1FontSize.html',1,'ass']]],
-  ['freetype_15',['FreeType',['../classFreeType.html',1,'']]],
-  ['future_16',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
-  ['future_3c_20void_20_3e_17',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
+  ['formatetcenumerator_15',['FormatEtcEnumerator',['../classFormatEtcEnumerator.html',1,'']]],
+  ['freetype_16',['FreeType',['../classFreeType.html',1,'']]],
+  ['future_17',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
+  ['future_3c_20void_20_3e_18',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
 ];

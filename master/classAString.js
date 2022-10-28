@@ -8,6 +8,7 @@ var classAString =
     [ "toDouble", "classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d", null ],
     [ "toFloat", "classAString.html#abb60406e99380d9ac93b2a62f2308228", null ],
     [ "toInt", "classAString.html#a595b975b64130656d41f02b9103ad807", null ],
+    [ "toLongInt", "classAString.html#a7206a8de8d911964daacb532c104481e", null ],
     [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ],
     [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ]
 ];

@@ -1,8 +1,10 @@
 var classAByteBuffer =
 [
     [ "at", "classAByteBuffer.html#a255bad3dc9488ef1899a5ecbbdf0d090", null ],
+    [ "at", "classAByteBuffer.html#a9827e0b5942c0e672f5dbd5a6ff1134f", null ],
     [ "capacity", "classAByteBuffer.html#a600684376b6ebfa4f61659dce8fb7f84", null ],
     [ "data", "classAByteBuffer.html#afe2d857335823888761116b7acbe6812", null ],
+    [ "empty", "classAByteBuffer.html#adc0e89e7599e61b9bb4bc7ddb1e61ea7", null ],
     [ "ensureReserved", "classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae", null ],
     [ "getAvailableToWrite", "classAByteBuffer.html#a1e3c412ab50f0fd5ecc243dd8f269474", null ],
     [ "getReserved", "classAByteBuffer.html#ac2aa13b29f5c79483b061523f02d4697", null ],

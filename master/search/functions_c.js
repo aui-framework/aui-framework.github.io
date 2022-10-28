@@ -10,5 +10,5 @@ var searchData=
   ['maximize_7',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
   ['minimize_8',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
   ['move_9',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
-  ['mul_10',['mul',['../classAColor.html#a2e34705fa6c1a668fe986868b280f7ce',1,'AColor']]]
+  ['mul_10',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
 ];

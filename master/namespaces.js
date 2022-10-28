@@ -150,10 +150,12 @@ var namespaces =
         [ "ADataBindingDefaultDoubleNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
         [ "ADataBindingDefaultNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
-        [ "first", "structaui_1_1impl_1_1first.html", null ]
+        [ "first", "structaui_1_1impl_1_1first.html", null ],
+        [ "select_overload", "structaui_1_1impl_1_1select__overload.html", null ]
       ] ],
       [ "parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
       [ "promise", null, [
+        [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
         [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
       ] ],
       [ "ShaderUniforms", "namespaceaui_1_1ShaderUniforms.html", null ],
@@ -186,6 +188,7 @@ var namespaces =
       ] ],
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
+      [ "BinarySearchNearestToZero", "structaui_1_1BinarySearchNearestToZero.html", null ],
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
@@ -215,7 +218,6 @@ var namespaces =
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
       [ "reverse_iterator_direction", "group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84", null ]
     ] ],
-    [ "Autumn", "namespaceAutumn.html", "namespaceAutumn" ],
     [ "AXml", "namespaceAXml.html", [
       [ "read", "group__xml.html#ga06fdf594d32ebd9bf8a564fd832c6f28", null ]
     ] ],
