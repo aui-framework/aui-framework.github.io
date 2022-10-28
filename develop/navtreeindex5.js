@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structSqlColumn.html":[0,2,376],
 "structState.html":[0,2,378],
 "structTexturedShaderHelper.html":[0,2,379],
 "structUnsupportedBrushHelper.html":[0,2,392],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,6,30],
 "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,28],
 "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,6,31],
-"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,29],
-"structaui_1_1traits_1_1ternary.html":[0,2,4,3,0]
+"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,29]
 };

@@ -248,6 +248,6 @@ var NAVTREEINDEX3 =
 "classgl_1_1Vao.html#ab3ea4b82c97d0f87ecf0b2cc5bc6b8b1":[0,0,11,9,0],
 "classgl_1_1VertexBuffer.html":[0,2,7,10],
 "classgl_1_1VertexBuffer.html":[0,0,11,10],
-"classgl_1_1detail_1_1VboImpl.html":[0,2,7,0,0],
-"classgl_1_1detail_1_1VboImpl.html":[0,0,11,0,0]
+"classgl_1_1detail_1_1VboImpl.html":[0,0,11,0,0],
+"classgl_1_1detail_1_1VboImpl.html":[0,2,7,0,0]
 };

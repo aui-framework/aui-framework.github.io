@@ -70,7 +70,7 @@ var NAVTREEINDEX =
 "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c",
 "classIEventLoop.html#a790b37b3115b15f1224c85749d352d04",
 "classtesting_1_1UITest.html",
-"structState.html",
+"structSqlColumn.html",
 "structaui_1_1traits_1_1ternary.html"
 ];
 
