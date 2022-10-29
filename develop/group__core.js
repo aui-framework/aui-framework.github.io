@@ -193,6 +193,11 @@ var group__core =
     ] ],
     [ "AUrl", "classAUrl.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
+    [ "AFieldObservable< T >", "classAFieldObservable.html", [
+      [ "addObserver", "classAFieldObservable.html#aa798b8ba57300b89167bb564d23521d7", null ],
+      [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ]
+    ] ],
+    [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
       [ "loop", "classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568", null ],
