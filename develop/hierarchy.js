@@ -625,6 +625,7 @@ var hierarchy =
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
     ] ],
     [ "aui::noncopyable", "structaui_1_1noncopyable.html", [
+      [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
         [ "AChildProcess", "classAChildProcess.html", null ],

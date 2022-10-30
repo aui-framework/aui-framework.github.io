@@ -423,6 +423,7 @@ var annotated =
     [ "AModelSelection", "classAModelSelection.html", "classAModelSelection" ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AMutex", "classAMutex.html", null ],
+    [ "AMutexWrapper", "classAMutexWrapper.html", null ],
     [ "ANoSpaceLeftException", "classANoSpaceLeftException.html", null ],
     [ "ANumberPicker", "classANumberPicker.html", "classANumberPicker" ],
     [ "AObject", "classAObject.html", "classAObject" ],

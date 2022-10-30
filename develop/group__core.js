@@ -162,6 +162,7 @@ var group__core =
     [ "AFuture< T >", "classAFuture.html", [
       [ "supplyException", "classAFuture.html#afb90c81c9ded0417533b721c34d3a139", null ]
     ] ],
+    [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "Message", "structAAbstractThread_1_1Message.html", null ],
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],
