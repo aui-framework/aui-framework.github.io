@@ -93,6 +93,7 @@ var hierarchy =
     [ "AFontManager", "classAFontManager.html", null ],
     [ "AFontStyle", "structAFontStyle.html", null ],
     [ "AFraction", "classAFraction.html", null ],
+    [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AI18n", "classAI18n.html", null ],
     [ "AInet4Address", "classAInet4Address.html", null ],
     [ "AJsonConv< T, Specialization >", "structAJsonConv.html", null ],
