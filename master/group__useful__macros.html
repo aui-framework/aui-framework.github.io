@@ -140,6 +140,14 @@ Macros</h2></td></tr>
 <tr class="memitem:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a>&#160;&#160;&#160;if(static bool _aui_once = 0; (_aui_once == 0 &amp;&amp; (_aui_once = true)))</td></tr>
 <tr class="memdesc:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes following function call or {} block once per program execution.  <a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">More...</a><br /></td></tr>
 <tr class="separator:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ad96f0df87278843d3bb932bf0aaec9"><td class="memItemLeft" align="right" valign="top"><a id="ga5ad96f0df87278843d3bb932bf0aaec9" name="ga5ad96f0df87278843d3bb932bf0aaec9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_ASSERT_UI_THREAD_ONLY</b>()&#160;&#160;&#160;{ assert((&quot;this method should be used in ui thread only.&quot;, (AWindow::current() ? <a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() == <a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>()-&gt;getThread() : <a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() == getThread()))); }</td></tr>
+<tr class="memdesc:ga5ad96f0df87278843d3bb932bf0aaec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the macro invocation has been performed in the UI thread. <br /></td></tr>
+<tr class="separator:ga5ad96f0df87278843d3bb932bf0aaec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a1ce309952c1b43b7e96be67dfec2d4"><td class="memItemLeft" align="right" valign="top"><a id="ga1a1ce309952c1b43b7e96be67dfec2d4" name="ga1a1ce309952c1b43b7e96be67dfec2d4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_ASSERT_WORKER_THREAD_ONLY</b>()&#160;&#160;&#160;{ assert((&quot;this method should be used in worker thread only.&quot;, AThread::current() != <a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>()-&gt;getThread())); }</td></tr>
+<tr class="memdesc:ga1a1ce309952c1b43b7e96be67dfec2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the macro invocation has not been performed in the UI thread. <br /></td></tr>
+<tr class="separator:ga1a1ce309952c1b43b7e96be67dfec2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -168,15 +176,15 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
-<div class="ttc" id="aclassAThread_html_a021e7f42706eeef73a1dc6cdbeac2b12"><div class="ttname"><a href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a></div><div class="ttdeci">static void sleep(unsigned durationInMs)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:126</div></div>
+<div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:126</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:310</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">  ...</div>
 <div class="line">  <span class="keywordflow">return</span> status;</div>
 <div class="line">};</div>
@@ -184,7 +192,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p >Lambda operators are supported: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> <span class="keyword">mutable</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">  ...</div>
 <div class="line">  <span class="keywordflow">return</span> status;</div>
 <div class="line">};</div>
@@ -209,14 +217,14 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
 <div class="ttc" id="agroup__useful__macros_html_ga21d729326347c5d74faf857abf18d695"><div class="ttname"><a href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a></div><div class="ttdeci">#define asyncX</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike async,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:341</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">  ...</div>
 <div class="line">  <span class="keywordflow">return</span> status;</div>
 <div class="line">};</div>
@@ -575,7 +583,7 @@ template&lt;typename Iterator &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>same iterator but reverse direction</dd></dl>
 <p>A reversed iterator points to the same element of the container.</p>
 <p >Works on <a class="el" href="classAVector.html" title="A std::vector with AUI extensions.">AVector</a>. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a1">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a2">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
 </dl>
 
 </div>

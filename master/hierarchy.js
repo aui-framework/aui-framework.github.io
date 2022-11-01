@@ -84,12 +84,16 @@ var hierarchy =
     [ "ADragNDrop", "classADragNDrop.html", null ],
     [ "AEnumerate< enum_t >", "classAEnumerate.html", null ],
     [ "AEnumerateAllValues< enum_t >", "structAEnumerateAllValues.html", null ],
+    [ "AFieldObservable< T >", "classAFieldObservable.html", null ],
+    [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
+    [ "AFieldSignalEmitter< bool >", "classAFieldSignalEmitter_3_01bool_01_4.html", null ],
     [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
     [ "AFont", "classAFont.html", null ],
     [ "AFontFamily", "classAFontFamily.html", null ],
     [ "AFontManager", "classAFontManager.html", null ],
     [ "AFontStyle", "structAFontStyle.html", null ],
     [ "AFraction", "classAFraction.html", null ],
+    [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AI18n", "classAI18n.html", null ],
     [ "AInet4Address", "classAInet4Address.html", null ],
     [ "AJsonConv< T, Specialization >", "structAJsonConv.html", null ],
@@ -174,8 +178,6 @@ var hierarchy =
     [ "AValueSmoother< T >", "classAValueSmoother.html", null ],
     [ "AViewProfiler", "classAViewProfiler.html", null ],
     [ "AViewsInit", "structAViewsInit.html", null ],
-    [ "AWatchable< T >", "classAWatchable.html", null ],
-    [ "AWatchable< bool >", "classAWatchable_3_01bool_01_4.html", null ],
     [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
@@ -624,6 +626,7 @@ var hierarchy =
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
     ] ],
     [ "aui::noncopyable", "structaui_1_1noncopyable.html", [
+      [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
         [ "AChildProcess", "classAChildProcess.html", null ],

@@ -137,7 +137,7 @@ Assertions</h1>
 </div><!-- fragment --><p >The code above ensures that the function was not called from some other thread. As you can see, the tooltip is produced using extra brace pair and <code>operator,</code>:</p>
 <div class="fragment"><div class="line">assert((<span class="stringliteral">&quot;your message&quot;</span>, expression))</div>
 </div><!-- fragment --><p >Do not put algorithm-necessary code inside <code>assert()</code> since asserts are removed in release builds on some compilers, i.e. don't <code>assert(("someAction failed!", someObject-&gt;someAction() != 0))</code> since it leads to hard-to-find bugs.</p>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md53"></a>
 Assert or exception?</h2>
 <p >Assert is an enemy for the production application since it <em>terminates</em> program execution. Use it when it's condition relies only on the developer. Quick example:</p>
 <div class="fragment"><div class="line">connect(mLoginButton-&gt;clicked, me::loginButtonClicked);</div>
