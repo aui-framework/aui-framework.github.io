@@ -59,7 +59,7 @@ var searchData=
   ['skipuntil_56',['skipUntil',['../classATokenizer.html#a46bc1a1038f8c6d2202811eac67c5f5d',1,'ATokenizer']]],
   ['skipuntilunescaped_57',['skipUntilUnescaped',['../classATokenizer.html#a4b240a2acf3ba5f35c8d88efd0cd6119',1,'ATokenizer']]],
   ['slave_58',['Slave',['../classSlave.html',1,'']]],
-  ['sleep_59',['sleep',['../classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12',1,'AThread']]],
+  ['sleep_59',['sleep',['../classAThread.html#a702e3769792fb7cda5f7960b7360ac9b',1,'AThread']]],
   ['slot_60',['slot',['../group__useful__macros.html#gaaaa072876366972108aef016e7882a99',1,'kAUI.h']]],
   ['socketconnectionresetexception_61',['SocketConnectionResetException',['../classSocketConnectionResetException.html',1,'']]],
   ['socketexception_62',['SocketException',['../classSocketException.html',1,'']]],

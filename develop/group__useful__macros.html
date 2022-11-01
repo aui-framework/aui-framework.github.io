@@ -176,15 +176,15 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
-<div class="ttc" id="aclassAThread_html_a021e7f42706eeef73a1dc6cdbeac2b12"><div class="ttname"><a href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a></div><div class="ttdeci">static void sleep(unsigned durationInMs)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:126</div></div>
+<div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:126</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:310</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">  ...</div>
 <div class="line">  <span class="keywordflow">return</span> status;</div>
 <div class="line">};</div>
@@ -192,7 +192,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p >Lambda operators are supported: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> <span class="keyword">mutable</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">  ...</div>
 <div class="line">  <span class="keywordflow">return</span> status;</div>
 <div class="line">};</div>
@@ -217,14 +217,14 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>When <code>AFuture&lt;T&gt;</code> is destroyed, the corresponding <code>async</code> task is either cancelled or removed from the execution queue. Use <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> or <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> to keep multiple AFuture&lt;T&gt; alive.</dd></dl>
 <p >Example without a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
 <div class="ttc" id="agroup__useful__macros_html_ga21d729326347c5d74faf857abf18d695"><div class="ttname"><a href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a></div><div class="ttdeci">#define asyncX</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike async,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:341</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
 <div class="line">  ...</div>
-<div class="line">  <a class="code hl_function" href="classAThread.html#a021e7f42706eeef73a1dc6cdbeac2b12">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">  ...</div>
 <div class="line">  <span class="keywordflow">return</span> status;</div>
 <div class="line">};</div>
