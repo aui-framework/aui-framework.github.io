@@ -104,14 +104,8 @@ var annotated =
     ] ],
     [ "aui", null, [
       [ "detail", null, [
-        [ "format", null, [
-          [ "type_length", "structaui_1_1detail_1_1format_1_1type__length.html", null ],
-          [ "type_length< APath >", "structaui_1_1detail_1_1format_1_1type__length_3_01APath_01_4.html", null ],
-          [ "type_length< AString >", "structaui_1_1detail_1_1format_1_1type__length_3_01AString_01_4.html", null ],
-          [ "type_length< char * >", "structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html", null ],
-          [ "type_length< std::string >", "structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html", null ],
-          [ "type_length< wchar_t * >", "structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html", null ]
-        ] ],
+        [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
+        [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
         [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ]
       ] ],
       [ "impl", null, [
@@ -206,6 +200,9 @@ var annotated =
       [ "Button", "structdeclarative_1_1Button.html", null ],
       [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ],
       [ "Style", "structdeclarative_1_1Style.html", null ]
+    ] ],
+    [ "fmt", null, [
+      [ "formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
     [ "gl", null, [
       [ "detail", null, [

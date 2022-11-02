@@ -70,8 +70,8 @@ var NAVTREEINDEX =
 "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21",
 "classIDrawable.html",
 "classgl_1_1Vao.html#ab3ea4b82c97d0f87ecf0b2cc5bc6b8b1",
-"structOpenGLRenderer_1_1FontEntryData.html",
-"structaui_1_1ternary.html"
+"structOpenGLPrerenderedString_1_1Vertex.html",
+"structaui_1_1traits_1_1ternary.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

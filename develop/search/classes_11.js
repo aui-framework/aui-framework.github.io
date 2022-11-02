@@ -22,12 +22,6 @@ var searchData=
   ['transformscale_19',['TransformScale',['../structass_1_1TransformScale.html',1,'ass']]],
   ['trylaterexception_20',['TryLaterException',['../classAThreadPool_1_1TryLaterException.html',1,'AThreadPool']]],
   ['type_21',['Type',['../structass_1_1detail_1_1Type.html',1,'ass::detail']]],
-  ['type_5flength_22',['type_length',['../structaui_1_1detail_1_1format_1_1type__length.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20apath_20_3e_23',['type_length&lt; APath &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01APath_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20astring_20_3e_24',['type_length&lt; AString &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01AString_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20char_20_2a_20_3e_25',['type_length&lt; char * &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20std_3a_3astring_20_3e_26',['type_length&lt; std::string &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html',1,'aui::detail::format']]],
-  ['type_5flength_3c_20wchar_5ft_20_2a_20_3e_27',['type_length&lt; wchar_t * &gt;',['../structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html',1,'aui::detail::format']]],
-  ['type_5flist_28',['type_list',['../structaui_1_1type__list.html',1,'aui']]],
-  ['type_5fof_29',['type_of',['../structass_1_1type__of.html',1,'ass']]]
+  ['type_5flist_22',['type_list',['../structaui_1_1type__list.html',1,'aui']]],
+  ['type_5fof_23',['type_of',['../structass_1_1type__of.html',1,'ass']]]
 ];

@@ -393,12 +393,17 @@ var hierarchy =
     [ "ADesktop::FileExtension", "structADesktop_1_1FileExtension.html", null ],
     [ "aui::impl::first< First, Up >", "structaui_1_1impl_1_1first.html", null ],
     [ "ass::FixedSize", "structass_1_1FixedSize.html", null ],
+    [ "aui::detail::fmt< T, EnableIf >", "structaui_1_1detail_1_1fmt.html", null ],
+    [ "aui::detail::fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
     [ "ass::Font", "structass_1_1Font.html", null ],
     [ "AFont::FontData", "structAFont_1_1FontData.html", null ],
     [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
     [ "ass::FontFamily", "structass_1_1FontFamily.html", null ],
     [ "AFont::FontKey", "structAFont_1_1FontKey.html", null ],
     [ "ass::FontSize", "structass_1_1FontSize.html", null ],
+    [ "formatter", null, [
+      [ "fmt::formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
+    ] ],
     [ "FreeType", "classFreeType.html", null ],
     [ "aui::impl::future::Future< Value >", "classaui_1_1impl_1_1future_1_1Future.html", null ],
     [ "aui::impl::future::Future< void >", "classaui_1_1impl_1_1future_1_1Future.html", [
@@ -815,12 +820,6 @@ var hierarchy =
     [ "std::tuple", null, [
       [ "aui::impl::json::my_tuple< Items >", "structaui_1_1impl_1_1json_1_1my__tuple.html", null ]
     ] ],
-    [ "aui::detail::format::type_length< T >", "structaui_1_1detail_1_1format_1_1type__length.html", null ],
-    [ "aui::detail::format::type_length< APath >", "structaui_1_1detail_1_1format_1_1type__length_3_01APath_01_4.html", null ],
-    [ "aui::detail::format::type_length< AString >", "structaui_1_1detail_1_1format_1_1type__length_3_01AString_01_4.html", null ],
-    [ "aui::detail::format::type_length< char * >", "structaui_1_1detail_1_1format_1_1type__length_3_01char_01_5_01_4.html", null ],
-    [ "aui::detail::format::type_length< std::string >", "structaui_1_1detail_1_1format_1_1type__length_3_01std_1_1string_01_4.html", null ],
-    [ "aui::detail::format::type_length< wchar_t * >", "structaui_1_1detail_1_1format_1_1type__length_3_01wchar__t_01_5_01_4.html", null ],
     [ "aui::type_list< Types >", "structaui_1_1type__list.html", null ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
