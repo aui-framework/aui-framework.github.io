@@ -209,5 +209,6 @@ var group__core =
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
-    [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]
+    [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
+    [ "operator\"\"_format", "group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8", null ]
 ];
