@@ -331,9 +331,21 @@ $(document).ready(function(){initNavTree('ALogger_8h_source.html',''); initResiz
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>};</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">#define ALOG_DEBUG(str) if (ALogger::isDebug()) ALogger::debug(str)</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">#include &lt;AUI/Traits/strings.h&gt;</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="keyword">template</span>&lt;std::<span class="keywordtype">size_t</span> L, <span class="keyword">typename</span> T, glm::qualifier Q&gt;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, glm::vec&lt;L, T, Q&gt; vec) {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    o &lt;&lt; <span class="stringliteral">&quot;{ &quot;</span>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; L; ++i) {</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">if</span> (i != 0) o &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        o &lt;&lt; vec[i];</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    o &lt;&lt; <span class="stringliteral">&quot; }&quot;</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#define ALOG_DEBUG(str) if (ALogger::isDebug()) ALogger::debug(str)</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">#include &lt;AUI/Traits/strings.h&gt;</span></div>
 <div class="ttc" id="aclassAFileOutputStream_html"><div class="ttname"><a href="classAFileOutputStream.html">AFileOutputStream</a></div><div class="ttdoc">Opens a file for a binary write.</div><div class="ttdef"><b>Definition:</b> AFileOutputStream.h:34</div></div>
 <div class="ttc" id="aclassALogger_html"><div class="ttname"><a href="classALogger.html">ALogger</a></div><div class="ttdoc">A logger class.</div><div class="ttdef"><b>Definition:</b> ALogger.h:66</div></div>
 <div class="ttc" id="aclassALogger_html_a40ade2b930dbd47aa48011d70d1e4a0b"><div class="ttname"><a href="classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b">ALogger::log</a></div><div class="ttdeci">LogWriter log(Level level, const AString &amp;prefix)</div><div class="ttdoc">Writer a log entry with LogWriter helper.</div><div class="ttdef"><b>Definition:</b> ALogger.h:263</div></div>
