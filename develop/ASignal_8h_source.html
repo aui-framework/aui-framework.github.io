@@ -289,9 +289,9 @@ $(document).ready(function(){initNavTree('ASignal_8h_source.html',''); initResiz
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        clearAllConnectionsIf([](<span class="keyword">const</span> <span class="keyword">auto</span>&amp;){ <span class="keywordflow">return</span> <span class="keyword">true</span>; });</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> clearAllConnectionsWith(<a class="code hl_class" href="classAObject.html">AObject</a>* <span class="keywordtype">object</span>) <span class="keyword">noexcept</span> <span class="keyword">override</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> clearAllConnectionsWith(<a class="code hl_struct" href="structaui_1_1no__escape.html">aui::no_escape&lt;AObject&gt;</a> <span class="keywordtype">object</span>) <span class="keyword">noexcept</span> <span class="keyword">override</span></div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        clearAllConnectionsIf([&amp;](<span class="keyword">const</span> <a class="code hl_define" href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a>&amp; p){ <span class="keywordflow">return</span> p.object == object; });</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        clearAllConnectionsIf([&amp;](<span class="keyword">const</span> <a class="code hl_define" href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a>&amp; p){ <span class="keywordflow">return</span> p.object == <span class="keywordtype">object</span>.ptr(); });</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">private</span>:</div>
@@ -399,7 +399,7 @@ $(document).ready(function(){initNavTree('ASignal_8h_source.html',''); initResiz
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="keyword">using</span> <a class="code hl_class" href="classASignal.html">emits</a> = <a class="code hl_class" href="classASignal.html">ASignal</a>&lt;Args...&gt;;</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">#define signals public</span></div>
-<div class="ttc" id="aclassAAbstractSignal_html"><div class="ttname"><a href="classAAbstractSignal.html">AAbstractSignal</a></div><div class="ttdoc">Base class for signal.</div><div class="ttdef"><b>Definition:</b> AAbstractSignal.h:127</div></div>
+<div class="ttc" id="aclassAAbstractSignal_html"><div class="ttname"><a href="classAAbstractSignal.html">AAbstractSignal</a></div><div class="ttdoc">Base class for signal.</div><div class="ttdef"><b>Definition:</b> AAbstractSignal.h:128</div></div>
 <div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition:</b> AObject.h:44</div></div>
 <div class="ttc" id="aclassASignal_html"><div class="ttname"><a href="classASignal.html">ASignal</a></div><div class="ttdoc">Represents a signal.</div><div class="ttdef"><b>Definition:</b> ASignal.h:38</div></div>
 <div class="ttc" id="aclassAThread_html_a1d09d7332e61f6ef39e93d4a1fdc2574"><div class="ttname"><a href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a></div><div class="ttdeci">static _&lt; AAbstractThread &gt; current()</div><div class="ttdef"><b>Definition:</b> AThread.cpp:140</div></div>
@@ -408,6 +408,7 @@ $(document).ready(function(){initNavTree('ASignal_8h_source.html',''); initResiz
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:129</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition:</b> kAUI.h:94</div></div>
 <div class="ttc" id="astructASignal_1_1call__wrapper_html"><div class="ttname"><a href="structASignal_1_1call__wrapper.html">ASignal::call_wrapper</a></div><div class="ttdef"><b>Definition:</b> ASignal.h:171</div></div>
+<div class="ttc" id="astructaui_1_1no__escape_html"><div class="ttname"><a href="structaui_1_1no__escape.html">aui::no_escape</a></div><div class="ttdoc">Does not allow escaping, allowing to accept lvalue ref, rvalue ref, shared_ptr and etc without overhe...</div><div class="ttdef"><b>Definition:</b> values.h:129</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

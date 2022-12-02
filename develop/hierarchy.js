@@ -791,6 +791,7 @@ var hierarchy =
       [ "SignalSlot", "classSignalSlot.html", null ],
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
+        [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
         [ "UITextField", "classUITextField.html", null ],
@@ -885,6 +886,7 @@ var hierarchy =
       [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ]
     ] ],
     [ "ViewActionClick", "structViewActionClick.html", [
+      [ "ViewActionKeyDownAndUp", "structViewActionKeyDownAndUp.html", null ],
       [ "ViewActionType", "structViewActionType.html", null ]
     ] ],
     [ "ViewActionDoubleClick", "structViewActionDoubleClick.html", null ],
