@@ -70,7 +70,7 @@ var NAVTREEINDEX =
 "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21",
 "classGLContext.html",
 "classgl_1_1Vao.html#ab3d087614c78ea0b9781b2b18292aab8",
-"structIDrawable_1_1Params.html",
+"structIRenderingContext_1_1Init.html",
 "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html"
 ];
 
