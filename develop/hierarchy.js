@@ -260,7 +260,7 @@ var hierarchy =
         [ "AView", "classAView.html", [
           [ "AAbstractLabel", "classAAbstractLabel.html", [
             [ "AButton", "classAButton.html", [
-              [ "AComboBox", "classAComboBox.html", null ]
+              [ "ADropdownList", "classADropdownList.html", null ]
             ] ],
             [ "ALabel", "classALabel.html", [
               [ "AListItem", "classAListItem.html", null ],

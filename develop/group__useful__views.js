@@ -16,10 +16,6 @@ var group__useful__views =
     [ "ACheckBox", "classACheckBox.html", [
       [ "consumesClick", "classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac", null ]
     ] ],
-    [ "AComboBox", "classAComboBox.html", [
-      [ "getContentMinimumWidth", "classAComboBox.html#a1ad36845afbb5b4ba117c7a7b97c88e9", null ],
-      [ "render", "classAComboBox.html#ad974e5df3eb783e0ec7f20f7c15a9c44", null ]
-    ] ],
     [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", [
       [ "getContentMinimumHeight", "classADoubleNumberPicker.html#a757efcfc6443b0daf81b7117446462c3", null ],
       [ "valueChanged", "classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221", null ],
@@ -30,6 +26,10 @@ var group__useful__views =
     ] ],
     [ "ADrawableView", "classADrawableView.html", [
       [ "render", "classADrawableView.html#a7fc1c91549d193d9e686100087814ccf", null ]
+    ] ],
+    [ "ADropdownList", "classADropdownList.html", [
+      [ "getContentMinimumWidth", "classADropdownList.html#a549d9cab0facd18f4904a762aa733d64", null ],
+      [ "render", "classADropdownList.html#a474ad4cd705d4953da35cfc3c1f64de5", null ]
     ] ],
     [ "AGridSplitter", "classAGridSplitter.html", [
       [ "Builder", "classAGridSplitter_1_1Builder.html", null ],
