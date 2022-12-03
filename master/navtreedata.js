@@ -68,10 +68,10 @@ var NAVTREEINDEX =
 "annotated.html",
 "classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2",
 "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21",
-"classIDrawable.html",
-"classgl_1_1Vao.html#ab3ea4b82c97d0f87ecf0b2cc5bc6b8b1",
-"structOpenGLPrerenderedString_1_1Vertex.html",
-"structaui_1_1traits_1_1ternary.html"
+"classFloatingEntry.html",
+"classgl_1_1Texture2D.html",
+"structData2.html",
+"structaui_1_1serialize__sized.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -152,7 +152,6 @@ var namespaces =
         [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
         [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
       ] ],
-      [ "ShaderUniforms", "namespaceaui_1_1ShaderUniforms.html", null ],
       [ "traits", null, [
         [ "ternary", "structaui_1_1traits_1_1ternary.html", null ],
         [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],

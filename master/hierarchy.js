@@ -50,6 +50,7 @@ var hierarchy =
     [ "ADataBindingDefault< View, FieldType >", "structADataBindingDefault.html", null ],
     [ "ADataBindingDefault< AAbstractLabel, AString >", "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html", null ],
     [ "ADataBindingDefault< ACheckBox, bool >", "structADataBindingDefault_3_01ACheckBox_00_01bool_01_4.html", null ],
+    [ "ADataBindingDefault< ACheckBoxWrapper, bool >", "structADataBindingDefault_3_01ACheckBoxWrapper_00_01bool_01_4.html", null ],
     [ "ADataBindingDefault< APathChooserView, APath >", "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html", null ],
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
     [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
@@ -259,7 +260,7 @@ var hierarchy =
         [ "AView", "classAView.html", [
           [ "AAbstractLabel", "classAAbstractLabel.html", [
             [ "AButton", "classAButton.html", [
-              [ "AComboBox", "classAComboBox.html", null ]
+              [ "ADropdownList", "classADropdownList.html", null ]
             ] ],
             [ "ALabel", "classALabel.html", [
               [ "AListItem", "classAListItem.html", null ],
@@ -269,7 +270,7 @@ var hierarchy =
             ] ]
           ] ],
           [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
-          [ "ACheckBoxInner", "classACheckBoxInner.html", null ],
+          [ "ACheckBox", "classACheckBox.html", null ],
           [ "ADividerView", "classADividerView.html", [
             [ "AHDividerView", "classAHDividerView.html", null ],
             [ "AVDividerView", "classAVDividerView.html", null ]
@@ -297,7 +298,7 @@ var hierarchy =
             ] ],
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
             [ "AButtonEx", "classAButtonEx.html", null ],
-            [ "ACheckBox", "classACheckBox.html", null ],
+            [ "ACheckBoxWrapper", "classACheckBoxWrapper.html", null ],
             [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", null ],
             [ "ADragArea", "classADragArea.html", null ],
             [ "ADragArea::ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ],
@@ -548,7 +549,6 @@ var hierarchy =
     ] ],
     [ "ass::ISelectable", "classass_1_1ISelectable.html", [
       [ "ACheckBox", "classACheckBox.html", null ],
-      [ "ACheckBoxInner", "classACheckBoxInner.html", null ],
       [ "AListItem", "classAListItem.html", null ],
       [ "ARadioButton", "classARadioButton.html", null ],
       [ "ATabButtonView", "classATabButtonView.html", null ],
@@ -791,6 +791,7 @@ var hierarchy =
       [ "SignalSlot", "classSignalSlot.html", null ],
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
+        [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
         [ "UITextField", "classUITextField.html", null ],
@@ -885,6 +886,7 @@ var hierarchy =
       [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ]
     ] ],
     [ "ViewActionClick", "structViewActionClick.html", [
+      [ "ViewActionKeyDownAndUp", "structViewActionKeyDownAndUp.html", null ],
       [ "ViewActionType", "structViewActionType.html", null ]
     ] ],
     [ "ViewActionDoubleClick", "structViewActionDoubleClick.html", null ],

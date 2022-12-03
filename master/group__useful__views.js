@@ -16,10 +16,6 @@ var group__useful__views =
     [ "ACheckBox", "classACheckBox.html", [
       [ "consumesClick", "classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac", null ]
     ] ],
-    [ "AComboBox", "classAComboBox.html", [
-      [ "getContentMinimumWidth", "classAComboBox.html#a1ad36845afbb5b4ba117c7a7b97c88e9", null ],
-      [ "render", "classAComboBox.html#ad974e5df3eb783e0ec7f20f7c15a9c44", null ]
-    ] ],
     [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", [
       [ "getContentMinimumHeight", "classADoubleNumberPicker.html#a757efcfc6443b0daf81b7117446462c3", null ],
       [ "valueChanged", "classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221", null ],
@@ -30,6 +26,10 @@ var group__useful__views =
     ] ],
     [ "ADrawableView", "classADrawableView.html", [
       [ "render", "classADrawableView.html#a7fc1c91549d193d9e686100087814ccf", null ]
+    ] ],
+    [ "ADropdownList", "classADropdownList.html", [
+      [ "getContentMinimumWidth", "classADropdownList.html#a549d9cab0facd18f4904a762aa733d64", null ],
+      [ "render", "classADropdownList.html#a474ad4cd705d4953da35cfc3c1f64de5", null ]
     ] ],
     [ "AGridSplitter", "classAGridSplitter.html", [
       [ "Builder", "classAGridSplitter_1_1Builder.html", null ],
@@ -161,6 +161,8 @@ var group__useful__views =
       [ "clickedButton", "classAView.html#a5812c5a904c1d23c711e0075e1b2be5d", null ],
       [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
       [ "focusState", "classAView.html#a96f3c6e2b8c960c5081866e26baa828e", null ],
+      [ "keyPressed", "classAView.html#a7299aeca90d52aa7406bebf1b5bb604a", null ],
+      [ "keyReleased", "classAView.html#a02446f0c63358a237c2fcb0da0487b8d", null ],
       [ "mAss", "classAView.html#a0da9806bf1d6524ef717abe66f41d269", null ],
       [ "mAssNames", "classAView.html#a13f1450f43fb867bcff67b1d7284bd46", null ],
       [ "mCursor", "classAView.html#a448c7992afd25631e42da434c2f9796d", null ],
@@ -170,6 +172,7 @@ var group__useful__views =
       [ "mMargin", "classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e", null ],
       [ "mMaxSize", "classAView.html#a65a8d1574db7e833c6481aecfbf9cadb", null ],
       [ "mMinSize", "classAView.html#afcab50e0676d2197c64a8d8c2221d741", null ],
+      [ "mouseScrolled", "classAView.html#ab5a8c50b074fc22dfc8bafcd7b525d67", null ],
       [ "mPadding", "classAView.html#a94e793bd34bdbd3b47a5bd5660747e18", null ],
       [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
       [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
@@ -178,6 +181,7 @@ var group__useful__views =
     [ "AViewContainer", "classAViewContainer.html", [
       [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
       [ "focus", "classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a", null ],
+      [ "focusChainTarget", "classAViewContainer.html#a2a72d70843acdacbaa957084a851014a", null ],
       [ "getContentMinimumHeight", "classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec", null ],
       [ "getContentMinimumWidth", "classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0", null ],
       [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
@@ -186,6 +190,7 @@ var group__useful__views =
       [ "onMouseWheel", "classAViewContainer.html#a4f68141aeb4a2d915c5b0cd0e98e5bb1", null ],
       [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
       [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
+      [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
       [ "setLayout", "classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542", null ],
       [ "updateParentsLayoutIfNecessary", "classAViewContainer.html#a09e9eff2f32d40eb6268d38b3a28238c", null ]
     ] ]
