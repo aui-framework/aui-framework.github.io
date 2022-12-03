@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structaui_1_1serialize__sized.html":[0,0,6,27],
 "structaui_1_1serialize__sized.html":[0,2,4,26],
 "structaui_1_1ternary.html":[0,0,6,28],
 "structaui_1_1ternary.html":[0,2,4,27],

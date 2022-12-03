@@ -89,6 +89,7 @@ var hierarchy =
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFieldSignalEmitter< bool >", "classAFieldSignalEmitter_3_01bool_01_4.html", null ],
     [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
+    [ "AFlatVector< T, MAX_SIZE >", "classAFlatVector.html", null ],
     [ "AFont", "classAFont.html", null ],
     [ "AFontFamily", "classAFontFamily.html", null ],
     [ "AFontManager", "classAFontManager.html", null ],

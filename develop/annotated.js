@@ -352,6 +352,7 @@ var annotated =
     [ "AFileNotFoundException", "classAFileNotFoundException.html", null ],
     [ "AFileOutputStream", "classAFileOutputStream.html", "classAFileOutputStream" ],
     [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
+    [ "AFlatVector", "classAFlatVector.html", null ],
     [ "AFocusAnimator", "classAFocusAnimator.html", "classAFocusAnimator" ],
     [ "AFont", "classAFont.html", "classAFont" ],
     [ "AFontFamily", "classAFontFamily.html", "classAFontFamily" ],

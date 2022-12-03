@@ -66,11 +66,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2",
-"classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21",
-"classFloatingEntry.html",
+"classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917",
+"classAString.html#a7206a8de8d911964daacb532c104481e",
+"classFailsOnCopy.html",
 "classgl_1_1Texture2D.html",
-"structData2.html",
+"structCharEntry.html",
 "structaui_1_1serialize__sized.html"
 ];
 
