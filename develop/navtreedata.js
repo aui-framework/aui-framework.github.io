@@ -70,8 +70,8 @@ var NAVTREEINDEX =
 "classAString.html#a7206a8de8d911964daacb532c104481e",
 "classFailsOnCopy.html",
 "classgl_1_1Texture2D.html",
-"structCharEntry.html",
-"structaui_1_1serialize__sized.html"
+"structBrushHelper.html",
+"structaui_1_1serialize__raw.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

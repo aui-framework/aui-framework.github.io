@@ -32,7 +32,7 @@ var classAView =
     [ "invalidateStateStyles", "classAView.html#aae643e27fa9578fecad36519f30ed043", null ],
     [ "onGesture", "classAView.html#a2b74937853928a68e0f7ec4cae7adb3b", null ],
     [ "onMousePressed", "classAView.html#ae00b0a186ecc94d89bf77cb384f3cc6c", null ],
-    [ "onMouseWheel", "classAView.html#ac23c6d6419f3fcf153b902ffafcbe7cd", null ],
+    [ "onMouseWheel", "classAView.html#a54e470b666b6ee087615104a4d68064d", null ],
     [ "operator+", "classAView.html#a6f62c8da04a69c4cb3e32d4f576b274b", null ],
     [ "pack", "classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71", null ],
     [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],

@@ -46,6 +46,7 @@ var hierarchy =
       ] ],
       [ "ASelectableLabel", "classASelectableLabel.html", null ]
     ] ],
+    [ "ACustomShaderBrush", "structACustomShaderBrush.html", null ],
     [ "ACutoffSignal", "classACutoffSignal.html", null ],
     [ "ADataBindingDefault< View, FieldType >", "structADataBindingDefault.html", null ],
     [ "ADataBindingDefault< AAbstractLabel, AString >", "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html", null ],
@@ -218,6 +219,7 @@ var hierarchy =
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
+    [ "CustomShaderHelper", "structCustomShaderHelper.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
     [ "ass::decl::Declaration< DeclarationStruct >", "structass_1_1decl_1_1Declaration.html", null ],
