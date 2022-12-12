@@ -27,10 +27,13 @@ var group__ass =
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
     [ "ass::TransformOffset", "structass_1_1TransformOffset.html", null ],
     [ "ass::TransformScale", "structass_1_1TransformScale.html", null ],
-    [ "ACursor", "group__ass.html#ga5246afc4bdd66935850032716ae2a5be", [
-      [ "ACursor::DEFAULT", "group__ass.html#gga5246afc4bdd66935850032716ae2a5bea5b39c8b553c821e7cddc6da64b5bd2ee", null ],
-      [ "ACursor::POINTER", "group__ass.html#gga5246afc4bdd66935850032716ae2a5beaa5f41c79d3f86121f0f658eba49128d5", null ],
-      [ "ACursor::TEXT", "group__ass.html#gga5246afc4bdd66935850032716ae2a5bea61a96ffcb251bb9bf0abf8fec19d0ea8", null ]
+    [ "ACursor", "classACursor.html", [
+      [ "Custom", "structACursor_1_1Custom.html", null ],
+      [ "System", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03", [
+        [ "DEFAULT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a80f892002d6dcf4cb956f8fac412a4b6", null ],
+        [ "POINTER", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c", null ],
+        [ "TEXT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed", null ]
+      ] ]
     ] ],
     [ "ass::Sizing", "group__ass.html#gacddcf8eaaf32f1471c17e0a4434bd3d8", [
       [ "ass::Sizing::NONE", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693", null ],

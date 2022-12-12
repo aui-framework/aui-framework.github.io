@@ -18,6 +18,7 @@ var annotated =
       [ "decl", null, [
         [ "Declaration", "structass_1_1decl_1_1Declaration.html", null ],
         [ "Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", null ],
+        [ "Declaration< ACursor::System >", "structass_1_1decl_1_1Declaration_3_01ACursor_1_1System_01_4.html", null ],
         [ "Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
         [ "Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
         [ "Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
@@ -164,6 +165,13 @@ var annotated =
         [ "in_range", "structaui_1_1valid_1_1in__range.html", null ],
         [ "validator", "structaui_1_1valid_1_1validator.html", null ]
       ] ],
+      [ "win32", null, [
+        [ "detail", null, [
+          [ "Win32Object", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
+        ] ],
+        [ "Bitmap", "structaui_1_1win32_1_1Bitmap.html", null ],
+        [ "DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ]
+      ] ],
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
       [ "BinarySearchNearestToZero", "structaui_1_1BinarySearchNearestToZero.html", null ],
@@ -307,6 +315,7 @@ var annotated =
     [ "AContainerPrinter", "structAContainerPrinter.html", null ],
     [ "ACurl", "classACurl.html", "classACurl" ],
     [ "ACurlMulti", "classACurlMulti.html", null ],
+    [ "ACursor", "classACursor.html", "classACursor" ],
     [ "ACursorSelectable", "classACursorSelectable.html", "classACursorSelectable" ],
     [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ],
     [ "ACustomShaderBrush", "structACustomShaderBrush.html", null ],

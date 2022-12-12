@@ -86,5 +86,6 @@ var searchData=
   ['success_83',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]],
   ['supplyexception_84',['supplyException',['../classAFuture.html#afb90c81c9ded0417533b721c34d3a139',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2',1,'AFuture&lt; void &gt;::supplyException()']]],
   ['symbol_85',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]],
-  ['systemslashdirection_86',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
+  ['system_86',['System',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor']]],
+  ['systemslashdirection_87',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];

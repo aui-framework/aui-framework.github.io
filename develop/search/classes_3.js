@@ -14,6 +14,7 @@ var searchData=
   ['contains_5fiterator_11',['contains_iterator',['../structAMap_1_1contains__iterator.html',1,'AMap']]],
   ['cubicbezier_12',['CubicBezier',['../classAnimationCurves_1_1CubicBezier.html',1,'AnimationCurves']]],
   ['currentthread_13',['CurrentThread',['../classCurrentThread.html',1,'']]],
-  ['customcaptionwindowimplwin32_14',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
-  ['customshaderhelper_15',['CustomShaderHelper',['../structCustomShaderHelper.html',1,'']]]
+  ['custom_14',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
+  ['customcaptionwindowimplwin32_15',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
+  ['customshaderhelper_16',['CustomShaderHelper',['../structCustomShaderHelper.html',1,'']]]
 ];

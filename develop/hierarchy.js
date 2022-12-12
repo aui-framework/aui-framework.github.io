@@ -37,6 +37,7 @@ var hierarchy =
     [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
+    [ "ACursor", "classACursor.html", null ],
     [ "ACursorSelectable", "classACursorSelectable.html", [
       [ "AAbstractTypeableView", "classAAbstractTypeableView.html", [
         [ "AAbstractTextField", "classAAbstractTextField.html", [
@@ -216,6 +217,7 @@ var hierarchy =
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
+    [ "ACursor::Custom", "structACursor_1_1Custom.html", null ],
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
@@ -443,7 +445,9 @@ var hierarchy =
     ] ],
     [ "APlaceholderAnimator::ICustomWidth", "classAPlaceholderAnimator_1_1ICustomWidth.html", null ],
     [ "ass::decl::IDeclarationBase", "structass_1_1decl_1_1IDeclarationBase.html", [
-      [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", null ],
+      [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", [
+        [ "ass::decl::Declaration< ACursor::System >", "structass_1_1decl_1_1Declaration_3_01ACursor_1_1System_01_4.html", null ]
+      ] ],
       [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
@@ -634,6 +638,12 @@ var hierarchy =
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
     ] ],
     [ "aui::noncopyable", "structaui_1_1noncopyable.html", [
+      [ "aui::win32::detail::Win32Object< HBITMAP >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
+        [ "aui::win32::Bitmap", "structaui_1_1win32_1_1Bitmap.html", null ]
+      ] ],
+      [ "aui::win32::detail::Win32Object< HDC >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
+        [ "aui::win32::DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ]
+      ] ],
       [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
@@ -668,7 +678,8 @@ var hierarchy =
       ] ],
       [ "Pipe", "classPipe.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
-      [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ]
+      [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
+      [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
     ] ],
     [ "NSApplication", null, [
       [ "AUINSApplication", "interfaceAUINSApplication.html", null ]
