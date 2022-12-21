@@ -332,9 +332,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setMouseCollisionPoli
 void&#160;</td><td class="memItemRight" valign="bottom"><b>pack</b> ()</td></tr>
 <tr class="memdesc:a646fbebc295c3a2d36ba3fad6cf80a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets minimal size. <br /></td></tr>
 <tr class="separator:a646fbebc295c3a2d36ba3fad6cf80a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2e35644a76131fed2a0319bc28bcd2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#adf2e35644a76131fed2a0319bc28bcd2">focus</a> ()</td></tr>
-<tr class="memdesc:adf2e35644a76131fed2a0319bc28bcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests focus for this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. It's overridden for <a class="el" href="classAViewContainer.html" title="A view that represents a set of views.">AViewContainer</a>.  <a href="classAView.html#adf2e35644a76131fed2a0319bc28bcd2">More...</a><br /></td></tr>
+<tr class="memitem:adf2e35644a76131fed2a0319bc28bcd2"><td class="memItemLeft" align="right" valign="top"><a id="adf2e35644a76131fed2a0319bc28bcd2" name="adf2e35644a76131fed2a0319bc28bcd2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>focus</b> ()</td></tr>
+<tr class="memdesc:adf2e35644a76131fed2a0319bc28bcd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requests focus for this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
 <tr class="separator:adf2e35644a76131fed2a0319bc28bcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9547a05b06074b931ac270898b4e3321"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a9547a05b06074b931ac270898b4e3321">capturesFocus</a> ()</td></tr>
+<tr class="separator:a9547a05b06074b931ac270898b4e3321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37642918735ccb3939f63d85ff56310c"><td class="memItemLeft" align="right" valign="top"><a id="a37642918735ccb3939f63d85ff56310c" name="a37642918735ccb3939f63d85ff56310c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasIndirectParent</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;v)</td></tr>
+<tr class="memdesc:a37642918735ccb3939f63d85ff56310c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the specified view is an indirect parent of this view. <br /></td></tr>
+<tr class="separator:a37642918735ccb3939f63d85ff56310c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa026069609b3bcfc580978ff801861eb"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa026069609b3bcfc580978ff801861eb">getPositionInWindow</a> () const</td></tr>
 <tr class="separator:aa026069609b3bcfc580978ff801861eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83eb2cea2f2ca2d86351fc34f7ffdf33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33">addAssName</a> (const <a class="el" href="classAString.html">AString</a> &amp;assName)</td></tr>
@@ -669,8 +676,37 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a72">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a74">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
+
+</div>
+</div>
+<a id="a9547a05b06074b931ac270898b4e3321" name="a9547a05b06074b931ac270898b4e3321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9547a05b06074b931ac270898b4e3321">&#9670;&nbsp;</a></span>capturesFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AView::capturesFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Can this view capture focus.</dd></dl>
+<p>For containers, capturing focus is redundant. </p>
+
+<p>Reimplemented in <a class="el" href="classAViewContainer.html#abd66caead2574fdb4da9891a803d014a">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -764,35 +800,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 <dl class="section see"><dt>See also</dt><dd>mExtraStylesheet </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a40">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
-
-</div>
-</div>
-<a id="adf2e35644a76131fed2a0319bc28bcd2" name="adf2e35644a76131fed2a0319bc28bcd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf2e35644a76131fed2a0319bc28bcd2">&#9670;&nbsp;</a></span>focus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AView::focus </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Requests focus for this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. It's overridden for <a class="el" href="classAViewContainer.html" title="A view that represents a set of views.">AViewContainer</a>. </p>
-
-<p>Reimplemented in <a class="el" href="classAViewContainer.html#aa1b36b4e28fdf4a365770e29c045002a">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -1161,7 +1168,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 <dl class="section return"><dt>Returns</dt><dd>true if this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> accepts tab focus </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2">AAbstractTextField</a>, and <a class="el" href="classAAbstractTypeableView.html#a0e905ae6059acbf92e94c30a053e3d56">AAbstractTypeableView</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a78">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a80">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>
@@ -1254,7 +1261,7 @@ Added/removed/changed ass names of this or parent views </li>
 <li>
 Changed state (hover, active, focus) of this view </li>
 </ul>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a80">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a82">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>
@@ -1412,7 +1419,7 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a74">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a76">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>
@@ -1653,7 +1660,7 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a87">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a89">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>

@@ -1,6 +1,7 @@
 var classAView =
 [
     [ "addAssName", "classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33", null ],
+    [ "capturesFocus", "classAView.html#a9547a05b06074b931ac270898b4e3321", null ],
     [ "click", "classAView.html#aacf35a2a25b71edbc985e970c394bf29", null ],
     [ "consumesClick", "classAView.html#a2710b009c20a283c5ed12634ee6c3c8f", null ],
     [ "extraStylesheet", "classAView.html#aa8b76866565fc34ce1ed970708de8125", null ],
@@ -27,6 +28,7 @@ var classAView =
     [ "getTotalOccupiedWidth", "classAView.html#a521f58942c69ff63566ada3e3d774f32", null ],
     [ "getWindow", "classAView.html#a03245e11f856a8ece49da1d7032c0203", null ],
     [ "handlesNonMouseNavigation", "classAView.html#a9c3deb7023947adc4c698540db4086c8", null ],
+    [ "hasIndirectParent", "classAView.html#a37642918735ccb3939f63d85ff56310c", null ],
     [ "invalidateAllStyles", "classAView.html#ad461e812a51a1d556ec8219399e659c9", null ],
     [ "invalidateAssHelper", "classAView.html#a2fe107662aec06c7c1ad7aa2eda71c0c", null ],
     [ "invalidateStateStyles", "classAView.html#aae643e27fa9578fecad36519f30ed043", null ],
