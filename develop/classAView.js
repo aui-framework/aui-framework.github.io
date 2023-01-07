@@ -3,6 +3,7 @@ var classAView =
     [ "addAssName", "classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33", null ],
     [ "capturesFocus", "classAView.html#a9547a05b06074b931ac270898b4e3321", null ],
     [ "click", "classAView.html#aacf35a2a25b71edbc985e970c394bf29", null ],
+    [ "composeContextMenu", "classAView.html#a6e70ccf042a8ff10deea1f538377eb91", null ],
     [ "consumesClick", "classAView.html#a2710b009c20a283c5ed12634ee6c3c8f", null ],
     [ "extraStylesheet", "classAView.html#aa8b76866565fc34ce1ed970708de8125", null ],
     [ "focus", "classAView.html#adf2e35644a76131fed2a0319bc28bcd2", null ],
