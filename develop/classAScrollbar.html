@@ -128,6 +128,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scroll</b> (int delta
 <tr class="separator:ad8b92cdffa0f708113f87806d7d79b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac54d3c1b837643db8806858441bad7f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbar.html#ac54d3c1b837643db8806858441bad7f0">onMouseWheel</a> (glm::ivec2 pos, glm::ivec2 delta) override</td></tr>
 <tr class="separator:ac54d3c1b837643db8806858441bad7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1165e75dbf62641bfd2fd15e5f171115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115">setStickToEnd</a> (bool stickToEnd)</td></tr>
+<tr class="memdesc:a1165e75dbf62641bfd2fd15e5f171115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set stick to end.  <a href="classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115">More...</a><br /></td></tr>
+<tr class="separator:a1165e75dbf62641bfd2fd15e5f171115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23faaf9567bcb9bbff88671c70719c46"><td class="memItemLeft" align="right" valign="top"><a id="a23faaf9567bcb9bbff88671c70719c46" name="a23faaf9567bcb9bbff88671c70719c46"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>scrollToStart</b> ()</td></tr>
+<tr class="separator:a23faaf9567bcb9bbff88671c70719c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7042e0e33b1407e792f7970d37ec5d"><td class="memItemLeft" align="right" valign="top"><a id="aae7042e0e33b1407e792f7970d37ec5d" name="aae7042e0e33b1407e792f7970d37ec5d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>scrollToEnd</b> ()</td></tr>
+<tr class="separator:aae7042e0e33b1407e792f7970d37ec5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace58f28680097b7798325142e9b774fa"><td class="memItemLeft" align="right" valign="top"><a id="ace58f28680097b7798325142e9b774fa" name="ace58f28680097b7798325142e9b774fa"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getAvailableSpaceForSpacer</b> ()</td></tr>
 <tr class="separator:ace58f28680097b7798325142e9b774fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -642,9 +651,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scrollBackward</b> ()
 <tr class="memitem:a3821b6aea6d36b05ccdef8cdc19cc479"><td class="memItemLeft" align="right" valign="top"><a id="a3821b6aea6d36b05ccdef8cdc19cc479" name="a3821b6aea6d36b05ccdef8cdc19cc479"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>handleScrollbar</b> (int s)</td></tr>
 <tr class="separator:a3821b6aea6d36b05ccdef8cdc19cc479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acef6368ae3493032dc13dd62f767d86f"><td class="memItemLeft" align="right" valign="top"><a id="acef6368ae3493032dc13dd62f767d86f" name="acef6368ae3493032dc13dd62f767d86f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxScroll</b> ()</td></tr>
-<tr class="separator:acef6368ae3493032dc13dd62f767d86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e7492f4f27ad5b4dc141926519311a"><td class="memItemLeft" align="right" valign="top"><a id="a31e7492f4f27ad5b4dc141926519311a" name="a31e7492f4f27ad5b4dc141926519311a"></a>
+std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxScroll</b> () const noexcept</td></tr>
+<tr class="separator:a31e7492f4f27ad5b4dc141926519311a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAViewContainer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAViewContainer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAViewContainer.html">AViewContainer</a></td></tr>
 <tr class="memitem:a7738965e4308aa6d12cc9118616762be inherit pro_methods_classAViewContainer"><td class="memItemLeft" align="right" valign="top"><a id="a7738965e4308aa6d12cc9118616762be" name="a7738965e4308aa6d12cc9118616762be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
@@ -917,6 +926,41 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classAView.html">AView</a>.</p>
+
+</div>
+</div>
+<a id="a1165e75dbf62641bfd2fd15e5f171115" name="a1165e75dbf62641bfd2fd15e5f171115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1165e75dbf62641bfd2fd15e5f171115">&#9670;&nbsp;</a></span>setStickToEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AScrollbar::setStickToEnd </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>stickToEnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set stick to end. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stickToEnd</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>When scroll area dimensions is updated (an element added to scroll area) if the scrollbar was scrolled to the end (bottom) the scrollbar automatically scrolls to the ends, keeping the scroll position in place. </p>
 
 </div>
 </div>

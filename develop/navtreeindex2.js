@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"classASqlQueryResult.html":[0,2,247],
+"classASqlQueryResult_1_1Iterator.html":[0,2,247,0],
 "classAStackedLayout.html":[2,0,7,1,4],
 "classAStacktrace.html":[0,2,249],
 "classAStacktrace_1_1Entry.html":[0,2,249,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783":[0,2,293,1],
 "classAWindowMenuProvider.html":[0,2,294],
 "classAWordWrappingEngine.html":[0,2,295],
-"classAWordWrappingEngine_1_1Entry.html":[0,2,295,0],
-"classAWordWrappingLayout.html":[2,0,7,1,6],
-"classAX509.html":[2,0,2,2]
+"classAWordWrappingEngine_1_1Entry.html":[0,2,295,0]
 };

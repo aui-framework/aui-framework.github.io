@@ -68,10 +68,12 @@ var group__useful__views =
       [ "Builder", "classAScrollArea_1_1Builder.html", null ],
       [ "getContentMinimumHeight", "classAScrollArea.html#aa686c2c309f39c9675654b76e4045397", null ],
       [ "onGesture", "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de", null ],
-      [ "onMouseWheel", "classAScrollArea.html#a84e9d956f62c86836f95eadc0324890e", null ]
+      [ "onMouseWheel", "classAScrollArea.html#a84e9d956f62c86836f95eadc0324890e", null ],
+      [ "setStickToEnd", "classAScrollArea.html#a2770daab18df7595e3977685d80a242f", null ]
     ] ],
     [ "AScrollbar", "classAScrollbar.html", [
-      [ "onMouseWheel", "classAScrollbar.html#ac54d3c1b837643db8806858441bad7f0", null ]
+      [ "onMouseWheel", "classAScrollbar.html#ac54d3c1b837643db8806858441bad7f0", null ],
+      [ "setStickToEnd", "classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115", null ]
     ] ],
     [ "ASpacerExpanding", "classASpacerExpanding.html", [
       [ "consumesClick", "classASpacerExpanding.html#abb29b7ae132b063f11f4a52838cba8cc", null ],

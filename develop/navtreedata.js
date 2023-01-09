@@ -67,11 +67,11 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classAFontManager.html",
-"classAStackedLayout.html",
-"classAX509Store.html",
-"classaui_1_1promise_1_1no__copy.html",
-"structASqlModel.html",
-"structaui_1_1no__escape.html"
+"classASqlQueryResult.html",
+"classAWordWrappingLayout.html",
+"classaui_1_1promise_1_1move__only.html",
+"structASignal_1_1call__wrapper.html",
+"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
