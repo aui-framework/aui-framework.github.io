@@ -104,6 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a65e1dd8b38bcbad6a7e49a3b91eb42f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAImageDrawable.html#a65e1dd8b38bcbad6a7e49a3b91eb42f4">draw</a> (const <a class="el" href="structIDrawable_1_1Params.html">Params</a> &amp;params) override</td></tr>
 <tr class="memdesc:a65e1dd8b38bcbad6a7e49a3b91eb42f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the image needs to be displayed. It is assumed that the renderer is already set to the desired state (coordinates, color, etc.)  <a href="classAImageDrawable.html#a65e1dd8b38bcbad6a7e49a3b91eb42f4">More...</a><br /></td></tr>
 <tr class="separator:a65e1dd8b38bcbad6a7e49a3b91eb42f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26589c9db7ad3fad6b17594f5c1e675a"><td class="memItemLeft" align="right" valign="top">AImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAImageDrawable.html#a26589c9db7ad3fad6b17594f5c1e675a">rasterize</a> (glm::ivec2 imageSize) override</td></tr>
+<tr class="memdesc:a26589c9db7ad3fad6b17594f5c1e675a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts possibly vector drawable to a raster image.  <a href="classAImageDrawable.html#a26589c9db7ad3fad6b17594f5c1e675a">More...</a><br /></td></tr>
+<tr class="separator:a26589c9db7ad3fad6b17594f5c1e675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eec89e7bd08616fed61cd7ec2a97ff7"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAImageDrawable.html#a0eec89e7bd08616fed61cd7ec2a97ff7">getSizeHint</a> () override</td></tr>
 <tr class="separator:a0eec89e7bd08616fed61cd7ec2a97ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIDrawable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIDrawable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIDrawable.html">IDrawable</a></td></tr>
@@ -173,6 +176,44 @@ static API_AUI_VIEWS <a class="el" href="class__.html">_</a>&lt; <a class="el" h
 <dl class="section return"><dt>Returns</dt><dd>Size of the stored image. Can be ignored by the renderer. If the size is unknown, it can be {0, 0} </dd></dl>
 
 <p>Implements <a class="el" href="classIDrawable.html#ae3f0cc5cdd0c449a8953b2ad37223752">IDrawable</a>.</p>
+
+</div>
+</div>
+<a id="a26589c9db7ad3fad6b17594f5c1e675a" name="a26589c9db7ad3fad6b17594f5c1e675a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26589c9db7ad3fad6b17594f5c1e675a">&#9670;&nbsp;</a></span>rasterize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AImage AImageDrawable::rasterize </td>
+          <td>(</td>
+          <td class="paramtype">glm::ivec2&#160;</td>
+          <td class="paramname"><em>imageSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts possibly vector drawable to a raster image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageSize</td><td>image size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rasterized image</dd></dl>
+<p>TODO Unimplemented for all drawables except raster image and svg </p>
+
+<p>Reimplemented from <a class="el" href="classIDrawable.html#a32c22356169c68b114bef8e91a5c462d">IDrawable</a>.</p>
 
 </div>
 </div>

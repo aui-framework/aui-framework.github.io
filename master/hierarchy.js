@@ -37,6 +37,7 @@ var hierarchy =
     [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
+    [ "ACursor", "classACursor.html", null ],
     [ "ACursorSelectable", "classACursorSelectable.html", [
       [ "AAbstractTypeableView", "classAAbstractTypeableView.html", [
         [ "AAbstractTextField", "classAAbstractTextField.html", [
@@ -46,6 +47,7 @@ var hierarchy =
       ] ],
       [ "ASelectableLabel", "classASelectableLabel.html", null ]
     ] ],
+    [ "ACustomShaderBrush", "structACustomShaderBrush.html", null ],
     [ "ACutoffSignal", "classACutoffSignal.html", null ],
     [ "ADataBindingDefault< View, FieldType >", "structADataBindingDefault.html", null ],
     [ "ADataBindingDefault< AAbstractLabel, AString >", "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html", null ],
@@ -89,6 +91,7 @@ var hierarchy =
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFieldSignalEmitter< bool >", "classAFieldSignalEmitter_3_01bool_01_4.html", null ],
     [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
+    [ "AFlatVector< T, MAX_SIZE >", "classAFlatVector.html", null ],
     [ "AFont", "classAFont.html", null ],
     [ "AFontFamily", "classAFontFamily.html", null ],
     [ "AFontManager", "classAFontManager.html", null ],
@@ -119,6 +122,7 @@ var hierarchy =
     [ "ALogger", "classALogger.html", null ],
     [ "ALongPressEvent", "structALongPressEvent.html", null ],
     [ "AMenu", "classAMenu.html", null ],
+    [ "AMenuItem", "structAMenuItem.html", null ],
     [ "AMetric", "classAMetric.html", null ],
     [ "AMigrationManager", "classAMigrationManager.html", null ],
     [ "AMimedData", "classAMimedData.html", null ],
@@ -214,9 +218,11 @@ var hierarchy =
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
+    [ "ACursor::Custom", "structACursor_1_1Custom.html", null ],
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
+    [ "CustomShaderHelper", "structCustomShaderHelper.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
     [ "ass::decl::Declaration< DeclarationStruct >", "structass_1_1decl_1_1Declaration.html", null ],
@@ -440,7 +446,9 @@ var hierarchy =
     ] ],
     [ "APlaceholderAnimator::ICustomWidth", "classAPlaceholderAnimator_1_1ICustomWidth.html", null ],
     [ "ass::decl::IDeclarationBase", "structass_1_1decl_1_1IDeclarationBase.html", [
-      [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", null ],
+      [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", [
+        [ "ass::decl::Declaration< ACursor::System >", "structass_1_1decl_1_1Declaration_3_01ACursor_1_1System_01_4.html", null ]
+      ] ],
       [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
@@ -478,6 +486,7 @@ var hierarchy =
       [ "ass::decl::Declaration< Visibility >", "structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html", null ]
     ] ],
     [ "IDrawable", "classIDrawable.html", [
+      [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
       [ "AImageDrawable", "classAImageDrawable.html", null ],
       [ "AVectorDrawable", "classAVectorDrawable.html", null ]
     ] ],
@@ -616,7 +625,6 @@ var hierarchy =
     [ "aui::member< Type >", "structaui_1_1member.html", null ],
     [ "aui::member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
-    [ "MenuItem", "structMenuItem.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
     [ "aui::promise::move_only< T >", "classaui_1_1promise_1_1move__only.html", null ],
@@ -631,6 +639,12 @@ var hierarchy =
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
     ] ],
     [ "aui::noncopyable", "structaui_1_1noncopyable.html", [
+      [ "aui::win32::detail::Win32Object< HBITMAP >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
+        [ "aui::win32::Bitmap", "structaui_1_1win32_1_1Bitmap.html", null ]
+      ] ],
+      [ "aui::win32::detail::Win32Object< HDC >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
+        [ "aui::win32::DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ]
+      ] ],
       [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
@@ -665,7 +679,8 @@ var hierarchy =
       ] ],
       [ "Pipe", "classPipe.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
-      [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ]
+      [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
+      [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
     ] ],
     [ "NSApplication", null, [
       [ "AUINSApplication", "interfaceAUINSApplication.html", null ]
@@ -891,11 +906,14 @@ var hierarchy =
     ] ],
     [ "ViewActionDoubleClick", "structViewActionDoubleClick.html", null ],
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
+    [ "ViewActionMousePress", "structViewActionMousePress.html", null ],
+    [ "ViewActionMouseRelease", "structViewActionMouseRelease.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
     [ "ViewAssertionGone", "structViewAssertionGone.html", null ],
     [ "ViewAssertionNotVisible", "structViewAssertionNotVisible.html", null ],
+    [ "ViewAssertionParentOf", "structViewAssertionParentOf.html", null ],
     [ "ViewAssertionSize< I >", "structViewAssertionSize.html", null ],
     [ "ViewAssertionSizeIsMinimal< I >", "structViewAssertionSizeIsMinimal.html", null ],
     [ "ViewAssertionSizeSame< I >", "structViewAssertionSizeSame.html", null ],

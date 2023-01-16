@@ -1,5 +1,6 @@
 var classAAbstractTypeableView =
 [
+    [ "composeContextMenu", "classAAbstractTypeableView.html#a5055b5200c2cc32a02c81e67498065d1", null ],
     [ "enterChar", "classAAbstractTypeableView.html#a49de5a96d5a4cb3215d804e38c5fbf42", null ],
     [ "getContentMinimumHeight", "classAAbstractTypeableView.html#adbae7713eb7d9818ef729f6857dd6ae5", null ],
     [ "handlesNonMouseNavigation", "classAAbstractTypeableView.html#a0e905ae6059acbf92e94c30a053e3d56", null ],

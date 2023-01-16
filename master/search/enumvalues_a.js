@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointer_0',['POINTER',['../group__ass.html#gga5246afc4bdd66935850032716ae2a5beaa5f41c79d3f86121f0f658eba49128d5',1,'ACursor.h']]]
+  ['pointer_0',['POINTER',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c',1,'ACursor']]]
 ];

@@ -2,12 +2,15 @@ var searchData=
 [
   ['whereexpr_0',['WhereExpr',['../classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html',1,'ASqlBuilder::WhereStatement']]],
   ['wherestatement_1',['WhereStatement',['../classASqlBuilder_1_1WhereStatement.html',1,'ASqlBuilder']]],
-  ['win32symservice_2',['Win32SymService',['../structWin32SymService.html',1,'']]],
-  ['windowdelegate_3',['WindowDelegate',['../interfaceWindowDelegate.html',1,'']]],
-  ['wineventhandle_4',['WinEventHandle',['../classWinEventHandle.html',1,'']]],
-  ['winioasync_5',['WinIoAsync',['../classWinIoAsync.html',1,'']]],
-  ['winiocompletionport_6',['WinIoCompletionPort',['../classWinIoCompletionPort.html',1,'']]],
-  ['winiothread_7',['WinIoThread',['../classWinIoThread.html',1,'']]],
-  ['wrappercontainer_8',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
-  ['writeexception_9',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]]
+  ['win32object_2',['Win32Object',['../structaui_1_1win32_1_1detail_1_1Win32Object.html',1,'aui::win32::detail']]],
+  ['win32object_3c_20hbitmap_20_3e_3',['Win32Object&lt; HBITMAP &gt;',['../structaui_1_1win32_1_1detail_1_1Win32Object.html',1,'aui::win32::detail']]],
+  ['win32object_3c_20hdc_20_3e_4',['Win32Object&lt; HDC &gt;',['../structaui_1_1win32_1_1detail_1_1Win32Object.html',1,'aui::win32::detail']]],
+  ['win32symservice_5',['Win32SymService',['../structWin32SymService.html',1,'']]],
+  ['windowdelegate_6',['WindowDelegate',['../interfaceWindowDelegate.html',1,'']]],
+  ['wineventhandle_7',['WinEventHandle',['../classWinEventHandle.html',1,'']]],
+  ['winioasync_8',['WinIoAsync',['../classWinIoAsync.html',1,'']]],
+  ['winiocompletionport_9',['WinIoCompletionPort',['../classWinIoCompletionPort.html',1,'']]],
+  ['winiothread_10',['WinIoThread',['../classWinIoThread.html',1,'']]],
+  ['wrappercontainer_11',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
+  ['writeexception_12',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]]
 ];
