@@ -66,12 +66,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classAFontManager.html",
-"classASqlQueryResult.html",
-"classAWordWrappingLayout.html",
-"classaui_1_1promise_1_1move__only.html",
-"structASignal_1_1call__wrapper.html",
-"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html"
+"classAFont.html",
+"classASqlModel_1_1IncompleteSelectRequest.html#a2b9748e316f1ca163dfd5879faadaf39",
+"classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783",
+"classaui_1_1impl_1_1future_1_1Future.html#ace309e79cafe8ed7e76992c6c308b787",
+"structASerializable_3_01char_0fL_0e_4.html",
+"structaui_1_1member.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

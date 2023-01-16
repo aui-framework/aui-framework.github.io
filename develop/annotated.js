@@ -285,6 +285,7 @@ var annotated =
     [ "AAbstractTypeableView", "classAAbstractTypeableView.html", "classAAbstractTypeableView" ],
     [ "AAccessDeniedException", "classAAccessDeniedException.html", null ],
     [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", null ],
+    [ "AAnimatedDrawable", "classAAnimatedDrawable.html", "classAAnimatedDrawable" ],
     [ "AAnimator", "classAAnimator.html", "classAAnimator" ],
     [ "AArrayView", "classAArrayView.html", null ],
     [ "AAssHelper", "classAAssHelper.html", "classAAssHelper" ],

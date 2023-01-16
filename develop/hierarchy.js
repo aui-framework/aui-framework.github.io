@@ -486,6 +486,7 @@ var hierarchy =
       [ "ass::decl::Declaration< Visibility >", "structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html", null ]
     ] ],
     [ "IDrawable", "classIDrawable.html", [
+      [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
       [ "AImageDrawable", "classAImageDrawable.html", null ],
       [ "AVectorDrawable", "classAVectorDrawable.html", null ]
     ] ],
