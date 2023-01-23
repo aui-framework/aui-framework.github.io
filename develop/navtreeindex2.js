@@ -185,6 +185,7 @@ var NAVTREEINDEX2 =
 "classAView.html#a9c3deb7023947adc4c698540db4086c8":[2,0,7,2,30,28],
 "classAView.html#aa026069609b3bcfc580978ff801861eb":[2,0,7,2,30,21],
 "classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e":[2,0,7,2,30,11],
+"classAView.html#aa80d3e423a09a2ea728e68560e507281":[2,0,7,2,30,67],
 "classAView.html#aa8b76866565fc34ce1ed970708de8125":[2,0,7,2,30,5],
 "classAView.html#aacf35a2a25b71edbc985e970c394bf29":[2,0,7,2,30,2],
 "classAView.html#aae643e27fa9578fecad36519f30ed043":[2,0,7,2,30,32],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classAWindow.html#adb15ad6de97629ac24f911bb3cccab51":[0,2,293,17],
 "classAWindow.html#adbc6e2cd963d867d3b80b7d5b5e4b044":[0,2,293,12],
 "classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b":[0,2,293,14],
-"classAWindowManager.html":[0,2,294],
-"classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a":[0,2,294,0]
+"classAWindowManager.html":[0,2,294]
 };

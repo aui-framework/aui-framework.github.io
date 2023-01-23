@@ -47,11 +47,12 @@ var searchData=
   ['mposition_44',['mPosition',['../classAView.html#a40d1a378258fac515816c3c1a9028473',1,'AView']]],
   ['mqueuelock_45',['mQueueLock',['../classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20',1,'AAbstractThread']]],
   ['msize_46',['mSize',['../classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b',1,'AView']]],
-  ['mul_47',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor::mul()'],['../structtuples_1_1detail_1_1functor_1_1mul.html',1,'tuples::detail::functor::mul']]],
-  ['multipleinputstream_48',['MultipleInputStream',['../classMultipleInputStream.html',1,'']]],
-  ['my_5ftuple_49',['my_tuple',['../structaui_1_1impl_1_1json_1_1my__tuple.html',1,'aui::impl::json']]],
-  ['myentry_50',['MyEntry',['../classMyEntry.html',1,'']]],
-  ['myeventloop_51',['MyEventLoop',['../classMyEventLoop.html',1,'']]],
-  ['mylistener_52',['MyListener',['../classMyListener.html',1,'']]],
-  ['mystruct_53',['MyStruct',['../structMyStruct.html',1,'']]]
+  ['mtextoverflow_47',['mTextOverflow',['../classAView.html#aa80d3e423a09a2ea728e68560e507281',1,'AView']]],
+  ['mul_48',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor::mul()'],['../structtuples_1_1detail_1_1functor_1_1mul.html',1,'tuples::detail::functor::mul']]],
+  ['multipleinputstream_49',['MultipleInputStream',['../classMultipleInputStream.html',1,'']]],
+  ['my_5ftuple_50',['my_tuple',['../structaui_1_1impl_1_1json_1_1my__tuple.html',1,'aui::impl::json']]],
+  ['myentry_51',['MyEntry',['../classMyEntry.html',1,'']]],
+  ['myeventloop_52',['MyEventLoop',['../classMyEventLoop.html',1,'']]],
+  ['mylistener_53',['MyListener',['../classMyListener.html',1,'']]],
+  ['mystruct_54',['MyStruct',['../structMyStruct.html',1,'']]]
 ];

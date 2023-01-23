@@ -451,6 +451,7 @@ var hierarchy =
       ] ],
       [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
+      [ "ass::decl::Declaration< ATextOverflow >", "structass_1_1decl_1_1Declaration_3_01ATextOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],

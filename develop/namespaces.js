@@ -25,6 +25,7 @@ var namespaces =
         [ "Declaration< ACursor::System >", "structass_1_1decl_1_1Declaration_3_01ACursor_1_1System_01_4.html", null ],
         [ "Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
         [ "Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
+        [ "Declaration< ATextOverflow >", "structass_1_1decl_1_1Declaration_3_01ATextOverflow_01_4.html", null ],
         [ "Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
         [ "Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
         [ "Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],

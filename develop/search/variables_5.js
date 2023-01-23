@@ -21,5 +21,6 @@ var searchData=
   ['mparent_18',['mParent',['../classAView.html#ac33d3edd01436307f555e7ddcbeed144',1,'AView']]],
   ['mposition_19',['mPosition',['../classAView.html#a40d1a378258fac515816c3c1a9028473',1,'AView']]],
   ['mqueuelock_20',['mQueueLock',['../classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20',1,'AAbstractThread']]],
-  ['msize_21',['mSize',['../classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b',1,'AView']]]
+  ['msize_21',['mSize',['../classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b',1,'AView']]],
+  ['mtextoverflow_22',['mTextOverflow',['../classAView.html#aa80d3e423a09a2ea728e68560e507281',1,'AView']]]
 ];

@@ -66,5 +66,6 @@ var classAView =
     [ "mPadding", "classAView.html#a94e793bd34bdbd3b47a5bd5660747e18", null ],
     [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
     [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
-    [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ]
+    [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
+    [ "mTextOverflow", "classAView.html#aa80d3e423a09a2ea728e68560e507281", null ]
 ];
