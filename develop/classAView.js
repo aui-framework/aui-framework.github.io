@@ -50,6 +50,7 @@ var classAView =
     [ "clickedButton", "classAView.html#a5812c5a904c1d23c711e0075e1b2be5d", null ],
     [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
     [ "focusState", "classAView.html#a96f3c6e2b8c960c5081866e26baa828e", null ],
+    [ "geometryChanged", "classAView.html#a5034ce1e3e117e2f4ece91c1d038dbe0", null ],
     [ "keyPressed", "classAView.html#a7299aeca90d52aa7406bebf1b5bb604a", null ],
     [ "keyReleased", "classAView.html#a02446f0c63358a237c2fcb0da0487b8d", null ],
     [ "mAss", "classAView.html#a0da9806bf1d6524ef717abe66f41d269", null ],
