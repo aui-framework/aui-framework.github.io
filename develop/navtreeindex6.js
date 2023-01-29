@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"structaui_1_1lambda__overloaded.html":[0,2,4,11],
+"structaui_1_1lambda__overloaded.html":[0,0,6,12],
+"structaui_1_1lazy.html":[0,2,4,12],
 "structaui_1_1lazy.html":[0,0,6,13],
 "structaui_1_1lazy_3_01void_01_4.html":[0,2,4,13],
 "structaui_1_1lazy_3_01void_01_4.html":[0,0,6,14],

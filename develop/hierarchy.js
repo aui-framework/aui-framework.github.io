@@ -654,6 +654,8 @@ var hierarchy =
         [ "AOtherProcess", "classAOtherProcess.html", null ]
       ] ],
       [ "ARsa", "classARsa.html", null ],
+      [ "AWin32Event", "classAWin32Event.html", null ],
+      [ "AWin32EventWait", "classAWin32EventWait.html", null ],
       [ "AX509", "classAX509.html", null ],
       [ "AX509Store", "classAX509Store.html", null ],
       [ "IInputStream", "classIInputStream.html", [
@@ -678,6 +680,7 @@ var hierarchy =
         [ "AWebsocket", "classAWebsocket.html", null ],
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
+      [ "IcmpImpl", "classIcmpImpl.html", null ],
       [ "Pipe", "classPipe.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
@@ -925,7 +928,6 @@ var hierarchy =
     ] ],
     [ "ASqlBuilder::WhereStatement::WhereExpr", "classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html", null ],
     [ "Win32SymService", "structWin32SymService.html", null ],
-    [ "WinEventHandle", "classWinEventHandle.html", null ],
     [ "WinIoAsync", "classWinIoAsync.html", null ],
     [ "WinIoThread", "classWinIoThread.html", null ],
     [ "std::wstring", null, [
