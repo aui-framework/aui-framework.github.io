@@ -184,7 +184,7 @@ var group__useful__views =
       [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
       [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
       [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
-      [ "mTextOverflow", "classAView.html#aa80d3e423a09a2ea728e68560e507281", null ]
+      [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ]
     ] ],
     [ "AViewContainer", "classAViewContainer.html", [
       [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],

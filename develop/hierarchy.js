@@ -299,7 +299,8 @@ var hierarchy =
                 [ "ACustomWindow", "classACustomWindow.html", [
                   [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
                 ] ],
-                [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ]
+                [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ],
+                [ "UIViewFocus::TestWindow", "classUIViewFocus_1_1TestWindow.html", null ]
               ] ]
             ] ],
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
@@ -451,7 +452,6 @@ var hierarchy =
       ] ],
       [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
-      [ "ass::decl::Declaration< ATextOverflow >", "structass_1_1decl_1_1Declaration_3_01ATextOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
       [ "ass::decl::Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],
@@ -479,6 +479,7 @@ var hierarchy =
       [ "ass::decl::Declaration< TextAlign >", "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html", null ],
       [ "ass::decl::Declaration< TextBorder >", "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html", null ],
       [ "ass::decl::Declaration< TextColor >", "structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html", null ],
+      [ "ass::decl::Declaration< TextOverflow >", "structass_1_1decl_1_1Declaration_3_01TextOverflow_01_4.html", null ],
       [ "ass::decl::Declaration< TextShadow >", "structass_1_1decl_1_1Declaration_3_01TextShadow_01_4.html", null ],
       [ "ass::decl::Declaration< TextTransform >", "structass_1_1decl_1_1Declaration_3_01TextTransform_01_4.html", null ],
       [ "ass::decl::Declaration< TransformOffset >", "structass_1_1decl_1_1Declaration_3_01TransformOffset_01_4.html", null ],
@@ -814,7 +815,8 @@ var hierarchy =
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
         [ "UITextField", "classUITextField.html", null ],
-        [ "UIType", "classUIType.html", null ]
+        [ "UIType", "classUIType.html", null ],
+        [ "UIViewFocus", "classUIViewFocus.html", null ]
       ] ]
     ] ],
     [ "ass::TextBorder", "structass_1_1TextBorder.html", null ],

@@ -11,11 +11,12 @@ var searchData=
   ['uitextfield_8',['UITextField',['../classUITextField.html',1,'']]],
   ['uithread_9',['UIThread',['../classUIThread.html',1,'']]],
   ['uitype_10',['UIType',['../classUIType.html',1,'']]],
-  ['uniform_11',['Uniform',['../classgl_1_1Shader_1_1Uniform.html',1,'gl::Shader']]],
-  ['unixeventfd_12',['UnixEventFd',['../classUnixEventFd.html',1,'']]],
-  ['unixioasync_13',['UnixIoAsync',['../classUnixIoAsync.html',1,'']]],
-  ['unixiothread_14',['UnixIoThread',['../classUnixIoThread.html',1,'']]],
-  ['unset_5fwrap_15',['unset_wrap',['../structass_1_1unset__wrap.html',1,'ass']]],
-  ['unsupportedbrushhelper_16',['UnsupportedBrushHelper',['../structUnsupportedBrushHelper.html',1,'']]],
-  ['update_17',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]]
+  ['uiviewfocus_11',['UIViewFocus',['../classUIViewFocus.html',1,'']]],
+  ['uniform_12',['Uniform',['../classgl_1_1Shader_1_1Uniform.html',1,'gl::Shader']]],
+  ['unixeventfd_13',['UnixEventFd',['../classUnixEventFd.html',1,'']]],
+  ['unixioasync_14',['UnixIoAsync',['../classUnixIoAsync.html',1,'']]],
+  ['unixiothread_15',['UnixIoThread',['../classUnixIoThread.html',1,'']]],
+  ['unset_5fwrap_16',['unset_wrap',['../structass_1_1unset__wrap.html',1,'ass']]],
+  ['unsupportedbrushhelper_17',['UnsupportedBrushHelper',['../structUnsupportedBrushHelper.html',1,'']]],
+  ['update_18',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]]
 ];
