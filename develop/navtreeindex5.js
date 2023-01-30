@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html":[0,2,229],
 "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html":[0,2,230],
 "structASerializable_3_01___3_01T_01_4_01_4.html":[0,2,217],
 "structASerializable_3_01aui_1_1serialize__raw_3_01T_01_4_01_4.html":[0,2,223],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structaui_1_1impl_1_1select__overload.html":[0,2,4,1,8],
 "structaui_1_1impl_1_1slot_1_1decode__type.html":[0,2,4,1,3,0],
 "structaui_1_1impl_1_1slot_1_1decode__type.html":[0,0,6,1,3,0],
-"structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html":[0,0,6,1,3,1],
-"structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html":[0,2,4,1,3,1]
+"structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html":[0,0,6,1,3,1]
 };

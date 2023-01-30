@@ -5,10 +5,11 @@ var searchData=
   ['makedirs_2',['makeDirs',['../classAPath.html#a248a0d9584a2b112f2be2a194c9d1a88',1,'APath']]],
   ['makesignal_3',['makeSignal',['../classACutoffSignal.html#a846f87917ee35414834b624c281ffd06',1,'ACutoffSignal']]],
   ['manage_4',['manage',['../structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776',1,'aui::ptr::manage(T *raw)'],['../structaui_1_1ptr.html#ad6e812de50ef39005c493b5b155fa6f6',1,'aui::ptr::manage(T *raw, Deleter deleter)']]],
-  ['mapposition_5',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
-  ['mappositionto_6',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
-  ['maximize_7',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
-  ['minimize_8',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
-  ['move_9',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
-  ['mul_10',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
+  ['map_5',['map',['../classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe',1,'AFuture']]],
+  ['mapposition_6',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
+  ['mappositionto_7',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
+  ['maximize_8',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
+  ['minimize_9',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
+  ['move_10',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
+  ['mul_11',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
 ];
