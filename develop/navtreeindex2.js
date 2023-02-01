@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"classASqlDatabase.html#aadb13cbf465a74d3aac1622503f5148d":[0,2,246,1],
+"classASqlModel_1_1IncompleteSelectRequest.html":[0,2,247,0],
 "classASqlModel_1_1IncompleteSelectRequest.html#a28366a8e682240d6d7493f56595abd58":[0,2,247,0,1],
 "classASqlModel_1_1IncompleteSelectRequest.html#a2b9748e316f1ca163dfd5879faadaf39":[0,2,247,0,0],
 "classASqlModel_1_1NoSuchRowException.html":[0,2,247,1],
@@ -238,16 +240,14 @@ var NAVTREEINDEX2 =
 "classAWindow.html#a201cce374d9e4359d014d8a9118d1357":[0,2,295,1],
 "classAWindow.html#a271b2fb2651a01713cafa78625f2dadb":[0,2,295,11],
 "classAWindow.html#a46e22a189bd7f29e08adcfac5aa13ea3":[0,2,295,6],
+"classAWindow.html#a536b1d16bbfca3e3e5c1c64d4a34b2b8":[0,2,295,13],
 "classAWindow.html#a607d322db574df5c957a7b19aede61ce":[0,2,295,3],
-"classAWindow.html#a633a616c5964b3fd3805363375442753":[0,2,295,13],
+"classAWindow.html#a633a616c5964b3fd3805363375442753":[0,2,295,14],
 "classAWindow.html#a82eed4e2cd2f8c03c0559ae3c4aade19":[0,2,295,2],
-"classAWindow.html#a84b432f8215f9f91d90bfc3e1ee73f78":[0,2,295,18],
-"classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac":[0,2,295,19],
+"classAWindow.html#a84b432f8215f9f91d90bfc3e1ee73f78":[0,2,295,19],
+"classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac":[0,2,295,20],
 "classAWindow.html#a914a33c3e1bf066273a4c56073423c26":[0,2,295,8],
 "classAWindow.html#a9ad06bbd233087b0b325878a0fef2b35":[0,2,295,0],
-"classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177":[0,2,295,16],
-"classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0":[0,2,295,4],
-"classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a":[0,2,295,5],
-"classAWindow.html#abfd2bbcb85258c68f1111d7b534f3bde":[0,2,295,7],
-"classAWindow.html#ac12087888735e70ce6347293fafdb30f":[0,2,295,15]
+"classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177":[0,2,295,17],
+"classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0":[0,2,295,4]
 };

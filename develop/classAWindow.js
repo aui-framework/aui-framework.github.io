@@ -13,6 +13,7 @@ var classAWindow =
     [ "maximize", "classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7", null ],
     [ "minimize", "classAWindow.html#a271b2fb2651a01713cafa78625f2dadb", null ],
     [ "quit", "classAWindow.html#adbc6e2cd963d867d3b80b7d5b5e4b044", null ],
+    [ "requestTouchscreenKeyboard", "classAWindow.html#a536b1d16bbfca3e3e5c1c64d4a34b2b8", null ],
     [ "restore", "classAWindow.html#a633a616c5964b3fd3805363375442753", null ],
     [ "show", "classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b", null ],
     [ "unmapPosition", "classAWindow.html#ac12087888735e70ce6347293fafdb30f", null ],

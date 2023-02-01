@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"structASerializable_3_01AByteBuffer_01_4.html":[0,2,218],
+"structASerializable_3_01AJson_01_4.html":[0,2,220],
+"structASerializable_3_01APath_01_4.html":[0,2,221],
 "structASerializable_3_01AString_01_4.html":[0,2,222],
 "structASerializable_3_01AUuid_01_4.html":[0,2,225],
 "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html":[0,2,229],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "structaui_1_1impl_1_1json_1_1my__tuple.html":[0,0,6,1,1,2],
 "structaui_1_1impl_1_1json_1_1my__tuple.html":[0,2,4,1,1,2],
 "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html":[0,2,4,1,2,0],
-"structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html":[0,0,6,1,2,0],
-"structaui_1_1impl_1_1select__overload.html":[0,0,6,1,8],
-"structaui_1_1impl_1_1select__overload.html":[0,2,4,1,8],
-"structaui_1_1impl_1_1slot_1_1decode__type.html":[0,2,4,1,3,0]
+"structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html":[0,0,6,1,2,0]
 };

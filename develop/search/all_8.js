@@ -9,6 +9,7 @@ var searchData=
   ['hasselection_6',['hasSelection',['../classACursorSelectable.html#a8c7d2652da1ada52cce28464d152ee03',1,'ACursorSelectable']]],
   ['hasvalue_7',['hasValue',['../classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0',1,'aui::impl::future::Future']]],
   ['hexable_8',['Hexable',['../structATokenizer_1_1Hexable.html',1,'ATokenizer']]],
-  ['home_9',['HOME',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3a3c86b6ae365e77ad726cfebf62d7077a',1,'APath']]],
-  ['hovered_10',['hovered',['../structass_1_1hovered.html',1,'ass']]]
+  ['hidetouchscreenkeyboard_9',['hideTouchscreenKeyboard',['../classABaseWindow.html#ae61368594001372e16f43b99e783d712',1,'ABaseWindow']]],
+  ['home_10',['HOME',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3a3c86b6ae365e77ad726cfebf62d7077a',1,'APath']]],
+  ['hovered_11',['hovered',['../structass_1_1hovered.html',1,'ass']]]
 ];
