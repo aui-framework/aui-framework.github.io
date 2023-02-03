@@ -49,6 +49,7 @@ var namespaces =
         [ "Declaration< MinSize >", "structass_1_1decl_1_1Declaration_3_01MinSize_01_4.html", null ],
         [ "Declaration< Opacity >", "structass_1_1decl_1_1Declaration_3_01Opacity_01_4.html", null ],
         [ "Declaration< Padding >", "structass_1_1decl_1_1Declaration_3_01Padding_01_4.html", null ],
+        [ "Declaration< ScrollbarAppearance >", "structass_1_1decl_1_1Declaration_3_01ScrollbarAppearance_01_4.html", null ],
         [ "Declaration< TextAlign >", "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html", null ],
         [ "Declaration< TextBorder >", "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html", null ],
         [ "Declaration< TextColor >", "structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html", null ],
