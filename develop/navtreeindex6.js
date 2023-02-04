@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structaui_1_1impl_1_1json_1_1my__tuple.html":[0,0,6,1,1,2],
 "structaui_1_1impl_1_1json_1_1my__tuple.html":[0,2,4,1,1,2],
 "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html":[0,2,4,1,2,0],
 "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html":[0,0,6,1,2,0],

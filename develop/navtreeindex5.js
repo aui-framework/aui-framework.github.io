@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structASerializable_3_01AByteBufferView_01_4.html":[0,2,219],
 "structASerializable_3_01AByteBuffer_01_4.html":[0,2,218],
 "structASerializable_3_01AJson_01_4.html":[0,2,220],
 "structASerializable_3_01APath_01_4.html":[0,2,221],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structaui_1_1impl_1_1json_1_1Field.html":[0,2,4,1,1,1],
 "structaui_1_1impl_1_1json_1_1Field.html":[0,0,6,1,1,1],
 "structaui_1_1impl_1_1json_1_1empty__tuple.html":[0,2,4,1,1,0],
-"structaui_1_1impl_1_1json_1_1empty__tuple.html":[0,0,6,1,1,0],
-"structaui_1_1impl_1_1json_1_1my__tuple.html":[0,0,6,1,1,2]
+"structaui_1_1impl_1_1json_1_1empty__tuple.html":[0,0,6,1,1,0]
 };

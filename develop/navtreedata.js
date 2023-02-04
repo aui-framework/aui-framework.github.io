@@ -70,7 +70,7 @@ var NAVTREEINDEX =
 "classASqlDatabase.html#aadb13cbf465a74d3aac1622503f5148d",
 "classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a",
 "classaui_1_1impl_1_1future_1_1Future.html#a71b869c1abeddf07d97c1206a6273733",
-"structASerializable_3_01AByteBuffer_01_4.html",
+"structASerializable_3_01AByteBufferView_01_4.html",
 "structaui_1_1impl_1_1json_1_1my__tuple.html"
 ];
 
