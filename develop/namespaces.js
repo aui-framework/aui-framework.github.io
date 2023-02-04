@@ -129,6 +129,8 @@ var namespaces =
         [ "future", null, [
           [ "CancellationWrapper", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
           [ "Future", "classaui_1_1impl_1_1future_1_1Future.html", "classaui_1_1impl_1_1future_1_1Future" ],
+          [ "FutureReturnType", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
+          [ "FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
           [ "OnSuccessCallback", "structaui_1_1impl_1_1future_1_1OnSuccessCallback.html", null ],
           [ "OnSuccessCallback< void >", "structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html", null ]
         ] ],
@@ -217,6 +219,8 @@ var namespaces =
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ],
+      [ "mapper", "conceptaui_1_1mapper.html", null ],
+      [ "factory", "conceptaui_1_1factory.html", null ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
       [ "reverse_iterator_direction", "group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84", null ]

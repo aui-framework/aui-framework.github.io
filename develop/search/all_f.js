@@ -25,7 +25,7 @@ var searchData=
   ['operator_20bool_22',['operator bool',['../classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8',1,'ASignal']]],
   ['operator_22_22_5fformat_23',['operator&quot;&quot;_format',['../group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8',1,'strings.h']]],
   ['operator_26_24',['operator&amp;',['../classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82',1,'ABitField']]],
-  ['operator_2a_25',['operator*',['../classaui_1_1impl_1_1future_1_1Future.html#a2d1c305db613abbf673c08ac6d2034ac',1,'aui::impl::future::Future::operator*()'],['../classaui_1_1impl_1_1future_1_1Future.html#ac4d7da17f5970393768b6dedf708f030',1,'aui::impl::future::Future::operator*() const'],['../classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7',1,'AAbstractThread::operator*()']]],
+  ['operator_2a_25',['operator*',['../classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5',1,'aui::impl::future::Future::operator*() const'],['../classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa',1,'aui::impl::future::Future::operator*()'],['../classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7',1,'AAbstractThread::operator*()']]],
   ['operator_2b_26',['operator+',['../classAView.html#a6f62c8da04a69c4cb3e32d4f576b274b',1,'AView']]],
   ['operator_2d_3e_27',['operator-&gt;',['../classaui_1_1impl_1_1future_1_1Future.html#ace309e79cafe8ed7e76992c6c308b787',1,'aui::impl::future::Future::operator-&gt;()'],['../classaui_1_1impl_1_1future_1_1Future.html#a8ac6612f3bcb5fe8ab09c4df07e3ce42',1,'aui::impl::future::Future::operator-&gt;() const']]],
   ['operator_2f_28',['operator/',['../classAPath.html#abafaeb035c4406f106cb9e556e6360ac',1,'APath']]],

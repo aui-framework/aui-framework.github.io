@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">develop</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -182,29 +182,29 @@ template&lt;typename Comparator &gt; </td></tr>
 <a class="el" href="classASet.html">ASet</a>&lt; StoredType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toSet</b> () const noexcept</td></tr>
 <tr class="separator:ad4ec89798abbadf8c53d45c5a021438a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2392025272d779d2c153262651dbfccb"><td class="memTemplParams" colspan="2"><a id="a2392025272d779d2c153262651dbfccb" name="a2392025272d779d2c153262651dbfccb"></a>
-template&lt;typename UnaryOperation &gt; </td></tr>
+template&lt;std::invocable&lt; const StoredType &amp; &gt; UnaryOperation&gt; </td></tr>
 <tr class="memitem:a2392025272d779d2c153262651dbfccb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>map</b> (UnaryOperation &amp;&amp;transformer) const -&gt; <a class="el" href="classAVector.html">AVector</a>&lt; decltype(transformer(std::declval&lt; StoredType &gt;()))&gt;</td></tr>
 <tr class="separator:a2392025272d779d2c153262651dbfccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9435470ae6a0447d7b9ef02cad296b61"><td class="memTemplParams" colspan="2"><a id="a9435470ae6a0447d7b9ef02cad296b61" name="a9435470ae6a0447d7b9ef02cad296b61"></a>
-template&lt;typename UnaryOperation &gt; </td></tr>
+template&lt;std::invocable&lt; const StoredType &amp; &gt; UnaryOperation&gt; </td></tr>
 <tr class="memitem:a9435470ae6a0447d7b9ef02cad296b61"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toMap</b> (UnaryOperation &amp;&amp;transformer) const -&gt; <a class="el" href="classAMap.html">AMap</a>&lt; decltype(transformer(std::declval&lt; StoredType &gt;()).<a class="el" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>), decltype(transformer(std::declval&lt; StoredType &gt;()).second)&gt;</td></tr>
 <tr class="separator:a9435470ae6a0447d7b9ef02cad296b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49710f6e86b123c0fb625236fe7dba4a"><td class="memTemplParams" colspan="2"><a id="a49710f6e86b123c0fb625236fe7dba4a" name="a49710f6e86b123c0fb625236fe7dba4a"></a>
-template&lt;typename UnaryOperation &gt; </td></tr>
+template&lt;std::invocable&lt; StoredType &amp; &gt; UnaryOperation&gt; </td></tr>
 <tr class="memitem:a49710f6e86b123c0fb625236fe7dba4a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>toMap</b> (UnaryOperation &amp;&amp;transformer) -&gt; <a class="el" href="classAMap.html">AMap</a>&lt; decltype(transformer(std::declval&lt; StoredType &gt;()).<a class="el" href="classAVector.html#a8321410937da08da17695a9a1403debd">first</a>), decltype(transformer(std::declval&lt; StoredType &gt;()).second)&gt;</td></tr>
 <tr class="separator:a49710f6e86b123c0fb625236fe7dba4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e75055efe4af9e346862a780927a01f"><td class="memTemplParams" colspan="2"><a id="a2e75055efe4af9e346862a780927a01f" name="a2e75055efe4af9e346862a780927a01f"></a>
-template&lt;typename Predicate &gt; </td></tr>
+template&lt;std::predicate&lt; const StoredType &amp; &gt; Predicate&gt; </td></tr>
 <tr class="memitem:a2e75055efe4af9e346862a780927a01f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classAVector.html">AVector</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>filter</b> (Predicate &amp;&amp;predicate)</td></tr>
 <tr class="separator:a2e75055efe4af9e346862a780927a01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a78a41e21a4537be5f255364b6f8582cc"><td class="memTemplParams" colspan="2"><a id="a78a41e21a4537be5f255364b6f8582cc" name="a78a41e21a4537be5f255364b6f8582cc"></a>
-template&lt;typename Callable &gt; </td></tr>
+template&lt;aui::mapper&lt; std::size_t, StoredType &gt; Callable&gt; </td></tr>
 <tr class="memitem:a78a41e21a4537be5f255364b6f8582cc"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classAVector.html">AVector</a>&lt; StoredType, Allocator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>generate</b> (size_t size, Callable &amp;&amp;callable) noexcept</td></tr>
 <tr class="separator:a78a41e21a4537be5f255364b6f8582cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a275203bce2c8afcff4fcd321058703b8"><td class="memTemplParams" colspan="2">template&lt;typename Iterator , typename UnaryOperation &gt; </td></tr>
+<tr class="memitem:a275203bce2c8afcff4fcd321058703b8"><td class="memTemplParams" colspan="2">template&lt;std::incrementable Iterator, std::invocable&lt; Iterator &gt; UnaryOperation&gt; </td></tr>
 <tr class="memitem:a275203bce2c8afcff4fcd321058703b8"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">fromRange</a> (<a class="el" href="structaui_1_1range.html">aui::range</a>&lt; Iterator &gt; range, UnaryOperation &amp;&amp;transformer) -&gt; <a class="el" href="classAVector.html">AVector</a>&lt; decltype(transformer(range.first()))&gt;</td></tr>
 <tr class="memdesc:a275203bce2c8afcff4fcd321058703b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new vector of transformed items of the range.  <a href="classAVector.html#a275203bce2c8afcff4fcd321058703b8">More...</a><br /></td></tr>
 <tr class="separator:a275203bce2c8afcff4fcd321058703b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,7 +325,7 @@ template&lt;class StoredType , class Allocator &gt; </div>
 <div class="memtemplate">
 template&lt;class StoredType , class Allocator &gt; </div>
 <div class="memtemplate">
-template&lt;typename Iterator , typename UnaryOperation &gt; </div>
+template&lt;std::incrementable Iterator, std::invocable&lt; Iterator &gt; UnaryOperation&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -986,8 +986,8 @@ Inheritance diagram for AVector&lt; StoredType, Allocator &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAVector__inherit__graph.png" border="0" usemap="#aAVector_3_01StoredType_00_01Allocator_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAVector_3_01StoredType_00_01Allocator_01_4_inherit__map" id="aAVector_3_01StoredType_00_01Allocator_01_4_inherit__map">
-<area shape="rect" title="A std::vector with AUI extensions." alt="" coords="11,95,162,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title="A std::vector with AUI extensions." alt="" coords="5,95,220,121"/>
+<area shape="rect" title=" " alt="" coords="31,5,194,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -995,8 +995,8 @@ Collaboration diagram for AVector&lt; StoredType, Allocator &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAVector__coll__graph.png" border="0" usemap="#aAVector_3_01StoredType_00_01Allocator_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aAVector_3_01StoredType_00_01Allocator_01_4_coll__map" id="aAVector_3_01StoredType_00_01Allocator_01_4_coll__map">
-<area shape="rect" title="A std::vector with AUI extensions." alt="" coords="11,95,162,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title="A std::vector with AUI extensions." alt="" coords="5,95,220,121"/>
+<area shape="rect" title=" " alt="" coords="31,5,194,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

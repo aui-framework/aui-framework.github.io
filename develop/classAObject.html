@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">develop</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -116,14 +116,14 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clearSignals</b> () noexcept</td></tr>
 <tr class="separator:ad24cd15d45d7d7fad9a8a613008a7f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7844706ce68c133ca7467c9f9b58eade"><td class="memTemplParams" colspan="2"><a id="a7844706ce68c133ca7467c9f9b58eade" name="a7844706ce68c133ca7467c9f9b58eade"></a>
-template&lt;class Signal , typename Function &gt; </td></tr>
+template&lt;AAnySignal Signal, ACompatibleSlotFor&lt; Signal &gt; Function&gt; </td></tr>
 <tr class="memitem:a7844706ce68c133ca7467c9f9b58eade"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>connect</b> (Signal &amp;signal, Function &amp;&amp;function)</td></tr>
 <tr class="separator:a7844706ce68c133ca7467c9f9b58eade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f6c827d53fd70ebc19f60287e0662f"><td class="memItemLeft" align="right" valign="top"><a id="a18f6c827d53fd70ebc19f60287e0662f" name="a18f6c827d53fd70ebc19f60287e0662f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setSignalsEnabled</b> (bool enabled)</td></tr>
 <tr class="separator:a18f6c827d53fd70ebc19f60287e0662f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0dedb751182fb3a2f36228750ae305a"><td class="memTemplParams" colspan="2"><a id="ad0dedb751182fb3a2f36228750ae305a" name="ad0dedb751182fb3a2f36228750ae305a"></a>
-template&lt;typename T &gt; </td></tr>
+template&lt;ASignalInvokable T&gt; </td></tr>
 <tr class="memitem:ad0dedb751182fb3a2f36228750ae305a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator^</b> (T &amp;&amp;t)</td></tr>
 <tr class="separator:ad0dedb751182fb3a2f36228750ae305a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae46e11b76a90235f43a6aa06bfa92654"><td class="memItemLeft" align="right" valign="top"><a id="ae46e11b76a90235f43a6aa06bfa92654" name="ae46e11b76a90235f43a6aa06bfa92654"></a>
@@ -143,15 +143,15 @@ Static Public Member Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
 <tr class="separator:a6eecf8e6aa8dfb1d51b68162fab7d2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19e1dd4c5b7d703e0dc8a1d7d0a8d176"><td class="memTemplParams" colspan="2"><a id="a19e1dd4c5b7d703e0dc8a1d7d0a8d176" name="a19e1dd4c5b7d703e0dc8a1d7d0a8d176"></a>
-template&lt;class Signal , class Object , typename Function &gt; </td></tr>
+template&lt;AAnySignal Signal, std::derived_from&lt; <a class="el" href="classAObject.html">AObject</a> &gt; Object, ACompatibleSlotFor&lt; Signal &gt; Function&gt; </td></tr>
 <tr class="memitem:a19e1dd4c5b7d703e0dc8a1d7d0a8d176"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>connect</b> (Signal &amp;signal, Object *object, Function &amp;&amp;function)</td></tr>
 <tr class="separator:a19e1dd4c5b7d703e0dc8a1d7d0a8d176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cc21a35fb75b6839d198eb9b522cc98"><td class="memTemplParams" colspan="2"><a id="a0cc21a35fb75b6839d198eb9b522cc98" name="a0cc21a35fb75b6839d198eb9b522cc98"></a>
-template&lt;class Signal , class Object , typename Function &gt; </td></tr>
+template&lt;AAnySignal Signal, std::derived_from&lt; <a class="el" href="classAObject.html">AObject</a> &gt; Object, ACompatibleSlotFor&lt; Signal &gt; Function&gt; </td></tr>
 <tr class="memitem:a0cc21a35fb75b6839d198eb9b522cc98"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>connect</b> (Signal &amp;signal, Object &amp;object, Function &amp;&amp;function)</td></tr>
 <tr class="separator:a0cc21a35fb75b6839d198eb9b522cc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae421aa345433e66c9419da76ca68b095"><td class="memTemplParams" colspan="2"><a id="ae421aa345433e66c9419da76ca68b095" name="ae421aa345433e66c9419da76ca68b095"></a>
-template&lt;class Signal , class Object , typename Function &gt; </td></tr>
+template&lt;AAnySignal Signal, std::derived_from&lt; <a class="el" href="classAObject.html">AObject</a> &gt; Object, ACompatibleSlotFor&lt; Signal &gt; Function&gt; </td></tr>
 <tr class="memitem:ae421aa345433e66c9419da76ca68b095"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>connect</b> (Signal &amp;signal, <a class="el" href="class__.html">_</a>&lt; Object &gt; object, Function &amp;&amp;function)</td></tr>
 <tr class="separator:ae421aa345433e66c9419da76ca68b095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f582f50c5d1195d16dfbb9ab92c4727"><td class="memItemLeft" align="right" valign="top"><a id="a3f582f50c5d1195d16dfbb9ab92c4727" name="a3f582f50c5d1195d16dfbb9ab92c4727"></a>
@@ -189,55 +189,55 @@ Inheritance diagram for AObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAObject__inherit__graph.png" border="0" usemap="#aAObject_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAObject_inherit__map" id="aAObject_inherit__map">
-<area shape="rect" title="A base object class." alt="" coords="205,568,275,595"/>
-<area shape="rect" href="classAAssHelper.html" title="Remember, ASS is not a butt. ASS is Aui Style Sheets." alt="" coords="373,5,465,32"/>
-<area shape="rect" href="classAChildProcess.html" title=" " alt="" coords="365,56,473,83"/>
-<area shape="rect" href="classACurl.html" title="Easy curl instance." alt="" coords="391,107,446,133"/>
-<area shape="rect" href="classACurlMulti.html" title="Multi curl instance." alt="" coords="377,157,460,184"/>
-<area shape="rect" href="classADataBinding.html" title=" " alt="" coords="339,208,498,235"/>
-<area shape="rect" href="classALayout.html" title="Base class for all layout managers." alt="" coords="383,259,454,285"/>
-<area shape="rect" href="classAListModel.html" title=" " alt="" coords="331,309,507,336"/>
-<area shape="rect" href="classAListModelAdapter.html" title=" " alt="" coords="323,361,515,402"/>
-<area shape="rect" href="classAListModelFilter.html" title=" " alt="" coords="349,426,489,467"/>
-<area shape="rect" href="classAListModelObserver.html" title=" " alt="" coords="333,492,504,519"/>
-<area shape="rect" href="classARadioButton_1_1Group.html" title=" " alt="" coords="347,543,490,569"/>
-<area shape="rect" href="classAStdOutputRecorder.html" title=" " alt="" coords="347,593,490,620"/>
-<area shape="rect" href="classAThread.html" title="Represents a user&#45;defined thread." alt="" coords="383,644,454,671"/>
-<area shape="rect" href="classATimer.html" title="Async timer." alt="" coords="387,695,451,721"/>
-<area shape="rect" href="classAView.html" title="Base class of all UI objects." alt="" coords="389,745,449,772"/>
-<area shape="rect" href="classInputStreamAsync.html" title="Converts a basic input stream to an asynchronous input stream so it&#39;s read in a separate thread." alt="" coords="354,796,483,823"/>
-<area shape="rect" href="classMaster.html" title=" " alt="" coords="387,847,450,873"/>
-<area shape="rect" href="classProcessSignalReceiver.html" title=" " alt="" coords="340,897,497,924"/>
-<area shape="rect" href="classReceiverObject.html" title=" " alt="" coords="363,948,474,975"/>
-<area shape="rect" href="classSendObject.html" title=" " alt="" coords="373,999,464,1025"/>
-<area shape="rect" href="classSlave.html" title=" " alt="" coords="391,1049,446,1076"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="23,539,140,565"/>
-<area shape="rect" title=" " alt="" coords="5,590,157,631"/>
-<area shape="rect" href="classAWebsocket.html" title="Websocket implementation." alt="" coords="595,87,691,113"/>
-<area shape="rect" href="classAAdvancedGridLayout.html" title="Grid layout. Unlike AGridLayout, cells may have different sizes." alt="" coords="567,137,719,164"/>
-<area shape="rect" href="classAGridLayout.html" title="Grid layout with fixed&#45;size cells." alt="" coords="596,188,691,215"/>
-<area shape="rect" href="classAHorizontalLayout.html" title="Places views in a row." alt="" coords="579,239,707,265"/>
-<area shape="rect" href="classAStackedLayout.html" title="Places views in a stack (along z axis)." alt="" coords="584,289,703,316"/>
-<area shape="rect" href="classAVerticalLayout.html" title="Places views in a column." alt="" coords="586,340,701,367"/>
-<area shape="rect" href="classAWordWrappingLayout.html" title="Imitates behaviour of word wrapping, but uses views instead words." alt="" coords="566,391,721,417"/>
-<area shape="rect" href="classAAbstractLabel.html" title="Represents an abstract text display view." alt="" coords="587,441,699,468"/>
-<area shape="rect" href="classAAbstractTypeableView.html" title="Basic implementation of type shortcuts and selection for editable text fields." alt="" coords="563,492,724,519"/>
-<area shape="rect" href="classACheckBox.html" title="A check box (without label)." alt="" coords="598,543,689,569"/>
-<area shape="rect" href="classADividerView.html" title="Base class for AHDividerView and AVDivierView." alt="" coords="593,593,693,620"/>
-<area shape="rect" href="classADrawableView.html" title="Simple view to draw an IDrawable." alt="" coords="586,644,701,671"/>
-<area shape="rect" href="classAProgressBar_1_1Inner.html" title=" " alt="" coords="574,695,713,721"/>
-<area shape="rect" href="classARadioButtonInner.html" title=" " alt="" coords="578,745,709,772"/>
-<area shape="rect" href="classARulerView.html" title="A Photoshop&#45;like ruler for measuring display units." alt="" coords="598,796,689,823"/>
-<area shape="rect" href="classAScrollbarButton.html" title=" " alt="" coords="583,847,703,873"/>
-<area shape="rect" href="classAScrollbarHandle.html" title=" " alt="" coords="582,897,705,924"/>
-<area shape="rect" href="classASpacerExpanding.html" title="Expanding view which is useful in UI building." alt="" coords="578,948,709,975"/>
-<area shape="rect" href="classASpacerFixed.html" title="Fixed&#45;size view which is useful in UI building." alt="" coords="592,999,695,1025"/>
-<area shape="rect" href="classASpinner.html" title=" " alt="" coords="606,1049,681,1076"/>
-<area shape="rect" href="classAViewContainer.html" title="A view that represents a set of views." alt="" coords="586,1100,701,1127"/>
-<area shape="rect" href="classAButton.html" title="Button with text, which can be pushed to make some action." alt="" coords="822,391,891,417"/>
-<area shape="rect" href="classALabel.html" title="Represents a simple single&#45;line text display view." alt="" coords="825,441,888,468"/>
-<area shape="rect" href="classAAbstractTextField.html" title="Text field implementation." alt="" coords="790,492,923,519"/>
-<area shape="rect" href="classATextArea_1_1TextAreaField.html" title=" " alt="" coords="772,543,941,569"/>
+<area shape="rect" title="A base object class." alt="" coords="216,553,285,580"/>
+<area shape="rect" href="classAAssHelper.html" title="Remember, ASS is not a butt. ASS is Aui Style Sheets." alt="" coords="382,5,474,32"/>
+<area shape="rect" href="classAChildProcess.html" title=" " alt="" coords="374,56,482,83"/>
+<area shape="rect" href="classACurl.html" title="Easy curl instance." alt="" coords="401,107,455,133"/>
+<area shape="rect" href="classACurlMulti.html" title="Multi curl instance." alt="" coords="387,157,469,184"/>
+<area shape="rect" href="classADataBinding.html" title=" " alt="" coords="349,208,507,235"/>
+<area shape="rect" href="classALayout.html" title="Base class for all layout managers." alt="" coords="393,259,463,285"/>
+<area shape="rect" href="classAListModel.html" title=" " alt="" coords="340,309,516,336"/>
+<area shape="rect" href="classAListModelAdapter.html" title=" " alt="" coords="333,361,523,402"/>
+<area shape="rect" href="classAListModelFilter.html" title=" " alt="" coords="337,427,519,453"/>
+<area shape="rect" href="classAListModelObserver.html" title=" " alt="" coords="343,477,513,504"/>
+<area shape="rect" href="classARadioButton_1_1Group.html" title=" " alt="" coords="357,528,499,555"/>
+<area shape="rect" href="classAStdOutputRecorder.html" title=" " alt="" coords="357,579,499,605"/>
+<area shape="rect" href="classAThread.html" title="Represents a user&#45;defined thread." alt="" coords="393,629,463,656"/>
+<area shape="rect" href="classATimer.html" title="Async timer." alt="" coords="396,680,460,707"/>
+<area shape="rect" href="classAView.html" title="Base class of all UI objects." alt="" coords="398,731,458,757"/>
+<area shape="rect" href="classInputStreamAsync.html" title="Converts a basic input stream to an asynchronous input stream so it&#39;s read in a separate thread." alt="" coords="363,781,493,808"/>
+<area shape="rect" href="classMaster.html" title=" " alt="" coords="397,832,459,859"/>
+<area shape="rect" href="classProcessSignalReceiver.html" title=" " alt="" coords="349,883,507,909"/>
+<area shape="rect" href="classReceiverObject.html" title=" " alt="" coords="373,933,483,960"/>
+<area shape="rect" href="classSendObject.html" title=" " alt="" coords="383,984,473,1011"/>
+<area shape="rect" href="classSlave.html" title=" " alt="" coords="401,1035,455,1061"/>
+<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="28,524,145,551"/>
+<area shape="rect" title=" " alt="" coords="5,575,168,617"/>
+<area shape="rect" href="classAWebsocket.html" title="Websocket implementation." alt="" coords="603,72,699,99"/>
+<area shape="rect" href="classAAdvancedGridLayout.html" title="Grid layout. Unlike AGridLayout, cells may have different sizes." alt="" coords="575,123,727,149"/>
+<area shape="rect" href="classAGridLayout.html" title="Grid layout with fixed&#45;size cells." alt="" coords="604,173,699,200"/>
+<area shape="rect" href="classAHorizontalLayout.html" title="Places views in a row." alt="" coords="587,224,715,251"/>
+<area shape="rect" href="classAStackedLayout.html" title="Places views in a stack (along z axis)." alt="" coords="592,275,711,301"/>
+<area shape="rect" href="classAVerticalLayout.html" title="Places views in a column." alt="" coords="594,325,709,352"/>
+<area shape="rect" href="classAWordWrappingLayout.html" title="Imitates behaviour of word wrapping, but uses views instead words." alt="" coords="574,376,729,403"/>
+<area shape="rect" href="classAAbstractLabel.html" title="Represents an abstract text display view." alt="" coords="595,427,707,453"/>
+<area shape="rect" href="classAAbstractTypeableView.html" title="Basic implementation of type shortcuts and selection for editable text fields." alt="" coords="571,477,732,504"/>
+<area shape="rect" href="classACheckBox.html" title="A check box (without label)." alt="" coords="606,528,697,555"/>
+<area shape="rect" href="classADividerView.html" title="Base class for AHDividerView and AVDivierView." alt="" coords="601,579,701,605"/>
+<area shape="rect" href="classADrawableView.html" title="Simple view to draw an IDrawable." alt="" coords="594,629,709,656"/>
+<area shape="rect" href="classAProgressBar_1_1Inner.html" title=" " alt="" coords="582,680,721,707"/>
+<area shape="rect" href="classARadioButtonInner.html" title=" " alt="" coords="586,731,717,757"/>
+<area shape="rect" href="classARulerView.html" title="A Photoshop&#45;like ruler for measuring display units." alt="" coords="606,781,697,808"/>
+<area shape="rect" href="classAScrollbarButton.html" title=" " alt="" coords="591,832,711,859"/>
+<area shape="rect" href="classAScrollbarHandle.html" title=" " alt="" coords="590,883,713,909"/>
+<area shape="rect" href="classASpacerExpanding.html" title="Expanding view which is useful in UI building." alt="" coords="586,933,717,960"/>
+<area shape="rect" href="classASpacerFixed.html" title="Fixed&#45;size view which is useful in UI building." alt="" coords="600,984,703,1011"/>
+<area shape="rect" href="classASpinner.html" title=" " alt="" coords="614,1035,689,1061"/>
+<area shape="rect" href="classAViewContainer.html" title="A view that represents a set of views." alt="" coords="594,1085,709,1112"/>
+<area shape="rect" href="classAButton.html" title="Button with text, which can be pushed to make some action." alt="" coords="830,376,899,403"/>
+<area shape="rect" href="classALabel.html" title="Represents a simple single&#45;line text display view." alt="" coords="833,427,896,453"/>
+<area shape="rect" href="classAAbstractTextField.html" title="Text field implementation." alt="" coords="798,477,931,504"/>
+<area shape="rect" href="classATextArea_1_1TextAreaField.html" title=" " alt="" coords="780,528,949,555"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -245,9 +245,9 @@ Collaboration diagram for AObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAObject__coll__graph.png" border="0" usemap="#aAObject_coll__map" alt="Collaboration graph"/></div>
 <map name="aAObject_coll__map" id="aAObject_coll__map">
-<area shape="rect" title="A base object class." alt="" coords="108,95,177,121"/>
+<area shape="rect" title="A base object class." alt="" coords="111,95,180,121"/>
 <area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="5,13,123,39"/>
-<area shape="rect" title=" " alt="" coords="147,5,299,47"/>
+<area shape="rect" title=" " alt="" coords="147,5,309,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

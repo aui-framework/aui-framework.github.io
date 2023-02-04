@@ -115,6 +115,8 @@ var annotated =
         [ "future", null, [
           [ "CancellationWrapper", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
           [ "Future", "classaui_1_1impl_1_1future_1_1Future.html", "classaui_1_1impl_1_1future_1_1Future" ],
+          [ "FutureReturnType", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
+          [ "FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
           [ "OnSuccessCallback", "structaui_1_1impl_1_1future_1_1OnSuccessCallback.html", null ],
           [ "OnSuccessCallback< void >", "structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html", null ]
         ] ],

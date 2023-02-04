@@ -7,7 +7,7 @@ var searchData=
   ['fast_5fpimpl_4',['fast_pimpl',['../structaui_1_1fast__pimpl.html',1,'aui']]],
   ['field_5',['Field',['../structaui_1_1impl_1_1json_1_1Field.html',1,'aui::impl::json']]],
   ['fileextension_6',['FileExtension',['../structADesktop_1_1FileExtension.html',1,'ADesktop']]],
-  ['finalize_7',['finalize',['../classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28',1,'IRenderer::IMultiStringCanvas::finalize()'],['../classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0',1,'SoftwareMultiStringCanvas::finalize()'],['../classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8',1,'OpenGLMultiStringCanvas::finalize()']]],
+  ['finalize_7',['finalize',['../classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8',1,'OpenGLMultiStringCanvas::finalize()'],['../classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0',1,'SoftwareMultiStringCanvas::finalize()'],['../classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28',1,'IRenderer::IMultiStringCanvas::finalize()']]],
   ['find_8',['find',['../classAPath.html#a6b512292d327d2170ac191b446e86d98',1,'APath']]],
   ['findanotherselfinstance_9',['findAnotherSelfInstance',['../classAProcess.html#a4c6537f6e1dc7d0538ee98d6f3d2fd59',1,'AProcess']]],
   ['findnearestto_10',['findNearestTo',['../classUIMatcher.html#a0936b37e3fc29a29a362897775cfb550',1,'UIMatcher']]],
@@ -30,12 +30,14 @@ var searchData=
   ['fontsize_27',['FontSize',['../structass_1_1FontSize.html',1,'ass']]],
   ['formatetcenumerator_28',['FormatEtcEnumerator',['../classFormatEtcEnumerator.html',1,'']]],
   ['formatter_3c_20t_2c_20char_2c_20std_3a_3aenable_5fif_5ft_3c_20aui_3a_3ais_5fcomplete_3c_20aenumerateallvalues_3c_20t_20_3e_20_3e_20_3e_20_3e_29',['formatter&lt; T, char, std::enable_if_t&lt; aui::is_complete&lt; AEnumerateAllValues&lt; T &gt; &gt; &gt; &gt;',['../structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html',1,'fmt']]],
-  ['framemillis_30',['frameMillis',['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()'],['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()']]],
+  ['framemillis_30',['frameMillis',['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()']]],
   ['freetype_31',['FreeType',['../classFreeType.html',1,'']]],
   ['frompid_32',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
   ['fromrange_33',['fromRange',['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector']]],
   ['fromstring_34',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
   ['fromvector_35',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
   ['future_36',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
-  ['future_3c_20void_20_3e_37',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
+  ['future_3c_20void_20_3e_37',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
+  ['futurereturntype_38',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
+  ['futurereturntype_3c_20void_20_3e_39',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]
 ];

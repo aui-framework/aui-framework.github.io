@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">develop</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -134,15 +134,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyException</b> (
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classAFuture.html">AFuture</a> &amp;r) const noexcept</td></tr>
 <tr class="separator:ac5f6b28591c6cb4303dc4dd2bd5bcf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memTemplParams" colspan="2"><a id="a0c46bbaafece47c858e18e1ae3a9b27b" name="a0c46bbaafece47c858e18e1ae3a9b27b"></a>
-template&lt;typename Callback &gt; </td></tr>
+template&lt;std::invocable&lt; const T &amp; &gt; Callback&gt; </td></tr>
 <tr class="memitem:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onSuccess</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
 <tr class="separator:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplParams" colspan="2"><a id="a2c29ecb80f38bac577e9ddcc8535918e" name="a2c29ecb80f38bac577e9ddcc8535918e"></a>
-template&lt;typename Callback &gt; </td></tr>
+template&lt;std::invocable&lt; const <a class="el" href="classAException.html">AException</a> &amp; &gt; Callback&gt; </td></tr>
 <tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onError</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
 <tr class="separator:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memTemplParams" colspan="2"><a id="a657b6d64c82ffd61689d5fc6f8d61ebe" name="a657b6d64c82ffd61689d5fc6f8d61ebe"></a>
-template&lt;typename Callback &gt; </td></tr>
+template&lt;std::invocable&lt; const T &amp; &gt; Callback&gt; </td></tr>
 <tr class="memitem:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>map</b> (Callback &amp;&amp;callback) -&gt; <a class="el" href="classAFuture.html">AFuture</a>&lt; decltype(callback(std::declval&lt; T &gt;()))&gt; const</td></tr>
 <tr class="memdesc:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps this <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> to another type of <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>. <br /></td></tr>
 <tr class="separator:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,15 +176,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reportInterrupted</b>
 <tr class="memitem:ad41767ced886fa915449f1c082c2b54e inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ad41767ced886fa915449f1c082c2b54e">wait</a> (AFutureWait flags=AFutureWait::DEFAULT) noexcept</td></tr>
 <tr class="memdesc:ad41767ced886fa915449f1c082c2b54e inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#ad41767ced886fa915449f1c082c2b54e">More...</a><br /></td></tr>
 <tr class="separator:ad41767ced886fa915449f1c082c2b54e inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71b869c1abeddf07d97c1206a6273733 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a71b869c1abeddf07d97c1206a6273733">get</a> (AFutureWait flags=AFutureWait::DEFAULT)</td></tr>
-<tr class="memdesc:a71b869c1abeddf07d97c1206a6273733 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a71b869c1abeddf07d97c1206a6273733">More...</a><br /></td></tr>
-<tr class="separator:a71b869c1abeddf07d97c1206a6273733 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1c305db613abbf673c08ac6d2034ac inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a2d1c305db613abbf673c08ac6d2034ac">operator*</a> ()</td></tr>
-<tr class="memdesc:a2d1c305db613abbf673c08ac6d2034ac inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a2d1c305db613abbf673c08ac6d2034ac">More...</a><br /></td></tr>
-<tr class="separator:a2d1c305db613abbf673c08ac6d2034ac inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4d7da17f5970393768b6dedf708f030 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">decltype(auto)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ac4d7da17f5970393768b6dedf708f030">operator*</a> () const</td></tr>
-<tr class="memdesc:ac4d7da17f5970393768b6dedf708f030 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the task result from the another thread. Sleeps if the task result is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#ac4d7da17f5970393768b6dedf708f030">More...</a><br /></td></tr>
-<tr class="separator:ac4d7da17f5970393768b6dedf708f030 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4efd8b2835bb6bfdaccbb6189a5d89db inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaui_1_1impl_1_1future_1_1FutureReturnType.html">FutureReturnType</a>&lt; void &gt;::<a class="el" href="structViewActionType.html">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db">get</a> (AFutureWait flags=AFutureWait::DEFAULT)</td></tr>
+<tr class="memdesc:a4efd8b2835bb6bfdaccbb6189a5d89db inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db">More...</a><br /></td></tr>
+<tr class="separator:a4efd8b2835bb6bfdaccbb6189a5d89db inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb26a46cb0171ac3d3210ffe6eca1f5 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaui_1_1impl_1_1future_1_1FutureReturnType.html">FutureReturnType</a>&lt; void &gt;::<a class="el" href="structViewActionType.html">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5">operator*</a> () const</td></tr>
+<tr class="memdesc:aecb26a46cb0171ac3d3210ffe6eca1f5 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the task result from the another thread. Sleeps if the task result is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5">More...</a><br /></td></tr>
+<tr class="separator:aecb26a46cb0171ac3d3210ffe6eca1f5 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaui_1_1impl_1_1future_1_1FutureReturnType.html">FutureReturnType</a>&lt; void &gt;::<a class="el" href="structViewActionType.html">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa">operator*</a> ()</td></tr>
+<tr class="memdesc:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa">More...</a><br /></td></tr>
+<tr class="separator:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace309e79cafe8ed7e76992c6c308b787 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ace309e79cafe8ed7e76992c6c308b787">operator-&gt;</a> ()</td></tr>
 <tr class="memdesc:ace309e79cafe8ed7e76992c6c308b787 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#ace309e79cafe8ed7e76992c6c308b787">More...</a><br /></td></tr>
 <tr class="separator:ace309e79cafe8ed7e76992c6c308b787 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,7 +218,7 @@ class AFuture&lt; T &gt;</div><p >Represents the result of an asynchronous opera
 <div class="line">  <span class="keywordflow">return</span> 123;</div>
 <div class="line">};</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
-<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents the result of an asynchronous operation.</div><div class="ttdef"><b>Definition:</b> AFuture.h:517</div></div>
+<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents the result of an asynchronous operation.</div><div class="ttdef"><b>Definition:</b> AFuture.h:528</div></div>
 <div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:121</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:305</div></div>
 </div><!-- fragment --><p >However, it can be default-constructed and the result can be supplied manually with the supplyResult() function:</p>
@@ -243,8 +243,8 @@ Inheritance diagram for AFuture&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAFuture__inherit__graph.png" border="0" usemap="#aAFuture_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAFuture_3_01T_01_4_inherit__map" id="aAFuture_3_01T_01_4_inherit__map">
-<area shape="rect" title="Represents the result of an asynchronous operation." alt="" coords="13,95,112,121"/>
-<area shape="rect" href="classaui_1_1impl_1_1future_1_1Future.html" title=" " alt="" coords="5,5,120,47"/>
+<area shape="rect" title="Represents the result of an asynchronous operation." alt="" coords="31,95,130,121"/>
+<area shape="rect" href="classaui_1_1impl_1_1future_1_1Future.html" title=" " alt="" coords="5,5,156,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -252,8 +252,8 @@ Collaboration diagram for AFuture&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAFuture__coll__graph.png" border="0" usemap="#aAFuture_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aAFuture_3_01T_01_4_coll__map" id="aAFuture_3_01T_01_4_coll__map">
-<area shape="rect" title="Represents the result of an asynchronous operation." alt="" coords="13,95,112,121"/>
-<area shape="rect" href="classaui_1_1impl_1_1future_1_1Future.html" title=" " alt="" coords="5,5,120,47"/>
+<area shape="rect" title="Represents the result of an asynchronous operation." alt="" coords="31,95,130,121"/>
+<area shape="rect" href="classaui_1_1impl_1_1future_1_1Future.html" title=" " alt="" coords="5,5,156,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

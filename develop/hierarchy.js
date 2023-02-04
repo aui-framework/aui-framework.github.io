@@ -418,6 +418,8 @@ var hierarchy =
       [ "AFuture< T >", "classAFuture.html", null ],
       [ "AFuture< void >", "classAFuture_3_01void_01_4.html", null ]
     ] ],
+    [ "aui::impl::future::FutureReturnType< T >", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
+    [ "aui::impl::future::FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
     [ "GLContext", "classGLContext.html", null ],
     [ "GLKViewController", null, [
       [ "AUIViewController", "interfaceAUIViewController.html", null ]

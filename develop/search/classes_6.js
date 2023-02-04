@@ -21,5 +21,7 @@ var searchData=
   ['formatter_3c_20t_2c_20char_2c_20std_3a_3aenable_5fif_5ft_3c_20aui_3a_3ais_5fcomplete_3c_20aenumerateallvalues_3c_20t_20_3e_20_3e_20_3e_20_3e_18',['formatter&lt; T, char, std::enable_if_t&lt; aui::is_complete&lt; AEnumerateAllValues&lt; T &gt; &gt; &gt; &gt;',['../structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html',1,'fmt']]],
   ['freetype_19',['FreeType',['../classFreeType.html',1,'']]],
   ['future_20',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
-  ['future_3c_20void_20_3e_21',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]]
+  ['future_3c_20void_20_3e_21',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
+  ['futurereturntype_22',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
+  ['futurereturntype_3c_20void_20_3e_23',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]
 ];

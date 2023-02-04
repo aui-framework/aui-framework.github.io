@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">develop</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('AThreadPool_8h_source.html',''); initR
   <div class="headertitle"><div class="title">AThreadPool.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++17</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
@@ -185,7 +185,7 @@ $(document).ready(function(){initNavTree('AThreadPool_8h_source.html',''); initR
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> Functor&gt;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">auto</span> parallel(Iterator begin, Iterator end, Functor&amp;&amp; functor);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callable&gt;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">template</span> &lt;std::invocable Callable&gt;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    [[nodiscard]]</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">inline</span> <span class="keyword">auto</span> operator*(Callable fun)</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {</div>
@@ -264,15 +264,15 @@ $(document).ready(function(){initNavTree('AThreadPool_8h_source.html',''); initR
 <div class="ttc" id="aclassAFutureSet_html"><div class="ttname"><a href="classAFutureSet.html">AFutureSet</a></div><div class="ttdoc">Manages multiple futures.</div><div class="ttdef"><b>Definition:</b> AThreadPool.h:166</div></div>
 <div class="ttc" id="aclassAFutureSet_html_a4284ace4dad03cacd1f5606d13b1b51a"><div class="ttname"><a href="classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a">AFutureSet::waitForAll</a></div><div class="ttdeci">void waitForAll() const</div><div class="ttdoc">Wait for the result of every AFuture.</div><div class="ttdef"><b>Definition:</b> AThreadPool.h:175</div></div>
 <div class="ttc" id="aclassAFutureSet_html_a6436d6a190457fb37401372f9fd6c417"><div class="ttname"><a href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">AFutureSet::checkForExceptions</a></div><div class="ttdeci">void checkForExceptions() const</div><div class="ttdoc">Find AFutures that encountered an exception. If such AFuture is found, AInvocationTargetException is ...</div><div class="ttdef"><b>Definition:</b> AThreadPool.h:186</div></div>
-<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents the result of an asynchronous operation.</div><div class="ttdef"><b>Definition:</b> AFuture.h:517</div></div>
+<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents the result of an asynchronous operation.</div><div class="ttdef"><b>Definition:</b> AFuture.h:528</div></div>
 <div class="ttc" id="aclassAQueue_html"><div class="ttname"><a href="classAQueue.html">AQueue</a></div><div class="ttdoc">A std::queue with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AQueue.h:29</div></div>
 <div class="ttc" id="aclassAThreadPool_1_1TryLaterException_html"><div class="ttname"><a href="classAThreadPool_1_1TryLaterException.html">AThreadPool::TryLaterException</a></div><div class="ttdef"><b>Definition:</b> AThreadPool.h:151</div></div>
 <div class="ttc" id="aclassAThreadPool_html"><div class="ttname"><a href="classAThreadPool.html">AThreadPool</a></div><div class="ttdoc">Thread pool implementation.</div><div class="ttdef"><b>Definition:</b> AThreadPool.h:40</div></div>
 <div class="ttc" id="aclassAThreadPool_html_a5ab99db5b16449e777bba101f46844af"><div class="ttname"><a href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">AThreadPool::global</a></div><div class="ttdeci">static AThreadPool &amp; global()</div><div class="ttdef"><b>Definition:</b> AThreadPool.cpp:143</div></div>
 <div class="ttc" id="aclassAThreadPool_html_ab193ebe3b3a67a28a5062df037f6e252"><div class="ttname"><a href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">AThreadPool::parallel</a></div><div class="ttdeci">auto parallel(Iterator begin, Iterator end, Functor &amp;&amp;functor)</div><div class="ttdef"><b>Definition:</b> AThreadPool.h:196</div></div>
-<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:41</div></div>
+<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:43</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:124</div></div>
-<div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html_aa5daf770778f70b6ce98d301d0e8619f"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">aui::impl::future::Future::hasResult</a></div><div class="ttdeci">bool hasResult() const noexcept</div><div class="ttdef"><b>Definition:</b> AFuture.h:306</div></div>
+<div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html_aa5daf770778f70b6ce98d301d0e8619f"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">aui::impl::future::Future::hasResult</a></div><div class="ttdeci">bool hasResult() const noexcept</div><div class="ttdef"><b>Definition:</b> AFuture.h:317</div></div>
 <div class="ttc" id="astructaui_1_1reverse__iterator__wrap_html"><div class="ttname"><a href="structaui_1_1reverse__iterator__wrap.html">aui::reverse_iterator_wrap</a></div><div class="ttdef"><b>Definition:</b> iterators.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
