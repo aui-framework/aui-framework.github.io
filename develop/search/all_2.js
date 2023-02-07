@@ -20,7 +20,8 @@ var searchData=
   ['boxshadow_17',['boxShadow',['../classRender.html#afd5b3c5b2e7399c2294566fda3ccebf0',1,'Render']]],
   ['brushhelper_18',['BrushHelper',['../structBrushHelper.html',1,'']]],
   ['builder_19',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder']]],
-  ['button_20',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]],
-  ['by_21',['By',['../namespaceBy.html',1,'']]],
-  ['byid_22',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]
+  ['button_20',['button',['../structAPointerPressedEvent.html#aedb39c87d88414d55bcfa2dc7b4acfd9',1,'APointerPressedEvent::button()'],['../structAPointerReleasedEvent.html#aa6a4392c231a941f2425b21cd72e840f',1,'APointerReleasedEvent::button()']]],
+  ['button_21',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]],
+  ['by_22',['By',['../namespaceBy.html',1,'']]],
+  ['byid_23',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]
 ];

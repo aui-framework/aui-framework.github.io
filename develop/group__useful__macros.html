@@ -325,12 +325,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">struct </span>__apply ## __FUNCTION__ ## __LINE__   : std::decay_t&lt;decltype(object)&gt;::stored_t { \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">struct </span>__apply ## __FUNCTION__ ## __LINE__   : std::decay_t&lt;decltype(object)&gt; { \</div>
 <div class="line">        void operator()() {                                                    \</div>
 <div class="line">            lambda;                                                            \</div>
 <div class="line">        }                                                                      \</div>
 <div class="line">    };                                                                         \</div>
-<div class="line">    (<span class="keyword">reinterpret_cast&lt;</span>__apply ## __FUNCTION__ ## __LINE__ &amp;<span class="keyword">&gt;</span>(object))()</div>
+<div class="line">    (<span class="keyword">static_cast&lt;</span>__apply ## __FUNCTION__ ## __LINE__ &amp;<span class="keyword">&gt;</span>(object))()</div>
 </div><!-- fragment -->
 <p>Performs multiple operations on a single object without repeating its name. </p>
 <dl class="params"><dt>Parameters</dt><dd>

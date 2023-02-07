@@ -1,5 +1,5 @@
 var classAScrollbar =
 [
-    [ "onMouseWheel", "classAScrollbar.html#ac54d3c1b837643db8806858441bad7f0", null ],
+    [ "onScroll", "classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411", null ],
     [ "setStickToEnd", "classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115", null ]
 ];

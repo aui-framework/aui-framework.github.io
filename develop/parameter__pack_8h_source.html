@@ -111,28 +111,29 @@ $(document).ready(function(){initNavTree('parameter__pack_8h_source.html',''); i
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>aui {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">namespace </span>impl {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span>... Up&gt;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1first.html">   24</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1first.html">first</a> {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keyword">using</span> type = First;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        };</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="namespaceaui_1_1parameter__pack.html">   67</a></span>    <span class="keyword">namespace </span>parameter_pack {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Callable, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> for_each(Callable&amp;&amp; c, Args&amp;&amp;... args) <span class="keyword">requires</span> (... &amp;&amp; std::invocable&lt;Callable, Args&gt;) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            (..., [&amp;] {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                c(std::forward&lt;Args&gt;(args));</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            }());</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Types&gt;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">using</span> first = <span class="keyword">typename</span> <a class="code hl_struct" href="structaui_1_1impl_1_1first.html">impl::first</a>&lt;Types...&gt;<a class="code hl_struct" href="structViewActionType.html">::type</a>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    };</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;AUI/Traits/concepts.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span>aui {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">namespace </span>impl {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> First, <span class="keyword">typename</span>... Up&gt;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1first.html">   25</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1first.html">first</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keyword">using</span> type = First;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        };</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="namespaceaui_1_1parameter__pack.html">   68</a></span>    <span class="keyword">namespace </span>parameter_pack {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Callable, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> for_each(Callable&amp;&amp; c, Args&amp;&amp;... args) <span class="keyword">requires</span> (... &amp;&amp; aui::invocable&lt;Callable, Args&gt;) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            (..., [&amp;] {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                c(std::forward&lt;Args&gt;(args));</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }());</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Types&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">using</span> first = <span class="keyword">typename</span> <a class="code hl_struct" href="structaui_1_1impl_1_1first.html">impl::first</a>&lt;Types...&gt;<a class="code hl_struct" href="structViewActionType.html">::type</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
 <div class="ttc" id="astructViewActionType_html"><div class="ttname"><a href="structViewActionType.html">ViewActionType</a></div><div class="ttdef"><b>Definition:</b> Type.h:21</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1first_html"><div class="ttname"><a href="structaui_1_1impl_1_1first.html">aui::impl::first</a></div><div class="ttdef"><b>Definition:</b> parameter_pack.h:24</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1first_html"><div class="ttname"><a href="structaui_1_1impl_1_1first.html">aui::impl::first</a></div><div class="ttdef"><b>Definition:</b> parameter_pack.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

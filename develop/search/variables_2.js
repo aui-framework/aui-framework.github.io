@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['fail_0',['fail',['../classACurl.html#a91049f49ce8f754261b5795f40e88b94',1,'ACurl']]],
-  ['focusstate_1',['focusState',['../classAView.html#a96f3c6e2b8c960c5081866e26baa828e',1,'AView']]]
+  ['datachanged_0',['dataChanged',['../classIListModel.html#aa8d3668d668948759dfdeba7ae405899',1,'IListModel']]],
+  ['datainserted_1',['dataInserted',['../classIListModel.html#a4991a53ae9caaba6ebd44543e73644d6',1,'IListModel']]],
+  ['dataremoved_2',['dataRemoved',['../classIListModel.html#aec159ec4883edd750bc9ac6e5969ab2d',1,'IListModel']]]
 ];

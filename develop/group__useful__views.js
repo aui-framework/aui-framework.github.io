@@ -43,7 +43,7 @@ var group__useful__views =
     [ "AListView", "classAListView.html", [
       [ "getContentMinimumHeight", "classAListView.html#aa6e333c79bb370556f838241379dd83d", null ],
       [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ],
-      [ "onMouseWheel", "classAListView.html#a464da92d47aa073d1b7b5380c76a996d", null ]
+      [ "onScroll", "classAListView.html#ac11c4506f0554e69bcf4438f7492ec97", null ]
     ] ],
     [ "ANumberPicker", "classANumberPicker.html", [
       [ "getContentMinimumHeight", "classANumberPicker.html#ae5931096355856c82ad0d6f56f0f0668", null ],
@@ -68,11 +68,11 @@ var group__useful__views =
       [ "Builder", "classAScrollArea_1_1Builder.html", null ],
       [ "getContentMinimumHeight", "classAScrollArea.html#aa686c2c309f39c9675654b76e4045397", null ],
       [ "onGesture", "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de", null ],
-      [ "onMouseWheel", "classAScrollArea.html#a84e9d956f62c86836f95eadc0324890e", null ],
+      [ "onScroll", "classAScrollArea.html#a1ec97c0e09e70449d9644680e1300b8d", null ],
       [ "setStickToEnd", "classAScrollArea.html#a2770daab18df7595e3977685d80a242f", null ]
     ] ],
     [ "AScrollbar", "classAScrollbar.html", [
-      [ "onMouseWheel", "classAScrollbar.html#ac54d3c1b837643db8806858441bad7f0", null ],
+      [ "onScroll", "classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411", null ],
       [ "setStickToEnd", "classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115", null ]
     ] ],
     [ "ASpacerExpanding", "classASpacerExpanding.html", [
@@ -102,7 +102,7 @@ var group__useful__views =
         [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a755c9bf00449be4736faaf8096634dd9", null ]
       ] ],
       [ "getContentMinimumHeight", "classATextArea.html#ac7e0a6483c8597050a8ba5ad26c62d6e", null ],
-      [ "onMouseWheel", "classATextArea.html#a0bdc84641dd2910dec8d4bcba8ff4e51", null ]
+      [ "onScroll", "classATextArea.html#aae0df62074c3a91e8c966e4474c1f4eb", null ]
     ] ],
     [ "ATextField", "classATextField.html", null ],
     [ "ATreeView", "classATreeView.html", [
@@ -112,7 +112,7 @@ var group__useful__views =
       ] ],
       [ "ItemView", "classATreeView_1_1ItemView.html", null ],
       [ "getContentMinimumHeight", "classATreeView.html#a8ad93957c27d657d7509158864e5095c", null ],
-      [ "onMouseWheel", "classATreeView.html#a69ead44900fdcf6e031d374fdb0ab523", null ]
+      [ "onScroll", "classATreeView.html#a0b061bb669274d85c1aed14d455850b7", null ]
     ] ],
     [ "AVDividerView", "classAVDividerView.html", null ],
     [ "AView", "classAView.html", [
@@ -150,8 +150,8 @@ var group__useful__views =
       [ "invalidateAssHelper", "classAView.html#a2fe107662aec06c7c1ad7aa2eda71c0c", null ],
       [ "invalidateStateStyles", "classAView.html#aae643e27fa9578fecad36519f30ed043", null ],
       [ "onGesture", "classAView.html#a2b74937853928a68e0f7ec4cae7adb3b", null ],
-      [ "onMousePressed", "classAView.html#ae00b0a186ecc94d89bf77cb384f3cc6c", null ],
-      [ "onMouseWheel", "classAView.html#a54e470b666b6ee087615104a4d68064d", null ],
+      [ "onPointerPressed", "classAView.html#a9460f4e65eb9bea9332d79a5436035f5", null ],
+      [ "onScroll", "classAView.html#af2c762c24fe6e7cfdfbfeb398aad6043", null ],
       [ "operator+", "classAView.html#a6f62c8da04a69c4cb3e32d4f576b274b", null ],
       [ "pack", "classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71", null ],
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
@@ -179,12 +179,12 @@ var group__useful__views =
       [ "mMargin", "classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e", null ],
       [ "mMaxSize", "classAView.html#a65a8d1574db7e833c6481aecfbf9cadb", null ],
       [ "mMinSize", "classAView.html#afcab50e0676d2197c64a8d8c2221d741", null ],
-      [ "mouseScrolled", "classAView.html#ab5a8c50b074fc22dfc8bafcd7b525d67", null ],
       [ "mPadding", "classAView.html#a94e793bd34bdbd3b47a5bd5660747e18", null ],
       [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
       [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
       [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
-      [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ]
+      [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ],
+      [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ]
     ] ],
     [ "AViewContainer", "classAViewContainer.html", [
       [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],
@@ -195,7 +195,7 @@ var group__useful__views =
       [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
       [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
       [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
-      [ "onMouseWheel", "classAViewContainer.html#ac85d68dc6bc433e61b7eb7db1f63d45d", null ],
+      [ "onScroll", "classAViewContainer.html#a495a90385729196ebdd503beec159a45", null ],
       [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
       [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
       [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],

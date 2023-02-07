@@ -34,8 +34,8 @@ var classAView =
     [ "invalidateAssHelper", "classAView.html#a2fe107662aec06c7c1ad7aa2eda71c0c", null ],
     [ "invalidateStateStyles", "classAView.html#aae643e27fa9578fecad36519f30ed043", null ],
     [ "onGesture", "classAView.html#a2b74937853928a68e0f7ec4cae7adb3b", null ],
-    [ "onMousePressed", "classAView.html#ae00b0a186ecc94d89bf77cb384f3cc6c", null ],
-    [ "onMouseWheel", "classAView.html#a54e470b666b6ee087615104a4d68064d", null ],
+    [ "onPointerPressed", "classAView.html#a9460f4e65eb9bea9332d79a5436035f5", null ],
+    [ "onScroll", "classAView.html#af2c762c24fe6e7cfdfbfeb398aad6043", null ],
     [ "operator+", "classAView.html#a6f62c8da04a69c4cb3e32d4f576b274b", null ],
     [ "pack", "classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71", null ],
     [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
@@ -63,10 +63,10 @@ var classAView =
     [ "mMargin", "classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e", null ],
     [ "mMaxSize", "classAView.html#a65a8d1574db7e833c6481aecfbf9cadb", null ],
     [ "mMinSize", "classAView.html#afcab50e0676d2197c64a8d8c2221d741", null ],
-    [ "mouseScrolled", "classAView.html#ab5a8c50b074fc22dfc8bafcd7b525d67", null ],
     [ "mPadding", "classAView.html#a94e793bd34bdbd3b47a5bd5660747e18", null ],
     [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
     [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
     [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
-    [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ]
+    [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ],
+    [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ]
 ];

@@ -70,8 +70,8 @@ var NAVTREEINDEX =
 "classASqlDatabase.html#aadb13cbf465a74d3aac1622503f5148d",
 "classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a",
 "classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db",
-"structARenderingContextOptions_1_1Software.html",
-"structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html"
+"structAJsonConv_3_01bool_01_4.html",
+"structaui_1_1detail_1_1fmt.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

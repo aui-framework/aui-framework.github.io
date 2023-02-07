@@ -123,7 +123,8 @@ var namespaces =
       [ "detail", null, [
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
-        [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ]
+        [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+        [ "SameHelper", "conceptaui_1_1detail_1_1SameHelper.html", null ]
       ] ],
       [ "impl", null, [
         [ "future", null, [
@@ -219,6 +220,24 @@ var namespaces =
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ],
+      [ "derived_from", "conceptaui_1_1derived__from.html", null ],
+      [ "invocable", "conceptaui_1_1invocable.html", null ],
+      [ "convertible_to", "conceptaui_1_1convertible__to.html", null ],
+      [ "destructible", "conceptaui_1_1destructible.html", null ],
+      [ "constructible_from", "conceptaui_1_1constructible__from.html", null ],
+      [ "move_constructible", "conceptaui_1_1move__constructible.html", null ],
+      [ "copy_constructible", "conceptaui_1_1copy__constructible.html", null ],
+      [ "same_as", "conceptaui_1_1same__as.html", null ],
+      [ "common_reference_with", "conceptaui_1_1common__reference__with.html", null ],
+      [ "assignable_from", "conceptaui_1_1assignable__from.html", null ],
+      [ "swappable", "conceptaui_1_1swappable.html", null ],
+      [ "movable", "conceptaui_1_1movable.html", null ],
+      [ "copyable", "conceptaui_1_1copyable.html", null ],
+      [ "default_initializable", "conceptaui_1_1default__initializable.html", null ],
+      [ "semiregular", "conceptaui_1_1semiregular.html", null ],
+      [ "regular", "conceptaui_1_1regular.html", null ],
+      [ "incrementable", "conceptaui_1_1incrementable.html", null ],
+      [ "predicate", "conceptaui_1_1predicate.html", null ],
       [ "mapper", "conceptaui_1_1mapper.html", null ],
       [ "factory", "conceptaui_1_1factory.html", null ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
