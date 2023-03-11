@@ -28,6 +28,7 @@ var group__views =
     [ "Visibility", "group__views.html#ga53d6f8ccb0015ea020228de41cfd2162", [
       [ "Visibility::VISIBLE", "group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54", null ],
       [ "Visibility::INVISIBLE", "group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a5fb351568336ebb294804f81e3c8663d", null ],
+      [ "Visibility::UNREACHABLE", "group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a58fd3b3b1f27606728077423eb21d8d6", null ],
       [ "Visibility::GONE", "group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74", null ]
     ] ],
     [ "AUI_ENUM_VALUES", "group__views.html#ga252491a233267aca499e06f3461aea07", null ]
