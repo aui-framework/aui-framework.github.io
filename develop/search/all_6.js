@@ -30,14 +30,15 @@ var searchData=
   ['fontsize_27',['FontSize',['../structass_1_1FontSize.html',1,'ass']]],
   ['formatetcenumerator_28',['FormatEtcEnumerator',['../classFormatEtcEnumerator.html',1,'']]],
   ['formatter_3c_20t_2c_20char_2c_20std_3a_3aenable_5fif_5ft_3c_20aui_3a_3ais_5fcomplete_3c_20aenumerateallvalues_3c_20t_20_3e_20_3e_20_3e_20_3e_29',['formatter&lt; T, char, std::enable_if_t&lt; aui::is_complete&lt; AEnumerateAllValues&lt; T &gt; &gt; &gt; &gt;',['../structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html',1,'fmt']]],
-  ['framemillis_30',['frameMillis',['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()']]],
+  ['framemillis_30',['frameMillis',['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()'],['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()']]],
   ['freetype_31',['FreeType',['../classFreeType.html',1,'']]],
   ['frompid_32',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
   ['fromrange_33',['fromRange',['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector']]],
   ['fromstring_34',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['fromvector_35',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
-  ['future_36',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
-  ['future_3c_20void_20_3e_37',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
-  ['futurereturntype_38',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
-  ['futurereturntype_3c_20void_20_3e_39',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]
+  ['fromurl_35',['fromUrl',['../classIDrawable.html#ae65ce317a418ed8c92858ef04b6e9b04',1,'IDrawable']]],
+  ['fromvector_36',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
+  ['future_37',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
+  ['future_3c_20void_20_3e_38',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
+  ['futurereturntype_39',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
+  ['futurereturntype_3c_20void_20_3e_40',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]
 ];
