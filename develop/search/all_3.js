@@ -7,7 +7,7 @@ var searchData=
   ['cancellationwrapper_4',['CancellationWrapper',['../structaui_1_1impl_1_1future_1_1CancellationWrapper.html',1,'aui::impl::future']]],
   ['capacity_5',['capacity',['../classAByteBuffer.html#a600684376b6ebfa4f61659dce8fb7f84',1,'AByteBuffer']]],
   ['capture_6',['capture',['../classAStacktrace.html#a7146759bc7848d34d98f303c76f1b37c',1,'AStacktrace']]],
-  ['capturesfocus_7',['capturesFocus',['../classAViewContainer.html#abd66caead2574fdb4da9891a803d014a',1,'AViewContainer::capturesFocus()'],['../classAView.html#a9547a05b06074b931ac270898b4e3321',1,'AView::capturesFocus()']]],
+  ['capturesfocus_7',['capturesFocus',['../classAView.html#a9547a05b06074b931ac270898b4e3321',1,'AView::capturesFocus()'],['../classASlider.html#a0e6810d98f2994cef20729603e762a12',1,'ASlider::capturesFocus()'],['../classAViewContainer.html#abd66caead2574fdb4da9891a803d014a',1,'AViewContainer::capturesFocus()']]],
   ['center_8',['CENTER',['../group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ac397289ee45877be0cd49811fe245b4e',1,'ass']]],
   ['character_9',['Character',['../structAFont_1_1Character.html',1,'AFont']]],
   ['charentry_10',['CharEntry',['../structCharEntry.html',1,'']]],

@@ -192,6 +192,7 @@ var annotated =
       [ "noncopyable", "structaui_1_1noncopyable.html", null ],
       [ "ptr", "structaui_1_1ptr.html", null ],
       [ "range", "structaui_1_1range.html", null ],
+      [ "ranged_number", "structaui_1_1ranged__number.html", null ],
       [ "raw_serializable", "structaui_1_1raw__serializable.html", null ],
       [ "reverse_iterator_wrap", "structaui_1_1reverse__iterator__wrap.html", null ],
       [ "sequence_traits", "structaui_1_1sequence__traits.html", [
@@ -505,6 +506,7 @@ var annotated =
     [ "AShortcut", "classAShortcut.html", null ],
     [ "ASignal", "classASignal.html", "classASignal" ],
     [ "ASizeAnimator", "classASizeAnimator.html", "classASizeAnimator" ],
+    [ "ASlider", "classASlider.html", "classASlider" ],
     [ "ASoftwareEmbedAuiWrap", "classASoftwareEmbedAuiWrap.html", null ],
     [ "ASolidBrush", "structASolidBrush.html", null ],
     [ "ASpacerExpanding", "classASpacerExpanding.html", "classASpacerExpanding" ],

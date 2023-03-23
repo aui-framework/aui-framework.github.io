@@ -290,6 +290,7 @@ var hierarchy =
           [ "ARulerView", "classARulerView.html", null ],
           [ "AScrollbarButton", "classAScrollbarButton.html", null ],
           [ "AScrollbarHandle", "classAScrollbarHandle.html", null ],
+          [ "ASlider::Handle", "classASlider_1_1Handle.html", null ],
           [ "ASpacerExpanding", "classASpacerExpanding.html", [
             [ "AScrollbarOffsetSpacer", "classAScrollbarOffsetSpacer.html", null ]
           ] ],
@@ -333,6 +334,7 @@ var hierarchy =
             ] ],
             [ "AScrollAreaContainer", "classAScrollAreaContainer.html", null ],
             [ "AScrollbar", "classAScrollbar.html", null ],
+            [ "ASlider", "classASlider.html", null ],
             [ "ASplitter", "classASplitter.html", null ],
             [ "ATabButtonRow", "classATabButtonRow.html", null ],
             [ "ATabView", "classATabView.html", null ],
@@ -737,6 +739,7 @@ var hierarchy =
       [ "uitest::impl::both< L, R >", "structuitest_1_1impl_1_1both.html", null ]
     ] ],
     [ "aui::range< Iterator >", "structaui_1_1range.html", null ],
+    [ "aui::ranged_number< UnderlyingType, min, max >", "structaui_1_1ranged__number.html", null ],
     [ "aui::raw_serializable< T >", "structaui_1_1raw__serializable.html", [
       [ "ASerializable< T, std::enable_if_t< std::is_arithmetic_v< T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html", null ]
     ] ],

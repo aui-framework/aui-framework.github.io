@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handle_0',['Handle',['../classIEventLoop_1_1Handle.html',1,'IEventLoop']]],
+  ['handle_0',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
   ['handlesnonmousenavigation_1',['handlesNonMouseNavigation',['../classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2',1,'AAbstractTextField::handlesNonMouseNavigation()'],['../classAAbstractTypeableView.html#a0e905ae6059acbf92e94c30a053e3d56',1,'AAbstractTypeableView::handlesNonMouseNavigation()'],['../classAView.html#a9c3deb7023947adc4c698540db4086c8',1,'AView::handlesNonMouseNavigation()']]],
   ['hash_3c_20astring_20_3e_2',['hash&lt; AString &gt;',['../structstd_1_1hash_3_01AString_01_4.html',1,'std']]],
   ['hasindirectparent_3',['hasIndirectParent',['../classAView.html#a37642918735ccb3939f63d85ff56310c',1,'AView']]],

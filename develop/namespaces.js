@@ -208,6 +208,7 @@ var namespaces =
       [ "noncopyable", "structaui_1_1noncopyable.html", null ],
       [ "ptr", "structaui_1_1ptr.html", null ],
       [ "range", "structaui_1_1range.html", null ],
+      [ "ranged_number", "structaui_1_1ranged__number.html", null ],
       [ "raw_serializable", "structaui_1_1raw__serializable.html", null ],
       [ "reverse_iterator_wrap", "structaui_1_1reverse__iterator__wrap.html", null ],
       [ "sequence_traits", "structaui_1_1sequence__traits.html", [
@@ -240,6 +241,7 @@ var namespaces =
       [ "predicate", "conceptaui_1_1predicate.html", null ],
       [ "mapper", "conceptaui_1_1mapper.html", null ],
       [ "factory", "conceptaui_1_1factory.html", null ],
+      [ "arithmetic", "conceptaui_1_1arithmetic.html", null ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
       [ "reverse_iterator_direction", "group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84", null ]

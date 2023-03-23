@@ -8,5 +8,6 @@ var group__useful__templates =
     [ "aui::zip< Containers >", "structaui_1_1zip.html", [
       [ "iterator", "structaui_1_1zip_1_1iterator.html", null ]
     ] ],
+    [ "aui::ranged_number< UnderlyingType, min, max >", "structaui_1_1ranged__number.html", null ],
     [ "aui::fast_pimpl< T, storageSize, storageAlignment >", "structaui_1_1fast__pimpl.html", null ]
 ];
