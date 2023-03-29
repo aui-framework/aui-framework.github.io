@@ -410,7 +410,6 @@ var hierarchy =
     [ "aui::detail::fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
     [ "ass::Font", "structass_1_1Font.html", null ],
     [ "AFont::FontData", "structAFont_1_1FontData.html", null ],
-    [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
     [ "ass::FontFamily", "structass_1_1FontFamily.html", null ],
     [ "AFont::FontKey", "structAFont_1_1FontKey.html", null ],
     [ "ass::FontSize", "structass_1_1FontSize.html", null ],
@@ -690,6 +689,7 @@ var hierarchy =
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
       [ "IcmpImpl", "classIcmpImpl.html", null ],
+      [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
       [ "Pipe", "classPipe.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
