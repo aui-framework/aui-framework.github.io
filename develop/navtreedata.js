@@ -68,10 +68,10 @@ var NAVTREEINDEX =
 "annotated.html",
 "classAFlatVector.html",
 "classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html",
-"classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac",
-"classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194",
-"structAJsonConv_3_01AJson_1_1Array_01_4.html",
-"structass_1_1unset__wrap.html"
+"classAWindow.html#a914a33c3e1bf066273a4c56073423c26",
+"classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0",
+"structAJsonConv_3_01APath_01_4.html",
+"structaui_1_1BinarySearchNearestToZero.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,7 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"structAJsonConv_3_01AJson_1_1Array_01_4.html":[0,2,126],
-"structAJsonConv_3_01AJson_1_1Object_01_4.html":[0,2,127],
 "structAJsonConv_3_01APath_01_4.html":[0,2,128],
 "structAJsonConv_3_01AString_01_4.html":[0,2,129],
 "structAJsonConv_3_01AVector_3_01T_01_4_00_01typename_01std_1_1enable__if__t_3_01aui_1_1has__json2263ac460368202a36432e8eb8d9ace5.html":[0,2,130],
@@ -249,5 +247,7 @@ var NAVTREEINDEX5 =
 "structass_1_1hovered.html":[0,0,5,25],
 "structass_1_1hovered.html":[0,2,3,25],
 "structass_1_1type__of.html":[0,0,5,42],
-"structass_1_1type__of.html":[0,2,3,42]
+"structass_1_1type__of.html":[0,2,3,42],
+"structass_1_1unset__wrap.html":[0,0,5,43],
+"structass_1_1unset__wrap.html":[0,2,3,43]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"structass_1_1unset__wrap.html":[0,0,5,43],
-"structass_1_1unset__wrap.html":[0,2,3,43],
 "structaui_1_1BinarySearchNearestToZero.html":[0,2,4,9],
 "structaui_1_1BinarySearchNearestToZero.html":[0,0,6,10],
 "structaui_1_1atomic__lazy.html":[0,2,4,8],
