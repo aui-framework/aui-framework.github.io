@@ -46,6 +46,7 @@ var classAView =
     [ "setPadding", "classAView.html#af409baa975fcd918472e42462b1955b6", null ],
     [ "setSizeForced", "classAView.html#ac385fe5c95866dbe081aac74c7dba519", null ],
     [ "transformGestureEventsToDesktop", "classAView.html#a1b273cbe961c8633b17171b750762135", null ],
+    [ "wantsTouchscreenKeyboard", "classAView.html#a96b967218c79654c2bca5cc8c686a407", null ],
     [ "clicked", "classAView.html#af2361cde3ebf9e0b410c28dab746029d", null ],
     [ "clickedButton", "classAView.html#a5812c5a904c1d23c711e0075e1b2be5d", null ],
     [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],

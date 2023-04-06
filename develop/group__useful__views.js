@@ -8,7 +8,8 @@ var group__useful__views =
       [ "textLength", "classAAbstractTextField.html#a6d41e754abc7f9e2432508a53287e3b4", null ],
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
       [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
-      [ "typeableInsert", "classAAbstractTextField.html#a627a137628b73f9139838408234ff47c", null ]
+      [ "typeableInsert", "classAAbstractTextField.html#a627a137628b73f9139838408234ff47c", null ],
+      [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ]
     ] ],
     [ "AButton", "classAButton.html", [
       [ "consumesClick", "classAButton.html#ad80e94073674662d0ad29b3662f6025f", null ]
@@ -166,6 +167,7 @@ var group__useful__views =
       [ "setPadding", "classAView.html#af409baa975fcd918472e42462b1955b6", null ],
       [ "setSizeForced", "classAView.html#ac385fe5c95866dbe081aac74c7dba519", null ],
       [ "transformGestureEventsToDesktop", "classAView.html#a1b273cbe961c8633b17171b750762135", null ],
+      [ "wantsTouchscreenKeyboard", "classAView.html#a96b967218c79654c2bca5cc8c686a407", null ],
       [ "clicked", "classAView.html#af2361cde3ebf9e0b410c28dab746029d", null ],
       [ "clickedButton", "classAView.html#a5812c5a904c1d23c711e0075e1b2be5d", null ],
       [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
