@@ -19,7 +19,11 @@ var group__views =
     [ "AMimedData", "classAMimedData.html", [
       [ "setText", "classAMimedData.html#aa02bc659384889d00a53001ecdd46046", null ]
     ] ],
-    [ "AOverflow", "group__views.html#ga0b5c15e7f44eba2c0eb1705539014892", null ],
+    [ "AOverflow", "group__views.html#ga0b5c15e7f44eba2c0eb1705539014892", [
+      [ "AOverflow::VISIBLE", "group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54", null ],
+      [ "AOverflow::HIDDEN", "group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a347e628a8f72626a0611ef842fe9d304", null ],
+      [ "AOverflow::HIDDEN_FROM_THIS", "group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a132f85d5b4f206b0cf9404c9b895739d", null ]
+    ] ],
     [ "FontRendering", "group__views.html#ga6cfde77b0c6e1bcd1b601d598c152e34", null ],
     [ "ImageRendering", "group__views.html#ga2df3ac3578c22f7d1b4efc6079a13db3", null ],
     [ "TextAlign", "group__views.html#gabdd7e81d0fb7db7f8a4e6465765bac0b", null ],
