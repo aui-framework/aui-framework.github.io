@@ -179,6 +179,8 @@ var annotated =
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
       [ "BinarySearchNearestToZero", "structaui_1_1BinarySearchNearestToZero.html", null ],
+      [ "callable_info", "structaui_1_1callable__info.html", null ],
+      [ "callable_info< Return(Args...)>", "structaui_1_1callable__info_3_01Return_07Args_8_8_8_08_4.html", null ],
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
@@ -203,7 +205,6 @@ var annotated =
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
-      [ "type_list", "structaui_1_1type__list.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ]
     ] ],
     [ "AzazaATest", null, [

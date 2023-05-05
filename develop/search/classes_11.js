@@ -22,6 +22,5 @@ var searchData=
   ['transformscale_19',['TransformScale',['../structass_1_1TransformScale.html',1,'ass']]],
   ['trylaterexception_20',['TryLaterException',['../classAThreadPool_1_1TryLaterException.html',1,'AThreadPool']]],
   ['type_21',['Type',['../structass_1_1detail_1_1Type.html',1,'ass::detail']]],
-  ['type_5flist_22',['type_list',['../structaui_1_1type__list.html',1,'aui']]],
-  ['type_5fof_23',['type_of',['../structass_1_1type__of.html',1,'ass']]]
+  ['type_5fof_22',['type_of',['../structass_1_1type__of.html',1,'ass']]]
 ];

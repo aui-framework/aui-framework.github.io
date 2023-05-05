@@ -213,6 +213,8 @@ var hierarchy =
     [ "Cache< T, Container, K >", "classCache.html", null ],
     [ "Cache< IDrawable, Cache, AUrl >", "classCache.html", null ],
     [ "ASignal< Args >::call_wrapper", "structASignal_1_1call__wrapper.html", null ],
+    [ "aui::callable_info< Return, Args >", "structaui_1_1callable__info.html", null ],
+    [ "aui::callable_info< Return(Args...)>", "structaui_1_1callable__info_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::impl::future::CancellationWrapper< Inner >", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
@@ -852,7 +854,6 @@ var hierarchy =
     [ "std::tuple", null, [
       [ "aui::impl::json::my_tuple< Items >", "structaui_1_1impl_1_1json_1_1my__tuple.html", null ]
     ] ],
-    [ "aui::type_list< Types >", "structaui_1_1type__list.html", null ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],

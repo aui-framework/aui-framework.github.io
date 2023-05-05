@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('parameter__pack_8h_source.html',''); i
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="namespaceaui_1_1parameter__pack.html">   68</a></span>    <span class="keyword">namespace </span>parameter_pack {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Callable, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> for_each(Callable&amp;&amp; c, Args&amp;&amp;... args) <span class="keyword">requires</span> (... &amp;&amp; aui::invocable&lt;Callable, Args&gt;) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> for_each(Callable&amp;&amp; c, Args&amp;&amp;... args) <span class="keyword">requires</span> (... &amp;&amp; <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;Callable, Args&gt;</a>) {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            (..., [&amp;] {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                c(std::forward&lt;Args&gt;(args));</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            }());</div>
@@ -132,6 +132,7 @@ $(document).ready(function(){initNavTree('parameter__pack_8h_source.html',''); i
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">using</span> first = <span class="keyword">typename</span> <a class="code hl_struct" href="structaui_1_1impl_1_1first.html">impl::first</a>&lt;Types...&gt;<a class="code hl_struct" href="structViewActionType.html">::type</a>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="ttc" id="aconceptaui_1_1invocable_html"><div class="ttname"><a href="conceptaui_1_1invocable.html">aui::invocable</a></div><div class="ttdoc">Invokable concept.</div><div class="ttdef"><b>Definition:</b> concepts.h:41</div></div>
 <div class="ttc" id="astructViewActionType_html"><div class="ttname"><a href="structViewActionType.html">ViewActionType</a></div><div class="ttdef"><b>Definition:</b> Type.h:21</div></div>
 <div class="ttc" id="astructaui_1_1impl_1_1first_html"><div class="ttname"><a href="structaui_1_1impl_1_1first.html">aui::impl::first</a></div><div class="ttdef"><b>Definition:</b> parameter_pack.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->

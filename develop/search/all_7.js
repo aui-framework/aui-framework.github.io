@@ -40,11 +40,14 @@ var searchData=
   ['gettotalfieldvertical_37',['getTotalFieldVertical',['../classAView.html#a274972d0e96c9ad2779fe5dfdeb71727',1,'AView']]],
   ['gettotaloccupiedheight_38',['getTotalOccupiedHeight',['../classAView.html#acaef54d28990d25a3edf594e163c1a8b',1,'AView']]],
   ['gettotaloccupiedwidth_39',['getTotalOccupiedWidth',['../classAView.html#a521f58942c69ff63566ada3e3d774f32',1,'AView']]],
-  ['getwindow_40',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
-  ['glcontext_41',['GLContext',['../classGLContext.html',1,'']]],
-  ['global_42',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool::global()'],['../classACurlMulti.html#a2f2680b1a852dc231c07d30f3f68a730',1,'ACurlMulti::global()']]],
-  ['gone_43',['GONE',['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74',1,'Visibility.h']]],
-  ['gradientshaderhelper_44',['GradientShaderHelper',['../structGradientShaderHelper.html',1,'']]],
-  ['greater_5fof_45',['greater_of',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
-  ['group_46',['Group',['../classARadioButton_1_1Group.html',1,'ARadioButton']]]
+  ['getviewat_40',['getViewAt',['../classAListViewContainer.html#a99cfac117a7ea1ffede2a0f22690e336',1,'AListViewContainer::getViewAt()'],['../classAViewContainer.html#aeb44d35f2a0eccc8fd1c6f9a7560f71f',1,'AViewContainer::getViewAt(glm::ivec2 pos, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE) const noexcept']]],
+  ['getviewatrecursive_41',['getViewAtRecursive',['../classAViewContainer.html#a2e958ee61095b749fbcebfa262662bf7',1,'AViewContainer::getViewAtRecursive(glm::ivec2 pos, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE) const noexcept'],['../classAViewContainer.html#a2e8ecc7bc43cd4313814066dd88b321f',1,'AViewContainer::getViewAtRecursive(glm::ivec2 pos, Callback &amp;&amp;callback, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE)']]],
+  ['getviewatrecursiveoftype_42',['getViewAtRecursiveOfType',['../classAViewContainer.html#a6785ea899fb389f3e3ae804aff46fbfb',1,'AViewContainer']]],
+  ['getwindow_43',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
+  ['glcontext_44',['GLContext',['../classGLContext.html',1,'']]],
+  ['global_45',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool::global()'],['../classACurlMulti.html#a2f2680b1a852dc231c07d30f3f68a730',1,'ACurlMulti::global()']]],
+  ['gone_46',['GONE',['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74',1,'Visibility.h']]],
+  ['gradientshaderhelper_47',['GradientShaderHelper',['../structGradientShaderHelper.html',1,'']]],
+  ['greater_5fof_48',['greater_of',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
+  ['group_49',['Group',['../classARadioButton_1_1Group.html',1,'ARadioButton']]]
 ];
