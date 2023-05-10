@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classASqlBuilder_1_1Update.html":[0,2,249,4],
 "classASqlBuilder_1_1WhereStatement.html":[0,2,249,5],
 "classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html":[0,2,249,5,0],
 "classASqlDatabase.html":[0,2,250],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classAWin32EventWait.html":[0,2,298],
 "classAWindow.html":[0,2,299],
 "classAWindow.html#a1aec53c688d095e3a9903df73e99b556":[0,2,299,9],
-"classAWindow.html#a201cce374d9e4359d014d8a9118d1357":[0,2,299,1],
-"classAWindow.html#a271b2fb2651a01713cafa78625f2dadb":[0,2,299,11]
+"classAWindow.html#a201cce374d9e4359d014d8a9118d1357":[0,2,299,1]
 };

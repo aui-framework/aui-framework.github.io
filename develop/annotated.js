@@ -392,7 +392,7 @@ var annotated =
     [ "AInet4Address", "classAInet4Address.html", null ],
     [ "AInvocationTargetException", "classAInvocationTargetException.html", null ],
     [ "AIOException", "classAIOException.html", null ],
-    [ "AJson", "classAJson.html", null ],
+    [ "AJson", "classAJson.html", "classAJson" ],
     [ "AJsonConv", "structAJsonConv.html", null ],
     [ "AJsonConv< AJson::Array >", "structAJsonConv_3_01AJson_1_1Array_01_4.html", null ],
     [ "AJsonConv< AJson::Object >", "structAJsonConv_3_01AJson_1_1Object_01_4.html", null ],

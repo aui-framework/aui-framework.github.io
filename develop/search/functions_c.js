@@ -9,7 +9,8 @@ var searchData=
   ['mapposition_6',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_7',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
   ['maximize_8',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
-  ['minimize_9',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
-  ['move_10',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
-  ['mul_11',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
+  ['mergedwith_9',['mergedWith',['../classAJson.html#a5ee18e70e8401823304e1f56cca503a4',1,'AJson']]],
+  ['minimize_10',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
+  ['move_11',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
+  ['mul_12',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
 ];
