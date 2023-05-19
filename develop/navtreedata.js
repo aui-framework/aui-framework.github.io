@@ -71,7 +71,7 @@ var NAVTREEINDEX =
 "classAWindow.html#a271b2fb2651a01713cafa78625f2dadb",
 "classaui_1_1assert__not__used__when__null.html",
 "structAEnumerate_1_1Values.html",
-"structass_1_1disabled.html"
+"structass_1_1detail_1_1debug__selector.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -403,6 +403,9 @@ var hierarchy =
     [ "ass::Expanding", "structass_1_1Expanding.html", null ],
     [ "Factory< BaseType >", "classFactory.html", null ],
     [ "FailsOnCopy", "classFailsOnCopy.html", null ],
+    [ "std::false_type", null, [
+      [ "fmt::detail::is_string< AString >", "structfmt_1_1detail_1_1is__string_3_01AString_01_4.html", null ]
+    ] ],
     [ "aui::fast_pimpl< T, storageSize, storageAlignment >", "structaui_1_1fast__pimpl.html", null ],
     [ "aui::impl::json::Field< T >", "structaui_1_1impl_1_1json_1_1Field.html", null ],
     [ "ADesktop::FileExtension", "structADesktop_1_1FileExtension.html", null ],
@@ -415,9 +418,11 @@ var hierarchy =
     [ "ass::FontFamily", "structass_1_1FontFamily.html", null ],
     [ "AFont::FontKey", "structAFont_1_1FontKey.html", null ],
     [ "ass::FontSize", "structass_1_1FontSize.html", null ],
-    [ "formatter", null, [
+    [ "fmt::formatter", null, [
+      [ "fmt::formatter< AString >", "structfmt_1_1formatter_3_01AString_01_4.html", null ],
       [ "fmt::formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
+    [ "fmt::formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
     [ "FreeType", "classFreeType.html", null ],
     [ "aui::impl::future::Future< Value >", "classaui_1_1impl_1_1future_1_1Future.html", null ],
     [ "aui::impl::future::Future< void >", "classaui_1_1impl_1_1future_1_1Future.html", [
@@ -583,7 +588,8 @@ var hierarchy =
     ] ],
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
-      [ "AAbstractTextField", "classAAbstractTextField.html", null ]
+      [ "AAbstractTextField", "classAAbstractTextField.html", null ],
+      [ "ass::decl::Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ]
     ] ],
     [ "AModelRange< T >::Iterator", "classAModelRange_1_1Iterator.html", null ],
     [ "AModelSelection< T >::Iterator", "classAModelSelection_1_1Iterator.html", null ],

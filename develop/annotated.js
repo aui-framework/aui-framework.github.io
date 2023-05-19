@@ -24,7 +24,7 @@ var annotated =
         [ "Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
         [ "Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
         [ "Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],
-        [ "Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ],
+        [ "Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4" ],
         [ "Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
         [ "Declaration< Border >", "structass_1_1decl_1_1Declaration_3_01Border_01_4.html", null ],
         [ "Declaration< BorderBottom >", "structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html", null ],
@@ -216,6 +216,11 @@ var annotated =
       [ "Style", "structdeclarative_1_1Style.html", null ]
     ] ],
     [ "fmt", null, [
+      [ "detail", null, [
+        [ "is_string< AString >", "structfmt_1_1detail_1_1is__string_3_01AString_01_4.html", null ]
+      ] ],
+      [ "formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
+      [ "formatter< AString >", "structfmt_1_1formatter_3_01AString_01_4.html", null ],
       [ "formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
     [ "gl", null, [
