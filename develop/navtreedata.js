@@ -68,10 +68,10 @@ var NAVTREEINDEX =
 "annotated.html",
 "classAFlatVector.html",
 "classASqlBuilder_1_1Update.html",
-"classAWindow.html#a271b2fb2651a01713cafa78625f2dadb",
-"classaui_1_1assert__not__used__when__null.html",
-"structAEnumerate_1_1Values.html",
-"structass_1_1detail_1_1debug__selector.html"
+"classAWindow.html#a201cce374d9e4359d014d8a9118d1357",
+"classass_1_1ISelectable.html",
+"structAEnumerateAllValues.html",
+"structass_1_1detail_1_1Type.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -26,7 +26,6 @@ var group__views =
     ] ],
     [ "FontRendering", "group__views.html#ga6cfde77b0c6e1bcd1b601d598c152e34", null ],
     [ "ImageRendering", "group__views.html#ga2df3ac3578c22f7d1b4efc6079a13db3", null ],
-    [ "TextAlign", "group__views.html#gabdd7e81d0fb7db7f8a4e6465765bac0b", null ],
     [ "TextOverflow", "group__views.html#ga4fdb190ac4fd525b1eb82e3722bfbfae", null ],
     [ "TextTransform", "group__views.html#gaa82185ce969128d9c1b40b1e914e66a8", null ],
     [ "Visibility", "group__views.html#ga53d6f8ccb0015ea020228de41cfd2162", [

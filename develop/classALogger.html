@@ -101,9 +101,25 @@ $(document).ready(function(){initNavTree('classALogger.html',''); initResizable(
 
 <p>A logger class.  
  <a href="classALogger.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="ALogger_8h_source.html">AUI/Logging/ALogger.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A logger class. </p>
+<p >Logger is used for journaling application events like errors or some user actions.</p>
+<p >It provides some extra functions like logging to file and output formatting.</p>
+<p >It provides <code>std::cout</code>-like API.</p>
+<p >Example: </p><div class="fragment"><div class="line">ALogger::info(<span class="stringliteral">&quot;MyApp&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;Hello world!&quot;</span>;</div>
+</div><!-- fragment --><p> Possible output: </p><div class="fragment"><div class="line">[00:47:02][UI Thread][Logger][INFO]: Hello world!</div>
+</div><!-- fragment --><p >It's convenient to define <code>LOG_TAG</code> variable for your class: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">&quot;MyDownloader&quot;</span>;</div>
+<div class="line"><span class="keyword">class </span>MyDownloader {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <span class="keywordtype">void</span> someAction() {</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;someAction() called&quot;</span>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> downloadFile(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; name) {</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;Downloading file: &quot;</span> &lt;&lt; name;</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:36</div></div>
+</div><!-- fragment --> </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a></td></tr>
@@ -161,25 +177,7 @@ static <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;<
 static <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>debug</b> (const <a class="el" href="classAString.html">AString</a> &amp;str)</td></tr>
 <tr class="separator:a88e1dcedaa0a7bbb413821e122b841e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >A logger class. </p>
-<p >Logger is used for journaling application events like errors or some user actions.</p>
-<p >It provides some extra functions like logging to file and output formatting.</p>
-<p >It provides <code>std::cout</code>-like API.</p>
-<p >Example: </p><div class="fragment"><div class="line">ALogger::info(<span class="stringliteral">&quot;MyApp&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;Hello world!&quot;</span>;</div>
-</div><!-- fragment --><p> Possible output: </p><div class="fragment"><div class="line">[00:47:02][UI Thread][Logger][INFO]: Hello world!</div>
-</div><!-- fragment --><p >It's convenient to define <code>LOG_TAG</code> variable for your class: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">&quot;MyDownloader&quot;</span>;</div>
-<div class="line"><span class="keyword">class </span>MyDownloader {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  <span class="keywordtype">void</span> someAction() {</div>
-<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;someAction() called&quot;</span>;</div>
-<div class="line">  }</div>
-<div class="line">  <span class="keywordtype">void</span> downloadFile(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; name) {</div>
-<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">&quot;Downloading file: &quot;</span> &lt;&lt; name;</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:36</div></div>
-</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afc8ce009869391c05cf8443081c2989d" name="afc8ce009869391c05cf8443081c2989d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc8ce009869391c05cf8443081c2989d">&#9670;&nbsp;</a></span>ALogger()</h2>
 
@@ -261,6 +259,8 @@ static <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;<
 
 </div>
 </div>
+
+<p><code>#include &lt;<a class="el" href="ALogger_8h_source.html">AUI/Logging/ALogger.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/Logging/<a class="el" href="ALogger_8h_source.html">ALogger.h</a></li>
 <li>aui.core/src/AUI/Logging/ALogger.cpp</li>

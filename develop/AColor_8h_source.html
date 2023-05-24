@@ -207,35 +207,41 @@ $(document).ready(function(){initNavTree('AColor_8h_source.html',''); initResiza
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> BLACK;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> WHITE;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>};</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::BLACK = {0.f, 0.f, 0.f, 1.f};</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::WHITE = {1.f, 1.f, 1.f, 1.f};</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> RED;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> GREEN;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> BLUE;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>};</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a>&amp; color) {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    o &lt;&lt; <span class="stringliteral">&quot;#&quot;</span>;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">char</span> buf[16];</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> (!color.isFullyOpaque()) {</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        std::snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;%02x&quot;</span>, uint8_t(color.a * 255.f));</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        o &lt;&lt; buf;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    std::snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;%02x%02x%02x&quot;</span>, uint8_t(color.r * 255.f), uint8_t(color.g * 255.f), uint8_t(color.b * 255.f));</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    o &lt;&lt; buf;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">inline</span> <a class="code hl_class" href="classAColor.html">AColor</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _argb(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> v)</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>{</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">return</span> AColor::fromAARRGGBB(<span class="keywordtype">unsigned</span>(v));</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>}</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keyword">inline</span> <a class="code hl_class" href="classAColor.html">AColor</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _rgb(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> v)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>{</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    assert((<span class="stringliteral">&quot;_rgb literal should be in 0xrrggbb format, not 0xaarrggbb&quot;</span> &amp;&amp; !(v &amp; 0xff000000u)));</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">return</span> AColor::fromRRGGBB(<span class="keywordtype">unsigned</span>(v));</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::BLACK = {0.f, 0.f, 0.f, 1.f};</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::WHITE = {1.f, 1.f, 1.f, 1.f};</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::RED   = {1.f, 0.f, 0.f, 1.f};</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::GREEN = {0.f, 1.f, 0.f, 1.f};</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a> AColor::BLUE  = {0.f, 0.f, 1.f, 1.f};</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a>&amp; color) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    o &lt;&lt; <span class="stringliteral">&quot;#&quot;</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">char</span> buf[16];</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> (!color.isFullyOpaque()) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        std::snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;%02x&quot;</span>, uint8_t(color.a * 255.f));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        o &lt;&lt; buf;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    std::snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;%02x%02x%02x&quot;</span>, uint8_t(color.r * 255.f), uint8_t(color.g * 255.f), uint8_t(color.b * 255.f));</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    o &lt;&lt; buf;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">inline</span> <a class="code hl_class" href="classAColor.html">AColor</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _argb(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> v)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>{</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">return</span> AColor::fromAARRGGBB(<span class="keywordtype">unsigned</span>(v));</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keyword">inline</span> <a class="code hl_class" href="classAColor.html">AColor</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _rgb(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> v)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    assert((<span class="stringliteral">&quot;_rgb literal should be in 0xrrggbb format, not 0xaarrggbb&quot;</span> &amp;&amp; !(v &amp; 0xff000000u)));</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">return</span> AColor::fromRRGGBB(<span class="keywordtype">unsigned</span>(v));</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}</div>
 <div class="ttc" id="aclassAColor_html"><div class="ttname"><a href="classAColor.html">AColor</a></div><div class="ttdoc">Represents a 4-component floating point color.</div><div class="ttdef"><b>Definition:</b> AColor.h:31</div></div>
 <div class="ttc" id="aclassAColor_html_a54874aeaf15cb5b4e1b68e84d0a64193"><div class="ttname"><a href="classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193">AColor::mul</a></div><div class="ttdeci">AColor mul(float d) const</div><div class="ttdoc">Multiply all color components except alpha channel (rgb * d, a)</div><div class="ttdef"><b>Definition:</b> AColor.h:119</div></div>
 <div class="ttc" id="aclassAColor_html_a61588fbcbbba8b205248fbd209d4ed0c"><div class="ttname"><a href="classAColor.html#a61588fbcbbba8b205248fbd209d4ed0c">AColor::transparentize</a></div><div class="ttdeci">AColor transparentize(float alpha) const noexcept</div><div class="ttdoc">Decreases the alpha channel by the given value.</div><div class="ttdef"><b>Definition:</b> AColor.h:108</div></div>

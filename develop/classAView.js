@@ -42,6 +42,7 @@ var classAView =
     [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
     [ "render", "classAView.html#afb763553515ae0d443c7a1ebc4847f10", null ],
     [ "setExtraStylesheet", "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b", null ],
+    [ "setExtraStylesheet", "classAView.html#abfffb2d8ac173e35e0599b4389efb9e1", null ],
     [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],
     [ "setPadding", "classAView.html#af409baa975fcd918472e42462b1955b6", null ],
     [ "setSizeForced", "classAView.html#ac385fe5c95866dbe081aac74c7dba519", null ],

@@ -45,5 +45,6 @@ var group__ass =
       [ "ass::Sizing::SPLIT_2X2", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aac2d1453e21b91adbf8d873909380ec3", null ],
       [ "ass::Sizing::CROPPED", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca", null ]
     ] ],
+    [ "TextAlign", "group__ass.html#gabdd7e81d0fb7db7f8a4e6465765bac0b", null ],
     [ "VerticalAlign", "group__ass.html#ga327847b397ac5aa9eefa2157dbe0961d", null ]
 ];

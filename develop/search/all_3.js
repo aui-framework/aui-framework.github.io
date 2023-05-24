@@ -42,12 +42,11 @@ var searchData=
   ['cropped_39',['CROPPED',['../group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca',1,'ass']]],
   ['crosscompiling_20_28android_20and_20ios_29_40',['Crosscompiling (Android and iOS)',['../md_docs_Crosscompiling.html',1,'']]],
   ['cubicbezier_41',['CubicBezier',['../classAnimationCurves_1_1CubicBezier.html',1,'AnimationCurves']]],
-  ['current_42',['current',['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow']]],
+  ['current_42',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow::current()']]],
   ['current_43',['CURRENT',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df',1,'AFileInputStream']]],
-  ['current_44',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread']]],
-  ['currentthread_45',['CurrentThread',['../classCurrentThread.html',1,'']]],
-  ['cursorindexbypos_46',['cursorIndexByPos',['../classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e',1,'ACursorSelectable']]],
-  ['custom_47',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
-  ['customcaptionwindowimplwin32_48',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
-  ['customshaderhelper_49',['CustomShaderHelper',['../structCustomShaderHelper.html',1,'']]]
+  ['currentthread_44',['CurrentThread',['../classCurrentThread.html',1,'']]],
+  ['cursorindexbypos_45',['cursorIndexByPos',['../classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e',1,'ACursorSelectable']]],
+  ['custom_46',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
+  ['customcaptionwindowimplwin32_47',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
+  ['customshaderhelper_48',['CustomShaderHelper',['../structCustomShaderHelper.html',1,'']]]
 ];

@@ -99,9 +99,11 @@ $(document).ready(function(){initNavTree('classADynamicPipe.html',''); initResiz
 
 <p>An asynchronous buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise).  
  <a href="classADynamicPipe.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="ADynamicPipe_8h_source.html">AUI/IO/ADynamicPipe.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >An asynchronous buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise). </p>
+<p ><a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> is similar to the unix pipes. It's slower than <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> but it's capable to store any byte count.</p>
+<p >Unlike <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a>, <a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> never blocks the thread which can be useful in an asynchronous system. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a636751385ea48b6f010f7f794c282602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classADynamicPipe.html#a636751385ea48b6f010f7f794c282602">write</a> (const char *src, size_t size) override</td></tr>
@@ -138,11 +140,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const no
 <tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classIOutputStream.html">IOutputStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b">operator&lt;&lt;</a> (const T &amp;t)</td></tr>
 <tr class="separator:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >An asynchronous buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise). </p>
-<p ><a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> is similar to the unix pipes. It's slower than <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> but it's capable to store any byte count.</p>
-<p >Unlike <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a>, <a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> never blocks the thread which can be useful in an asynchronous system. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a24f3ed96953c57ef1d30bbb85472524e" name="a24f3ed96953c57ef1d30bbb85472524e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24f3ed96953c57ef1d30bbb85472524e">&#9670;&nbsp;</a></span>read()</h2>
 
@@ -246,6 +244,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const no
 
 </div>
 </div>
+
+<p><code>#include &lt;<a class="el" href="ADynamicPipe_8h_source.html">AUI/IO/ADynamicPipe.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/IO/<a class="el" href="ADynamicPipe_8h_source.html">ADynamicPipe.h</a></li>
 <li>aui.core/src/AUI/IO/ADynamicPipe.cpp</li>

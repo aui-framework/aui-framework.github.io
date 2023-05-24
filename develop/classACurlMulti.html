@@ -99,9 +99,15 @@ $(document).ready(function(){initNavTree('classACurlMulti.html',''); initResizab
 
 <p>Multi curl instance.  
  <a href="classACurlMulti.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="ACurlMulti_8h_source.html">AUI/Curl/ACurlMulti.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Multi curl instance. </p>
+<p >Provides support to multiple simultaneous curl requests in a one thread.</p>
+<p >Analogous to Qt's QNetworkAccessManager.</p>
+<p >All calls are processed by enqueueing them on <a class="el" href="classACurlMulti.html" title="Multi curl instance.">ACurlMulti</a>'s thread, so the underlying curl handle is used by the single thread. This means that the following code will fail:</p>
+<p ><code> auto m = _new&lt;ACurlMulti&gt;(); m &lt;&lt; _new&lt;ACurl&gt;(...); assert(!m-&gt;empty()); // assertion failure here </code></p>
+<p >Use <a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> function to avoid this limitation:</p>
+<p ><code> auto m = _new&lt;ACurlMulti&gt;(); m &lt;&lt; _new&lt;ACurl&gt;(...); <a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> // + assert(!m-&gt;empty()); // ok! </code> </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a07d4c68ecdc3ffe2ec7705d12c4b6714"><td class="memItemLeft" align="right" valign="top"><a id="a07d4c68ecdc3ffe2ec7705d12c4b6714" name="a07d4c68ecdc3ffe2ec7705d12c4b6714"></a>
@@ -194,15 +200,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a cla
 <tr class="memdesc:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set thread of the object. <br /></td></tr>
 <tr class="separator:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Multi curl instance. </p>
-<p >Provides support to multiple simultaneous curl requests in a one thread.</p>
-<p >Analogous to Qt's QNetworkAccessManager.</p>
-<p >All calls are processed by enqueueing them on <a class="el" href="classACurlMulti.html" title="Multi curl instance.">ACurlMulti</a>'s thread, so the underlying curl handle is used by the single thread. This means that the following code will fail:</p>
-<p ><code> auto m = _new&lt;ACurlMulti&gt;(); m &lt;&lt; _new&lt;ACurl&gt;(...); assert(!m-&gt;empty()); // assertion failure here </code></p>
-<p >Use <a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> function to avoid this limitation:</p>
-<p ><code> auto m = _new&lt;ACurlMulti&gt;(); m &lt;&lt; _new&lt;ACurl&gt;(...); <a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> // + assert(!m-&gt;empty()); // ok! </code> </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+
+<p><code>#include &lt;<a class="el" href="ACurlMulti_8h_source.html">AUI/Curl/ACurlMulti.h</a>&gt;</code></p>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.curl/src/AUI/Curl/<a class="el" href="ACurlMulti_8h_source.html">ACurlMulti.h</a></li>
 <li>aui.curl/src/AUI/Curl/ACurlMulti.cpp</li>
 </ul>

@@ -10,7 +10,7 @@ var searchData=
   ['text_7',['text',['../classACursorSelectable.html#a056363780f0a6bac958eb68861682c96',1,'ACursorSelectable::text()'],['../classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d',1,'AAbstractTextField::text()'],['../classASelectableLabel.html#add210bc650574f96c1fb0a633ca61ee7',1,'ASelectableLabel::text()']]],
   ['text_8',['TEXT',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed',1,'ACursor']]],
   ['text_9',['text',['../classATextArea_1_1TextAreaField.html#ae47ef9fd771cfa707ef5894515c209e6',1,'ATextArea::TextAreaField']]],
-  ['textalign_10',['TextAlign',['../group__views.html#gabdd7e81d0fb7db7f8a4e6465765bac0b',1,'TextAlign.h']]],
+  ['textalign_10',['TextAlign',['../group__ass.html#gabdd7e81d0fb7db7f8a4e6465765bac0b',1,'TextAlign.h']]],
   ['textareafield_11',['TextAreaField',['../classATextArea_1_1TextAreaField.html',1,'ATextArea']]],
   ['textborder_12',['TextBorder',['../structass_1_1TextBorder.html',1,'ass']]],
   ['textchanged_13',['textChanged',['../classAAbstractTypeableView.html#a4addebde2ee640e32b78040f71f2d107',1,'AAbstractTypeableView']]],
