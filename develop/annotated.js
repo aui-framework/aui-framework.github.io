@@ -3,7 +3,7 @@ var annotated =
     [ "AAndroid", null, [
       [ "Ref", "classAAndroid_1_1Ref.html", null ]
     ] ],
-    [ "ADesktop", null, [
+    [ "ADesktop", "namespaceADesktop.html", [
       [ "FileExtension", "structADesktop_1_1FileExtension.html", null ]
     ] ],
     [ "AnimationCurves", null, [
@@ -106,6 +106,35 @@ var annotated =
       [ "unset_wrap", "structass_1_1unset__wrap.html", null ]
     ] ],
     [ "aui", null, [
+      [ "dbus", null, [
+        [ "impl", null, [
+          [ "basic_converter", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ]
+        ] ],
+        [ "converter", "structaui_1_1dbus_1_1converter.html", null ],
+        [ "converter< AMap< K, V > >", "structaui_1_1dbus_1_1converter_3_01AMap_3_01K_00_01V_01_4_01_4.html", null ],
+        [ "converter< AString >", "structaui_1_1dbus_1_1converter_3_01AString_01_4.html", null ],
+        [ "converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
+        [ "converter< bool >", "structaui_1_1dbus_1_1converter_3_01bool_01_4.html", null ],
+        [ "converter< char[N]>", "structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html", null ],
+        [ "converter< const char * >", "structaui_1_1dbus_1_1converter_3_01const_01char_01_5_01_4.html", null ],
+        [ "converter< double >", "structaui_1_1dbus_1_1converter_3_01double_01_4.html", null ],
+        [ "converter< ObjectPath >", "structaui_1_1dbus_1_1converter_3_01ObjectPath_01_4.html", null ],
+        [ "converter< std::int16_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int16__t_01_4.html", null ],
+        [ "converter< std::int32_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int32__t_01_4.html", null ],
+        [ "converter< std::int64_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int64__t_01_4.html", null ],
+        [ "converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
+        [ "converter< std::string >", "structaui_1_1dbus_1_1converter_3_01std_1_1string_01_4.html", null ],
+        [ "converter< std::tuple< Types... > >", "structaui_1_1dbus_1_1converter_3_01std_1_1tuple_3_01Types_8_8_8_01_4_01_4.html", null ],
+        [ "converter< std::uint16_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint16__t_01_4.html", null ],
+        [ "converter< std::uint32_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint32__t_01_4.html", null ],
+        [ "converter< std::uint64_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint64__t_01_4.html", null ],
+        [ "converter< std::uint8_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint8__t_01_4.html", null ],
+        [ "converter< Unknown >", "structaui_1_1dbus_1_1converter_3_01Unknown_01_4.html", null ],
+        [ "converter< Variant >", "structaui_1_1dbus_1_1converter_3_01Variant_01_4.html", null ],
+        [ "ObjectPath", "classaui_1_1dbus_1_1ObjectPath.html", null ],
+        [ "Unknown", "structaui_1_1dbus_1_1Unknown.html", null ],
+        [ "Variant", "structaui_1_1dbus_1_1Variant.html", null ]
+      ] ],
       [ "detail", null, [
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
@@ -179,14 +208,14 @@ var annotated =
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],
       [ "BinarySearchNearestToZero", "structaui_1_1BinarySearchNearestToZero.html", null ],
-      [ "callable_info", "structaui_1_1callable__info.html", null ],
-      [ "callable_info< Return(Args...)>", "structaui_1_1callable__info_3_01Return_07Args_8_8_8_08_4.html", null ],
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
+      [ "function_info", "structaui_1_1function__info.html", null ],
+      [ "function_info< Return(Args...)>", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html", null ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
       [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
       [ "member", "structaui_1_1member.html", null ],
-      [ "member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
+      [ "member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4" ],
       [ "member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
       [ "no_escape", "structaui_1_1no__escape.html", null ],
       [ "non_null", "structaui_1_1non__null.html", null ],
@@ -205,6 +234,8 @@ var annotated =
       [ "ternary", "structaui_1_1ternary.html", null ],
       [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
       [ "ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
+      [ "tuple_visitor", "structaui_1_1tuple__visitor.html", null ],
+      [ "tuple_visitor< std::tuple< Args... > >", "structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html", null ],
       [ "zip", "structaui_1_1zip.html", "structaui_1_1zip" ]
     ] ],
     [ "AzazaATest", null, [
@@ -350,6 +381,7 @@ var annotated =
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
     [ "ADataBindingLinker", "classADataBindingLinker.html", null ],
     [ "ADataBindingLinker2", "classADataBindingLinker2.html", null ],
+    [ "ADBus", "classADBus.html", "classADBus" ],
     [ "ADeque", "classADeque.html", "classADeque" ],
     [ "ADividerView", "classADividerView.html", "classADividerView" ],
     [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", "classADoubleNumberPicker" ],

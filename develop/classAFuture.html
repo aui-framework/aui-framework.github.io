@@ -117,14 +117,15 @@ class AFuture&lt; T &gt;</div><p >Represents the result of an asynchronous opera
 <div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents the result of an asynchronous operation.</div><div class="ttdef"><b>Definition:</b> AFuture.h:528</div></div>
 <div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:121</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:305</div></div>
-</div><!-- fragment --><p >However, it can be default-constructed and the result can be supplied manually with the supplyResult() function:</p>
+</div><!-- fragment --><p >However, it can be default-constructed and the result can be supplied manually with the <a class="el" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836" title="Pushes the result to AFuture.">supplyResult()</a> method:</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> theFuture;</div>
 <div class="line"><a class="code hl_class" href="classAThread.html">AThread</a> t([=] {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
-<div class="line">  theFuture.supplyResult(123);</div>
+<div class="line">  theFuture.<a class="code hl_function" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a>(123);</div>
 <div class="line">});</div>
 <div class="line">t.start();</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
+<div class="ttc" id="aclassAFuture_html_a5ee665a2a1d9b02010a9cd19de7bd836"><div class="ttname"><a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">AFuture::supplyResult</a></div><div class="ttdeci">void supplyResult(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:544</div></div>
 <div class="ttc" id="aclassAThread_html"><div class="ttname"><a href="classAThread.html">AThread</a></div><div class="ttdoc">Represents a user-defined thread.</div><div class="ttdef"><b>Definition:</b> AThread.h:182</div></div>
 </div><!-- fragment --><p ><a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> provides a set of functions to manage the process execution: <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a9cd06da141d2eb2496468eea376878f2" title="Cancels the AFuture&#39;s task.">cancel()</a>, <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ad41767ced886fa915449f1c082c2b54e" title="Sleeps if the supplyResult is not currently available.">wait()</a>, <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult()</a>, <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0">hasValue()</a>.</p>
 <p ><a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> is a shared_ptr-based wrapper so it can be easily copied, pointing to the same task.</p>
@@ -150,8 +151,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e4fa3f5ff5637667b004f8422c53670"><td class="memItemLeft" align="right" valign="top"><a id="a6e4fa3f5ff5637667b004f8422c53670" name="a6e4fa3f5ff5637667b004f8422c53670"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (Task task=nullptr) noexcept</td></tr>
 <tr class="separator:a6e4fa3f5ff5637667b004f8422c53670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="memItemLeft" align="right" valign="top"><a id="a5ee665a2a1d9b02010a9cd19de7bd836" name="a5ee665a2a1d9b02010a9cd19de7bd836"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyResult</b> (T v) const noexcept</td></tr>
+<tr class="memitem:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a> (T v) const noexcept</td></tr>
+<tr class="memdesc:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the result to <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>.  <a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">More...</a><br /></td></tr>
 <tr class="separator:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb90c81c9ded0417533b721c34d3a139"><td class="memItemLeft" align="right" valign="top"><a id="afb90c81c9ded0417533b721c34d3a139" name="afb90c81c9ded0417533b721c34d3a139"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyException</b> () const noexcept</td></tr>
@@ -163,13 +164,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyException</b> (
 <tr class="memitem:ac5f6b28591c6cb4303dc4dd2bd5bcf5c"><td class="memItemLeft" align="right" valign="top"><a id="ac5f6b28591c6cb4303dc4dd2bd5bcf5c" name="ac5f6b28591c6cb4303dc4dd2bd5bcf5c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classAFuture.html">AFuture</a> &amp;r) const noexcept</td></tr>
 <tr class="separator:ac5f6b28591c6cb4303dc4dd2bd5bcf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memTemplParams" colspan="2"><a id="a0c46bbaafece47c858e18e1ae3a9b27b" name="a0c46bbaafece47c858e18e1ae3a9b27b"></a>
-template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Callback&gt; </td></tr>
-<tr class="memitem:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onSuccess</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
+<tr class="memitem:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Callback&gt; </td></tr>
+<tr class="memitem:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a> (Callback &amp;&amp;callback) const noexcept</td></tr>
+<tr class="memdesc:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add onSuccess callback to the future.  <a href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">More...</a><br /></td></tr>
 <tr class="separator:a0c46bbaafece47c858e18e1ae3a9b27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplParams" colspan="2"><a id="a2c29ecb80f38bac577e9ddcc8535918e" name="a2c29ecb80f38bac577e9ddcc8535918e"></a>
-template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const <a class="el" href="classAException.html">AException</a> &amp; &gt; Callback&gt; </td></tr>
-<tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onError</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
+<tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const <a class="el" href="classAException.html">AException</a> &amp; &gt; Callback&gt; </td></tr>
+<tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">onError</a> (Callback &amp;&amp;callback) const noexcept</td></tr>
+<tr class="memdesc:a2c29ecb80f38bac577e9ddcc8535918e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add onError callback to the future.  <a href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">More...</a><br /></td></tr>
 <tr class="separator:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memTemplParams" colspan="2"><a id="a657b6d64c82ffd61689d5fc6f8d61ebe" name="a657b6d64c82ffd61689d5fc6f8d61ebe"></a>
 template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Callback&gt; </td></tr>
@@ -233,6 +234,127 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>isVo
 <a class="el" href="class__.html">_</a>&lt; <a class="el" href="structaui_1_1impl_1_1future_1_1CancellationWrapper.html">CancellationWrapper</a>&lt; Inner &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mInner</b></td></tr>
 <tr class="separator:af8d122520d5d1f548b9bafddf6ab30de inherit pro_attribs_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2c29ecb80f38bac577e9ddcc8535918e" name="a2c29ecb80f38bac577e9ddcc8535918e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c29ecb80f38bac577e9ddcc8535918e">&#9670;&nbsp;</a></span>onError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const <a class="el" href="classAException.html">AException</a> &amp; &gt; Callback&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classAFuture.html">AFuture</a> &amp; <a class="el" href="classAFuture.html">AFuture</a>&lt; T &gt;::onError </td>
+          <td>(</td>
+          <td class="paramtype">Callback &amp;&amp;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add onError callback to the future. </p>
+<p >The callback will be called on the worker's thread when the async task is returned a result.</p>
+<p >onError does not expand <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
+<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
+<div class="line">private:</div>
+<div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">mAsync &lt;&lt; functionReturningFuture().onSuccess(...); <span class="comment">// or onError</span></div>
+<div class="ttc" id="aclassAAsyncHolder_html"><div class="ttname"><a href="classAAsyncHolder.html">AAsyncHolder</a></div><div class="ttdoc">Holds a set of futures keeping them valid.</div><div class="ttdef"><b>Definition:</b> AAsyncHolder.h:35</div></div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a0c46bbaafece47c858e18e1ae3a9b27b" name="a0c46bbaafece47c858e18e1ae3a9b27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c46bbaafece47c858e18e1ae3a9b27b">&#9670;&nbsp;</a></span>onSuccess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Callback&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classAFuture.html">AFuture</a> &amp; <a class="el" href="classAFuture.html">AFuture</a>&lt; T &gt;::onSuccess </td>
+          <td>(</td>
+          <td class="paramtype">Callback &amp;&amp;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add onSuccess callback to the future. </p>
+<p >The callback will be called on the worker's thread when the async task is returned a result.</p>
+<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
+<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
+<div class="line">private:</div>
+<div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">mAsync &lt;&lt; functionReturningFuture().onSuccess(...); <span class="comment">// or onError</span></div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a5ee665a2a1d9b02010a9cd19de7bd836" name="a5ee665a2a1d9b02010a9cd19de7bd836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee665a2a1d9b02010a9cd19de7bd836">&#9670;&nbsp;</a></span>supplyResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAFuture.html">AFuture</a>&lt; T &gt;::supplyResult </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes the result to <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>value</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>After <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> grabbed the value, supplyResult calls onSuccess listeners with the new value. </p>
+
+</div>
+</div>
 
 <p><code>#include &lt;<a class="el" href="AFuture_8h_source.html">AUI/Thread/AFuture.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following file:<ul>

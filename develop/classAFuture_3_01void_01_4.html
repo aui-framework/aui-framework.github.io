@@ -119,8 +119,8 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyException</b> () const noexcept</td></tr>
 <tr class="memdesc:ad8f671c9cd3307d2e83b3f199cb0a4d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores an exception from std::current_exception to the future. <br /></td></tr>
 <tr class="separator:ad8f671c9cd3307d2e83b3f199cb0a4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebac718b4b2e26803e67f3a8eedd0d06"><td class="memItemLeft" align="right" valign="top"><a id="aebac718b4b2e26803e67f3a8eedd0d06" name="aebac718b4b2e26803e67f3a8eedd0d06"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyResult</b> () const noexcept</td></tr>
+<tr class="memitem:aebac718b4b2e26803e67f3a8eedd0d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">supplyResult</a> () const noexcept</td></tr>
+<tr class="memdesc:aebac718b4b2e26803e67f3a8eedd0d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes "success" result.  <a href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">More...</a><br /></td></tr>
 <tr class="separator:aebac718b4b2e26803e67f3a8eedd0d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a826720e0a9bda6e4ef29459a9de0ea72"><td class="memItemLeft" align="right" valign="top"><a id="a826720e0a9bda6e4ef29459a9de0ea72" name="a826720e0a9bda6e4ef29459a9de0ea72"></a>
 <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (std::nullptr_t) noexcept</td></tr>
@@ -222,7 +222,15 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 
 <p>Add onSuccess callback to the future. </p>
 <p >The callback will be called on the worker's thread when the async task is returned a result.</p>
-<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> becomes invalid, onSuccess would not be called. </p>
+<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
+<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
+<div class="line">private:</div>
+<div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">mAsync &lt;&lt; functionReturningFuture().onSuccess(...); <span class="comment">// or onError</span></div>
+<div class="ttc" id="aclassAAsyncHolder_html"><div class="ttname"><a href="classAAsyncHolder.html">AAsyncHolder</a></div><div class="ttdoc">Holds a set of futures keeping them valid.</div><div class="ttdef"><b>Definition:</b> AAsyncHolder.h:35</div></div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
@@ -254,7 +262,42 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 
 <p>Add onSuccess callback to the future. </p>
 <p >The callback will be called on the worker's thread when the async task is returned a result.</p>
-<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> becomes invalid, onSuccess would not be called. </p>
+<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
+<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
+<div class="line">private:</div>
+<div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">mAsync &lt;&lt; functionReturningFuture().onSuccess(...); <span class="comment">// or onError</span></div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="aebac718b4b2e26803e67f3a8eedd0d06" name="aebac718b4b2e26803e67f3a8eedd0d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebac718b4b2e26803e67f3a8eedd0d06">&#9670;&nbsp;</a></span>supplyResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAFuture.html">AFuture</a>&lt; void &gt;::supplyResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes "success" result. </p>
+<p >supplyResult calls onSuccess listeners with the new value. </p>
 
 </div>
 </div>

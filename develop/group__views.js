@@ -3,6 +3,7 @@ var group__views =
     [ "Aui Style Sheets", "group__ass.html", "group__ass" ],
     [ "Layout Managers", "group__layout__managers.html", "group__layout__managers" ],
     [ "Views", "group__useful__views.html", "group__useful__views" ],
+    [ "ADesktop", "namespaceADesktop.html", null ],
     [ "ACursor", "classACursor.html", [
       [ "Custom", "structACursor_1_1Custom.html", null ],
       [ "System", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03", [
@@ -15,6 +16,9 @@ var group__views =
       [ "DropEvent", "structADragNDrop_1_1DropEvent.html", null ],
       [ "EnterEvent", "structADragNDrop_1_1EnterEvent.html", null ],
       [ "perform", "classADragNDrop.html#af2faade058d2f6067ceb19182a5e872f", null ]
+    ] ],
+    [ "ADBus", "classADBus.html", [
+      [ "Exception", "classADBus_1_1Exception.html", null ]
     ] ],
     [ "AMimedData", "classAMimedData.html", [
       [ "setText", "classAMimedData.html#aa02bc659384889d00a53001ecdd46046", null ]

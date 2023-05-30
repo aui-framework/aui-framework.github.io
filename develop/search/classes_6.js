@@ -22,8 +22,10 @@ var searchData=
   ['formatter_3c_20astring_20_3e_19',['formatter&lt; AString &gt;',['../structfmt_1_1formatter_3_01AString_01_4.html',1,'fmt']]],
   ['formatter_3c_20t_2c_20char_2c_20std_3a_3aenable_5fif_5ft_3c_20aui_3a_3ais_5fcomplete_3c_20aenumerateallvalues_3c_20t_20_3e_20_3e_20_3e_20_3e_20',['formatter&lt; T, char, std::enable_if_t&lt; aui::is_complete&lt; AEnumerateAllValues&lt; T &gt; &gt; &gt; &gt;',['../structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html',1,'fmt']]],
   ['freetype_21',['FreeType',['../classFreeType.html',1,'']]],
-  ['future_22',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
-  ['future_3c_20void_20_3e_23',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
-  ['futurereturntype_24',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
-  ['futurereturntype_3c_20void_20_3e_25',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]
+  ['function_5finfo_22',['function_info',['../structaui_1_1function__info.html',1,'aui']]],
+  ['function_5finfo_3c_20return_28args_2e_2e_2e_29_3e_23',['function_info&lt; Return(Args...)&gt;',['../structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html',1,'aui']]],
+  ['future_24',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
+  ['future_3c_20void_20_3e_25',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
+  ['futurereturntype_26',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
+  ['futurereturntype_3c_20void_20_3e_27',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]
 ];

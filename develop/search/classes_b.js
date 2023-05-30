@@ -7,7 +7,7 @@ var searchData=
   ['master_4',['Master',['../classMaster.html',1,'']]],
   ['maxsize_5',['MaxSize',['../structass_1_1MaxSize.html',1,'ass']]],
   ['member_6',['member',['../structaui_1_1member.html',1,'aui']]],
-  ['member_3c_20type_28clazz_3a_3a_2a_29_28args_2e_2e_2e_29_3e_7',['member&lt; Type(Clazz::*)(Args...)&gt;',['../structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html',1,'aui']]],
+  ['member_3c_20type_28clazz_3a_3a_2a_29_28args_2e_2e_2e_29_20const_20_3e_7',['member&lt; Type(Clazz::*)(Args...) const &gt;',['../structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html',1,'aui']]],
   ['member_3c_20type_28clazz_3a_3a_2a_29_3e_8',['member&lt; Type(Clazz::*)&gt;',['../structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html',1,'aui']]],
   ['menucontainer_9',['MenuContainer',['../classAEmbedMenuProvider_1_1MenuContainer.html',1,'AEmbedMenuProvider']]],
   ['message_10',['Message',['../structAAbstractThread_1_1Message.html',1,'AAbstractThread']]],

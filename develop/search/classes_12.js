@@ -16,7 +16,8 @@ var searchData=
   ['unixeventfd_13',['UnixEventFd',['../classUnixEventFd.html',1,'']]],
   ['unixioasync_14',['UnixIoAsync',['../classUnixIoAsync.html',1,'']]],
   ['unixiothread_15',['UnixIoThread',['../classUnixIoThread.html',1,'']]],
-  ['unset_5fwrap_16',['unset_wrap',['../structass_1_1unset__wrap.html',1,'ass']]],
-  ['unsupportedbrushhelper_17',['UnsupportedBrushHelper',['../structUnsupportedBrushHelper.html',1,'']]],
-  ['update_18',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]]
+  ['unknown_16',['Unknown',['../structaui_1_1dbus_1_1Unknown.html',1,'aui::dbus']]],
+  ['unset_5fwrap_17',['unset_wrap',['../structass_1_1unset__wrap.html',1,'ass']]],
+  ['unsupportedbrushhelper_18',['UnsupportedBrushHelper',['../structUnsupportedBrushHelper.html',1,'']]],
+  ['update_19',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]]
 ];

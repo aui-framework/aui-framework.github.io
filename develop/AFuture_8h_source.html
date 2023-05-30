@@ -504,122 +504,126 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>(Task task = <span class="keyword">nullptr</span>) <span class="keyword">noexcept</span>: super(std::move(task)) {}</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>    <a class="code hl_class" href="classAFuture.html">~AFuture</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span> </div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    <span class="keywordtype">void</span> supplyResult(T v) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        assert((<span class="stringliteral">&quot;task is already provided&quot;</span>, inner-&gt;task == <span class="keyword">nullptr</span>));</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        std::unique_lock lock(inner-&gt;mutex);</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        inner-&gt;value = std::move(v);</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        inner-&gt;cv.notify_all();</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        AUI_NULLSAFE(inner-&gt;onSuccess)(*inner-&gt;value);</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    }</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno"><a class="line" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">  544</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a>(T v) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        assert((<span class="stringliteral">&quot;task is already provided&quot;</span>, inner-&gt;task == <span class="keyword">nullptr</span>));</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span> </div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno"><a class="line" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">  551</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">supplyException</a>() const noexcept {</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        inner-&gt;reportException();</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>    }</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span> </div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; operator=(std::nullptr_t) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        super::mInner = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    }</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; r) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        <span class="keywordflow">return</span> super::mInner == r.mInner;</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    }</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span> </div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const T&amp;&gt; Callback&gt;</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; onSuccess(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        super::onSuccess(std::forward&lt;Callback&gt;(callback));</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        std::unique_lock lock(inner-&gt;mutex);</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        inner-&gt;value = std::move(v);</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        inner-&gt;cv.notify_all();</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        AUI_NULLSAFE(inner-&gt;onSuccess)(*inner-&gt;value);</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    }</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">  557</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">supplyException</a>() const noexcept {</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>        inner-&gt;reportException();</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    }</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span> </div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; operator=(std::nullptr_t) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        super::mInner = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    }</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span> </div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; r) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        <span class="keywordflow">return</span> super::mInner == r.mInner;</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    }</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const AException&amp;&gt; Callback&gt;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; onError(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        super::onError(std::forward&lt;Callback&gt;(callback));</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    }</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const T&amp;&gt; Callback&gt;</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno"><a class="line" href="classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe">  582</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe">map</a>(Callback&amp;&amp; callback) -&gt; <a class="code hl_class" href="classAFuture.html">AFuture&lt;decltype(callback(std::declval&lt;T&gt;</a>()))&gt; <span class="keyword">const</span> {</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        <a class="code hl_class" href="classAFuture.html">AFuture&lt;decltype(callback(std::declval&lt;T&gt;</a>()))&gt; result;</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        onSuccess([result, callback = std::forward&lt;Callback&gt;(callback)](<span class="keyword">const</span> T&amp; v) {</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            result.supplyResult(callback(v));</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>        });</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        onError([result](<span class="keyword">const</span> <a class="code hl_class" href="classAException.html">AException</a>&amp; v) {</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>            <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>                <span class="keywordflow">throw</span> v;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>            } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                result.reportException();</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>            }</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>        });</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const T&amp;&gt; Callback&gt;</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno"><a class="line" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">  592</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; <a class="code hl_function" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a>(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>        super::onSuccess(std::forward&lt;Callback&gt;(callback));</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>    }</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>};</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html">  599</a></span><span class="keyword">class </span><a class="code hl_class" href="classAFuture.html">AFuture</a>&lt;void&gt; final: <span class="keyword">public</span> <a class="code hl_class" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future</a>&lt;void&gt; {</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>    <span class="keyword">using</span> T = void;</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>    <span class="keyword">using</span> super = <span class="keyword">typename</span> <a class="code hl_class" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    <span class="keyword">using</span> Task = <span class="keyword">typename</span> super::TaskCallback;</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>(Task task = <span class="keyword">nullptr</span>) <span class="keyword">noexcept</span>: super(std::move(task)) {}</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    <a class="code hl_class" href="classAFuture.html">~AFuture</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span> </div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2">  613</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2">supplyException</a>() const noexcept {</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>        inner-&gt;reportException();</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    }</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span> </div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keywordtype">void</span> supplyResult() const noexcept {</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        assert((<span class="stringliteral">&quot;task is already provided&quot;</span>, inner-&gt;task == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const AException&amp;&gt; Callback&gt;</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno"><a class="line" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">  617</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; <a class="code hl_function" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">onError</a>(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        super::onError(std::forward&lt;Callback&gt;(callback));</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    }</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        std::unique_lock lock(inner-&gt;mutex);</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        inner-&gt;value = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        inner-&gt;cv.notify_all();</div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>        AUI_NULLSAFE(inner-&gt;onSuccess)();</div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>    }</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span> </div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; operator=(std::nullptr_t) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>        super::mInner = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    }</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; r) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>        <span class="keywordflow">return</span> super::mInner == r.mInner;</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    }</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span> </div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    <span class="keyword">template</span>&lt;aui::invocable Callback&gt;</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#a5312213cf82b1e04f0e48be12e0131b2">  646</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; <a class="code hl_function" href="classAFuture_3_01void_01_4.html#a5312213cf82b1e04f0e48be12e0131b2">onSuccess</a>(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>        super::onSuccess(std::forward&lt;Callback&gt;(callback));</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>    }</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const T&amp;&gt; Callback&gt;</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno"><a class="line" href="classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe">  626</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe">map</a>(Callback&amp;&amp; callback) -&gt; <a class="code hl_class" href="classAFuture.html">AFuture&lt;decltype(callback(std::declval&lt;T&gt;</a>()))&gt; <span class="keyword">const</span> {</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        <a class="code hl_class" href="classAFuture.html">AFuture&lt;decltype(callback(std::declval&lt;T&gt;</a>()))&gt; result;</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        <a class="code hl_function" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a>([result, callback = std::forward&lt;Callback&gt;(callback)](<span class="keyword">const</span> T&amp; v) {</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>            result.supplyResult(callback(v));</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>        });</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>        <a class="code hl_function" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">onError</a>([result](<span class="keyword">const</span> <a class="code hl_class" href="classAException.html">AException</a>&amp; v) {</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>                <span class="keywordflow">throw</span> v;</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>            } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>                result.reportException();</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            }</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        });</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    }</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>};</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html">  643</a></span><span class="keyword">class </span><a class="code hl_class" href="classAFuture.html">AFuture</a>&lt;void&gt; final: <span class="keyword">public</span> <a class="code hl_class" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future</a>&lt;void&gt; {</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    <span class="keyword">using</span> T = void;</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>    <span class="keyword">using</span> super = <span class="keyword">typename</span> <a class="code hl_class" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>    <span class="keyword">using</span> Task = <span class="keyword">typename</span> super::TaskCallback;</div>
 <div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span> </div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const AException&amp;&gt; Callback&gt;</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917">  659</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; <a class="code hl_function" href="classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917">onError</a>(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>        super::onError(std::forward&lt;Callback&gt;(callback));</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    }</div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>};</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span> </div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span> </div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span><span class="preprocessor">#include &lt;AUI/Thread/AThreadPool.h&gt;</span></div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="preprocessor">#include &lt;AUI/Common/AException.h&gt;</span></div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>(Task task = <span class="keyword">nullptr</span>) <span class="keyword">noexcept</span>: super(std::move(task)) {}</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    <a class="code hl_class" href="classAFuture.html">~AFuture</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span> </div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2">  657</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2">supplyException</a>() const noexcept {</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        inner-&gt;reportException();</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    }</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span> </div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">  667</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">supplyResult</a>() const noexcept {</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>        assert((<span class="stringliteral">&quot;task is already provided&quot;</span>, inner-&gt;task == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        std::unique_lock lock(inner-&gt;mutex);</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        inner-&gt;value = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        inner-&gt;cv.notify_all();</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        AUI_NULLSAFE(inner-&gt;onSuccess)();</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    }</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; operator=(std::nullptr_t) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>        super::mInner = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    }</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; r) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>        <span class="keywordflow">return</span> super::mInner == r.mInner;</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    }</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span> </div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>    <span class="keyword">template</span>&lt;aui::invocable Callback&gt;</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#a5312213cf82b1e04f0e48be12e0131b2">  707</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; <a class="code hl_function" href="classAFuture_3_01void_01_4.html#a5312213cf82b1e04f0e48be12e0131b2">onSuccess</a>(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        super::onSuccess(std::forward&lt;Callback&gt;(callback));</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>    }</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span> </div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;const AException&amp;&gt; Callback&gt;</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917">  732</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; <a class="code hl_function" href="classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917">onError</a>(Callback&amp;&amp; callback) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        super::onError(std::forward&lt;Callback&gt;(callback));</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    }</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>};</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span> </div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span> </div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span><span class="preprocessor">#include &lt;AUI/Thread/AThreadPool.h&gt;</span></div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span><span class="preprocessor">#include &lt;AUI/Common/AException.h&gt;</span></div>
 <div class="ttc" id="aclassAConditionVariable_html"><div class="ttname"><a href="classAConditionVariable.html">AConditionVariable</a></div><div class="ttdoc">Represents a condition variable.</div><div class="ttdef"><b>Definition:</b> AConditionVariable.h:28</div></div>
 <div class="ttc" id="aclassAConditionVariable_html_ac0de7beaf1c9b3b0806d8bdec30af303"><div class="ttname"><a href="classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303">AConditionVariable::notify_all</a></div><div class="ttdeci">void notify_all() noexcept</div><div class="ttdef"><b>Definition:</b> AConditionVariable.h:65</div></div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:34</div></div>
-<div class="ttc" id="aclassAFuture_3_01void_01_4_html_a5312213cf82b1e04f0e48be12e0131b2"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#a5312213cf82b1e04f0e48be12e0131b2">AFuture&lt; void &gt;::onSuccess</a></div><div class="ttdeci">const AFuture &amp; onSuccess(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:646</div></div>
-<div class="ttc" id="aclassAFuture_3_01void_01_4_html_a5b99b885a63bfc96085b894b248f5917"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917">AFuture&lt; void &gt;::onError</a></div><div class="ttdeci">const AFuture &amp; onError(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:659</div></div>
-<div class="ttc" id="aclassAFuture_3_01void_01_4_html_ad8f671c9cd3307d2e83b3f199cb0a4d2"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2">AFuture&lt; void &gt;::supplyException</a></div><div class="ttdeci">void supplyException() const noexcept</div><div class="ttdoc">Stores an exception from std::current_exception to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:613</div></div>
+<div class="ttc" id="aclassAFuture_3_01void_01_4_html_a5312213cf82b1e04f0e48be12e0131b2"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#a5312213cf82b1e04f0e48be12e0131b2">AFuture&lt; void &gt;::onSuccess</a></div><div class="ttdeci">const AFuture &amp; onSuccess(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:707</div></div>
+<div class="ttc" id="aclassAFuture_3_01void_01_4_html_a5b99b885a63bfc96085b894b248f5917"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#a5b99b885a63bfc96085b894b248f5917">AFuture&lt; void &gt;::onError</a></div><div class="ttdeci">const AFuture &amp; onError(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:732</div></div>
+<div class="ttc" id="aclassAFuture_3_01void_01_4_html_ad8f671c9cd3307d2e83b3f199cb0a4d2"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2">AFuture&lt; void &gt;::supplyException</a></div><div class="ttdeci">void supplyException() const noexcept</div><div class="ttdoc">Stores an exception from std::current_exception to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:657</div></div>
+<div class="ttc" id="aclassAFuture_3_01void_01_4_html_aebac718b4b2e26803e67f3a8eedd0d06"><div class="ttname"><a href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">AFuture&lt; void &gt;::supplyResult</a></div><div class="ttdeci">void supplyResult() const noexcept</div><div class="ttdoc">Pushes &quot;success&quot; result.</div><div class="ttdef"><b>Definition:</b> AFuture.h:667</div></div>
 <div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents the result of an asynchronous operation.</div><div class="ttdef"><b>Definition:</b> AFuture.h:528</div></div>
-<div class="ttc" id="aclassAFuture_html_a657b6d64c82ffd61689d5fc6f8d61ebe"><div class="ttname"><a href="classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe">AFuture::map</a></div><div class="ttdeci">auto map(Callback &amp;&amp;callback) -&gt; AFuture&lt; decltype(callback(std::declval&lt; T &gt;()))&gt; const</div><div class="ttdoc">Maps this AFuture to another type of AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:582</div></div>
-<div class="ttc" id="aclassAFuture_html_afb90c81c9ded0417533b721c34d3a139"><div class="ttname"><a href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">AFuture::supplyException</a></div><div class="ttdeci">void supplyException() const noexcept</div><div class="ttdoc">Stores an exception from std::current_exception to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:551</div></div>
+<div class="ttc" id="aclassAFuture_html_a0c46bbaafece47c858e18e1ae3a9b27b"><div class="ttname"><a href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">AFuture::onSuccess</a></div><div class="ttdeci">const AFuture &amp; onSuccess(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:592</div></div>
+<div class="ttc" id="aclassAFuture_html_a2c29ecb80f38bac577e9ddcc8535918e"><div class="ttname"><a href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">AFuture::onError</a></div><div class="ttdeci">const AFuture &amp; onError(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onError callback to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:617</div></div>
+<div class="ttc" id="aclassAFuture_html_a5ee665a2a1d9b02010a9cd19de7bd836"><div class="ttname"><a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">AFuture::supplyResult</a></div><div class="ttdeci">void supplyResult(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:544</div></div>
+<div class="ttc" id="aclassAFuture_html_a657b6d64c82ffd61689d5fc6f8d61ebe"><div class="ttname"><a href="classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe">AFuture::map</a></div><div class="ttdeci">auto map(Callback &amp;&amp;callback) -&gt; AFuture&lt; decltype(callback(std::declval&lt; T &gt;()))&gt; const</div><div class="ttdoc">Maps this AFuture to another type of AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:626</div></div>
+<div class="ttc" id="aclassAFuture_html_afb90c81c9ded0417533b721c34d3a139"><div class="ttname"><a href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">AFuture::supplyException</a></div><div class="ttdeci">void supplyException() const noexcept</div><div class="ttdoc">Stores an exception from std::current_exception to the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:557</div></div>
 <div class="ttc" id="aclassAInvocationTargetException_html"><div class="ttname"><a href="classAInvocationTargetException.html">AInvocationTargetException</a></div><div class="ttdef"><b>Definition:</b> AFuture.h:32</div></div>
 <div class="ttc" id="aclassAMutex_html"><div class="ttname"><a href="classAMutex.html">AMutex</a></div><div class="ttdef"><b>Definition:</b> AMutex.h:21</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:36</div></div>
@@ -630,7 +634,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="ttc" id="aclassAThread_1_1Interrupted_html_a01d46aa465b849cc5753f09ec31b15cf"><div class="ttname"><a href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">AThread::Interrupted::needRethrow</a></div><div class="ttdeci">void needRethrow() const noexcept</div><div class="ttdoc">Schedules AThread::Interrupted exception to the next interruption point. Sometimes you could not thro...</div><div class="ttdef"><b>Definition:</b> AThread.h:196</div></div>
 <div class="ttc" id="aclassAThread_html_a1d09d7332e61f6ef39e93d4a1fdc2574"><div class="ttname"><a href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a></div><div class="ttdeci">static _&lt; AAbstractThread &gt; current()</div><div class="ttdef"><b>Definition:</b> AThread.cpp:135</div></div>
 <div class="ttc" id="aclassAThread_html_a64c8a94e0bddd90ca609b3cfb5ba007f"><div class="ttname"><a href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a></div><div class="ttdeci">static void interruptionPoint()</div><div class="ttdoc">Interruption point.</div><div class="ttdef"><b>Definition:</b> AThread.cpp:146</div></div>
-<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:124</div></div>
+<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:135</div></div>
 <div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future</a></div><div class="ttdef"><b>Definition:</b> AFuture.h:102</div></div>
 <div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html_a0578501a241e49a209694084f6eb1194"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194">aui::impl::future::Future::isWaitNeeded</a></div><div class="ttdeci">bool isWaitNeeded() const noexcept</div><div class="ttdef"><b>Definition:</b> AFuture.h:309</div></div>
 <div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html_a11ec964f2ce8f8726b37f0aa5f7ecbb0"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0">aui::impl::future::Future::hasValue</a></div><div class="ttdeci">bool hasValue() const noexcept</div><div class="ttdef"><b>Definition:</b> AFuture.h:325</div></div>
@@ -651,7 +655,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="ttc" id="astructaui_1_1impl_1_1future_1_1Future_1_1Inner_html_a431e9f0127b66804bf0e314477c4bd4a"><div class="ttname"><a href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a">aui::impl::future::Future::Inner::value</a></div><div class="ttdeci">std::conditional_t&lt; isVoid, bool, AOptional&lt; Value &gt; &gt; value</div><div class="ttdef"><b>Definition:</b> AFuture.h:114</div></div>
 <div class="ttc" id="astructaui_1_1impl_1_1future_1_1Future_1_1Inner_html_adbe5e1bfd42e4aeed5cb2afee35eff48"><div class="ttname"><a href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#adbe5e1bfd42e4aeed5cb2afee35eff48">aui::impl::future::Future::Inner::tryExecute</a></div><div class="ttdeci">bool tryExecute(const _weak&lt; CancellationWrapper&lt; Inner &gt; &gt; &amp;innerWeak)</div><div class="ttdoc">Executes the task stored in the future. Using weak_ptr to internal object in order to make possible F...</div><div class="ttdef"><b>Definition:</b> AFuture.h:203</div></div>
 <div class="ttc" id="astructaui_1_1impl_1_1future_1_1OnSuccessCallback_html"><div class="ttname"><a href="structaui_1_1impl_1_1future_1_1OnSuccessCallback.html">aui::impl::future::OnSuccessCallback</a></div><div class="ttdef"><b>Definition:</b> AFuture.h:81</div></div>
-<div class="ttc" id="astructaui_1_1ptr_html"><div class="ttname"><a href="structaui_1_1ptr.html">aui::ptr</a></div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:75</div></div>
+<div class="ttc" id="astructaui_1_1ptr_html"><div class="ttname"><a href="structaui_1_1ptr.html">aui::ptr</a></div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

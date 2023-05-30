@@ -199,6 +199,45 @@ var hierarchy =
       [ "ass::focus< Base >", "structass_1_1focus.html", null ],
       [ "ass::hovered< Base >", "structass_1_1hovered.html", null ]
     ] ],
+    [ "aui::dbus::impl::basic_converter< T, dbusType >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ],
+    [ "aui::dbus::impl::basic_converter< bool, DBUS_TYPE_BOOLEAN >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< bool >", "structaui_1_1dbus_1_1converter_3_01bool_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< const char *, DBUS_TYPE_OBJECT_PATH >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< ObjectPath >", "structaui_1_1dbus_1_1converter_3_01ObjectPath_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< const char *, DBUS_TYPE_STRING >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< const char * >", "structaui_1_1dbus_1_1converter_3_01const_01char_01_5_01_4.html", [
+        [ "aui::dbus::converter< char[N]>", "structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html", null ],
+        [ "aui::dbus::converter< std::string >", "structaui_1_1dbus_1_1converter_3_01std_1_1string_01_4.html", [
+          [ "aui::dbus::converter< AString >", "structaui_1_1dbus_1_1converter_3_01AString_01_4.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< double, DBUS_TYPE_DOUBLE >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< double >", "structaui_1_1dbus_1_1converter_3_01double_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::int16_t, DBUS_TYPE_INT16 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::int16_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int16__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::int32_t, DBUS_TYPE_INT32 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::int32_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int32__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::int64_t, DBUS_TYPE_INT64 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::int64_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int64__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint16_t, DBUS_TYPE_UINT16 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint16_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint16__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint32_t, DBUS_TYPE_UINT32 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint32_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint32__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint64_t, DBUS_TYPE_UINT64 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint64_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint64__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint8_t, DBUS_TYPE_BYTE >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint8_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint8__t_01_4.html", null ]
+    ] ],
     [ "aui::BinarySearchNearestToZero< Predicate, Iterator >", "structaui_1_1BinarySearchNearestToZero.html", null ],
     [ "ass::Border", "structass_1_1Border.html", null ],
     [ "ass::BorderBottom", "structass_1_1BorderBottom.html", null ],
@@ -213,13 +252,18 @@ var hierarchy =
     [ "Cache< T, Container, K >", "classCache.html", null ],
     [ "Cache< IDrawable, Cache, AUrl >", "classCache.html", null ],
     [ "ASignal< Args >::call_wrapper", "structASignal_1_1call__wrapper.html", null ],
-    [ "aui::callable_info< Return, Args >", "structaui_1_1callable__info.html", null ],
-    [ "aui::callable_info< Return(Args...)>", "structaui_1_1callable__info_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::impl::future::CancellationWrapper< Inner >", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
+    [ "aui::dbus::converter< T >", "structaui_1_1dbus_1_1converter.html", null ],
+    [ "aui::dbus::converter< AMap< K, V > >", "structaui_1_1dbus_1_1converter_3_01AMap_3_01K_00_01V_01_4_01_4.html", null ],
+    [ "aui::dbus::converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
+    [ "aui::dbus::converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
+    [ "aui::dbus::converter< std::tuple< Types... > >", "structaui_1_1dbus_1_1converter_3_01std_1_1tuple_3_01Types_8_8_8_01_4_01_4.html", null ],
+    [ "aui::dbus::converter< Unknown >", "structaui_1_1dbus_1_1converter_3_01Unknown_01_4.html", null ],
+    [ "aui::dbus::converter< Variant >", "structaui_1_1dbus_1_1converter_3_01Variant_01_4.html", null ],
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
@@ -373,6 +417,7 @@ var hierarchy =
     [ "ACurl::ErrorDescription", "structACurl_1_1ErrorDescription.html", null ],
     [ "std::exception", null, [
       [ "AException", "classAException.html", [
+        [ "ADBus::Exception", "classADBus_1_1Exception.html", null ],
         [ "AIOException", "classAIOException.html", [
           [ "AAccessDeniedException", "classAAccessDeniedException.html", null ],
           [ "ACurl::Exception", "classACurl_1_1Exception.html", null ],
@@ -424,6 +469,8 @@ var hierarchy =
     ] ],
     [ "fmt::formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
     [ "FreeType", "classFreeType.html", null ],
+    [ "aui::function_info< Return, Args >", "structaui_1_1function__info.html", null ],
+    [ "aui::function_info< Return(Args...)>", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::impl::future::Future< Value >", "classaui_1_1impl_1_1future_1_1Future.html", null ],
     [ "aui::impl::future::Future< void >", "classaui_1_1impl_1_1future_1_1Future.html", [
       [ "AFuture< T >", "classAFuture.html", null ],
@@ -640,7 +687,7 @@ var hierarchy =
     [ "ass::Margin", "structass_1_1Margin.html", null ],
     [ "ass::MaxSize", "structass_1_1MaxSize.html", null ],
     [ "aui::member< Type >", "structaui_1_1member.html", null ],
-    [ "aui::member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
+    [ "aui::member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", null ],
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
@@ -662,6 +709,7 @@ var hierarchy =
       [ "aui::win32::detail::Win32Object< HDC >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
         [ "aui::win32::DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ]
       ] ],
+      [ "ADBus", "classADBus.html", null ],
       [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
@@ -815,6 +863,9 @@ var hierarchy =
     [ "std::streambuf", null, [
       [ "AStdIStream::StreamBuf", "classAStdIStream_1_1StreamBuf.html", null ]
     ] ],
+    [ "std::string", null, [
+      [ "aui::dbus::ObjectPath", "classaui_1_1dbus_1_1ObjectPath.html", null ]
+    ] ],
     [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
     [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
@@ -860,6 +911,8 @@ var hierarchy =
     [ "std::tuple", null, [
       [ "aui::impl::json::my_tuple< Items >", "structaui_1_1impl_1_1json_1_1my__tuple.html", null ]
     ] ],
+    [ "aui::tuple_visitor< Args >", "structaui_1_1tuple__visitor.html", null ],
+    [ "aui::tuple_visitor< std::tuple< Args... > >", "structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html", null ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],
@@ -874,6 +927,7 @@ var hierarchy =
     [ "gl::Shader::Uniform", "classgl_1_1Shader_1_1Uniform.html", null ],
     [ "UnixIoAsync", "classUnixIoAsync.html", null ],
     [ "UnixIoThread", "classUnixIoThread.html", null ],
+    [ "aui::dbus::Unknown", "structaui_1_1dbus_1_1Unknown.html", null ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
     [ "UnsupportedBrushHelper< Brush >", "structUnsupportedBrushHelper.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
@@ -887,6 +941,9 @@ var hierarchy =
     ] ],
     [ "AEnumerate< enum_t >::Values< values >", "structAEnumerate_1_1Values.html", null ],
     [ "gl::Vao", "classgl_1_1Vao.html", null ],
+    [ "VariantImpl", null, [
+      [ "aui::dbus::Variant", "structaui_1_1dbus_1_1Variant.html", null ]
+    ] ],
     [ "gl::detail::VboImpl< T >", "classgl_1_1detail_1_1VboImpl.html", null ],
     [ "gl::detail::VboImpl< gl::ResourceKind::INDEX_BUFFER >", "classgl_1_1detail_1_1VboImpl.html", [
       [ "gl::IndexBuffer", "classgl_1_1IndexBuffer.html", null ]

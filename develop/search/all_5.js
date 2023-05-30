@@ -13,7 +13,7 @@ var searchData=
   ['entry_10',['Entry',['../classAStacktrace_1_1Entry.html',1,'AStacktrace::Entry'],['../classAWordWrappingEngine_1_1Entry.html',1,'AWordWrappingEngine::Entry']]],
   ['error_11',['Error',['../structaui_1_1impl_1_1Error.html',1,'aui::impl']]],
   ['errordescription_12',['ErrorDescription',['../structACurl_1_1ErrorDescription.html',1,'ACurl']]],
-  ['exception_13',['Exception',['../classACurl_1_1Exception.html',1,'ACurl']]],
+  ['exception_13',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception']]],
   ['execute_14',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
   ['executeasadministrator_15',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
   ['executewaitforexit_16',['executeWaitForExit',['../classAProcess.html#aa636c40424103381cb9fdacbdad265d8',1,'AProcess']]],

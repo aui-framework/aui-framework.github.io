@@ -29,7 +29,7 @@ var searchData=
   ['setcolor_26',['setColor',['../classRender.html#a15b97ec33e1201b427721c5f0a2277fd',1,'Render::setColor()'],['../classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794',1,'IRenderer::setColor()']]],
   ['setcolorforced_27',['setColorForced',['../classRender.html#ae5e09173d281900868bb5a322612ec01',1,'Render::setColorForced()'],['../classIRenderer.html#a55c5336c483e50cdd796b2072d663a57',1,'IRenderer::setColorForced()']]],
   ['setcontents_28',['setContents',['../classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd',1,'AViewContainer']]],
-  ['setextrastylesheet_29',['setExtraStylesheet',['../classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b',1,'AView::setExtraStylesheet(_&lt; AStylesheet &gt; extraStylesheet)'],['../classAView.html#abfffb2d8ac173e35e0599b4389efb9e1',1,'AView::setExtraStylesheet(AStylesheet &amp;&amp;extraStylesheet)']]],
+  ['setextrastylesheet_29',['setExtraStylesheet',['../classAView.html#abfffb2d8ac173e35e0599b4389efb9e1',1,'AView::setExtraStylesheet(AStylesheet &amp;&amp;extraStylesheet)'],['../classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b',1,'AView::setExtraStylesheet(_&lt; AStylesheet &gt; extraStylesheet)']]],
   ['setfocuschaintarget_30',['setFocusChainTarget',['../classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc',1,'AViewContainer']]],
   ['setlayout_31',['setLayout',['../classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542',1,'AViewContainer']]],
   ['setmargin_32',['setMargin',['../classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7',1,'AView']]],
@@ -43,8 +43,8 @@ var searchData=
   ['setthread_40',['setThread',['../classAObject.html#a98cf3fa4ac279b30860bf228c44306b2',1,'AObject']]],
   ['settransform_41',['setTransform',['../classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7',1,'IRenderer::setTransform()'],['../classRender.html#ad3d5f6c8566729290636f9f439fb3334',1,'Render::setTransform()']]],
   ['settransformforced_42',['setTransformForced',['../classIRenderer.html#abba373ab78eefb1063d9ddcfc37e7c95',1,'IRenderer::setTransformForced()'],['../classRender.html#a0b7ceabde073ee69fe5d59184a7bf238',1,'Render::setTransformForced()']]],
-  ['setup_43',['SetUp',['../classSignalSlot.html#a3f34f536b06b064d139e23563e4ecef8',1,'SignalSlot']]],
-  ['setup_44',['setup',['../structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf',1,'ADataBindingDefault']]],
+  ['setup_43',['setup',['../structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf',1,'ADataBindingDefault']]],
+  ['setup_44',['SetUp',['../classSignalSlot.html#a3f34f536b06b064d139e23563e4ecef8',1,'SignalSlot']]],
   ['setupconnections_45',['setupConnections',['../structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8',1,'ass::ParentSubSelector']]],
   ['setvalue_46',['setValue',['../classAProgressBar.html#afe74ce3a7b4bed591ae12d6a73a0fc7c',1,'AProgressBar']]],
   ['shader_47',['Shader',['../classgl_1_1Shader.html',1,'gl']]],
@@ -88,7 +88,8 @@ var searchData=
   ['sub_85',['sub',['../structtuples_1_1detail_1_1functor_1_1sub.html',1,'tuples::detail::functor']]],
   ['success_86',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]],
   ['supplyexception_87',['supplyException',['../classAFuture.html#afb90c81c9ded0417533b721c34d3a139',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2',1,'AFuture&lt; void &gt;::supplyException()']]],
-  ['symbol_88',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]],
-  ['system_89',['System',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor']]],
-  ['systemslashdirection_90',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
+  ['supplyresult_88',['supplyResult',['../classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836',1,'AFuture::supplyResult()'],['../classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06',1,'AFuture&lt; void &gt;::supplyResult()']]],
+  ['symbol_89',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]],
+  ['system_90',['System',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor']]],
+  ['systemslashdirection_91',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
