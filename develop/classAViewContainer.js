@@ -7,7 +7,7 @@ var classAViewContainer =
     [ "getContentMinimumWidth", "classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0", null ],
     [ "getViewAt", "classAViewContainer.html#aeb44d35f2a0eccc8fd1c6f9a7560f71f", null ],
     [ "getViewAtRecursive", "classAViewContainer.html#a2e958ee61095b749fbcebfa262662bf7", null ],
-    [ "getViewAtRecursive", "classAViewContainer.html#a2e8ecc7bc43cd4313814066dd88b321f", null ],
+    [ "getViewAtRecursive", "classAViewContainer.html#a1b19d35413be2a20884f2659d4db294d", null ],
     [ "getViewAtRecursiveOfType", "classAViewContainer.html#a6785ea899fb389f3e3ae804aff46fbfb", null ],
     [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
     [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
