@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"structtuples_1_1detail_1_1functor_1_1add.html":[0,2,12,0,0,0],
+"structtuples_1_1detail_1_1functor_1_1div.html":[0,2,12,0,0,1],
+"structtuples_1_1detail_1_1functor_1_1div.html":[0,0,17,0,0,1],
+"structtuples_1_1detail_1_1functor_1_1mul.html":[0,2,12,0,0,2],
 "structtuples_1_1detail_1_1functor_1_1mul.html":[0,0,17,0,0,2],
 "structtuples_1_1detail_1_1functor_1_1sub.html":[0,0,17,0,0,3],
 "structtuples_1_1detail_1_1functor_1_1sub.html":[0,2,12,0,0,3],

@@ -72,7 +72,7 @@ var NAVTREEINDEX =
 "class___1_1SafeCallWrapper.html",
 "structADataBindingDefault_3_01ACheckBoxWrapper_00_01bool_01_4.html",
 "structass_1_1decl_1_1Declaration_3_01TextShadow_01_4.html",
-"structtuples_1_1detail_1_1functor_1_1mul.html"
+"structtuples_1_1detail_1_1functor_1_1add.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

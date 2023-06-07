@@ -688,6 +688,7 @@ var hierarchy =
     [ "ass::MaxSize", "structass_1_1MaxSize.html", null ],
     [ "aui::member< Type >", "structaui_1_1member.html", null ],
     [ "aui::member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", null ],
+    [ "aui::member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],

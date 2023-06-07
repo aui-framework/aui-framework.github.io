@@ -216,6 +216,7 @@ var annotated =
       [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
       [ "member", "structaui_1_1member.html", null ],
       [ "member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4" ],
+      [ "member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4" ],
       [ "member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
       [ "no_escape", "structaui_1_1no__escape.html", null ],
       [ "non_null", "structaui_1_1non__null.html", null ],
