@@ -139,6 +139,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc8ce009869391c05cf8443081c2989d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classALogger.html#afc8ce009869391c05cf8443081c2989d">ALogger</a> (<a class="el" href="classAString.html">AString</a> filename)</td></tr>
 <tr class="memdesc:afc8ce009869391c05cf8443081c2989d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for an extra log file.  <a href="classALogger.html#afc8ce009869391c05cf8443081c2989d">More...</a><br /></td></tr>
 <tr class="separator:afc8ce009869391c05cf8443081c2989d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a659e6dbaa5f4b08ce2176830f75404"><td class="memItemLeft" align="right" valign="top"><a id="a8a659e6dbaa5f4b08ce2176830f75404" name="a8a659e6dbaa5f4b08ce2176830f75404"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDebugMode</b> (bool debug)</td></tr>
+<tr class="separator:a8a659e6dbaa5f4b08ce2176830f75404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db019d2f16d345ad7e1a2b021346bee"><td class="memItemLeft" align="right" valign="top"><a id="a3db019d2f16d345ad7e1a2b021346bee" name="a3db019d2f16d345ad7e1a2b021346bee"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDebug</b> ()</td></tr>
+<tr class="separator:a3db019d2f16d345ad7e1a2b021346bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2da2365b9f592d3c47d834456a23d54"><td class="memItemLeft" align="right" valign="top"><a id="aa2da2365b9f592d3c47d834456a23d54" name="aa2da2365b9f592d3c47d834456a23d54"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLogFile</b> (<a class="el" href="classAPath.html">APath</a> path)</td></tr>
+<tr class="separator:aa2da2365b9f592d3c47d834456a23d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c184cf3ad84e42d110d11f79049be2"><td class="memItemLeft" align="right" valign="top"><a id="ad9c184cf3ad84e42d110d11f79049be2" name="ad9c184cf3ad84e42d110d11f79049be2"></a>
+const <a class="el" href="classAString.html">AString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>logFile</b> ()</td></tr>
+<tr class="separator:ad9c184cf3ad84e42d110d11f79049be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87172582c048df7d66feefda3e6bf3ce"><td class="memItemLeft" align="right" valign="top"><a id="a87172582c048df7d66feefda3e6bf3ce" name="a87172582c048df7d66feefda3e6bf3ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onLogged</b> (std::function&lt; void(const <a class="el" href="classAString.html">AString</a> &amp;prefix, const <a class="el" href="classAString.html">AString</a> &amp;message, Level level)&gt; callback)</td></tr>
+<tr class="separator:a87172582c048df7d66feefda3e6bf3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memTemplParams" colspan="2"><a id="a63c7471e4fe2c2dd96e38f72203d1ec7" name="a63c7471e4fe2c2dd96e38f72203d1ec7"></a>
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callable&gt; </td></tr>
+<tr class="memitem:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>doLogFileAccessSafe</b> (Callable action)</td></tr>
+<tr class="separator:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40ade2b930dbd47aa48011d70d1e4a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b">log</a> (Level level, const <a class="el" href="classAString.html">AString</a> &amp;prefix)</td></tr>
 <tr class="memdesc:a40ade2b930dbd47aa48011d70d1e4a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writer a log entry with <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a> helper.  <a href="classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b">More...</a><br /></td></tr>
 <tr class="separator:a40ade2b930dbd47aa48011d70d1e4a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,25 +167,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c5633c4a2e3d510716953d4847fc59f"><td class="memItemLeft" align="right" valign="top"><a id="a7c5633c4a2e3d510716953d4847fc59f" name="a7c5633c4a2e3d510716953d4847fc59f"></a>
 static <a class="el" href="classALogger.html">ALogger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>global</b> ()</td></tr>
 <tr class="separator:a7c5633c4a2e3d510716953d4847fc59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9731563463c2fd167832d01c1f36d497"><td class="memItemLeft" align="right" valign="top"><a id="a9731563463c2fd167832d01c1f36d497" name="a9731563463c2fd167832d01c1f36d497"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>setDebugMode</b> (bool debug)</td></tr>
-<tr class="separator:a9731563463c2fd167832d01c1f36d497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23494daa26280682ffa38a25e0adaf7"><td class="memItemLeft" align="right" valign="top"><a id="aa23494daa26280682ffa38a25e0adaf7" name="aa23494daa26280682ffa38a25e0adaf7"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDebug</b> ()</td></tr>
-<tr class="separator:aa23494daa26280682ffa38a25e0adaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8a7069229537e24e8c03aa6659f6bd5"><td class="memItemLeft" align="right" valign="top"><a id="ac8a7069229537e24e8c03aa6659f6bd5" name="ac8a7069229537e24e8c03aa6659f6bd5"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>setLogFile</b> (<a class="el" href="classAPath.html">APath</a> path)</td></tr>
-<tr class="separator:ac8a7069229537e24e8c03aa6659f6bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9531167c3695b2a02bcfeea5b75acd98"><td class="memItemLeft" align="right" valign="top"><a id="a9531167c3695b2a02bcfeea5b75acd98" name="a9531167c3695b2a02bcfeea5b75acd98"></a>
-static const <a class="el" href="classAString.html">AString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>logFile</b> ()</td></tr>
-<tr class="separator:a9531167c3695b2a02bcfeea5b75acd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a489ab0829fb94ae3c626a6f00eedc49f"><td class="memItemLeft" align="right" valign="top"><a id="a489ab0829fb94ae3c626a6f00eedc49f" name="a489ab0829fb94ae3c626a6f00eedc49f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>onLogged</b> (std::function&lt; void(const <a class="el" href="classAString.html">AString</a> &amp;prefix, const <a class="el" href="classAString.html">AString</a> &amp;message, Level level)&gt; callback)</td></tr>
-<tr class="separator:a489ab0829fb94ae3c626a6f00eedc49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf38231f4d1d527fb8c63ba9b9a0882"><td class="memTemplParams" colspan="2"><a id="afcf38231f4d1d527fb8c63ba9b9a0882" name="afcf38231f4d1d527fb8c63ba9b9a0882"></a>
-template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callable&gt; </td></tr>
-<tr class="memitem:afcf38231f4d1d527fb8c63ba9b9a0882"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>doLogFileAccessSafe</b> (Callable action)</td></tr>
-<tr class="separator:afcf38231f4d1d527fb8c63ba9b9a0882"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6a0bd37bdbf342872644e5437dd5333"><td class="memItemLeft" align="right" valign="top"><a id="ac6a0bd37bdbf342872644e5437dd5333" name="ac6a0bd37bdbf342872644e5437dd5333"></a>
 static <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b> (const <a class="el" href="classAString.html">AString</a> &amp;str)</td></tr>
 <tr class="separator:ac6a0bd37bdbf342872644e5437dd5333"><td class="memSeparator" colspan="2">&#160;</td></tr>
