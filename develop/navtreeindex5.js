@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_configure_flags.html":[1,2],
 "md_docs_Code_style_and_recommendations.html":[1,5],
 "md_docs_Crosscompiling.html":[1,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,2,3,1,15],
 "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,0,6,1,15],
 "structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html":[0,0,6,1,16],
-"structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html":[0,2,3,1,16],
-"structass_1_1decl_1_1Declaration_3_01FontFamily_01_4.html":[0,2,3,1,18]
+"structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html":[0,2,3,1,16]
 };

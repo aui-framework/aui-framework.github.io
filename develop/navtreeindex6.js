@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structass_1_1decl_1_1Declaration_3_01FontFamily_01_4.html":[0,2,3,1,18],
 "structass_1_1decl_1_1Declaration_3_01FontFamily_01_4.html":[0,0,6,1,18],
 "structass_1_1decl_1_1Declaration_3_01FontRendering_01_4.html":[0,0,6,1,19],
 "structass_1_1decl_1_1Declaration_3_01FontRendering_01_4.html":[0,2,3,1,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structaui_1_1valid_1_1in__range.html":[0,0,7,7,3],
 "structaui_1_1valid_1_1in__range.html":[0,2,4,6,3],
 "structaui_1_1valid_1_1validator.html":[0,0,7,7,4],
-"structaui_1_1valid_1_1validator.html":[0,2,4,6,4],
-"structaui_1_1win32_1_1Bitmap.html":[0,0,7,8,1]
+"structaui_1_1valid_1_1validator.html":[0,2,4,6,4]
 };

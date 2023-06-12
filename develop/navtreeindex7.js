@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structaui_1_1win32_1_1Bitmap.html":[0,0,7,8,1],
 "structaui_1_1win32_1_1Bitmap.html":[0,2,4,7,1],
 "structaui_1_1win32_1_1DeviceContext.html":[0,0,7,8,2],
 "structaui_1_1win32_1_1DeviceContext.html":[0,2,4,7,2],

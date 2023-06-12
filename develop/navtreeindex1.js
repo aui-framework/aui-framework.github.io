@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classAException.html":[2,0,0,10],
 "classAFakeWindowInitializer.html":[0,2,94],
 "classAFieldObservable.html":[2,0,0,39],
 "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590":[2,0,0,39,1],
@@ -157,10 +158,10 @@ var NAVTREEINDEX1 =
 "classAPathChooserView.html":[2,0,7,2,14],
 "classAPipe.html":[2,0,0,2,8],
 "classAPipe.html":[2,0,0,26],
-"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[2,0,0,26,1],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[2,0,0,2,8,1],
-"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[2,0,0,2,8,0],
+"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[2,0,0,26,1],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[2,0,0,26,0],
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[2,0,0,2,8,0],
 "classAPlaceholderAnimator.html":[0,2,186],
 "classAPlaceholderAnimator_1_1ICustomWidth.html":[0,2,186,0],
 "classAPool.html":[0,2,189],
@@ -238,16 +239,15 @@ var NAVTREEINDEX1 =
 "classASet.html#abfe9f1127b1811d332d6032d57e59544":[2,0,0,15,0],
 "classASharedRaiiHelper.html":[2,0,0,43],
 "classAShortcut.html":[0,2,237],
-"classASignal.html":[2,0,0,16],
 "classASignal.html":[2,0,0,0,1],
-"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[2,0,0,16,1],
+"classASignal.html":[2,0,0,16],
 "classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[2,0,0,0,1,1],
+"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[2,0,0,16,1],
 "classASizeAnimator.html":[0,2,239],
 "classASizeAnimator.html#a37484d5126c917ab5a8d9ba01e12ae65":[0,2,239,0],
 "classASlider.html":[2,0,7,2,21],
 "classASlider.html#a0e6810d98f2994cef20729603e762a12":[2,0,7,2,21,1],
 "classASlider.html#aac66e7ba8ef4ebb38c645cb40f7af62b":[2,0,7,2,21,3],
 "classASlider.html#ae8b27e20c99191fc0fd34bb3e85aa059":[2,0,7,2,21,2],
-"classASlider_1_1Handle.html":[2,0,7,2,21,0],
-"classASoftwareEmbedAuiWrap.html":[0,2,241]
+"classASlider_1_1Handle.html":[2,0,7,2,21,0]
 };

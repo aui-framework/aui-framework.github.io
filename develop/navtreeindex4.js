@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classUIMatcher.html":[0,2,401],
 "classUIMatcher.html#a0936b37e3fc29a29a362897775cfb550":[0,2,401,0],
 "classUIScreenAnalyzer.html":[0,2,402],
 "classUIScrollTest.html":[0,2,403],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "interfaceAppDelegate.html":[0,2,190],
 "interfaceMainView.html":[0,2,352],
 "interfaceSceneDelegate.html":[0,2,377],
-"interfaceWindowDelegate.html":[0,2,435],
-"md_docs_AUI_Boot.html":[1,1]
+"interfaceWindowDelegate.html":[0,2,435]
 };

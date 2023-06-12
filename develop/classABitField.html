@@ -129,8 +129,11 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> ()
 <tr class="memdesc:a6356f6d6ea0341695bedf3390d904810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether flag set or not and sets flag.  <a href="classABitField.html#a6356f6d6ea0341695bedf3390d904810">More...</a><br /></td></tr>
 <tr class="separator:a6356f6d6ea0341695bedf3390d904810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc8e3f50b769418a06186380d37114e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classABitField.html#afc8e3f50b769418a06186380d37114e5">test</a> (T flags) const</td></tr>
-<tr class="memdesc:afc8e3f50b769418a06186380d37114e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether flag(s) set or not.  <a href="classABitField.html#afc8e3f50b769418a06186380d37114e5">More...</a><br /></td></tr>
+<tr class="memdesc:afc8e3f50b769418a06186380d37114e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether flag (or all flags) set or not.  <a href="classABitField.html#afc8e3f50b769418a06186380d37114e5">More...</a><br /></td></tr>
 <tr class="separator:afc8e3f50b769418a06186380d37114e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d2a4873168f5262679594a5c695250"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classABitField.html#aa5d2a4873168f5262679594a5c695250">testAny</a> (T flags) const</td></tr>
+<tr class="memdesc:aa5d2a4873168f5262679594a5c695250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether flag (or one of the flags flags) set or not.  <a href="classABitField.html#aa5d2a4873168f5262679594a5c695250">More...</a><br /></td></tr>
+<tr class="separator:aa5d2a4873168f5262679594a5c695250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5d85e3c5f84f64cae65d4b7df9b3b82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">operator&amp;</a> (T flags) const</td></tr>
 <tr class="memdesc:aa5d85e3c5f84f64cae65d4b7df9b3b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether flag(s) set or not.  <a href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">More...</a><br /></td></tr>
 <tr class="separator:aa5d85e3c5f84f64cae65d4b7df9b3b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -351,7 +354,45 @@ template&lt;typename T  = uint32_t&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Determines whether flag(s) set or not. </p>
+<p>Determines whether flag (or all flags) set or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>flag(s) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if flag(s) set </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function supports multiple flags (i.e <code>check(FLAG1 | FLAG2)</code>). </dd></dl>
+
+</div>
+</div>
+<a id="aa5d2a4873168f5262679594a5c695250" name="aa5d2a4873168f5262679594a5c695250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5d2a4873168f5262679594a5c695250">&#9670;&nbsp;</a></span>testAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = uint32_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classABitField.html">ABitField</a>&lt; T &gt;::testAny </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines whether flag (or one of the flags flags) set or not. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flags</td><td>flag(s) </td></tr>

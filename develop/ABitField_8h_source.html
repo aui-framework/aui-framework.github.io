@@ -162,26 +162,30 @@ $(document).ready(function(){initNavTree('ABitField_8h_source.html',''); initRes
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classABitField.html#afc8e3f50b769418a06186380d37114e5">   97</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classABitField.html#afc8e3f50b769418a06186380d37114e5">test</a>(T flags)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> (mStorage &amp; flags) == flags;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">  107</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">operator&amp;</a>(T flags)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classABitField.html#afc8e3f50b769418a06186380d37114e5">test</a>(flags);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">void</span> set(T flag, <span class="keywordtype">bool</span> value) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">if</span> (value) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            mStorage |= flag;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            mStorage &amp;= ~flag;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classABitField.html#aa5d2a4873168f5262679594a5c695250">  106</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classABitField.html#aa5d2a4873168f5262679594a5c695250">testAny</a>(T flags)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> bool(mStorage &amp; flags);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">  116</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">operator&amp;</a>(T flags)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classABitField.html#afc8e3f50b769418a06186380d37114e5">test</a>(flags);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> set(T flag, <span class="keywordtype">bool</span> value) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">if</span> (value) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            mStorage |= flag;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            mStorage &amp;= ~flag;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
 <div class="ttc" id="aclassABitField_html"><div class="ttname"><a href="classABitField.html">ABitField</a></div><div class="ttdoc">Bit field implementation.</div><div class="ttdef"><b>Definition:</b> ABitField.h:24</div></div>
 <div class="ttc" id="aclassABitField_html_a3259d7ca57bbfeba3c41b91c0160a13e"><div class="ttname"><a href="classABitField.html#a3259d7ca57bbfeba3c41b91c0160a13e">ABitField::operator&lt;&lt;</a></div><div class="ttdeci">ABitField &amp; operator&lt;&lt;(T flag)</div><div class="ttdoc">Sets flag.</div><div class="ttdef"><b>Definition:</b> ABitField.h:48</div></div>
 <div class="ttc" id="aclassABitField_html_a34ec75756c1ed11a878b78d13acfbbf0"><div class="ttname"><a href="classABitField.html#a34ec75756c1ed11a878b78d13acfbbf0">ABitField::operator&gt;&gt;</a></div><div class="ttdeci">ABitField &amp; operator&gt;&gt;(T flag)</div><div class="ttdoc">Resets flag.</div><div class="ttdef"><b>Definition:</b> ABitField.h:58</div></div>
 <div class="ttc" id="aclassABitField_html_a6356f6d6ea0341695bedf3390d904810"><div class="ttname"><a href="classABitField.html#a6356f6d6ea0341695bedf3390d904810">ABitField::checkAndReset</a></div><div class="ttdeci">bool checkAndReset(T flag)</div><div class="ttdoc">Determines whether flag set or not and sets flag.</div><div class="ttdef"><b>Definition:</b> ABitField.h:81</div></div>
 <div class="ttc" id="aclassABitField_html_aa0034b4149bddd81c509c56870f25903"><div class="ttname"><a href="classABitField.html#aa0034b4149bddd81c509c56870f25903">ABitField::checkAndSet</a></div><div class="ttdeci">bool checkAndSet(T flag)</div><div class="ttdoc">Determines whether flag set or not and resets flag.</div><div class="ttdef"><b>Definition:</b> ABitField.h:68</div></div>
-<div class="ttc" id="aclassABitField_html_aa5d85e3c5f84f64cae65d4b7df9b3b82"><div class="ttname"><a href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">ABitField::operator&amp;</a></div><div class="ttdeci">bool operator&amp;(T flags) const</div><div class="ttdoc">Determines whether flag(s) set or not.</div><div class="ttdef"><b>Definition:</b> ABitField.h:107</div></div>
-<div class="ttc" id="aclassABitField_html_afc8e3f50b769418a06186380d37114e5"><div class="ttname"><a href="classABitField.html#afc8e3f50b769418a06186380d37114e5">ABitField::test</a></div><div class="ttdeci">bool test(T flags) const</div><div class="ttdoc">Determines whether flag(s) set or not.</div><div class="ttdef"><b>Definition:</b> ABitField.h:97</div></div>
+<div class="ttc" id="aclassABitField_html_aa5d2a4873168f5262679594a5c695250"><div class="ttname"><a href="classABitField.html#aa5d2a4873168f5262679594a5c695250">ABitField::testAny</a></div><div class="ttdeci">bool testAny(T flags) const</div><div class="ttdoc">Determines whether flag (or one of the flags flags) set or not.</div><div class="ttdef"><b>Definition:</b> ABitField.h:106</div></div>
+<div class="ttc" id="aclassABitField_html_aa5d85e3c5f84f64cae65d4b7df9b3b82"><div class="ttname"><a href="classABitField.html#aa5d85e3c5f84f64cae65d4b7df9b3b82">ABitField::operator&amp;</a></div><div class="ttdeci">bool operator&amp;(T flags) const</div><div class="ttdoc">Determines whether flag(s) set or not.</div><div class="ttdef"><b>Definition:</b> ABitField.h:116</div></div>
+<div class="ttc" id="aclassABitField_html_afc8e3f50b769418a06186380d37114e5"><div class="ttname"><a href="classABitField.html#afc8e3f50b769418a06186380d37114e5">ABitField::test</a></div><div class="ttdeci">bool test(T flags) const</div><div class="ttdoc">Determines whether flag (or all flags) set or not.</div><div class="ttdef"><b>Definition:</b> ABitField.h:97</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
