@@ -40,10 +40,11 @@ var searchData=
   ['viewassertiontext_37',['ViewAssertionText',['../structViewAssertionText.html',1,'']]],
   ['viewassertionvisible_38',['ViewAssertionVisible',['../structViewAssertionVisible.html',1,'']]],
   ['viewhierarchytreemodel_39',['ViewHierarchyTreeModel',['../classViewHierarchyTreeModel.html',1,'']]],
-  ['viewpropertiesview_40',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
-  ['views_41',['Views',['../group__useful__views.html',1,'']]],
-  ['visibility_42',['Visibility',['../group__views.html#ga53d6f8ccb0015ea020228de41cfd2162',1,'Visibility.h']]],
-  ['visible_43',['VISIBLE',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;AOverflow.h'],['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;Visibility.h']]],
-  ['visitheader_44',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
-  ['visitsviewrecursive_45',['visitsViewRecursive',['../classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf',1,'AViewContainer']]]
+  ['viewmock_40',['ViewMock',['../classViewMock.html',1,'']]],
+  ['viewpropertiesview_41',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
+  ['views_42',['Views',['../group__useful__views.html',1,'']]],
+  ['visibility_43',['Visibility',['../group__views.html#ga53d6f8ccb0015ea020228de41cfd2162',1,'Visibility.h']]],
+  ['visible_44',['VISIBLE',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;AOverflow.h'],['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;Visibility.h']]],
+  ['visitheader_45',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
+  ['visitsviewrecursive_46',['visitsViewRecursive',['../classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf',1,'AViewContainer']]]
 ];

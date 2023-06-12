@@ -34,5 +34,6 @@ var searchData=
   ['viewassertiontext_31',['ViewAssertionText',['../structViewAssertionText.html',1,'']]],
   ['viewassertionvisible_32',['ViewAssertionVisible',['../structViewAssertionVisible.html',1,'']]],
   ['viewhierarchytreemodel_33',['ViewHierarchyTreeModel',['../classViewHierarchyTreeModel.html',1,'']]],
-  ['viewpropertiesview_34',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]]
+  ['viewmock_34',['ViewMock',['../classViewMock.html',1,'']]],
+  ['viewpropertiesview_35',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]]
 ];

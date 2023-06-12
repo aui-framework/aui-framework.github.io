@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"structaui_1_1valid_1_1in__range.html":[0,0,7,7,3],
+"structaui_1_1valid_1_1in__range.html":[0,2,4,6,3],
 "structaui_1_1valid_1_1validator.html":[0,0,7,7,4],
 "structaui_1_1valid_1_1validator.html":[0,2,4,6,4],
 "structaui_1_1win32_1_1Bitmap.html":[0,0,7,8,1],
