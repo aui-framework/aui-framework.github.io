@@ -323,39 +323,63 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        }</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    }</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAOptional.html">AOptional&lt;U&gt;</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keywordflow">return</span> (mInitialized == rhs.mInitialized) &amp;&amp; (!mInitialized || value() == rhs.value());</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> U&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">return</span> mInitialized &amp;&amp; value() == rhs;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> std::nullopt_t&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">return</span> !mInitialized;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    std::aligned_storage_t&lt;<span class="keyword">sizeof</span>(T), <span class="keyword">alignof</span>(T)&gt; mStorage;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordtype">bool</span> mInitialized = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    T* ptrUnsafe() noexcept {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">return</span> &amp;valueUnsafe();</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    }</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    T&amp; valueUnsafe() noexcept {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T&amp;<span class="keyword">&gt;</span>(mStorage);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    }</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>};</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classAOptional.html#a672f83397545ad6d8b16669b17b5ff42">  252</a></span>    T&amp;&amp; <a class="code hl_function" href="classAOptional.html#a672f83397545ad6d8b16669b17b5ff42">valueOr</a>(F&amp;&amp; alternative) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">if</span> (mInitialized) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <span class="keywordflow">return</span> std::move(value());</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> isSame = std::is_constructible_v&lt;T, F&gt;;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> isInvocable = std::is_invocable_v&lt;F&gt;;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keyword">static_assert</span>(isSame || isInvocable, <span class="stringliteral">&quot;F is neither same as T nor invokable returning T nor invokable throwing a exception&quot;</span>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (isSame) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordflow">return</span> std::forward&lt;F&gt;(alternative);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(isInvocable) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;std::invoke_result_t&lt;F&gt;, <span class="keywordtype">void</span>&gt;) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                alternative();</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                assert((<span class="stringliteral">&quot;should not have reached here&quot;</span>, <span class="keyword">false</span>));</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;should not have reached here&quot;</span>); <span class="comment">// stub exception</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                <span class="keywordflow">return</span> alternative();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            }</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    }</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAOptional.html">AOptional&lt;U&gt;</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">return</span> (mInitialized == rhs.mInitialized) &amp;&amp; (!mInitialized || value() == rhs.value());</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> U&gt;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> U&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">return</span> mInitialized &amp;&amp; value() == rhs;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> std::nullopt_t&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">return</span> !mInitialized;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    std::aligned_storage_t&lt;<span class="keyword">sizeof</span>(T), <span class="keyword">alignof</span>(T)&gt; mStorage;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordtype">bool</span> mInitialized = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    T* ptrUnsafe() noexcept {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordflow">return</span> &amp;valueUnsafe();</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    T&amp; valueUnsafe() noexcept {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T&amp;<span class="keyword">&gt;</span>(mStorage);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>};</div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:36</div></div>
+<div class="ttc" id="aclassAOptional_html_a672f83397545ad6d8b16669b17b5ff42"><div class="ttname"><a href="classAOptional.html#a672f83397545ad6d8b16669b17b5ff42">AOptional::valueOr</a></div><div class="ttdeci">T &amp;&amp; valueOr(F &amp;&amp;alternative)</div><div class="ttdoc">value or alternative (either value or callback)</div><div class="ttdef"><b>Definition:</b> AOptional.h:252</div></div>
 <div class="ttc" id="aclassAOptional_html_a71c3dc1b2ba9b9017348e471833b5d2c"><div class="ttname"><a href="classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c">AOptional::valueOr</a></div><div class="ttdeci">T valueOr(F &amp;&amp;alternative) const</div><div class="ttdoc">value or alternative (either value or callback)</div><div class="ttdef"><b>Definition:</b> AOptional.h:223</div></div>
 <div class="ttc" id="aclassAOptional_html_af06a447261a5749736eff9cbee227f97"><div class="ttname"><a href="classAOptional.html#af06a447261a5749736eff9cbee227f97">AOptional::valueOrException</a></div><div class="ttdeci">T valueOrException(const char *message=&quot;empty optional&quot;) const</div><div class="ttdoc">value or exception</div><div class="ttdef"><b>Definition:</b> AOptional.h:208</div></div>
 </div><!-- fragment --></div><!-- contents -->
