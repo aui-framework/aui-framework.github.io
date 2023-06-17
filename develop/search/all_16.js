@@ -4,7 +4,7 @@ var searchData=
   ['value_1',['value',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a',1,'aui::impl::future::Future::Inner']]],
   ['valuechanged_2',['valueChanged',['../classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221',1,'ADoubleNumberPicker::valueChanged()'],['../classANumberPicker.html#addc043a70d5402573886ba56346c26b4',1,'ANumberPicker::valueChanged()']]],
   ['valuechanging_3',['valueChanging',['../classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154',1,'ADoubleNumberPicker::valueChanging()'],['../classANumberPicker.html#a304ec6f825d8eecc381ee7a1bb452612',1,'ANumberPicker::valueChanging()']]],
-  ['valueor_4',['valueOr',['../classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c',1,'AOptional::valueOr(F &amp;&amp;alternative) const'],['../classAOptional.html#a672f83397545ad6d8b16669b17b5ff42',1,'AOptional::valueOr(F &amp;&amp;alternative)']]],
+  ['valueor_4',['valueOr',['../classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c',1,'AOptional']]],
   ['valueorexception_5',['valueOrException',['../classAOptional.html#af06a447261a5749736eff9cbee227f97',1,'AOptional']]],
   ['values_6',['Values',['../structAEnumerate_1_1Values.html',1,'AEnumerate']]],
   ['vao_7',['Vao',['../classgl_1_1Vao.html',1,'gl']]],
