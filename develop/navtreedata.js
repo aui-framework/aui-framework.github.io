@@ -70,7 +70,7 @@ var NAVTREEINDEX =
 "classASlider_1_1Handle.html",
 "classAView.html#ad461e812a51a1d556ec8219399e659c9",
 "classUIKeyDownRecursive.html",
-"interfaceMainView.html",
+"interfaceAppDelegate.html",
 "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html",
 "structaui_1_1valid_1_1in__range.html"
 ];

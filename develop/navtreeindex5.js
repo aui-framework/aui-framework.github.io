@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"interfaceAppDelegate.html":[0,2,190],
 "interfaceMainView.html":[0,2,352],
 "interfaceSceneDelegate.html":[0,2,377],
 "interfaceWindowDelegate.html":[0,2,437],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structass_1_1decl_1_1Declaration_3_01Border_01_4.html":[0,2,3,1,10],
 "structass_1_1decl_1_1Declaration_3_01Border_01_4.html":[0,0,6,1,10],
 "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,2,3,1,14],
-"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,0,6,1,14],
-"structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html":[0,2,3,1,15]
+"structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html":[0,0,6,1,14]
 };
