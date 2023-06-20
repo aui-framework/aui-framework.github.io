@@ -13,6 +13,7 @@ var classAViewContainer =
     [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
     [ "onClickPrevented", "classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3", null ],
     [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
+    [ "onPointerMove", "classAViewContainer.html#a19d6a8c7fe9a4cce0804c9f51c16cb56", null ],
     [ "onPointerPressed", "classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b", null ],
     [ "onPointerReleased", "classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b", null ],
     [ "onScroll", "classAViewContainer.html#a495a90385729196ebdd503beec159a45", null ],

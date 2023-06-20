@@ -1,7 +1,7 @@
 var searchData=
 [
   ['handle_0',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
-  ['handlesnonmousenavigation_1',['handlesNonMouseNavigation',['../classAView.html#a9c3deb7023947adc4c698540db4086c8',1,'AView::handlesNonMouseNavigation()'],['../classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2',1,'AAbstractTextField::handlesNonMouseNavigation()'],['../classAAbstractTypeableView.html#a0e905ae6059acbf92e94c30a053e3d56',1,'AAbstractTypeableView::handlesNonMouseNavigation()']]],
+  ['handlesnonmousenavigation_1',['handlesNonMouseNavigation',['../classAView.html#a9c3deb7023947adc4c698540db4086c8',1,'AView::handlesNonMouseNavigation()'],['../classAAbstractTypeableView.html#a0e905ae6059acbf92e94c30a053e3d56',1,'AAbstractTypeableView::handlesNonMouseNavigation()'],['../classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2',1,'AAbstractTextField::handlesNonMouseNavigation()']]],
   ['hash_3c_20astring_20_3e_2',['hash&lt; AString &gt;',['../structstd_1_1hash_3_01AString_01_4.html',1,'std']]],
   ['hasindirectparent_3',['hasIndirectParent',['../classAView.html#a37642918735ccb3939f63d85ff56310c',1,'AView']]],
   ['hasmany_4',['hasMany',['../structASqlModel.html#abcdb3a737a16a830d7a1271d08c7a27a',1,'ASqlModel']]],
@@ -13,5 +13,6 @@ var searchData=
   ['hidden_5ffrom_5fthis_10',['HIDDEN_FROM_THIS',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a132f85d5b4f206b0cf9404c9b895739d',1,'AOverflow.h']]],
   ['hidetouchscreenkeyboard_11',['hideTouchscreenKeyboard',['../classABaseWindow.html#ae61368594001372e16f43b99e783d712',1,'ABaseWindow']]],
   ['home_12',['HOME',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3a3c86b6ae365e77ad726cfebf62d7077a',1,'APath']]],
-  ['hovered_13',['hovered',['../structass_1_1hovered.html',1,'ass']]]
+  ['hovered_13',['hovered',['../structass_1_1hovered.html',1,'ass']]],
+  ['hovered_14',['Hovered',['../structass_1_1on__state_1_1Hovered.html',1,'ass::on_state']]]
 ];

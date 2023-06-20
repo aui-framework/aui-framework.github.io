@@ -1,6 +1,7 @@
 var classASelectableLabel =
 [
     [ "consumesClick", "classASelectableLabel.html#acea414e646b28b000827388f682bc2cb", null ],
+    [ "onPointerMove", "classASelectableLabel.html#a1f16db4dee44dc82cdc98ca1c708bf60", null ],
     [ "onPointerPressed", "classASelectableLabel.html#ad920592b27005f7124527fcf4c21d62f", null ],
     [ "onPointerReleased", "classASelectableLabel.html#a8226aed826f34b6898f6f5ef00c03bd7", null ],
     [ "render", "classASelectableLabel.html#a85a2ada023bc24ab105e0a1006110cf6", null ],

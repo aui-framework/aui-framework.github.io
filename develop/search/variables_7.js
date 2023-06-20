@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['mass_0',['mAss',['../classAView.html#a0da9806bf1d6524ef717abe66f41d269',1,'AView']]],
+  ['mass_0',['mAss',['../classAView.html#a6d4886486fa16bbfda71ddb2546bf517',1,'AView']]],
   ['massnames_1',['mAssNames',['../classAView.html#a13f1450f43fb867bcff67b1d7284bd46',1,'AView']]],
   ['maximized_2',['maximized',['../classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177',1,'AWindow']]],
   ['mcursor_3',['mCursor',['../classAView.html#a0291fee9c96836079ecdd0d591d5791c',1,'AView']]],
-  ['mcustomstylerule_4',['mCustomStyleRule',['../classAView.html#aaea3fc721d08603a1a3cbc9c11729142',1,'AView']]],
+  ['mcustomstylerule_4',['mCustomStyleRule',['../classAView.html#a5a90d8af44986418e46ab4dcf5e9182e',1,'AView']]],
   ['mexpanding_5',['mExpanding',['../classAView.html#a5122d5846227520294bda27e6b45ea4a',1,'AView']]],
   ['mfixedsize_6',['mFixedSize',['../classAView.html#a5d5732f8af15828f75729ba5bde0d4c9',1,'AView']]],
   ['mfocusnextviewontab_7',['mFocusNextViewOnTab',['../classAView.html#ad708855b7225115c0354c8ae0e61ff55',1,'AView']]],

@@ -5,7 +5,7 @@ var searchData=
   ['valuechanged_2',['valueChanged',['../classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221',1,'ADoubleNumberPicker::valueChanged()'],['../classANumberPicker.html#addc043a70d5402573886ba56346c26b4',1,'ANumberPicker::valueChanged()']]],
   ['valuechanging_3',['valueChanging',['../classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154',1,'ADoubleNumberPicker::valueChanging()'],['../classANumberPicker.html#a304ec6f825d8eecc381ee7a1bb452612',1,'ANumberPicker::valueChanging()']]],
   ['valueor_4',['valueOr',['../classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c',1,'AOptional']]],
-  ['valueorexception_5',['valueOrException',['../classAOptional.html#af06a447261a5749736eff9cbee227f97',1,'AOptional']]],
+  ['valueorexception_5',['valueOrException',['../classAOptional.html#ac2f1093971087a13def94bbd620b7735',1,'AOptional::valueOrException(const char *message=&quot;empty optional&quot;)'],['../classAOptional.html#a22e06483655aac11d8d1307086d5ba34',1,'AOptional::valueOrException(const char *message=&quot;empty optional&quot;) const']]],
   ['values_6',['Values',['../structAEnumerate_1_1Values.html',1,'AEnumerate']]],
   ['vao_7',['Vao',['../classgl_1_1Vao.html',1,'gl']]],
   ['variant_8',['Variant',['../structaui_1_1dbus_1_1Variant.html',1,'aui::dbus']]],

@@ -194,9 +194,9 @@ var hierarchy =
     [ "ass::BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],
     [ "Base", null, [
       [ "AComBase< Child, Base >", "classAComBase.html", null ],
-      [ "ass::active< Base >", "structass_1_1active.html", null ],
+      [ "ass::activated< Base >", "structass_1_1activated.html", null ],
       [ "ass::disabled< Base >", "structass_1_1disabled.html", null ],
-      [ "ass::focus< Base >", "structass_1_1focus.html", null ],
+      [ "ass::focused< Base >", "structass_1_1focused.html", null ],
       [ "ass::hovered< Base >", "structass_1_1hovered.html", null ]
     ] ],
     [ "aui::dbus::impl::basic_converter< T, dbusType >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ],
@@ -255,6 +255,12 @@ var hierarchy =
     [ "aui::impl::future::CancellationWrapper< Inner >", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
+    [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
+      [ "ass::on_state::Activated", "structass_1_1on__state_1_1Activated.html", null ],
+      [ "ass::on_state::Disabled", "structass_1_1on__state_1_1Disabled.html", null ],
+      [ "ass::on_state::Focused", "structass_1_1on__state_1_1Focused.html", null ],
+      [ "ass::on_state::Hovered", "structass_1_1on__state_1_1Hovered.html", null ]
+    ] ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
     [ "aui::dbus::converter< T >", "structaui_1_1dbus_1_1converter.html", null ],
@@ -274,7 +280,6 @@ var hierarchy =
     [ "CustomShaderHelper", "structCustomShaderHelper.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
-    [ "ass::decl::Declaration< DeclarationStruct >", "structass_1_1decl_1_1Declaration.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
     [ "aui::impl::slot::decode_type< _< T > >", "structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html", null ],
     [ "std::deque", null, [
@@ -501,54 +506,13 @@ var hierarchy =
       ] ],
       [ "ass::detail::debug_selector", "structass_1_1detail_1_1debug__selector.html", [
         [ "ass::debug_selector", "structass_1_1debug__selector.html", null ]
-      ] ]
+      ] ],
+      [ "ass::on_state::impl::OnStateSelector", "structass_1_1on__state_1_1impl_1_1OnStateSelector.html", null ]
     ] ],
     [ "IBackgroundEffect", "classIBackgroundEffect.html", [
       [ "EffectShimmer", "classEffectShimmer.html", null ]
     ] ],
     [ "APlaceholderAnimator::ICustomWidth", "classAPlaceholderAnimator_1_1ICustomWidth.html", null ],
-    [ "ass::decl::IDeclarationBase", "structass_1_1decl_1_1IDeclarationBase.html", [
-      [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", [
-        [ "ass::decl::Declaration< ACursor::System >", "structass_1_1decl_1_1Declaration_3_01ACursor_1_1System_01_4.html", null ]
-      ] ],
-      [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
-      [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
-      [ "ass::decl::Declaration< Border >", "structass_1_1decl_1_1Declaration_3_01Border_01_4.html", null ],
-      [ "ass::decl::Declaration< BorderBottom >", "structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html", null ],
-      [ "ass::decl::Declaration< BorderLeft >", "structass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ],
-      [ "ass::decl::Declaration< BorderRadius >", "structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html", null ],
-      [ "ass::decl::Declaration< BoxShadow >", "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html", null ],
-      [ "ass::decl::Declaration< Expanding >", "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html", null ],
-      [ "ass::decl::Declaration< FixedSize >", "structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html", null ],
-      [ "ass::decl::Declaration< Font >", "structass_1_1decl_1_1Declaration_3_01Font_01_4.html", null ],
-      [ "ass::decl::Declaration< FontFamily >", "structass_1_1decl_1_1Declaration_3_01FontFamily_01_4.html", null ],
-      [ "ass::decl::Declaration< FontRendering >", "structass_1_1decl_1_1Declaration_3_01FontRendering_01_4.html", null ],
-      [ "ass::decl::Declaration< FontSize >", "structass_1_1decl_1_1Declaration_3_01FontSize_01_4.html", null ],
-      [ "ass::decl::Declaration< ImageRendering >", "structass_1_1decl_1_1Declaration_3_01ImageRendering_01_4.html", null ],
-      [ "ass::decl::Declaration< LayoutSpacing >", "structass_1_1decl_1_1Declaration_3_01LayoutSpacing_01_4.html", null ],
-      [ "ass::decl::Declaration< LineHeight >", "structass_1_1decl_1_1Declaration_3_01LineHeight_01_4.html", null ],
-      [ "ass::decl::Declaration< Margin >", "structass_1_1decl_1_1Declaration_3_01Margin_01_4.html", null ],
-      [ "ass::decl::Declaration< MaxSize >", "structass_1_1decl_1_1Declaration_3_01MaxSize_01_4.html", null ],
-      [ "ass::decl::Declaration< MinSize >", "structass_1_1decl_1_1Declaration_3_01MinSize_01_4.html", null ],
-      [ "ass::decl::Declaration< Opacity >", "structass_1_1decl_1_1Declaration_3_01Opacity_01_4.html", null ],
-      [ "ass::decl::Declaration< Padding >", "structass_1_1decl_1_1Declaration_3_01Padding_01_4.html", null ],
-      [ "ass::decl::Declaration< ScrollbarAppearance >", "structass_1_1decl_1_1Declaration_3_01ScrollbarAppearance_01_4.html", null ],
-      [ "ass::decl::Declaration< TextAlign >", "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html", null ],
-      [ "ass::decl::Declaration< TextBorder >", "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html", null ],
-      [ "ass::decl::Declaration< TextColor >", "structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html", null ],
-      [ "ass::decl::Declaration< TextOverflow >", "structass_1_1decl_1_1Declaration_3_01TextOverflow_01_4.html", null ],
-      [ "ass::decl::Declaration< TextShadow >", "structass_1_1decl_1_1Declaration_3_01TextShadow_01_4.html", null ],
-      [ "ass::decl::Declaration< TextTransform >", "structass_1_1decl_1_1Declaration_3_01TextTransform_01_4.html", null ],
-      [ "ass::decl::Declaration< TransformOffset >", "structass_1_1decl_1_1Declaration_3_01TransformOffset_01_4.html", null ],
-      [ "ass::decl::Declaration< TransformScale >", "structass_1_1decl_1_1Declaration_3_01TransformScale_01_4.html", null ],
-      [ "ass::decl::Declaration< VerticalAlign >", "structass_1_1decl_1_1Declaration_3_01VerticalAlign_01_4.html", null ],
-      [ "ass::decl::Declaration< Visibility >", "structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html", null ]
-    ] ],
     [ "IDrawable", "classIDrawable.html", [
       [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
       [ "AImageDrawable", "classAImageDrawable.html", null ],
@@ -607,6 +571,48 @@ var hierarchy =
       [ "OpenGLPrerenderedString", "classOpenGLPrerenderedString.html", null ],
       [ "SoftwarePrerenderedString", "classSoftwarePrerenderedString.html", null ]
     ] ],
+    [ "ass::prop::IPropertyBase", "structass_1_1prop_1_1IPropertyBase.html", [
+      [ "ass::prop::Property< ACursor >", "structass_1_1prop_1_1Property_3_01ACursor_01_4.html", [
+        [ "ass::prop::Property< ACursor::System >", "structass_1_1prop_1_1Property_3_01ACursor_1_1System_01_4.html", null ]
+      ] ],
+      [ "ass::prop::Property< AOverflow >", "structass_1_1prop_1_1Property_3_01AOverflow_01_4.html", null ],
+      [ "ass::prop::Property< AOverflowMask >", "structass_1_1prop_1_1Property_3_01AOverflowMask_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundCropping >", "structass_1_1prop_1_1Property_3_01BackgroundCropping_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundEffect >", "structass_1_1prop_1_1Property_3_01BackgroundEffect_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundGradient >", "structass_1_1prop_1_1Property_3_01BackgroundGradient_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundSolid >", "structass_1_1prop_1_1Property_3_01BackgroundSolid_01_4.html", null ],
+      [ "ass::prop::Property< Border >", "structass_1_1prop_1_1Property_3_01Border_01_4.html", null ],
+      [ "ass::prop::Property< BorderBottom >", "structass_1_1prop_1_1Property_3_01BorderBottom_01_4.html", null ],
+      [ "ass::prop::Property< BorderLeft >", "structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html", null ],
+      [ "ass::prop::Property< BorderRadius >", "structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html", null ],
+      [ "ass::prop::Property< BoxShadow >", "structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html", null ],
+      [ "ass::prop::Property< Expanding >", "structass_1_1prop_1_1Property_3_01Expanding_01_4.html", null ],
+      [ "ass::prop::Property< FixedSize >", "structass_1_1prop_1_1Property_3_01FixedSize_01_4.html", null ],
+      [ "ass::prop::Property< Font >", "structass_1_1prop_1_1Property_3_01Font_01_4.html", null ],
+      [ "ass::prop::Property< FontFamily >", "structass_1_1prop_1_1Property_3_01FontFamily_01_4.html", null ],
+      [ "ass::prop::Property< FontRendering >", "structass_1_1prop_1_1Property_3_01FontRendering_01_4.html", null ],
+      [ "ass::prop::Property< FontSize >", "structass_1_1prop_1_1Property_3_01FontSize_01_4.html", null ],
+      [ "ass::prop::Property< ImageRendering >", "structass_1_1prop_1_1Property_3_01ImageRendering_01_4.html", null ],
+      [ "ass::prop::Property< LayoutSpacing >", "structass_1_1prop_1_1Property_3_01LayoutSpacing_01_4.html", null ],
+      [ "ass::prop::Property< LineHeight >", "structass_1_1prop_1_1Property_3_01LineHeight_01_4.html", null ],
+      [ "ass::prop::Property< Margin >", "structass_1_1prop_1_1Property_3_01Margin_01_4.html", null ],
+      [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ],
+      [ "ass::prop::Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ],
+      [ "ass::prop::Property< Opacity >", "structass_1_1prop_1_1Property_3_01Opacity_01_4.html", null ],
+      [ "ass::prop::Property< Padding >", "structass_1_1prop_1_1Property_3_01Padding_01_4.html", null ],
+      [ "ass::prop::Property< ScrollbarAppearance >", "structass_1_1prop_1_1Property_3_01ScrollbarAppearance_01_4.html", null ],
+      [ "ass::prop::Property< TextAlign >", "structass_1_1prop_1_1Property_3_01TextAlign_01_4.html", null ],
+      [ "ass::prop::Property< TextBorder >", "structass_1_1prop_1_1Property_3_01TextBorder_01_4.html", null ],
+      [ "ass::prop::Property< TextColor >", "structass_1_1prop_1_1Property_3_01TextColor_01_4.html", null ],
+      [ "ass::prop::Property< TextOverflow >", "structass_1_1prop_1_1Property_3_01TextOverflow_01_4.html", null ],
+      [ "ass::prop::Property< TextShadow >", "structass_1_1prop_1_1Property_3_01TextShadow_01_4.html", null ],
+      [ "ass::prop::Property< TextTransform >", "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html", null ],
+      [ "ass::prop::Property< TransformOffset >", "structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html", null ],
+      [ "ass::prop::Property< TransformScale >", "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html", null ],
+      [ "ass::prop::Property< VerticalAlign >", "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html", null ],
+      [ "ass::prop::Property< Visibility >", "structass_1_1prop_1_1Property_3_01Visibility_01_4.html", null ]
+    ] ],
     [ "IRenderer", "classIRenderer.html", [
       [ "OpenGLRenderer", "classOpenGLRenderer.html", null ],
       [ "SoftwareRenderer", "classSoftwareRenderer.html", null ]
@@ -637,7 +643,7 @@ var hierarchy =
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
       [ "AAbstractTextField", "classAAbstractTextField.html", null ],
-      [ "ass::decl::Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ]
+      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ]
     ] ],
     [ "AModelRange< T >::Iterator", "classAModelRange_1_1Iterator.html", null ],
     [ "AModelSelection< T >::Iterator", "classAModelSelection_1_1Iterator.html", null ],
@@ -782,6 +788,11 @@ var hierarchy =
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+    [ "ass::prop::Property< PropertyStruct >", "structass_1_1prop_1_1Property.html", null ],
+    [ "ass::PropertyList", "structass_1_1PropertyList.html", [
+      [ "ass::PropertyListRecursive", "structass_1_1PropertyListRecursive.html", null ],
+      [ "ass::Rule", "structass_1_1Rule.html", null ]
+    ] ],
     [ "aui::ptr", "structaui_1_1ptr.html", null ],
     [ "RenderHints::PushColor", "classRenderHints_1_1PushColor.html", [
       [ "RenderHints::PushState", "classRenderHints_1_1PushState.html", null ]
@@ -816,9 +827,6 @@ var hierarchy =
     [ "gl::ResourcePool< T >", "classgl_1_1ResourcePool.html", null ],
     [ "aui::reverse_iterator_wrap< T >", "structaui_1_1reverse__iterator__wrap.html", null ],
     [ "RoundedRect", "structRoundedRect.html", null ],
-    [ "RuleWithoutSelector", "structRuleWithoutSelector.html", [
-      [ "Rule", "structRule.html", null ]
-    ] ],
     [ "std::runtime_error", null, [
       [ "AXmlParseError", "classAXmlParseError.html", null ]
     ] ],

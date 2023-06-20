@@ -278,7 +278,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line">    <span class="keyword">auto</span> <a id="a2" name="a2"></a><a class="code hl_function" href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">reverse_iterator_direction</a>(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
+<div class="line">    <span class="keyword">auto</span> reverse_iterator_direction(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
 <div class="line">        std::enable_if_t&lt;!impl::is_forward_iterator&lt;Iterator&gt;,</div>
 <div class="line">                         <span class="keyword">decltype</span>((iterator + 1).base())</div>
 <div class="line">                         &gt; {</div>
@@ -286,7 +286,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line">    <span class="keyword">auto</span> <a class="code hl_function" href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">reverse_iterator_direction</a>(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
+<div class="line">    <span class="keyword">auto</span> reverse_iterator_direction(Iterator iterator) <span class="keyword">noexcept</span> -&gt;</div>
 <div class="line">        std::enable_if_t&lt;impl::is_forward_iterator&lt;Iterator&gt;,</div>
 <div class="line">                         <span class="keyword">decltype</span>(std::make_reverse_iterator(std::declval&lt;Iterator&gt;()))</div>
 <div class="line">                         &gt; {</div>
@@ -294,7 +294,6 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        <span class="keywordflow">return</span> std::make_reverse_iterator(iterator + 1);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__useful__macros_html_gac5abe2e70dfe9c5b9124860b8c74cc84"><div class="ttname"><a href="group__useful__macros.html#gac5abe2e70dfe9c5b9124860b8c74cc84">aui::reverse_iterator_direction</a></div><div class="ttdeci">auto reverse_iterator_direction(Iterator iterator) noexcept -&gt; std::enable_if_t&lt;!impl::is_forward_iterator&lt; Iterator &gt;, decltype((iterator+1).base()) &gt;</div><div class="ttdoc">Reverses iterator direction (i.e. converts iterator to reverse_iterator, reverse_iterator to iterator...</div><div class="ttdef"><b>Definition:</b> iterators.h:218</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaee1b2b611b51a8c6101ff769ed9b6a98"><div class="ttname"><a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a></div><div class="ttdeci">#define AUI_NO_OPTIMIZE_OUT(object)</div><div class="ttdoc">Forbids object from being optimized out by compiler.</div><div class="ttdef"><b>Definition:</b> macros.h:44</div></div>
 <div class="ttc" id="astructViewAssertionEmpty_html"><div class="ttname"><a href="structViewAssertionEmpty.html">ViewAssertionEmpty</a></div><div class="ttdef"><b>Definition:</b> Empty.h:24</div></div>
 </div><!-- fragment --> </div><!-- contents -->
