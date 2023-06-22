@@ -398,6 +398,7 @@ var hierarchy =
             [ "MockedViewContainer", "classMockedViewContainer.html", null ],
             [ "WrapperContainer", "classWrapperContainer.html", null ]
           ] ],
+          [ "ViewMock", "classViewMock.html", null ],
           [ "ViewMock", "classViewMock.html", null ]
         ] ],
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
@@ -893,6 +894,7 @@ var hierarchy =
         [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
         [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
+        [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
         [ "UITextField", "classUITextField.html", null ],
         [ "UIType", "classUIType.html", null ],

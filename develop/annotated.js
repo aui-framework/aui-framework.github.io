@@ -719,6 +719,7 @@ var annotated =
     [ "UIMatcher", "classUIMatcher.html", "classUIMatcher" ],
     [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
     [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
+    [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
     [ "UIScrollTest", "classUIScrollTest.html", "classUIScrollTest" ],
     [ "UITestRenderingContext", "classUITestRenderingContext.html", null ],
     [ "UITestWindowManager", "classUITestWindowManager.html", null ],
