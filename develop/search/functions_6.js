@@ -11,11 +11,12 @@ var searchData=
   ['for_5feach_5fall_8',['for_each_all',['../structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html#a4f351867cd0ddc79501b2ab2765ed195',1,'aui::tuple_visitor&lt; std::tuple&lt; Args... &gt; &gt;']]],
   ['for_5feach_5fmake_5ftuple_9',['for_each_make_tuple',['../structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html#a2e083fcc24d9f51fc684891b4c33a9b1',1,'aui::tuple_visitor&lt; std::tuple&lt; Args... &gt; &gt;']]],
   ['for_5feach_5fsingle_10',['for_each_single',['../structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html#ad9517bc4a81bcd1b73de3fa6140e0ff0',1,'aui::tuple_visitor&lt; std::tuple&lt; Args... &gt; &gt;']]],
-  ['framemillis_11',['frameMillis',['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()']]],
-  ['frompid_12',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
-  ['fromrange_13',['fromRange',['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector']]],
-  ['fromstring_14',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
-  ['fromurl_15',['fromUrl',['../classIDrawable.html#ae65ce317a418ed8c92858ef04b6e9b04',1,'IDrawable']]],
-  ['fromvector_16',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
-  ['future_17',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
+  ['forceupdatecursor_11',['forceUpdateCursor',['../classABaseWindow.html#a90cf97a971f09f7ad9e0531bb688b7fb',1,'ABaseWindow::forceUpdateCursor()'],['../classAWindow.html#a3bb8a070ce8c1530d7419ace2957b72a',1,'AWindow::forceUpdateCursor()']]],
+  ['framemillis_12',['frameMillis',['../classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0',1,'ABaseWindow::frameMillis()'],['../classAEmbedAuiWrap_1_1EmbedWindow.html#ad4397817f26735b74d6bb6d36f2294ca',1,'AEmbedAuiWrap::EmbedWindow::frameMillis()'],['../classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a',1,'AWindow::frameMillis()']]],
+  ['frompid_13',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
+  ['fromrange_14',['fromRange',['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector']]],
+  ['fromstring_15',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
+  ['fromurl_16',['fromUrl',['../classIDrawable.html#ae65ce317a418ed8c92858ef04b6e9b04',1,'IDrawable']]],
+  ['fromvector_17',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel']]],
+  ['future_18',['Future',['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future']]]
 ];

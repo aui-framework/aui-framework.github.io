@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classAEmbedMenuProvider_1_1MenuContainer.html":[0,2,88,0],
 "classAEnumerate.html":[0,2,89],
 "classAEventLoop.html":[2,0,0,31],
 "classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e":[2,0,0,31,0],
@@ -132,12 +133,12 @@ var NAVTREEINDEX1 =
 "classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c":[2,0,1,1,0],
 "classAOptional.html#ac2f1093971087a13def94bbd620b7735":[2,0,1,1,1],
 "classAOtherProcess.html":[0,2,179],
-"classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1":[0,2,179,6],
 "classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1":[0,2,179,7],
+"classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1":[0,2,179,6],
 "classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5":[0,2,179,2],
 "classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5":[0,2,179,3],
-"classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417":[0,2,179,5],
 "classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417":[0,2,179,4],
+"classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417":[0,2,179,5],
 "classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b":[0,2,179,1],
 "classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b":[0,2,179,0],
 "classAOverlappingSurface.html":[0,2,180],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classASet.html#aa353fe8fe00c1e866a48910256dcb9de":[2,0,0,15,5],
 "classASet.html#ab7f59f0f32f0710d1810bcda4a878a89":[2,0,0,15,4],
 "classASet.html#abfe9f1127b1811d332d6032d57e59544":[2,0,0,15,0],
-"classASharedRaiiHelper.html":[2,0,0,43],
-"classAShortcut.html":[0,2,237]
+"classASharedRaiiHelper.html":[2,0,0,43]
 };

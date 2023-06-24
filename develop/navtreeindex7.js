@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,7,36],
+"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,35],
 "structaui_1_1traits_1_1ternary.html":[0,0,7,5,0],
 "structaui_1_1traits_1_1ternary.html":[0,2,4,4,0],
 "structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,4,1],
