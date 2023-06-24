@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structass_1_1hovered.html":[0,0,6,26],
 "structass_1_1hovered.html":[0,2,3,26],
 "structass_1_1on__state_1_1Activated.html":[0,2,3,2,1],
 "structass_1_1on__state_1_1Activated.html":[0,0,6,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,7,35],
 "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,34],
 "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,0,7,36],
-"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,35],
-"structaui_1_1traits_1_1ternary.html":[0,0,7,5,0]
+"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html":[0,2,4,35]
 };

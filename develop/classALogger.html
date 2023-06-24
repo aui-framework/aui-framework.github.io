@@ -154,9 +154,9 @@ const <a class="el" href="classAString.html">AString</a> &amp;&#160;</td><td cla
 <tr class="memitem:a87172582c048df7d66feefda3e6bf3ce"><td class="memItemLeft" align="right" valign="top"><a id="a87172582c048df7d66feefda3e6bf3ce" name="a87172582c048df7d66feefda3e6bf3ce"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>onLogged</b> (std::function&lt; void(const <a class="el" href="classAString.html">AString</a> &amp;prefix, const <a class="el" href="classAString.html">AString</a> &amp;message, Level level)&gt; callback)</td></tr>
 <tr class="separator:a87172582c048df7d66feefda3e6bf3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memTemplParams" colspan="2"><a id="a63c7471e4fe2c2dd96e38f72203d1ec7" name="a63c7471e4fe2c2dd96e38f72203d1ec7"></a>
-template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callable&gt; </td></tr>
-<tr class="memitem:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>doLogFileAccessSafe</b> (Callable action)</td></tr>
+<tr class="memitem:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callable&gt; </td></tr>
+<tr class="memitem:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classALogger.html#a63c7471e4fe2c2dd96e38f72203d1ec7">doLogFileAccessSafe</a> (Callable action)</td></tr>
+<tr class="memdesc:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to perform some action (access safely) on log file (which is opened all over the execution process)  <a href="classALogger.html#a63c7471e4fe2c2dd96e38f72203d1ec7">More...</a><br /></td></tr>
 <tr class="separator:a63c7471e4fe2c2dd96e38f72203d1ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40ade2b930dbd47aa48011d70d1e4a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b">log</a> (Level level, const <a class="el" href="classAString.html">AString</a> &amp;prefix)</td></tr>
 <tr class="memdesc:a40ade2b930dbd47aa48011d70d1e4a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writer a log entry with <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a> helper.  <a href="classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b">More...</a><br /></td></tr>
@@ -220,6 +220,37 @@ static <a class="el" href="structALogger_1_1LogWriter.html">LogWriter</a>&#160;<
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a63c7471e4fe2c2dd96e38f72203d1ec7" name="a63c7471e4fe2c2dd96e38f72203d1ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c7471e4fe2c2dd96e38f72203d1ec7">&#9670;&nbsp;</a></span>doLogFileAccessSafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callable&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ALogger::doLogFileAccessSafe </td>
+          <td>(</td>
+          <td class="paramtype">Callable&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allows to perform some action (access safely) on log file (which is opened all over the execution process) </p>
+<p >Useful when sending log file to remote server. </p><dl class="section note"><dt>Note</dt><dd>Windows, for instance, doesn't allow to read the file when it's already opened </dd></dl>
+
+</div>
+</div>
 <a id="a40ade2b930dbd47aa48011d70d1e4a0b" name="a40ade2b930dbd47aa48011d70d1e4a0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40ade2b930dbd47aa48011d70d1e4a0b">&#9670;&nbsp;</a></span>log()</h2>
 
