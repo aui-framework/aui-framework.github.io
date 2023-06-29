@@ -172,6 +172,7 @@ var hierarchy =
     [ "aui::assert_not_used_when_null< T >", "classaui_1_1assert__not__used__when__null.html", null ],
     [ "AStacktrace", "classAStacktrace.html", null ],
     [ "AStringFormatHelper", "structAStringFormatHelper.html", null ],
+    [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
     [ "AStylesheet", "classAStylesheet.html", null ],
     [ "AzazaATest::ATest", "structAzazaATest_1_1ATest.html", null ],
     [ "ATextLayoutHelper", "classATextLayoutHelper.html", null ],
@@ -264,12 +265,45 @@ var hierarchy =
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
     [ "aui::dbus::converter< T >", "structaui_1_1dbus_1_1converter.html", null ],
+    [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter.html", null ],
     [ "aui::dbus::converter< AMap< K, V > >", "structaui_1_1dbus_1_1converter_3_01AMap_3_01K_00_01V_01_4_01_4.html", null ],
     [ "aui::dbus::converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
     [ "aui::dbus::converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
+    [ "aui::jni::Converter< std::string >", "structaui_1_1jni_1_1Converter_3_01std_1_1string_01_4.html", [
+      [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ]
+    ] ],
     [ "aui::dbus::converter< std::tuple< Types... > >", "structaui_1_1dbus_1_1converter_3_01std_1_1tuple_3_01Types_8_8_8_01_4_01_4.html", null ],
+    [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter_3_01T_01_4.html", null ],
     [ "aui::dbus::converter< Unknown >", "structaui_1_1dbus_1_1converter_3_01Unknown_01_4.html", null ],
     [ "aui::dbus::converter< Variant >", "structaui_1_1dbus_1_1converter_3_01Variant_01_4.html", null ],
+    [ "aui::jni::Converter< void >", "structaui_1_1jni_1_1Converter_3_01void_01_4.html", null ],
+    [ "aui::jni::ConverterPrimitive< T, sign >", "structaui_1_1jni_1_1ConverterPrimitive.html", null ],
+    [ "aui::jni::ConverterPrimitive< jboolean, 'Z'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jboolean >", "structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html", [
+        [ "aui::jni::Converter< bool >", "structaui_1_1jni_1_1Converter_3_01bool_01_4.html", null ]
+      ] ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jbyte, 'B'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jbyte >", "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jchar, 'C'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jchar >", "structaui_1_1jni_1_1Converter_3_01jchar_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jdouble, 'D'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jdouble >", "structaui_1_1jni_1_1Converter_3_01jdouble_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jfloat, 'F'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jfloat >", "structaui_1_1jni_1_1Converter_3_01jfloat_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jint, 'I'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jint >", "structaui_1_1jni_1_1Converter_3_01jint_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jlong, 'J'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jlong >", "structaui_1_1jni_1_1Converter_3_01jlong_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jshort, 'S'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jshort >", "structaui_1_1jni_1_1Converter_3_01jshort_01_4.html", null ]
+    ] ],
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
@@ -489,6 +523,7 @@ var hierarchy =
     [ "GLKViewController", null, [
       [ "AUIViewController", "interfaceAUIViewController.html", null ]
     ] ],
+    [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", null ],
     [ "GradientShaderHelper", "structGradientShaderHelper.html", null ],
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
@@ -817,7 +852,6 @@ var hierarchy =
       [ "ASerializable< AUuid >", "structASerializable_3_01AUuid_01_4.html", null ]
     ] ],
     [ "Util::Rect", "classUtil_1_1Rect.html", null ],
-    [ "AAndroid::Ref", "classAAndroid_1_1Ref.html", null ],
     [ "Render", "classRender.html", null ],
     [ "gl::impl::resource< T >", "structgl_1_1impl_1_1resource.html", null ],
     [ "gl::impl::resource< ResourceKind::TEXTURE >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html", null ],
@@ -856,6 +890,9 @@ var hierarchy =
     [ "uitest::impl::side_value< ASide::LEFT >", "structuitest_1_1impl_1_1side__value_3_01ASide_1_1LEFT_01_4.html", null ],
     [ "uitest::impl::side_value< ASide::RIGHT >", "structuitest_1_1impl_1_1side__value_3_01ASide_1_1RIGHT_01_4.html", null ],
     [ "uitest::impl::side_value< ASide::TOP >", "structuitest_1_1impl_1_1side__value_3_01ASide_1_1TOP_01_4.html", null ],
+    [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature.html", null ],
+    [ "aui::jni::signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
+    [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
     [ "ARenderingContextOptions::Software", "structARenderingContextOptions_1_1Software.html", null ],
     [ "SolidShaderHelper", "structSolidShaderHelper.html", null ],
     [ "SomeBuilderClass", "classSomeBuilderClass.html", null ],
@@ -926,6 +963,22 @@ var hierarchy =
     ] ],
     [ "aui::tuple_visitor< Args >", "structaui_1_1tuple__visitor.html", null ],
     [ "aui::tuple_visitor< std::tuple< Args... > >", "structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html", null ],
+    [ "aui::jni::TypedMethods< T >", "structaui_1_1jni_1_1TypedMethods.html", null ],
+    [ "aui::jni::TypedMethods< jboolean >", "structaui_1_1jni_1_1TypedMethods_3_01jboolean_01_4.html", [
+      [ "aui::jni::TypedMethods< bool >", "structaui_1_1jni_1_1TypedMethods_3_01bool_01_4.html", null ]
+    ] ],
+    [ "aui::jni::TypedMethods< jbyte >", "structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jchar >", "structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jdouble >", "structaui_1_1jni_1_1TypedMethods_3_01jdouble_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jfloat >", "structaui_1_1jni_1_1TypedMethods_3_01jfloat_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jint >", "structaui_1_1jni_1_1TypedMethods_3_01jint_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jlong >", "structaui_1_1jni_1_1TypedMethods_3_01jlong_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jobject * >", "structaui_1_1jni_1_1TypedMethods_3_01jobject_01_5_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jobject >", "structaui_1_1jni_1_1TypedMethods_3_01jobject_01_4.html", [
+      [ "aui::jni::TypedMethods< jstring >", "structaui_1_1jni_1_1TypedMethods_3_01jstring_01_4.html", null ]
+    ] ],
+    [ "aui::jni::TypedMethods< jshort >", "structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html", null ],
+    [ "aui::jni::TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],

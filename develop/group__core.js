@@ -213,6 +213,7 @@ var group__core =
       [ "timer", "classAScheduler.html#adcc8bfa4d75bc92bd37d3836cddc151a", null ]
     ] ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
+    [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],

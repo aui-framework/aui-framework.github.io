@@ -24,5 +24,19 @@ var searchData=
   ['tuple_5fvisitor_21',['tuple_visitor',['../structaui_1_1tuple__visitor.html',1,'aui']]],
   ['tuple_5fvisitor_3c_20std_3a_3atuple_3c_20args_2e_2e_2e_20_3e_20_3e_22',['tuple_visitor&lt; std::tuple&lt; Args... &gt; &gt;',['../structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html',1,'aui']]],
   ['type_23',['Type',['../structass_1_1detail_1_1Type.html',1,'ass::detail']]],
-  ['type_5fof_24',['type_of',['../structass_1_1type__of.html',1,'ass']]]
+  ['type_5fof_24',['type_of',['../structass_1_1type__of.html',1,'ass']]],
+  ['typedmethods_25',['TypedMethods',['../structaui_1_1jni_1_1TypedMethods.html',1,'aui::jni']]],
+  ['typedmethods_3c_20bool_20_3e_26',['TypedMethods&lt; bool &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01bool_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jboolean_20_3e_27',['TypedMethods&lt; jboolean &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jboolean_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jbyte_20_3e_28',['TypedMethods&lt; jbyte &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jchar_20_3e_29',['TypedMethods&lt; jchar &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jdouble_20_3e_30',['TypedMethods&lt; jdouble &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jdouble_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jfloat_20_3e_31',['TypedMethods&lt; jfloat &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jfloat_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jint_20_3e_32',['TypedMethods&lt; jint &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jint_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jlong_20_3e_33',['TypedMethods&lt; jlong &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jlong_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jobject_20_2a_20_3e_34',['TypedMethods&lt; jobject * &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jobject_01_5_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jobject_20_3e_35',['TypedMethods&lt; jobject &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jobject_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jshort_20_3e_36',['TypedMethods&lt; jshort &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20jstring_20_3e_37',['TypedMethods&lt; jstring &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01jstring_01_4.html',1,'aui::jni']]],
+  ['typedmethods_3c_20void_20_3e_38',['TypedMethods&lt; void &gt;',['../structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html',1,'aui::jni']]]
 ];

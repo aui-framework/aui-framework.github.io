@@ -1,8 +1,5 @@
 var annotated =
 [
-    [ "AAndroid", null, [
-      [ "Ref", "classAAndroid_1_1Ref.html", null ]
-    ] ],
     [ "ADesktop", "namespaceADesktop.html", [
       [ "FileExtension", "structADesktop_1_1FileExtension.html", null ]
     ] ],
@@ -178,6 +175,41 @@ var annotated =
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
         [ "first", "structaui_1_1impl_1_1first.html", null ],
         [ "select_overload", "structaui_1_1impl_1_1select__overload.html", null ]
+      ] ],
+      [ "jni", null, [
+        [ "Converter", "structaui_1_1jni_1_1Converter.html", null ],
+        [ "Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ],
+        [ "Converter< bool >", "structaui_1_1jni_1_1Converter_3_01bool_01_4.html", null ],
+        [ "Converter< jboolean >", "structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html", null ],
+        [ "Converter< jbyte >", "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html", null ],
+        [ "Converter< jchar >", "structaui_1_1jni_1_1Converter_3_01jchar_01_4.html", null ],
+        [ "Converter< jdouble >", "structaui_1_1jni_1_1Converter_3_01jdouble_01_4.html", null ],
+        [ "Converter< jfloat >", "structaui_1_1jni_1_1Converter_3_01jfloat_01_4.html", null ],
+        [ "Converter< jint >", "structaui_1_1jni_1_1Converter_3_01jint_01_4.html", null ],
+        [ "Converter< jlong >", "structaui_1_1jni_1_1Converter_3_01jlong_01_4.html", null ],
+        [ "Converter< jshort >", "structaui_1_1jni_1_1Converter_3_01jshort_01_4.html", null ],
+        [ "Converter< std::string >", "structaui_1_1jni_1_1Converter_3_01std_1_1string_01_4.html", null ],
+        [ "Converter< T >", "structaui_1_1jni_1_1Converter_3_01T_01_4.html", null ],
+        [ "Converter< void >", "structaui_1_1jni_1_1Converter_3_01void_01_4.html", null ],
+        [ "ConverterPrimitive", "structaui_1_1jni_1_1ConverterPrimitive.html", null ],
+        [ "GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", null ],
+        [ "signature", "structaui_1_1jni_1_1signature.html", null ],
+        [ "signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
+        [ "signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
+        [ "TypedMethods", "structaui_1_1jni_1_1TypedMethods.html", null ],
+        [ "TypedMethods< bool >", "structaui_1_1jni_1_1TypedMethods_3_01bool_01_4.html", null ],
+        [ "TypedMethods< jboolean >", "structaui_1_1jni_1_1TypedMethods_3_01jboolean_01_4.html", null ],
+        [ "TypedMethods< jbyte >", "structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html", null ],
+        [ "TypedMethods< jchar >", "structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html", null ],
+        [ "TypedMethods< jdouble >", "structaui_1_1jni_1_1TypedMethods_3_01jdouble_01_4.html", null ],
+        [ "TypedMethods< jfloat >", "structaui_1_1jni_1_1TypedMethods_3_01jfloat_01_4.html", null ],
+        [ "TypedMethods< jint >", "structaui_1_1jni_1_1TypedMethods_3_01jint_01_4.html", null ],
+        [ "TypedMethods< jlong >", "structaui_1_1jni_1_1TypedMethods_3_01jlong_01_4.html", null ],
+        [ "TypedMethods< jobject * >", "structaui_1_1jni_1_1TypedMethods_3_01jobject_01_5_01_4.html", null ],
+        [ "TypedMethods< jobject >", "structaui_1_1jni_1_1TypedMethods_3_01jobject_01_4.html", null ],
+        [ "TypedMethods< jshort >", "structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html", null ],
+        [ "TypedMethods< jstring >", "structaui_1_1jni_1_1TypedMethods_3_01jstring_01_4.html", null ],
+        [ "TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ]
       ] ],
       [ "promise", null, [
         [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
@@ -577,6 +609,7 @@ var annotated =
     [ "AStdOutputRecorder", "classAStdOutputRecorder.html", null ],
     [ "AString", "classAString.html", "classAString" ],
     [ "AStringFormatHelper", "structAStringFormatHelper.html", null ],
+    [ "AStringLiteral", "structAStringLiteral.html", null ],
     [ "AStringStream", "classAStringStream.html", "classAStringStream" ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "AStylesheet", "classAStylesheet.html", null ],
