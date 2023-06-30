@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structaui_1_1jni_1_1Converter_3_01jdouble_01_4.html":[0,2,3,3,6],
 "structaui_1_1jni_1_1Converter_3_01jdouble_01_4.html":[0,0,6,3,6],
 "structaui_1_1jni_1_1Converter_3_01jfloat_01_4.html":[0,2,3,3,7],
 "structaui_1_1jni_1_1Converter_3_01jfloat_01_4.html":[0,0,6,3,7],

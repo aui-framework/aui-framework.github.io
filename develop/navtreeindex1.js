@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classAEnumerate.html":[0,2,88],
 "classAEventLoop.html":[2,0,1,31],
 "classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e":[2,0,1,31,0],
 "classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f":[2,0,1,31,1],
@@ -165,8 +166,8 @@ var NAVTREEINDEX1 =
 "classAPathChooserView.html":[2,0,8,2,14],
 "classAPipe.html":[2,0,1,26],
 "classAPipe.html":[2,0,1,2,8],
-"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[2,0,1,26,1],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[2,0,1,2,8,1],
+"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[2,0,1,26,1],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[2,0,1,2,8,0],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[2,0,1,26,0],
 "classAPlaceholderAnimator.html":[0,2,185],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "classASet.html#ab7f59f0f32f0710d1810bcda4a878a89":[2,0,1,15,4],
 "classASet.html#abfe9f1127b1811d332d6032d57e59544":[2,0,1,15,0],
 "classASharedRaiiHelper.html":[2,0,1,43],
-"classAShortcut.html":[0,2,236],
-"classASignal.html":[2,0,1,0,1]
+"classAShortcut.html":[0,2,236]
 };

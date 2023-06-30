@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structass_1_1PropertyList.html":[0,0,5,37],
 "structass_1_1PropertyList.html":[0,2,2,37],
 "structass_1_1PropertyListRecursive.html":[0,0,5,38],
 "structass_1_1PropertyListRecursive.html":[0,2,2,38],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html":[0,0,6,3,4],
 "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html":[0,2,3,3,4],
 "structaui_1_1jni_1_1Converter_3_01jchar_01_4.html":[0,2,3,3,5],
-"structaui_1_1jni_1_1Converter_3_01jchar_01_4.html":[0,0,6,3,5],
-"structaui_1_1jni_1_1Converter_3_01jdouble_01_4.html":[0,2,3,3,6]
+"structaui_1_1jni_1_1Converter_3_01jchar_01_4.html":[0,0,6,3,5]
 };

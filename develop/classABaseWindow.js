@@ -10,6 +10,7 @@ var classABaseWindow =
     [ "isPreventingClickOnPointerRelease", "classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f", null ],
     [ "iterateOverFocusChain", "classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897", null ],
     [ "onDragEnter", "classABaseWindow.html#a44892d8ede207abec1de76bbb83553a4", null ],
+    [ "onGesture", "classABaseWindow.html#a6f89d221f84f8fd86abec2f5ae40dc0b", null ],
     [ "onPointerMove", "classABaseWindow.html#a53ae5592f95f4e9cbab53c17b3934697", null ],
     [ "onPointerPressed", "classABaseWindow.html#acbcbf158381a9f0e05069abcffcf3ea5", null ],
     [ "onPointerReleased", "classABaseWindow.html#a8b251f45c577fbe1b797a1116ace8755", null ],

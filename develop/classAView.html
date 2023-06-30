@@ -580,6 +580,7 @@ Protected Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>requestLayoutUpdate</b> ()</td></tr>
 <tr class="separator:a359759a15142b8e338ed02ad2f6c0a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b273cbe961c8633b17171b750762135"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135">transformGestureEventsToDesktop</a> (const glm::ivec2 &amp;origin, const AGestureEvent &amp;event)</td></tr>
+<tr class="memdesc:a1b273cbe961c8633b17171b750762135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts touch screen events to desktop.  <a href="classAView.html#a1b273cbe961c8633b17171b750762135">More...</a><br /></td></tr>
 <tr class="separator:a1b273cbe961c8633b17171b750762135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a433c7d9f753ea1170fdb9db475de7bdf"><td class="memItemLeft" align="right" valign="top"><a id="a433c7d9f753ea1170fdb9db475de7bdf" name="a433c7d9f753ea1170fdb9db475de7bdf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (const <a class="el" href="structass_1_1PropertyList.html">ass::PropertyList</a> &amp;propertyList)</td></tr>
@@ -1409,10 +1410,10 @@ Changed state (hover, active, focus) of this view </li>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The standard implementation <code><a class="el" href="classAView.html#a2b74937853928a68e0f7ec4cae7adb3b">AView::onGesture</a></code> emulates desktop events such as right click and scroll. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135">transformGestureEventsToDesktop</a> </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>true, if consumed </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135" title="Converts touch screen events to desktop.">transformGestureEventsToDesktop</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true, if consumed (handled). True value prevents click. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classAListView.html#a1fe6ab723b7168060e837126b374043a">AListView</a>, <a class="el" href="classAScrollArea.html#afbcd54f9f12a396420748a06838b87de">AScrollArea</a>, and <a class="el" href="classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classABaseWindow.html#a6f89d221f84f8fd86abec2f5ae40dc0b">ABaseWindow</a>, <a class="el" href="classAListView.html#a1fe6ab723b7168060e837126b374043a">AListView</a>, <a class="el" href="classAScrollArea.html#afbcd54f9f12a396420748a06838b87de">AScrollArea</a>, and <a class="el" href="classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -1806,12 +1807,8 @@ Changed state (hover, active, focus) of this view </li>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Converts touch screen events to desktop. </p><dl>
-<dt><b><a class="el" href="structAFingerDragEvent.html">AFingerDragEvent</a></b> </dt>
-<dd>Emulates mouse wheel scroll </dd>
-<dt><b><a class="el" href="structALongPressEvent.html">ALongPressEvent</a></b> </dt>
-<dd>Emulates right click </dd>
-</dl>
+
+<p>Converts touch screen events to desktop. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">origin</td><td>position where the event(s) started to occur from. </td></tr>
@@ -1819,7 +1816,13 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if consumed </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if consumed (handled).</dd></dl>
+<dl>
+<dt><b><a class="el" href="structAFingerDragEvent.html">AFingerDragEvent</a></b> </dt>
+<dd>Emulates mouse wheel scroll </dd>
+<dt><b><a class="el" href="structALongPressEvent.html" title="Long press event.">ALongPressEvent</a></b> </dt>
+<dd>Shows context menu (if exists) </dd>
+</dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a32">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 

@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classSoftwareRenderer.html#a31ece2333bea4c18ea4e7c4109412327":[0,2,388,13],
 "classSoftwareRenderer.html#a399e2636518ba8b9c5c8740a282e9e90":[0,2,388,12],
 "classSoftwareRenderer.html#a3c6d019b20372f0ca707776f840ad540":[0,2,388,14],
 "classSoftwareRenderer.html#a6e9a8a21dbe622d60270932ab6cab0dc":[0,2,388,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "group__useful__macros.html#ga21d729326347c5d74faf857abf18d695":[2,0,1,1,1],
 "group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7":[2,0,1,1,7],
 "group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d":[2,0,1,1,15],
-"group__useful__macros.html#ga37a7868fa959073915f599ed29b8962f":[2,0,1,1,17],
-"group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c":[2,0,1,1,21]
+"group__useful__macros.html#ga37a7868fa959073915f599ed29b8962f":[2,0,1,1,17]
 };
