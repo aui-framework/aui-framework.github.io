@@ -3,7 +3,7 @@ var searchData=
   ['ternary_0',['ternary',['../structaui_1_1ternary.html',1,'aui::ternary&lt; boolean, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary.html',1,'aui::traits::ternary&lt; value, OnTrue, OnFalse &gt;']]],
   ['ternary_3c_20std_3a_3afalse_5ftype_2c_20ontrue_2c_20onfalse_20_3e_1',['ternary&lt; std::false_type, OnTrue, OnFalse &gt;',['../structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::ternary&lt; std::false_type, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::traits::ternary&lt; std::false_type, OnTrue, OnFalse &gt;']]],
   ['ternary_3c_20std_3a_3atrue_5ftype_2c_20ontrue_2c_20onfalse_20_3e_2',['ternary&lt; std::true_type, OnTrue, OnFalse &gt;',['../structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::ternary&lt; std::true_type, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html',1,'aui::traits::ternary&lt; std::true_type, OnTrue, OnFalse &gt;']]],
-  ['testwindow_3',['TestWindow',['../classUIScrollTest_1_1TestWindow.html',1,'UIScrollTest::TestWindow'],['../classUIViewFocus_1_1TestWindow.html',1,'UIViewFocus::TestWindow']]],
+  ['testwindow_3',['TestWindow',['../classUIClick_1_1TestWindow.html',1,'UIClick::TestWindow'],['../classUIScrollTest_1_1TestWindow.html',1,'UIScrollTest::TestWindow'],['../classUIViewFocus_1_1TestWindow.html',1,'UIViewFocus::TestWindow']]],
   ['textareafield_4',['TextAreaField',['../classATextArea_1_1TextAreaField.html',1,'ATextArea']]],
   ['textborder_5',['TextBorder',['../structass_1_1TextBorder.html',1,'ass']]],
   ['textcolor_6',['TextColor',['../structass_1_1TextColor.html',1,'ass']]],

@@ -388,6 +388,7 @@ var hierarchy =
                 [ "ACustomWindow", "classACustomWindow.html", [
                   [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
                 ] ],
+                [ "UIClick::TestWindow", "classUIClick_1_1TestWindow.html", null ],
                 [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ],
                 [ "UIViewFocus::TestWindow", "classUIViewFocus_1_1TestWindow.html", null ]
               ] ]
@@ -1046,14 +1047,15 @@ var hierarchy =
     [ "aui::ui_building::view_helper< view< View > >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ]
     ] ],
-    [ "ViewActionClick", "structViewActionClick.html", [
+    [ "ViewActionClick< Button >", "structViewActionClick.html", [
       [ "ViewActionKeyDownAndUp", "structViewActionKeyDownAndUp.html", null ],
       [ "ViewActionType", "structViewActionType.html", null ]
     ] ],
     [ "ViewActionDoubleClick", "structViewActionDoubleClick.html", null ],
+    [ "ViewActionGestureLongPress", "structViewActionGestureLongPress.html", null ],
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
-    [ "ViewActionMousePress", "structViewActionMousePress.html", null ],
-    [ "ViewActionMouseRelease", "structViewActionMouseRelease.html", null ],
+    [ "ViewActionMousePress< Button >", "structViewActionMousePress.html", null ],
+    [ "ViewActionMouseRelease< Button >", "structViewActionMouseRelease.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
