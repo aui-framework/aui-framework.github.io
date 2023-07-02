@@ -1,7 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d":[2,0,1,1,15],
-"group__useful__macros.html#ga37a7868fa959073915f599ed29b8962f":[2,0,1,1,17],
 "group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c":[2,0,1,1,21],
 "group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9":[2,0,1,1,2],
 "group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e":[2,0,1,1,16],
@@ -101,8 +99,8 @@ var NAVTREEINDEX5 =
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,71],
 "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html":[0,2,72],
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,73],
-"structADesktop_1_1FileExtension.html":[0,2,0,0],
 "structADesktop_1_1FileExtension.html":[0,0,1,0],
+"structADesktop_1_1FileExtension.html":[0,2,0,0],
 "structADragNDrop_1_1DropEvent.html":[2,0,8,5,0],
 "structADragNDrop_1_1EnterEvent.html":[2,0,8,5,1],
 "structAEnumerateAllValues.html":[0,2,89],
@@ -235,8 +233,8 @@ var NAVTREEINDEX5 =
 "structass_1_1BorderLeft.html":[2,0,8,0,7],
 "structass_1_1BorderRadius.html":[2,0,8,0,8],
 "structass_1_1BoxShadow.html":[2,0,8,0,9],
-"structass_1_1DirectParentSubSelector.html":[0,0,5,18],
 "structass_1_1DirectParentSubSelector.html":[0,2,2,18],
+"structass_1_1DirectParentSubSelector.html":[0,0,5,18],
 "structass_1_1Expanding.html":[2,0,8,0,10],
 "structass_1_1FixedSize.html":[2,0,8,0,11],
 "structass_1_1Font.html":[2,0,8,0,12],
@@ -249,5 +247,7 @@ var NAVTREEINDEX5 =
 "structass_1_1MinSize.html":[2,0,8,0,19],
 "structass_1_1Opacity.html":[2,0,8,0,20],
 "structass_1_1Padding.html":[2,0,8,0,21],
-"structass_1_1ParentSubSelector.html":[0,0,5,36]
+"structass_1_1ParentSubSelector.html":[0,2,2,36],
+"structass_1_1ParentSubSelector.html":[0,0,5,36],
+"structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8":[0,0,5,36,0]
 };
