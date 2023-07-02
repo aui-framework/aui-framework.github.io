@@ -7,10 +7,9 @@ var searchData=
   ['win32object_3c_20hdc_20_3e_4',['Win32Object&lt; HDC &gt;',['../structaui_1_1win32_1_1detail_1_1Win32Object.html',1,'aui::win32::detail']]],
   ['win32symservice_5',['Win32SymService',['../structWin32SymService.html',1,'']]],
   ['windowdelegate_6',['WindowDelegate',['../interfaceWindowDelegate.html',1,'']]],
-  ['wineventhandle_7',['WinEventHandle',['../classWinEventHandle.html',1,'']]],
-  ['winioasync_8',['WinIoAsync',['../classWinIoAsync.html',1,'']]],
-  ['winiocompletionport_9',['WinIoCompletionPort',['../classWinIoCompletionPort.html',1,'']]],
-  ['winiothread_10',['WinIoThread',['../classWinIoThread.html',1,'']]],
-  ['wrappercontainer_11',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
-  ['writeexception_12',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]]
+  ['winioasync_7',['WinIoAsync',['../classWinIoAsync.html',1,'']]],
+  ['winiocompletionport_8',['WinIoCompletionPort',['../classWinIoCompletionPort.html',1,'']]],
+  ['winiothread_9',['WinIoThread',['../classWinIoThread.html',1,'']]],
+  ['wrappercontainer_10',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
+  ['writeexception_11',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]]
 ];

@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">master</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -100,9 +100,24 @@ $(document).ready(function(){initNavTree('classAPath.html',''); initResizable();
 
 <p>An add-on to <a class="el" href="classAString.html" title="Represents a wide char string.">AString</a> with functions for working with the path.  
  <a href="classAPath.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="APath_8h_source.html">AUI/IO/APath.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >An add-on to <a class="el" href="classAString.html" title="Represents a wide char string.">AString</a> with functions for working with the path. </p>
+<dl class="section note"><dt>Note</dt><dd>In most file systems, both a regular file and a folder with the same name can exist on the same path.</dd></dl>
+<p>Example usage: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classAPath.html">APath</a> someDir = <span class="stringliteral">&quot;someDir&quot;</span>;</div>
+<div class="line"><a class="code hl_class" href="classAPath.html">APath</a> filePath = someDir / <span class="stringliteral">&quot;myfile.txt&quot;</span>; <span class="comment">// &quot;/&quot; replaced with a system file separator</span></div>
+<div class="ttc" id="aclassAPath_html"><div class="ttname"><a href="classAPath.html">APath</a></div><div class="ttdoc">An add-on to AString with functions for working with the path.</div><div class="ttdef"><b>Definition:</b> APath.h:110</div></div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Sometimes the word "file" refers to both a <em>regular file</em> (txt, png, jpeg, etc.) and a <em>folder</em> (directory, a file that contains other regular files and folders), i.e. a unit of the file system, which is often a confusion in terminology. Here and further: <ul>
+<li>
+<b>file</b> - a unit of the file system. </li>
+<li>
+<b>regular file</b> - a file that can be read or written to. You can think of as a sequence of bytes or a stream of bytes. </li>
+<li>
+<b>folder</b> (directory) - a file that may have child files (both regular files and folders) </li>
+</ul>
+</dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2IO_2APath_8h-example.html#_a1">/github/workspace/aui.core/src/AUI/IO/APath.h</a>, and <a class="el" href="_2github_2workspace_2aui_8json_2src_2AUI_2Json_2Conversion_8h-example.html#_a13">/github/workspace/aui.json/src/AUI/Json/Conversion.h</a>.</dd>
+</dl>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a38597cac45847bf6ce74272ea0b72ef3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPath.html#a38597cac45847bf6ce74272ea0b72ef3">DefaultPath</a> { <a class="el" href="classAPath.html#a38597cac45847bf6ce74272ea0b72ef3af11a27bb7f92685193a8b9bb47c6a57f">APPDATA</a>
@@ -590,24 +605,7 @@ Additional Inherited Members</h2></td></tr>
 constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><b>NPOS</b> = super::npos</td></tr>
 <tr class="separator:aa7c70f4dda88e8d85184f7447034663e inherit pub_static_attribs_classAString"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >An add-on to <a class="el" href="classAString.html" title="Represents a wide char string.">AString</a> with functions for working with the path. </p>
-<dl class="section note"><dt>Note</dt><dd>In most file systems, both a regular file and a folder with the same name can exist on the same path.</dd></dl>
-<p>Example usage: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classAPath.html">APath</a> someDir = <span class="stringliteral">&quot;someDir&quot;</span>;</div>
-<div class="line"><a class="code hl_class" href="classAPath.html">APath</a> filePath = someDir / <span class="stringliteral">&quot;myfile.txt&quot;</span>; <span class="comment">// &quot;/&quot; replaced with a system file separator</span></div>
-<div class="ttc" id="aclassAPath_html"><div class="ttname"><a href="classAPath.html">APath</a></div><div class="ttdoc">An add-on to AString with functions for working with the path.</div><div class="ttdef"><b>Definition:</b> APath.h:110</div></div>
-</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>Sometimes the word "file" refers to both a <em>regular file</em> (txt, png, jpeg, etc.) and a <em>folder</em> (directory, a file that contains other regular files and folders), i.e. a unit of the file system, which is often a confusion in terminology. Here and further: <ul>
-<li>
-<b>file</b> - a unit of the file system. </li>
-<li>
-<b>regular file</b> - a file that can be read or written to. You can think of as a sequence of bytes or a stream of bytes. </li>
-<li>
-<b>folder</b> (directory) - a file that may have child files (both regular files and folders) </li>
-</ul>
-</dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2IO_2APath_8h-example.html#_a1">/github/workspace/aui.core/src/AUI/IO/APath.h</a>, and <a class="el" href="_2github_2workspace_2aui_8json_2src_2AUI_2Json_2Conversion_8h-example.html#_a13">/github/workspace/aui.json/src/AUI/Json/Conversion.h</a>.</dd>
-</dl>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a38597cac45847bf6ce74272ea0b72ef3" name="a38597cac45847bf6ce74272ea0b72ef3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38597cac45847bf6ce74272ea0b72ef3">&#9670;&nbsp;</a></span>DefaultPath</h2>
 
@@ -1016,7 +1014,7 @@ constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><b>NPOS
 <p>Path of the child element. Relevant only for folders. </p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classAString.html">AString</a> filename = <span class="stringliteral">&quot;file.txt&quot;</span>;</div>
 <div class="line"><a class="code hl_class" href="classAPath.html">APath</a> path = <span class="stringliteral">&quot;path&quot;</span> / <span class="stringliteral">&quot;to&quot;</span> / <span class="stringliteral">&quot;your&quot;</span> / filename;</div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:35</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:36</div></div>
 </div><!-- fragment --><p> Which would supplyResult into "path/to/your/file.txt" </p><dl class="section return"><dt>Returns</dt><dd>path to child file relatively to this folder </dd></dl>
 
 </div>
@@ -1123,6 +1121,8 @@ constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><b>NPOS
 
 </div>
 </div>
+
+<p><code>#include &lt;<a class="el" href="APath_8h_source.html">AUI/IO/APath.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/IO/<a class="el" href="APath_8h_source.html">APath.h</a></li>
 <li>aui.core/src/AUI/IO/APath.cpp</li>

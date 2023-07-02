@@ -24,11 +24,13 @@ var searchData=
   ['isinterrupted_21',['isInterrupted',['../classAThread.html#af43a40837f9a3192aaa49b0c4db7c0ee',1,'AThread::isInterrupted()'],['../classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a',1,'AAbstractThread::isInterrupted()']]],
   ['ismaximized_22',['isMaximized',['../classAWindow.html#a46e22a189bd7f29e08adcfac5aa13ea3',1,'AWindow']]],
   ['isminimized_23',['isMinimized',['../classAWindow.html#abfd2bbcb85258c68f1111d7b534f3bde',1,'AWindow']]],
-  ['isredrawwillbeefficient_24',['isRedrawWillBeEfficient',['../classAWindow.html#a79faccde073f6767c3698c4c7d718503',1,'AWindow']]],
-  ['isregularfileexists_25',['isRegularFileExists',['../classAPath.html#a7c1302777d5b748bf87a24d078c090e1',1,'APath']]],
-  ['isrelative_26',['isRelative',['../classAPath.html#ac6fe94d839c51484b6415feb8f1737c0',1,'APath']]],
-  ['issubsetof_27',['isSubsetOf',['../classADeque.html#a9746ac10b93ec75c6ab3cdafefbc5258',1,'ADeque::isSubsetOf()'],['../classAQueue.html#aba771ddfc85e646843b4cab514d2ac43',1,'AQueue::isSubsetOf()'],['../classASet.html#a50dfbcda92792f0d9ae4404f08291519',1,'ASet::isSubsetOf()'],['../classAVector.html#a9fe11dadd6ad27a15555419591416f45',1,'AVector::isSubsetOf()']]],
-  ['isuiconsumesmouseat_28',['isUIConsumesMouseAt',['../classAEmbedAuiWrap.html#a94e753338ddc99688833742fcc0e192a',1,'AEmbedAuiWrap']]],
-  ['iswaitneeded_29',['isWaitNeeded',['../classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194',1,'aui::impl::future::Future']]],
-  ['iteration_30',['iteration',['../classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3',1,'AScheduler']]]
+  ['ispreventingclickonpointerrelease_24',['isPreventingClickOnPointerRelease',['../classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f',1,'ABaseWindow']]],
+  ['isredrawwillbeefficient_25',['isRedrawWillBeEfficient',['../classAWindow.html#a79faccde073f6767c3698c4c7d718503',1,'AWindow']]],
+  ['isregularfileexists_26',['isRegularFileExists',['../classAPath.html#a7c1302777d5b748bf87a24d078c090e1',1,'APath']]],
+  ['isrelative_27',['isRelative',['../classAPath.html#ac6fe94d839c51484b6415feb8f1737c0',1,'APath']]],
+  ['issubsetof_28',['isSubsetOf',['../classADeque.html#a9746ac10b93ec75c6ab3cdafefbc5258',1,'ADeque::isSubsetOf()'],['../classAQueue.html#aba771ddfc85e646843b4cab514d2ac43',1,'AQueue::isSubsetOf()'],['../classASet.html#a50dfbcda92792f0d9ae4404f08291519',1,'ASet::isSubsetOf()'],['../classAVector.html#a9fe11dadd6ad27a15555419591416f45',1,'AVector::isSubsetOf()']]],
+  ['isuiconsumesmouseat_29',['isUIConsumesMouseAt',['../classAEmbedAuiWrap.html#a94e753338ddc99688833742fcc0e192a',1,'AEmbedAuiWrap']]],
+  ['iswaitneeded_30',['isWaitNeeded',['../classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194',1,'aui::impl::future::Future']]],
+  ['iterateoverfocuschain_31',['iterateOverFocusChain',['../classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897',1,'ABaseWindow']]],
+  ['iteration_32',['iteration',['../classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3',1,'AScheduler']]]
 ];

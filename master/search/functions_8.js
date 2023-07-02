@@ -5,5 +5,6 @@ var searchData=
   ['hasmany_2',['hasMany',['../structASqlModel.html#abcdb3a737a16a830d7a1271d08c7a27a',1,'ASqlModel']]],
   ['hasresult_3',['hasResult',['../classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f',1,'aui::impl::future::Future']]],
   ['hasselection_4',['hasSelection',['../classACursorSelectable.html#a8c7d2652da1ada52cce28464d152ee03',1,'ACursorSelectable']]],
-  ['hasvalue_5',['hasValue',['../classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0',1,'aui::impl::future::Future']]]
+  ['hasvalue_5',['hasValue',['../classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0',1,'aui::impl::future::Future']]],
+  ['hidetouchscreenkeyboard_6',['hideTouchscreenKeyboard',['../classABaseWindow.html#ae61368594001372e16f43b99e783d712',1,'ABaseWindow']]]
 ];

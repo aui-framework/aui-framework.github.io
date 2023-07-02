@@ -26,7 +26,7 @@ var group__core =
       [ "write", "classAByteBuffer.html#ac2a3dab90d185a33804a0b855d732f07", null ]
     ] ],
     [ "AByteBufferView", "classAByteBufferView.html", [
-      [ "at", "classAByteBufferView.html#a795996e31fb1752c40c7dd250064254e", null ]
+      [ "at", "classAByteBufferView.html#a1c222289a4c87b0d1dd1afd7bc36ae0e", null ]
     ] ],
     [ "AChar", "classAChar.html", null ],
     [ "AColor", "classAColor.html", [
@@ -138,7 +138,9 @@ var group__core =
     [ "ALogger", "classALogger.html", [
       [ "LogWriter", "structALogger_1_1LogWriter.html", null ],
       [ "ALogger", "classALogger.html#afc8ce009869391c05cf8443081c2989d", null ],
-      [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ]
+      [ "doLogFileAccessSafe", "classALogger.html#a63c7471e4fe2c2dd96e38f72203d1ec7", null ],
+      [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ],
+      [ "setLogFile", "classALogger.html#aa2da2365b9f592d3c47d834456a23d54", null ]
     ] ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", [
@@ -160,7 +162,11 @@ var group__core =
       [ "notifyProcessMessages", "classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f", null ]
     ] ],
     [ "AFuture< T >", "classAFuture.html", [
-      [ "supplyException", "classAFuture.html#afb90c81c9ded0417533b721c34d3a139", null ]
+      [ "map", "classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe", null ],
+      [ "onError", "classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e", null ],
+      [ "onSuccess", "classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b", null ],
+      [ "supplyException", "classAFuture.html#afb90c81c9ded0417533b721c34d3a139", null ],
+      [ "supplyResult", "classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836", null ]
     ] ],
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
@@ -207,7 +213,9 @@ var group__core =
       [ "timer", "classAScheduler.html#adcc8bfa4d75bc92bd37d3836cddc151a", null ]
     ] ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
+    [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
+    [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
     [ "operator\"\"_format", "group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8", null ]

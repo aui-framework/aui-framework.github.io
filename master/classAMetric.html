@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">master</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -100,9 +100,38 @@ $(document).ready(function(){initNavTree('classAMetric.html',''); initResizable(
 
 <p>Stores dimensions in scalable units (dp, pt, etc...).  
  <a href="classAMetric.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="AMetric_8h_source.html">AUI/Util/AMetric.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Stores dimensions in scalable units (dp, pt, etc...). </p>
+<p >It's highly recommended to use only Density-independent Pixel unit (<code>_dp</code>) to make your application correctly handle systems with high DPI. In AUI, all units are density independent except <code>_px</code>. The only purpose of the <code>_px</code> unit is to define lines of exact one or two pixels wide.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Initialization</h1>
+<p >Recommended way is to use operator literal format: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a = 5_dp <span class="comment">// -&gt; a = 5 dimension-independent units (= pixels on 100% scaling)</span></div>
+<div class="ttc" id="aclassAMetric_html"><div class="ttname"><a href="classAMetric.html">AMetric</a></div><div class="ttdoc">Stores dimensions in scalable units (dp, pt, etc...).</div><div class="ttdef"><b>Definition:</b> AMetric.h:79</div></div>
+</div><!-- fragment --><p >Common usage: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a = 5_dp;</div>
+<div class="line">a.getValuePx() <span class="comment">// 5 on 100% scale, 6 on 125% scale, etc</span></div>
+</div><!-- fragment --><p ><a class="el" href="classAMetric.html" title="Stores dimensions in scalable units (dp, pt, etc...).">AMetric</a> can be also initialized via value and unit:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a(5, T_DP);</div>
+</div><!-- fragment --><p ><a class="el" href="classAMetric.html" title="Stores dimensions in scalable units (dp, pt, etc...).">AMetric</a> can be also initialized with zero without unit specified (in this case, AMetric::getUnit will return T_PX):</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> zero1 = 0; <span class="comment">// zero pixels</span></div>
+<div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> zero2 = {}; <span class="comment">// also zero pixels</span></div>
+</div><!-- fragment --><p >However, if you try to specify nonzero integer without unit, it will produce a runtime error:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a = 5; <span class="comment">// runtime error</span></div>
+</div><!-- fragment --><p>{cpp}</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Supported units</h2>
+<p >Currently supported units:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Unit   </th><th class="markdownTableHeadNone">Enum   </th><th class="markdownTableHeadNone">Literal   </th><th class="markdownTableHeadNone">Value    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Density-independent Pixels   </td><td class="markdownTableBodyNone">T_DP   </td><td class="markdownTableBodyNone">_dp   </td><td class="markdownTableBodyNone">px * <code>scale_factor</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Typography point   </td><td class="markdownTableBodyNone">T_PT   </td><td class="markdownTableBodyNone">_pt   </td><td class="markdownTableBodyNone">px * <code>scale_factor</code> * 4 / 3    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Pixels   </td><td class="markdownTableBodyNone">T_PX   </td><td class="markdownTableBodyNone">_px   </td><td class="markdownTableBodyNone">px   </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>It's highly recommended to use only Density-independent Pixel unit (_dp). DP guarantees that your application will correctly handle systems with hidpi screens. </dd></dl>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a7f62bec783c3f8fa0eda1790f4e4a6b0"><td class="memItemLeft" align="right" valign="top"><a id="a7f62bec783c3f8fa0eda1790f4e4a6b0" name="a7f62bec783c3f8fa0eda1790f4e4a6b0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Unit</b> { <b>T_UNKNOWN</b>
@@ -167,37 +196,7 @@ Static Public Member Functions</h2></td></tr>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>fromPxToMetric</b> (float value, Unit unit)</td></tr>
 <tr class="separator:a864d8d723c07dabce94c4b80c0e3b639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Stores dimensions in scalable units (dp, pt, etc...). </p>
-<p >It's highly recommended to use only Density-independent Pixel unit (<code>_dp</code>) to make your application correctly handle systems with high DPI. In AUI, all units are density independent except <code>_px</code>. The only purpose of the <code>_px</code> unit is to define lines of exact one or two pixels wide.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Initialization</h1>
-<p >Common usage: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a = 5_dp;</div>
-<div class="line">a.getValuePx() <span class="comment">// 5 on 100% scale, 6 on 125% scale, etc</span></div>
-<div class="ttc" id="aclassAMetric_html"><div class="ttname"><a href="classAMetric.html">AMetric</a></div><div class="ttdoc">Stores dimensions in scalable units (dp, pt, etc...).</div><div class="ttdef"><b>Definition:</b> AMetric.h:74</div></div>
-</div><!-- fragment --><p ><a class="el" href="classAMetric.html" title="Stores dimensions in scalable units (dp, pt, etc...).">AMetric</a> can be also initialized via value and unit:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a(5, T_DP);</div>
-</div><!-- fragment --><p ><a class="el" href="classAMetric.html" title="Stores dimensions in scalable units (dp, pt, etc...).">AMetric</a> can be also initialized with zero without unit specified (in this case, AMetric::getUnit will return T_PX):</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> zero1 = 0; <span class="comment">// zero pixels</span></div>
-<div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> zero2 = {}; <span class="comment">// also zero pixels</span></div>
-</div><!-- fragment --><p >However, if you try to specify nonzero integer without unit, it will produce a runtime error:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classAMetric.html">AMetric</a> a = 5; <span class="comment">// runtime error</span></div>
-</div><!-- fragment --><p>{cpp}</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Supported units</h2>
-<p >Currently supported units:</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Unit   </th><th class="markdownTableHeadNone">Enum   </th><th class="markdownTableHeadNone">Literal   </th><th class="markdownTableHeadNone">Value    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Density-independent Pixels   </td><td class="markdownTableBodyNone">T_DP   </td><td class="markdownTableBodyNone">_dp   </td><td class="markdownTableBodyNone">px * <code>scale_factor</code>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Typography point   </td><td class="markdownTableBodyNone">T_PT   </td><td class="markdownTableBodyNone">_pt   </td><td class="markdownTableBodyNone">px * <code>scale_factor</code> * 4 / 3    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Pixels   </td><td class="markdownTableBodyNone">T_PX   </td><td class="markdownTableBodyNone">_px   </td><td class="markdownTableBodyNone">px   </td></tr>
-</table>
-<dl class="section note"><dt>Note</dt><dd>It's highly recommended to use only Density-independent Pixel unit (_dp). DP guarantees that your application will correctly handle systems with hidpi screens. </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3df11a1366f2115e89f5bddbc4ae4910" name="a3df11a1366f2115e89f5bddbc4ae4910"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3df11a1366f2115e89f5bddbc4ae4910">&#9670;&nbsp;</a></span>AMetric()</h2>
 
@@ -245,6 +244,8 @@ template&lt;typename T , typename std::enable_if_t&lt; std::is_integral_v&lt; T 
 
 </div>
 </div>
+
+<p><code>#include &lt;<a class="el" href="AMetric_8h_source.html">AUI/Util/AMetric.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.views/src/AUI/Util/<a class="el" href="AMetric_8h_source.html">AMetric.h</a></li>
 <li>aui.views/src/AUI/Util/AMetric.cpp</li>

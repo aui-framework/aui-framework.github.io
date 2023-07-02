@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">master</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -132,9 +132,9 @@ $(document).ready(function(){initNavTree('ASelectableLabel_8h_source.html',''); 
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractLabel.html#a179568e91a2310d422fe7e8ecdf9b700">render</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> onMouseMove(glm::ivec2 pos) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAView.html#ae00b0a186ecc94d89bf77cb384f3cc6c">onMousePressed</a>(glm::ivec2 pos, AInput::Key button) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> onMouseReleased(glm::ivec2 pos, AInput::Key button) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAView.html#a22711048b99b2a1b3d00c11ee8967e20">onPointerMove</a>(glm::ivec2 pos) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAView.html#a9460f4e65eb9bea9332d79a5436035f5">onPointerPressed</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab">onPointerReleased</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> onFocusLost() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('ASelectableLabel_8h_source.html',''); 
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> onKeyDown(AInput::Key key) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> onMouseDoubleClicked(glm::ivec2 pos, AInput::Key button) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> onPointerDoubleClicked(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    glm::ivec2 getMouseSelectionPadding() <span class="keyword">override</span>;</div>
@@ -155,15 +155,19 @@ $(document).ready(function(){initNavTree('ASelectableLabel_8h_source.html',''); 
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
 <div class="ttc" id="aclassAAbstractLabel_html_a179568e91a2310d422fe7e8ecdf9b700"><div class="ttname"><a href="classAAbstractLabel.html#a179568e91a2310d422fe7e8ecdf9b700">AAbstractLabel::render</a></div><div class="ttdeci">void render() override</div><div class="ttdoc">Draws this AView. Noone should call this function except rendering routine.</div><div class="ttdef"><b>Definition:</b> AAbstractLabel.cpp:35</div></div>
-<div class="ttc" id="aclassAAbstractLabel_html_a1e393fdd98d58b9d024e39e6a7cfcb2f"><div class="ttname"><a href="classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f">AAbstractLabel::consumesClick</a></div><div class="ttdeci">bool consumesClick(const glm::ivec2 &amp;pos) override</div><div class="ttdoc">Determines whether this AView processes this click or passes it thru.</div><div class="ttdef"><b>Definition:</b> AAbstractLabel.cpp:222</div></div>
-<div class="ttc" id="aclassACursorSelectable_html"><div class="ttname"><a href="classACursorSelectable.html">ACursorSelectable</a></div><div class="ttdef"><b>Definition:</b> ACursorSelectable.h:30</div></div>
+<div class="ttc" id="aclassAAbstractLabel_html_a1e393fdd98d58b9d024e39e6a7cfcb2f"><div class="ttname"><a href="classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f">AAbstractLabel::consumesClick</a></div><div class="ttdeci">bool consumesClick(const glm::ivec2 &amp;pos) override</div><div class="ttdoc">Determines whether this AView processes this click or passes it thru.</div><div class="ttdef"><b>Definition:</b> AAbstractLabel.cpp:283</div></div>
+<div class="ttc" id="aclassACursorSelectable_html"><div class="ttname"><a href="classACursorSelectable.html">ACursorSelectable</a></div><div class="ttdef"><b>Definition:</b> ACursorSelectable.h:31</div></div>
 <div class="ttc" id="aclassACursorSelectable_html_ae1744b705b48d18401882f5f5106a89e"><div class="ttname"><a href="classACursorSelectable.html#ae1744b705b48d18401882f5f5106a89e">ACursorSelectable::textLength</a></div><div class="ttdeci">virtual size_t textLength() const =0</div></div>
 <div class="ttc" id="aclassALabel_html"><div class="ttname"><a href="classALabel.html">ALabel</a></div><div class="ttdoc">Represents a simple single-line text display view.</div><div class="ttdef"><b>Definition:</b> ALabel.h:28</div></div>
 <div class="ttc" id="aclassASelectableLabel_html"><div class="ttname"><a href="classASelectableLabel.html">ASelectableLabel</a></div><div class="ttdoc">Like ALabel but with cursor selection capabilities.</div><div class="ttdef"><b>Definition:</b> ASelectableLabel.h:30</div></div>
 <div class="ttc" id="aclassASelectableLabel_html_add210bc650574f96c1fb0a633ca61ee7"><div class="ttname"><a href="classASelectableLabel.html#add210bc650574f96c1fb0a633ca61ee7">ASelectableLabel::text</a></div><div class="ttdeci">const AString &amp; text() const override</div><div class="ttdef"><b>Definition:</b> ASelectableLabel.h:35</div></div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:35</div></div>
-<div class="ttc" id="aclassAView_html_ae00b0a186ecc94d89bf77cb384f3cc6c"><div class="ttname"><a href="classAView.html#ae00b0a186ecc94d89bf77cb384f3cc6c">AView::onMousePressed</a></div><div class="ttdeci">virtual void onMousePressed(glm::ivec2 pos, AInput::Key button)</div><div class="ttdef"><b>Definition:</b> AView.cpp:328</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a wide char string.</div><div class="ttdef"><b>Definition:</b> AString.h:36</div></div>
+<div class="ttc" id="aclassAView_html_a22711048b99b2a1b3d00c11ee8967e20"><div class="ttname"><a href="classAView.html#a22711048b99b2a1b3d00c11ee8967e20">AView::onPointerMove</a></div><div class="ttdeci">virtual void onPointerMove(glm::ivec2 pos)</div><div class="ttdoc">Handles pointer hover events.</div><div class="ttdef"><b>Definition:</b> AView.cpp:343</div></div>
+<div class="ttc" id="aclassAView_html_a9460f4e65eb9bea9332d79a5436035f5"><div class="ttname"><a href="classAView.html#a9460f4e65eb9bea9332d79a5436035f5">AView::onPointerPressed</a></div><div class="ttdeci">virtual void onPointerPressed(const APointerPressedEvent &amp;event)</div><div class="ttdoc">Called on pointer (mouse) released event.</div><div class="ttdef"><b>Definition:</b> AView.cpp:354</div></div>
+<div class="ttc" id="aclassAView_html_a9e1d18e1f5414fc9599325f71e97f2ab"><div class="ttname"><a href="classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab">AView::onPointerReleased</a></div><div class="ttdeci">virtual void onPointerReleased(const APointerReleasedEvent &amp;event)</div><div class="ttdoc">Called on pointer (mouse) released event.</div><div class="ttdef"><b>Definition:</b> AView.cpp:372</div></div>
 <div class="ttc" id="astructAFontStyle_html"><div class="ttname"><a href="structAFontStyle.html">AFontStyle</a></div><div class="ttdef"><b>Definition:</b> AFontStyle.h:27</div></div>
+<div class="ttc" id="astructAPointerPressedEvent_html"><div class="ttname"><a href="structAPointerPressedEvent.html">APointerPressedEvent</a></div><div class="ttdoc">Pointing method press event.</div><div class="ttdef"><b>Definition:</b> APointerPressedEvent.h:24</div></div>
+<div class="ttc" id="astructAPointerReleasedEvent_html"><div class="ttname"><a href="structAPointerReleasedEvent.html">APointerReleasedEvent</a></div><div class="ttdoc">Pointing method press event.</div><div class="ttdef"><b>Definition:</b> APointerReleasedEvent.h:24</div></div>
 <div class="ttc" id="astructViewAssertionText_html"><div class="ttname"><a href="structViewAssertionText.html">ViewAssertionText</a></div><div class="ttdef"><b>Definition:</b> Text.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

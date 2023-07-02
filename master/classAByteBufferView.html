@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">master</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -99,9 +99,10 @@ $(document).ready(function(){initNavTree('classAByteBufferView.html',''); initRe
 
 <p>Acts like std::string_view but for <a class="el" href="classAByteBuffer.html" title="std::vector-like growing array for byte storage.">AByteBuffer</a>.  
  <a href="classAByteBufferView.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="AByteBufferView_8h_source.html">AUI/Common/AByteBufferView.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Acts like std::string_view but for <a class="el" href="classAByteBuffer.html" title="std::vector-like growing array for byte storage.">AByteBuffer</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>don't use const reference of <a class="el" href="classAByteBufferView.html" title="Acts like std::string_view but for AByteBuffer.">AByteBufferView</a>. Passing by const reference forces compiler to use memory instead of registers. </dd></dl>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a96ad8759dedc33a17308df7904c39ba5"><td class="memItemLeft" align="right" valign="top"><a id="a96ad8759dedc33a17308df7904c39ba5" name="a96ad8759dedc33a17308df7904c39ba5"></a>
@@ -113,10 +114,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c8614cb411955c43d6523ebeb9e2314"><td class="memItemLeft" align="right" valign="top"><a id="a1c8614cb411955c43d6523ebeb9e2314" name="a1c8614cb411955c43d6523ebeb9e2314"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AByteBufferView</b> (std::string_view string) noexcept</td></tr>
 <tr class="separator:a1c8614cb411955c43d6523ebeb9e2314"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a795996e31fb1752c40c7dd250064254e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a795996e31fb1752c40c7dd250064254e"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAByteBufferView.html#a795996e31fb1752c40c7dd250064254e">at</a> (size_t byteIndex)</td></tr>
-<tr class="memdesc:a795996e31fb1752c40c7dd250064254e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets value of specified type by byte index relative to the beginning of internal buffer.  <a href="classAByteBufferView.html#a795996e31fb1752c40c7dd250064254e">More...</a><br /></td></tr>
-<tr class="separator:a795996e31fb1752c40c7dd250064254e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c222289a4c87b0d1dd1afd7bc36ae0e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1c222289a4c87b0d1dd1afd7bc36ae0e"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAByteBufferView.html#a1c222289a4c87b0d1dd1afd7bc36ae0e">at</a> (size_t byteIndex) const noexcept</td></tr>
+<tr class="memdesc:a1c222289a4c87b0d1dd1afd7bc36ae0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets value of specified type by byte index relative to the beginning of internal buffer.  <a href="classAByteBufferView.html#a1c222289a4c87b0d1dd1afd7bc36ae0e">More...</a><br /></td></tr>
+<tr class="separator:a1c222289a4c87b0d1dd1afd7bc36ae0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73d871ab3b4fdc9cf815580b90fabb1"><td class="memItemLeft" align="right" valign="top"><a id="ad73d871ab3b4fdc9cf815580b90fabb1" name="ad73d871ab3b4fdc9cf815580b90fabb1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexcept</td></tr>
+<tr class="separator:ad73d871ab3b4fdc9cf815580b90fabb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b922a00d0a2cdae5b5851013eaea08"><td class="memItemLeft" align="right" valign="top"><a id="a97b922a00d0a2cdae5b5851013eaea08" name="a97b922a00d0a2cdae5b5851013eaea08"></a>
 <a class="el" href="classAByteBufferView.html">AByteBufferView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>slice</b> (std::size_t offset) const noexcept</td></tr>
 <tr class="separator:a97b922a00d0a2cdae5b5851013eaea08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,12 +157,9 @@ template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acc99dce9e9ae4731b8c24402acdba4d4"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classAByteBufferView.html">AByteBufferView</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fromRaw</b> (const T &amp;data) noexcept</td></tr>
 <tr class="separator:acc99dce9e9ae4731b8c24402acdba4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Acts like std::string_view but for <a class="el" href="classAByteBuffer.html" title="std::vector-like growing array for byte storage.">AByteBuffer</a>. </p>
-<dl class="section note"><dt>Note</dt><dd>don't use const reference of <a class="el" href="classAByteBufferView.html" title="Acts like std::string_view but for AByteBuffer.">AByteBufferView</a>. Passing by const reference forces compiler to use memory instead of registers. </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a795996e31fb1752c40c7dd250064254e" name="a795996e31fb1752c40c7dd250064254e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a795996e31fb1752c40c7dd250064254e">&#9670;&nbsp;</a></span>at()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c222289a4c87b0d1dd1afd7bc36ae0e" name="a1c222289a4c87b0d1dd1afd7bc36ae0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c222289a4c87b0d1dd1afd7bc36ae0e">&#9670;&nbsp;</a></span>at()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,12 +174,12 @@ template&lt;typename T &gt; </div>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>byteIndex</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -200,6 +201,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+
+<p><code>#include &lt;<a class="el" href="AByteBufferView_8h_source.html">AUI/Common/AByteBufferView.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/Common/<a class="el" href="AByteBufferView_8h_source.html">AByteBufferView.h</a></li>
 <li>aui.core/src/AUI/Common/AByteBufferBase64.cpp</li>

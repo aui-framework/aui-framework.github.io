@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['textchanged_0',['textChanged',['../classAAbstractTypeableView.html#a4addebde2ee640e32b78040f71f2d107',1,'AAbstractTypeableView']]],
-  ['textchanging_1',['textChanging',['../classAAbstractTypeableView.html#ad5412b86c537ee74c130c7f3623ec09c',1,'AAbstractTypeableView']]]
+  ['position_0',['position',['../structAPointerPressedEvent.html#ae7e906ce526d697c91bf9efc72b2bd20',1,'APointerPressedEvent::position()'],['../structAPointerReleasedEvent.html#a418003ae2af7ac1f656464a8bd938422',1,'APointerReleasedEvent::position()']]]
 ];

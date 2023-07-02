@@ -5,9 +5,10 @@ var searchData=
   ['enqueue_2',['enqueue',['../classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf',1,'AAbstractThread']]],
   ['ensurereserved_3',['ensureReserved',['../classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae',1,'AByteBuffer']]],
   ['enterchar_4',['enterChar',['../classAAbstractTypeableView.html#a49de5a96d5a4cb3215d804e38c5fbf42',1,'AAbstractTypeableView']]],
-  ['execute_5',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
-  ['executeasadministrator_6',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
-  ['executewaitforexit_7',['executeWaitForExit',['../classAProcess.html#aa636c40424103381cb9fdacbdad265d8',1,'AProcess']]],
-  ['exists_8',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
-  ['extrastylesheet_9',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
+  ['env_5',['env',['../group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46',1,'aui::jni']]],
+  ['execute_6',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
+  ['executeasadministrator_7',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
+  ['executewaitforexit_8',['executeWaitForExit',['../classAProcess.html#a3f74fa0108325de438c33cd0cf5519e2',1,'AProcess']]],
+  ['exists_9',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
+  ['extrastylesheet_10',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
 ];

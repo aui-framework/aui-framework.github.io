@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['repeat_0',['repeat',['../structATexturedBrush.html#a9759fd226e78d36217ce417caf320589',1,'ATexturedBrush']]],
-  ['restored_1',['restored',['../classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac',1,'AWindow']]]
+  ['keypressed_0',['keyPressed',['../classAView.html#a7299aeca90d52aa7406bebf1b5bb604a',1,'AView']]],
+  ['keyreleased_1',['keyReleased',['../classAView.html#a02446f0c63358a237c2fcb0da0487b8d',1,'AView']]],
+  ['kinetic_2',['kinetic',['../structAScrollEvent.html#ad74005ce7e0a777817a7a09ce997f5ae',1,'AScrollEvent']]]
 ];

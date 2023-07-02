@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uv1_0',['uv1',['../structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16',1,'ATexturedBrush']]],
-  ['uv2_1',['uv2',['../structATexturedBrush.html#a3c7946b2d5bf403f1b20dead1df337fc',1,'ATexturedBrush']]]
+  ['repeat_0',['repeat',['../structATexturedBrush.html#a9759fd226e78d36217ce417caf320589',1,'ATexturedBrush']]],
+  ['restored_1',['restored',['../classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac',1,'AWindow']]]
 ];

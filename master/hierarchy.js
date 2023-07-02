@@ -135,6 +135,8 @@ var hierarchy =
     [ "AModelSelection< T >", "classAModelSelection.html", null ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
+    [ "APointerPressedEvent", "structAPointerPressedEvent.html", null ],
+    [ "APointerReleasedEvent", "structAPointerReleasedEvent.html", null ],
     [ "APool< T >", "classAPool.html", null ],
     [ "APool< T >::APoolDeleter", "structAPool_1_1APoolDeleter.html", null ],
     [ "AppDelegate()", "categoryAppDelegate_07_08.html", null ],
@@ -142,6 +144,7 @@ var hierarchy =
     [ "ARaiiHelper< Callback >", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", null ],
+    [ "AScrollEvent", "structAScrollEvent.html", null ],
     [ "ASerializable< T, T2 >", "structASerializable.html", null ],
     [ "ASerializable< _< T > >", "structASerializable_3_01___3_01T_01_4_01_4.html", null ],
     [ "ASerializable< AByteBuffer >", "structASerializable_3_01AByteBuffer_01_4.html", null ],
@@ -169,6 +172,7 @@ var hierarchy =
     [ "aui::assert_not_used_when_null< T >", "classaui_1_1assert__not__used__when__null.html", null ],
     [ "AStacktrace", "classAStacktrace.html", null ],
     [ "AStringFormatHelper", "structAStringFormatHelper.html", null ],
+    [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
     [ "AStylesheet", "classAStylesheet.html", null ],
     [ "AzazaATest::ATest", "structAzazaATest_1_1ATest.html", null ],
     [ "ATextLayoutHelper", "classATextLayoutHelper.html", null ],
@@ -191,10 +195,49 @@ var hierarchy =
     [ "ass::BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],
     [ "Base", null, [
       [ "AComBase< Child, Base >", "classAComBase.html", null ],
-      [ "ass::active< Base >", "structass_1_1active.html", null ],
+      [ "ass::activated< Base >", "structass_1_1activated.html", null ],
       [ "ass::disabled< Base >", "structass_1_1disabled.html", null ],
-      [ "ass::focus< Base >", "structass_1_1focus.html", null ],
+      [ "ass::focused< Base >", "structass_1_1focused.html", null ],
       [ "ass::hovered< Base >", "structass_1_1hovered.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< T, dbusType >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ],
+    [ "aui::dbus::impl::basic_converter< bool, DBUS_TYPE_BOOLEAN >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< bool >", "structaui_1_1dbus_1_1converter_3_01bool_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< const char *, DBUS_TYPE_OBJECT_PATH >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< ObjectPath >", "structaui_1_1dbus_1_1converter_3_01ObjectPath_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< const char *, DBUS_TYPE_STRING >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< const char * >", "structaui_1_1dbus_1_1converter_3_01const_01char_01_5_01_4.html", [
+        [ "aui::dbus::converter< char[N]>", "structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html", null ],
+        [ "aui::dbus::converter< std::string >", "structaui_1_1dbus_1_1converter_3_01std_1_1string_01_4.html", [
+          [ "aui::dbus::converter< AString >", "structaui_1_1dbus_1_1converter_3_01AString_01_4.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< double, DBUS_TYPE_DOUBLE >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< double >", "structaui_1_1dbus_1_1converter_3_01double_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::int16_t, DBUS_TYPE_INT16 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::int16_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int16__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::int32_t, DBUS_TYPE_INT32 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::int32_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int32__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::int64_t, DBUS_TYPE_INT64 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::int64_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1int64__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint16_t, DBUS_TYPE_UINT16 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint16_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint16__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint32_t, DBUS_TYPE_UINT32 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint32_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint32__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint64_t, DBUS_TYPE_UINT64 >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint64_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint64__t_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::impl::basic_converter< std::uint8_t, DBUS_TYPE_BYTE >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
+      [ "aui::dbus::converter< std::uint8_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint8__t_01_4.html", null ]
     ] ],
     [ "aui::BinarySearchNearestToZero< Predicate, Iterator >", "structaui_1_1BinarySearchNearestToZero.html", null ],
     [ "ass::Border", "structass_1_1Border.html", null ],
@@ -213,8 +256,54 @@ var hierarchy =
     [ "aui::impl::future::CancellationWrapper< Inner >", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
+    [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
+      [ "ass::on_state::Activated", "structass_1_1on__state_1_1Activated.html", null ],
+      [ "ass::on_state::Disabled", "structass_1_1on__state_1_1Disabled.html", null ],
+      [ "ass::on_state::Focused", "structass_1_1on__state_1_1Focused.html", null ],
+      [ "ass::on_state::Hovered", "structass_1_1on__state_1_1Hovered.html", null ]
+    ] ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
+    [ "aui::dbus::converter< T >", "structaui_1_1dbus_1_1converter.html", null ],
+    [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter.html", null ],
+    [ "aui::dbus::converter< AMap< K, V > >", "structaui_1_1dbus_1_1converter_3_01AMap_3_01K_00_01V_01_4_01_4.html", null ],
+    [ "aui::dbus::converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
+    [ "aui::dbus::converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
+    [ "aui::jni::Converter< std::string >", "structaui_1_1jni_1_1Converter_3_01std_1_1string_01_4.html", [
+      [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ]
+    ] ],
+    [ "aui::dbus::converter< std::tuple< Types... > >", "structaui_1_1dbus_1_1converter_3_01std_1_1tuple_3_01Types_8_8_8_01_4_01_4.html", null ],
+    [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter_3_01T_01_4.html", null ],
+    [ "aui::dbus::converter< Unknown >", "structaui_1_1dbus_1_1converter_3_01Unknown_01_4.html", null ],
+    [ "aui::dbus::converter< Variant >", "structaui_1_1dbus_1_1converter_3_01Variant_01_4.html", null ],
+    [ "aui::jni::Converter< void >", "structaui_1_1jni_1_1Converter_3_01void_01_4.html", null ],
+    [ "aui::jni::ConverterPrimitive< T, sign >", "structaui_1_1jni_1_1ConverterPrimitive.html", null ],
+    [ "aui::jni::ConverterPrimitive< jboolean, 'Z'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jboolean >", "structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html", [
+        [ "aui::jni::Converter< bool >", "structaui_1_1jni_1_1Converter_3_01bool_01_4.html", null ]
+      ] ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jbyte, 'B'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jbyte >", "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jchar, 'C'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jchar >", "structaui_1_1jni_1_1Converter_3_01jchar_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jdouble, 'D'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jdouble >", "structaui_1_1jni_1_1Converter_3_01jdouble_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jfloat, 'F'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jfloat >", "structaui_1_1jni_1_1Converter_3_01jfloat_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jint, 'I'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jint >", "structaui_1_1jni_1_1Converter_3_01jint_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jlong, 'J'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jlong >", "structaui_1_1jni_1_1Converter_3_01jlong_01_4.html", null ]
+    ] ],
+    [ "aui::jni::ConverterPrimitive< jshort, 'S'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
+      [ "aui::jni::Converter< jshort >", "structaui_1_1jni_1_1Converter_3_01jshort_01_4.html", null ]
+    ] ],
     [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
       [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
     ] ],
@@ -225,7 +314,6 @@ var hierarchy =
     [ "CustomShaderHelper", "structCustomShaderHelper.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
-    [ "ass::decl::Declaration< DeclarationStruct >", "structass_1_1decl_1_1Declaration.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
     [ "aui::impl::slot::decode_type< _< T > >", "structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html", null ],
     [ "std::deque", null, [
@@ -287,6 +375,7 @@ var hierarchy =
           [ "ARulerView", "classARulerView.html", null ],
           [ "AScrollbarButton", "classAScrollbarButton.html", null ],
           [ "AScrollbarHandle", "classAScrollbarHandle.html", null ],
+          [ "ASlider::Handle", "classASlider_1_1Handle.html", null ],
           [ "ASpacerExpanding", "classASpacerExpanding.html", [
             [ "AScrollbarOffsetSpacer", "classAScrollbarOffsetSpacer.html", null ]
           ] ],
@@ -299,7 +388,9 @@ var hierarchy =
                 [ "ACustomWindow", "classACustomWindow.html", [
                   [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
                 ] ],
-                [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ]
+                [ "UIClick::TestWindow", "classUIClick_1_1TestWindow.html", null ],
+                [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ],
+                [ "UIViewFocus::TestWindow", "classUIViewFocus_1_1TestWindow.html", null ]
               ] ]
             ] ],
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
@@ -329,6 +420,7 @@ var hierarchy =
             ] ],
             [ "AScrollAreaContainer", "classAScrollAreaContainer.html", null ],
             [ "AScrollbar", "classAScrollbar.html", null ],
+            [ "ASlider", "classASlider.html", null ],
             [ "ASplitter", "classASplitter.html", null ],
             [ "ATabButtonRow", "classATabButtonRow.html", null ],
             [ "ATabView", "classATabView.html", null ],
@@ -340,7 +432,9 @@ var hierarchy =
             [ "DevtoolsPanel", "classDevtoolsPanel.html", null ],
             [ "MockedViewContainer", "classMockedViewContainer.html", null ],
             [ "WrapperContainer", "classWrapperContainer.html", null ]
-          ] ]
+          ] ],
+          [ "ViewMock", "classViewMock.html", null ],
+          [ "ViewMock", "classViewMock.html", null ]
         ] ],
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
         [ "Master", "classMaster.html", null ],
@@ -365,6 +459,7 @@ var hierarchy =
     [ "ACurl::ErrorDescription", "structACurl_1_1ErrorDescription.html", null ],
     [ "std::exception", null, [
       [ "AException", "classAException.html", [
+        [ "ADBus::Exception", "classADBus_1_1Exception.html", null ],
         [ "AIOException", "classAIOException.html", [
           [ "AAccessDeniedException", "classAAccessDeniedException.html", null ],
           [ "ACurl::Exception", "classACurl_1_1Exception.html", null ],
@@ -395,6 +490,9 @@ var hierarchy =
     [ "ass::Expanding", "structass_1_1Expanding.html", null ],
     [ "Factory< BaseType >", "classFactory.html", null ],
     [ "FailsOnCopy", "classFailsOnCopy.html", null ],
+    [ "std::false_type", null, [
+      [ "fmt::detail::is_string< AString >", "structfmt_1_1detail_1_1is__string_3_01AString_01_4.html", null ]
+    ] ],
     [ "aui::fast_pimpl< T, storageSize, storageAlignment >", "structaui_1_1fast__pimpl.html", null ],
     [ "aui::impl::json::Field< T >", "structaui_1_1impl_1_1json_1_1Field.html", null ],
     [ "ADesktop::FileExtension", "structADesktop_1_1FileExtension.html", null ],
@@ -404,23 +502,29 @@ var hierarchy =
     [ "aui::detail::fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
     [ "ass::Font", "structass_1_1Font.html", null ],
     [ "AFont::FontData", "structAFont_1_1FontData.html", null ],
-    [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
     [ "ass::FontFamily", "structass_1_1FontFamily.html", null ],
     [ "AFont::FontKey", "structAFont_1_1FontKey.html", null ],
     [ "ass::FontSize", "structass_1_1FontSize.html", null ],
-    [ "formatter", null, [
+    [ "fmt::formatter", null, [
+      [ "fmt::formatter< AString >", "structfmt_1_1formatter_3_01AString_01_4.html", null ],
       [ "fmt::formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
+    [ "fmt::formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
     [ "FreeType", "classFreeType.html", null ],
+    [ "aui::function_info< Return, Args >", "structaui_1_1function__info.html", null ],
+    [ "aui::function_info< Return(Args...)>", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::impl::future::Future< Value >", "classaui_1_1impl_1_1future_1_1Future.html", null ],
     [ "aui::impl::future::Future< void >", "classaui_1_1impl_1_1future_1_1Future.html", [
       [ "AFuture< T >", "classAFuture.html", null ],
       [ "AFuture< void >", "classAFuture_3_01void_01_4.html", null ]
     ] ],
+    [ "aui::impl::future::FutureReturnType< T >", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
+    [ "aui::impl::future::FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
     [ "GLContext", "classGLContext.html", null ],
     [ "GLKViewController", null, [
       [ "AUIViewController", "interfaceAUIViewController.html", null ]
     ] ],
+    [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", null ],
     [ "GradientShaderHelper", "structGradientShaderHelper.html", null ],
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
@@ -439,52 +543,13 @@ var hierarchy =
       ] ],
       [ "ass::detail::debug_selector", "structass_1_1detail_1_1debug__selector.html", [
         [ "ass::debug_selector", "structass_1_1debug__selector.html", null ]
-      ] ]
+      ] ],
+      [ "ass::on_state::impl::OnStateSelector", "structass_1_1on__state_1_1impl_1_1OnStateSelector.html", null ]
     ] ],
     [ "IBackgroundEffect", "classIBackgroundEffect.html", [
       [ "EffectShimmer", "classEffectShimmer.html", null ]
     ] ],
     [ "APlaceholderAnimator::ICustomWidth", "classAPlaceholderAnimator_1_1ICustomWidth.html", null ],
-    [ "ass::decl::IDeclarationBase", "structass_1_1decl_1_1IDeclarationBase.html", [
-      [ "ass::decl::Declaration< ACursor >", "structass_1_1decl_1_1Declaration_3_01ACursor_01_4.html", [
-        [ "ass::decl::Declaration< ACursor::System >", "structass_1_1decl_1_1Declaration_3_01ACursor_1_1System_01_4.html", null ]
-      ] ],
-      [ "ass::decl::Declaration< AOverflow >", "structass_1_1decl_1_1Declaration_3_01AOverflow_01_4.html", null ],
-      [ "ass::decl::Declaration< AOverflowMask >", "structass_1_1decl_1_1Declaration_3_01AOverflowMask_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundCropping >", "structass_1_1decl_1_1Declaration_3_01BackgroundCropping_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundEffect >", "structass_1_1decl_1_1Declaration_3_01BackgroundEffect_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundGradient >", "structass_1_1decl_1_1Declaration_3_01BackgroundGradient_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundImage >", "structass_1_1decl_1_1Declaration_3_01BackgroundImage_01_4.html", null ],
-      [ "ass::decl::Declaration< BackgroundSolid >", "structass_1_1decl_1_1Declaration_3_01BackgroundSolid_01_4.html", null ],
-      [ "ass::decl::Declaration< Border >", "structass_1_1decl_1_1Declaration_3_01Border_01_4.html", null ],
-      [ "ass::decl::Declaration< BorderBottom >", "structass_1_1decl_1_1Declaration_3_01BorderBottom_01_4.html", null ],
-      [ "ass::decl::Declaration< BorderLeft >", "structass_1_1decl_1_1Declaration_3_01BorderLeft_01_4.html", null ],
-      [ "ass::decl::Declaration< BorderRadius >", "structass_1_1decl_1_1Declaration_3_01BorderRadius_01_4.html", null ],
-      [ "ass::decl::Declaration< BoxShadow >", "structass_1_1decl_1_1Declaration_3_01BoxShadow_01_4.html", null ],
-      [ "ass::decl::Declaration< Expanding >", "structass_1_1decl_1_1Declaration_3_01Expanding_01_4.html", null ],
-      [ "ass::decl::Declaration< FixedSize >", "structass_1_1decl_1_1Declaration_3_01FixedSize_01_4.html", null ],
-      [ "ass::decl::Declaration< Font >", "structass_1_1decl_1_1Declaration_3_01Font_01_4.html", null ],
-      [ "ass::decl::Declaration< FontFamily >", "structass_1_1decl_1_1Declaration_3_01FontFamily_01_4.html", null ],
-      [ "ass::decl::Declaration< FontRendering >", "structass_1_1decl_1_1Declaration_3_01FontRendering_01_4.html", null ],
-      [ "ass::decl::Declaration< FontSize >", "structass_1_1decl_1_1Declaration_3_01FontSize_01_4.html", null ],
-      [ "ass::decl::Declaration< ImageRendering >", "structass_1_1decl_1_1Declaration_3_01ImageRendering_01_4.html", null ],
-      [ "ass::decl::Declaration< LayoutSpacing >", "structass_1_1decl_1_1Declaration_3_01LayoutSpacing_01_4.html", null ],
-      [ "ass::decl::Declaration< LineHeight >", "structass_1_1decl_1_1Declaration_3_01LineHeight_01_4.html", null ],
-      [ "ass::decl::Declaration< Margin >", "structass_1_1decl_1_1Declaration_3_01Margin_01_4.html", null ],
-      [ "ass::decl::Declaration< MaxSize >", "structass_1_1decl_1_1Declaration_3_01MaxSize_01_4.html", null ],
-      [ "ass::decl::Declaration< MinSize >", "structass_1_1decl_1_1Declaration_3_01MinSize_01_4.html", null ],
-      [ "ass::decl::Declaration< Opacity >", "structass_1_1decl_1_1Declaration_3_01Opacity_01_4.html", null ],
-      [ "ass::decl::Declaration< Padding >", "structass_1_1decl_1_1Declaration_3_01Padding_01_4.html", null ],
-      [ "ass::decl::Declaration< TextAlign >", "structass_1_1decl_1_1Declaration_3_01TextAlign_01_4.html", null ],
-      [ "ass::decl::Declaration< TextBorder >", "structass_1_1decl_1_1Declaration_3_01TextBorder_01_4.html", null ],
-      [ "ass::decl::Declaration< TextColor >", "structass_1_1decl_1_1Declaration_3_01TextColor_01_4.html", null ],
-      [ "ass::decl::Declaration< TextShadow >", "structass_1_1decl_1_1Declaration_3_01TextShadow_01_4.html", null ],
-      [ "ass::decl::Declaration< TextTransform >", "structass_1_1decl_1_1Declaration_3_01TextTransform_01_4.html", null ],
-      [ "ass::decl::Declaration< TransformOffset >", "structass_1_1decl_1_1Declaration_3_01TransformOffset_01_4.html", null ],
-      [ "ass::decl::Declaration< TransformScale >", "structass_1_1decl_1_1Declaration_3_01TransformScale_01_4.html", null ],
-      [ "ass::decl::Declaration< VerticalAlign >", "structass_1_1decl_1_1Declaration_3_01VerticalAlign_01_4.html", null ],
-      [ "ass::decl::Declaration< Visibility >", "structass_1_1decl_1_1Declaration_3_01Visibility_01_4.html", null ]
-    ] ],
     [ "IDrawable", "classIDrawable.html", [
       [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
       [ "AImageDrawable", "classAImageDrawable.html", null ],
@@ -543,6 +608,48 @@ var hierarchy =
       [ "OpenGLPrerenderedString", "classOpenGLPrerenderedString.html", null ],
       [ "SoftwarePrerenderedString", "classSoftwarePrerenderedString.html", null ]
     ] ],
+    [ "ass::prop::IPropertyBase", "structass_1_1prop_1_1IPropertyBase.html", [
+      [ "ass::prop::Property< ACursor >", "structass_1_1prop_1_1Property_3_01ACursor_01_4.html", [
+        [ "ass::prop::Property< ACursor::System >", "structass_1_1prop_1_1Property_3_01ACursor_1_1System_01_4.html", null ]
+      ] ],
+      [ "ass::prop::Property< AOverflow >", "structass_1_1prop_1_1Property_3_01AOverflow_01_4.html", null ],
+      [ "ass::prop::Property< AOverflowMask >", "structass_1_1prop_1_1Property_3_01AOverflowMask_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundCropping >", "structass_1_1prop_1_1Property_3_01BackgroundCropping_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundEffect >", "structass_1_1prop_1_1Property_3_01BackgroundEffect_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundGradient >", "structass_1_1prop_1_1Property_3_01BackgroundGradient_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ],
+      [ "ass::prop::Property< BackgroundSolid >", "structass_1_1prop_1_1Property_3_01BackgroundSolid_01_4.html", null ],
+      [ "ass::prop::Property< Border >", "structass_1_1prop_1_1Property_3_01Border_01_4.html", null ],
+      [ "ass::prop::Property< BorderBottom >", "structass_1_1prop_1_1Property_3_01BorderBottom_01_4.html", null ],
+      [ "ass::prop::Property< BorderLeft >", "structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html", null ],
+      [ "ass::prop::Property< BorderRadius >", "structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html", null ],
+      [ "ass::prop::Property< BoxShadow >", "structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html", null ],
+      [ "ass::prop::Property< Expanding >", "structass_1_1prop_1_1Property_3_01Expanding_01_4.html", null ],
+      [ "ass::prop::Property< FixedSize >", "structass_1_1prop_1_1Property_3_01FixedSize_01_4.html", null ],
+      [ "ass::prop::Property< Font >", "structass_1_1prop_1_1Property_3_01Font_01_4.html", null ],
+      [ "ass::prop::Property< FontFamily >", "structass_1_1prop_1_1Property_3_01FontFamily_01_4.html", null ],
+      [ "ass::prop::Property< FontRendering >", "structass_1_1prop_1_1Property_3_01FontRendering_01_4.html", null ],
+      [ "ass::prop::Property< FontSize >", "structass_1_1prop_1_1Property_3_01FontSize_01_4.html", null ],
+      [ "ass::prop::Property< ImageRendering >", "structass_1_1prop_1_1Property_3_01ImageRendering_01_4.html", null ],
+      [ "ass::prop::Property< LayoutSpacing >", "structass_1_1prop_1_1Property_3_01LayoutSpacing_01_4.html", null ],
+      [ "ass::prop::Property< LineHeight >", "structass_1_1prop_1_1Property_3_01LineHeight_01_4.html", null ],
+      [ "ass::prop::Property< Margin >", "structass_1_1prop_1_1Property_3_01Margin_01_4.html", null ],
+      [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ],
+      [ "ass::prop::Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ],
+      [ "ass::prop::Property< Opacity >", "structass_1_1prop_1_1Property_3_01Opacity_01_4.html", null ],
+      [ "ass::prop::Property< Padding >", "structass_1_1prop_1_1Property_3_01Padding_01_4.html", null ],
+      [ "ass::prop::Property< ScrollbarAppearance >", "structass_1_1prop_1_1Property_3_01ScrollbarAppearance_01_4.html", null ],
+      [ "ass::prop::Property< TextAlign >", "structass_1_1prop_1_1Property_3_01TextAlign_01_4.html", null ],
+      [ "ass::prop::Property< TextBorder >", "structass_1_1prop_1_1Property_3_01TextBorder_01_4.html", null ],
+      [ "ass::prop::Property< TextColor >", "structass_1_1prop_1_1Property_3_01TextColor_01_4.html", null ],
+      [ "ass::prop::Property< TextOverflow >", "structass_1_1prop_1_1Property_3_01TextOverflow_01_4.html", null ],
+      [ "ass::prop::Property< TextShadow >", "structass_1_1prop_1_1Property_3_01TextShadow_01_4.html", null ],
+      [ "ass::prop::Property< TextTransform >", "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html", null ],
+      [ "ass::prop::Property< TransformOffset >", "structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html", null ],
+      [ "ass::prop::Property< TransformScale >", "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html", null ],
+      [ "ass::prop::Property< VerticalAlign >", "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html", null ],
+      [ "ass::prop::Property< Visibility >", "structass_1_1prop_1_1Property_3_01Visibility_01_4.html", null ]
+    ] ],
     [ "IRenderer", "classIRenderer.html", [
       [ "OpenGLRenderer", "classOpenGLRenderer.html", null ],
       [ "SoftwareRenderer", "classSoftwareRenderer.html", null ]
@@ -572,7 +679,8 @@ var hierarchy =
     ] ],
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
-      [ "AAbstractTextField", "classAAbstractTextField.html", null ]
+      [ "AAbstractTextField", "classAAbstractTextField.html", null ],
+      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ]
     ] ],
     [ "AModelRange< T >::Iterator", "classAModelRange_1_1Iterator.html", null ],
     [ "AModelSelection< T >::Iterator", "classAModelSelection_1_1Iterator.html", null ],
@@ -623,6 +731,7 @@ var hierarchy =
     [ "ass::Margin", "structass_1_1Margin.html", null ],
     [ "ass::MaxSize", "structass_1_1MaxSize.html", null ],
     [ "aui::member< Type >", "structaui_1_1member.html", null ],
+    [ "aui::member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", null ],
     [ "aui::member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
@@ -645,6 +754,7 @@ var hierarchy =
       [ "aui::win32::detail::Win32Object< HDC >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
         [ "aui::win32::DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ]
       ] ],
+      [ "ADBus", "classADBus.html", null ],
       [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
       [ "AProcess", "classAProcess.html", [
@@ -653,6 +763,8 @@ var hierarchy =
         [ "AOtherProcess", "classAOtherProcess.html", null ]
       ] ],
       [ "ARsa", "classARsa.html", null ],
+      [ "AWin32Event", "classAWin32Event.html", null ],
+      [ "AWin32EventWait", "classAWin32EventWait.html", null ],
       [ "AX509", "classAX509.html", null ],
       [ "AX509Store", "classAX509Store.html", null ],
       [ "IInputStream", "classIInputStream.html", [
@@ -677,6 +789,8 @@ var hierarchy =
         [ "AWebsocket", "classAWebsocket.html", null ],
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
+      [ "IcmpImpl", "classIcmpImpl.html", null ],
+      [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
       [ "Pipe", "classPipe.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
@@ -711,6 +825,11 @@ var hierarchy =
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+    [ "ass::prop::Property< PropertyStruct >", "structass_1_1prop_1_1Property.html", null ],
+    [ "ass::PropertyList", "structass_1_1PropertyList.html", [
+      [ "ass::PropertyListRecursive", "structass_1_1PropertyListRecursive.html", null ],
+      [ "ass::Rule", "structass_1_1Rule.html", null ]
+    ] ],
     [ "aui::ptr", "structaui_1_1ptr.html", null ],
     [ "RenderHints::PushColor", "classRenderHints_1_1PushColor.html", [
       [ "RenderHints::PushState", "classRenderHints_1_1PushState.html", null ]
@@ -726,6 +845,7 @@ var hierarchy =
       [ "uitest::impl::both< L, R >", "structuitest_1_1impl_1_1both.html", null ]
     ] ],
     [ "aui::range< Iterator >", "structaui_1_1range.html", null ],
+    [ "aui::ranged_number< UnderlyingType, min, max >", "structaui_1_1ranged__number.html", null ],
     [ "aui::raw_serializable< T >", "structaui_1_1raw__serializable.html", [
       [ "ASerializable< T, std::enable_if_t< std::is_arithmetic_v< T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html", null ]
     ] ],
@@ -733,7 +853,6 @@ var hierarchy =
       [ "ASerializable< AUuid >", "structASerializable_3_01AUuid_01_4.html", null ]
     ] ],
     [ "Util::Rect", "classUtil_1_1Rect.html", null ],
-    [ "AAndroid::Ref", "classAAndroid_1_1Ref.html", null ],
     [ "Render", "classRender.html", null ],
     [ "gl::impl::resource< T >", "structgl_1_1impl_1_1resource.html", null ],
     [ "gl::impl::resource< ResourceKind::TEXTURE >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html", null ],
@@ -744,9 +863,6 @@ var hierarchy =
     [ "gl::ResourcePool< T >", "classgl_1_1ResourcePool.html", null ],
     [ "aui::reverse_iterator_wrap< T >", "structaui_1_1reverse__iterator__wrap.html", null ],
     [ "RoundedRect", "structRoundedRect.html", null ],
-    [ "RuleWithoutSelector", "structRuleWithoutSelector.html", [
-      [ "Rule", "structRule.html", null ]
-    ] ],
     [ "std::runtime_error", null, [
       [ "AXmlParseError", "classAXmlParseError.html", null ]
     ] ],
@@ -754,6 +870,7 @@ var hierarchy =
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
     [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
+    [ "ScrollbarAppearance", "structScrollbarAppearance.html", null ],
     [ "aui::impl::select_overload< Args >", "structaui_1_1impl_1_1select__overload.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
@@ -774,6 +891,9 @@ var hierarchy =
     [ "uitest::impl::side_value< ASide::LEFT >", "structuitest_1_1impl_1_1side__value_3_01ASide_1_1LEFT_01_4.html", null ],
     [ "uitest::impl::side_value< ASide::RIGHT >", "structuitest_1_1impl_1_1side__value_3_01ASide_1_1RIGHT_01_4.html", null ],
     [ "uitest::impl::side_value< ASide::TOP >", "structuitest_1_1impl_1_1side__value_3_01ASide_1_1TOP_01_4.html", null ],
+    [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature.html", null ],
+    [ "aui::jni::signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
+    [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
     [ "ARenderingContextOptions::Software", "structARenderingContextOptions_1_1Software.html", null ],
     [ "SolidShaderHelper", "structSolidShaderHelper.html", null ],
     [ "SomeBuilderClass", "classSomeBuilderClass.html", null ],
@@ -792,6 +912,9 @@ var hierarchy =
     [ "std::streambuf", null, [
       [ "AStdIStream::StreamBuf", "classAStdIStream_1_1StreamBuf.html", null ]
     ] ],
+    [ "std::string", null, [
+      [ "aui::dbus::ObjectPath", "classaui_1_1dbus_1_1ObjectPath.html", null ]
+    ] ],
     [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
     [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
@@ -807,10 +930,13 @@ var hierarchy =
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
         [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
+        [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
+        [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
         [ "UITextField", "classUITextField.html", null ],
-        [ "UIType", "classUIType.html", null ]
+        [ "UIType", "classUIType.html", null ],
+        [ "UIViewFocus", "classUIViewFocus.html", null ]
       ] ]
     ] ],
     [ "ass::TextBorder", "structass_1_1TextBorder.html", null ],
@@ -836,7 +962,24 @@ var hierarchy =
     [ "std::tuple", null, [
       [ "aui::impl::json::my_tuple< Items >", "structaui_1_1impl_1_1json_1_1my__tuple.html", null ]
     ] ],
-    [ "aui::type_list< Types >", "structaui_1_1type__list.html", null ],
+    [ "aui::tuple_visitor< Args >", "structaui_1_1tuple__visitor.html", null ],
+    [ "aui::tuple_visitor< std::tuple< Args... > >", "structaui_1_1tuple__visitor_3_01std_1_1tuple_3_01Args_8_8_8_01_4_01_4.html", null ],
+    [ "aui::jni::TypedMethods< T >", "structaui_1_1jni_1_1TypedMethods.html", null ],
+    [ "aui::jni::TypedMethods< jboolean >", "structaui_1_1jni_1_1TypedMethods_3_01jboolean_01_4.html", [
+      [ "aui::jni::TypedMethods< bool >", "structaui_1_1jni_1_1TypedMethods_3_01bool_01_4.html", null ]
+    ] ],
+    [ "aui::jni::TypedMethods< jbyte >", "structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jchar >", "structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jdouble >", "structaui_1_1jni_1_1TypedMethods_3_01jdouble_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jfloat >", "structaui_1_1jni_1_1TypedMethods_3_01jfloat_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jint >", "structaui_1_1jni_1_1TypedMethods_3_01jint_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jlong >", "structaui_1_1jni_1_1TypedMethods_3_01jlong_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jobject * >", "structaui_1_1jni_1_1TypedMethods_3_01jobject_01_5_01_4.html", null ],
+    [ "aui::jni::TypedMethods< jobject >", "structaui_1_1jni_1_1TypedMethods_3_01jobject_01_4.html", [
+      [ "aui::jni::TypedMethods< jstring >", "structaui_1_1jni_1_1TypedMethods_3_01jstring_01_4.html", null ]
+    ] ],
+    [ "aui::jni::TypedMethods< jshort >", "structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html", null ],
+    [ "aui::jni::TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],
@@ -851,6 +994,7 @@ var hierarchy =
     [ "gl::Shader::Uniform", "classgl_1_1Shader_1_1Uniform.html", null ],
     [ "UnixIoAsync", "classUnixIoAsync.html", null ],
     [ "UnixIoThread", "classUnixIoThread.html", null ],
+    [ "aui::dbus::Unknown", "structaui_1_1dbus_1_1Unknown.html", null ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
     [ "UnsupportedBrushHelper< Brush >", "structUnsupportedBrushHelper.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
@@ -864,6 +1008,9 @@ var hierarchy =
     ] ],
     [ "AEnumerate< enum_t >::Values< values >", "structAEnumerate_1_1Values.html", null ],
     [ "gl::Vao", "classgl_1_1Vao.html", null ],
+    [ "VariantImpl", null, [
+      [ "aui::dbus::Variant", "structaui_1_1dbus_1_1Variant.html", null ]
+    ] ],
     [ "gl::detail::VboImpl< T >", "classgl_1_1detail_1_1VboImpl.html", null ],
     [ "gl::detail::VboImpl< gl::ResourceKind::INDEX_BUFFER >", "classgl_1_1detail_1_1VboImpl.html", [
       [ "gl::IndexBuffer", "classgl_1_1IndexBuffer.html", null ]
@@ -900,14 +1047,15 @@ var hierarchy =
     [ "aui::ui_building::view_helper< view< View > >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::view< View >", "structaui_1_1ui__building_1_1view.html", null ]
     ] ],
-    [ "ViewActionClick", "structViewActionClick.html", [
+    [ "ViewActionClick< Button >", "structViewActionClick.html", [
       [ "ViewActionKeyDownAndUp", "structViewActionKeyDownAndUp.html", null ],
       [ "ViewActionType", "structViewActionType.html", null ]
     ] ],
     [ "ViewActionDoubleClick", "structViewActionDoubleClick.html", null ],
+    [ "ViewActionGestureLongPress", "structViewActionGestureLongPress.html", null ],
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
-    [ "ViewActionMousePress", "structViewActionMousePress.html", null ],
-    [ "ViewActionMouseRelease", "structViewActionMouseRelease.html", null ],
+    [ "ViewActionMousePress< Button >", "structViewActionMousePress.html", null ],
+    [ "ViewActionMouseRelease< Button >", "structViewActionMouseRelease.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
@@ -924,7 +1072,6 @@ var hierarchy =
     ] ],
     [ "ASqlBuilder::WhereStatement::WhereExpr", "classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html", null ],
     [ "Win32SymService", "structWin32SymService.html", null ],
-    [ "WinEventHandle", "classWinEventHandle.html", null ],
     [ "WinIoAsync", "classWinIoAsync.html", null ],
     [ "WinIoThread", "classWinIoThread.html", null ],
     [ "std::wstring", null, [

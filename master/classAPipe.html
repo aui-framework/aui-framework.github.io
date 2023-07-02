@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">master</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -98,9 +98,11 @@ $(document).ready(function(){initNavTree('classAPipe.html',''); initResizable();
 
 <p>A thread safe buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise).  
  <a href="classAPipe.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="APipe_8h_source.html">AUI/IO/APipe.h</a>&gt;</code></p>
-<table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A thread safe buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise). </p>
+<p ><a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> is similar to the unix pipes. It's capable to store up to 65,536 bytes. It's implemented like a ring buffer. If this limit is reached, a <a class="el" href="classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279" title="Writes exact size bytes to stream. Blocking (waiting for write all data) is allowed.">write()</a> method blocks thread until buffer is read from.</p>
+<p >If capacity may be not enough, consider to use <a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> instead. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aee628cf7a29f35b048cf6fcfe4ec8eb3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3">read</a> (char *dst, size_t size) override</td></tr>
@@ -140,11 +142,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr
 <tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classIOutputStream.html">IOutputStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b">operator&lt;&lt;</a> (const T &amp;t)</td></tr>
 <tr class="separator:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >A thread safe buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise). </p>
-<p ><a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> is similar to the unix pipes. It's capable to store up to 65,536 bytes. It's implemented like a ring buffer. If this limit is reached, a <a class="el" href="classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279" title="Writes exact size bytes to stream. Blocking (waiting for write all data) is allowed.">write()</a> method blocks thread until buffer is read from.</p>
-<p >If capacity may be not enough, consider to use <a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> instead. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aee628cf7a29f35b048cf6fcfe4ec8eb3" name="aee628cf7a29f35b048cf6fcfe4ec8eb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee628cf7a29f35b048cf6fcfe4ec8eb3">&#9670;&nbsp;</a></span>read()</h2>
 
@@ -248,6 +246,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr
 
 </div>
 </div>
+
+<p><code>#include &lt;<a class="el" href="APipe_8h_source.html">AUI/IO/APipe.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/IO/<a class="el" href="APipe_8h_source.html">APipe.h</a></li>
 <li>aui.core/src/AUI/IO/APipe.cpp</li>

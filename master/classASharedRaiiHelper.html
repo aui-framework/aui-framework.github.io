@@ -33,7 +33,7 @@
    <div id="projectname">AUI Framework
    &#160;<span id="projectnumber">master</span>
    </div>
-   <div id="projectbrief">Cross-platform module-based framework for developing  C++17 desktop applications</div>
+   <div id="projectbrief">Cross-platform module-based framework for developing  C++20 desktop applications</div>
   </td>
  </tr>
  </tbody>
@@ -98,18 +98,9 @@ $(document).ready(function(){initNavTree('classASharedRaiiHelper.html',''); init
 
 <p>Shared completion marker for multithreaded callback-based future handling.  
  <a href="classASharedRaiiHelper.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="ASharedRaiiHelper_8h_source.html">AUI/Util/ASharedRaiiHelper.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab99ef3434078ef991d5f5068920f9e17"><td class="memItemLeft" align="right" valign="top"><a id="ab99ef3434078ef991d5f5068920f9e17" name="ab99ef3434078ef991d5f5068920f9e17"></a>
-static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classASharedRaiiHelper.html">ASharedRaiiHelper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>make</b> (std::function&lt; void()&gt; callback)</td></tr>
-<tr class="separator:ab99ef3434078ef991d5f5068920f9e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Shared completion marker for multithreaded callback-based future handling. </p>
-<p ><a class="el" href="classASharedRaiiHelper.html" title="Shared completion marker for multithreaded callback-based future handling.">ASharedRaiiHelper</a> is intended to track the completion of multiple futures, exploiting the destruction of AFuture::onSuccess or AFuture::onError callbacks when they called. This approach allows to easily integrate <a class="el" href="classASharedRaiiHelper.html" title="Shared completion marker for multithreaded callback-based future handling.">ASharedRaiiHelper</a> to the existing code.</p>
+<p ><a class="el" href="classASharedRaiiHelper.html" title="Shared completion marker for multithreaded callback-based future handling.">ASharedRaiiHelper</a> is intended to track the completion of multiple futures, exploiting the destruction of <a class="el" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b" title="Add onSuccess callback to the future.">AFuture::onSuccess</a> or <a class="el" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e" title="Add onError callback to the future.">AFuture::onError</a> callbacks when they called. This approach allows to easily integrate <a class="el" href="classASharedRaiiHelper.html" title="Shared completion marker for multithreaded callback-based future handling.">ASharedRaiiHelper</a> to the existing code.</p>
 <p >Note that the callback will be called even if onSuccess is not.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> marker = ASharedRaiiHelper::make([] {</div>
 <div class="line">    <span class="comment">// will be called when all futures called onSuccess or destroyed</span></div>
@@ -124,8 +115,17 @@ static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classASha
 <div class="line"> </div>
 <div class="line"><span class="comment">// keep the future alive in async holder</span></div>
 <div class="line">mAsyncHolder &lt;&lt; future;</div>
-<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:305</div></div>
-</div><!-- fragment --> </div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:318</div></div>
+</div><!-- fragment --> </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab99ef3434078ef991d5f5068920f9e17"><td class="memItemLeft" align="right" valign="top"><a id="ab99ef3434078ef991d5f5068920f9e17" name="ab99ef3434078ef991d5f5068920f9e17"></a>
+static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classASharedRaiiHelper.html">ASharedRaiiHelper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>make</b> (std::function&lt; void()&gt; callback)</td></tr>
+<tr class="separator:ab99ef3434078ef991d5f5068920f9e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+<p><code>#include &lt;<a class="el" href="ASharedRaiiHelper_8h_source.html">AUI/Util/ASharedRaiiHelper.h</a>&gt;</code></p>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>aui.core/src/AUI/Util/<a class="el" href="ASharedRaiiHelper_8h_source.html">ASharedRaiiHelper.h</a></li>
 </ul>
 </div><!-- contents -->
