@@ -132,13 +132,13 @@ Android</h2>
 <li>Create new Android Studio project with native C++ support.</li>
 <li>In your <code>app/src/cpp/CMakeLists.txt</code>, <code>add_subdirectory</code> your C++ application or directly <code>auib_import</code> the AUI framework (unrecommended because you will experience difficulties when compiling for other platforms).</li>
 <li>Copy &amp; paste AUI's <a href="https://github.com/aui-framework/aui/tree/master/platform/android">native Java code</a> for Android to your project. You may also want to adjust your <code>app.gradle</code> and <code>AndroidManifest.xml</code>.</li>
-<li>To draw AUI, you should use <code>GLSurfaceView</code> and <a href="https://github.com/aui-framework/aui/blob/master/platform/android/lib/src/java/com/github/aui/android/MyGLSurfaceView.kt">pass rendering routines</a> to AUI. Also, take care of handling user input.</li>
+<li>To draw AUI, you should use <code>GLSurfaceView</code> and <a href="https://github.com/aui-framework/aui/blob/master/platform/android/lib/src/java/com/github/aui/android/AuiView.kt">pass rendering routines</a> to AUI. Also, take care of handling user input. Also, you can inflate <a href="https://github.com/aui-framework/aui/blob/master/platform/android/lib/src/java/com/github/aui/android/AuiView.kt">AuiView</a> to your own Android layout.</li>
 </ol>
 <h2><a class="anchor" id="autotoc_md71"></a>
 iOS</h2>
 <ol type="1">
 <li>Create new Xcode project.</li>
-<li>Since Xcode does not support CMake, you will have to compile AUI (and your C++ AUI application) by yourself (by' creating Xcode rules or manually dropping compiled binaries to Xcode project).</li>
+<li>Since Xcode does not support CMake, you will have to compile AUI (and your C++ AUI application) by yourself (by creating Xcode rules or manually dropping compiled binaries to Xcode project).</li>
 <li><a href="https://github.com/aui-framework/aui/blob/master/aui.views/src/AUI/Platform/ios/AUIViewController.mm">Take a look</a> on how does AUI handles its routines on iOS and implement them by yourself in your project. </li>
 </ol>
 </div></div><!-- contents -->
