@@ -19,6 +19,7 @@ var classAWindow =
     [ "show", "classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b", null ],
     [ "unmapPosition", "classAWindow.html#ac12087888735e70ce6347293fafdb30f", null ],
     [ "maximized", "classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177", null ],
+    [ "mFocusNextViewOnTab", "classAWindow.html#a76918d11708d7b6edf4c67df9a1ec8e4", null ],
     [ "minimized", "classAWindow.html#adb15ad6de97629ac24f911bb3cccab51", null ],
     [ "moving", "classAWindow.html#a84b432f8215f9f91d90bfc3e1ee73f78", null ],
     [ "restored", "classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac", null ]

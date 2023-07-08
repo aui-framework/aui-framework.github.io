@@ -65,7 +65,6 @@ var classAView =
     [ "mCustomStyleRule", "classAView.html#a5a90d8af44986418e46ab4dcf5e9182e", null ],
     [ "mExpanding", "classAView.html#a5122d5846227520294bda27e6b45ea4a", null ],
     [ "mFixedSize", "classAView.html#a5d5732f8af15828f75729ba5bde0d4c9", null ],
-    [ "mFocusNextViewOnTab", "classAView.html#ad708855b7225115c0354c8ae0e61ff55", null ],
     [ "mMargin", "classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e", null ],
     [ "mMaxSize", "classAView.html#a65a8d1574db7e833c6481aecfbf9cadb", null ],
     [ "mMinSize", "classAView.html#afcab50e0676d2197c64a8d8c2221d741", null ],

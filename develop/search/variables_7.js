@@ -7,7 +7,7 @@ var searchData=
   ['mcustomstylerule_4',['mCustomStyleRule',['../classAView.html#a5a90d8af44986418e46ab4dcf5e9182e',1,'AView']]],
   ['mexpanding_5',['mExpanding',['../classAView.html#a5122d5846227520294bda27e6b45ea4a',1,'AView']]],
   ['mfixedsize_6',['mFixedSize',['../classAView.html#a5d5732f8af15828f75729ba5bde0d4c9',1,'AView']]],
-  ['mfocusnextviewontab_7',['mFocusNextViewOnTab',['../classAView.html#ad708855b7225115c0354c8ae0e61ff55',1,'AView']]],
+  ['mfocusnextviewontab_7',['mFocusNextViewOnTab',['../classAWindow.html#a76918d11708d7b6edf4c67df9a1ec8e4',1,'AWindow']]],
   ['mid_8',['mId',['../classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea',1,'AAbstractThread']]],
   ['minimized_9',['minimized',['../classAWindow.html#adb15ad6de97629ac24f911bb3cccab51',1,'AWindow']]],
   ['mmargin_10',['mMargin',['../classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e',1,'AView']]],
