@@ -146,7 +146,7 @@ var group__useful__views =
       [ "composeContextMenu", "classAView.html#a6e70ccf042a8ff10deea1f538377eb91", null ],
       [ "consumesClick", "classAView.html#a2710b009c20a283c5ed12634ee6c3c8f", null ],
       [ "extraStylesheet", "classAView.html#aa8b76866565fc34ce1ed970708de8125", null ],
-      [ "focus", "classAView.html#adf2e35644a76131fed2a0319bc28bcd2", null ],
+      [ "focus", "classAView.html#af46394aa10dbc12a7b9e5cadd5c3e740", null ],
       [ "getBorderRadius", "classAView.html#a56b5b208d3138683ae18dfe8d8edbdae", null ],
       [ "getCenterPointInWindow", "classAView.html#abb924b63a9acdb4c837b4ee2e15cd986", null ],
       [ "getContentMinimumHeight", "classAView.html#a771d50948bb0ca66cb1a9038f76e416e", null ],
