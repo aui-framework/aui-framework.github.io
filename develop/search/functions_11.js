@@ -19,7 +19,7 @@ var searchData=
   ['remove_16',['remove',['../classASqlBuilder.html#a629d9a4a1bd80a780aa909128b4dd5e2',1,'ASqlBuilder::remove()'],['../structASqlModel.html#a2e8dd259c05d058fb4216f9bff8ee143',1,'ASqlModel::remove()']]],
   ['removeall_17',['removeAll',['../classAQueue.html#a6e2176bb102251379725563048f66fc6',1,'AQueue::removeAll()'],['../classADeque.html#abfcf39b922cfefa8e8b26c48f6b3564a',1,'ADeque::removeAll()'],['../classAVector.html#af1feec53844fa47cdcd75c46ca371556',1,'AVector::removeAll()']]],
   ['removeassname_18',['removeAssName',['../classAView.html#a11d7426c20f9ef791040935a846960e6',1,'AView']]],
-  ['removeat_19',['removeAt',['../classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8',1,'AVector::removeAt()'],['../classAListModel.html#a2c19b8f7c2ca98f55765fe5b02a6b1c4',1,'AListModel::removeAt()'],['../classADeque.html#a1ea78cc2ae00c653dcfb9ad5484356e6',1,'ADeque::removeAt()']]],
+  ['removeat_19',['removeAt',['../classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8',1,'AVector::removeAt()'],['../classADeque.html#a1ea78cc2ae00c653dcfb9ad5484356e6',1,'ADeque::removeAt()'],['../classAListModel.html#a2c19b8f7c2ca98f55765fe5b02a6b1c4',1,'AListModel::removeAt()']]],
   ['removefile_20',['removeFile',['../classAPath.html#a4512a1474619f7a6ccb773dc2ee7fbef',1,'APath']]],
   ['removefilerecursive_21',['removeFileRecursive',['../classAPath.html#a1b5343e5010302e4dd86a28eecc4eb19',1,'APath']]],
   ['removefirst_22',['removeFirst',['../classADeque.html#ae7b0789b6a61053af42c83fece8e0646',1,'ADeque::removeFirst()'],['../classAQueue.html#a318128185e2fc9066ace18690673218d',1,'AQueue::removeFirst()'],['../classAVector.html#aba5f9102b390dfc040028ba3a96da168',1,'AVector::removeFirst()']]],
@@ -31,10 +31,11 @@ var searchData=
   ['resetinterruptflag_28',['resetInterruptFlag',['../classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206',1,'AAbstractThread::resetInterruptFlag()'],['../classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442',1,'AThread::resetInterruptFlag()']]],
   ['resetsignal_29',['resetSignal',['../classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783',1,'ACutoffSignal']]],
   ['resize_30',['resize',['../classAByteBuffer.html#ab5e6422ce4f96ecdfc24a459ee453a34',1,'AByteBuffer']]],
-  ['restore_31',['restore',['../classAWindow.html#a633a616c5964b3fd3805363375442753',1,'AWindow']]],
-  ['reversebyte_32',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
-  ['rotate_33',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
-  ['roundedrect_34',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
-  ['roundedrectantialiased_35',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
-  ['run_36',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
+  ['resolvesymbolsifneeded_31',['resolveSymbolsIfNeeded',['../classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4',1,'AStacktrace']]],
+  ['restore_32',['restore',['../classAWindow.html#a633a616c5964b3fd3805363375442753',1,'AWindow']]],
+  ['reversebyte_33',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
+  ['rotate_34',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
+  ['roundedrect_35',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
+  ['roundedrectantialiased_36',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
+  ['run_37',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
 ];

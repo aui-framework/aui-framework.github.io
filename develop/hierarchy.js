@@ -460,6 +460,7 @@ var hierarchy =
     [ "std::exception", null, [
       [ "AException", "classAException.html", [
         [ "ADBus::Exception", "classADBus_1_1Exception.html", null ],
+        [ "AFatalException", "classAFatalException.html", null ],
         [ "AIOException", "classAIOException.html", [
           [ "AAccessDeniedException", "classAAccessDeniedException.html", null ],
           [ "ACurl::Exception", "classACurl_1_1Exception.html", null ],
@@ -479,7 +480,6 @@ var hierarchy =
         ] ],
         [ "AProcessException", "classAProcessException.html", null ],
         [ "AProgramModuleLoadException", "classAProgramModuleLoadException.html", null ],
-        [ "ASegfaultException", "classASegfaultException.html", null ],
         [ "ASqlModel< Model >::NoSuchRowException", "classASqlModel_1_1NoSuchRowException.html", null ],
         [ "ASqlModel< Model >::TooManyRowsException", "classASqlModel_1_1TooManyRowsException.html", null ],
         [ "AUuidException", "classAUuidException.html", null ],

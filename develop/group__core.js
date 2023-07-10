@@ -53,6 +53,11 @@ var group__core =
       [ "removeIf", "classADeque.html#acc4703a436346f62ccd4f7be94fe59dc", null ]
     ] ],
     [ "AException", "classAException.html", null ],
+    [ "AFatalException", "classAFatalException.html", [
+      [ "address", "classAFatalException.html#af90bdae1f989047134c8a2d22e96f86e", null ],
+      [ "nativeSignalId", "classAFatalException.html#a6c6ac322b7e0b04108365d70571563da", null ],
+      [ "signalName", "classAFatalException.html#aa9613dd64b50fbccd463afa488971572", null ]
+    ] ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", [
       [ "const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
       [ "contains_iterator", "structAMap_1_1contains__iterator.html", null ],
@@ -68,7 +73,6 @@ var group__core =
       [ "removeAll", "classAQueue.html#a6e2176bb102251379725563048f66fc6", null ],
       [ "removeFirst", "classAQueue.html#a318128185e2fc9066ace18690673218d", null ]
     ] ],
-    [ "ASegfaultException", "classASegfaultException.html", null ],
     [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", [
       [ "insertAll", "classASet.html#abfe9f1127b1811d332d6032d57e59544", null ],
       [ "isSubsetOf", "classASet.html#a50dfbcda92792f0d9ae4404f08291519", null ],
@@ -141,6 +145,15 @@ var group__core =
       [ "doLogFileAccessSafe", "classALogger.html#a63c7471e4fe2c2dd96e38f72203d1ec7", null ],
       [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ],
       [ "setLogFile", "classALogger.html#aa2da2365b9f592d3c47d834456a23d54", null ]
+    ] ],
+    [ "AStacktrace", "classAStacktrace.html", [
+      [ "Entry", "classAStacktrace_1_1Entry.html", [
+        [ "fileName", "classAStacktrace_1_1Entry.html#a3deb4e464ac61926ef732c3f746d0470", null ],
+        [ "functionName", "classAStacktrace_1_1Entry.html#a61d8534903ade21013d6b272937dc86a", null ],
+        [ "lineNumber", "classAStacktrace_1_1Entry.html#adb06ca26db1ac1f3eea0320130ceff2e", null ]
+      ] ],
+      [ "resolveSymbolsIfNeeded", "classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4", null ],
+      [ "stripBeforeFunctionCall", "classAStacktrace.html#a433c70cff737bf88f1ef839cde918082", null ]
     ] ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", [
