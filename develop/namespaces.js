@@ -128,6 +128,16 @@ var namespaces =
       ] ]
     ] ],
     [ "aui", null, [
+      [ "container", null, [
+        [ "contains", "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32", null ],
+        [ "contains", "group__core.html#gabe452b08e79e60da43e8895010f93010", null ],
+        [ "index_of", "group__core.html#gaae8bc3a90d5b48feecabafa616e294a5", null ],
+        [ "is_subset", "group__core.html#ga1a7e590ef7a5a4312e8ee8cd1f482fcf", null ],
+        [ "remove_all", "group__core.html#gae4ba61e70230db1f2265936cf13eabf1", null ],
+        [ "remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
+        [ "remove_first", "group__core.html#ga2577d2513980745d362b98d29abec571", null ],
+        [ "to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ]
+      ] ],
       [ "dbus", null, [
         [ "impl", null, [
           [ "basic_converter", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ]

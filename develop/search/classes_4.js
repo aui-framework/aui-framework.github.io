@@ -14,5 +14,6 @@ var searchData=
   ['disabled_11',['disabled',['../structass_1_1disabled.html',1,'ass']]],
   ['disabled_12',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
   ['div_13',['div',['../structtuples_1_1detail_1_1functor_1_1div.html',1,'tuples::detail::functor']]],
-  ['dropevent_14',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]]
+  ['dropevent_14',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]],
+  ['dynamicvector_15',['DynamicVector',['../classDynamicVector.html',1,'']]]
 ];
