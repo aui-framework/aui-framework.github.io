@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['position_0',['position',['../structAPointerPressedEvent.html#ae7e906ce526d697c91bf9efc72b2bd20',1,'APointerPressedEvent::position()'],['../structAPointerReleasedEvent.html#a418003ae2af7ac1f656464a8bd938422',1,'APointerReleasedEvent::position()']]]
+  ['repeat_0',['repeat',['../structATexturedBrush.html#a9759fd226e78d36217ce417caf320589',1,'ATexturedBrush']]],
+  ['restored_1',['restored',['../classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac',1,'AWindow']]]
 ];

@@ -538,6 +538,7 @@ var annotated =
     [ "APathChooserView", "classAPathChooserView.html", null ],
     [ "APipe", "classAPipe.html", "classAPipe" ],
     [ "APlaceholderAnimator", "classAPlaceholderAnimator.html", "classAPlaceholderAnimator" ],
+    [ "APointerIndex", "classAPointerIndex.html", "classAPointerIndex" ],
     [ "APointerPressedEvent", "structAPointerPressedEvent.html", "structAPointerPressedEvent" ],
     [ "APointerReleasedEvent", "structAPointerReleasedEvent.html", "structAPointerReleasedEvent" ],
     [ "APool", "classAPool.html", "classAPool" ],

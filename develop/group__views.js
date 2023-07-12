@@ -4,6 +4,13 @@ var group__views =
     [ "Layout Managers", "group__layout__managers.html", "group__layout__managers" ],
     [ "Views", "group__useful__views.html", "group__useful__views" ],
     [ "ADesktop", "namespaceADesktop.html", null ],
+    [ "APointerIndex", "classAPointerIndex.html", [
+      [ "button", "classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6", null ],
+      [ "canBeConsideredAsLeftButton", "classAPointerIndex.html#a51351fc7478d63c2bf0985e8909ef279", null ],
+      [ "finger", "classAPointerIndex.html#abcc86fc123d626ab24ae9cd3a621b8bb", null ],
+      [ "isButton", "classAPointerIndex.html#a587505abb5e0de9f6343d12713b7d2dd", null ],
+      [ "isFinger", "classAPointerIndex.html#a050825608f15d569612ed87c0379a038", null ]
+    ] ],
     [ "ACursor", "classACursor.html", [
       [ "Custom", "structACursor_1_1Custom.html", null ],
       [ "System", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03", [

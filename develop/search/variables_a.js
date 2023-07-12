@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['scrolled_0',['scrolled',['../classAView.html#a603b11e87b05b203f321f6be85d45de8',1,'AView']]],
-  ['success_1',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]]
+  ['textchanged_0',['textChanged',['../classAAbstractTypeableView.html#a4addebde2ee640e32b78040f71f2d107',1,'AAbstractTypeableView']]],
+  ['textchanging_1',['textChanging',['../classAAbstractTypeableView.html#ad5412b86c537ee74c130c7f3623ec09c',1,'AAbstractTypeableView']]],
+  ['triggerclick_2',['triggerClick',['../structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0',1,'APointerReleasedEvent']]]
 ];

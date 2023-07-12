@@ -34,7 +34,7 @@ var searchData=
   ['browseforfile_31',['browseForFile',['../namespaceADesktop.html#a6e9cf035b6b4b52290a481c2e6a15111',1,'ADesktop']]],
   ['brushhelper_32',['BrushHelper',['../structBrushHelper.html',1,'']]],
   ['builder_33',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder']]],
-  ['button_34',['button',['../structAPointerPressedEvent.html#aedb39c87d88414d55bcfa2dc7b4acfd9',1,'APointerPressedEvent::button()'],['../structAPointerReleasedEvent.html#aa6a4392c231a941f2425b21cd72e840f',1,'APointerReleasedEvent::button()']]],
+  ['button_34',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],
   ['button_35',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]],
   ['by_36',['By',['../namespaceBy.html',1,'']]],
   ['byid_37',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]

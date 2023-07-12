@@ -192,7 +192,7 @@ var group__useful__views =
       [ "transformGestureEventsToDesktop", "classAView.html#a1b273cbe961c8633b17171b750762135", null ],
       [ "wantsTouchscreenKeyboard", "classAView.html#a96b967218c79654c2bca5cc8c686a407", null ],
       [ "clicked", "classAView.html#af2361cde3ebf9e0b410c28dab746029d", null ],
-      [ "clickedButton", "classAView.html#a5812c5a904c1d23c711e0075e1b2be5d", null ],
+      [ "clickedButton", "classAView.html#a815fabb561c95b6b90a64686b707ec9e", null ],
       [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
       [ "clickedRightOrLongPressed", "classAView.html#a8d60b048342b29b46dac2657ce6e781b", null ],
       [ "focusState", "classAView.html#a96f3c6e2b8c960c5081866e26baa828e", null ],

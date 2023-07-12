@@ -5,5 +5,6 @@ var searchData=
   ['boxshadow_2',['boxShadow',['../classRender.html#afd5b3c5b2e7399c2294566fda3ccebf0',1,'Render']]],
   ['browsefordir_3',['browseForDir',['../namespaceADesktop.html#a4894140d4d28c69a7a3a11bc04b8dcbb',1,'ADesktop']]],
   ['browseforfile_4',['browseForFile',['../namespaceADesktop.html#a6e9cf035b6b4b52290a481c2e6a15111',1,'ADesktop']]],
-  ['byid_5',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]
+  ['button_5',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],
+  ['byid_6',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]]
 ];

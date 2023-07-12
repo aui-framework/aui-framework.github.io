@@ -136,6 +136,7 @@ var hierarchy =
     [ "AModelSelection< T >", "classAModelSelection.html", null ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
+    [ "APointerIndex", "classAPointerIndex.html", null ],
     [ "APointerPressedEvent", "structAPointerPressedEvent.html", null ],
     [ "APointerReleasedEvent", "structAPointerReleasedEvent.html", null ],
     [ "APool< T >", "classAPool.html", null ],
