@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"functions_func_i.html":[0,4,1,9],
 "functions_func_j.html":[0,4,1,10],
 "functions_func_l.html":[0,4,1,11],
 "functions_func_m.html":[0,4,1,12],
@@ -221,12 +220,14 @@ var NAVTREEINDEX5 =
 "structAModelMeta.html":[0,2,169],
 "structAModelMetaBase.html":[0,2,170],
 "structAPointerPressedEvent.html":[0,2,189],
-"structAPointerPressedEvent.html#a113bdea6852221a33e9117e3d2ec4d38":[0,2,189,0],
-"structAPointerPressedEvent.html#ae7e906ce526d697c91bf9efc72b2bd20":[0,2,189,1],
+"structAPointerPressedEvent.html#a113bdea6852221a33e9117e3d2ec4d38":[0,2,189,1],
+"structAPointerPressedEvent.html#a16a416a1269413eae614a2367e853ca2":[0,2,189,0],
+"structAPointerPressedEvent.html#ae7e906ce526d697c91bf9efc72b2bd20":[0,2,189,2],
 "structAPointerReleasedEvent.html":[0,2,190],
-"structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0":[0,2,190,2],
-"structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060":[0,2,190,0],
-"structAPointerReleasedEvent.html#a418003ae2af7ac1f656464a8bd938422":[0,2,190,1],
+"structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0":[0,2,190,3],
+"structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060":[0,2,190,1],
+"structAPointerReleasedEvent.html#a418003ae2af7ac1f656464a8bd938422":[0,2,190,2],
+"structAPointerReleasedEvent.html#afad2603e699b7dd974bdb306b5b5061e":[0,2,190,0],
 "structAPool_1_1APoolDeleter.html":[0,2,191,0],
 "structARenderingContextOptions.html":[0,2,206],
 "structARenderingContextOptions_1_1DirectX11.html":[0,2,206,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structASerializable_3_01aui_1_1serialize__sized_3_01T_01_4_01_4.html":[0,2,229],
 "structASerializable_3_01char_0fL_0e_4.html":[0,2,231],
 "structASerializable_3_01const_01char_01_5_01_4.html":[0,2,232],
-"structASerializable_3_01std_1_1string_01_4.html":[0,2,233],
-"structASignal_1_1call__wrapper.html":[2,0,1,16,0]
+"structASerializable_3_01std_1_1string_01_4.html":[0,2,233]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af":[2,0,1,23,18],
 "classAVector.html#a2915d448c360ac07de6d3c9db5e138d2":[2,0,1,23,12],
 "classAVector.html#a564421f04219ef42aeef06f2809b69ea":[2,0,1,23,6],
 "classAVector.html#a7f05b8b5f57830f4755ebc0b55831f46":[2,0,1,23,9],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "classITreeModel.html":[0,2,351],
 "classIValueMutableListModel.html":[0,2,352],
 "classIXmlDocumentVisitor.html":[2,0,10,2],
-"classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25":[2,0,10,2,0]
+"classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25":[2,0,10,2,0],
+"classIXmlEntityVisitor.html":[2,0,10,3]
 };

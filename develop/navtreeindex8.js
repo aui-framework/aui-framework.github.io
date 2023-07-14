@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html":[0,2,7,1,3],
 "structgl_1_1impl_1_1resource__basic__buffer.html":[0,2,7,1,4],
 "structgl_1_1impl_1_1resource__basic__buffer.html":[0,0,12,1,4],
 "structstd_1_1hash_3_01AString_01_4.html":[0,0,14,0],

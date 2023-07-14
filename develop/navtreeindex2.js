@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classAScrollAreaContainer.html#a5cf0c992fb5bdf2d26a86adea00c2033":[0,2,214,0],
 "classAScrollArea_1_1Builder.html":[2,0,8,2,19,0],
 "classAScrollbar.html":[2,0,8,2,20],
 "classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411":[2,0,8,2,20,1],
@@ -29,10 +28,10 @@ var NAVTREEINDEX2 =
 "classASet.html#abfe9f1127b1811d332d6032d57e59544":[2,0,1,15,0],
 "classASharedRaiiHelper.html":[2,0,1,46],
 "classAShortcut.html":[0,2,238],
-"classASignal.html":[2,0,1,0,1],
 "classASignal.html":[2,0,1,16],
-"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[2,0,1,16,1],
+"classASignal.html":[2,0,1,0,1],
 "classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[2,0,1,0,1,1],
+"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[2,0,1,16,1],
 "classASizeAnimator.html":[0,2,240],
 "classASizeAnimator.html#a37484d5126c917ab5a8d9ba01e12ae65":[0,2,240,0],
 "classASlider.html":[2,0,8,2,21],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151":[2,0,1,23,14],
 "classAVector.html#a13d40334d90b2d75006fed1e05fba778":[2,0,1,23,0],
 "classAVector.html#a14da8bd35be2e570afb6bfb6ace6b888":[2,0,1,23,5],
-"classAVector.html#a1b7c4beb3e4cffab55cd05fe2afec669":[2,0,1,23,13]
+"classAVector.html#a1b7c4beb3e4cffab55cd05fe2afec669":[2,0,1,23,13],
+"classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af":[2,0,1,23,18]
 };
