@@ -13,6 +13,8 @@ var searchData=
   ['lazy_3c_20void_20_3e_10',['lazy&lt; void &gt;',['../structaui_1_1lazy_3_01void_01_4.html',1,'aui']]],
   ['less_5fof_11',['less_of',['../structuitest_1_1impl_1_1less__of.html',1,'uitest::impl']]],
   ['linear_12',['Linear',['../classAnimationCurves_1_1Linear.html',1,'AnimationCurves']]],
-  ['lineheight_13',['LineHeight',['../structass_1_1LineHeight.html',1,'ass']]],
-  ['logwriter_14',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]]
+  ['linearlayoutimpl_13',['LinearLayoutImpl',['../classaui_1_1detail_1_1LinearLayoutImpl.html',1,'aui::detail']]],
+  ['linearlayoutimpl_3c_20_5f_3c_20aview_20_3e_20_3e_14',['LinearLayoutImpl&lt; _&lt; AView &gt; &gt;',['../classaui_1_1detail_1_1LinearLayoutImpl.html',1,'aui::detail']]],
+  ['lineheight_15',['LineHeight',['../structass_1_1LineHeight.html',1,'ass']]],
+  ['logwriter_16',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]]
 ];

@@ -17,6 +17,7 @@ var classAVector =
     [ "operator<<", "classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151", null ],
     [ "removeAll", "classAVector.html#af1feec53844fa47cdcd75c46ca371556", null ],
     [ "removeAt", "classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8", null ],
-    [ "removeFirst", "classAVector.html#aba5f9102b390dfc040028ba3a96da168", null ],
-    [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ]
+    [ "removeFirst", "classAVector.html#aa6a54a22a7f8148f1e79b9b8f34db453", null ],
+    [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ],
+    [ "removeIfFirst", "classAVector.html#aa70d17fe5a10801a82ff3fe0c19ab1f4", null ]
 ];

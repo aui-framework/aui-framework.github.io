@@ -28,6 +28,7 @@ var hierarchy =
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "ABitField< T >", "classABitField.html", null ],
     [ "ABoxFields", "structABoxFields.html", null ],
+    [ "aui::detail::AbsoluteLayoutCell", "structaui_1_1detail_1_1AbsoluteLayoutCell.html", null ],
     [ "ABuiltinFiles", "classABuiltinFiles.html", null ],
     [ "AByteBufferView", "classAByteBufferView.html", null ],
     [ "AChar", "classAChar.html", null ],
@@ -340,12 +341,22 @@ var hierarchy =
         [ "ACurlMulti", "classACurlMulti.html", null ],
         [ "ADataBinding< Model >", "classADataBinding.html", null ],
         [ "ALayout", "classALayout.html", [
+          [ "aui::detail::LinearLayoutImpl< _< AView > >", "classaui_1_1detail_1_1LinearLayoutImpl.html", [
+            [ "ALinearLayout< Storage >", "classALinearLayout.html", [
+              [ "AHorizontalLayout", "classAHorizontalLayout.html", null ],
+              [ "AStackedLayout", "classAStackedLayout.html", null ],
+              [ "AVerticalLayout", "classAVerticalLayout.html", null ],
+              [ "AWordWrappingLayout", "classAWordWrappingLayout.html", null ]
+            ] ],
+            [ "ALinearLayout< _< AView > >", "classALinearLayout_3_01___3_01AView_01_4_01_4.html", null ]
+          ] ],
           [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", null ],
           [ "AGridLayout", "classAGridLayout.html", null ],
-          [ "AHorizontalLayout", "classAHorizontalLayout.html", null ],
-          [ "AStackedLayout", "classAStackedLayout.html", null ],
-          [ "AVerticalLayout", "classAVerticalLayout.html", null ],
-          [ "AWordWrappingLayout", "classAWordWrappingLayout.html", null ]
+          [ "aui::detail::LinearLayoutImpl< Storage >", "classaui_1_1detail_1_1LinearLayoutImpl.html", [
+            [ "ALinearLayout< aui::detail::AbsoluteLayoutCell >", "classALinearLayout.html", [
+              [ "AAbsoluteLayout", "classAAbsoluteLayout.html", null ]
+            ] ]
+          ] ]
         ] ],
         [ "AListModel< StoredType >", "classAListModel.html", null ],
         [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ],

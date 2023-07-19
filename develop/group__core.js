@@ -166,8 +166,9 @@ var group__core =
       [ "operator<<", "classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151", null ],
       [ "removeAll", "classAVector.html#af1feec53844fa47cdcd75c46ca371556", null ],
       [ "removeAt", "classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8", null ],
-      [ "removeFirst", "classAVector.html#aba5f9102b390dfc040028ba3a96da168", null ],
-      [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ]
+      [ "removeFirst", "classAVector.html#aa6a54a22a7f8148f1e79b9b8f34db453", null ],
+      [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ],
+      [ "removeIfFirst", "classAVector.html#aa70d17fe5a10801a82ff3fe0c19ab1f4", null ]
     ] ],
     [ "IStringable", "classIStringable.html", [
       [ "toString", "classIStringable.html#a7bb0454adbf12f59aa8550cc75bddb97", null ]
@@ -281,6 +282,6 @@ var group__core =
     [ "operator\"\"_format", "group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8", null ],
     [ "aui::container::remove_all", "group__core.html#gae4ba61e70230db1f2265936cf13eabf1", null ],
     [ "aui::container::remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
-    [ "aui::container::remove_first", "group__core.html#ga2577d2513980745d362b98d29abec571", null ],
+    [ "aui::container::remove_first", "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848", null ],
     [ "aui::container::to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ]
 ];

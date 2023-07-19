@@ -135,7 +135,7 @@ var namespaces =
         [ "is_subset", "group__core.html#ga1a7e590ef7a5a4312e8ee8cd1f482fcf", null ],
         [ "remove_all", "group__core.html#gae4ba61e70230db1f2265936cf13eabf1", null ],
         [ "remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
-        [ "remove_first", "group__core.html#ga2577d2513980745d362b98d29abec571", null ],
+        [ "remove_first", "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848", null ],
         [ "to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ]
       ] ],
       [ "dbus", null, [
@@ -170,8 +170,10 @@ var namespaces =
         [ "convertible_or_void", "conceptaui_1_1dbus_1_1convertible__or__void.html", null ]
       ] ],
       [ "detail", null, [
+        [ "AbsoluteLayoutCell", "structaui_1_1detail_1_1AbsoluteLayoutCell.html", null ],
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
+        [ "LinearLayoutImpl", "classaui_1_1detail_1_1LinearLayoutImpl.html", "classaui_1_1detail_1_1LinearLayoutImpl" ],
         [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ],
         [ "SameHelper", "conceptaui_1_1detail_1_1SameHelper.html", null ]
       ] ],
