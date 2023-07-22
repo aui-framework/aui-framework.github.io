@@ -333,6 +333,7 @@ var hierarchy =
     ] ],
     [ "std::enable_shared_from_this", null, [
       [ "AObject", "classAObject.html", [
+        [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
         [ "AAssHelper", "classAAssHelper.html", null ],
         [ "AChildProcess", "classAChildProcess.html", null ],
         [ "ACurl", "classACurl.html", [
