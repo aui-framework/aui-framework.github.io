@@ -179,7 +179,12 @@ var annotated =
         [ "select_overload", "structaui_1_1impl_1_1select__overload.html", null ]
       ] ],
       [ "jni", null, [
+        [ "detail", null, [
+          [ "CastHelper", "structaui_1_1jni_1_1detail_1_1CastHelper.html", null ]
+        ] ],
+        [ "ArrayView", "classaui_1_1jni_1_1ArrayView.html", null ],
         [ "Converter", "structaui_1_1jni_1_1Converter.html", null ],
+        [ "Converter< ArrayView< T > >", "structaui_1_1jni_1_1Converter_3_01ArrayView_3_01T_01_4_01_4.html", null ],
         [ "Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ],
         [ "Converter< bool >", "structaui_1_1jni_1_1Converter_3_01bool_01_4.html", null ],
         [ "Converter< jboolean >", "structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html", null ],

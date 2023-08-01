@@ -259,6 +259,7 @@ var hierarchy =
     [ "Cache< IDrawable, Cache, AUrl >", "classCache.html", null ],
     [ "ASignal< Args >::call_wrapper", "structASignal_1_1call__wrapper.html", null ],
     [ "aui::impl::future::CancellationWrapper< Inner >", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
+    [ "aui::jni::detail::CastHelper", "structaui_1_1jni_1_1detail_1_1CastHelper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
     [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
@@ -275,7 +276,8 @@ var hierarchy =
     [ "aui::dbus::converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
     [ "aui::dbus::converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
     [ "aui::jni::Converter< std::string >", "structaui_1_1jni_1_1Converter_3_01std_1_1string_01_4.html", [
-      [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ]
+      [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ],
+      [ "aui::jni::Converter< ArrayView< T > >", "structaui_1_1jni_1_1Converter_3_01ArrayView_3_01T_01_4_01_4.html", null ]
     ] ],
     [ "aui::dbus::converter< std::tuple< Types... > >", "structaui_1_1dbus_1_1converter_3_01std_1_1tuple_3_01Types_8_8_8_01_4_01_4.html", null ],
     [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter_3_01T_01_4.html", null ],
@@ -540,7 +542,9 @@ var hierarchy =
     [ "GLKViewController", null, [
       [ "AUIViewController", "interfaceAUIViewController.html", null ]
     ] ],
-    [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", null ],
+    [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", [
+      [ "aui::jni::ArrayView< T >", "classaui_1_1jni_1_1ArrayView.html", null ]
+    ] ],
     [ "GradientShaderHelper", "structGradientShaderHelper.html", null ],
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],

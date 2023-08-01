@@ -70,10 +70,10 @@ var NAVTREEINDEX =
 "classARulerView.html#aba1d3199759b91387dd9b93ff590d946",
 "classAUuid.html",
 "classIRenderer_1_1IMultiStringCanvas.html#a66f353bfd4c56f9092cb13b29316bdf1",
-"conceptaui_1_1semiregular.html",
-"structAPointerReleasedEvent.html#afad2603e699b7dd974bdb306b5b5061e",
-"structaui_1_1dbus_1_1Variant.html",
-"structaui_1_1win32_1_1detail_1_1Win32Object.html"
+"conceptaui_1_1same__as.html",
+"structAPointerReleasedEvent.html#a418003ae2af7ac1f656464a8bd938422",
+"structaui_1_1dbus_1_1Unknown.html",
+"structaui_1_1valid_1_1validator.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

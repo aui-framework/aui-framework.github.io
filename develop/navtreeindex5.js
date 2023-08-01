@@ -1,9 +1,10 @@
 var NAVTREEINDEX5 =
 {
+"conceptaui_1_1same__as.html":[0,0,6,50],
 "conceptaui_1_1semiregular.html":[0,0,6,57],
 "conceptaui_1_1swappable.html":[0,0,6,53],
-"functions.html":[0,4,0],
 "functions.html":[0,4,0,0],
+"functions.html":[0,4,0],
 "functions_a.html":[0,4,0,1],
 "functions_b.html":[0,4,0,2],
 "functions_c.html":[0,4,0,3],
@@ -88,12 +89,12 @@ var NAVTREEINDEX5 =
 "group__io.html":[2,0,1,2],
 "group__io.html#ga87f7361faaeb6e043938f79698edf5d0":[2,0,1,2,14],
 "group__jni.html":[2,0,0],
-"group__jni.html#ga145dc96ff69b0677398b41c8611d6a1f":[2,0,0,2],
-"group__jni.html#ga25c210f55279d8e9bde9e2bcd9f7b75b":[2,0,0,6],
-"group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46":[2,0,0,4],
-"group__jni.html#ga91c62729a729a9faadd6c9ab07dd2741":[2,0,0,3],
-"group__jni.html#gab975e01587c23cab0a80b1708d1c7a76":[2,0,0,1],
-"group__jni.html#gaf9b5a9801b0f772cc269e5be2d90b3fa":[2,0,0,5],
+"group__jni.html#ga145dc96ff69b0677398b41c8611d6a1f":[2,0,0,3],
+"group__jni.html#ga25c210f55279d8e9bde9e2bcd9f7b75b":[2,0,0,7],
+"group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46":[2,0,0,5],
+"group__jni.html#ga91c62729a729a9faadd6c9ab07dd2741":[2,0,0,4],
+"group__jni.html#gab975e01587c23cab0a80b1708d1c7a76":[2,0,0,2],
+"group__jni.html#gaf9b5a9801b0f772cc269e5be2d90b3fa":[2,0,0,6],
 "group__json.html":[2,0,5],
 "group__layout__managers.html":[2,0,8,1],
 "group__network.html":[2,0,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structAPointerPressedEvent.html#ae7e906ce526d697c91bf9efc72b2bd20":[0,2,192,2],
 "structAPointerReleasedEvent.html":[0,2,193],
 "structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0":[0,2,193,3],
-"structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060":[0,2,193,1],
-"structAPointerReleasedEvent.html#a418003ae2af7ac1f656464a8bd938422":[0,2,193,2]
+"structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060":[0,2,193,1]
 };
