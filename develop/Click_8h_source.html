@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('Click_8h_source.html',''); initResizab
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_struct" href="structViewActionMousePress.html">ViewActionMousePress</a>(<span class="keyword">const</span> glm::ivec2&amp; position) : position(position) {}</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; view) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">auto</span> coords = view-&gt;getPositionInWindow() + (position ? *position : view-&gt;getSize() / 2);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">auto</span> coords = view-&gt;getPositionInWindow() + (position ? *position : (view-&gt;getSize() / 2));</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">auto</span> window = view-&gt;getWindow();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        AInput::overrideStateForTesting(Button, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        window-&gt;onPointerPressed({coords, <a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(Button)});</div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('Click_8h_source.html',''); initResizab
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_struct" href="structViewActionMouseRelease.html">ViewActionMouseRelease</a>(<span class="keyword">const</span> glm::ivec2&amp; position) : position(position) {}</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; view) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span> coords = view-&gt;getPositionInWindow() + (position ? *position : view-&gt;getSize() / 2);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">auto</span> coords = view-&gt;getPositionInWindow() + (position ? *position : (view-&gt;getSize() / 2));</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">auto</span> window = view-&gt;getWindow();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        AInput::overrideStateForTesting(Button, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        window-&gt;onPointerReleased({coords, <a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(Button)});</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('Click_8h_source.html',''); initResizab
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_struct" href="structViewActionClick.html">ViewActionClick</a>(<span class="keyword">const</span> glm::ivec2&amp; position) : position(position) {}</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; view) {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">auto</span> coords = view-&gt;getPositionInWindow() + (position ? *position : view-&gt;getSize() / 2);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">auto</span> coords = view-&gt;getPositionInWindow() + (position ? *position : (view-&gt;getSize() / 2));</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">auto</span> window = view-&gt;getWindow();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        AInput::overrideStateForTesting(Button, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        window-&gt;onPointerPressed({coords, <a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(Button)});</div>

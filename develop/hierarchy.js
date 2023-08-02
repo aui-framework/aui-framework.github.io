@@ -500,6 +500,7 @@ var hierarchy =
         [ "AProgramModuleLoadException", "classAProgramModuleLoadException.html", null ],
         [ "ASqlModel< Model >::NoSuchRowException", "classASqlModel_1_1NoSuchRowException.html", null ],
         [ "ASqlModel< Model >::TooManyRowsException", "classASqlModel_1_1TooManyRowsException.html", null ],
+        [ "ATreeIndex::Exception", "classATreeIndex_1_1Exception.html", null ],
         [ "AUuidException", "classAUuidException.html", null ],
         [ "AZLibException", "classAZLibException.html", null ],
         [ "SQLException", "classSQLException.html", null ]

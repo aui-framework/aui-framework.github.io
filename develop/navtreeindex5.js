@@ -1,5 +1,17 @@
 var NAVTREEINDEX5 =
 {
+"conceptaui_1_1detail_1_1SameHelper.html":[0,0,6,2,5],
+"conceptaui_1_1factory.html":[0,0,6,62],
+"conceptaui_1_1incrementable.html":[0,0,6,59],
+"conceptaui_1_1invocable.html":[0,0,6,44],
+"conceptaui_1_1jni_1_1ExposableClass.html":[0,0,6,4,37],
+"conceptaui_1_1jni_1_1convertible.html":[0,0,6,4,36],
+"conceptaui_1_1mapper.html":[0,0,6,61],
+"conceptaui_1_1movable.html":[0,0,6,54],
+"conceptaui_1_1move__constructible.html":[0,0,6,48],
+"conceptaui_1_1not__overloaded__lambda.html":[0,0,6,42],
+"conceptaui_1_1predicate.html":[0,0,6,60],
+"conceptaui_1_1regular.html":[0,0,6,58],
 "conceptaui_1_1same__as.html":[0,0,6,50],
 "conceptaui_1_1semiregular.html":[0,0,6,57],
 "conceptaui_1_1swappable.html":[0,0,6,53],
@@ -237,17 +249,5 @@ var NAVTREEINDEX5 =
 "structALinearGradientBrush.html":[0,2,151],
 "structALogger_1_1LogWriter.html":[2,0,1,29,0],
 "structALongPressEvent.html":[0,2,162],
-"structAMap_1_1const__contains__iterator.html":[2,0,1,12,0],
-"structAMap_1_1contains__iterator.html":[2,0,1,12,1],
-"structAMenuItem.html":[0,2,166],
-"structAModel.html":[0,2,170],
-"structAModelMeta.html":[0,2,172],
-"structAModelMetaBase.html":[0,2,173],
-"structAPointerPressedEvent.html":[0,2,192],
-"structAPointerPressedEvent.html#a113bdea6852221a33e9117e3d2ec4d38":[0,2,192,1],
-"structAPointerPressedEvent.html#a16a416a1269413eae614a2367e853ca2":[0,2,192,0],
-"structAPointerPressedEvent.html#ae7e906ce526d697c91bf9efc72b2bd20":[0,2,192,2],
-"structAPointerReleasedEvent.html":[0,2,193],
-"structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0":[0,2,193,3],
-"structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060":[0,2,193,1]
+"structAMap_1_1const__contains__iterator.html":[2,0,1,12,0]
 };

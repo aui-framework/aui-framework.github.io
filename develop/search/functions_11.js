@@ -39,8 +39,9 @@ var searchData=
   ['resolvesymbolsifneeded_36',['resolveSymbolsIfNeeded',['../classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4',1,'AStacktrace']]],
   ['restore_37',['restore',['../classAWindow.html#a633a616c5964b3fd3805363375442753',1,'AWindow']]],
   ['reversebyte_38',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
-  ['rotate_39',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
-  ['roundedrect_40',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
-  ['roundedrectantialiased_41',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
-  ['run_42',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
+  ['root_39',['root',['../classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33',1,'ITreeModel::root()'],['../classViewHierarchyTreeModel.html#abf1452f48d0f5f137e21ae506a2a38b2',1,'ViewHierarchyTreeModel::root()']]],
+  ['rotate_40',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
+  ['roundedrect_41',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
+  ['roundedrectantialiased_42',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
+  ['run_43',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
 ];
