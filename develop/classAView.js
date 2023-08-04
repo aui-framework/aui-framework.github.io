@@ -39,6 +39,7 @@ var classAView =
     [ "onPointerPressed", "classAView.html#a9460f4e65eb9bea9332d79a5436035f5", null ],
     [ "onPointerReleased", "classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab", null ],
     [ "onScroll", "classAView.html#af2c762c24fe6e7cfdfbfeb398aad6043", null ],
+    [ "onViewGraphSubtreeChanged", "classAView.html#a43e89f0f7a3dfb49d82216e351566bf1", null ],
     [ "operator+", "classAView.html#ac6292013de2f384cb791f1c91787a362", null ],
     [ "pack", "classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71", null ],
     [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
@@ -73,5 +74,6 @@ var classAView =
     [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
     [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
     [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ],
-    [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ]
+    [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ],
+    [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
 ];

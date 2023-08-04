@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"structaui_1_1valid_1_1chars_1_1latin.html":[0,2,3,7,0,0],
+"structaui_1_1valid_1_1chars_1_1latin.html":[0,0,6,9,0,0],
+"structaui_1_1valid_1_1chars_1_1numeric.html":[0,2,3,7,0,1],
 "structaui_1_1valid_1_1chars_1_1numeric.html":[0,0,6,9,0,1],
 "structaui_1_1valid_1_1container_1_1all.html":[0,2,3,7,1,0],
 "structaui_1_1valid_1_1container_1_1all.html":[0,0,6,9,1,0],

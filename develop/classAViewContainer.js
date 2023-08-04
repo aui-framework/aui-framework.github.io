@@ -17,6 +17,7 @@ var classAViewContainer =
     [ "onPointerPressed", "classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b", null ],
     [ "onPointerReleased", "classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b", null ],
     [ "onScroll", "classAViewContainer.html#a495a90385729196ebdd503beec159a45", null ],
+    [ "onViewGraphSubtreeChanged", "classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb", null ],
     [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
     [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
     [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],

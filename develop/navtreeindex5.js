@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"conceptaui_1_1default__initializable.html":[0,0,6,56],
+"conceptaui_1_1derived__from.html":[0,0,6,43],
+"conceptaui_1_1destructible.html":[0,0,6,46],
 "conceptaui_1_1detail_1_1SameHelper.html":[0,0,6,2,5],
 "conceptaui_1_1factory.html":[0,0,6,62],
 "conceptaui_1_1incrementable.html":[0,0,6,59],
@@ -25,8 +28,8 @@ var NAVTREEINDEX5 =
 "functions_enum.html":[0,4,4],
 "functions_eval.html":[0,4,5],
 "functions_f.html":[0,4,0,6],
-"functions_func.html":[0,4,1,0],
 "functions_func.html":[0,4,1],
+"functions_func.html":[0,4,1,0],
 "functions_func_a.html":[0,4,1,1],
 "functions_func_b.html":[0,4,1,2],
 "functions_func_c.html":[0,4,1,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "structAJsonConv_3_01int_01_4.html":[0,2,137],
 "structAJsonConv_3_01short_01_4.html":[0,2,138],
 "structAJsonConv_3_01std_1_1pair_3_01T1_00_01T2_01_4_01_4.html":[0,2,139],
-"structALinearGradientBrush.html":[0,2,151],
-"structALogger_1_1LogWriter.html":[2,0,1,29,0],
-"structALongPressEvent.html":[0,2,162],
-"structAMap_1_1const__contains__iterator.html":[2,0,1,12,0]
+"structALinearGradientBrush.html":[0,2,151]
 };
