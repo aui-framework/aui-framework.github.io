@@ -359,19 +359,19 @@ $(document).ready(function(){initNavTree('ALogger_8h_source.html',''); initResiz
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="keywordtype">void</span> log(Level level, std::string_view prefix, std::string_view message);</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>};</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="keyword">template</span>&lt;std::<span class="keywordtype">size_t</span> L, <span class="keyword">typename</span> T, glm::qualifier Q&gt;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, glm::vec&lt;L, T, Q&gt; vec) {</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    o &lt;&lt; <span class="stringliteral">&quot;{ &quot;</span>;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; L; ++i) {</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        <span class="keywordflow">if</span> (i != 0) o &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        o &lt;&lt; vec[i];</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    }</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    o &lt;&lt; <span class="stringliteral">&quot; }&quot;</span>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="keyword">namespace </span>glm {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keyword">template</span>&lt;glm::length_t L, <span class="keyword">typename</span> T, glm::qualifier Q&gt;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, vec&lt;L, T, Q&gt; vec) {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        o &lt;&lt; <span class="stringliteral">&quot;{ &quot;</span>;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; L; ++i) {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            <span class="keywordflow">if</span> (i != 0) o &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            o &lt;&lt; vec[i];</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        o &lt;&lt; <span class="stringliteral">&quot; }&quot;</span>;</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>}</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordflow">return</span> o;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#define ALOG_DEBUG(str) if (ALogger::global().isDebug()) ALogger::debug(str)</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="preprocessor">#include &lt;AUI/Traits/strings.h&gt;</span></div>
