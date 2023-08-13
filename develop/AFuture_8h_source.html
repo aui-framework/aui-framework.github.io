@@ -511,7 +511,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        std::unique_lock lock(inner-&gt;mutex);</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        inner-&gt;value = std::move(v);</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        inner-&gt;cv.notify_all();</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        AUI_NULLSAFE(inner-&gt;onSuccess)(*inner-&gt;value);</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        inner-&gt;notifyOnSuccessCallback();</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    }</div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">  557</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139">supplyException</a>() const noexcept {</div>
@@ -582,7 +582,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        std::unique_lock lock(inner-&gt;mutex);</div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>        inner-&gt;value = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>        inner-&gt;cv.notify_all();</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        AUI_NULLSAFE(inner-&gt;onSuccess)();</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        inner-&gt;notifyOnSuccessCallback();</div>
 <div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    }</div>
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    <a class="code hl_class" href="classAFuture.html">AFuture</a>&amp; operator=(std::nullptr_t) <span class="keyword">noexcept</span> {</div>
