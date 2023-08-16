@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"conceptaui_1_1dbus_1_1convertible__or__void.html":[0,0,6,1,26],
 "conceptaui_1_1default__initializable.html":[0,0,6,56],
 "conceptaui_1_1derived__from.html":[0,0,6,43],
 "conceptaui_1_1destructible.html":[0,0,6,46],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "structAJsonConv_3_01float_01_4.html":[0,2,136],
 "structAJsonConv_3_01int_01_4.html":[0,2,137],
 "structAJsonConv_3_01short_01_4.html":[0,2,138],
-"structAJsonConv_3_01std_1_1pair_3_01T1_00_01T2_01_4_01_4.html":[0,2,139],
-"structALinearGradientBrush.html":[0,2,151]
+"structAJsonConv_3_01std_1_1pair_3_01T1_00_01T2_01_4_01_4.html":[0,2,139]
 };

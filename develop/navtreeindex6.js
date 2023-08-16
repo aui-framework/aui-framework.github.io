@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structALinearGradientBrush.html":[0,2,151],
 "structALogger_1_1LogWriter.html":[2,0,1,29,0],
 "structALongPressEvent.html":[0,2,162],
 "structAMap_1_1const__contains__iterator.html":[2,0,1,12,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structass_1_1prop_1_1Property_3_01TextShadow_01_4.html":[0,2,2,3,35],
 "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html":[0,2,2,3,36],
 "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html":[0,0,5,3,36],
-"structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html":[0,0,5,3,37],
-"structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html":[0,2,2,3,37]
+"structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html":[0,0,5,3,37]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html":[0,2,2,3,37],
 "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html":[0,0,5,3,38],
 "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html":[0,2,2,3,38],
 "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html":[0,0,5,3,39],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html":[0,0,6,8,1,0],
 "structaui_1_1ui__building_1_1view.html":[0,0,6,8,2],
 "structaui_1_1ui__building_1_1view.html":[0,2,3,6,2],
-"structaui_1_1ui__building_1_1view__helper.html":[0,2,3,6,3],
-"structaui_1_1ui__building_1_1view__helper.html":[0,0,6,8,3]
+"structaui_1_1ui__building_1_1view__helper.html":[0,2,3,6,3]
 };
