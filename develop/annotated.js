@@ -3,11 +3,6 @@ var annotated =
     [ "ADesktop", "namespaceADesktop.html", [
       [ "FileExtension", "structADesktop_1_1FileExtension.html", null ]
     ] ],
-    [ "AnimationCurves", null, [
-      [ "CubicBezier", "classAnimationCurves_1_1CubicBezier.html", null ],
-      [ "Linear", "classAnimationCurves_1_1Linear.html", null ],
-      [ "Standard", "classAnimationCurves_1_1Standard.html", null ]
-    ] ],
     [ "ass", null, [
       [ "button", null, [
         [ "Default", "structass_1_1button_1_1Default.html", null ]
@@ -115,6 +110,12 @@ var annotated =
       [ "unset_wrap", "structass_1_1unset__wrap.html", null ]
     ] ],
     [ "aui", null, [
+      [ "animation_curves", null, [
+        [ "CubicBezier", "classaui_1_1animation__curves_1_1CubicBezier.html", null ],
+        [ "Linear", "classaui_1_1animation__curves_1_1Linear.html", null ],
+        [ "Standard", "classaui_1_1animation__curves_1_1Standard.html", null ],
+        [ "ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ]
+      ] ],
       [ "dbus", null, [
         [ "impl", null, [
           [ "basic_converter", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ]
@@ -460,7 +461,6 @@ var annotated =
     [ "AFileInputStream", "classAFileInputStream.html", "classAFileInputStream" ],
     [ "AFileNotFoundException", "classAFileNotFoundException.html", null ],
     [ "AFileOutputStream", "classAFileOutputStream.html", "classAFileOutputStream" ],
-    [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
     [ "AFlatVector", "classAFlatVector.html", null ],
     [ "AFocusAnimator", "classAFocusAnimator.html", "classAFocusAnimator" ],
     [ "AFont", "classAFont.html", "classAFont" ],
@@ -549,6 +549,7 @@ var annotated =
     [ "APipe", "classAPipe.html", "classAPipe" ],
     [ "APlaceholderAnimator", "classAPlaceholderAnimator.html", "classAPlaceholderAnimator" ],
     [ "APointerIndex", "classAPointerIndex.html", "classAPointerIndex" ],
+    [ "APointerMoveEvent", "structAPointerMoveEvent.html", "structAPointerMoveEvent" ],
     [ "APointerPressedEvent", "structAPointerPressedEvent.html", "structAPointerPressedEvent" ],
     [ "APointerReleasedEvent", "structAPointerReleasedEvent.html", "structAPointerReleasedEvent" ],
     [ "APool", "classAPool.html", "classAPool" ],
@@ -641,6 +642,7 @@ var annotated =
     [ "AThreadPool", "classAThreadPool.html", "classAThreadPool" ],
     [ "ATimer", "classATimer.html", null ],
     [ "ATokenizer", "classATokenizer.html", "classATokenizer" ],
+    [ "ATouchScroller", "classATouchScroller.html", "classATouchScroller" ],
     [ "ATranslationAnimator", "classATranslationAnimator.html", "classATranslationAnimator" ],
     [ "ATreeIndex", "classATreeIndex.html", "classATreeIndex" ],
     [ "ATreeView", "classATreeView.html", "classATreeView" ],
@@ -749,6 +751,7 @@ var annotated =
     [ "SendObject", "classSendObject.html", null ],
     [ "SignalSlot", "classSignalSlot.html", "classSignalSlot" ],
     [ "Slave", "classSlave.html", null ],
+    [ "SliderMock", "classSliderMock.html", null ],
     [ "SmallVector", "classSmallVector.html", null ],
     [ "SocketConnectionResetException", "classSocketConnectionResetException.html", null ],
     [ "SocketException", "classSocketException.html", null ],
@@ -767,6 +770,7 @@ var annotated =
     [ "UIClick", "classUIClick.html", "classUIClick" ],
     [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
     [ "UIMatcher", "classUIMatcher.html", "classUIMatcher" ],
+    [ "UIMultitouchTest", "classUIMultitouchTest.html", "classUIMultitouchTest" ],
     [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
     [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
     [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
@@ -788,6 +792,9 @@ var annotated =
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
     [ "ViewActionMousePress", "structViewActionMousePress.html", null ],
     [ "ViewActionMouseRelease", "structViewActionMouseRelease.html", null ],
+    [ "ViewActionPointerMoved", "structViewActionPointerMoved.html", null ],
+    [ "ViewActionPointerPressed", "structViewActionPointerPressed.html", null ],
+    [ "ViewActionPointerReleased", "structViewActionPointerReleased.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewActionType", "structViewActionType.html", null ],
     [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],

@@ -59,7 +59,7 @@ var searchData=
   ['converterprimitive_3c_20jint_2c_20_27i_27_3e_56',['ConverterPrimitive&lt; jint, &apos;I&apos;&gt;',['../structaui_1_1jni_1_1ConverterPrimitive.html',1,'aui::jni']]],
   ['converterprimitive_3c_20jlong_2c_20_27j_27_3e_57',['ConverterPrimitive&lt; jlong, &apos;J&apos;&gt;',['../structaui_1_1jni_1_1ConverterPrimitive.html',1,'aui::jni']]],
   ['converterprimitive_3c_20jshort_2c_20_27s_27_3e_58',['ConverterPrimitive&lt; jshort, &apos;S&apos;&gt;',['../structaui_1_1jni_1_1ConverterPrimitive.html',1,'aui::jni']]],
-  ['cubicbezier_59',['CubicBezier',['../classAnimationCurves_1_1CubicBezier.html',1,'AnimationCurves']]],
+  ['cubicbezier_59',['CubicBezier',['../classaui_1_1animation__curves_1_1CubicBezier.html',1,'aui::animation_curves']]],
   ['currentthread_60',['CurrentThread',['../classCurrentThread.html',1,'']]],
   ['custom_61',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
   ['customcaptionwindowimplwin32_62',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],

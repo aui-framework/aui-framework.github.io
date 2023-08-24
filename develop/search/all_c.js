@@ -17,7 +17,7 @@ var searchData=
   ['less_5fof_14',['less_of',['../structuitest_1_1impl_1_1less__of.html',1,'uitest::impl']]],
   ['let_15',['let',['../group__useful__macros.html#ga045dd54932944d8830380f4596d64446',1,'kAUI.h']]],
   ['line_16',['line',['../classRender.html#a9500eb550eac35ae73663faef58d5f78',1,'Render']]],
-  ['linear_17',['Linear',['../classAnimationCurves_1_1Linear.html',1,'AnimationCurves']]],
+  ['linear_17',['Linear',['../classaui_1_1animation__curves_1_1Linear.html',1,'aui::animation_curves']]],
   ['linearlayoutimpl_18',['LinearLayoutImpl',['../classaui_1_1detail_1_1LinearLayoutImpl.html',1,'aui::detail']]],
   ['linearlayoutimpl_3c_20_5f_3c_20aview_20_3e_20_3e_19',['LinearLayoutImpl&lt; _&lt; AView &gt; &gt;',['../classaui_1_1detail_1_1LinearLayoutImpl.html',1,'aui::detail']]],
   ['lineheight_20',['LineHeight',['../structass_1_1LineHeight.html',1,'ass']]],

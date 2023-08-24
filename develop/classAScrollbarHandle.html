@@ -101,9 +101,9 @@ $(document).ready(function(){initNavTree('classAScrollbarHandle.html',''); initR
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a83f1b5c28a4f523c0364bb466da19e65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbarHandle.html#a83f1b5c28a4f523c0364bb466da19e65">setSize</a> (glm::ivec2 size) override</td></tr>
 <tr class="separator:a83f1b5c28a4f523c0364bb466da19e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c04aabd6b03b55dbd88eb67202c9c0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbarHandle.html#a3c04aabd6b03b55dbd88eb67202c9c0e">onPointerMove</a> (glm::ivec2 pos) override</td></tr>
-<tr class="memdesc:a3c04aabd6b03b55dbd88eb67202c9c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer hover events.  <a href="classAScrollbarHandle.html#a3c04aabd6b03b55dbd88eb67202c9c0e">More...</a><br /></td></tr>
-<tr class="separator:a3c04aabd6b03b55dbd88eb67202c9c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6d100ef255c0ee345d08d39bf362a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbarHandle.html#a9d6d100ef255c0ee345d08d39bf362a7">onPointerMove</a> (glm::vec2 pos, const <a class="el" href="structAPointerMoveEvent.html">APointerMoveEvent</a> &amp;event) override</td></tr>
+<tr class="memdesc:a9d6d100ef255c0ee345d08d39bf362a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pointer hover events.  <a href="classAScrollbarHandle.html#a9d6d100ef255c0ee345d08d39bf362a7">More...</a><br /></td></tr>
+<tr class="separator:a9d6d100ef255c0ee345d08d39bf362a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ddead08e7d2722704e69cb2f024ab09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbarHandle.html#a8ddead08e7d2722704e69cb2f024ab09">onPointerPressed</a> (const <a class="el" href="structAPointerPressedEvent.html">APointerPressedEvent</a> &amp;event) override</td></tr>
 <tr class="memdesc:a8ddead08e7d2722704e69cb2f024ab09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on pointer (mouse) released event.  <a href="classAScrollbarHandle.html#a8ddead08e7d2722704e69cb2f024ab09">More...</a><br /></td></tr>
 <tr class="separator:a8ddead08e7d2722704e69cb2f024ab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -681,8 +681,8 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 <tr class="separator:a13f1450f43fb867bcff67b1d7284bd46 inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3c04aabd6b03b55dbd88eb67202c9c0e" name="a3c04aabd6b03b55dbd88eb67202c9c0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04aabd6b03b55dbd88eb67202c9c0e">&#9670;&nbsp;</a></span>onPointerMove()</h2>
+<a id="a9d6d100ef255c0ee345d08d39bf362a7" name="a9d6d100ef255c0ee345d08d39bf362a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6d100ef255c0ee345d08d39bf362a7">&#9670;&nbsp;</a></span>onPointerMove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,9 +693,19 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
         <tr>
           <td class="memname">void AScrollbarHandle::onPointerMove </td>
           <td>(</td>
-          <td class="paramtype">glm::ivec2&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structAPointerMoveEvent.html">APointerMoveEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -714,7 +724,7 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the view is pressed, it would still received move events. Use AView::isMouseHover to check is the pointer actually over view or not. See <a class="el" href="classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab" title="Called on pointer (mouse) released event.">AView::onPointerReleased</a> for more info. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classAView.html#a22711048b99b2a1b3d00c11ee8967e20">AView</a>.</p>
+<p>Reimplemented from <a class="el" href="classAView.html#a42df9e3fd7573f26ac052a5e85774cf7">AView</a>.</p>
 
 </div>
 </div>

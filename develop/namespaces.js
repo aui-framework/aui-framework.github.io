@@ -5,11 +5,6 @@ var namespaces =
     ] ],
     [ "ADesktop", "namespaceADesktop.html", "namespaceADesktop" ],
     [ "AHash", "namespaceAHash.html", null ],
-    [ "AnimationCurves", null, [
-      [ "CubicBezier", "classAnimationCurves_1_1CubicBezier.html", null ],
-      [ "Linear", "classAnimationCurves_1_1Linear.html", null ],
-      [ "Standard", "classAnimationCurves_1_1Standard.html", null ]
-    ] ],
     [ "APlatform", "namespaceAPlatform.html", null ],
     [ "ass", null, [
       [ "button", null, [
@@ -128,6 +123,12 @@ var namespaces =
       ] ]
     ] ],
     [ "aui", null, [
+      [ "animation_curves", null, [
+        [ "CubicBezier", "classaui_1_1animation__curves_1_1CubicBezier.html", null ],
+        [ "Linear", "classaui_1_1animation__curves_1_1Linear.html", null ],
+        [ "Standard", "classaui_1_1animation__curves_1_1Standard.html", null ],
+        [ "ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ]
+      ] ],
       [ "container", null, [
         [ "contains", "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32", null ],
         [ "contains", "group__core.html#gabe452b08e79e60da43e8895010f93010", null ],

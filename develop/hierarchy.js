@@ -92,7 +92,6 @@ var hierarchy =
     [ "AFieldObservable< T >", "classAFieldObservable.html", null ],
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFieldSignalEmitter< bool >", "classAFieldSignalEmitter_3_01bool_01_4.html", null ],
-    [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
     [ "AFlatVector< T, MAX_SIZE >", "classAFlatVector.html", null ],
     [ "AFont", "classAFont.html", null ],
     [ "AFontFamily", "classAFontFamily.html", null ],
@@ -138,6 +137,7 @@ var hierarchy =
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
     [ "APointerIndex", "classAPointerIndex.html", null ],
+    [ "APointerMoveEvent", "structAPointerMoveEvent.html", null ],
     [ "APointerPressedEvent", "structAPointerPressedEvent.html", null ],
     [ "APointerReleasedEvent", "structAPointerReleasedEvent.html", null ],
     [ "APool< T >", "classAPool.html", null ],
@@ -185,6 +185,7 @@ var hierarchy =
     [ "AThreadPool", "classAThreadPool.html", null ],
     [ "ATokenizer", "classATokenizer.html", null ],
     [ "aui::atomic_lazy< T >", "structaui_1_1atomic__lazy.html", null ],
+    [ "ATouchScroller", "classATouchScroller.html", null ],
     [ "ATreeIndex", "classATreeIndex.html", null ],
     [ "AUIViewController()", "categoryAUIViewController_07_08.html", null ],
     [ "AUrl", "classAUrl.html", null ],
@@ -311,8 +312,8 @@ var hierarchy =
     [ "aui::jni::ConverterPrimitive< jshort, 'S'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
       [ "aui::jni::Converter< jshort >", "structaui_1_1jni_1_1Converter_3_01jshort_01_4.html", null ]
     ] ],
-    [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
-      [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
+    [ "aui::animation_curves::CubicBezier", "classaui_1_1animation__curves_1_1CubicBezier.html", [
+      [ "aui::animation_curves::Standard", "classaui_1_1animation__curves_1_1Standard.html", null ]
     ] ],
     [ "ACursor::Custom", "structACursor_1_1Custom.html", null ],
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
@@ -407,6 +408,7 @@ var hierarchy =
                   [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
                 ] ],
                 [ "UIClick::TestWindow", "classUIClick_1_1TestWindow.html", null ],
+                [ "UIMultitouchTest::TestWindow", "classUIMultitouchTest_1_1TestWindow.html", null ],
                 [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ],
                 [ "UIViewFocus::TestWindow", "classUIViewFocus_1_1TestWindow.html", null ]
               ] ]
@@ -438,7 +440,9 @@ var hierarchy =
             ] ],
             [ "AScrollAreaContainer", "classAScrollAreaContainer.html", null ],
             [ "AScrollbar", "classAScrollbar.html", null ],
-            [ "ASlider", "classASlider.html", null ],
+            [ "ASlider", "classASlider.html", [
+              [ "SliderMock", "classSliderMock.html", null ]
+            ] ],
             [ "ASplitter", "classASplitter.html", null ],
             [ "ATabButtonRow", "classATabButtonRow.html", null ],
             [ "ATabView", "classATabView.html", null ],
@@ -741,7 +745,7 @@ var hierarchy =
     [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
     [ "aui::lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
     [ "uitest::impl::less_of< side >", "structuitest_1_1impl_1_1less__of.html", null ],
-    [ "AnimationCurves::Linear", "classAnimationCurves_1_1Linear.html", null ],
+    [ "aui::animation_curves::Linear", "classaui_1_1animation__curves_1_1Linear.html", null ],
     [ "ass::LineHeight", "structass_1_1LineHeight.html", null ],
     [ "ALogger::LogWriter", "structALogger_1_1LogWriter.html", null ],
     [ "MacosApp", "classMacosApp.html", null ],
@@ -954,6 +958,7 @@ var hierarchy =
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
         [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
+        [ "UIMultitouchTest", "classUIMultitouchTest.html", null ],
         [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
@@ -1080,6 +1085,9 @@ var hierarchy =
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
     [ "ViewActionMousePress< Button >", "structViewActionMousePress.html", null ],
     [ "ViewActionMouseRelease< Button >", "structViewActionMouseRelease.html", null ],
+    [ "ViewActionPointerMoved", "structViewActionPointerMoved.html", null ],
+    [ "ViewActionPointerPressed", "structViewActionPointerPressed.html", null ],
+    [ "ViewActionPointerReleased", "structViewActionPointerReleased.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
@@ -1091,6 +1099,7 @@ var hierarchy =
     [ "ViewAssertionSizeSame< I >", "structViewAssertionSizeSame.html", null ],
     [ "ViewAssertionText", "structViewAssertionText.html", null ],
     [ "ViewAssertionVisible", "structViewAssertionVisible.html", null ],
+    [ "aui::animation_curves::ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ],
     [ "std::weak_ptr", null, [
       [ "_weak< T >", "struct__weak.html", null ]
     ] ],

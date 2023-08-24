@@ -35,7 +35,7 @@ var classAView =
     [ "invalidateStateStyles", "classAView.html#aae643e27fa9578fecad36519f30ed043", null ],
     [ "onClickPrevented", "classAView.html#a4baedd07aad97c0f2d82f3937acb7362", null ],
     [ "onGesture", "classAView.html#a2b74937853928a68e0f7ec4cae7adb3b", null ],
-    [ "onPointerMove", "classAView.html#a22711048b99b2a1b3d00c11ee8967e20", null ],
+    [ "onPointerMove", "classAView.html#a42df9e3fd7573f26ac052a5e85774cf7", null ],
     [ "onPointerPressed", "classAView.html#a9460f4e65eb9bea9332d79a5436035f5", null ],
     [ "onPointerReleased", "classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab", null ],
     [ "onScroll", "classAView.html#af2c762c24fe6e7cfdfbfeb398aad6043", null ],
