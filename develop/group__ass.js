@@ -26,6 +26,7 @@ var group__ass =
     [ "ass::TextColor", "structass_1_1TextColor.html", null ],
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
     [ "ass::TransformOffset", "structass_1_1TransformOffset.html", null ],
+    [ "ass::TransformRotate", "structass_1_1TransformRotate.html", null ],
     [ "ass::TransformScale", "structass_1_1TransformScale.html", null ],
     [ "ACursor", "classACursor.html", [
       [ "Custom", "structACursor_1_1Custom.html", null ],

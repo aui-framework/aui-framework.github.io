@@ -16,6 +16,7 @@ var hierarchy =
       [ "CurrentThread", "classCurrentThread.html", null ],
       [ "UIThread", "classUIThread.html", null ]
     ] ],
+    [ "AAngleRadians", "classAAngleRadians.html", null ],
     [ "AAnimator", "classAAnimator.html", [
       [ "AFocusAnimator", "classAFocusAnimator.html", null ],
       [ "APlaceholderAnimator", "classAPlaceholderAnimator.html", null ],
@@ -671,6 +672,7 @@ var hierarchy =
       [ "ass::prop::Property< TextShadow >", "structass_1_1prop_1_1Property_3_01TextShadow_01_4.html", null ],
       [ "ass::prop::Property< TextTransform >", "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html", null ],
       [ "ass::prop::Property< TransformOffset >", "structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html", null ],
+      [ "ass::prop::Property< TransformRotate >", "structass_1_1prop_1_1Property_3_01TransformRotate_01_4.html", null ],
       [ "ass::prop::Property< TransformScale >", "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html", null ],
       [ "ass::prop::Property< VerticalAlign >", "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html", null ],
       [ "ass::prop::Property< Visibility >", "structass_1_1prop_1_1Property_3_01Visibility_01_4.html", null ]
@@ -986,6 +988,7 @@ var hierarchy =
       [ "Util::TexturePacker< T >", "classUtil_1_1TexturePacker.html", null ]
     ] ],
     [ "ass::TransformOffset", "structass_1_1TransformOffset.html", null ],
+    [ "ass::TransformRotate", "structass_1_1TransformRotate.html", null ],
     [ "ass::TransformScale", "structass_1_1TransformScale.html", null ],
     [ "AThreadPool::TryLaterException", "classAThreadPool_1_1TryLaterException.html", null ],
     [ "std::tuple", null, [

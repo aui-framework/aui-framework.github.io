@@ -26,6 +26,10 @@ var group__views =
     [ "ADBus", "classADBus.html", [
       [ "Exception", "classADBus_1_1Exception.html", null ]
     ] ],
+    [ "AAngleRadians", "classAAngleRadians.html", null ],
+    [ "AMetric", "classAMetric.html", [
+      [ "AMetric", "classAMetric.html#af39dfd28613c0a469de4753294d3bbf3", null ]
+    ] ],
     [ "AMimedData", "classAMimedData.html", [
       [ "setText", "classAMimedData.html#aa02bc659384889d00a53001ecdd46046", null ]
     ] ],

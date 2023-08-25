@@ -60,6 +60,7 @@ var annotated =
         [ "Property< TextShadow >", "structass_1_1prop_1_1Property_3_01TextShadow_01_4.html", null ],
         [ "Property< TextTransform >", "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html", null ],
         [ "Property< TransformOffset >", "structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html", null ],
+        [ "Property< TransformRotate >", "structass_1_1prop_1_1Property_3_01TransformRotate_01_4.html", null ],
         [ "Property< TransformScale >", "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html", null ],
         [ "Property< VerticalAlign >", "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html", null ],
         [ "Property< Visibility >", "structass_1_1prop_1_1Property_3_01Visibility_01_4.html", null ]
@@ -105,6 +106,7 @@ var annotated =
       [ "TextColor", "structass_1_1TextColor.html", null ],
       [ "TextShadow", "structass_1_1TextShadow.html", null ],
       [ "TransformOffset", "structass_1_1TransformOffset.html", null ],
+      [ "TransformRotate", "structass_1_1TransformRotate.html", null ],
       [ "TransformScale", "structass_1_1TransformScale.html", null ],
       [ "type_of", "structass_1_1type__of.html", null ],
       [ "unset_wrap", "structass_1_1unset__wrap.html", null ]
@@ -381,6 +383,7 @@ var annotated =
     [ "AAbstractTypeableView", "classAAbstractTypeableView.html", "classAAbstractTypeableView" ],
     [ "AAccessDeniedException", "classAAccessDeniedException.html", null ],
     [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", "classAAdvancedGridLayout" ],
+    [ "AAngleRadians", "classAAngleRadians.html", null ],
     [ "AAnimatedDrawable", "classAAnimatedDrawable.html", "classAAnimatedDrawable" ],
     [ "AAnimator", "classAAnimator.html", "classAAnimator" ],
     [ "AArrayView", "classAArrayView.html", null ],
