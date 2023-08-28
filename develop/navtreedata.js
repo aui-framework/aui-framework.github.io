@@ -72,8 +72,8 @@ var NAVTREEINDEX =
 "classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7",
 "classgl_1_1Vao.html",
 "structAFontStyle.html",
-"structass_1_1prop_1_1Property_3_01LayoutSpacing_01_4.html",
-"structaui_1_1sequence__traits_1_1of.html"
+"structass_1_1prop_1_1Property_3_01FontSize_01_4.html",
+"structaui_1_1raw__serializable.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

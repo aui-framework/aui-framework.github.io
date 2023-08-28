@@ -73,7 +73,7 @@ var namespaces =
       [ "BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
       [ "BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
       [ "BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
-      [ "BackgroundImage", "structass_1_1BackgroundImage.html", null ],
+      [ "BackgroundImage", "structass_1_1BackgroundImage.html", "structass_1_1BackgroundImage" ],
       [ "BackgroundSolid", "structass_1_1BackgroundSolid.html", null ],
       [ "Border", "structass_1_1Border.html", null ],
       [ "BorderBottom", "structass_1_1BorderBottom.html", null ],
