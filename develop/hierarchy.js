@@ -803,6 +803,9 @@ var hierarchy =
         [ "ARandomInputStream", "classARandomInputStream.html", null ],
         [ "AStringStream", "classAStringStream.html", null ],
         [ "ATcpSocket", "classATcpSocket.html", null ],
+        [ "ISeekableInputStream", "classISeekableInputStream.html", [
+          [ "AStrongByteBufferInputStream", "classAStrongByteBufferInputStream.html", null ]
+        ] ],
         [ "MultipleInputStream", "classMultipleInputStream.html", null ],
         [ "PipeInputStream", "classPipeInputStream.html", null ]
       ] ],

@@ -59,13 +59,26 @@ var group__io =
       [ "read", "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c", null ],
       [ "write", "classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b", null ]
     ] ],
+    [ "AStrongByteBufferInputStream", "classAStrongByteBufferInputStream.html", [
+      [ "isEof", "classAStrongByteBufferInputStream.html#a7206e6ba9535e688287ad8998e73d708", null ],
+      [ "read", "classAStrongByteBufferInputStream.html#a0221c8acf22fa504a1ebd75a65f7d384", null ],
+      [ "seek", "classAStrongByteBufferInputStream.html#a58efe1938efdd1755c2a855973a05d50", null ],
+      [ "tell", "classAStrongByteBufferInputStream.html#af9086be1a67a1e9c3c52600879982ea7", null ]
+    ] ],
     [ "IInputStream", "classIInputStream.html", [
       [ "deserialize", "classIInputStream.html#a36c4cf58fa8466b92d9af1eb09e25d47", null ],
       [ "operator>>", "classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2", null ],
       [ "operator>>", "classIInputStream.html#a1840a69ad7ecad3ab4cdf58aed3823e2", null ],
       [ "read", "classIInputStream.html#a2eeb1071827ea8a9ca61bfd414639588", null ],
+      [ "read", "classIInputStream.html#a7b37579b8cb8d97984e18f70b0536846", null ],
       [ "readExact", "classIInputStream.html#a2d3fbd41d7e0d03c043d51f27353f9a3", null ]
     ] ],
     [ "InputStreamAsync", "classInputStreamAsync.html", null ],
+    [ "ISeekableInputStream", "classISeekableInputStream.html", [
+      [ "fileSize", "classISeekableInputStream.html#a4508931973b7205fc33754c4fcf2a4d5", null ],
+      [ "isEof", "classISeekableInputStream.html#a9d473001d0868eb9e35557d34dbcc0d7", null ],
+      [ "seek", "classISeekableInputStream.html#ae1885394185beeeef0cc331ae3a3a6f9", null ],
+      [ "tell", "classISeekableInputStream.html#a20de413b233ba5fb6927d7708801cd10", null ]
+    ] ],
     [ "AUI_ENUM_FLAG", "group__io.html#ga87f7361faaeb6e043938f79698edf5d0", null ]
 ];
