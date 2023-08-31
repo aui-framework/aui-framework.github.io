@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structass_1_1prop_1_1Property_3_01Border_01_4.html":[0,2,1,3,11],
 "structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html":[0,0,4,3,15],
 "structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html":[0,2,1,3,15],
 "structass_1_1prop_1_1Property_3_01Expanding_01_4.html":[0,0,4,3,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html":[0,2,2,22],
 "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html":[0,0,5,24],
 "structaui_1_1no__escape.html":[0,0,5,25],
-"structaui_1_1no__escape.html":[0,2,2,23],
-"structaui_1_1non__null.html":[0,2,2,24]
+"structaui_1_1no__escape.html":[0,2,2,23]
 };

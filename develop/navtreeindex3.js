@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"classATouchScroller.html#ac3bfb94b346e8fb52db52174be112af2":[0,2,285,3],
 "classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12":[0,2,285,1],
 "classATranslationAnimator.html":[0,2,286],
 "classATranslationAnimator.html#ab247b32895ce745d499ca92ebd956462":[0,2,286,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classIRemovableListModel.html":[0,2,347],
 "classIRenderer.html":[0,2,348],
 "classIRenderer.html#a165d31eb7104305e4bccb9135fe5c778":[0,2,348,13],
-"classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031":[0,2,348,12],
-"classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794":[0,2,348,18]
+"classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031":[0,2,348,12]
 };

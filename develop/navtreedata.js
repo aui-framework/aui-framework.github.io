@@ -68,11 +68,11 @@ var NAVTREEINDEX =
 "annotated.html",
 "classADynamicVector.html#a041470ffc414ef919ba5664c6ad52df4",
 "classAResourceBusyException.html",
-"classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12",
-"classIRenderer.html#a55c5336c483e50cdd796b2072d663a57",
+"classATouchScroller.html#ac3bfb94b346e8fb52db52174be112af2",
+"classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794",
 "classgl_1_1Shader.html",
-"structADataBindingDefault_3_01ANumberPicker_00_01uint16__t_01_4.html",
-"structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html",
+"structADataBindingDefault_3_01ANumberPicker_00_01int8__t_01_4.html",
+"structass_1_1prop_1_1Property_3_01Border_01_4.html",
 "structaui_1_1non__null.html"
 ];
 

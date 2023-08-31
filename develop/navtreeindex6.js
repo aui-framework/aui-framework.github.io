@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structADataBindingDefault_3_01ANumberPicker_00_01int8__t_01_4.html":[0,2,69],
 "structADataBindingDefault_3_01ANumberPicker_00_01uint16__t_01_4.html":[0,2,70],
 "structADataBindingDefault_3_01ANumberPicker_00_01uint32__t_01_4.html":[0,2,71],
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,72],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html":[0,0,4,3,13],
 "structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html":[0,2,1,3,14],
 "structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html":[0,0,4,3,14],
-"structass_1_1prop_1_1Property_3_01Border_01_4.html":[0,0,4,3,11],
-"structass_1_1prop_1_1Property_3_01Border_01_4.html":[0,2,1,3,11]
+"structass_1_1prop_1_1Property_3_01Border_01_4.html":[0,0,4,3,11]
 };

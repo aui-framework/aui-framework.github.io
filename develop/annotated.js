@@ -572,7 +572,7 @@ var annotated =
     [ "ARandomInputStream", "classARandomInputStream.html", "classARandomInputStream" ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", "structARenderingContextOptions" ],
     [ "AResourceBusyException", "classAResourceBusyException.html", null ],
-    [ "ARotationAnimator", "classARotationAnimator.html", null ],
+    [ "ARotationAnimator", "classARotationAnimator.html", "classARotationAnimator" ],
     [ "ARsa", "classARsa.html", null ],
     [ "ARulerArea", "classARulerArea.html", "classARulerArea" ],
     [ "ARulerView", "classARulerView.html", "classARulerView" ],
