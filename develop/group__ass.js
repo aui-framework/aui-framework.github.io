@@ -43,6 +43,7 @@ var group__ass =
         [ "TEXT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed", null ]
       ] ]
     ] ],
+    [ "ATextAlign", "group__ass.html#ga04f95ffef6e5fa435b7c5fcf67c49848", null ],
     [ "ass::Sizing", "group__ass.html#gacddcf8eaaf32f1471c17e0a4434bd3d8", [
       [ "ass::Sizing::NONE", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693", null ],
       [ "ass::Sizing::FIT", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a12197f0373bd373681e99d73fd509954", null ],
@@ -53,6 +54,5 @@ var group__ass =
       [ "ass::Sizing::SPLIT_2X2", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aac2d1453e21b91adbf8d873909380ec3", null ],
       [ "ass::Sizing::CROPPED", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca", null ]
     ] ],
-    [ "TextAlign", "group__ass.html#gabdd7e81d0fb7db7f8a4e6465765bac0b", null ],
     [ "VerticalAlign", "group__ass.html#ga327847b397ac5aa9eefa2157dbe0961d", null ]
 ];
