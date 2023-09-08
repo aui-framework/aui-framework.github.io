@@ -216,7 +216,7 @@ var group__useful__views =
       [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
       [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
       [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
-      [ "mTextOverflow", "classAView.html#a9c412219482a3a98572f652980d5311a", null ],
+      [ "mTextOverflow", "classAView.html#aa80d3e423a09a2ea728e68560e507281", null ],
       [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ],
       [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
     ] ],

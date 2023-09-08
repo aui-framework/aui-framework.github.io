@@ -72,7 +72,7 @@ var NAVTREEINDEX =
 "classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794",
 "classgl_1_1Shader.html",
 "structADataBindingDefault_3_01ANumberPicker_00_01int8__t_01_4.html",
-"structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html",
+"structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html",
 "structaui_1_1non__null.html"
 ];
 
