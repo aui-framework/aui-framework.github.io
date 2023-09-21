@@ -484,19 +484,22 @@ $(document).ready(function(){initNavTree('values_8h_source.html',''); initResiza
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    <span class="keyword">requires</span> aui::convertible_to&lt;<span class="keyword">decltype</span>(min), UnderlyingType&gt; &amp;&amp; aui::convertible_to&lt;<span class="keyword">decltype</span>(max), UnderlyingType&gt;</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno"><a class="line" href="structaui_1_1ranged__number.html">  454</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number</a> {</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        <a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number</a>(UnderlyingType value): value(glm::clamp(value, <span class="keyword">static_cast&lt;</span>UnderlyingType<span class="keyword">&gt;</span>(min), <span class="keyword">static_cast&lt;</span>UnderlyingType<span class="keyword">&gt;</span>(max))) {}</div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>        <a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number</a>(): value(min) {}</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>         <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MIN = min;</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>         <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> MAX = max;</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>        <span class="keyword">operator</span> UnderlyingType()<span class="keyword"> const </span>{ <span class="comment">// make it possible to work with ranged_number like with the underlying type</span></div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>            <span class="keywordflow">return</span> value;</div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>        }</div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span> </div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        UnderlyingType value;</div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>    };</div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span> </div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>    <span class="keyword">using</span> <a class="code hl_struct" href="structaui_1_1ranged__number.html">float_within_0_1</a> = <a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number&lt;float, 0, 1&gt;</a>;</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>}</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>        <a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number</a>(UnderlyingType value): value(glm::clamp(value, <span class="keyword">static_cast&lt;</span>UnderlyingType<span class="keyword">&gt;</span>(min), <span class="keyword">static_cast&lt;</span>UnderlyingType<span class="keyword">&gt;</span>(max))) {}</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>        <a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number</a>(): value(min) {}</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>        <span class="keyword">operator</span> UnderlyingType()<span class="keyword"> const </span>{ <span class="comment">// make it possible to work with ranged_number like with the underlying type</span></div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>            <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>        }</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span> </div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>        UnderlyingType value;</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    };</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <span class="keyword">using</span> <a class="code hl_struct" href="structaui_1_1ranged__number.html">float_within_0_1</a> = <a class="code hl_struct" href="structaui_1_1ranged__number.html">ranged_number&lt;float, 0, 1&gt;</a>;</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>}</div>
 <div class="ttc" id="aclassAMutex_html"><div class="ttname"><a href="classAMutex.html">AMutex</a></div><div class="ttdef"><b>Definition:</b> AMutex.h:21</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:36</div></div>
 <div class="ttc" id="aclassFactory_html"><div class="ttname"><a href="classFactory.html">Factory</a></div><div class="ttdef"><b>Definition:</b> Factory.h:23</div></div>
