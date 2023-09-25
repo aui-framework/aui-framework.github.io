@@ -17,9 +17,10 @@ var NAVTREEINDEX2 =
 "classAScrollArea.html":[2,0,8,2,19],
 "classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75":[2,0,8,2,19,3],
 "classAScrollArea.html#a1ec97c0e09e70449d9644680e1300b8d":[2,0,8,2,19,5],
-"classAScrollArea.html#a2770daab18df7595e3977685d80a242f":[2,0,8,2,19,6],
+"classAScrollArea.html#a2770daab18df7595e3977685d80a242f":[2,0,8,2,19,7],
 "classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0":[2,0,8,2,19,4],
-"classAScrollArea.html#a9999759647617833d28cf954a3ca7635":[2,0,8,2,19,7],
+"classAScrollArea.html#a9999759647617833d28cf954a3ca7635":[2,0,8,2,19,8],
+"classAScrollArea.html#a9bc0693d28cda3e14efa640836b70837":[2,0,8,2,19,6],
 "classAScrollArea.html#aa686c2c309f39c9675654b76e4045397":[2,0,8,2,19,1],
 "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de":[2,0,8,2,19,2],
 "classAScrollAreaContainer.html":[0,2,217],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classATokenizer.html#afedf6bf69c5cab59c2c784c7fb454959":[0,2,284,6],
 "classATokenizer.html#aff91697d61a7bef9eba976a987c540ba":[0,2,284,7],
 "classATouchScroller.html":[0,2,285],
-"classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8":[0,2,285,0],
-"classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14":[0,2,285,2]
+"classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8":[0,2,285,0]
 };
