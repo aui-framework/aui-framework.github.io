@@ -71,9 +71,9 @@ var NAVTREEINDEX =
 "classATouchScroller.html#ac3bfb94b346e8fb52db52174be112af2",
 "classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794",
 "classgl_1_1Shader.html",
-"structADataBindingDefault_3_01ANumberPicker_00_01int8__t_01_4.html",
+"structADataBindingDefault_3_01ANumberPicker_00_01int32__t_01_4.html",
 "structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html",
-"structaui_1_1non__null.html"
+"structaui_1_1no__escape.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
