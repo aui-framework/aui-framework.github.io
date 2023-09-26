@@ -39,6 +39,7 @@ var hierarchy =
     [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
+    [ "ACurlInit", "structACurlInit.html", null ],
     [ "ACursor", "classACursor.html", null ],
     [ "ACursorSelectable", "classACursorSelectable.html", [
       [ "AAbstractTypeableView", "classAAbstractTypeableView.html", [

@@ -414,6 +414,7 @@ var annotated =
     [ "AConditionVariable", "classAConditionVariable.html", "classAConditionVariable" ],
     [ "AContainerPrinter", "structAContainerPrinter.html", null ],
     [ "ACurl", "classACurl.html", "classACurl" ],
+    [ "ACurlInit", "structACurlInit.html", null ],
     [ "ACurlMulti", "classACurlMulti.html", null ],
     [ "ACursor", "classACursor.html", "classACursor" ],
     [ "ACursorSelectable", "classACursorSelectable.html", "classACursorSelectable" ],
