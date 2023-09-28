@@ -322,17 +322,17 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                                lock.unlock(); <span class="comment">// unlock earlier because destruction of shared_ptr may cause deadlock</span></div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                            }</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                        }</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAException.html">AException</a>&amp;) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAThread_1_1Interrupted.html">AThread::Interrupted</a>&amp;) {</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                        <span class="keywordflow">if</span> (<span class="keyword">auto</span> sharedPtrLock = innerWeak.lock()) {</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                            inner-&gt;reportException();</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                            inner-&gt;reportInterrupted();</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                        }</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                        <span class="keywordflow">throw</span>;</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                    } <span class="keywordflow">catch</span> (...) {</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                        <span class="keywordflow">if</span> (<span class="keyword">auto</span> sharedPtrLock = innerWeak.lock()) {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                            inner-&gt;reportInterrupted();</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                            inner-&gt;reportException();</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        }</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                        <span class="keywordflow">throw</span>;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    } </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                }</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            }</div>
