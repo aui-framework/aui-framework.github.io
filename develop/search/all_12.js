@@ -60,11 +60,12 @@ var searchData=
   ['restored_57',['restored',['../classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac',1,'AWindow']]],
   ['reverse_5fiterator_5fwrap_58',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
   ['reversebyte_59',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
-  ['root_60',['root',['../classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33',1,'ITreeModel::root()'],['../classViewHierarchyTreeModel.html#abf1452f48d0f5f137e21ae506a2a38b2',1,'ViewHierarchyTreeModel::root()']]],
+  ['root_60',['root',['../classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6',1,'ITreeModel::root()'],['../classViewHierarchyTreeModel.html#ae7bf9ab311de0b3daf51c39917e3a92e',1,'ViewHierarchyTreeModel::root()']]],
   ['rotate_61',['rotate',['../classRender.html#a5f463b9dc1109a22704b7d29a898be61',1,'Render::rotate(const glm::vec3 &amp;axis, float angle)'],['../classRender.html#aa2e39b20e4521fac6e6c3a690a072818',1,'Render::rotate(float angle)']]],
   ['roundedrect_62',['RoundedRect',['../structRoundedRect.html',1,'']]],
   ['roundedrect_63',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
   ['roundedrectantialiased_64',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
-  ['rule_65',['Rule',['../structass_1_1Rule.html',1,'ass']]],
-  ['run_66',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
+  ['row_65',['row',['../classATreeModelIndex.html#aa730c919f25355a4224df3a8640563b6',1,'ATreeModelIndex']]],
+  ['rule_66',['Rule',['../structass_1_1Rule.html',1,'ass']]],
+  ['run_67',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
 ];

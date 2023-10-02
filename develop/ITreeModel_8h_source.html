@@ -118,106 +118,79 @@ $(document).ready(function(){initNavTree('ITreeModel_8h_source.html',''); initRe
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;AUI/Common/ASignal.h&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;any&gt;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;AModelRange.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;AListModelRange.h&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;AUI/Common/AException.h&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classATreeIndex.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a> {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classATreeIndex_1_1Exception.html">   32</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classATreeIndex_1_1Exception.html">Exception</a>: <span class="keyword">public</span> <a class="code hl_class" href="classAException.html">AException</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">using</span> AException::AException;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classATreeIndex.html#acd4ec96b17eb2572b38ff420c5033259">   44</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classATreeIndex.html#acd4ec96b17eb2572b38ff420c5033259">ATreeIndex</a>(std::size_t row, std::size_t column, std::any userdata) <span class="keyword">noexcept</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        mRow(row),</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        mColumn(column),</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        mUserdata(std::move(userdata)) {}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    T as()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> std::any_cast&lt;T&gt;(mUserdata);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">throw</span> Exception(</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    <span class="stringliteral">&quot;bad userdata type (expected {}, holds {})&quot;</span>_format(<span class="keyword">typeid</span>(T).name(), mUserdata.type().name()));</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> hasValue() const noexcept {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> mUserdata.has_value();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::size_t row()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> mRow;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;AUI/Common/AObject.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;AUI/Traits/concepts.h&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;AUI/Model/ATreeModelIndex.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classITreeModel.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="classITreeModel.html">ITreeModel</a>: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classITreeModel.html">~ITreeModel</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6">   50</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a> <a class="code hl_function" href="classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6">root</a>() = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classITreeModel.html#a893cef623ddd93ad2881a403f0739494">   55</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="classITreeModel.html#a893cef623ddd93ad2881a403f0739494">childrenCount</a>(<span class="keyword">const</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a>&amp; vertex) = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classITreeModel.html#af2e8645b11c16f1e32bda296d72692b6">   60</a></span>    <span class="keyword">virtual</span> T <a class="code hl_function" href="classITreeModel.html#af2e8645b11c16f1e32bda296d72692b6">itemAt</a>(<span class="keyword">const</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a>&amp; index) = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classITreeModel.html#a03c5f80b1dbfa0f744bb98e472aeec97">   68</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a> <a class="code hl_function" href="classITreeModel.html#a03c5f80b1dbfa0f744bb98e472aeec97">indexOfChild</a>(<span class="keywordtype">size_t</span> row, <span class="keywordtype">size_t</span> column, <span class="keyword">const</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a>&amp; vertex) = 0;</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::size_t column()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> mColumn;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::size_t mRow, mColumn;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::any mUserdata;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classITreeModel.html">   87</a></span><span class="keyword">class </span><a class="code hl_class" href="classITreeModel.html">ITreeModel</a></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classITreeModel.html">~ITreeModel</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classITreeModel.html#a186b542d606f456ec9bf6ddf0e17c971">   75</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a> <a class="code hl_function" href="classITreeModel.html#a186b542d606f456ec9bf6ddf0e17c971">parent</a>(<span class="keyword">const</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a>&amp; vertex) = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">using</span> stored_t = T;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">template</span>&lt;aui::predicate&lt;ATreeModelIndex&gt; Predicate&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;ATreeModelIndex&gt;</a> find(<span class="keyword">const</span> Predicate&amp; predicate) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> visit(predicate, <a class="code hl_function" href="classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6">root</a>());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">template</span>&lt;aui::invocable&lt;ATreeModelIndex&gt; Callback&gt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> forEachDirectChildOf(<span class="keyword">const</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a>&amp; vertex, Callback&amp;&amp; callback) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">auto</span> s = <a class="code hl_function" href="classITreeModel.html#a893cef623ddd93ad2881a403f0739494">childrenCount</a>(vertex);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">for</span> (<span class="keyword">decltype</span>(s) i = 0; i &lt; s; ++i) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            callback(<a class="code hl_function" href="classITreeModel.html#a03c5f80b1dbfa0f744bb98e472aeec97">indexOfChild</a>(i, 0, vertex));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33">   97</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a> <a class="code hl_function" href="classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33">root</a>() = 0;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classITreeModel.html#abc26a1dddbee3c72048d0dc128dd4b7f">  102</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="classITreeModel.html#abc26a1dddbee3c72048d0dc128dd4b7f">childrenCount</a>(<span class="keyword">const</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a>&amp; vertex) = 0;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classITreeModel.html#ac012f15488627a6c3674d0565e5baf90">  107</a></span>    <span class="keyword">virtual</span> T <a class="code hl_function" href="classITreeModel.html#ac012f15488627a6c3674d0565e5baf90">itemAt</a>(<span class="keyword">const</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a>&amp; index) = 0;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classITreeModel.html#af90ea12c21233103b4720aecf2ceb708">  115</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a> <a class="code hl_function" href="classITreeModel.html#af90ea12c21233103b4720aecf2ceb708">indexOfChild</a>(<span class="keywordtype">size_t</span> row, <span class="keywordtype">size_t</span> column, <span class="keyword">const</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a>&amp; vertex) = 0;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classITreeModel.html#a90e3adb8060b77b2ce9b6098e5c141af">  122</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a> <a class="code hl_function" href="classITreeModel.html#a90e3adb8060b77b2ce9b6098e5c141af">parent</a>(<span class="keyword">const</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a>&amp; vertex) = 0;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">using</span> stored_t = T;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">template</span>&lt;aui::predicate&lt;ATreeIndex&gt; Predicate&gt;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;ATreeIndex&gt;</a> find(<span class="keyword">const</span> Predicate&amp; predicate) {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">return</span> visit(predicate, <a class="code hl_function" href="classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33">root</a>());</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>signals:</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">template</span>&lt;aui::predicate&lt;ATreeIndex&gt; Predicate&gt;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;ATreeIndex&gt;</a> visit(<span class="keyword">const</span> Predicate&amp; p, <span class="keyword">const</span> <a class="code hl_class" href="classATreeIndex.html">ATreeIndex</a>&amp; vertex) {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (p(vertex)) {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span> vertex;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        std::size_t count = <a class="code hl_function" href="classITreeModel.html#abc26a1dddbee3c72048d0dc128dd4b7f">childrenCount</a>(vertex);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; count; ++i) {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keyword">auto</span> child = <a class="code hl_function" href="classITreeModel.html#af90ea12c21233103b4720aecf2ceb708">indexOfChild</a>(i, 0, vertex);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> v = visit(p, child)) {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                <span class="keywordflow">return</span> v;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    };</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>};</div>
-<div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:34</div></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>signals:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classITreeModel.html#a161e2cbb94136f965b59cb4246f16acd">   96</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;ATreeModelIndex&gt;</a> <a class="code hl_variable" href="classITreeModel.html#a161e2cbb94136f965b59cb4246f16acd">dataChanged</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classITreeModel.html#a63c6b2343bafa38c3b88eff3f59d7e71">  101</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;ATreeModelIndex&gt;</a> <a class="code hl_variable" href="classITreeModel.html#a63c6b2343bafa38c3b88eff3f59d7e71">dataInserted</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classITreeModel.html#a639a0ceccaeb454a504d01cfa4cc86dc">  106</a></span>    <a class="code hl_class" href="classASignal.html">emits&lt;ATreeModelIndex&gt;</a> <a class="code hl_variable" href="classITreeModel.html#a639a0ceccaeb454a504d01cfa4cc86dc">dataRemoved</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">template</span>&lt;aui::predicate&lt;ATreeModelIndex&gt; Predicate&gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;ATreeModelIndex&gt;</a> visit(<span class="keyword">const</span> Predicate&amp; p, <span class="keyword">const</span> <a class="code hl_class" href="classATreeModelIndex.html">ATreeModelIndex</a>&amp; vertex) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (p(vertex)) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">return</span> vertex;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        std::size_t count = <a class="code hl_function" href="classITreeModel.html#a893cef623ddd93ad2881a403f0739494">childrenCount</a>(vertex);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; count; ++i) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keyword">auto</span> child = <a class="code hl_function" href="classITreeModel.html#a03c5f80b1dbfa0f744bb98e472aeec97">indexOfChild</a>(i, 0, vertex);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> v = visit(p, child)) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">return</span> v;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    };</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>};</div>
+<div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition:</b> AObject.h:56</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:36</div></div>
-<div class="ttc" id="aclassATreeIndex_1_1Exception_html"><div class="ttname"><a href="classATreeIndex_1_1Exception.html">ATreeIndex::Exception</a></div><div class="ttdef"><b>Definition:</b> ITreeModel.h:32</div></div>
-<div class="ttc" id="aclassATreeIndex_html"><div class="ttname"><a href="classATreeIndex.html">ATreeIndex</a></div><div class="ttdef"><b>Definition:</b> ITreeModel.h:30</div></div>
-<div class="ttc" id="aclassATreeIndex_html_acd4ec96b17eb2572b38ff420c5033259"><div class="ttname"><a href="classATreeIndex.html#acd4ec96b17eb2572b38ff420c5033259">ATreeIndex::ATreeIndex</a></div><div class="ttdeci">ATreeIndex(std::size_t row, std::size_t column, std::any userdata) noexcept</div><div class="ttdef"><b>Definition:</b> ITreeModel.h:44</div></div>
-<div class="ttc" id="aclassITreeModel_html"><div class="ttname"><a href="classITreeModel.html">ITreeModel</a></div><div class="ttdoc">Tree model.</div><div class="ttdef"><b>Definition:</b> ITreeModel.h:88</div></div>
-<div class="ttc" id="aclassITreeModel_html_a2bafa336baf4ff9d8872e524e6c05c33"><div class="ttname"><a href="classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33">ITreeModel::root</a></div><div class="ttdeci">virtual ATreeIndex root()=0</div><div class="ttdoc">Root vertex.</div></div>
-<div class="ttc" id="aclassITreeModel_html_a90e3adb8060b77b2ce9b6098e5c141af"><div class="ttname"><a href="classITreeModel.html#a90e3adb8060b77b2ce9b6098e5c141af">ITreeModel::parent</a></div><div class="ttdeci">virtual ATreeIndex parent(const ATreeIndex &amp;vertex)=0</div><div class="ttdoc">Creates valid index of parent.</div></div>
-<div class="ttc" id="aclassITreeModel_html_abc26a1dddbee3c72048d0dc128dd4b7f"><div class="ttname"><a href="classITreeModel.html#abc26a1dddbee3c72048d0dc128dd4b7f">ITreeModel::childrenCount</a></div><div class="ttdeci">virtual size_t childrenCount(const ATreeIndex &amp;vertex)=0</div><div class="ttdoc">Count of children of the vertex.</div></div>
-<div class="ttc" id="aclassITreeModel_html_ac012f15488627a6c3674d0565e5baf90"><div class="ttname"><a href="classITreeModel.html#ac012f15488627a6c3674d0565e5baf90">ITreeModel::itemAt</a></div><div class="ttdeci">virtual T itemAt(const ATreeIndex &amp;index)=0</div><div class="ttdoc">value representation, used by ATreeView.</div></div>
-<div class="ttc" id="aclassITreeModel_html_af90ea12c21233103b4720aecf2ceb708"><div class="ttname"><a href="classITreeModel.html#af90ea12c21233103b4720aecf2ceb708">ITreeModel::indexOfChild</a></div><div class="ttdeci">virtual ATreeIndex indexOfChild(size_t row, size_t column, const ATreeIndex &amp;vertex)=0</div><div class="ttdoc">Creates valid ATreeIndex of the child.</div></div>
+<div class="ttc" id="aclassASignal_html"><div class="ttname"><a href="classASignal.html">ASignal&lt; Args... &gt;</a></div></div>
+<div class="ttc" id="aclassATreeModelIndex_html"><div class="ttname"><a href="classATreeModelIndex.html">ATreeModelIndex</a></div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:7</div></div>
+<div class="ttc" id="aclassITreeModel_html"><div class="ttname"><a href="classITreeModel.html">ITreeModel</a></div><div class="ttdoc">Tree model.</div><div class="ttdef"><b>Definition:</b> ITreeModel.h:41</div></div>
+<div class="ttc" id="aclassITreeModel_html_a03c5f80b1dbfa0f744bb98e472aeec97"><div class="ttname"><a href="classITreeModel.html#a03c5f80b1dbfa0f744bb98e472aeec97">ITreeModel::indexOfChild</a></div><div class="ttdeci">virtual ATreeModelIndex indexOfChild(size_t row, size_t column, const ATreeModelIndex &amp;vertex)=0</div><div class="ttdoc">Creates valid ATreeModelIndex of the child.</div></div>
+<div class="ttc" id="aclassITreeModel_html_a161e2cbb94136f965b59cb4246f16acd"><div class="ttname"><a href="classITreeModel.html#a161e2cbb94136f965b59cb4246f16acd">ITreeModel::dataChanged</a></div><div class="ttdeci">emits&lt; ATreeModelIndex &gt; dataChanged</div><div class="ttdoc">Model data was changed.</div><div class="ttdef"><b>Definition:</b> ITreeModel.h:96</div></div>
+<div class="ttc" id="aclassITreeModel_html_a186b542d606f456ec9bf6ddf0e17c971"><div class="ttname"><a href="classITreeModel.html#a186b542d606f456ec9bf6ddf0e17c971">ITreeModel::parent</a></div><div class="ttdeci">virtual ATreeModelIndex parent(const ATreeModelIndex &amp;vertex)=0</div><div class="ttdoc">Creates valid index of parent.</div></div>
+<div class="ttc" id="aclassITreeModel_html_a639a0ceccaeb454a504d01cfa4cc86dc"><div class="ttname"><a href="classITreeModel.html#a639a0ceccaeb454a504d01cfa4cc86dc">ITreeModel::dataRemoved</a></div><div class="ttdeci">emits&lt; ATreeModelIndex &gt; dataRemoved</div><div class="ttdoc">Model data about to remove.</div><div class="ttdef"><b>Definition:</b> ITreeModel.h:106</div></div>
+<div class="ttc" id="aclassITreeModel_html_a63c6b2343bafa38c3b88eff3f59d7e71"><div class="ttname"><a href="classITreeModel.html#a63c6b2343bafa38c3b88eff3f59d7e71">ITreeModel::dataInserted</a></div><div class="ttdeci">emits&lt; ATreeModelIndex &gt; dataInserted</div><div class="ttdoc">Model data was added.</div><div class="ttdef"><b>Definition:</b> ITreeModel.h:101</div></div>
+<div class="ttc" id="aclassITreeModel_html_a7516243f380d02fbefcbbe2d1983c4c6"><div class="ttname"><a href="classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6">ITreeModel::root</a></div><div class="ttdeci">virtual ATreeModelIndex root()=0</div><div class="ttdoc">Root vertex.</div></div>
+<div class="ttc" id="aclassITreeModel_html_a893cef623ddd93ad2881a403f0739494"><div class="ttname"><a href="classITreeModel.html#a893cef623ddd93ad2881a403f0739494">ITreeModel::childrenCount</a></div><div class="ttdeci">virtual size_t childrenCount(const ATreeModelIndex &amp;vertex)=0</div><div class="ttdoc">Count of children of the vertex.</div></div>
+<div class="ttc" id="aclassITreeModel_html_af2e8645b11c16f1e32bda296d72692b6"><div class="ttname"><a href="classITreeModel.html#af2e8645b11c16f1e32bda296d72692b6">ITreeModel::itemAt</a></div><div class="ttdeci">virtual T itemAt(const ATreeModelIndex &amp;index)=0</div><div class="ttdoc">value representation, used by ATreeView.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

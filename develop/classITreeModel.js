@@ -1,8 +1,11 @@
 var classITreeModel =
 [
-    [ "childrenCount", "classITreeModel.html#abc26a1dddbee3c72048d0dc128dd4b7f", null ],
-    [ "indexOfChild", "classITreeModel.html#af90ea12c21233103b4720aecf2ceb708", null ],
-    [ "itemAt", "classITreeModel.html#ac012f15488627a6c3674d0565e5baf90", null ],
-    [ "parent", "classITreeModel.html#a90e3adb8060b77b2ce9b6098e5c141af", null ],
-    [ "root", "classITreeModel.html#a2bafa336baf4ff9d8872e524e6c05c33", null ]
+    [ "childrenCount", "classITreeModel.html#a893cef623ddd93ad2881a403f0739494", null ],
+    [ "indexOfChild", "classITreeModel.html#a03c5f80b1dbfa0f744bb98e472aeec97", null ],
+    [ "itemAt", "classITreeModel.html#af2e8645b11c16f1e32bda296d72692b6", null ],
+    [ "parent", "classITreeModel.html#a186b542d606f456ec9bf6ddf0e17c971", null ],
+    [ "root", "classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6", null ],
+    [ "dataChanged", "classITreeModel.html#a161e2cbb94136f965b59cb4246f16acd", null ],
+    [ "dataInserted", "classITreeModel.html#a63c6b2343bafa38c3b88eff3f59d7e71", null ],
+    [ "dataRemoved", "classITreeModel.html#a639a0ceccaeb454a504d01cfa4cc86dc", null ]
 ];

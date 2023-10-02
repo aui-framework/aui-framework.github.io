@@ -2,10 +2,10 @@ var searchData=
 [
   ['data_0',['data',['../classAByteBuffer.html#afe2d857335823888761116b7acbe6812',1,'AByteBuffer']]],
   ['data2_1',['Data2',['../structData2.html',1,'']]],
-  ['datachanged_2',['dataChanged',['../classIListModel.html#aa8d3668d668948759dfdeba7ae405899',1,'IListModel']]],
-  ['datainserted_3',['dataInserted',['../classIListModel.html#a4991a53ae9caaba6ebd44543e73644d6',1,'IListModel']]],
+  ['datachanged_2',['dataChanged',['../classIListModel.html#ae0e2f40373890474386d2ec87a98a72c',1,'IListModel::dataChanged()'],['../classITreeModel.html#a161e2cbb94136f965b59cb4246f16acd',1,'ITreeModel::dataChanged()']]],
+  ['datainserted_3',['dataInserted',['../classIListModel.html#a2347b3d81f0235b5a0465327c357aec9',1,'IListModel::dataInserted()'],['../classITreeModel.html#a63c6b2343bafa38c3b88eff3f59d7e71',1,'ITreeModel::dataInserted()']]],
   ['dataoptional_4',['DataOptional',['../structDataOptional.html',1,'']]],
-  ['dataremoved_5',['dataRemoved',['../classIListModel.html#aec159ec4883edd750bc9ac6e5969ab2d',1,'IListModel']]],
+  ['dataremoved_5',['dataRemoved',['../classITreeModel.html#a639a0ceccaeb454a504d01cfa4cc86dc',1,'ITreeModel::dataRemoved()'],['../classIListModel.html#ae6e27f6d155686ad8f60b30723f05284',1,'IListModel::dataRemoved()']]],
   ['debug_5fselector_6',['debug_selector',['../structass_1_1debug__selector.html',1,'ass::debug_selector'],['../structass_1_1detail_1_1debug__selector.html',1,'ass::detail::debug_selector']]],
   ['decode_5ftype_7',['decode_type',['../structaui_1_1impl_1_1slot_1_1decode__type.html',1,'aui::impl::slot']]],
   ['decode_5ftype_3c_20_5f_3c_20t_20_3e_20_3e_8',['decode_type&lt; _&lt; T &gt; &gt;',['../structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html',1,'aui::impl::slot']]],

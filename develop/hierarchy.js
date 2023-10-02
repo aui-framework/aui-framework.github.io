@@ -122,6 +122,9 @@ var hierarchy =
     [ "ALayoutInflater", "classALayoutInflater.html", null ],
     [ "uitest::impl::align< side >", "structuitest_1_1impl_1_1align.html", null ],
     [ "ALinearGradientBrush", "structALinearGradientBrush.html", null ],
+    [ "AListModelIndex", "classAListModelIndex.html", null ],
+    [ "AListModelRange< T >", "classAListModelRange.html", null ],
+    [ "AListModelSelection< T >", "classAListModelSelection.html", null ],
     [ "ALogger", "classALogger.html", null ],
     [ "ALongPressEvent", "structALongPressEvent.html", null ],
     [ "AMenu", "classAMenu.html", null ],
@@ -130,12 +133,9 @@ var hierarchy =
     [ "AMigrationManager", "classAMigrationManager.html", null ],
     [ "AMimedData", "classAMimedData.html", null ],
     [ "AModel", "structAModel.html", null ],
-    [ "AModelIndex", "classAModelIndex.html", null ],
     [ "AModelMetaBase< T >", "structAModelMetaBase.html", [
       [ "AModelMeta< T >", "structAModelMeta.html", null ]
     ] ],
-    [ "AModelRange< T >", "classAModelRange.html", null ],
-    [ "AModelSelection< T >", "classAModelSelection.html", null ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
     [ "APointerIndex", "classAPointerIndex.html", null ],
@@ -188,7 +188,7 @@ var hierarchy =
     [ "ATokenizer", "classATokenizer.html", null ],
     [ "aui::atomic_lazy< T >", "structaui_1_1atomic__lazy.html", null ],
     [ "ATouchScroller", "classATouchScroller.html", null ],
-    [ "ATreeIndex", "classATreeIndex.html", null ],
+    [ "ATreeModelIndex", "classATreeModelIndex.html", null ],
     [ "AUIViewController()", "categoryAUIViewController_07_08.html", null ],
     [ "AUrl", "classAUrl.html", null ],
     [ "AUuid", "classAUuid.html", null ],
@@ -338,6 +338,9 @@ var hierarchy =
     ] ],
     [ "std::enable_shared_from_this", null, [
       [ "AObject", "classAObject.html", [
+        [ "ITreeModel< AString >", "classITreeModel.html", [
+          [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", null ]
+        ] ],
         [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
         [ "AAssHelper", "classAAssHelper.html", null ],
         [ "AChildProcess", "classAChildProcess.html", null ],
@@ -364,9 +367,6 @@ var hierarchy =
             ] ]
           ] ]
         ] ],
-        [ "AListModel< StoredType >", "classAListModel.html", null ],
-        [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ],
-        [ "AListModelFilter< T, Filter >", "classAListModelFilter.html", null ],
         [ "AListModelObserver< T >", "classAListModelObserver.html", null ],
         [ "ARadioButton::Group", "classARadioButton_1_1Group.html", null ],
         [ "AStdOutputRecorder", "classAStdOutputRecorder.html", null ],
@@ -460,6 +460,21 @@ var hierarchy =
           [ "ViewMock", "classViewMock.html", null ],
           [ "ViewMock", "classViewMock.html", null ]
         ] ],
+        [ "IListModel< T >", "classIListModel.html", [
+          [ "IRemovableListModel< StoredType >", "classIRemovableListModel.html", [
+            [ "AListModel< StoredType >", "classAListModel.html", null ]
+          ] ],
+          [ "IRemovableListModel< ItemTo >", "classIRemovableListModel.html", [
+            [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ]
+          ] ],
+          [ "IValueMutableListModel< StoredType >", "classIValueMutableListModel.html", [
+            [ "AListModel< StoredType >", "classAListModel.html", null ]
+          ] ],
+          [ "AListModelFilter< T, Filter >", "classAListModelFilter.html", null ],
+          [ "IRemovableListModel< T >", "classIRemovableListModel.html", null ],
+          [ "IValueMutableListModel< T >", "classIValueMutableListModel.html", null ]
+        ] ],
+        [ "ITreeModel< T >", "classITreeModel.html", null ],
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
         [ "Master", "classMaster.html", null ],
         [ "ProcessSignalReceiver", "classProcessSignalReceiver.html", null ],
@@ -506,7 +521,7 @@ var hierarchy =
         [ "AProgramModuleLoadException", "classAProgramModuleLoadException.html", null ],
         [ "ASqlModel< Model >::NoSuchRowException", "classASqlModel_1_1NoSuchRowException.html", null ],
         [ "ASqlModel< Model >::TooManyRowsException", "classASqlModel_1_1TooManyRowsException.html", null ],
-        [ "ATreeIndex::Exception", "classATreeIndex_1_1Exception.html", null ],
+        [ "ATreeModelIndex::Exception", "classATreeModelIndex_1_1Exception.html", null ],
         [ "AUuidException", "classAUuidException.html", null ],
         [ "AZLibException", "classAZLibException.html", null ],
         [ "SQLException", "classSQLException.html", null ]
@@ -599,20 +614,6 @@ var hierarchy =
         [ "UITestWindowManager", "classUITestWindowManager.html", null ]
       ] ],
       [ "MyEventLoop", "classMyEventLoop.html", null ]
-    ] ],
-    [ "IListModel< T >", "classIListModel.html", [
-      [ "IRemovableListModel< StoredType >", "classIRemovableListModel.html", [
-        [ "AListModel< StoredType >", "classAListModel.html", null ]
-      ] ],
-      [ "IRemovableListModel< ItemTo >", "classIRemovableListModel.html", [
-        [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ]
-      ] ],
-      [ "IValueMutableListModel< StoredType >", "classIValueMutableListModel.html", [
-        [ "AListModel< StoredType >", "classAListModel.html", null ]
-      ] ],
-      [ "AListModelFilter< T, Filter >", "classAListModelFilter.html", null ],
-      [ "IRemovableListModel< T >", "classIRemovableListModel.html", null ],
-      [ "IValueMutableListModel< T >", "classIValueMutableListModel.html", null ]
     ] ],
     [ "AListModelObserver< T >::IListModelListener", "classAListModelObserver_1_1IListModelListener.html", [
       [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
@@ -710,17 +711,13 @@ var hierarchy =
       [ "AAbstractTextField", "classAAbstractTextField.html", null ],
       [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ]
     ] ],
-    [ "AModelRange< T >::Iterator", "classAModelRange_1_1Iterator.html", null ],
-    [ "AModelSelection< T >::Iterator", "classAModelSelection_1_1Iterator.html", null ],
+    [ "AListModelRange< T >::Iterator", "classAListModelRange_1_1Iterator.html", null ],
+    [ "AListModelSelection< T >::Iterator", "classAListModelSelection_1_1Iterator.html", null ],
     [ "ASqlQueryResult::Iterator", "classASqlQueryResult_1_1Iterator.html", null ],
     [ "aui::zip< Containers >::iterator", "structaui_1_1zip_1_1iterator.html", null ],
     [ "ITexture", "classITexture.html", [
       [ "OpenGLTexture2D", "classOpenGLTexture2D.html", null ],
       [ "SoftwareTexture", "classSoftwareTexture.html", null ]
-    ] ],
-    [ "ITreeModel< T >", "classITreeModel.html", null ],
-    [ "ITreeModel< AString >", "classITreeModel.html", [
-      [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", null ]
     ] ],
     [ "IXmlEntityVisitor", "classIXmlEntityVisitor.html", [
       [ "IXmlDocumentVisitor", "classIXmlDocumentVisitor.html", null ]

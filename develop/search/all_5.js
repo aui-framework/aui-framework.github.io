@@ -14,7 +14,7 @@ var searchData=
   ['env_11',['env',['../group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46',1,'aui::jni']]],
   ['error_12',['Error',['../structaui_1_1impl_1_1Error.html',1,'aui::impl']]],
   ['errordescription_13',['ErrorDescription',['../structACurl_1_1ErrorDescription.html',1,'ACurl']]],
-  ['exception_14',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeIndex_1_1Exception.html',1,'ATreeIndex::Exception']]],
+  ['exception_14',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeModelIndex_1_1Exception.html',1,'ATreeModelIndex::Exception']]],
   ['execute_15',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
   ['executeasadministrator_16',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
   ['executewaitforexit_17',['executeWaitForExit',['../classAProcess.html#a3f74fa0108325de438c33cd0cf5519e2',1,'AProcess']]],
