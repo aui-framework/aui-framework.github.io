@@ -67,13 +67,13 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classADynamicVector.html#a041470ffc414ef919ba5664c6ad52df4",
-"classAResourceBusyException.html",
-"classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14",
-"classIOutputStream.html#a93b76426e175a9eb9b28151b0ec7086e",
-"classaui_1_1promise_1_1move__only.html",
-"structACursor_1_1Custom.html",
-"structass_1_1prop_1_1Property_3_01BackgroundGradient_01_4.html",
-"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html#a2bd40a82d18d21ffb181a6d096dd56d4"
+"classARotationAnimator.html#a53130bdfe82d80f33e4a8a8150795d96",
+"classATranslationAnimator.html#ab247b32895ce745d499ca92ebd956462",
+"classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031",
+"classgl_1_1IndexBuffer.html",
+"structADataBindingDefault_3_01ACheckBoxWrapper_00_01bool_01_4.html",
+"structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html#aa7f63674acda9925fedad1fe4b66eb5c",
+"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html#ac6f26e325156e1f1c93120a5b55ca85f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

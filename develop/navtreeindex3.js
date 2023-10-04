@@ -1,9 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14":[0,2,286,2],
-"classATouchScroller.html#ac3bfb94b346e8fb52db52174be112af2":[0,2,286,3],
-"classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12":[0,2,286,1],
-"classATranslationAnimator.html":[0,2,287],
 "classATranslationAnimator.html#ab247b32895ce745d499ca92ebd956462":[0,2,287,0],
 "classATreeModelIndex.html":[0,2,288],
 "classATreeModelIndex.html#a03f7862906a0ad0dd2f21dfad68654b5":[0,2,288,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX3 =
 "classIMenuProvider.html":[0,2,345],
 "classIOutputStream.html":[0,2,347],
 "classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72":[0,2,347,1],
-"classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b":[0,2,347,0]
+"classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b":[0,2,347,0],
+"classIOutputStream.html#a93b76426e175a9eb9b28151b0ec7086e":[0,2,347,2],
+"classIRemovableListModel.html":[0,2,348],
+"classIRenderer.html":[0,2,349],
+"classIRenderer.html#a165d31eb7104305e4bccb9135fe5c778":[0,2,349,13]
 };

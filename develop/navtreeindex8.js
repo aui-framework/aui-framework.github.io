@@ -1,9 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html#a2bd40a82d18d21ffb181a6d096dd56d4":[0,2,2,20,0],
-"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html#a2bd40a82d18d21ffb181a6d096dd56d4":[0,0,5,22,0],
-"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html":[0,0,5,23],
-"structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html":[0,2,2,21],
 "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html#ac6f26e325156e1f1c93120a5b55ca85f":[0,0,5,23,0],
 "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html#ac6f26e325156e1f1c93120a5b55ca85f":[0,2,2,21,0],
 "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html":[0,2,2,22],
@@ -75,8 +71,8 @@ var NAVTREEINDEX8 =
 "structaui_1_1valid_1_1in__range.html":[0,2,2,8,3],
 "structaui_1_1valid_1_1validator.html":[0,0,5,10,4],
 "structaui_1_1valid_1_1validator.html":[0,2,2,8,4],
-"structaui_1_1win32_1_1Bitmap.html":[0,2,2,9,1],
 "structaui_1_1win32_1_1Bitmap.html":[0,0,5,11,1],
+"structaui_1_1win32_1_1Bitmap.html":[0,2,2,9,1],
 "structaui_1_1win32_1_1DeviceContext.html":[0,2,2,9,2],
 "structaui_1_1win32_1_1DeviceContext.html":[0,0,5,11,2],
 "structaui_1_1win32_1_1detail_1_1Win32Object.html":[0,2,2,9,0,0],
