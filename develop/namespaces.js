@@ -290,7 +290,8 @@ var namespaces =
           [ "Win32Object", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
         ] ],
         [ "Bitmap", "structaui_1_1win32_1_1Bitmap.html", null ],
-        [ "DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ]
+        [ "DeviceContext", "structaui_1_1win32_1_1DeviceContext.html", null ],
+        [ "Handle", "classaui_1_1win32_1_1Handle.html", null ]
       ] ],
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],

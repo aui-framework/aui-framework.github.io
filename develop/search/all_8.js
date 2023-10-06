@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handle_0',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
+  ['handle_0',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classaui_1_1win32_1_1Handle.html',1,'aui::win32::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
   ['handlepointermove_1',['handlePointerMove',['../classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12',1,'ATouchScroller']]],
   ['handlepointerpressed_2',['handlePointerPressed',['../classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14',1,'ATouchScroller']]],
   ['handlepointerreleased_3',['handlePointerReleased',['../classATouchScroller.html#ac3bfb94b346e8fb52db52174be112af2',1,'ATouchScroller']]],

@@ -195,6 +195,7 @@ var hierarchy =
     [ "AValueSmoother< T >", "classAValueSmoother.html", null ],
     [ "AViewProfiler", "classAViewProfiler.html", null ],
     [ "AViewsInit", "structAViewsInit.html", null ],
+    [ "AWatchdog", "classAWatchdog.html", null ],
     [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
@@ -822,6 +823,7 @@ var hierarchy =
       [ "Pipe", "classPipe.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
+      [ "aui::win32::Handle", "classaui_1_1win32_1_1Handle.html", null ],
       [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
     ] ],
     [ "NSApplication", null, [

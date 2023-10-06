@@ -237,6 +237,7 @@ var group__core =
       [ "operator*", "classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7", null ],
       [ "operator<<", "classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c", null ],
       [ "resetInterruptFlag", "classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206", null ],
+      [ "threadStacktrace", "classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d", null ],
       [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ],
       [ "mMessageQueue", "classAAbstractThread.html#a35d8618d61be04cf3afc68f0023023ee", null ],
       [ "mQueueLock", "classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20", null ]
@@ -271,6 +272,11 @@ var group__core =
     ] ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
+    [ "AWatchdog", "classAWatchdog.html", [
+      [ "AWatchdog", "classAWatchdog.html#a45366505121d3cd934428017fcd6ef45", null ],
+      [ "isHang", "classAWatchdog.html#af523718d5589ef376acb1955308c44aa", null ],
+      [ "runOperation", "classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929", null ]
+    ] ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],
     [ "aui::container::contains", "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32", null ],

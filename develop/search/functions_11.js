@@ -44,5 +44,6 @@ var searchData=
   ['roundedrect_41',['roundedRect',['../classRender.html#a78a78ba480e45524de8b58eb63e42eb5',1,'Render']]],
   ['roundedrectantialiased_42',['roundedRectAntialiased',['../classRender.html#a9feb22563dd70aa2b60cf16eea0028f0',1,'Render']]],
   ['row_43',['row',['../classATreeModelIndex.html#aa730c919f25355a4224df3a8640563b6',1,'ATreeModelIndex']]],
-  ['run_44',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]]
+  ['run_44',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]],
+  ['runoperation_45',['runOperation',['../classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929',1,'AWatchdog']]]
 ];

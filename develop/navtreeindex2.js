@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classARotationAnimator.html":[0,2,212],
 "classARotationAnimator.html#a53130bdfe82d80f33e4a8a8150795d96":[0,2,212,0],
 "classARsa.html":[2,0,3,1],
 "classARulerArea.html":[2,0,8,2,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8":[0,2,286,0],
 "classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14":[0,2,286,2],
 "classATouchScroller.html#ac3bfb94b346e8fb52db52174be112af2":[0,2,286,3],
-"classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12":[0,2,286,1],
-"classATranslationAnimator.html":[0,2,287]
+"classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12":[0,2,286,1]
 };
