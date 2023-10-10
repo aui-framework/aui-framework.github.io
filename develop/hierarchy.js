@@ -710,7 +710,8 @@ var hierarchy =
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
       [ "AAbstractTextField", "classAAbstractTextField.html", null ],
-      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ]
+      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ],
+      [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ]
     ] ],
     [ "AListModelRange< T >::Iterator", "classAListModelRange_1_1Iterator.html", null ],
     [ "AListModelSelection< T >::Iterator", "classAListModelSelection_1_1Iterator.html", null ],
