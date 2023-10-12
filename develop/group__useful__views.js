@@ -49,8 +49,7 @@ var group__useful__views =
     [ "AHDividerView", "classAHDividerView.html", null ],
     [ "ALabel", "classALabel.html", null ],
     [ "AListView", "classAListView.html", [
-      [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ],
-      [ "onScroll", "classAListView.html#ac11c4506f0554e69bcf4438f7492ec97", null ]
+      [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ]
     ] ],
     [ "ANumberPicker", "classANumberPicker.html", [
       [ "getContentMinimumHeight", "classANumberPicker.html#ae5931096355856c82ad0d6f56f0f0668", null ],
@@ -76,6 +75,7 @@ var group__useful__views =
     [ "AScrollArea", "classAScrollArea.html", [
       [ "Builder", "classAScrollArea_1_1Builder.html", null ],
       [ "getContentMinimumHeight", "classAScrollArea.html#aa686c2c309f39c9675654b76e4045397", null ],
+      [ "getContentMinimumWidth", "classAScrollArea.html#a3632b3acdb4cf42947d60652d47ac16c", null ],
       [ "onGesture", "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de", null ],
       [ "onPointerPressed", "classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75", null ],
       [ "onPointerReleased", "classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0", null ],
@@ -84,6 +84,7 @@ var group__useful__views =
       [ "setStickToEnd", "classAScrollArea.html#a2770daab18df7595e3977685d80a242f", null ],
       [ "setWheelScrollable", "classAScrollArea.html#a9999759647617833d28cf954a3ca7635", null ]
     ] ],
+    [ "AScrollAreaInner", "classAScrollAreaInner.html", null ],
     [ "AScrollbar", "classAScrollbar.html", [
       [ "onPointerPressed", "classAScrollbar.html#a0fc60c7d8b7b77626b7983a43e51507b", null ],
       [ "onScroll", "classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411", null ],

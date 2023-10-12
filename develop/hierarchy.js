@@ -427,7 +427,6 @@ var hierarchy =
             [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
             [ "AGridSplitter", "classAGridSplitter.html", null ],
             [ "AGroupBox", "classAGroupBox.html", null ],
-            [ "AListView", "classAListView.html", null ],
             [ "AListViewContainer", "classAListViewContainer.html", null ],
             [ "AMenuContainer", "classAMenuContainer.html", null ],
             [ "ANumberPicker", "classANumberPicker.html", null ],
@@ -439,9 +438,10 @@ var hierarchy =
             [ "ARadioGroup", "classARadioGroup.html", null ],
             [ "ARulerArea", "classARulerArea.html", null ],
             [ "AScrollArea", "classAScrollArea.html", [
+              [ "AListView", "classAListView.html", null ],
               [ "ViewPropertiesView", "classViewPropertiesView.html", null ]
             ] ],
-            [ "AScrollAreaContainer", "classAScrollAreaContainer.html", null ],
+            [ "AScrollAreaInner", "classAScrollAreaInner.html", null ],
             [ "AScrollbar", "classAScrollbar.html", null ],
             [ "ASlider", "classASlider.html", [
               [ "SliderMock", "classSliderMock.html", null ]

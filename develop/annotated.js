@@ -580,7 +580,7 @@ var annotated =
     [ "ARulerView", "classARulerView.html", "classARulerView" ],
     [ "AScheduler", "classAScheduler.html", "classAScheduler" ],
     [ "AScrollArea", "classAScrollArea.html", "classAScrollArea" ],
-    [ "AScrollAreaContainer", "classAScrollAreaContainer.html", null ],
+    [ "AScrollAreaInner", "classAScrollAreaInner.html", null ],
     [ "AScrollbar", "classAScrollbar.html", "classAScrollbar" ],
     [ "AScrollbarButton", "classAScrollbarButton.html", null ],
     [ "AScrollbarHandle", "classAScrollbarHandle.html", "classAScrollbarHandle" ],

@@ -67,7 +67,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classADynamicVector.html#a0343a74a0061db5bb821bc56f11c5f5e",
-"classARotationAnimator.html",
+"classARotationAnimator.html#a53130bdfe82d80f33e4a8a8150795d96",
 "classATranslationAnimator.html",
 "classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b",
 "classaui_1_1promise_1_1move__only.html",
