@@ -54,7 +54,7 @@ var namespaces =
         [ "Property< LineHeight >", "structass_1_1prop_1_1Property_3_01LineHeight_01_4.html", null ],
         [ "Property< Margin >", "structass_1_1prop_1_1Property_3_01Margin_01_4.html", null ],
         [ "Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", "structass_1_1prop_1_1Property_3_01MaxSize_01_4" ],
-        [ "Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ],
+        [ "Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", "structass_1_1prop_1_1Property_3_01MinSize_01_4" ],
         [ "Property< Opacity >", "structass_1_1prop_1_1Property_3_01Opacity_01_4.html", null ],
         [ "Property< Padding >", "structass_1_1prop_1_1Property_3_01Padding_01_4.html", null ],
         [ "Property< ScrollbarAppearance >", "structass_1_1prop_1_1Property_3_01ScrollbarAppearance_01_4.html", null ],

@@ -73,7 +73,7 @@ var NAVTREEINDEX =
 "classaui_1_1promise_1_1move__only.html",
 "structACurl_1_1ErrorDescription.html",
 "structass_1_1prop_1_1Property_3_01BackgroundEffect_01_4.html",
-"structaui_1_1lazy_3_01void_01_4.html"
+"structaui_1_1lazy.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
