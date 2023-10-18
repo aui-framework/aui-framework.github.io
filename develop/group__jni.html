@@ -227,19 +227,20 @@ API_AUI_CORE void&#160;</td><td class="memItemRight" valign="bottom"><b>aui::jni
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    ret_t name (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, args)) { \</div>
+<b>Value:</b><div class="fragment"><div class="line">    ret_t name (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)) { \</div>
 <div class="line">        static_assert(::aui::jni::convertible&lt;ret_t&gt;, <span class="stringliteral">&quot;return type is required to be convertible&quot;</span>); \</div>
 <div class="line">        auto clazz = getClass();                 \</div>
 <div class="line">        auto e = <a class="code hl_function" href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">::aui::jni::env</a>();              \</div>
-<div class="line">        const <span class="keywordtype">char</span>* signature = ::aui::jni::signature_v&lt;ret_t (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, args))&gt;; \</div>
+<div class="line">        const <span class="keywordtype">char</span>* signature = ::aui::jni::signature_v&lt;ret_t (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>))&gt;; \</div>
 <div class="line">        static <span class="keyword">auto</span> methodId = e-&gt;GetMethodID(clazz, #name, signature);    \</div>
 <div class="line">        if (methodId == 0) {                          \</div>
 <div class="line">            throw <a class="code hl_class" href="classAException.html">AException</a>(<span class="stringliteral">&quot;no such jni method: {} {}&quot;</span>_format(#name, signature)); \</div>
 <div class="line">        }                                         \</div>
-<div class="line">        return ::aui::jni::callMethod&lt;ret_t&gt;(this-&gt;asObject(), methodId <a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES_CONTENTS, <a class="code hl_class" href="class__.html">_</a>, args)); \</div>
+<div class="line">        return ::aui::jni::callMethod&lt;ret_t&gt;(this-&gt;asObject(), methodId <a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES_CONTENTS, <a class="code hl_class" href="class__.html">_</a>, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)); \</div>
 <div class="line">    }</div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:34</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:135</div></div>
+<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:34</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga67824e9205a7ba9a6eff4fed858fba9c"><div class="ttname"><a href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a></div><div class="ttdeci">#define AUI_PP_FOR_EACH(_Macro, _Data, _Tuple)</div><div class="ttdoc">Expands to _Macro(0, _Data, e1) _Macro(1, _Data, e2) ... _Macro(K -1, _Data, eK) as many of AUI_INTER...</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:198</div></div>
 </div><!-- fragment -->
 <p>Defines nonstatic method C++ -&gt; Java. </p>
@@ -296,16 +297,16 @@ API_AUI_CORE void&#160;</td><td class="memItemRight" valign="bottom"><b>aui::jni
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">static</span> ret_t name (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, args)) { \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">static</span> ret_t name (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)) { \</div>
 <div class="line">        static_assert(::aui::jni::convertible&lt;ret_t&gt;, <span class="stringliteral">&quot;return type is required to be convertible&quot;</span>); \</div>
 <div class="line">        auto clazz = getClass();                 \</div>
 <div class="line">        auto e = <a class="code hl_function" href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">::aui::jni::env</a>();              \</div>
-<div class="line">        const <span class="keywordtype">char</span>* signature = ::aui::jni::signature_v&lt;ret_t (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, args))&gt;; \</div>
+<div class="line">        const <span class="keywordtype">char</span>* signature = ::aui::jni::signature_v&lt;ret_t (<a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES, <a class="code hl_class" href="class__.html">_</a>, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>))&gt;; \</div>
 <div class="line">        static <span class="keyword">auto</span> methodId = e-&gt;GetStaticMethodID(clazz, #name, signature);    \</div>
 <div class="line">        if (methodId == 0) {                          \</div>
 <div class="line">            throw <a class="code hl_class" href="classAException.html">AException</a>(<span class="stringliteral">&quot;no such static jni method: {} {}&quot;</span>_format(#name, signature)); \</div>
 <div class="line">        }                                         \</div>
-<div class="line">        return ::aui::jni::callStaticMethod&lt;ret_t&gt;(clazz, methodId <a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES_CONTENTS, <a class="code hl_class" href="class__.html">_</a>, args)); \</div>
+<div class="line">        return ::aui::jni::callStaticMethod&lt;ret_t&gt;(clazz, methodId <a class="code hl_define" href="group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c">AUI_PP_FOR_EACH</a>(AUI_JNI_INTERNAL_OMIT_BRACES_CONTENTS, <a class="code hl_class" href="class__.html">_</a>, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)); \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
 <p>Defines static method C++ -&gt; Java. </p>

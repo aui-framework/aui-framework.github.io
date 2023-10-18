@@ -148,13 +148,23 @@ $(document).ready(function(){initNavTree('TextureImpl_8h_source.html',''); initR
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    glTexParameteri(TEXTURE_TARGET, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    glTexParameteri(TEXTURE_TARGET, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">template</span>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TEXTURE_TARGET&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_class" href="classgl_1_1Texture.html">gl::Texture&lt;TEXTURE_TARGET&gt;::bind</a>(uint8_t index) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    gl::State::activeTexture(index);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    gl::State::bindTexture(TEXTURE_TARGET, mTexture);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TEXTURE_TARGET&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">void</span> <a class="code hl_class" href="classgl_1_1Texture.html">gl::Texture&lt;TEXTURE_TARGET&gt;::setupClampToEdge</a>() {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    glTexParameteri(TEXTURE_TARGET, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    glTexParameteri(TEXTURE_TARGET, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">template</span>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TEXTURE_TARGET&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_class" href="classgl_1_1Texture.html">gl::Texture&lt;TEXTURE_TARGET&gt;::bind</a>(uint8_t index) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    gl::State::activeTexture(index);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    gl::State::bindTexture(TEXTURE_TARGET, mTexture);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">template</span>&lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TEXTURE_TARGET&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> <a class="code hl_class" href="classgl_1_1Texture.html">gl::Texture&lt;TEXTURE_TARGET&gt;::unbind</a>(uint8_t index) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    gl::State::activeTexture(index);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    gl::State::bindTexture(TEXTURE_TARGET, 0);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 <div class="ttc" id="aclassgl_1_1ResourcePool_html"><div class="ttname"><a href="classgl_1_1ResourcePool.html">gl::ResourcePool</a></div><div class="ttdef"><b>Definition:</b> ResourcePool.h:61</div></div>
 <div class="ttc" id="aclassgl_1_1Texture_html"><div class="ttname"><a href="classgl_1_1Texture.html">gl::Texture</a></div><div class="ttdef"><b>Definition:</b> Texture.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->

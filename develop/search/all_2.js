@@ -29,7 +29,7 @@ var searchData=
   ['borderradius_26',['BorderRadius',['../structass_1_1BorderRadius.html',1,'ass']]],
   ['both_27',['both',['../structuitest_1_1impl_1_1both.html',1,'uitest::impl']]],
   ['boxshadow_28',['BoxShadow',['../structass_1_1BoxShadow.html',1,'ass']]],
-  ['boxshadow_29',['boxShadow',['../classRender.html#afd5b3c5b2e7399c2294566fda3ccebf0',1,'Render']]],
+  ['boxshadow_29',['boxShadow',['../classARender.html#aba7e17cebfa609a37367d7eb0c8ffdeb',1,'ARender']]],
   ['browsefordir_30',['browseForDir',['../namespaceADesktop.html#a4894140d4d28c69a7a3a11bc04b8dcbb',1,'ADesktop']]],
   ['browseforfile_31',['browseForFile',['../namespaceADesktop.html#a6e9cf035b6b4b52290a481c2e6a15111',1,'ADesktop']]],
   ['brushhelper_32',['BrushHelper',['../structBrushHelper.html',1,'']]],

@@ -103,15 +103,17 @@ var menudata={children:[
 {text:"Getting started",url:"usergroup1.html",children:[
 {text:"Getting started with AUI",url:"md_docs_Getting_started_with_AUI.html"},
 {text:"AUI Boot",url:"md_docs_AUI_Boot.html"},
-{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"},
 {text:"Writing tests",url:"md_docs_Writing_tests.html"},
 {text:"Writing platform dependent code",url:"md_docs_Writing_platform_dependent_code.html"},
 {text:"Code style and recommendations",url:"md_docs_Code_style_and_recommendations.html"},
 {text:"Troubleshoot list",url:"md_docs_Troubleshoot_list.html"},
 {text:"Crosscompiling (Android and iOS)",url:"md_docs_Crosscompiling.html"}]},
-{text:"Reference",url:"usergroup2.html",children:[
+{text:"Tweaking",url:"usergroup2.html",children:[
+{text:"AUI configure flags",url:"md_docs_AUI_configure_flags.html"},
+{text:"AUI command line arguments",url:"md_docs_AUI_command_line_arguments.html"}]},
+{text:"Reference",url:"usergroup3.html",children:[
 {text:"All AUI Modules",url:"modules.html"},
 {text:"All AUI Classes",url:"classes.html"},
-{text:"All AUI CMake commands",url:"usergroup3.html",children:[
+{text:"All AUI CMake commands",url:"usergroup4.html",children:[
 {text:"aui_app",url:"md_docs_aui_app.html"},
 {text:"aui_executable",url:"md_docs_aui_executable.html"}]}]}]}

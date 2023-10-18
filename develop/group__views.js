@@ -26,6 +26,40 @@ var group__views =
     [ "ADBus", "classADBus.html", [
       [ "Exception", "classADBus_1_1Exception.html", null ]
     ] ],
+    [ "ARender", "classARender.html", null ],
+    [ "IRenderer", "classIRenderer.html", [
+      [ "IMultiStringCanvas", "classIRenderer_1_1IMultiStringCanvas.html", [
+        [ "addString", "classIRenderer_1_1IMultiStringCanvas.html#a17b5cd21fa9ad96ca170e70a53ae233d", null ],
+        [ "enableCachingForTextLayoutHelper", "classIRenderer_1_1IMultiStringCanvas.html#a66f353bfd4c56f9092cb13b29316bdf1", null ],
+        [ "finalize", "classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28", null ],
+        [ "getTextLayoutHelper", "classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8", null ],
+        [ "nextLine", "classIRenderer_1_1IMultiStringCanvas.html#a04559c8577d9e83e4b15ddd2e02e9b6b", null ],
+        [ "notifySymbolAdded", "classIRenderer_1_1IMultiStringCanvas.html#a366823907ae2978d777ce5d059354844", null ]
+      ] ],
+      [ "IPrerenderedString", "classIRenderer_1_1IPrerenderedString.html", null ],
+      [ "drawBoxShadow", "classIRenderer.html#a61cfc6048a0fd0ae9d08a3c5c744f49b", null ],
+      [ "drawLine", "classIRenderer.html#a57ce09335001abf3eefcfeb428b77722", null ],
+      [ "drawLines", "classIRenderer.html#afabbdfc5958b6b4ab4f5e87551c5334c", null ],
+      [ "drawLines", "classIRenderer.html#aa909eaa2752f7e8a17a15aa9f54aa040", null ],
+      [ "drawRect", "classIRenderer.html#a84662bbbafcd89e223373af448bb8945", null ],
+      [ "drawRectBorder", "classIRenderer.html#a226cb68a0a8e0f1fad3e45ca6f0c1f27", null ],
+      [ "drawRoundedRect", "classIRenderer.html#a3209f675422fe320b61c7fa910fdc7d9", null ],
+      [ "drawRoundedRectBorder", "classIRenderer.html#a44b98dda3c4ea077938dfb757dc7aaf0", null ],
+      [ "drawString", "classIRenderer.html#a65ebad57ff49a037b792d6f30bc6b949", null ],
+      [ "getNewTexture", "classIRenderer.html#a76d78feea6e83dbf5b21d186ee9ce85b", null ],
+      [ "newMultiStringCanvas", "classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031", null ],
+      [ "popMaskAfter", "classIRenderer.html#a165d31eb7104305e4bccb9135fe5c778", null ],
+      [ "popMaskBefore", "classIRenderer.html#aa2fea00ede8a2adb8f421532f61b819b", null ],
+      [ "prerenderString", "classIRenderer.html#aeede6d25a7cf4cbf26ff5ca933364ae5", null ],
+      [ "pushMaskAfter", "classIRenderer.html#ad62b96580dfca6f7bfd1085fa053afdf", null ],
+      [ "pushMaskBefore", "classIRenderer.html#af7cfbbdf47bc406b224c299f1f7ebc33", null ],
+      [ "setBlending", "classIRenderer.html#a6ea6868a57253736a7d1bc359a9bb2f0", null ],
+      [ "setColor", "classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794", null ],
+      [ "setColorForced", "classIRenderer.html#a55c5336c483e50cdd796b2072d663a57", null ],
+      [ "setTransform", "classIRenderer.html#a7a871039e6348f193ab15073fd9b58e7", null ],
+      [ "setTransformForced", "classIRenderer.html#abba373ab78eefb1063d9ddcfc37e7c95", null ],
+      [ "setWindow", "classIRenderer.html#a5d11574d20c7bf4d807123f69c57669a", null ]
+    ] ],
     [ "AAngleRadians", "classAAngleRadians.html", null ],
     [ "AMetric", "classAMetric.html", [
       [ "AMetric", "classAMetric.html#af39dfd28613c0a469de4753294d3bbf3", null ]

@@ -258,6 +258,9 @@ var namespaces =
         [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
         [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
       ] ],
+      [ "sl_gen", null, [
+        [ "Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ]
+      ] ],
       [ "traits", null, [
         [ "ternary", "structaui_1_1traits_1_1ternary.html", null ],
         [ "ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
@@ -348,6 +351,7 @@ var namespaces =
       [ "mapper", "conceptaui_1_1mapper.html", null ],
       [ "factory", "conceptaui_1_1factory.html", null ],
       [ "arithmetic", "conceptaui_1_1arithmetic.html", null ],
+      [ "args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]
     ] ],
@@ -382,13 +386,19 @@ var namespaces =
         [ "resource< ResourceKind::VERTEX_BUFFER >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html", null ],
         [ "resource_basic_buffer", "structgl_1_1impl_1_1resource__basic__buffer.html", null ]
       ] ],
+      [ "Framebuffer", "classgl_1_1Framebuffer.html", "classgl_1_1Framebuffer" ],
       [ "IndexBuffer", "classgl_1_1IndexBuffer.html", null ],
+      [ "Program", "classgl_1_1Program.html", "classgl_1_1Program" ],
+      [ "Renderbuffer", "classgl_1_1Renderbuffer.html", null ],
+      [ "RenderbufferRenderTarget", "classgl_1_1RenderbufferRenderTarget.html", null ],
+      [ "RenderTargetDepth", "structgl_1_1RenderTargetDepth.html", null ],
+      [ "RenderTargetRGBA8", "structgl_1_1RenderTargetRGBA8.html", null ],
       [ "ResourcePool", "classgl_1_1ResourcePool.html", null ],
-      [ "Shader", "classgl_1_1Shader.html", "classgl_1_1Shader" ],
       [ "State", "classgl_1_1State.html", null ],
       [ "Texture", "classgl_1_1Texture.html", null ],
       [ "Texture1D", "classgl_1_1Texture1D.html", null ],
       [ "Texture2D", "classgl_1_1Texture2D.html", null ],
+      [ "TextureRenderTarget", "classgl_1_1TextureRenderTarget.html", null ],
       [ "Vao", "classgl_1_1Vao.html", "classgl_1_1Vao" ],
       [ "VertexBuffer", "classgl_1_1VertexBuffer.html", null ]
     ] ],

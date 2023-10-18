@@ -258,12 +258,16 @@ var group__core =
     ] ],
     [ "AUrl", "classAUrl.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
+    [ "ACommandLineArgs", "classACommandLineArgs.html", [
+      [ "value", "classACommandLineArgs.html#a3393e32c6e2904ee2955135511801812", null ]
+    ] ],
     [ "AFieldObservable< T >", "classAFieldObservable.html", [
       [ "addObserver", "classAFieldObservable.html#aa798b8ba57300b89167bb564d23521d7", null ],
       [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ]
     ] ],
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
+    [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
       [ "loop", "classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568", null ],
@@ -277,6 +281,7 @@ var group__core =
       [ "isHang", "classAWatchdog.html#af523718d5589ef376acb1955308c44aa", null ],
       [ "runOperation", "classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929", null ]
     ] ],
+    [ "aui::args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],
     [ "aui::container::contains", "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32", null ],

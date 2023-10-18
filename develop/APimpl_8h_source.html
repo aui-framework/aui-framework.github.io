@@ -119,8 +119,8 @@ $(document).ready(function(){initNavTree('APimpl_8h_source.html',''); initResiza
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structaui_1_1fast__pimpl.html">   36</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1fast__pimpl.html">fast_pimpl</a> {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_struct" href="structaui_1_1fast__pimpl.html">fast_pimpl</a>(Args&amp;&amp;... args) {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">new</span> (<a class="code hl_struct" href="structaui_1_1ptr.html">ptr</a>()) T(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_struct" href="structaui_1_1fast__pimpl.html">fast_pimpl</a>(Args&amp;&amp;... <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">new</span> (<a class="code hl_struct" href="structaui_1_1ptr.html">ptr</a>()) T(std::forward&lt;Args&gt;(<a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)...);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keyword">static_assert</span>(storageSize &gt;= <span class="keyword">sizeof</span>(T), <span class="stringliteral">&quot;not enough size&quot;</span>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keyword">static_assert</span>(storageAlignment % <span class="keyword">alignof</span>(T) == 0, <span class="stringliteral">&quot;alignment does not match&quot;</span>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
@@ -198,6 +198,7 @@ $(document).ready(function(){initNavTree('APimpl_8h_source.html',''); initResiza
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        std::aligned_storage_t&lt;storageSize, storageAlignment&gt; mStorage;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    };</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:34</div></div>
 <div class="ttc" id="astructaui_1_1fast__pimpl_html"><div class="ttname"><a href="structaui_1_1fast__pimpl.html">aui::fast_pimpl</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) pimpl idiom.</div><div class="ttdef"><b>Definition:</b> APimpl.h:36</div></div>
 <div class="ttc" id="astructaui_1_1ptr_html"><div class="ttname"><a href="structaui_1_1ptr.html">aui::ptr</a></div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:76</div></div>
 </div><!-- fragment --></div><!-- contents -->

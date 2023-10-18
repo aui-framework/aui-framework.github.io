@@ -2,7 +2,7 @@ var searchData=
 [
   ['nativesignalid_0',['nativeSignalId',['../classAFatalException.html#a6c6ac322b7e0b04108365d70571563da',1,'AFatalException']]],
   ['needrethrow_1',['needRethrow',['../classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf',1,'AThread::Interrupted']]],
-  ['newmultistringcanvas_2',['newMultiStringCanvas',['../classSoftwareRenderer.html#a04464150e8a26e635963eb036080fa31',1,'SoftwareRenderer::newMultiStringCanvas()'],['../classRender.html#a40bd1229ddd5d98c4607de21f6bcfdbc',1,'Render::newMultiStringCanvas()'],['../classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031',1,'IRenderer::newMultiStringCanvas()'],['../classOpenGLRenderer.html#a9a4006a09de6c715036e66468c103e5d',1,'OpenGLRenderer::newMultiStringCanvas()']]],
+  ['newmultistringcanvas_2',['newMultiStringCanvas',['../classSoftwareRenderer.html#a04464150e8a26e635963eb036080fa31',1,'SoftwareRenderer::newMultiStringCanvas()'],['../classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031',1,'IRenderer::newMultiStringCanvas()'],['../classARender.html#af8bb8862b98e179a0f62759acadbf57b',1,'ARender::newMultiStringCanvas()'],['../classOpenGLRenderer.html#a9a4006a09de6c715036e66468c103e5d',1,'OpenGLRenderer::newMultiStringCanvas()']]],
   ['nextline_3',['nextLine',['../classIRenderer_1_1IMultiStringCanvas.html#a04559c8577d9e83e4b15ddd2e02e9b6b',1,'IRenderer::IMultiStringCanvas']]],
   ['no_5fcopy_4',['no_copy',['../classaui_1_1promise_1_1no__copy.html',1,'aui::promise']]],
   ['no_5fescape_5',['no_escape',['../structaui_1_1no__escape.html',1,'aui']]],

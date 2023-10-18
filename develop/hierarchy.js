@@ -102,6 +102,7 @@ var hierarchy =
     [ "AFraction", "classAFraction.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AI18n", "classAI18n.html", null ],
+    [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
     [ "AInet4Address", "classAInet4Address.html", null ],
     [ "AJsonConv< T, Specialization >", "structAJsonConv.html", null ],
     [ "AJsonConv< AJson::Array >", "structAJsonConv_3_01AJson_1_1Array_01_4.html", null ],
@@ -148,6 +149,7 @@ var hierarchy =
     [ "AProgramModule", "classAProgramModule.html", null ],
     [ "ARaiiHelper< Callback >", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
+    [ "ARender", "classARender.html", null ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", null ],
     [ "AScrollEvent", "structAScrollEvent.html", null ],
     [ "ASerializable< T, T2 >", "structASerializable.html", null ],
@@ -266,6 +268,7 @@ var hierarchy =
     [ "aui::jni::detail::CastHelper", "structaui_1_1jni_1_1detail_1_1CastHelper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
+    [ "ALinearGradientBrush::ColorEntry", "structALinearGradientBrush_1_1ColorEntry.html", null ],
     [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
       [ "ass::on_state::Activated", "structass_1_1on__state_1_1Activated.html", null ],
       [ "ass::on_state::Disabled", "structass_1_1on__state_1_1Disabled.html", null ],
@@ -322,7 +325,6 @@ var hierarchy =
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
-    [ "CustomShaderHelper", "structCustomShaderHelper.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
@@ -562,13 +564,9 @@ var hierarchy =
     [ "aui::impl::future::FutureReturnType< T >", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
     [ "aui::impl::future::FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
     [ "GLContext", "classGLContext.html", null ],
-    [ "GLKViewController", null, [
-      [ "AUIViewController", "interfaceAUIViewController.html", null ]
-    ] ],
     [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", [
       [ "aui::jni::ArrayView< T >", "classaui_1_1jni_1_1ArrayView.html", null ]
     ] ],
-    [ "GradientShaderHelper", "structGradientShaderHelper.html", null ],
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
     [ "std::hash< AString >", "structstd_1_1hash_3_01AString_01_4.html", null ],
@@ -692,6 +690,10 @@ var hierarchy =
           [ "UITestRenderingContext", "classUITestRenderingContext.html", null ]
         ] ]
       ] ]
+    ] ],
+    [ "gl::Framebuffer::IRenderTarget", "classgl_1_1Framebuffer_1_1IRenderTarget.html", [
+      [ "gl::RenderbufferRenderTarget< internalFormat, multisampling >", "classgl_1_1RenderbufferRenderTarget.html", null ],
+      [ "gl::TextureRenderTarget< internalFormat, type, format >", "classgl_1_1TextureRenderTarget.html", null ]
     ] ],
     [ "ass::ISelectable", "classass_1_1ISelectable.html", [
       [ "ACheckBox", "classACheckBox.html", null ],
@@ -823,15 +825,18 @@ var hierarchy =
       [ "IcmpImpl", "classIcmpImpl.html", null ],
       [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
       [ "Pipe", "classPipe.html", null ],
+      [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
       [ "aui::win32::Handle", "classaui_1_1win32_1_1Handle.html", null ],
-      [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
+      [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ],
+      [ "gl::Framebuffer", "classgl_1_1Framebuffer.html", null ]
     ] ],
     [ "NSApplication", null, [
       [ "AUINSApplication", "interfaceAUINSApplication.html", null ]
     ] ],
     [ "NSObject", null, [
+      [ "AppDelegate", "interfaceAppDelegate.html", null ],
       [ "WindowDelegate", "interfaceWindowDelegate.html", null ]
     ] ],
     [ "<NSTextInputClient>", null, [
@@ -857,6 +862,7 @@ var hierarchy =
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+    [ "gl::Program", "classgl_1_1Program.html", null ],
     [ "ass::prop::Property< PropertyStruct >", "structass_1_1prop_1_1Property.html", null ],
     [ "ass::PropertyList", "structass_1_1PropertyList.html", [
       [ "ass::PropertyListRecursive", "structass_1_1PropertyListRecursive.html", null ],
@@ -885,7 +891,9 @@ var hierarchy =
       [ "ASerializable< AUuid >", "structASerializable_3_01AUuid_01_4.html", null ]
     ] ],
     [ "Util::Rect", "classUtil_1_1Rect.html", null ],
-    [ "Render", "classRender.html", null ],
+    [ "gl::Renderbuffer< multisampling >", "classgl_1_1Renderbuffer.html", null ],
+    [ "gl::RenderTargetDepth", "structgl_1_1RenderTargetDepth.html", null ],
+    [ "gl::RenderTargetRGBA8", "structgl_1_1RenderTargetRGBA8.html", null ],
     [ "gl::impl::resource< T >", "structgl_1_1impl_1_1resource.html", null ],
     [ "gl::impl::resource< ResourceKind::TEXTURE >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html", null ],
     [ "gl::impl::resource_basic_buffer", "structgl_1_1impl_1_1resource__basic__buffer.html", [
@@ -912,7 +920,6 @@ var hierarchy =
     [ "std::set", null, [
       [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", null ]
     ] ],
-    [ "gl::Shader", "classgl_1_1Shader.html", null ],
     [ "std::shared_ptr", null, [
       [ "_< IRenderer::IPrerenderedString >", "class__.html", null ],
       [ "_< ITexture >", "class__.html", null ],
@@ -927,7 +934,6 @@ var hierarchy =
     [ "aui::jni::signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
     [ "ARenderingContextOptions::Software", "structARenderingContextOptions_1_1Software.html", null ],
-    [ "SolidShaderHelper", "structSolidShaderHelper.html", null ],
     [ "SomeBuilderClass", "classSomeBuilderClass.html", null ],
     [ "SqlColumn", "structSqlColumn.html", null ],
     [ "AAssHelper::State", "structAAssHelper_1_1State.html", null ],
@@ -979,13 +985,13 @@ var hierarchy =
     [ "ass::TextColor", "structass_1_1TextColor.html", null ],
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
     [ "gl::Texture< TEXTURE_TARGET >", "classgl_1_1Texture.html", null ],
+    [ "aui::sl_gen::Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ],
     [ "gl::Texture< TEXTURE_1D >", "classgl_1_1Texture.html", [
       [ "gl::Texture1D", "classgl_1_1Texture1D.html", null ]
     ] ],
     [ "gl::Texture< TEXTURE_2D >", "classgl_1_1Texture.html", [
       [ "gl::Texture2D", "classgl_1_1Texture2D.html", null ]
     ] ],
-    [ "TexturedShaderHelper", "structTexturedShaderHelper.html", null ],
     [ "Util::TexturePacker_Lol", "classUtil_1_1TexturePacker__Lol.html", [
       [ "Util::TexturePacker< AImage >", "classUtil_1_1TexturePacker.html", [
         [ "Util::SimpleTexturePacker", "classUtil_1_1SimpleTexturePacker.html", null ]
@@ -1022,18 +1028,22 @@ var hierarchy =
     ] ],
     [ "UIMatcher", "classUIMatcher.html", null ],
     [ "UIResponder", null, [
-      [ "AppDelegate", "interfaceAppDelegate.html", null ],
       [ "SceneDelegate", "interfaceSceneDelegate.html", null ]
+    ] ],
+    [ "UIView", null, [
+      [ "AUIView", "interfaceAUIView.html", null ]
+    ] ],
+    [ "UIViewController", null, [
+      [ "AUIViewController", "interfaceAUIViewController.html", null ]
     ] ],
     [ "<UIWindowSceneDelegate>", null, [
       [ "SceneDelegate", "interfaceSceneDelegate.html", null ]
     ] ],
-    [ "gl::Shader::Uniform", "classgl_1_1Shader_1_1Uniform.html", null ],
+    [ "gl::Program::Uniform", "classgl_1_1Program_1_1Uniform.html", null ],
     [ "UnixIoAsync", "classUnixIoAsync.html", null ],
     [ "UnixIoThread", "classUnixIoThread.html", null ],
     [ "aui::dbus::Unknown", "structaui_1_1dbus_1_1Unknown.html", null ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
-    [ "UnsupportedBrushHelper< Brush >", "structUnsupportedBrushHelper.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
       [ "aui::valid::chars::latin", "structaui_1_1valid_1_1chars_1_1latin.html", null ],
       [ "aui::valid::chars::numeric", "structaui_1_1valid_1_1chars_1_1numeric.html", null ],
@@ -1063,7 +1073,9 @@ var hierarchy =
         [ "AFutureSet< T >", "classAFutureSet.html", null ]
       ] ],
       [ "AVector< AString >", "classAVector.html", [
-        [ "AStringVector", "classAStringVector.html", null ]
+        [ "AStringVector", "classAStringVector.html", [
+          [ "ACommandLineArgs", "classACommandLineArgs.html", null ]
+        ] ]
       ] ],
       [ "AVector< Line >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]

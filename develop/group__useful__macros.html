@@ -299,13 +299,14 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<a class="code hl_class" href="classAStringVector.html">AStringVector</a> args); \</div>
-<div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, <span class="keywordtype">int</span>(*aui_entry)(<a class="code hl_class" href="classAStringVector.html">AStringVector</a>)); \</div>
+<b>Value:</b><div class="fragment"><div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<span class="keyword">const</span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a>&amp; <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>); \</div>
+<div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, <span class="keywordtype">int</span>(*aui_entry)(<span class="keyword">const</span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a>&amp;)); \</div>
 <div class="line">    int main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {                               \</div>
 <div class="line">        return aui_main(argc, argv, aui_entry);\</div>
 <div class="line">    } \</div>
-<div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<a class="code hl_class" href="classAStringVector.html">AStringVector</a> args)</div>
+<div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<span class="keyword">const</span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a>&amp; <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)</div>
 <div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition:</b> AStringVector.h:27</div></div>
+<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:34</div></div>
 </div><!-- fragment -->
 <p>Application entry point. </p>
 <p >Native entry point varies platform to platform (i.e. Windows requires <code>int main</code> entry point for console applications and <code>WinMain</code> for graphical applications; entry point of an Android application is located in Java code). AUI_ENTRY unifies your entry point, efficiently supporting every platform.</p>
