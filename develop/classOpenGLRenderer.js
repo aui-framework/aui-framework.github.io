@@ -2,6 +2,7 @@ var classOpenGLRenderer =
 [
     [ "FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
     [ "drawBoxShadow", "classOpenGLRenderer.html#aff53f7415791df6df6363d42412b3f7e", null ],
+    [ "drawBoxShadowInner", "classOpenGLRenderer.html#ad5ce56ae3785dff473f8fd459ade9d16", null ],
     [ "drawLine", "classOpenGLRenderer.html#a1b0a3f54935ad9fc571c190fb26edbf3", null ],
     [ "drawLines", "classOpenGLRenderer.html#ac6868691d05903709cdaaf307ba888ce", null ],
     [ "drawLines", "classOpenGLRenderer.html#ad91af1e43bd1f02095e5c9222fb935b7", null ],

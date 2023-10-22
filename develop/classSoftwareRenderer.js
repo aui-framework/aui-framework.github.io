@@ -1,6 +1,7 @@
 var classSoftwareRenderer =
 [
     [ "drawBoxShadow", "classSoftwareRenderer.html#a2ebd59fa86f2802a365d60bdab2be794", null ],
+    [ "drawBoxShadowInner", "classSoftwareRenderer.html#a5b1841868413dc51b0b3adf81a2de57f", null ],
     [ "drawLine", "classSoftwareRenderer.html#ab583989dd82e1937a7238c7953ad3168", null ],
     [ "drawLines", "classSoftwareRenderer.html#a83dc3ccec6f1f99d0ff2c0847ccbbc7f", null ],
     [ "drawLines", "classSoftwareRenderer.html#ab8cb707877d650d213b5e4ab2947922a", null ],

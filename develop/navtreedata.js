@@ -73,10 +73,10 @@ var NAVTREEINDEX =
 "classARadioGroup.html",
 "classATokenizer.html#af0d897961e2dcc5b50de93b095508492",
 "classIListModel.html",
-"classaui_1_1impl_1_1future_1_1Future.html#a8ac6612f3bcb5fe8ab09c4df07e3ce42",
-"md_docs_Crosscompiling.html",
-"structass_1_1on__state_1_1Focused.html",
-"structaui_1_1jni_1_1TypedMethods_3_01jint_01_4.html"
+"classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339",
+"md_docs_AUI_command_line_arguments.html",
+"structass_1_1on__state_1_1Activated.html",
+"structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

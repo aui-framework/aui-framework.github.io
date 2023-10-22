@@ -3,6 +3,7 @@ var classIRenderer =
     [ "IMultiStringCanvas", "classIRenderer_1_1IMultiStringCanvas.html", "classIRenderer_1_1IMultiStringCanvas" ],
     [ "IPrerenderedString", "classIRenderer_1_1IPrerenderedString.html", null ],
     [ "drawBoxShadow", "classIRenderer.html#a61cfc6048a0fd0ae9d08a3c5c744f49b", null ],
+    [ "drawBoxShadowInner", "classIRenderer.html#a8998adedf7f279cf3599986309f40017", null ],
     [ "drawLine", "classIRenderer.html#a57ce09335001abf3eefcfeb428b77722", null ],
     [ "drawLines", "classIRenderer.html#afabbdfc5958b6b4ab4f5e87551c5334c", null ],
     [ "drawLines", "classIRenderer.html#aa909eaa2752f7e8a17a15aa9f54aa040", null ],

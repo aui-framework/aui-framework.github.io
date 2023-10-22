@@ -119,6 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ebd59fa86f2802a365d60bdab2be794"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoftwareRenderer.html#a2ebd59fa86f2802a365d60bdab2be794">drawBoxShadow</a> (glm::vec2 position, glm::vec2 size, float blurRadius, const <a class="el" href="classAColor.html">AColor</a> &amp;color) override</td></tr>
 <tr class="memdesc:a2ebd59fa86f2802a365d60bdab2be794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rectangle-shaped shadow.  <a href="classSoftwareRenderer.html#a2ebd59fa86f2802a365d60bdab2be794">More...</a><br /></td></tr>
 <tr class="separator:a2ebd59fa86f2802a365d60bdab2be794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b1841868413dc51b0b3adf81a2de57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoftwareRenderer.html#a5b1841868413dc51b0b3adf81a2de57f">drawBoxShadowInner</a> (glm::vec2 position, glm::vec2 size, float blurRadius, float spreadRadius, float borderRadius, const <a class="el" href="classAColor.html">AColor</a> &amp;color, glm::vec2 offset) override</td></tr>
+<tr class="memdesc:a5b1841868413dc51b0b3adf81a2de57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws inner (inset) rectangle-shaped shadow.  <a href="classSoftwareRenderer.html#a5b1841868413dc51b0b3adf81a2de57f">More...</a><br /></td></tr>
+<tr class="separator:a5b1841868413dc51b0b3adf81a2de57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa272aef1b3026f2b20579d954ed6557c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSoftwareRenderer.html#aa272aef1b3026f2b20579d954ed6557c">drawString</a> (glm::vec2 position, const <a class="el" href="classAString.html">AString</a> &amp;string, const <a class="el" href="structAFontStyle.html">AFontStyle</a> &amp;fs) override</td></tr>
 <tr class="memdesc:aa272aef1b3026f2b20579d954ed6557c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws string.  <a href="classSoftwareRenderer.html#aa272aef1b3026f2b20579d954ed6557c">More...</a><br /></td></tr>
 <tr class="separator:aa272aef1b3026f2b20579d954ed6557c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,6 +299,88 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mStencilDepth</b> 
 </dl>
 
 <p>Implements <a class="el" href="classIRenderer.html#a61cfc6048a0fd0ae9d08a3c5c744f49b">IRenderer</a>.</p>
+
+</div>
+</div>
+<a id="a5b1841868413dc51b0b3adf81a2de57f" name="a5b1841868413dc51b0b3adf81a2de57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1841868413dc51b0b3adf81a2de57f">&#9670;&nbsp;</a></span>drawBoxShadowInner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SoftwareRenderer::drawBoxShadowInner </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>blurRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>spreadRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>borderRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAColor.html">AColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws inner (inset) rectangle-shaped shadow. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>position </td></tr>
+    <tr><td class="paramname">size</td><td>rectangle size </td></tr>
+    <tr><td class="paramname">blurRadius</td><td>blur radius </td></tr>
+    <tr><td class="paramname">spreadRadius</td><td>spread (offset) radius </td></tr>
+    <tr><td class="paramname">borderRadius</td><td>border radius of the rectangle. </td></tr>
+    <tr><td class="paramname">color</td><td>shadow color </td></tr>
+    <tr><td class="paramname">offset</td><td>shadow offset. Unlike outer shadow (<a class="el" href="classARender.html#aba7e17cebfa609a37367d7eb0c8ffdeb" title="Draws a rectangle-shaped shadow.">ARender::boxShadow</a>), the offset is passed to the shader instead of a simple rectangle position offset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classIRenderer.html#a8998adedf7f279cf3599986309f40017">IRenderer</a>.</p>
 
 </div>
 </div>

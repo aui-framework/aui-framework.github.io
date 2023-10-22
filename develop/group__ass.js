@@ -17,6 +17,7 @@ var group__ass =
     [ "ass::BorderLeft", "structass_1_1BorderLeft.html", null ],
     [ "ass::BorderRadius", "structass_1_1BorderRadius.html", null ],
     [ "ass::BoxShadow", "structass_1_1BoxShadow.html", null ],
+    [ "ass::BoxShadowInner", "structass_1_1BoxShadowInner.html", null ],
     [ "ass::Expanding", "structass_1_1Expanding.html", null ],
     [ "ass::FixedSize", "structass_1_1FixedSize.html", null ],
     [ "ass::Font", "structass_1_1Font.html", null ],
