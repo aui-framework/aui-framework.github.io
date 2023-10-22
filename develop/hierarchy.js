@@ -389,6 +389,7 @@ var hierarchy =
           ] ],
           [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
           [ "ACheckBox", "classACheckBox.html", null ],
+          [ "ACircleProgressBar::Inner", "classACircleProgressBar_1_1Inner.html", null ],
           [ "ADividerView", "classADividerView.html", [
             [ "AHDividerView", "classAHDividerView.html", null ],
             [ "AVDividerView", "classAVDividerView.html", null ]
@@ -421,6 +422,7 @@ var hierarchy =
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
             [ "AButtonEx", "classAButtonEx.html", null ],
             [ "ACheckBoxWrapper", "classACheckBoxWrapper.html", null ],
+            [ "ACircleProgressBar", "classACircleProgressBar.html", null ],
             [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", null ],
             [ "ADragArea", "classADragArea.html", null ],
             [ "ADragArea::ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ],

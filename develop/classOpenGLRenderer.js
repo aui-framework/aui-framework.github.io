@@ -9,6 +9,7 @@ var classOpenGLRenderer =
     [ "drawRectBorder", "classOpenGLRenderer.html#a08f7ee3d7ca9278c1fab47dcc08ceafd", null ],
     [ "drawRoundedRect", "classOpenGLRenderer.html#acae0b3240ff270389357f34de2df7797", null ],
     [ "drawRoundedRectBorder", "classOpenGLRenderer.html#afc6078d09fb52819102e2807dd4b6b64", null ],
+    [ "drawSquareSector", "classOpenGLRenderer.html#abeda25edf56609fb4a9f4494b2e5ab92", null ],
     [ "drawString", "classOpenGLRenderer.html#ad44893a1e04c5d5ec07eae5d76994609", null ],
     [ "newMultiStringCanvas", "classOpenGLRenderer.html#a9a4006a09de6c715036e66468c103e5d", null ],
     [ "popMaskAfter", "classOpenGLRenderer.html#a504179fb0d78b3ea69eda47129e3e886", null ],

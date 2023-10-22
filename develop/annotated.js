@@ -415,6 +415,7 @@ var annotated =
     [ "ACheckBox", "classACheckBox.html", "classACheckBox" ],
     [ "ACheckBoxWrapper", "classACheckBoxWrapper.html", null ],
     [ "AChildProcess", "classAChildProcess.html", "classAChildProcess" ],
+    [ "ACircleProgressBar", "classACircleProgressBar.html", "classACircleProgressBar" ],
     [ "AClass", "classAClass.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],

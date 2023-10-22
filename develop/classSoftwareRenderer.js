@@ -8,6 +8,7 @@ var classSoftwareRenderer =
     [ "drawRectBorder", "classSoftwareRenderer.html#a4745d720936b50bd9fd51f5227a7354b", null ],
     [ "drawRoundedRect", "classSoftwareRenderer.html#a16d6e52e7579b497ab7bf511193d4e76", null ],
     [ "drawRoundedRectBorder", "classSoftwareRenderer.html#abb64d6ce78bb055b2c1e3b0ad008fb2f", null ],
+    [ "drawSquareSector", "classSoftwareRenderer.html#a9faf3e04c1008c9534e7935b26ba4e21", null ],
     [ "drawString", "classSoftwareRenderer.html#aa272aef1b3026f2b20579d954ed6557c", null ],
     [ "newMultiStringCanvas", "classSoftwareRenderer.html#a04464150e8a26e635963eb036080fa31", null ],
     [ "popMaskAfter", "classSoftwareRenderer.html#aa9edd5b2b7e6587745dd317b264958be", null ],

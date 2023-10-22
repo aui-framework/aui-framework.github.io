@@ -150,6 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa909eaa2752f7e8a17a15aa9f54aa040"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRenderer.html#aa909eaa2752f7e8a17a15aa9f54aa040">drawLines</a> (const ABrush &amp;brush, <a class="el" href="classAArrayView.html">AArrayView</a>&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points)=0</td></tr>
 <tr class="memdesc:aa909eaa2752f7e8a17a15aa9f54aa040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple individual lines in a batch.  <a href="classIRenderer.html#aa909eaa2752f7e8a17a15aa9f54aa040">More...</a><br /></td></tr>
 <tr class="separator:aa909eaa2752f7e8a17a15aa9f54aa040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31d04c585334b05f1c9618b52ffe7af9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRenderer.html#a31d04c585334b05f1c9618b52ffe7af9">drawSquareSector</a> (const ABrush &amp;brush, const glm::vec2 &amp;position, const glm::vec2 &amp;size, <a class="el" href="classAAngleRadians.html">AAngleRadians</a> begin, <a class="el" href="classAAngleRadians.html">AAngleRadians</a> end)=0</td></tr>
+<tr class="memdesc:a31d04c585334b05f1c9618b52ffe7af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws sector in rectangle shape. The sector is drawn clockwise from begin to end angles.  <a href="classIRenderer.html#a31d04c585334b05f1c9618b52ffe7af9">More...</a><br /></td></tr>
+<tr class="separator:a31d04c585334b05f1c9618b52ffe7af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c5336c483e50cdd796b2072d663a57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRenderer.html#a55c5336c483e50cdd796b2072d663a57">setColorForced</a> (const <a class="el" href="classAColor.html">AColor</a> &amp;color)</td></tr>
 <tr class="memdesc:a55c5336c483e50cdd796b2072d663a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color which is multiplied with any brush.  <a href="classIRenderer.html#a55c5336c483e50cdd796b2072d663a57">More...</a><br /></td></tr>
 <tr class="separator:a55c5336c483e50cdd796b2072d663a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -674,6 +677,73 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mStencilDepth</b> 
 </dl>
 
 <p>Implemented in <a class="el" href="classOpenGLRenderer.html#afc6078d09fb52819102e2807dd4b6b64">OpenGLRenderer</a>, and <a class="el" href="classSoftwareRenderer.html#abb64d6ce78bb055b2c1e3b0ad008fb2f">SoftwareRenderer</a>.</p>
+
+</div>
+</div>
+<a id="a31d04c585334b05f1c9618b52ffe7af9" name="a31d04c585334b05f1c9618b52ffe7af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31d04c585334b05f1c9618b52ffe7af9">&#9670;&nbsp;</a></span>drawSquareSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IRenderer::drawSquareSector </td>
+          <td>(</td>
+          <td class="paramtype">const ABrush &amp;&#160;</td>
+          <td class="paramname"><em>brush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAAngleRadians.html">AAngleRadians</a>&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAAngleRadians.html">AAngleRadians</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws sector in rectangle shape. The sector is drawn clockwise from begin to end angles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brush</td><td>brush to use </td></tr>
+    <tr><td class="paramname">position</td><td>rectangle position (px) </td></tr>
+    <tr><td class="paramname">size</td><td>rectangle size (px)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The method can be used as mask to <a class="el" href="classARender.html#afae06e671e5b083b4c9dd8c3444282ad" title="Draws rounded rect (with antialiasing, if msaa enabled).">ARender::roundedRect</a>, creating arc shape. </p>
+
+<p>Implemented in <a class="el" href="classOpenGLRenderer.html#abeda25edf56609fb4a9f4494b2e5ab92">OpenGLRenderer</a>, and <a class="el" href="classSoftwareRenderer.html#a9faf3e04c1008c9534e7935b26ba4e21">SoftwareRenderer</a>.</p>
 
 </div>
 </div>

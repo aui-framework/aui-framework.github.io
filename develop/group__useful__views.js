@@ -17,6 +17,11 @@ var group__useful__views =
     [ "ACheckBox", "classACheckBox.html", [
       [ "consumesClick", "classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac", null ]
     ] ],
+    [ "ACircleProgressBar", "classACircleProgressBar.html", [
+      [ "Inner", "classACircleProgressBar_1_1Inner.html", null ],
+      [ "render", "classACircleProgressBar.html#a3235447f0be1c9ac1d9da232afc8e0f4", null ],
+      [ "setValue", "classACircleProgressBar.html#af9ea10f9e48bf1f74573fca9dc2245c6", null ]
+    ] ],
     [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", [
       [ "getContentMinimumHeight", "classADoubleNumberPicker.html#a757efcfc6443b0daf81b7117446462c3", null ],
       [ "valueChanged", "classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221", null ],

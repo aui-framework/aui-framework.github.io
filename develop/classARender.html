@@ -158,6 +158,9 @@ static <a class="el" href="class__.html">Texture</a>&#160;</td><td class="memIte
 <tr class="memitem:af5ada350df5f010575c60ddf38dbab1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIRenderer_1_1IPrerenderedString.html">IRenderer::IPrerenderedString</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classARender.html#af5ada350df5f010575c60ddf38dbab1b">prerenderString</a> (const glm::vec2 &amp;position, const <a class="el" href="classAString.html">AString</a> &amp;<a class="el" href="structViewAssertionText.html">text</a>, <a class="el" href="structAFontStyle.html">AFontStyle</a> &amp;fs)</td></tr>
 <tr class="memdesc:af5ada350df5f010575c60ddf38dbab1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyzes string and creates an instance of <code><a class="el" href="classIRenderer_1_1IPrerenderedString.html">IRenderer::IPrerenderedString</a></code> which helps <code><a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a></code> to efficiently render the string.  <a href="classARender.html#af5ada350df5f010575c60ddf38dbab1b">More...</a><br /></td></tr>
 <tr class="separator:af5ada350df5f010575c60ddf38dbab1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5959b06184de1db3ca7972f7bdae53"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classARender.html#a5f5959b06184de1db3ca7972f7bdae53">squareSector</a> (const ABrush &amp;brush, const glm::vec2 &amp;position, const glm::vec2 &amp;size, <a class="el" href="classAAngleRadians.html">AAngleRadians</a> begin, <a class="el" href="classAAngleRadians.html">AAngleRadians</a> end)</td></tr>
+<tr class="memdesc:a5f5959b06184de1db3ca7972f7bdae53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws sector in rectangle shape. The sector is drawn clockwise from begin to end angles.  <a href="classARender.html#a5f5959b06184de1db3ca7972f7bdae53">More...</a><br /></td></tr>
+<tr class="separator:a5f5959b06184de1db3ca7972f7bdae53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c5b77ccf8db2fd6b44907ff337c068"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classARender.html#a37c5b77ccf8db2fd6b44907ff337c068">setColorForced</a> (const <a class="el" href="classAColor.html">AColor</a> &amp;color)</td></tr>
 <tr class="memdesc:a37c5b77ccf8db2fd6b44907ff337c068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color which is multiplied with any brush.  <a href="classARender.html#a37c5b77ccf8db2fd6b44907ff337c068">More...</a><br /></td></tr>
 <tr class="separator:a37c5b77ccf8db2fd6b44907ff337c068"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -996,6 +999,71 @@ static const glm::mat4 &amp;&#160;</td><td class="memItemRight" valign="bottom">
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5f5959b06184de1db3ca7972f7bdae53" name="a5f5959b06184de1db3ca7972f7bdae53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5959b06184de1db3ca7972f7bdae53">&#9670;&nbsp;</a></span>squareSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ARender::squareSector </td>
+          <td>(</td>
+          <td class="paramtype">const ABrush &amp;&#160;</td>
+          <td class="paramname"><em>brush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAAngleRadians.html">AAngleRadians</a>&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAAngleRadians.html">AAngleRadians</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws sector in rectangle shape. The sector is drawn clockwise from begin to end angles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brush</td><td>brush to use </td></tr>
+    <tr><td class="paramname">position</td><td>rectangle position (px) </td></tr>
+    <tr><td class="paramname">size</td><td>rectangle size (px)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The method can be used as mask to <a class="el" href="classARender.html#afae06e671e5b083b4c9dd8c3444282ad" title="Draws rounded rect (with antialiasing, if msaa enabled).">ARender::roundedRect</a>, creating arc shape. </p>
 
 </div>
 </div>

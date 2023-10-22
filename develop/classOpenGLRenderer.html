@@ -150,6 +150,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawRectImpl</b> (glm
 <tr class="memitem:ad91af1e43bd1f02095e5c9222fb935b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpenGLRenderer.html#ad91af1e43bd1f02095e5c9222fb935b7">drawLines</a> (const ABrush &amp;brush, <a class="el" href="classAArrayView.html">AArrayView</a>&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points) override</td></tr>
 <tr class="memdesc:ad91af1e43bd1f02095e5c9222fb935b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws multiple individual lines in a batch.  <a href="classOpenGLRenderer.html#ad91af1e43bd1f02095e5c9222fb935b7">More...</a><br /></td></tr>
 <tr class="separator:ad91af1e43bd1f02095e5c9222fb935b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeda25edf56609fb4a9f4494b2e5ab92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpenGLRenderer.html#abeda25edf56609fb4a9f4494b2e5ab92">drawSquareSector</a> (const ABrush &amp;brush, const glm::vec2 &amp;position, const glm::vec2 &amp;size, <a class="el" href="classAAngleRadians.html">AAngleRadians</a> begin, <a class="el" href="classAAngleRadians.html">AAngleRadians</a> end) override</td></tr>
+<tr class="memdesc:abeda25edf56609fb4a9f4494b2e5ab92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws sector in rectangle shape. The sector is drawn clockwise from begin to end angles.  <a href="classOpenGLRenderer.html#abeda25edf56609fb4a9f4494b2e5ab92">More...</a><br /></td></tr>
+<tr class="separator:abeda25edf56609fb4a9f4494b2e5ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e0d52dae4a4cd965915a7db177ef9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOpenGLRenderer.html#a57e0d52dae4a4cd965915a7db177ef9d">pushMaskBefore</a> () override</td></tr>
 <tr class="memdesc:a57e0d52dae4a4cd965915a7db177ef9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">witches drawing to the stencil buffer instead of color buffer.  <a href="classOpenGLRenderer.html#a57e0d52dae4a4cd965915a7db177ef9d">More...</a><br /></td></tr>
 <tr class="separator:a57e0d52dae4a4cd965915a7db177ef9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -715,6 +718,73 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mStencilDepth</b> 
 </dl>
 
 <p>Implements <a class="el" href="classIRenderer.html#a44b98dda3c4ea077938dfb757dc7aaf0">IRenderer</a>.</p>
+
+</div>
+</div>
+<a id="abeda25edf56609fb4a9f4494b2e5ab92" name="abeda25edf56609fb4a9f4494b2e5ab92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeda25edf56609fb4a9f4494b2e5ab92">&#9670;&nbsp;</a></span>drawSquareSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenGLRenderer::drawSquareSector </td>
+          <td>(</td>
+          <td class="paramtype">const ABrush &amp;&#160;</td>
+          <td class="paramname"><em>brush</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::vec2 &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAAngleRadians.html">AAngleRadians</a>&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classAAngleRadians.html">AAngleRadians</a>&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws sector in rectangle shape. The sector is drawn clockwise from begin to end angles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brush</td><td>brush to use </td></tr>
+    <tr><td class="paramname">position</td><td>rectangle position (px) </td></tr>
+    <tr><td class="paramname">size</td><td>rectangle size (px)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The method can be used as mask to <a class="el" href="classARender.html#afae06e671e5b083b4c9dd8c3444282ad" title="Draws rounded rect (with antialiasing, if msaa enabled).">ARender::roundedRect</a>, creating arc shape. </p>
+
+<p>Implements <a class="el" href="classIRenderer.html#a31d04c585334b05f1c9618b52ffe7af9">IRenderer</a>.</p>
 
 </div>
 </div>

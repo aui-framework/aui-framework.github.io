@@ -45,6 +45,7 @@ var group__views =
       [ "drawRectBorder", "classIRenderer.html#a226cb68a0a8e0f1fad3e45ca6f0c1f27", null ],
       [ "drawRoundedRect", "classIRenderer.html#a3209f675422fe320b61c7fa910fdc7d9", null ],
       [ "drawRoundedRectBorder", "classIRenderer.html#a44b98dda3c4ea077938dfb757dc7aaf0", null ],
+      [ "drawSquareSector", "classIRenderer.html#a31d04c585334b05f1c9618b52ffe7af9", null ],
       [ "drawString", "classIRenderer.html#a65ebad57ff49a037b792d6f30bc6b949", null ],
       [ "getNewTexture", "classIRenderer.html#a76d78feea6e83dbf5b21d186ee9ce85b", null ],
       [ "newMultiStringCanvas", "classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031", null ],
