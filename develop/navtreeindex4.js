@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2":[3,0,1,2,13,1],
 "classIListModel.html":[0,2,347],
 "classIListModel.html#a2347b3d81f0235b5a0465327c357aec9":[0,2,347,1],
 "classIListModel.html#ae0e2f40373890474386d2ec87a98a72c":[0,2,347,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0":[0,2,2,3,0,1,5],
 "classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa":[0,2,2,3,0,1,7],
 "classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa":[0,0,5,4,0,1,7],
-"classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db":[0,0,5,4,0,1,3],
-"classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db":[0,2,2,3,0,1,3]
+"classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db":[0,0,5,4,0,1,3]
 };

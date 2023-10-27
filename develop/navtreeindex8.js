@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html":[0,2,2,4,26],
 "structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html":[0,0,5,5,26],
 "structaui_1_1jni_1_1TypedMethods_3_01jdouble_01_4.html":[0,2,2,4,27],
 "structaui_1_1jni_1_1TypedMethods_3_01jdouble_01_4.html":[0,0,5,5,27],

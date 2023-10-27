@@ -6,6 +6,7 @@ var classABaseWindow =
     [ "createOverlappingSurfaceImpl", "classABaseWindow.html#ad4d622457e75f3b5dd537430563c6369", null ],
     [ "forceUpdateCursor", "classABaseWindow.html#a90cf97a971f09f7ad9e0531bb688b7fb", null ],
     [ "frameMillis", "classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0", null ],
+    [ "getFps", "classABaseWindow.html#a97c201d702b93ac223e1f383b5bedca0", null ],
     [ "hideTouchscreenKeyboard", "classABaseWindow.html#ae61368594001372e16f43b99e783d712", null ],
     [ "isPreventingClickOnPointerRelease", "classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f", null ],
     [ "iterateOverFocusChain", "classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897", null ],

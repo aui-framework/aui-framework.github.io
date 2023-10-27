@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structass_1_1hovered.html":[0,0,4,27],
 "structass_1_1on__state_1_1Activated.html":[0,0,4,2,1],
 "structass_1_1on__state_1_1Activated.html":[0,2,1,2,1],
 "structass_1_1on__state_1_1Disabled.html":[0,0,4,2,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "structaui_1_1jni_1_1TypedMethods_3_01jboolean_01_4.html":[0,0,5,5,24],
 "structaui_1_1jni_1_1TypedMethods_3_01jboolean_01_4.html":[0,2,2,4,24],
 "structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html":[0,2,2,4,25],
-"structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html":[0,0,5,5,25],
-"structaui_1_1jni_1_1TypedMethods_3_01jchar_01_4.html":[0,2,2,4,26]
+"structaui_1_1jni_1_1TypedMethods_3_01jbyte_01_4.html":[0,0,5,5,25]
 };
