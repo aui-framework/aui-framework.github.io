@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"interfaceSceneDelegate.html":[0,2,390],
 "interfaceWindowDelegate.html":[0,2,456],
 "md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_command_line_arguments.html":[2,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "structass_1_1detail_1_1debug__selector.html":[0,2,1,1,1],
 "structass_1_1detail_1_1debug__selector.html":[0,0,4,1,1],
 "structass_1_1disabled.html":[0,2,1,20],
-"structass_1_1disabled.html":[0,0,4,20]
+"structass_1_1disabled.html":[0,0,4,20],
+"structass_1_1focused.html":[0,2,1,23]
 };
