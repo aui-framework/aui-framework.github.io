@@ -227,6 +227,7 @@ var group__useful__views =
       [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
     ] ],
     [ "AViewContainer", "classAViewContainer.html", [
+      [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
       [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],
       [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
       [ "focusChainTarget", "classAViewContainer.html#a2a72d70843acdacbaa957084a851014a", null ],
@@ -245,6 +246,7 @@ var group__useful__views =
       [ "onPointerReleased", "classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b", null ],
       [ "onScroll", "classAViewContainer.html#a495a90385729196ebdd503beec159a45", null ],
       [ "onViewGraphSubtreeChanged", "classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb", null ],
+      [ "pointerEventsMapping", "classAViewContainer.html#a18187c2873caae48dba130517c2131f0", null ],
       [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
       [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
       [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
