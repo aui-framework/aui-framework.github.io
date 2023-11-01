@@ -36,6 +36,7 @@ var hierarchy =
     [ "AClass< T >", "classAClass.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
+    [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", null ],
     [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
@@ -99,6 +100,7 @@ var hierarchy =
     [ "AFontFamily", "classAFontFamily.html", null ],
     [ "AFontManager", "classAFontManager.html", null ],
     [ "AFontStyle", "structAFontStyle.html", null ],
+    [ "AFormMultipartEntry", "structAFormMultipartEntry.html", null ],
     [ "AFraction", "classAFraction.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AI18n", "classAI18n.html", null ],
@@ -197,6 +199,7 @@ var hierarchy =
     [ "AValueSmoother< T >", "classAValueSmoother.html", null ],
     [ "AViewProfiler", "classAViewProfiler.html", null ],
     [ "AViewsInit", "structAViewsInit.html", null ],
+    [ "aui::constraint::avoid_copy< T >", "classaui_1_1constraint_1_1avoid__copy.html", null ],
     [ "AWatchdog", "classAWatchdog.html", null ],
     [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
@@ -504,6 +507,7 @@ var hierarchy =
     [ "ACurl::ErrorDescription", "structACurl_1_1ErrorDescription.html", null ],
     [ "std::exception", null, [
       [ "AException", "classAException.html", [
+        [ "AComplexFutureOperation< T >::NoValueException", "classAComplexFutureOperation_1_1NoValueException.html", null ],
         [ "ADBus::Exception", "classADBus_1_1Exception.html", null ],
         [ "AFatalException", "classAFatalException.html", null ],
         [ "AIOException", "classAIOException.html", [
@@ -613,7 +617,7 @@ var hierarchy =
       [ "AEventLoop", "classAEventLoop.html", null ],
       [ "AScheduler", "classAScheduler.html", null ],
       [ "AWindowManager", "classAWindowManager.html", [
-        [ "UITestWindowManager", "classUITestWindowManager.html", null ]
+        [ "AStubWindowManager", "classAStubWindowManager.html", null ]
       ] ],
       [ "MyEventLoop", "classMyEventLoop.html", null ]
     ] ],
@@ -690,9 +694,7 @@ var hierarchy =
       [ "AFakeWindowInitializer", "classAFakeWindowInitializer.html", null ],
       [ "CommonRenderingContext", "classCommonRenderingContext.html", [
         [ "OpenGLRenderingContext", "classOpenGLRenderingContext.html", null ],
-        [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", [
-          [ "UITestRenderingContext", "classUITestRenderingContext.html", null ]
-        ] ]
+        [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", null ]
       ] ]
     ] ],
     [ "gl::Framebuffer::IRenderTarget", "classgl_1_1Framebuffer_1_1IRenderTarget.html", [
@@ -760,6 +762,9 @@ var hierarchy =
     [ "MacosApp", "classMacosApp.html", null ],
     [ "Manager< T >", "classManager.html", null ],
     [ "std::map", null, [
+      [ "AMap< AString, AFormMultipartEntry >", "classAMap.html", [
+        [ "AFormMultipart", "classAFormMultipart.html", null ]
+      ] ],
       [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", null ]
     ] ],
     [ "ass::Margin", "structass_1_1Margin.html", null ],
@@ -770,13 +775,12 @@ var hierarchy =
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
-    [ "aui::promise::move_only< T >", "classaui_1_1promise_1_1move__only.html", null ],
+    [ "aui::constraint::move_only< T >", "classaui_1_1constraint_1_1move__only.html", null ],
     [ "tuples::detail::functor::mul", "structtuples_1_1detail_1_1functor_1_1mul.html", null ],
     [ "std::mutex", null, [
       [ "AMutex", "classAMutex.html", null ]
     ] ],
     [ "MyStruct", "structMyStruct.html", null ],
-    [ "aui::promise::no_copy< T >", "classaui_1_1promise_1_1no__copy.html", null ],
     [ "aui::no_escape< T >", "structaui_1_1no__escape.html", null ],
     [ "aui::non_null_lateinit< T >", "structaui_1_1non__null__lateinit.html", [
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
@@ -803,6 +807,7 @@ var hierarchy =
       [ "AX509Store", "classAX509Store.html", null ],
       [ "IInputStream", "classIInputStream.html", [
         [ "AByteBufferInputStream", "classAByteBufferInputStream.html", null ],
+        [ "AConcatInputStream", "classAConcatInputStream.html", null ],
         [ "ADynamicPipe", "classADynamicPipe.html", null ],
         [ "AFileInputStream", "classAFileInputStream.html", null ],
         [ "ALimitedInputStream", "classALimitedInputStream.html", null ],
@@ -813,7 +818,6 @@ var hierarchy =
         [ "ISeekableInputStream", "classISeekableInputStream.html", [
           [ "AStrongByteBufferInputStream", "classAStrongByteBufferInputStream.html", null ]
         ] ],
-        [ "MultipleInputStream", "classMultipleInputStream.html", null ],
         [ "PipeInputStream", "classPipeInputStream.html", null ]
       ] ],
       [ "IOutputStream", "classIOutputStream.html", [
@@ -906,6 +910,7 @@ var hierarchy =
       [ "gl::impl::resource< ResourceKind::VERTEX_BUFFER >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html", null ]
     ] ],
     [ "gl::ResourcePool< T >", "classgl_1_1ResourcePool.html", null ],
+    [ "ACurl::Response", "structACurl_1_1Response.html", null ],
     [ "aui::reverse_iterator_wrap< T >", "structaui_1_1reverse__iterator__wrap.html", null ],
     [ "RoundedRect", "structRoundedRect.html", null ],
     [ "std::runtime_error", null, [

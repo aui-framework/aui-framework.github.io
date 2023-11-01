@@ -176,6 +176,10 @@ const StoredType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>at<
 template&lt;typename Comparator &gt; </td></tr>
 <tr class="memitem:af665c0d3d595065a8b51c4008cba7768"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classAVector.html">AVector</a>&lt; StoredType &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sort</b> (Comparator &amp;&amp;comparator) noexcept</td></tr>
 <tr class="separator:af665c0d3d595065a8b51c4008cba7768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230ce8220ec505e551e6f78cbdafe203"><td class="memTemplParams" colspan="2">template&lt;aui::predicate&lt; StoredType &gt; Predicate&gt; </td></tr>
+<tr class="memitem:a230ce8220ec505e551e6f78cbdafe203"><td class="memTemplItemLeft" align="right" valign="top">StoredType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAVector.html#a230ce8220ec505e551e6f78cbdafe203">findIf</a> (Predicate &amp;&amp;predicate) noexcept</td></tr>
+<tr class="memdesc:a230ce8220ec505e551e6f78cbdafe203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds element by predicate.  <a href="classAVector.html#a230ce8220ec505e551e6f78cbdafe203">More...</a><br /></td></tr>
+<tr class="separator:a230ce8220ec505e551e6f78cbdafe203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf23a6f5a0a4c745a13119e9a2111bb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8">removeAt</a> (size_t index) noexcept</td></tr>
 <tr class="separator:abf23a6f5a0a4c745a13119e9a2111bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b060a2d6cc3fe72aeaa34bcf7188af"><td class="memTemplParams" colspan="2">template&lt;aui::predicate&lt; StoredType &gt; Predicate&gt; </td></tr>
@@ -203,10 +207,6 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 template&lt;aui::predicate&lt; const StoredType &amp; &gt; Predicate&gt; </td></tr>
 <tr class="memitem:ab4d37d3064a481ad8b92e4ac840bc528"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classAVector.html">self</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>filter</b> (Predicate &amp;&amp;predicate)</td></tr>
 <tr class="separator:ab4d37d3064a481ad8b92e4ac840bc528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafe9fd0fe61003648cef549b4551d954"><td class="memTemplParams" colspan="2"><a id="aafe9fd0fe61003648cef549b4551d954" name="aafe9fd0fe61003648cef549b4551d954"></a>
-template&lt;aui::predicate&lt; const StoredType &amp; &gt; Predicate&gt; </td></tr>
-<tr class="memitem:aafe9fd0fe61003648cef549b4551d954"><td class="memTemplItemLeft" align="right" valign="top">super::iterator&#160;</td><td class="memTemplItemRight" valign="bottom"><b>findIf</b> (Predicate &amp;&amp;predicate)</td></tr>
-<tr class="separator:aafe9fd0fe61003648cef549b4551d954"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -255,6 +255,45 @@ template&lt;class StoredType , class Allocator &gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if container contains an element, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a230ce8220ec505e551e6f78cbdafe203" name="a230ce8220ec505e551e6f78cbdafe203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230ce8220ec505e551e6f78cbdafe203">&#9670;&nbsp;</a></span>findIf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class StoredType , class Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;aui::predicate&lt; StoredType &gt; Predicate&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StoredType * <a class="el" href="classAVector.html">AVector</a>&lt; StoredType, Allocator &gt;::findIf </td>
+          <td>(</td>
+          <td class="paramtype">Predicate &amp;&amp;&#160;</td>
+          <td class="paramname"><em>predicate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds element by predicate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">predicate</td><td>predicate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the value on which the predicate returned true, nullptr otherwise </dd></dl>
 
 </div>
 </div>

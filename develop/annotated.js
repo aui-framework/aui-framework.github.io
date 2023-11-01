@@ -120,6 +120,10 @@ var annotated =
         [ "Standard", "classaui_1_1animation__curves_1_1Standard.html", null ],
         [ "ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ]
       ] ],
+      [ "constraint", null, [
+        [ "avoid_copy", "classaui_1_1constraint_1_1avoid__copy.html", null ],
+        [ "move_only", "classaui_1_1constraint_1_1move__only.html", null ]
+      ] ],
       [ "dbus", null, [
         [ "impl", null, [
           [ "basic_converter", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ]
@@ -222,10 +226,6 @@ var annotated =
         [ "TypedMethods< jshort >", "structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html", null ],
         [ "TypedMethods< jstring >", "structaui_1_1jni_1_1TypedMethods_3_01jstring_01_4.html", null ],
         [ "TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ]
-      ] ],
-      [ "promise", null, [
-        [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
-        [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
       ] ],
       [ "sl_gen", null, [
         [ "Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ]
@@ -424,7 +424,9 @@ var annotated =
     [ "AColor", "classAColor.html", "classAColor" ],
     [ "AComBase", "classAComBase.html", null ],
     [ "ACommandLineArgs", "classACommandLineArgs.html", "classACommandLineArgs" ],
+    [ "AComplexFutureOperation", "classAComplexFutureOperation.html", "classAComplexFutureOperation" ],
     [ "AComPtr", "classAComPtr.html", null ],
+    [ "AConcatInputStream", "classAConcatInputStream.html", "classAConcatInputStream" ],
     [ "AConditionVariable", "classAConditionVariable.html", "classAConditionVariable" ],
     [ "AContainerPrinter", "structAContainerPrinter.html", null ],
     [ "ACurl", "classACurl.html", "classACurl" ],
@@ -486,6 +488,8 @@ var annotated =
     [ "AFontManager", "classAFontManager.html", null ],
     [ "AFontStyle", "structAFontStyle.html", null ],
     [ "AForEachUI", "classAForEachUI.html", null ],
+    [ "AFormMultipart", "classAFormMultipart.html", null ],
+    [ "AFormMultipartEntry", "structAFormMultipartEntry.html", null ],
     [ "AFraction", "classAFraction.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AFuture", "classAFuture.html", "classAFuture" ],
@@ -648,6 +652,7 @@ var annotated =
     [ "AStringStream", "classAStringStream.html", "classAStringStream" ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "AStrongByteBufferInputStream", "classAStrongByteBufferInputStream.html", "classAStrongByteBufferInputStream" ],
+    [ "AStubWindowManager", "classAStubWindowManager.html", null ],
     [ "AStylesheet", "classAStylesheet.html", null ],
     [ "ATabButtonRow", "classATabButtonRow.html", null ],
     [ "ATabButtonView", "classATabButtonView.html", null ],
@@ -745,7 +750,6 @@ var annotated =
     [ "Manager", "classManager.html", null ],
     [ "Master", "classMaster.html", null ],
     [ "MockedViewContainer", "classMockedViewContainer.html", null ],
-    [ "MultipleInputStream", "classMultipleInputStream.html", "classMultipleInputStream" ],
     [ "MyEntry", "classMyEntry.html", null ],
     [ "MyEventLoop", "classMyEventLoop.html", "classMyEventLoop" ],
     [ "MyListener", "classMyListener.html", null ],
@@ -794,8 +798,6 @@ var annotated =
     [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
     [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
     [ "UIScrollTest", "classUIScrollTest.html", "classUIScrollTest" ],
-    [ "UITestRenderingContext", "classUITestRenderingContext.html", null ],
-    [ "UITestWindowManager", "classUITestWindowManager.html", null ],
     [ "UITextField", "classUITextField.html", null ],
     [ "UIThread", "classUIThread.html", null ],
     [ "UIType", "classUIType.html", null ],

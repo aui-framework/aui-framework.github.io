@@ -17,7 +17,7 @@ var classSoftwareRenderer =
     [ "prerenderString", "classSoftwareRenderer.html#a2587fb26d202c1fcfe9f760653bdf572", null ],
     [ "pushMaskAfter", "classSoftwareRenderer.html#a3c6d019b20372f0ca707776f840ad540", null ],
     [ "pushMaskBefore", "classSoftwareRenderer.html#ab74c1992402f334c1e94b96c9cd0ad79", null ],
-    [ "putPixel", "classSoftwareRenderer.html#a1d20a3adc33051ee4924c1bde58b9af7", null ],
+    [ "putPixel", "classSoftwareRenderer.html#ab38bb10e1ca6430cc412d78114c7545f", null ],
     [ "setBlending", "classSoftwareRenderer.html#a00804cf6f6a575187e4fb41f0f59f496", null ],
     [ "setWindow", "classSoftwareRenderer.html#aa22f54e5ef84fb268c359501bc9d7e2e", null ]
 ];

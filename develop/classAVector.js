@@ -1,6 +1,7 @@
 var classAVector =
 [
     [ "contains", "classAVector.html#a13d40334d90b2d75006fed1e05fba778", null ],
+    [ "findIf", "classAVector.html#a230ce8220ec505e551e6f78cbdafe203", null ],
     [ "first", "classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f", null ],
     [ "first", "classAVector.html#a8321410937da08da17695a9a1403debd", null ],
     [ "indexOf", "classAVector.html#afb4aa45648e0aab5a33f41ba2f1da89f", null ],

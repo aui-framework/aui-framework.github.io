@@ -150,6 +150,7 @@ var group__core =
     ] ],
     [ "AVector< StoredType, Allocator >", "classAVector.html", [
       [ "contains", "classAVector.html#a13d40334d90b2d75006fed1e05fba778", null ],
+      [ "findIf", "classAVector.html#a230ce8220ec505e551e6f78cbdafe203", null ],
       [ "first", "classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f", null ],
       [ "first", "classAVector.html#a8321410937da08da17695a9a1403debd", null ],
       [ "indexOf", "classAVector.html#afb4aa45648e0aab5a33f41ba2f1da89f", null ],
@@ -200,6 +201,13 @@ var group__core =
       [ "stripBeforeFunctionCall", "classAStacktrace.html#a433c70cff737bf88f1ef839cde918082", null ]
     ] ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
+    [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", [
+      [ "NoValueException", "classAComplexFutureOperation_1_1NoValueException.html", null ],
+      [ "makeFuture", "classAComplexFutureOperation.html#a83361abec41b8c8ebabe7e0fb658ac30", null ],
+      [ "operator<<", "classAComplexFutureOperation.html#a0fbb6d1119f80d2d41375b399ec024fb", null ],
+      [ "supplyException", "classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df", null ],
+      [ "supplyResult", "classAComplexFutureOperation.html#af5030b0d9d649b90ebb6cce463cc07d4", null ]
+    ] ],
     [ "AConditionVariable", "classAConditionVariable.html", [
       [ "notify_all", "classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303", null ],
       [ "notify_one", "classAConditionVariable.html#a0f01b279878a7a39c713b08d8e9e0674", null ],
@@ -254,6 +262,7 @@ var group__core =
     ] ],
     [ "AFutureSet< T >", "classAFutureSet.html", [
       [ "checkForExceptions", "classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417", null ],
+      [ "onAllComplete", "classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8", null ],
       [ "waitForAll", "classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a", null ]
     ] ],
     [ "AUrl", "classAUrl.html", null ],

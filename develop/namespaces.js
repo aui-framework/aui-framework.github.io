@@ -134,6 +134,10 @@ var namespaces =
         [ "Standard", "classaui_1_1animation__curves_1_1Standard.html", null ],
         [ "ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ]
       ] ],
+      [ "constraint", null, [
+        [ "avoid_copy", "classaui_1_1constraint_1_1avoid__copy.html", null ],
+        [ "move_only", "classaui_1_1constraint_1_1move__only.html", null ]
+      ] ],
       [ "container", null, [
         [ "contains", "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32", null ],
         [ "contains", "group__core.html#gabe452b08e79e60da43e8895010f93010", null ],
@@ -256,10 +260,6 @@ var namespaces =
         [ "setJavaVM", "group__jni.html#ga25c210f55279d8e9bde9e2bcd9f7b75b", null ]
       ] ],
       [ "parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
-      [ "promise", null, [
-        [ "move_only", "classaui_1_1promise_1_1move__only.html", null ],
-        [ "no_copy", "classaui_1_1promise_1_1no__copy.html", null ]
-      ] ],
       [ "sl_gen", null, [
         [ "Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ]
       ] ],

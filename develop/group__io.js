@@ -3,6 +3,9 @@ var group__io =
     [ "AByteBufferInputStream", "classAByteBufferInputStream.html", [
       [ "read", "classAByteBufferInputStream.html#aa43ec19c84d7a04f84b69fc1009f5dbc", null ]
     ] ],
+    [ "AConcatInputStream", "classAConcatInputStream.html", [
+      [ "read", "classAConcatInputStream.html#a1d6ba1ddea2e8a385e1b4437b6e5dc11", null ]
+    ] ],
     [ "ADynamicPipe", "classADynamicPipe.html", [
       [ "read", "classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e", null ],
       [ "write", "classADynamicPipe.html#a636751385ea48b6f010f7f794c282602", null ]

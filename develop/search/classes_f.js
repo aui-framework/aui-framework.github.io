@@ -17,7 +17,8 @@ var searchData=
   ['resource_3c_20resourcekind_3a_3avertex_5fbuffer_20_3e_14',['resource&lt; ResourceKind::VERTEX_BUFFER &gt;',['../structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html',1,'gl::impl']]],
   ['resource_5fbasic_5fbuffer_15',['resource_basic_buffer',['../structgl_1_1impl_1_1resource__basic__buffer.html',1,'gl::impl']]],
   ['resourcepool_16',['ResourcePool',['../classgl_1_1ResourcePool.html',1,'gl']]],
-  ['reverse_5fiterator_5fwrap_17',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
-  ['roundedrect_18',['RoundedRect',['../structRoundedRect.html',1,'']]],
-  ['rule_19',['Rule',['../structass_1_1Rule.html',1,'ass']]]
+  ['response_17',['Response',['../structACurl_1_1Response.html',1,'ACurl']]],
+  ['reverse_5fiterator_5fwrap_18',['reverse_iterator_wrap',['../structaui_1_1reverse__iterator__wrap.html',1,'aui']]],
+  ['roundedrect_19',['RoundedRect',['../structRoundedRect.html',1,'']]],
+  ['rule_20',['Rule',['../structass_1_1Rule.html',1,'ass']]]
 ];
