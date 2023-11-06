@@ -260,6 +260,13 @@ var namespaces =
         [ "setJavaVM", "group__jni.html#ga25c210f55279d8e9bde9e2bcd9f7b75b", null ]
       ] ],
       [ "parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
+      [ "render", null, [
+        [ "brush", null, [
+          [ "gradient", null, [
+            [ "Helper", "structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html", null ]
+          ] ]
+        ] ]
+      ] ],
       [ "sl_gen", null, [
         [ "Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ]
       ] ],

@@ -227,6 +227,13 @@ var annotated =
         [ "TypedMethods< jstring >", "structaui_1_1jni_1_1TypedMethods_3_01jstring_01_4.html", null ],
         [ "TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ]
       ] ],
+      [ "render", null, [
+        [ "brush", null, [
+          [ "gradient", null, [
+            [ "Helper", "structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html", null ]
+          ] ]
+        ] ]
+      ] ],
       [ "sl_gen", null, [
         [ "Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ]
       ] ],
