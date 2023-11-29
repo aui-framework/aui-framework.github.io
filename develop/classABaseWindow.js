@@ -17,7 +17,7 @@ var classABaseWindow =
     [ "onPointerReleased", "classABaseWindow.html#a8b251f45c577fbe1b797a1116ace8755", null ],
     [ "onScroll", "classABaseWindow.html#ae3c6b348c19efdb6509e1b3acf7169e5", null ],
     [ "preventClickOnPointerRelease", "classABaseWindow.html#a8b5adda729634c0cff12b9d515b33e20", null ],
-    [ "render", "classABaseWindow.html#a98b65108eee1b4bead5a47dcf9cec951", null ],
+    [ "render", "classABaseWindow.html#a31889c283aaa993f539bf2b52311c792", null ],
     [ "requestTouchscreenKeyboard", "classABaseWindow.html#a194360a7e6e494b91ab9572652620752", null ],
     [ "shouldDisplayHoverAnimations", "classABaseWindow.html#a40e4d24e07e1ff2314ed476eb71429f8", null ],
     [ "mPreventClickOnPointerRelease", "classABaseWindow.html#aa251c03918146d1768ca105ef5a68493", null ]

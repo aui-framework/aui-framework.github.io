@@ -272,6 +272,7 @@ var hierarchy =
     [ "aui::jni::detail::CastHelper", "structaui_1_1jni_1_1detail_1_1CastHelper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
+    [ "ClipOptimizationContext", "structClipOptimizationContext.html", null ],
     [ "ALinearGradientBrush::ColorEntry", "structALinearGradientBrush_1_1ColorEntry.html", null ],
     [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
       [ "ass::on_state::Activated", "structass_1_1on__state_1_1Activated.html", null ],
@@ -380,6 +381,7 @@ var hierarchy =
         [ "AThread", "classAThread.html", null ],
         [ "ATimer", "classATimer.html", null ],
         [ "AView", "classAView.html", [
+          [ "ViewMock", "classViewMock.html", null ],
           [ "AAbstractLabel", "classAAbstractLabel.html", [
             [ "AButton", "classAButton.html", [
               [ "ADropdownList", "classADropdownList.html", null ]
@@ -419,6 +421,7 @@ var hierarchy =
                 ] ],
                 [ "UIClick::TestWindow", "classUIClick_1_1TestWindow.html", null ],
                 [ "UIMultitouchTest::TestWindow", "classUIMultitouchTest_1_1TestWindow.html", null ],
+                [ "UIRenderOptimizationTest::TestWindow", "classUIRenderOptimizationTest_1_1TestWindow.html", null ],
                 [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ],
                 [ "UIViewFocus::TestWindow", "classUIViewFocus_1_1TestWindow.html", null ]
               ] ]
@@ -984,6 +987,7 @@ var hierarchy =
         [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
         [ "UIMultitouchTest", "classUIMultitouchTest.html", null ],
         [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
+        [ "UIRenderOptimizationTest", "classUIRenderOptimizationTest.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],

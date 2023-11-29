@@ -3,7 +3,7 @@ var group__useful__views =
     [ "AAbstractTextField", "classAAbstractTextField.html", [
       [ "getContentMinimumHeight", "classAAbstractTextField.html#aa1d30fc5cfb064423af8c12cab10ac3a", null ],
       [ "handlesNonMouseNavigation", "classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2", null ],
-      [ "render", "classAAbstractTextField.html#a9681178b8f4e95e3aba53b96d4d1302c", null ],
+      [ "render", "classAAbstractTextField.html#a0c4457d2bccaabafb5fb38810e22f5fa", null ],
       [ "text", "classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d", null ],
       [ "textLength", "classAAbstractTextField.html#a6d41e754abc7f9e2432508a53287e3b4", null ],
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
@@ -19,7 +19,7 @@ var group__useful__views =
     ] ],
     [ "ACircleProgressBar", "classACircleProgressBar.html", [
       [ "Inner", "classACircleProgressBar_1_1Inner.html", null ],
-      [ "render", "classACircleProgressBar.html#a3235447f0be1c9ac1d9da232afc8e0f4", null ],
+      [ "render", "classACircleProgressBar.html#acae1d34a7d3cfc53664a3254073b1574", null ],
       [ "setValue", "classACircleProgressBar.html#af9ea10f9e48bf1f74573fca9dc2245c6", null ]
     ] ],
     [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", [
@@ -34,12 +34,12 @@ var group__useful__views =
       ] ]
     ] ],
     [ "ADrawableView", "classADrawableView.html", [
-      [ "render", "classADrawableView.html#a7fc1c91549d193d9e686100087814ccf", null ]
+      [ "render", "classADrawableView.html#a86af6b192734ad11a5ed4002409ecd84", null ]
     ] ],
     [ "ADropdownList", "classADropdownList.html", [
       [ "getContentMinimumWidth", "classADropdownList.html#a549d9cab0facd18f4904a762aa733d64", null ],
       [ "onPointerReleased", "classADropdownList.html#a8b7f862613657a839dc1576c9baf96ff", null ],
-      [ "render", "classADropdownList.html#a474ad4cd705d4953da35cfc3c1f64de5", null ]
+      [ "render", "classADropdownList.html#a1a4fbffce801e52df7f52c0a5b397a32", null ]
     ] ],
     [ "AGridSplitter", "classAGridSplitter.html", [
       [ "Builder", "classAGridSplitter_1_1Builder.html", null ],
@@ -65,7 +65,7 @@ var group__useful__views =
     [ "APathChooserView", "classAPathChooserView.html", null ],
     [ "AProgressBar", "classAProgressBar.html", [
       [ "Inner", "classAProgressBar_1_1Inner.html", null ],
-      [ "render", "classAProgressBar.html#a6f29c5fa5e281dc7b59f9b329cf2215c", null ],
+      [ "render", "classAProgressBar.html#a090f5f768aa28510fb6bc885eb360245", null ],
       [ "setValue", "classAProgressBar.html#afe74ce3a7b4bed591ae12d6a73a0fc7c", null ]
     ] ],
     [ "ARadioButton", "classARadioButton.html", [
@@ -75,7 +75,7 @@ var group__useful__views =
     [ "ARadioGroup", "classARadioGroup.html", null ],
     [ "ARulerArea", "classARulerArea.html", [
       [ "onPointerMove", "classARulerArea.html#a5df1a3fd72f215be26f9e2f54a57f153", null ],
-      [ "render", "classARulerArea.html#ad0be295754bd0d7b515207760d1d1ec1", null ]
+      [ "render", "classARulerArea.html#a9d4e471e8df8cbf44fb12224d3592f56", null ]
     ] ],
     [ "AScrollArea", "classAScrollArea.html", [
       [ "Builder", "classAScrollArea_1_1Builder.html", null ],
@@ -121,11 +121,11 @@ var group__useful__views =
       [ "ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
       [ "getContentMinimumHeight", "classAText.html#aca1c2934439c96461cf11f7786e238ec", null ],
       [ "getContentMinimumWidth", "classAText.html#a6e4d8cbb0ea0a32f435c272f0df38e1d", null ],
-      [ "render", "classAText.html#ac693309395cd54741845c46754ad8073", null ]
+      [ "render", "classAText.html#a296d5ed37040964114a33f2d1344a82a", null ]
     ] ],
     [ "ATextArea", "classATextArea.html", [
       [ "TextAreaField", "classATextArea_1_1TextAreaField.html", [
-        [ "render", "classATextArea_1_1TextAreaField.html#a8f0b9bca88e77c4f15f707b85a3ac174", null ],
+        [ "render", "classATextArea_1_1TextAreaField.html#a0fdf23722f091e8b461d18b76fd6ce52", null ],
         [ "text", "classATextArea_1_1TextAreaField.html#ae47ef9fd771cfa707ef5894515c209e6", null ],
         [ "textLength", "classATextArea_1_1TextAreaField.html#a7c706e015165ddfe881436dc498e9ef8", null ],
         [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a8ed301f96db4c7251998fe398b89b423", null ],
@@ -191,9 +191,10 @@ var group__useful__views =
       [ "onViewGraphSubtreeChanged", "classAView.html#a43e89f0f7a3dfb49d82216e351566bf1", null ],
       [ "operator+", "classAView.html#ac6292013de2f384cb791f1c91787a362", null ],
       [ "pack", "classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71", null ],
+      [ "postRender", "classAView.html#a4e1593b6ae4efe2a6b6b6d376c7070f4", null ],
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
-      [ "render", "classAView.html#afb763553515ae0d443c7a1ebc4847f10", null ],
+      [ "render", "classAView.html#a963fbdfa517db949b880297405804985", null ],
       [ "setExtraStylesheet", "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b", null ],
       [ "setExtraStylesheet", "classAView.html#abfffb2d8ac173e35e0599b4389efb9e1", null ],
       [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],
@@ -247,7 +248,7 @@ var group__useful__views =
       [ "onScroll", "classAViewContainer.html#a495a90385729196ebdd503beec159a45", null ],
       [ "onViewGraphSubtreeChanged", "classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb", null ],
       [ "pointerEventsMapping", "classAViewContainer.html#a18187c2873caae48dba130517c2131f0", null ],
-      [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
+      [ "render", "classAViewContainer.html#ae31e59f7f259b654ffa1a1c29d538c55", null ],
       [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
       [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
       [ "setLayout", "classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542", null ],
