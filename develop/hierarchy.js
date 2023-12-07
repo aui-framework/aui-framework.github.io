@@ -261,6 +261,7 @@ var hierarchy =
     [ "ass::BoxShadow", "structass_1_1BoxShadow.html", null ],
     [ "ass::BoxShadowInner", "structass_1_1BoxShadowInner.html", null ],
     [ "BrushHelper", "structBrushHelper.html", null ],
+    [ "gl::Vao::Buffer", "structgl_1_1Vao_1_1Buffer.html", null ],
     [ "ABasicListEditor::Builder", "classABasicListEditor_1_1Builder.html", null ],
     [ "ACurl::Builder", "classACurl_1_1Builder.html", null ],
     [ "AGridSplitter::Builder", "classAGridSplitter_1_1Builder.html", null ],

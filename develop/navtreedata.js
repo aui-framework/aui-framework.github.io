@@ -74,9 +74,9 @@ var NAVTREEINDEX =
 "classATokenizer.html#a09dbb1649a6fb375db7430d8a77c0358",
 "classFreeType.html",
 "classaui_1_1constraint_1_1avoid__copy.html",
-"group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54",
-"structass_1_1TransformScale.html",
-"structaui_1_1jni_1_1Converter_3_01jfloat_01_4.html",
+"group__views.html#gaa82185ce969128d9c1b40b1e914e66a8",
+"structass_1_1TextColor.html",
+"structaui_1_1jni_1_1Converter_3_01jchar_01_4.html",
 ""
 ];
 
