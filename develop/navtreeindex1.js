@@ -95,7 +95,7 @@ var NAVTREEINDEX1 =
 "classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe":[3,0,1,36,0],
 "classAFuture.html#afb90c81c9ded0417533b721c34d3a139":[3,0,1,36,3],
 "classAFutureSet.html":[3,0,1,40],
-"classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a":[3,0,1,40,2],
+"classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6":[3,0,1,40,2],
 "classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417":[3,0,1,40,0],
 "classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8":[3,0,1,40,1],
 "classAFuture_3_01void_01_4.html":[0,2,120],
