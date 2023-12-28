@@ -413,6 +413,7 @@ var annotated =
       [ "Builder", "classABasicListEditor_1_1Builder.html", null ]
     ] ],
     [ "ABitField", "classABitField.html", "classABitField" ],
+    [ "ABorderStyle", "classABorderStyle.html", "classABorderStyle" ],
     [ "ABoxFields", "structABoxFields.html", null ],
     [ "ABuiltinFiles", "classABuiltinFiles.html", null ],
     [ "AButton", "classAButton.html", "classAButton" ],

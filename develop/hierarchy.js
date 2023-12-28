@@ -28,6 +28,7 @@ var hierarchy =
     [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "ABitField< T >", "classABitField.html", null ],
+    [ "ABorderStyle", "classABorderStyle.html", null ],
     [ "ABoxFields", "structABoxFields.html", null ],
     [ "aui::detail::AbsoluteLayoutCell", "structaui_1_1detail_1_1AbsoluteLayoutCell.html", null ],
     [ "ABuiltinFiles", "classABuiltinFiles.html", null ],
@@ -331,6 +332,7 @@ var hierarchy =
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
+    [ "ABorderStyle::Dashed", "structABorderStyle_1_1Dashed.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
@@ -949,6 +951,7 @@ var hierarchy =
     [ "aui::jni::signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
     [ "ARenderingContextOptions::Software", "structARenderingContextOptions_1_1Software.html", null ],
+    [ "ABorderStyle::Solid", "structABorderStyle_1_1Solid.html", null ],
     [ "SomeBuilderClass", "classSomeBuilderClass.html", null ],
     [ "SqlColumn", "structSqlColumn.html", null ],
     [ "AAssHelper::State", "structAAssHelper_1_1State.html", null ],
