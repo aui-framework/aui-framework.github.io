@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"structaui_1_1jni_1_1Converter_3_01bool_01_4.html":[0,0,5,6,5],
+"structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html":[0,2,2,5,6],
+"structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html":[0,0,5,6,6],
 "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html":[0,2,2,5,7],
 "structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html":[0,0,5,6,7],
 "structaui_1_1jni_1_1Converter_3_01jchar_01_4.html":[0,0,5,6,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "":[0,0,5,13],
 "":[0,0,5,13,0],
 "":[0,0,7],
-"":[0,0,9],
-"":[0,0,10],
-"":[0,0,10,0],
-"":[0,0,11]
+"":[0,0,9]
 };

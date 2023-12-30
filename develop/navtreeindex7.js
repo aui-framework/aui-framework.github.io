@@ -1,5 +1,8 @@
 var NAVTREEINDEX7 =
 {
+"structass_1_1Rule.html":[0,2,1,40],
+"structass_1_1Rule.html":[0,0,4,40],
+"structass_1_1Selected.html":[0,2,1,41],
 "structass_1_1Selected.html":[0,0,4,41],
 "structass_1_1TextBorder.html":[3,0,8,0,23],
 "structass_1_1TextColor.html":[3,0,8,0,24],
@@ -246,8 +249,5 @@ var NAVTREEINDEX7 =
 "structaui_1_1jni_1_1Converter_3_01ArrayView_3_01T_01_4_01_4.html":[0,0,5,6,3],
 "structaui_1_1jni_1_1Converter_3_01T_01_4.html":[0,0,5,6,15],
 "structaui_1_1jni_1_1Converter_3_01T_01_4.html":[0,2,2,5,15],
-"structaui_1_1jni_1_1Converter_3_01bool_01_4.html":[0,2,2,5,5],
-"structaui_1_1jni_1_1Converter_3_01bool_01_4.html":[0,0,5,6,5],
-"structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html":[0,2,2,5,6],
-"structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html":[0,0,5,6,6]
+"structaui_1_1jni_1_1Converter_3_01bool_01_4.html":[0,2,2,5,5]
 };
