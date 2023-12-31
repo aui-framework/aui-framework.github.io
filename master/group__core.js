@@ -53,6 +53,11 @@ var group__core =
       [ "removeIf", "classADeque.html#acc4703a436346f62ccd4f7be94fe59dc", null ]
     ] ],
     [ "AException", "classAException.html", null ],
+    [ "AFatalException", "classAFatalException.html", [
+      [ "address", "classAFatalException.html#af90bdae1f989047134c8a2d22e96f86e", null ],
+      [ "nativeSignalId", "classAFatalException.html#a6c6ac322b7e0b04108365d70571563da", null ],
+      [ "signalName", "classAFatalException.html#aa9613dd64b50fbccd463afa488971572", null ]
+    ] ],
     [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", [
       [ "const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
       [ "contains_iterator", "structAMap_1_1contains__iterator.html", null ],
@@ -68,7 +73,6 @@ var group__core =
       [ "removeAll", "classAQueue.html#a6e2176bb102251379725563048f66fc6", null ],
       [ "removeFirst", "classAQueue.html#a318128185e2fc9066ace18690673218d", null ]
     ] ],
-    [ "ASegfaultException", "classASegfaultException.html", null ],
     [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", [
       [ "insertAll", "classASet.html#abfe9f1127b1811d332d6032d57e59544", null ],
       [ "isSubsetOf", "classASet.html#a50dfbcda92792f0d9ae4404f08291519", null ],
@@ -80,6 +84,49 @@ var group__core =
     [ "ASignal< Args >", "classASignal.html", [
       [ "call_wrapper", "structASignal_1_1call__wrapper.html", null ],
       [ "operator bool", "classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8", null ]
+    ] ],
+    [ "ASmallVector< StoredType, StaticVectorSize, Allocator >", "classASmallVector.html", [
+      [ "contains", "classASmallVector.html#a511e11ed43e30084771dd76c0ccb7145", null ],
+      [ "first", "classASmallVector.html#ad66270a6a83459098809cb4054bc14f4", null ],
+      [ "first", "classASmallVector.html#af6248d63363516a932a4a58a643ba525", null ],
+      [ "indexOf", "classASmallVector.html#a1a31505aa1208a3b18cd9147d6a17efa", null ],
+      [ "insertAll", "classASmallVector.html#aa3a50ce81a9207767e848c3f7daa1b23", null ],
+      [ "insertAll", "classASmallVector.html#aba557ad628f26ab47ffa82683fbc2c59", null ],
+      [ "insertAll", "classASmallVector.html#a6504479b52b2216c7ff1968506332e77", null ],
+      [ "insertAll", "classASmallVector.html#adb512c057a9c3b5f15e37397cfab5394", null ],
+      [ "isSubsetOf", "classASmallVector.html#af4df5932f2245514880d58c47c2cd3fc", null ],
+      [ "last", "classASmallVector.html#a682852eea3896ed018156c922d463c42", null ],
+      [ "last", "classASmallVector.html#a4a3fb602df90bd7422e32c26628e5483", null ],
+      [ "operator<<", "classASmallVector.html#a093f16b48c00df1960be4b0934346b4e", null ],
+      [ "operator<<", "classASmallVector.html#a8281ce527c49cddf4dd23d042ff5c288", null ],
+      [ "operator<<", "classASmallVector.html#af6cfa259be481a7236bedc4a9b14ba61", null ],
+      [ "operator<<", "classASmallVector.html#a8f242586547b64bcfca18014e324fbc2", null ],
+      [ "removeAll", "classASmallVector.html#a743f72fb6cf16c9f59742002a9572975", null ],
+      [ "removeAt", "classASmallVector.html#a4852bc93ab8450c1668de09834e30f90", null ],
+      [ "removeFirst", "classASmallVector.html#a4fad07e3518e3f575cab29fef3fcb8b2", null ],
+      [ "removeIf", "classASmallVector.html#a87e7d420ec86173821f665e6f76cf180", null ],
+      [ "size", "classASmallVector.html#a538812bc06c9f2c2385aaabc6f87be50", null ]
+    ] ],
+    [ "AStaticVector< StoredType, MaxSize >", "classAStaticVector.html", [
+      [ "contains", "classAStaticVector.html#a51b4f11d750814eaf36541213f322d3b", null ],
+      [ "first", "classAStaticVector.html#a487b1e891bc9741ecde4d12c01113840", null ],
+      [ "first", "classAStaticVector.html#a114ccc2f52467c7e4bdc97f74a6553a7", null ],
+      [ "indexOf", "classAStaticVector.html#af67ddfdc172739d64f78abfb1039ac81", null ],
+      [ "insertAll", "classAStaticVector.html#a55224ea7400dc72c768f4147297a8d77", null ],
+      [ "insertAll", "classAStaticVector.html#a168ee3f8677b2e3cfe49c456f5744003", null ],
+      [ "insertAll", "classAStaticVector.html#af7fec7475122442104f72813d84dd3bc", null ],
+      [ "insertAll", "classAStaticVector.html#a53d4db0d9c486ce4c497765d1b4dcf58", null ],
+      [ "isSubsetOf", "classAStaticVector.html#af2165b3ee80a74184621bbdc2d8b67bd", null ],
+      [ "last", "classAStaticVector.html#ab482712a23b6173cd126324ce5e6d984", null ],
+      [ "last", "classAStaticVector.html#ae7d9de63c978535c5792e4dd6ee8aaa0", null ],
+      [ "operator<<", "classAStaticVector.html#adc2930836b8fa80d527d6e82058657d6", null ],
+      [ "operator<<", "classAStaticVector.html#a2c1a85fef1b6d3066c95892a7f93bd07", null ],
+      [ "operator<<", "classAStaticVector.html#a7e820b53b587d058336c45dda023eb39", null ],
+      [ "operator<<", "classAStaticVector.html#a40da54a00c19e7052dd8cb5334e29207", null ],
+      [ "removeAll", "classAStaticVector.html#a330c6fc00b22446489284ea41eab1698", null ],
+      [ "removeAt", "classAStaticVector.html#a23d8cf25703a119d2ac8de11a3ce634c", null ],
+      [ "removeFirst", "classAStaticVector.html#a2fbd845e9117854d9d4a9de68f972e8c", null ],
+      [ "removeIf", "classAStaticVector.html#a6eeb83464c6c810d12d3e12441cbf5c6", null ]
     ] ],
     [ "AString", "classAString.html", [
       [ "AString", "classAString.html#a2ddc86772025c375410335b527e5a9cc", null ],
@@ -103,6 +150,7 @@ var group__core =
     ] ],
     [ "AVector< StoredType, Allocator >", "classAVector.html", [
       [ "contains", "classAVector.html#a13d40334d90b2d75006fed1e05fba778", null ],
+      [ "findIf", "classAVector.html#a230ce8220ec505e551e6f78cbdafe203", null ],
       [ "first", "classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f", null ],
       [ "first", "classAVector.html#a8321410937da08da17695a9a1403debd", null ],
       [ "indexOf", "classAVector.html#afb4aa45648e0aab5a33f41ba2f1da89f", null ],
@@ -119,8 +167,9 @@ var group__core =
       [ "operator<<", "classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151", null ],
       [ "removeAll", "classAVector.html#af1feec53844fa47cdcd75c46ca371556", null ],
       [ "removeAt", "classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8", null ],
-      [ "removeFirst", "classAVector.html#aba5f9102b390dfc040028ba3a96da168", null ],
-      [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ]
+      [ "removeFirst", "classAVector.html#aa6a54a22a7f8148f1e79b9b8f34db453", null ],
+      [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ],
+      [ "removeIfFirst", "classAVector.html#aa70d17fe5a10801a82ff3fe0c19ab1f4", null ]
     ] ],
     [ "IStringable", "classIStringable.html", [
       [ "toString", "classIStringable.html#a7bb0454adbf12f59aa8550cc75bddb97", null ]
@@ -142,7 +191,23 @@ var group__core =
       [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ],
       [ "setLogFile", "classALogger.html#aa2da2365b9f592d3c47d834456a23d54", null ]
     ] ],
+    [ "AStacktrace", "classAStacktrace.html", [
+      [ "Entry", "classAStacktrace_1_1Entry.html", [
+        [ "fileName", "classAStacktrace_1_1Entry.html#a3deb4e464ac61926ef732c3f746d0470", null ],
+        [ "functionName", "classAStacktrace_1_1Entry.html#a61d8534903ade21013d6b272937dc86a", null ],
+        [ "lineNumber", "classAStacktrace_1_1Entry.html#adb06ca26db1ac1f3eea0320130ceff2e", null ]
+      ] ],
+      [ "resolveSymbolsIfNeeded", "classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4", null ],
+      [ "stripBeforeFunctionCall", "classAStacktrace.html#a433c70cff737bf88f1ef839cde918082", null ]
+    ] ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
+    [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", [
+      [ "NoValueException", "classAComplexFutureOperation_1_1NoValueException.html", null ],
+      [ "makeFuture", "classAComplexFutureOperation.html#a83361abec41b8c8ebabe7e0fb658ac30", null ],
+      [ "operator<<", "classAComplexFutureOperation.html#a0fbb6d1119f80d2d41375b399ec024fb", null ],
+      [ "supplyException", "classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df", null ],
+      [ "supplyResult", "classAComplexFutureOperation.html#af5030b0d9d649b90ebb6cce463cc07d4", null ]
+    ] ],
     [ "AConditionVariable", "classAConditionVariable.html", [
       [ "notify_all", "classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303", null ],
       [ "notify_one", "classAConditionVariable.html#a0f01b279878a7a39c713b08d8e9e0674", null ],
@@ -180,6 +245,7 @@ var group__core =
       [ "operator*", "classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7", null ],
       [ "operator<<", "classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c", null ],
       [ "resetInterruptFlag", "classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206", null ],
+      [ "threadStacktrace", "classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d", null ],
       [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ],
       [ "mMessageQueue", "classAAbstractThread.html#a35d8618d61be04cf3afc68f0023023ee", null ],
       [ "mQueueLock", "classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20", null ]
@@ -196,16 +262,21 @@ var group__core =
     ] ],
     [ "AFutureSet< T >", "classAFutureSet.html", [
       [ "checkForExceptions", "classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417", null ],
-      [ "waitForAll", "classAFutureSet.html#a4284ace4dad03cacd1f5606d13b1b51a", null ]
+      [ "onAllComplete", "classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8", null ],
+      [ "waitForAll", "classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6", null ]
     ] ],
     [ "AUrl", "classAUrl.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
+    [ "ACommandLineArgs", "classACommandLineArgs.html", [
+      [ "value", "classACommandLineArgs.html#a3393e32c6e2904ee2955135511801812", null ]
+    ] ],
     [ "AFieldObservable< T >", "classAFieldObservable.html", [
       [ "addObserver", "classAFieldObservable.html#aa798b8ba57300b89167bb564d23521d7", null ],
       [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ]
     ] ],
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
+    [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
       [ "loop", "classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568", null ],
@@ -214,9 +285,23 @@ var group__core =
     ] ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
+    [ "AWatchdog", "classAWatchdog.html", [
+      [ "AWatchdog", "classAWatchdog.html#a45366505121d3cd934428017fcd6ef45", null ],
+      [ "isHang", "classAWatchdog.html#af523718d5589ef376acb1955308c44aa", null ],
+      [ "runOperation", "classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929", null ]
+    ] ],
+    [ "aui::args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],
+    [ "aui::container::contains", "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32", null ],
+    [ "aui::container::contains", "group__core.html#gabe452b08e79e60da43e8895010f93010", null ],
     [ "aui::importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
     [ "aui::importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
-    [ "operator\"\"_format", "group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8", null ]
+    [ "aui::container::index_of", "group__core.html#gaae8bc3a90d5b48feecabafa616e294a5", null ],
+    [ "aui::container::is_subset", "group__core.html#ga1a7e590ef7a5a4312e8ee8cd1f482fcf", null ],
+    [ "operator\"\"_format", "group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8", null ],
+    [ "aui::container::remove_all", "group__core.html#gae4ba61e70230db1f2265936cf13eabf1", null ],
+    [ "aui::container::remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
+    [ "aui::container::remove_first", "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848", null ],
+    [ "aui::container::to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ]
 ];

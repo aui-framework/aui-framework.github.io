@@ -101,7 +101,9 @@ $(document).ready(function(){initNavTree('classAByteBufferView.html',''); initRe
  <a href="classAByteBufferView.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Acts like std::string_view but for <a class="el" href="classAByteBuffer.html" title="std::vector-like growing array for byte storage.">AByteBuffer</a>. </p>
-<dl class="section note"><dt>Note</dt><dd>don't use const reference of <a class="el" href="classAByteBufferView.html" title="Acts like std::string_view but for AByteBuffer.">AByteBufferView</a>. Passing by const reference forces compiler to use memory instead of registers. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>don't use const reference of <a class="el" href="classAByteBufferView.html" title="Acts like std::string_view but for AByteBuffer.">AByteBufferView</a>. Passing by const reference forces compiler to use memory instead of registers. </dd>
+<dd>
+<a class="el" href="classAByteBufferView.html" title="Acts like std::string_view but for AByteBuffer.">AByteBufferView</a> is intended for const access to memory data. As a function argument, consider to use <code>std::span&lt;std::byte&gt;</code> instead for non-const access. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -149,6 +151,9 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const noex
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad7d0da71816aad95f6c82e90168e9211"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>as</b> () const</td></tr>
 <tr class="separator:ad7d0da71816aad95f6c82e90168e9211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee58f7b35906d72b5d7931cc240a793"><td class="memItemLeft" align="right" valign="top"><a id="afee58f7b35906d72b5d7931cc240a793" name="afee58f7b35906d72b5d7931cc240a793"></a>
+<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIInputStream.html">IInputStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toStream</b> () const</td></tr>
+<tr class="separator:afee58f7b35906d72b5d7931cc240a793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>

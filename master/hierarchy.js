@@ -16,6 +16,7 @@ var hierarchy =
       [ "CurrentThread", "classCurrentThread.html", null ],
       [ "UIThread", "classUIThread.html", null ]
     ] ],
+    [ "AAngleRadians", "classAAngleRadians.html", null ],
     [ "AAnimator", "classAAnimator.html", [
       [ "AFocusAnimator", "classAFocusAnimator.html", null ],
       [ "APlaceholderAnimator", "classAPlaceholderAnimator.html", null ],
@@ -27,16 +28,20 @@ var hierarchy =
     [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "ABitField< T >", "classABitField.html", null ],
+    [ "ABorderStyle", "classABorderStyle.html", null ],
     [ "ABoxFields", "structABoxFields.html", null ],
+    [ "aui::detail::AbsoluteLayoutCell", "structaui_1_1detail_1_1AbsoluteLayoutCell.html", null ],
     [ "ABuiltinFiles", "classABuiltinFiles.html", null ],
     [ "AByteBufferView", "classAByteBufferView.html", null ],
     [ "AChar", "classAChar.html", null ],
     [ "AClass< T >", "classAClass.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
+    [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", null ],
     [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],
     [ "AContainerPrinter< Iterator >", "structAContainerPrinter.html", null ],
+    [ "ACurlInit", "structACurlInit.html", null ],
     [ "ACursor", "classACursor.html", null ],
     [ "ACursorSelectable", "classACursorSelectable.html", [
       [ "AAbstractTypeableView", "classAAbstractTypeableView.html", [
@@ -85,20 +90,22 @@ var hierarchy =
     [ "ADataBindingLinker2< Model, Data >", "classADataBindingLinker2.html", null ],
     [ "tuples::detail::functor::add", "structtuples_1_1detail_1_1functor_1_1add.html", null ],
     [ "ADragNDrop", "classADragNDrop.html", null ],
+    [ "ADynamicVector< StoredType >", "classADynamicVector.html", null ],
     [ "AEnumerate< enum_t >", "classAEnumerate.html", null ],
     [ "AEnumerateAllValues< enum_t >", "structAEnumerateAllValues.html", null ],
     [ "AFieldObservable< T >", "classAFieldObservable.html", null ],
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFieldSignalEmitter< bool >", "classAFieldSignalEmitter_3_01bool_01_4.html", null ],
-    [ "AFingerDragEvent", "structAFingerDragEvent.html", null ],
     [ "AFlatVector< T, MAX_SIZE >", "classAFlatVector.html", null ],
     [ "AFont", "classAFont.html", null ],
     [ "AFontFamily", "classAFontFamily.html", null ],
     [ "AFontManager", "classAFontManager.html", null ],
     [ "AFontStyle", "structAFontStyle.html", null ],
+    [ "AFormMultipartEntry", "structAFormMultipartEntry.html", null ],
     [ "AFraction", "classAFraction.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AI18n", "classAI18n.html", null ],
+    [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
     [ "AInet4Address", "classAInet4Address.html", null ],
     [ "AJsonConv< T, Specialization >", "structAJsonConv.html", null ],
     [ "AJsonConv< AJson::Array >", "structAJsonConv_3_01AJson_1_1Array_01_4.html", null ],
@@ -119,6 +126,9 @@ var hierarchy =
     [ "ALayoutInflater", "classALayoutInflater.html", null ],
     [ "uitest::impl::align< side >", "structuitest_1_1impl_1_1align.html", null ],
     [ "ALinearGradientBrush", "structALinearGradientBrush.html", null ],
+    [ "AListModelIndex", "classAListModelIndex.html", null ],
+    [ "AListModelRange< T >", "classAListModelRange.html", null ],
+    [ "AListModelSelection< T >", "classAListModelSelection.html", null ],
     [ "ALogger", "classALogger.html", null ],
     [ "ALongPressEvent", "structALongPressEvent.html", null ],
     [ "AMenu", "classAMenu.html", null ],
@@ -127,14 +137,13 @@ var hierarchy =
     [ "AMigrationManager", "classAMigrationManager.html", null ],
     [ "AMimedData", "classAMimedData.html", null ],
     [ "AModel", "structAModel.html", null ],
-    [ "AModelIndex", "classAModelIndex.html", null ],
     [ "AModelMetaBase< T >", "structAModelMetaBase.html", [
       [ "AModelMeta< T >", "structAModelMeta.html", null ]
     ] ],
-    [ "AModelRange< T >", "classAModelRange.html", null ],
-    [ "AModelSelection< T >", "classAModelSelection.html", null ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
+    [ "APointerIndex", "classAPointerIndex.html", null ],
+    [ "APointerMoveEvent", "structAPointerMoveEvent.html", null ],
     [ "APointerPressedEvent", "structAPointerPressedEvent.html", null ],
     [ "APointerReleasedEvent", "structAPointerReleasedEvent.html", null ],
     [ "APool< T >", "classAPool.html", null ],
@@ -143,6 +152,7 @@ var hierarchy =
     [ "AProgramModule", "classAProgramModule.html", null ],
     [ "ARaiiHelper< Callback >", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
+    [ "ARender", "classARender.html", null ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", null ],
     [ "AScrollEvent", "structAScrollEvent.html", null ],
     [ "ASerializable< T, T2 >", "structASerializable.html", null ],
@@ -161,6 +171,7 @@ var hierarchy =
     [ "ASerializable< T, std::enable_if_t< std::is_base_of_v< IInputStream, T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html", null ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AShortcut", "classAShortcut.html", null ],
+    [ "ASmallVector< StoredType, StaticVectorSize, Allocator >", "classASmallVector.html", null ],
     [ "ASolidBrush", "structASolidBrush.html", null ],
     [ "ASplitterHelper", "classASplitterHelper.html", null ],
     [ "ASqlBlueprintColumn", "classASqlBlueprintColumn.html", null ],
@@ -171,6 +182,7 @@ var hierarchy =
     [ "ASqlQueryResult", "classASqlQueryResult.html", null ],
     [ "aui::assert_not_used_when_null< T >", "classaui_1_1assert__not__used__when__null.html", null ],
     [ "AStacktrace", "classAStacktrace.html", null ],
+    [ "AStaticVector< StoredType, MaxSize >", "classAStaticVector.html", null ],
     [ "AStringFormatHelper", "structAStringFormatHelper.html", null ],
     [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
     [ "AStylesheet", "classAStylesheet.html", null ],
@@ -180,13 +192,16 @@ var hierarchy =
     [ "AThreadPool", "classAThreadPool.html", null ],
     [ "ATokenizer", "classATokenizer.html", null ],
     [ "aui::atomic_lazy< T >", "structaui_1_1atomic__lazy.html", null ],
-    [ "ATreeIndex", "classATreeIndex.html", null ],
+    [ "ATouchScroller", "classATouchScroller.html", null ],
+    [ "ATreeModelIndex", "classATreeModelIndex.html", null ],
     [ "AUIViewController()", "categoryAUIViewController_07_08.html", null ],
     [ "AUrl", "classAUrl.html", null ],
     [ "AUuid", "classAUuid.html", null ],
     [ "AValueSmoother< T >", "classAValueSmoother.html", null ],
     [ "AViewProfiler", "classAViewProfiler.html", null ],
     [ "AViewsInit", "structAViewsInit.html", null ],
+    [ "aui::constraint::avoid_copy< T >", "classaui_1_1constraint_1_1avoid__copy.html", null ],
+    [ "AWatchdog", "classAWatchdog.html", null ],
     [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
@@ -245,7 +260,9 @@ var hierarchy =
     [ "ass::BorderLeft", "structass_1_1BorderLeft.html", null ],
     [ "ass::BorderRadius", "structass_1_1BorderRadius.html", null ],
     [ "ass::BoxShadow", "structass_1_1BoxShadow.html", null ],
+    [ "ass::BoxShadowInner", "structass_1_1BoxShadowInner.html", null ],
     [ "BrushHelper", "structBrushHelper.html", null ],
+    [ "gl::Vao::Buffer", "structgl_1_1Vao_1_1Buffer.html", null ],
     [ "ABasicListEditor::Builder", "classABasicListEditor_1_1Builder.html", null ],
     [ "ACurl::Builder", "classACurl_1_1Builder.html", null ],
     [ "AGridSplitter::Builder", "classAGridSplitter_1_1Builder.html", null ],
@@ -254,8 +271,11 @@ var hierarchy =
     [ "Cache< IDrawable, Cache, AUrl >", "classCache.html", null ],
     [ "ASignal< Args >::call_wrapper", "structASignal_1_1call__wrapper.html", null ],
     [ "aui::impl::future::CancellationWrapper< Inner >", "structaui_1_1impl_1_1future_1_1CancellationWrapper.html", null ],
+    [ "aui::jni::detail::CastHelper", "structaui_1_1jni_1_1detail_1_1CastHelper.html", null ],
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
+    [ "ClipOptimizationContext", "structClipOptimizationContext.html", null ],
+    [ "ALinearGradientBrush::ColorEntry", "structALinearGradientBrush_1_1ColorEntry.html", null ],
     [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
       [ "ass::on_state::Activated", "structass_1_1on__state_1_1Activated.html", null ],
       [ "ass::on_state::Disabled", "structass_1_1on__state_1_1Disabled.html", null ],
@@ -270,7 +290,8 @@ var hierarchy =
     [ "aui::dbus::converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
     [ "aui::dbus::converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
     [ "aui::jni::Converter< std::string >", "structaui_1_1jni_1_1Converter_3_01std_1_1string_01_4.html", [
-      [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ]
+      [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ],
+      [ "aui::jni::Converter< ArrayView< T > >", "structaui_1_1jni_1_1Converter_3_01ArrayView_3_01T_01_4_01_4.html", null ]
     ] ],
     [ "aui::dbus::converter< std::tuple< Types... > >", "structaui_1_1dbus_1_1converter_3_01std_1_1tuple_3_01Types_8_8_8_01_4_01_4.html", null ],
     [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter_3_01T_01_4.html", null ],
@@ -304,14 +325,14 @@ var hierarchy =
     [ "aui::jni::ConverterPrimitive< jshort, 'S'>", "structaui_1_1jni_1_1ConverterPrimitive.html", [
       [ "aui::jni::Converter< jshort >", "structaui_1_1jni_1_1Converter_3_01jshort_01_4.html", null ]
     ] ],
-    [ "AnimationCurves::CubicBezier", "classAnimationCurves_1_1CubicBezier.html", [
-      [ "AnimationCurves::Standard", "classAnimationCurves_1_1Standard.html", null ]
+    [ "aui::animation_curves::CubicBezier", "classaui_1_1animation__curves_1_1CubicBezier.html", [
+      [ "aui::animation_curves::Standard", "classaui_1_1animation__curves_1_1Standard.html", null ]
     ] ],
     [ "ACursor::Custom", "structACursor_1_1Custom.html", null ],
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", [
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
-    [ "CustomShaderHelper", "structCustomShaderHelper.html", null ],
+    [ "ABorderStyle::Dashed", "structABorderStyle_1_1Dashed.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
@@ -328,6 +349,10 @@ var hierarchy =
     ] ],
     [ "std::enable_shared_from_this", null, [
       [ "AObject", "classAObject.html", [
+        [ "ITreeModel< AString >", "classITreeModel.html", [
+          [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", null ]
+        ] ],
+        [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
         [ "AAssHelper", "classAAssHelper.html", null ],
         [ "AChildProcess", "classAChildProcess.html", null ],
         [ "ACurl", "classACurl.html", [
@@ -336,22 +361,30 @@ var hierarchy =
         [ "ACurlMulti", "classACurlMulti.html", null ],
         [ "ADataBinding< Model >", "classADataBinding.html", null ],
         [ "ALayout", "classALayout.html", [
+          [ "aui::detail::LinearLayoutImpl< _< AView > >", "classaui_1_1detail_1_1LinearLayoutImpl.html", [
+            [ "ALinearLayout< Storage >", "classALinearLayout.html", [
+              [ "AHorizontalLayout", "classAHorizontalLayout.html", null ],
+              [ "AStackedLayout", "classAStackedLayout.html", null ],
+              [ "AVerticalLayout", "classAVerticalLayout.html", null ],
+              [ "AWordWrappingLayout", "classAWordWrappingLayout.html", null ]
+            ] ],
+            [ "ALinearLayout< _< AView > >", "classALinearLayout_3_01___3_01AView_01_4_01_4.html", null ]
+          ] ],
           [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", null ],
           [ "AGridLayout", "classAGridLayout.html", null ],
-          [ "AHorizontalLayout", "classAHorizontalLayout.html", null ],
-          [ "AStackedLayout", "classAStackedLayout.html", null ],
-          [ "AVerticalLayout", "classAVerticalLayout.html", null ],
-          [ "AWordWrappingLayout", "classAWordWrappingLayout.html", null ]
+          [ "aui::detail::LinearLayoutImpl< Storage >", "classaui_1_1detail_1_1LinearLayoutImpl.html", [
+            [ "ALinearLayout< aui::detail::AbsoluteLayoutCell >", "classALinearLayout.html", [
+              [ "AAbsoluteLayout", "classAAbsoluteLayout.html", null ]
+            ] ]
+          ] ]
         ] ],
-        [ "AListModel< StoredType >", "classAListModel.html", null ],
-        [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ],
-        [ "AListModelFilter< T, Filter >", "classAListModelFilter.html", null ],
         [ "AListModelObserver< T >", "classAListModelObserver.html", null ],
         [ "ARadioButton::Group", "classARadioButton_1_1Group.html", null ],
         [ "AStdOutputRecorder", "classAStdOutputRecorder.html", null ],
         [ "AThread", "classAThread.html", null ],
         [ "ATimer", "classATimer.html", null ],
         [ "AView", "classAView.html", [
+          [ "ViewMock", "classViewMock.html", null ],
           [ "AAbstractLabel", "classAAbstractLabel.html", [
             [ "AButton", "classAButton.html", [
               [ "ADropdownList", "classADropdownList.html", null ]
@@ -365,6 +398,7 @@ var hierarchy =
           ] ],
           [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
           [ "ACheckBox", "classACheckBox.html", null ],
+          [ "ACircleProgressBar::Inner", "classACircleProgressBar_1_1Inner.html", null ],
           [ "ADividerView", "classADividerView.html", [
             [ "AHDividerView", "classAHDividerView.html", null ],
             [ "AVDividerView", "classAVDividerView.html", null ]
@@ -389,6 +423,8 @@ var hierarchy =
                   [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
                 ] ],
                 [ "UIClick::TestWindow", "classUIClick_1_1TestWindow.html", null ],
+                [ "UIMultitouchTest::TestWindow", "classUIMultitouchTest_1_1TestWindow.html", null ],
+                [ "UIRenderOptimizationTest::TestWindow", "classUIRenderOptimizationTest_1_1TestWindow.html", null ],
                 [ "UIScrollTest::TestWindow", "classUIScrollTest_1_1TestWindow.html", null ],
                 [ "UIViewFocus::TestWindow", "classUIViewFocus_1_1TestWindow.html", null ]
               ] ]
@@ -396,6 +432,7 @@ var hierarchy =
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
             [ "AButtonEx", "classAButtonEx.html", null ],
             [ "ACheckBoxWrapper", "classACheckBoxWrapper.html", null ],
+            [ "ACircleProgressBar", "classACircleProgressBar.html", null ],
             [ "ADoubleNumberPicker", "classADoubleNumberPicker.html", null ],
             [ "ADragArea", "classADragArea.html", null ],
             [ "ADragArea::ADraggableHandle", "classADragArea_1_1ADraggableHandle.html", null ],
@@ -404,7 +441,6 @@ var hierarchy =
             [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
             [ "AGridSplitter", "classAGridSplitter.html", null ],
             [ "AGroupBox", "classAGroupBox.html", null ],
-            [ "AListView", "classAListView.html", null ],
             [ "AListViewContainer", "classAListViewContainer.html", null ],
             [ "AMenuContainer", "classAMenuContainer.html", null ],
             [ "ANumberPicker", "classANumberPicker.html", null ],
@@ -416,11 +452,14 @@ var hierarchy =
             [ "ARadioGroup", "classARadioGroup.html", null ],
             [ "ARulerArea", "classARulerArea.html", null ],
             [ "AScrollArea", "classAScrollArea.html", [
+              [ "AListView", "classAListView.html", null ],
               [ "ViewPropertiesView", "classViewPropertiesView.html", null ]
             ] ],
-            [ "AScrollAreaContainer", "classAScrollAreaContainer.html", null ],
+            [ "AScrollAreaInner", "classAScrollAreaInner.html", null ],
             [ "AScrollbar", "classAScrollbar.html", null ],
-            [ "ASlider", "classASlider.html", null ],
+            [ "ASlider", "classASlider.html", [
+              [ "SliderMock", "classSliderMock.html", null ]
+            ] ],
             [ "ASplitter", "classASplitter.html", null ],
             [ "ATabButtonRow", "classATabButtonRow.html", null ],
             [ "ATabView", "classATabView.html", null ],
@@ -436,6 +475,21 @@ var hierarchy =
           [ "ViewMock", "classViewMock.html", null ],
           [ "ViewMock", "classViewMock.html", null ]
         ] ],
+        [ "IListModel< T >", "classIListModel.html", [
+          [ "IRemovableListModel< StoredType >", "classIRemovableListModel.html", [
+            [ "AListModel< StoredType >", "classAListModel.html", null ]
+          ] ],
+          [ "IRemovableListModel< ItemTo >", "classIRemovableListModel.html", [
+            [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ]
+          ] ],
+          [ "IValueMutableListModel< StoredType >", "classIValueMutableListModel.html", [
+            [ "AListModel< StoredType >", "classAListModel.html", null ]
+          ] ],
+          [ "AListModelFilter< T, Filter >", "classAListModelFilter.html", null ],
+          [ "IRemovableListModel< T >", "classIRemovableListModel.html", null ],
+          [ "IValueMutableListModel< T >", "classIValueMutableListModel.html", null ]
+        ] ],
+        [ "ITreeModel< T >", "classITreeModel.html", null ],
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
         [ "Master", "classMaster.html", null ],
         [ "ProcessSignalReceiver", "classProcessSignalReceiver.html", null ],
@@ -459,7 +513,9 @@ var hierarchy =
     [ "ACurl::ErrorDescription", "structACurl_1_1ErrorDescription.html", null ],
     [ "std::exception", null, [
       [ "AException", "classAException.html", [
+        [ "AComplexFutureOperation< T >::NoValueException", "classAComplexFutureOperation_1_1NoValueException.html", null ],
         [ "ADBus::Exception", "classADBus_1_1Exception.html", null ],
+        [ "AFatalException", "classAFatalException.html", null ],
         [ "AIOException", "classAIOException.html", [
           [ "AAccessDeniedException", "classAAccessDeniedException.html", null ],
           [ "ACurl::Exception", "classACurl_1_1Exception.html", null ],
@@ -479,9 +535,9 @@ var hierarchy =
         ] ],
         [ "AProcessException", "classAProcessException.html", null ],
         [ "AProgramModuleLoadException", "classAProgramModuleLoadException.html", null ],
-        [ "ASegfaultException", "classASegfaultException.html", null ],
         [ "ASqlModel< Model >::NoSuchRowException", "classASqlModel_1_1NoSuchRowException.html", null ],
         [ "ASqlModel< Model >::TooManyRowsException", "classASqlModel_1_1TooManyRowsException.html", null ],
+        [ "ATreeModelIndex::Exception", "classATreeModelIndex_1_1Exception.html", null ],
         [ "AUuidException", "classAUuidException.html", null ],
         [ "AZLibException", "classAZLibException.html", null ],
         [ "SQLException", "classSQLException.html", null ]
@@ -521,14 +577,13 @@ var hierarchy =
     [ "aui::impl::future::FutureReturnType< T >", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
     [ "aui::impl::future::FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
     [ "GLContext", "classGLContext.html", null ],
-    [ "GLKViewController", null, [
-      [ "AUIViewController", "interfaceAUIViewController.html", null ]
+    [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", [
+      [ "aui::jni::ArrayView< T >", "classaui_1_1jni_1_1ArrayView.html", null ]
     ] ],
-    [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", null ],
-    [ "GradientShaderHelper", "structGradientShaderHelper.html", null ],
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
     [ "std::hash< AString >", "structstd_1_1hash_3_01AString_01_4.html", null ],
+    [ "aui::render::brush::gradient::Helper", "structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html", null ],
     [ "ATokenizer::Hexable< underlying_t >", "structATokenizer_1_1Hexable.html", null ],
     [ "ass::IAssSubSelector", "classass_1_1IAssSubSelector.html", [
       [ "ass::DirectParentSubSelector< L, R >", "structass_1_1DirectParentSubSelector.html", null ],
@@ -569,23 +624,9 @@ var hierarchy =
       [ "AEventLoop", "classAEventLoop.html", null ],
       [ "AScheduler", "classAScheduler.html", null ],
       [ "AWindowManager", "classAWindowManager.html", [
-        [ "UITestWindowManager", "classUITestWindowManager.html", null ]
+        [ "AStubWindowManager", "classAStubWindowManager.html", null ]
       ] ],
       [ "MyEventLoop", "classMyEventLoop.html", null ]
-    ] ],
-    [ "IListModel< T >", "classIListModel.html", [
-      [ "IRemovableListModel< StoredType >", "classIRemovableListModel.html", [
-        [ "AListModel< StoredType >", "classAListModel.html", null ]
-      ] ],
-      [ "IRemovableListModel< ItemTo >", "classIRemovableListModel.html", [
-        [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ]
-      ] ],
-      [ "IValueMutableListModel< StoredType >", "classIValueMutableListModel.html", [
-        [ "AListModel< StoredType >", "classAListModel.html", null ]
-      ] ],
-      [ "AListModelFilter< T, Filter >", "classAListModelFilter.html", null ],
-      [ "IRemovableListModel< T >", "classIRemovableListModel.html", null ],
-      [ "IValueMutableListModel< T >", "classIValueMutableListModel.html", null ]
     ] ],
     [ "AListModelObserver< T >::IListModelListener", "classAListModelObserver_1_1IListModelListener.html", [
       [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
@@ -614,6 +655,8 @@ var hierarchy =
       ] ],
       [ "ass::prop::Property< AOverflow >", "structass_1_1prop_1_1Property_3_01AOverflow_01_4.html", null ],
       [ "ass::prop::Property< AOverflowMask >", "structass_1_1prop_1_1Property_3_01AOverflowMask_01_4.html", null ],
+      [ "ass::prop::Property< ATextAlign >", "structass_1_1prop_1_1Property_3_01ATextAlign_01_4.html", null ],
+      [ "ass::prop::Property< ATextOverflow >", "structass_1_1prop_1_1Property_3_01ATextOverflow_01_4.html", null ],
       [ "ass::prop::Property< BackgroundCropping >", "structass_1_1prop_1_1Property_3_01BackgroundCropping_01_4.html", null ],
       [ "ass::prop::Property< BackgroundEffect >", "structass_1_1prop_1_1Property_3_01BackgroundEffect_01_4.html", null ],
       [ "ass::prop::Property< BackgroundGradient >", "structass_1_1prop_1_1Property_3_01BackgroundGradient_01_4.html", null ],
@@ -624,6 +667,7 @@ var hierarchy =
       [ "ass::prop::Property< BorderLeft >", "structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html", null ],
       [ "ass::prop::Property< BorderRadius >", "structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html", null ],
       [ "ass::prop::Property< BoxShadow >", "structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html", null ],
+      [ "ass::prop::Property< BoxShadowInner >", "structass_1_1prop_1_1Property_3_01BoxShadowInner_01_4.html", null ],
       [ "ass::prop::Property< Expanding >", "structass_1_1prop_1_1Property_3_01Expanding_01_4.html", null ],
       [ "ass::prop::Property< FixedSize >", "structass_1_1prop_1_1Property_3_01FixedSize_01_4.html", null ],
       [ "ass::prop::Property< Font >", "structass_1_1prop_1_1Property_3_01Font_01_4.html", null ],
@@ -639,13 +683,12 @@ var hierarchy =
       [ "ass::prop::Property< Opacity >", "structass_1_1prop_1_1Property_3_01Opacity_01_4.html", null ],
       [ "ass::prop::Property< Padding >", "structass_1_1prop_1_1Property_3_01Padding_01_4.html", null ],
       [ "ass::prop::Property< ScrollbarAppearance >", "structass_1_1prop_1_1Property_3_01ScrollbarAppearance_01_4.html", null ],
-      [ "ass::prop::Property< TextAlign >", "structass_1_1prop_1_1Property_3_01TextAlign_01_4.html", null ],
       [ "ass::prop::Property< TextBorder >", "structass_1_1prop_1_1Property_3_01TextBorder_01_4.html", null ],
       [ "ass::prop::Property< TextColor >", "structass_1_1prop_1_1Property_3_01TextColor_01_4.html", null ],
-      [ "ass::prop::Property< TextOverflow >", "structass_1_1prop_1_1Property_3_01TextOverflow_01_4.html", null ],
       [ "ass::prop::Property< TextShadow >", "structass_1_1prop_1_1Property_3_01TextShadow_01_4.html", null ],
       [ "ass::prop::Property< TextTransform >", "structass_1_1prop_1_1Property_3_01TextTransform_01_4.html", null ],
       [ "ass::prop::Property< TransformOffset >", "structass_1_1prop_1_1Property_3_01TransformOffset_01_4.html", null ],
+      [ "ass::prop::Property< TransformRotate >", "structass_1_1prop_1_1Property_3_01TransformRotate_01_4.html", null ],
       [ "ass::prop::Property< TransformScale >", "structass_1_1prop_1_1Property_3_01TransformScale_01_4.html", null ],
       [ "ass::prop::Property< VerticalAlign >", "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html", null ],
       [ "ass::prop::Property< Visibility >", "structass_1_1prop_1_1Property_3_01Visibility_01_4.html", null ]
@@ -658,10 +701,12 @@ var hierarchy =
       [ "AFakeWindowInitializer", "classAFakeWindowInitializer.html", null ],
       [ "CommonRenderingContext", "classCommonRenderingContext.html", [
         [ "OpenGLRenderingContext", "classOpenGLRenderingContext.html", null ],
-        [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", [
-          [ "UITestRenderingContext", "classUITestRenderingContext.html", null ]
-        ] ]
+        [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", null ]
       ] ]
+    ] ],
+    [ "gl::Framebuffer::IRenderTarget", "classgl_1_1Framebuffer_1_1IRenderTarget.html", [
+      [ "gl::RenderbufferRenderTarget< internalFormat, multisampling >", "classgl_1_1RenderbufferRenderTarget.html", null ],
+      [ "gl::TextureRenderTarget< internalFormat, type, format >", "classgl_1_1TextureRenderTarget.html", null ]
     ] ],
     [ "ass::ISelectable", "classass_1_1ISelectable.html", [
       [ "ACheckBox", "classACheckBox.html", null ],
@@ -680,19 +725,17 @@ var hierarchy =
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
       [ "AAbstractTextField", "classAAbstractTextField.html", null ],
-      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ]
+      [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ],
+      [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ],
+      [ "ass::prop::Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ]
     ] ],
-    [ "AModelRange< T >::Iterator", "classAModelRange_1_1Iterator.html", null ],
-    [ "AModelSelection< T >::Iterator", "classAModelSelection_1_1Iterator.html", null ],
+    [ "AListModelRange< T >::Iterator", "classAListModelRange_1_1Iterator.html", null ],
+    [ "AListModelSelection< T >::Iterator", "classAListModelSelection_1_1Iterator.html", null ],
     [ "ASqlQueryResult::Iterator", "classASqlQueryResult_1_1Iterator.html", null ],
     [ "aui::zip< Containers >::iterator", "structaui_1_1zip_1_1iterator.html", null ],
     [ "ITexture", "classITexture.html", [
       [ "OpenGLTexture2D", "classOpenGLTexture2D.html", null ],
       [ "SoftwareTexture", "classSoftwareTexture.html", null ]
-    ] ],
-    [ "ITreeModel< T >", "classITreeModel.html", null ],
-    [ "ITreeModel< AString >", "classITreeModel.html", [
-      [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", null ]
     ] ],
     [ "IXmlEntityVisitor", "classIXmlEntityVisitor.html", [
       [ "IXmlDocumentVisitor", "classIXmlDocumentVisitor.html", null ]
@@ -720,12 +763,15 @@ var hierarchy =
     [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
     [ "aui::lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
     [ "uitest::impl::less_of< side >", "structuitest_1_1impl_1_1less__of.html", null ],
-    [ "AnimationCurves::Linear", "classAnimationCurves_1_1Linear.html", null ],
+    [ "aui::animation_curves::Linear", "classaui_1_1animation__curves_1_1Linear.html", null ],
     [ "ass::LineHeight", "structass_1_1LineHeight.html", null ],
     [ "ALogger::LogWriter", "structALogger_1_1LogWriter.html", null ],
     [ "MacosApp", "classMacosApp.html", null ],
     [ "Manager< T >", "classManager.html", null ],
     [ "std::map", null, [
+      [ "AMap< AString, AFormMultipartEntry >", "classAMap.html", [
+        [ "AFormMultipart", "classAFormMultipart.html", null ]
+      ] ],
       [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", null ]
     ] ],
     [ "ass::Margin", "structass_1_1Margin.html", null ],
@@ -736,13 +782,12 @@ var hierarchy =
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "AAbstractThread::Message", "structAAbstractThread_1_1Message.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
-    [ "aui::promise::move_only< T >", "classaui_1_1promise_1_1move__only.html", null ],
+    [ "aui::constraint::move_only< T >", "classaui_1_1constraint_1_1move__only.html", null ],
     [ "tuples::detail::functor::mul", "structtuples_1_1detail_1_1functor_1_1mul.html", null ],
     [ "std::mutex", null, [
       [ "AMutex", "classAMutex.html", null ]
     ] ],
     [ "MyStruct", "structMyStruct.html", null ],
-    [ "aui::promise::no_copy< T >", "classaui_1_1promise_1_1no__copy.html", null ],
     [ "aui::no_escape< T >", "structaui_1_1no__escape.html", null ],
     [ "aui::non_null_lateinit< T >", "structaui_1_1non__null__lateinit.html", [
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
@@ -769,6 +814,7 @@ var hierarchy =
       [ "AX509Store", "classAX509Store.html", null ],
       [ "IInputStream", "classIInputStream.html", [
         [ "AByteBufferInputStream", "classAByteBufferInputStream.html", null ],
+        [ "AConcatInputStream", "classAConcatInputStream.html", null ],
         [ "ADynamicPipe", "classADynamicPipe.html", null ],
         [ "AFileInputStream", "classAFileInputStream.html", null ],
         [ "ALimitedInputStream", "classALimitedInputStream.html", null ],
@@ -776,7 +822,9 @@ var hierarchy =
         [ "ARandomInputStream", "classARandomInputStream.html", null ],
         [ "AStringStream", "classAStringStream.html", null ],
         [ "ATcpSocket", "classATcpSocket.html", null ],
-        [ "MultipleInputStream", "classMultipleInputStream.html", null ],
+        [ "ISeekableInputStream", "classISeekableInputStream.html", [
+          [ "AStrongByteBufferInputStream", "classAStrongByteBufferInputStream.html", null ]
+        ] ],
         [ "PipeInputStream", "classPipeInputStream.html", null ]
       ] ],
       [ "IOutputStream", "classIOutputStream.html", [
@@ -792,14 +840,18 @@ var hierarchy =
       [ "IcmpImpl", "classIcmpImpl.html", null ],
       [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
       [ "Pipe", "classPipe.html", null ],
+      [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", null ],
       [ "UnixEventFd", "classUnixEventFd.html", null ],
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
-      [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ]
+      [ "aui::win32::Handle", "classaui_1_1win32_1_1Handle.html", null ],
+      [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ],
+      [ "gl::Framebuffer", "classgl_1_1Framebuffer.html", null ]
     ] ],
     [ "NSApplication", null, [
       [ "AUINSApplication", "interfaceAUINSApplication.html", null ]
     ] ],
     [ "NSObject", null, [
+      [ "AppDelegate", "interfaceAppDelegate.html", null ],
       [ "WindowDelegate", "interfaceWindowDelegate.html", null ]
     ] ],
     [ "<NSTextInputClient>", null, [
@@ -825,6 +877,8 @@ var hierarchy =
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+    [ "AViewContainer::PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
+    [ "gl::Program", "classgl_1_1Program.html", null ],
     [ "ass::prop::Property< PropertyStruct >", "structass_1_1prop_1_1Property.html", null ],
     [ "ass::PropertyList", "structass_1_1PropertyList.html", [
       [ "ass::PropertyListRecursive", "structass_1_1PropertyListRecursive.html", null ],
@@ -853,7 +907,9 @@ var hierarchy =
       [ "ASerializable< AUuid >", "structASerializable_3_01AUuid_01_4.html", null ]
     ] ],
     [ "Util::Rect", "classUtil_1_1Rect.html", null ],
-    [ "Render", "classRender.html", null ],
+    [ "gl::Renderbuffer< multisampling >", "classgl_1_1Renderbuffer.html", null ],
+    [ "gl::RenderTargetDepth", "structgl_1_1RenderTargetDepth.html", null ],
+    [ "gl::RenderTargetRGBA8", "structgl_1_1RenderTargetRGBA8.html", null ],
     [ "gl::impl::resource< T >", "structgl_1_1impl_1_1resource.html", null ],
     [ "gl::impl::resource< ResourceKind::TEXTURE >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html", null ],
     [ "gl::impl::resource_basic_buffer", "structgl_1_1impl_1_1resource__basic__buffer.html", [
@@ -861,6 +917,7 @@ var hierarchy =
       [ "gl::impl::resource< ResourceKind::VERTEX_BUFFER >", "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1VERTEX__BUFFER_01_4.html", null ]
     ] ],
     [ "gl::ResourcePool< T >", "classgl_1_1ResourcePool.html", null ],
+    [ "ACurl::Response", "structACurl_1_1Response.html", null ],
     [ "aui::reverse_iterator_wrap< T >", "structaui_1_1reverse__iterator__wrap.html", null ],
     [ "RoundedRect", "structRoundedRect.html", null ],
     [ "std::runtime_error", null, [
@@ -880,7 +937,6 @@ var hierarchy =
     [ "std::set", null, [
       [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", null ]
     ] ],
-    [ "gl::Shader", "classgl_1_1Shader.html", null ],
     [ "std::shared_ptr", null, [
       [ "_< IRenderer::IPrerenderedString >", "class__.html", null ],
       [ "_< ITexture >", "class__.html", null ],
@@ -895,7 +951,7 @@ var hierarchy =
     [ "aui::jni::signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
     [ "ARenderingContextOptions::Software", "structARenderingContextOptions_1_1Software.html", null ],
-    [ "SolidShaderHelper", "structSolidShaderHelper.html", null ],
+    [ "ABorderStyle::Solid", "structABorderStyle_1_1Solid.html", null ],
     [ "SomeBuilderClass", "classSomeBuilderClass.html", null ],
     [ "SqlColumn", "structSqlColumn.html", null ],
     [ "AAssHelper::State", "structAAssHelper_1_1State.html", null ],
@@ -925,12 +981,17 @@ var hierarchy =
     [ "aui::ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
     [ "aui::traits::ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
     [ "testing::Test", null, [
+      [ "DynamicVector", "classDynamicVector.html", null ],
       [ "Process", "classProcess.html", null ],
       [ "SignalSlot", "classSignalSlot.html", null ],
+      [ "SmallVector", "classSmallVector.html", null ],
+      [ "StaticVector", "classStaticVector.html", null ],
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
         [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
+        [ "UIMultitouchTest", "classUIMultitouchTest.html", null ],
         [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
+        [ "UIRenderOptimizationTest", "classUIRenderOptimizationTest.html", null ],
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
@@ -943,13 +1004,13 @@ var hierarchy =
     [ "ass::TextColor", "structass_1_1TextColor.html", null ],
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
     [ "gl::Texture< TEXTURE_TARGET >", "classgl_1_1Texture.html", null ],
+    [ "aui::sl_gen::Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ],
     [ "gl::Texture< TEXTURE_1D >", "classgl_1_1Texture.html", [
       [ "gl::Texture1D", "classgl_1_1Texture1D.html", null ]
     ] ],
     [ "gl::Texture< TEXTURE_2D >", "classgl_1_1Texture.html", [
       [ "gl::Texture2D", "classgl_1_1Texture2D.html", null ]
     ] ],
-    [ "TexturedShaderHelper", "structTexturedShaderHelper.html", null ],
     [ "Util::TexturePacker_Lol", "classUtil_1_1TexturePacker__Lol.html", [
       [ "Util::TexturePacker< AImage >", "classUtil_1_1TexturePacker.html", [
         [ "Util::SimpleTexturePacker", "classUtil_1_1SimpleTexturePacker.html", null ]
@@ -957,6 +1018,7 @@ var hierarchy =
       [ "Util::TexturePacker< T >", "classUtil_1_1TexturePacker.html", null ]
     ] ],
     [ "ass::TransformOffset", "structass_1_1TransformOffset.html", null ],
+    [ "ass::TransformRotate", "structass_1_1TransformRotate.html", null ],
     [ "ass::TransformScale", "structass_1_1TransformScale.html", null ],
     [ "AThreadPool::TryLaterException", "classAThreadPool_1_1TryLaterException.html", null ],
     [ "std::tuple", null, [
@@ -985,18 +1047,22 @@ var hierarchy =
     ] ],
     [ "UIMatcher", "classUIMatcher.html", null ],
     [ "UIResponder", null, [
-      [ "AppDelegate", "interfaceAppDelegate.html", null ],
       [ "SceneDelegate", "interfaceSceneDelegate.html", null ]
+    ] ],
+    [ "UIView", null, [
+      [ "AUIView", "interfaceAUIView.html", null ]
+    ] ],
+    [ "UIViewController", null, [
+      [ "AUIViewController", "interfaceAUIViewController.html", null ]
     ] ],
     [ "<UIWindowSceneDelegate>", null, [
       [ "SceneDelegate", "interfaceSceneDelegate.html", null ]
     ] ],
-    [ "gl::Shader::Uniform", "classgl_1_1Shader_1_1Uniform.html", null ],
+    [ "gl::Program::Uniform", "classgl_1_1Program_1_1Uniform.html", null ],
     [ "UnixIoAsync", "classUnixIoAsync.html", null ],
     [ "UnixIoThread", "classUnixIoThread.html", null ],
     [ "aui::dbus::Unknown", "structaui_1_1dbus_1_1Unknown.html", null ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
-    [ "UnsupportedBrushHelper< Brush >", "structUnsupportedBrushHelper.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
       [ "aui::valid::chars::latin", "structaui_1_1valid_1_1chars_1_1latin.html", null ],
       [ "aui::valid::chars::numeric", "structaui_1_1valid_1_1chars_1_1numeric.html", null ],
@@ -1026,7 +1092,9 @@ var hierarchy =
         [ "AFutureSet< T >", "classAFutureSet.html", null ]
       ] ],
       [ "AVector< AString >", "classAVector.html", [
-        [ "AStringVector", "classAStringVector.html", null ]
+        [ "AStringVector", "classAStringVector.html", [
+          [ "ACommandLineArgs", "classACommandLineArgs.html", null ]
+        ] ]
       ] ],
       [ "AVector< Line >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
@@ -1056,6 +1124,9 @@ var hierarchy =
     [ "ViewActionMouseMove", "structViewActionMouseMove.html", null ],
     [ "ViewActionMousePress< Button >", "structViewActionMousePress.html", null ],
     [ "ViewActionMouseRelease< Button >", "structViewActionMouseRelease.html", null ],
+    [ "ViewActionPointerMoved", "structViewActionPointerMoved.html", null ],
+    [ "ViewActionPointerPressed", "structViewActionPointerPressed.html", null ],
+    [ "ViewActionPointerReleased", "structViewActionPointerReleased.html", null ],
     [ "ViewActionScroll", "structViewActionScroll.html", null ],
     [ "ViewAssertionAverageColor", "structViewAssertionAverageColor.html", null ],
     [ "ViewAssertionEmpty", "structViewAssertionEmpty.html", null ],
@@ -1067,6 +1138,7 @@ var hierarchy =
     [ "ViewAssertionSizeSame< I >", "structViewAssertionSizeSame.html", null ],
     [ "ViewAssertionText", "structViewAssertionText.html", null ],
     [ "ViewAssertionVisible", "structViewAssertionVisible.html", null ],
+    [ "aui::animation_curves::ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ],
     [ "std::weak_ptr", null, [
       [ "_weak< T >", "struct__weak.html", null ]
     ] ],

@@ -1,6 +1,7 @@
 var classAVector =
 [
     [ "contains", "classAVector.html#a13d40334d90b2d75006fed1e05fba778", null ],
+    [ "findIf", "classAVector.html#a230ce8220ec505e551e6f78cbdafe203", null ],
     [ "first", "classAVector.html#a0b77cf95ca7fc7be63bf85aed285f75f", null ],
     [ "first", "classAVector.html#a8321410937da08da17695a9a1403debd", null ],
     [ "indexOf", "classAVector.html#afb4aa45648e0aab5a33f41ba2f1da89f", null ],
@@ -17,6 +18,7 @@ var classAVector =
     [ "operator<<", "classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151", null ],
     [ "removeAll", "classAVector.html#af1feec53844fa47cdcd75c46ca371556", null ],
     [ "removeAt", "classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8", null ],
-    [ "removeFirst", "classAVector.html#aba5f9102b390dfc040028ba3a96da168", null ],
-    [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ]
+    [ "removeFirst", "classAVector.html#aa6a54a22a7f8148f1e79b9b8f34db453", null ],
+    [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ],
+    [ "removeIfFirst", "classAVector.html#aa70d17fe5a10801a82ff3fe0c19ab1f4", null ]
 ];

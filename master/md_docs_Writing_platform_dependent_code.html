@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AUI Framework: Platform checks</title>
+<title>AUI Framework: Writing platform dependent code</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,63 +89,119 @@ $(document).ready(function(){initNavTree('md_docs_Writing_platform_dependent_cod
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Platform checks </div></div>
+  <div class="headertitle"><div class="title">Writing platform dependent code </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><table class="doxtable">
+<div class="textblock"><p >AUI provides set of <code>AUI_PLATFORM_*</code> and <code>AUI_COMPILER_*</code> definitions for platform and compiler checking to use in both CMake and C++.</p>
+<h1><a class="anchor" id="autotoc_md87"></a>
+Platform checks</h1>
+<table class="doxtable">
 <tr>
-<th>Platform </th><th>#if check </th><th>Platform specific dir  </th></tr>
+<th>Platform </th><th>C++ </th><th>CMake </th><th>Platform specific dir  </th></tr>
 <tr>
 <td>Windows  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_WIN)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><p class="starttd"><code>Platform/win32</code>  </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td>Linux (not Android)  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_LINUX</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_LINUX)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><p class="starttd"><code>Platform/linux</code>  </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td>macOS  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_MACOS</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_MACOS)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><p class="starttd"><code>Platform/macos</code>  </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td>Android  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_ANDROID</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_ANDROID)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><p class="starttd"><code>Platform/android</code>  </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td>iOS (both iPhone and iPad)  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_IOS</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_IOS)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><p class="starttd"><code>Platform/ios</code>  </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td>Apple (macOS, iOS)  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_APPLE</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_APPLE)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><p class="starttd"><code>Platform/apple</code>  </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td>Unix (Linux, Android, macOS, iOS)  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_UNIX</span></div>
-<div class="line"><span class="comment">// ...</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_UNIX)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
 </div><!-- fragment -->  </td><td><code>Platform/unix</code>   </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md79"></a>
-Platform specific sources</h1>
-<p >With AUI, the platform dependent code can be placed in <code>src/Platform/&lt;PLATFORM_NAME&gt;</code> dir, where <code>&lt;PLATFORM_NAME&gt;</code> is one of the supported platforms (see the table above). </p>
+<h2><a class="anchor" id="autotoc_md88"></a>
+Platform specific sources</h2>
+<p >With AUI, the platform dependent code can be placed in <code>src/Platform/&lt;PLATFORM_NAME&gt;</code> dir, where <code>&lt;PLATFORM_NAME&gt;</code> is one of the supported platforms (see the table above).</p>
+<h1><a class="anchor" id="autotoc_md89"></a>
+Compiler checks</h1>
+<table class="doxtable">
+<tr>
+<th>Compiler </th><th>C++ </th><th>CMake  </th></tr>
+<tr>
+<td>MSVC  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_COMPILER_MSVC</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_COMPILER_MSVC)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
+</div><!-- fragment -->  <p class="endtd"></p>
+</td></tr>
+<tr>
+<td>GCC (including MinGW)  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_COMPILER_GCC</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_COMPILER_GCC)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
+</div><!-- fragment -->  <p class="endtd"></p>
+</td></tr>
+<tr>
+<td>CLANG  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_COMPILER_CLANG</span></div>
+<div class="line">  <span class="comment">// ...</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_COMPILER_CLANG)</div>
+<div class="line">  # ...</div>
+<div class="line">endif()</div>
+</div><!-- fragment -->   </td></tr>
+</table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

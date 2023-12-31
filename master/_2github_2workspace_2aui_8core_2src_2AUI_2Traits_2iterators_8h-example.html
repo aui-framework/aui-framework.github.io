@@ -151,60 +151,60 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        Iterator mBegin;</div>
 <div class="line">        Iterator mEnd;</div>
 <div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        range(Iterator mBegin, Iterator mEnd) : mBegin(mBegin), mEnd(mEnd) {}</div>
+<div class="line">        <span class="keyword">constexpr</span> range(Iterator mBegin, Iterator mEnd) : mBegin(mBegin), mEnd(mEnd) {}</div>
 <div class="line"> </div>
-<div class="line">        ~range() {</div>
+<div class="line">        <span class="keyword">constexpr</span> ~range() {</div>
 <div class="line">            <a id="a0" name="a0"></a><a class="code hl_define" href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a>(range::size)</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container&gt;</div>
-<div class="line">        range(Container&amp; c): mBegin(c.begin()), mEnd(c.end()) {</div>
+<div class="line">        <span class="keyword">constexpr</span> range(Container&amp; c): mBegin(c.begin()), mEnd(c.end()) {</div>
 <div class="line"> </div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container&gt;</div>
-<div class="line">        range(<span class="keyword">const</span> Container&amp; c): mBegin(c.begin()), mEnd(c.end()) {</div>
+<div class="line">        <span class="keyword">constexpr</span> range(<span class="keyword">const</span> Container&amp; c): mBegin(c.begin()), mEnd(c.end()) {</div>
 <div class="line"> </div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        <span class="keywordtype">bool</span> <a id="_a1" name="_a1"></a><a class="code hl_struct" href="structViewAssertionEmpty.html">empty</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a id="_a1" name="_a1"></a><a class="code hl_struct" href="structViewAssertionEmpty.html">empty</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mBegin == mEnd;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        std::size_t size() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> std::size_t size() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> std::distance(mBegin, mEnd);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        Iterator&amp; begin() <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> Iterator&amp; begin() <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mBegin;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        Iterator&amp; end() <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> Iterator&amp; end() <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mEnd;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        Iterator&amp; begin() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> Iterator&amp; begin() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mBegin;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        Iterator&amp; end() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> Iterator&amp; end() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mEnd;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; first()<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; first()<span class="keyword"> const </span>{</div>
 <div class="line">            <span class="keywordflow">return</span> *mBegin;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; last()<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; last()<span class="keyword"> const </span>{</div>
 <div class="line">            <span class="keywordflow">return</span> *std::prev(mEnd);</div>
 <div class="line">        }</div>
 <div class="line">    };</div>

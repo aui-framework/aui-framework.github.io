@@ -45,17 +45,20 @@ var NAVTREE =
     [ "Getting started", "usergroup1.html", [
       [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
-      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
       [ "Writing tests", "md_docs_Writing_tests.html", null ],
       [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ],
       [ "Crosscompiling (Android and iOS)", "md_docs_Crosscompiling.html", null ]
     ] ],
-    [ "Reference", "usergroup2.html", [
+    [ "Tweaking", "usergroup2.html", [
+      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
+      [ "AUI command line arguments", "md_docs_AUI_command_line_arguments.html", null ]
+    ] ],
+    [ "Reference", "usergroup3.html", [
       [ "All AUI Modules", "modules.html", "modules" ],
       [ "All AUI Classes", "classes.html", null ],
-      [ "All AUI CMake commands", "usergroup3.html", [
+      [ "All AUI CMake commands", "usergroup4.html", [
         [ "aui_app", "md_docs_aui_app.html", null ],
         [ "aui_executable", "md_docs_aui_executable.html", null ]
       ] ]
@@ -66,13 +69,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classAEnumerate.html",
-"classASignal.html",
-"classAView.html#aa8b76866565fc34ce1ed970708de8125",
-"classSoftwareRenderer.html#a399e2636518ba8b9c5c8740a282e9e90",
-"group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c",
-"structass_1_1ParentSubSelector.html#a978a669997406936fe7788f3785bb3f8",
-"structaui_1_1jni_1_1Converter_3_01jchar_01_4.html"
+"classADragArea_1_1ADraggableHandle.html",
+"classAProgramModule.html",
+"classATokenizer.html#a0764ae79970937bb783566f0648a78de",
+"classFormatEtcEnumerator.html",
+"classaui_1_1animation__curves_1_1ViscousFluid.html",
+"group__views.html#ga0b5c15e7f44eba2c0eb1705539014892",
+"structass_1_1PropertyListRecursive.html",
+"structaui_1_1jni_1_1Converter_3_01ArrayView_3_01T_01_4_01_4.html",
+""
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

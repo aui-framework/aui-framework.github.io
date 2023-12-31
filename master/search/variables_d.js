@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['value_0',['value',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a',1,'aui::impl::future::Future::Inner']]],
-  ['valuechanged_1',['valueChanged',['../classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221',1,'ADoubleNumberPicker::valueChanged()'],['../classANumberPicker.html#addc043a70d5402573886ba56346c26b4',1,'ANumberPicker::valueChanged()']]],
-  ['valuechanging_2',['valueChanging',['../classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154',1,'ADoubleNumberPicker::valueChanging()'],['../classANumberPicker.html#a304ec6f825d8eecc381ee7a1bb452612',1,'ANumberPicker::valueChanging()']]]
+  ['textchanged_0',['textChanged',['../classAAbstractTypeableView.html#a4addebde2ee640e32b78040f71f2d107',1,'AAbstractTypeableView']]],
+  ['textchanging_1',['textChanging',['../classAAbstractTypeableView.html#ad5412b86c537ee74c130c7f3623ec09c',1,'AAbstractTypeableView']]],
+  ['threshold_2',['THRESHOLD',['../classATouchScroller.html#a2221690cb4ad802d78059a537387caed',1,'ATouchScroller']]],
+  ['triggerclick_3',['triggerClick',['../structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0',1,'APointerReleasedEvent']]]
 ];

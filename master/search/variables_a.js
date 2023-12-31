@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scrolled_0',['scrolled',['../classAView.html#a603b11e87b05b203f321f6be85d45de8',1,'AView']]],
-  ['success_1',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]]
+  ['pointerindex_0',['pointerIndex',['../structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e',1,'APointerMoveEvent::pointerIndex()'],['../structAPointerPressedEvent.html#a113bdea6852221a33e9117e3d2ec4d38',1,'APointerPressedEvent::pointerIndex()'],['../structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060',1,'APointerReleasedEvent::pointerIndex()'],['../structAScrollEvent.html#a431620f313b0808fb40f4afad9592b9e',1,'AScrollEvent::pointerIndex()']]],
+  ['position_1',['position',['../structAPointerPressedEvent.html#a65f7e6527dd6c6baab30f4cae16cf465',1,'APointerPressedEvent::position()'],['../structAPointerReleasedEvent.html#af4316fcaa82636ab844436945e9cc93e',1,'APointerReleasedEvent::position()']]]
 ];

@@ -1,5 +1,6 @@
 var group__jni =
 [
+    [ "aui::jni::ArrayView< T >", "classaui_1_1jni_1_1ArrayView.html", null ],
     [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", null ],
     [ "AUI_JNI_CLASS", "group__jni.html#gab975e01587c23cab0a80b1708d1c7a76", null ],
     [ "AUI_JNI_METHOD", "group__jni.html#ga145dc96ff69b0677398b41c8611d6a1f", null ],

@@ -1,5 +1,6 @@
 var classAViewContainer =
 [
+    [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
     [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],
     [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
     [ "focusChainTarget", "classAViewContainer.html#a2a72d70843acdacbaa957084a851014a", null ],
@@ -13,14 +14,17 @@ var classAViewContainer =
     [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
     [ "onClickPrevented", "classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3", null ],
     [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
-    [ "onPointerMove", "classAViewContainer.html#a19d6a8c7fe9a4cce0804c9f51c16cb56", null ],
+    [ "onPointerMove", "classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7", null ],
     [ "onPointerPressed", "classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b", null ],
     [ "onPointerReleased", "classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b", null ],
     [ "onScroll", "classAViewContainer.html#a495a90385729196ebdd503beec159a45", null ],
-    [ "render", "classAViewContainer.html#a266886089eb80bfdf54dffe39f325b5d", null ],
+    [ "onViewGraphSubtreeChanged", "classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb", null ],
+    [ "pointerEventsMapping", "classAViewContainer.html#a18187c2873caae48dba130517c2131f0", null ],
+    [ "render", "classAViewContainer.html#ae31e59f7f259b654ffa1a1c29d538c55", null ],
     [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
     [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
     [ "setLayout", "classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542", null ],
     [ "updateParentsLayoutIfNecessary", "classAViewContainer.html#a09e9eff2f32d40eb6268d38b3a28238c", null ],
-    [ "visitsViewRecursive", "classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf", null ]
+    [ "visitsViewRecursive", "classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf", null ],
+    [ "childrenChanged", "classAViewContainer.html#af4713774dc02772268a95caa20639491", null ]
 ];

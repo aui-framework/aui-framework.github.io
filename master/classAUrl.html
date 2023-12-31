@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classAUrl.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classAUrl-members.html">List of all members</a>  </div>
@@ -101,8 +102,15 @@ $(document).ready(function(){initNavTree('classAUrl.html',''); initResizable(); 
  <a href="classAUrl.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Uniform Resource Locator implementation. </p>
-<p >Handles standard web url (schema://host:port/path). </p>
+<p >Handles standard web url (schema://host:port/path).</p>
+<p >Empty schema is mapped to the assets file. In example, ":icon.svg" references to <code>icon.svg</code> file in your assets. See aui_compile_assets() and <a href="https://github.com/aui-framework/aui/tree/master/examples/AUI.Example.Views">examples</a> of asset usage. </p>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:affab7887de293a1b68cad426fc089358"><td class="memItemLeft" align="right" valign="top"><a id="affab7887de293a1b68cad426fc089358" name="affab7887de293a1b68cad426fc089358"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Resolver</b> = std::function&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIInputStream.html">IInputStream</a> &gt;(const <a class="el" href="classAUrl.html">AUrl</a> &amp;)&gt;</td></tr>
+<tr class="separator:affab7887de293a1b68cad426fc089358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4f7df6a28f66ebc319895a53efcc62f2"><td class="memItemLeft" align="right" valign="top"><a id="a4f7df6a28f66ebc319895a53efcc62f2" name="a4f7df6a28f66ebc319895a53efcc62f2"></a>
@@ -135,9 +143,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a737053956a935a4a83ab743850c9935a"><td class="memItemLeft" align="right" valign="top"><a id="a737053956a935a4a83ab743850c9935a" name="a737053956a935a4a83ab743850c9935a"></a>
 static <a class="el" href="classAUrl.html">AUrl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>file</b> (const <a class="el" href="classAString.html">AString</a> &amp;file)</td></tr>
 <tr class="separator:a737053956a935a4a83ab743850c9935a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbabb98a094fcd40fe0afe9c6c45e15d"><td class="memItemLeft" align="right" valign="top"><a id="adbabb98a094fcd40fe0afe9c6c45e15d" name="adbabb98a094fcd40fe0afe9c6c45e15d"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>registerResolver</b> (const <a class="el" href="classAString.html">AString</a> &amp;protocol, const std::function&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIInputStream.html">IInputStream</a> &gt;(const <a class="el" href="classAUrl.html">AUrl</a> &amp;)&gt; &amp;factory)</td></tr>
-<tr class="separator:adbabb98a094fcd40fe0afe9c6c45e15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dc1373a7481d1a317565432766a93e"><td class="memItemLeft" align="right" valign="top"><a id="a38dc1373a7481d1a317565432766a93e" name="a38dc1373a7481d1a317565432766a93e"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>registerResolver</b> (const <a class="el" href="classAString.html">AString</a> &amp;protocol, Resolver resolver)</td></tr>
+<tr class="separator:a38dc1373a7481d1a317565432766a93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 <p><code>#include &lt;<a class="el" href="AUrl_8h_source.html">AUI/Url/AUrl.h</a>&gt;</code></p>

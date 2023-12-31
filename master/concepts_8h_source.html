@@ -124,8 +124,8 @@ $(document).ready(function(){initNavTree('concepts_8h_source.html',''); initResi
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                           std::is_convertible_v&lt;const volatile Derived*, const volatile Base*&gt;;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="conceptaui_1_1invocable.html">   41</a></span>    <span class="keyword">concept </span><a class="code hl_concept" href="conceptaui_1_1invocable.html">invocable</a> = <span class="keyword">requires</span>(F&amp;&amp; f, Args&amp;&amp;... args) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        { std::invoke(f, std::forward&lt;Args&gt;(args)...) };</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="conceptaui_1_1invocable.html">   41</a></span>    <span class="keyword">concept </span><a class="code hl_concept" href="conceptaui_1_1invocable.html">invocable</a> = <span class="keyword">requires</span>(F&amp;&amp; f, Args&amp;&amp;... <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        { std::invoke(f, std::forward&lt;Args&gt;(<a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)...) };</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> From, <span class="keyword">class</span> To&gt;</div>
@@ -212,8 +212,8 @@ $(document).ready(function(){initNavTree('concepts_8h_source.html',''); initResi
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">concept </span>predicate = <span class="keyword">requires</span>(F&amp;&amp; f, Args&amp;&amp;... args) {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        { f(std::forward&lt;Args&gt;(args)...) } -&gt; same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">concept </span>predicate = <span class="keyword">requires</span>(F&amp;&amp; f, Args&amp;&amp;... <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        { f(std::forward&lt;Args&gt;(<a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)...) } -&gt; same_as&lt;bool&gt;;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    };</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// aui concepts</span></div>
@@ -233,6 +233,7 @@ $(document).ready(function(){initNavTree('concepts_8h_source.html',''); initResi
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
 <div class="ttc" id="aconceptaui_1_1arithmetic_html"><div class="ttname"><a href="conceptaui_1_1arithmetic.html">aui::arithmetic</a></div><div class="ttdoc">Concept shortcut to std::is_arithmetic_v.</div><div class="ttdef"><b>Definition:</b> concepts.h:149</div></div>
 <div class="ttc" id="aconceptaui_1_1invocable_html"><div class="ttname"><a href="conceptaui_1_1invocable.html">aui::invocable</a></div><div class="ttdoc">Invokable concept.</div><div class="ttdef"><b>Definition:</b> concepts.h:41</div></div>
+<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -106,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2eeb1071827ea8a9ca61bfd414639588"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a2eeb1071827ea8a9ca61bfd414639588">read</a> (char *dst, size_t size)=0</td></tr>
 <tr class="memdesc:a2eeb1071827ea8a9ca61bfd414639588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed.  <a href="classIInputStream.html#a2eeb1071827ea8a9ca61bfd414639588">More...</a><br /></td></tr>
 <tr class="separator:a2eeb1071827ea8a9ca61bfd414639588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b37579b8cb8d97984e18f70b0536846"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a7b37579b8cb8d97984e18f70b0536846">read</a> (std::span&lt; std::byte &gt; destination)</td></tr>
+<tr class="memdesc:a7b37579b8cb8d97984e18f70b0536846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to <code>destination.size()</code> bytes from stream. Blocking (waiting for new data) is allowed.  <a href="classIInputStream.html#a7b37579b8cb8d97984e18f70b0536846">More...</a><br /></td></tr>
+<tr class="separator:a7b37579b8cb8d97984e18f70b0536846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d3fbd41d7e0d03c043d51f27353f9a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a2d3fbd41d7e0d03c043d51f27353f9a3">readExact</a> (char *dst, size_t size)</td></tr>
 <tr class="memdesc:a2d3fbd41d7e0d03c043d51f27353f9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads exact <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed.  <a href="classIInputStream.html#a2d3fbd41d7e0d03c043d51f27353f9a3">More...</a><br /></td></tr>
 <tr class="separator:a2d3fbd41d7e0d03c043d51f27353f9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +210,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a2eeb1071827ea8a9ca61bfd414639588" name="a2eeb1071827ea8a9ca61bfd414639588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eeb1071827ea8a9ca61bfd414639588">&#9670;&nbsp;</a></span>read()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eeb1071827ea8a9ca61bfd414639588">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,7 +257,47 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of read bytes (including 0) </dd></dl>
 
-<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#aa43ec19c84d7a04f84b69fc1009f5dbc">AByteBufferInputStream</a>, <a class="el" href="classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e">ADynamicPipe</a>, <a class="el" href="classAFileInputStream.html#a21ca24d981fe73be575335c3463aa611">AFileInputStream</a>, <a class="el" href="classALimitedInputStream.html#a18091fc98b1fa65c7e2a9ea7c54cd85f">ALimitedInputStream</a>, <a class="el" href="classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3">APipe</a>, <a class="el" href="classARandomInputStream.html#ae6deddbadfbc0ae88aa4b9c62d962f50">ARandomInputStream</a>, <a class="el" href="classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c">AStringStream</a>, <a class="el" href="classMultipleInputStream.html#aa60064456d79879da0b973ef230a6b84">MultipleInputStream</a>, <a class="el" href="classPipeInputStream.html#aa0ba3f47c2eac395bf546655947ac1a6">PipeInputStream</a>, and <a class="el" href="classATcpSocket.html#ae642aa64b944b8cbca4337f950bfb8d0">ATcpSocket</a>.</p>
+<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#aa43ec19c84d7a04f84b69fc1009f5dbc">AByteBufferInputStream</a>, <a class="el" href="classAConcatInputStream.html#a1d6ba1ddea2e8a385e1b4437b6e5dc11">AConcatInputStream</a>, <a class="el" href="classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e">ADynamicPipe</a>, <a class="el" href="classAFileInputStream.html#a21ca24d981fe73be575335c3463aa611">AFileInputStream</a>, <a class="el" href="classALimitedInputStream.html#a18091fc98b1fa65c7e2a9ea7c54cd85f">ALimitedInputStream</a>, <a class="el" href="classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3">APipe</a>, <a class="el" href="classARandomInputStream.html#ae6deddbadfbc0ae88aa4b9c62d962f50">ARandomInputStream</a>, <a class="el" href="classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c">AStringStream</a>, <a class="el" href="classAStrongByteBufferInputStream.html#a0221c8acf22fa504a1ebd75a65f7d384">AStrongByteBufferInputStream</a>, <a class="el" href="classPipeInputStream.html#aa0ba3f47c2eac395bf546655947ac1a6">PipeInputStream</a>, and <a class="el" href="classATcpSocket.html#ae642aa64b944b8cbca4337f950bfb8d0">ATcpSocket</a>.</p>
+
+</div>
+</div>
+<a id="a7b37579b8cb8d97984e18f70b0536846" name="a7b37579b8cb8d97984e18f70b0536846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b37579b8cb8d97984e18f70b0536846">&#9670;&nbsp;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t IInputStream::read </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; std::byte &gt;&#160;</td>
+          <td class="paramname"><em>destination</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads up to <code>destination.size()</code> bytes from stream. Blocking (waiting for new data) is allowed. </p>
+<dl>
+<dt><b>Sneaky exceptions</b> </dt>
+<dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination buffer </td></tr>
+    <tr><td class="paramname">size</td><td>destination buffer's size. &gt; 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of read bytes (including 0) </dd></dl>
 
 </div>
 </div>
@@ -323,18 +366,20 @@ Inheritance diagram for IInputStream:</div>
 <div class="dyncontent">
 <div class="center"><img src="classIInputStream__inherit__graph.png" border="0" usemap="#aIInputStream_inherit__map" alt="Inheritance graph"/></div>
 <map name="aIInputStream_inherit__map" id="aIInputStream_inherit__map">
-<area shape="rect" title="Represents an input stream." alt="" coords="171,233,268,260"/>
+<area shape="rect" title="Represents an input stream." alt="" coords="171,259,268,285"/>
 <area shape="rect" href="classAByteBufferInputStream.html" title="Converts a AByteBuffer to an IInputStream." alt="" coords="316,5,479,32"/>
-<area shape="rect" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise)." alt="" coords="344,56,451,83"/>
-<area shape="rect" href="classAFileInputStream.html" title="Opens a file for a binary read." alt="" coords="336,107,459,133"/>
-<area shape="rect" href="classALimitedInputStream.html" title="Input stream that will pass through a maximum of a certain number of bytes &#45; then it will return eof ..." alt="" coords="325,157,470,184"/>
-<area shape="rect" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise)." alt="" coords="369,208,426,235"/>
-<area shape="rect" href="classARandomInputStream.html" title="An input stream that generates random bytes." alt="" coords="322,259,473,285"/>
-<area shape="rect" href="classAStringStream.html" title="A buffer input/output stream based on std::string." alt="" coords="344,309,451,336"/>
-<area shape="rect" href="classATcpSocket.html" title="A bidirectional TCP connection (either a client connection or returned by ATcpServerSocket)." alt="" coords="350,360,445,387"/>
-<area shape="rect" href="classMultipleInputStream.html" title=" " alt="" coords="328,411,467,437"/>
-<area shape="rect" href="classPipeInputStream.html" title=" " alt="" coords="338,461,457,488"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="5,233,123,260"/>
+<area shape="rect" href="classAConcatInputStream.html" title="Concatenates multiple sequential input streams into one." alt="" coords="326,56,469,83"/>
+<area shape="rect" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise)." alt="" coords="344,107,451,133"/>
+<area shape="rect" href="classAFileInputStream.html" title="Opens a file for a binary read." alt="" coords="336,157,459,184"/>
+<area shape="rect" href="classALimitedInputStream.html" title="Input stream that will pass through a maximum of a certain number of bytes &#45; then it will return eof ..." alt="" coords="325,208,470,235"/>
+<area shape="rect" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise)." alt="" coords="369,259,426,285"/>
+<area shape="rect" href="classARandomInputStream.html" title="An input stream that generates random bytes." alt="" coords="322,309,473,336"/>
+<area shape="rect" href="classAStringStream.html" title="A buffer input/output stream based on std::string." alt="" coords="344,360,451,387"/>
+<area shape="rect" href="classATcpSocket.html" title="A bidirectional TCP connection (either a client connection or returned by ATcpServerSocket)." alt="" coords="350,411,445,437"/>
+<area shape="rect" href="classISeekableInputStream.html" title="Represents an input stream with updating reading position." alt="" coords="322,461,473,488"/>
+<area shape="rect" href="classPipeInputStream.html" title=" " alt="" coords="338,512,457,539"/>
+<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="5,259,123,285"/>
+<area shape="rect" href="classAStrongByteBufferInputStream.html" title="Input stream based on AByteBuffer with memory control, clears byte buffer on destruction." alt="" coords="527,461,727,488"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">

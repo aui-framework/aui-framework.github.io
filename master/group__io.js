@@ -3,6 +3,9 @@ var group__io =
     [ "AByteBufferInputStream", "classAByteBufferInputStream.html", [
       [ "read", "classAByteBufferInputStream.html#aa43ec19c84d7a04f84b69fc1009f5dbc", null ]
     ] ],
+    [ "AConcatInputStream", "classAConcatInputStream.html", [
+      [ "read", "classAConcatInputStream.html#a1d6ba1ddea2e8a385e1b4437b6e5dc11", null ]
+    ] ],
     [ "ADynamicPipe", "classADynamicPipe.html", [
       [ "read", "classADynamicPipe.html#a24f3ed96953c57ef1d30bbb85472524e", null ],
       [ "write", "classADynamicPipe.html#a636751385ea48b6f010f7f794c282602", null ]
@@ -32,6 +35,7 @@ var group__io =
       ] ],
       [ "absolute", "classAPath.html#aaa8ac6cdefdbb7c5b0a53b0f7255a639", null ],
       [ "exists", "classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c", null ],
+      [ "extensionChanged", "classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85", null ],
       [ "isAbsolute", "classAPath.html#a0de41be67e8b34561c29203172e6b58b", null ],
       [ "isDirectoryExists", "classAPath.html#ab2157a1af5be806cc4b8570ddc0fca54", null ],
       [ "isRegularFileExists", "classAPath.html#a7c1302777d5b748bf87a24d078c090e1", null ],
@@ -59,13 +63,26 @@ var group__io =
       [ "read", "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c", null ],
       [ "write", "classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b", null ]
     ] ],
+    [ "AStrongByteBufferInputStream", "classAStrongByteBufferInputStream.html", [
+      [ "isEof", "classAStrongByteBufferInputStream.html#a7206e6ba9535e688287ad8998e73d708", null ],
+      [ "read", "classAStrongByteBufferInputStream.html#a0221c8acf22fa504a1ebd75a65f7d384", null ],
+      [ "seek", "classAStrongByteBufferInputStream.html#a58efe1938efdd1755c2a855973a05d50", null ],
+      [ "tell", "classAStrongByteBufferInputStream.html#af9086be1a67a1e9c3c52600879982ea7", null ]
+    ] ],
     [ "IInputStream", "classIInputStream.html", [
       [ "deserialize", "classIInputStream.html#a36c4cf58fa8466b92d9af1eb09e25d47", null ],
       [ "operator>>", "classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2", null ],
       [ "operator>>", "classIInputStream.html#a1840a69ad7ecad3ab4cdf58aed3823e2", null ],
       [ "read", "classIInputStream.html#a2eeb1071827ea8a9ca61bfd414639588", null ],
+      [ "read", "classIInputStream.html#a7b37579b8cb8d97984e18f70b0536846", null ],
       [ "readExact", "classIInputStream.html#a2d3fbd41d7e0d03c043d51f27353f9a3", null ]
     ] ],
     [ "InputStreamAsync", "classInputStreamAsync.html", null ],
+    [ "ISeekableInputStream", "classISeekableInputStream.html", [
+      [ "fileSize", "classISeekableInputStream.html#a4508931973b7205fc33754c4fcf2a4d5", null ],
+      [ "isEof", "classISeekableInputStream.html#a9d473001d0868eb9e35557d34dbcc0d7", null ],
+      [ "seek", "classISeekableInputStream.html#ae1885394185beeeef0cc331ae3a3a6f9", null ],
+      [ "tell", "classISeekableInputStream.html#a20de413b233ba5fb6927d7708801cd10", null ]
+    ] ],
     [ "AUI_ENUM_FLAG", "group__io.html#ga87f7361faaeb6e043938f79698edf5d0", null ]
 ];
