@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"structaui_1_1jni_1_1Converter_3_01ArrayView_3_01T_01_4_01_4.html":[0,0,5,6,3],
+"structaui_1_1jni_1_1Converter_3_01T_01_4.html":[0,0,5,6,15],
+"structaui_1_1jni_1_1Converter_3_01T_01_4.html":[0,2,2,5,15],
+"structaui_1_1jni_1_1Converter_3_01bool_01_4.html":[0,2,2,5,5],
 "structaui_1_1jni_1_1Converter_3_01bool_01_4.html":[0,0,5,6,5],
 "structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html":[0,2,2,5,6],
 "structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html":[0,0,5,6,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "":[0,0,5,12],
 "":[0,0,5,12,0],
 "":[0,0,5,12,1],
-"":[0,0,5,12,2],
-"":[0,0,5,13],
-"":[0,0,5,13,0],
-"":[0,0,7],
-"":[0,0,9]
+"":[0,0,5,12,2]
 };

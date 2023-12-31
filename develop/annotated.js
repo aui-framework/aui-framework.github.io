@@ -769,7 +769,7 @@ var annotated =
     [ "OpenGLRenderer", "classOpenGLRenderer.html", "classOpenGLRenderer" ],
     [ "OpenGLRenderingContext", "classOpenGLRenderingContext.html", null ],
     [ "OpenGLTexture2D", "classOpenGLTexture2D.html", "classOpenGLTexture2D" ],
-    [ "Pipe", "classPipe.html", null ],
+    [ "Pipe", "classPipe.html", "classPipe" ],
     [ "PipeInputStream", "classPipeInputStream.html", "classPipeInputStream" ],
     [ "PipeOutputStream", "classPipeOutputStream.html", "classPipeOutputStream" ],
     [ "Process", "classProcess.html", null ],
