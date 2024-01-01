@@ -9,12 +9,14 @@ var searchData=
   ['default_6',['Default',['../structass_1_1button_1_1Default.html',1,'ass::button']]],
   ['delete_7',['Delete',['../classASqlBuilder_1_1Delete.html',1,'ASqlBuilder']]],
   ['devicecontext_8',['DeviceContext',['../structaui_1_1win32_1_1DeviceContext.html',1,'aui::win32']]],
-  ['devtoolspanel_9',['DevtoolsPanel',['../classDevtoolsPanel.html',1,'']]],
-  ['directparentsubselector_10',['DirectParentSubSelector',['../structass_1_1DirectParentSubSelector.html',1,'ass']]],
-  ['directx11_11',['DirectX11',['../structARenderingContextOptions_1_1DirectX11.html',1,'ARenderingContextOptions']]],
-  ['disabled_12',['disabled',['../structass_1_1disabled.html',1,'ass']]],
-  ['disabled_13',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
-  ['div_14',['div',['../structtuples_1_1detail_1_1functor_1_1div.html',1,'tuples::detail::functor']]],
-  ['dropevent_15',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]],
-  ['dynamicvector_16',['DynamicVector',['../classDynamicVector.html',1,'']]]
+  ['devtoolslayouttab_9',['DevtoolsLayoutTab',['../classDevtoolsLayoutTab.html',1,'']]],
+  ['devtoolspanel_10',['DevtoolsPanel',['../classDevtoolsPanel.html',1,'']]],
+  ['devtoolsperformancetab_11',['DevtoolsPerformanceTab',['../classDevtoolsPerformanceTab.html',1,'']]],
+  ['directparentsubselector_12',['DirectParentSubSelector',['../structass_1_1DirectParentSubSelector.html',1,'ass']]],
+  ['directx11_13',['DirectX11',['../structARenderingContextOptions_1_1DirectX11.html',1,'ARenderingContextOptions']]],
+  ['disabled_14',['disabled',['../structass_1_1disabled.html',1,'ass']]],
+  ['disabled_15',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
+  ['div_16',['div',['../structtuples_1_1detail_1_1functor_1_1div.html',1,'tuples::detail::functor']]],
+  ['dropevent_17',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]],
+  ['dynamicvector_18',['DynamicVector',['../classDynamicVector.html',1,'']]]
 ];

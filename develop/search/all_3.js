@@ -95,10 +95,11 @@ var searchData=
   ['cropped_92',['CROPPED',['../group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca',1,'ass']]],
   ['crosscompiling_20_28android_20and_20ios_29_93',['Crosscompiling (Android and iOS)',['../md_docs_Crosscompiling.html',1,'']]],
   ['cubicbezier_94',['CubicBezier',['../classaui_1_1animation__curves_1_1CubicBezier.html',1,'aui::animation_curves']]],
-  ['current_95',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow::current()']]],
+  ['current_95',['current',['../classAWindow.html#af1a8a3cceec988f8f2b00805096971fd',1,'AWindow']]],
   ['current_96',['CURRENT',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22aa2770969c827f0f2910f6179418462df',1,'AFileInputStream']]],
-  ['currentthread_97',['CurrentThread',['../classCurrentThread.html',1,'']]],
-  ['cursorindexbypos_98',['cursorIndexByPos',['../classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e',1,'ACursorSelectable']]],
-  ['custom_99',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
-  ['customcaptionwindowimplwin32_100',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]]
+  ['current_97',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread']]],
+  ['currentthread_98',['CurrentThread',['../classCurrentThread.html',1,'']]],
+  ['cursorindexbypos_99',['cursorIndexByPos',['../classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e',1,'ACursorSelectable']]],
+  ['custom_100',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
+  ['customcaptionwindowimplwin32_101',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]]
 ];

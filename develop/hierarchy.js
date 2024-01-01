@@ -142,6 +142,7 @@ var hierarchy =
     ] ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
+    [ "APerformanceSection", "classAPerformanceSection.html", null ],
     [ "APointerIndex", "classAPointerIndex.html", null ],
     [ "APointerMoveEvent", "structAPointerMoveEvent.html", null ],
     [ "APointerPressedEvent", "structAPointerPressedEvent.html", null ],
@@ -468,7 +469,9 @@ var hierarchy =
             [ "ATreeView", "classATreeView.html", null ],
             [ "ATreeView::ContainerView", "classATreeView_1_1ContainerView.html", null ],
             [ "ATreeView::ItemView", "classATreeView_1_1ItemView.html", null ],
+            [ "DevtoolsLayoutTab", "classDevtoolsLayoutTab.html", null ],
             [ "DevtoolsPanel", "classDevtoolsPanel.html", null ],
+            [ "DevtoolsPerformanceTab", "classDevtoolsPerformanceTab.html", null ],
             [ "MockedViewContainer", "classMockedViewContainer.html", null ],
             [ "WrapperContainer", "classWrapperContainer.html", null ]
           ] ],
@@ -802,6 +805,7 @@ var hierarchy =
       [ "ADBus", "classADBus.html", null ],
       [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
       [ "AObject", "classAObject.html", null ],
+      [ "APerformanceFrame", "classAPerformanceFrame.html", null ],
       [ "AProcess", "classAProcess.html", [
         [ "AChildProcess", "classAChildProcess.html", null ],
         [ "AOtherProcess", "classAOtherProcess.html", null ],
@@ -928,6 +932,7 @@ var hierarchy =
     [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
     [ "ScrollbarAppearance", "structScrollbarAppearance.html", null ],
+    [ "APerformanceFrame::Section", "structAPerformanceFrame_1_1Section.html", null ],
     [ "aui::impl::select_overload< Args >", "structaui_1_1impl_1_1select__overload.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
@@ -1096,6 +1101,7 @@ var hierarchy =
           [ "ACommandLineArgs", "classACommandLineArgs.html", null ]
         ] ]
       ] ],
+      [ "AVector< Section >", "classAVector.html", null ],
       [ "AVector< Line >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
