@@ -191,10 +191,10 @@ var group__core =
       [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ],
       [ "setLogFile", "classALogger.html#aa2da2365b9f592d3c47d834456a23d54", null ]
     ] ],
-    [ "APerformanceFrame", "classAPerformanceFrame.html", [
-      [ "Section", "structAPerformanceFrame_1_1Section.html", null ]
+    [ "APerformanceFrame", "classAPerformanceFrame.html", null ],
+    [ "APerformanceSection", "classAPerformanceSection.html", [
+      [ "Data", "structAPerformanceSection_1_1Data.html", null ]
     ] ],
-    [ "APerformanceSection", "classAPerformanceSection.html", null ],
     [ "AStacktrace", "classAStacktrace.html", [
       [ "Entry", "classAStacktrace_1_1Entry.html", [
         [ "fileName", "classAStacktrace_1_1Entry.html#a3deb4e464ac61926ef732c3f746d0470", null ],

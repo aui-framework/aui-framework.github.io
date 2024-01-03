@@ -1,7 +1,7 @@
 var group__profiling =
 [
-    [ "APerformanceFrame", "classAPerformanceFrame.html", [
-      [ "Section", "structAPerformanceFrame_1_1Section.html", null ]
-    ] ],
-    [ "APerformanceSection", "classAPerformanceSection.html", null ]
+    [ "APerformanceFrame", "classAPerformanceFrame.html", null ],
+    [ "APerformanceSection", "classAPerformanceSection.html", [
+      [ "Data", "structAPerformanceSection_1_1Data.html", null ]
+    ] ]
 ];

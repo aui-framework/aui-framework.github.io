@@ -334,6 +334,7 @@ var hierarchy =
       [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
     ] ],
     [ "ABorderStyle::Dashed", "structABorderStyle_1_1Dashed.html", null ],
+    [ "APerformanceSection::Data", "structAPerformanceSection_1_1Data.html", null ],
     [ "Data2", "structData2.html", null ],
     [ "DataOptional", "structDataOptional.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
@@ -932,7 +933,6 @@ var hierarchy =
     [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
     [ "ScrollbarAppearance", "structScrollbarAppearance.html", null ],
-    [ "APerformanceFrame::Section", "structAPerformanceFrame_1_1Section.html", null ],
     [ "aui::impl::select_overload< Args >", "structaui_1_1impl_1_1select__overload.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
     [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
@@ -1101,7 +1101,7 @@ var hierarchy =
           [ "ACommandLineArgs", "classACommandLineArgs.html", null ]
         ] ]
       ] ],
-      [ "AVector< Section >", "classAVector.html", null ],
+      [ "AVector< Data >", "classAVector.html", null ],
       [ "AVector< Line >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
