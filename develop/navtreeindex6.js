@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b":[3,0,1,1,30],
+"group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e":[3,0,1,1,28],
 "group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3":[3,0,1,1,0],
 "group__useful__macros.html#gae1fc2102db681a7f0a933299ec7c8114":[3,0,1,1,8],
 "group__useful__macros.html#gaeaa1b8ba6c00feec5edde5ac786c967d":[3,0,1,1,20],
@@ -69,8 +71,8 @@ var NAVTREEINDEX6 =
 "structACurl_1_1ErrorDescription.html":[3,0,5,0,1],
 "structACurl_1_1Response.html":[3,0,5,0,3],
 "structACursorSelectable_1_1Selection.html":[0,2,61,0],
-"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACursor_1_1Custom.html":[3,0,9,0,29,0],
+"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACustomShaderBrush.html":[0,2,63],
 "structADataBindingDefault.html":[0,2,67],
 "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html":[0,2,68],
@@ -124,8 +126,12 @@ var NAVTREEINDEX6 =
 "structAModel.html":[0,2,181],
 "structAModelMeta.html":[0,2,182],
 "structAModelMetaBase.html":[0,2,183],
-"structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
 "structAPerformanceSection_1_1Data.html":[3,0,1,31,0],
+"structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
+"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
+"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,31,0,0],
+"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
+"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,31,0,1],
 "structAPointerMoveEvent.html":[0,2,202],
 "structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,202,0],
 "structAPointerPressedEvent.html":[0,2,203],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "structass_1_1DirectParentSubSelector.html":[0,2,1,19],
 "structass_1_1Expanding.html":[3,0,9,0,11],
 "structass_1_1FixedSize.html":[3,0,9,0,12],
-"structass_1_1Font.html":[3,0,9,0,13],
-"structass_1_1FontFamily.html":[3,0,9,0,14],
-"structass_1_1FontSize.html":[3,0,9,0,15],
-"structass_1_1LayoutSpacing.html":[3,0,9,0,16],
-"structass_1_1LineHeight.html":[3,0,9,0,17],
-"structass_1_1Margin.html":[3,0,9,0,18],
-"structass_1_1MaxSize.html":[3,0,9,0,19]
+"structass_1_1Font.html":[3,0,9,0,13]
 };
