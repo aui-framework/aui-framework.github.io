@@ -97,6 +97,7 @@ var NAVTREEINDEX3 =
 "classAView.html#a03245e11f856a8ece49da1d7032c0203":[3,0,9,2,33,27],
 "classAView.html#a0569ae03bfeebb23dbea2da2585f0d67":[3,0,9,2,33,17],
 "classAView.html#a11d7426c20f9ef791040935a846960e6":[3,0,9,2,33,44],
+"classAView.html#a129f3b9ae234f84498c7965ad6ee8df4":[3,0,9,2,33,75],
 "classAView.html#a1934c219a3411ec2917c9cd05f0fe453":[3,0,9,2,33,22],
 "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b":[3,0,9,2,33,73],
 "classAView.html#a1b273cbe961c8633b17171b750762135":[3,0,9,2,33,51],
@@ -122,7 +123,7 @@ var NAVTREEINDEX3 =
 "classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e":[3,0,9,2,33,67],
 "classAView.html#a5d5732f8af15828f75729ba5bde0d4c9":[3,0,9,2,33,66],
 "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f":[3,0,9,2,33,43],
-"classAView.html#a603b11e87b05b203f321f6be85d45de8":[3,0,9,2,33,75],
+"classAView.html#a603b11e87b05b203f321f6be85d45de8":[3,0,9,2,33,76],
 "classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71":[3,0,9,2,33,41],
 "classAView.html#a65a8d1574db7e833c6481aecfbf9cadb":[3,0,9,2,33,68],
 "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b":[3,0,9,2,33,46],
@@ -146,7 +147,7 @@ var NAVTREEINDEX3 =
 "classAView.html#a9c3deb7023947adc4c698540db4086c8":[3,0,9,2,33,28],
 "classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab":[3,0,9,2,33,37],
 "classAView.html#aa026069609b3bcfc580978ff801861eb":[3,0,9,2,33,21],
-"classAView.html#aa0b29b615b99f9b60f08a3669aa19adf":[3,0,9,2,33,76],
+"classAView.html#aa0b29b615b99f9b60f08a3669aa19adf":[3,0,9,2,33,78],
 "classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e":[3,0,9,2,33,11],
 "classAView.html#aa80d3e423a09a2ea728e68560e507281":[3,0,9,2,33,74],
 "classAView.html#aa8b76866565fc34ce1ed970708de8125":[3,0,9,2,33,5],
@@ -161,6 +162,7 @@ var NAVTREEINDEX3 =
 "classAView.html#ac385fe5c95866dbe081aac74c7dba519":[3,0,9,2,33,50],
 "classAView.html#ac6292013de2f384cb791f1c91787a362":[3,0,9,2,33,40],
 "classAView.html#acaef54d28990d25a3edf594e163c1a8b":[3,0,9,2,33,25],
+"classAView.html#accd0aaa185656f113bb1b4127ba36a1e":[3,0,9,2,33,77],
 "classAView.html#ad0b6189b40c29d3c31ef3d3a21ce364b":[3,0,9,2,33,20],
 "classAView.html#ad461e812a51a1d556ec8219399e659c9":[3,0,9,2,33,30],
 "classAView.html#ae11b78477772c712d635eb2c540ad65d":[3,0,9,2,33,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "classAXmlParseError.html":[3,0,11,1],
 "classAZLibException.html":[0,2,332],
 "classCache.html":[0,2,334],
-"classCommonRenderingContext.html":[0,2,337],
-"classCurrentThread.html":[0,2,338],
-"classCustomCaptionWindowImplWin32.html":[0,2,339]
+"classCommonRenderingContext.html":[0,2,337]
 };

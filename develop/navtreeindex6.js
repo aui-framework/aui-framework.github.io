@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html#gaac1d9a8a41bf6154b6869b7129982039":[3,0,1,1,24],
+"group__useful__macros.html#gab763971e6fef21bb1673e0caed91379b":[3,0,1,1,22],
 "group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b":[3,0,1,1,30],
 "group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e":[3,0,1,1,28],
 "group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3":[3,0,1,1,0],
@@ -88,8 +90,8 @@ var NAVTREEINDEX6 =
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,78],
 "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html":[0,2,79],
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,80],
-"structADesktop_1_1FileExtension.html":[0,0,1,0],
 "structADesktop_1_1FileExtension.html":[0,2,0,0],
+"structADesktop_1_1FileExtension.html":[0,0,1,0],
 "structADragNDrop_1_1DropEvent.html":[3,0,9,6,0],
 "structADragNDrop_1_1EnterEvent.html":[3,0,9,6,1],
 "structAEnumerateAllValues.html":[0,2,97],
@@ -245,9 +247,7 @@ var NAVTREEINDEX6 =
 "structass_1_1BorderRadius.html":[3,0,9,0,8],
 "structass_1_1BoxShadow.html":[3,0,9,0,9],
 "structass_1_1BoxShadowInner.html":[3,0,9,0,10],
-"structass_1_1DirectParentSubSelector.html":[0,0,4,19],
 "structass_1_1DirectParentSubSelector.html":[0,2,1,19],
-"structass_1_1Expanding.html":[3,0,9,0,11],
-"structass_1_1FixedSize.html":[3,0,9,0,12],
-"structass_1_1Font.html":[3,0,9,0,13]
+"structass_1_1DirectParentSubSelector.html":[0,0,4,19],
+"structass_1_1Expanding.html":[3,0,9,0,11]
 };

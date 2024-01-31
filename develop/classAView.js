@@ -75,6 +75,8 @@ var classAView =
     [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
     [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
     [ "mTextOverflow", "classAView.html#aa80d3e423a09a2ea728e68560e507281", null ],
+    [ "positionChanged", "classAView.html#a129f3b9ae234f84498c7965ad6ee8df4", null ],
     [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ],
+    [ "sizeChanged", "classAView.html#accd0aaa185656f113bb1b4127ba36a1e", null ],
     [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
 ];
