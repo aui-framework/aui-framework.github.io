@@ -789,7 +789,9 @@ var hierarchy =
     [ "aui::constraint::move_only< T >", "classaui_1_1constraint_1_1move__only.html", null ],
     [ "tuples::detail::functor::mul", "structtuples_1_1detail_1_1functor_1_1mul.html", null ],
     [ "std::mutex", null, [
-      [ "AMutex", "classAMutex.html", null ]
+      [ "aui::detail::MutexExtras< std::mutex >", "structaui_1_1detail_1_1MutexExtras.html", [
+        [ "AMutex", "structAMutex.html", null ]
+      ] ]
     ] ],
     [ "MyStruct", "structMyStruct.html", null ],
     [ "aui::no_escape< T >", "structaui_1_1no__escape.html", null ],
@@ -912,6 +914,11 @@ var hierarchy =
       [ "ASerializable< AUuid >", "structASerializable_3_01AUuid_01_4.html", null ]
     ] ],
     [ "Util::Rect", "classUtil_1_1Rect.html", null ],
+    [ "std::recursive_mutex", null, [
+      [ "aui::detail::MutexExtras< std::recursive_mutex >", "structaui_1_1detail_1_1MutexExtras.html", [
+        [ "ARecursiveMutex", "structARecursiveMutex.html", null ]
+      ] ]
+    ] ],
     [ "gl::Renderbuffer< multisampling >", "classgl_1_1Renderbuffer.html", null ],
     [ "gl::RenderTargetDepth", "structgl_1_1RenderTargetDepth.html", null ],
     [ "gl::RenderTargetRGBA8", "structgl_1_1RenderTargetRGBA8.html", null ],
@@ -941,6 +948,11 @@ var hierarchy =
     [ "aui::serialize_sized< T >", "structaui_1_1serialize__sized.html", null ],
     [ "std::set", null, [
       [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", null ]
+    ] ],
+    [ "std::shared_mutex", null, [
+      [ "aui::detail::MutexExtras< std::shared_mutex >", "structaui_1_1detail_1_1MutexExtras.html", [
+        [ "ASharedMutex", "structASharedMutex.html", null ]
+      ] ]
     ] ],
     [ "std::shared_ptr", null, [
       [ "_< IRenderer::IPrerenderedString >", "class__.html", null ],
@@ -979,6 +991,9 @@ var hierarchy =
     [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
     [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
+    [ "T", null, [
+      [ "aui::detail::MutexExtras< T >", "structaui_1_1detail_1_1MutexExtras.html", null ]
+    ] ],
     [ "aui::ternary< boolean, OnTrue, OnFalse >", "structaui_1_1ternary.html", null ],
     [ "aui::traits::ternary< value, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary.html", null ],
     [ "aui::ternary< std::false_type, OnTrue, OnFalse >", "structaui_1_1ternary_3_01std_1_1false__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],

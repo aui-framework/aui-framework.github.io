@@ -158,6 +158,7 @@ var annotated =
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
         [ "LinearLayoutImpl", "classaui_1_1detail_1_1LinearLayoutImpl.html", "classaui_1_1detail_1_1LinearLayoutImpl" ],
+        [ "MutexExtras", "structaui_1_1detail_1_1MutexExtras.html", null ],
         [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ]
       ] ],
       [ "impl", null, [
@@ -565,7 +566,7 @@ var annotated =
     [ "AModelMeta", "structAModelMeta.html", null ],
     [ "AModelMetaBase", "structAModelMetaBase.html", null ],
     [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
-    [ "AMutex", "classAMutex.html", null ],
+    [ "AMutex", "structAMutex.html", null ],
     [ "AMutexWrapper", "classAMutexWrapper.html", null ],
     [ "ANoSpaceLeftException", "classANoSpaceLeftException.html", null ],
     [ "ANumberPicker", "classANumberPicker.html", "classANumberPicker" ],
@@ -600,6 +601,7 @@ var annotated =
     [ "ARaiiHelper", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
     [ "ARandomInputStream", "classARandomInputStream.html", "classARandomInputStream" ],
+    [ "ARecursiveMutex", "structARecursiveMutex.html", null ],
     [ "ARender", "classARender.html", null ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", "structARenderingContextOptions" ],
     [ "AResourceBusyException", "classAResourceBusyException.html", null ],
@@ -632,6 +634,7 @@ var annotated =
     [ "ASerializable< T, std::enable_if_t< std::is_arithmetic_v< T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html", null ],
     [ "ASerializable< T, std::enable_if_t< std::is_base_of_v< IInputStream, T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html", null ],
     [ "ASet", "classASet.html", "classASet" ],
+    [ "ASharedMutex", "structASharedMutex.html", null ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AShortcut", "classAShortcut.html", null ],
     [ "ASignal", "classASignal.html", "classASignal" ],
