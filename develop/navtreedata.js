@@ -76,7 +76,7 @@ var NAVTREEINDEX =
 "classass_1_1IAssSubSelector.html",
 "group__useful__macros.html#gaac1d9a8a41bf6154b6869b7129982039",
 "structass_1_1FixedSize.html",
-"structaui_1_1impl_1_1json_1_1my__tuple.html",
+"structaui_1_1impl_1_1json_1_1empty__tuple.html",
 ""
 ];
 

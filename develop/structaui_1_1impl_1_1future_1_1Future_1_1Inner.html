@@ -132,9 +132,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reportInterrupted</b>
 <tr class="memitem:aa7f1aefbd8c8b85c99db3c4bc72fb330"><td class="memItemLeft" align="right" valign="top"><a id="aa7f1aefbd8c8b85c99db3c4bc72fb330" name="aa7f1aefbd8c8b85c99db3c4bc72fb330"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportException</b> () noexcept</td></tr>
 <tr class="separator:aa7f1aefbd8c8b85c99db3c4bc72fb330"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3eda48e25f1e47ddd98ccd7070c522"><td class="memItemLeft" align="right" valign="top"><a id="a3e3eda48e25f1e47ddd98ccd7070c522" name="a3e3eda48e25f1e47ddd98ccd7070c522"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyOnSuccessCallback</b> () noexcept</td></tr>
-<tr class="separator:a3e3eda48e25f1e47ddd98ccd7070c522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7c5aefcf52dd35751c46ceec94e8405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405">notifyOnSuccessCallback</a> (std::unique_lock&lt; decltype(mutex)&gt; &amp;lock) noexcept</td></tr>
+<tr class="memdesc:aa7c5aefcf52dd35751c46ceec94e8405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls onSuccess callback.  <a href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405">More...</a><br /></td></tr>
+<tr class="separator:aa7c5aefcf52dd35751c46ceec94e8405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Signals and public fields</h2></td></tr>
@@ -169,6 +169,43 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>cancelled</b> = false
 <tr class="separator:a001b6d3413716339b65022a48c4dce6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa7c5aefcf52dd35751c46ceec94e8405" name="aa7c5aefcf52dd35751c46ceec94e8405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c5aefcf52dd35751c46ceec94e8405">&#9670;&nbsp;</a></span>notifyOnSuccessCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Value  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future</a>&lt; Value &gt;::Inner::notifyOnSuccessCallback </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_lock&lt; decltype(mutex)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>lock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls onSuccess callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lock</td><td>lock of Inner::mutex mutex.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>lock is expected to be locked. Under the lock, callback is moved to local stack, lock is unlocked, and only then callback is called. This helps to avoid deadlocks (i.e. retreiving <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s value in onSuccess callback). lock is not locked again. If <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> does not have value or onSuccess callback, the lock remains untouched. </p>
+
+</div>
+</div>
 <a id="adbe5e1bfd42e4aeed5cb2afee35eff48" name="adbe5e1bfd42e4aeed5cb2afee35eff48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbe5e1bfd42e4aeed5cb2afee35eff48">&#9670;&nbsp;</a></span>tryExecute()</h2>
 
