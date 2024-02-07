@@ -117,9 +117,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasValue</b> () const
 <tr class="memitem:acb1f82aaadfbe1273ab8764b608a0bc7"><td class="memItemLeft" align="right" valign="top"><a id="acb1f82aaadfbe1273ab8764b608a0bc7" name="acb1f82aaadfbe1273ab8764b608a0bc7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thr) noexcept</td></tr>
 <tr class="separator:acb1f82aaadfbe1273ab8764b608a0bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a694c9383a81b7d8dea59702a6064c282"><td class="memItemLeft" align="right" valign="top"><a id="a694c9383a81b7d8dea59702a6064c282" name="a694c9383a81b7d8dea59702a6064c282"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wait</b> (const <a class="el" href="struct__weak.html">_weak</a>&lt; <a class="el" href="structaui_1_1impl_1_1future_1_1CancellationWrapper.html">CancellationWrapper</a>&lt; <a class="el" href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html">Inner</a> &gt; &gt; &amp;innerWeak, AFutureWait flags=AFutureWait::DEFAULT) noexcept</td></tr>
-<tr class="separator:a694c9383a81b7d8dea59702a6064c282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc52d1abcecefc3fef36c4ac8e01c8e"><td class="memItemLeft" align="right" valign="top"><a id="abbc52d1abcecefc3fef36c4ac8e01c8e" name="abbc52d1abcecefc3fef36c4ac8e01c8e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wait</b> (const <a class="el" href="struct__weak.html">_weak</a>&lt; <a class="el" href="structaui_1_1impl_1_1future_1_1CancellationWrapper.html">CancellationWrapper</a>&lt; <a class="el" href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html">Inner</a> &gt; &gt; &amp;innerWeak, <a class="el" href="classABitField.html">ABitField</a>&lt; AFutureWait &gt; flags=AFutureWait::DEFAULT) noexcept</td></tr>
+<tr class="separator:abbc52d1abcecefc3fef36c4ac8e01c8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4f4f4829b8ef57dfaf0b97694ad51ac"><td class="memItemLeft" align="right" valign="top"><a id="ae4f4f4829b8ef57dfaf0b97694ad51ac" name="ae4f4f4829b8ef57dfaf0b97694ad51ac"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>cancel</b> () noexcept</td></tr>
 <tr class="separator:ae4f4f4829b8ef57dfaf0b97694ad51ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +135,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reportException</b> (
 <tr class="memitem:aa7c5aefcf52dd35751c46ceec94e8405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405">notifyOnSuccessCallback</a> (std::unique_lock&lt; decltype(mutex)&gt; &amp;lock) noexcept</td></tr>
 <tr class="memdesc:aa7c5aefcf52dd35751c46ceec94e8405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls onSuccess callback.  <a href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405">More...</a><br /></td></tr>
 <tr class="separator:aa7c5aefcf52dd35751c46ceec94e8405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4777132ddc63d5e1131164b1160ffaac"><td class="memTemplParams" colspan="2"><a id="a4777132ddc63d5e1131164b1160ffaac" name="a4777132ddc63d5e1131164b1160ffaac"></a>
+template&lt;typename Callback &gt; </td></tr>
+<tr class="memitem:a4777132ddc63d5e1131164b1160ffaac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addOnSuccessCallback</b> (Callback &amp;&amp;callback)</td></tr>
+<tr class="separator:a4777132ddc63d5e1131164b1160ffaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400dd5e2f820fbeef103827860f99a8e"><td class="memTemplParams" colspan="2"><a id="a400dd5e2f820fbeef103827860f99a8e" name="a400dd5e2f820fbeef103827860f99a8e"></a>
+template&lt;typename Callback &gt; </td></tr>
+<tr class="memitem:a400dd5e2f820fbeef103827860f99a8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addOnErrorCallback</b> (Callback &amp;&amp;callback)</td></tr>
+<tr class="separator:a400dd5e2f820fbeef103827860f99a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Signals and public fields</h2></td></tr>
@@ -202,7 +210,7 @@ template&lt;typename Value  = void&gt; </div>
   </table>
   </dd>
 </dl>
-<p>lock is expected to be locked. Under the lock, callback is moved to local stack, lock is unlocked, and only then callback is called. This helps to avoid deadlocks (i.e. retreiving <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a>'s value in onSuccess callback). lock is not locked again. If <a class="el" href="classAFuture.html" title="Represents the result of an asynchronous operation.">AFuture</a> does not have value or onSuccess callback, the lock remains untouched. </p>
+<p>lock is expected to be locked. Under the lock, callback is moved to local stack, lock is unlocked, and only then callback is called. This helps to avoid deadlocks (i.e. retreiving <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>'s value in onSuccess callback). lock is not locked again. If <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> does not have value or onSuccess callback, the lock remains untouched. </p>
 
 </div>
 </div>

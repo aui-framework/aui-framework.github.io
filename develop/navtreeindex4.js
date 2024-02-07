@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classCurrentThread.html":[0,2,340],
 "classCustomCaptionWindowImplWin32.html":[0,2,341],
 "classDevtoolsLayoutTab.html":[0,2,344],
 "classDevtoolsPanel.html":[0,2,345],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "class__.html#a7c2f7bfb8368831ca835045b93c37772":[0,2,13,2],
 "class___1_1SafeCallWrapper.html":[0,2,13,0],
 "classass_1_1AAssSelector.html":[0,0,4,4],
-"classass_1_1AAssSelector.html":[0,2,1,4],
-"classass_1_1IAssSubSelector.html":[0,0,4,28]
+"classass_1_1AAssSelector.html":[0,2,1,4]
 };

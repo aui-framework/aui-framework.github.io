@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html#gaac1d9a8a41bf6154b6869b7129982039":[3,0,1,1,24],
 "group__useful__macros.html#gab763971e6fef21bb1673e0caed91379b":[3,0,1,1,22],
 "group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b":[3,0,1,1,30],
 "group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e":[3,0,1,1,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structass_1_1BorderLeft.html":[3,0,9,0,7],
 "structass_1_1BorderRadius.html":[3,0,9,0,8],
 "structass_1_1BoxShadow.html":[3,0,9,0,9],
-"structass_1_1BoxShadowInner.html":[3,0,9,0,10],
-"structass_1_1DirectParentSubSelector.html":[0,2,1,19]
+"structass_1_1BoxShadowInner.html":[3,0,9,0,10]
 };

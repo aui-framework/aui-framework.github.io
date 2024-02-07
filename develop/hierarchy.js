@@ -12,7 +12,9 @@ var hierarchy =
       [ "AUdpSocket", "classAUdpSocket.html", null ]
     ] ],
     [ "AAbstractThread", "classAAbstractThread.html", [
-      [ "AThread", "classAThread.html", null ],
+      [ "AThread", "classAThread.html", [
+        [ "AThreadPool::Worker", "classAThreadPool_1_1Worker.html", null ]
+      ] ],
       [ "CurrentThread", "classCurrentThread.html", null ],
       [ "UIThread", "classUIThread.html", null ]
     ] ],

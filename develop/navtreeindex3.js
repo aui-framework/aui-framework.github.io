@@ -1,6 +1,7 @@
 var NAVTREEINDEX3 =
 {
 "classAThreadPool_1_1TryLaterException.html":[0,2,297,0],
+"classAThreadPool_1_1Worker.html":[0,2,297,1],
 "classAThread_1_1Interrupted.html":[3,0,1,41,0],
 "classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf":[3,0,1,41,0,0],
 "classATimer.html":[3,0,1,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classAXmlParseError.html":[3,0,11,1],
 "classAZLibException.html":[0,2,334],
 "classCache.html":[0,2,336],
-"classCommonRenderingContext.html":[0,2,339],
-"classCurrentThread.html":[0,2,340]
+"classCommonRenderingContext.html":[0,2,339]
 };

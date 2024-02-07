@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structass_1_1DirectParentSubSelector.html":[0,2,1,19],
 "structass_1_1DirectParentSubSelector.html":[0,0,4,19],
 "structass_1_1Expanding.html":[3,0,9,0,11],
 "structass_1_1FixedSize.html":[3,0,9,0,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405":[0,2,2,4,0,1,0,0],
 "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#adbe5e1bfd42e4aeed5cb2afee35eff48":[0,2,2,4,0,1,0,1],
 "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#adbe5e1bfd42e4aeed5cb2afee35eff48":[0,0,5,5,0,1,0,1],
-"structaui_1_1impl_1_1future_1_1OnSuccessCallback.html":[0,0,5,5,0,4],
-"structaui_1_1impl_1_1future_1_1OnSuccessCallback.html":[0,2,2,4,0,4]
+"structaui_1_1impl_1_1future_1_1OnSuccessCallback.html":[0,0,5,5,0,4]
 };

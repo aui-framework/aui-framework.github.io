@@ -10,6 +10,7 @@ var searchData=
   ['winioasync_7',['WinIoAsync',['../classWinIoAsync.html',1,'']]],
   ['winiocompletionport_8',['WinIoCompletionPort',['../classWinIoCompletionPort.html',1,'']]],
   ['winiothread_9',['WinIoThread',['../classWinIoThread.html',1,'']]],
-  ['wrappercontainer_10',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
-  ['writeexception_11',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]]
+  ['worker_10',['Worker',['../classAThreadPool_1_1Worker.html',1,'AThreadPool']]],
+  ['wrappercontainer_11',['WrapperContainer',['../classWrapperContainer.html',1,'']]],
+  ['writeexception_12',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]]
 ];
