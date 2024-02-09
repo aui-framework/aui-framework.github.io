@@ -190,6 +190,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga0b5c29ea5716ab0c88709f9b472a2f64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">AUI_PERFORM_AS_MEMBER</a>(object,  lambda)</td></tr>
 <tr class="memdesc:ga0b5c29ea5716ab0c88709f9b472a2f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multiple operations on a single object without repeating its name.  <a href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">More...</a><br /></td></tr>
 <tr class="separator:ga0b5c29ea5716ab0c88709f9b472a2f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee46aadc753cc62a15ea8cd64bdeaa61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a>&#160;&#160;&#160;<a class="el" href="classARaiiHelper.html">ARaiiHelper</a> auiDeffer ## __LINE__ = [&amp;]</td></tr>
+<tr class="memdesc:gaee46aadc753cc62a15ea8cd64bdeaa61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defers execution of the next block to the end of current block (RAII scope).  <a href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">More...</a><br /></td></tr>
+<tr class="separator:gaee46aadc753cc62a15ea8cd64bdeaa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga045dd54932944d8830380f4596d64446"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a>&#160;&#160;&#160;^ [&amp;](const auto&amp; it)</td></tr>
 <tr class="memdesc:ga045dd54932944d8830380f4596d64446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multiple operations on a single object without repeating its name (in place) This function can be used as an operator on object.  <a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">More...</a><br /></td></tr>
 <tr class="separator:ga045dd54932944d8830380f4596d64446"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,7 +238,7 @@ Macros</h2></td></tr>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:212</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:318</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:331</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
@@ -275,7 +278,7 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__useful__macros_html_ga21d729326347c5d74faf857abf18d695"><div class="ttname"><a href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a></div><div class="ttdeci">#define asyncX</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike async,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:349</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21d729326347c5d74faf857abf18d695"><div class="ttname"><a href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a></div><div class="ttdeci">#define asyncX</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike async,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:362</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
@@ -286,6 +289,26 @@ Macros</h2></td></tr>
 <div class="line">};</div>
 <div class="line"><span class="keywordtype">int</span> status = *futureStatus;</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="gaee46aadc753cc62a15ea8cd64bdeaa61" name="gaee46aadc753cc62a15ea8cd64bdeaa61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee46aadc753cc62a15ea8cd64bdeaa61">&#9670;&nbsp;</a></span>AUI_DEFER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_DEFER&#160;&#160;&#160;<a class="el" href="classARaiiHelper.html">ARaiiHelper</a> auiDeffer ## __LINE__ = [&amp;]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defers execution of the next block to the end of current block (RAII scope). </p>
+<p >This example prints "Hello world\n": </p><div class="fragment"><div class="line"><a class="code hl_define" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a> { printf(<span class="stringliteral">&quot;world\n&quot;</span>) };</div>
+<div class="line">printf(<span class="stringliteral">&quot;Hello&quot;</span>);</div>
+<div class="ttc" id="agroup__useful__macros_html_gaee46aadc753cc62a15ea8cd64bdeaa61"><div class="ttname"><a href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a></div><div class="ttdeci">#define AUI_DEFER</div><div class="ttdoc">Defers execution of the next block to the end of current block (RAII scope).</div><div class="ttdef"><b>Definition:</b> kAUI.h:199</div></div>
+</div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="classARaiiHelper.html">ARaiiHelper</a> </dd></dl>
+
 </div>
 </div>
 <a id="ga9fb2be9313369673815a6892aa7f3a1f" name="ga9fb2be9313369673815a6892aa7f3a1f"></a>
@@ -796,7 +819,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><a class="code hl_define" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a> {</div>
 <div class="line">    std::printf(<span class="stringliteral">&quot;Only once!&quot;</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__useful__macros_html_gacba25f2657a42c1c6a786d5b537b6a7e"><div class="ttname"><a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a></div><div class="ttdeci">#define do_once</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition:</b> kAUI.h:380</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gacba25f2657a42c1c6a786d5b537b6a7e"><div class="ttname"><a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a></div><div class="ttdeci">#define do_once</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition:</b> kAUI.h:393</div></div>
 </div><!-- fragment -->   </td></tr>
 </table>
 
@@ -831,7 +854,7 @@ Macros</h2></td></tr>
 <td><div class="fragment"><div class="line"><span class="keyword">auto</span> tf = _new&lt;ATextField&gt;();</div>
 <div class="line">tf-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>);</div>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><span class="keyword">auto</span> tf = _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>); };</div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:251</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:264</div></div>
 </div><!-- fragment -->   </td></tr>
 </table>
 <p >It's especially useful when building user interfaces:</p>
@@ -931,7 +954,7 @@ Macros</h2></td></tr>
 <div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
 <div class="line">  _new&lt;ALabel&gt;(<span class="stringliteral">&quot;Red text!&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { TextColor { AColor::RED } },</div>
 <div class="line">});</div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:276</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:289</div></div>
 </div><!-- fragment --><p >Also applicable to declarative-style views: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;AUI/ASS/ASS.h&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span>ass;</div>
 <div class="line">...</div>

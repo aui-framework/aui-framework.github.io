@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"structaui_1_1impl_1_1future_1_1OnSuccessCallback.html":[0,0,5,5,0,4],
 "structaui_1_1impl_1_1future_1_1OnSuccessCallback.html":[0,2,2,4,0,4],
 "structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html":[0,0,5,5,0,5],
 "structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html":[0,2,2,4,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "usergroup1.html":[1],
 "usergroup2.html":[2],
 "usergroup3.html":[3],
-"usergroup4.html":[3,2],
-"":[0,0,5,5,0]
+"usergroup4.html":[3,2]
 };

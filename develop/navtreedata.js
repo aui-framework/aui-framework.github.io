@@ -75,7 +75,7 @@ var NAVTREEINDEX =
 "classCurrentThread.html",
 "classass_1_1IAssSubSelector.html",
 "group__useful__macros.html#gaac1d9a8a41bf6154b6869b7129982039",
-"structass_1_1DirectParentSubSelector.html",
+"structass_1_1BoxShadowInner.html",
 "structaui_1_1impl_1_1future_1_1OnSuccessCallback.html",
 ""
 ];
