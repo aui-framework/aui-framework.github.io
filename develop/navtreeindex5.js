@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"classass_1_1AAssSelector.html":[0,2,1,4],
 "classass_1_1IAssSubSelector.html":[0,0,4,28],
 "classass_1_1IAssSubSelector.html":[0,2,1,28],
 "classass_1_1ISelectable.html":[0,0,4,29],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "group__useful__macros.html#gaa250d8839c4736760fdd5c4990fded23":[3,0,1,1,26],
 "group__useful__macros.html#gaa662d9689a6a0b3403f7182c54d3477d":[3,0,1,1,20],
 "group__useful__macros.html#gaa968229c6cc4b8411286d9d56804a0f3":[3,0,1,1,10],
-"group__useful__macros.html#gaa9e741551b2e22321a61931783442d22":[3,0,1,1,28],
-"group__useful__macros.html#gaaaa072876366972108aef016e7882a99":[3,0,1,1,32]
+"group__useful__macros.html#gaa9e741551b2e22321a61931783442d22":[3,0,1,1,28]
 };

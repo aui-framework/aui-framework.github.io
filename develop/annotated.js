@@ -527,6 +527,7 @@ var annotated =
     [ "AJsonConv< double >", "structAJsonConv_3_01double_01_4.html", null ],
     [ "AJsonConv< float >", "structAJsonConv_3_01float_01_4.html", null ],
     [ "AJsonConv< int >", "structAJsonConv_3_01int_01_4.html", null ],
+    [ "AJsonConv< int64_t >", "structAJsonConv_3_01int64__t_01_4.html", null ],
     [ "AJsonConv< short >", "structAJsonConv_3_01short_01_4.html", null ],
     [ "AJsonConv< std::pair< T1, T2 > >", "structAJsonConv_3_01std_1_1pair_3_01T1_00_01T2_01_4_01_4.html", null ],
     [ "AJsonConv< T, std::enable_if_t< aui::is_complete< AJsonConvFieldDescriptor< T > > > >", "structAJsonConv_3_01T_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AJsonConvFieldDescriptor_3_01T_01_4_01_4_01_4_01_4.html", null ],

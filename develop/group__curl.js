@@ -16,6 +16,7 @@ var group__curl =
         [ "withParams", "classACurl_1_1Builder.html#a725accc3cde28e970fd6d1deec1e95ef", null ],
         [ "withParams", "classACurl_1_1Builder.html#ad947cb7a6754b074b83474ee8fb54460", null ],
         [ "withRanges", "classACurl_1_1Builder.html#a90b64fd21369dd52ce7c80275d383946", null ],
+        [ "withTimeout", "classACurl_1_1Builder.html#a0ab6560ce9971b024144ad3a9e620bff", null ],
         [ "withWriteCallback", "classACurl_1_1Builder.html#a57f315c345c0d1f4da76e5d76f23e366", null ]
       ] ],
       [ "ErrorDescription", "structACurl_1_1ErrorDescription.html", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"usergroup3.html":[3],
+"usergroup4.html":[3,2],
 "":[0,0,5,5,0],
 "":[0,0,5,3],
 "":[0,0,0],
