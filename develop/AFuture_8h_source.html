@@ -659,7 +659,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                addOnSuccessCallback(callback);</div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                addOnErrorCallback(callback);</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                threadPoolWorker-&gt;loop([&amp;] { lock.unlock(); <span class="keywordflow">return</span> !hasValue(); });</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                threadPoolWorker-&gt;loop([&amp;] { <span class="keywordflow">if</span> (lock.owns_lock()) lock.unlock(); <span class="keywordflow">return</span> !hasValue(); });</div>
 <div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span> </div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>                <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>            }</div>
