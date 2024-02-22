@@ -225,6 +225,9 @@ constexpr iterator&#160;</td><td class="memItemRight" valign="bottom"><b>erase</
 <tr class="separator:a6504479b52b2216c7ff1968506332e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a743f72fb6cf16c9f59742002a9572975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASmallVector.html#a743f72fb6cf16c9f59742002a9572975">removeAll</a> (const StoredType &amp;item) noexcept</td></tr>
 <tr class="separator:a743f72fb6cf16c9f59742002a9572975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d839e83293fe0a04cdbd1169ec5dbb"><td class="memTemplParams" colspan="2">template&lt;typename T , aui::mapper&lt; const StoredType &amp;, const T &amp; &gt; Projection&gt; </td></tr>
+<tr class="memitem:af6d839e83293fe0a04cdbd1169ec5dbb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classASmallVector.html#af6d839e83293fe0a04cdbd1169ec5dbb">removeAll</a> (const T &amp;item, Projection projection) noexcept</td></tr>
+<tr class="separator:af6d839e83293fe0a04cdbd1169ec5dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fad07e3518e3f575cab29fef3fcb8b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASmallVector.html#a4fad07e3518e3f575cab29fef3fcb8b2">removeFirst</a> (const StoredType &amp;item) noexcept</td></tr>
 <tr class="separator:a4fad07e3518e3f575cab29fef3fcb8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4df5932f2245514880d58c47c2cd3fc"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer &gt; </td></tr>
@@ -268,6 +271,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sort</b> () noexcept<
 template&lt;typename Comparator &gt; </td></tr>
 <tr class="memitem:afff835e5c7334919e87f575f2f2cb3e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>sort</b> (Comparator &amp;&amp;comparator) noexcept</td></tr>
 <tr class="separator:afff835e5c7334919e87f575f2f2cb3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890fae8b6754f40ccff30a773c06d34a"><td class="memTemplParams" colspan="2">template&lt;aui::predicate&lt; StoredType &gt; Predicate&gt; </td></tr>
+<tr class="memitem:a890fae8b6754f40ccff30a773c06d34a"><td class="memTemplItemLeft" align="right" valign="top">StoredType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classASmallVector.html#a890fae8b6754f40ccff30a773c06d34a">findIf</a> (Predicate &amp;&amp;predicate) noexcept</td></tr>
+<tr class="memdesc:a890fae8b6754f40ccff30a773c06d34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds element by predicate.  <a href="classASmallVector.html#a890fae8b6754f40ccff30a773c06d34a">More...</a><br /></td></tr>
+<tr class="separator:a890fae8b6754f40ccff30a773c06d34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49dd758ec0d6d62acb687a4e636742dd"><td class="memTemplParams" colspan="2">template&lt;typename T , aui::mapper&lt; const StoredType &amp;, const T &amp; &gt; Projection&gt; </td></tr>
+<tr class="memitem:a49dd758ec0d6d62acb687a4e636742dd"><td class="memTemplItemLeft" align="right" valign="top">StoredType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classASmallVector.html#a49dd758ec0d6d62acb687a4e636742dd">findIf</a> (const T &amp;value, Projection &amp;&amp;projection) noexcept</td></tr>
+<tr class="memdesc:a49dd758ec0d6d62acb687a4e636742dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds element by value.  <a href="classASmallVector.html#a49dd758ec0d6d62acb687a4e636742dd">More...</a><br /></td></tr>
+<tr class="separator:a49dd758ec0d6d62acb687a4e636742dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4852bc93ab8450c1668de09834e30f90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASmallVector.html#a4852bc93ab8450c1668de09834e30f90">removeAt</a> (size_t index) noexcept</td></tr>
 <tr class="separator:a4852bc93ab8450c1668de09834e30f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e7d420ec86173821f665e6f76cf180"><td class="memTemplParams" colspan="2">template&lt;typename Predicate &gt; </td></tr>
@@ -342,6 +353,95 @@ template&lt;typename StoredType , std::size_t StaticVectorSize, typename Allocat
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if container contains an element, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a49dd758ec0d6d62acb687a4e636742dd" name="a49dd758ec0d6d62acb687a4e636742dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49dd758ec0d6d62acb687a4e636742dd">&#9670;&nbsp;</a></span>findIf() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StoredType , std::size_t StaticVectorSize, typename Allocator  = std::allocator&lt;StoredType&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , aui::mapper&lt; const StoredType &amp;, const T &amp; &gt; Projection&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StoredType * <a class="el" href="classASmallVector.html">ASmallVector</a>&lt; StoredType, StaticVectorSize, Allocator &gt;::findIf </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Projection &amp;&amp;&#160;</td>
+          <td class="paramname"><em>projection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds element by value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value </td></tr>
+    <tr><td class="paramname">projection</td><td>callable that transforms <code>const StoredType&amp;</code> to <code>const T&amp;</code>. Can be any operator() cappable object, including lambda and pointer-to-member. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the value on which the predicate returned true, nullptr otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a890fae8b6754f40ccff30a773c06d34a" name="a890fae8b6754f40ccff30a773c06d34a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a890fae8b6754f40ccff30a773c06d34a">&#9670;&nbsp;</a></span>findIf() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StoredType , std::size_t StaticVectorSize, typename Allocator  = std::allocator&lt;StoredType&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;aui::predicate&lt; StoredType &gt; Predicate&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StoredType * <a class="el" href="classASmallVector.html">ASmallVector</a>&lt; StoredType, StaticVectorSize, Allocator &gt;::findIf </td>
+          <td>(</td>
+          <td class="paramtype">Predicate &amp;&amp;&#160;</td>
+          <td class="paramname"><em>predicate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds element by predicate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">predicate</td><td>predicate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the value on which the predicate returned true, nullptr otherwise </dd></dl>
 
 </div>
 </div>
@@ -928,7 +1028,7 @@ template&lt;typename StoredType , std::size_t StaticVectorSize, typename Allocat
 </div>
 </div>
 <a id="a743f72fb6cf16c9f59742002a9572975" name="a743f72fb6cf16c9f59742002a9572975"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a743f72fb6cf16c9f59742002a9572975">&#9670;&nbsp;</a></span>removeAll()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a743f72fb6cf16c9f59742002a9572975">&#9670;&nbsp;</a></span>removeAll() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -955,6 +1055,53 @@ template&lt;typename StoredType , std::size_t StaticVectorSize, typename Allocat
 <p >Removes all occurrences of <code>item</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">item</td><td>element to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6d839e83293fe0a04cdbd1169ec5dbb" name="af6d839e83293fe0a04cdbd1169ec5dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d839e83293fe0a04cdbd1169ec5dbb">&#9670;&nbsp;</a></span>removeAll() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StoredType , std::size_t StaticVectorSize, typename Allocator  = std::allocator&lt;StoredType&gt;&gt; </div>
+<div class="memtemplate">
+template&lt;typename T , aui::mapper&lt; const StoredType &amp;, const T &amp; &gt; Projection&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classASmallVector.html">ASmallVector</a>&lt; StoredType, StaticVectorSize, Allocator &gt;::removeAll </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Projection&#160;</td>
+          <td class="paramname"><em>projection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Removes all occurrences of <code>item</code> with specified projection. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>element to remove. </td></tr>
+    <tr><td class="paramname">projection</td><td>callable that transforms <code>const StoredType&amp;</code> to <code>const T&amp;</code>. Can be any operator() cappable object, including lambda and pointer-to-member. </td></tr>
   </table>
   </dd>
 </dl>

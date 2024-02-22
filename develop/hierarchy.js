@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "A2DTransform", "structA2DTransform.html", null ],
     [ "AAbstractSignal", "classAAbstractSignal.html", [
       [ "ASignal< Args... >", "classASignal.html", null ],
       [ "ASignal< T >", "classASignal.html", null ],
@@ -421,6 +422,7 @@ var hierarchy =
           [ "ASpacerFixed", "classASpacerFixed.html", null ],
           [ "ASpinner", "classASpinner.html", null ],
           [ "AViewContainer", "classAViewContainer.html", [
+            [ "A2FingerTransformArea", "classA2FingerTransformArea.html", null ],
             [ "ABaseWindow", "classABaseWindow.html", [
               [ "AEmbedAuiWrap::EmbedWindow", "classAEmbedAuiWrap_1_1EmbedWindow.html", null ],
               [ "AWindow", "classAWindow.html", [

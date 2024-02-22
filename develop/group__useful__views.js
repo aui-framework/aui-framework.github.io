@@ -1,5 +1,11 @@
 var group__useful__views =
 [
+    [ "A2FingerTransformArea", "classA2FingerTransformArea.html", [
+      [ "consumesClick", "classA2FingerTransformArea.html#a9004e7382bc4aa1137cdaa3c65529677", null ],
+      [ "onPointerMove", "classA2FingerTransformArea.html#aaaa9709c084ce99d2fe4b9e6d40e539a", null ],
+      [ "onPointerPressed", "classA2FingerTransformArea.html#abb8858991ec90c9847a20426affb58da", null ],
+      [ "onPointerReleased", "classA2FingerTransformArea.html#a6c3a3a744582272bcddac000fca67d52", null ]
+    ] ],
     [ "AAbstractTextField", "classAAbstractTextField.html", [
       [ "getContentMinimumHeight", "classAAbstractTextField.html#aa1d30fc5cfb064423af8c12cab10ac3a", null ],
       [ "handlesNonMouseNavigation", "classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2", null ],

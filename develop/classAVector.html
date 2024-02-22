@@ -136,6 +136,9 @@ template&lt;typename Iterator &gt; </td></tr>
 <tr class="separator:a564421f04219ef42aeef06f2809b69ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1feec53844fa47cdcd75c46ca371556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVector.html#af1feec53844fa47cdcd75c46ca371556">removeAll</a> (const StoredType &amp;item) noexcept</td></tr>
 <tr class="separator:af1feec53844fa47cdcd75c46ca371556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660f005827f50bcc988909b3255ae04f"><td class="memTemplParams" colspan="2">template&lt;typename T , aui::mapper&lt; const StoredType &amp;, const T &amp; &gt; Projection&gt; </td></tr>
+<tr class="memitem:a660f005827f50bcc988909b3255ae04f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAVector.html#a660f005827f50bcc988909b3255ae04f">removeAll</a> (const T &amp;item, Projection projection) noexcept</td></tr>
+<tr class="separator:a660f005827f50bcc988909b3255ae04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6a54a22a7f8148f1e79b9b8f34db453"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; std::size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAVector.html#aa6a54a22a7f8148f1e79b9b8f34db453">removeFirst</a> (const StoredType &amp;item) noexcept</td></tr>
 <tr class="separator:aa6a54a22a7f8148f1e79b9b8f34db453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fe11dadd6ad27a15555419591416f45"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer &gt; </td></tr>
@@ -883,7 +886,7 @@ template&lt;class StoredType , class Allocator &gt; </div>
 </div>
 </div>
 <a id="af1feec53844fa47cdcd75c46ca371556" name="af1feec53844fa47cdcd75c46ca371556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1feec53844fa47cdcd75c46ca371556">&#9670;&nbsp;</a></span>removeAll()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1feec53844fa47cdcd75c46ca371556">&#9670;&nbsp;</a></span>removeAll() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -910,6 +913,53 @@ template&lt;class StoredType , class Allocator &gt; </div>
 <p >Removes all occurrences of <code>item</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">item</td><td>element to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a660f005827f50bcc988909b3255ae04f" name="a660f005827f50bcc988909b3255ae04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660f005827f50bcc988909b3255ae04f">&#9670;&nbsp;</a></span>removeAll() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class StoredType , class Allocator &gt; </div>
+<div class="memtemplate">
+template&lt;typename T , aui::mapper&lt; const StoredType &amp;, const T &amp; &gt; Projection&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classAVector.html">AVector</a>&lt; StoredType, Allocator &gt;::removeAll </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Projection&#160;</td>
+          <td class="paramname"><em>projection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Removes all occurrences of <code>item</code> with specified projection. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>element to remove. </td></tr>
+    <tr><td class="paramname">projection</td><td>callable that transforms <code>const StoredType&amp;</code> to <code>const T&amp;</code>. Can be any operator() cappable object, including lambda and pointer-to-member. </td></tr>
   </table>
   </dd>
 </dl>

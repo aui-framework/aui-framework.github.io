@@ -394,6 +394,8 @@ var annotated =
     ] ],
     [ "_", "class__.html", "class__" ],
     [ "_weak", "struct__weak.html", null ],
+    [ "A2DTransform", "structA2DTransform.html", null ],
+    [ "A2FingerTransformArea", "classA2FingerTransformArea.html", "classA2FingerTransformArea" ],
     [ "AAbsoluteLayout", "classAAbsoluteLayout.html", "classAAbsoluteLayout" ],
     [ "AAbstractLabel", "classAAbstractLabel.html", "classAAbstractLabel" ],
     [ "AAbstractSignal", "classAAbstractSignal.html", null ],
