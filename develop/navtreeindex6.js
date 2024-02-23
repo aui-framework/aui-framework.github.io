@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c":[3,0,1,1,12],
+"group__useful__macros.html#ga7417762bbd55bfd6ab7d2cf70c9f8485":[3,0,1,1,11],
+"group__useful__macros.html#ga7c082ba11f904d5d369fbff6cf04f580":[3,0,1,1,15],
 "group__useful__macros.html#ga877d499f6a6a8bdb190772cf91d0c1e6":[3,0,1,1,19],
 "group__useful__macros.html#ga882e02c056bf3808e24bd5d4ba475dcf":[3,0,1,1,14],
 "group__useful__macros.html#ga8ff787979c768cad34414b49ef75763f":[3,0,1,1,27],
@@ -85,8 +88,8 @@ var NAVTREEINDEX6 =
 "structACurl_1_1ErrorDescription.html":[3,0,5,0,1],
 "structACurl_1_1Response.html":[3,0,5,0,3],
 "structACursorSelectable_1_1Selection.html":[0,2,63,0],
-"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACursor_1_1Custom.html":[3,0,9,0,29,0],
+"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACustomShaderBrush.html":[0,2,65],
 "structADataBindingDefault.html":[0,2,69],
 "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html":[0,2,70],
@@ -102,8 +105,8 @@ var NAVTREEINDEX6 =
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,80],
 "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html":[0,2,81],
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,82],
-"structADesktop_1_1FileExtension.html":[0,2,0,0],
 "structADesktop_1_1FileExtension.html":[0,0,1,0],
+"structADesktop_1_1FileExtension.html":[0,2,0,0],
 "structADragNDrop_1_1DropEvent.html":[3,0,9,6,0],
 "structADragNDrop_1_1EnterEvent.html":[3,0,9,6,1],
 "structAEnumerateAllValues.html":[0,2,99],
@@ -144,10 +147,10 @@ var NAVTREEINDEX6 =
 "structAMutex.html":[0,2,188],
 "structAPerformanceSection_1_1Data.html":[3,0,1,31,0],
 "structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
-"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,31,0,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
-"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,31,0,1],
+"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,31,0,0],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
+"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,31,0,1],
 "structAPointerMoveEvent.html":[0,2,205],
 "structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,205,0],
 "structAPointerPressedEvent.html":[0,2,206],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "structViewAssertionVisible.html":[0,2,465],
 "structWin32SymService.html":[0,2,469],
 "struct__weak.html":[0,2,14],
-"structass_1_1BackgroundCropping.html":[3,0,9,0,0],
-"structass_1_1BackgroundEffect.html":[3,0,9,0,1],
-"structass_1_1BackgroundGradient.html":[3,0,9,0,2],
-"structass_1_1BackgroundImage.html":[3,0,9,0,3]
+"structass_1_1BackgroundCropping.html":[3,0,9,0,0]
 };

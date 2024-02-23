@@ -6,6 +6,7 @@ var classIRenderer =
     [ "drawBoxShadowInner", "classIRenderer.html#a8998adedf7f279cf3599986309f40017", null ],
     [ "drawLines", "classIRenderer.html#ac3728656bbac813c07dc786a6fbeff70", null ],
     [ "drawLines", "classIRenderer.html#aa68a810bf828aa3572c8284660096618", null ],
+    [ "drawPoints", "classIRenderer.html#a02a937cfa43862ae92b59d73d5cb6dcc", null ],
     [ "drawRect", "classIRenderer.html#a84662bbbafcd89e223373af448bb8945", null ],
     [ "drawRectBorder", "classIRenderer.html#a226cb68a0a8e0f1fad3e45ca6f0c1f27", null ],
     [ "drawRoundedRect", "classIRenderer.html#a3209f675422fe320b61c7fa910fdc7d9", null ],

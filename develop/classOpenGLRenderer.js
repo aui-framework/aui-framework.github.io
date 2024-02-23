@@ -5,6 +5,7 @@ var classOpenGLRenderer =
     [ "drawBoxShadowInner", "classOpenGLRenderer.html#ad5ce56ae3785dff473f8fd459ade9d16", null ],
     [ "drawLines", "classOpenGLRenderer.html#aa6fcf6fd4b9f0ea08207362fc0841e13", null ],
     [ "drawLines", "classOpenGLRenderer.html#a73f2764582a8fc7a4a9d8da411e84ae7", null ],
+    [ "drawPoints", "classOpenGLRenderer.html#a96ff936291fb3cf260271b9c2a515979", null ],
     [ "drawRect", "classOpenGLRenderer.html#a7055475ddd36145e4ba42e887d09ec4d", null ],
     [ "drawRectBorder", "classOpenGLRenderer.html#a08f7ee3d7ca9278c1fab47dcc08ceafd", null ],
     [ "drawRoundedRect", "classOpenGLRenderer.html#acae0b3240ff270389357f34de2df7797", null ],
