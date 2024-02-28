@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -256,7 +256,7 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_class" href="classACurl_1_1Builder.html">~Builder</a>();</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classACurl_1_1Builder.html#a57f315c345c0d1f4da76e5d76f23e366">  201</a></span>        <a class="code hl_class" href="classACurl_1_1Builder.html">Builder</a>&amp; <a class="code hl_function" href="classACurl_1_1Builder.html#a57f315c345c0d1f4da76e5d76f23e366">withWriteCallback</a>(<a class="code hl_typedef" href="classACurl.html#a752944b2f6dd5c10c45c6447bfc1d2a8">WriteCallback</a> callback) {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            assert((<span class="stringliteral">&quot;write callback already set&quot;</span> &amp;&amp; mWriteCallback == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            AUI_ASSERTX(mWriteCallback == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;write callback already set&quot;</span>);</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            mWriteCallback = std::move(callback);</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
@@ -268,7 +268,7 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>         }</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="classACurl_1_1Builder.html#aaf913bd599bee8fc97d9d55b3fb0cdec">  224</a></span>        <a class="code hl_class" href="classACurl_1_1Builder.html">Builder</a>&amp; <a class="code hl_function" href="classACurl_1_1Builder.html#aaf913bd599bee8fc97d9d55b3fb0cdec">withBody</a>(<a class="code hl_typedef" href="classACurl.html#ab1db17bc7f80a4776b8ca50a8f1af8d7">ReadCallback</a> callback) {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            assert((<span class="stringliteral">&quot;write callback already set&quot;</span> &amp;&amp; mReadCallback == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            AUI_ASSERTX(mReadCallback == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;write callback already set&quot;</span>);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            mReadCallback = std::move(callback);</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        }</div>
@@ -287,7 +287,7 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <a class="code hl_class" href="classACurl_1_1Builder.html">Builder</a>&amp; withTimeout(std::chrono::seconds timeout);</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="classACurl_1_1Builder.html#a1917191553bcfc4d3b1d5a951bd5684d">  255</a></span>        <a class="code hl_class" href="classACurl_1_1Builder.html">Builder</a>&amp; <a class="code hl_function" href="classACurl_1_1Builder.html#a1917191553bcfc4d3b1d5a951bd5684d">withBody</a>(std::string contents) {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            assert((<span class="stringliteral">&quot;write callback already set&quot;</span> &amp;&amp; mReadCallback == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            AUI_ASSERTX(mReadCallback == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;write callback already set&quot;</span>);</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <span class="keyword">struct </span>Body {</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                <span class="keyword">explicit</span> Body(std::string b) : contents(std::move(b)), i(contents.begin()) {}</div>
@@ -317,7 +317,7 @@ $(document).ready(function(){initNavTree('Curl_2ACurl_8h_source.html',''); initR
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        }</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b">  293</a></span>        <a class="code hl_class" href="classACurl_1_1Builder.html">Builder</a>&amp; <a class="code hl_function" href="classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b">withErrorCallback</a>(ErrorCallback callback) {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            assert((<span class="stringliteral">&quot;error callback already set&quot;</span> &amp;&amp; mErrorCallback == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            AUI_ASSERTX(mErrorCallback == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;error callback already set&quot;</span>);</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            mErrorCallback = std::move(callback);</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        }</div>

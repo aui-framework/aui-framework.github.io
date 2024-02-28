@@ -278,7 +278,10 @@ var namespaces =
       ] ],
       [ "ui_building", null, [
         [ "layouted_container_factory", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
-        [ "layouted_container_factory_impl", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", "structaui_1_1ui__building_1_1layouted__container__factory__impl" ],
+        [ "layouted_container_factory_impl", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", null ],
+        [ "layouted_container_factory_impl_with_expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html", [
+          [ "Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html", null ]
+        ] ],
         [ "view", "structaui_1_1ui__building_1_1view.html", null ],
         [ "view_helper", "structaui_1_1ui__building_1_1view__helper.html", null ]
       ] ],

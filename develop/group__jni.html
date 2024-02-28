@@ -165,7 +165,7 @@ API_AUI_CORE void&#160;</td><td class="memItemRight" valign="bottom"><b>aui::jni
 <div class="line">public:                           \</div>
 <div class="line">    static <span class="keyword">constexpr</span> <span class="keyword">auto</span> JAVA_CLASS_NAME = #path ## _asl;                        \</div>
 <div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> getClassName() noexcept { <span class="keywordflow">return</span> #path; } \</div>
-<div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">auto</span> getClass() noexcept { static ::aui::jni::GlobalRef t = <a class="code hl_function" href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">::aui::jni::env</a>()-&gt;FindClass(getClassName()); assert((<span class="stringliteral">&quot;no such class: &quot;</span> #path, t.asClass() != <span class="keyword">nullptr</span>)); <span class="keywordflow">return</span> t.asClass(); } \</div>
+<div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">auto</span> getClass() noexcept { static ::aui::jni::GlobalRef t = <a class="code hl_function" href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">::aui::jni::env</a>()-&gt;FindClass(getClassName()); AUI_ASSERTX(t.asClass() != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;no such class: &quot;</span> #path); <span class="keywordflow">return</span> t.asClass(); } \</div>
 <div class="line">                                      \</div>
 <div class="line">};                                \</div>
 <div class="line">struct name: <span class="keyword">public</span> name ## _info</div>

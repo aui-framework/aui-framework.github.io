@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('AAsyncHolder_8h_source.html',''); init
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -162,9 +162,9 @@ $(document).ready(function(){initNavTree('AAsyncHolder_8h_source.html',''); init
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            lock.unlock();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            future.<a class="code hl_function" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a>([<span class="keyword">this</span>, it](<span class="keyword">const</span> T&amp; result) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                assert((!mDead, <span class="stringliteral">&quot;you have concurrency issues&quot;</span>));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                AUI_ASSERTX(!mDead, <span class="stringliteral">&quot;you have concurrency issues&quot;</span>);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                std::unique_lock lock(mSync);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                assert(!mCustomTypeFutures.empty());</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                AUI_ASSERT(!mCustomTypeFutures.empty());</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                mCustomTypeFutures.erase(it);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            });</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>

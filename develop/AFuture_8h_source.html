@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -289,7 +289,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                        }</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                        <span class="keyword">auto</span> func = std::move(task);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                        assert(<span class="keywordtype">bool</span>(func));</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                        AUI_ASSERT(<span class="keywordtype">bool</span>(func));</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                        lock.unlock();</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                        innerCancellation = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                        <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(isVoid) {</div>
@@ -353,7 +353,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405">  287</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405">notifyOnSuccessCallback</a>(std::unique_lock&lt;<span class="keyword">decltype</span>(mutex)&gt;&amp; lock) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                assert(lock.owns_lock());</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                AUI_ASSERT(lock.owns_lock());</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                <span class="keywordflow">if</span> (cancelled) {</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                }</div>
@@ -528,7 +528,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno"><a class="line" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">  606</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a>(T v) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        assert((<span class="stringliteral">&quot;task is already provided&quot;</span>, inner-&gt;task == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        AUI_ASSERTX(inner-&gt;task == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;task is already provided&quot;</span>);</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span> </div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>        std::unique_lock lock(inner-&gt;mutex);</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>        inner-&gt;value = std::move(v);</div>
@@ -603,7 +603,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
 <div class="line"><a id="l00733" name="l00733"></a><span class="lineno"><a class="line" href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">  733</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06">supplyResult</a>() const noexcept {</div>
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>        <span class="keyword">auto</span>&amp; inner = (*super::mInner);</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        assert((<span class="stringliteral">&quot;task is already provided&quot;</span>, inner-&gt;task == <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>        AUI_ASSERTX(inner-&gt;task == <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;task is already provided&quot;</span>);</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span> </div>
 <div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>        std::unique_lock lock(inner-&gt;mutex);</div>
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>        inner-&gt;value = <span class="keyword">true</span>;</div>
@@ -656,7 +656,7 @@ $(document).ready(function(){initNavTree('AFuture_8h_source.html',''); initResiz
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        <span class="keywordflow">if</span> (flags &amp; AFutureWait::ALLOW_STACKFUL_COROUTINES) {</div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> threadPoolWorker = _cast&lt;AThreadPool::Worker&gt;(<a class="code hl_function" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>())) {</div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>                <span class="keywordflow">if</span> (hasResult()) <span class="keywordflow">return</span>; <span class="comment">// for sure</span></div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                assert(lock.owns_lock());</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                AUI_ASSERT(lock.owns_lock());</div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>                <span class="keyword">auto</span> callback = [threadPoolWorker](<span class="keyword">auto</span>&amp;&amp;...) {</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>                    threadPoolWorker-&gt;threadPool().wakeUpAll();</div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>                };</div>

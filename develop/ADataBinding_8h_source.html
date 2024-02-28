@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('ADataBinding_8h_source.html',''); init
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -211,14 +211,14 @@ $(document).ready(function(){initNavTree('ADataBinding_8h_source.html',''); init
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> View, <span class="keyword">typename</span> ModelField, <span class="keyword">typename</span> SetterArg&gt;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_class" href="classADataBindingLinker.html">ADataBindingLinker&lt;Model, View, std::decay_t&lt;ModelField&gt;</a>, std::decay_t&lt;ModelField&gt;, SetterArg&gt; operator()(ModelField(Model::*field), <span class="keywordtype">void</span>(View::*setterFunc)(SetterArg)) {</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        assert(setterFunc != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        AUI_ASSERT(setterFunc != <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classADataBindingLinker.html">ADataBindingLinker&lt;Model, View, std::decay_t&lt;ModelField&gt;</a>, std::decay_t&lt;ModelField&gt;, SetterArg&gt;(<span class="keyword">this</span>, <span class="keyword">nullptr</span>, setterFunc, field);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> View, <span class="keyword">typename</span> ModelField, <span class="keyword">typename</span> GetterRV, <span class="keyword">typename</span> SetterArg&gt;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_class" href="classADataBindingLinker.html">ADataBindingLinker&lt;Model, View, std::decay_t&lt;ModelField&gt;</a>, GetterRV, SetterArg&gt; operator()(ModelField(Model::*field),</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                                                                                              <a class="code hl_class" href="classASignal.html">ASignal&lt;GetterRV&gt;</a>(View::*getter),</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                                                                                              <span class="keywordtype">void</span>(View::*setterFunc)(SetterArg) = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        assert((getter != <span class="keyword">nullptr</span> || setterFunc != <span class="keyword">nullptr</span>) &amp;&amp;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        AUI_ASSERT((getter != <span class="keyword">nullptr</span> || setterFunc != <span class="keyword">nullptr</span>) &amp;&amp;</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>               <span class="stringliteral">&quot;implement ADataBindingDefault for your view in order to use default binding&quot;</span>);</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classADataBindingLinker.html">ADataBindingLinker&lt;Model, View, std::decay_t&lt;ModelField&gt;</a>, GetterRV, SetterArg&gt;(<span class="keyword">this</span>, getter, setterFunc, field);</div>
@@ -329,7 +329,7 @@ $(document).ready(function(){initNavTree('ADataBinding_8h_source.html',''); init
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    };</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keywordflow">if</span> (linker.getGetter()) {</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        AObject::connect(<span class="keywordtype">object</span>.get()-&gt;*(linker.getGetter()), linker.getBinder(), [<span class="keywordtype">object</span>, linker](<span class="keyword">const</span> GetterRV&amp; data) {</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            assert((<span class="stringliteral">&quot;please setModel for ADataBinding&quot;</span> &amp;&amp; &amp;linker.getBinder()-&gt;getEditableModel()));</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            AUI_ASSERTX(&amp;linker.getBinder()-&gt;getEditableModel(), <span class="stringliteral">&quot;please setModel for ADataBinding&quot;</span>);</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            object-&gt;setSignalsEnabled(false);</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            linker.getBinder()-&gt;getEditableModel().*(linker.getField()) = data;</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            converter c;</div>

@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('ABaseWindow_8h_source.html',''); initR
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -360,9 +360,9 @@ $(document).ready(function(){initNavTree('ABaseWindow_8h_source.html',''); initR
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>};</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9">  392</a></span><span class="preprocessor">#define AUI_ASSERT_UI_THREAD_ONLY() { assert((&quot;this method should be used in ui thread only.&quot;</span>, (AWindow::current() ? AThread::current() == AWindow::current()-&gt;getThread() : AThread::current() == getThread()))); }</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9">  392</a></span><span class="preprocessor">#define AUI_ASSERT_UI_THREAD_ONLY() { AUI_ASSERTX((AWindow::current() ? AThread::current() == AWindow::current()-&gt;getThread() : AThread::current() == getThread()), &quot;this method should be used in ui thread only.&quot;</span>); }</div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4">  400</a></span><span class="preprocessor">#define AUI_ASSERT_WORKER_THREAD_ONLY() { assert((&quot;this method should be used in worker thread only.&quot;</span>, AThread::current() != AWindow::current()-&gt;getThread())); }</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4">  400</a></span><span class="preprocessor">#define AUI_ASSERT_WORKER_THREAD_ONLY() { AUI_ASSERTX(AThread::current() != AWindow::current()-&gt;getThread(), &quot;this method should be used in worker thread only.&quot;</span>); }</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
 <div class="ttc" id="aclassABaseWindow_html"><div class="ttname"><a href="classABaseWindow.html">ABaseWindow</a></div><div class="ttdef"><b>Definition:</b> ABaseWindow.h:37</div></div>
 <div class="ttc" id="aclassABaseWindow_html_a31c9bd37b38a7b2d7153b2137c083a3f"><div class="ttname"><a href="classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f">ABaseWindow::isPreventingClickOnPointerRelease</a></div><div class="ttdeci">bool isPreventingClickOnPointerRelease() const noexcept</div><div class="ttdef"><b>Definition:</b> ABaseWindow.h:81</div></div>

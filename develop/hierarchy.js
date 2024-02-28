@@ -757,16 +757,19 @@ var hierarchy =
       [ "uitest::impl::both< L, R >", "structuitest_1_1impl_1_1both.html", null ]
     ] ],
     [ "aui::impl::parallel::LambdaCapturer< Container >", "structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html", null ],
-    [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
-      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
-        [ "declarative::Button", "structdeclarative_1_1Button.html", null ]
+    [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", null ],
+    [ "aui::ui_building::layouted_container_factory_impl< Layout, AViewContainer >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
+      [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html", [
+        [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+          [ "declarative::Button", "structdeclarative_1_1Button.html", null ]
+        ] ]
       ] ]
     ] ],
-    [ "aui::ui_building::layouted_container_factory_impl< Layout, AViewContainer >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
-      [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
-    ] ],
     [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
-      [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
+      [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, AViewContainer >", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html", [
+        [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
+      ] ],
+      [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html", null ]
     ] ],
     [ "ass::LayoutSpacing", "structass_1_1LayoutSpacing.html", null ],
     [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
@@ -1133,7 +1136,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
-      [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html", null ]
+      [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html", null ]
     ] ],
     [ "aui::ui_building::view_helper< layouted_container_factory< Layout, AViewContainer > >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]

@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('SoftwareRenderer_8h_source.html',''); 
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('SoftwareRenderer_8h_source.html',''); 
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classSoftwareRenderer.html#acfb7889a9820555a42dbcd98844f17eb">   46</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSoftwareRenderer.html#acfb7889a9820555a42dbcd98844f17eb">putPixel</a>(glm::ivec2 position, <a class="code hl_class" href="classAColor.html">AColor</a> color, <a class="code hl_class" href="classAOptional.html">AOptional&lt;Blending&gt;</a> blending = std::nullopt) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        assert((<span class="stringliteral">&quot;context is null&quot;</span> &amp;&amp; mContext != <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        AUI_ASSERTX(mContext != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;context is null&quot;</span>);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        color = glm::clamp(color, glm::vec4(0), glm::vec4(1));</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">auto</span> actualBlending = blending ? *blending : mBlending;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        glm::uvec2 uposition(position);</div>

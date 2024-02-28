@@ -8,5 +8,5 @@ var searchData=
   ['error_5',['Error',['../structaui_1_1impl_1_1Error.html',1,'aui::impl']]],
   ['errordescription_6',['ErrorDescription',['../structACurl_1_1ErrorDescription.html',1,'ACurl']]],
   ['exception_7',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeModelIndex_1_1Exception.html',1,'ATreeModelIndex::Exception']]],
-  ['expanding_8',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1ui__building_1_1layouted__container__factory__impl_1_1Expanding.html',1,'aui::ui_building::layouted_container_factory_impl&lt; Layout, Container &gt;::Expanding']]]
+  ['expanding_8',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html',1,'aui::ui_building::layouted_container_factory_impl_with_expanding&lt; Layout, Container &gt;::Expanding']]]
 ];
