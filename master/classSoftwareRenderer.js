@@ -4,6 +4,7 @@ var classSoftwareRenderer =
     [ "drawBoxShadowInner", "classSoftwareRenderer.html#a5b1841868413dc51b0b3adf81a2de57f", null ],
     [ "drawLines", "classSoftwareRenderer.html#aac5694893d8a3bc605eee68714e5c328", null ],
     [ "drawLines", "classSoftwareRenderer.html#af7f7dda2dfdcf4b39f2b7449e7863333", null ],
+    [ "drawPoints", "classSoftwareRenderer.html#a714eb4d71c357d05c3268901b845de41", null ],
     [ "drawRect", "classSoftwareRenderer.html#a6539a50b3ab3da1d5aa02b0b4ea8fb44", null ],
     [ "drawRectBorder", "classSoftwareRenderer.html#a4745d720936b50bd9fd51f5227a7354b", null ],
     [ "drawRoundedRect", "classSoftwareRenderer.html#a16d6e52e7579b497ab7bf511193d4e76", null ],

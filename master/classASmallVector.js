@@ -1,6 +1,8 @@
 var classASmallVector =
 [
     [ "contains", "classASmallVector.html#a511e11ed43e30084771dd76c0ccb7145", null ],
+    [ "findIf", "classASmallVector.html#a49dd758ec0d6d62acb687a4e636742dd", null ],
+    [ "findIf", "classASmallVector.html#a890fae8b6754f40ccff30a773c06d34a", null ],
     [ "first", "classASmallVector.html#ad66270a6a83459098809cb4054bc14f4", null ],
     [ "first", "classASmallVector.html#af6248d63363516a932a4a58a643ba525", null ],
     [ "indexOf", "classASmallVector.html#a1a31505aa1208a3b18cd9147d6a17efa", null ],
@@ -16,6 +18,7 @@ var classASmallVector =
     [ "operator<<", "classASmallVector.html#af6cfa259be481a7236bedc4a9b14ba61", null ],
     [ "operator<<", "classASmallVector.html#a8f242586547b64bcfca18014e324fbc2", null ],
     [ "removeAll", "classASmallVector.html#a743f72fb6cf16c9f59742002a9572975", null ],
+    [ "removeAll", "classASmallVector.html#af6d839e83293fe0a04cdbd1169ec5dbb", null ],
     [ "removeAt", "classASmallVector.html#a4852bc93ab8450c1668de09834e30f90", null ],
     [ "removeFirst", "classASmallVector.html#a4fad07e3518e3f575cab29fef3fcb8b2", null ],
     [ "removeIf", "classASmallVector.html#a87e7d420ec86173821f665e6f76cf180", null ],

@@ -87,6 +87,8 @@ var group__core =
     ] ],
     [ "ASmallVector< StoredType, StaticVectorSize, Allocator >", "classASmallVector.html", [
       [ "contains", "classASmallVector.html#a511e11ed43e30084771dd76c0ccb7145", null ],
+      [ "findIf", "classASmallVector.html#a49dd758ec0d6d62acb687a4e636742dd", null ],
+      [ "findIf", "classASmallVector.html#a890fae8b6754f40ccff30a773c06d34a", null ],
       [ "first", "classASmallVector.html#ad66270a6a83459098809cb4054bc14f4", null ],
       [ "first", "classASmallVector.html#af6248d63363516a932a4a58a643ba525", null ],
       [ "indexOf", "classASmallVector.html#a1a31505aa1208a3b18cd9147d6a17efa", null ],
@@ -102,6 +104,7 @@ var group__core =
       [ "operator<<", "classASmallVector.html#af6cfa259be481a7236bedc4a9b14ba61", null ],
       [ "operator<<", "classASmallVector.html#a8f242586547b64bcfca18014e324fbc2", null ],
       [ "removeAll", "classASmallVector.html#a743f72fb6cf16c9f59742002a9572975", null ],
+      [ "removeAll", "classASmallVector.html#af6d839e83293fe0a04cdbd1169ec5dbb", null ],
       [ "removeAt", "classASmallVector.html#a4852bc93ab8450c1668de09834e30f90", null ],
       [ "removeFirst", "classASmallVector.html#a4fad07e3518e3f575cab29fef3fcb8b2", null ],
       [ "removeIf", "classASmallVector.html#a87e7d420ec86173821f665e6f76cf180", null ],
@@ -166,6 +169,7 @@ var group__core =
       [ "operator<<", "classAVector.html#a1b7c4beb3e4cffab55cd05fe2afec669", null ],
       [ "operator<<", "classAVector.html#a0f13b7a90fda33b5ae4fc8847b9e6151", null ],
       [ "removeAll", "classAVector.html#af1feec53844fa47cdcd75c46ca371556", null ],
+      [ "removeAll", "classAVector.html#a660f005827f50bcc988909b3255ae04f", null ],
       [ "removeAt", "classAVector.html#abf23a6f5a0a4c745a13119e9a2111bb8", null ],
       [ "removeFirst", "classAVector.html#aa6a54a22a7f8148f1e79b9b8f34db453", null ],
       [ "removeIf", "classAVector.html#a22b060a2d6cc3fe72aeaa34bcf7188af", null ],
@@ -190,6 +194,14 @@ var group__core =
       [ "doLogFileAccessSafe", "classALogger.html#a63c7471e4fe2c2dd96e38f72203d1ec7", null ],
       [ "log", "classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b", null ],
       [ "setLogFile", "classALogger.html#aa2da2365b9f592d3c47d834456a23d54", null ]
+    ] ],
+    [ "APerformanceFrame", "classAPerformanceFrame.html", null ],
+    [ "APerformanceSection", "classAPerformanceSection.html", [
+      [ "Data", "structAPerformanceSection_1_1Data.html", [
+        [ "color", "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef", null ],
+        [ "name", "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a", null ]
+      ] ],
+      [ "APerformanceSection", "classAPerformanceSection.html#ac34a60124892c570c657c07f713982db", null ]
     ] ],
     [ "AStacktrace", "classAStacktrace.html", [
       [ "Entry", "classAStacktrace_1_1Entry.html", [

@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2023 Alex2772</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This library is free software; you can redistribute it and/or</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// modify it under the terms of the GNU Lesser General Public</span></div>
@@ -245,13 +245,13 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    [[nodiscard]]</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    T&amp; value() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        assert((<span class="stringliteral">&quot;optional is empty&quot;</span>, mInitialized));</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        AUI_ASSERTX(mInitialized, <span class="stringliteral">&quot;optional is empty&quot;</span>);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T&amp;<span class="keyword">&gt;</span>(mStorage);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    [[nodiscard]]</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">const</span> T&amp; value() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        assert((<span class="stringliteral">&quot;optional is empty&quot;</span>, mInitialized));</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        AUI_ASSERTX(mInitialized, <span class="stringliteral">&quot;optional is empty&quot;</span>);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>T&amp;<span class="keyword">&gt;</span>(mStorage);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
@@ -323,7 +323,7 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(isInvocable) {</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;std::invoke_result_t&lt;F&gt;, <span class="keywordtype">void</span>&gt;) {</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                alternative();</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                assert((<span class="stringliteral">&quot;should not have reached here&quot;</span>, <span class="keyword">false</span>));</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                AUI_ASSERTX(<span class="keyword">false</span>, <span class="stringliteral">&quot;should not have reached here&quot;</span>);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;should not have reached here&quot;</span>); <span class="comment">// stub exception</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                <span class="keywordflow">return</span> alternative();</div>

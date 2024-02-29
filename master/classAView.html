@@ -481,6 +481,9 @@ template&lt;AAnySignal Signal, ACompatibleSlotFor&lt; Signal &gt; Function&gt; <
 <tr class="memitem:a18f6c827d53fd70ebc19f60287e0662f inherit pub_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a18f6c827d53fd70ebc19f60287e0662f" name="a18f6c827d53fd70ebc19f60287e0662f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setSignalsEnabled</b> (bool enabled)</td></tr>
 <tr class="separator:a18f6c827d53fd70ebc19f60287e0662f inherit pub_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8be81ab875e7b856a9ff67fd5e1f8453 inherit pub_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a8be81ab875e7b856a9ff67fd5e1f8453" name="a8be81ab875e7b856a9ff67fd5e1f8453"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSignalsEnabled</b> () const noexcept</td></tr>
+<tr class="separator:a8be81ab875e7b856a9ff67fd5e1f8453 inherit pub_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0dedb751182fb3a2f36228750ae305a inherit pub_methods_classAObject"><td class="memTemplParams" colspan="2"><a id="ad0dedb751182fb3a2f36228750ae305a" name="ad0dedb751182fb3a2f36228750ae305a"></a>
 template&lt;ASignalInvokable T&gt; </td></tr>
 <tr class="memitem:ad0dedb751182fb3a2f36228750ae305a inherit pub_methods_classAObject"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator^</b> (T &amp;&amp;t)</td></tr>
@@ -535,6 +538,14 @@ Signals and public fields</h2></td></tr>
 <a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clicked</b></td></tr>
 <tr class="memdesc:af2361cde3ebf9e0b410c28dab746029d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left mouse button clicked. <br /></td></tr>
 <tr class="separator:af2361cde3ebf9e0b410c28dab746029d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129f3b9ae234f84498c7965ad6ee8df4"><td class="memItemLeft" align="right" valign="top"><a id="a129f3b9ae234f84498c7965ad6ee8df4" name="a129f3b9ae234f84498c7965ad6ee8df4"></a>
+<a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>positionChanged</b></td></tr>
+<tr class="memdesc:a129f3b9ae234f84498c7965ad6ee8df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position changed. <br /></td></tr>
+<tr class="separator:a129f3b9ae234f84498c7965ad6ee8df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd0aaa185656f113bb1b4127ba36a1e"><td class="memItemLeft" align="right" valign="top"><a id="accd0aaa185656f113bb1b4127ba36a1e" name="accd0aaa185656f113bb1b4127ba36a1e"></a>
+<a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sizeChanged</b></td></tr>
+<tr class="memdesc:accd0aaa185656f113bb1b4127ba36a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size changed. <br /></td></tr>
+<tr class="separator:accd0aaa185656f113bb1b4127ba36a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5034ce1e3e117e2f4ece91c1d038dbe0"><td class="memItemLeft" align="right" valign="top"><a id="a5034ce1e3e117e2f4ece91c1d038dbe0" name="a5034ce1e3e117e2f4ece91c1d038dbe0"></a>
 <a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2, glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometryChanged</b></td></tr>
 <tr class="memdesc:a5034ce1e3e117e2f4ece91c1d038dbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry (position and size) changed. <br /></td></tr>
@@ -845,7 +856,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 <dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> processes this click</dd></dl>
 <p>Used in <a class="el" href="classAViewContainer.html#aeb44d35f2a0eccc8fd1c6f9a7560f71f" title="Finds first direct child view under position.">AViewContainer::getViewAt</a> method subset, thus affecting click event handling. </p>
 
-<p>Reimplemented in <a class="el" href="classAWindow.html#a607d322db574df5c957a7b19aede61ce">AWindow</a>, <a class="el" href="classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f">AAbstractLabel</a>, <a class="el" href="classAButton.html#ad80e94073674662d0ad29b3662f6025f">AButton</a>, <a class="el" href="classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac">ACheckBox</a>, <a class="el" href="classADividerView.html#a85aab2a154585e0782e2e006042d5775">ADividerView</a>, <a class="el" href="classAGridSplitter.html#ad7c71f294a8283c3c396d09eb4228594">AGridSplitter</a>, <a class="el" href="classASelectableLabel.html#acea414e646b28b000827388f682bc2cb">ASelectableLabel</a>, <a class="el" href="classASpacerExpanding.html#abb29b7ae132b063f11f4a52838cba8cc">ASpacerExpanding</a>, <a class="el" href="classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35">ASpacerFixed</a>, and <a class="el" href="classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAWindow.html#a607d322db574df5c957a7b19aede61ce">AWindow</a>, <a class="el" href="classA2FingerTransformArea.html#a9004e7382bc4aa1137cdaa3c65529677">A2FingerTransformArea</a>, <a class="el" href="classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f">AAbstractLabel</a>, <a class="el" href="classAButton.html#ad80e94073674662d0ad29b3662f6025f">AButton</a>, <a class="el" href="classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac">ACheckBox</a>, <a class="el" href="classADividerView.html#a85aab2a154585e0782e2e006042d5775">ADividerView</a>, <a class="el" href="classAGridSplitter.html#ad7c71f294a8283c3c396d09eb4228594">AGridSplitter</a>, <a class="el" href="classASelectableLabel.html#acea414e646b28b000827388f682bc2cb">ASelectableLabel</a>, <a class="el" href="classASpacerExpanding.html#abb29b7ae132b063f11f4a52838cba8cc">ASpacerExpanding</a>, <a class="el" href="classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35">ASpacerFixed</a>, and <a class="el" href="classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -1521,7 +1532,7 @@ Changed state (hover, active, focus) of this view </li>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the view is pressed, it would still received move events. Use AView::isMouseHover to check is the pointer actually over view or not. See <a class="el" href="classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab" title="Called on pointer (mouse) released event.">AView::onPointerReleased</a> for more info. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#a1242fa2db41e2f416d8e5c2e7c044c4a">ABaseWindow</a>, <a class="el" href="classAWindow.html#a0de97c943cf121559175fc46f4f5a45b">AWindow</a>, <a class="el" href="classAAbstractTypeableView.html#a37570cae76dc81c109332aeaac4815c0">AAbstractTypeableView</a>, <a class="el" href="classADragNDropView.html#a79a24c4df7abfe6f71a8677cc4a74f38">ADragNDropView</a>, <a class="el" href="classAGridSplitter.html#a4e6215798efb5c314a6a617936136d9a">AGridSplitter</a>, <a class="el" href="classARulerArea.html#a5df1a3fd72f215be26f9e2f54a57f153">ARulerArea</a>, <a class="el" href="classAScrollbarHandle.html#a9d6d100ef255c0ee345d08d39bf362a7">AScrollbarHandle</a>, <a class="el" href="classASelectableLabel.html#a4818ce7b1dec8eda1d5a3b252d497350">ASelectableLabel</a>, <a class="el" href="classASlider.html#a0d768fa106169967c7c83ce3f016c334">ASlider</a>, <a class="el" href="classASplitter.html#a3d81fcd2756bc311bd4cf92b838625a3">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#a1d8d0d0de1bb9e73c0219d2d6542b533">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classABaseWindow.html#a1242fa2db41e2f416d8e5c2e7c044c4a">ABaseWindow</a>, <a class="el" href="classAWindow.html#a0de97c943cf121559175fc46f4f5a45b">AWindow</a>, <a class="el" href="classA2FingerTransformArea.html#aaaa9709c084ce99d2fe4b9e6d40e539a">A2FingerTransformArea</a>, <a class="el" href="classAAbstractTypeableView.html#a37570cae76dc81c109332aeaac4815c0">AAbstractTypeableView</a>, <a class="el" href="classADragNDropView.html#a79a24c4df7abfe6f71a8677cc4a74f38">ADragNDropView</a>, <a class="el" href="classAGridSplitter.html#a4e6215798efb5c314a6a617936136d9a">AGridSplitter</a>, <a class="el" href="classARulerArea.html#a5df1a3fd72f215be26f9e2f54a57f153">ARulerArea</a>, <a class="el" href="classAScrollbarHandle.html#a9d6d100ef255c0ee345d08d39bf362a7">AScrollbarHandle</a>, <a class="el" href="classASelectableLabel.html#a4818ce7b1dec8eda1d5a3b252d497350">ASelectableLabel</a>, <a class="el" href="classASlider.html#a0d768fa106169967c7c83ce3f016c334">ASlider</a>, <a class="el" href="classASplitter.html#a3d81fcd2756bc311bd4cf92b838625a3">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#a1d8d0d0de1bb9e73c0219d2d6542b533">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -1558,7 +1569,7 @@ Changed state (hover, active, focus) of this view </li>
 </dl>
 <p >If button is pressed on this view, we want to know when the mouse will be released even if mouse outside this view and even the mouse outside the window so we can guarantee that if we got a mouse press event, we will get a mouse release event too.</p>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#acbcbf158381a9f0e05069abcffcf3ea5">ABaseWindow</a>, <a class="el" href="classACustomWindow.html#ad994e4dd3ae33763d98aaa1e09aeb61a">ACustomWindow</a>, <a class="el" href="classAAbstractTypeableView.html#a1610e371ab07c0dc1f33f73f9862b649">AAbstractTypeableView</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#ac4d152f61a923f860e2f3edfc6d02097">ADragArea::ADraggableHandle</a>, <a class="el" href="classAGridSplitter.html#aa9f9af05b47347613a2ffb4c818c675d">AGridSplitter</a>, <a class="el" href="classAListItem.html#ad7e646a0aec551979e9459398d8185b3">AListItem</a>, <a class="el" href="classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a8ddead08e7d2722704e69cb2f024ab09">AScrollbarHandle</a>, <a class="el" href="classAScrollbar.html#a0fc60c7d8b7b77626b7983a43e51507b">AScrollbar</a>, <a class="el" href="classASelectableLabel.html#ad920592b27005f7124527fcf4c21d62f">ASelectableLabel</a>, <a class="el" href="classASlider.html#ae8b27e20c99191fc0fd34bb3e85aa059">ASlider</a>, <a class="el" href="classASplitter.html#a4e8f9e638a7ad6f16099e73be6774ed0">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#afba0224b949321c63d28f5d24fdbfdae">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classABaseWindow.html#acbcbf158381a9f0e05069abcffcf3ea5">ABaseWindow</a>, <a class="el" href="classACustomWindow.html#ad994e4dd3ae33763d98aaa1e09aeb61a">ACustomWindow</a>, <a class="el" href="classA2FingerTransformArea.html#abb8858991ec90c9847a20426affb58da">A2FingerTransformArea</a>, <a class="el" href="classAAbstractTypeableView.html#a1610e371ab07c0dc1f33f73f9862b649">AAbstractTypeableView</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#ac4d152f61a923f860e2f3edfc6d02097">ADragArea::ADraggableHandle</a>, <a class="el" href="classAGridSplitter.html#aa9f9af05b47347613a2ffb4c818c675d">AGridSplitter</a>, <a class="el" href="classAListItem.html#ad7e646a0aec551979e9459398d8185b3">AListItem</a>, <a class="el" href="classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a8ddead08e7d2722704e69cb2f024ab09">AScrollbarHandle</a>, <a class="el" href="classAScrollbar.html#a0fc60c7d8b7b77626b7983a43e51507b">AScrollbar</a>, <a class="el" href="classASelectableLabel.html#ad920592b27005f7124527fcf4c21d62f">ASelectableLabel</a>, <a class="el" href="classASlider.html#ae8b27e20c99191fc0fd34bb3e85aa059">ASlider</a>, <a class="el" href="classASplitter.html#a4e8f9e638a7ad6f16099e73be6774ed0">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#afba0224b949321c63d28f5d24fdbfdae">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1606,7 @@ Changed state (hover, active, focus) of this view </li>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>To handle clicks, you should use <a class="el" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d" title="Left mouse button clicked.">AView::clicked</a> signal instead. View still receives pointer move and released events even if cursor goes outside the view boundaries, or other exclusive event appeared (i.e. scrollarea scroll). <a class="el" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d" title="Left mouse button clicked.">AView::clicked</a> emitted only if release event occurred inside view and no other event has prevented click gesture. See <a class="el" href="structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0" title="Whether the pointer release event triggers click event or not.">APointerReleasedEvent::triggerClick</a>. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#a8b251f45c577fbe1b797a1116ace8755">ABaseWindow</a>, <a class="el" href="classACustomWindow.html#a6e594d82e7939027457541a7aee3a4fc">ACustomWindow</a>, <a class="el" href="classAAbstractTypeableView.html#ad8bea8ffb3e7371bc7792a598e9c2f8c">AAbstractTypeableView</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#aa81efc95b631bd2425950817a4506adc">ADragArea::ADraggableHandle</a>, <a class="el" href="classADropdownList.html#a8b7f862613657a839dc1576c9baf96ff">ADropdownList</a>, <a class="el" href="classAGridSplitter.html#a63734a9e908a6bed6b822cf6f396cc81">AGridSplitter</a>, <a class="el" href="classARadioButton.html#ab4ab5757b49e2850c8cb1ef0cc9b9eec">ARadioButton</a>, <a class="el" href="classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a1782caa0d906330e103a408ca27f5dfe">AScrollbarHandle</a>, <a class="el" href="classASelectableLabel.html#a8226aed826f34b6898f6f5ef00c03bd7">ASelectableLabel</a>, <a class="el" href="classASlider.html#aac66e7ba8ef4ebb38c645cb40f7af62b">ASlider</a>, <a class="el" href="classASplitter.html#ac09c8d3db8623742b075c26139dc044e">ASplitter</a>, and <a class="el" href="classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classABaseWindow.html#a8b251f45c577fbe1b797a1116ace8755">ABaseWindow</a>, <a class="el" href="classACustomWindow.html#a6e594d82e7939027457541a7aee3a4fc">ACustomWindow</a>, <a class="el" href="classA2FingerTransformArea.html#a6c3a3a744582272bcddac000fca67d52">A2FingerTransformArea</a>, <a class="el" href="classAAbstractTypeableView.html#ad8bea8ffb3e7371bc7792a598e9c2f8c">AAbstractTypeableView</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#aa81efc95b631bd2425950817a4506adc">ADragArea::ADraggableHandle</a>, <a class="el" href="classADropdownList.html#a8b7f862613657a839dc1576c9baf96ff">ADropdownList</a>, <a class="el" href="classAGridSplitter.html#a63734a9e908a6bed6b822cf6f396cc81">AGridSplitter</a>, <a class="el" href="classARadioButton.html#ab4ab5757b49e2850c8cb1ef0cc9b9eec">ARadioButton</a>, <a class="el" href="classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a1782caa0d906330e103a408ca27f5dfe">AScrollbarHandle</a>, <a class="el" href="classASelectableLabel.html#a8226aed826f34b6898f6f5ef00c03bd7">ASelectableLabel</a>, <a class="el" href="classASlider.html#aac66e7ba8ef4ebb38c645cb40f7af62b">ASlider</a>, <a class="el" href="classASplitter.html#ac09c8d3db8623742b075c26139dc044e">ASplitter</a>, and <a class="el" href="classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b">AViewContainer</a>.</p>
 
 </div>
 </div>
@@ -2014,7 +2025,7 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a111">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a113">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>
@@ -2102,27 +2113,27 @@ Inheritance diagram for AView:</div>
 <area shape="rect" href="classAHDividerView.html" title="A horizontal line." alt="" coords="727,239,837,266"/>
 <area shape="rect" href="classAVDividerView.html" title="A vertical line." alt="" coords="727,290,837,317"/>
 <area shape="rect" href="classAScrollbarOffsetSpacer.html" title=" " alt="" coords="703,518,861,545"/>
-<area shape="rect" href="classABaseWindow.html" title=" " alt="" coords="729,569,835,595"/>
-<area shape="rect" href="classABasicListEditor.html" title="Helper UI to edit list models." alt="" coords="723,619,841,646"/>
-<area shape="rect" href="classAButtonEx.html" title="Unlike AButton, AButtonEx is a container which looks like a button." alt="" coords="741,670,823,697"/>
-<area shape="rect" href="classACheckBoxWrapper.html" title="View container with a checkbox." alt="" coords="713,721,851,747"/>
-<area shape="rect" href="classACircleProgressBar.html" title="A circle&#45;shaped progress bar." alt="" coords="714,771,850,798"/>
-<area shape="rect" href="classADoubleNumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="705,822,859,849"/>
-<area shape="rect" href="classADragArea.html" title="Wrapping container to drag views inside of it." alt="" coords="739,873,825,899"/>
-<area shape="rect" href="classADragArea_1_1ADraggableHandle.html" title=" " alt="" coords="683,923,881,950"/>
-<area shape="rect" href="classADragNDropView.html" title=" " alt="" coords="720,974,844,1001"/>
-<area shape="rect" href="classAEmbedMenuProvider_1_1MenuContainer.html" title=" " alt="" coords="660,1025,904,1051"/>
-<area shape="rect" href="classAForEachUI.html" title=" " alt="" coords="697,1075,867,1102"/>
-<area shape="rect" href="classAGridSplitter.html" title="A resizable grid layout." alt="" coords="734,1126,830,1153"/>
-<area shape="rect" href="classAGroupBox.html" title="A titled frame." alt="" coords="738,1177,826,1203"/>
-<area shape="rect" href="classAListViewContainer.html" title=" " alt="" coords="713,1227,851,1254"/>
-<area shape="rect" href="classAMenuContainer.html" title=" " alt="" coords="723,1278,841,1305"/>
-<area shape="rect" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="725,1329,839,1355"/>
-<area shape="rect" href="classAOverlappingSurface.html" title=" " alt="" coords="709,1379,855,1406"/>
-<area shape="rect" href="classAPageView.html" title="Like ATabView but without tabs line." alt="" coords="737,1430,827,1457"/>
-<area shape="rect" href="classAPathChooserView.html" title="A text field with &quot;...&quot; button prompting path." alt="" coords="715,1481,849,1507"/>
-<area shape="rect" href="classAProgressBar.html" title="A progress bar." alt="" coords="731,1531,833,1558"/>
-<area shape="rect" href="classARadioButton.html" title="A radio button." alt="" coords="731,1582,833,1609"/>
+<area shape="rect" href="classA2FingerTransformArea.html" title="Handles and processes the multitouch scale, transform and rotation events based on two&#45;finger gesture..." alt="" coords="702,569,862,595"/>
+<area shape="rect" href="classABaseWindow.html" title=" " alt="" coords="729,619,835,646"/>
+<area shape="rect" href="classABasicListEditor.html" title="Helper UI to edit list models." alt="" coords="723,670,841,697"/>
+<area shape="rect" href="classAButtonEx.html" title="Unlike AButton, AButtonEx is a container which looks like a button." alt="" coords="741,721,823,747"/>
+<area shape="rect" href="classACheckBoxWrapper.html" title="View container with a checkbox." alt="" coords="713,771,851,798"/>
+<area shape="rect" href="classACircleProgressBar.html" title="A circle&#45;shaped progress bar." alt="" coords="714,822,850,849"/>
+<area shape="rect" href="classADoubleNumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="705,873,859,899"/>
+<area shape="rect" href="classADragArea.html" title="Wrapping container to drag views inside of it." alt="" coords="739,923,825,950"/>
+<area shape="rect" href="classADragArea_1_1ADraggableHandle.html" title=" " alt="" coords="683,974,881,1001"/>
+<area shape="rect" href="classADragNDropView.html" title=" " alt="" coords="720,1025,844,1051"/>
+<area shape="rect" href="classAEmbedMenuProvider_1_1MenuContainer.html" title=" " alt="" coords="660,1075,904,1102"/>
+<area shape="rect" href="classAForEachUI.html" title=" " alt="" coords="697,1126,867,1153"/>
+<area shape="rect" href="classAGridSplitter.html" title="A resizable grid layout." alt="" coords="734,1177,830,1203"/>
+<area shape="rect" href="classAGroupBox.html" title="A titled frame." alt="" coords="738,1227,826,1254"/>
+<area shape="rect" href="classAListViewContainer.html" title=" " alt="" coords="713,1278,851,1305"/>
+<area shape="rect" href="classAMenuContainer.html" title=" " alt="" coords="723,1329,841,1355"/>
+<area shape="rect" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="725,1379,839,1406"/>
+<area shape="rect" href="classAOverlappingSurface.html" title=" " alt="" coords="709,1430,855,1457"/>
+<area shape="rect" href="classAPageView.html" title="Like ATabView but without tabs line." alt="" coords="737,1481,827,1507"/>
+<area shape="rect" href="classAPathChooserView.html" title="A text field with &quot;...&quot; button prompting path." alt="" coords="715,1531,849,1558"/>
+<area shape="rect" href="classAProgressBar.html" title="A progress bar." alt="" coords="731,1582,833,1609"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">

@@ -184,6 +184,7 @@ var namespaces =
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
         [ "LinearLayoutImpl", "classaui_1_1detail_1_1LinearLayoutImpl.html", "classaui_1_1detail_1_1LinearLayoutImpl" ],
+        [ "MutexExtras", "structaui_1_1detail_1_1MutexExtras.html", null ],
         [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ],
         [ "SameHelper", "conceptaui_1_1detail_1_1SameHelper.html", null ]
       ] ],
@@ -277,7 +278,10 @@ var namespaces =
       ] ],
       [ "ui_building", null, [
         [ "layouted_container_factory", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
-        [ "layouted_container_factory_impl", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", "structaui_1_1ui__building_1_1layouted__container__factory__impl" ],
+        [ "layouted_container_factory_impl", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", null ],
+        [ "layouted_container_factory_impl_with_expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html", [
+          [ "Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html", null ]
+        ] ],
         [ "view", "structaui_1_1ui__building_1_1view.html", null ],
         [ "view_helper", "structaui_1_1ui__building_1_1view__helper.html", null ]
       ] ],
