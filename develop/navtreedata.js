@@ -75,9 +75,9 @@ var NAVTREEINDEX =
 "classAWordWrappingEngine_1_1Entry.html",
 "classViewPropertiesView.html",
 "group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c",
-"structass_1_1BackgroundEffect.html",
-"structaui_1_1impl_1_1first.html",
-"structuitest_1_1impl_1_1not_0b.html"
+"structViewAssertionAverageColor.html",
+"structaui_1_1detail_1_1pointer__to__member.html",
+"structtuples_1_1detail_1_1functor_1_1div.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

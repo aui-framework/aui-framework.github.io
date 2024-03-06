@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['split_5f2x2_0',['SPLIT_2X2',['../group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aac2d1453e21b91adbf8d873909380ec3',1,'ass']]]
+  ['pointer_0',['POINTER',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c',1,'ACursor']]]
 ];
