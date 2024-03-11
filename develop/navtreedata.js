@@ -69,15 +69,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classADividerView.html#a85aab2a154585e0782e2e006042d5775",
-"classAPointerIndex.html#a050825608f15d569612ed87c0379a038",
-"classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442",
-"classAWordWrappingEngine_1_1Entry.html",
-"classViewPropertiesView.html",
-"group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c",
-"structViewAssertionAverageColor.html",
-"structaui_1_1detail_1_1pointer__to__member.html",
-"structtuples_1_1detail_1_1functor_1_1div.html"
+"classADeque.html#ae7b0789b6a61053af42c83fece8e0646",
+"classAPlaceholderAnimator_1_1ICustomWidth.html",
+"classATextLayoutHelper.html",
+"classAWindowMenuProvider.html",
+"classViewHierarchyTreeModel.html#ae7bf9ab311de0b3daf51c39917e3a92e",
+"group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e",
+"structViewActionScroll.html",
+"structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html",
+"structtuples_1_1detail_1_1functor_1_1add.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

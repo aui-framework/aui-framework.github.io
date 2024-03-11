@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e":[3,0,1,1,17],
+"group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c":[3,0,1,1,33],
 "group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c":[3,0,1,1,12],
 "group__useful__macros.html#ga7417762bbd55bfd6ab7d2cf70c9f8485":[3,0,1,1,11],
 "group__useful__macros.html#ga7c082ba11f904d5d369fbff6cf04f580":[3,0,1,1,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "structViewActionMouseRelease.html":[0,2,450],
 "structViewActionPointerMoved.html":[0,2,451],
 "structViewActionPointerPressed.html":[0,2,452],
-"structViewActionPointerReleased.html":[0,2,453],
-"structViewActionScroll.html":[0,2,454],
-"structViewActionType.html":[0,2,455]
+"structViewActionPointerReleased.html":[0,2,453]
 };

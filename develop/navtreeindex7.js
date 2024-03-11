@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"structViewActionScroll.html":[0,2,454],
+"structViewActionType.html":[0,2,455],
 "structViewAssertionAverageColor.html":[0,2,456],
 "structViewAssertionEmpty.html":[0,2,457],
 "structViewAssertionGone.html":[0,2,458],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "structaui_1_1detail_1_1MutexExtras.html":[0,0,5,4,4],
 "structaui_1_1detail_1_1fmt.html":[0,0,5,4,1],
 "structaui_1_1detail_1_1fmt.html":[0,2,2,3,1],
-"structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html":[0,0,5,4,2],
-"structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html":[0,2,2,3,2],
-"structaui_1_1detail_1_1pointer__to__member.html":[0,0,5,4,5]
+"structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html":[0,0,5,4,2]
 };
