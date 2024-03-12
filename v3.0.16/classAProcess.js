@@ -1,0 +1,7 @@
+var classAProcess =
+[
+    [ "getModuleName", "classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9", null ],
+    [ "getPathToExecutable", "classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2", null ],
+    [ "getPid", "classAProcess.html#a199a0e08befd7915cef239cc2f21c432", null ],
+    [ "waitForExitCode", "classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4", null ]
+];
