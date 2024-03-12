@@ -139,7 +139,7 @@ class AFuture&lt; T &gt;</div><p >Represents a value that is not currently avail
 <div class="line">});</div>
 <div class="line">t.start();</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
-<div class="ttc" id="aclassAFuture_html_a5ee665a2a1d9b02010a9cd19de7bd836"><div class="ttname"><a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">AFuture::supplyResult</a></div><div class="ttdeci">void supplyResult(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:606</div></div>
+<div class="ttc" id="aclassAFuture_html_a5ee665a2a1d9b02010a9cd19de7bd836"><div class="ttname"><a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">AFuture::supplyResult</a></div><div class="ttdeci">void supplyResult(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:610</div></div>
 <div class="ttc" id="aclassAThread_html"><div class="ttname"><a href="classAThread.html">AThread</a></div><div class="ttdoc">Represents a user-defined thread.</div><div class="ttdef"><b>Definition:</b> AThread.h:190</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Be aware of exceptions or control flow keywords! If you don't pass the result, <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> will always stay unavailable, thus all waiting code will wait indefinitely long, leading to resource leaks (CPU and memory). Consider using one of suggested methods of usage instead.</dd></dl>
 <p><a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> provides a set of functions for both "value emitting" side: supplyValue(), <a class="el" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139" title="Stores an exception from std::current_exception to the future.">supplyException()</a>, and "value
@@ -167,6 +167,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>OnSuccessCallback</b
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a19a1b6cb0e3a7a849027e655db147705"><td class="memItemLeft" align="right" valign="top"><a id="a19a1b6cb0e3a7a849027e655db147705" name="a19a1b6cb0e3a7a849027e655db147705"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (T immediateValue)</td></tr>
+<tr class="separator:a19a1b6cb0e3a7a849027e655db147705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e4fa3f5ff5637667b004f8422c53670"><td class="memItemLeft" align="right" valign="top"><a id="a6e4fa3f5ff5637667b004f8422c53670" name="a6e4fa3f5ff5637667b004f8422c53670"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (Task task=nullptr) noexcept</td></tr>
 <tr class="separator:a6e4fa3f5ff5637667b004f8422c53670"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,8 +200,8 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 <tr class="memdesc:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps this <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> to another type of <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>. <br /></td></tr>
 <tr class="separator:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classaui_1_1impl_1_1future_1_1Future"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaui_1_1impl_1_1future_1_1Future')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future&lt; void &gt;</a></td></tr>
-<tr class="memitem:a7f4a1b6c22942ecce2add44e3aa96339 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339">Future</a> (TaskCallback task=nullptr) noexcept</td></tr>
-<tr class="separator:a7f4a1b6c22942ecce2add44e3aa96339 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe5754a3209491e78c64461244b63fa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#abfe5754a3209491e78c64461244b63fa">Future</a> (TaskCallback task=nullptr)</td></tr>
+<tr class="separator:abfe5754a3209491e78c64461244b63fa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a8620245e8b66797f12f7142411b51f inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="a1a8620245e8b66797f12f7142411b51f" name="a1a8620245e8b66797f12f7142411b51f"></a>
 const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="structaui_1_1impl_1_1future_1_1CancellationWrapper.html">CancellationWrapper</a>&lt; Inner &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>inner</b> () const noexcept</td></tr>
 <tr class="separator:a1a8620245e8b66797f12f7142411b51f inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>

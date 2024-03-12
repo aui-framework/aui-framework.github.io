@@ -53,7 +53,7 @@ var searchData=
   ['function_5finfo_50',['function_info',['../structaui_1_1function__info.html',1,'aui']]],
   ['function_5finfo_3c_20return_28args_2e_2e_2e_29_3e_51',['function_info&lt; Return(Args...)&gt;',['../structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html',1,'aui']]],
   ['functionname_52',['functionName',['../classAStacktrace_1_1Entry.html#a61d8534903ade21013d6b272937dc86a',1,'AStacktrace::Entry']]],
-  ['future_53',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339',1,'aui::impl::future::Future::Future()']]],
+  ['future_53',['Future',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future::Future&lt; Value &gt;'],['../classaui_1_1impl_1_1future_1_1Future.html#abfe5754a3209491e78c64461244b63fa',1,'aui::impl::future::Future::Future()']]],
   ['future_3c_20void_20_3e_54',['Future&lt; void &gt;',['../classaui_1_1impl_1_1future_1_1Future.html',1,'aui::impl::future']]],
   ['futurereturntype_55',['FutureReturnType',['../structaui_1_1impl_1_1future_1_1FutureReturnType.html',1,'aui::impl::future']]],
   ['futurereturntype_3c_20void_20_3e_56',['FutureReturnType&lt; void &gt;',['../structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html',1,'aui::impl::future']]]

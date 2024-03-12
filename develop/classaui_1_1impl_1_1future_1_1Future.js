@@ -1,7 +1,7 @@
 var classaui_1_1impl_1_1future_1_1Future =
 [
     [ "Inner", "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html", "structaui_1_1impl_1_1future_1_1Future_1_1Inner" ],
-    [ "Future", "classaui_1_1impl_1_1future_1_1Future.html#a7f4a1b6c22942ecce2add44e3aa96339", null ],
+    [ "Future", "classaui_1_1impl_1_1future_1_1Future.html#abfe5754a3209491e78c64461244b63fa", null ],
     [ "cancel", "classaui_1_1impl_1_1future_1_1Future.html#a9cd06da141d2eb2496468eea376878f2", null ],
     [ "get", "classaui_1_1impl_1_1future_1_1Future.html#a4efd8b2835bb6bfdaccbb6189a5d89db", null ],
     [ "hasResult", "classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f", null ],
