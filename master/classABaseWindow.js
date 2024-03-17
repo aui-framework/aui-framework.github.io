@@ -20,5 +20,7 @@ var classABaseWindow =
     [ "render", "classABaseWindow.html#a31889c283aaa993f539bf2b52311c792", null ],
     [ "requestTouchscreenKeyboard", "classABaseWindow.html#a194360a7e6e494b91ab9572652620752", null ],
     [ "shouldDisplayHoverAnimations", "classABaseWindow.html#a40e4d24e07e1ff2314ed476eb71429f8", null ],
-    [ "mPreventClickOnPointerRelease", "classABaseWindow.html#aa251c03918146d1768ca105ef5a68493", null ]
+    [ "mPreventClickOnPointerRelease", "classABaseWindow.html#aa251c03918146d1768ca105ef5a68493", null ],
+    [ "touchscreenKeyboardHideRequested", "classABaseWindow.html#aef42d0c8f76d5defb6804e3bce934b6a", null ],
+    [ "touchscreenKeyboardShowRequested", "classABaseWindow.html#a40dd22714d90e8ee56400e0679cb605c", null ]
 ];
