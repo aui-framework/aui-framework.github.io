@@ -3,7 +3,7 @@ var searchData=
   ['cache_0',['Cache',['../classCache.html',1,'']]],
   ['cache_3c_20idrawable_2c_20cache_2c_20aurl_20_3e_1',['Cache&lt; IDrawable, Cache, AUrl &gt;',['../classCache.html',1,'']]],
   ['call_5fwrapper_2',['call_wrapper',['../structASignal_1_1call__wrapper.html',1,'ASignal']]],
-  ['cancel_3',['cancel',['../classaui_1_1impl_1_1future_1_1Future.html#a9cd06da141d2eb2496468eea376878f2',1,'aui::impl::future::Future']]],
+  ['cancel_3',['cancel',['../classaui_1_1impl_1_1future_1_1Future.html#a86f6a2302691921a1848b44813710a41',1,'aui::impl::future::Future']]],
   ['cancellationwrapper_4',['CancellationWrapper',['../structaui_1_1impl_1_1future_1_1CancellationWrapper.html',1,'aui::impl::future']]],
   ['capacity_5',['capacity',['../classAByteBuffer.html#a600684376b6ebfa4f61659dce8fb7f84',1,'AByteBuffer']]],
   ['capture_6',['capture',['../classAStacktrace.html#a7146759bc7848d34d98f303c76f1b37c',1,'AStacktrace']]],

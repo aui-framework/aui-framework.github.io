@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wait_0',['wait',['../classaui_1_1impl_1_1future_1_1Future.html#ad41767ced886fa915449f1c082c2b54e',1,'aui::impl::future::Future::wait()'],['../classAConditionVariable.html#a9642386005b00d1278e87d78d1082acb',1,'AConditionVariable::wait(Lock &amp;lock, Predicate &amp;&amp;predicate)']]],
+  ['wait_0',['wait',['../classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9',1,'aui::impl::future::Future::wait()'],['../classAConditionVariable.html#a9642386005b00d1278e87d78d1082acb',1,'AConditionVariable::wait(Lock &amp;lock, Predicate &amp;&amp;predicate)']]],
   ['wait_5ffor_1',['wait_for',['../classAConditionVariable.html#aafb373b5d011972ad21031a8a26bcc9b',1,'AConditionVariable::wait_for(Lock &amp;lock, Duration duration, Predicate &amp;&amp;predicate)'],['../classAConditionVariable.html#af49e24fddafa4d3cf29c0dcef892258e',1,'AConditionVariable::wait_for(Lock &amp;lock, Duration duration)']]],
   ['wait_5funtil_2',['wait_until',['../classAConditionVariable.html#a8feff787c9ae31ca8915ebbd2d4f69f6',1,'AConditionVariable::wait_until(Lock &amp;lock, Timepoint timepoint)'],['../classAConditionVariable.html#a6e9a28278fc82d6fbe161ea330812119',1,'AConditionVariable::wait_until(Lock &amp;lock, Duration duration, Predicate &amp;&amp;predicate)']]],
   ['waitforall_3',['waitForAll',['../classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6',1,'AFutureSet']]],
