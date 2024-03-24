@@ -69,15 +69,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classADeque.html#ae7b0789b6a61053af42c83fece8e0646",
-"classAPlaceholderAnimator_1_1ICustomWidth.html",
-"classATextLayoutHelper.html",
-"classAWindowMenuProvider.html",
-"classViewHierarchyTreeModel.html#ae7bf9ab311de0b3daf51c39917e3a92e",
-"group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e",
-"structViewActionScroll.html",
-"structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html",
-"structtuples_1_1detail_1_1functor_1_1add.html"
+"classADeque.html#addae4f0ef1ff1c8cab2a26ae6c67ab16",
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3",
+"classATextArea_1_1TextAreaField.html#a7c706e015165ddfe881436dc498e9ef8",
+"classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b",
+"classViewHierarchyTreeModel.html#a01d533442875ccee8353e2d6514f41c0",
+"group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d",
+"structViewActionMouseRelease.html",
+"structaui_1_1detail_1_1MutexExtras.html",
+"structgl_1_1impl_1_1resource__basic__buffer.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

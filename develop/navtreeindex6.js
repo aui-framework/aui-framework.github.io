@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d":[3,0,1,1,16],
+"group__useful__macros.html#ga37a7868fa959073915f599ed29b8962f":[3,0,1,1,18],
+"group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c":[3,0,1,1,22],
+"group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9":[3,0,1,1,2],
 "group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e":[3,0,1,1,17],
 "group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c":[3,0,1,1,33],
 "group__useful__macros.html#ga67824e9205a7ba9a6eff4fed858fba9c":[3,0,1,1,12],
@@ -160,12 +164,12 @@ var NAVTREEINDEX6 =
 "structAModelMeta.html":[0,2,185],
 "structAModelMetaBase.html":[0,2,186],
 "structAMutex.html":[0,2,188],
-"structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
 "structAPerformanceSection_1_1Data.html":[3,0,1,31,0],
+"structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,31,0,0],
-"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,31,0,1],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
+"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,31,0,1],
 "structAPointerMoveEvent.html":[0,2,205],
 "structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,205,0],
 "structAPointerPressedEvent.html":[0,2,206],
@@ -223,8 +227,8 @@ var NAVTREEINDEX6 =
 "structATokenizer_1_1Hexable.html":[0,2,302,0],
 "structAViewContainer_1_1PointerEventsMapping.html":[3,0,9,2,35,0],
 "structAViewsInit.html":[0,2,324],
-"structAzazaATest_1_1ATest.html":[0,0,7,0],
 "structAzazaATest_1_1ATest.html":[0,2,3,0],
+"structAzazaATest_1_1ATest.html":[0,0,7,0],
 "structBrushHelper.html":[0,2,338],
 "structCharEntry.html":[0,2,340],
 "structClipOptimizationContext.html":[0,2,341],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "structViewActionGestureLongPress.html":[0,2,446],
 "structViewActionKeyDownAndUp.html":[0,2,447],
 "structViewActionMouseMove.html":[0,2,448],
-"structViewActionMousePress.html":[0,2,449],
-"structViewActionMouseRelease.html":[0,2,450],
-"structViewActionPointerMoved.html":[0,2,451],
-"structViewActionPointerPressed.html":[0,2,452],
-"structViewActionPointerReleased.html":[0,2,453]
+"structViewActionMousePress.html":[0,2,449]
 };

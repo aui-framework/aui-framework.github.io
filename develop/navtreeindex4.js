@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b":[0,2,329,17],
+"classAWindowManager.html":[0,2,330],
+"classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a":[0,2,330,0],
+"classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783":[0,2,330,1],
 "classAWindowMenuProvider.html":[0,2,331],
 "classAWordWrappingEngine.html":[0,2,332],
 "classAWordWrappingEngine_1_1Entry.html":[0,2,332,0],
@@ -166,12 +170,12 @@ var NAVTREEINDEX4 =
 "classReceiverObject.html":[0,2,403],
 "classRenderHints_1_1PushColor.html":[0,0,12,0],
 "classRenderHints_1_1PushColor.html":[0,2,7,0],
-"classRenderHints_1_1PushMask.html":[0,0,12,1],
 "classRenderHints_1_1PushMask.html":[0,2,7,1],
+"classRenderHints_1_1PushMask.html":[0,0,12,1],
 "classRenderHints_1_1PushMatrix.html":[0,2,7,2],
 "classRenderHints_1_1PushMatrix.html":[0,0,12,2],
-"classRenderHints_1_1PushState.html":[0,0,12,3],
 "classRenderHints_1_1PushState.html":[0,2,7,3],
+"classRenderHints_1_1PushState.html":[0,0,12,3],
 "classSQLException.html":[0,2,425],
 "classScopedHGlobal.html":[0,2,407],
 "classScreenshotAnalyzer.html":[0,2,408],
@@ -241,13 +245,9 @@ var NAVTREEINDEX4 =
 "classUtil_1_1Rect.html":[0,0,17,0],
 "classUtil_1_1SimpleTexturePacker.html":[0,2,12,1],
 "classUtil_1_1SimpleTexturePacker.html":[0,0,17,1],
-"classUtil_1_1TexturePacker.html":[0,2,12,2],
 "classUtil_1_1TexturePacker.html":[0,0,17,2],
-"classUtil_1_1TexturePacker__Lol.html":[0,2,12,3],
+"classUtil_1_1TexturePacker.html":[0,2,12,2],
 "classUtil_1_1TexturePacker__Lol.html":[0,0,17,3],
-"classViewHierarchyTreeModel.html":[0,2,466],
-"classViewHierarchyTreeModel.html#a01d533442875ccee8353e2d6514f41c0":[0,2,466,1],
-"classViewHierarchyTreeModel.html#a0658b29d846fc7c4b8cbb34b08afde23":[0,2,466,2],
-"classViewHierarchyTreeModel.html#a3151dfb021d92980c0527fd61edc72b2":[0,2,466,3],
-"classViewHierarchyTreeModel.html#a6cf46e3fd2c2ceacd6d787812c60337d":[0,2,466,0]
+"classUtil_1_1TexturePacker__Lol.html":[0,2,12,3],
+"classViewHierarchyTreeModel.html":[0,2,466]
 };
