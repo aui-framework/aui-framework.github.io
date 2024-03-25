@@ -24,7 +24,7 @@ var searchData=
   ['getminsize_21',['getMinSize',['../classAView.html#a546a17cc5d955dfa75928d48337c65a7',1,'AView']]],
   ['getmodulename_22',['getModuleName',['../classAChildProcess.html#a9a6a20a905d730dc30ddf1f7501331fd',1,'AChildProcess::getModuleName()'],['../classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b',1,'AOtherProcess::getModuleName() override'],['../classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b',1,'AOtherProcess::getModuleName() override'],['../classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9',1,'AProcess::getModuleName()']]],
   ['getnewtexture_23',['getNewTexture',['../classARender.html#a4981647000b9506081eff0a559266edf',1,'ARender::getNewTexture()'],['../classIRenderer.html#a76d78feea6e83dbf5b21d186ee9ce85b',1,'IRenderer::getNewTexture()']]],
-  ['getorinsert_24',['getOrInsert',['../classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc',1,'AMap']]],
+  ['getorinsert_24',['getOrInsert',['../classABaseMap.html#ac805be4757f47cc09079b4ce2b5e3ef3',1,'ABaseMap']]],
   ['getoverflow_25',['getOverflow',['../classAView.html#a91e63d78d42435872c5482776046fdfc',1,'AView']]],
   ['getoverflowmask_26',['getOverflowMask',['../classAView.html#a0569ae03bfeebb23dbea2da2585f0d67',1,'AView']]],
   ['getpadding_27',['getPadding',['../classAView.html#a346bb0a269caf3f15e1f90320bd7479d',1,'AView']]],

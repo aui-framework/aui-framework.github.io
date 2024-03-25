@@ -138,16 +138,22 @@ $(document).ready(function(){initNavTree('ATreeModelIndex_8h_source.html',''); i
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> mColumn;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::size_t mRow;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::size_t mColumn;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::any mUserdata;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classATreeModelIndex.html#a5d1c38d75a44901acb6976929e9b3264">   65</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classATreeModelIndex.html#a5d1c38d75a44901acb6976929e9b3264">isRoot</a>() const noexcept {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> mRow == 0 &amp;&amp; mColumn == 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    std::size_t mRow;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::size_t mColumn;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    std::any mUserdata;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:34</div></div>
 <div class="ttc" id="aclassATreeModelIndex_1_1Exception_html"><div class="ttname"><a href="classATreeModelIndex_1_1Exception.html">ATreeModelIndex::Exception</a></div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:9</div></div>
 <div class="ttc" id="aclassATreeModelIndex_html"><div class="ttname"><a href="classATreeModelIndex.html">ATreeModelIndex</a></div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:7</div></div>
 <div class="ttc" id="aclassATreeModelIndex_html_a03f7862906a0ad0dd2f21dfad68654b5"><div class="ttname"><a href="classATreeModelIndex.html#a03f7862906a0ad0dd2f21dfad68654b5">ATreeModelIndex::ATreeModelIndex</a></div><div class="ttdeci">ATreeModelIndex(std::size_t row, std::size_t column, std::any userdata) noexcept</div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:21</div></div>
+<div class="ttc" id="aclassATreeModelIndex_html_a5d1c38d75a44901acb6976929e9b3264"><div class="ttname"><a href="classATreeModelIndex.html#a5d1c38d75a44901acb6976929e9b3264">ATreeModelIndex::isRoot</a></div><div class="ttdeci">bool isRoot() const noexcept</div><div class="ttdoc">check if this vertex is the root.</div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:65</div></div>
 <div class="ttc" id="aclassATreeModelIndex_html_aa730c919f25355a4224df3a8640563b6"><div class="ttname"><a href="classATreeModelIndex.html#aa730c919f25355a4224df3a8640563b6">ATreeModelIndex::row</a></div><div class="ttdeci">std::size_t row() const</div><div class="ttdoc">row of the vertex relative to it's parent. If vertex is root, row should be 0.</div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:49</div></div>
 <div class="ttc" id="aclassATreeModelIndex_html_af1bde250b7d98c8594450efa3cdddc45"><div class="ttname"><a href="classATreeModelIndex.html#af1bde250b7d98c8594450efa3cdddc45">ATreeModelIndex::as</a></div><div class="ttdeci">T as() const</div><div class="ttdoc">any_cast the external user data stored in this vertex.</div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:31</div></div>
 <div class="ttc" id="aclassATreeModelIndex_html_aff44d6fb6a4504b623097fd4353658a9"><div class="ttname"><a href="classATreeModelIndex.html#aff44d6fb6a4504b623097fd4353658a9">ATreeModelIndex::column</a></div><div class="ttdeci">std::size_t column() const</div><div class="ttdoc">column of the vertex relative to it's parent. If vertex is root, column should be 0.</div><div class="ttdef"><b>Definition:</b> ATreeModelIndex.h:57</div></div>

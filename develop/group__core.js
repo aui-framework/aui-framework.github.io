@@ -58,11 +58,13 @@ var group__core =
       [ "nativeSignalId", "classAFatalException.html#a6c6ac322b7e0b04108365d70571563da", null ],
       [ "signalName", "classAFatalException.html#aa9613dd64b50fbccd463afa488971572", null ]
     ] ],
-    [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", [
-      [ "const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
-      [ "contains_iterator", "structAMap_1_1contains__iterator.html", null ],
-      [ "getOrInsert", "classAMap.html#ac43e7b45e1c0b67d3960d03ef9adb3cc", null ]
+    [ "ABaseMap< KeyType, ValueType, Parent >", "classABaseMap.html", [
+      [ "const_contains_iterator", "structABaseMap_1_1const__contains__iterator.html", null ],
+      [ "contains_iterator", "structABaseMap_1_1contains__iterator.html", null ],
+      [ "getOrInsert", "classABaseMap.html#ac805be4757f47cc09079b4ce2b5e3ef3", null ]
     ] ],
+    [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", null ],
+    [ "AUnorderedMap< KeyType, ValueType, Hasher, Comparer, Allocator >", "classAUnorderedMap.html", null ],
     [ "AObject", "classAObject.html", [
       [ "setThread", "classAObject.html#a98cf3fa4ac279b30860bf228c44306b2", null ]
     ] ],
@@ -315,5 +317,6 @@ var group__core =
     [ "aui::container::remove_all", "group__core.html#gae4ba61e70230db1f2265936cf13eabf1", null ],
     [ "aui::container::remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
     [ "aui::container::remove_first", "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848", null ],
-    [ "aui::container::to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ]
+    [ "aui::container::to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ],
+    [ "aui::container::to_unordered_map", "group__core.html#ga7a88e702b03388170c461d980530572b", null ]
 ];

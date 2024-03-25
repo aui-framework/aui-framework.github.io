@@ -77,6 +77,9 @@ var hierarchy =
     [ "aui::impl::ADataBindingDefaultNumberPicker< int32_t >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
       [ "ADataBindingDefault< ANumberPicker, int32_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int32__t_01_4.html", null ]
     ] ],
+    [ "aui::impl::ADataBindingDefaultNumberPicker< int64_t >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
+      [ "ADataBindingDefault< ANumberPicker, int64_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int64__t_01_4.html", null ]
+    ] ],
     [ "aui::impl::ADataBindingDefaultNumberPicker< int8_t >", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", [
       [ "ADataBindingDefault< ANumberPicker, int8_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int8__t_01_4.html", null ]
     ] ],
@@ -287,8 +290,8 @@ var hierarchy =
       [ "ass::on_state::Focused", "structass_1_1on__state_1_1Focused.html", null ],
       [ "ass::on_state::Hovered", "structass_1_1on__state_1_1Hovered.html", null ]
     ] ],
-    [ "AMap< KeyType, ValueType, Predicate, Allocator >::const_contains_iterator", "structAMap_1_1const__contains__iterator.html", null ],
-    [ "AMap< KeyType, ValueType, Predicate, Allocator >::contains_iterator", "structAMap_1_1contains__iterator.html", null ],
+    [ "ABaseMap< KeyType, ValueType, Parent >::const_contains_iterator", "structABaseMap_1_1const__contains__iterator.html", null ],
+    [ "ABaseMap< KeyType, ValueType, Parent >::contains_iterator", "structABaseMap_1_1contains__iterator.html", null ],
     [ "aui::dbus::converter< T >", "structaui_1_1dbus_1_1converter.html", null ],
     [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter.html", null ],
     [ "aui::dbus::converter< AMap< K, V > >", "structaui_1_1dbus_1_1converter_3_01AMap_3_01K_00_01V_01_4_01_4.html", null ],
@@ -762,6 +765,12 @@ var hierarchy =
       [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html", [
         [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
           [ "declarative::Button", "structdeclarative_1_1Button.html", null ]
+        ] ],
+        [ "aui::ui_building::layouted_container_factory< AVerticalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+          [ "declarative::RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
+        ] ],
+        [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+          [ "declarative::RadioGroup::Horizontal", "structdeclarative_1_1RadioGroup_1_1Horizontal.html", null ]
         ] ]
       ] ]
     ] ],
@@ -781,10 +790,9 @@ var hierarchy =
     [ "MacosApp", "classMacosApp.html", null ],
     [ "Manager< T >", "classManager.html", null ],
     [ "std::map", null, [
-      [ "AMap< AString, AFormMultipartEntry >", "classAMap.html", [
-        [ "AFormMultipart", "classAFormMultipart.html", null ]
-      ] ],
-      [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", null ]
+      [ "ABaseMap< KeyType, ValueType, std::map< KeyType, ValueType, Predicate, Allocator > >", "classABaseMap.html", [
+        [ "AMap< KeyType, ValueType, Predicate, Allocator >", "classAMap.html", null ]
+      ] ]
     ] ],
     [ "ass::Margin", "structass_1_1Margin.html", null ],
     [ "ass::MaxSize", "structass_1_1MaxSize.html", null ],
@@ -890,6 +898,13 @@ var hierarchy =
     ] ],
     [ "ass::Padding", "structass_1_1Padding.html", null ],
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
+    [ "Parent", null, [
+      [ "ABaseMap< KeyType, ValueType, Parent >", "classABaseMap.html", [
+        [ "AMap< AString, AFormMultipartEntry >", "classAMap.html", [
+          [ "AFormMultipart", "classAFormMultipart.html", null ]
+        ] ]
+      ] ]
+    ] ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
     [ "AViewContainer::PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
@@ -1090,6 +1105,11 @@ var hierarchy =
     [ "UnixIoAsync", "classUnixIoAsync.html", null ],
     [ "UnixIoThread", "classUnixIoThread.html", null ],
     [ "aui::dbus::Unknown", "structaui_1_1dbus_1_1Unknown.html", null ],
+    [ "std::unordered_map", null, [
+      [ "ABaseMap< KeyType, ValueType, std::unordered_map< KeyType, ValueType, Hasher, Comparer, Allocator > >", "classABaseMap.html", [
+        [ "AUnorderedMap< KeyType, ValueType, Hasher, Comparer, Allocator >", "classAUnorderedMap.html", null ]
+      ] ]
+    ] ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
       [ "aui::valid::chars::latin", "structaui_1_1valid_1_1chars_1_1latin.html", null ],
@@ -1131,9 +1151,8 @@ var hierarchy =
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
     [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
-      [ "aui::ui_building::view< ARadioGroup >", "structaui_1_1ui__building_1_1view.html", [
-        [ "declarative::RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
-      ] ]
+      [ "aui::ui_building::layouted_container_factory< AVerticalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
+      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
     ] ],
     [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
       [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html", null ]

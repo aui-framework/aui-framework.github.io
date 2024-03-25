@@ -146,7 +146,8 @@ var namespaces =
         [ "remove_all", "group__core.html#gae4ba61e70230db1f2265936cf13eabf1", null ],
         [ "remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
         [ "remove_first", "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848", null ],
-        [ "to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ]
+        [ "to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ],
+        [ "to_unordered_map", "group__core.html#ga7a88e702b03388170c461d980530572b", null ]
       ] ],
       [ "dbus", null, [
         [ "impl", null, [
@@ -377,7 +378,9 @@ var namespaces =
     [ "By", "namespaceBy.html", null ],
     [ "declarative", null, [
       [ "Button", "structdeclarative_1_1Button.html", null ],
-      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ],
+      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", [
+        [ "Horizontal", "structdeclarative_1_1RadioGroup_1_1Horizontal.html", null ]
+      ] ],
       [ "Style", "structdeclarative_1_1Style.html", null ]
     ] ],
     [ "fmt", null, [
