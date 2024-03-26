@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"structgl_1_1impl_1_1resource.html":[0,2,6,1,0],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html":[0,2,6,1,1],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html":[0,0,11,1,1],
 "structgl_1_1impl_1_1resource_3_01ResourceKind_1_1TEXTURE_01_4.html":[0,2,6,1,2],

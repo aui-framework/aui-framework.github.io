@@ -60,7 +60,8 @@ var NAVTREE =
       [ "All AUI Classes", "classes.html", null ],
       [ "All AUI CMake commands", "usergroup4.html", [
         [ "aui_app", "md_docs_aui_app.html", null ],
-        [ "aui_executable", "md_docs_aui_executable.html", null ]
+        [ "aui_executable", "md_docs_aui_executable.html", null ],
+        [ "aui_module", "md_docs_aui_module.html", null ]
       ] ]
     ] ]
   ] ]
@@ -75,9 +76,9 @@ var NAVTREEINDEX =
 "classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7",
 "classUtil_1_1TexturePacker__Lol.html",
 "group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64",
-"structViewActionDoubleClick.html",
-"structaui_1_1dbus_1_1impl_1_1basic__converter.html",
-"structgl_1_1impl_1_1resource_3_01ResourceKind_1_1INDEX__BUFFER_01_4.html"
+"structViewActionClick.html",
+"structaui_1_1dbus_1_1converter_3_01std_1_1uint8__t_01_4.html",
+"structgl_1_1impl_1_1resource.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

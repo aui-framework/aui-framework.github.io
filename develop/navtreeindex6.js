@@ -84,6 +84,7 @@ var NAVTREEINDEX6 =
 "md_docs_Writing_tests.html":[1,2],
 "md_docs_aui_app.html":[3,2,0],
 "md_docs_aui_executable.html":[3,2,1],
+"md_docs_aui_module.html":[3,2,2],
 "modules.html":[3,0],
 "namespaceADesktop.html":[3,0,9,3],
 "namespaceADesktop.html#a4894140d4d28c69a7a3a11bc04b8dcbb":[0,0,1,1],
@@ -113,8 +114,8 @@ var NAVTREEINDEX6 =
 "structACurl_1_1ErrorDescription.html":[3,0,5,0,1],
 "structACurl_1_1Response.html":[3,0,5,0,3],
 "structACursorSelectable_1_1Selection.html":[0,2,64,0],
-"structACursor_1_1Custom.html":[3,0,9,0,29,0],
 "structACursor_1_1Custom.html":[3,0,9,5,0],
+"structACursor_1_1Custom.html":[3,0,9,0,29,0],
 "structACustomShaderBrush.html":[0,2,66],
 "structADataBindingDefault.html":[0,2,70],
 "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html":[0,2,71],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structScrollbarAppearance.html":[0,2,412],
 "structSelectionMatchesAssert.html":[0,2,413],
 "structSqlColumn.html":[0,2,427],
-"structState.html":[0,2,429],
-"structViewActionClick.html":[0,2,447]
+"structState.html":[0,2,429]
 };
