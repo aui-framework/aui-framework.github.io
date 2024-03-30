@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"group__useful__macros.html":[3,0,1,1],
+"group__useful__macros.html#ga017b8ad4b092d72d9998d0b0e6d3f8d8":[3,0,1,1,24],
+"group__useful__macros.html#ga045dd54932944d8830380f4596d64446":[3,0,1,1,30],
 "group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64":[3,0,1,1,7],
 "group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4":[3,0,1,1,3],
 "group__useful__macros.html#ga21d729326347c5d74faf857abf18d695":[3,0,1,1,1],
@@ -114,8 +117,8 @@ var NAVTREEINDEX6 =
 "structACurl_1_1ErrorDescription.html":[3,0,5,0,1],
 "structACurl_1_1Response.html":[3,0,5,0,3],
 "structACursorSelectable_1_1Selection.html":[0,2,64,0],
-"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACursor_1_1Custom.html":[3,0,9,0,29,0],
+"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACustomShaderBrush.html":[0,2,66],
 "structADataBindingDefault.html":[0,2,70],
 "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html":[0,2,71],
@@ -172,8 +175,8 @@ var NAVTREEINDEX6 =
 "structAMutex.html":[0,2,190],
 "structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
 "structAPerformanceSection_1_1Data.html":[3,0,1,33,0],
-"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,33,0,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
+"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,33,0,0],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,33,0,1],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPointerMoveEvent.html":[0,2,207],
@@ -233,8 +236,8 @@ var NAVTREEINDEX6 =
 "structATokenizer_1_1Hexable.html":[0,2,304,0],
 "structAViewContainer_1_1PointerEventsMapping.html":[3,0,9,2,35,0],
 "structAViewsInit.html":[0,2,327],
-"structAzazaATest_1_1ATest.html":[0,2,3,0],
 "structAzazaATest_1_1ATest.html":[0,0,7,0],
+"structAzazaATest_1_1ATest.html":[0,2,3,0],
 "structBrushHelper.html":[0,2,341],
 "structCharEntry.html":[0,2,343],
 "structClipOptimizationContext.html":[0,2,344],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "structOpenGLPrerenderedString_1_1Vertex.html":[0,2,397,0],
 "structOpenGLRenderer_1_1FontEntryData.html":[0,2,398,0],
 "structRoundedRect.html":[0,2,407],
-"structScrollbarAppearance.html":[0,2,412],
-"structSelectionMatchesAssert.html":[0,2,413],
-"structSqlColumn.html":[0,2,427],
-"structState.html":[0,2,429]
+"structScrollbarAppearance.html":[0,2,412]
 };
