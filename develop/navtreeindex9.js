@@ -1,5 +1,13 @@
 var NAVTREEINDEX9 =
 {
+"structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html":[0,2,5,1],
+"structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html":[0,0,10,1],
+"structgl_1_1RenderTargetDepth.html":[0,0,11,7],
+"structgl_1_1RenderTargetDepth.html":[0,2,6,7],
+"structgl_1_1RenderTargetRGBA8.html":[0,0,11,8],
+"structgl_1_1RenderTargetRGBA8.html":[0,2,6,8],
+"structgl_1_1Vao_1_1Buffer.html":[0,0,11,15,0],
+"structgl_1_1Vao_1_1Buffer.html":[0,2,6,15,0],
 "structgl_1_1Vao_1_1Buffer.html#a1a10640801b998e62d5029d1fcd2e703":[0,0,11,15,0,0],
 "structgl_1_1Vao_1_1Buffer.html#a1a10640801b998e62d5029d1fcd2e703":[0,2,6,15,0,0],
 "structgl_1_1impl_1_1resource.html":[0,2,6,1,0],

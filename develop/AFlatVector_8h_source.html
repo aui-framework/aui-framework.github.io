@@ -127,12 +127,12 @@ $(document).ready(function(){initNavTree('AFlatVector_8h_source.html',''); initR
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    T&amp; operator[](std::size_t index) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        AUI_ASSERTX(index &lt; size(), <span class="stringliteral">&quot;index out of bounds&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(index &lt; size(), <span class="stringliteral">&quot;index out of bounds&quot;</span>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> data()[index];</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> T&amp; operator[](std::size_t index) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        AUI_ASSERTX(index &lt; size(), <span class="stringliteral">&quot;index out of bounds&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(index &lt; size(), <span class="stringliteral">&quot;index out of bounds&quot;</span>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> data()[index];</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('AFlatVector_8h_source.html',''); initR
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> push_back(T value) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        AUI_ASSERTX(mSize &lt; MAX_SIZE, <span class="stringliteral">&quot;size exceeded&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(mSize &lt; MAX_SIZE, <span class="stringliteral">&quot;size exceeded&quot;</span>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">new</span> (data() + mSize) T(std::move(value));</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
@@ -188,6 +188,7 @@ $(document).ready(function(){initNavTree('AFlatVector_8h_source.html',''); initR
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
 <div class="ttc" id="aclassAFlatVector_html"><div class="ttname"><a href="classAFlatVector.html">AFlatVector</a></div><div class="ttdoc">Stack-only vector implementation.</div><div class="ttdef"><b>Definition:</b> AFlatVector.h:29</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

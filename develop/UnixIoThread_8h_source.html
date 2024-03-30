@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('UnixIoThread_8h_source.html',''); init
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;AUI/Thread/AThread.h&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;sys/poll.h&gt;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;UnixEventFd.h&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;AUI/Thread/ACutoffSignal.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;AUI/Thread/AFuture.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;AUI/Util/EnumUtil.h&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;AUI/Util/ABitField.h&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
@@ -174,30 +174,29 @@ $(document).ready(function(){initNavTree('UnixIoThread_8h_source.html',''); init
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_class" href="classACutoffSignal.html">ACutoffSignal</a> cv;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        mThread-&gt;enqueue([&amp;]() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            callback();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            cv.<a class="code hl_function" href="classACutoffSignal.html#a846f87917ee35414834b624c281ffd06">makeSignal</a>();</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        });</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        cv.<a class="code hl_function" href="classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488">waitForSignal</a>();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_class" href="classUnixIoThread.html">UnixIoThread</a>() <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_class" href="classAFuture.html">AFuture&lt;&gt;</a> cs;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        mThread-&gt;enqueue([&amp;] {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            cs.<a class="code hl_function" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        });</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        cs.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9">wait</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_class" href="classUnixIoThread.html">UnixIoThread</a>() <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="ttc" id="aclassABitField_html"><div class="ttname"><a href="classABitField.html">ABitField</a></div><div class="ttdoc">Bit field implementation.</div><div class="ttdef"><b>Definition:</b> ABitField.h:25</div></div>
-<div class="ttc" id="aclassACutoffSignal_html"><div class="ttname"><a href="classACutoffSignal.html">ACutoffSignal</a></div><div class="ttdoc">One-shot event communication.</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:28</div></div>
-<div class="ttc" id="aclassACutoffSignal_html_a846f87917ee35414834b624c281ffd06"><div class="ttname"><a href="classACutoffSignal.html#a846f87917ee35414834b624c281ffd06">ACutoffSignal::makeSignal</a></div><div class="ttdeci">void makeSignal()</div><div class="ttdoc">Flags a signal, causing the waitForSignal() to never block.</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:35</div></div>
-<div class="ttc" id="aclassACutoffSignal_html_adc988f41edf1ec7ab3f9c8b56c81c488"><div class="ttname"><a href="classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488">ACutoffSignal::waitForSignal</a></div><div class="ttdeci">void waitForSignal()</div><div class="ttdoc">Wait for makeSignal().</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:56</div></div>
+<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that is not currently available.</div><div class="ttdef"><b>Definition:</b> AFuture.h:598</div></div>
+<div class="ttc" id="aclassAFuture_html_a5ee665a2a1d9b02010a9cd19de7bd836"><div class="ttname"><a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">AFuture::supplyResult</a></div><div class="ttdeci">void supplyResult(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:622</div></div>
 <div class="ttc" id="aclassAThread_html_a1d09d7332e61f6ef39e93d4a1fdc2574"><div class="ttname"><a href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a></div><div class="ttdeci">static _&lt; AAbstractThread &gt; current()</div><div class="ttdef"><b>Definition:</b> AThread.cpp:226</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition:</b> AVector.h:43</div></div>
 <div class="ttc" id="aclassMyEventLoop_html"><div class="ttname"><a href="classMyEventLoop.html">MyEventLoop</a></div><div class="ttdef"><b>Definition:</b> UnixIoThread.cpp:125</div></div>
 <div class="ttc" id="aclassUnixEventFd_html"><div class="ttname"><a href="classUnixEventFd.html">UnixEventFd</a></div><div class="ttdef"><b>Definition:</b> UnixEventFd.h:26</div></div>
 <div class="ttc" id="aclassUnixIoThread_html"><div class="ttname"><a href="classUnixIoThread.html">UnixIoThread</a></div><div class="ttdef"><b>Definition:</b> UnixIoThread.h:46</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:135</div></div>
+<div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html_a33c33fde86e1a2665089e15bcb6f37e9"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9">aui::impl::future::Future::wait</a></div><div class="ttdeci">void wait(AFutureWait flags=AFutureWait::DEFAULT) const noexcept</div><div class="ttdoc">Sleeps if the supplyResult is not currently available.</div><div class="ttdef"><b>Definition:</b> AFuture.h:448</div></div>
 <div class="ttc" id="agroup__core_html_gaaf899fee232b3bc2862a3b0302a79ff5"><div class="ttname"><a href="group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5">AUI_ENUM_FLAG</a></div><div class="ttdeci">AUI_ENUM_FLAG(ASide)</div><div class="ttdoc">Describes sides of a 2D rectangle.</div><div class="ttdef"><b>Definition:</b> ASide.h:30</div></div>
 <div class="ttc" id="astructAMutex_html"><div class="ttname"><a href="structAMutex.html">AMutex</a></div><div class="ttdef"><b>Definition:</b> AMutex.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->

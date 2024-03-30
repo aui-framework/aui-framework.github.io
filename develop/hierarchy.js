@@ -393,7 +393,6 @@ var hierarchy =
         [ "AThread", "classAThread.html", null ],
         [ "ATimer", "classATimer.html", null ],
         [ "AView", "classAView.html", [
-          [ "ViewMock", "classViewMock.html", null ],
           [ "AAbstractLabel", "classAAbstractLabel.html", [
             [ "AButton", "classAButton.html", [
               [ "ADropdownList", "classADropdownList.html", null ]
@@ -483,9 +482,7 @@ var hierarchy =
             [ "DevtoolsPerformanceTab", "classDevtoolsPerformanceTab.html", null ],
             [ "MockedViewContainer", "classMockedViewContainer.html", null ],
             [ "WrapperContainer", "classWrapperContainer.html", null ]
-          ] ],
-          [ "ViewMock", "classViewMock.html", null ],
-          [ "ViewMock", "classViewMock.html", null ]
+          ] ]
         ] ],
         [ "IListModel< T >", "classIListModel.html", [
           [ "IRemovableListModel< StoredType >", "classIRemovableListModel.html", [
@@ -525,6 +522,7 @@ var hierarchy =
     [ "ACurl::ErrorDescription", "structACurl_1_1ErrorDescription.html", null ],
     [ "std::exception", null, [
       [ "AException", "classAException.html", [
+        [ "AAssertionFailedException", "classAAssertionFailedException.html", null ],
         [ "AComplexFutureOperation< T >::NoValueException", "classAComplexFutureOperation_1_1NoValueException.html", null ],
         [ "ADBus::Exception", "classADBus_1_1Exception.html", null ],
         [ "AFatalException", "classAFatalException.html", null ],
@@ -828,7 +826,8 @@ var hierarchy =
       [ "AProcess", "classAProcess.html", [
         [ "AChildProcess", "classAChildProcess.html", null ],
         [ "AOtherProcess", "classAOtherProcess.html", null ],
-        [ "AOtherProcess", "classAOtherProcess.html", null ]
+        [ "AOtherProcess", "classAOtherProcess.html", null ],
+        [ "ASelfProcess", "classASelfProcess.html", null ]
       ] ],
       [ "ARsa", "classARsa.html", null ],
       [ "AWin32Event", "classAWin32Event.html", null ],

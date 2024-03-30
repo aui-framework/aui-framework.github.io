@@ -44,12 +44,11 @@ var searchData=
   ['viewassertionvisible_41',['ViewAssertionVisible',['../structViewAssertionVisible.html',1,'']]],
   ['viewgraphsubtreechanged_42',['viewGraphSubtreeChanged',['../classAView.html#aa0b29b615b99f9b60f08a3669aa19adf',1,'AView']]],
   ['viewhierarchytreemodel_43',['ViewHierarchyTreeModel',['../classViewHierarchyTreeModel.html',1,'']]],
-  ['viewmock_44',['ViewMock',['../classViewMock.html',1,'']]],
-  ['viewpropertiesview_45',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
-  ['views_46',['Views',['../group__useful__views.html',1,'']]],
-  ['viscousfluid_47',['ViscousFluid',['../classaui_1_1animation__curves_1_1ViscousFluid.html',1,'aui::animation_curves']]],
-  ['visibility_48',['Visibility',['../group__views.html#ga53d6f8ccb0015ea020228de41cfd2162',1,'Visibility.h']]],
-  ['visible_49',['VISIBLE',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;AOverflow.h'],['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;Visibility.h']]],
-  ['visitheader_50',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
-  ['visitsviewrecursive_51',['visitsViewRecursive',['../classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf',1,'AViewContainer']]]
+  ['viewpropertiesview_44',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
+  ['views_45',['Views',['../group__useful__views.html',1,'']]],
+  ['viscousfluid_46',['ViscousFluid',['../classaui_1_1animation__curves_1_1ViscousFluid.html',1,'aui::animation_curves']]],
+  ['visibility_47',['Visibility',['../group__views.html#ga53d6f8ccb0015ea020228de41cfd2162',1,'Visibility.h']]],
+  ['visible_48',['VISIBLE',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;AOverflow.h'],['../group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54',1,'VISIBLE():&#160;Visibility.h']]],
+  ['visitheader_49',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
+  ['visitsviewrecursive_50',['visitsViewRecursive',['../classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf',1,'AViewContainer']]]
 ];
