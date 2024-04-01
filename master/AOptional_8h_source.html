@@ -245,13 +245,13 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    [[nodiscard]]</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    T&amp; value() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        AUI_ASSERTX(mInitialized, <span class="stringliteral">&quot;optional is empty&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(mInitialized, <span class="stringliteral">&quot;optional is empty&quot;</span>);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>T&amp;<span class="keyword">&gt;</span>(mStorage);</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    [[nodiscard]]</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">const</span> T&amp; value() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        AUI_ASSERTX(mInitialized, <span class="stringliteral">&quot;optional is empty&quot;</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(mInitialized, <span class="stringliteral">&quot;optional is empty&quot;</span>);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>T&amp;<span class="keyword">&gt;</span>(mStorage);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
@@ -323,7 +323,7 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(isInvocable) {</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;std::invoke_result_t&lt;F&gt;, <span class="keywordtype">void</span>&gt;) {</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                alternative();</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                AUI_ASSERTX(<span class="keyword">false</span>, <span class="stringliteral">&quot;should not have reached here&quot;</span>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(<span class="keyword">false</span>, <span class="stringliteral">&quot;should not have reached here&quot;</span>);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;should not have reached here&quot;</span>); <span class="comment">// stub exception</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                <span class="keywordflow">return</span> alternative();</div>
@@ -368,6 +368,7 @@ $(document).ready(function(){initNavTree('AOptional_8h_source.html',''); initRes
 <div class="ttc" id="aclassAOptional_html_a71c3dc1b2ba9b9017348e471833b5d2c"><div class="ttname"><a href="classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c">AOptional::valueOr</a></div><div class="ttdeci">T valueOr(F &amp;&amp;alternative) const</div><div class="ttdoc">value or alternative (either value or callback)</div><div class="ttdef"><b>Definition:</b> AOptional.h:234</div></div>
 <div class="ttc" id="aclassAOptional_html_ac2f1093971087a13def94bbd620b7735"><div class="ttname"><a href="classAOptional.html#ac2f1093971087a13def94bbd620b7735">AOptional::valueOrException</a></div><div class="ttdeci">T &amp; valueOrException(const char *message=&quot;empty optional&quot;)</div><div class="ttdoc">value or exception</div><div class="ttdef"><b>Definition:</b> AOptional.h:208</div></div>
 <div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:34</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

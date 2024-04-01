@@ -37,10 +37,11 @@ var searchData=
   ['isredrawwillbeefficient_34',['isRedrawWillBeEfficient',['../classAWindow.html#a79faccde073f6767c3698c4c7d718503',1,'AWindow']]],
   ['isregularfileexists_35',['isRegularFileExists',['../classAPath.html#a7c1302777d5b748bf87a24d078c090e1',1,'APath']]],
   ['isrelative_36',['isRelative',['../classAPath.html#ac6fe94d839c51484b6415feb8f1737c0',1,'APath']]],
-  ['issubsetof_37',['isSubsetOf',['../classADeque.html#a9746ac10b93ec75c6ab3cdafefbc5258',1,'ADeque::isSubsetOf()'],['../classAVector.html#a9fe11dadd6ad27a15555419591416f45',1,'AVector::isSubsetOf()'],['../classAStaticVector.html#af2165b3ee80a74184621bbdc2d8b67bd',1,'AStaticVector::isSubsetOf()'],['../classASmallVector.html#af4df5932f2245514880d58c47c2cd3fc',1,'ASmallVector::isSubsetOf()'],['../classASet.html#a50dfbcda92792f0d9ae4404f08291519',1,'ASet::isSubsetOf()'],['../classAQueue.html#aba771ddfc85e646843b4cab514d2ac43',1,'AQueue::isSubsetOf()'],['../classADynamicVector.html#a0343a74a0061db5bb821bc56f11c5f5e',1,'ADynamicVector::isSubsetOf()']]],
-  ['isuiconsumesmouseat_38',['isUIConsumesMouseAt',['../classAEmbedAuiWrap.html#a94e753338ddc99688833742fcc0e192a',1,'AEmbedAuiWrap']]],
-  ['iswaitneeded_39',['isWaitNeeded',['../classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194',1,'aui::impl::future::Future']]],
-  ['itemat_40',['itemAt',['../classITreeModel.html#af2e8645b11c16f1e32bda296d72692b6',1,'ITreeModel::itemAt()'],['../classViewHierarchyTreeModel.html#a0658b29d846fc7c4b8cbb34b08afde23',1,'ViewHierarchyTreeModel::itemAt()']]],
-  ['iterateoverfocuschain_41',['iterateOverFocusChain',['../classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897',1,'ABaseWindow']]],
-  ['iteration_42',['iteration',['../classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3',1,'AScheduler']]]
+  ['isroot_37',['isRoot',['../classATreeModelIndex.html#a5d1c38d75a44901acb6976929e9b3264',1,'ATreeModelIndex']]],
+  ['issubsetof_38',['isSubsetOf',['../classASmallVector.html#af4df5932f2245514880d58c47c2cd3fc',1,'ASmallVector::isSubsetOf()'],['../classAStaticVector.html#af2165b3ee80a74184621bbdc2d8b67bd',1,'AStaticVector::isSubsetOf()'],['../classAVector.html#a9fe11dadd6ad27a15555419591416f45',1,'AVector::isSubsetOf()'],['../classASet.html#a50dfbcda92792f0d9ae4404f08291519',1,'ASet::isSubsetOf()'],['../classAQueue.html#aba771ddfc85e646843b4cab514d2ac43',1,'AQueue::isSubsetOf()'],['../classADynamicVector.html#a0343a74a0061db5bb821bc56f11c5f5e',1,'ADynamicVector::isSubsetOf()'],['../classADeque.html#a9746ac10b93ec75c6ab3cdafefbc5258',1,'ADeque::isSubsetOf()']]],
+  ['isuiconsumesmouseat_39',['isUIConsumesMouseAt',['../classAEmbedAuiWrap.html#a94e753338ddc99688833742fcc0e192a',1,'AEmbedAuiWrap']]],
+  ['iswaitneeded_40',['isWaitNeeded',['../classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194',1,'aui::impl::future::Future']]],
+  ['itemat_41',['itemAt',['../classITreeModel.html#af2e8645b11c16f1e32bda296d72692b6',1,'ITreeModel::itemAt()'],['../classViewHierarchyTreeModel.html#a0658b29d846fc7c4b8cbb34b08afde23',1,'ViewHierarchyTreeModel::itemAt()']]],
+  ['iterateoverfocuschain_42',['iterateOverFocusChain',['../classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897',1,'ABaseWindow']]],
+  ['iteration_43',['iteration',['../classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3',1,'AScheduler']]]
 ];

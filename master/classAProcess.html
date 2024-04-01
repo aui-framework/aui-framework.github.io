@@ -110,6 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a406e61a076feaf56d6b7ae4f408a76a4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">waitForExitCode</a> ()=0</td></tr>
 <tr class="memdesc:a406e61a076feaf56d6b7ae4f408a76a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for process to be finished and returns exit code.  <a href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">More...</a><br /></td></tr>
 <tr class="separator:a406e61a076feaf56d6b7ae4f408a76a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10b6f23b8339a9795c5405ffba21440"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">processMemory</a> () const =0</td></tr>
+<tr class="memdesc:ae10b6f23b8339a9795c5405ffba21440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain process memory usage.  <a href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">More...</a><br /></td></tr>
+<tr class="separator:ae10b6f23b8339a9795c5405ffba21440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac70997a70e10fe8994785ca3fdf0879"><td class="memItemLeft" align="right" valign="top"><a id="aac70997a70e10fe8994785ca3fdf0879" name="aac70997a70e10fe8994785ca3fdf0879"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>kill</b> () const noexcept</td></tr>
 <tr class="separator:aac70997a70e10fe8994785ca3fdf0879"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,7 +361,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>process' executable file name. </dd></dl>
 
-<p>Implemented in <a class="el" href="classAChildProcess.html#a9a6a20a905d730dc30ddf1f7501331fd">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b">AOtherProcess</a>.</p>
+<p>Implemented in <a class="el" href="classASelfProcess.html#aaa85c2839d2bd4d62102d3aca8be6079">ASelfProcess</a>, <a class="el" href="classAChildProcess.html#a9a6a20a905d730dc30ddf1f7501331fd">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#affb06dab47dc8ef55bccc3344ef1580b">AOtherProcess</a>.</p>
 
 </div>
 </div>
@@ -386,7 +389,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>path to the process' executable. </dd></dl>
 
-<p>Implemented in <a class="el" href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5">AOtherProcess</a>.</p>
+<p>Implemented in <a class="el" href="classASelfProcess.html#aa9434f38629dfc8b3654664c39219f68">ASelfProcess</a>, <a class="el" href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a10f67440449a78e21245337fc35e38d5">AOtherProcess</a>.</p>
 
 </div>
 </div>
@@ -414,7 +417,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>process' ID. </dd></dl>
 
-<p>Implemented in <a class="el" href="classAChildProcess.html#ac2ca351abb4d5f0f6e1e0f3e448321b6">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417">AOtherProcess</a>.</p>
+<p>Implemented in <a class="el" href="classASelfProcess.html#a2b688e6ef61c5a5d2d43d5f2441c3f0d">ASelfProcess</a>, <a class="el" href="classAChildProcess.html#ac2ca351abb4d5f0f6e1e0f3e448321b6">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a62c2ce5d3183278e14e16172272ab417">AOtherProcess</a>.</p>
 
 </div>
 </div>
@@ -471,6 +474,35 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae10b6f23b8339a9795c5405ffba21440" name="ae10b6f23b8339a9795c5405ffba21440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10b6f23b8339a9795c5405ffba21440">&#9670;&nbsp;</a></span>processMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t AProcess::processMemory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain process memory usage. </p>
+
+<p>Implemented in <a class="el" href="classASelfProcess.html#a80aa2eb19fa6ef74b97d89461ee70390">ASelfProcess</a>, <a class="el" href="classAChildProcess.html#a3618ca410edc926d18e612dc299c4481">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a08106355228091fece00e88bbfa4844f">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a08106355228091fece00e88bbfa4844f">AOtherProcess</a>.</p>
+
+</div>
+</div>
 <a id="adea549494f632443acf8a5533e6ef719" name="adea549494f632443acf8a5533e6ef719"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adea549494f632443acf8a5533e6ef719">&#9670;&nbsp;</a></span>self()</h2>
 
@@ -523,7 +555,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Wait for process to be finished and returns exit code. </p>
 <dl class="section return"><dt>Returns</dt><dd>exit code </dd></dl>
 
-<p>Implemented in <a class="el" href="classAChildProcess.html#aa3870a6019a5e41c26c6599058a102b1">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1">AOtherProcess</a>.</p>
+<p>Implemented in <a class="el" href="classASelfProcess.html#ae486109e2458491ec9821ed7aa67979f">ASelfProcess</a>, <a class="el" href="classAChildProcess.html#aa3870a6019a5e41c26c6599058a102b1">AChildProcess</a>, <a class="el" href="classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1">AOtherProcess</a>, and <a class="el" href="classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1">AOtherProcess</a>.</p>
 
 </div>
 </div>
@@ -531,6 +563,7 @@ Static Public Member Functions</h2></td></tr>
 <p><code>#include &lt;<a class="el" href="AProcess_8h_source.html">AUI/Platform/AProcess.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.core/src/AUI/Platform/<a class="el" href="AProcess_8h_source.html">AProcess.h</a></li>
+<li>aui.core/src/AUI/Platform/apple/AProcessImpl.mm</li>
 <li>aui.core/src/AUI/Platform/AProcess.cpp</li>
 <li>aui.core/src/AUI/Platform/unix/AProcessImpl.cpp</li>
 <li>aui.core/src/AUI/Platform/win32/AProcessImpl.cpp</li>
@@ -543,6 +576,7 @@ Inheritance diagram for AProcess:</div>
 <area shape="rect" title=" " alt="" coords="153,80,232,107"/>
 <area shape="rect" href="classAChildProcess.html" title=" " alt="" coords="5,155,113,181"/>
 <area shape="rect" href="classAOtherProcess.html" title=" " alt="" coords="137,155,248,181"/>
+<area shape="rect" href="classASelfProcess.html" title=" " alt="" coords="272,155,375,181"/>
 <area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="134,5,251,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>

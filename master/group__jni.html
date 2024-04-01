@@ -165,12 +165,13 @@ API_AUI_CORE void&#160;</td><td class="memItemRight" valign="bottom"><b>aui::jni
 <div class="line">public:                           \</div>
 <div class="line">    static <span class="keyword">constexpr</span> <span class="keyword">auto</span> JAVA_CLASS_NAME = #path ## _asl;                        \</div>
 <div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> getClassName() noexcept { <span class="keywordflow">return</span> #path; } \</div>
-<div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">auto</span> getClass() noexcept { static ::aui::jni::GlobalRef t = <a class="code hl_function" href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">::aui::jni::env</a>()-&gt;FindClass(getClassName()); AUI_ASSERTX(t.asClass() != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;no such class: &quot;</span> #path); <span class="keywordflow">return</span> t.asClass(); } \</div>
+<div class="line">    [[nodiscard]] <span class="keyword">static</span> <span class="keyword">auto</span> getClass() noexcept { static ::aui::jni::GlobalRef t = <a class="code hl_function" href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">::aui::jni::env</a>()-&gt;FindClass(getClassName()); <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(t.asClass() != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;no such class: &quot;</span> #path); <span class="keywordflow">return</span> t.asClass(); } \</div>
 <div class="line">                                      \</div>
 <div class="line">};                                \</div>
 <div class="line">struct name: <span class="keyword">public</span> name ## _info</div>
 <div class="ttc" id="aclassaui_1_1jni_1_1GlobalRef_html"><div class="ttname"><a href="classaui_1_1jni_1_1GlobalRef.html">aui::jni::GlobalRef</a></div><div class="ttdoc">Global ref.</div><div class="ttdef"><b>Definition:</b> GlobalRef.h:28</div></div>
 <div class="ttc" id="agroup__jni_html_ga4c3eef7015da9043bc8c1fcf5ea68a46"><div class="ttname"><a href="group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46">aui::jni::env</a></div><div class="ttdeci">JNIEnv * env()</div><div class="ttdef"><b>Definition:</b> Globals.h:43</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
 </div><!-- fragment -->
 <p>Defines getClassName and other useful methods required for Java class definition. </p>
 <dl class="params"><dt>Parameters</dt><dd>

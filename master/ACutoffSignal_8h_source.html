@@ -113,14 +113,14 @@ $(document).ready(function(){initNavTree('ACutoffSignal_8h_source.html',''); ini
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;AMutex.h&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;AConditionVariable.h&quot;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classACutoffSignal.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classACutoffSignal.html">ACutoffSignal</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classACutoffSignal.html">   28</a></span><span class="keyword">class </span>[[deprecated(&quot;Use <a class="code hl_class" href="classAFuture.html">AFuture</a>&lt;void&gt; instead&quot;)]] <a class="code hl_class" href="classACutoffSignal.html">ACutoffSignal</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="classACutoffSignal.html">ACutoffSignal</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classACutoffSignal.html#a846f87917ee35414834b624c281ffd06">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classACutoffSignal.html#a846f87917ee35414834b624c281ffd06">makeSignal</a>() {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        std::unique_lock lock(mMutex);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        mSignaled = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        mCV.<a class="code hl_function" href="classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303">notify_all</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        mCV.notify_all();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783">   44</a></span>     <span class="keywordtype">void</span> <a class="code hl_function" href="classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783">resetSignal</a>() noexcept {</div>
@@ -144,11 +144,11 @@ $(document).ready(function(){initNavTree('ACutoffSignal_8h_source.html',''); ini
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="ttc" id="aclassAConditionVariable_html"><div class="ttname"><a href="classAConditionVariable.html">AConditionVariable</a></div><div class="ttdoc">Represents a condition variable.</div><div class="ttdef"><b>Definition:</b> AConditionVariable.h:29</div></div>
-<div class="ttc" id="aclassAConditionVariable_html_ac0de7beaf1c9b3b0806d8bdec30af303"><div class="ttname"><a href="classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303">AConditionVariable::notify_all</a></div><div class="ttdeci">void notify_all() noexcept</div><div class="ttdef"><b>Definition:</b> AConditionVariable.h:66</div></div>
 <div class="ttc" id="aclassACutoffSignal_html"><div class="ttname"><a href="classACutoffSignal.html">ACutoffSignal</a></div><div class="ttdoc">One-shot event communication.</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:28</div></div>
 <div class="ttc" id="aclassACutoffSignal_html_a168665e9d2fce2ae9ce8525a76355783"><div class="ttname"><a href="classACutoffSignal.html#a168665e9d2fce2ae9ce8525a76355783">ACutoffSignal::resetSignal</a></div><div class="ttdeci">void resetSignal() noexcept</div><div class="ttdoc">Resets the cut off state so the waitForSignal() function would block again.</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:44</div></div>
 <div class="ttc" id="aclassACutoffSignal_html_a846f87917ee35414834b624c281ffd06"><div class="ttname"><a href="classACutoffSignal.html#a846f87917ee35414834b624c281ffd06">ACutoffSignal::makeSignal</a></div><div class="ttdeci">void makeSignal()</div><div class="ttdoc">Flags a signal, causing the waitForSignal() to never block.</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:35</div></div>
 <div class="ttc" id="aclassACutoffSignal_html_adc988f41edf1ec7ab3f9c8b56c81c488"><div class="ttname"><a href="classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488">ACutoffSignal::waitForSignal</a></div><div class="ttdeci">void waitForSignal()</div><div class="ttdoc">Wait for makeSignal().</div><div class="ttdef"><b>Definition:</b> ACutoffSignal.h:56</div></div>
+<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that is not currently available.</div><div class="ttdef"><b>Definition:</b> AFuture.h:598</div></div>
 <div class="ttc" id="astructAMutex_html"><div class="ttname"><a href="structAMutex.html">AMutex</a></div><div class="ttdef"><b>Definition:</b> AMutex.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

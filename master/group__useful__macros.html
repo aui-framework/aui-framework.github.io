@@ -181,6 +181,12 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_PP_COMMA_IF</b>(_i)&#160;&#160;&#160;<a class="el" href="group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7">AUI_PP_CAT</a>(AUI_PP_INTERNAL_COMMA_IF_, _i)</td></tr>
 <tr class="memdesc:gaa968229c6cc4b8411286d9d56804a0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns comma if _i != 0. Requires _i to be between 0 and 15. <br /></td></tr>
 <tr class="separator:gaa968229c6cc4b8411286d9d56804a0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaea31a73fb11ef46f539d8292b33167f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(condition)&#160;&#160;&#160;AUI_IMPL_ASSERT(condition)</td></tr>
+<tr class="memdesc:gaaea31a73fb11ef46f539d8292b33167f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the passed condition evaluates to true.  <a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">More...</a><br /></td></tr>
+<tr class="separator:gaaea31a73fb11ef46f539d8292b33167f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae43a68976a4d8539e92ff86fc034218c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(condition,  what)&#160;&#160;&#160;AUI_IMPL_ASSERTX(condition, what)</td></tr>
+<tr class="memdesc:gae43a68976a4d8539e92ff86fc034218c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the passed condition evaluates to true. Adds extra message string.  <a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">More...</a><br /></td></tr>
+<tr class="separator:gae43a68976a4d8539e92ff86fc034218c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">me</a>&#160;&#160;&#160;this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</td></tr>
 <tr class="memdesc:gac83b72d92d1105a82cd5590c0f65d48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes the current class and type of the current class separated by comma. It's convenient to use with the connect function:  <a href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">More...</a><br /></td></tr>
 <tr class="separator:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,11 +215,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes following function call or {} block once per program execution.  <a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">More...</a><br /></td></tr>
 <tr class="separator:gacba25f2657a42c1c6a786d5b537b6a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5ad96f0df87278843d3bb932bf0aaec9"><td class="memItemLeft" align="right" valign="top"><a id="ga5ad96f0df87278843d3bb932bf0aaec9" name="ga5ad96f0df87278843d3bb932bf0aaec9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_ASSERT_UI_THREAD_ONLY</b>()&#160;&#160;&#160;{ AUI_ASSERTX((<a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>() ? <a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() == <a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>()-&gt;getThread() : <a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() == getThread()), &quot;this method should be used in ui thread only.&quot;); }</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_ASSERT_UI_THREAD_ONLY</b>()&#160;&#160;&#160;{ <a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>((<a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>() ? <a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() == <a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>()-&gt;getThread() : <a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() == getThread()), &quot;this method should be used in ui thread only.&quot;); }</td></tr>
 <tr class="memdesc:ga5ad96f0df87278843d3bb932bf0aaec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the macro invocation has been performed in the UI thread. <br /></td></tr>
 <tr class="separator:ga5ad96f0df87278843d3bb932bf0aaec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1a1ce309952c1b43b7e96be67dfec2d4"><td class="memItemLeft" align="right" valign="top"><a id="ga1a1ce309952c1b43b7e96be67dfec2d4" name="ga1a1ce309952c1b43b7e96be67dfec2d4"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_ASSERT_WORKER_THREAD_ONLY</b>()&#160;&#160;&#160;{ AUI_ASSERTX(<a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() != <a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>()-&gt;getThread(), &quot;this method should be used in worker thread only.&quot;); }</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_ASSERT_WORKER_THREAD_ONLY</b>()&#160;&#160;&#160;{ <a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(<a class="el" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>() != <a class="el" href="classAWindow.html#af1a8a3cceec988f8f2b00805096971fd">AWindow::current</a>()-&gt;getThread(), &quot;this method should be used in worker thread only.&quot;); }</td></tr>
 <tr class="memdesc:ga1a1ce309952c1b43b7e96be67dfec2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the macro invocation has not been performed in the UI thread. <br /></td></tr>
 <tr class="separator:ga1a1ce309952c1b43b7e96be67dfec2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -289,6 +295,81 @@ Macros</h2></td></tr>
 <div class="line">};</div>
 <div class="line"><span class="keywordtype">int</span> status = *futureStatus;</div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="gaaea31a73fb11ef46f539d8292b33167f" name="gaaea31a73fb11ef46f539d8292b33167f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaea31a73fb11ef46f539d8292b33167f">&#9670;&nbsp;</a></span>AUI_ASSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_ASSERT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">condition</td><td>)</td>
+          <td>&#160;&#160;&#160;AUI_IMPL_ASSERT(condition)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asserts that the passed condition evaluates to true. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">condition</td><td>the expression</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the condition evaluates to false, triggers default C++ assert behavior (that is, program termination) on debug build or throws <a class="el" href="classAAssertionFailedException.html">AAssertionFailedException</a> on release builds, so it can be handled and reported properly in production applications. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c" title="Asserts that the passed condition evaluates to true. Adds extra message string.">AUI_ASSERTX</a></dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> v = 2 + 2;</div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(v &gt;= 0); <span class="comment">// does not trigger</span></div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(v != 4); <span class="comment">// triggers</span></div>
+<div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:55</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gae43a68976a4d8539e92ff86fc034218c" name="gae43a68976a4d8539e92ff86fc034218c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae43a68976a4d8539e92ff86fc034218c">&#9670;&nbsp;</a></span>AUI_ASSERTX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_ASSERTX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">condition, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">what&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;AUI_IMPL_ASSERTX(condition, what)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asserts that the passed condition evaluates to true. Adds extra message string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">condition</td><td>the expression </td></tr>
+    <tr><td class="paramname">what</td><td>string literal which will be appended to the error message</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the condition evaluates to false, triggers default C++ assert behavior (that is, program termination) on debug build or throws <a class="el" href="classAAssertionFailedException.html">AAssertionFailedException</a> on release builds, so it can be handled and reported properly in production applications. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f" title="Asserts that the passed condition evaluates to true.">AUI_ASSERT</a></dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> v = 2 + 2;</div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(v &gt;= 0, <span class="stringliteral">&quot;positive value expected&quot;</span>); <span class="comment">// does not trigger</span></div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(v != 4, <span class="stringliteral">&quot;4 is unacceptable value&quot;</span>); <span class="comment">// triggers</span></div>
+<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a74">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+</dl>
+
 </div>
 </div>
 <a id="gaee46aadc753cc62a15ea8cd64bdeaa61" name="gaee46aadc753cc62a15ea8cd64bdeaa61"></a>

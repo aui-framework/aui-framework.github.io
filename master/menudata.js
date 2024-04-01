@@ -118,4 +118,5 @@ var menudata={children:[
 {text:"All AUI Classes",url:"classes.html"},
 {text:"All AUI CMake commands",url:"usergroup4.html",children:[
 {text:"aui_app",url:"md_docs_aui_app.html"},
-{text:"aui_executable",url:"md_docs_aui_executable.html"}]}]}]}
+{text:"aui_executable",url:"md_docs_aui_executable.html"},
+{text:"aui_module",url:"md_docs_aui_module.html"}]}]}]}

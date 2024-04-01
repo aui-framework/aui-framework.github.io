@@ -2,8 +2,10 @@ var group__useful__macros =
 [
     [ "async", "group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3", null ],
     [ "asyncX", "group__useful__macros.html#ga21d729326347c5d74faf857abf18d695", null ],
+    [ "AUI_ASSERT", "group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f", null ],
     [ "AUI_ASSERT_UI_THREAD_ONLY", "group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9", null ],
     [ "AUI_ASSERT_WORKER_THREAD_ONLY", "group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4", null ],
+    [ "AUI_ASSERTX", "group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c", null ],
     [ "AUI_DEFER", "group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61", null ],
     [ "AUI_ENTRY", "group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f", null ],
     [ "AUI_NO_OPTIMIZE_OUT", "group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98", null ],

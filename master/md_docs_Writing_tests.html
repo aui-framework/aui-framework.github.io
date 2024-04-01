@@ -93,8 +93,22 @@ $(document).ready(function(){initNavTree('md_docs_Writing_tests.html',''); initR
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >AUI uses GTest as the tests framework and provides a simple way to use it in your application.</p>
-<p >In order to enable tests for your project, call <code>aui_enable_tests()</code> in the end of your <code>CMakeLists.txt</code> and create <code>tests/</code> dir along with <code>src/</code> and <code>CMakeLists.txt</code>. Place your test suites inside the <code>tests/</code> directory.</p>
-<h1><a class="anchor" id="autotoc_md92"></a>
+<p >It also includes GMock library.</p>
+<p >GoogleTest is Google's C++ testing and mocking framework. This user's guide has the following contents:</p>
+<ul>
+<li><a href="https://github.com/google/googletest/blob/main/docs/primer.md">GoogleTest Primer</a> - Teaches you how to write simple tests using GoogleTest. Read this first if you are new to GoogleTest.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/advanced.md">GoogleTest Advanced</a> - Read this when you've finished the Primer and want to utilize GoogleTest to its full potential.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/samples.md">GoogleTest Samples</a> - Describes some GoogleTest samples.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/faq.md">GoogleTest FAQ</a> - Have a question? Want some tips? Check here first.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/gmock_for_dummies.md">Mocking for Dummies</a> - Teaches you how to create mock objects and use them in tests.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/gmock_cook_book.md">Mocking Cookbook</a> - Includes tips and approaches to common mocking use cases.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/gmock_cheat_sheet.md">Mocking Cheat Sheet</a> - A handy reference for matchers, actions, invariants, and more.</li>
+<li><a href="https://github.com/google/googletest/blob/main/docs/gmock_faq.md">Mocking FAQ</a> - Contains answers to some mocking-specific questions.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md106"></a>
+In AUI</h2>
+<p >In order to enable tests for your project, call <code>aui_enable_tests(&lt;target-name&gt;)</code> in the end of your <code>CMakeLists.txt</code> and create <code>tests/</code> dir along with <code>src/</code> and <code>CMakeLists.txt</code>. Place your test suites inside the <code>tests/</code> directory.</p>
+<h1><a class="anchor" id="autotoc_md107"></a>
 Example</h1>
 <p >Suppose we want to test the <code>sum</code> function of the following program:</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;AUI/Platform/Entry.h&gt;</span></div>
@@ -114,9 +128,9 @@ Example</h1>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition:</b> Entry.h:97</div></div>
 </div><!-- fragment --><p >Possible output:</p>
 <div class="fragment"><div class="line">[14:57:02][UI Thread][MyApp][INFO]: 2 + 2 = 4</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md93"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md108"></a>
 Project structure</h2>
-<p >To write a test, enable tests for your projects first. Add <code>aui_enable_tests()</code> to the end of your <code>CMakeLists.txt</code>:</p>
+<p >To write a test, enable tests for your projects first. Add <code>aui_enable_tests(&lt;target-name&gt;)</code> to the end of your <code>CMakeLists.txt</code>:</p>
 <div class="fragment"><div class="line"># Standard routine</div>
 <div class="line">cmake_minimum_required(VERSION 3.16)</div>
 <div class="line">project(project_template)</div>
@@ -141,7 +155,7 @@ Project structure</h2>
 <div class="line"># Link required libs</div>
 <div class="line">target_link_libraries(project_template PRIVATE aui::core)</div>
 <div class="line"> </div>
-<div class="line">aui_enable_tests() # &lt;----------------------------------------------</div>
+<div class="line">aui_enable_tests(project_template) # &lt;----------------------------------------------</div>
 </div><!-- fragment --><p >and create the <code>tests/</code> dir along with <code>CMakeLists.txt</code> and <code>src/</code>. Inside <code>tests/</code>, create <code>MyTest.cpp</code>:</p>
 <div class="fragment"><div class="line">CMakeLists.txt</div>
 <div class="line">src</div>
@@ -179,7 +193,7 @@ Project structure</h2>
 <li>If you are testing a shared library, the shared library is linked to the <code>Tests</code> program</li>
 <li>If you are testing an executable, the executable's sources are automatically compiled with the <code>Tests</code> program and the <code>include</code> scope of the executable is copied to the <code>Tests</code> program (this is why we have easily accessed the <code>main.h</code> header)</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md95"></a>
+<h1><a class="anchor" id="autotoc_md109"></a>
 Writing UI Tests</h1>
 <p >Since AUI is a UI framework it is also capable of UI tests.</p>
 <p >In addition to the previous example, we'd create some window:</p>

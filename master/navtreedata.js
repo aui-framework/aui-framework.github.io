@@ -60,7 +60,8 @@ var NAVTREE =
       [ "All AUI Classes", "classes.html", null ],
       [ "All AUI CMake commands", "usergroup4.html", [
         [ "aui_app", "md_docs_aui_app.html", null ],
-        [ "aui_executable", "md_docs_aui_executable.html", null ]
+        [ "aui_executable", "md_docs_aui_executable.html", null ],
+        [ "aui_module", "md_docs_aui_module.html", null ]
       ] ]
     ] ]
   ] ]
@@ -69,15 +70,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classADeque.html#ae7b0789b6a61053af42c83fece8e0646",
-"classAPlaceholderAnimator_1_1ICustomWidth.html",
-"classATextLayoutHelper.html",
-"classAWindowMenuProvider.html",
-"classViewHierarchyTreeModel.html#ae7bf9ab311de0b3daf51c39917e3a92e",
-"group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e",
-"structViewActionScroll.html",
-"structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html",
-"structtuples_1_1detail_1_1functor_1_1add.html"
+"classADeque.html#a865a3fe5fd6e1ab8e76835de43e2b582",
+"classAPerformanceSection.html#ac34a60124892c570c657c07f713982db",
+"classATcpSocket.html#ae642aa64b944b8cbca4337f950bfb8d0",
+"classAWindow.html#a82eed4e2cd2f8c03c0559ae3c4aade19",
+"classUnixEventFd.html",
+"group__json.html",
+"structDataOptional.html",
+"structaui_1_1dbus_1_1converter_3_01std_1_1string_01_4.html",
+"structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

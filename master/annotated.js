@@ -315,7 +315,9 @@ var annotated =
     ] ],
     [ "declarative", null, [
       [ "Button", "structdeclarative_1_1Button.html", null ],
-      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", null ],
+      [ "RadioGroup", "structdeclarative_1_1RadioGroup.html", [
+        [ "Horizontal", "structdeclarative_1_1RadioGroup_1_1Horizontal.html", null ]
+      ] ],
       [ "Style", "structdeclarative_1_1Style.html", null ]
     ] ],
     [ "fmt", null, [
@@ -412,8 +414,10 @@ var annotated =
     [ "AAnimatedDrawable", "classAAnimatedDrawable.html", "classAAnimatedDrawable" ],
     [ "AAnimator", "classAAnimator.html", "classAAnimator" ],
     [ "AArrayView", "classAArrayView.html", null ],
+    [ "AAssertionFailedException", "classAAssertionFailedException.html", null ],
     [ "AAssHelper", "classAAssHelper.html", "classAAssHelper" ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
+    [ "ABaseMap", "classABaseMap.html", "classABaseMap" ],
     [ "ABaseWindow", "classABaseWindow.html", "classABaseWindow" ],
     [ "ABasicListEditor", "classABasicListEditor.html", [
       [ "Builder", "classABasicListEditor_1_1Builder.html", null ]
@@ -461,6 +465,7 @@ var annotated =
     [ "ADataBindingDefault< ADoubleNumberPicker, float >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01float_01_4.html", null ],
     [ "ADataBindingDefault< ANumberPicker, int16_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int16__t_01_4.html", null ],
     [ "ADataBindingDefault< ANumberPicker, int32_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int32__t_01_4.html", null ],
+    [ "ADataBindingDefault< ANumberPicker, int64_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int64__t_01_4.html", null ],
     [ "ADataBindingDefault< ANumberPicker, int8_t >", "structADataBindingDefault_3_01ANumberPicker_00_01int8__t_01_4.html", null ],
     [ "ADataBindingDefault< ANumberPicker, uint16_t >", "structADataBindingDefault_3_01ANumberPicker_00_01uint16__t_01_4.html", null ],
     [ "ADataBindingDefault< ANumberPicker, uint32_t >", "structADataBindingDefault_3_01ANumberPicker_00_01uint32__t_01_4.html", null ],
@@ -561,7 +566,7 @@ var annotated =
     [ "AListViewContainer", "classAListViewContainer.html", "classAListViewContainer" ],
     [ "ALogger", "classALogger.html", "classALogger" ],
     [ "ALongPressEvent", "structALongPressEvent.html", null ],
-    [ "AMap", "classAMap.html", "classAMap" ],
+    [ "AMap", "classAMap.html", null ],
     [ "AMenu", "classAMenu.html", null ],
     [ "AMenuContainer", "classAMenuContainer.html", null ],
     [ "AMenuItem", "structAMenuItem.html", null ],
@@ -624,6 +629,7 @@ var annotated =
     [ "AScrollbarOffsetSpacer", "classAScrollbarOffsetSpacer.html", null ],
     [ "AScrollEvent", "structAScrollEvent.html", "structAScrollEvent" ],
     [ "ASelectableLabel", "classASelectableLabel.html", "classASelectableLabel" ],
+    [ "ASelfProcess", "classASelfProcess.html", "classASelfProcess" ],
     [ "ASerializable", "structASerializable.html", null ],
     [ "ASerializable< _< T > >", "structASerializable_3_01___3_01T_01_4_01_4.html", null ],
     [ "ASerializable< AByteBuffer >", "structASerializable_3_01AByteBuffer_01_4.html", null ],
@@ -696,6 +702,7 @@ var annotated =
     [ "AUIView", "interfaceAUIView.html", null ],
     [ "AUIViewController", "interfaceAUIViewController.html", null ],
     [ "AUIViewController()", "categoryAUIViewController_07_08.html", null ],
+    [ "AUnorderedMap", "classAUnorderedMap.html", null ],
     [ "AUrl", "classAUrl.html", null ],
     [ "AUuid", "classAUuid.html", "classAUuid" ],
     [ "AUuidException", "classAUuidException.html", null ],
@@ -851,7 +858,6 @@ var annotated =
     [ "ViewAssertionText", "structViewAssertionText.html", null ],
     [ "ViewAssertionVisible", "structViewAssertionVisible.html", null ],
     [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", "classViewHierarchyTreeModel" ],
-    [ "ViewMock", "classViewMock.html", null ],
     [ "ViewPropertiesView", "classViewPropertiesView.html", null ],
     [ "Win32SymService", "structWin32SymService.html", null ],
     [ "WindowDelegate", "interfaceWindowDelegate.html", null ],
