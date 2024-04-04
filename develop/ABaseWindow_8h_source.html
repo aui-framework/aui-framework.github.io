@@ -358,17 +358,19 @@ $(document).ready(function(){initNavTree('ABaseWindow_8h_source.html',''); initR
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">#if AUI_SHOW_TOUCHES</span></div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keyword">struct </span>ShowTouches {</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;glm::vec2&gt;</a> positions;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    };</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <a class="code hl_class" href="classAMap.html">AMap&lt;APointerIndex, ShowTouches&gt;</a> mShowTouches;</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>};</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9">  403</a></span><span class="preprocessor">#define AUI_ASSERT_UI_THREAD_ONLY() { AUI_ASSERTX((AWindow::current() ? AThread::current() == AWindow::current()-&gt;getThread() : AThread::current() == getThread()), &quot;this method should be used in ui thread only.&quot;</span>); }</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4">  411</a></span><span class="preprocessor">#define AUI_ASSERT_WORKER_THREAD_ONLY() { AUI_ASSERTX(AThread::current() != AWindow::current()-&gt;getThread(), &quot;this method should be used in worker thread only.&quot;</span>); }</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        glm::vec2 press;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>        <a class="code hl_class" href="classAVector.html">AVector&lt;glm::vec2&gt;</a> moves;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        <a class="code hl_class" href="classAOptional.html">AOptional&lt;glm::vec2&gt;</a> release;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    };</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    <a class="code hl_class" href="classAMap.html">AMap&lt;APointerIndex, ShowTouches&gt;</a> mShowTouches;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>};</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9">  405</a></span><span class="preprocessor">#define AUI_ASSERT_UI_THREAD_ONLY() { AUI_ASSERTX((AWindow::current() ? AThread::current() == AWindow::current()-&gt;getThread() : AThread::current() == getThread()), &quot;this method should be used in ui thread only.&quot;</span>); }</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4">  413</a></span><span class="preprocessor">#define AUI_ASSERT_WORKER_THREAD_ONLY() { AUI_ASSERTX(AThread::current() != AWindow::current()-&gt;getThread(), &quot;this method should be used in worker thread only.&quot;</span>); }</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
 <div class="ttc" id="aclassABaseWindow_html"><div class="ttname"><a href="classABaseWindow.html">ABaseWindow</a></div><div class="ttdef"><b>Definition:</b> ABaseWindow.h:37</div></div>
 <div class="ttc" id="aclassABaseWindow_html_a31c9bd37b38a7b2d7153b2137c083a3f"><div class="ttname"><a href="classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f">ABaseWindow::isPreventingClickOnPointerRelease</a></div><div class="ttdeci">bool isPreventingClickOnPointerRelease() const noexcept</div><div class="ttdef"><b>Definition:</b> ABaseWindow.h:81</div></div>
 <div class="ttc" id="aclassABaseWindow_html_a40dd22714d90e8ee56400e0679cb605c"><div class="ttname"><a href="classABaseWindow.html#a40dd22714d90e8ee56400e0679cb605c">ABaseWindow::touchscreenKeyboardShowRequested</a></div><div class="ttdeci">emits touchscreenKeyboardShowRequested</div><div class="ttdoc">On touch screen keyboard show requested.</div><div class="ttdef"><b>Definition:</b> ABaseWindow.h:319</div></div>
