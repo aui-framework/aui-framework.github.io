@@ -157,22 +157,23 @@ $(document).ready(function(){initNavTree('ATouchScroller_8h_source.html',''); in
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        glm::vec2 previousPosition = {0.f, 0.f}; <span class="comment">// to calculate velocity</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        glm::vec2 currentVelocity = {0.f, 0.f};</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        glm::vec2 prevVelocity = {0.f, 0.f};</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::chrono::microseconds timeBetweenFrames;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_class" href="classAOptional.html">AOptional&lt;std::chrono::high_resolution_clock::time_point&gt;</a> lastFrameTime;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    };</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">struct </span>KineticScrollingState {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_class" href="classAPointerIndex.html">APointerIndex</a> pointer;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        glm::vec2 origin;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordtype">float</span> velocity;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">float</span> averageTimeDelta;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        glm::vec2 direction;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        std::chrono::high_resolution_clock::time_point lastFrameTime = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    };</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    std::variant&lt;std::nullopt_t, WaitingForThresholdState, ScrollingState, KineticScrollingState&gt; mState = std::nullopt;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        glm::vec2 prevPrevVelocity = {0.f, 0.f};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        std::chrono::microseconds timeBetweenFrames;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_class" href="classAOptional.html">AOptional&lt;std::chrono::high_resolution_clock::time_point&gt;</a> lastFrameTime;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    };</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">struct </span>KineticScrollingState {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_class" href="classAPointerIndex.html">APointerIndex</a> pointer;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        glm::vec2 origin;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">float</span> velocity;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">float</span> averageTimeDelta;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        glm::vec2 direction;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        std::chrono::high_resolution_clock::time_point lastFrameTime = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    };</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    std::variant&lt;std::nullopt_t, WaitingForThresholdState, ScrollingState, KineticScrollingState&gt; mState = std::nullopt;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
 <div class="ttc" id="aclassAMetric_html"><div class="ttname"><a href="classAMetric.html">AMetric</a></div><div class="ttdoc">Stores dimensions in scalable units (dp, pt, etc...).</div><div class="ttdef"><b>Definition:</b> AMetric.h:80</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:36</div></div>
 <div class="ttc" id="aclassAPointerIndex_html"><div class="ttname"><a href="classAPointerIndex.html">APointerIndex</a></div><div class="ttdoc">Wrapper class that stores either mouse button index or finger index.</div><div class="ttdef"><b>Definition:</b> APointerIndex.h:26</div></div>
