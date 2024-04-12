@@ -75,8 +75,8 @@ var NAVTREEINDEX =
 "classATcpSocket.html#ae642aa64b944b8cbca4337f950bfb8d0",
 "classAWindow.html#a82eed4e2cd2f8c03c0559ae3c4aade19",
 "classUnixEventFd.html",
-"group__json.html",
-"structDataOptional.html",
+"group__network.html",
+"structIDrawable_1_1Params.html",
 "structaui_1_1dbus_1_1converter_3_01std_1_1string_01_4.html",
 "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html"
 ];

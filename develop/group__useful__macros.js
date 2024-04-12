@@ -8,6 +8,7 @@ var group__useful__macros =
     [ "AUI_ASSERTX", "group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c", null ],
     [ "AUI_DEFER", "group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61", null ],
     [ "AUI_ENTRY", "group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f", null ],
+    [ "AUI_MARK_AS_USED", "group__useful__macros.html#gad409f7ab56b7719fecd676abfa776b1f", null ],
     [ "AUI_NO_OPTIMIZE_OUT", "group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98", null ],
     [ "AUI_PERFORM_AS_MEMBER", "group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64", null ],
     [ "AUI_PP_CAT", "group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7", null ],
