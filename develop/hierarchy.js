@@ -498,7 +498,9 @@ var hierarchy =
           [ "IRemovableListModel< T >", "classIRemovableListModel.html", null ],
           [ "IValueMutableListModel< T >", "classIValueMutableListModel.html", null ]
         ] ],
-        [ "ITreeModel< T >", "classITreeModel.html", null ],
+        [ "ITreeModel< T >", "classITreeModel.html", [
+          [ "ATreeModel< T >", "classATreeModel.html", null ]
+        ] ],
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
         [ "Master", "classMaster.html", null ],
         [ "ProcessSignalReceiver", "classProcessSignalReceiver.html", null ],
@@ -739,6 +741,7 @@ var hierarchy =
       [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ],
       [ "ass::prop::Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ]
     ] ],
+    [ "ATreeModel< T >::Item", "structATreeModel_1_1Item.html", null ],
     [ "AListModelRange< T >::Iterator", "classAListModelRange_1_1Iterator.html", null ],
     [ "AListModelSelection< T >::Iterator", "classAListModelSelection_1_1Iterator.html", null ],
     [ "ASqlQueryResult::Iterator", "classASqlQueryResult_1_1Iterator.html", null ],

@@ -39,13 +39,12 @@ var searchData=
   ['resolvesymbolsifneeded_36',['resolveSymbolsIfNeeded',['../classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4',1,'AStacktrace']]],
   ['restore_37',['restore',['../classAWindow.html#a633a616c5964b3fd3805363375442753',1,'AWindow']]],
   ['reversebyte_38',['reverseByte',['../classATokenizer.html#a83ba8b62996d3c8382182f62afca2f70',1,'ATokenizer']]],
-  ['root_39',['root',['../classViewHierarchyTreeModel.html#ae7bf9ab311de0b3daf51c39917e3a92e',1,'ViewHierarchyTreeModel::root()'],['../classITreeModel.html#a7516243f380d02fbefcbbe2d1983c4c6',1,'ITreeModel::root()']]],
-  ['rotate_40',['rotate',['../classARender.html#a4cf7a10dd6ddf45dcb57acae2e98cc0b',1,'ARender::rotate(AAngleRadians angle)'],['../classARender.html#a157f146e9c215b6250ba47307b5c9f28',1,'ARender::rotate(const glm::vec3 &amp;axis, AAngleRadians angle)']]],
-  ['roundedrect_41',['roundedRect',['../classARender.html#afae06e671e5b083b4c9dd8c3444282ad',1,'ARender']]],
-  ['roundedrectborder_42',['roundedRectBorder',['../classARender.html#a0e2f5a3c91980a466f7bad19f35469a5',1,'ARender']]],
-  ['row_43',['row',['../classATreeModelIndex.html#aa730c919f25355a4224df3a8640563b6',1,'ATreeModelIndex']]],
-  ['run_44',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]],
-  ['runasync_45',['runAsync',['../classACurl_1_1Builder.html#a5540f23420109f46ad40bc0871783fd6',1,'ACurl::Builder::runAsync()'],['../classACurl_1_1Builder.html#ab17a2dd6e203e25c1143d46b27033c6c',1,'ACurl::Builder::runAsync(ACurlMulti &amp;curlMulti)']]],
-  ['runblocking_46',['runBlocking',['../classACurl_1_1Builder.html#a3d759c8584889a179c9b9248bfba9e5c',1,'ACurl::Builder']]],
-  ['runoperation_47',['runOperation',['../classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929',1,'AWatchdog']]]
+  ['rotate_39',['rotate',['../classARender.html#a4cf7a10dd6ddf45dcb57acae2e98cc0b',1,'ARender::rotate(AAngleRadians angle)'],['../classARender.html#a157f146e9c215b6250ba47307b5c9f28',1,'ARender::rotate(const glm::vec3 &amp;axis, AAngleRadians angle)']]],
+  ['roundedrect_40',['roundedRect',['../classARender.html#afae06e671e5b083b4c9dd8c3444282ad',1,'ARender']]],
+  ['roundedrectborder_41',['roundedRectBorder',['../classARender.html#a0e2f5a3c91980a466f7bad19f35469a5',1,'ARender']]],
+  ['row_42',['row',['../classATreeModelIndex.html#aa730c919f25355a4224df3a8640563b6',1,'ATreeModelIndex']]],
+  ['run_43',['run',['../classAChildProcess.html#a73ca38bc82e6de0b0377487f213b44b3',1,'AChildProcess']]],
+  ['runasync_44',['runAsync',['../classACurl_1_1Builder.html#a5540f23420109f46ad40bc0871783fd6',1,'ACurl::Builder::runAsync()'],['../classACurl_1_1Builder.html#ab17a2dd6e203e25c1143d46b27033c6c',1,'ACurl::Builder::runAsync(ACurlMulti &amp;curlMulti)']]],
+  ['runblocking_45',['runBlocking',['../classACurl_1_1Builder.html#a3d759c8584889a179c9b9248bfba9e5c',1,'ACurl::Builder']]],
+  ['runoperation_46',['runOperation',['../classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929',1,'AWatchdog']]]
 ];

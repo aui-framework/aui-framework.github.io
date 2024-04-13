@@ -695,6 +695,7 @@ var annotated =
     [ "ATokenizer", "classATokenizer.html", "classATokenizer" ],
     [ "ATouchScroller", "classATouchScroller.html", "classATouchScroller" ],
     [ "ATranslationAnimator", "classATranslationAnimator.html", "classATranslationAnimator" ],
+    [ "ATreeModel", "classATreeModel.html", "classATreeModel" ],
     [ "ATreeModelIndex", "classATreeModelIndex.html", "classATreeModelIndex" ],
     [ "ATreeView", "classATreeView.html", "classATreeView" ],
     [ "AUdpSocket", "classAUdpSocket.html", "classAUdpSocket" ],

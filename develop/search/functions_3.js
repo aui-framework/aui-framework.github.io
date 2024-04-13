@@ -7,7 +7,7 @@ var searchData=
   ['checkandreset_4',['checkAndReset',['../classABitField.html#a6356f6d6ea0341695bedf3390d904810',1,'ABitField']]],
   ['checkandset_5',['checkAndSet',['../classABitField.html#aa0034b4149bddd81c509c56870f25903',1,'ABitField']]],
   ['checkforexceptions_6',['checkForExceptions',['../classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417',1,'AFutureSet']]],
-  ['childrencount_7',['childrenCount',['../classITreeModel.html#a893cef623ddd93ad2881a403f0739494',1,'ITreeModel::childrenCount()'],['../classViewHierarchyTreeModel.html#a6cf46e3fd2c2ceacd6d787812c60337d',1,'ViewHierarchyTreeModel::childrenCount()']]],
+  ['childrencount_7',['childrenCount',['../classATreeModel.html#ac5e9566de42197d25e10b7cbfbde4370',1,'ATreeModel::childrenCount()'],['../classITreeModel.html#adb920093cd7fae6dda0408f9dd42f667',1,'ITreeModel::childrenCount()'],['../classViewHierarchyTreeModel.html#a7c6267ce0db663b17e0589711a7088ff',1,'ViewHierarchyTreeModel::childrenCount()']]],
   ['clearselection_8',['clearSelection',['../classACursorSelectable.html#a5731596bf1feb0a5e1efc8c6c318acf6',1,'ACursorSelectable']]],
   ['click_9',['click',['../classAView.html#aacf35a2a25b71edbc985e970c394bf29',1,'AView']]],
   ['close_10',['close',['../classACurl.html#a092938995093d4a863d6dd01d23990f4',1,'ACurl::close()'],['../classAWebsocket.html#a336b44b6dea5ddc38a4efd322f676612',1,'AWebsocket::close()']]],
