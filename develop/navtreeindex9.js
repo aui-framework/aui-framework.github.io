@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"structdeclarative_1_1Style.html":[0,2,4,2],
 "structfmt_1_1detail_1_1is__string_3_01AString_01_4.html":[0,0,10,0,0],
 "structfmt_1_1detail_1_1is__string_3_01AString_01_4.html":[0,2,5,0,0],
 "structfmt_1_1formatter_3_01AString_01_4.html":[0,2,5,2],

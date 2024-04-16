@@ -201,6 +201,7 @@ var group__useful__views =
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
       [ "render", "classAView.html#a963fbdfa517db949b880297405804985", null ],
+      [ "setExpanding", "classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5", null ],
       [ "setExtraStylesheet", "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b", null ],
       [ "setExtraStylesheet", "classAView.html#abfffb2d8ac173e35e0599b4389efb9e1", null ],
       [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],

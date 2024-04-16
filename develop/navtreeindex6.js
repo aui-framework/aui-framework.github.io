@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"group__jni.html#ga25c210f55279d8e9bde9e2bcd9f7b75b":[3,0,0,7],
 "group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46":[3,0,0,5],
 "group__jni.html#ga91c62729a729a9faadd6c9ab07dd2741":[3,0,0,4],
 "group__jni.html#gab975e01587c23cab0a80b1708d1c7a76":[3,0,0,2],
@@ -188,8 +189,8 @@ var NAVTREEINDEX6 =
 "structAMutex.html":[0,2,191],
 "structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
 "structAPerformanceSection_1_1Data.html":[3,0,1,33,0],
-"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,33,0,0],
+"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,33,0,1],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPointerMoveEvent.html":[0,2,208],
@@ -230,8 +231,8 @@ var NAVTREEINDEX6 =
 "structASerializable_3_01const_01char_01_5_01_4.html":[0,2,255],
 "structASerializable_3_01std_1_1string_01_4.html":[0,2,256],
 "structASharedMutex.html":[0,2,260],
-"structASignal_1_1call__wrapper.html":[3,0,1,18,0],
 "structASignal_1_1call__wrapper.html":[3,0,1,0,1,0],
+"structASignal_1_1call__wrapper.html":[3,0,1,18,0],
 "structASolidBrush.html":[0,2,268],
 "structASqlModel.html":[0,2,278],
 "structASqlModel.html#a2e8dd259c05d058fb4216f9bff8ee143":[0,2,278,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structATexturedBrush.html#aa0ac62633d7962576270733882033326":[0,2,302,0],
 "structATokenizer_1_1Hexable.html":[0,2,306,0],
 "structATreeModel_1_1Item.html":[0,2,309,0],
-"structAViewContainer_1_1PointerEventsMapping.html":[3,0,9,2,35,0],
-"structAViewsInit.html":[0,2,330]
+"structAViewContainer_1_1PointerEventsMapping.html":[3,0,9,2,35,0]
 };
