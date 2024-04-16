@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46":[3,0,0,5],
+"group__jni.html#ga91c62729a729a9faadd6c9ab07dd2741":[3,0,0,4],
+"group__jni.html#gab975e01587c23cab0a80b1708d1c7a76":[3,0,0,2],
+"group__jni.html#gaf9b5a9801b0f772cc269e5be2d90b3fa":[3,0,0,6],
 "group__json.html":[3,0,6],
 "group__layout__managers.html":[3,0,9,1],
 "group__network.html":[3,0,7],
@@ -126,8 +130,8 @@ var NAVTREEINDEX6 =
 "structACurl_1_1ErrorDescription.html":[3,0,5,0,1],
 "structACurl_1_1Response.html":[3,0,5,0,3],
 "structACursorSelectable_1_1Selection.html":[0,2,65,0],
-"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACursor_1_1Custom.html":[3,0,9,0,29,0],
+"structACursor_1_1Custom.html":[3,0,9,5,0],
 "structACustomShaderBrush.html":[0,2,67],
 "structADataBindingDefault.html":[0,2,71],
 "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html":[0,2,72],
@@ -226,8 +230,8 @@ var NAVTREEINDEX6 =
 "structASerializable_3_01const_01char_01_5_01_4.html":[0,2,255],
 "structASerializable_3_01std_1_1string_01_4.html":[0,2,256],
 "structASharedMutex.html":[0,2,260],
-"structASignal_1_1call__wrapper.html":[3,0,1,0,1,0],
 "structASignal_1_1call__wrapper.html":[3,0,1,18,0],
+"structASignal_1_1call__wrapper.html":[3,0,1,0,1,0],
 "structASolidBrush.html":[0,2,268],
 "structASqlModel.html":[0,2,278],
 "structASqlModel.html#a2e8dd259c05d058fb4216f9bff8ee143":[0,2,278,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "structATokenizer_1_1Hexable.html":[0,2,306,0],
 "structATreeModel_1_1Item.html":[0,2,309,0],
 "structAViewContainer_1_1PointerEventsMapping.html":[3,0,9,2,35,0],
-"structAViewsInit.html":[0,2,330],
-"structAzazaATest_1_1ATest.html":[0,2,3,0],
-"structAzazaATest_1_1ATest.html":[0,0,7,0],
-"structBrushHelper.html":[0,2,344],
-"structCharEntry.html":[0,2,346]
+"structAViewsInit.html":[0,2,330]
 };

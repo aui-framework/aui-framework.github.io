@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"classATcpSocket.html#a12c9f8ebd57f0189bd2bda6103d1718e":[3,0,7,3,2],
+"classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0":[3,0,7,3,0],
 "classATcpSocket.html#ae642aa64b944b8cbca4337f950bfb8d0":[3,0,7,3,1],
 "classAText.html":[3,0,9,2,29],
 "classAText.html#a296d5ed37040964114a33f2d1344a82a":[3,0,9,2,29,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "classAWindow.html#a0de97c943cf121559175fc46f4f5a45b":[0,2,335,14],
 "classAWindow.html#a1aec53c688d095e3a9903df73e99b556":[0,2,335,10],
 "classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006":[0,2,335,13],
-"classAWindow.html#a201cce374d9e4359d014d8a9118d1357":[0,2,335,1],
-"classAWindow.html#a271b2fb2651a01713cafa78625f2dadb":[0,2,335,12],
-"classAWindow.html#a3bb8a070ce8c1530d7419ace2957b72a":[0,2,335,5]
+"classAWindow.html#a201cce374d9e4359d014d8a9118d1357":[0,2,335,1]
 };

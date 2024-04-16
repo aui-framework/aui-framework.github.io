@@ -97,57 +97,59 @@ $(document).ready(function(){initNavTree('classAFuture.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a value that is not currently available.  
+<p>Represents a value that will be available at some point in the future.  
  <a href="classAFuture.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T = void&gt;<br />
-class AFuture&lt; T &gt;</div><p >Represents a value that is not currently available. </p>
+class AFuture&lt; T &gt;</div><p >Represents a value that will be available at some point in the future. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>result type (void is default)</td></tr>
   </table>
   </dd>
 </dl>
-<p><a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> is used as a result for asynchronous functions.</p>
-<p ><a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> is returned by <a class="el" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> keyword:</p>
+<p><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is used as a result for asynchronous functions.</p>
+<p ><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is returned by <a class="el" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> keyword:</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> theFuture = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
 <div class="line">  <span class="keywordflow">return</span> 123;</div>
 <div class="line">};</div>
-<div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
-<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that is not currently available.</div><div class="ttdef"><b>Definition:</b> AFuture.h:598</div></div>
+<div class="line">...</div>
+<div class="line">cout &lt;&lt; *theFuture; <span class="comment">// waits for the task, outputs 123</span></div>
+<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that will be available at some point in the future.</div><div class="ttdef"><b>Definition:</b> AFuture.h:620</div></div>
 <div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:212</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:331</div></div>
 </div><!-- fragment --><p >If your operation consists of complex future sequences, you have multiple options:</p><ol type="1">
-<li>Use stackful coroutines. That is, you can use <code>operator*</code> and <code><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ac99fbb4b588e6504a9da1a9186e137ae" title="Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently availab...">get()</a></code> methods (blocking value acquiring) within a threadpool thread (including the one that runs <a class="el" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> 's body). If value is not currently available, these methods temporarily return the thread to threadpool, effeciently allowing it to execute other tasks. <dl class="section note"><dt>Note</dt><dd>Be aware fot <code>std::unique_lock</code> and similar RAII-based lock functions when performing blocking value acquiring operation.</dd></dl>
+<li>Use stackful coroutines. That is, you can use <code>operator*</code> and <code><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ac99fbb4b588e6504a9da1a9186e137ae" title="Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available...">get()</a></code> methods (blocking value acquiring) within a threadpool thread (including the one that runs <a class="el" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> 's body). If value is not currently available, these methods temporarily return the thread to threadpool, effeciently allowing it to execute other tasks. <dl class="section note"><dt>Note</dt><dd>Be aware fot <code>std::unique_lock</code> and similar RAII-based lock functions when performing blocking value acquiring operation.</dd></dl>
 </li>
-<li>Use stackless coroutines. C++20 introduced coroutines language feature. That is, you can use co_await operator to <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> value: <div class="fragment"><div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> longOperation();</div>
+<li>Use stackless coroutines. C++20 introduced coroutines language feature. That is, you can use co_await operator to <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> value: <div class="fragment"><div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> longOperation();</div>
 <div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> myFunction() {</div>
 <div class="line">  <span class="keywordtype">int</span> resultOfLongOperation = <span class="keyword">co_await</span> longOperation();</div>
 <div class="line">  <span class="keywordflow">return</span> resultOfLongOperation + 1;</div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
-<li>Use <a class="el" href="classAComplexFutureOperation.html" title="Helper class to construct AFuture values.">AComplexFutureOperation</a>. This class creates <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> (root <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>) and forwards all exceptions to the root <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>. This method is not recommended for trivial usecases, as it requires you to extensivly youse onSuccess method in order to get and process <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> result, leading your code to hardly maintainable spaghetti.</li>
+<li>Use <a class="el" href="classAComplexFutureOperation.html" title="Helper class to construct AFuture values.">AComplexFutureOperation</a>. This class creates <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> (root <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>) and forwards all exceptions to the root <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>. This method is not recommended for trivial usecases, as it requires you to extensivly youse onSuccess method in order to get and process <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> result, leading your code to hardly maintainable spaghetti.</li>
 </ol>
-<div class="fragment"><div class="line">For rare cases, you can <span class="keywordflow">default</span>-construct <a class="code hl_class" href="classAFuture.html">AFuture</a> and the result can be supplied manually with the <a class="code hl_function" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a>() method:</div>
+<div class="fragment"><div class="line">For rare cases, you can <span class="keywordflow">default</span>-construct <a class="code hl_class" href="classAFuture.html">AFuture</a> and the result can be supplied manually with the <a class="code hl_function" href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">supplyValue</a>() method:</div>
 <div class="line"> </div>
 <div class="line">@code{cpp}</div>
 <div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> theFuture;</div>
 <div class="line"><a class="code hl_class" href="classAThread.html">AThread</a> t([=] {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
-<div class="line">  theFuture.<a class="code hl_function" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a>(123);</div>
+<div class="line">  theFuture.<a class="code hl_function" href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">supplyValue</a>(123);</div>
 <div class="line">});</div>
 <div class="line">t.start();</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
-<div class="ttc" id="aclassAFuture_html_a5ee665a2a1d9b02010a9cd19de7bd836"><div class="ttname"><a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">AFuture::supplyResult</a></div><div class="ttdeci">void supplyResult(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:622</div></div>
+<div class="ttc" id="aclassAFuture_html_aa640a25cdc678b93f8d764a83013841f"><div class="ttname"><a href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">AFuture::supplyValue</a></div><div class="ttdeci">void supplyValue(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:644</div></div>
 <div class="ttc" id="aclassAThread_html"><div class="ttname"><a href="classAThread.html">AThread</a></div><div class="ttdoc">Represents a user-defined thread.</div><div class="ttdef"><b>Definition:</b> AThread.h:190</div></div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Be aware of exceptions or control flow keywords! If you don't pass the result, <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> will always stay unavailable, thus all waiting code will wait indefinitely long, leading to resource leaks (CPU and memory). Consider using one of suggested methods of usage instead.</dd></dl>
-<p><a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> provides a set of functions for both "value emitting" side: supplyValue(), <a class="el" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139" title="Stores an exception from std::current_exception to the future.">supplyException()</a>, and "value
-receiving" side:</p>
-<p ><a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> is a shared_ptr-based wrapper so it can be easily copied, pointing to the same task.</p>
-<p >If all AFutures of the task are destroyed, the task is cancelled. If the task is executing when <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a86f6a2302691921a1848b44813710a41" title="Cancels the AFuture&#39;s task.">cancel()</a> is called, <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> waits for the task, however, task's thread is still requested for interrupt. It guarantees that your task cannot be executed or be executing when <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> destroyed and allows to efficiently utilize c++'s RAII feature.</p>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Be aware of exceptions or control flow keywords! If you don't pass the result, <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> will always stay unavailable, thus all waiting code will wait indefinitely long, leading to resource leaks (CPU and memory). Consider using one of suggested methods of usage instead.</dd></dl>
+<p><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> provides a set of functions for both "value emitting" side: <a class="el" href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f" title="Pushes the result to AFuture.">supplyValue()</a>, <a class="el" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139" title="Stores an exception from std::current_exception to the future.">supplyException()</a>, and "value
+receiving" side: <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a5620526486a642b7c5b39b9f56e08ddb" title="Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available...">operator-&gt;()</a>, <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa" title="Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available...">operator*()</a>, <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ac99fbb4b588e6504a9da1a9186e137ae" title="Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available...">get()</a>.</p>
+<p >When <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s operation is completed it calls either <a class="el" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b" title="Add onSuccess callback to the future.">onSuccess()</a> or <a class="el" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e" title="Add onError callback to the future.">onError()</a>. These callbacks are excepted to be called in any case. Use <a class="el" href="classAFuture.html#ae25e87699d0b39d45b6b2cd3555dc7b5" title="Adds the callback to both onSuccess and onResult.">onFinally()</a> to handle both.</p>
+<p ><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is a shared_ptr-based wrapper so it can be easily copied, pointing to the same task.</p>
+<p >If all AFutures of the task are destroyed, the task is cancelled. If the task is executing when <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a86f6a2302691921a1848b44813710a41" title="Cancels the AFuture&#39;s task.">cancel()</a> is called, <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> waits for the task, however, task's thread is still requested for interrupt. It guarantees that your task cannot be executed or be executing when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> destroyed and allows to efficiently utilize c++'s RAII feature.</p>
 <p >To manage multiple AFutures, use <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> or <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a> classes.</p>
-<p >When waiting for result, <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> may execute the task (if not default-constructed) on the caller thread instead of waiting. See <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9" title="Sleeps if the supplyResult is not currently available.">AFuture::wait</a> for details. </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> implements work-stealing algorithm to prevent deadlocks and optimizaze thread usage: when waiting for result, <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> may execute the task (if not default-constructed) on the caller thread instead of waiting. See <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9" title="Sleeps if the supplyValue is not currently available.">AFuture::wait</a> for details. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -173,9 +175,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e4fa3f5ff5637667b004f8422c53670"><td class="memItemLeft" align="right" valign="top"><a id="a6e4fa3f5ff5637667b004f8422c53670" name="a6e4fa3f5ff5637667b004f8422c53670"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (Task task=nullptr) noexcept</td></tr>
 <tr class="separator:a6e4fa3f5ff5637667b004f8422c53670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">supplyResult</a> (T v) const noexcept</td></tr>
-<tr class="memdesc:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the result to <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>.  <a href="classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836">More...</a><br /></td></tr>
-<tr class="separator:a5ee665a2a1d9b02010a9cd19de7bd836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa640a25cdc678b93f8d764a83013841f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">supplyValue</a> (T v) const noexcept</td></tr>
+<tr class="memdesc:aa640a25cdc678b93f8d764a83013841f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the result to <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>.  <a href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">More...</a><br /></td></tr>
+<tr class="separator:aa640a25cdc678b93f8d764a83013841f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb90c81c9ded0417533b721c34d3a139"><td class="memItemLeft" align="right" valign="top"><a id="afb90c81c9ded0417533b721c34d3a139" name="afb90c81c9ded0417533b721c34d3a139"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>supplyException</b> () const noexcept</td></tr>
 <tr class="memdesc:afb90c81c9ded0417533b721c34d3a139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores an exception from std::current_exception to the future. <br /></td></tr>
@@ -194,10 +196,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 <tr class="memitem:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">onError</a> (Callback &amp;&amp;callback) const noexcept</td></tr>
 <tr class="memdesc:a2c29ecb80f38bac577e9ddcc8535918e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add onError callback to the future.  <a href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e">More...</a><br /></td></tr>
 <tr class="separator:a2c29ecb80f38bac577e9ddcc8535918e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae25e87699d0b39d45b6b2cd3555dc7b5"><td class="memTemplParams" colspan="2"><a id="ae25e87699d0b39d45b6b2cd3555dc7b5" name="ae25e87699d0b39d45b6b2cd3555dc7b5"></a>
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callback&gt; </td></tr>
+<tr class="memitem:ae25e87699d0b39d45b6b2cd3555dc7b5"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>onFinally</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
+<tr class="memdesc:ae25e87699d0b39d45b6b2cd3555dc7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the callback to both onSuccess and onResult. <br /></td></tr>
+<tr class="separator:ae25e87699d0b39d45b6b2cd3555dc7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memTemplParams" colspan="2"><a id="a657b6d64c82ffd61689d5fc6f8d61ebe" name="a657b6d64c82ffd61689d5fc6f8d61ebe"></a>
 template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Callback&gt; </td></tr>
 <tr class="memitem:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>map</b> (Callback &amp;&amp;callback) -&gt; <a class="el" href="classAFuture.html">AFuture</a>&lt; decltype(callback(std::declval&lt; T &gt;()))&gt; const</td></tr>
-<tr class="memdesc:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps this <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> to another type of <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>. <br /></td></tr>
+<tr class="memdesc:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps this <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> to another type of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>. <br /></td></tr>
 <tr class="separator:a657b6d64c82ffd61689d5fc6f8d61ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classaui_1_1impl_1_1future_1_1Future"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classaui_1_1impl_1_1future_1_1Future')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classaui_1_1impl_1_1future_1_1Future.html">aui::impl::future::Future&lt; void &gt;</a></td></tr>
 <tr class="memitem:abfe5754a3209491e78c64461244b63fa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#abfe5754a3209491e78c64461244b63fa">Future</a> (TaskCallback task=nullptr)</td></tr>
@@ -214,35 +221,39 @@ const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="structaui_
 <tr class="memitem:af6f4c05c8a0a697d3e6af9608f10fe97 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="af6f4c05c8a0a697d3e6af9608f10fe97" name="af6f4c05c8a0a697d3e6af9608f10fe97"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportException</b> () const noexcept</td></tr>
 <tr class="separator:af6f4c05c8a0a697d3e6af9608f10fe97 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4d8f1ac30f0060c74eb5489cbd5209 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="add4d8f1ac30f0060c74eb5489cbd5209" name="add4d8f1ac30f0060c74eb5489cbd5209"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onSuccess</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
-<tr class="separator:add4d8f1ac30f0060c74eb5489cbd5209 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60d05818522d6c5cd9cc293d626d7252 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="a60d05818522d6c5cd9cc293d626d7252" name="a60d05818522d6c5cd9cc293d626d7252"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onError</b> (Callback &amp;&amp;callback) const noexcept</td></tr>
-<tr class="separator:a60d05818522d6c5cd9cc293d626d7252 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2022eb205dbe3b06ea11b71746963975 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="a2022eb205dbe3b06ea11b71746963975" name="a2022eb205dbe3b06ea11b71746963975"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onSuccess</b> (Callback &amp;&amp;callback) const</td></tr>
+<tr class="separator:a2022eb205dbe3b06ea11b71746963975 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad02521a9dfd35d505c6c9e9ccbe2208a inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="ad02521a9dfd35d505c6c9e9ccbe2208a" name="ad02521a9dfd35d505c6c9e9ccbe2208a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onError</b> (Callback &amp;&amp;callback) const</td></tr>
+<tr class="separator:ad02521a9dfd35d505c6c9e9ccbe2208a inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e51c2970177c73026597a889d09c363 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="a4e51c2970177c73026597a889d09c363" name="a4e51c2970177c73026597a889d09c363"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>onFinally</b> (Callback &amp;&amp;callback) const</td></tr>
+<tr class="memdesc:a4e51c2970177c73026597a889d09c363 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the callback to both onSuccess and onResult. <br /></td></tr>
+<tr class="separator:a4e51c2970177c73026597a889d09c363 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86f6a2302691921a1848b44813710a41 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a86f6a2302691921a1848b44813710a41">cancel</a> () const noexcept</td></tr>
-<tr class="memdesc:a86f6a2302691921a1848b44813710a41 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>'s task.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a86f6a2302691921a1848b44813710a41">More...</a><br /></td></tr>
+<tr class="memdesc:a86f6a2302691921a1848b44813710a41 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a86f6a2302691921a1848b44813710a41">More...</a><br /></td></tr>
 <tr class="separator:a86f6a2302691921a1848b44813710a41 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1149b67d0893a61eb1a644b7ec290a1e inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a id="a1149b67d0893a61eb1a644b7ec290a1e" name="a1149b67d0893a61eb1a644b7ec290a1e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportInterrupted</b> () const</td></tr>
 <tr class="separator:a1149b67d0893a61eb1a644b7ec290a1e inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c33fde86e1a2665089e15bcb6f37e9 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9">wait</a> (AFutureWait flags=AFutureWait::DEFAULT) const noexcept</td></tr>
-<tr class="memdesc:a33c33fde86e1a2665089e15bcb6f37e9 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9">More...</a><br /></td></tr>
+<tr class="memdesc:a33c33fde86e1a2665089e15bcb6f37e9 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleeps if the supplyValue is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9">More...</a><br /></td></tr>
 <tr class="separator:a33c33fde86e1a2665089e15bcb6f37e9 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99fbb4b588e6504a9da1a9186e137ae inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaui_1_1impl_1_1future_1_1FutureReturnType.html">FutureReturnType</a>&lt; void &gt;::<a class="el" href="structViewActionType.html">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#ac99fbb4b588e6504a9da1a9186e137ae">get</a> (AFutureWait flags=AFutureWait::DEFAULT) const</td></tr>
-<tr class="memdesc:ac99fbb4b588e6504a9da1a9186e137ae inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#ac99fbb4b588e6504a9da1a9186e137ae">More...</a><br /></td></tr>
+<tr class="memdesc:ac99fbb4b588e6504a9da1a9186e137ae inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#ac99fbb4b588e6504a9da1a9186e137ae">More...</a><br /></td></tr>
 <tr class="separator:ac99fbb4b588e6504a9da1a9186e137ae inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb26a46cb0171ac3d3210ffe6eca1f5 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaui_1_1impl_1_1future_1_1FutureReturnType.html">FutureReturnType</a>&lt; void &gt;::<a class="el" href="structViewActionType.html">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5">operator*</a> () const</td></tr>
 <tr class="memdesc:aecb26a46cb0171ac3d3210ffe6eca1f5 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the task result from the another thread. Sleeps if the task result is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5">More...</a><br /></td></tr>
 <tr class="separator:aecb26a46cb0171ac3d3210ffe6eca1f5 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structaui_1_1impl_1_1future_1_1FutureReturnType.html">FutureReturnType</a>&lt; void &gt;::<a class="el" href="structViewActionType.html">type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa">operator*</a> ()</td></tr>
-<tr class="memdesc:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa">More...</a><br /></td></tr>
+<tr class="memdesc:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa">More...</a><br /></td></tr>
 <tr class="separator:a4774b655e122ffe6ee93f60d0f5632aa inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e9a0f2c65b1e36c3ccd5ff59a40910 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a57e9a0f2c65b1e36c3ccd5ff59a40910">operator-&gt;</a> () const</td></tr>
-<tr class="memdesc:a57e9a0f2c65b1e36c3ccd5ff59a40910 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a57e9a0f2c65b1e36c3ccd5ff59a40910">More...</a><br /></td></tr>
+<tr class="memdesc:a57e9a0f2c65b1e36c3ccd5ff59a40910 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a57e9a0f2c65b1e36c3ccd5ff59a40910">More...</a><br /></td></tr>
 <tr class="separator:a57e9a0f2c65b1e36c3ccd5ff59a40910 inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5620526486a642b7c5b39b9f56e08ddb inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memItemLeft" align="right" valign="top">void const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1impl_1_1future_1_1Future.html#a5620526486a642b7c5b39b9f56e08ddb">operator-&gt;</a> ()</td></tr>
-<tr class="memdesc:a5620526486a642b7c5b39b9f56e08ddb inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyResult from the another thread. Sleeps if the supplyResult is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a5620526486a642b7c5b39b9f56e08ddb">More...</a><br /></td></tr>
+<tr class="memdesc:a5620526486a642b7c5b39b9f56e08ddb inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available.  <a href="classaui_1_1impl_1_1future_1_1Future.html#a5620526486a642b7c5b39b9f56e08ddb">More...</a><br /></td></tr>
 <tr class="separator:a5620526486a642b7c5b39b9f56e08ddb inherit pub_methods_classaui_1_1impl_1_1future_1_1Future"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -287,8 +298,8 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 
 <p>Add onError callback to the future. </p>
 <p >The callback will be called on the worker's thread when the async task is returned a result.</p>
-<p >onError does not expand <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
-<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
+<p >onError does not expand <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
+<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
 <div class="line">private:</div>
 <div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
 <div class="line">...</div>
@@ -329,8 +340,8 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 
 <p>Add onSuccess callback to the future. </p>
 <p >The callback will be called on the worker's thread when the async task is returned a result.</p>
-<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
-<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
+<p >onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
+<dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
 <div class="line">private:</div>
 <div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
 <div class="line">...</div>
@@ -340,8 +351,8 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 
 </div>
 </div>
-<a id="a5ee665a2a1d9b02010a9cd19de7bd836" name="a5ee665a2a1d9b02010a9cd19de7bd836"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ee665a2a1d9b02010a9cd19de7bd836">&#9670;&nbsp;</a></span>supplyResult()</h2>
+<a id="aa640a25cdc678b93f8d764a83013841f" name="aa640a25cdc678b93f8d764a83013841f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa640a25cdc678b93f8d764a83013841f">&#9670;&nbsp;</a></span>supplyValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +363,7 @@ template&lt;typename T  = void&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classAFuture.html">AFuture</a>&lt; T &gt;::supplyResult </td>
+          <td class="memname">void <a class="el" href="classAFuture.html">AFuture</a>&lt; T &gt;::supplyValue </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
@@ -366,14 +377,14 @@ template&lt;typename T  = void&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Pushes the result to <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>. </p>
+<p>Pushes the result to <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">v</td><td>value</td></tr>
   </table>
   </dd>
 </dl>
-<p>After <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> grabbed the value, supplyResult calls onSuccess listeners with the new value. </p>
+<p>After <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> grabbed the value, supplyValue calls onSuccess listeners with the new value. </p>
 
 </div>
 </div>
@@ -387,7 +398,7 @@ Inheritance diagram for AFuture&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAFuture__inherit__graph.png" border="0" usemap="#aAFuture_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAFuture_3_01T_01_4_inherit__map" id="aAFuture_3_01T_01_4_inherit__map">
-<area shape="rect" title="Represents a value that is not currently available." alt="" coords="31,95,130,121"/>
+<area shape="rect" title="Represents a value that will be available at some point in the future." alt="" coords="31,95,130,121"/>
 <area shape="rect" href="classaui_1_1impl_1_1future_1_1Future.html" title=" " alt="" coords="5,5,156,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -396,7 +407,7 @@ Collaboration diagram for AFuture&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAFuture__coll__graph.png" border="0" usemap="#aAFuture_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aAFuture_3_01T_01_4_coll__map" id="aAFuture_3_01T_01_4_coll__map">
-<area shape="rect" title="Represents a value that is not currently available." alt="" coords="31,95,130,121"/>
+<area shape="rect" title="Represents a value that will be available at some point in the future." alt="" coords="31,95,130,121"/>
 <area shape="rect" href="classaui_1_1impl_1_1future_1_1Future.html" title=" " alt="" coords="5,5,156,47"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>

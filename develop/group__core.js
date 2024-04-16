@@ -220,7 +220,7 @@ var group__core =
       [ "makeFuture", "classAComplexFutureOperation.html#a83361abec41b8c8ebabe7e0fb658ac30", null ],
       [ "operator<<", "classAComplexFutureOperation.html#a0fbb6d1119f80d2d41375b399ec024fb", null ],
       [ "supplyException", "classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df", null ],
-      [ "supplyResult", "classAComplexFutureOperation.html#af5030b0d9d649b90ebb6cce463cc07d4", null ]
+      [ "supplyValue", "classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02", null ]
     ] ],
     [ "AConditionVariable", "classAConditionVariable.html", [
       [ "notify_all", "classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303", null ],
@@ -243,9 +243,10 @@ var group__core =
     [ "AFuture< T >", "classAFuture.html", [
       [ "map", "classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe", null ],
       [ "onError", "classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e", null ],
+      [ "onFinally", "classAFuture.html#ae25e87699d0b39d45b6b2cd3555dc7b5", null ],
       [ "onSuccess", "classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b", null ],
       [ "supplyException", "classAFuture.html#afb90c81c9ded0417533b721c34d3a139", null ],
-      [ "supplyResult", "classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836", null ]
+      [ "supplyValue", "classAFuture.html#aa640a25cdc678b93f8d764a83013841f", null ]
     ] ],
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [

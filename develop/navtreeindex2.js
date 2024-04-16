@@ -1,12 +1,14 @@
 var NAVTREEINDEX2 =
 {
+"classAPerformanceSection.html":[3,0,1,33],
 "classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,1,33,1],
+"classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,2,1,1],
 "classAPipe.html":[3,0,1,30],
 "classAPipe.html":[3,0,1,2,9],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,2,9,1],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,30,1],
-"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,30,0],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,30,0],
 "classAPlaceholderAnimator.html":[0,2,206],
 "classAPlaceholderAnimator_1_1ICustomWidth.html":[0,2,206,0],
 "classAPointerIndex.html":[3,0,9,4],
@@ -103,10 +105,10 @@ var NAVTREEINDEX2 =
 "classASet.html#abfe9f1127b1811d332d6032d57e59544":[3,0,1,17,0],
 "classASharedRaiiHelper.html":[3,0,1,53],
 "classAShortcut.html":[0,2,262],
-"classASignal.html":[3,0,1,18],
 "classASignal.html":[3,0,1,0,1],
-"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[3,0,1,18,1],
+"classASignal.html":[3,0,1,18],
 "classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[3,0,1,0,1,1],
+"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[3,0,1,18,1],
 "classASizeAnimator.html":[0,2,264],
 "classASizeAnimator.html#a37484d5126c917ab5a8d9ba01e12ae65":[0,2,264,0],
 "classASlider.html":[3,0,9,2,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "classATcpServerSocket.html":[3,0,7,2],
 "classATcpServerSocket.html#a4608ba25273731caa5b990c80911bed6":[3,0,7,2,0],
 "classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7":[3,0,7,2,1],
-"classATcpSocket.html":[3,0,7,3],
-"classATcpSocket.html#a12c9f8ebd57f0189bd2bda6103d1718e":[3,0,7,3,2],
-"classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0":[3,0,7,3,0]
+"classATcpSocket.html":[3,0,7,3]
 };

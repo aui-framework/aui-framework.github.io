@@ -111,7 +111,7 @@ var searchData=
   ['sub_108',['sub',['../structtuples_1_1detail_1_1functor_1_1sub.html',1,'tuples::detail::functor']]],
   ['success_109',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]],
   ['supplyexception_110',['supplyException',['../classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df',1,'AComplexFutureOperation::supplyException()'],['../classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2',1,'AFuture&lt; void &gt;::supplyException()'],['../classAFuture.html#afb90c81c9ded0417533b721c34d3a139',1,'AFuture::supplyException()']]],
-  ['supplyresult_111',['supplyResult',['../classAFuture_3_01void_01_4.html#aebac718b4b2e26803e67f3a8eedd0d06',1,'AFuture&lt; void &gt;::supplyResult()'],['../classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836',1,'AFuture::supplyResult()'],['../classAComplexFutureOperation.html#af5030b0d9d649b90ebb6cce463cc07d4',1,'AComplexFutureOperation::supplyResult()']]],
+  ['supplyvalue_111',['supplyValue',['../classAFuture_3_01void_01_4.html#aee857ead4b1496f905155e0b09fb091c',1,'AFuture&lt; void &gt;::supplyValue()'],['../classAFuture.html#aa640a25cdc678b93f8d764a83013841f',1,'AFuture::supplyValue()'],['../classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02',1,'AComplexFutureOperation::supplyValue()']]],
   ['symbol_112',['Symbol',['../structATextLayoutHelper_1_1Symbol.html',1,'ATextLayoutHelper']]],
   ['system_113',['System',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor']]],
   ['systemslashdirection_114',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]

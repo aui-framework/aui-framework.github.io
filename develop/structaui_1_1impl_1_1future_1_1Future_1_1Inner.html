@@ -214,7 +214,7 @@ template&lt;typename Value  = void&gt; </div>
   </table>
   </dd>
 </dl>
-<p>lock is expected to be locked. Under the lock, callback is moved to local stack, lock is unlocked, and only then callback is called. This helps to avoid deadlocks (i.e. retreiving <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a>'s value in onSuccess callback). lock is not locked again. If <a class="el" href="classAFuture.html" title="Represents a value that is not currently available.">AFuture</a> does not have value or onSuccess callback, the lock remains untouched. </p>
+<p>lock is expected to be locked. Under the lock, callback is moved to local stack, lock is unlocked, and only then callback is called. This helps to avoid deadlocks (i.e. retreiving <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s value in onSuccess callback). lock is not locked again. If <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> does not have value or onSuccess callback, the lock remains untouched. </p>
 
 </div>
 </div>
