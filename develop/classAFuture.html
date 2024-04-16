@@ -140,7 +140,7 @@ class AFuture&lt; T &gt;</div><p >Represents a value that will be available at s
 <div class="line">});</div>
 <div class="line">t.start();</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
-<div class="ttc" id="aclassAFuture_html_aa640a25cdc678b93f8d764a83013841f"><div class="ttname"><a href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">AFuture::supplyValue</a></div><div class="ttdeci">void supplyValue(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:644</div></div>
+<div class="ttc" id="aclassAFuture_html_aa640a25cdc678b93f8d764a83013841f"><div class="ttname"><a href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">AFuture::supplyValue</a></div><div class="ttdeci">void supplyValue(T v) const noexcept</div><div class="ttdoc">Pushes the result to AFuture.</div><div class="ttdef"><b>Definition:</b> AFuture.h:650</div></div>
 <div class="ttc" id="aclassAThread_html"><div class="ttname"><a href="classAThread.html">AThread</a></div><div class="ttdoc">Represents a user-defined thread.</div><div class="ttdef"><b>Definition:</b> AThread.h:190</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Be aware of exceptions or control flow keywords! If you don't pass the result, <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> will always stay unavailable, thus all waiting code will wait indefinitely long, leading to resource leaks (CPU and memory). Consider using one of suggested methods of usage instead.</dd></dl>
 <p><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> provides a set of functions for both "value emitting" side: <a class="el" href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f" title="Pushes the result to AFuture.">supplyValue()</a>, <a class="el" href="classAFuture.html#afb90c81c9ded0417533b721c34d3a139" title="Stores an exception from std::current_exception to the future.">supplyException()</a>, and "value
@@ -175,6 +175,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e4fa3f5ff5637667b004f8422c53670"><td class="memItemLeft" align="right" valign="top"><a id="a6e4fa3f5ff5637667b004f8422c53670" name="a6e4fa3f5ff5637667b004f8422c53670"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (Task task=nullptr) noexcept</td></tr>
 <tr class="separator:a6e4fa3f5ff5637667b004f8422c53670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdbddc2658bf153e970e32800e5537a6"><td class="memItemLeft" align="right" valign="top"><a id="afdbddc2658bf153e970e32800e5537a6" name="afdbddc2658bf153e970e32800e5537a6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (const <a class="el" href="classAFuture.html">AFuture</a> &amp;)=default</td></tr>
+<tr class="separator:afdbddc2658bf153e970e32800e5537a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2df3be90302d0e01338399ad60563e2"><td class="memItemLeft" align="right" valign="top"><a id="af2df3be90302d0e01338399ad60563e2" name="af2df3be90302d0e01338399ad60563e2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AFuture</b> (<a class="el" href="classAFuture.html">AFuture</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:af2df3be90302d0e01338399ad60563e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa366423efb0443c3eafe1a030c8008c4"><td class="memItemLeft" align="right" valign="top"><a id="aa366423efb0443c3eafe1a030c8008c4" name="aa366423efb0443c3eafe1a030c8008c4"></a>
+<a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classAFuture.html">AFuture</a> &amp;)=default</td></tr>
+<tr class="separator:aa366423efb0443c3eafe1a030c8008c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab517db9b77252b9893f9eda16d98b253"><td class="memItemLeft" align="right" valign="top"><a id="ab517db9b77252b9893f9eda16d98b253" name="ab517db9b77252b9893f9eda16d98b253"></a>
+<a class="el" href="classAFuture.html">AFuture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classAFuture.html">AFuture</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:ab517db9b77252b9893f9eda16d98b253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa640a25cdc678b93f8d764a83013841f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">supplyValue</a> (T v) const noexcept</td></tr>
 <tr class="memdesc:aa640a25cdc678b93f8d764a83013841f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the result to <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>.  <a href="classAFuture.html#aa640a25cdc678b93f8d764a83013841f">More...</a><br /></td></tr>
 <tr class="separator:aa640a25cdc678b93f8d764a83013841f"><td class="memSeparator" colspan="2">&#160;</td></tr>

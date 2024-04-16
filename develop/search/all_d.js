@@ -6,7 +6,7 @@ var searchData=
   ['make_5funique_5fwith_5fdeleter_3',['make_unique_with_deleter',['../structaui_1_1ptr.html#a82476ef5b8d0e47b520385d5727c9923',1,'aui::ptr']]],
   ['makedir_4',['makeDir',['../classAPath.html#a3086272262834a19139e1324aed5285b',1,'APath']]],
   ['makedirs_5',['makeDirs',['../classAPath.html#a248a0d9584a2b112f2be2a194c9d1a88',1,'APath']]],
-  ['makefuture_6',['makeFuture',['../classAComplexFutureOperation.html#a83361abec41b8c8ebabe7e0fb658ac30',1,'AComplexFutureOperation']]],
+  ['makefuture_6',['makeFuture',['../classAComplexFutureOperation.html#a8d50985e58d41071f6a24fb35403bb75',1,'AComplexFutureOperation']]],
   ['makesignal_7',['makeSignal',['../classACutoffSignal.html#a846f87917ee35414834b624c281ffd06',1,'ACutoffSignal']]],
   ['manage_8',['manage',['../structaui_1_1ptr.html#ad6e812de50ef39005c493b5b155fa6f6',1,'aui::ptr::manage(T *raw, Deleter deleter)'],['../structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776',1,'aui::ptr::manage(T *raw)']]],
   ['manager_9',['Manager',['../classManager.html',1,'']]],
