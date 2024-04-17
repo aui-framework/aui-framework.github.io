@@ -94,6 +94,12 @@ var hierarchy =
     ] ],
     [ "ADataBindingLinker< Model, Klass, ModelField, Getter, Setter >", "classADataBindingLinker.html", null ],
     [ "ADataBindingLinker2< Model, Data >", "classADataBindingLinker2.html", null ],
+    [ "aui::impl::ADataBindingRangedDoubleNumberPicker< UnderlyingType, min, max >", "structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html", [
+      [ "ADataBindingDefault< ADoubleNumberPicker, aui::ranged_number< UnderlyingType, min, max > >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html", null ]
+    ] ],
+    [ "aui::impl::ADataBindingRangedNumberPicker< UnderlyingType, min, max >", "structaui_1_1impl_1_1ADataBindingRangedNumberPicker.html", [
+      [ "ADataBindingDefault< ANumberPicker, aui::ranged_number< UnderlyingType, min, max > >", "structADataBindingDefault_3_01ANumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html", null ]
+    ] ],
     [ "tuples::detail::functor::add", "structtuples_1_1detail_1_1functor_1_1add.html", null ],
     [ "ADragNDrop", "classADragNDrop.html", null ],
     [ "ADynamicVector< StoredType >", "classADynamicVector.html", null ],
