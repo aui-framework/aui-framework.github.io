@@ -868,7 +868,6 @@ var hierarchy =
         [ "AWebsocket", "classAWebsocket.html", null ],
         [ "PipeOutputStream", "classPipeOutputStream.html", null ]
       ] ],
-      [ "IcmpImpl", "classIcmpImpl.html", null ],
       [ "OpenGLRenderer::FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
       [ "Pipe", "classPipe.html", null ],
       [ "SoftwareRenderingContext", "classSoftwareRenderingContext.html", null ],

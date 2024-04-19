@@ -1,6 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"structaui_1_1dbus_1_1converter_3_01bool_01_4.html":[0,2,2,2,5],
 "structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html":[0,2,2,2,6],
 "structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html":[0,0,5,3,6],
 "structaui_1_1dbus_1_1converter_3_01const_01char_01_5_01_4.html":[0,2,2,2,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX8 =
 "structaui_1_1valid_1_1validator.html":[0,0,5,12,4],
 "structaui_1_1win32_1_1Bitmap.html":[0,0,5,13,1],
 "structaui_1_1win32_1_1Bitmap.html":[0,2,2,11,1],
-"structaui_1_1win32_1_1DeviceContext.html":[0,2,2,11,2]
+"structaui_1_1win32_1_1DeviceContext.html":[0,2,2,11,2],
+"structaui_1_1win32_1_1DeviceContext.html":[0,0,5,13,2]
 };

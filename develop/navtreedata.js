@@ -74,11 +74,11 @@ var NAVTREEINDEX =
 "classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5",
 "classATabButtonView.html",
 "classAWin32Event.html#a76dedcdb3fae278390ba7fa17e893f77",
-"classUIPointerBehaviour.html",
-"group__crypt.html#ga1f2f918870c930b7b3ac48302beb57cc",
-"structATexturedBrush.html",
-"structaui_1_1dbus_1_1converter_3_01bool_01_4.html",
-"structaui_1_1win32_1_1DeviceContext.html"
+"classUIRenderOptimizationTest.html",
+"group__curl.html",
+"structATexturedBrush.html#a3c7946b2d5bf403f1b20dead1df337fc",
+"structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html",
+"structaui_1_1win32_1_1detail_1_1Win32Object.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

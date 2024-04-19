@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"group__crypt.html#ga1f2f918870c930b7b3ac48302beb57cc":[3,0,4,4],
 "group__curl.html":[3,0,5],
 "group__io.html":[3,0,1,2],
 "group__io.html#ga87f7361faaeb6e043938f79698edf5d0":[3,0,1,2,17],
@@ -93,9 +92,9 @@ var NAVTREEINDEX6 =
 "interfaceAUIView.html":[0,2,316],
 "interfaceAUIViewController.html":[0,2,317],
 "interfaceAppDelegate.html":[0,2,214],
-"interfaceMainView.html":[0,2,392],
-"interfaceSceneDelegate.html":[0,2,413],
-"interfaceWindowDelegate.html":[0,2,477],
+"interfaceMainView.html":[0,2,391],
+"interfaceSceneDelegate.html":[0,2,412],
+"interfaceWindowDelegate.html":[0,2,476],
 "md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_command_line_arguments.html":[2,1],
 "md_docs_AUI_configure_flags.html":[2,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "structAStringFormatHelper.html":[0,2,288],
 "structAStringLiteral.html":[3,0,1,54],
 "structATextLayoutHelper_1_1Symbol.html":[0,2,303,0],
-"structAText_1_1ParsedFlags.html":[3,0,9,2,29,0]
+"structAText_1_1ParsedFlags.html":[3,0,9,2,29,0],
+"structATexturedBrush.html":[0,2,304]
 };

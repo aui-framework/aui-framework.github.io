@@ -755,7 +755,6 @@ var annotated =
     [ "FreeType", "classFreeType.html", null ],
     [ "GLContext", "classGLContext.html", null ],
     [ "IBackgroundEffect", "classIBackgroundEffect.html", null ],
-    [ "IcmpImpl", "classIcmpImpl.html", null ],
     [ "IDrawable", "classIDrawable.html", "classIDrawable" ],
     [ "IEventLoop", "classIEventLoop.html", "classIEventLoop" ],
     [ "IInputStream", "classIInputStream.html", "classIInputStream" ],
