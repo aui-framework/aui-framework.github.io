@@ -53,7 +53,7 @@ var searchData=
   ['stealout_50',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['string_51',['string',['../classARender.html#a2792d8b67635d6e23b7708c20afa6f2f',1,'ARender']]],
   ['stripbeforefunctioncall_52',['stripBeforeFunctionCall',['../classAStacktrace.html#a433c70cff737bf88f1ef839cde918082',1,'AStacktrace']]],
-  ['supplyexception_53',['supplyException',['../classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df',1,'AComplexFutureOperation::supplyException()'],['../classAFuture.html#afb90c81c9ded0417533b721c34d3a139',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#ad8f671c9cd3307d2e83b3f199cb0a4d2',1,'AFuture&lt; void &gt;::supplyException()']]],
+  ['supplyexception_53',['supplyException',['../classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df',1,'AComplexFutureOperation::supplyException()'],['../classAFuture.html#ad63fde0831188f9a75a7b0e10bd2a50d',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#a2f550fb2f9abba74e364cb54b2f9a914',1,'AFuture&lt; void &gt;::supplyException()']]],
   ['supplyvalue_54',['supplyValue',['../classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02',1,'AComplexFutureOperation::supplyValue()'],['../classAFuture.html#aa640a25cdc678b93f8d764a83013841f',1,'AFuture::supplyValue()'],['../classAFuture_3_01void_01_4.html#aee857ead4b1496f905155e0b09fb091c',1,'AFuture&lt; void &gt;::supplyValue()']]],
   ['systemslashdirection_55',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
