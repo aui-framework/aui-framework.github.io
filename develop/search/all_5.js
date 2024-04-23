@@ -7,7 +7,7 @@ var searchData=
   ['empty_5ftuple_4',['empty_tuple',['../structaui_1_1impl_1_1json_1_1empty__tuple.html',1,'aui::impl::json']]],
   ['enablecachingfortextlayouthelper_5',['enableCachingForTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#a66f353bfd4c56f9092cb13b29316bdf1',1,'IRenderer::IMultiStringCanvas']]],
   ['end_6',['END',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22ab1a326c06d88bf042f73d70f50197905',1,'AFileInputStream']]],
-  ['enqueue_7',['enqueue',['../classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf',1,'AAbstractThread']]],
+  ['enqueue_7',['enqueue',['../classAMessageQueue.html#a6a327dce95efc4b7bb0add3b20d4e23a',1,'AMessageQueue::enqueue()'],['../classAAbstractThread.html#a3e018eb931d46f2353fcc5929b9b9a4a',1,'AAbstractThread::enqueue()']]],
   ['ensurereserved_8',['ensureReserved',['../classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae',1,'AByteBuffer']]],
   ['enterchar_9',['enterChar',['../classAAbstractTypeableView.html#a49de5a96d5a4cb3215d804e38c5fbf42',1,'AAbstractTypeableView']]],
   ['enterevent_10',['EnterEvent',['../structADragNDrop_1_1EnterEvent.html',1,'ADragNDrop']]],

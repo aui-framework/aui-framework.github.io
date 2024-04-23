@@ -574,6 +574,7 @@ var annotated =
     [ "AMenu", "classAMenu.html", null ],
     [ "AMenuContainer", "classAMenuContainer.html", null ],
     [ "AMenuItem", "structAMenuItem.html", null ],
+    [ "AMessageQueue", "classAMessageQueue.html", "classAMessageQueue" ],
     [ "AMetric", "classAMetric.html", "classAMetric" ],
     [ "AMigrationManager", "classAMigrationManager.html", null ],
     [ "AMimedData", "classAMimedData.html", "classAMimedData" ],

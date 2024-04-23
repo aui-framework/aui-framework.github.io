@@ -136,10 +136,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>join</b> ()</td></tr>
 <tr class="inherit_header pub_methods_classAAbstractThread"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAAbstractThread')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAAbstractThread.html">AAbstractThread</a></td></tr>
 <tr class="memitem:aa0086fd4598259bf171ce908ee21c818 inherit pub_methods_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818">getId</a> () const</td></tr>
 <tr class="separator:aa0086fd4598259bf171ce908ee21c818 inherit pub_methods_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adafbe663a50399d299d5ba7d5f5d95bf inherit pub_methods_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a id="adafbe663a50399d299d5ba7d5f5d95bf" name="adafbe663a50399d299d5ba7d5f5d95bf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (std::function&lt; void()&gt; f)</td></tr>
-<tr class="memdesc:adafbe663a50399d299d5ba7d5f5d95bf inherit pub_methods_classAAbstractThread"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers task for execution (message) to this thread's event queue. Messages are processed by framework itself using <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a>. This behaviour may be overwritten using the <code><a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> </code> function. <br /></td></tr>
-<tr class="separator:adafbe663a50399d299d5ba7d5f5d95bf inherit pub_methods_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e018eb931d46f2353fcc5929b9b9a4a inherit pub_methods_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a id="a3e018eb931d46f2353fcc5929b9b9a4a" name="a3e018eb931d46f2353fcc5929b9b9a4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (AMessageQueue::Message f)</td></tr>
+<tr class="memdesc:a3e018eb931d46f2353fcc5929b9b9a4a inherit pub_methods_classAAbstractThread"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers task for execution (message) to this thread's event queue. Messages are processed by framework itself using <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a>. This behaviour may be overwritten using the <code><a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> </code> function. <br /></td></tr>
+<tr class="separator:a3e018eb931d46f2353fcc5929b9b9a4a inherit pub_methods_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a987230f54ff5e4e61ce86538e96e4d inherit pub_methods_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIEventLoop.html">IEventLoop</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">getCurrentEventLoop</a> () const</td></tr>
 <tr class="memdesc:a8a987230f54ff5e4e61ce86538e96e4d inherit pub_methods_classAAbstractThread"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current event loop for this thread.  <a href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">More...</a><br /></td></tr>
 <tr class="separator:a8a987230f54ff5e4e61ce86538e96e4d inherit pub_methods_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,14 +265,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a cla
 <tr class="memitem:a196a9e4cc6b527bb66b295046dc6c4ec inherit pro_attribs_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a id="a196a9e4cc6b527bb66b295046dc6c4ec" name="a196a9e4cc6b527bb66b295046dc6c4ec"></a>
 <a class="el" href="classAString.html">AString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mThreadName</b></td></tr>
 <tr class="separator:a196a9e4cc6b527bb66b295046dc6c4ec inherit pro_attribs_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67cc196524099cb566d4b74874ee6c20 inherit pro_attribs_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a id="a67cc196524099cb566d4b74874ee6c20" name="a67cc196524099cb566d4b74874ee6c20"></a>
-<a class="el" href="structAMutex.html">AMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mQueueLock</b></td></tr>
-<tr class="memdesc:a67cc196524099cb566d4b74874ee6c20 inherit pro_attribs_classAAbstractThread"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAAbstractThread_1_1Message.html">Message</a> queue mutex. <br /></td></tr>
-<tr class="separator:a67cc196524099cb566d4b74874ee6c20 inherit pro_attribs_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d8618d61be04cf3afc68f0023023ee inherit pro_attribs_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a id="a35d8618d61be04cf3afc68f0023023ee" name="a35d8618d61be04cf3afc68f0023023ee"></a>
-<a class="el" href="classADeque.html">ADeque</a>&lt; <a class="el" href="structAAbstractThread_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mMessageQueue</b></td></tr>
-<tr class="memdesc:a35d8618d61be04cf3afc68f0023023ee inherit pro_attribs_classAAbstractThread"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAAbstractThread_1_1Message.html">Message</a> queue. <br /></td></tr>
-<tr class="separator:a35d8618d61be04cf3afc68f0023023ee inherit pro_attribs_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da936ab489cde9a1614906ce70c77fb inherit pro_attribs_classAAbstractThread"><td class="memItemLeft" align="right" valign="top"><a id="a8da936ab489cde9a1614906ce70c77fb" name="a8da936ab489cde9a1614906ce70c77fb"></a>
+<a class="el" href="classAMessageQueue.html">AMessageQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mMessageQueue</b></td></tr>
+<tr class="separator:a8da936ab489cde9a1614906ce70c77fb inherit pro_attribs_classAAbstractThread"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1d09d7332e61f6ef39e93d4a1fdc2574" name="a1d09d7332e61f6ef39e93d4a1fdc2574"></a>
@@ -507,17 +502,18 @@ Collaboration diagram for AThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAThread__coll__graph.png" border="0" usemap="#aAThread_coll__map" alt="Collaboration graph"/></div>
 <map name="aAThread_coll__map" id="aAThread_coll__map">
-<area shape="rect" title="Represents a user&#45;defined thread." alt="" coords="808,141,879,168"/>
-<area shape="rect" href="classAAbstractThread.html" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="639,92,759,119"/>
+<area shape="rect" title="Represents a user&#45;defined thread." alt="" coords="824,159,895,185"/>
+<area shape="rect" href="classAAbstractThread.html" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="655,107,775,133"/>
 <area shape="rect" href="classAString.html" title="Represents a wide char string." alt="" coords="387,5,453,32"/>
 <area shape="rect" title=" " alt="" coords="169,5,257,32"/>
-<area shape="rect" href="structAMutex.html" title=" " alt="" coords="387,64,453,91"/>
-<area shape="rect" href="structaui_1_1detail_1_1MutexExtras.html" title=" " alt="" coords="136,57,289,98"/>
-<area shape="rect" title=" " alt="" coords="5,64,87,91"/>
-<area shape="rect" href="classAConditionVariable.html" title="Represents a condition variable." alt="" coords="354,115,486,141"/>
-<area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="664,165,733,192"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="361,165,479,192"/>
-<area shape="rect" title=" " alt="" coords="339,217,501,258"/>
+<area shape="rect" href="classAMessageQueue.html" title="Universal thread&#45;safe message (callback) queue implementation." alt="" coords="359,56,481,83"/>
+<area shape="rect" href="structAMutex.html" title=" " alt="" coords="387,107,453,133"/>
+<area shape="rect" href="structaui_1_1detail_1_1MutexExtras.html" title=" " alt="" coords="136,99,289,141"/>
+<area shape="rect" title=" " alt="" coords="5,107,87,133"/>
+<area shape="rect" href="classAConditionVariable.html" title="Represents a condition variable." alt="" coords="354,157,486,184"/>
+<area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="680,208,749,235"/>
+<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="361,208,479,235"/>
+<area shape="rect" title=" " alt="" coords="339,259,501,301"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

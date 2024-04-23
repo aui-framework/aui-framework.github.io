@@ -2,7 +2,7 @@ var searchData=
 [
   ['empty_0',['empty',['../classAByteBuffer.html#adc0e89e7599e61b9bb4bc7ddb1e61ea7',1,'AByteBuffer']]],
   ['enablecachingfortextlayouthelper_1',['enableCachingForTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#a66f353bfd4c56f9092cb13b29316bdf1',1,'IRenderer::IMultiStringCanvas']]],
-  ['enqueue_2',['enqueue',['../classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf',1,'AAbstractThread']]],
+  ['enqueue_2',['enqueue',['../classAAbstractThread.html#a3e018eb931d46f2353fcc5929b9b9a4a',1,'AAbstractThread::enqueue()'],['../classAMessageQueue.html#a6a327dce95efc4b7bb0add3b20d4e23a',1,'AMessageQueue::enqueue()']]],
   ['ensurereserved_3',['ensureReserved',['../classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae',1,'AByteBuffer']]],
   ['enterchar_4',['enterChar',['../classAAbstractTypeableView.html#a49de5a96d5a4cb3215d804e38c5fbf42',1,'AAbstractTypeableView']]],
   ['env_5',['env',['../group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46',1,'aui::jni']]],

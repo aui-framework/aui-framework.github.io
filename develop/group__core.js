@@ -250,9 +250,8 @@ var group__core =
     ] ],
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
-      [ "Message", "structAAbstractThread_1_1Message.html", null ],
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],
-      [ "enqueue", "classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf", null ],
+      [ "enqueue", "classAAbstractThread.html#a3e018eb931d46f2353fcc5929b9b9a4a", null ],
       [ "getCurrentEventLoop", "classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d", null ],
       [ "getId", "classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818", null ],
       [ "interrupt", "classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43", null ],
@@ -261,9 +260,7 @@ var group__core =
       [ "operator<<", "classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c", null ],
       [ "resetInterruptFlag", "classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206", null ],
       [ "threadStacktrace", "classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d", null ],
-      [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ],
-      [ "mMessageQueue", "classAAbstractThread.html#a35d8618d61be04cf3afc68f0023023ee", null ],
-      [ "mQueueLock", "classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20", null ]
+      [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ]
     ] ],
     [ "AThread", "classAThread.html", [
       [ "Interrupted", "classAThread_1_1Interrupted.html", [
@@ -292,6 +289,10 @@ var group__core =
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
+    [ "AMessageQueue", "classAMessageQueue.html", [
+      [ "enqueue", "classAMessageQueue.html#a6a327dce95efc4b7bb0add3b20d4e23a", null ],
+      [ "processMessages", "classAMessageQueue.html#ab415def62bd70ecb804bc3aa1bea119f", null ]
+    ] ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
       [ "loop", "classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568", null ],
