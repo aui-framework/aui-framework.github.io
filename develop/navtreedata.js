@@ -70,15 +70,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classADeque.html#abfcf39b922cfefa8e8b26c48f6b3564a",
-"classAPath.html#ac6fe94d839c51484b6415feb8f1737c0",
-"classATabButtonRow.html",
-"classAWin32Event.html",
-"classUIPointerBehaviour.html",
-"group__crypt.html#ga1f2f918870c930b7b3ac48302beb57cc",
-"structATexturedBrush.html#a3c7946b2d5bf403f1b20dead1df337fc",
-"structaui_1_1dbus_1_1converter_3_01char_0fN_0e_4.html",
-"structaui_1_1win32_1_1detail_1_1Win32Object.html"
+"classADeque.html#a9746ac10b93ec75c6ab3cdafefbc5258",
+"classAPath.html#abb7e0d8f6c632d915f41a31a52036b00",
+"classAStylesheet.html",
+"classAWebsocket.html#aa2e066cfdfda0d9eeffbc403f45b62f3",
+"classUIMultitouchTest_1_1TestWindow.html",
+"group__crypt.html",
+"structATexturedBrush.html",
+"structaui_1_1dbus_1_1converter_3_01bool_01_4.html",
+"structaui_1_1win32_1_1DeviceContext.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

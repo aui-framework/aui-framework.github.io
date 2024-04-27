@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"structaui_1_1win32_1_1DeviceContext.html":[0,2,2,11,2],
 "structaui_1_1win32_1_1detail_1_1Win32Object.html":[0,0,5,13,0,0],
 "structaui_1_1win32_1_1detail_1_1Win32Object.html":[0,2,2,11,0,0],
 "structaui_1_1zip.html":[3,0,3,2],

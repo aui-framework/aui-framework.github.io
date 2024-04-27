@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classAWebsocket.html#aa2e066cfdfda0d9eeffbc403f45b62f3":[3,0,5,2,1],
 "classAWin32Event.html":[0,2,336],
 "classAWin32Event.html#a76dedcdb3fae278390ba7fa17e893f77":[0,2,336,0],
 "classAWin32EventWait.html":[0,2,337],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classUIKeyDownRecursive.html":[0,2,437],
 "classUIMatcher.html":[0,2,438],
 "classUIMatcher.html#a0936b37e3fc29a29a362897775cfb550":[0,2,438,0],
-"classUIMultitouchTest.html":[0,2,439],
-"classUIMultitouchTest_1_1TestWindow.html":[0,2,439,0]
+"classUIMultitouchTest.html":[0,2,439]
 };

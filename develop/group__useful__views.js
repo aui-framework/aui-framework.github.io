@@ -15,7 +15,8 @@ var group__useful__views =
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
       [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
       [ "typeableInsert", "classAAbstractTextField.html#a627a137628b73f9139838408234ff47c", null ],
-      [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ]
+      [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ],
+      [ "actionButtonPressed", "classAAbstractTextField.html#acefd4f090e6cfd879ad646a9b6311a29", null ]
     ] ],
     [ "AButton", "classAButton.html", [
       [ "consumesClick", "classAButton.html#ad80e94073674662d0ad29b3662f6025f", null ]
