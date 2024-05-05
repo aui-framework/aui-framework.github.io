@@ -662,6 +662,7 @@ var annotated =
     [ "ASolidBrush", "structASolidBrush.html", null ],
     [ "ASpacerExpanding", "classASpacerExpanding.html", "classASpacerExpanding" ],
     [ "ASpacerFixed", "classASpacerFixed.html", "classASpacerFixed" ],
+    [ "ASpinlockMutex", "classASpinlockMutex.html", "classASpinlockMutex" ],
     [ "ASpinner", "classASpinner.html", "classASpinner" ],
     [ "ASplitter", "classASplitter.html", "classASplitter" ],
     [ "ASplitterHelper", "classASplitterHelper.html", null ],

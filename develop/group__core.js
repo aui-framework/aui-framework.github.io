@@ -248,6 +248,9 @@ var group__core =
       [ "supplyException", "classAFuture.html#ad63fde0831188f9a75a7b0e10bd2a50d", null ],
       [ "supplyValue", "classAFuture.html#aa640a25cdc678b93f8d764a83013841f", null ]
     ] ],
+    [ "AMutex", "structAMutex.html", null ],
+    [ "ARecursiveMutex", "structARecursiveMutex.html", null ],
+    [ "ASharedMutex", "structASharedMutex.html", null ],
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],

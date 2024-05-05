@@ -188,6 +188,7 @@ var hierarchy =
     [ "AShortcut", "classAShortcut.html", null ],
     [ "ASmallVector< StoredType, StaticVectorSize, Allocator >", "classASmallVector.html", null ],
     [ "ASolidBrush", "structASolidBrush.html", null ],
+    [ "ASpinlockMutex", "classASpinlockMutex.html", null ],
     [ "ASplitterHelper", "classASplitterHelper.html", null ],
     [ "ASqlBlueprintColumn", "classASqlBlueprintColumn.html", null ],
     [ "ASqlBlueprintTable", "classASqlBlueprintTable.html", null ],
