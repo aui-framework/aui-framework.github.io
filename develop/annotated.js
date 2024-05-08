@@ -442,6 +442,7 @@ var annotated =
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
     [ "AColor", "classAColor.html", "classAColor" ],
+    [ "AColorHSV", "structAColorHSV.html", null ],
     [ "AComBase", "classAComBase.html", null ],
     [ "ACommandLineArgs", "classACommandLineArgs.html", "classACommandLineArgs" ],
     [ "AComplexFutureOperation", "classAComplexFutureOperation.html", "classAComplexFutureOperation" ],

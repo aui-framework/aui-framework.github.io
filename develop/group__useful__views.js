@@ -190,7 +190,7 @@ var group__useful__views =
       [ "getTotalFieldVertical", "classAView.html#a274972d0e96c9ad2779fe5dfdeb71727", null ],
       [ "getTotalOccupiedHeight", "classAView.html#acaef54d28990d25a3edf594e163c1a8b", null ],
       [ "getTotalOccupiedWidth", "classAView.html#a521f58942c69ff63566ada3e3d774f32", null ],
-      [ "getWindow", "classAView.html#a03245e11f856a8ece49da1d7032c0203", null ],
+      [ "getWindow", "classAView.html#ae881f45d02f968dd3584f267d6300521", null ],
       [ "handlesNonMouseNavigation", "classAView.html#a9c3deb7023947adc4c698540db4086c8", null ],
       [ "hasIndirectParent", "classAView.html#a37642918735ccb3939f63d85ff56310c", null ],
       [ "invalidateAllStyles", "classAView.html#ad461e812a51a1d556ec8219399e659c9", null ],

@@ -40,6 +40,7 @@ var hierarchy =
     [ "AClass< T >", "classAClass.html", null ],
     [ "ACleanup", "classACleanup.html", null ],
     [ "AClipboard", "classAClipboard.html", null ],
+    [ "AColorHSV", "structAColorHSV.html", null ],
     [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", null ],
     [ "AComPtr< T >", "classAComPtr.html", null ],
     [ "AConditionVariable", "classAConditionVariable.html", null ],

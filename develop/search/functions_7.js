@@ -45,6 +45,6 @@ var searchData=
   ['getviewat_42',['getViewAt',['../classAListViewContainer.html#a99cfac117a7ea1ffede2a0f22690e336',1,'AListViewContainer::getViewAt()'],['../classAViewContainer.html#aeb44d35f2a0eccc8fd1c6f9a7560f71f',1,'AViewContainer::getViewAt(glm::ivec2 pos, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE) const noexcept']]],
   ['getviewatrecursive_43',['getViewAtRecursive',['../classAViewContainer.html#a2e958ee61095b749fbcebfa262662bf7',1,'AViewContainer::getViewAtRecursive(glm::ivec2 pos, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE) const noexcept'],['../classAViewContainer.html#a1b19d35413be2a20884f2659d4db294d',1,'AViewContainer::getViewAtRecursive(glm::ivec2 pos, const Callback &amp;callback, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE)']]],
   ['getviewatrecursiveoftype_44',['getViewAtRecursiveOfType',['../classAViewContainer.html#a6785ea899fb389f3e3ae804aff46fbfb',1,'AViewContainer']]],
-  ['getwindow_45',['getWindow',['../classAView.html#a03245e11f856a8ece49da1d7032c0203',1,'AView']]],
+  ['getwindow_45',['getWindow',['../classAView.html#ae881f45d02f968dd3584f267d6300521',1,'AView']]],
   ['global_46',['global',['../classAThreadPool.html#a5ab99db5b16449e777bba101f46844af',1,'AThreadPool::global()'],['../classACurlMulti.html#a2f2680b1a852dc231c07d30f3f68a730',1,'ACurlMulti::global()']]]
 ];
