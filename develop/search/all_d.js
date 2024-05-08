@@ -10,7 +10,7 @@ var searchData=
   ['makesignal_7',['makeSignal',['../classACutoffSignal.html#a846f87917ee35414834b624c281ffd06',1,'ACutoffSignal']]],
   ['manage_8',['manage',['../structaui_1_1ptr.html#ad6e812de50ef39005c493b5b155fa6f6',1,'aui::ptr::manage(T *raw, Deleter deleter)'],['../structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776',1,'aui::ptr::manage(T *raw)']]],
   ['manager_9',['Manager',['../classManager.html',1,'']]],
-  ['map_10',['map',['../classAOptional.html#aa5e6bb7219f1423fbca9903278719bc3',1,'AOptional::map()'],['../classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe',1,'AFuture::map()']]],
+  ['map_10',['map',['../classAOptional.html#af3365fab5f76668ae9728da5358c6df2',1,'AOptional::map()'],['../classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe',1,'AFuture::map()']]],
   ['mapposition_11',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_12',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
   ['margin_13',['Margin',['../structass_1_1Margin.html',1,'ass']]],

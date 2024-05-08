@@ -494,6 +494,7 @@ var hierarchy =
             [ "WrapperContainer", "classWrapperContainer.html", null ]
           ] ]
         ] ],
+        [ "Emitter", "classEmitter.html", null ],
         [ "IListModel< T >", "classIListModel.html", [
           [ "IRemovableListModel< StoredType >", "classIRemovableListModel.html", [
             [ "AListModel< StoredType >", "classAListModel.html", null ]
@@ -514,6 +515,7 @@ var hierarchy =
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
         [ "Master", "classMaster.html", null ],
         [ "ProcessSignalReceiver", "classProcessSignalReceiver.html", null ],
+        [ "Receiver", "classReceiver.html", null ],
         [ "ReceiverObject", "classReceiverObject.html", null ],
         [ "SendObject", "classSendObject.html", null ],
         [ "Slave", "classSlave.html", null ],

@@ -142,9 +142,12 @@ var group__core =
       [ "toDouble", "classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d", null ],
       [ "toFloat", "classAString.html#abb60406e99380d9ac93b2a62f2308228", null ],
       [ "toInt", "classAString.html#a595b975b64130656d41f02b9103ad807", null ],
+      [ "toIntOrException", "classAString.html#a0f0025bc8da72d7e0807f06c972362a9", null ],
       [ "toLongInt", "classAString.html#a7206a8de8d911964daacb532c104481e", null ],
+      [ "toLongIntOrException", "classAString.html#a180d5f0967ffb6d7a989d90b4635d8e9", null ],
       [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ],
-      [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ]
+      [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ],
+      [ "toUIntOrException", "classAString.html#ade69a4a70112994e90449008d3cb222f", null ]
     ] ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "ATimer", "classATimer.html", null ],
