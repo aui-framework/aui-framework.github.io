@@ -372,6 +372,7 @@ var hierarchy =
         [ "ITreeModel< AString >", "classITreeModel.html", [
           [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", null ]
         ] ],
+        [ "Receiver", "classReceiver.html", null ],
         [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
         [ "AAssHelper", "classAAssHelper.html", null ],
         [ "AChildProcess", "classAChildProcess.html", null ],
