@@ -140,6 +140,7 @@ var group__core =
       [ "AString", "classAString.html#a1eb7e24ca17238ab4db2f302ac41ef51", null ],
       [ "toBool", "classAString.html#a4a5c7b21fc8b2cce2fb88eccbe4bc122", null ],
       [ "toDouble", "classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d", null ],
+      [ "toDoubleOrException", "classAString.html#ad9c5f0dd655d291227d084f674661029", null ],
       [ "toFloat", "classAString.html#abb60406e99380d9ac93b2a62f2308228", null ],
       [ "toInt", "classAString.html#a595b975b64130656d41f02b9103ad807", null ],
       [ "toIntOrException", "classAString.html#a0f0025bc8da72d7e0807f06c972362a9", null ],
@@ -290,7 +291,9 @@ var group__core =
     ] ],
     [ "AFieldObservable< T >", "classAFieldObservable.html", [
       [ "addObserver", "classAFieldObservable.html#aa798b8ba57300b89167bb564d23521d7", null ],
-      [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ]
+      [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ],
+      [ "operator>>", "classAFieldObservable.html#a6c348e2718e16dfbb95559d84bda2d7d", null ],
+      [ "removeObserver", "classAFieldObservable.html#ae4e80295ba4a9ddfd9ba9835face7d75", null ]
     ] ],
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],

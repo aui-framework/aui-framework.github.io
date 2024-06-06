@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0":[3,0,1,60],
+"group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32":[3,0,1,63],
+"group__core.html#ga7a88e702b03388170c461d980530572b":[3,0,1,74],
 "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848":[3,0,1,72],
 "group__core.html#gaa3610507f3842446dc91291a81ebf41e":[3,0,1,62],
 "group__core.html#gaa70b24485dced85af19ad2687ca8a373":[3,0,1,73],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "structASerializable_3_01___3_01T_01_4_01_4.html":[0,2,251],
 "structASerializable_3_01aui_1_1serialize__raw_3_01T_01_4_01_4.html":[0,2,257],
 "structASerializable_3_01aui_1_1serialize__sized_3_01T_01_4_01_4.html":[0,2,258],
-"structASerializable_3_01char_0fL_0e_4.html":[0,2,260],
-"structASerializable_3_01const_01char_01_5_01_4.html":[0,2,261],
-"structASerializable_3_01std_1_1string_01_4.html":[0,2,262],
-"structASharedMutex.html":[3,0,1,43]
+"structASerializable_3_01char_0fL_0e_4.html":[0,2,260]
 };
