@@ -216,6 +216,7 @@ var namespaces =
         [ "ADataBindingRangedNumberPicker", "structaui_1_1impl_1_1ADataBindingRangedNumberPicker.html", null ],
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
         [ "first", "structaui_1_1impl_1_1first.html", null ],
+        [ "JsonObject", "structaui_1_1impl_1_1JsonObject.html", "structaui_1_1impl_1_1JsonObject" ],
         [ "select_overload", "structaui_1_1impl_1_1select__overload.html", null ]
       ] ],
       [ "jni", null, [

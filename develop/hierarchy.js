@@ -1157,6 +1157,9 @@ var hierarchy =
           [ "ACommandLineArgs", "classACommandLineArgs.html", null ]
         ] ]
       ] ],
+      [ "AVector< std::pair< AString, AJson > >", "classAVector.html", [
+        [ "aui::impl::JsonObject", "structaui_1_1impl_1_1JsonObject.html", null ]
+      ] ],
       [ "AVector< Data >", "classAVector.html", null ],
       [ "AVector< Line >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]

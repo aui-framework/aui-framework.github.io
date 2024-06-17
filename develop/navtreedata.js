@@ -78,7 +78,7 @@ var NAVTREEINDEX =
 "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0",
 "structASerializable_3_01const_01char_01_5_01_4.html",
 "structaui_1_1dbus_1_1converter.html",
-"structaui_1_1valid_1_1chars_1_1numeric.html"
+"structaui_1_1ui__building_1_1view.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
