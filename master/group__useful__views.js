@@ -15,7 +15,8 @@ var group__useful__views =
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
       [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
       [ "typeableInsert", "classAAbstractTextField.html#a627a137628b73f9139838408234ff47c", null ],
-      [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ]
+      [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ],
+      [ "actionButtonPressed", "classAAbstractTextField.html#acefd4f090e6cfd879ad646a9b6311a29", null ]
     ] ],
     [ "AButton", "classAButton.html", [
       [ "consumesClick", "classAButton.html#ad80e94073674662d0ad29b3662f6025f", null ]
@@ -60,7 +61,14 @@ var group__useful__views =
     [ "AHDividerView", "classAHDividerView.html", null ],
     [ "ALabel", "classALabel.html", null ],
     [ "AListView", "classAListView.html", [
-      [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ]
+      [ "SelectAction", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47", [
+        [ "CLEAR_SELECTION_AND_SET", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47adedd147810f45d4a387137a76016b121", null ],
+        [ "SET", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a8c52684db8f49511e9b44471716bf164", null ],
+        [ "UNSET", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a666a87025ab0d8965e221050c8948001", null ],
+        [ "TOGGLE", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a1252c45651289c0b553a30d27bb5ae9b", null ]
+      ] ],
+      [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ],
+      [ "selectItem", "classAListView.html#a7369cc389a88274c38c4f51693734b0f", null ]
     ] ],
     [ "ANumberPicker", "classANumberPicker.html", [
       [ "getContentMinimumHeight", "classANumberPicker.html#ae5931096355856c82ad0d6f56f0f0668", null ],
@@ -182,7 +190,7 @@ var group__useful__views =
       [ "getTotalFieldVertical", "classAView.html#a274972d0e96c9ad2779fe5dfdeb71727", null ],
       [ "getTotalOccupiedHeight", "classAView.html#acaef54d28990d25a3edf594e163c1a8b", null ],
       [ "getTotalOccupiedWidth", "classAView.html#a521f58942c69ff63566ada3e3d774f32", null ],
-      [ "getWindow", "classAView.html#a03245e11f856a8ece49da1d7032c0203", null ],
+      [ "getWindow", "classAView.html#ae881f45d02f968dd3584f267d6300521", null ],
       [ "handlesNonMouseNavigation", "classAView.html#a9c3deb7023947adc4c698540db4086c8", null ],
       [ "hasIndirectParent", "classAView.html#a37642918735ccb3939f63d85ff56310c", null ],
       [ "invalidateAllStyles", "classAView.html#ad461e812a51a1d556ec8219399e659c9", null ],
@@ -201,6 +209,7 @@ var group__useful__views =
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
       [ "render", "classAView.html#a963fbdfa517db949b880297405804985", null ],
+      [ "setExpanding", "classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5", null ],
       [ "setExtraStylesheet", "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b", null ],
       [ "setExtraStylesheet", "classAView.html#abfffb2d8ac173e35e0599b4389efb9e1", null ],
       [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],

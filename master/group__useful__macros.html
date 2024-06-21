@@ -108,6 +108,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gaee1b2b611b51a8c6101ff769ed9b6a98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a>(object)&#160;&#160;&#160;{ auto unused = &amp;object ; }</td></tr>
 <tr class="memdesc:gaee1b2b611b51a8c6101ff769ed9b6a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forbids object from being optimized out by compiler.  <a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">More...</a><br /></td></tr>
 <tr class="separator:gaee1b2b611b51a8c6101ff769ed9b6a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad409f7ab56b7719fecd676abfa776b1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gad409f7ab56b7719fecd676abfa776b1f">AUI_MARK_AS_USED</a>(variable)&#160;&#160;&#160;{ (void)variable; }</td></tr>
+<tr class="memdesc:gad409f7ab56b7719fecd676abfa776b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks the variable as being used.  <a href="group__useful__macros.html#gad409f7ab56b7719fecd676abfa776b1f">More...</a><br /></td></tr>
+<tr class="separator:gad409f7ab56b7719fecd676abfa776b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga261f46bdecf8431d252d1f1e4879a5c7"><td class="memItemLeft" align="right" valign="top"><a id="ga261f46bdecf8431d252d1f1e4879a5c7" name="ga261f46bdecf8431d252d1f1e4879a5c7"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>AUI_PP_CAT</b>(_1,  _2)&#160;&#160;&#160;AUI_PP_INTERNAL_CAT(_1, _2)</td></tr>
 <tr class="memdesc:ga261f46bdecf8431d252d1f1e4879a5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expands and concatenates the arguments. Constructed macros reevaluate. <br /></td></tr>
@@ -243,8 +246,8 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
-<div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:212</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:331</div></div>
+<div class="ttc" id="aclassAThread_html_a702e3769792fb7cda5f7960b7360ac9b"><div class="ttname"><a href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div><div class="ttdef"><b>Definition:</b> AThread.cpp:208</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:326</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
@@ -284,7 +287,7 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> task = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// a long task</span></div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__useful__macros_html_ga21d729326347c5d74faf857abf18d695"><div class="ttname"><a href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a></div><div class="ttdeci">#define asyncX</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike async,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:362</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21d729326347c5d74faf857abf18d695"><div class="ttname"><a href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a></div><div class="ttdeci">#define asyncX</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike async,...</div><div class="ttdef"><b>Definition:</b> kAUI.h:357</div></div>
 </div><!-- fragment --> <p >Example with a return value</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> futureStatus = <a class="code hl_define" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">asyncX</a> [&amp;] {</div>
 <div class="line">  <span class="keywordtype">int</span> status;</div>
@@ -324,7 +327,7 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> v = 2 + 2;</div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(v &gt;= 0); <span class="comment">// does not trigger</span></div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(v != 4); <span class="comment">// triggers</span></div>
-<div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:55</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:52</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -366,7 +369,7 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> v = 2 + 2;</div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(v &gt;= 0, <span class="stringliteral">&quot;positive value expected&quot;</span>); <span class="comment">// does not trigger</span></div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(v != 4, <span class="stringliteral">&quot;4 is unacceptable value&quot;</span>); <span class="comment">// triggers</span></div>
-<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:71</div></div>
 </div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a74">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
@@ -385,9 +388,9 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Defers execution of the next block to the end of current block (RAII scope). </p>
-<p >This example prints "Hello world\n": </p><div class="fragment"><div class="line"><a class="code hl_define" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a> { printf(<span class="stringliteral">&quot;world\n&quot;</span>) };</div>
+<p >This example prints "Hello world\n": </p><div class="fragment"><div class="line"><a class="code hl_define" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a> { printf(<span class="stringliteral">&quot; world\n&quot;</span>) };</div>
 <div class="line">printf(<span class="stringliteral">&quot;Hello&quot;</span>);</div>
-<div class="ttc" id="agroup__useful__macros_html_gaee46aadc753cc62a15ea8cd64bdeaa61"><div class="ttname"><a href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a></div><div class="ttdeci">#define AUI_DEFER</div><div class="ttdoc">Defers execution of the next block to the end of current block (RAII scope).</div><div class="ttdef"><b>Definition:</b> kAUI.h:199</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaee46aadc753cc62a15ea8cd64bdeaa61"><div class="ttname"><a href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a></div><div class="ttdeci">#define AUI_DEFER</div><div class="ttdoc">Defers execution of the next block to the end of current block (RAII scope).</div><div class="ttdef"><b>Definition:</b> kAUI.h:194</div></div>
 </div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="classARaiiHelper.html">ARaiiHelper</a> </dd></dl>
 
 </div>
@@ -409,14 +412,36 @@ Macros</h2></td></tr>
 <div class="line">        return aui_main(argc, argv, aui_entry);\</div>
 <div class="line">    } \</div>
 <div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<span class="keyword">const</span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a>&amp; <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)</div>
-<div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition:</b> AStringVector.h:27</div></div>
-<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:34</div></div>
+<div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition:</b> AStringVector.h:22</div></div>
+<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition:</b> OSAndroid.cpp:29</div></div>
 </div><!-- fragment -->
 <p>Application entry point. </p>
 <p >Native entry point varies platform to platform (i.e. Windows requires <code>int main</code> entry point for console applications and <code>WinMain</code> for graphical applications; entry point of an Android application is located in Java code). AUI_ENTRY unifies your entry point, efficiently supporting every platform.</p>
 <p >AUI_ENTRY of a graphical application should be non-blocking since on mobile platforms application's event loop is located outsize of the entry point. On desktop platforms an event loop is created outside AUI_ENTRY in order to unify the mobile and desktop behaviour. If there are no open windows, the event loop breaks causing the application to exit.</p>
 <p >Application arguments (int argc, char** argv) are forwarded to AUI_ENTRY as <code><a class="el" href="classAStringVector.html" title="An AVector with string-related functions.">AStringVector</a> args</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>On Android, iOS and macOS only the main thread is able to initialize graphics context. </dd></dl>
+
+</div>
+</div>
+<a id="gad409f7ab56b7719fecd676abfa776b1f" name="gad409f7ab56b7719fecd676abfa776b1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad409f7ab56b7719fecd676abfa776b1f">&#9670;&nbsp;</a></span>AUI_MARK_AS_USED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_MARK_AS_USED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">variable</td><td>)</td>
+          <td>&#160;&#160;&#160;{ (void)variable; }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks the variable as being used. </p>
+<p >Silences the unused variable compiler warning.</p>
+<p >Can be used to force [=] lambda to capture a variable. </p>
 
 </div>
 </div>
@@ -455,7 +480,7 @@ Macros</h2></td></tr>
 <div class="line">    ...</div>
 <div class="line">  }</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__useful__macros_html_gaee1b2b611b51a8c6101ff769ed9b6a98"><div class="ttname"><a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a></div><div class="ttdeci">#define AUI_NO_OPTIMIZE_OUT(object)</div><div class="ttdoc">Forbids object from being optimized out by compiler.</div><div class="ttdef"><b>Definition:</b> macros.h:44</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaee1b2b611b51a8c6101ff769ed9b6a98"><div class="ttname"><a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a></div><div class="ttdeci">#define AUI_NO_OPTIMIZE_OUT(object)</div><div class="ttdoc">Forbids object from being optimized out by compiler.</div><div class="ttdef"><b>Definition:</b> macros.h:40</div></div>
 </div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Traits_2iterators_8h-example.html#a0">/github/workspace/aui.core/src/AUI/Traits/iterators.h</a>.</dd>
 </dl>
 
@@ -530,7 +555,7 @@ Macros</h2></td></tr>
 <div class="line">  plantTree();</div>
 <div class="line">  raiseSon();</div>
 <div class="line">});</div>
-<div class="ttc" id="agroup__useful__macros_html_ga0b5c29ea5716ab0c88709f9b472a2f64"><div class="ttname"><a href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">AUI_PERFORM_AS_MEMBER</a></div><div class="ttdeci">#define AUI_PERFORM_AS_MEMBER(object, lambda)</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name.</div><div class="ttdef"><b>Definition:</b> kAUI.h:144</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga0b5c29ea5716ab0c88709f9b472a2f64"><div class="ttname"><a href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">AUI_PERFORM_AS_MEMBER</a></div><div class="ttdeci">#define AUI_PERFORM_AS_MEMBER(object, lambda)</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name.</div><div class="ttdef"><b>Definition:</b> kAUI.h:139</div></div>
 </div><!-- fragment -->   </td></tr>
 </table>
 
@@ -569,8 +594,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7">AUI_PP_CAT</a>(AUI_PP_INTERNAL_FOR_EACH_IMPL_, <a class="code hl_define" href="group__useful__macros.html#gab763971e6fef21bb1673e0caed91379b">AUI_PP_NARG0</a> _Tuple) \</div>
 <div class="line">  (0, _Macro, _Data, _Tuple)</div>
-<div class="ttc" id="agroup__useful__macros_html_ga261f46bdecf8431d252d1f1e4879a5c7"><div class="ttname"><a href="group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7">AUI_PP_CAT</a></div><div class="ttdeci">#define AUI_PP_CAT(_1, _2)</div><div class="ttdoc">Expands and concatenates the arguments. Constructed macros reevaluate.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:25</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gab763971e6fef21bb1673e0caed91379b"><div class="ttname"><a href="group__useful__macros.html#gab763971e6fef21bb1673e0caed91379b">AUI_PP_NARG0</a></div><div class="ttdeci">#define AUI_PP_NARG0(...)</div><div class="ttdoc">Evaluates to the number of arguments after expansion. Identifies 'empty' as 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:166</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga261f46bdecf8431d252d1f1e4879a5c7"><div class="ttname"><a href="group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7">AUI_PP_CAT</a></div><div class="ttdeci">#define AUI_PP_CAT(_1, _2)</div><div class="ttdoc">Expands and concatenates the arguments. Constructed macros reevaluate.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:22</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gab763971e6fef21bb1673e0caed91379b"><div class="ttname"><a href="group__useful__macros.html#gab763971e6fef21bb1673e0caed91379b">AUI_PP_NARG0</a></div><div class="ttdeci">#define AUI_PP_NARG0(...)</div><div class="ttdoc">Evaluates to the number of arguments after expansion. Identifies 'empty' as 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:163</div></div>
 </div><!-- fragment -->
 <p>Expands to _Macro(0, _Data, e1) _Macro(1, _Data, e2) ... _Macro(K -1, _Data, eK) as many of AUI_INTERNAL_NARG0 _Tuple. </p>
 <p >Requires: * |_Macro| can be called with 3 arguments.</p><ul>
@@ -656,7 +681,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="group__useful__macros.html#ga7c082ba11f904d5d369fbff6cf04f580">AUI_PP_HEAD</a>(<a class="code hl_define" href="group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7">AUI_PP_CAT</a>(AUI_PP_INTERNAL_IBP_IS_VARIADIC_R_, \</div>
 <div class="line">                             AUI_PP_INTERNAL_IBP_IS_VARIADIC_C __VA_ARGS__))</div>
-<div class="ttc" id="agroup__useful__macros_html_ga7c082ba11f904d5d369fbff6cf04f580"><div class="ttname"><a href="group__useful__macros.html#ga7c082ba11f904d5d369fbff6cf04f580">AUI_PP_HEAD</a></div><div class="ttdeci">#define AUI_PP_HEAD(...)</div><div class="ttdoc">Returns the first argument.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:81</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga7c082ba11f904d5d369fbff6cf04f580"><div class="ttname"><a href="group__useful__macros.html#ga7c082ba11f904d5d369fbff6cf04f580">AUI_PP_HEAD</a></div><div class="ttdeci">#define AUI_PP_HEAD(...)</div><div class="ttdoc">Returns the first argument.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:78</div></div>
 </div><!-- fragment -->
 <p>Expands to 1 if the first argument starts with something in parentheses, otherwise to 0. </p>
 
@@ -681,8 +706,8 @@ Macros</h2></td></tr>
 <div class="line">                             <a class="code hl_define" href="group__useful__macros.html#ga882e02c056bf3808e24bd5d4ba475dcf">AUI_PP_HAS_COMMA</a>(<a class="code hl_define" href="group__useful__macros.html#gae1fc2102db681a7f0a933299ec7c8114">AUI_PP_COMMA</a> __VA_ARGS__), \</div>
 <div class="line">                             <a class="code hl_define" href="group__useful__macros.html#ga882e02c056bf3808e24bd5d4ba475dcf">AUI_PP_HAS_COMMA</a>(__VA_ARGS__()),              \</div>
 <div class="line">                             <a class="code hl_define" href="group__useful__macros.html#ga882e02c056bf3808e24bd5d4ba475dcf">AUI_PP_HAS_COMMA</a>(<a class="code hl_define" href="group__useful__macros.html#gae1fc2102db681a7f0a933299ec7c8114">AUI_PP_COMMA</a> __VA_ARGS__()))</div>
-<div class="ttc" id="agroup__useful__macros_html_ga882e02c056bf3808e24bd5d4ba475dcf"><div class="ttname"><a href="group__useful__macros.html#ga882e02c056bf3808e24bd5d4ba475dcf">AUI_PP_HAS_COMMA</a></div><div class="ttdeci">#define AUI_PP_HAS_COMMA(...)</div><div class="ttdoc">Returns 1 if the expansion of arguments has an unprotected comma.Otherwise returns 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:73</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gae1fc2102db681a7f0a933299ec7c8114"><div class="ttname"><a href="group__useful__macros.html#gae1fc2102db681a7f0a933299ec7c8114">AUI_PP_COMMA</a></div><div class="ttdeci">#define AUI_PP_COMMA(...)</div><div class="ttdoc">Returns a comma. Given a variadic number of arguments.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:43</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga882e02c056bf3808e24bd5d4ba475dcf"><div class="ttname"><a href="group__useful__macros.html#ga882e02c056bf3808e24bd5d4ba475dcf">AUI_PP_HAS_COMMA</a></div><div class="ttdeci">#define AUI_PP_HAS_COMMA(...)</div><div class="ttdoc">Returns 1 if the expansion of arguments has an unprotected comma.Otherwise returns 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:70</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gae1fc2102db681a7f0a933299ec7c8114"><div class="ttname"><a href="group__useful__macros.html#gae1fc2102db681a7f0a933299ec7c8114">AUI_PP_COMMA</a></div><div class="ttdeci">#define AUI_PP_COMMA(...)</div><div class="ttdoc">Returns a comma. Given a variadic number of arguments.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:40</div></div>
 </div><!-- fragment -->
 <p>If the arguments after expansion have no tokens, evaluates to <code>1</code>. Otherwise evaluates to <code>0</code>. </p>
 <p >Requires: * the number of arguments after expansion is at most 15.</p><ul>
@@ -720,10 +745,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e">AUI_PP_IF</a>(<a class="code hl_define" href="group__useful__macros.html#ga877d499f6a6a8bdb190772cf91d0c1e6">AUI_PP_IS_BEGIN_PARENS</a>(__VA_ARGS__), \</div>
 <div class="line">              <a class="code hl_define" href="group__useful__macros.html#gaa662d9689a6a0b3403f7182c54d3477d">AUI_PP_IS_EMPTY</a>(<a class="code hl_define" href="group__useful__macros.html#ga7417762bbd55bfd6ab7d2cf70c9f8485">AUI_PP_EMPTY</a> __VA_ARGS__), 0)</div>
-<div class="ttc" id="agroup__useful__macros_html_ga61cadca2309281f9c004db1d9935b85e"><div class="ttname"><a href="group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e">AUI_PP_IF</a></div><div class="ttdeci">#define AUI_PP_IF(_Cond, _Then, _Else)</div><div class="ttdoc">Evaluates to _Then if _Cond is 1 and _Else if _Cond is 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:139</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga7417762bbd55bfd6ab7d2cf70c9f8485"><div class="ttname"><a href="group__useful__macros.html#ga7417762bbd55bfd6ab7d2cf70c9f8485">AUI_PP_EMPTY</a></div><div class="ttdeci">#define AUI_PP_EMPTY(...)</div><div class="ttdoc">Returns empty. Given a variadic number of arguments.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:37</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga877d499f6a6a8bdb190772cf91d0c1e6"><div class="ttname"><a href="group__useful__macros.html#ga877d499f6a6a8bdb190772cf91d0c1e6">AUI_PP_IS_BEGIN_PARENS</a></div><div class="ttdeci">#define AUI_PP_IS_BEGIN_PARENS(...)</div><div class="ttdoc">Expands to 1 if the first argument starts with something in parentheses, otherwise to 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:173</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gaa662d9689a6a0b3403f7182c54d3477d"><div class="ttname"><a href="group__useful__macros.html#gaa662d9689a6a0b3403f7182c54d3477d">AUI_PP_IS_EMPTY</a></div><div class="ttdeci">#define AUI_PP_IS_EMPTY(...)</div><div class="ttdoc">If the arguments after expansion have no tokens, evaluates to 1. Otherwise evaluates to 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:129</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga61cadca2309281f9c004db1d9935b85e"><div class="ttname"><a href="group__useful__macros.html#ga61cadca2309281f9c004db1d9935b85e">AUI_PP_IF</a></div><div class="ttdeci">#define AUI_PP_IF(_Cond, _Then, _Else)</div><div class="ttdoc">Evaluates to _Then if _Cond is 1 and _Else if _Cond is 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:136</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga7417762bbd55bfd6ab7d2cf70c9f8485"><div class="ttname"><a href="group__useful__macros.html#ga7417762bbd55bfd6ab7d2cf70c9f8485">AUI_PP_EMPTY</a></div><div class="ttdeci">#define AUI_PP_EMPTY(...)</div><div class="ttdoc">Returns empty. Given a variadic number of arguments.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:34</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga877d499f6a6a8bdb190772cf91d0c1e6"><div class="ttname"><a href="group__useful__macros.html#ga877d499f6a6a8bdb190772cf91d0c1e6">AUI_PP_IS_BEGIN_PARENS</a></div><div class="ttdeci">#define AUI_PP_IS_BEGIN_PARENS(...)</div><div class="ttdoc">Expands to 1 if the first argument starts with something in parentheses, otherwise to 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:170</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaa662d9689a6a0b3403f7182c54d3477d"><div class="ttname"><a href="group__useful__macros.html#gaa662d9689a6a0b3403f7182c54d3477d">AUI_PP_IS_EMPTY</a></div><div class="ttdeci">#define AUI_PP_IS_EMPTY(...)</div><div class="ttdoc">If the arguments after expansion have no tokens, evaluates to 1. Otherwise evaluates to 0.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:126</div></div>
 </div><!-- fragment -->
 <p>Expands to 1 is there is only one argument and it is enclosed in parentheses. </p>
 
@@ -868,8 +893,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d">AUI_PP_IDENTITY</a>(                        \</div>
 <div class="line">      <a class="code hl_define" href="group__useful__macros.html#ga261f46bdecf8431d252d1f1e4879a5c7">AUI_PP_CAT</a>(_Macro, <a class="code hl_define" href="group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c">AUI_PP_NARG</a>(__VA_ARGS__))(__VA_ARGS__))</div>
-<div class="ttc" id="agroup__useful__macros_html_ga3783a349299ab87b24b03aa8623bbb5d"><div class="ttname"><a href="group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d">AUI_PP_IDENTITY</a></div><div class="ttdeci">#define AUI_PP_IDENTITY(_1)</div><div class="ttdoc">Returns the only argument.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:49</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga382618f43d8e63819ab0c751c252fb7c"><div class="ttname"><a href="group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c">AUI_PP_NARG</a></div><div class="ttdeci">#define AUI_PP_NARG(...)</div><div class="ttdoc">Evaluates to the number of arguments after expansion.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:64</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga3783a349299ab87b24b03aa8623bbb5d"><div class="ttname"><a href="group__useful__macros.html#ga3783a349299ab87b24b03aa8623bbb5d">AUI_PP_IDENTITY</a></div><div class="ttdeci">#define AUI_PP_IDENTITY(_1)</div><div class="ttdoc">Returns the only argument.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:46</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga382618f43d8e63819ab0c751c252fb7c"><div class="ttname"><a href="group__useful__macros.html#ga382618f43d8e63819ab0c751c252fb7c">AUI_PP_NARG</a></div><div class="ttdeci">#define AUI_PP_NARG(...)</div><div class="ttdoc">Evaluates to the number of arguments after expansion.</div><div class="ttdef"><b>Definition:</b> APreprocessor.h:61</div></div>
 </div><!-- fragment -->
 <p>Calls CAT(_Macro, NARG(<b>VA_ARGS</b>))(<b>VA_ARGS</b>) </p>
 
@@ -900,7 +925,7 @@ Macros</h2></td></tr>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><a class="code hl_define" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a> {</div>
 <div class="line">    std::printf(<span class="stringliteral">&quot;Only once!&quot;</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__useful__macros_html_gacba25f2657a42c1c6a786d5b537b6a7e"><div class="ttname"><a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a></div><div class="ttdeci">#define do_once</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition:</b> kAUI.h:393</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gacba25f2657a42c1c6a786d5b537b6a7e"><div class="ttname"><a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a></div><div class="ttdeci">#define do_once</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition:</b> kAUI.h:388</div></div>
 </div><!-- fragment -->   </td></tr>
 </table>
 
@@ -935,7 +960,7 @@ Macros</h2></td></tr>
 <td><div class="fragment"><div class="line"><span class="keyword">auto</span> tf = _new&lt;ATextField&gt;();</div>
 <div class="line">tf-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>);</div>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><span class="keyword">auto</span> tf = _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>); };</div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:264</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:259</div></div>
 </div><!-- fragment -->   </td></tr>
 </table>
 <p >It's especially useful when building user interfaces:</p>
@@ -952,7 +977,7 @@ Macros</h2></td></tr>
 <div class="line">    tf1,</div>
 <div class="line">    tf2,</div>
 <div class="line">});</div>
-<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:177</div></div>
+<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:172</div></div>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> { <span class="comment">// clean, less code and easy to understand</span></div>
 <div class="line">    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>) },</div>
 <div class="line">    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;World!&quot;</span>) },</div>
@@ -1009,7 +1034,7 @@ Macros</h2></td></tr>
 <tr>
 <td><div class="fragment"><div class="line">connect(clicked, myObject, &amp;MyObject::handleClicked);</div>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(clicked, <a class="code hl_define" href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a>(myObject)::handleClicked);</div>
-<div class="ttc" id="agroup__useful__macros_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition:</b> kAUI.h:92</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__useful__macros.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition:</b> kAUI.h:87</div></div>
 </div><!-- fragment -->   </td></tr>
 </table>
 <dl class="section note"><dt>Note</dt><dd>If you are intended to reference this-&gt; object, consider using <a class="el" href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">me</a> instead. </dd></dl>
@@ -1035,7 +1060,7 @@ Macros</h2></td></tr>
 <div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
 <div class="line">  _new&lt;ALabel&gt;(<span class="stringliteral">&quot;Red text!&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { TextColor { AColor::RED } },</div>
 <div class="line">});</div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:289</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:284</div></div>
 </div><!-- fragment --><p >Also applicable to declarative-style views: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;AUI/ASS/ASS.h&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span>ass;</div>
 <div class="line">...</div>

@@ -216,8 +216,50 @@ template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a3dc186b53b7a8d4c5227b5defda18912"><td class="memItemLeft" align="right" valign="top"><a id="a3dc186b53b7a8d4c5227b5defda18912" name="a3dc186b53b7a8d4c5227b5defda18912"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const std::nullopt_t &amp;rhs) const noexcept</td></tr>
 <tr class="separator:a3dc186b53b7a8d4c5227b5defda18912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3365fab5f76668ae9728da5358c6df2"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Mapper&gt; </td></tr>
+<tr class="memitem:af3365fab5f76668ae9728da5358c6df2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAOptional.html#af3365fab5f76668ae9728da5358c6df2">map</a> (Mapper &amp;&amp;mapper) -&gt; <a class="el" href="classAOptional.html">AOptional</a>&lt; decltype(std::invoke(std::forward&lt; Mapper &gt;(mapper), value()))&gt; const</td></tr>
+<tr class="memdesc:af3365fab5f76668ae9728da5358c6df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">If a value is present, apply the provided mapper function to it.  <a href="classAOptional.html#af3365fab5f76668ae9728da5358c6df2">More...</a><br /></td></tr>
+<tr class="separator:af3365fab5f76668ae9728da5358c6df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af3365fab5f76668ae9728da5358c6df2" name="af3365fab5f76668ae9728da5358c6df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3365fab5f76668ae9728da5358c6df2">&#9670;&nbsp;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; Mapper&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classAOptional.html">AOptional</a>&lt; T &gt;::map </td>
+          <td>(</td>
+          <td class="paramtype">Mapper &amp;&amp;&#160;</td>
+          <td class="paramname"><em>mapper</em></td><td>)</td>
+          <td> -&gt; <a class="el" href="classAOptional.html">AOptional</a>&lt;decltype(std::invoke(std::forward&lt;Mapper&gt;(mapper), value()))&gt; const </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If a value is present, apply the provided mapper function to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mapper</td><td>mapper function to apply. The mapper is invoked as a STL projection (i.e., the mapper could be lambda, pointer-to-member function or field). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a71c3dc1b2ba9b9017348e471833b5d2c" name="a71c3dc1b2ba9b9017348e471833b5d2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71c3dc1b2ba9b9017348e471833b5d2c">&#9670;&nbsp;</a></span>valueOr()</h2>
 

@@ -113,7 +113,7 @@ Examples</h1>
 <div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;3&quot;</span>),</div>
 <div class="line">  }</div>
 <div class="line">);</div>
-<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:177</div></div>
+<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:172</div></div>
 </div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_035347.png" alt="" class="inline"/>  </td></tr>
 </table>
 <p ><a class="el" href="classAVerticalLayout.html">Vertical</a> layout: </p><table class="doxtable">
@@ -144,6 +144,41 @@ Examples</h1>
 <div class="line">  }</div>
 <div class="line">);</div>
 </div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_041807.png" alt="" class="inline"/>  </td></tr>
+</table>
+<p >You can specify the expanding if you want the view to grow inside it's container (<a class="el" href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5" title="Changes the expanding of view.">AView::setExpanding</a>): </p><table class="doxtable">
+<tr>
+<th>Code </th><th>Result  </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">setContents(</div>
+<div class="line">  <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;Up&quot;</span>),</div>
+<div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Horizontal</a> {</div>
+<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Left&quot;</span>),</div>
+<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Center&quot;</span>),</div>
+<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Right&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">    },</div>
+<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;Down&quot;</span>),</div>
+<div class="line">  }</div>
+<div class="line">);</div>
+<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:259</div></div>
+</div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_172900.png" alt="" class="inline"/>  </td></tr>
+</table>
+<p >Expanding views push other views in their container if necessary. This is how AExpandingSpacer works. </p><table class="doxtable">
+<tr>
+<th>Code </th><th>Result  </th></tr>
+<tr>
+<td><div class="fragment"><div class="line">setContents(</div>
+<div class="line">  <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;Up&quot;</span>),</div>
+<div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Horizontal</a> {</div>
+<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Left&quot;</span>),</div>
+<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Center&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Right&quot;</span>),</div>
+<div class="line">    },</div>
+<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;Down&quot;</span>),</div>
+<div class="line">  }</div>
+<div class="line">);</div>
+</div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_174121.png" alt="" class="inline"/>  </td></tr>
 </table>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>

@@ -7,6 +7,7 @@ var classaui_1_1impl_1_1future_1_1Future =
     [ "hasResult", "classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f", null ],
     [ "hasValue", "classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0", null ],
     [ "isWaitNeeded", "classaui_1_1impl_1_1future_1_1Future.html#a0578501a241e49a209694084f6eb1194", null ],
+    [ "onFinally", "classaui_1_1impl_1_1future_1_1Future.html#a4e51c2970177c73026597a889d09c363", null ],
     [ "operator*", "classaui_1_1impl_1_1future_1_1Future.html#a4774b655e122ffe6ee93f60d0f5632aa", null ],
     [ "operator*", "classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5", null ],
     [ "operator->", "classaui_1_1impl_1_1future_1_1Future.html#a5620526486a642b7c5b39b9f56e08ddb", null ],

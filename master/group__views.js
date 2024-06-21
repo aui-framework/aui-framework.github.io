@@ -23,6 +23,11 @@ var group__views =
       [ "EnterEvent", "structADragNDrop_1_1EnterEvent.html", null ],
       [ "perform", "classADragNDrop.html#af2faade058d2f6067ceb19182a5e872f", null ]
     ] ],
+    [ "ARenderingContextOptions", "structARenderingContextOptions.html", [
+      [ "DirectX11", "structARenderingContextOptions_1_1DirectX11.html", null ],
+      [ "OpenGL", "structARenderingContextOptions_1_1OpenGL.html", null ],
+      [ "Software", "structARenderingContextOptions_1_1Software.html", null ]
+    ] ],
     [ "ADBus", "classADBus.html", [
       [ "Exception", "classADBus_1_1Exception.html", null ]
     ] ],

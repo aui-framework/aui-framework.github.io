@@ -90,7 +90,6 @@ $(document).ready(function(){initNavTree('classAAbstractThread.html',''); initRe
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -108,11 +107,6 @@ $(document).ready(function(){initNavTree('classAAbstractThread.html',''); initRe
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8core_2src_2AUI_2Common_2AObject_8h-example.html#_a2">/github/workspace/aui.core/src/AUI/Common/AObject.h</a>.</dd>
 </dl>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAAbstractThread_1_1Message.html">Message</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:afe8e23b098e75e10aa65f72953c9334b"><td class="memItemLeft" align="right" valign="top"><a id="afe8e23b098e75e10aa65f72953c9334b" name="afe8e23b098e75e10aa65f72953c9334b"></a>
@@ -124,10 +118,10 @@ typedef std::thread::id&#160;</td><td class="memItemRight" valign="bottom"><b>id
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa0086fd4598259bf171ce908ee21c818"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818">getId</a> () const</td></tr>
 <tr class="separator:aa0086fd4598259bf171ce908ee21c818"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adafbe663a50399d299d5ba7d5f5d95bf"><td class="memItemLeft" align="right" valign="top"><a id="adafbe663a50399d299d5ba7d5f5d95bf" name="adafbe663a50399d299d5ba7d5f5d95bf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (std::function&lt; void()&gt; f)</td></tr>
-<tr class="memdesc:adafbe663a50399d299d5ba7d5f5d95bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers task for execution (message) to this thread's event queue. Messages are processed by framework itself using <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a>. This behaviour may be overwritten using the <code><a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> </code> function. <br /></td></tr>
-<tr class="separator:adafbe663a50399d299d5ba7d5f5d95bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e018eb931d46f2353fcc5929b9b9a4a"><td class="memItemLeft" align="right" valign="top"><a id="a3e018eb931d46f2353fcc5929b9b9a4a" name="a3e018eb931d46f2353fcc5929b9b9a4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (AMessageQueue::Message f)</td></tr>
+<tr class="memdesc:a3e018eb931d46f2353fcc5929b9b9a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delivers task for execution (message) to this thread's event queue. Messages are processed by framework itself using <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a>. This behaviour may be overwritten using the <code><a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> </code> function. <br /></td></tr>
+<tr class="separator:a3e018eb931d46f2353fcc5929b9b9a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2112c2730e01c42f1377a529c738841a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a">isInterrupted</a> ()</td></tr>
 <tr class="separator:a2112c2730e01c42f1377a529c738841a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afebdbf7af6b433d73ae13ac1ef19d206"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206">resetInterruptFlag</a> ()</td></tr>
@@ -179,14 +173,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a196a9e4cc6b527bb66b295046dc6c4ec"><td class="memItemLeft" align="right" valign="top"><a id="a196a9e4cc6b527bb66b295046dc6c4ec" name="a196a9e4cc6b527bb66b295046dc6c4ec"></a>
 <a class="el" href="classAString.html">AString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mThreadName</b></td></tr>
 <tr class="separator:a196a9e4cc6b527bb66b295046dc6c4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67cc196524099cb566d4b74874ee6c20"><td class="memItemLeft" align="right" valign="top"><a id="a67cc196524099cb566d4b74874ee6c20" name="a67cc196524099cb566d4b74874ee6c20"></a>
-<a class="el" href="structAMutex.html">AMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mQueueLock</b></td></tr>
-<tr class="memdesc:a67cc196524099cb566d4b74874ee6c20"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAAbstractThread_1_1Message.html">Message</a> queue mutex. <br /></td></tr>
-<tr class="separator:a67cc196524099cb566d4b74874ee6c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35d8618d61be04cf3afc68f0023023ee"><td class="memItemLeft" align="right" valign="top"><a id="a35d8618d61be04cf3afc68f0023023ee" name="a35d8618d61be04cf3afc68f0023023ee"></a>
-<a class="el" href="classADeque.html">ADeque</a>&lt; <a class="el" href="structAAbstractThread_1_1Message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mMessageQueue</b></td></tr>
-<tr class="memdesc:a35d8618d61be04cf3afc68f0023023ee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structAAbstractThread_1_1Message.html">Message</a> queue. <br /></td></tr>
-<tr class="separator:a35d8618d61be04cf3afc68f0023023ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da936ab489cde9a1614906ce70c77fb"><td class="memItemLeft" align="right" valign="top"><a id="a8da936ab489cde9a1614906ce70c77fb" name="a8da936ab489cde9a1614906ce70c77fb"></a>
+<a class="el" href="classAMessageQueue.html">AMessageQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mMessageQueue</b></td></tr>
+<tr class="separator:a8da936ab489cde9a1614906ce70c77fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -444,13 +433,14 @@ Collaboration diagram for AAbstractThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAAbstractThread__coll__graph.png" border="0" usemap="#aAAbstractThread_coll__map" alt="Collaboration graph"/></div>
 <map name="aAAbstractThread_coll__map" id="aAAbstractThread_coll__map">
-<area shape="rect" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="131,276,251,303"/>
-<area shape="rect" href="classAString.html" title="Represents a wide char string." alt="" coords="23,172,89,199"/>
+<area shape="rect" title="Represents an abstract thread. Not all threads are created through AThread &#45; these are interfaced wit..." alt="" coords="177,261,297,288"/>
+<area shape="rect" href="classAString.html" title="Represents a wide char string." alt="" coords="17,172,82,199"/>
 <area shape="rect" title=" " alt="" coords="5,89,93,115"/>
-<area shape="rect" href="structAMutex.html" title=" " alt="" coords="157,172,224,199"/>
-<area shape="rect" href="structaui_1_1detail_1_1MutexExtras.html" title=" " alt="" coords="118,81,271,123"/>
-<area shape="rect" title=" " alt="" coords="154,5,235,32"/>
-<area shape="rect" href="classAConditionVariable.html" title="Represents a condition variable." alt="" coords="249,172,381,199"/>
+<area shape="rect" href="classAMessageQueue.html" title="Universal thread&#45;safe message (callback) queue implementation." alt="" coords="108,172,231,199"/>
+<area shape="rect" href="structAMutex.html" title="Basic syscall&#45;based synchronization primitive." alt="" coords="263,172,329,199"/>
+<area shape="rect" href="structaui_1_1detail_1_1MutexExtras.html" title=" " alt="" coords="219,81,373,123"/>
+<area shape="rect" title=" " alt="" coords="255,5,337,32"/>
+<area shape="rect" href="classAConditionVariable.html" title="Represents a condition variable." alt="" coords="354,172,486,199"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

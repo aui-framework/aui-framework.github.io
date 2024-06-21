@@ -7,7 +7,6 @@ var classABaseWindow =
     [ "forceUpdateCursor", "classABaseWindow.html#a90cf97a971f09f7ad9e0531bb688b7fb", null ],
     [ "frameMillis", "classABaseWindow.html#a6e16aeb25e748fcad5c1ebb6309ae2e0", null ],
     [ "getFps", "classABaseWindow.html#a97c201d702b93ac223e1f383b5bedca0", null ],
-    [ "hideTouchscreenKeyboard", "classABaseWindow.html#ae61368594001372e16f43b99e783d712", null ],
     [ "isPreventingClickOnPointerRelease", "classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f", null ],
     [ "iterateOverFocusChain", "classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897", null ],
     [ "onDragEnter", "classABaseWindow.html#a44892d8ede207abec1de76bbb83553a4", null ],
@@ -18,9 +17,10 @@ var classABaseWindow =
     [ "onScroll", "classABaseWindow.html#ae3c6b348c19efdb6509e1b3acf7169e5", null ],
     [ "preventClickOnPointerRelease", "classABaseWindow.html#a8b5adda729634c0cff12b9d515b33e20", null ],
     [ "render", "classABaseWindow.html#a31889c283aaa993f539bf2b52311c792", null ],
-    [ "requestTouchscreenKeyboard", "classABaseWindow.html#a194360a7e6e494b91ab9572652620752", null ],
+    [ "requestHideTouchscreenKeyboard", "classABaseWindow.html#aa0feeffa4b0425fbfff911b056474f5a", null ],
+    [ "requestShowTouchscreenKeyboard", "classABaseWindow.html#a15dc2c3827081082ca78675c5bbe024e", null ],
     [ "shouldDisplayHoverAnimations", "classABaseWindow.html#a40e4d24e07e1ff2314ed476eb71429f8", null ],
     [ "mPreventClickOnPointerRelease", "classABaseWindow.html#aa251c03918146d1768ca105ef5a68493", null ],
-    [ "touchscreenKeyboardHideRequested", "classABaseWindow.html#aef42d0c8f76d5defb6804e3bce934b6a", null ],
-    [ "touchscreenKeyboardShowRequested", "classABaseWindow.html#a40dd22714d90e8ee56400e0679cb605c", null ]
+    [ "touchscreenKeyboardHidden", "classABaseWindow.html#a1142d834d732746db473c07a2a60fc50", null ],
+    [ "touchscreenKeyboardShown", "classABaseWindow.html#ac6d3eae63ed1eaffc6bc3f6ea84fcc97", null ]
 ];

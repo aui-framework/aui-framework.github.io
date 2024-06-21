@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classAListView.html',''); initResizabl
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Signals and public fields</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -103,6 +104,16 @@ $(document).ready(function(){initNavTree('classAListView.html',''); initResizabl
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Displays a list model of strings. </p>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9d28394809b0d6ff7e1783e5b253ff47"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47">SelectAction</a> { <a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47adedd147810f45d4a387137a76016b121">CLEAR_SELECTION_AND_SET</a>
+, <a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a8c52684db8f49511e9b44471716bf164">SET</a>
+, <a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a666a87025ab0d8965e221050c8948001">UNSET</a>
+, <a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a1252c45651289c0b553a30d27bb5ae9b">TOGGLE</a>
+ }</td></tr>
+<tr class="memdesc:a9d28394809b0d6ff7e1783e5b253ff47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selection action for updateSelectionOnItem.  <a href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47">More...</a><br /></td></tr>
+<tr class="separator:a9d28394809b0d6ff7e1783e5b253ff47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad74eeed922d263224a1fb9a16d6d1e33"><td class="memItemLeft" align="right" valign="top"><a id="ad74eeed922d263224a1fb9a16d6d1e33" name="ad74eeed922d263224a1fb9a16d6d1e33"></a>
@@ -111,8 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62183b93222f37d5f7fdf4e59afaaf3f"><td class="memItemLeft" align="right" valign="top"><a id="a62183b93222f37d5f7fdf4e59afaaf3f" name="a62183b93222f37d5f7fdf4e59afaaf3f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setModel</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIListModel.html">IListModel</a>&lt; <a class="el" href="classAString.html">AString</a> &gt; &gt; &amp;model)</td></tr>
 <tr class="separator:a62183b93222f37d5f7fdf4e59afaaf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4909b7abd1b4f3d99a709da37cd7de7a"><td class="memItemLeft" align="right" valign="top"><a id="a4909b7abd1b4f3d99a709da37cd7de7a" name="a4909b7abd1b4f3d99a709da37cd7de7a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateSelectionOnItem</b> (size_t i, <a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47">AListView::SelectAction</a> action)</td></tr>
+<tr class="separator:a4909b7abd1b4f3d99a709da37cd7de7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7369cc389a88274c38c4f51693734b0f"><td class="memItemLeft" align="right" valign="top"><a id="a7369cc389a88274c38c4f51693734b0f" name="a7369cc389a88274c38c4f51693734b0f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>selectItem</b> (size_t i)</td></tr>
+<tr class="memdesc:a7369cc389a88274c38c4f51693734b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acts on the item at index i as if the user were left-clicked without keyboard modifiers on it. <br /></td></tr>
 <tr class="separator:a7369cc389a88274c38c4f51693734b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6f0e2886a62d76ca97ca2aecb54dd4"><td class="memItemLeft" align="right" valign="top"><a id="a4c6f0e2886a62d76ca97ca2aecb54dd4" name="a4c6f0e2886a62d76ca97ca2aecb54dd4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getContentFullHeight</b> ()</td></tr>
@@ -332,9 +347,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addViewCustomLayout</
 void&#160;</td><td class="memItemRight" valign="bottom"><b>redraw</b> ()</td></tr>
 <tr class="memdesc:a5f31342ebc6f35e57201cc55d3e64b8f inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request window manager to redraw this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
 <tr class="separator:a5f31342ebc6f35e57201cc55d3e64b8f inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03245e11f856a8ece49da1d7032c0203 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classABaseWindow.html">ABaseWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a03245e11f856a8ece49da1d7032c0203">getWindow</a> ()</td></tr>
-<tr class="memdesc:a03245e11f856a8ece49da1d7032c0203 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines window which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> belongs to.  <a href="classAView.html#a03245e11f856a8ece49da1d7032c0203">More...</a><br /></td></tr>
-<tr class="separator:a03245e11f856a8ece49da1d7032c0203 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae881f45d02f968dd3584f267d6300521 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classABaseWindow.html">ABaseWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ae881f45d02f968dd3584f267d6300521">getWindow</a> () const</td></tr>
+<tr class="memdesc:ae881f45d02f968dd3584f267d6300521 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines window which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> belongs to.  <a href="classAView.html#ae881f45d02f968dd3584f267d6300521">More...</a><br /></td></tr>
+<tr class="separator:ae881f45d02f968dd3584f267d6300521 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3932b363ae52d2b298fb52edb17978a5 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="a3932b363ae52d2b298fb52edb17978a5" name="a3932b363ae52d2b298fb52edb17978a5"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStencilMask</b> ()</td></tr>
 <tr class="separator:a3932b363ae52d2b298fb52edb17978a5 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -456,8 +471,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getContentHeight</b> (
 <tr class="memitem:abf796250c783c5cf84df6b989a95d2c4 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="abf796250c783c5cf84df6b989a95d2c4" name="abf796250c783c5cf84df6b989a95d2c4"></a>
 const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getExpanding</b> () const</td></tr>
 <tr class="separator:abf796250c783c5cf84df6b989a95d2c4 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dff85e3a36d4963bb5e7c1eb3dc02c5 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="a8dff85e3a36d4963bb5e7c1eb3dc02c5" name="a8dff85e3a36d4963bb5e7c1eb3dc02c5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setExpanding</b> (const glm::ivec2 &amp;expanding)</td></tr>
+<tr class="memitem:a8dff85e3a36d4963bb5e7c1eb3dc02c5 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5">setExpanding</a> (const glm::ivec2 &amp;expanding)</td></tr>
+<tr class="memdesc:a8dff85e3a36d4963bb5e7c1eb3dc02c5 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the expanding of view.  <a href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5">More...</a><br /></td></tr>
 <tr class="separator:a8dff85e3a36d4963bb5e7c1eb3dc02c5 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae50ca286a74a3d80e90f5004a0889697 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="ae50ca286a74a3d80e90f5004a0889697" name="ae50ca286a74a3d80e90f5004a0889697"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setExpanding</b> (int expanding)</td></tr>
@@ -647,6 +662,9 @@ template&lt;ASignalInvokable T&gt; </td></tr>
 <tr class="memitem:a69d68b22657b816454da2717c64bc01c inherit pub_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a69d68b22657b816454da2717c64bc01c" name="a69d68b22657b816454da2717c64bc01c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSlotsCallsOnlyOnMyThread</b> () const noexcept</td></tr>
 <tr class="separator:a69d68b22657b816454da2717c64bc01c inherit pub_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cfd80eb8685793bf5f0970900aacd8 inherit pub_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a10cfd80eb8685793bf5f0970900aacd8" name="a10cfd80eb8685793bf5f0970900aacd8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMyThread</b> (bool slotsCallsOnlyOnMyThread)</td></tr>
+<tr class="separator:a10cfd80eb8685793bf5f0970900aacd8 inherit pub_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structaui_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structaui_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structaui_1_1noncopyable.html">aui::noncopyable</a></td></tr>
 <tr class="memitem:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memItemLeft" align="right" valign="top"><a id="a640f7f625060ec4c2d8e053058ed342d" name="a640f7f625060ec4c2d8e053058ed342d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>noncopyable</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
@@ -836,9 +854,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (con
 <tr class="memdesc:a6e70ccf042a8ff10deea1f538377eb91 inherit pro_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce context (right click) menu.  <a href="classAView.html#a6e70ccf042a8ff10deea1f538377eb91">More...</a><br /></td></tr>
 <tr class="separator:a6e70ccf042a8ff10deea1f538377eb91 inherit pro_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:a10cfd80eb8685793bf5f0970900aacd8 inherit pro_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a10cfd80eb8685793bf5f0970900aacd8" name="a10cfd80eb8685793bf5f0970900aacd8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMyThread</b> (bool slotsCallsOnlyOnMyThread)</td></tr>
-<tr class="separator:a10cfd80eb8685793bf5f0970900aacd8 inherit pro_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a98cf3fa4ac279b30860bf228c44306b2" name="a98cf3fa4ac279b30860bf228c44306b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
 <tr class="memdesc:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set thread of the object. <br /></td></tr>
@@ -879,9 +894,8 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mPosition</b> =
 glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mSize</b> = { 20, 20 }</td></tr>
 <tr class="memdesc:a1ac0adc58a85edb3bf5fcbd8977fec6b inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size, including content area, border and padding. <br /></td></tr>
 <tr class="separator:a1ac0adc58a85edb3bf5fcbd8977fec6b inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5122d5846227520294bda27e6b45ea4a inherit pro_attribs_classAView"><td class="memItemLeft" align="right" valign="top"><a id="a5122d5846227520294bda27e6b45ea4a" name="a5122d5846227520294bda27e6b45ea4a"></a>
-glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mExpanding</b> = {0, 0}</td></tr>
-<tr class="memdesc:a5122d5846227520294bda27e6b45ea4a inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expansion coefficient. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container. <br /></td></tr>
+<tr class="memitem:a5122d5846227520294bda27e6b45ea4a inherit pro_attribs_classAView"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = {0, 0}</td></tr>
+<tr class="memdesc:a5122d5846227520294bda27e6b45ea4a inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expansion coefficient. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container.  <a href="classAView.html#a5122d5846227520294bda27e6b45ea4a">More...</a><br /></td></tr>
 <tr class="separator:a5122d5846227520294bda27e6b45ea4a inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcab50e0676d2197c64a8d8c2221d741 inherit pro_attribs_classAView"><td class="memItemLeft" align="right" valign="top"><a id="afcab50e0676d2197c64a8d8c2221d741" name="afcab50e0676d2197c64a8d8c2221d741"></a>
 glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mMinSize</b> = {0, 0}</td></tr>
@@ -907,6 +921,41 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 <tr class="memdesc:a22c7f11d281b887e5cf672f4f992d3a3 inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASS class names.  <a href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">More...</a><br /></td></tr>
 <tr class="separator:a22c7f11d281b887e5cf672f4f992d3a3 inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a9d28394809b0d6ff7e1783e5b253ff47" name="a9d28394809b0d6ff7e1783e5b253ff47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d28394809b0d6ff7e1783e5b253ff47">&#9670;&nbsp;</a></span>SelectAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47">AListView::SelectAction</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selection action for updateSelectionOnItem. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9d28394809b0d6ff7e1783e5b253ff47adedd147810f45d4a387137a76016b121" name="a9d28394809b0d6ff7e1783e5b253ff47adedd147810f45d4a387137a76016b121"></a>CLEAR_SELECTION_AND_SET&#160;</td><td class="fielddoc"><p >Clears old selection and selects the specified index. Used by selectItem. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9d28394809b0d6ff7e1783e5b253ff47a8c52684db8f49511e9b44471716bf164" name="a9d28394809b0d6ff7e1783e5b253ff47a8c52684db8f49511e9b44471716bf164"></a>SET&#160;</td><td class="fielddoc"><p >Selects the specified index. In single selection mode, acts like CLEAR_SELECTION_AND_SET. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9d28394809b0d6ff7e1783e5b253ff47a666a87025ab0d8965e221050c8948001" name="a9d28394809b0d6ff7e1783e5b253ff47a666a87025ab0d8965e221050c8948001"></a>UNSET&#160;</td><td class="fielddoc"><p >Deselects the specified index. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9d28394809b0d6ff7e1783e5b253ff47a1252c45651289c0b553a30d27bb5ae9b" name="a9d28394809b0d6ff7e1783e5b253ff47a1252c45651289c0b553a30d27bb5ae9b"></a>TOGGLE&#160;</td><td class="fielddoc"><p >Selects or deselects the specified index depending on it's current state. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="adb7ba4b014f5bcaa03751f765d562a00" name="adb7ba4b014f5bcaa03751f765d562a00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb7ba4b014f5bcaa03751f765d562a00">&#9670;&nbsp;</a></span>onDataChanged()</h2>

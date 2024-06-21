@@ -71,7 +71,7 @@ var group__core =
     [ "AQueue< StoredType >", "classAQueue.html", [
       [ "contains", "classAQueue.html#aa03dc0318b8218de0a289fa8a8743852", null ],
       [ "isSubsetOf", "classAQueue.html#aba771ddfc85e646843b4cab514d2ac43", null ],
-      [ "popOrGenerate", "classAQueue.html#ace3a2fc1c85e85bad31dabb5f663f35f", null ],
+      [ "popOrGenerate", "classAQueue.html#a4c2998fa5eff4094c0819e050ef25c6e", null ],
       [ "removeAll", "classAQueue.html#a6e2176bb102251379725563048f66fc6", null ],
       [ "removeFirst", "classAQueue.html#a318128185e2fc9066ace18690673218d", null ]
     ] ],
@@ -140,11 +140,15 @@ var group__core =
       [ "AString", "classAString.html#a1eb7e24ca17238ab4db2f302ac41ef51", null ],
       [ "toBool", "classAString.html#a4a5c7b21fc8b2cce2fb88eccbe4bc122", null ],
       [ "toDouble", "classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d", null ],
+      [ "toDoubleOrException", "classAString.html#ad9c5f0dd655d291227d084f674661029", null ],
       [ "toFloat", "classAString.html#abb60406e99380d9ac93b2a62f2308228", null ],
       [ "toInt", "classAString.html#a595b975b64130656d41f02b9103ad807", null ],
+      [ "toIntOrException", "classAString.html#a0f0025bc8da72d7e0807f06c972362a9", null ],
       [ "toLongInt", "classAString.html#a7206a8de8d911964daacb532c104481e", null ],
+      [ "toLongIntOrException", "classAString.html#a180d5f0967ffb6d7a989d90b4635d8e9", null ],
       [ "toStdString", "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21", null ],
-      [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ]
+      [ "toUInt", "classAString.html#aef74276f1c87ce89ccbc11a873d59402", null ],
+      [ "toUIntOrException", "classAString.html#ade69a4a70112994e90449008d3cb222f", null ]
     ] ],
     [ "AStringVector", "classAStringVector.html", null ],
     [ "ATimer", "classATimer.html", null ],
@@ -217,10 +221,10 @@ var group__core =
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", [
       [ "NoValueException", "classAComplexFutureOperation_1_1NoValueException.html", null ],
-      [ "makeFuture", "classAComplexFutureOperation.html#a83361abec41b8c8ebabe7e0fb658ac30", null ],
+      [ "makeFuture", "classAComplexFutureOperation.html#a8d50985e58d41071f6a24fb35403bb75", null ],
       [ "operator<<", "classAComplexFutureOperation.html#a0fbb6d1119f80d2d41375b399ec024fb", null ],
       [ "supplyException", "classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df", null ],
-      [ "supplyResult", "classAComplexFutureOperation.html#af5030b0d9d649b90ebb6cce463cc07d4", null ]
+      [ "supplyValue", "classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02", null ]
     ] ],
     [ "AConditionVariable", "classAConditionVariable.html", [
       [ "notify_all", "classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303", null ],
@@ -243,15 +247,18 @@ var group__core =
     [ "AFuture< T >", "classAFuture.html", [
       [ "map", "classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe", null ],
       [ "onError", "classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e", null ],
+      [ "onFinally", "classAFuture.html#ae25e87699d0b39d45b6b2cd3555dc7b5", null ],
       [ "onSuccess", "classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b", null ],
-      [ "supplyException", "classAFuture.html#afb90c81c9ded0417533b721c34d3a139", null ],
-      [ "supplyResult", "classAFuture.html#a5ee665a2a1d9b02010a9cd19de7bd836", null ]
+      [ "supplyException", "classAFuture.html#ad63fde0831188f9a75a7b0e10bd2a50d", null ],
+      [ "supplyValue", "classAFuture.html#aa640a25cdc678b93f8d764a83013841f", null ]
     ] ],
+    [ "AMutex", "structAMutex.html", null ],
+    [ "ARecursiveMutex", "structARecursiveMutex.html", null ],
+    [ "ASharedMutex", "structASharedMutex.html", null ],
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
-      [ "Message", "structAAbstractThread_1_1Message.html", null ],
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],
-      [ "enqueue", "classAAbstractThread.html#adafbe663a50399d299d5ba7d5f5d95bf", null ],
+      [ "enqueue", "classAAbstractThread.html#a3e018eb931d46f2353fcc5929b9b9a4a", null ],
       [ "getCurrentEventLoop", "classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d", null ],
       [ "getId", "classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818", null ],
       [ "interrupt", "classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43", null ],
@@ -260,9 +267,7 @@ var group__core =
       [ "operator<<", "classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c", null ],
       [ "resetInterruptFlag", "classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206", null ],
       [ "threadStacktrace", "classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d", null ],
-      [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ],
-      [ "mMessageQueue", "classAAbstractThread.html#a35d8618d61be04cf3afc68f0023023ee", null ],
-      [ "mQueueLock", "classAAbstractThread.html#a67cc196524099cb566d4b74874ee6c20", null ]
+      [ "mId", "classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea", null ]
     ] ],
     [ "AThread", "classAThread.html", [
       [ "Interrupted", "classAThread_1_1Interrupted.html", [
@@ -286,11 +291,17 @@ var group__core =
     ] ],
     [ "AFieldObservable< T >", "classAFieldObservable.html", [
       [ "addObserver", "classAFieldObservable.html#aa798b8ba57300b89167bb564d23521d7", null ],
-      [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ]
+      [ "operator<<", "classAFieldObservable.html#a6a67fb1f049499301bbca9c38b68a590", null ],
+      [ "operator>>", "classAFieldObservable.html#a6c348e2718e16dfbb95559d84bda2d7d", null ],
+      [ "removeObserver", "classAFieldObservable.html#ae4e80295ba4a9ddfd9ba9835face7d75", null ]
     ] ],
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
+    [ "AMessageQueue", "classAMessageQueue.html", [
+      [ "enqueue", "classAMessageQueue.html#a6a327dce95efc4b7bb0add3b20d4e23a", null ],
+      [ "processMessages", "classAMessageQueue.html#ab415def62bd70ecb804bc3aa1bea119f", null ]
+    ] ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
       [ "loop", "classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568", null ],

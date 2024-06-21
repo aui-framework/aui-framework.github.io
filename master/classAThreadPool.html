@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('classAThreadPool.html',''); initResiza
  <a href="classAThreadPool.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Thread pool implementation. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">AThreadPool::global()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af" title="Global thread pool created with the default constructor.">AThreadPool::global()</a> </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -129,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9f169592e52d9898532c395e1003c8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8c8db781f899bed41df24db627ba967"><td class="memItemLeft" align="right" valign="top"><a id="ae8c8db781f899bed41df24db627ba967" name="ae8c8db781f899bed41df24db627ba967"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>AThreadPool</b> ()</td></tr>
-<tr class="memdesc:ae8c8db781f899bed41df24db627ba967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the thread pool with <code>max(std::thread::hardware_concurrency() - 1, 2)</code> of threads. <br /></td></tr>
+<tr class="memdesc:ae8c8db781f899bed41df24db627ba967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the thread pool with <code>max(std::thread::hardware_concurrency() - 1, 2)</code> of threads or &ndash;aui-threadpool-size=SIZE passed to your application. <br /></td></tr>
 <tr class="separator:ae8c8db781f899bed41df24db627ba967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28916540bc70dde32b3c2484b9f9718d"><td class="memItemLeft" align="right" valign="top"><a id="a28916540bc70dde32b3c2484b9f9718d" name="a28916540bc70dde32b3c2484b9f9718d"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getPendingTaskCount</b> ()</td></tr>
@@ -168,7 +168,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a03d8c76c6ba0fc70734eaa61ef888c77"><td class="memItemLeft" align="right" valign="top"><a id="a03d8c76c6ba0fc70734eaa61ef888c77" name="a03d8c76c6ba0fc70734eaa61ef888c77"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (const std::function&lt; void()&gt; &amp;fun, Priority priority=PRIORITY_MEDIUM)</td></tr>
 <tr class="separator:a03d8c76c6ba0fc70734eaa61ef888c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab99db5b16449e777bba101f46844af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classAThreadPool.html">AThreadPool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">global</a> ()</td></tr>
+<tr class="memitem:a5ab99db5b16449e777bba101f46844af"><td class="memItemLeft" align="right" valign="top"><a id="a5ab99db5b16449e777bba101f46844af" name="a5ab99db5b16449e777bba101f46844af"></a>
+static <a class="el" href="classAThreadPool.html">AThreadPool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>global</b> ()</td></tr>
+<tr class="memdesc:a5ab99db5b16449e777bba101f46844af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global thread pool created with the default constructor. <br /></td></tr>
 <tr class="separator:a5ab99db5b16449e777bba101f46844af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-types" name="pro-types"></a>
@@ -232,32 +234,6 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>mIdleWorkers</b> = 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5ab99db5b16449e777bba101f46844af" name="a5ab99db5b16449e777bba101f46844af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ab99db5b16449e777bba101f46844af">&#9670;&nbsp;</a></span>global()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classAThreadPool.html">AThreadPool</a> &amp; AThreadPool::global </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>a global thread pool created with the default constructor. </dd></dl>
-
-</div>
-</div>
 <a id="ab193ebe3b3a67a28a5062df037f6e252" name="ab193ebe3b3a67a28a5062df037f6e252"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab193ebe3b3a67a28a5062df037f6e252">&#9670;&nbsp;</a></span>parallel()</h2>
 

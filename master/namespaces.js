@@ -212,8 +212,11 @@ var namespaces =
         ] ],
         [ "ADataBindingDefaultDoubleNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
         [ "ADataBindingDefaultNumberPicker", "structaui_1_1impl_1_1ADataBindingDefaultNumberPicker.html", null ],
+        [ "ADataBindingRangedDoubleNumberPicker", "structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html", null ],
+        [ "ADataBindingRangedNumberPicker", "structaui_1_1impl_1_1ADataBindingRangedNumberPicker.html", null ],
         [ "Error", "structaui_1_1impl_1_1Error.html", null ],
         [ "first", "structaui_1_1impl_1_1first.html", null ],
+        [ "JsonObject", "structaui_1_1impl_1_1JsonObject.html", "structaui_1_1impl_1_1JsonObject" ],
         [ "select_overload", "structaui_1_1impl_1_1select__overload.html", null ]
       ] ],
       [ "jni", null, [
