@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('AMutexWrapper_8h_source.html',''); ini
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        mMutex.lock();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#if AUI_DEBUG</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        mOwnerThread = std::this_thread::get_id();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        mOwnerThread = <a class="code hl_function" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>();</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -139,14 +139,14 @@ $(document).ready(function(){initNavTree('AMutexWrapper_8h_source.html',''); ini
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> unlock() {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#if AUI_DEBUG</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        aui::zero(mOwnerThread);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        mOwnerThread = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        mMutex.unlock();</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    T&amp; value() <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#if AUI_DEBUG</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(mOwnerThread == std::this_thread::get_id(), <span class="stringliteral">&quot;AMutexWrapper should be locked by this thread in order to get access to the underlying object&quot;</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(mOwnerThread == <a class="code hl_function" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>(), <span class="stringliteral">&quot;AMutexWrapper should be locked by this thread in order to get access to the underlying object&quot;</span>);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> mValue;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
@@ -160,10 +160,12 @@ $(document).ready(function(){initNavTree('AMutexWrapper_8h_source.html',''); ini
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_struct" href="structAMutex.html">AMutex</a> mMutex;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#if AUI_DEBUG</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::thread::id mOwnerThread;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_class" href="class__.html">_&lt;AAbstractThread&gt;</a> mOwnerThread;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
 <div class="ttc" id="aclassAMutexWrapper_html"><div class="ttname"><a href="classAMutexWrapper.html">AMutexWrapper</a></div><div class="ttdoc">Wraps the object with mutex, providing thread-safety layer and a runtime check.</div><div class="ttdef"><b>Definition:</b> AMutexWrapper.h:22</div></div>
+<div class="ttc" id="aclassAThread_html_a1d09d7332e61f6ef39e93d4a1fdc2574"><div class="ttname"><a href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a></div><div class="ttdeci">static _&lt; AAbstractThread &gt; current()</div><div class="ttdef"><b>Definition:</b> AThread.cpp:222</div></div>
+<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:172</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:71</div></div>
 <div class="ttc" id="astructAMutex_html"><div class="ttname"><a href="structAMutex.html">AMutex</a></div><div class="ttdoc">Basic syscall-based synchronization primitive.</div><div class="ttdef"><b>Definition:</b> AMutex.h:33</div></div>
 <div class="ttc" id="astructaui_1_1noncopyable_html"><div class="ttname"><a href="structaui_1_1noncopyable.html">aui::noncopyable</a></div><div class="ttdoc">Forbids copy of your class.</div><div class="ttdef"><b>Definition:</b> values.h:40</div></div>

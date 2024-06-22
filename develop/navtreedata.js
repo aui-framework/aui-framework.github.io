@@ -75,8 +75,8 @@ var NAVTREEINDEX =
 "classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b",
 "classAViewContainer.html#af4713774dc02772268a95caa20639491",
 "classSoftwareRenderingContext.html",
-"group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0",
-"structASerializable_3_01const_01char_01_5_01_4.html",
+"group__core.html#ga2305696ff6358034fab947ca8cd7812a",
+"structASerializable_3_01char_0fL_0e_4.html",
 "structaui_1_1dbus_1_1converter.html",
 "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html"
 ];
