@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"group__core.html":[3,0,1],
+"group__core.html#ga0088806c40549a1bc72ea08cdb864be9":[3,0,1,66],
+"group__core.html#ga09f190c0f6d2ec8c6d293331fe7e3ee8":[3,0,1,69],
+"group__core.html#ga1a7e590ef7a5a4312e8ee8cd1f482fcf":[3,0,1,68],
 "group__core.html#ga2305696ff6358034fab947ca8cd7812a":[3,0,1,65],
 "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0":[3,0,1,60],
 "group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32":[3,0,1,63],
@@ -210,12 +214,12 @@ var NAVTREEINDEX6 =
 "structAModelMeta.html":[0,2,194],
 "structAModelMetaBase.html":[0,2,195],
 "structAMutex.html":[3,0,1,41],
-"structAPerformanceSection_1_1Data.html":[3,0,1,33,0],
 "structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
+"structAPerformanceSection_1_1Data.html":[3,0,1,33,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,33,0,0],
-"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,33,0,1],
+"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPointerMoveEvent.html":[0,2,214],
 "structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,214,0],
 "structAPointerPressedEvent.html":[0,2,215],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "structASerializable_3_01APath_01_4.html":[0,2,255],
 "structASerializable_3_01AString_01_4.html":[0,2,256],
 "structASerializable_3_01AUuid_01_4.html":[0,2,259],
-"structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html":[0,2,263],
-"structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html":[0,2,264],
-"structASerializable_3_01___3_01T_01_4_01_4.html":[0,2,251],
-"structASerializable_3_01aui_1_1serialize__raw_3_01T_01_4_01_4.html":[0,2,257],
-"structASerializable_3_01aui_1_1serialize__sized_3_01T_01_4_01_4.html":[0,2,258]
+"structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__arithmetic__v_3_01T_01_4_01_4_01_4.html":[0,2,263]
 };

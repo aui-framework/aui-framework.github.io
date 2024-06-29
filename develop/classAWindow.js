@@ -17,6 +17,7 @@ var classAWindow =
     [ "onPointerMove", "classAWindow.html#a0de97c943cf121559175fc46f4f5a45b", null ],
     [ "quit", "classAWindow.html#adbc6e2cd963d867d3b80b7d5b5e4b044", null ],
     [ "restore", "classAWindow.html#a633a616c5964b3fd3805363375442753", null ],
+    [ "setMobileScreenOrientation", "classAWindow.html#a9ddbf7068457e4dc86a53d102e37617b", null ],
     [ "show", "classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b", null ],
     [ "unmapPosition", "classAWindow.html#ac12087888735e70ce6347293fafdb30f", null ],
     [ "maximized", "classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177", null ],

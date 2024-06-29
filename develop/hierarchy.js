@@ -1061,6 +1061,9 @@ var hierarchy =
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
     [ "gl::Texture< TEXTURE_TARGET >", "classgl_1_1Texture.html", null ],
     [ "aui::sl_gen::Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ],
+    [ "gl::Texture< gl::TEXTURE_2D_ARRAY >", "classgl_1_1Texture.html", [
+      [ "gl::Texture2DArray", "classgl_1_1Texture2DArray.html", null ]
+    ] ],
     [ "gl::Texture< TEXTURE_1D >", "classgl_1_1Texture.html", [
       [ "gl::Texture1D", "classgl_1_1Texture1D.html", null ]
     ] ],

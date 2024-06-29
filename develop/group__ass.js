@@ -44,6 +44,7 @@ var group__ass =
         [ "TEXT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed", null ]
       ] ]
     ] ],
+    [ "AScreenOrientation", "group__ass.html#ga693a0acd61fa6c15b3ea6309d943b146", null ],
     [ "ATextAlign", "group__ass.html#ga04f95ffef6e5fa435b7c5fcf67c49848", null ],
     [ "ass::Sizing", "group__ass.html#gacddcf8eaaf32f1471c17e0a4434bd3d8", [
       [ "ass::Sizing::NONE", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693", null ],
