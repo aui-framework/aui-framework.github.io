@@ -972,6 +972,7 @@ var hierarchy =
     [ "std::runtime_error", null, [
       [ "AXmlParseError", "classAXmlParseError.html", null ]
     ] ],
+    [ "ABaseWindow::ScalingParams", "structABaseWindow_1_1ScalingParams.html", null ],
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
     [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
