@@ -753,6 +753,7 @@ var annotated =
     [ "DevtoolsLayoutTab", "classDevtoolsLayoutTab.html", null ],
     [ "DevtoolsPanel", "classDevtoolsPanel.html", null ],
     [ "DevtoolsPerformanceTab", "classDevtoolsPerformanceTab.html", null ],
+    [ "DevtoolsPointerInspect", "classDevtoolsPointerInspect.html", null ],
     [ "DynamicVector", "classDynamicVector.html", null ],
     [ "EffectShimmer", "classEffectShimmer.html", null ],
     [ "Emitter", "classEmitter.html", null ],

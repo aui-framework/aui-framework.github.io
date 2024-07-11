@@ -492,6 +492,7 @@ var hierarchy =
             [ "DevtoolsLayoutTab", "classDevtoolsLayoutTab.html", null ],
             [ "DevtoolsPanel", "classDevtoolsPanel.html", null ],
             [ "DevtoolsPerformanceTab", "classDevtoolsPerformanceTab.html", null ],
+            [ "DevtoolsPointerInspect", "classDevtoolsPointerInspect.html", null ],
             [ "MockedViewContainer", "classMockedViewContainer.html", null ],
             [ "WrapperContainer", "classWrapperContainer.html", null ]
           ] ]
