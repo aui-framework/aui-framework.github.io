@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structASerializable_3_01AByteBufferView_01_4.html":[0,2,253],
 "structASerializable_3_01AByteBuffer_01_4.html":[0,2,252],
 "structASerializable_3_01AJson_01_4.html":[0,2,254],
 "structASerializable_3_01APath_01_4.html":[0,2,255],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html":[0,2,1,3,41],
 "structass_1_1prop_1_1Property_3_01Visibility_01_4.html":[0,0,4,3,42],
 "structass_1_1prop_1_1Property_3_01Visibility_01_4.html":[0,2,1,3,42],
-"structass_1_1type__of.html":[0,2,1,48],
-"structass_1_1type__of.html":[0,0,4,48]
+"structass_1_1type__of.html":[0,2,1,48]
 };
