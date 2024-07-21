@@ -1103,6 +1103,11 @@ var hierarchy =
     ] ],
     [ "aui::jni::TypedMethods< jshort >", "structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html", null ],
     [ "aui::jni::TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ],
+    [ "std::u16string", null, [
+      [ "AString", "classAString.html", [
+        [ "APath", "classAPath.html", null ]
+      ] ]
+    ] ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],
@@ -1215,11 +1220,6 @@ var hierarchy =
     [ "Win32SymService", "structWin32SymService.html", null ],
     [ "WinIoAsync", "classWinIoAsync.html", null ],
     [ "WinIoThread", "classWinIoThread.html", null ],
-    [ "std::wstring", null, [
-      [ "AString", "classAString.html", [
-        [ "APath", "classAPath.html", null ]
-      ] ]
-    ] ],
     [ "aui::zip< Containers >", "structaui_1_1zip.html", null ],
     [ "aui::Lambdas", null, [
       [ "aui::lambda_overloaded< Lambdas >", "structaui_1_1lambda__overloaded.html", null ]

@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a9e29ff337272d76fd683360018c57b67":[3,0,9,0,32,7],
+"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aac2d1453e21b91adbf8d873909380ec3":[3,0,9,0,32,8],
+"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693":[3,0,9,0,32,0],
 "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ac397289ee45877be0cd49811fe245b4e":[3,0,9,0,32,2],
 "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aeac9f95f880e5fe80d83a5821ba5111e":[3,0,9,0,32,3],
 "group__background__effect.html":[3,0,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "structARenderingContextOptions_1_1Software.html":[3,0,9,7,2],
 "structAScrollEvent.html":[0,2,247],
 "structAScrollEvent.html#a431620f313b0808fb40f4afad9592b9e":[0,2,247,3],
-"structAScrollEvent.html#accebabadf3ba168d57ff61ef6fc29b2c":[0,2,247,0],
-"structAScrollEvent.html#ad74005ce7e0a777817a7a09ce997f5ae":[0,2,247,1],
-"structAScrollEvent.html#afb585641aa999c42077063ccf83c6ffe":[0,2,247,2],
-"structASerializable.html":[0,2,250]
+"structAScrollEvent.html#accebabadf3ba168d57ff61ef6fc29b2c":[0,2,247,0]
 };
