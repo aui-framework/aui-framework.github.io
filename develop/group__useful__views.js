@@ -245,7 +245,9 @@ var group__useful__views =
       [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
     ] ],
     [ "AViewContainer", "classAViewContainer.html", [
-      [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
+      [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", [
+        [ "isBlockClicksWhenPressed", "structAViewContainer_1_1PointerEventsMapping.html#a53bbbba56d7255476a756b50cd5eef08", null ]
+      ] ],
       [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],
       [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
       [ "focusChainTarget", "classAViewContainer.html#a2a72d70843acdacbaa957084a851014a", null ],

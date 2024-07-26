@@ -1,6 +1,6 @@
 var classAViewContainer =
 [
-    [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
+    [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", "structAViewContainer_1_1PointerEventsMapping" ],
     [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],
     [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
     [ "focusChainTarget", "classAViewContainer.html#a2a72d70843acdacbaa957084a851014a", null ],
