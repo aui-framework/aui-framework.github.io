@@ -28,7 +28,6 @@ var hierarchy =
       [ "ATranslationAnimator", "classATranslationAnimator.html", null ]
     ] ],
     [ "AArrayView< T >", "classAArrayView.html", null ],
-    [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "ABitField< T >", "classABitField.html", null ],
     [ "ABorderStyle", "classABorderStyle.html", null ],
@@ -613,6 +612,7 @@ var hierarchy =
     [ "aui::render::brush::gradient::Helper", "structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html", null ],
     [ "ATokenizer::Hexable< underlying_t >", "structATokenizer_1_1Hexable.html", null ],
     [ "ass::IAssSubSelector", "classass_1_1IAssSubSelector.html", [
+      [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
       [ "ass::DirectParentSubSelector< L, R >", "structass_1_1DirectParentSubSelector.html", null ],
       [ "ass::ParentSubSelector< L, R >", "structass_1_1ParentSubSelector.html", null ],
       [ "ass::Selected", "structass_1_1Selected.html", null ],
