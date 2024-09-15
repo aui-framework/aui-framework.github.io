@@ -114,8 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0fdf23722f091e8b461d18b76fd6ce52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a0fdf23722f091e8b461d18b76fd6ce52">render</a> (<a class="el" href="structClipOptimizationContext.html">ClipOptimizationContext</a> context) override</td></tr>
 <tr class="memdesc:a0fdf23722f091e8b461d18b76fd6ce52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classATextArea_1_1TextAreaField.html#a0fdf23722f091e8b461d18b76fd6ce52">More...</a><br /></td></tr>
 <tr class="separator:a0fdf23722f091e8b461d18b76fd6ce52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e3e881fdf7aa2f3c39604ecae75f0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#ac6e3e881fdf7aa2f3c39604ecae75f0b">onCharEntered</a> (wchar_t c) override</td></tr>
-<tr class="separator:ac6e3e881fdf7aa2f3c39604ecae75f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f954ced9c1a880c13224cddfbbef22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a33f954ced9c1a880c13224cddfbbef22">onCharEntered</a> (char16_t c) override</td></tr>
+<tr class="separator:a33f954ced9c1a880c13224cddfbbef22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAAbstractTypeableView"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAAbstractTypeableView')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAAbstractTypeableView.html">AAbstractTypeableView</a></td></tr>
 <tr class="memitem:adbae7713eb7d9818ef729f6857dd6ae5 inherit pub_methods_classAAbstractTypeableView"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractTypeableView.html#adbae7713eb7d9818ef729f6857dd6ae5">getContentMinimumHeight</a> (ALayoutDirection layout) override</td></tr>
 <tr class="separator:adbae7713eb7d9818ef729f6857dd6ae5 inherit pub_methods_classAAbstractTypeableView"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -345,6 +345,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setGeometry</
 <tr class="memitem:ad098105552187e1d3e296fe924ff027f inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="ad098105552187e1d3e296fe924ff027f" name="ad098105552187e1d3e296fe924ff027f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setGeometry</b> (const glm::ivec2 &amp;position, const glm::ivec2 &amp;size)</td></tr>
 <tr class="separator:ad098105552187e1d3e296fe924ff027f inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5f2c0c54e1c5fade70fe08cb96c5b2 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="aad5f2c0c54e1c5fade70fe08cb96c5b2" name="aad5f2c0c54e1c5fade70fe08cb96c5b2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isBlockClicksWhenPressed</b> () const noexcept</td></tr>
+<tr class="separator:aad5f2c0c54e1c5fade70fe08cb96c5b2 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3eec6710e760c67f3f9c79899a03d62 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="aa3eec6710e760c67f3f9c79899a03d62" name="aa3eec6710e760c67f3f9c79899a03d62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setBlockClicksWhenPressed</b> (bool value) noexcept</td></tr>
+<tr class="separator:aa3eec6710e760c67f3f9c79899a03d62 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae11b78477772c712d635eb2c540ad65d inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ae11b78477772c712d635eb2c540ad65d">getFixedSize</a> ()</td></tr>
 <tr class="memdesc:ae11b78477772c712d635eb2c540ad65d inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed size.  <a href="classAView.html#ae11b78477772c712d635eb2c540ad65d">More...</a><br /></td></tr>
 <tr class="separator:ae11b78477772c712d635eb2c540ad65d inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -554,12 +560,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a1cb6483eae44ea75a69d6d1a8674fc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ed301f96db4c7251998fe398b89b423"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a8ed301f96db4c7251998fe398b89b423">typeableInsert</a> (size_t at, const <a class="el" href="classAString.html">AString</a> &amp;toInsert) override</td></tr>
 <tr class="separator:a8ed301f96db4c7251998fe398b89b423"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a755c9bf00449be4736faaf8096634dd9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a755c9bf00449be4736faaf8096634dd9">typeableInsert</a> (size_t at, wchar_t toInsert) override</td></tr>
-<tr class="separator:a755c9bf00449be4736faaf8096634dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95f69aabaad732f49a9259dc210d903a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a95f69aabaad732f49a9259dc210d903a">typeableFind</a> (wchar_t c, size_t startPos) override</td></tr>
-<tr class="separator:a95f69aabaad732f49a9259dc210d903a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42ea767b5e687caff8d46db9e8c83993"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a42ea767b5e687caff8d46db9e8c83993">typeableReverseFind</a> (wchar_t c, size_t startPos) override</td></tr>
-<tr class="separator:a42ea767b5e687caff8d46db9e8c83993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9e01e8a4e7b1a1881c98e2f6b70c46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a9f9e01e8a4e7b1a1881c98e2f6b70c46">typeableInsert</a> (size_t at, char16_t toInsert) override</td></tr>
+<tr class="separator:a9f9e01e8a4e7b1a1881c98e2f6b70c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4438d181f948bfbd16ac9b4b9d37c4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a6a4438d181f948bfbd16ac9b4b9d37c4">typeableFind</a> (char16_t c, size_t startPos) override</td></tr>
+<tr class="separator:a6a4438d181f948bfbd16ac9b4b9d37c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c20dca83c2edbb34db86ec57d0e542"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#a84c20dca83c2edbb34db86ec57d0e542">typeableReverseFind</a> (char16_t c, size_t startPos) override</td></tr>
+<tr class="separator:a84c20dca83c2edbb34db86ec57d0e542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3c360068bcc956557a2684e2235ed92"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextArea_1_1TextAreaField.html#ab3c360068bcc956557a2684e2235ed92">length</a> () const override</td></tr>
 <tr class="separator:ab3c360068bcc956557a2684e2235ed92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAAbstractTypeableView"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAAbstractTypeableView')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAAbstractTypeableView.html">AAbstractTypeableView</a></td></tr>
@@ -577,8 +583,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateSelecti
 <tr class="separator:af0829a838e0e5580eea0d59518d008be inherit pro_methods_classAAbstractTypeableView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc3865da7e0392a42812df0929f97057 inherit pro_methods_classAAbstractTypeableView"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractTypeableView.html#afc3865da7e0392a42812df0929f97057">onSelectionChanged</a> () override</td></tr>
 <tr class="separator:afc3865da7e0392a42812df0929f97057 inherit pro_methods_classAAbstractTypeableView"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49de5a96d5a4cb3215d804e38c5fbf42 inherit pro_methods_classAAbstractTypeableView"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractTypeableView.html#a49de5a96d5a4cb3215d804e38c5fbf42">enterChar</a> (wchar_t c)</td></tr>
-<tr class="separator:a49de5a96d5a4cb3215d804e38c5fbf42 inherit pro_methods_classAAbstractTypeableView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fba934d979cff3407333c507c6543fd inherit pro_methods_classAAbstractTypeableView"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractTypeableView.html#a4fba934d979cff3407333c507c6543fd">enterChar</a> (char16_t c)</td></tr>
+<tr class="separator:a4fba934d979cff3407333c507c6543fd inherit pro_methods_classAAbstractTypeableView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bcb4cfb3ac2bf1728e0288e317b3662 inherit pro_methods_classAAbstractTypeableView"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractTypeableView.html#a0bcb4cfb3ac2bf1728e0288e317b3662">getMouseSelectionPadding</a> () override</td></tr>
 <tr class="separator:a0bcb4cfb3ac2bf1728e0288e317b3662 inherit pro_methods_classAAbstractTypeableView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ec673aa3b4449e885e6dc7d1ee3b31 inherit pro_methods_classAAbstractTypeableView"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractTypeableView.html#ad7ec673aa3b4449e885e6dc7d1ee3b31">getMouseSelectionScroll</a> () override</td></tr>
@@ -822,6 +828,9 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 <tr class="memitem:a22c7f11d281b887e5cf672f4f992d3a3 inherit pro_attribs_classAView"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAString.html">AString</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">mAssNames</a></td></tr>
 <tr class="memdesc:a22c7f11d281b887e5cf672f4f992d3a3 inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASS class names.  <a href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">More...</a><br /></td></tr>
 <tr class="separator:a22c7f11d281b887e5cf672f4f992d3a3 inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a4475a69d795612634df68566a0b9d5fb">mSkipUntilLayoutUpdate</a> = true</td></tr>
+<tr class="memdesc:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true, <a class="el" href="classAViewContainer.html" title="A view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry.  <a href="classAView.html#a4475a69d795612634df68566a0b9d5fb">More...</a><br /></td></tr>
+<tr class="separator:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classACursorSelectable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classACursorSelectable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classACursorSelectable.html">ACursorSelectable</a></td></tr>
 <tr class="memitem:a9f68ad4af459c994832d0b1302088e95 inherit pro_attribs_classACursorSelectable"><td class="memItemLeft" align="right" valign="top"><a id="a9f68ad4af459c994832d0b1302088e95" name="a9f68ad4af459c994832d0b1302088e95"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorIndex</b> = 0</td></tr>
@@ -885,8 +894,8 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
 
 </div>
 </div>
-<a id="ac6e3e881fdf7aa2f3c39604ecae75f0b" name="ac6e3e881fdf7aa2f3c39604ecae75f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6e3e881fdf7aa2f3c39604ecae75f0b">&#9670;&nbsp;</a></span>onCharEntered()</h2>
+<a id="a33f954ced9c1a880c13224cddfbbef22" name="a33f954ced9c1a880c13224cddfbbef22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f954ced9c1a880c13224cddfbbef22">&#9670;&nbsp;</a></span>onCharEntered()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,7 +906,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
         <tr>
           <td class="memname">void ATextArea::TextAreaField::onCharEntered </td>
           <td>(</td>
-          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramtype">char16_t&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1095,8 +1104,8 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
 
 </div>
 </div>
-<a id="a95f69aabaad732f49a9259dc210d903a" name="a95f69aabaad732f49a9259dc210d903a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95f69aabaad732f49a9259dc210d903a">&#9670;&nbsp;</a></span>typeableFind()</h2>
+<a id="a6a4438d181f948bfbd16ac9b4b9d37c4" name="a6a4438d181f948bfbd16ac9b4b9d37c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4438d181f948bfbd16ac9b4b9d37c4">&#9670;&nbsp;</a></span>typeableFind()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1107,7 +1116,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
         <tr>
           <td class="memname">size_t ATextArea::TextAreaField::typeableFind </td>
           <td>(</td>
-          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramtype">char16_t&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
@@ -1133,8 +1142,48 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
 
 </div>
 </div>
+<a id="a9f9e01e8a4e7b1a1881c98e2f6b70c46" name="a9f9e01e8a4e7b1a1881c98e2f6b70c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9e01e8a4e7b1a1881c98e2f6b70c46">&#9670;&nbsp;</a></span>typeableInsert() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ATextArea::TextAreaField::typeableInsert </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char16_t&#160;</td>
+          <td class="paramname"><em>toInsert</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Inserts string. </p><dl class="section return"><dt>Returns</dt><dd>true, if successfully inserted; false otherwise </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>when insert could not be completed (i.e. isValidText discarded the new string contents), the state is left unchanged as like if <code>typeableInsert</code> have not been called. </dd></dl>
+
+<p>Implements <a class="el" href="classAAbstractTypeableView.html#ad5e92b02ec78bfe47fdb5c3216db28a2">AAbstractTypeableView</a>.</p>
+
+</div>
+</div>
 <a id="a8ed301f96db4c7251998fe398b89b423" name="a8ed301f96db4c7251998fe398b89b423"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ed301f96db4c7251998fe398b89b423">&#9670;&nbsp;</a></span>typeableInsert() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed301f96db4c7251998fe398b89b423">&#9670;&nbsp;</a></span>typeableInsert() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1173,48 +1222,8 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
 
 </div>
 </div>
-<a id="a755c9bf00449be4736faaf8096634dd9" name="a755c9bf00449be4736faaf8096634dd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a755c9bf00449be4736faaf8096634dd9">&#9670;&nbsp;</a></span>typeableInsert() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ATextArea::TextAreaField::typeableInsert </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>at</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">wchar_t&#160;</td>
-          <td class="paramname"><em>toInsert</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p >Inserts string. </p><dl class="section return"><dt>Returns</dt><dd>true, if successfully inserted; false otherwise </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>when insert could not be completed (i.e. isValidText discarded the new string contents), the state is left unchanged as like if <code>typeableInsert</code> have not been called. </dd></dl>
-
-<p>Implements <a class="el" href="classAAbstractTypeableView.html#a6509bc11bf21b94ee5a34253049d5f79">AAbstractTypeableView</a>.</p>
-
-</div>
-</div>
-<a id="a42ea767b5e687caff8d46db9e8c83993" name="a42ea767b5e687caff8d46db9e8c83993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42ea767b5e687caff8d46db9e8c83993">&#9670;&nbsp;</a></span>typeableReverseFind()</h2>
+<a id="a84c20dca83c2edbb34db86ec57d0e542" name="a84c20dca83c2edbb34db86ec57d0e542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84c20dca83c2edbb34db86ec57d0e542">&#9670;&nbsp;</a></span>typeableReverseFind()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1225,7 +1234,7 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
         <tr>
           <td class="memname">size_t ATextArea::TextAreaField::typeableReverseFind </td>
           <td>(</td>
-          <td class="paramtype">wchar_t&#160;</td>
+          <td class="paramtype">char16_t&#160;</td>
           <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>

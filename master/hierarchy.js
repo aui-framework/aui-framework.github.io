@@ -28,7 +28,6 @@ var hierarchy =
       [ "ATranslationAnimator", "classATranslationAnimator.html", null ]
     ] ],
     [ "AArrayView< T >", "classAArrayView.html", null ],
-    [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "ABitField< T >", "classABitField.html", null ],
     [ "ABorderStyle", "classABorderStyle.html", null ],
@@ -492,6 +491,7 @@ var hierarchy =
             [ "DevtoolsLayoutTab", "classDevtoolsLayoutTab.html", null ],
             [ "DevtoolsPanel", "classDevtoolsPanel.html", null ],
             [ "DevtoolsPerformanceTab", "classDevtoolsPerformanceTab.html", null ],
+            [ "DevtoolsPointerInspect", "classDevtoolsPointerInspect.html", null ],
             [ "MockedViewContainer", "classMockedViewContainer.html", null ],
             [ "WrapperContainer", "classWrapperContainer.html", null ]
           ] ]
@@ -612,6 +612,7 @@ var hierarchy =
     [ "aui::render::brush::gradient::Helper", "structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html", null ],
     [ "ATokenizer::Hexable< underlying_t >", "structATokenizer_1_1Hexable.html", null ],
     [ "ass::IAssSubSelector", "classass_1_1IAssSubSelector.html", [
+      [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
       [ "ass::DirectParentSubSelector< L, R >", "structass_1_1DirectParentSubSelector.html", null ],
       [ "ass::ParentSubSelector< L, R >", "structass_1_1ParentSubSelector.html", null ],
       [ "ass::Selected", "structass_1_1Selected.html", null ],
@@ -972,6 +973,7 @@ var hierarchy =
     [ "std::runtime_error", null, [
       [ "AXmlParseError", "classAXmlParseError.html", null ]
     ] ],
+    [ "ABaseWindow::ScalingParams", "structABaseWindow_1_1ScalingParams.html", null ],
     [ "SceneDelegate()", "categorySceneDelegate_07_08.html", null ],
     [ "ScopedHGlobal", "classScopedHGlobal.html", null ],
     [ "ScreenshotAnalyzer", "classScreenshotAnalyzer.html", null ],
@@ -1061,6 +1063,9 @@ var hierarchy =
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
     [ "gl::Texture< TEXTURE_TARGET >", "classgl_1_1Texture.html", null ],
     [ "aui::sl_gen::Texture2D", "structaui_1_1sl__gen_1_1Texture2D.html", null ],
+    [ "gl::Texture< gl::TEXTURE_2D_ARRAY >", "classgl_1_1Texture.html", [
+      [ "gl::Texture2DArray", "classgl_1_1Texture2DArray.html", null ]
+    ] ],
     [ "gl::Texture< TEXTURE_1D >", "classgl_1_1Texture.html", [
       [ "gl::Texture1D", "classgl_1_1Texture1D.html", null ]
     ] ],
@@ -1098,6 +1103,11 @@ var hierarchy =
     ] ],
     [ "aui::jni::TypedMethods< jshort >", "structaui_1_1jni_1_1TypedMethods_3_01jshort_01_4.html", null ],
     [ "aui::jni::TypedMethods< void >", "structaui_1_1jni_1_1TypedMethods_3_01void_01_4.html", null ],
+    [ "std::u16string", null, [
+      [ "AString", "classAString.html", [
+        [ "APath", "classAPath.html", null ]
+      ] ]
+    ] ],
     [ "<UIApplicationDelegate>", null, [
       [ "AppDelegate", "interfaceAppDelegate.html", null ]
     ] ],
@@ -1210,11 +1220,6 @@ var hierarchy =
     [ "Win32SymService", "structWin32SymService.html", null ],
     [ "WinIoAsync", "classWinIoAsync.html", null ],
     [ "WinIoThread", "classWinIoThread.html", null ],
-    [ "std::wstring", null, [
-      [ "AString", "classAString.html", [
-        [ "APath", "classAPath.html", null ]
-      ] ]
-    ] ],
     [ "aui::zip< Containers >", "structaui_1_1zip.html", null ],
     [ "aui::Lambdas", null, [
       [ "aui::lambda_overloaded< Lambdas >", "structaui_1_1lambda__overloaded.html", null ]

@@ -13,8 +13,8 @@ var group__useful__views =
       [ "text", "classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d", null ],
       [ "textLength", "classAAbstractTextField.html#a6d41e754abc7f9e2432508a53287e3b4", null ],
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
+      [ "typeableInsert", "classAAbstractTextField.html#a2bf33c76efd328235e0b61693edb5205", null ],
       [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
-      [ "typeableInsert", "classAAbstractTextField.html#a627a137628b73f9139838408234ff47c", null ],
       [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ],
       [ "actionButtonPressed", "classAAbstractTextField.html#acefd4f090e6cfd879ad646a9b6311a29", null ]
     ] ],
@@ -142,8 +142,8 @@ var group__useful__views =
         [ "render", "classATextArea_1_1TextAreaField.html#a0fdf23722f091e8b461d18b76fd6ce52", null ],
         [ "text", "classATextArea_1_1TextAreaField.html#ae47ef9fd771cfa707ef5894515c209e6", null ],
         [ "textLength", "classATextArea_1_1TextAreaField.html#a7c706e015165ddfe881436dc498e9ef8", null ],
-        [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a8ed301f96db4c7251998fe398b89b423", null ],
-        [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a755c9bf00449be4736faaf8096634dd9", null ]
+        [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a9f9e01e8a4e7b1a1881c98e2f6b70c46", null ],
+        [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a8ed301f96db4c7251998fe398b89b423", null ]
       ] ],
       [ "getContentMinimumHeight", "classATextArea.html#ac7e0a6483c8597050a8ba5ad26c62d6e", null ],
       [ "onScroll", "classATextArea.html#aae0df62074c3a91e8c966e4474c1f4eb", null ]
@@ -238,6 +238,7 @@ var group__useful__views =
       [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
       [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
       [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
+      [ "mSkipUntilLayoutUpdate", "classAView.html#a4475a69d795612634df68566a0b9d5fb", null ],
       [ "mTextOverflow", "classAView.html#aa80d3e423a09a2ea728e68560e507281", null ],
       [ "positionChanged", "classAView.html#a129f3b9ae234f84498c7965ad6ee8df4", null ],
       [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ],
@@ -245,7 +246,9 @@ var group__useful__views =
       [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
     ] ],
     [ "AViewContainer", "classAViewContainer.html", [
-      [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", null ],
+      [ "PointerEventsMapping", "structAViewContainer_1_1PointerEventsMapping.html", [
+        [ "isBlockClicksWhenPressed", "structAViewContainer_1_1PointerEventsMapping.html#a53bbbba56d7255476a756b50cd5eef08", null ]
+      ] ],
       [ "capturesFocus", "classAViewContainer.html#abd66caead2574fdb4da9891a803d014a", null ],
       [ "consumesClick", "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd", null ],
       [ "focusChainTarget", "classAViewContainer.html#a2a72d70843acdacbaa957084a851014a", null ],

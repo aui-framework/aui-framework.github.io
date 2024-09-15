@@ -119,6 +119,7 @@ var namespaces =
         [ "NONE", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693", null ],
         [ "FIT", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a12197f0373bd373681e99d73fd509954", null ],
         [ "CENTER", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ac397289ee45877be0cd49811fe245b4e", null ],
+        [ "TILE", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aeac9f95f880e5fe80d83a5821ba5111e", null ],
         [ "FIT_PADDING", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a1a0b4e0e6c6c1a6a5958518f4e8d6178", null ],
         [ "COVER", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a901b03ba0232d92accb3426e9acddfee", null ],
         [ "CONTAIN", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a6c8c93b0cd657e2fd400f2c61acc6f42", null ],
@@ -417,6 +418,7 @@ var namespaces =
       [ "Texture", "classgl_1_1Texture.html", null ],
       [ "Texture1D", "classgl_1_1Texture1D.html", null ],
       [ "Texture2D", "classgl_1_1Texture2D.html", null ],
+      [ "Texture2DArray", "classgl_1_1Texture2DArray.html", null ],
       [ "TextureRenderTarget", "classgl_1_1TextureRenderTarget.html", null ],
       [ "Vao", "classgl_1_1Vao.html", "classgl_1_1Vao" ],
       [ "VertexBuffer", "classgl_1_1VertexBuffer.html", null ]

@@ -190,6 +190,9 @@ Macros</h2></td></tr>
 <tr class="memitem:gae43a68976a4d8539e92ff86fc034218c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(condition,  what)&#160;&#160;&#160;AUI_IMPL_ASSERTX(condition, what)</td></tr>
 <tr class="memdesc:gae43a68976a4d8539e92ff86fc034218c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asserts that the passed condition evaluates to true. Adds extra message string.  <a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">More...</a><br /></td></tr>
 <tr class="separator:gae43a68976a4d8539e92ff86fc034218c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1f59dbc9cb81d4a8cf90be3beb37541"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">AUI_ASSERT_NO_CONDITION</a>(what)&#160;&#160;&#160;AUI_IMPL_FAIL(what)</td></tr>
+<tr class="memdesc:gad1f59dbc9cb81d4a8cf90be3beb37541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always triggers assertion fail.  <a href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">More...</a><br /></td></tr>
+<tr class="separator:gad1f59dbc9cb81d4a8cf90be3beb37541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">me</a>&#160;&#160;&#160;this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</td></tr>
 <tr class="memdesc:gac83b72d92d1105a82cd5590c0f65d48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passes the current class and type of the current class separated by comma. It's convenient to use with the connect function:  <a href="group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b">More...</a><br /></td></tr>
 <tr class="separator:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -323,11 +326,46 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>If the condition evaluates to false, triggers default C++ assert behavior (that is, program termination) on debug build or throws <a class="el" href="classAAssertionFailedException.html">AAssertionFailedException</a> on release builds, so it can be handled and reported properly in production applications. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c" title="Asserts that the passed condition evaluates to true. Adds extra message string.">AUI_ASSERTX</a></dd></dl>
+<p>If the condition evaluates to false, triggers default C++ assert behavior (that is, program termination) on debug build or throws <a class="el" href="classAAssertionFailedException.html">AAssertionFailedException</a> on release builds, so it can be handled and reported properly in production applications. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c" title="Asserts that the passed condition evaluates to true. Adds extra message string.">AUI_ASSERTX</a> </dd>
+<dd>
+<a class="el" href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541" title="Always triggers assertion fail.">AUI_ASSERT_NO_CONDITION</a></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> v = 2 + 2;</div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(v &gt;= 0); <span class="comment">// does not trigger</span></div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(v != 4); <span class="comment">// triggers</span></div>
-<div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:52</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:55</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="gad1f59dbc9cb81d4a8cf90be3beb37541" name="gad1f59dbc9cb81d4a8cf90be3beb37541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad1f59dbc9cb81d4a8cf90be3beb37541">&#9670;&nbsp;</a></span>AUI_ASSERT_NO_CONDITION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUI_ASSERT_NO_CONDITION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">what</td><td>)</td>
+          <td>&#160;&#160;&#160;AUI_IMPL_FAIL(what)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Always triggers assertion fail. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">what</td><td>string literal which will be appended to the error message</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Triggers default C++ assert behavior (that is, program termination) on debug build or throws <a class="el" href="classAAssertionFailedException.html">AAssertionFailedException</a> on release builds, so it can be handled and reported properly in production applications. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f" title="Asserts that the passed condition evaluates to true.">AUI_ASSERT</a></dd></dl>
+<div class="fragment"><div class="line"><span class="keywordflow">switch</span> (i) {</div>
+<div class="line">  <span class="keywordflow">case</span> 0: <span class="comment">// ...</span></div>
+<div class="line">  <span class="keywordflow">default</span>:</div>
+<div class="line">    <a class="code hl_define" href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">AUI_ASSERT_NO_CONDITION</a>(<span class="stringliteral">&quot;invalid i&quot;</span>);</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__useful__macros_html_gad1f59dbc9cb81d4a8cf90be3beb37541"><div class="ttname"><a href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">AUI_ASSERT_NO_CONDITION</a></div><div class="ttdeci">#define AUI_ASSERT_NO_CONDITION(what)</div><div class="ttdoc">Always triggers assertion fail.</div><div class="ttdef"><b>Definition:</b> Assert.h:94</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -369,8 +407,8 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> v = 2 + 2;</div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(v &gt;= 0, <span class="stringliteral">&quot;positive value expected&quot;</span>); <span class="comment">// does not trigger</span></div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(v != 4, <span class="stringliteral">&quot;4 is unacceptable value&quot;</span>); <span class="comment">// triggers</span></div>
-<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:71</div></div>
-</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a74">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a75">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>
@@ -977,7 +1015,7 @@ Macros</h2></td></tr>
 <div class="line">    tf1,</div>
 <div class="line">    tf2,</div>
 <div class="line">});</div>
-<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:172</div></div>
+<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:173</div></div>
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> { <span class="comment">// clean, less code and easy to understand</span></div>
 <div class="line">    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;Hello!&quot;</span>) },</div>
 <div class="line">    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">&quot;World!&quot;</span>) },</div>

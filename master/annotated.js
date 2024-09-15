@@ -354,6 +354,7 @@ var annotated =
       [ "Texture", "classgl_1_1Texture.html", null ],
       [ "Texture1D", "classgl_1_1Texture1D.html", null ],
       [ "Texture2D", "classgl_1_1Texture2D.html", null ],
+      [ "Texture2DArray", "classgl_1_1Texture2DArray.html", null ],
       [ "TextureRenderTarget", "classgl_1_1TextureRenderTarget.html", null ],
       [ "Vao", "classgl_1_1Vao.html", "classgl_1_1Vao" ],
       [ "VertexBuffer", "classgl_1_1VertexBuffer.html", null ]
@@ -752,6 +753,7 @@ var annotated =
     [ "DevtoolsLayoutTab", "classDevtoolsLayoutTab.html", null ],
     [ "DevtoolsPanel", "classDevtoolsPanel.html", null ],
     [ "DevtoolsPerformanceTab", "classDevtoolsPerformanceTab.html", null ],
+    [ "DevtoolsPointerInspect", "classDevtoolsPointerInspect.html", null ],
     [ "DynamicVector", "classDynamicVector.html", null ],
     [ "EffectShimmer", "classEffectShimmer.html", null ],
     [ "Emitter", "classEmitter.html", null ],

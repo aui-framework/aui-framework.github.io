@@ -3,6 +3,7 @@ var group__useful__macros =
     [ "async", "group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3", null ],
     [ "asyncX", "group__useful__macros.html#ga21d729326347c5d74faf857abf18d695", null ],
     [ "AUI_ASSERT", "group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f", null ],
+    [ "AUI_ASSERT_NO_CONDITION", "group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541", null ],
     [ "AUI_ASSERT_UI_THREAD_ONLY", "group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9", null ],
     [ "AUI_ASSERT_WORKER_THREAD_ONLY", "group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4", null ],
     [ "AUI_ASSERTX", "group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c", null ],
