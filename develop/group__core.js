@@ -187,6 +187,9 @@ var group__core =
     [ "IStringable", "classIStringable.html", [
       [ "toString", "classIStringable.html#a7bb0454adbf12f59aa8550cc75bddb97", null ]
     ] ],
+    [ "ARect< T >", "structARect.html", [
+      [ "isIntersects", "structARect.html#ac9445dd93815f0fa106b393671837ea8", null ]
+    ] ],
     [ "AI18n", "classAI18n.html", null ],
     [ "ALanguageCode", "classALanguageCode.html", null ],
     [ "ADynamicPipe", "classADynamicPipe.html", [
@@ -261,7 +264,7 @@ var group__core =
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],
-      [ "enqueue", "classAAbstractThread.html#a3e018eb931d46f2353fcc5929b9b9a4a", null ],
+      [ "enqueue", "classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8", null ],
       [ "getCurrentEventLoop", "classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d", null ],
       [ "getId", "classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818", null ],
       [ "interrupt", "classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43", null ],
@@ -301,9 +304,9 @@ var group__core =
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
-    [ "AMessageQueue", "classAMessageQueue.html", [
-      [ "enqueue", "classAMessageQueue.html#a6a327dce95efc4b7bb0add3b20d4e23a", null ],
-      [ "processMessages", "classAMessageQueue.html#ab415def62bd70ecb804bc3aa1bea119f", null ]
+    [ "AMessageQueue< Mutex, Args >", "classAMessageQueue.html", [
+      [ "enqueue", "classAMessageQueue.html#a23bfcfffad6123186c9a3c0f42383124", null ],
+      [ "processMessages", "classAMessageQueue.html#ae42e43f10e1591722f25a5ab7cdfc407", null ]
     ] ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
@@ -318,6 +321,7 @@ var group__core =
       [ "isHang", "classAWatchdog.html#af523718d5589ef376acb1955308c44aa", null ],
       [ "runOperation", "classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929", null ]
     ] ],
+    [ "APoint2D", "group__core.html#ga389f408d67d62017fb38ee1350384275", null ],
     [ "aui::args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],

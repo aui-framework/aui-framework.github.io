@@ -1,4 +1,4 @@
 var classATranslationAnimator =
 [
-    [ "doAnimation", "classATranslationAnimator.html#ab247b32895ce745d499ca92ebd956462", null ]
+    [ "doAnimation", "classATranslationAnimator.html#a3a94f3c6604936a6d88fbab8499d3608", null ]
 ];

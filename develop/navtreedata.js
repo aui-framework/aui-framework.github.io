@@ -70,15 +70,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classADeque.html#a7957277c721f922f5be177ceb21da860",
-"classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c",
-"classAString.html#ad9c5f0dd655d291227d084f674661029",
-"classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b",
-"classSoftwareRenderer.html#aa22f54e5ef84fb268c359501bc9d7e2e",
-"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca",
-"structAScrollEvent.html#accebabadf3ba168d57ff61ef6fc29b2c",
-"structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html",
-"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html"
+"classADeque.html#a6b0408cade52feba74143457055b90e1",
+"classAPath.html#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b",
+"classAString.html#abb60406e99380d9ac93b2a62f2308228",
+"classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc",
+"classSoftwareRenderer.html#a1d549104fc0cdaffc1b9ad4233d27abb",
+"functions_w.html",
+"structAPointerPressedEvent.html#a16a416a1269413eae614a2367e853ca2",
+"structass_1_1prop_1_1Property_3_01Margin_01_4.html",
+"structaui_1_1non__null__lateinit.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

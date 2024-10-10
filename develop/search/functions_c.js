@@ -7,13 +7,14 @@ var searchData=
   ['makefuture_4',['makeFuture',['../classAComplexFutureOperation.html#a8d50985e58d41071f6a24fb35403bb75',1,'AComplexFutureOperation']]],
   ['makesignal_5',['makeSignal',['../classACutoffSignal.html#a846f87917ee35414834b624c281ffd06',1,'ACutoffSignal']]],
   ['manage_6',['manage',['../structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776',1,'aui::ptr::manage(T *raw)'],['../structaui_1_1ptr.html#ad6e812de50ef39005c493b5b155fa6f6',1,'aui::ptr::manage(T *raw, Deleter deleter)']]],
-  ['map_7',['map',['../classAOptional.html#af3365fab5f76668ae9728da5358c6df2',1,'AOptional::map()'],['../classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe',1,'AFuture::map()']]],
+  ['map_7',['map',['../classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe',1,'AFuture::map()'],['../classAOptional.html#af3365fab5f76668ae9728da5358c6df2',1,'AOptional::map()']]],
   ['mapposition_8',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_9',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
-  ['maximize_10',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
-  ['mergedwith_11',['mergedWith',['../classAJson.html#a5ee18e70e8401823304e1f56cca503a4',1,'AJson']]],
-  ['minimize_12',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
-  ['move_13',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
-  ['movetocenter_14',['moveToCenter',['../classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006',1,'AWindow']]],
-  ['mul_15',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
+  ['markpixeldatainvalid_10',['markPixelDataInvalid',['../classABaseWindow.html#a729f78175c3e5264141043b0fcd86fe0',1,'ABaseWindow::markPixelDataInvalid()'],['../classAView.html#a9dbc24e272ea843ad75fb30c2e36389a',1,'AView::markPixelDataInvalid()']]],
+  ['maximize_11',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
+  ['mergedwith_12',['mergedWith',['../classAJson.html#a5ee18e70e8401823304e1f56cca503a4',1,'AJson']]],
+  ['minimize_13',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
+  ['move_14',['move',['../classAPath.html#a933e2210525e6f5b265c0f5d1bbf8c7a',1,'APath']]],
+  ['movetocenter_15',['moveToCenter',['../classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006',1,'AWindow']]],
+  ['mul_16',['mul',['../classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193',1,'AColor']]]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AUI Framework: AMessageQueue Class Reference</title>
+<title>AUI Framework: AMessageQueue&lt; Mutex, Args &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,44 +93,45 @@ $(document).ready(function(){initNavTree('classAMessageQueue.html',''); initResi
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classAMessageQueue-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">AMessageQueue Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
+  <div class="headertitle"><div class="title">AMessageQueue&lt; Mutex, Args &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Universal thread-safe message (callback) queue implementation.  
  <a href="classAMessageQueue.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Universal thread-safe message (callback) queue implementation. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Mutex = AMutex, typename... Args&gt;<br />
+class AMessageQueue&lt; Mutex, Args &gt;</div><p >Universal thread-safe message (callback) queue implementation. </p>
 <p >Thread-safe message queue. The implementation supports enqueueing new messages inside the callbacks. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a44a5264c7a8d75ca000c97beef37859c"><td class="memItemLeft" align="right" valign="top"><a id="a44a5264c7a8d75ca000c97beef37859c" name="a44a5264c7a8d75ca000c97beef37859c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> = std::function&lt; void()&gt;</td></tr>
-<tr class="separator:a44a5264c7a8d75ca000c97beef37859c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbbc07f6cd81a1df271b56f464aacca5"><td class="memItemLeft" align="right" valign="top"><a id="acbbc07f6cd81a1df271b56f464aacca5" name="acbbc07f6cd81a1df271b56f464aacca5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Message</b> = std::function&lt; void(Args...)&gt;</td></tr>
+<tr class="separator:acbbc07f6cd81a1df271b56f464aacca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6a327dce95efc4b7bb0add3b20d4e23a"><td class="memItemLeft" align="right" valign="top"><a id="a6a327dce95efc4b7bb0add3b20d4e23a" name="a6a327dce95efc4b7bb0add3b20d4e23a"></a>
+<tr class="memitem:a23bfcfffad6123186c9a3c0f42383124"><td class="memItemLeft" align="right" valign="top"><a id="a23bfcfffad6123186c9a3c0f42383124" name="a23bfcfffad6123186c9a3c0f42383124"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (Message message)</td></tr>
-<tr class="memdesc:a6a327dce95efc4b7bb0add3b20d4e23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add message to the queue to process in <a class="el" href="classAMessageQueue.html#ab415def62bd70ecb804bc3aa1bea119f" title="Process messages submitted by enqueue method.">processMessages()</a>. <br /></td></tr>
-<tr class="separator:a6a327dce95efc4b7bb0add3b20d4e23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab415def62bd70ecb804bc3aa1bea119f"><td class="memItemLeft" align="right" valign="top"><a id="ab415def62bd70ecb804bc3aa1bea119f" name="ab415def62bd70ecb804bc3aa1bea119f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processMessages</b> ()</td></tr>
-<tr class="memdesc:ab415def62bd70ecb804bc3aa1bea119f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classProcess.html">Process</a> messages submitted by enqueue method. <br /></td></tr>
-<tr class="separator:ab415def62bd70ecb804bc3aa1bea119f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a523b6308fc4d6beda6115e09d15ce3d0"><td class="memItemLeft" align="right" valign="top"><a id="a523b6308fc4d6beda6115e09d15ce3d0" name="a523b6308fc4d6beda6115e09d15ce3d0"></a>
-<a class="el" href="structAMutex.html">AMutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sync</b> () noexcept</td></tr>
-<tr class="separator:a523b6308fc4d6beda6115e09d15ce3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a549483b17ff12d1ee722343c8928786a"><td class="memItemLeft" align="right" valign="top"><a id="a549483b17ff12d1ee722343c8928786a" name="a549483b17ff12d1ee722343c8928786a"></a>
+<tr class="memdesc:a23bfcfffad6123186c9a3c0f42383124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add message to the queue to process in <a class="el" href="classAMessageQueue.html#ae42e43f10e1591722f25a5ab7cdfc407" title="Process messages submitted by enqueue method.">processMessages()</a>. <br /></td></tr>
+<tr class="separator:a23bfcfffad6123186c9a3c0f42383124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42e43f10e1591722f25a5ab7cdfc407"><td class="memItemLeft" align="right" valign="top"><a id="ae42e43f10e1591722f25a5ab7cdfc407" name="ae42e43f10e1591722f25a5ab7cdfc407"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>processMessages</b> (Args... args)</td></tr>
+<tr class="memdesc:ae42e43f10e1591722f25a5ab7cdfc407"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classProcess.html">Process</a> messages submitted by enqueue method. <br /></td></tr>
+<tr class="separator:ae42e43f10e1591722f25a5ab7cdfc407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb7e34188e29555c658a5d520ec8b00"><td class="memItemLeft" align="right" valign="top"><a id="a7eb7e34188e29555c658a5d520ec8b00" name="a7eb7e34188e29555c658a5d520ec8b00"></a>
+Mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sync</b> () noexcept</td></tr>
+<tr class="separator:a7eb7e34188e29555c658a5d520ec8b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1365dc90c67c2452c2648cc7d82be9f0"><td class="memItemLeft" align="right" valign="top"><a id="a1365dc90c67c2452c2648cc7d82be9f0" name="a1365dc90c67c2452c2648cc7d82be9f0"></a>
 <a class="el" href="classADeque.html">ADeque</a>&lt; Message &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>messages</b> () noexcept</td></tr>
-<tr class="separator:a549483b17ff12d1ee722343c8928786a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae00ff0129e8f70ab0063eae0fa507f12"><td class="memItemLeft" align="right" valign="top"><a id="ae00ff0129e8f70ab0063eae0fa507f12" name="ae00ff0129e8f70ab0063eae0fa507f12"></a>
-const <a class="el" href="structAMutex.html">AMutex</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sync</b> () const noexcept</td></tr>
-<tr class="separator:ae00ff0129e8f70ab0063eae0fa507f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d59fc86b5138d0dd675e95703376e0a"><td class="memItemLeft" align="right" valign="top"><a id="a4d59fc86b5138d0dd675e95703376e0a" name="a4d59fc86b5138d0dd675e95703376e0a"></a>
+<tr class="separator:a1365dc90c67c2452c2648cc7d82be9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd80b980ea400597c06aca668d6b522"><td class="memItemLeft" align="right" valign="top"><a id="acfd80b980ea400597c06aca668d6b522" name="acfd80b980ea400597c06aca668d6b522"></a>
+const Mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>sync</b> () const noexcept</td></tr>
+<tr class="separator:acfd80b980ea400597c06aca668d6b522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a635f59790802ad6ec459ba7d11173000"><td class="memItemLeft" align="right" valign="top"><a id="a635f59790802ad6ec459ba7d11173000" name="a635f59790802ad6ec459ba7d11173000"></a>
 const <a class="el" href="classADeque.html">ADeque</a>&lt; Message &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>messages</b> () const noexcept</td></tr>
-<tr class="separator:a4d59fc86b5138d0dd675e95703376e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a635f59790802ad6ec459ba7d11173000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 <p><code>#include &lt;<a class="el" href="AMessageQueue_8h_source.html">AUI/Util/AMessageQueue.h</a>&gt;</code></p>

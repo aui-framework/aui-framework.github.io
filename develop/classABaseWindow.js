@@ -1,5 +1,6 @@
 var classABaseWindow =
 [
+    [ "Profiling", "structABaseWindow_1_1Profiling.html", "structABaseWindow_1_1Profiling" ],
     [ "ScalingParams", "structABaseWindow_1_1ScalingParams.html", "structABaseWindow_1_1ScalingParams" ],
     [ "blockUserInput", "classABaseWindow.html#aecd6330bd485121e21ff2d49e7c383f4", null ],
     [ "createOverlappingSurface", "classABaseWindow.html#aac234fdc6c88229140ba7d834eb893e9", null ],
@@ -11,6 +12,7 @@ var classABaseWindow =
     [ "getFps", "classABaseWindow.html#a97c201d702b93ac223e1f383b5bedca0", null ],
     [ "isPreventingClickOnPointerRelease", "classABaseWindow.html#a31c9bd37b38a7b2d7153b2137c083a3f", null ],
     [ "iterateOverFocusChain", "classABaseWindow.html#ab62d7b36a323b00b1611a316813eb897", null ],
+    [ "markPixelDataInvalid", "classABaseWindow.html#a729f78175c3e5264141043b0fcd86fe0", null ],
     [ "onDragEnter", "classABaseWindow.html#a44892d8ede207abec1de76bbb83553a4", null ],
     [ "onGesture", "classABaseWindow.html#a6f89d221f84f8fd86abec2f5ae40dc0b", null ],
     [ "onPointerMove", "classABaseWindow.html#a1242fa2db41e2f416d8e5c2e7c044c4a", null ],
@@ -18,7 +20,8 @@ var classABaseWindow =
     [ "onPointerReleased", "classABaseWindow.html#a8b251f45c577fbe1b797a1116ace8755", null ],
     [ "onScroll", "classABaseWindow.html#ae3c6b348c19efdb6509e1b3acf7169e5", null ],
     [ "preventClickOnPointerRelease", "classABaseWindow.html#a8b5adda729634c0cff12b9d515b33e20", null ],
-    [ "render", "classABaseWindow.html#a31889c283aaa993f539bf2b52311c792", null ],
+    [ "profiling", "classABaseWindow.html#a89a54b23c094c179e029d0e91cc7a5c7", null ],
+    [ "render", "classABaseWindow.html#a25d404514b744a091cd093185376c25b", null ],
     [ "requestHideTouchscreenKeyboard", "classABaseWindow.html#aa0feeffa4b0425fbfff911b056474f5a", null ],
     [ "requestShowTouchscreenKeyboard", "classABaseWindow.html#a15dc2c3827081082ca78675c5bbe024e", null ],
     [ "setScalingParams", "classABaseWindow.html#a90a5a60abbfadac9c210699b15a31133", null ],

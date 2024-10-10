@@ -393,6 +393,7 @@ var namespaces =
       ] ],
       [ "formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
       [ "formatter< AString >", "structfmt_1_1formatter_3_01AString_01_4.html", null ],
+      [ "formatter< glm::vec< L, T, Q > >", "structfmt_1_1formatter_3_01glm_1_1vec_3_01L_00_01T_00_01Q_01_4_01_4.html", null ],
       [ "formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
     [ "gl", null, [
@@ -424,9 +425,9 @@ var namespaces =
       [ "VertexBuffer", "classgl_1_1VertexBuffer.html", null ]
     ] ],
     [ "RenderHints", null, [
-      [ "PushColor", "classRenderHints_1_1PushColor.html", null ],
-      [ "PushMask", "classRenderHints_1_1PushMask.html", null ],
-      [ "PushMatrix", "classRenderHints_1_1PushMatrix.html", null ],
+      [ "PushColor", "structRenderHints_1_1PushColor.html", null ],
+      [ "PushMask", "structRenderHints_1_1PushMask.html", null ],
+      [ "PushMatrix", "structRenderHints_1_1PushMatrix.html", null ],
       [ "PushState", "classRenderHints_1_1PushState.html", null ]
     ] ],
     [ "std", null, [

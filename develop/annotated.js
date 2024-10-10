@@ -329,6 +329,7 @@ var annotated =
       ] ],
       [ "formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
       [ "formatter< AString >", "structfmt_1_1formatter_3_01AString_01_4.html", null ],
+      [ "formatter< glm::vec< L, T, Q > >", "structfmt_1_1formatter_3_01glm_1_1vec_3_01L_00_01T_00_01Q_01_4_01_4.html", null ],
       [ "formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
     [ "gl", null, [
@@ -360,9 +361,9 @@ var annotated =
       [ "VertexBuffer", "classgl_1_1VertexBuffer.html", null ]
     ] ],
     [ "RenderHints", null, [
-      [ "PushColor", "classRenderHints_1_1PushColor.html", null ],
-      [ "PushMask", "classRenderHints_1_1PushMask.html", null ],
-      [ "PushMatrix", "classRenderHints_1_1PushMatrix.html", null ],
+      [ "PushColor", "structRenderHints_1_1PushColor.html", null ],
+      [ "PushMask", "structRenderHints_1_1PushMask.html", null ],
+      [ "PushMatrix", "structRenderHints_1_1PushMatrix.html", null ],
       [ "PushState", "classRenderHints_1_1PushState.html", null ]
     ] ],
     [ "std", null, [
@@ -500,6 +501,7 @@ var annotated =
     [ "AEOFException", "classAEOFException.html", null ],
     [ "AEventLoop", "classAEventLoop.html", "classAEventLoop" ],
     [ "AException", "classAException.html", null ],
+    [ "AFakeMutex", "classAFakeMutex.html", null ],
     [ "AFakeWindowInitializer", "classAFakeWindowInitializer.html", null ],
     [ "AFatalException", "classAFatalException.html", "classAFatalException" ],
     [ "AFieldObservable", "classAFieldObservable.html", "classAFieldObservable" ],
@@ -622,8 +624,9 @@ var annotated =
     [ "ARaiiHelper", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
     [ "ARandomInputStream", "classARandomInputStream.html", "classARandomInputStream" ],
+    [ "ARect", "structARect.html", "structARect" ],
     [ "ARecursiveMutex", "structARecursiveMutex.html", null ],
-    [ "ARender", "classARender.html", null ],
+    [ "ARenderContext", "structARenderContext.html", "structARenderContext" ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", "structARenderingContextOptions" ],
     [ "AResourceBusyException", "classAResourceBusyException.html", null ],
     [ "ARotationAnimator", "classARotationAnimator.html", "classARotationAnimator" ],
@@ -632,7 +635,7 @@ var annotated =
     [ "ARulerView", "classARulerView.html", "classARulerView" ],
     [ "AScheduler", "classAScheduler.html", "classAScheduler" ],
     [ "AScrollArea", "classAScrollArea.html", "classAScrollArea" ],
-    [ "AScrollAreaInner", "classAScrollAreaInner.html", null ],
+    [ "AScrollAreaViewport", "classAScrollAreaViewport.html", "classAScrollAreaViewport" ],
     [ "AScrollbar", "classAScrollbar.html", "classAScrollbar" ],
     [ "AScrollbarButton", "classAScrollbarButton.html", null ],
     [ "AScrollbarHandle", "classAScrollbarHandle.html", "classAScrollbarHandle" ],
@@ -744,7 +747,6 @@ var annotated =
     [ "BrushHelper", "structBrushHelper.html", null ],
     [ "Cache", "classCache.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
-    [ "ClipOptimizationContext", "structClipOptimizationContext.html", null ],
     [ "CommonRenderingContext", "classCommonRenderingContext.html", null ],
     [ "CurrentThread", "classCurrentThread.html", null ],
     [ "CustomCaptionWindowImplWin32", "classCustomCaptionWindowImplWin32.html", null ],
@@ -775,6 +777,7 @@ var annotated =
     [ "IRemovableListModel", "classIRemovableListModel.html", null ],
     [ "IRenderer", "classIRenderer.html", "classIRenderer" ],
     [ "IRenderingContext", "classIRenderingContext.html", "classIRenderingContext" ],
+    [ "IRenderViewToTexture", "classIRenderViewToTexture.html", "classIRenderViewToTexture" ],
     [ "ISeekableInputStream", "classISeekableInputStream.html", "classISeekableInputStream" ],
     [ "ISqlDatabase", "classISqlDatabase.html", null ],
     [ "ISqlDriver", "classISqlDriver.html", null ],

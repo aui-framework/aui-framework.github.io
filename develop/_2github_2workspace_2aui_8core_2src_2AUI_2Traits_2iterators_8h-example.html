@@ -118,6 +118,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line"><span class="preprocessor">#include &lt;variant&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;parameter_pack.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;macros.h&quot;</span></div>
 <div class="line"> </div>
@@ -184,12 +185,12 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        <span class="keyword">constexpr</span> Iterator&amp; begin() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> Iterator begin() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mBegin;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        <span class="keyword">constexpr</span> Iterator&amp; end() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> Iterator end() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line">            <span class="keywordflow">return</span> mEnd;</div>
 <div class="line">        }</div>
 <div class="line"> </div>
@@ -201,6 +202,14 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        [[nodiscard]]</div>
 <div class="line">        <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; last()<span class="keyword"> const </span>{</div>
 <div class="line">            <span class="keywordflow">return</span> *std::prev(mEnd);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        [[nodiscard]]</div>
+<div class="line">        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> range&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"> </div>
+<div class="line">        [[nodiscard]]</div>
+<div class="line">        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> range&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">            <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == rhs);</div>
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line"> </div>
@@ -289,8 +298,38 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        <span class="keywordflow">return</span> std::make_reverse_iterator(iterator + 1);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a id="_a2" name="_a2"></a><a class="code hl_struct" href="structaui_1_1range.html">aui::range&lt;Iterator&gt;::operator==</a>(<span class="keyword">const</span> range&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">    <span class="keywordflow">if</span> (size() != rhs.size()) {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp;[l, r] : <a id="_a3" name="_a3"></a><a class="code hl_struct" href="structaui_1_1zip.html">aui::zip</a>(*<span class="keyword">this</span>, rhs)) {</div>
+<div class="line">        <span class="keywordflow">if</span> (l != r) {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <a class="code hl_struct" href="structaui_1_1range.html">aui::range&lt;T&gt;</a> range) {</div>
+<div class="line">    os &lt;&lt; <span class="stringliteral">&quot;[ &quot;</span>;</div>
+<div class="line">    <span class="keywordtype">bool</span> isFirst = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; v : range) {</div>
+<div class="line">        <span class="keywordflow">if</span> (isFirst) {</div>
+<div class="line">            isFirst = <span class="keyword">false</span>;</div>
+<div class="line">        } <span class="keywordflow">else</span> {</div>
+<div class="line">            os &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line">        }</div>
+<div class="line">        os &lt;&lt; v;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> os &lt;&lt; <span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_gaee1b2b611b51a8c6101ff769ed9b6a98"><div class="ttname"><a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a></div><div class="ttdeci">#define AUI_NO_OPTIMIZE_OUT(object)</div><div class="ttdoc">Forbids object from being optimized out by compiler.</div><div class="ttdef"><b>Definition:</b> macros.h:40</div></div>
 <div class="ttc" id="astructViewAssertionEmpty_html"><div class="ttname"><a href="structViewAssertionEmpty.html">ViewAssertionEmpty</a></div><div class="ttdef"><b>Definition:</b> Empty.h:19</div></div>
+<div class="ttc" id="astructaui_1_1range_html"><div class="ttname"><a href="structaui_1_1range.html">aui::range</a></div><div class="ttdef"><b>Definition:</b> iterators.h:50</div></div>
+<div class="ttc" id="astructaui_1_1zip_html"><div class="ttname"><a href="structaui_1_1zip.html">aui::zip</a></div><div class="ttdoc">Iterates multiple containers in parallel.</div><div class="ttdef"><b>Definition:</b> iterators.h:154</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

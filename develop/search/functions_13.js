@@ -28,7 +28,7 @@ var searchData=
   ['touint_25',['toUInt',['../classAString.html#aef74276f1c87ce89ccbc11a873d59402',1,'AString']]],
   ['touintorexception_26',['toUIntOrException',['../classAString.html#ade69a4a70112994e90449008d3cb222f',1,'AString']]],
   ['transformgestureeventstodesktop_27',['transformGestureEventsToDesktop',['../classAView.html#a1b273cbe961c8633b17171b750762135',1,'AView']]],
-  ['translate_28',['translate',['../classARender.html#a2372a64ec2c7b49189055fad383102f7',1,'ARender']]],
+  ['translate_28',['translate',['../classIRenderer.html#ac89e0663e7c97a9a5641d5867d75a5d9',1,'IRenderer']]],
   ['transparentize_29',['transparentize',['../classAColor.html#a61588fbcbbba8b205248fbd209d4ed0c',1,'AColor']]],
   ['try_5flock_30',['try_lock',['../classASpinlockMutex.html#a04dce91069ae87e2e3b1b2563b4e693b',1,'ASpinlockMutex']]],
   ['tryexecute_31',['tryExecute',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#adbe5e1bfd42e4aeed5cb2afee35eff48',1,'aui::impl::future::Future::Inner']]],
