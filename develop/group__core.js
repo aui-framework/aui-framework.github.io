@@ -187,6 +187,7 @@ var group__core =
     [ "IStringable", "classIStringable.html", [
       [ "toString", "classIStringable.html#a7bb0454adbf12f59aa8550cc75bddb97", null ]
     ] ],
+    [ "ALineSegment< T >", "structALineSegment.html", null ],
     [ "ARect< T >", "structARect.html", [
       [ "isIntersects", "structARect.html#ac9445dd93815f0fa106b393671837ea8", null ]
     ] ],

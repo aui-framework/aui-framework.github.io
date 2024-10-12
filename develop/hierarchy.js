@@ -142,6 +142,7 @@ var hierarchy =
     [ "ALayoutInflater", "classALayoutInflater.html", null ],
     [ "uitest::impl::align< side >", "structuitest_1_1impl_1_1align.html", null ],
     [ "ALinearGradientBrush", "structALinearGradientBrush.html", null ],
+    [ "ALineSegment< T >", "structALineSegment.html", null ],
     [ "AListModelIndex", "classAListModelIndex.html", null ],
     [ "AListModelRange< T >", "classAListModelRange.html", null ],
     [ "AListModelSelection< T >", "classAListModelSelection.html", null ],

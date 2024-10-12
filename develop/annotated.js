@@ -565,6 +565,7 @@ var annotated =
     [ "ALinearGradientBrush", "structALinearGradientBrush.html", "structALinearGradientBrush" ],
     [ "ALinearLayout", "classALinearLayout.html", null ],
     [ "ALinearLayout< _< AView > >", "classALinearLayout_3_01___3_01AView_01_4_01_4.html", "classALinearLayout_3_01___3_01AView_01_4_01_4" ],
+    [ "ALineSegment", "structALineSegment.html", null ],
     [ "AListItem", "classAListItem.html", "classAListItem" ],
     [ "AListModel", "classAListModel.html", "classAListModel" ],
     [ "AListModelAdapter", "classAListModelAdapter.html", null ],
