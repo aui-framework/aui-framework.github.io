@@ -150,9 +150,9 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> () 
 <tr class="memitem:a2a9fa6ccea94603fb2240bee243a79ea"><td class="memItemLeft" align="right" valign="top"><a id="a2a9fa6ccea94603fb2240bee243a79ea" name="a2a9fa6ccea94603fb2240bee243a79ea"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setMinSize</b> (glm::ivec2 minSize) noexcept</td></tr>
 <tr class="separator:a2a9fa6ccea94603fb2240bee243a79ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a359759a15142b8e338ed02ad2f6c0a45"><td class="memItemLeft" align="right" valign="top"><a id="a359759a15142b8e338ed02ad2f6c0a45" name="a359759a15142b8e338ed02ad2f6c0a45"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>requestLayoutUpdate</b> ()</td></tr>
-<tr class="separator:a359759a15142b8e338ed02ad2f6c0a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1abd0cf71d854d4c5128227821b0e5"><td class="memItemLeft" align="right" valign="top"><a id="ade1abd0cf71d854d4c5128227821b0e5" name="ade1abd0cf71d854d4c5128227821b0e5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>markMinContentSizeInvalid</b> ()</td></tr>
+<tr class="separator:ade1abd0cf71d854d4c5128227821b0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b2a408d7fbcb07fd8c4a5fda68006b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b">setExtraStylesheet</a> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAStylesheet.html">AStylesheet</a> &gt; <a class="el" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>)</td></tr>
 <tr class="separator:a67b2a408d7fbcb07fd8c4a5fda68006b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfffb2d8ac173e35e0599b4389efb9e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#abfffb2d8ac173e35e0599b4389efb9e1">setExtraStylesheet</a> (<a class="el" href="classAStylesheet.html">AStylesheet</a> &amp;&amp;<a class="el" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>)</td></tr>
@@ -231,6 +231,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCursor</b> (<a cla
 <tr class="separator:a7a9e235e61231946d9f06017c1701e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a771d50948bb0ca66cb1a9038f76e416e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a771d50948bb0ca66cb1a9038f76e416e">getContentMinimumHeight</a> (ALayoutDirection layout)</td></tr>
 <tr class="separator:a771d50948bb0ca66cb1a9038f76e416e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bb2370107f161f1acd93cbe7f0262f8"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a1bb2370107f161f1acd93cbe7f0262f8">getContentMinimumSize</a> (ALayoutDirection layout) noexcept</td></tr>
+<tr class="separator:a1bb2370107f161f1acd93cbe7f0262f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8f8c11e2fb57611a46a1f5b2bc377f"><td class="memItemLeft" align="right" valign="top"><a id="a9c8f8c11e2fb57611a46a1f5b2bc377f" name="a9c8f8c11e2fb57611a46a1f5b2bc377f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isContentMinimumSizeInvalidated</b> () noexcept</td></tr>
+<tr class="separator:a9c8f8c11e2fb57611a46a1f5b2bc377f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f3ed95a81fce6d6c816e9dc496e12d"><td class="memItemLeft" align="right" valign="top"><a id="ab5f3ed95a81fce6d6c816e9dc496e12d" name="ab5f3ed95a81fce6d6c816e9dc496e12d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasFocus</b> () const</td></tr>
 <tr class="separator:ab5f3ed95a81fce6d6c816e9dc496e12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,9 +262,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getContentHeight</b> (
 <tr class="memitem:abf796250c783c5cf84df6b989a95d2c4"><td class="memItemLeft" align="right" valign="top"><a id="abf796250c783c5cf84df6b989a95d2c4" name="abf796250c783c5cf84df6b989a95d2c4"></a>
 const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getExpanding</b> () const</td></tr>
 <tr class="separator:abf796250c783c5cf84df6b989a95d2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dff85e3a36d4963bb5e7c1eb3dc02c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5">setExpanding</a> (const glm::ivec2 &amp;expanding)</td></tr>
-<tr class="memdesc:a8dff85e3a36d4963bb5e7c1eb3dc02c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the expanding of view.  <a href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5">More...</a><br /></td></tr>
-<tr class="separator:a8dff85e3a36d4963bb5e7c1eb3dc02c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f47691e1e4de96c4ac972a587e0d980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980">setExpanding</a> (glm::ivec2 expanding)</td></tr>
+<tr class="memdesc:a2f47691e1e4de96c4ac972a587e0d980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the expanding of view.  <a href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980">More...</a><br /></td></tr>
+<tr class="separator:a2f47691e1e4de96c4ac972a587e0d980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae50ca286a74a3d80e90f5004a0889697"><td class="memItemLeft" align="right" valign="top"><a id="ae50ca286a74a3d80e90f5004a0889697" name="ae50ca286a74a3d80e90f5004a0889697"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setExpanding</b> (int expanding)</td></tr>
 <tr class="separator:ae50ca286a74a3d80e90f5004a0889697"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -668,6 +673,12 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mSize</b> = { 2
 <tr class="memitem:a5122d5846227520294bda27e6b45ea4a"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = {0, 0}</td></tr>
 <tr class="memdesc:a5122d5846227520294bda27e6b45ea4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expansion coefficient. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container.  <a href="classAView.html#a5122d5846227520294bda27e6b45ea4a">More...</a><br /></td></tr>
 <tr class="separator:a5122d5846227520294bda27e6b45ea4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03620bb4a613bc2c104083ce174e5cb"><td class="memItemLeft" align="right" valign="top"><a id="ac03620bb4a613bc2c104083ce174e5cb" name="ac03620bb4a613bc2c104083ce174e5cb"></a>
+<a class="el" href="classAOptional.html">AOptional</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mCachedMinContentSize</b></td></tr>
+<tr class="separator:ac03620bb4a613bc2c104083ce174e5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27fcbb47a32d44d3837b6cc080ee43f"><td class="memItemLeft" align="right" valign="top"><a id="ab27fcbb47a32d44d3837b6cc080ee43f" name="ab27fcbb47a32d44d3837b6cc080ee43f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mMarkedMinContentSizeInvalid</b> = false</td></tr>
+<tr class="separator:ab27fcbb47a32d44d3837b6cc080ee43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcab50e0676d2197c64a8d8c2221d741"><td class="memItemLeft" align="right" valign="top"><a id="afcab50e0676d2197c64a8d8c2221d741" name="afcab50e0676d2197c64a8d8c2221d741"></a>
 glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mMinSize</b> = {0, 0}</td></tr>
 <tr class="memdesc:afcab50e0676d2197c64a8d8c2221d741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimal size. <br /></td></tr>
@@ -983,6 +994,33 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 <dl class="section return"><dt>Returns</dt><dd>minimal content-area height. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classAAbstractLabel.html#a65949d4523eac52912a0fd63a25854d4">AAbstractLabel</a>, <a class="el" href="classAAbstractTextField.html#aa1d30fc5cfb064423af8c12cab10ac3a">AAbstractTextField</a>, <a class="el" href="classAAbstractTypeableView.html#adbae7713eb7d9818ef729f6857dd6ae5">AAbstractTypeableView</a>, <a class="el" href="classADoubleNumberPicker.html#a757efcfc6443b0daf81b7117446462c3">ADoubleNumberPicker</a>, <a class="el" href="classAGroupBox.html#a5a20a66f7e3927c06946ed49054d1dd3">AGroupBox</a>, <a class="el" href="classANumberPicker.html#ae5931096355856c82ad0d6f56f0f0668">ANumberPicker</a>, <a class="el" href="classAScrollArea.html#aa686c2c309f39c9675654b76e4045397">AScrollArea</a>, <a class="el" href="classASpacerFixed.html#adecb4adaba29315c52692e32d886ed62">ASpacerFixed</a>, <a class="el" href="classAText.html#aca1c2934439c96461cf11f7786e238ec">AText</a>, <a class="el" href="classATextArea.html#ac7e0a6483c8597050a8ba5ad26c62d6e">ATextArea</a>, <a class="el" href="classATreeView_1_1ContainerView.html#a3a9e16de50261df034a74a1d2558b8ad">ATreeView::ContainerView</a>, <a class="el" href="classATreeView.html#a8ad93957c27d657d7509158864e5095c">ATreeView</a>, and <a class="el" href="classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec">AViewContainer</a>.</p>
+
+</div>
+</div>
+<a id="a1bb2370107f161f1acd93cbe7f0262f8" name="a1bb2370107f161f1acd93cbe7f0262f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb2370107f161f1acd93cbe7f0262f8">&#9670;&nbsp;</a></span>getContentMinimumSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::ivec2 AView::getContentMinimumSize </td>
+          <td>(</td>
+          <td class="paramtype">ALayoutDirection&#160;</td>
+          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>minimal content-area size. </dd></dl>
 
 </div>
 </div>
@@ -1784,8 +1822,8 @@ Changed state (hover, active, focus) of this view </li>
 
 </div>
 </div>
-<a id="a8dff85e3a36d4963bb5e7c1eb3dc02c5" name="a8dff85e3a36d4963bb5e7c1eb3dc02c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dff85e3a36d4963bb5e7c1eb3dc02c5">&#9670;&nbsp;</a></span>setExpanding()</h2>
+<a id="a2f47691e1e4de96c4ac972a587e0d980" name="a2f47691e1e4de96c4ac972a587e0d980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f47691e1e4de96c4ac972a587e0d980">&#9670;&nbsp;</a></span>setExpanding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1796,7 +1834,7 @@ Changed state (hover, active, focus) of this view </li>
         <tr>
           <td class="memname">void AView::setExpanding </td>
           <td>(</td>
-          <td class="paramtype">const glm::ivec2 &amp;&#160;</td>
+          <td class="paramtype">glm::ivec2&#160;</td>
           <td class="paramname"><em>expanding</em></td><td>)</td>
           <td></td>
         </tr>

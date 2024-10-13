@@ -176,6 +176,7 @@ var group__useful__views =
       [ "getBorderRadius", "classAView.html#a56b5b208d3138683ae18dfe8d8edbdae", null ],
       [ "getCenterPointInWindow", "classAView.html#a32e6cd31d4a7ec7b39c9ce5f577900e9", null ],
       [ "getContentMinimumHeight", "classAView.html#a771d50948bb0ca66cb1a9038f76e416e", null ],
+      [ "getContentMinimumSize", "classAView.html#a1bb2370107f161f1acd93cbe7f0262f8", null ],
       [ "getContentMinimumWidth", "classAView.html#a7a9e235e61231946d9f06017c1701e91", null ],
       [ "getCursor", "classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e", null ],
       [ "getFixedSize", "classAView.html#ae11b78477772c712d635eb2c540ad65d", null ],
@@ -213,7 +214,7 @@ var group__useful__views =
       [ "redraw", "classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f", null ],
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
       [ "render", "classAView.html#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3", null ],
-      [ "setExpanding", "classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5", null ],
+      [ "setExpanding", "classAView.html#a2f47691e1e4de96c4ac972a587e0d980", null ],
       [ "setExtraStylesheet", "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b", null ],
       [ "setExtraStylesheet", "classAView.html#abfffb2d8ac173e35e0599b4389efb9e1", null ],
       [ "setMargin", "classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7", null ],
@@ -276,7 +277,6 @@ var group__useful__views =
       [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
       [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
       [ "setLayout", "classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542", null ],
-      [ "updateParentsLayoutIfNecessary", "classAViewContainer.html#a09e9eff2f32d40eb6268d38b3a28238c", null ],
       [ "visitsViewRecursive", "classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf", null ],
       [ "childrenChanged", "classAViewContainer.html#af4713774dc02772268a95caa20639491", null ]
     ] ]
