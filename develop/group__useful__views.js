@@ -55,9 +55,7 @@ var group__useful__views =
       [ "onPointerPressed", "classAGridSplitter.html#aa9f9af05b47347613a2ffb4c818c675d", null ],
       [ "onPointerReleased", "classAGridSplitter.html#a63734a9e908a6bed6b822cf6f396cc81", null ]
     ] ],
-    [ "AGroupBox", "classAGroupBox.html", [
-      [ "getContentMinimumHeight", "classAGroupBox.html#a5a20a66f7e3927c06946ed49054d1dd3", null ]
-    ] ],
+    [ "AGroupBox", "classAGroupBox.html", null ],
     [ "AHDividerView", "classAHDividerView.html", null ],
     [ "ALabel", "classALabel.html", null ],
     [ "AListView", "classAListView.html", [

@@ -528,7 +528,7 @@ var annotated =
     [ "AGLEmbedAuiWrap", "classAGLEmbedAuiWrap.html", null ],
     [ "AGridLayout", "classAGridLayout.html", "classAGridLayout" ],
     [ "AGridSplitter", "classAGridSplitter.html", "classAGridSplitter" ],
-    [ "AGroupBox", "classAGroupBox.html", "classAGroupBox" ],
+    [ "AGroupBox", "classAGroupBox.html", null ],
     [ "AHDividerView", "classAHDividerView.html", null ],
     [ "AHorizontalLayout", "classAHorizontalLayout.html", "classAHorizontalLayout" ],
     [ "AI18n", "classAI18n.html", null ],

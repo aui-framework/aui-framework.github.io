@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"functions_w.html":[0,4,0,23],
 "group__ass.html":[3,0,9,0],
 "group__ass.html#ga04f95ffef6e5fa435b7c5fcf67c49848":[3,0,9,0,31],
 "group__ass.html#ga327847b397ac5aa9eefa2157dbe0961d":[3,0,9,0,33],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPointerMoveEvent.html":[0,2,216],
 "structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,216,0],
-"structAPointerPressedEvent.html":[0,2,217]
+"structAPointerPressedEvent.html":[0,2,217],
+"structAPointerPressedEvent.html#a113bdea6852221a33e9117e3d2ec4d38":[0,2,217,1]
 };

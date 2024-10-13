@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classAPath.html#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b":[3,0,1,2,8,0,1],
 "classAPath.html#a38597cac45847bf6ce74272ea0b72ef3af11a27bb7f92685193a8b9bb47c6a57f":[3,0,1,2,8,0,0],
 "classAPath.html#a4512a1474619f7a6ccb773dc2ee7fbef":[3,0,1,2,8,12],
 "classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c":[3,0,1,2,8,2],
@@ -15,16 +14,16 @@ var NAVTREEINDEX2 =
 "classAPathChooserView.html":[3,0,9,2,16],
 "classAPerformanceFrame.html":[3,0,2,0],
 "classAPerformanceFrame.html":[3,0,1,34],
-"classAPerformanceSection.html":[3,0,2,1],
 "classAPerformanceSection.html":[3,0,1,35],
+"classAPerformanceSection.html":[3,0,2,1],
 "classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,1,35,1],
 "classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,2,1,1],
 "classAPipe.html":[3,0,1,2,9],
 "classAPipe.html":[3,0,1,32],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,32,1],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,2,9,1],
-"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,32,0],
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
 "classAPlaceholderAnimator.html":[0,2,214],
 "classAPlaceholderAnimator_1_1ICustomWidth.html":[0,2,214,0],
 "classAPointerIndex.html":[3,0,9,4],
@@ -123,8 +122,8 @@ var NAVTREEINDEX2 =
 "classAShortcut.html":[0,2,271],
 "classASignal.html":[3,0,1,18],
 "classASignal.html":[3,0,1,0,1],
-"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[3,0,1,18,1],
 "classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[3,0,1,0,1,1],
+"classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8":[3,0,1,18,1],
 "classASizeAnimator.html":[0,2,273],
 "classASizeAnimator.html#a299061a40c0d53d20cd15636ae22f3df":[0,2,273,0],
 "classASlider.html":[3,0,9,2,24],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "classAString.html#a595b975b64130656d41f02b9103ad807":[3,0,1,21,9],
 "classAString.html#a7206a8de8d911964daacb532c104481e":[3,0,1,21,11],
 "classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21":[3,0,1,21,15],
-"classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d":[3,0,1,21,6]
+"classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d":[3,0,1,21,6],
+"classAString.html#abb60406e99380d9ac93b2a62f2308228":[3,0,1,21,8]
 };
