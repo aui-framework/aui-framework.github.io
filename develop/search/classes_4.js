@@ -14,11 +14,12 @@ var searchData=
   ['devtoolspanel_11',['DevtoolsPanel',['../classDevtoolsPanel.html',1,'']]],
   ['devtoolsperformancetab_12',['DevtoolsPerformanceTab',['../classDevtoolsPerformanceTab.html',1,'']]],
   ['devtoolspointerinspect_13',['DevtoolsPointerInspect',['../classDevtoolsPointerInspect.html',1,'']]],
-  ['directparentsubselector_14',['DirectParentSubSelector',['../structass_1_1DirectParentSubSelector.html',1,'ass']]],
-  ['directx11_15',['DirectX11',['../structARenderingContextOptions_1_1DirectX11.html',1,'ARenderingContextOptions']]],
-  ['disabled_16',['disabled',['../structass_1_1disabled.html',1,'ass']]],
-  ['disabled_17',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
-  ['div_18',['div',['../structtuples_1_1detail_1_1functor_1_1div.html',1,'tuples::detail::functor']]],
-  ['dropevent_19',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]],
-  ['dynamicvector_20',['DynamicVector',['../classDynamicVector.html',1,'']]]
+  ['devtoolsprofilingoptions_14',['DevtoolsProfilingOptions',['../classDevtoolsProfilingOptions.html',1,'']]],
+  ['directparentsubselector_15',['DirectParentSubSelector',['../structass_1_1DirectParentSubSelector.html',1,'ass']]],
+  ['directx11_16',['DirectX11',['../structARenderingContextOptions_1_1DirectX11.html',1,'ARenderingContextOptions']]],
+  ['disabled_17',['disabled',['../structass_1_1disabled.html',1,'ass']]],
+  ['disabled_18',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
+  ['div_19',['div',['../structtuples_1_1detail_1_1functor_1_1div.html',1,'tuples::detail::functor']]],
+  ['dropevent_20',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]],
+  ['dynamicvector_21',['DynamicVector',['../classDynamicVector.html',1,'']]]
 ];
