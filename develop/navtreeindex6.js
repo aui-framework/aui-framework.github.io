@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"functions_v.html":[0,4,0,22],
 "functions_vars.html":[0,4,2],
 "functions_w.html":[0,4,0,23],
 "group__ass.html":[3,0,9,0],
@@ -140,7 +141,6 @@ var NAVTREEINDEX6 =
 "md_docs_Crosscompiling.html":[1,6],
 "md_docs_Getting_started_with_AUI.html":[1,0],
 "md_docs_Troubleshoot_list.html":[1,5],
-"md_docs_Writing_platform_dependent_code.html":[1,3],
 "md_docs_Writing_tests.html":[1,2],
 "md_docs_aui_app.html":[3,2,0],
 "md_docs_aui_executable.html":[3,2,1],

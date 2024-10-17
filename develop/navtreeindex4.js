@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0":[3,0,9,2,35,5],
 "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc":[3,0,9,2,35,22],
 "classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd":[3,0,9,2,35,2],
 "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd":[3,0,9,2,35,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0":[0,2,437,1],
 "classSoftwarePrerenderedString.html":[0,2,438],
 "classSoftwareRenderer.html":[0,2,439],
-"classSoftwareRenderer.html#a00804cf6f6a575187e4fb41f0f59f496":[0,2,439,17],
-"classSoftwareRenderer.html#a04464150e8a26e635963eb036080fa31":[0,2,439,4]
+"classSoftwareRenderer.html#a00804cf6f6a575187e4fb41f0f59f496":[0,2,439,17]
 };

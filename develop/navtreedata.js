@@ -46,7 +46,7 @@ var NAVTREE =
       [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
       [ "Writing tests", "md_docs_Writing_tests.html", null ],
-      [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
+      [ "Writing platform dependent code", "@ref md_docs_Writing_platform_dependent_code", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ],
       [ "Crosscompiling (Android and iOS)", "md_docs_Crosscompiling.html", null ]
@@ -69,13 +69,13 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classADeque.html#a6b0408cade52feba74143457055b90e1",
-"classAPath.html#a38597cac45847bf6ce74272ea0b72ef3af11a27bb7f92685193a8b9bb47c6a57f",
-"classAString.html#ac5366542c9f6fc7e9ebedd03f3926619",
-"classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc",
-"classSoftwareRenderer.html#a1441fc2d791de0aa28e80802364073df",
-"functions_vars.html",
+"@ref md_docs_Writing_platform_dependent_code",
+"classADeque.html#a3fafe66b8456d6e36aca5940c5ae9673",
+"classAPath.html#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b",
+"classAString.html#abb60406e99380d9ac93b2a62f2308228",
+"classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0",
+"classSoftwareRenderer.html#a04464150e8a26e635963eb036080fa31",
+"functions_v.html",
 "structAPointerPressedEvent.html",
 "structass_1_1prop_1_1Property_3_01LineHeight_01_4.html",
 "structaui_1_1non__null.html"

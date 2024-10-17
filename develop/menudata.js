@@ -107,7 +107,7 @@ var menudata={children:[
 {text:"Getting started with AUI",url:"md_docs_Getting_started_with_AUI.html"},
 {text:"AUI Boot",url:"md_docs_AUI_Boot.html"},
 {text:"Writing tests",url:"md_docs_Writing_tests.html"},
-{text:"Writing platform dependent code",url:"md_docs_Writing_platform_dependent_code.html"},
+{text:"Writing platform dependent code",url:"@ref md_docs_Writing_platform_dependent_code"},
 {text:"Code style and recommendations",url:"md_docs_Code_style_and_recommendations.html"},
 {text:"Troubleshoot list",url:"md_docs_Troubleshoot_list.html"},
 {text:"Crosscompiling (Android and iOS)",url:"md_docs_Crosscompiling.html"}]},
