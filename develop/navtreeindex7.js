@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"structAPointerMoveEvent.html":[0,2,216],
+"structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,216,0],
 "structAPointerPressedEvent.html":[0,2,217],
 "structAPointerPressedEvent.html#a113bdea6852221a33e9117e3d2ec4d38":[0,2,217,1],
 "structAPointerPressedEvent.html#a16a416a1269413eae614a2367e853ca2":[0,2,217,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "structass_1_1prop_1_1Property_3_01Font_01_4.html":[0,2,1,3,21],
 "structass_1_1prop_1_1Property_3_01ImageRendering_01_4.html":[0,2,1,3,25],
 "structass_1_1prop_1_1Property_3_01ImageRendering_01_4.html":[0,0,4,3,25],
-"structass_1_1prop_1_1Property_3_01LayoutSpacing_01_4.html":[0,2,1,3,26],
-"structass_1_1prop_1_1Property_3_01LayoutSpacing_01_4.html":[0,0,4,3,26],
-"structass_1_1prop_1_1Property_3_01LineHeight_01_4.html":[0,2,1,3,27]
+"structass_1_1prop_1_1Property_3_01LayoutSpacing_01_4.html":[0,2,1,3,26]
 };
