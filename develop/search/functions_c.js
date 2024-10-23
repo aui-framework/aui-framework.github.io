@@ -10,7 +10,7 @@ var searchData=
   ['map_7',['map',['../classAFuture.html#a657b6d64c82ffd61689d5fc6f8d61ebe',1,'AFuture::map()'],['../classAOptional.html#af3365fab5f76668ae9728da5358c6df2',1,'AOptional::map()']]],
   ['mapposition_8',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_9',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
-  ['markpixeldatainvalid_10',['markPixelDataInvalid',['../classABaseWindow.html#a729f78175c3e5264141043b0fcd86fe0',1,'ABaseWindow::markPixelDataInvalid()'],['../classAView.html#a9dbc24e272ea843ad75fb30c2e36389a',1,'AView::markPixelDataInvalid()']]],
+  ['markpixeldatainvalid_10',['markPixelDataInvalid',['../classABaseWindow.html#a729f78175c3e5264141043b0fcd86fe0',1,'ABaseWindow::markPixelDataInvalid()'],['../classAView.html#a9dbc24e272ea843ad75fb30c2e36389a',1,'AView::markPixelDataInvalid()'],['../classAViewContainer.html#a0dbea419f874b188d9b086ef17987f09',1,'AViewContainer::markPixelDataInvalid()']]],
   ['maximize_11',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
   ['mergedwith_12',['mergedWith',['../classAJson.html#a5ee18e70e8401823304e1f56cca503a4',1,'AJson']]],
   ['minimize_13',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],

@@ -770,6 +770,7 @@ var annotated =
     [ "IBackgroundEffect", "classIBackgroundEffect.html", null ],
     [ "IDrawable", "classIDrawable.html", "classIDrawable" ],
     [ "IEventLoop", "classIEventLoop.html", "classIEventLoop" ],
+    [ "IFontView", "classIFontView.html", null ],
     [ "IInputStream", "classIInputStream.html", "classIInputStream" ],
     [ "IListModel", "classIListModel.html", "classIListModel" ],
     [ "IMatcher", "classIMatcher.html", null ],

@@ -663,6 +663,13 @@ var hierarchy =
       ] ],
       [ "MyEventLoop", "classMyEventLoop.html", null ]
     ] ],
+    [ "IFontView", "classIFontView.html", [
+      [ "AAbstractLabel", "classAAbstractLabel.html", null ],
+      [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
+      [ "ARulerArea", "classARulerArea.html", null ],
+      [ "ARulerView", "classARulerView.html", null ],
+      [ "AText", "classAText.html", null ]
+    ] ],
     [ "IInputStream", "classIInputStream.html", [
       [ "AByteBufferInputStream", "classAByteBufferInputStream.html", null ],
       [ "AConcatInputStream", "classAConcatInputStream.html", null ],

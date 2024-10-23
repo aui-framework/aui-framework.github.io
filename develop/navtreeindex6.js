@@ -1,5 +1,11 @@
 var NAVTREEINDEX6 =
 {
+"functions_q.html":[0,4,0,17],
+"functions_r.html":[0,4,0,18],
+"functions_s.html":[0,4,0,19],
+"functions_t.html":[0,4,0,20],
+"functions_type.html":[0,4,3],
+"functions_u.html":[0,4,0,21],
 "functions_v.html":[0,4,0,22],
 "functions_vars.html":[0,4,2],
 "functions_w.html":[0,4,0,23],
@@ -132,9 +138,9 @@ var NAVTREEINDEX6 =
 "interfaceAUIView.html":[0,2,324],
 "interfaceAUIViewController.html":[0,2,325],
 "interfaceAppDelegate.html":[0,2,220],
-"interfaceMainView.html":[0,2,402],
-"interfaceSceneDelegate.html":[0,2,424],
-"interfaceWindowDelegate.html":[0,2,488],
+"interfaceMainView.html":[0,2,403],
+"interfaceSceneDelegate.html":[0,2,425],
+"interfaceWindowDelegate.html":[0,2,489],
 "md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_command_line_arguments.html":[2,1],
 "md_docs_AUI_configure_flags.html":[2,0],
@@ -204,8 +210,8 @@ var NAVTREEINDEX6 =
 "structADataBindingDefault_3_01ANumberPicker_00_01uint8__t_01_4.html":[0,2,87],
 "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html":[0,2,88],
 "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html":[0,2,89],
-"structADesktop_1_1FileExtension.html":[0,0,1,0],
 "structADesktop_1_1FileExtension.html":[0,2,0,0],
+"structADesktop_1_1FileExtension.html":[0,0,1,0],
 "structADragNDrop_1_1DropEvent.html":[3,0,9,6,0],
 "structADragNDrop_1_1EnterEvent.html":[3,0,9,6,1],
 "structAEnumerateAllValues.html":[0,2,106],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "structAModel.html":[0,2,195],
 "structAModelMeta.html":[0,2,196],
 "structAModelMetaBase.html":[0,2,197],
-"structAMutex.html":[3,0,1,43],
-"structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
-"structAPerformanceSection_1_1Data.html":[3,0,1,35,0],
-"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,35,0,0],
-"structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
-"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,35,0,1],
-"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1]
+"structAMutex.html":[3,0,1,43]
 };

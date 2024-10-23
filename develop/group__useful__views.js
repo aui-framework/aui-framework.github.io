@@ -135,6 +135,7 @@ var group__useful__views =
       [ "ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
       [ "getContentMinimumHeight", "classAText.html#aca1c2934439c96461cf11f7786e238ec", null ],
       [ "getContentMinimumWidth", "classAText.html#a6e4d8cbb0ea0a32f435c272f0df38e1d", null ],
+      [ "invalidateAllStyles", "classAText.html#a4175da6a6ad68303c8aaaa3a40a3e96f", null ],
       [ "render", "classAText.html#ae2b1f0cb57c5157500a46ddf96047434", null ]
     ] ],
     [ "ATextArea", "classATextArea.html", [
@@ -241,6 +242,7 @@ var group__useful__views =
       [ "mPadding", "classAView.html#a94e793bd34bdbd3b47a5bd5660747e18", null ],
       [ "mParent", "classAView.html#ac33d3edd01436307f555e7ddcbeed144", null ],
       [ "mPosition", "classAView.html#a40d1a378258fac515816c3c1a9028473", null ],
+      [ "mRedrawRequested", "classAView.html#a8e918ba52e98cfb94ff340560dcbcbb7", null ],
       [ "mSize", "classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b", null ],
       [ "mSkipUntilLayoutUpdate", "classAView.html#a4475a69d795612634df68566a0b9d5fb", null ],
       [ "mTextOverflow", "classAView.html#aa80d3e423a09a2ea728e68560e507281", null ],
@@ -264,6 +266,7 @@ var group__useful__views =
       [ "getViewAtRecursiveOfType", "classAViewContainer.html#a6785ea899fb389f3e3ae804aff46fbfb", null ],
       [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
       [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
+      [ "markPixelDataInvalid", "classAViewContainer.html#a0dbea419f874b188d9b086ef17987f09", null ],
       [ "onClickPrevented", "classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3", null ],
       [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
       [ "onPointerMove", "classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7", null ],
@@ -275,7 +278,7 @@ var group__useful__views =
       [ "render", "classAViewContainer.html#ab07329de1ec5471908c09172b2292528", null ],
       [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
       [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
-      [ "setLayout", "classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542", null ],
+      [ "setLayout", "classAViewContainer.html#a0b1875df876e1c75a819d0fbca55546e", null ],
       [ "visitsViewRecursive", "classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf", null ],
       [ "childrenChanged", "classAViewContainer.html#af4713774dc02772268a95caa20639491", null ]
     ] ]

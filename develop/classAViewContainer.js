@@ -12,6 +12,7 @@ var classAViewContainer =
     [ "getViewAtRecursiveOfType", "classAViewContainer.html#a6785ea899fb389f3e3ae804aff46fbfb", null ],
     [ "invalidateAllStyles", "classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a", null ],
     [ "invalidateAssHelper", "classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60", null ],
+    [ "markPixelDataInvalid", "classAViewContainer.html#a0dbea419f874b188d9b086ef17987f09", null ],
     [ "onClickPrevented", "classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3", null ],
     [ "onGesture", "classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47", null ],
     [ "onPointerMove", "classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7", null ],
@@ -23,7 +24,7 @@ var classAViewContainer =
     [ "render", "classAViewContainer.html#ab07329de1ec5471908c09172b2292528", null ],
     [ "setContents", "classAViewContainer.html#aab5364f66a70e2a0210974a4472a47fd", null ],
     [ "setFocusChainTarget", "classAViewContainer.html#a9d2f31a6c58f6547632b921fe5f79efc", null ],
-    [ "setLayout", "classAViewContainer.html#a32c085fa95b856dd6aa377a89ad5d542", null ],
+    [ "setLayout", "classAViewContainer.html#a0b1875df876e1c75a819d0fbca55546e", null ],
     [ "visitsViewRecursive", "classAViewContainer.html#a736a1aa46ec8dbb1bc3721c65b0f8faf", null ],
     [ "childrenChanged", "classAViewContainer.html#af4713774dc02772268a95caa20639491", null ]
 ];

@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('UIBuildingHelpers_8h_source.html','');
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">inline</span> <span class="keyword">auto</span> _container(<a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&gt; views, Args&amp;&amp;... <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">auto</span> c = _new&lt;AViewContainer&gt;();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    c-&gt;setLayout(_new&lt;Layout&gt;(std::forward&lt;Args&gt;(<a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)...));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    c-&gt;setLayout(std::make_unique&lt;Layout&gt;(std::forward&lt;Args&gt;(<a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>)...));</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    c-&gt;setViews(std::move(views));</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('UIBuildingHelpers_8h_source.html','');
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">inline</span> <span class="keyword">auto</span> _form(<span class="keyword">const</span> <a class="code hl_class" href="classAVector.html">AVector</a>&lt;std::pair&lt;std::variant&lt;<a class="code hl_class" href="classAString.html">AString</a>, <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&gt;, <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&gt;&gt;&amp; views)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">auto</span> c = _new&lt;AViewContainer&gt;();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    c-&gt;setLayout(_new&lt;AAdvancedGridLayout&gt;(2, views.size()));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    c-&gt;setLayout(std::make_unique&lt;AAdvancedGridLayout&gt;(2, views.size()));</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    c-&gt;setExpanding({2, 0});</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; v : views) {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">try</span> {</div>
