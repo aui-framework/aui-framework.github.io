@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"functions_o.html":[0,4,0,15],
+"functions_p.html":[0,4,0,16],
 "functions_q.html":[0,4,0,17],
 "functions_r.html":[0,4,0,18],
 "functions_s.html":[0,4,0,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "structALongPressEvent.html":[0,2,186],
 "structAMenuItem.html":[0,2,190],
 "structAModel.html":[0,2,195],
-"structAModelMeta.html":[0,2,196],
-"structAModelMetaBase.html":[0,2,197],
-"structAMutex.html":[3,0,1,43]
+"structAModelMeta.html":[0,2,196]
 };
