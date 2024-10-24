@@ -12,5 +12,5 @@ var classaui_1_1impl_1_1future_1_1Future =
     [ "operator*", "classaui_1_1impl_1_1future_1_1Future.html#aecb26a46cb0171ac3d3210ffe6eca1f5", null ],
     [ "operator->", "classaui_1_1impl_1_1future_1_1Future.html#a5620526486a642b7c5b39b9f56e08ddb", null ],
     [ "operator->", "classaui_1_1impl_1_1future_1_1Future.html#a57e9a0f2c65b1e36c3ccd5ff59a40910", null ],
-    [ "wait", "classaui_1_1impl_1_1future_1_1Future.html#a33c33fde86e1a2665089e15bcb6f37e9", null ]
+    [ "wait", "classaui_1_1impl_1_1future_1_1Future.html#a93534534889dea9725ee1f5acbbec3c8", null ]
 ];
