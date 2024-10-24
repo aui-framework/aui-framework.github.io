@@ -119,6 +119,13 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8json_2src_2A
 <div class="line">    (value1, <span class="stringliteral">&quot;value1&quot;</span>)</div>
 <div class="line">    (value2, <span class="stringliteral">&quot;value2&quot;</span>)</div>
 <div class="line">)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// or</span></div>
+<div class="line"> </div>
+<div class="line">AJSON_FIELDS(SomeModel,</div>
+<div class="line">    AJSON_FIELDS_ENTRY(value1)</div>
+<div class="line">    AJSON_FIELDS_ENTRY(value2)</div>
+<div class="line">)</div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition:</b> AString.h:37</div></div>
 </div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * AUI Framework - Declarative UI toolkit for modern C++20</span></div>
@@ -240,6 +247,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8json_2src_2A
 <div class="line"><span class="preprocessor">    } \</span></div>
 <div class="line"><span class="preprocessor">};</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#define AJSON_FIELDS_ENTRY(name) (name, AUI_PP_STRINGIZE(name))</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;T, std::enable_if_t&lt;aui::is_complete&lt;AJsonConvFieldDescriptor&lt;T&gt;&gt;&gt;&gt; {</div>
