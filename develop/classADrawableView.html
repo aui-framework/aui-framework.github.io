@@ -100,15 +100,23 @@ $(document).ready(function(){initNavTree('classADrawableView.html',''); initResi
  <a href="classADrawableView.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Simple view to draw an <a class="el" href="classIDrawable.html" title="An abstract image that determines itself how it is displayed. Essentially an abstraction from vector ...">IDrawable</a>. </p>
+<p ><a class="el" href="classADrawableView.html" title="Simple view to draw an IDrawable.">ADrawableView</a> brings you more control over the drawable. This is useful for drawables with extended interface (i.e., AAnimatedImage).</p>
+<p >The sizing and positioning acts like <a class="el" href="structass_1_1BackgroundImage.html" title="Represents textured (image) background.">ass::BackgroundImage</a>. Moreover, these rules are taken from <a class="el" href="structass_1_1BackgroundImage.html" title="Represents textured (image) background.">ass::BackgroundImage</a> applied to <a class="el" href="classADrawableView.html" title="Simple view to draw an IDrawable.">ADrawableView</a>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> drawable = <a class="code hl_function" href="classIDrawable.html#ae65ce317a418ed8c92858ef04b6e9b04">IDrawable::fromUrl</a>(<span class="stringliteral">&quot;:animation.webp&quot;</span>);</div>
+<div class="line">_new&lt;ADrawableView&gt;(drawable) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">  BackgroundImage({}, {}, {}, Sizing::COVER), <span class="comment">// &lt;- drawable is sized and positioned as with COVER.</span></div>
+<div class="line">};</div>
+<div class="ttc" id="aclassIDrawable_html_ae65ce317a418ed8c92858ef04b6e9b04"><div class="ttname"><a href="classIDrawable.html#ae65ce317a418ed8c92858ef04b6e9b04">IDrawable::fromUrl</a></div><div class="ttdeci">static API_AUI_VIEWS _&lt; IDrawable &gt; fromUrl(const AUrl &amp;url) noexcept</div><div class="ttdoc">Creates a drawable from an url.</div><div class="ttdef"><b>Definition:</b> IDrawable.cpp:19</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:287</div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>When applying <a class="el" href="structass_1_1BackgroundImage.html" title="Represents textured (image) background.">ass::BackgroundImage</a>, do not pass url to it, it's redundant for <a class="el" href="classADrawableView.html" title="Simple view to draw an IDrawable.">ADrawableView</a> and would cause a debug error. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad7e39cf6f7a806aa8284230a583d14da"><td class="memItemLeft" align="right" valign="top"><a id="ad7e39cf6f7a806aa8284230a583d14da" name="ad7e39cf6f7a806aa8284230a583d14da"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ADrawableView</b> (const <a class="el" href="classAUrl.html">AUrl</a> &amp;url)</td></tr>
+<tr class="memitem:ad7e39cf6f7a806aa8284230a583d14da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classADrawableView.html#ad7e39cf6f7a806aa8284230a583d14da">ADrawableView</a> (const <a class="el" href="classAUrl.html">AUrl</a> &amp;url)</td></tr>
+<tr class="memdesc:ad7e39cf6f7a806aa8284230a583d14da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance with the URL of a image resource.  <a href="classADrawableView.html#ad7e39cf6f7a806aa8284230a583d14da">More...</a><br /></td></tr>
 <tr class="separator:ad7e39cf6f7a806aa8284230a583d14da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae31810f81a7a78278e15f6927cc67a2"><td class="memItemLeft" align="right" valign="top"><a id="aae31810f81a7a78278e15f6927cc67a2" name="aae31810f81a7a78278e15f6927cc67a2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ADrawableView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIDrawable.html">IDrawable</a> &gt; &amp;drawable)</td></tr>
-<tr class="separator:aae31810f81a7a78278e15f6927cc67a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe532495f739df87bbba73798d748c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classADrawableView.html#aebe532495f739df87bbba73798d748c3">ADrawableView</a> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIDrawable.html">IDrawable</a> &gt; drawable)</td></tr>
+<tr class="memdesc:aebe532495f739df87bbba73798d748c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance from the given drawable.  <a href="classADrawableView.html#aebe532495f739df87bbba73798d748c3">More...</a><br /></td></tr>
+<tr class="separator:aebe532495f739df87bbba73798d748c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab65bc38ed964f121d7a1ef46a596bff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classADrawableView.html#ab65bc38ed964f121d7a1ef46a596bff0">render</a> (<a class="el" href="structARenderContext.html">ARenderContext</a> context) override</td></tr>
 <tr class="memdesc:ab65bc38ed964f121d7a1ef46a596bff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classADrawableView.html#ab65bc38ed964f121d7a1ef46a596bff0">More...</a><br /></td></tr>
 <tr class="separator:ab65bc38ed964f121d7a1ef46a596bff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -737,6 +745,75 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 <tr class="memdesc:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true, <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry.  <a href="classAView.html#a4475a69d795612634df68566a0b9d5fb">More...</a><br /></td></tr>
 <tr class="separator:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad7e39cf6f7a806aa8284230a583d14da" name="ad7e39cf6f7a806aa8284230a583d14da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e39cf6f7a806aa8284230a583d14da">&#9670;&nbsp;</a></span>ADrawableView() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ADrawableView::ADrawableView </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classAUrl.html">AUrl</a> &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an instance with the URL of a image resource. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>URL to the image resource. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebe532495f739df87bbba73798d748c3" name="aebe532495f739df87bbba73798d748c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe532495f739df87bbba73798d748c3">&#9670;&nbsp;</a></span>ADrawableView() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ADrawableView::ADrawableView </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class__.html">_</a>&lt; <a class="el" href="classIDrawable.html">IDrawable</a> &gt;&#160;</td>
+          <td class="paramname"><em>drawable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an instance from the given drawable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drawable</td><td>The <a class="el" href="classIDrawable.html" title="An abstract image that determines itself how it is displayed. Essentially an abstraction from vector ...">IDrawable</a> to be rendered. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab65bc38ed964f121d7a1ef46a596bff0" name="ab65bc38ed964f121d7a1ef46a596bff0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab65bc38ed964f121d7a1ef46a596bff0">&#9670;&nbsp;</a></span>render()</h2>

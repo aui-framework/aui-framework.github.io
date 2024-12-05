@@ -1,8 +1,10 @@
 var NAVTREEINDEX2 =
 {
+"classAPipe.html":[3,0,1,2,9],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,31,1],
-"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
+"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,2,9,1],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,31,0],
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
 "classAPlaceholderAnimator.html":[0,2,215],
 "classAPlaceholderAnimator_1_1ICustomWidth.html":[0,2,215,0],
 "classAPointerIndex.html":[3,0,9,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "classATabButtonRow.html":[0,2,304],
 "classATabButtonView.html":[0,2,305],
 "classATabView.html":[3,0,9,2,28],
-"classATcpServerSocket.html":[3,0,7,2],
-"classATcpServerSocket.html#a4608ba25273731caa5b990c80911bed6":[3,0,7,2,0],
-"classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7":[3,0,7,2,1]
+"classATcpServerSocket.html":[3,0,7,2]
 };
