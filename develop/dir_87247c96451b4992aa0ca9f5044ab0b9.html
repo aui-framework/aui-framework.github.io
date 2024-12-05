@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AUI Framework: Contributing to AUI</title>
+<title>AUI Framework: aui.views/src/AUI/Platform/emscripten Directory Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('md_docs_Contributing_to_AUI.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('dir_87247c96451b4992aa0ca9f5044ab0b9.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,44 +88,11 @@ $(document).ready(function(){initNavTree('md_docs_Contributing_to_AUI.html','');
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Contributing to AUI </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">emscripten Directory Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >AUI is maintained by 1 developer so community help and contributions are heavily appreciated. Here's some helpful information.</p>
-<h1><a class="anchor" id="autotoc_md105"></a>
-Becoming a contributor</h1>
-<ol type="1">
-<li>Follow <a class="el" href="md_docs_Code_style_and_recommendations.html">AUI's code style</a>.</li>
-<li>Anyone may become an AUI contributor: there are no restrictions.</li>
-<li>Tasks and todos are listed on the <a href="https://github.com/aui-framework/aui/issues">GitHub Issues page</a>. Issues marked as <code>good first issue</code> are relatively simple and can be done without deep dive into AUI.</li>
-<li><p class="startli">AUI follows git flow-like branching model. <code>master</code> branch is a release candidate branch. <code>develop</code> branch is current develop branch. Each feature of the framework is created in a separate branch from <code>develop</code> in the <code>feat/</code> folder. pulling changes from your branch to <code>develop</code> is possible only if the merge with your branch does not generate merge conflicts and does not break the build and tests.</p>
-<p class="startli">That is, if you want to implement a feature, you should fork AUI's repository (if you don't have direct access to it's repository), checkout the <code>develop</code> branch and create a new branch called <code>feat/feature-name</code>, where you work under your feature.</p>
-<p class="startli">When you have finished your work, you should open a pull request from the <code>feat/feature-name</code> branch of your repository to the <code>develop</code> branch of the AUI's original repository.</p>
-</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md108"></a>
-Creating an AUI module</h1>
-<p >Suppose whe want to create a module called <code>aui::my_module</code>:</p>
-<ol type="1">
-<li>In the main <code>CMakeLists.txt</code>:<ol type="a">
-<li>Find the <code># define all components</code> anchor, put <code>define_aui_component(my_module)</code>.</li>
-<li>Find the <code># all components for exporting</code> anchor, put <code>my_module</code> to <code>AUI_ALL_COMPONENTS</code>.</li>
-</ol>
-</li>
-<li>In <code>docs/Doxyfile</code>:<ol type="a">
-<li>Append <code>aui.my_module/src</code> to the <code>STRIP_FROM_INC_PATH</code> variable.</li>
-<li>Append <code>aui.my_module</code> to the <code>INPUT</code> variable.</li>
-</ol>
-</li>
-<li>If <code>aui::my_module</code> has dependencies (excluding <code>aui::core</code>), handle them at <code># add dependencies</code> in <code>cmake/aui-config.cmake.in</code>.</li>
-<li>Put the reference to the module in <code>docs/index.html</code>.</li>
-<li>Create <code>aui.my_module</code> dir.</li>
-<li>Copy &amp; paste <code>CMakeLists.txt</code> from any small module (i.e. <code>aui::xml</code>) and configure it for your module.</li>
-<li>Use <code>API_AUI_MY_MODULE</code> to export symbols from your module (it's created by the <code>aui_module</code> CMake function). </li>
-</ol>
-</div></div><!-- contents -->
-</div><!-- PageDoc -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->
