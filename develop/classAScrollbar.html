@@ -158,6 +158,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateScrollHandleOff
 <tr class="separator:a0fc60c7d8b7b77626b7983a43e51507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afff53bb4ceab0b7f9eebffeafd197a3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbar.html#afff53bb4ceab0b7f9eebffeafd197a3e">setSize</a> (glm::ivec2 size) override</td></tr>
 <tr class="separator:afff53bb4ceab0b7f9eebffeafd197a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e7492f4f27ad5b4dc141926519311a"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAScrollbar.html#a31e7492f4f27ad5b4dc141926519311a">getMaxScroll</a> () const noexcept</td></tr>
+<tr class="separator:a31e7492f4f27ad5b4dc141926519311a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAViewContainerBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAViewContainerBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAViewContainerBase.html">AViewContainerBase</a></td></tr>
 <tr class="memitem:afee2348e0a4b1e39b0ead8a72cc8997a inherit pub_methods_classAViewContainerBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#afee2348e0a4b1e39b0ead8a72cc8997a">render</a> (<a class="el" href="structARenderContext.html">ARenderContext</a> context) override</td></tr>
 <tr class="memdesc:afee2348e0a4b1e39b0ead8a72cc8997a inherit pub_methods_classAViewContainerBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classAViewContainerBase.html#afee2348e0a4b1e39b0ead8a72cc8997a">More...</a><br /></td></tr>
@@ -324,9 +326,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const
 <tr class="separator:a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5b76d3ce6659d0b431f8080110b1fb5 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ab5b76d3ce6659d0b431f8080110b1fb5">getTotalOccupiedHeight</a> () const</td></tr>
 <tr class="separator:ab5b76d3ce6659d0b431f8080110b1fb5 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c88218c88c6ad89f2fcd0557c7d3658 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="a2c88218c88c6ad89f2fcd0557c7d3658" name="a2c88218c88c6ad89f2fcd0557c7d3658"></a>
-glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getMinimumSizePlusField</b> ()</td></tr>
-<tr class="separator:a2c88218c88c6ad89f2fcd0557c7d3658 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e167e381210b7045032419131d36ba inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa8e167e381210b7045032419131d36ba">getMinimumSizePlusMargin</a> ()</td></tr>
+<tr class="separator:aa8e167e381210b7045032419131d36ba inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0de8af992ddbbe2237caf1148397b592 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a0de8af992ddbbe2237caf1148397b592">getMargin</a> ()</td></tr>
 <tr class="memdesc:a0de8af992ddbbe2237caf1148397b592 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">margin</a>.  <a href="classAView.html#a0de8af992ddbbe2237caf1148397b592">More...</a><br /></td></tr>
 <tr class="separator:a0de8af992ddbbe2237caf1148397b592 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -549,8 +550,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a cla
 <tr class="memitem:aae643e27fa9578fecad36519f30ed043 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aae643e27fa9578fecad36519f30ed043">invalidateStateStyles</a> ()</td></tr>
 <tr class="memdesc:aae643e27fa9578fecad36519f30ed043 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates state selectors for ASS.  <a href="classAView.html#aae643e27fa9578fecad36519f30ed043">More...</a><br /></td></tr>
 <tr class="separator:aae643e27fa9578fecad36519f30ed043 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96b967218c79654c2bca5cc8c686a407 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a96b967218c79654c2bca5cc8c686a407">wantsTouchscreenKeyboard</a> ()</td></tr>
-<tr class="memdesc:a96b967218c79654c2bca5cc8c686a407 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if view is textfield-like view which requires touchscreen keyboard when clicked.  <a href="classAView.html#a96b967218c79654c2bca5cc8c686a407">More...</a><br /></td></tr>
+<tr class="memitem:a96b967218c79654c2bca5cc8c686a407 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="a96b967218c79654c2bca5cc8c686a407" name="a96b967218c79654c2bca5cc8c686a407"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>wantsTouchscreenKeyboard</b> ()</td></tr>
+<tr class="memdesc:a96b967218c79654c2bca5cc8c686a407 inherit pub_methods_classAView"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if view is textfield-like view which requires touchscreen keyboard when clicked. <br /></td></tr>
 <tr class="separator:a96b967218c79654c2bca5cc8c686a407 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e107013a87ab6460f002c318bad93e2 inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a6e107013a87ab6460f002c318bad93e2">setSkipUntilLayoutUpdate</a> (bool skipUntilLayoutUpdate)</td></tr>
 <tr class="separator:a6e107013a87ab6460f002c318bad93e2 inherit pub_methods_classAView"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -747,9 +749,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>scrollBackward</b> ()
 <tr class="memitem:a3821b6aea6d36b05ccdef8cdc19cc479"><td class="memItemLeft" align="right" valign="top"><a id="a3821b6aea6d36b05ccdef8cdc19cc479" name="a3821b6aea6d36b05ccdef8cdc19cc479"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>handleScrollbar</b> (int s)</td></tr>
 <tr class="separator:a3821b6aea6d36b05ccdef8cdc19cc479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e7492f4f27ad5b4dc141926519311a"><td class="memItemLeft" align="right" valign="top"><a id="a31e7492f4f27ad5b4dc141926519311a" name="a31e7492f4f27ad5b4dc141926519311a"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getMaxScroll</b> () const noexcept</td></tr>
-<tr class="separator:a31e7492f4f27ad5b4dc141926519311a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAViewContainerBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAViewContainerBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAViewContainerBase.html">AViewContainerBase</a></td></tr>
 <tr class="memitem:abf186faf03c8c48f1673346fbbebf161 inherit pro_methods_classAViewContainerBase"><td class="memItemLeft" align="right" valign="top"><a id="abf186faf03c8c48f1673346fbbebf161" name="abf186faf03c8c48f1673346fbbebf161"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view, <a class="el" href="structARenderContext.html">ARenderContext</a> contextOfTheContainer)</td></tr>
@@ -947,6 +946,33 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AScrollbarHandle</b>
 <tr class="separator:a6e38826a87fc4e07e097f3bacce3e81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a31e7492f4f27ad5b4dc141926519311a" name="a31e7492f4f27ad5b4dc141926519311a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e7492f4f27ad5b4dc141926519311a">&#9670;&nbsp;</a></span>getMaxScroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t AScrollbar::getMaxScroll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>max scroll of this scrollbar.</dd></dl>
+<p>If viewport size is larger than content size (in the case when contents are smaller than <a class="el" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars.">AScrollArea</a>), 0 is returned. </p>
+
+</div>
+</div>
 <a id="a0fc60c7d8b7b77626b7983a43e51507b" name="a0fc60c7d8b7b77626b7983a43e51507b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fc60c7d8b7b77626b7983a43e51507b">&#9670;&nbsp;</a></span>onPointerPressed()</h2>
 

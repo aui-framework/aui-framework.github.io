@@ -6,7 +6,7 @@ var searchData=
   ['waitforall_3',['waitForAll',['../classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6',1,'AFutureSet']]],
   ['waitforexitcode_4',['waitForExitCode',['../classASelfProcess.html#ae486109e2458491ec9821ed7aa67979f',1,'ASelfProcess::waitForExitCode()'],['../classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4',1,'AProcess::waitForExitCode()'],['../classAChildProcess.html#aa3870a6019a5e41c26c6599058a102b1',1,'AChildProcess::waitForExitCode()'],['../classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1',1,'AOtherProcess::waitForExitCode() override'],['../classAOtherProcess.html#a0dce0805600c2efede5cf56cc48276c1',1,'AOtherProcess::waitForExitCode() override']]],
   ['waitforsignal_5',['waitForSignal',['../classACutoffSignal.html#adc988f41edf1ec7ab3f9c8b56c81c488',1,'ACutoffSignal']]],
-  ['wantstouchscreenkeyboard_6',['wantsTouchscreenKeyboard',['../classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61',1,'AAbstractTextField::wantsTouchscreenKeyboard()'],['../classAView.html#a96b967218c79654c2bca5cc8c686a407',1,'AView::wantsTouchscreenKeyboard()']]],
+  ['wantstouchscreenkeyboard_6',['wantsTouchscreenKeyboard',['../classAView.html#a96b967218c79654c2bca5cc8c686a407',1,'AView']]],
   ['weak_7',['weak',['../class__.html#a5cfe74cd1d03e23f8aebdb13cb556873',1,'_']]],
   ['withbody_8',['withBody',['../classACurl_1_1Builder.html#aaf913bd599bee8fc97d9d55b3fb0cdec',1,'ACurl::Builder::withBody(ReadCallback callback)'],['../classACurl_1_1Builder.html#a1917191553bcfc4d3b1d5a951bd5684d',1,'ACurl::Builder::withBody(std::string contents)']]],
   ['witherrorcallback_9',['withErrorCallback',['../classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b',1,'ACurl::Builder']]],

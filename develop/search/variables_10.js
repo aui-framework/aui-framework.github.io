@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['textchanged_0',['textChanged',['../classAAbstractTypeableView.html#a4addebde2ee640e32b78040f71f2d107',1,'AAbstractTypeableView']]],
-  ['textchanging_1',['textChanging',['../classAAbstractTypeableView.html#ad5412b86c537ee74c130c7f3623ec09c',1,'AAbstractTypeableView']]],
+  ['textchanged_0',['textChanged',['../classAAbstractTypeable.html#a8f4a7834da62adfc423806d5dfc38e6a',1,'AAbstractTypeable']]],
+  ['textchanging_1',['textChanging',['../classAAbstractTypeable.html#ac06749997360eb1be5759f98147095cf',1,'AAbstractTypeable']]],
   ['threshold_2',['THRESHOLD',['../classATouchScroller.html#a2221690cb4ad802d78059a537387caed',1,'ATouchScroller']]],
   ['touchscreenkeyboardhidden_3',['touchscreenKeyboardHidden',['../classAWindowBase.html#a72575f26e375574febb3990b99754d2a',1,'AWindowBase']]],
   ['touchscreenkeyboardshown_4',['touchscreenKeyboardShown',['../classAWindowBase.html#af0c150e6e46180e1fb781bee090b40fb',1,'AWindowBase']]],

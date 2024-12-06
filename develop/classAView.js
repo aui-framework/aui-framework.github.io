@@ -18,6 +18,7 @@ var classAView =
     [ "getFloating", "classAView.html#a30c0be62facef4c94a1fe51382541fd5", null ],
     [ "getMargin", "classAView.html#a0de8af992ddbbe2237caf1148397b592", null ],
     [ "getMaxSize", "classAView.html#ab4bbc6b9ced25ac8a591262143a2d093", null ],
+    [ "getMinimumSizePlusMargin", "classAView.html#aa8e167e381210b7045032419131d36ba", null ],
     [ "getMinSize", "classAView.html#a4409e3c4993b808d2d7e23f85bc09328", null ],
     [ "getOverflow", "classAView.html#a91e63d78d42435872c5482776046fdfc", null ],
     [ "getOverflowMask", "classAView.html#a0569ae03bfeebb23dbea2da2585f0d67", null ],

@@ -38,7 +38,7 @@ var group__views =
         [ "finalize", "classIRenderer_1_1IMultiStringCanvas.html#a80147504502f567cae7de80445865e28", null ],
         [ "getTextLayoutHelper", "classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8", null ],
         [ "nextLine", "classIRenderer_1_1IMultiStringCanvas.html#a04559c8577d9e83e4b15ddd2e02e9b6b", null ],
-        [ "notifySymbolAdded", "classIRenderer_1_1IMultiStringCanvas.html#a366823907ae2978d777ce5d059354844", null ]
+        [ "notifySymbolAdded", "classIRenderer_1_1IMultiStringCanvas.html#a6bcbcfcf57aa2c08d85f32ae9d784205", null ]
       ] ],
       [ "IPrerenderedString", "classIRenderer_1_1IPrerenderedString.html", null ],
       [ "boxShadow", "classIRenderer.html#aeec32d1da8dc30c10c1257baecb27c89", null ],

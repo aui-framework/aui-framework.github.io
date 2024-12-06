@@ -47,13 +47,17 @@ var hierarchy =
     [ "ACurlInit", "structACurlInit.html", null ],
     [ "ACursor", "classACursor.html", null ],
     [ "ACursorSelectable", "classACursorSelectable.html", [
-      [ "AAbstractTypeableView", "classAAbstractTypeableView.html", [
-        [ "AAbstractTextField", "classAAbstractTextField.html", [
-          [ "ATextField", "classATextField.html", null ]
+      [ "AAbstractTypeable", "classAAbstractTypeable.html", [
+        [ "AAbstractTypeableView< AView >", "classAAbstractTypeableView.html", [
+          [ "AAbstractTextField", "classAAbstractTextField.html", [
+            [ "ATextField", "classATextField.html", null ]
+          ] ]
         ] ],
-        [ "ATextArea::TextAreaField", "classATextArea_1_1TextAreaField.html", null ]
-      ] ],
-      [ "ASelectableLabel", "classASelectableLabel.html", null ]
+        [ "AAbstractTypeableView< ATextBase< AWordWrappingEngine< std::list< _unique< aui::detail::TextBaseEntry > > > > >", "classAAbstractTypeableView.html", [
+          [ "ATextArea", "classATextArea.html", null ]
+        ] ],
+        [ "AAbstractTypeableView< Super >", "classAAbstractTypeableView.html", null ]
+      ] ]
     ] ],
     [ "ACustomShaderBrush", "structACustomShaderBrush.html", null ],
     [ "ACutoffSignal", "classACutoffSignal.html", null ],
@@ -161,7 +165,6 @@ var hierarchy =
     [ "AModelMetaBase< T >", "structAModelMetaBase.html", [
       [ "AModelMeta< T >", "structAModelMeta.html", null ]
     ] ],
-    [ "AMultilineTextRender", "classAMultilineTextRender.html", null ],
     [ "AOptional< T >", "classAOptional.html", null ],
     [ "APerformanceSection", "classAPerformanceSection.html", null ],
     [ "APointerIndex", "classAPointerIndex.html", null ],
@@ -226,7 +229,9 @@ var hierarchy =
     [ "AViewsInit", "structAViewsInit.html", null ],
     [ "aui::constraint::avoid_copy< T >", "classaui_1_1constraint_1_1avoid__copy.html", null ],
     [ "AWatchdog", "classAWatchdog.html", null ],
-    [ "AWordWrappingEngine", "classAWordWrappingEngine.html", null ],
+    [ "AWordWrappingEngineBase", "classAWordWrappingEngineBase.html", [
+      [ "AWordWrappingEngine< Container >", "classAWordWrappingEngine.html", null ]
+    ] ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
     [ "ass::BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
@@ -285,6 +290,7 @@ var hierarchy =
     [ "ass::BorderRadius", "structass_1_1BorderRadius.html", null ],
     [ "ass::BorderRight", "structass_1_1BorderRight.html", null ],
     [ "ass::BorderTop", "structass_1_1BorderTop.html", null ],
+    [ "ATextLayoutHelper::Boundary", "structATextLayoutHelper_1_1Boundary.html", null ],
     [ "ass::BoxShadow", "structass_1_1BoxShadow.html", null ],
     [ "ass::BoxShadowInner", "structass_1_1BoxShadowInner.html", null ],
     [ "BrushHelper", "structBrushHelper.html", null ],
@@ -301,6 +307,11 @@ var hierarchy =
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
     [ "ALinearGradientBrush::ColorEntry", "structALinearGradientBrush_1_1ColorEntry.html", null ],
+    [ "std::conditional_t", null, [
+      [ "AAbstractTypeableView< AView >", "classAAbstractTypeableView.html", null ],
+      [ "AAbstractTypeableView< ATextBase< AWordWrappingEngine< std::list< _unique< aui::detail::TextBaseEntry > > > > >", "classAAbstractTypeableView.html", null ],
+      [ "AAbstractTypeableView< Super >", "classAAbstractTypeableView.html", null ]
+    ] ],
     [ "ass::PropertyListRecursive::ConditionalPropertyList", "structass_1_1PropertyListRecursive_1_1ConditionalPropertyList.html", [
       [ "ass::on_state::Activated", "structass_1_1on__state_1_1Activated.html", null ],
       [ "ass::on_state::Disabled", "structass_1_1on__state_1_1Disabled.html", null ],
@@ -420,11 +431,9 @@ var hierarchy =
             [ "ALabel", "classALabel.html", [
               [ "AListItem", "classAListItem.html", null ],
               [ "APageSwitch", "classAPageSwitch.html", null ],
-              [ "ASelectableLabel", "classASelectableLabel.html", null ],
               [ "ATabButtonView", "classATabButtonView.html", null ]
             ] ]
           ] ],
-          [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
           [ "ACheckBox", "classACheckBox.html", null ],
           [ "ACircleProgressBar::Inner", "classACircleProgressBar_1_1Inner.html", null ],
           [ "ADividerView", "classADividerView.html", [
@@ -444,6 +453,9 @@ var hierarchy =
           [ "ASpacerFixed", "classASpacerFixed.html", null ],
           [ "ASpinner", "classASpinner.html", null ],
           [ "AViewContainerBase", "classAViewContainerBase.html", [
+            [ "ATextBase< AWordWrappingEngine<> >", "classATextBase.html", [
+              [ "AText", "classAText.html", null ]
+            ] ],
             [ "ABasicListEditor", "classABasicListEditor.html", null ],
             [ "ACheckBoxWrapper", "classACheckBoxWrapper.html", null ],
             [ "ACircleProgressBar", "classACircleProgressBar.html", null ],
@@ -471,8 +483,7 @@ var hierarchy =
             ] ],
             [ "ATabButtonRow", "classATabButtonRow.html", null ],
             [ "ATabView", "classATabView.html", null ],
-            [ "AText", "classAText.html", null ],
-            [ "ATextArea", "classATextArea.html", null ],
+            [ "ATextBase< WordWrappingEngine >", "classATextBase.html", null ],
             [ "ATreeView", "classATreeView.html", null ],
             [ "ATreeView::ItemView", "classATreeView_1_1ItemView.html", null ],
             [ "AViewContainer", "classAViewContainer.html", [
@@ -541,10 +552,16 @@ var hierarchy =
     ] ],
     [ "ADragNDrop::EnterEvent", "structADragNDrop_1_1EnterEvent.html", null ],
     [ "AStacktrace::Entry", "classAStacktrace_1_1Entry.html", null ],
-    [ "AWordWrappingEngine::Entry", "classAWordWrappingEngine_1_1Entry.html", [
+    [ "AWordWrappingEngineBase::Entry", "classAWordWrappingEngineBase_1_1Entry.html", [
       [ "AViewEntry", "classAViewEntry.html", null ],
       [ "MyEntry", "classMyEntry.html", [
         [ "FloatingEntry", "classFloatingEntry.html", null ]
+      ] ],
+      [ "aui::detail::TextBaseEntry", "classaui_1_1detail_1_1TextBaseEntry.html", [
+        [ "aui::detail::CharEntry", "classaui_1_1detail_1_1CharEntry.html", null ],
+        [ "aui::detail::NextLineEntry", "classaui_1_1detail_1_1NextLineEntry.html", null ],
+        [ "aui::detail::WhitespaceEntry", "classaui_1_1detail_1_1WhitespaceEntry.html", null ],
+        [ "aui::detail::WordEntry", "classaui_1_1detail_1_1WordEntry.html", null ]
       ] ]
     ] ],
     [ "aui::impl::Error", "structaui_1_1impl_1_1Error.html", null ],
@@ -673,11 +690,11 @@ var hierarchy =
       [ "MyEventLoop", "classMyEventLoop.html", null ]
     ] ],
     [ "IFontView", "classIFontView.html", [
+      [ "ATextBase< AWordWrappingEngine<> >", "classATextBase.html", null ],
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
-      [ "AAbstractTypeableView", "classAAbstractTypeableView.html", null ],
       [ "ARulerArea", "classARulerArea.html", null ],
       [ "ARulerView", "classARulerView.html", null ],
-      [ "AText", "classAText.html", null ]
+      [ "ATextBase< WordWrappingEngine >", "classATextBase.html", null ]
     ] ],
     [ "IInputStream", "classIInputStream.html", [
       [ "AByteBufferInputStream", "classAByteBufferInputStream.html", null ],
@@ -802,6 +819,7 @@ var hierarchy =
     [ "IStringable", "classIStringable.html", [
       [ "AAbstractLabel", "classAAbstractLabel.html", null ],
       [ "AAbstractTextField", "classAAbstractTextField.html", null ],
+      [ "ATextArea", "classATextArea.html", null ],
       [ "ass::prop::Property< BackgroundImage >", "structass_1_1prop_1_1Property_3_01BackgroundImage_01_4.html", null ],
       [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ],
       [ "ass::prop::Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ]
@@ -1011,7 +1029,6 @@ var hierarchy =
     [ "ass::ScrollbarAppearance", "structass_1_1ScrollbarAppearance.html", null ],
     [ "aui::impl::select_overload< Args >", "structaui_1_1impl_1_1select__overload.html", null ],
     [ "ACursorSelectable::Selection", "structACursorSelectable_1_1Selection.html", null ],
-    [ "SelectionMatchesAssert", "structSelectionMatchesAssert.html", null ],
     [ "aui::sequence_traits< T >", "structaui_1_1sequence__traits.html", null ],
     [ "aui::serialize_raw< T >", "structaui_1_1serialize__raw.html", null ],
     [ "aui::serialize_sized< T >", "structaui_1_1serialize__sized.html", null ],
@@ -1040,7 +1057,6 @@ var hierarchy =
     [ "SqlColumn", "structSqlColumn.html", null ],
     [ "AAssHelper::State", "structAAssHelper_1_1State.html", null ],
     [ "gl::State", "classgl_1_1State.html", null ],
-    [ "State", "structState.html", null ],
     [ "ASqlBuilder::Statement", "classASqlBuilder_1_1Statement.html", [
       [ "ASqlBuilder::Insert", "classASqlBuilder_1_1Insert.html", null ],
       [ "ASqlBuilder::WhereStatement", "classASqlBuilder_1_1WhereStatement.html", [
@@ -1049,6 +1065,7 @@ var hierarchy =
         [ "ASqlBuilder::Update", "classASqlBuilder_1_1Update.html", null ]
       ] ]
     ] ],
+    [ "aui::detail::TextBaseEntry::StopLineScanningHint", "structaui_1_1detail_1_1TextBaseEntry_1_1StopLineScanningHint.html", null ],
     [ "std::streambuf", null, [
       [ "AStdIStream::StreamBuf", "classAStdIStream_1_1StreamBuf.html", null ]
     ] ],
@@ -1057,7 +1074,11 @@ var hierarchy =
     ] ],
     [ "declarative::Style", "structdeclarative_1_1Style.html", null ],
     [ "tuples::detail::functor::sub", "structtuples_1_1detail_1_1functor_1_1sub.html", null ],
-    [ "ATextLayoutHelper::Symbol", "structATextLayoutHelper_1_1Symbol.html", null ],
+    [ "Super", null, [
+      [ "AAbstractTypeableView< AView >", "classAAbstractTypeableView.html", null ],
+      [ "AAbstractTypeableView< ATextBase< AWordWrappingEngine< std::list< _unique< aui::detail::TextBaseEntry > > > > >", "classAAbstractTypeableView.html", null ],
+      [ "AAbstractTypeableView< Super >", "classAAbstractTypeableView.html", null ]
+    ] ],
     [ "T", null, [
       [ "aui::detail::MutexExtras< T >", "structaui_1_1detail_1_1MutexExtras.html", null ]
     ] ],
@@ -1082,6 +1103,7 @@ var hierarchy =
         [ "UIScreenAnalyzer", "classUIScreenAnalyzer.html", null ],
         [ "UIScrollPointerMove", "classUIScrollPointerMove.html", null ],
         [ "UIScrollTest", "classUIScrollTest.html", null ],
+        [ "UITextArea", "classUITextArea.html", null ],
         [ "UITextField", "classUITextField.html", null ],
         [ "UIType", "classUIType.html", null ],
         [ "UIViewFocus", "classUIViewFocus.html", null ]
@@ -1204,6 +1226,7 @@ var hierarchy =
       ] ],
       [ "AVector< Data >", "classAVector.html", null ],
       [ "AVector< Line >", "classAVector.html", null ],
+      [ "AVector< _< AWordWrappingEngineBase::Entry > >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],

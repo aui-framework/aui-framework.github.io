@@ -190,11 +190,16 @@ var namespaces =
       ] ],
       [ "detail", null, [
         [ "AbsoluteLayoutCell", "structaui_1_1detail_1_1AbsoluteLayoutCell.html", null ],
+        [ "CharEntry", "classaui_1_1detail_1_1CharEntry.html", null ],
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
         [ "LinearLayoutImpl", "classaui_1_1detail_1_1LinearLayoutImpl.html", "classaui_1_1detail_1_1LinearLayoutImpl" ],
         [ "MutexExtras", "structaui_1_1detail_1_1MutexExtras.html", null ],
+        [ "NextLineEntry", "classaui_1_1detail_1_1NextLineEntry.html", null ],
         [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+        [ "TextBaseEntry", "classaui_1_1detail_1_1TextBaseEntry.html", "classaui_1_1detail_1_1TextBaseEntry" ],
+        [ "WhitespaceEntry", "classaui_1_1detail_1_1WhitespaceEntry.html", null ],
+        [ "WordEntry", "classaui_1_1detail_1_1WordEntry.html", null ],
         [ "SameHelper", "conceptaui_1_1detail_1_1SameHelper.html", null ]
       ] ],
       [ "enumerate", null, [

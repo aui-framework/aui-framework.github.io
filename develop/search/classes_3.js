@@ -6,7 +6,7 @@ var searchData=
   ['cancellationwrapper_3',['CancellationWrapper',['../structaui_1_1impl_1_1future_1_1CancellationWrapper.html',1,'aui::impl::future']]],
   ['casthelper_4',['CastHelper',['../structaui_1_1jni_1_1detail_1_1CastHelper.html',1,'aui::jni::detail']]],
   ['character_5',['Character',['../structAFont_1_1Character.html',1,'AFont']]],
-  ['charentry_6',['CharEntry',['../structCharEntry.html',1,'']]],
+  ['charentry_6',['CharEntry',['../classaui_1_1detail_1_1CharEntry.html',1,'aui::detail::CharEntry'],['../structCharEntry.html',1,'CharEntry']]],
   ['class_5fof_7',['class_of',['../structass_1_1class__of.html',1,'ass']]],
   ['classof_8',['ClassOf',['../structass_1_1detail_1_1ClassOf.html',1,'ass::detail']]],
   ['colorentry_9',['ColorEntry',['../structALinearGradientBrush_1_1ColorEntry.html',1,'ALinearGradientBrush']]],

@@ -1,4 +1,5 @@
 var classATextLayoutHelper =
 [
-    [ "Symbol", "structATextLayoutHelper_1_1Symbol.html", null ]
+    [ "Boundary", "structATextLayoutHelper_1_1Boundary.html", null ],
+    [ "Line", "classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531", null ]
 ];

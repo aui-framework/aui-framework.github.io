@@ -7,15 +7,13 @@ var group__useful__views =
       [ "onPointerReleased", "classA2FingerTransformArea.html#a6c3a3a744582272bcddac000fca67d52", null ]
     ] ],
     [ "AAbstractTextField", "classAAbstractTextField.html", [
-      [ "getContentMinimumHeight", "classAAbstractTextField.html#aa1d30fc5cfb064423af8c12cab10ac3a", null ],
-      [ "handlesNonMouseNavigation", "classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2", null ],
-      [ "render", "classAAbstractTextField.html#a7b684618af86ab6d1883404a11297541", null ],
+      [ "cursorIndexByPos", "classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c", null ],
+      [ "getCursorPosition", "classAAbstractTextField.html#adc0cd1f14fc2f3e492eb45c367353f5f", null ],
+      [ "length", "classAAbstractTextField.html#af32ef6283e0cf52cf1b053874b5410f1", null ],
       [ "text", "classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d", null ],
-      [ "textLength", "classAAbstractTextField.html#a6d41e754abc7f9e2432508a53287e3b4", null ],
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
       [ "typeableInsert", "classAAbstractTextField.html#a2bf33c76efd328235e0b61693edb5205", null ],
       [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
-      [ "wantsTouchscreenKeyboard", "classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61", null ],
       [ "actionButtonPressed", "classAAbstractTextField.html#acefd4f090e6cfd879ad646a9b6311a29", null ]
     ] ],
     [ "AButton", "classAButton.html", [
@@ -96,6 +94,7 @@ var group__useful__views =
       [ "onPointerPressed", "classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75", null ],
       [ "onPointerReleased", "classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0", null ],
       [ "onScroll", "classAScrollArea.html#a1ec97c0e09e70449d9644680e1300b8d", null ],
+      [ "scrollTo", "classAScrollArea.html#a563fa4f906204d13ea57de488f877e62", null ],
       [ "scrollTo", "classAScrollArea.html#af80d183863ac414847460c0f6e8b8985", null ],
       [ "setStickToEnd", "classAScrollArea.html#a2770daab18df7595e3977685d80a242f", null ],
       [ "setWheelScrollable", "classAScrollArea.html#a9999759647617833d28cf954a3ca7635", null ]
@@ -104,6 +103,7 @@ var group__useful__views =
       [ "Inner", "classAScrollAreaViewport_1_1Inner.html", null ]
     ] ],
     [ "AScrollbar", "classAScrollbar.html", [
+      [ "getMaxScroll", "classAScrollbar.html#a31e7492f4f27ad5b4dc141926519311a", null ],
       [ "onPointerPressed", "classAScrollbar.html#a0fc60c7d8b7b77626b7983a43e51507b", null ],
       [ "onScroll", "classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411", null ],
       [ "setStickToEnd", "classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115", null ]
@@ -131,22 +131,16 @@ var group__useful__views =
     ] ],
     [ "ATabView", "classATabView.html", null ],
     [ "AText", "classAText.html", [
-      [ "ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
-      [ "getContentMinimumHeight", "classAText.html#aca1c2934439c96461cf11f7786e238ec", null ],
-      [ "getContentMinimumWidth", "classAText.html#a6e4d8cbb0ea0a32f435c272f0df38e1d", null ],
-      [ "invalidateAllStyles", "classAText.html#a4175da6a6ad68303c8aaaa3a40a3e96f", null ],
-      [ "render", "classAText.html#ae2b1f0cb57c5157500a46ddf96047434", null ]
+      [ "ParsedFlags", "structAText_1_1ParsedFlags.html", null ]
     ] ],
     [ "ATextArea", "classATextArea.html", [
-      [ "TextAreaField", "classATextArea_1_1TextAreaField.html", [
-        [ "render", "classATextArea_1_1TextAreaField.html#a6a24f4b83e6678c90387f85b4992a733", null ],
-        [ "text", "classATextArea_1_1TextAreaField.html#ae47ef9fd771cfa707ef5894515c209e6", null ],
-        [ "textLength", "classATextArea_1_1TextAreaField.html#a7c706e015165ddfe881436dc498e9ef8", null ],
-        [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a9f9e01e8a4e7b1a1881c98e2f6b70c46", null ],
-        [ "typeableInsert", "classATextArea_1_1TextAreaField.html#a8ed301f96db4c7251998fe398b89b423", null ]
-      ] ],
-      [ "getContentMinimumHeight", "classATextArea.html#ac7e0a6483c8597050a8ba5ad26c62d6e", null ],
-      [ "onScroll", "classATextArea.html#aae0df62074c3a91e8c966e4474c1f4eb", null ]
+      [ "cursorIndexByPos", "classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c", null ],
+      [ "getCursorPosition", "classATextArea.html#a166ab21304b9dd1a7393738c8589e48c", null ],
+      [ "length", "classATextArea.html#af937c3bf26c1faf077deed94d25641b2", null ],
+      [ "text", "classATextArea.html#a270fa624c5bb3301b00c6d5f1e8fc3ca", null ],
+      [ "toString", "classATextArea.html#af74dca1f8abfdcdcb5aab416fda78be7", null ],
+      [ "typeableInsert", "classATextArea.html#a197fd52af34a4333a6e8dc96ba84399b", null ],
+      [ "typeableInsert", "classATextArea.html#aed8e7bf3dbc09389c0b0a8699a6d8969", null ]
     ] ],
     [ "ATextField", "classATextField.html", null ],
     [ "ATreeView", "classATreeView.html", [
@@ -181,6 +175,7 @@ var group__useful__views =
       [ "getFloating", "classAView.html#a30c0be62facef4c94a1fe51382541fd5", null ],
       [ "getMargin", "classAView.html#a0de8af992ddbbe2237caf1148397b592", null ],
       [ "getMaxSize", "classAView.html#ab4bbc6b9ced25ac8a591262143a2d093", null ],
+      [ "getMinimumSizePlusMargin", "classAView.html#aa8e167e381210b7045032419131d36ba", null ],
       [ "getMinSize", "classAView.html#a4409e3c4993b808d2d7e23f85bc09328", null ],
       [ "getOverflow", "classAView.html#a91e63d78d42435872c5482776046fdfc", null ],
       [ "getOverflowMask", "classAView.html#a0569ae03bfeebb23dbea2da2585f0d67", null ],
