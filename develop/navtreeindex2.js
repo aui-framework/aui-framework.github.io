@@ -1,8 +1,14 @@
 var NAVTREEINDEX2 =
 {
+"classAPerformanceSection.html":[3,0,1,34],
+"classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,2,1,1],
+"classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,1,34,1],
+"classAPipe.html":[3,0,1,31],
+"classAPipe.html":[3,0,1,2,9],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,2,9,1],
-"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
+"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,31,1],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,31,0],
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
 "classAPlaceholderAnimator.html":[0,2,215],
 "classAPlaceholderAnimator_1_1ICustomWidth.html":[0,2,215,0],
 "classAPointerIndex.html":[3,0,9,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX2 =
 "classATabView.html":[3,0,9,2,28],
 "classATcpServerSocket.html":[3,0,7,2],
 "classATcpServerSocket.html#a4608ba25273731caa5b990c80911bed6":[3,0,7,2,0],
-"classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7":[3,0,7,2,1],
-"classATcpSocket.html":[3,0,7,3],
-"classATcpSocket.html#a12c9f8ebd57f0189bd2bda6103d1718e":[3,0,7,3,2],
-"classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0":[3,0,7,3,0],
-"classATcpSocket.html#ae642aa64b944b8cbca4337f950bfb8d0":[3,0,7,3,1],
-"classAText.html":[3,0,9,2,29],
-"classATextArea.html":[3,0,9,2,30]
+"classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7":[3,0,7,2,1]
 };

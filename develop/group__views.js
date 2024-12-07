@@ -86,13 +86,13 @@ var group__views =
       [ "AOverflow::HIDDEN", "group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a347e628a8f72626a0611ef842fe9d304", null ],
       [ "AOverflow::HIDDEN_FROM_THIS", "group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a132f85d5b4f206b0cf9404c9b895739d", null ]
     ] ],
-    [ "ATextInputAction", "group__views.html#gad24a446ec1501a5f65e7c5f90622e4b6", [
-      [ "ATextInputAction::DEFAULT", "group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a5b39c8b553c821e7cddc6da64b5bd2ee", null ],
-      [ "ATextInputAction::DONE", "group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a2ba22e58ca17bb728d522bba36cf8350", null ],
-      [ "ATextInputAction::GO", "group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a3d6954dd72e53b9015d2a6e6546058f8", null ],
-      [ "ATextInputAction::SEND", "group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a548e51fa67d541384e9585adf0db95dc", null ],
-      [ "ATextInputAction::SEARCH", "group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a0f544d682c3a664870f025f48c4b04b5", null ],
-      [ "ATextInputAction::NEXT", "group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a47559fb833ff58321570e5e877b467f6", null ]
+    [ "ATextInputActionIcon", "group__views.html#gaec8a763bfbb2044d7b55de90c5a56742", [
+      [ "ATextInputActionIcon::DEFAULT", "group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee", null ],
+      [ "ATextInputActionIcon::DONE", "group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a2ba22e58ca17bb728d522bba36cf8350", null ],
+      [ "ATextInputActionIcon::GO", "group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a3d6954dd72e53b9015d2a6e6546058f8", null ],
+      [ "ATextInputActionIcon::SEND", "group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a548e51fa67d541384e9585adf0db95dc", null ],
+      [ "ATextInputActionIcon::SEARCH", "group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a0f544d682c3a664870f025f48c4b04b5", null ],
+      [ "ATextInputActionIcon::NEXT", "group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a47559fb833ff58321570e5e877b467f6", null ]
     ] ],
     [ "ATextInputType", "group__views.html#ga2795f63a52f7a5f028abc780bf64758f", [
       [ "ATextInputType::DEFAULT", "group__views.html#gga2795f63a52f7a5f028abc780bf64758fa5b39c8b553c821e7cddc6da64b5bd2ee", null ],

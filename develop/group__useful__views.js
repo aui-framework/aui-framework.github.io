@@ -9,12 +9,13 @@ var group__useful__views =
     [ "AAbstractTextField", "classAAbstractTextField.html", [
       [ "cursorIndexByPos", "classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c", null ],
       [ "getCursorPosition", "classAAbstractTextField.html#adc0cd1f14fc2f3e492eb45c367353f5f", null ],
+      [ "isPasswordField", "classAAbstractTextField.html#a1335a4965fef3cc6c7acdaae9eee4989", null ],
       [ "length", "classAAbstractTextField.html#af32ef6283e0cf52cf1b053874b5410f1", null ],
       [ "text", "classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d", null ],
+      [ "textInputType", "classAAbstractTextField.html#acff87085d6824b23edaa6c8efa9a3303", null ],
       [ "toString", "classAAbstractTextField.html#a2f6746d740de6ae7ea869b240c429b55", null ],
       [ "typeableInsert", "classAAbstractTextField.html#a2bf33c76efd328235e0b61693edb5205", null ],
-      [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ],
-      [ "actionButtonPressed", "classAAbstractTextField.html#acefd4f090e6cfd879ad646a9b6311a29", null ]
+      [ "typeableInsert", "classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53", null ]
     ] ],
     [ "AButton", "classAButton.html", [
       [ "consumesClick", "classAButton.html#ad80e94073674662d0ad29b3662f6025f", null ]
@@ -136,8 +137,10 @@ var group__useful__views =
     [ "ATextArea", "classATextArea.html", [
       [ "cursorIndexByPos", "classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c", null ],
       [ "getCursorPosition", "classATextArea.html#a166ab21304b9dd1a7393738c8589e48c", null ],
+      [ "isPasswordField", "classATextArea.html#a70958930a546776094688e422c110594", null ],
       [ "length", "classATextArea.html#af937c3bf26c1faf077deed94d25641b2", null ],
       [ "text", "classATextArea.html#a270fa624c5bb3301b00c6d5f1e8fc3ca", null ],
+      [ "textInputType", "classATextArea.html#a213968d5560eeab22c9855090b33ffae", null ],
       [ "toString", "classATextArea.html#af74dca1f8abfdcdcb5aab416fda78be7", null ],
       [ "typeableInsert", "classATextArea.html#a197fd52af34a4333a6e8dc96ba84399b", null ],
       [ "typeableInsert", "classATextArea.html#aed8e7bf3dbc09389c0b0a8699a6d8969", null ]
