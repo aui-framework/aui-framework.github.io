@@ -315,79 +315,89 @@ $(document).ready(function(){initNavTree('ATextBase_8h_source.html',''); initRes
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        }</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordtype">int</span> accumulator = 0;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : mEngine.entries()) {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">if</span> (accumulator + e-&gt;getSize().x &gt; mMaxSize.x) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                <span class="keywordflow">if</span> (accumulator == 0) {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                    <span class="keywordflow">return</span> mMaxSize.x;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                }</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="comment">// there&#39;s no need to calculate min size further.</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                <span class="keywordflow">return</span> accumulator;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            }</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            accumulator += e-&gt;getSize().x;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        }</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">return</span> accumulator;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classATextBase.html#ab6b02687de35950dabd8514f0ae339f0">  240</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classATextBase.html#ab6b02687de35950dabd8514f0ae339f0">getContentMinimumHeight</a>(ALayoutDirection layout)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordflow">if</span> (!mPrerenderedString) {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            performLayout();</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> engineHeight = mEngine.height()) {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">return</span> *engineHeight;</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        }</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordtype">void</span> invalidateFont()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        mPrerenderedString.reset();</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        markMinContentSizeInvalid();</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">void</span> commitStyle()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        AView::commitStyle();</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        commitStyleFont();</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    }</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">  263</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">invalidateAllStyles</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        invalidateAllStylesFont();</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <a class="code hl_function" href="classAViewContainerBase.html#abd2dfc9066b58828d03862d4f3ce5898">AViewContainerBase::invalidateAllStyles</a>();</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> fillStringCanvas(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;IRenderer::IMultiStringCanvas&gt;</a>&amp; canvas) = 0;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordtype">void</span> prerenderString(<a class="code hl_struct" href="structARenderContext.html">ARenderContext</a> ctx) {</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        performLayout();</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keyword">auto</span> multiStringCanvas = ctx.render.<a class="code hl_function" href="classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031">newMultiStringCanvas</a>(getFontStyle());</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            fillStringCanvas(multiStringCanvas);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <span class="comment">/*</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">            */</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            mPrerenderedString = multiStringCanvas-&gt;finalize();</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> clearContent() {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <a class="code hl_function" href="classAViewContainerBase.html#a7ff74467604e643889f579390602902e">removeAllViews</a>();</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        mPrerenderedString = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    WordWrappingEngine mEngine;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <a class="code hl_class" href="class__.html">_&lt;IRenderer::IPrerenderedString&gt;</a> mPrerenderedString;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordtype">void</span> performLayout() {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <a class="code hl_class" href="classAPerformanceSection.html">APerformanceSection</a> s(<span class="stringliteral">&quot;ATextBase::performLayout&quot;</span>);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        mEngine.setTextAlign(getFontStyle().align);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        mEngine.setLineHeight(getFontStyle().lineSpacing);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        mEngine.performLayout({mPadding.left, mPadding.top }, <a class="code hl_function" href="classAView.html#a6013ec876536dba2a7dabb9701f94b54">getSize</a>() - glm::ivec2{mPadding.horizontal(), mPadding.vertical()});</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>};</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="comment">// if width is not defined, when we try to occupy as much space as possible, only restricted by max size.</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="comment">// basically, it is drastically simplified version of perform layout.</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordtype">int</span> max = 0;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordtype">int</span> accumulator = 0;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keyword">const</span> <span class="keyword">auto</span> paddedMaxSize = mMaxSize.x - mPadding.horizontal();</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; e : mEngine.entries()) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            <span class="keywordflow">if</span> (e-&gt;forcesNextLine()) {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                max = glm::max(max, accumulator);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                accumulator = 0;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span> (accumulator + e-&gt;getSize().x &gt; paddedMaxSize) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">if</span> (accumulator == 0) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                    <span class="keywordflow">return</span> mMaxSize.x;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                <span class="comment">// there&#39;s no need to calculate min size further.</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                <span class="keywordflow">goto</span> ret;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            accumulator += e-&gt;getSize().x;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        ret:</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keywordflow">return</span> glm::max(max, accumulator);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="classATextBase.html#ab6b02687de35950dabd8514f0ae339f0">  250</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classATextBase.html#ab6b02687de35950dabd8514f0ae339f0">getContentMinimumHeight</a>(ALayoutDirection layout)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">if</span> (!mPrerenderedString) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            performLayout();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> engineHeight = mEngine.height()) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            <span class="keywordflow">return</span> *engineHeight;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordtype">void</span> invalidateFont()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        mPrerenderedString.reset();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        markMinContentSizeInvalid();</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordtype">void</span> commitStyle()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        AView::commitStyle();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        commitStyleFont();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">  273</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">invalidateAllStyles</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        invalidateAllStylesFont();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <a class="code hl_function" href="classAViewContainerBase.html#abd2dfc9066b58828d03862d4f3ce5898">AViewContainerBase::invalidateAllStyles</a>();</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> fillStringCanvas(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;IRenderer::IMultiStringCanvas&gt;</a>&amp; canvas) = 0;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordtype">void</span> prerenderString(<a class="code hl_struct" href="structARenderContext.html">ARenderContext</a> ctx) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        performLayout();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keyword">auto</span> multiStringCanvas = ctx.render.<a class="code hl_function" href="classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031">newMultiStringCanvas</a>(getFontStyle());</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            fillStringCanvas(multiStringCanvas);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="comment">/*</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">            */</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            mPrerenderedString = multiStringCanvas-&gt;finalize();</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> clearContent() {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <a class="code hl_function" href="classAViewContainerBase.html#a7ff74467604e643889f579390602902e">removeAllViews</a>();</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        mPrerenderedString = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    WordWrappingEngine mEngine;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <a class="code hl_class" href="class__.html">_&lt;IRenderer::IPrerenderedString&gt;</a> mPrerenderedString;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <span class="keywordtype">void</span> performLayout() {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <a class="code hl_class" href="classAPerformanceSection.html">APerformanceSection</a> s(<span class="stringliteral">&quot;ATextBase::performLayout&quot;</span>);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        mEngine.setTextAlign(getFontStyle().align);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        mEngine.setLineHeight(getFontStyle().lineSpacing);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        mEngine.performLayout({mPadding.left, mPadding.top }, <a class="code hl_function" href="classAView.html#a6013ec876536dba2a7dabb9701f94b54">getSize</a>() - glm::ivec2{mPadding.horizontal(), mPadding.vertical()});</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>};</div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition:</b> AException.h:29</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:32</div></div>
 <div class="ttc" id="aclassAOptional_html_a71c3dc1b2ba9b9017348e471833b5d2c"><div class="ttname"><a href="classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c">AOptional::valueOr</a></div><div class="ttdeci">T valueOr(F &amp;&amp;alternative) const</div><div class="ttdoc">value or alternative (either value or callback)</div><div class="ttdef"><b>Definition:</b> AOptional.h:227</div></div>
@@ -396,8 +406,8 @@ $(document).ready(function(){initNavTree('ATextBase_8h_source.html',''); initRes
 <div class="ttc" id="aclassATextBase_html"><div class="ttname"><a href="classATextBase.html">ATextBase</a></div><div class="ttdoc">Base class for AText without public APIs.</div><div class="ttdef"><b>Definition:</b> ATextBase.h:189</div></div>
 <div class="ttc" id="aclassATextBase_html_a0a2da7a4aad318f118f8cbf7b0e97783"><div class="ttname"><a href="classATextBase.html#a0a2da7a4aad318f118f8cbf7b0e97783">ATextBase::render</a></div><div class="ttdeci">void render(ARenderContext context) override</div><div class="ttdoc">Draws this AView. Noone should call this function except rendering routine.</div><div class="ttdef"><b>Definition:</b> ATextBase.h:195</div></div>
 <div class="ttc" id="aclassATextBase_html_a159126c5126fbb7a0d6f799de204981e"><div class="ttname"><a href="classATextBase.html#a159126c5126fbb7a0d6f799de204981e">ATextBase::getContentMinimumWidth</a></div><div class="ttdeci">int getContentMinimumWidth(ALayoutDirection layout) override</div><div class="ttdef"><b>Definition:</b> ATextBase.h:221</div></div>
-<div class="ttc" id="aclassATextBase_html_ab6b02687de35950dabd8514f0ae339f0"><div class="ttname"><a href="classATextBase.html#ab6b02687de35950dabd8514f0ae339f0">ATextBase::getContentMinimumHeight</a></div><div class="ttdeci">int getContentMinimumHeight(ALayoutDirection layout) override</div><div class="ttdef"><b>Definition:</b> ATextBase.h:240</div></div>
-<div class="ttc" id="aclassATextBase_html_ad9c379f388b108c9bbc0bd62fa68b4cb"><div class="ttname"><a href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">ATextBase::invalidateAllStyles</a></div><div class="ttdeci">void invalidateAllStyles() override</div><div class="ttdoc">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.</div><div class="ttdef"><b>Definition:</b> ATextBase.h:263</div></div>
+<div class="ttc" id="aclassATextBase_html_ab6b02687de35950dabd8514f0ae339f0"><div class="ttname"><a href="classATextBase.html#ab6b02687de35950dabd8514f0ae339f0">ATextBase::getContentMinimumHeight</a></div><div class="ttdeci">int getContentMinimumHeight(ALayoutDirection layout) override</div><div class="ttdef"><b>Definition:</b> ATextBase.h:250</div></div>
+<div class="ttc" id="aclassATextBase_html_ad9c379f388b108c9bbc0bd62fa68b4cb"><div class="ttname"><a href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">ATextBase::invalidateAllStyles</a></div><div class="ttdeci">void invalidateAllStyles() override</div><div class="ttdoc">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.</div><div class="ttdef"><b>Definition:</b> ATextBase.h:273</div></div>
 <div class="ttc" id="aclassAViewContainerBase_html"><div class="ttname"><a href="classAViewContainerBase.html">AViewContainerBase</a></div><div class="ttdoc">A view that represents a set of views.</div><div class="ttdef"><b>Definition:</b> AViewContainerBase.h:68</div></div>
 <div class="ttc" id="aclassAViewContainerBase_html_a7ff74467604e643889f579390602902e"><div class="ttname"><a href="classAViewContainerBase.html#a7ff74467604e643889f579390602902e">AViewContainerBase::removeAllViews</a></div><div class="ttdeci">void removeAllViews()</div><div class="ttdoc">Remove all views from container.</div><div class="ttdef"><b>Definition:</b> AViewContainerBase.cpp:489</div></div>
 <div class="ttc" id="aclassAViewContainerBase_html_abd2dfc9066b58828d03862d4f3ce5898"><div class="ttname"><a href="classAViewContainerBase.html#abd2dfc9066b58828d03862d4f3ce5898">AViewContainerBase::invalidateAllStyles</a></div><div class="ttdeci">void invalidateAllStyles() override</div><div class="ttdoc">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.</div><div class="ttdef"><b>Definition:</b> AViewContainerBase.cpp:451</div></div>
@@ -406,7 +416,7 @@ $(document).ready(function(){initNavTree('ATextBase_8h_source.html',''); initRes
 <div class="ttc" id="aclassAWordWrappingEngineBase_1_1Entry_html"><div class="ttname"><a href="classAWordWrappingEngineBase_1_1Entry.html">AWordWrappingEngineBase::Entry</a></div><div class="ttdef"><b>Definition:</b> AWordWrappingEngine.h:23</div></div>
 <div class="ttc" id="aclassIFontView_html"><div class="ttname"><a href="classIFontView.html">IFontView</a></div><div class="ttdoc">Interface of a AView that works with fonts (i.e., ALabel, ATextField, AText, etc.....</div><div class="ttdef"><b>Definition:</b> IFontView.h:19</div></div>
 <div class="ttc" id="aclassIRenderer_html_a1b6e54bd30326409ade5dac9caf2d031"><div class="ttname"><a href="classIRenderer.html#a1b6e54bd30326409ade5dac9caf2d031">IRenderer::newMultiStringCanvas</a></div><div class="ttdeci">virtual _&lt; IMultiStringCanvas &gt; newMultiStringCanvas(const AFontStyle &amp;style)=0</div><div class="ttdoc">Creates new canvas for batching multiple prerender string calls.</div></div>
-<div class="ttc" id="aclassIRenderer_html_a2cecf34e74678f677c18dc0bdb9af794"><div class="ttname"><a href="classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794">IRenderer::setColor</a></div><div class="ttdeci">void setColor(const AColor &amp;color)</div><div class="ttdef"><b>Definition:</b> IRenderer.h:434</div></div>
+<div class="ttc" id="aclassIRenderer_html_a2cecf34e74678f677c18dc0bdb9af794"><div class="ttname"><a href="classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794">IRenderer::setColor</a></div><div class="ttdeci">void setColor(const AColor &amp;color)</div><div class="ttdef"><b>Definition:</b> IRenderer.h:429</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:177</div></div>
 <div class="ttc" id="aclassaui_1_1detail_1_1CharEntry_html"><div class="ttname"><a href="classaui_1_1detail_1_1CharEntry.html">aui::detail::CharEntry</a></div><div class="ttdef"><b>Definition:</b> ATextBase.h:37</div></div>
 <div class="ttc" id="aclassaui_1_1detail_1_1NextLineEntry_html"><div class="ttname"><a href="classaui_1_1detail_1_1NextLineEntry.html">aui::detail::NextLineEntry</a></div><div class="ttdef"><b>Definition:</b> ATextBase.h:154</div></div>
