@@ -44,7 +44,7 @@ var group__useful__views =
       [ "render", "classADrawableView.html#ab65bc38ed964f121d7a1ef46a596bff0", null ]
     ] ],
     [ "ADropdownList", "classADropdownList.html", [
-      [ "getContentMinimumWidth", "classADropdownList.html#a549d9cab0facd18f4904a762aa733d64", null ],
+      [ "getContentMinimumWidth", "classADropdownList.html#a6808a81a9de662ab5e3ee56e7a9a7d00", null ],
       [ "onPointerReleased", "classADropdownList.html#a8b7f862613657a839dc1576c9baf96ff", null ],
       [ "render", "classADropdownList.html#a510428a5ae613ddb4fafa97617ddd74f", null ]
     ] ],
@@ -89,8 +89,8 @@ var group__useful__views =
     ] ],
     [ "AScrollArea", "classAScrollArea.html", [
       [ "Builder", "classAScrollArea_1_1Builder.html", null ],
-      [ "getContentMinimumHeight", "classAScrollArea.html#aa686c2c309f39c9675654b76e4045397", null ],
-      [ "getContentMinimumWidth", "classAScrollArea.html#a3632b3acdb4cf42947d60652d47ac16c", null ],
+      [ "getContentMinimumHeight", "classAScrollArea.html#ab7c5b9f1c56a5786bc90e8fa1a6996d0", null ],
+      [ "getContentMinimumWidth", "classAScrollArea.html#a767ffd848bb15e9ab986328eceedbdce", null ],
       [ "onGesture", "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de", null ],
       [ "onPointerPressed", "classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75", null ],
       [ "onPointerReleased", "classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0", null ],
@@ -121,8 +121,8 @@ var group__useful__views =
     ] ],
     [ "ASpacerFixed", "classASpacerFixed.html", [
       [ "consumesClick", "classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35", null ],
-      [ "getContentMinimumHeight", "classASpacerFixed.html#adecb4adaba29315c52692e32d886ed62", null ],
-      [ "getContentMinimumWidth", "classASpacerFixed.html#ac51602087565fd27e0c4567cce1a8f48", null ]
+      [ "getContentMinimumHeight", "classASpacerFixed.html#a8fa325194a88919cc706eae0bb636080", null ],
+      [ "getContentMinimumWidth", "classASpacerFixed.html#a254d9515819c06c79d2a29f83932cc2f", null ]
     ] ],
     [ "ASplitter", "classASplitter.html", [
       [ "onClickPrevented", "classASplitter.html#a69880ca134ca12fa0acfc1982714822c", null ],
@@ -148,14 +148,14 @@ var group__useful__views =
     [ "ATextField", "classATextField.html", null ],
     [ "ATreeView", "classATreeView.html", [
       [ "ContainerView", "classATreeView_1_1ContainerView.html", [
-        [ "getContentMinimumHeight", "classATreeView_1_1ContainerView.html#a3a9e16de50261df034a74a1d2558b8ad", null ],
-        [ "getContentMinimumWidth", "classATreeView_1_1ContainerView.html#ac4de1ad58f5bb9392e4f14215ae48bdc", null ]
+        [ "getContentMinimumHeight", "classATreeView_1_1ContainerView.html#a5fbe7838b7f0e8b1838c165dd068cbdd", null ],
+        [ "getContentMinimumWidth", "classATreeView_1_1ContainerView.html#a71883c8bfdd402f8c735b6b17f46f667", null ]
       ] ],
       [ "ItemView", "classATreeView_1_1ItemView.html", [
         [ "onPointerMove", "classATreeView_1_1ItemView.html#a1d8d0d0de1bb9e73c0219d2d6542b533", null ],
         [ "onPointerPressed", "classATreeView_1_1ItemView.html#afba0224b949321c63d28f5d24fdbfdae", null ]
       ] ],
-      [ "getContentMinimumHeight", "classATreeView.html#a8ad93957c27d657d7509158864e5095c", null ],
+      [ "getContentMinimumHeight", "classATreeView.html#a6b0048f8907409c867e9c31bbd9b3ac1", null ],
       [ "onScroll", "classATreeView.html#a0b061bb669274d85c1aed14d455850b7", null ]
     ] ],
     [ "AVDividerView", "classAVDividerView.html", null ],
@@ -170,9 +170,9 @@ var group__useful__views =
       [ "focus", "classAView.html#af46394aa10dbc12a7b9e5cadd5c3e740", null ],
       [ "getBorderRadius", "classAView.html#a56b5b208d3138683ae18dfe8d8edbdae", null ],
       [ "getCenterPointInWindow", "classAView.html#a32e6cd31d4a7ec7b39c9ce5f577900e9", null ],
-      [ "getContentMinimumHeight", "classAView.html#a771d50948bb0ca66cb1a9038f76e416e", null ],
+      [ "getContentMinimumHeight", "classAView.html#a21c9fd89567b6841cac56cef63312e71", null ],
       [ "getContentMinimumSize", "classAView.html#a1bb2370107f161f1acd93cbe7f0262f8", null ],
-      [ "getContentMinimumWidth", "classAView.html#a7a9e235e61231946d9f06017c1701e91", null ],
+      [ "getContentMinimumWidth", "classAView.html#a71ecfca653416e23d3490746ff1c9fc8", null ],
       [ "getCursor", "classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e", null ],
       [ "getFixedSize", "classAView.html#ae11b78477772c712d635eb2c540ad65d", null ],
       [ "getFloating", "classAView.html#a30c0be62facef4c94a1fe51382541fd5", null ],
@@ -255,6 +255,7 @@ var group__useful__views =
       [ "addView", "classAViewContainer.html#a507d17db67b2627988dee34b8d075958", null ],
       [ "addViewCustomLayout", "classAViewContainer.html#a065e6e7cddaa0de5dc6cae91dceca07e", null ],
       [ "addViews", "classAViewContainer.html#a61a44647cf745717b4904752ad72648b", null ],
+      [ "getLayout", "classAViewContainer.html#a494c275ec7cd4ae5919a10875ef8e8a5", null ],
       [ "removeAllViews", "classAViewContainer.html#a7ff74467604e643889f579390602902e", null ],
       [ "removeView", "classAViewContainer.html#a4050a6197941af693f0d505b23308c5b", null ],
       [ "removeView", "classAViewContainer.html#a893f5dfb66264aa5c0b1e8ea87b31612", null ],
@@ -274,8 +275,9 @@ var group__useful__views =
       [ "capturesFocus", "classAViewContainerBase.html#ab706616eb8bbb4002e28abce029ebfb6", null ],
       [ "consumesClick", "classAViewContainerBase.html#aa8b42b477396e4de39687d2b2a737042", null ],
       [ "focusChainTarget", "classAViewContainerBase.html#a6ecd021bfb4f2591aea40ff17eb55b0b", null ],
-      [ "getContentMinimumHeight", "classAViewContainerBase.html#afcc5a3e53ff1f2a52bb4571c73f60fa7", null ],
-      [ "getContentMinimumWidth", "classAViewContainerBase.html#a19818c89ac343926950b7c238e32bdd8", null ],
+      [ "getContentMinimumHeight", "classAViewContainerBase.html#af436cb02b6ab35bb0fd894b81e76d003", null ],
+      [ "getContentMinimumWidth", "classAViewContainerBase.html#a61875f7975ff51d6b1fae6d1f284a0c8", null ],
+      [ "getLayout", "classAViewContainerBase.html#a494c275ec7cd4ae5919a10875ef8e8a5", null ],
       [ "getViewAt", "classAViewContainerBase.html#a96c24aac5b9d50a8cec70d905a104a0e", null ],
       [ "getViewAtRecursive", "classAViewContainerBase.html#a5c040aade2f725888bd0cbfc458f2f29", null ],
       [ "getViewAtRecursive", "classAViewContainerBase.html#a26ab2f2aab3a89c6ee2db5047b226913", null ],

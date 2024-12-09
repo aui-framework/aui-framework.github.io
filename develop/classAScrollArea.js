@@ -1,8 +1,8 @@
 var classAScrollArea =
 [
     [ "Builder", "classAScrollArea_1_1Builder.html", null ],
-    [ "getContentMinimumHeight", "classAScrollArea.html#aa686c2c309f39c9675654b76e4045397", null ],
-    [ "getContentMinimumWidth", "classAScrollArea.html#a3632b3acdb4cf42947d60652d47ac16c", null ],
+    [ "getContentMinimumHeight", "classAScrollArea.html#ab7c5b9f1c56a5786bc90e8fa1a6996d0", null ],
+    [ "getContentMinimumWidth", "classAScrollArea.html#a767ffd848bb15e9ab986328eceedbdce", null ],
     [ "onGesture", "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de", null ],
     [ "onPointerPressed", "classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75", null ],
     [ "onPointerReleased", "classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0", null ],

@@ -4,6 +4,7 @@ var classAViewContainer =
     [ "addView", "classAViewContainer.html#a507d17db67b2627988dee34b8d075958", null ],
     [ "addViewCustomLayout", "classAViewContainer.html#a065e6e7cddaa0de5dc6cae91dceca07e", null ],
     [ "addViews", "classAViewContainer.html#a61a44647cf745717b4904752ad72648b", null ],
+    [ "getLayout", "classAViewContainer.html#a494c275ec7cd4ae5919a10875ef8e8a5", null ],
     [ "removeAllViews", "classAViewContainer.html#a7ff74467604e643889f579390602902e", null ],
     [ "removeView", "classAViewContainer.html#a4050a6197941af693f0d505b23308c5b", null ],
     [ "removeView", "classAViewContainer.html#a893f5dfb66264aa5c0b1e8ea87b31612", null ],

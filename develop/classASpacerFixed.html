@@ -100,7 +100,15 @@ $(document).ready(function(){initNavTree('classASpacerFixed.html',''); initResiz
  <a href="classASpacerFixed.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Fixed-size view which is useful in UI building. </p>
-<p >ABlankSpace is fixed size blank view which acquires specified space. </p>
+<p ><a class="el" href="classASpacerFixed.html" title="Fixed-size view which is useful in UI building.">ASpacerFixed</a> is fixed size blank view which acquires specified space in <code>Horizontal</code> and <code>Vertical</code> layouts. For the rest of layout managers it does nothing.</p>
+<p ><a class="el" href="classASpacerFixed.html" title="Fixed-size view which is useful in UI building.">ASpacerFixed</a> follows direction of its container layout. That is, for <code>Horizontal</code> layout it consumes horizontal space only and for <code>Vertical</code> layout it consumes vertical space only.</p>
+<p >Example usage: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Horizontal</a> {</div>
+<div class="line">  Label { <span class="stringliteral">&quot;Hello&quot;</span> },</div>
+<div class="line">  SpacerFixed(100_dp),</div>
+<div class="line">  Label { <span class="stringliteral">&quot;world&quot;</span> },</div>
+<div class="line">}</div>
+<div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:173</div></div>
+</div><!-- fragment --><p> In this case, SpacerFixed occupies <code>100_dp</code> in horizontal but nothing in vertical. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -110,10 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26cff5cac1c98387ded49f6ec2027d35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35">consumesClick</a> (const glm::ivec2 &amp;pos) override</td></tr>
 <tr class="memdesc:a26cff5cac1c98387ded49f6ec2027d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> processes this click or passes it thru.  <a href="classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35">More...</a><br /></td></tr>
 <tr class="separator:a26cff5cac1c98387ded49f6ec2027d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac51602087565fd27e0c4567cce1a8f48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASpacerFixed.html#ac51602087565fd27e0c4567cce1a8f48">getContentMinimumWidth</a> (ALayoutDirection layout) override</td></tr>
-<tr class="separator:ac51602087565fd27e0c4567cce1a8f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adecb4adaba29315c52692e32d886ed62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASpacerFixed.html#adecb4adaba29315c52692e32d886ed62">getContentMinimumHeight</a> (ALayoutDirection layout) override</td></tr>
-<tr class="separator:adecb4adaba29315c52692e32d886ed62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254d9515819c06c79d2a29f83932cc2f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASpacerFixed.html#a254d9515819c06c79d2a29f83932cc2f">getContentMinimumWidth</a> () override</td></tr>
+<tr class="separator:a254d9515819c06c79d2a29f83932cc2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fa325194a88919cc706eae0bb636080"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classASpacerFixed.html#a8fa325194a88919cc706eae0bb636080">getContentMinimumHeight</a> () override</td></tr>
+<tr class="separator:a8fa325194a88919cc706eae0bb636080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAView"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAView')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAView.html">AView</a></td></tr>
 <tr class="memitem:a5f31342ebc6f35e57201cc55d3e64b8f inherit pub_methods_classAView"><td class="memItemLeft" align="right" valign="top"><a id="a5f31342ebc6f35e57201cc55d3e64b8f" name="a5f31342ebc6f35e57201cc55d3e64b8f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>redraw</b> ()</td></tr>
@@ -768,8 +776,8 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 
 </div>
 </div>
-<a id="adecb4adaba29315c52692e32d886ed62" name="adecb4adaba29315c52692e32d886ed62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adecb4adaba29315c52692e32d886ed62">&#9670;&nbsp;</a></span>getContentMinimumHeight()</h2>
+<a id="a8fa325194a88919cc706eae0bb636080" name="a8fa325194a88919cc706eae0bb636080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa325194a88919cc706eae0bb636080">&#9670;&nbsp;</a></span>getContentMinimumHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,8 +788,7 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
         <tr>
           <td class="memname">int ASpacerFixed::getContentMinimumHeight </td>
           <td>(</td>
-          <td class="paramtype">ALayoutDirection&#160;</td>
-          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -793,12 +800,12 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>minimal content-area height. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classAView.html#a771d50948bb0ca66cb1a9038f76e416e">AView</a>.</p>
+<p>Reimplemented from <a class="el" href="classAView.html#a21c9fd89567b6841cac56cef63312e71">AView</a>.</p>
 
 </div>
 </div>
-<a id="ac51602087565fd27e0c4567cce1a8f48" name="ac51602087565fd27e0c4567cce1a8f48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac51602087565fd27e0c4567cce1a8f48">&#9670;&nbsp;</a></span>getContentMinimumWidth()</h2>
+<a id="a254d9515819c06c79d2a29f83932cc2f" name="a254d9515819c06c79d2a29f83932cc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a254d9515819c06c79d2a29f83932cc2f">&#9670;&nbsp;</a></span>getContentMinimumWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,8 +816,7 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
         <tr>
           <td class="memname">int ASpacerFixed::getContentMinimumWidth </td>
           <td>(</td>
-          <td class="paramtype">ALayoutDirection&#160;</td>
-          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -822,7 +828,7 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>minimal content-area width. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classAView.html#a7a9e235e61231946d9f06017c1701e91">AView</a>.</p>
+<p>Reimplemented from <a class="el" href="classAView.html#a71ecfca653416e23d3490746ff1c9fc8">AView</a>.</p>
 
 </div>
 </div>
