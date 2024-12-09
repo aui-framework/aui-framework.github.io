@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('AAbstractTypeableView_8h_source.html',
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> onKeyDown(AInput::Key key)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        Super::onKeyDown(key);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        AAbstractTypeable::handleKey(key);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (key == AInput::Key::RETURN) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (key == AInput::Key::RETURN &amp;&amp; !AInput::isKeyDown(AInput::LSHIFT) &amp;&amp; !AInput::isKeyDown(AInput::RSHIFT)) {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> this-&gt;actionButtonPressed;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>

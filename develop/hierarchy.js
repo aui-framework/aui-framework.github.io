@@ -69,6 +69,7 @@ var hierarchy =
     [ "ADataBindingDefault< ALabel, AString >", "structADataBindingDefault_3_01ALabel_00_01AString_01_4.html", null ],
     [ "ADataBindingDefault< APathChooserView, APath >", "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html", null ],
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
+    [ "ADataBindingDefault< View, Visibility >", "structADataBindingDefault_3_01View_00_01Visibility_01_4.html", null ],
     [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
     [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< double >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", [
       [ "ADataBindingDefault< ADoubleNumberPicker, double >", "structADataBindingDefault_3_01ADoubleNumberPicker_00_01double_01_4.html", null ]
@@ -882,6 +883,8 @@ var hierarchy =
     [ "ass::MaxSize", "structass_1_1MaxSize.html", null ],
     [ "aui::member< Type >", "structaui_1_1member.html", null ],
     [ "aui::member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", null ],
+    [ "aui::member< Type(Clazz::*)(Args...) const noexcept >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01noexcept_01_4.html", null ],
+    [ "aui::member< Type(Clazz::*)(Args...) noexcept >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01noexcept_01_4.html", null ],
     [ "aui::member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", null ],
     [ "aui::member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
