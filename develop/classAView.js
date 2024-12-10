@@ -11,7 +11,7 @@ var classAView =
     [ "getBorderRadius", "classAView.html#a56b5b208d3138683ae18dfe8d8edbdae", null ],
     [ "getCenterPointInWindow", "classAView.html#a32e6cd31d4a7ec7b39c9ce5f577900e9", null ],
     [ "getContentMinimumHeight", "classAView.html#a21c9fd89567b6841cac56cef63312e71", null ],
-    [ "getContentMinimumSize", "classAView.html#a1bb2370107f161f1acd93cbe7f0262f8", null ],
+    [ "getContentMinimumSize", "classAView.html#ad5f42cf9fcc3a188236887c22e66164e", null ],
     [ "getContentMinimumWidth", "classAView.html#a71ecfca653416e23d3490746ff1c9fc8", null ],
     [ "getCursor", "classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e", null ],
     [ "getFixedSize", "classAView.html#ae11b78477772c712d635eb2c540ad65d", null ],

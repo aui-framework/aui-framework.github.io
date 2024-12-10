@@ -413,7 +413,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getContentMinimumHeight();</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    glm::ivec2 getContentMinimumSize(ALayoutDirection layout) <span class="keyword">noexcept</span> {</div>
+<div class="line">    glm::ivec2 getContentMinimumSize() noexcept {</div>
 <div class="line">        <span class="keywordflow">if</span> (!mCachedMinContentSize) {</div>
 <div class="line">            glm::ivec2 minContentSize = glm::ivec2(getContentMinimumWidth(), getContentMinimumHeight());</div>
 <div class="line">            mCachedMinContentSize = minContentSize;</div>
@@ -432,11 +432,11 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    <span class="keywordtype">bool</span> hasFocus() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumWidth(ALayoutDirection layout = ALayoutDirection::NONE);</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumHeight(ALayoutDirection layout = ALayoutDirection::NONE);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumWidth();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumHeight();</div>
 <div class="line"> </div>
 <div class="line">    glm::ivec2 getMinimumSize() {</div>
-<div class="line">        <span class="keywordflow">return</span> {getMinimumWidth(), getMinimumHeight()};</div>
+<div class="line">        <span class="keywordflow">return</span> { getMinimumWidth(), getMinimumHeight() };</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> setMaxSize(<span class="keyword">const</span> glm::ivec2&amp; maxSize) {</div>
