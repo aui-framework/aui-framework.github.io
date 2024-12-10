@@ -18,6 +18,14 @@ var group__views =
         [ "TEXT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed", null ]
       ] ]
     ] ],
+    [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", [
+      [ "getCaptionContainer", "classACustomCaptionWindow.html#ab6277524040b8fbb41bb9ed77a7cc5a9", null ],
+      [ "getContentContainer", "classACustomCaptionWindow.html#aa1de52ab590e272df944fa71a088585b", null ]
+    ] ],
+    [ "ACustomWindow", "classACustomWindow.html", [
+      [ "onPointerPressed", "classACustomWindow.html#ad994e4dd3ae33763d98aaa1e09aeb61a", null ],
+      [ "onPointerReleased", "classACustomWindow.html#a6e594d82e7939027457541a7aee3a4fc", null ]
+    ] ],
     [ "ADragNDrop", "classADragNDrop.html", [
       [ "DropEvent", "structADragNDrop_1_1DropEvent.html", null ],
       [ "EnterEvent", "structADragNDrop_1_1EnterEvent.html", null ],
@@ -27,6 +35,33 @@ var group__views =
       [ "DirectX11", "structARenderingContextOptions_1_1DirectX11.html", null ],
       [ "OpenGL", "structARenderingContextOptions_1_1OpenGL.html", null ],
       [ "Software", "structARenderingContextOptions_1_1Software.html", null ]
+    ] ],
+    [ "AWindow", "classAWindow.html", [
+      [ "AWindow", "classAWindow.html#a9ad06bbd233087b0b325878a0fef2b35", null ],
+      [ "allowDragNDrop", "classAWindow.html#a201cce374d9e4359d014d8a9118d1357", null ],
+      [ "blockUserInput", "classAWindow.html#a82eed4e2cd2f8c03c0559ae3c4aade19", null ],
+      [ "consumesClick", "classAWindow.html#a607d322db574df5c957a7b19aede61ce", null ],
+      [ "createOverlappingSurfaceImpl", "classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0", null ],
+      [ "forceUpdateCursor", "classAWindow.html#a3bb8a070ce8c1530d7419ace2957b72a", null ],
+      [ "frameMillis", "classAWindow.html#ab7ee3bccf676f9aadf3f07bb03bc6a2a", null ],
+      [ "isMaximized", "classAWindow.html#a46e22a189bd7f29e08adcfac5aa13ea3", null ],
+      [ "isMinimized", "classAWindow.html#abfd2bbcb85258c68f1111d7b534f3bde", null ],
+      [ "mapPosition", "classAWindow.html#a914a33c3e1bf066273a4c56073423c26", null ],
+      [ "mapPositionTo", "classAWindow.html#a1aec53c688d095e3a9903df73e99b556", null ],
+      [ "maximize", "classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7", null ],
+      [ "minimize", "classAWindow.html#a271b2fb2651a01713cafa78625f2dadb", null ],
+      [ "moveToCenter", "classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006", null ],
+      [ "onPointerMove", "classAWindow.html#a0de97c943cf121559175fc46f4f5a45b", null ],
+      [ "quit", "classAWindow.html#adbc6e2cd963d867d3b80b7d5b5e4b044", null ],
+      [ "restore", "classAWindow.html#a633a616c5964b3fd3805363375442753", null ],
+      [ "setMobileScreenOrientation", "classAWindow.html#a9ddbf7068457e4dc86a53d102e37617b", null ],
+      [ "show", "classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b", null ],
+      [ "unmapPosition", "classAWindow.html#ac12087888735e70ce6347293fafdb30f", null ],
+      [ "maximized", "classAWindow.html#a9bbb78e28565bf60fd4efb4a2d989177", null ],
+      [ "mFocusNextViewOnTab", "classAWindow.html#a76918d11708d7b6edf4c67df9a1ec8e4", null ],
+      [ "minimized", "classAWindow.html#adb15ad6de97629ac24f911bb3cccab51", null ],
+      [ "moving", "classAWindow.html#a84b432f8215f9f91d90bfc3e1ee73f78", null ],
+      [ "restored", "classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac", null ]
     ] ],
     [ "ADBus", "classADBus.html", [
       [ "Exception", "classADBus_1_1Exception.html", null ]

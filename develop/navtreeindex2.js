@@ -1,14 +1,16 @@
 var NAVTREEINDEX2 =
 {
+"classAPerformanceFrame.html":[3,0,1,33],
+"classAPerformanceSection.html":[3,0,2,1],
 "classAPerformanceSection.html":[3,0,1,34],
 "classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,2,1,1],
 "classAPerformanceSection.html#ac34a60124892c570c657c07f713982db":[3,0,1,34,1],
-"classAPipe.html":[3,0,1,2,9],
 "classAPipe.html":[3,0,1,31],
-"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,2,9,1],
+"classAPipe.html":[3,0,1,2,9],
 "classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,31,1],
-"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
+"classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279":[3,0,1,2,9,1],
 "classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,31,0],
+"classAPipe.html#aee628cf7a29f35b048cf6fcfe4ec8eb3":[3,0,1,2,9,0],
 "classAPlaceholderAnimator.html":[0,2,216],
 "classAPlaceholderAnimator_1_1ICustomWidth.html":[0,2,216,0],
 "classAPointerIndex.html":[3,0,9,4],
@@ -242,12 +244,10 @@ var NAVTREEINDEX2 =
 "classAStrongByteBufferInputStream.html#a58efe1938efdd1755c2a855973a05d50":[3,0,1,2,13,2],
 "classAStrongByteBufferInputStream.html#a7206e6ba9535e688287ad8998e73d708":[3,0,1,2,13,0],
 "classAStrongByteBufferInputStream.html#af9086be1a67a1e9c3c52600879982ea7":[3,0,1,2,13,3],
-"classAStubWindowManager.html":[3,0,9,13],
+"classAStubWindowManager.html":[3,0,9,16],
 "classAStylesheet.html":[0,2,303],
 "classATabButtonRow.html":[0,2,304],
 "classATabButtonView.html":[0,2,305],
 "classATabView.html":[3,0,9,2,28],
-"classATcpServerSocket.html":[3,0,7,2],
-"classATcpServerSocket.html#a4608ba25273731caa5b990c80911bed6":[3,0,7,2,0],
-"classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7":[3,0,7,2,1]
+"classATcpServerSocket.html":[3,0,7,2]
 };

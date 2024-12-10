@@ -479,7 +479,7 @@ var annotated =
     [ "ACurlMulti", "classACurlMulti.html", null ],
     [ "ACursor", "classACursor.html", "classACursor" ],
     [ "ACursorSelectable", "classACursorSelectable.html", "classACursorSelectable" ],
-    [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ],
+    [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", "classACustomCaptionWindow" ],
     [ "ACustomShaderBrush", "structACustomShaderBrush.html", null ],
     [ "ACustomWindow", "classACustomWindow.html", "classACustomWindow" ],
     [ "ACutoffSignal", "classACutoffSignal.html", "classACutoffSignal" ],

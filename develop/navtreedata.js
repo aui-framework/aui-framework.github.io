@@ -70,15 +70,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "@ref md_docs_Writing_platform_dependent_code",
-"classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221",
-"classAPerformanceSection.html",
-"classATcpSocket.html",
-"classAViewContainerBase.html#a5c34300ea147d4de9df55281d5883a1d",
-"classOpenGLRenderer.html#ac3761c862d5f1682cf8f74512d7b521d",
-"functions.html",
-"structADragNDrop_1_1DropEvent.html",
-"structass_1_1on__state_1_1Hovered.html",
-"structaui_1_1jni_1_1Converter_3_01jbyte_01_4.html",
+"classADoubleNumberPicker.html",
+"classAPerformanceFrame.html",
+"classATcpServerSocket.html#a4608ba25273731caa5b990c80911bed6",
+"classAViewContainerBase.html#a52d7919b2e271026525836dc1a961b1c",
+"classOpenGLRenderer.html#aa03e448927fac94b0855e71bab9355f5",
+"conceptaui_1_1semiregular.html",
+"structADesktop_1_1FileExtension.html",
+"structass_1_1on__state_1_1Focused.html",
+"structaui_1_1jni_1_1Converter_3_01jboolean_01_4.html",
 ""
 ];
 
