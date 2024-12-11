@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('md_docs_AUI_Boot.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >AUI Boot is yet another package manager based on CMake. If a library uses CMake and it can be pulled using <code>git clone</code>, AUI Boot in 99% cases can provide it for you into your project. It downloads the library, compiles it and places it in <code>~/.aui</code> folder for future reuse.</p>
-<h1><a class="anchor" id="autotoc_md33"></a>
+<h1><a class="anchor" id="autotoc_md38"></a>
 Importing AUI</h1>
 <div class="fragment"><div class="line">file(</div>
 <div class="line">    DOWNLOAD </div>
@@ -106,23 +106,23 @@ Importing AUI</h1>
 <div class="line"> </div>
 <div class="line">aui_link(YOUR_APP PUBLIC aui::core</div>
 <div class="line">                         aui::views)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md42"></a>
 Importing 3rdparty libraries</h1>
 <p >You can import any library that can be imported to your project by compiling it using CMake and finding it's package with <code>find_package</code>, i.e. Sentry: </p><div class="fragment"><div class="line"># importing Sentry with AUI.Boot</div>
 <div class="line">auib_import(sentry https://github.com/getsentry/sentry-native</div>
 <div class="line">            CMAKE_ARGS -DSENTRY_BACKEND=crashpad)</div>
 <div class="line">target_link_libraries(YOUR_APP PUBLIC sentry::sentry)</div>
 </div><!-- fragment --><p >For more libraries, please visit <a href="https://github.com/aui-framework/boot">https://github.com/aui-framework/boot</a>.</p>
-<h1><a class="anchor" id="autotoc_md39"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 Importing project as a subdirectory</h1>
 <div class="fragment"><div class="line">-DAUIB_LIB_AS=ON</div>
 </div><!-- fragment --><p> , where 'LIB' is external project name. For example, to import AUI as a subdirectory: </p><div class="fragment"><div class="line">-DAUIB_AUI_AS=ON</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md42"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md46"></a>
 CMake commands</h1>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 auib_import</h2>
 <p >If needed, downloads and compiles project. Adds an <code>IMPORTED</code> target. Built on top of <code>find_package</code>.</p>
-<h3><a class="anchor" id="autotoc_md47"></a>
+<h3><a class="anchor" id="autotoc_md51"></a>
 Signature</h3>
 <div class="fragment"><div class="line">auib_import(&lt;PackageName&gt; &lt;URL&gt;</div>
 <div class="line">            [ADD_SUBDIRECTORY]</div>
@@ -135,51 +135,51 @@ Signature</h3>
 <div class="line">            [LINK &lt;STATIC|SHARED&gt;]</div>
 <div class="line">            [REQUIRES dependencies...]</div>
 <div class="line">            [VERSION version])</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md48"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md53"></a>
 PackageName</h3>
 <p >Specifies the package name which will be passed to <code>find_package</code>.</p>
-<h3><a class="anchor" id="autotoc_md50"></a>
+<h3><a class="anchor" id="autotoc_md54"></a>
 URL</h3>
 <p >URL to the git repository of the project you want to import.</p>
-<h3><a class="anchor" id="autotoc_md52"></a>
+<h3><a class="anchor" id="autotoc_md55"></a>
 ADD_SUBDIRECTORY</h3>
 <p >Uses <code>add_subdirectory</code> instead of <code>find_package</code> as project importing mechanism as if <code>AUIB_&lt;PackageName&gt;_AS</code> was specified.</p>
-<h3><a class="anchor" id="autotoc_md54"></a>
+<h3><a class="anchor" id="autotoc_md56"></a>
 ARCHIVE</h3>
 <p >The provided URL is pointing to zip archive instead of a git repository.</p>
 <p >For large dependencies, this might be faster than pulling whole repository.</p>
 <h3><a class="anchor" id="autotoc_md57"></a>
 CONFIG_ONLY</h3>
 <p >Forces <code>find_package</code> to use the config mode only.</p>
-<h3><a class="anchor" id="autotoc_md60"></a>
+<h3><a class="anchor" id="autotoc_md58"></a>
 VERSION</h3>
 <p >Commit hash, tag or branch name to <code>checkout</code>.</p>
-<h3><a class="anchor" id="autotoc_md64"></a>
+<h3><a class="anchor" id="autotoc_md61"></a>
 COMPONENTS</h3>
 <p >List of components to import which will be passed to <code>find_package</code>. Also, passed as semicolon-separated list to dependency's <code>CMakeLists.txt</code> via <code>AUIB_COMPONENTS</code> variable.</p>
-<h3><a class="anchor" id="autotoc_md66"></a>
+<h3><a class="anchor" id="autotoc_md64"></a>
 CMAKE_WORKING_DIR</h3>
 <p >Run cmake in specified directory, in relation to the pulled repo's root directory.</p>
-<h3><a class="anchor" id="autotoc_md67"></a>
+<h3><a class="anchor" id="autotoc_md65"></a>
 CMAKELISTS_CUSTOM</h3>
 <p >Replace/put the specified file from your project to the pulled repo's root directory as <code>CMakeLists.txt</code>.</p>
 <p >This way you can customize the behavior of dependency's cmake.</p>
-<h3><a class="anchor" id="autotoc_md71"></a>
+<h3><a class="anchor" id="autotoc_md67"></a>
 PRECOMPILED_URL_PREFIX</h3>
 <p >Instead of building the dependency from sources, try to import the precompiled binaries first.</p>
-<h4><a class="anchor" id="autotoc_md72"></a>
+<h4><a class="anchor" id="autotoc_md68"></a>
 PrecompiledUrlPrefix</h4>
 <p >Specifies url prefix where the precompiled binaries downloaded from.</p>
-<h3><a class="anchor" id="autotoc_md74"></a>
+<h3><a class="anchor" id="autotoc_md70"></a>
 LINK</h3>
 <p >Overrides <code>BUILD_SHARED_LIBS</code> of the dependency, specifying <code>SHARED</code> or <code>STATIC</code> linking.</p>
-<h3><a class="anchor" id="autotoc_md75"></a>
+<h3><a class="anchor" id="autotoc_md71"></a>
 REQUIRES</h3>
 <p >List of the package dependencies. Every dependency's root variable (${DEPENDENCY}_ROOT) is checked for existence and validness, then it passed directly to <code>auib_import</code>ed target (via ${DEPENDENCY}_ROOT).</p>
 <p >It is useful when some package root is implicitly defined in your project somewhere and aui.boot does not know about it, thus does not forward.</p>
-<h1><a class="anchor" id="autotoc_md77"></a>
+<h1><a class="anchor" id="autotoc_md72"></a>
 Using same dependencies</h1>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md73"></a>
 Case 1</h2>
 <p >For example, your application uses <code>aui.core</code> module, which actually uses <code>ZLIB</code>:</p>
 <p ><img src="https://user-images.githubusercontent.com/19491414/153878183-fa92b4b5-c2f8-4516-8923-71a447cb1aa3.png" alt="image" class="inline"/></p>
@@ -188,7 +188,7 @@ Case 1</h2>
 <p ><img src="https://user-images.githubusercontent.com/19491414/153878258-cacdd4f1-8e2c-45d7-87d0-662ae0a02b28.png" alt="image" class="inline"/></p>
 <p ><b>With AUI.Boot</b>, you'd not even use AUI.Boot's functions! Just use <code>find_package(ZLIB REQUIRED)</code> and link it to your application with <code>target_link_libraries(YourApplication PRIVATE ZLIB::ZLIB)</code>, because AUI.Boot forwards location of used dependencies to your project. Your application and AUI are using the same <code>ZLIB</code>:</p>
 <p ><img src="https://user-images.githubusercontent.com/19491414/153878341-fa379cc6-b12d-4896-a535-4879b9d5640d.png" alt="image" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md79"></a>
+<h2><a class="anchor" id="autotoc_md74"></a>
 Case 2</h2>
 <p >Another case is <code>OpenSSL</code> between <code>aui.crypt</code> and <code>aui.curl</code>:</p>
 <p ><img src="https://user-images.githubusercontent.com/19491414/153878364-b214f167-8243-400c-93af-a227af2f961b.png" alt="image" class="inline"/></p>
