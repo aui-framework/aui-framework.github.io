@@ -19,12 +19,13 @@ var searchData=
   ['env_16',['env',['../group__jni.html#ga4c3eef7015da9043bc8c1fcf5ea68a46',1,'aui::jni']]],
   ['error_17',['Error',['../structaui_1_1impl_1_1Error.html',1,'aui::impl']]],
   ['errordescription_18',['ErrorDescription',['../structACurl_1_1ErrorDescription.html',1,'ACurl']]],
-  ['exception_19',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeModelIndex_1_1Exception.html',1,'ATreeModelIndex::Exception']]],
-  ['execute_20',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
-  ['executeasadministrator_21',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
-  ['executewaitforexit_22',['executeWaitForExit',['../classAProcess.html#a3f74fa0108325de438c33cd0cf5519e2',1,'AProcess']]],
-  ['exists_23',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
-  ['expanding_24',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html',1,'aui::ui_building::layouted_container_factory_impl_with_expanding&lt; Layout, Container &gt;::Expanding']]],
-  ['extensionchanged_25',['extensionChanged',['../classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85',1,'APath']]],
-  ['extrastylesheet_26',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
+  ['ew_5fresize_19',['EW_RESIZE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03ad254f08fdc9d603e37b7f459b2b814a4',1,'ACursor']]],
+  ['exception_20',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeModelIndex_1_1Exception.html',1,'ATreeModelIndex::Exception']]],
+  ['execute_21',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
+  ['executeasadministrator_22',['executeAsAdministrator',['../classAProcess.html#a4a918d1d0db6513e5cefefb5a420d18e',1,'AProcess']]],
+  ['executewaitforexit_23',['executeWaitForExit',['../classAProcess.html#a3f74fa0108325de438c33cd0cf5519e2',1,'AProcess']]],
+  ['exists_24',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
+  ['expanding_25',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html',1,'aui::ui_building::layouted_container_factory_impl_with_expanding&lt; Layout, Container &gt;::Expanding']]],
+  ['extensionchanged_26',['extensionChanged',['../classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85',1,'APath']]],
+  ['extrastylesheet_27',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
 ];

@@ -41,7 +41,7 @@ var searchData=
   ['isqldriverresult_38',['ISqlDriverResult',['../classISqlDriverResult.html',1,'']]],
   ['isqldriverrow_39',['ISqlDriverRow',['../classISqlDriverRow.html',1,'']]],
   ['istringable_40',['IStringable',['../classIStringable.html',1,'']]],
-  ['item_41',['Item',['../structATreeModel_1_1Item.html',1,'ATreeModel']]],
+  ['item_41',['Item',['../structASplitterHelper_1_1Item.html',1,'ASplitterHelper::Item'],['../structATreeModel_1_1Item.html',1,'ATreeModel&lt; T &gt;::Item']]],
   ['itemview_42',['ItemView',['../classATreeView_1_1ItemView.html',1,'ATreeView']]],
   ['iterator_43',['Iterator',['../classAListModelRange_1_1Iterator.html',1,'AListModelRange&lt; T &gt;::Iterator'],['../classAListModelSelection_1_1Iterator.html',1,'AListModelSelection&lt; T &gt;::Iterator'],['../classASqlQueryResult_1_1Iterator.html',1,'ASqlQueryResult::Iterator']]],
   ['iterator_44',['iterator',['../structaui_1_1zip_1_1iterator.html',1,'aui::zip']]],

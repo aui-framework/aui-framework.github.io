@@ -24,6 +24,7 @@ var searchData=
   ['notifyprocessmessages_21',['notifyProcessMessages',['../classMyEventLoop.html#a1f7382d382641805cbd0fb39d250028b',1,'MyEventLoop::notifyProcessMessages()'],['../classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f',1,'AEventLoop::notifyProcessMessages()'],['../classIEventLoop.html#af26f19c03393cca88b5bb4f183838305',1,'IEventLoop::notifyProcessMessages()'],['../classAScheduler.html#a297b30aa7fe6ab8fbcfe80299de2e5bc',1,'AScheduler::notifyProcessMessages()'],['../classAEmbedAuiWrap.html#aeff1e827ec7eb422c407556263583a3e',1,'AEmbedAuiWrap::notifyProcessMessages()'],['../classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783',1,'AWindowManager::notifyProcessMessages()']]],
   ['notifysymboladded_22',['notifySymbolAdded',['../classIRenderer_1_1IMultiStringCanvas.html#a6bcbcfcf57aa2c08d85f32ae9d784205',1,'IRenderer::IMultiStringCanvas']]],
   ['novalueexception_23',['NoValueException',['../classAComplexFutureOperation_1_1NoValueException.html',1,'AComplexFutureOperation']]],
-  ['number_24',['NUMBER',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fa34f55eca38e0605a84f169ff61a2a396',1,'ATextInputType.h']]],
-  ['numeric_25',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
+  ['ns_5fresize_24',['NS_RESIZE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03aae41b18b9ff5c7fed48a6ead690e6812',1,'ACursor']]],
+  ['number_25',['NUMBER',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fa34f55eca38e0605a84f169ff61a2a396',1,'ATextInputType.h']]],
+  ['numeric_26',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
 ];

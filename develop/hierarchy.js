@@ -300,6 +300,7 @@ var hierarchy =
     [ "ACurl::Builder", "classACurl_1_1Builder.html", null ],
     [ "AGridSplitter::Builder", "classAGridSplitter_1_1Builder.html", null ],
     [ "AScrollArea::Builder", "classAScrollArea_1_1Builder.html", null ],
+    [ "ASplitter::Builder< Layout >", "classASplitter_1_1Builder.html", null ],
     [ "Cache< T, Container, K >", "classCache.html", null ],
     [ "Cache< IDrawable, Cache, AUrl >", "classCache.html", null ],
     [ "ASignal< Args >::call_wrapper", "structASignal_1_1call__wrapper.html", null ],
@@ -308,6 +309,7 @@ var hierarchy =
     [ "AFont::Character", "structAFont_1_1Character.html", null ],
     [ "CharEntry", "structCharEntry.html", null ],
     [ "ALinearGradientBrush::ColorEntry", "structALinearGradientBrush_1_1ColorEntry.html", null ],
+    [ "AAdvancedGridLayout::CompositionCache", "structAAdvancedGridLayout_1_1CompositionCache.html", null ],
     [ "std::conditional_t", null, [
       [ "AAbstractTypeableView< AView >", "classAAbstractTypeableView.html", null ],
       [ "AAbstractTypeableView< ATextBase< AWordWrappingEngine< std::list< _unique< aui::detail::TextBaseEntry > > > > >", "classAAbstractTypeableView.html", null ],
@@ -411,7 +413,9 @@ var hierarchy =
             ] ],
             [ "ALinearLayout< _< AView > >", "classALinearLayout_3_01___3_01AView_01_4_01_4.html", null ]
           ] ],
-          [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", null ],
+          [ "AAdvancedGridLayout", "classAAdvancedGridLayout.html", [
+            [ "AGridSplitterLayout", "classAGridSplitterLayout.html", null ]
+          ] ],
           [ "AGridLayout", "classAGridLayout.html", null ],
           [ "aui::detail::LinearLayoutImpl< Storage >", "classaui_1_1detail_1_1LinearLayoutImpl.html", [
             [ "ALinearLayout< aui::detail::AbsoluteLayoutCell >", "classALinearLayout.html", [
@@ -465,6 +469,7 @@ var hierarchy =
             [ "ADragNDropView", "classADragNDropView.html", null ],
             [ "AEmbedMenuProvider::MenuContainer", "classAEmbedMenuProvider_1_1MenuContainer.html", null ],
             [ "AForEachUI< T, Layout >", "classAForEachUI.html", null ],
+            [ "AGridSplitter", "classAGridSplitter.html", null ],
             [ "AGroupBox", "classAGroupBox.html", null ],
             [ "AMenuContainer", "classAMenuContainer.html", null ],
             [ "ANumberPicker", "classANumberPicker.html", null ],
@@ -482,6 +487,7 @@ var hierarchy =
             [ "ASlider", "classASlider.html", [
               [ "SliderMock", "classSliderMock.html", null ]
             ] ],
+            [ "ASplitter", "classASplitter.html", null ],
             [ "ATabButtonRow", "classATabButtonRow.html", null ],
             [ "ATabView", "classATabView.html", null ],
             [ "ATextBase< WordWrappingEngine >", "classATextBase.html", null ],
@@ -491,12 +497,10 @@ var hierarchy =
               [ "A2FingerTransformArea", "classA2FingerTransformArea.html", null ],
               [ "AButtonEx", "classAButtonEx.html", null ],
               [ "ADragArea", "classADragArea.html", null ],
-              [ "AGridSplitter", "classAGridSplitter.html", null ],
               [ "AListViewContainer", "classAListViewContainer.html", null ],
               [ "AOverlappingSurface", "classAOverlappingSurface.html", null ],
               [ "ARadioGroup", "classARadioGroup.html", null ],
               [ "AScrollAreaViewport::Inner", "classAScrollAreaViewport_1_1Inner.html", null ],
-              [ "ASplitter", "classASplitter.html", null ],
               [ "ATreeView::ContainerView", "classATreeView_1_1ContainerView.html", null ],
               [ "AWindowBase", "classAWindowBase.html", [
                 [ "AEmbedAuiWrap::EmbedWindow", "classAEmbedAuiWrap_1_1EmbedWindow.html", null ],
@@ -640,10 +644,12 @@ var hierarchy =
       [ "aui::jni::ArrayView< T >", "classaui_1_1jni_1_1ArrayView.html", null ]
     ] ],
     [ "uitest::impl::greater_of< side >", "structuitest_1_1impl_1_1greater__of.html", null ],
+    [ "AAdvancedGridLayout::GridCell", "structAAdvancedGridLayout_1_1GridCell.html", null ],
     [ "IEventLoop::Handle", "classIEventLoop_1_1Handle.html", null ],
     [ "std::hash< AString >", "structstd_1_1hash_3_01AString_01_4.html", null ],
     [ "aui::render::brush::gradient::Helper", "structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html", null ],
     [ "ATokenizer::Hexable< underlying_t >", "structATokenizer_1_1Hexable.html", null ],
+    [ "aui::HVLayout< direction >", "structaui_1_1HVLayout.html", null ],
     [ "ass::IAssSubSelector", "classass_1_1IAssSubSelector.html", [
       [ "ass::AAssSelector", "classass_1_1AAssSelector.html", null ],
       [ "ass::AndSelector< L, R >", "structass_1_1AndSelector.html", null ],
@@ -825,6 +831,7 @@ var hierarchy =
       [ "ass::prop::Property< MaxSize >", "structass_1_1prop_1_1Property_3_01MaxSize_01_4.html", null ],
       [ "ass::prop::Property< MinSize >", "structass_1_1prop_1_1Property_3_01MinSize_01_4.html", null ]
     ] ],
+    [ "ASplitterHelper::Item", "structASplitterHelper_1_1Item.html", null ],
     [ "ATreeModel< T >::Item", "structATreeModel_1_1Item.html", null ],
     [ "AListModelRange< T >::Iterator", "classAListModelRange_1_1Iterator.html", null ],
     [ "AListModelSelection< T >::Iterator", "classAListModelSelection_1_1Iterator.html", null ],
@@ -1054,6 +1061,7 @@ var hierarchy =
     [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature.html", null ],
     [ "aui::jni::signature< Return(Args...)>", "structaui_1_1jni_1_1signature_3_01Return_07Args_8_8_8_08_4.html", null ],
     [ "aui::jni::signature< T >", "structaui_1_1jni_1_1signature_3_01T_01_4.html", null ],
+    [ "SizeInjector< direction >", "structSizeInjector.html", null ],
     [ "ARenderingContextOptions::Software", "structARenderingContextOptions_1_1Software.html", null ],
     [ "ABorderStyle::Solid", "structABorderStyle_1_1Solid.html", null ],
     [ "SomeBuilderClass", "classSomeBuilderClass.html", null ],

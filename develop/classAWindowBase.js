@@ -26,6 +26,7 @@ var classAWindowBase =
     [ "requestShowTouchscreenKeyboard", "classAWindowBase.html#ae33a254e98ec41be018ae46b1ca2112d", null ],
     [ "setScalingParams", "classAWindowBase.html#affc513d9290ac5f7f6192a0bb77ab6da", null ],
     [ "shouldDisplayHoverAnimations", "classAWindowBase.html#aa3efdc56a2a7a543b7ba1a70fa3694b4", null ],
+    [ "mForceUpdateCursorGuard", "classAWindowBase.html#a0659371b801e657f8d0be8f956fbf718", null ],
     [ "mPreventClickOnPointerRelease", "classAWindowBase.html#a3b5c9f3eb8d3a741ddb523444a828c2f", null ],
     [ "touchscreenKeyboardHidden", "classAWindowBase.html#a72575f26e375574febb3990b99754d2a", null ],
     [ "touchscreenKeyboardShown", "classAWindowBase.html#af0c150e6e46180e1fb781bee090b40fb", null ]

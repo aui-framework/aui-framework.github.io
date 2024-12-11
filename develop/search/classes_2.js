@@ -31,6 +31,6 @@ var searchData=
   ['boxshadowinner_28',['BoxShadowInner',['../structass_1_1BoxShadowInner.html',1,'ass']]],
   ['brushhelper_29',['BrushHelper',['../structBrushHelper.html',1,'']]],
   ['buffer_30',['Buffer',['../structgl_1_1Vao_1_1Buffer.html',1,'gl::Vao']]],
-  ['builder_31',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder']]],
+  ['builder_31',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder'],['../classASplitter_1_1Builder.html',1,'ASplitter::Builder&lt; Layout &gt;']]],
   ['button_32',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]]
 ];

@@ -339,6 +339,7 @@ var namespaces =
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
       [ "function_info", "structaui_1_1function__info.html", null ],
       [ "function_info< Return(Args...)>", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html", null ],
+      [ "HVLayout", "structaui_1_1HVLayout.html", null ],
       [ "identity", "structaui_1_1identity.html", null ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
