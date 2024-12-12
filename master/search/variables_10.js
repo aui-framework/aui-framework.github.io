@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['value_0',['value',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a',1,'aui::impl::future::Future::Inner']]],
-  ['valuechanged_1',['valueChanged',['../classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221',1,'ADoubleNumberPicker::valueChanged()'],['../classANumberPicker.html#aef2effb631b29b918205bd36779d83db',1,'ANumberPicker::valueChanged()']]],
-  ['valuechanging_2',['valueChanging',['../classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154',1,'ADoubleNumberPicker::valueChanging()'],['../classANumberPicker.html#a304ec6f825d8eecc381ee7a1bb452612',1,'ANumberPicker::valueChanging()']]],
-  ['viewgraphsubtreechanged_3',['viewGraphSubtreeChanged',['../classAView.html#aa0b29b615b99f9b60f08a3669aa19adf',1,'AView']]]
+  ['textchanged_0',['textChanged',['../classAAbstractTypeable.html#a8f4a7834da62adfc423806d5dfc38e6a',1,'AAbstractTypeable']]],
+  ['textchanging_1',['textChanging',['../classAAbstractTypeable.html#ac06749997360eb1be5759f98147095cf',1,'AAbstractTypeable']]],
+  ['threshold_2',['THRESHOLD',['../classATouchScroller.html#a2221690cb4ad802d78059a537387caed',1,'ATouchScroller']]],
+  ['touchscreenkeyboardhidden_3',['touchscreenKeyboardHidden',['../classAWindowBase.html#a72575f26e375574febb3990b99754d2a',1,'AWindowBase']]],
+  ['touchscreenkeyboardshown_4',['touchscreenKeyboardShown',['../classAWindowBase.html#af0c150e6e46180e1fb781bee090b40fb',1,'AWindowBase']]],
+  ['triggerclick_5',['triggerClick',['../structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0',1,'APointerReleasedEvent']]]
 ];

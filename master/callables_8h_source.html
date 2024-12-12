@@ -141,8 +141,16 @@ $(document).ready(function(){initNavTree('callables_8h_source.html',''); initRes
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">template</span>&lt;not_overloaded_lambda Lambda&gt;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">using</span> <a class="code hl_struct" href="structaui_1_1member.html">lambda_info</a> = <a class="code hl_struct" href="structaui_1_1member.html">member</a>&lt;<span class="keyword">decltype</span>(&amp;Lambda::operator())&gt;;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structaui_1_1identity.html">   59</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1identity.html">identity</a></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        [[nodiscard]]</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">constexpr</span> T&amp;&amp; operator()(T&amp;&amp; t) <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> std::forward&lt;T&gt;(t); }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 <div class="ttc" id="astructaui_1_1function__info_html"><div class="ttname"><a href="structaui_1_1function__info.html">aui::function_info</a></div><div class="ttdef"><b>Definition:</b> callables.h:43</div></div>
+<div class="ttc" id="astructaui_1_1identity_html"><div class="ttname"><a href="structaui_1_1identity.html">aui::identity</a></div><div class="ttdoc">Function object type whose operator() returns its argument unchanged.</div><div class="ttdef"><b>Definition:</b> callables.h:60</div></div>
 <div class="ttc" id="astructaui_1_1lambda__overloaded_html"><div class="ttname"><a href="structaui_1_1lambda__overloaded.html">aui::lambda_overloaded</a></div><div class="ttdef"><b>Definition:</b> callables.h:34</div></div>
 <div class="ttc" id="astructaui_1_1member_html"><div class="ttname"><a href="structaui_1_1member.html">aui::member</a></div><div class="ttdef"><b>Definition:</b> members.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->

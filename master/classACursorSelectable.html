@@ -108,8 +108,8 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a056363780f0a6bac958eb68861682c96"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classAString.html">AString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">text</a> () const =0</td></tr>
 <tr class="separator:a056363780f0a6bac958eb68861682c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1744b705b48d18401882f5f5106a89e"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#ae1744b705b48d18401882f5f5106a89e">textLength</a> () const =0</td></tr>
-<tr class="separator:ae1744b705b48d18401882f5f5106a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323a643dc50b69858cd58b88d44c88c3"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#a323a643dc50b69858cd58b88d44c88c3">length</a> () const =0</td></tr>
+<tr class="separator:a323a643dc50b69858cd58b88d44c88c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab57a73316d07645d7e41c0550e2da07f"><td class="memItemLeft" align="right" valign="top"><a id="ab57a73316d07645d7e41c0550e2da07f" name="ab57a73316d07645d7e41c0550e2da07f"></a>
 <a class="el" href="classAString.html">AString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>selectedText</b> () const</td></tr>
 <tr class="separator:ab57a73316d07645d7e41c0550e2da07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,11 +117,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7ba4f15a59d296890dfef071f88af8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c7d2652da1ada52cce28464d152ee03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#a8c7d2652da1ada52cce28464d152ee03">hasSelection</a> () const</td></tr>
 <tr class="separator:a8c7d2652da1ada52cce28464d152ee03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03881ca05a1c9eef910f03155ade4a5e"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#a03881ca05a1c9eef910f03155ade4a5e">cursorIndexByPos</a> (glm::ivec2 pos)</td></tr>
-<tr class="separator:a03881ca05a1c9eef910f03155ade4a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada97b02a9a040cba933164abc4ed3800"><td class="memItemLeft" align="right" valign="top"><a id="ada97b02a9a040cba933164abc4ed3800" name="ada97b02a9a040cba933164abc4ed3800"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getPosByIndex</b> (int end, int begin=0)</td></tr>
-<tr class="separator:ada97b02a9a040cba933164abc4ed3800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a5c0510de667734666e4336bf30e8e2"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2">cursorIndexByPos</a> (glm::ivec2 pos)=0</td></tr>
+<tr class="separator:a4a5c0510de667734666e4336bf30e8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f79a0281ff61425671fcf32e15b287"><td class="memItemLeft" align="right" valign="top"><a id="a73f79a0281ff61425671fcf32e15b287" name="a73f79a0281ff61425671fcf32e15b287"></a>
+virtual glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getPosByIndex</b> (size_t index)=0</td></tr>
+<tr class="separator:a73f79a0281ff61425671fcf32e15b287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73839c234668a97846e0721e79cf1360"><td class="memItemLeft" align="right" valign="top">virtual glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#a73839c234668a97846e0721e79cf1360">getCursorPosition</a> ()=0</td></tr>
+<tr class="separator:a73839c234668a97846e0721e79cf1360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5f8f40d5c6863221d1a9a3b4af32a46"><td class="memItemLeft" align="right" valign="top"><a id="ad5f8f40d5c6863221d1a9a3b4af32a46" name="ad5f8f40d5c6863221d1a9a3b4af32a46"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>selectAll</b> ()</td></tr>
 <tr class="memdesc:ad5f8f40d5c6863221d1a9a3b4af32a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select whole text in the text field. <br /></td></tr>
@@ -139,24 +141,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setSelection</b> (<a 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a0d4c385cbef866657c0c8170011cda22"><td class="memItemLeft" align="right" valign="top"><a id="a0d4c385cbef866657c0c8170011cda22" name="a0d4c385cbef866657c0c8170011cda22"></a>
-virtual glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getMouseSelectionPadding</b> ()=0</td></tr>
-<tr class="separator:a0d4c385cbef866657c0c8170011cda22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3c37993187f26a1c0348d005744e802"><td class="memItemLeft" align="right" valign="top"><a id="ae3c37993187f26a1c0348d005744e802" name="ae3c37993187f26a1c0348d005744e802"></a>
-virtual glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getMouseSelectionScroll</b> ()=0</td></tr>
-<tr class="separator:ae3c37993187f26a1c0348d005744e802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac99b0d9bd565f1f6916553bb822804a4"><td class="memItemLeft" align="right" valign="top"><a id="ac99b0d9bd565f1f6916553bb822804a4" name="ac99b0d9bd565f1f6916553bb822804a4"></a>
-virtual <a class="el" href="structAFontStyle.html">AFontStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getMouseSelectionFont</b> ()=0</td></tr>
-<tr class="separator:ac99b0d9bd565f1f6916553bb822804a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2591386b9c9a982309425b56f44e5dc9"><td class="memItemLeft" align="right" valign="top"><a id="a2591386b9c9a982309425b56f44e5dc9" name="a2591386b9c9a982309425b56f44e5dc9"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLButtonPressed</b> ()=0</td></tr>
 <tr class="separator:a2591386b9c9a982309425b56f44e5dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf67d3113324b177b346163ed0b1314c"><td class="memItemLeft" align="right" valign="top"><a id="aaf67d3113324b177b346163ed0b1314c" name="aaf67d3113324b177b346163ed0b1314c"></a>
 virtual <a class="el" href="classAString.html">AString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDisplayText</b> ()=0</td></tr>
 <tr class="separator:aaf67d3113324b177b346163ed0b1314c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6a23f7eda453cd11c75e75cf3f9668"><td class="memItemLeft" align="right" valign="top"><a id="a1c6a23f7eda453cd11c75e75cf3f9668" name="a1c6a23f7eda453cd11c75e75cf3f9668"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>doRedraw</b> ()=0</td></tr>
-<tr class="separator:a1c6a23f7eda453cd11c75e75cf3f9668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07580c4acd8d8ed9945302fcbc155110"><td class="memItemLeft" align="right" valign="top"><a id="a07580c4acd8d8ed9945302fcbc155110" name="a07580c4acd8d8ed9945302fcbc155110"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>cursorSelectableRedraw</b> ()=0</td></tr>
+<tr class="separator:a07580c4acd8d8ed9945302fcbc155110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8befc4e2940aef80b2a94e0975065bf6"><td class="memItemLeft" align="right" valign="top"><a id="a8befc4e2940aef80b2a94e0975065bf6" name="a8befc4e2940aef80b2a94e0975065bf6"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSelectionChanged</b> ()=0</td></tr>
 <tr class="separator:a8befc4e2940aef80b2a94e0975065bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,49 +165,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseReleased</
 <tr class="memitem:a5170c830ca9416737b860794f36fca7b"><td class="memItemLeft" align="right" valign="top"><a id="a5170c830ca9416737b860794f36fca7b" name="a5170c830ca9416737b860794f36fca7b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>handleMouseMove</b> (const glm::ivec2 &amp;pos)</td></tr>
 <tr class="separator:a5170c830ca9416737b860794f36fca7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebef005fd73299ac85ab4999a06c1390"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classACursorSelectable.html#aebef005fd73299ac85ab4999a06c1390">drawSelectionPre</a> ()</td></tr>
-<tr class="separator:aebef005fd73299ac85ab4999a06c1390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea4bd8a898758bad9a1edd2406200f24"><td class="memItemLeft" align="right" valign="top"><a id="aea4bd8a898758bad9a1edd2406200f24" name="aea4bd8a898758bad9a1edd2406200f24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawSelectionPost</b> ()</td></tr>
-<tr class="separator:aea4bd8a898758bad9a1edd2406200f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ff9d1163478bd62f59ff06b8a1b631"><td class="memItemLeft" align="right" valign="top"><a id="a13ff9d1163478bd62f59ff06b8a1b631" name="a13ff9d1163478bd62f59ff06b8a1b631"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawSelectionRects</b> ()</td></tr>
-<tr class="separator:a13ff9d1163478bd62f59ff06b8a1b631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17616de0680ed974ff8bbc5cf097a670"><td class="memItemLeft" align="right" valign="top"><a id="a17616de0680ed974ff8bbc5cf097a670" name="a17616de0680ed974ff8bbc5cf097a670"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTextLayoutHelper</b> (<a class="el" href="classATextLayoutHelper.html">ATextLayoutHelper</a> textLayoutHelper)</td></tr>
-<tr class="separator:a17616de0680ed974ff8bbc5cf097a670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c169961ce0bd459ad9be5cd3eddfbdf"><td class="memTemplParams" colspan="2"><a id="a2c169961ce0bd459ad9be5cd3eddfbdf" name="a2c169961ce0bd459ad9be5cd3eddfbdf"></a>
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callback&gt; </td></tr>
+<tr class="memitem:a2c169961ce0bd459ad9be5cd3eddfbdf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>drawSelectionBeforeAndAfter</b> (<a class="el" href="classIRenderer.html">IRenderer</a> &amp;render, std::span&lt; <a class="el" href="structARect.html">ARect</a>&lt; int &gt; &gt; rects, Callback &amp;&amp;drawText)</td></tr>
+<tr class="separator:a2c169961ce0bd459ad9be5cd3eddfbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9f68ad4af459c994832d0b1302088e95"><td class="memItemLeft" align="right" valign="top"><a id="a9f68ad4af459c994832d0b1302088e95" name="a9f68ad4af459c994832d0b1302088e95"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorIndex</b> = 0</td></tr>
 <tr class="separator:a9f68ad4af459c994832d0b1302088e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bc4270dd6d3df504c9257fd39ecd91f"><td class="memItemLeft" align="right" valign="top"><a id="a8bc4270dd6d3df504c9257fd39ecd91f" name="a8bc4270dd6d3df504c9257fd39ecd91f"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection</b> = -1</td></tr>
-<tr class="separator:a8bc4270dd6d3df504c9257fd39ecd91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af95d8a7e1f4c332c11d3f66bdb8ff1"><td class="memItemLeft" align="right" valign="top"><a id="a5af95d8a7e1f4c332c11d3f66bdb8ff1" name="a5af95d8a7e1f4c332c11d3f66bdb8ff1"></a>
+<a class="el" href="classAOptional.html">AOptional</a>&lt; unsigned &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection</b></td></tr>
+<tr class="separator:a5af95d8a7e1f4c332c11d3f66bdb8ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a03881ca05a1c9eef910f03155ade4a5e" name="a03881ca05a1c9eef910f03155ade4a5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03881ca05a1c9eef910f03155ade4a5e">&#9670;&nbsp;</a></span>cursorIndexByPos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned ACursorSelectable::cursorIndexByPos </td>
-          <td>(</td>
-          <td class="paramtype">glm::ivec2&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Character index by pixel position. </dd></dl>
-
-</div>
-</div>
-<a id="aebef005fd73299ac85ab4999a06c1390" name="aebef005fd73299ac85ab4999a06c1390"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebef005fd73299ac85ab4999a06c1390">&#9670;&nbsp;</a></span>drawSelectionPre()</h2>
+<a id="a4a5c0510de667734666e4336bf30e8e2" name="a4a5c0510de667734666e4336bf30e8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a5c0510de667734666e4336bf30e8e2">&#9670;&nbsp;</a></span>cursorIndexByPos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +190,36 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ACursorSelectable::drawSelectionPre </td>
+          <td class="memname">virtual unsigned ACursorSelectable::cursorIndexByPos </td>
+          <td>(</td>
+          <td class="paramtype">glm::ivec2&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Character index by pixel position. </dd></dl>
+
+<p>Implemented in <a class="el" href="classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c">AAbstractTextField</a>, and <a class="el" href="classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c">ATextArea</a>.</p>
+
+</div>
+</div>
+<a id="a73839c234668a97846e0721e79cf1360" name="a73839c234668a97846e0721e79cf1360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73839c234668a97846e0721e79cf1360">&#9670;&nbsp;</a></span>getCursorPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual glm::ivec2 ACursorSelectable::getCursorPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -231,11 +227,14 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>absoluteCursorPos </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Cursor position relative to this view.</dd></dl>
+<p>Returns position relative to top left corner of the view. That is, if implementation supports scrolling (i.e., <a class="el" href="classATextField.html" title="Editable field with text to receive a text input from the user.">ATextField</a>) the returned position does not include overflowed contents. </p>
+
+<p>Implemented in <a class="el" href="classAAbstractTextField.html#adc0cd1f14fc2f3e492eb45c367353f5f">AAbstractTextField</a>, and <a class="el" href="classATextArea.html#a166ab21304b9dd1a7393738c8589e48c">ATextArea</a>.</p>
 
 </div>
 </div>
@@ -254,6 +253,34 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if selection is present. </dd></dl>
+
+</div>
+</div>
+<a id="a323a643dc50b69858cd58b88d44c88c3" name="a323a643dc50b69858cd58b88d44c88c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323a643dc50b69858cd58b88d44c88c3">&#9670;&nbsp;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t ACursorSelectable::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Text field text length. </dd></dl>
+
+<p>Implemented in <a class="el" href="classAAbstractTextField.html#af32ef6283e0cf52cf1b053874b5410f1">AAbstractTextField</a>, and <a class="el" href="classATextArea.html#af937c3bf26c1faf077deed94d25641b2">ATextArea</a>.</p>
 
 </div>
 </div>
@@ -299,39 +326,11 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>mCursorSelection<
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Text field text. <dl>
 <dt><b>Performance note</b> </dt>
-<dd>If text length is needed, use <a class="el" href="classACursorSelectable.html#ae1744b705b48d18401882f5f5106a89e">textLength()</a> function instead. On some implementations it's faster that <a class="el" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">text()</a>. </dd>
+<dd>If text length is needed, use textLength() function instead. On some implementations it's faster that <a class="el" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">text()</a>. </dd>
 </dl>
 </dd></dl>
 
-<p>Implemented in <a class="el" href="classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d">AAbstractTextField</a>, <a class="el" href="classASelectableLabel.html#add210bc650574f96c1fb0a633ca61ee7">ASelectableLabel</a>, and <a class="el" href="classATextArea_1_1TextAreaField.html#ae47ef9fd771cfa707ef5894515c209e6">ATextArea::TextAreaField</a>.</p>
-
-</div>
-</div>
-<a id="ae1744b705b48d18401882f5f5106a89e" name="ae1744b705b48d18401882f5f5106a89e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1744b705b48d18401882f5f5106a89e">&#9670;&nbsp;</a></span>textLength()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual size_t ACursorSelectable::textLength </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Text field text length. </dd></dl>
-
-<p>Implemented in <a class="el" href="classAAbstractTextField.html#a6d41e754abc7f9e2432508a53287e3b4">AAbstractTextField</a>, <a class="el" href="classASelectableLabel.html#a6381f790188d8dc9b03bb1ebe1512ec8">ASelectableLabel</a>, and <a class="el" href="classATextArea_1_1TextAreaField.html#a7c706e015165ddfe881436dc498e9ef8">ATextArea::TextAreaField</a>.</p>
+<p>Implemented in <a class="el" href="classAAbstractTextField.html#a3df3cebecf0129318d06f89457ddab2d">AAbstractTextField</a>, and <a class="el" href="classATextArea.html#a270fa624c5bb3301b00c6d5f1e8fc3ca">ATextArea</a>.</p>
 
 </div>
 </div>
@@ -344,12 +343,14 @@ Inheritance diagram for ACursorSelectable:</div>
 <div class="dyncontent">
 <div class="center"><img src="classACursorSelectable__inherit__graph.png" border="0" usemap="#aACursorSelectable_inherit__map" alt="Inheritance graph"/></div>
 <map name="aACursorSelectable_inherit__map" id="aACursorSelectable_inherit__map">
-<area shape="rect" title=" " alt="" coords="177,5,308,32"/>
-<area shape="rect" href="classAAbstractTypeableView.html" title="Basic implementation of type shortcuts and selection for editable text fields." alt="" coords="79,80,241,107"/>
-<area shape="rect" href="classASelectableLabel.html" title="Like ALabel but with cursor selection capabilities." alt="" coords="265,80,389,107"/>
-<area shape="rect" href="classAAbstractTextField.html" title="Text field implementation." alt="" coords="5,155,139,181"/>
-<area shape="rect" href="classATextArea_1_1TextAreaField.html" title=" " alt="" coords="163,155,333,181"/>
-<area shape="rect" href="classATextField.html" title="Represents an editable field with text to receive a text input from the user." alt="" coords="30,229,114,256"/>
+<area shape="rect" title=" " alt="" coords="5,93,136,119"/>
+<area shape="rect" href="classAAbstractTypeable.html" title="Base class for AAbstractTypeableView which is template class." alt="" coords="184,93,316,119"/>
+<area shape="rect" href="classAAbstractTypeableView.html" title=" " alt="" coords="403,5,565,47"/>
+<area shape="rect" href="classAAbstractTypeableView.html" title=" " alt="" coords="364,71,604,141"/>
+<area shape="rect" href="classAAbstractTypeableView.html" title="Basic implementation of type shortcuts and selection for editable text fields." alt="" coords="403,165,565,207"/>
+<area shape="rect" href="classAAbstractTextField.html" title="Text field implementation." alt="" coords="652,13,785,39"/>
+<area shape="rect" href="classATextField.html" title="Editable field with text to receive a text input from the user." alt="" coords="833,13,917,39"/>
+<area shape="rect" href="classATextArea.html" title="Multiline text input area." alt="" coords="677,93,760,119"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

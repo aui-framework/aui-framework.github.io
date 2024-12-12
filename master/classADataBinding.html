@@ -112,7 +112,7 @@ class ADataBinding&lt; Model &gt;</div><p >Data binding implementation. </p>
 <p >If pointer of your model passed, <a class="el" href="classADataBinding.html" title="Data binding implementation.">ADataBinding</a> will reference to your model and write directly to your model. When <a class="el" href="classADataBinding.html" title="Data binding implementation.">ADataBinding</a> is destructed the pointer will not be deleted. </p>
 <p >Example:</p>
 <div class="fragment"><div class="line">_new&lt;ATextField&gt;() &amp;&amp; dataBinding(&amp;User::username)</div>
-</div><!-- fragment --> <p >This code will bind <a class="el" href="classATextField.html" title="Represents an editable field with text to receive a text input from the user.">ATextField</a> with username field in the User model.</p>
+</div><!-- fragment --> <p >This code will bind <a class="el" href="classATextField.html" title="Editable field with text to receive a text input from the user.">ATextField</a> with username field in the User model.</p>
 <p >Another example:</p>
 <p ><img src="https://github.com/aui-framework/aui/raw/develop/docs/imgs/Screenshot_20230705_173329.png" alt="" class="inline"/> <img src="https://github.com/aui-framework/aui/raw/develop/docs/imgs/Recording_20230705_at_17.51.14.gif" alt="" class="inline"/> </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
@@ -149,8 +149,8 @@ class ADataBinding&lt; Model &gt;</div><p >Data binding implementation. </p>
 <div class="line">        });</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdef"><b>Definition:</b> AWindow.h:41</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:259</div></div>
+<div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition:</b> AWindow.h:45</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:262</div></div>
 <div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:173</div></div>
 </div><!-- fragment --> <p >Here, we use getEditableModel() in order to change data in our model and notifyUpdate() to notify.</p>
 <p >Also, we use <a class="el" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> construction to define custom format for label.</p>
@@ -163,18 +163,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af8cc28b769357811e2f2953ee8c0b136"><td class="memItemLeft" align="right" valign="top"><a id="af8cc28b769357811e2f2953ee8c0b136" name="af8cc28b769357811e2f2953ee8c0b136"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ADataBinding</b> (Model *m)</td></tr>
 <tr class="separator:af8cc28b769357811e2f2953ee8c0b136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a39703be3fce53265f3463d6a4fc90"><td class="memTemplParams" colspan="2"><a id="a87a39703be3fce53265f3463d6a4fc90" name="a87a39703be3fce53265f3463d6a4fc90"></a>
-template&lt;typename View , typename ModelField , typename SetterArg &gt; </td></tr>
-<tr class="memitem:a87a39703be3fce53265f3463d6a4fc90"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classADataBindingLinker.html">ADataBindingLinker</a>&lt; Model, View, std::decay_t&lt; ModelField &gt;, std::decay_t&lt; ModelField &gt;, SetterArg &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (ModelField(Model::*field), void(View::*setterFunc)(SetterArg))</td></tr>
-<tr class="separator:a87a39703be3fce53265f3463d6a4fc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a226d8ac2e31e6df577524049c2016031"><td class="memTemplParams" colspan="2"><a id="a226d8ac2e31e6df577524049c2016031" name="a226d8ac2e31e6df577524049c2016031"></a>
-template&lt;typename View , typename ModelField , typename GetterRV , typename SetterArg &gt; </td></tr>
-<tr class="memitem:a226d8ac2e31e6df577524049c2016031"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classADataBindingLinker.html">ADataBindingLinker</a>&lt; Model, View, std::decay_t&lt; ModelField &gt;, GetterRV, SetterArg &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (ModelField(Model::*field), <a class="el" href="classASignal.html">ASignal</a>&lt; GetterRV &gt;(View::*getter), void(View::*setterFunc)(SetterArg)=nullptr)</td></tr>
-<tr class="separator:a226d8ac2e31e6df577524049c2016031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98890480f94becb473b62df040d888ac"><td class="memTemplParams" colspan="2"><a id="a98890480f94becb473b62df040d888ac" name="a98890480f94becb473b62df040d888ac"></a>
-template&lt;typename Data &gt; </td></tr>
-<tr class="memitem:a98890480f94becb473b62df040d888ac"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classADataBindingLinker2.html">ADataBindingLinker2</a>&lt; Model, Data &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (Data(Model::*field))</td></tr>
-<tr class="separator:a98890480f94becb473b62df040d888ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8e6089394fa4458393f5d0b9fd255f"><td class="memTemplParams" colspan="2">template&lt;typename View , typename ModelField , typename SetterArg &gt; </td></tr>
+<tr class="memitem:a3a8e6089394fa4458393f5d0b9fd255f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classADataBinding.html#a3a8e6089394fa4458393f5d0b9fd255f">operator()</a> (ModelField(Model::*field), void(View::*setterFunc)(SetterArg))</td></tr>
+<tr class="memdesc:a3a8e6089394fa4458393f5d0b9fd255f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection to setter only.  <a href="classADataBinding.html#a3a8e6089394fa4458393f5d0b9fd255f">More...</a><br /></td></tr>
+<tr class="separator:a3a8e6089394fa4458393f5d0b9fd255f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4431a57a71a7b36db42f38b80d904c46"><td class="memTemplParams" colspan="2">template&lt;typename ModelField , typename SetterLambda &gt; </td></tr>
+<tr class="memitem:a4431a57a71a7b36db42f38b80d904c46"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classADataBinding.html#a4431a57a71a7b36db42f38b80d904c46">operator()</a> (ModelField(Model::*field), SetterLambda setterLambda)</td></tr>
+<tr class="memdesc:a4431a57a71a7b36db42f38b80d904c46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection to specified lambda setter only.  <a href="classADataBinding.html#a4431a57a71a7b36db42f38b80d904c46">More...</a><br /></td></tr>
+<tr class="separator:a4431a57a71a7b36db42f38b80d904c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c574b7a03d7afabe8e690135b80578"><td class="memTemplParams" colspan="2">template&lt;typename View , typename ModelField , typename GetterRV , <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; View *, const ModelField &amp; &gt; Setter&gt; </td></tr>
+<tr class="memitem:a12c574b7a03d7afabe8e690135b80578"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classADataBinding.html#a12c574b7a03d7afabe8e690135b80578">operator()</a> (ModelField(Model::*field), <a class="el" href="classASignal.html">ASignal</a>&lt; GetterRV &gt;(View::*getter), Setter setter=(void(View::*)(const ModelField &amp;)) nullptr)</td></tr>
+<tr class="memdesc:a12c574b7a03d7afabe8e690135b80578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection to specified pointer-to-member-field signal and pointer-to-member-function setter.  <a href="classADataBinding.html#a12c574b7a03d7afabe8e690135b80578">More...</a><br /></td></tr>
+<tr class="separator:a12c574b7a03d7afabe8e690135b80578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89944814449e3e25b37b8139919fdf75"><td class="memTemplParams" colspan="2">template&lt;typename Data &gt; </td></tr>
+<tr class="memitem:a89944814449e3e25b37b8139919fdf75"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classADataBinding.html#a89944814449e3e25b37b8139919fdf75">operator()</a> (Data(Model::*field))</td></tr>
+<tr class="memdesc:a89944814449e3e25b37b8139919fdf75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection via <a class="el" href="structADataBindingDefault.html">ADataBindingDefault</a>.  <a href="classADataBinding.html#a89944814449e3e25b37b8139919fdf75">More...</a><br /></td></tr>
+<tr class="separator:a89944814449e3e25b37b8139919fdf75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b72008f067878041971dd213ea8b106"><td class="memTemplParams" colspan="2">template&lt;typename Data , <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; Data &gt; Projection&gt; </td></tr>
+<tr class="memitem:a8b72008f067878041971dd213ea8b106"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classADataBindingLinker2.html">ADataBindingLinker2</a>&lt; Model, Data, Projection &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classADataBinding.html#a8b72008f067878041971dd213ea8b106">operator()</a> (Data(Model::*field), Projection projection)</td></tr>
+<tr class="memdesc:a8b72008f067878041971dd213ea8b106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a connection via <a class="el" href="structADataBindingDefault.html">ADataBindingDefault</a> and projection (setter only).  <a href="classADataBinding.html#a8b72008f067878041971dd213ea8b106">More...</a><br /></td></tr>
+<tr class="separator:a8b72008f067878041971dd213ea8b106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a293e0a235731387ff61cafb7ffd318f2"><td class="memItemLeft" align="right" valign="top"><a id="a293e0a235731387ff61cafb7ffd318f2" name="a293e0a235731387ff61cafb7ffd318f2"></a>
 const Model &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getModel</b> () const noexcept</td></tr>
 <tr class="separator:a293e0a235731387ff61cafb7ffd318f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +219,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addObserver</b> (Obse
 template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> T&gt; </td></tr>
 <tr class="memitem:ae29f25aef796775bd63b592ab356c04a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addObserver</b> (T &amp;&amp;applier)</td></tr>
 <tr class="separator:ae29f25aef796775bd63b592ab356c04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae404f6a7c8d5de5aaf619953c1a7ba32"><td class="memTemplParams" colspan="2"><a id="ae404f6a7c8d5de5aaf619953c1a7ba32" name="ae404f6a7c8d5de5aaf619953c1a7ba32"></a>
+template&lt;typename ModelField , typename FieldObserver &gt; </td></tr>
+<tr class="memitem:ae404f6a7c8d5de5aaf619953c1a7ba32"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addObserverNoInitialCall</b> (ModelField(Model::*field), FieldObserver &amp;&amp;observer)</td></tr>
+<tr class="separator:ae404f6a7c8d5de5aaf619953c1a7ba32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4466716f3e9f7b787dd16286bdf58537"><td class="memTemplParams" colspan="2"><a id="a4466716f3e9f7b787dd16286bdf58537" name="a4466716f3e9f7b787dd16286bdf58537"></a>
 template&lt;typename ModelField , typename FieldObserver &gt; </td></tr>
 <tr class="memitem:a4466716f3e9f7b787dd16286bdf58537"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addObserver</b> (ModelField(Model::*field), FieldObserver &amp;&amp;observer)</td></tr>
@@ -252,11 +264,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMy
 <tr class="memitem:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memItemLeft" align="right" valign="top"><a id="a640f7f625060ec4c2d8e053058ed342d" name="a640f7f625060ec4c2d8e053058ed342d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>noncopyable</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
 <tr class="separator:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memItemLeft" align="right" valign="top"><a id="a40029c7ea1fc9cdb0225cf3c6b790b58" name="a40029c7ea1fc9cdb0225cf3c6b790b58"></a>
+<a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
+<tr class="separator:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Signals and public fields</h2></td></tr>
 <tr class="memitem:a626f82611dff72cb336300f93c9f6174"><td class="memItemLeft" align="right" valign="top"><a id="a626f82611dff72cb336300f93c9f6174" name="a626f82611dff72cb336300f93c9f6174"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>modelChanged</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>modelChanged</b></td></tr>
 <tr class="memdesc:a626f82611dff72cb336300f93c9f6174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data in the model has changed. <br /></td></tr>
 <tr class="separator:a626f82611dff72cb336300f93c9f6174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -287,6 +302,251 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a cla
 <tr class="memdesc:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set thread of the object. <br /></td></tr>
 <tr class="separator:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a89944814449e3e25b37b8139919fdf75" name="a89944814449e3e25b37b8139919fdf75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89944814449e3e25b37b8139919fdf75">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Model &gt; </div>
+<div class="memtemplate">
+template&lt;typename Data &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classADataBinding.html">ADataBinding</a>&lt; Model &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">DataModel::*&#160;</td>
+          <td class="paramname"><em>field</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a connection via <a class="el" href="structADataBindingDefault.html">ADataBindingDefault</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>pointer-to-member-field of model.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><a class="el" href="structADataBindingDefault.html">ADataBindingDefault</a> must be defined for model type and your view. </p>
+
+</div>
+</div>
+<a id="a8b72008f067878041971dd213ea8b106" name="a8b72008f067878041971dd213ea8b106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b72008f067878041971dd213ea8b106">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Model &gt; </div>
+<div class="memtemplate">
+template&lt;typename Data , <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; Data &gt; Projection&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classADataBindingLinker2.html">ADataBindingLinker2</a>&lt; Model, Data, Projection &gt; <a class="el" href="classADataBinding.html">ADataBinding</a>&lt; Model &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">DataModel::*&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Projection&#160;</td>
+          <td class="paramname"><em>projection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a connection via <a class="el" href="structADataBindingDefault.html">ADataBindingDefault</a> and projection (setter only). </p>
+<p ><a class="el" href="structADataBindingDefault.html">ADataBindingDefault</a> must be defined for model type and your view. </p>
+
+</div>
+</div>
+<a id="a12c574b7a03d7afabe8e690135b80578" name="a12c574b7a03d7afabe8e690135b80578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c574b7a03d7afabe8e690135b80578">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Model &gt; </div>
+<div class="memtemplate">
+template&lt;typename View , typename ModelField , typename GetterRV , <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; View *, const ModelField &amp; &gt; Setter&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classADataBinding.html">ADataBinding</a>&lt; Model &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">ModelFieldModel::*&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classASignal.html">ASignal</a>&lt; GetterRV &gt;View::*&#160;</td>
+          <td class="paramname"><em>getter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Setter&#160;</td>
+          <td class="paramname"><em>setter</em> = <code>(void(View::*)(const&#160;ModelField&amp;))nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a connection to specified pointer-to-member-field signal and pointer-to-member-function setter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>pointer-to-member-field of model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4431a57a71a7b36db42f38b80d904c46" name="a4431a57a71a7b36db42f38b80d904c46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4431a57a71a7b36db42f38b80d904c46">&#9670;&nbsp;</a></span>operator()() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Model &gt; </div>
+<div class="memtemplate">
+template&lt;typename ModelField , typename SetterLambda &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classADataBinding.html">ADataBinding</a>&lt; Model &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">ModelFieldModel::*&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SetterLambda&#160;</td>
+          <td class="paramname"><em>setterLambda</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a connection to specified lambda setter only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>pointer-to-member-field of model. </td></tr>
+    <tr><td class="paramname">setterLambda</td><td>lambda which accepts reference to your view type and const reference to data (see examples).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>View type is deduces from the first argument of your lambda. </p><div class="fragment"><div class="line"><span class="keyword">struct </span>Model {</div>
+<div class="line">  <a class="code hl_class" href="classAString.html">AString</a> <a class="code hl_struct" href="structViewAssertionText.html">text</a>;</div>
+<div class="line">};</div>
+<div class="line"><span class="keyword">auto</span> model = _new&lt;ADataBinding&lt;Model&gt;&gt;(Model{});</div>
+<div class="line">_new&lt;ALabel&gt;() &amp;&amp; model(&amp;Model::text, [](<a class="code hl_class" href="classALabel.html">ALabel</a>&amp; view, <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; data) {</div>
+<div class="line">   view.setText(data);</div>
+<div class="line">});</div>
+<div class="ttc" id="aclassALabel_html"><div class="ttname"><a href="classALabel.html">ALabel</a></div><div class="ttdoc">Represents a simple single-line text display view.</div><div class="ttdef"><b>Definition:</b> ALabel.h:23</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition:</b> AString.h:37</div></div>
+<div class="ttc" id="astructViewAssertionText_html"><div class="ttname"><a href="structViewAssertionText.html">ViewAssertionText</a></div><div class="ttdef"><b>Definition:</b> Text.h:21</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a3a8e6089394fa4458393f5d0b9fd255f" name="a3a8e6089394fa4458393f5d0b9fd255f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8e6089394fa4458393f5d0b9fd255f">&#9670;&nbsp;</a></span>operator()() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Model &gt; </div>
+<div class="memtemplate">
+template&lt;typename View , typename ModelField , typename SetterArg &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classADataBinding.html">ADataBinding</a>&lt; Model &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">ModelFieldModel::*&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(View::*)(SetterArg)&#160;</td>
+          <td class="paramname"><em>setterFunc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a connection to setter only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">field</td><td>pointer-to-member-field of model. </td></tr>
+    <tr><td class="paramname">setterFunc</td><td>pointer-to-member-function setter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 
 <p><code>#include &lt;<a class="el" href="ADataBinding_8h_source.html">AUI/Util/ADataBinding.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following file:<ul>

@@ -11,10 +11,10 @@ var group__core =
       [ "capacity", "classAByteBuffer.html#a600684376b6ebfa4f61659dce8fb7f84", null ],
       [ "data", "classAByteBuffer.html#afe2d857335823888761116b7acbe6812", null ],
       [ "empty", "classAByteBuffer.html#adc0e89e7599e61b9bb4bc7ddb1e61ea7", null ],
-      [ "ensureReserved", "classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae", null ],
       [ "getAvailableToWrite", "classAByteBuffer.html#a1e3c412ab50f0fd5ecc243dd8f269474", null ],
       [ "getReserved", "classAByteBuffer.html#ac2aa13b29f5c79483b061523f02d4697", null ],
       [ "getSize", "classAByteBuffer.html#ac5a81b7824aa11a2c08d09475de10d60", null ],
+      [ "grow", "classAByteBuffer.html#aa67518516cac8be372344af2c38f3059", null ],
       [ "increaseInternalBuffer", "classAByteBuffer.html#a20c5aca6ff494be78ca31fac4e2f0604", null ],
       [ "increaseSize", "classAByteBuffer.html#a1b966838a64157b6dab4948ef3a1b191", null ],
       [ "reallocate", "classAByteBuffer.html#a1a7b5197e01e5fea969356677d492cb3", null ],
@@ -30,7 +30,7 @@ var group__core =
     ] ],
     [ "AChar", "classAChar.html", null ],
     [ "AColor", "classAColor.html", [
-      [ "mul", "classAColor.html#a54874aeaf15cb5b4e1b68e84d0a64193", null ],
+      [ "mul", "classAColor.html#a5762b3e4a42ea94374ea2335fba91c26", null ],
       [ "opacify", "classAColor.html#a6f3a5debba1dfa2577e80ed210ef9ba9", null ],
       [ "transparentize", "classAColor.html#a61588fbcbbba8b205248fbd209d4ed0c", null ]
     ] ],
@@ -82,10 +82,6 @@ var group__core =
       [ "operator<<", "classASet.html#a68c355f20fffdc1d2082f0eb29d8100b", null ],
       [ "operator<<", "classASet.html#ab7f59f0f32f0710d1810bcda4a878a89", null ],
       [ "operator>>", "classASet.html#aa353fe8fe00c1e866a48910256dcb9de", null ]
-    ] ],
-    [ "ASignal< Args >", "classASignal.html", [
-      [ "call_wrapper", "structASignal_1_1call__wrapper.html", null ],
-      [ "operator bool", "classASignal.html#aebb81db0902a1f21eef9078a0cd1d9e8", null ]
     ] ],
     [ "ASmallVector< StoredType, StaticVectorSize, Allocator >", "classASmallVector.html", [
       [ "contains", "classASmallVector.html#a511e11ed43e30084771dd76c0ccb7145", null ],
@@ -187,6 +183,10 @@ var group__core =
     [ "IStringable", "classIStringable.html", [
       [ "toString", "classIStringable.html#a7bb0454adbf12f59aa8550cc75bddb97", null ]
     ] ],
+    [ "ALineSegment< T >", "structALineSegment.html", null ],
+    [ "ARect< T >", "structARect.html", [
+      [ "isIntersects", "structARect.html#ac9445dd93815f0fa106b393671837ea8", null ]
+    ] ],
     [ "AI18n", "classAI18n.html", null ],
     [ "ALanguageCode", "classALanguageCode.html", null ],
     [ "ADynamicPipe", "classADynamicPipe.html", [
@@ -220,6 +220,9 @@ var group__core =
       ] ],
       [ "resolveSymbolsIfNeeded", "classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4", null ],
       [ "stripBeforeFunctionCall", "classAStacktrace.html#a433c70cff737bf88f1ef839cde918082", null ]
+    ] ],
+    [ "AEnumerate< enum_t >", "classAEnumerate.html", [
+      [ "Values", "structAEnumerate_1_1Values.html", null ]
     ] ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "AComplexFutureOperation< T >", "classAComplexFutureOperation.html", [
@@ -261,7 +264,7 @@ var group__core =
     [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
     [ "AAbstractThread", "classAAbstractThread.html", [
       [ "id", "classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b", null ],
-      [ "enqueue", "classAAbstractThread.html#a3e018eb931d46f2353fcc5929b9b9a4a", null ],
+      [ "enqueue", "classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8", null ],
       [ "getCurrentEventLoop", "classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d", null ],
       [ "getId", "classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818", null ],
       [ "interrupt", "classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43", null ],
@@ -301,9 +304,9 @@ var group__core =
     [ "AFieldSignalEmitter< T >", "classAFieldSignalEmitter.html", null ],
     [ "AFunctionQueue", "classAFunctionQueue.html", null ],
     [ "AImplementationManager< Base, Implementations >", "structAImplementationManager.html", null ],
-    [ "AMessageQueue", "classAMessageQueue.html", [
-      [ "enqueue", "classAMessageQueue.html#a6a327dce95efc4b7bb0add3b20d4e23a", null ],
-      [ "processMessages", "classAMessageQueue.html#ab415def62bd70ecb804bc3aa1bea119f", null ]
+    [ "AMessageQueue< Mutex, Args >", "classAMessageQueue.html", [
+      [ "enqueue", "classAMessageQueue.html#a23bfcfffad6123186c9a3c0f42383124", null ],
+      [ "processMessages", "classAMessageQueue.html#ae42e43f10e1591722f25a5ab7cdfc407", null ]
     ] ],
     [ "AScheduler", "classAScheduler.html", [
       [ "iteration", "classAScheduler.html#ae04bfc685dc4dd00f2a06b63c9d3caa3", null ],
@@ -318,6 +321,7 @@ var group__core =
       [ "isHang", "classAWatchdog.html#af523718d5589ef376acb1955308c44aa", null ],
       [ "runOperation", "classAWatchdog.html#a0be6f6e5960439f21009c20232a5f929", null ]
     ] ],
+    [ "APoint2D", "group__core.html#ga389f408d67d62017fb38ee1350384275", null ],
     [ "aui::args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaaf899fee232b3bc2862a3b0302a79ff5", null ],
     [ "AUI_ENUM_FLAG", "group__core.html#gaa3610507f3842446dc91291a81ebf41e", null ],
@@ -332,5 +336,6 @@ var group__core =
     [ "aui::container::remove_at", "group__core.html#gab30c70d5b1a69ac3732151a93b04ef26", null ],
     [ "aui::container::remove_first", "group__core.html#ga8ea6b3fd4cc0a386f24ea75463947848", null ],
     [ "aui::container::to_map", "group__core.html#gaa70b24485dced85af19ad2687ca8a373", null ],
-    [ "aui::container::to_unordered_map", "group__core.html#ga7a88e702b03388170c461d980530572b", null ]
+    [ "aui::container::to_unordered_map", "group__core.html#ga7a88e702b03388170c461d980530572b", null ],
+    [ "aui::enumerate::ALL_VALUES", "group__core.html#ga177fb99c6b6cf725dc64202f891678cf", null ]
 ];

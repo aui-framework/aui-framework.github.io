@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line"><span class="preprocessor">#include &quot;AUI/Reflect/AClass.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;AUI/Font/AFontStyle.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;AUI/Util/AFieldSignalEmitter.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;AUI/Util/ClipOptimizationContext.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;AUI/Render/ARenderContext.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;AUI/Util/IBackgroundEffect.h&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/ASS/PropertyListRecursive.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Enum/AOverflow.h&gt;</span></div>
@@ -145,26 +145,29 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line"><span class="preprocessor">#include &lt;AUI/Event/APointerPressedEvent.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Event/APointerReleasedEvent.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Event/APointerMoveEvent.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Render/ITexture.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Render/IRenderViewToTexture.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Enum/AFloat.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">class </span><a id="_a0" name="_a0"></a><a class="code hl_class" href="classARender.html">ARender</a>;</div>
-<div class="line"><span class="keyword">class </span><a id="_a1" name="_a1"></a><a class="code hl_class" href="classAWindow.html">AWindow</a>;</div>
-<div class="line"><span class="keyword">class </span><a id="_a2" name="_a2"></a><a class="code hl_class" href="classABaseWindow.html">ABaseWindow</a>;</div>
-<div class="line"><span class="keyword">class </span><a id="_a3" name="_a3"></a><a class="code hl_class" href="classAViewContainer.html">AViewContainer</a>;</div>
-<div class="line"><span class="keyword">class </span><a id="_a4" name="_a4"></a><a class="code hl_class" href="classAAnimator.html">AAnimator</a>;</div>
-<div class="line"><span class="keyword">class </span><a id="_a5" name="_a5"></a><a class="code hl_class" href="classAAssHelper.html">AAssHelper</a>;</div>
-<div class="line"><span class="keyword">class </span><a id="_a6" name="_a6"></a><a class="code hl_class" href="classAStylesheet.html">AStylesheet</a>;</div>
+<div class="line"><span class="keyword">class </span><a id="_a0" name="_a0"></a><a class="code hl_class" href="classAWindow.html">AWindow</a>;</div>
+<div class="line"><span class="keyword">class </span><a id="_a1" name="_a1"></a><a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>;</div>
+<div class="line"><span class="keyword">class </span><a id="_a2" name="_a2"></a><a class="code hl_class" href="classAViewContainerBase.html">AViewContainerBase</a>;</div>
+<div class="line"><span class="keyword">class </span><a id="_a3" name="_a3"></a><a class="code hl_class" href="classAAnimator.html">AAnimator</a>;</div>
+<div class="line"><span class="keyword">class </span><a id="_a4" name="_a4"></a><a class="code hl_class" href="classAAssHelper.html">AAssHelper</a>;</div>
+<div class="line"><span class="keyword">class </span><a id="_a5" name="_a5"></a><a class="code hl_class" href="classAStylesheet.html">AStylesheet</a>;</div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">class </span>API_AUI_VIEWS <a id="_a7" name="_a7"></a><a class="code hl_class" href="classAView.html">AView</a>: <span class="keyword">public</span> <a id="_a8" name="_a8"></a><a class="code hl_class" href="classAObject.html">AObject</a></div>
+<div class="line"><span class="keyword">class </span>API_AUI_VIEWS <a id="_a6" name="_a6"></a><a class="code hl_class" href="classAView.html">AView</a>: <span class="keyword">public</span> <a id="_a7" name="_a7"></a><a class="code hl_class" href="classAObject.html">AObject</a></div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classAViewContainer.html">AViewContainer</a>;</div>
+<div class="line">    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classAViewContainerBase.html">AViewContainerBase</a>;</div>
+<div class="line">    <span class="keyword">friend</span> <span class="keyword">class </span><a id="_a8" name="_a8"></a><a class="code hl_class" href="classAViewContainer.html">AViewContainer</a>;</div>
+<div class="line">    <span class="keyword">friend</span> <span class="keyword">class </span><a id="_a9" name="_a9"></a><a class="code hl_class" href="classIRenderViewToTexture.html">IRenderViewToTexture</a>;</div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <a id="_a9" name="_a9"></a><a class="code hl_class" href="class__.html">_&lt;AAnimator&gt;</a> mAnimator;</div>
+<div class="line">    <a id="_a10" name="_a10"></a><a class="code hl_class" href="class__.html">_&lt;AAnimator&gt;</a> mAnimator;</div>
 <div class="line"> </div>
 <div class="line">    AOverflowMask mOverflowMask = AOverflowMask::ROUNDED_RECT;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_enumeration" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a> mVisibility = <a id="a10" name="a10"></a><a class="code hl_enumvalue" href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54">Visibility::VISIBLE</a>;</div>
+<div class="line">    Visibility mVisibility = Visibility::VISIBLE;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="class__.html">_&lt;AAssHelper&gt;</a> mAssHelper;</div>
 <div class="line"> </div>
@@ -172,9 +175,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line"> </div>
 <div class="line">    MouseCollisionPolicy mMouseCollisionPolicy = MouseCollisionPolicy::DEFAULT;</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a11" name="_a11"></a><a class="code hl_struct" href="structAFontStyle.html">AFontStyle</a> mFontStyle;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">float</span> mOpacity = 1;</div>
+<div class="line">    <a id="_a11" name="_a11"></a><a class="code hl_struct" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a> mOpacity = 1;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_enumeration" href="group__views.html#ga0b5c15e7f44eba2c0eb1705539014892">AOverflow</a> mOverflow = <a id="a12" name="a12"></a><a class="code hl_enumvalue" href="group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54">AOverflow::VISIBLE</a>;</div>
 <div class="line"> </div>
@@ -186,115 +187,121 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    [[nodiscard]]</div>
 <div class="line">    ALayoutDirection parentLayoutDirection() const noexcept;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> mRedrawRequested = false;</div>
-<div class="line"> </div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">bool</span> mMouseEntered = false;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">bool</span> mBlockClicksWhenPressed = true;</div>
 <div class="line"> </div>
 <div class="line">protected:</div>
-<div class="line">    <a class="code hl_class" href="classAViewContainer.html">AViewContainer</a>* <a id="a13" name="a13"></a><a class="code hl_variable" href="classAView.html#ac33d3edd01436307f555e7ddcbeed144">mParent</a> = <span class="keywordtype">nullptr</span>;</div>
+<div class="line">    <a class="code hl_class" href="classAViewContainerBase.html">AViewContainerBase</a>* mParent = <span class="keywordtype">nullptr</span>;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_enumeration" href="group__views.html#gacba678dfa3c1cb4aab689f901f414119">ATextOverflow</a> <a id="a14" name="a14"></a><a class="code hl_variable" href="classAView.html#aa80d3e423a09a2ea728e68560e507281">mTextOverflow</a> = <a class="code hl_enumeration" href="group__views.html#gacba678dfa3c1cb4aab689f901f414119">ATextOverflow</a>::NONE;</div>
+<div class="line">    std::array&lt;ass::prop::IPropertyBase*, <span class="keywordtype">int</span>(ass::prop::PropertySlot::COUNT)&gt; mAss;</div>
 <div class="line"> </div>
-<div class="line">    std::array&lt;ass::prop::IPropertyBase*, <span class="keywordtype">int</span>(ass::prop::PropertySlot::COUNT)&gt; <a id="a15" name="a15"></a><a class="code hl_variable" href="classAView.html#a6d4886486fa16bbfda71ddb2546bf517">mAss</a>;</div>
+<div class="line">    ass::PropertyListRecursive mCustomStyleRule;</div>
 <div class="line"> </div>
-<div class="line">    ass::PropertyListRecursive <a id="a16" name="a16"></a><a class="code hl_variable" href="classAView.html#a5a90d8af44986418e46ab4dcf5e9182e">mCustomStyleRule</a>;</div>
+<div class="line">    <a id="_a13" name="_a13"></a><a class="code hl_class" href="classAOptional.html">AOptional</a>&lt;<a id="_a14" name="_a14"></a><a class="code hl_class" href="classACursor.html">ACursor</a>&gt; mCursor = <a class="code hl_class" href="classACursor.html">ACursor</a>::<a id="a15" name="a15"></a><a class="code hl_enumvalue" href="group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>;</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a17" name="_a17"></a><a class="code hl_class" href="classAOptional.html">AOptional</a>&lt;<a id="_a18" name="_a18"></a><a class="code hl_class" href="classACursor.html">ACursor</a>&gt; <a id="a19" name="a19"></a><a class="code hl_variable" href="classAView.html#a0291fee9c96836079ecdd0d591d5791c">mCursor</a> = <a class="code hl_class" href="classACursor.html">ACursor</a>::<a id="a20" name="a20"></a><a class="code hl_enumvalue" href="group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a>;</div>
+<div class="line">    glm::ivec2 mPosition = { 0, 0 };</div>
 <div class="line"> </div>
-<div class="line">    glm::ivec2 <a id="a21" name="a21"></a><a class="code hl_variable" href="classAView.html#a40d1a378258fac515816c3c1a9028473">mPosition</a> = { 0, 0 };</div>
+<div class="line">    glm::ivec2 mSize = { 20, 20 };</div>
 <div class="line"> </div>
-<div class="line">    glm::ivec2 <a id="a22" name="a22"></a><a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a> = { 20, 20 };</div>
+<div class="line">    glm::ivec2 mExpanding = {0, 0};</div>
 <div class="line"> </div>
-<div class="line">    glm::ivec2 <a id="a23" name="a23"></a><a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = {0, 0};</div>
+<div class="line">    <a class="code hl_class" href="classAOptional.html">AOptional&lt;glm::ivec2&gt;</a> mCachedMinContentSize;</div>
+<div class="line">    <span class="keywordtype">bool</span> mMarkedMinContentSizeInvalid = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
-<div class="line">    glm::ivec2 <a id="a24" name="a24"></a><a class="code hl_variable" href="classAView.html#afcab50e0676d2197c64a8d8c2221d741">mMinSize</a> = {0, 0};</div>
+<div class="line">    <span class="keywordtype">bool</span> mRedrawRequested = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
-<div class="line">    glm::ivec2 <a id="a25" name="a25"></a><a class="code hl_variable" href="classAView.html#a65a8d1574db7e833c6481aecfbf9cadb">mMaxSize</a> = {0x7fffffff, 0x7fffffff};</div>
+<div class="line">    glm::ivec2 mMinSize = {0, 0};</div>
 <div class="line"> </div>
-<div class="line">    glm::ivec2 <a id="a26" name="a26"></a><a class="code hl_variable" href="classAView.html#a5d5732f8af15828f75729ba5bde0d4c9">mFixedSize</a> = {0, 0};</div>
+<div class="line">    glm::ivec2 mMaxSize = {0x7fffffff, 0x7fffffff};</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a27" name="_a27"></a><a class="code hl_struct" href="structABoxFields.html">ABoxFields</a> <a id="a28" name="a28"></a><a class="code hl_variable" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">mMargin</a>;</div>
+<div class="line">    glm::ivec2 mFixedSize = {0, 0};</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a> <a id="a29" name="a29"></a><a class="code hl_variable" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">mPadding</a>;</div>
+<div class="line">    <a id="_a16" name="_a16"></a><a class="code hl_struct" href="structABoxFields.html">ABoxFields</a> mMargin;</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a30" name="_a30"></a><a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> <a id="a31" name="a31"></a><a class="code hl_variable" href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">mAssNames</a>;</div>
+<div class="line">    <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a> mPadding;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> <a id="a32" name="a32"></a><a class="code hl_variable" href="classAView.html#a4475a69d795612634df68566a0b9d5fb">mSkipUntilLayoutUpdate</a> = <span class="keyword">true</span>;</div>
+<div class="line">    <a id="_a17" name="_a17"></a><a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> mAssNames;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> requestLayoutUpdate();</div>
+<div class="line">    <span class="keywordtype">bool</span> mSkipUntilLayoutUpdate = <span class="keyword">true</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> <a id="a33" name="a33"></a><a class="code hl_function" href="classAView.html#a1b273cbe961c8633b17171b750762135">transformGestureEventsToDesktop</a>(<span class="keyword">const</span> glm::ivec2&amp; origin, <span class="keyword">const</span> AGestureEvent&amp; event);</div>
+<div class="line">    <span class="keywordtype">bool</span> transformGestureEventsToDesktop(<span class="keyword">const</span> glm::ivec2&amp; origin, <span class="keyword">const</span> AGestureEvent&amp; event);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> applyAssRule(<span class="keyword">const</span> <a id="_a34" name="_a34"></a><a class="code hl_struct" href="structass_1_1PropertyList.html">ass::PropertyList</a>&amp; propertyList);</div>
-<div class="line">    <span class="keywordtype">void</span> applyAssRule(<span class="keyword">const</span> <a id="_a35" name="_a35"></a><a class="code hl_struct" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a>&amp; propertyList);</div>
+<div class="line">    <span class="keywordtype">void</span> applyAssRule(<span class="keyword">const</span> <a id="_a18" name="_a18"></a><a class="code hl_struct" href="structass_1_1PropertyList.html">ass::PropertyList</a>&amp; propertyList);</div>
+<div class="line">    <span class="keywordtype">void</span> applyAssRule(<span class="keyword">const</span> <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a>&amp; propertyList);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <a id="_a36" name="_a36"></a><a class="code hl_class" href="classAVector.html">AMenuModel</a> <a id="a37" name="a37"></a><a class="code hl_function" href="classAView.html#a6e70ccf042a8ff10deea1f538377eb91">composeContextMenu</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <a id="_a20" name="_a20"></a><a class="code hl_class" href="classAVector.html">AMenuModel</a> composeContextMenu();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a38" name="a38"></a><a class="code hl_function" href="classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb">onViewGraphSubtreeChanged</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onViewGraphSubtreeChanged();</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> markPixelDataInvalid(<a id="_a21" name="_a21"></a><a class="code hl_struct" href="structARect.html">ARect&lt;int&gt;</a> invalidArea);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> commitStyle();</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    <a class="code hl_class" href="classAView.html">AView</a>();</div>
-<div class="line">    <span class="keyword">virtual</span> <a class="code hl_class" href="classAView.html">~AView</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a39" name="a39"></a><a class="code hl_function" href="classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f">redraw</a>();</div>
+<div class="line">    <a class="code hl_class" href="classAView.html">~AView</a>() <span class="keyword">override</span>;</div>
+<div class="line">    <span class="keywordtype">void</span> redraw();</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classABaseWindow.html">ABaseWindow</a>* <a id="a40" name="a40"></a><a class="code hl_function" href="classAView.html#ae881f45d02f968dd3584f267d6300521">getWindow</a>() <span class="keyword">const</span>;</div>
+<div class="line">    <a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>* getWindow() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> drawStencilMask();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> drawStencilMask(<a id="_a22" name="_a22"></a><a class="code hl_struct" href="structARenderContext.html">ARenderContext</a> ctx);</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a41" name="a41"></a><a class="code hl_function" href="classAViewContainer.html#ae31e59f7f259b654ffa1a1c29d538c55">render</a>(<a id="_a42" name="_a42"></a><a class="code hl_struct" href="structClipOptimizationContext.html">ClipOptimizationContext</a> context);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> render(<a class="code hl_struct" href="structARenderContext.html">ARenderContext</a> ctx);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a43" name="a43"></a><a class="code hl_function" href="classAView.html#a4e1593b6ae4efe2a6b6b6d376c7070f4">postRender</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> postRender(<a class="code hl_struct" href="structARenderContext.html">ARenderContext</a> ctx);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> popStencilIfNeeded();</div>
+<div class="line">    <span class="keywordtype">void</span> popStencilIfNeeded(<a class="code hl_struct" href="structARenderContext.html">ARenderContext</a> ctx);</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a>&amp; getAssNames() const noexcept {</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">mAssNames</a>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> glm::ivec2&amp; <a id="a44" name="a44"></a><a class="code hl_function" href="classAView.html#ad0b6189b40c29d3c31ef3d3a21ce364b">getPosition</a>()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword"></span> </div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a40d1a378258fac515816c3c1a9028473">mPosition</a>;</div>
+<div class="line">        <span class="keywordflow">return</span> mAssNames;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    glm::ivec2 <a id="a45" name="a45"></a><a class="code hl_function" href="classAView.html#abb924b63a9acdb4c837b4ee2e15cd986">getCenterPointInWindow</a>()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a id="a46" name="a46"></a><a class="code hl_function" href="classAView.html#aa026069609b3bcfc580978ff801861eb">getPositionInWindow</a>() + <a id="a47" name="a47"></a><a class="code hl_function" href="classAView.html#a1934c219a3411ec2917c9cd05f0fe453">getSize</a>() / 2;</div>
+<div class="line">    glm::ivec2 getPosition() const noexcept</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> mPosition;</div>
 <div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> glm::ivec2&amp; <a class="code hl_function" href="classAView.html#a1934c219a3411ec2917c9cd05f0fe453">getSize</a>()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> glm::ivec2&amp; <a id="a48" name="a48"></a><a class="code hl_function" href="classAView.html#a546a17cc5d955dfa75928d48337c65a7">getMinSize</a>()<span class="keyword"> const </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#afcab50e0676d2197c64a8d8c2221d741">mMinSize</a>;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setMinSize(<span class="keyword">const</span> glm::ivec2&amp; minSize) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#afcab50e0676d2197c64a8d8c2221d741">mMinSize</a> = minSize;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a49" name="a49"></a><a class="code hl_function" href="classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b">setExtraStylesheet</a>(<a class="code hl_class" href="class__.html">_&lt;AStylesheet&gt;</a> <a id="a50" name="a50"></a><a class="code hl_function" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>) {</div>
-<div class="line">        mExtraStylesheet = std::move(<a class="code hl_function" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>);</div>
-<div class="line">        <a id="a51" name="a51"></a><a class="code hl_function" href="classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60">invalidateAssHelper</a>();</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b">setExtraStylesheet</a>(<a class="code hl_class" href="classAStylesheet.html">AStylesheet</a>&amp;&amp; <a class="code hl_function" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>);</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AStylesheet&gt;</a>&amp; <a class="code hl_function" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>() const noexcept {</div>
+<div class="line">    glm::ivec2 getCenterPointInWindow() const noexcept</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> getPositionInWindow() + getSize() / 2;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    glm::ivec2 getSize() const noexcept</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> mSize;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    glm::ivec2 getMinSize() const noexcept {</div>
+<div class="line">        <span class="keywordflow">return</span> mMinSize;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setMinSize(glm::ivec2 minSize) <span class="keyword">noexcept</span> {</div>
+<div class="line">        mMinSize = minSize;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> markMinContentSizeInvalid();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setExtraStylesheet(<a class="code hl_class" href="class__.html">_&lt;AStylesheet&gt;</a> extraStylesheet) {</div>
+<div class="line">        mExtraStylesheet = std::move(extraStylesheet);</div>
+<div class="line">        invalidateAssHelper();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setExtraStylesheet(<a class="code hl_class" href="classAStylesheet.html">AStylesheet</a>&amp;&amp; extraStylesheet);</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AStylesheet&gt;</a>&amp; extraStylesheet() const noexcept {</div>
 <div class="line">        <span class="keywordflow">return</span> mExtraStylesheet;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_enumeration" href="group__views.html#ga0b5c15e7f44eba2c0eb1705539014892">AOverflow</a> <a id="a52" name="a52"></a><a class="code hl_function" href="classAView.html#a91e63d78d42435872c5482776046fdfc">getOverflow</a>()<span class="keyword"> const</span></div>
+<div class="line">    <a class="code hl_enumeration" href="group__views.html#ga0b5c15e7f44eba2c0eb1705539014892">AOverflow</a> getOverflow()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> mOverflow;</div>
 <div class="line">    }</div>
@@ -303,11 +310,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        mOverflow = overflow;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setTextOverflow(<a class="code hl_enumeration" href="group__views.html#gacba678dfa3c1cb4aab689f901f414119">ATextOverflow</a> textOverflow) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#aa80d3e423a09a2ea728e68560e507281">mTextOverflow</a> = textOverflow;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    AOverflowMask <a id="a53" name="a53"></a><a class="code hl_function" href="classAView.html#a0569ae03bfeebb23dbea2da2585f0d67">getOverflowMask</a>()<span class="keyword"> const</span></div>
+<div class="line">    AOverflowMask getOverflowMask()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> mOverflowMask;</div>
 <div class="line">    }</div>
@@ -316,7 +319,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        mOverflowMask = overflow;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">float</span> <a id="a54" name="a54"></a><a class="code hl_function" href="classAView.html#a56b5b208d3138683ae18dfe8d8edbdae">getBorderRadius</a>()<span class="keyword"> const </span>{</div>
+<div class="line">    <span class="keywordtype">float</span> getBorderRadius()<span class="keyword"> const </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> mBorderRadius;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordtype">void</span> setBorderRadius(<span class="keywordtype">float</span> radius) {</div>
@@ -325,116 +328,156 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">int</span> getWidth()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>.x;</div>
+<div class="line">        <span class="keywordflow">return</span> mSize.x;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">int</span> getHeight()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>.y;</div>
+<div class="line">        <span class="keywordflow">return</span> mSize.y;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">float</span> <a id="a55" name="a55"></a><a class="code hl_function" href="classAView.html#a521f58942c69ff63566ada3e3d774f32">getTotalOccupiedWidth</a>()<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">int</span> getTotalOccupiedWidth()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> mVisibility == <a id="a56" name="a56"></a><a class="code hl_enumvalue" href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74">Visibility::GONE</a> ? 0 : <a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>.x + <a id="a57" name="a57"></a><a class="code hl_function" href="classAView.html#a3f2e024a5acecec85af1aedaa67066e5">getTotalFieldHorizontal</a>();</div>
+<div class="line">        <span class="keywordflow">return</span> !(mVisibility &amp; Visibility::FLAG_CONSUME_SPACE) ? 0 : mSize.x + getTotalFieldHorizontal();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">float</span> <a id="a58" name="a58"></a><a class="code hl_function" href="classAView.html#acaef54d28990d25a3edf594e163c1a8b">getTotalOccupiedHeight</a>()<span class="keyword"> const</span></div>
+<div class="line">    <span class="keywordtype">int</span> getTotalOccupiedHeight()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> mVisibility == <a class="code hl_enumvalue" href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74">Visibility::GONE</a> ? 0 : <a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>.y + <a id="a59" name="a59"></a><a class="code hl_function" href="classAView.html#a274972d0e96c9ad2779fe5dfdeb71727">getTotalFieldVertical</a>();</div>
+<div class="line">        <span class="keywordflow">return</span> !(mVisibility &amp; Visibility::FLAG_CONSUME_SPACE) ? 0 : mSize.y + getTotalFieldVertical();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; <a id="a60" name="a60"></a><a class="code hl_function" href="classAView.html#ab3c244b2b5d88b895ff9eee41e5f5447">getMargin</a>()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">mMargin</a>;</div>
+<div class="line">    glm::ivec2 getMinimumSizePlusMargin() {</div>
+<div class="line">        <span class="keywordflow">return</span> getMinimumSize() + mMargin.<a id="a23" name="a23"></a>occupiedSize();</div>
 <div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a61" name="a61"></a><a class="code hl_function" href="classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7">setMargin</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; margin) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">mMargin</a> = margin;</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a id="a62" name="a62"></a><a class="code hl_function" href="classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd">consumesClick</a>(<span class="keyword">const</span> glm::ivec2&amp; pos);</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; <a id="a63" name="a63"></a><a class="code hl_function" href="classAView.html#a346bb0a269caf3f15e1f90320bd7479d">getPadding</a>()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">mPadding</a>;</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; getMargin()</div>
+<div class="line">    {</div>
+<div class="line">        ensureAssUpdated();</div>
+<div class="line">        <span class="keywordflow">return</span> mMargin;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a64" name="a64"></a><a class="code hl_function" href="classAView.html#af409baa975fcd918472e42462b1955b6">setPadding</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; padding) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">mPadding</a> = padding;</div>
+<div class="line">    <span class="keywordtype">void</span> setMargin(<span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; margin) {</div>
+<div class="line">        mMargin = margin;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> consumesClick(<span class="keyword">const</span> glm::ivec2&amp; pos);</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; getPadding()</div>
+<div class="line">    {</div>
+<div class="line">        ensureAssUpdated();</div>
+<div class="line">        <span class="keywordflow">return</span> mPadding;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setPadding(<span class="keyword">const</span> <a class="code hl_struct" href="structABoxFields.html">ABoxFields</a>&amp; padding) {</div>
+<div class="line">        mPadding = padding;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <a id="_a24" name="_a24"></a><a class="code hl_class" href="classAString.html">AString</a> debugString() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keywordtype">float</span> <a class="code hl_function" href="classAView.html#a3f2e024a5acecec85af1aedaa67066e5">getTotalFieldHorizontal</a>() <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keywordtype">float</span> <a class="code hl_function" href="classAView.html#a274972d0e96c9ad2779fe5dfdeb71727">getTotalFieldVertical</a>() <span class="keyword">const</span>;</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classAViewContainer.html">AViewContainer</a>* <a id="a65" name="a65"></a><a class="code hl_function" href="classAView.html#a6af1dde86c744d781a729568c7a595a2">getParent</a>()<span class="keyword"> const</span></div>
-<div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#ac33d3edd01436307f555e7ddcbeed144">mParent</a>;</div>
+<div class="line">    <span class="keywordtype">int</span> getTotalFieldHorizontal()<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> mPadding.<a id="a25" name="a25"></a>horizontal() + mMargin.horizontal();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classAOptional.html">AOptional&lt;ACursor&gt;</a>&amp; <a id="a66" name="a66"></a><a class="code hl_function" href="classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e">getCursor</a>()<span class="keyword"> const</span></div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    <span class="keywordtype">int</span> getTotalFieldVertical()<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> mPadding.<a id="a26" name="a26"></a>vertical() + mMargin.vertical();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    glm::ivec2 getTotalFieldSize()<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> { getTotalFieldHorizontal(), getTotalFieldVertical() };</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="classAViewContainerBase.html">AViewContainerBase</a>* getParent()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a0291fee9c96836079ecdd0d591d5791c">mCursor</a>;</div>
+<div class="line">        <span class="keywordflow">return</span> mParent;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="classAOptional.html">AOptional&lt;ACursor&gt;</a>&amp; getCursor()<span class="keyword"> const</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> mCursor;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordtype">void</span> setCursor(<a class="code hl_class" href="classAOptional.html">AOptional&lt;ACursor&gt;</a> cursor);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a id="a67" name="a67"></a><a class="code hl_function" href="classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0">getContentMinimumWidth</a>(ALayoutDirection layout);</div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getContentMinimumWidth();</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a id="a68" name="a68"></a><a class="code hl_function" href="classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec">getContentMinimumHeight</a>(ALayoutDirection layout);</div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getContentMinimumHeight();</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    glm::ivec2 getContentMinimumSize() noexcept {</div>
+<div class="line">        <span class="keywordflow">if</span> (!mCachedMinContentSize) {</div>
+<div class="line">            glm::ivec2 minContentSize = glm::ivec2(getContentMinimumWidth(), getContentMinimumHeight());</div>
+<div class="line">            mCachedMinContentSize = minContentSize;</div>
+<div class="line">            <span class="keywordflow">return</span> minContentSize;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="comment">// TODO ignore layout?</span></div>
+<div class="line">        <span class="keywordflow">return</span> *mCachedMinContentSize;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    <span class="keywordtype">bool</span> isContentMinimumSizeInvalidated() noexcept {</div>
+<div class="line">        <span class="keywordflow">return</span> !mCachedMinContentSize.<a id="a27" name="a27"></a>hasValue();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">bool</span> hasFocus() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumWidth(ALayoutDirection layout = ALayoutDirection::NONE);</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumHeight(ALayoutDirection layout = ALayoutDirection::NONE);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumWidth();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getMinimumHeight();</div>
 <div class="line"> </div>
 <div class="line">    glm::ivec2 getMinimumSize() {</div>
-<div class="line">        <span class="keywordflow">return</span> {getMinimumWidth(), getMinimumHeight()};</div>
+<div class="line">        <span class="keywordflow">return</span> { getMinimumWidth(), getMinimumHeight() };</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> setMaxSize(<span class="keyword">const</span> glm::ivec2&amp; maxSize) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a65a8d1574db7e833c6481aecfbf9cadb">mMaxSize</a> = maxSize;</div>
+<div class="line">        mMaxSize = maxSize;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    [[nodiscard]] <span class="keyword">const</span> glm::ivec2&amp; <a id="a69" name="a69"></a><a class="code hl_function" href="classAView.html#ab4bbc6b9ced25ac8a591262143a2d093">getMaxSize</a>()<span class="keyword"> const</span></div>
+<div class="line">    [[nodiscard]] <span class="keyword">const</span> glm::ivec2&amp; getMaxSize()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a65a8d1574db7e833c6481aecfbf9cadb">mMaxSize</a>;</div>
+<div class="line">        <span class="keywordflow">return</span> mMaxSize;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">int</span> getContentWidth()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>.x - <a class="code hl_variable" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">mPadding</a>.<a id="a70" name="a70"></a>horizontal());</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mSize.x - mPadding.horizontal());</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">int</span> getContentHeight()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a>.y - <a class="code hl_variable" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">mPadding</a>.<a id="a71" name="a71"></a>vertical());</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(mSize.y - mPadding.vertical());</div>
 <div class="line">    }</div>
 <div class="line">    [[nodiscard]]</div>
 <div class="line">    <span class="keyword">const</span> glm::ivec2&amp; getExpanding()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a>;</div>
+<div class="line">        <span class="keywordflow">return</span> mExpanding;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setExpanding(<span class="keyword">const</span> glm::ivec2&amp; expanding)</div>
+<div class="line">    <span class="keywordtype">void</span> setExpanding(glm::ivec2 expanding)</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = expanding;</div>
+<div class="line">        <span class="keywordflow">if</span> (mExpanding == expanding) [[unlikely]] {</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        mExpanding = expanding;</div>
+<div class="line">        markMinContentSizeInvalid();</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordtype">void</span> setExpanding(<span class="keywordtype">int</span> expanding)</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = { expanding, expanding };</div>
+<div class="line">        setExpanding({expanding, expanding});</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordtype">void</span> setExpanding()</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = glm::ivec2(2);</div>
+<div class="line">        setExpanding(2);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AAnimator&gt;</a>&amp; getAnimator()<span class="keyword"> const </span>{</div>
@@ -446,31 +489,32 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    <span class="keywordtype">void</span> setAnimator(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AAnimator&gt;</a>&amp; animator);</div>
 <div class="line">    <span class="keywordtype">void</span> getTransform(glm::mat4&amp; transform) <span class="keyword">const</span>;</div>
 <div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
 <div class="line">    <span class="keywordtype">int</span> getExpandingHorizontal()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a>.x;</div>
+<div class="line">        <span class="keywordflow">return</span> mExpanding.x;</div>
 <div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
 <div class="line">    <span class="keywordtype">int</span> getExpandingVertical()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a>.y;</div>
+<div class="line">        <span class="keywordflow">return</span> mExpanding.y;</div>
 <div class="line">    }</div>
-<div class="line">    <a class="code hl_struct" href="structAFontStyle.html">AFontStyle</a>&amp; getFontStyle();</div>
 <div class="line"> </div>
-<div class="line">    [[nodiscard]] <span class="keywordtype">float</span> getOpacity()<span class="keyword"> const </span>{</div>
+<div class="line">    [[nodiscard]] <a class="code hl_struct" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a> getOpacity()<span class="keyword"> const </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> mOpacity;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordtype">void</span> setOpacity(<span class="keywordtype">float</span> opacity) {</div>
+<div class="line">    <span class="keywordtype">void</span> setOpacity(<a class="code hl_struct" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a> opacity) {</div>
 <div class="line">        mOpacity = opacity;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> invalidateFont();</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPosition(glm::ivec2 position);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a72" name="a72"></a><a class="code hl_function" href="classAView.html#ac385fe5c95866dbe081aac74c7dba519">setSizeForced</a>(glm::ivec2 size) {</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">mSize</a> = size;</div>
+<div class="line">    <span class="keywordtype">void</span> setSizeForced(glm::ivec2 size) {</div>
+<div class="line">        mSize = size;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setSize(glm::ivec2 size);</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setGeometry(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> <a id="_a73" name="_a73"></a><a class="code hl_struct" href="structViewAssertionSize.html">width</a>, <span class="keywordtype">int</span> <a class="code hl_struct" href="structViewAssertionSize.html">height</a>);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setGeometry(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> <a id="_a28" name="_a28"></a><a class="code hl_struct" href="structViewAssertionSize.html">width</a>, <span class="keywordtype">int</span> <a class="code hl_struct" href="structViewAssertionSize.html">height</a>);</div>
 <div class="line">    <span class="keywordtype">void</span> setGeometry(<span class="keyword">const</span> glm::ivec2&amp; position, <span class="keyword">const</span> glm::ivec2&amp; size) {</div>
 <div class="line">        setGeometry(position.x, position.y, size.x, size.y);</div>
 <div class="line">    }</div>
@@ -483,12 +527,16 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        mBlockClicksWhenPressed = value;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> glm::ivec2&amp; <a id="a74" name="a74"></a><a class="code hl_function" href="classAView.html#ae11b78477772c712d635eb2c540ad65d">getFixedSize</a>() {</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a5d5732f8af15828f75729ba5bde0d4c9">mFixedSize</a>;</div>
+<div class="line">    <span class="keyword">const</span> glm::ivec2&amp; getFixedSize() {</div>
+<div class="line">        <span class="keywordflow">return</span> mFixedSize;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordtype">void</span> setFixedSize(glm::ivec2 size) {</div>
-<div class="line">        <a id="a75" name="a75"></a><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(glm::all(glm::greaterThanEqual(size, glm::ivec2(-100000))), <span class="stringliteral">&quot;abnormal fixed size&quot;</span>);</div>
-<div class="line">        <a class="code hl_variable" href="classAView.html#a5d5732f8af15828f75729ba5bde0d4c9">mFixedSize</a> = size;</div>
+<div class="line">        <a id="a29" name="a29"></a><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(glm::all(glm::greaterThanEqual(size, glm::ivec2(-100000))), <span class="stringliteral">&quot;abnormal fixed size&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">if</span> (size == mFixedSize) [[unlikely]] {</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        mFixedSize = size;</div>
+<div class="line">        markMinContentSizeInvalid();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
@@ -504,7 +552,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keywordtype">bool</span> isPressed(<a id="_a76" name="_a76"></a><a class="code hl_class" href="classAPointerIndex.html">APointerIndex</a> index) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line">    <span class="keywordtype">bool</span> isPressed(<a id="_a30" name="_a30"></a><a class="code hl_class" href="classAPointerIndex.html">APointerIndex</a> index) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> mPressed.contains(index);</div>
 <div class="line">    }</div>
@@ -521,17 +569,17 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        <span class="keywordflow">return</span> mMouseEntered;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_enumeration" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a> getVisibility()<span class="keyword"> const</span></div>
+<div class="line">    Visibility getVisibility()<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        <span class="keywordflow">return</span> mVisibility;</div>
 <div class="line">    }</div>
-<div class="line">    <a class="code hl_enumeration" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a> getVisibilityRecursive() <span class="keyword">const</span>;</div>
+<div class="line">    Visibility getVisibilityRecursive() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setVisibility(<a class="code hl_enumeration" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a> visibility) <span class="keyword">noexcept</span>;</div>
+<div class="line">    <span class="keywordtype">void</span> setVisibility(Visibility visibility) <span class="keyword">noexcept</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setVisible(<span class="keywordtype">bool</span> <a id="_a77" name="_a77"></a><a class="code hl_struct" href="structViewAssertionVisible.html">visible</a>) <span class="keyword">noexcept</span></div>
+<div class="line">    <span class="keywordtype">void</span> setVisible(<span class="keywordtype">bool</span> <a id="_a31" name="_a31"></a><a class="code hl_struct" href="structViewAssertionVisible.html">visible</a>) <span class="keyword">noexcept</span></div>
 <div class="line">    {</div>
-<div class="line">        setVisibility(<a class="code hl_struct" href="structViewAssertionVisible.html">visible</a> ? <a class="code hl_enumvalue" href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54">Visibility::VISIBLE</a> : <a id="a78" name="a78"></a><a class="code hl_enumvalue" href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a5fb351568336ebb294804f81e3c8663d">Visibility::INVISIBLE</a>);</div>
+<div class="line">        setVisibility(<a class="code hl_struct" href="structViewAssertionVisible.html">visible</a> ? Visibility::VISIBLE : Visibility::INVISIBLE);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
@@ -543,27 +591,27 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        mMouseCollisionPolicy = mouseCollisionPolicy;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a79" name="a79"></a><a class="code hl_function" href="classAView.html#aacf35a2a25b71edbc985e970c394bf29">click</a>() {</div>
-<div class="line">        emit <a id="a80" name="a80"></a><a class="code hl_variable" href="classAView.html#a815fabb561c95b6b90a64686b707ec9e">clickedButton</a>(<a id="a81" name="a81"></a><a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(AInput::LBUTTON));</div>
-<div class="line">        emit <a id="a82" name="a82"></a><a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">clicked</a>();</div>
+<div class="line">    <span class="keywordtype">void</span> <a id="_a32" name="_a32"></a><a class="code hl_struct" href="structViewActionClick.html">click</a>() {</div>
+<div class="line">        <a id="a33" name="a33"></a><a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> clickedButton(<a id="a34" name="a34"></a><a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(AInput::LBUTTON));</div>
+<div class="line">        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> clicked();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a83" name="a83"></a><a class="code hl_function" href="classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71">pack</a>();</div>
+<div class="line">    <span class="keywordtype">void</span> pack();</div>
 <div class="line"> </div>
-<div class="line">     <span class="keywordtype">void</span> <a id="a84" name="a84"></a><a class="code hl_function" href="classAView.html#af46394aa10dbc12a7b9e5cadd5c3e740">focus</a>(<span class="keywordtype">bool</span> needFocusChainUpdate = <span class="keyword">true</span>);</div>
+<div class="line">     <span class="keywordtype">void</span> focus(<span class="keywordtype">bool</span> needFocusChainUpdate = <span class="keyword">true</span>);</div>
 <div class="line"> </div>
-<div class="line">     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a id="a85" name="a85"></a><a class="code hl_function" href="classAViewContainer.html#abd66caead2574fdb4da9891a803d014a">capturesFocus</a>();</div>
+<div class="line">     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> capturesFocus();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">bool</span> <a id="a86" name="a86"></a><a class="code hl_function" href="classAView.html#a37642918735ccb3939f63d85ff56310c">hasIndirectParent</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; v);</div>
+<div class="line">    <span class="keywordtype">bool</span> hasIndirectParent(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; v);</div>
 <div class="line"> </div>
-<div class="line">    [[nodiscard]] glm::ivec2 <a class="code hl_function" href="classAView.html#aa026069609b3bcfc580978ff801861eb">getPositionInWindow</a>() <span class="keyword">const</span>;</div>
+<div class="line">    [[nodiscard]] glm::ivec2 getPositionInWindow() <span class="keyword">const</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a87" name="a87"></a><a class="code hl_function" href="classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33">addAssName</a>(<span class="keyword">const</span> <a id="_a88" name="_a88"></a><a class="code hl_class" href="classAString.html">AString</a>&amp; assName);</div>
+<div class="line">    <span class="keywordtype">void</span> addAssName(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; assName);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a89" name="a89"></a><a class="code hl_function" href="classAView.html#a11d7426c20f9ef791040935a846960e6">removeAssName</a>(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; assName);</div>
+<div class="line">    <span class="keywordtype">void</span> removeAssName(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; assName);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">inline</span> <a class="code hl_class" href="classAView.html">AView</a>&amp; operator&lt;&lt;(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; assName) {</div>
-<div class="line">        <a class="code hl_function" href="classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33">addAssName</a>(assName);</div>
+<div class="line">        addAssName(assName);</div>
 <div class="line">        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -572,7 +620,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a>&amp; getCustomAss()<span class="keyword"> const </span>{</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_variable" href="classAView.html#a5a90d8af44986418e46ab4dcf5e9182e">mCustomStyleRule</a>;</div>
+<div class="line">        <span class="keywordflow">return</span> mCustomStyleRule;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> setCustomStyle(<a class="code hl_struct" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> rule);</div>
@@ -586,31 +634,33 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <a id="_a90" name="_a90"></a><a class="code hl_struct" href="struct__weak.html">_weak&lt;AView&gt;</a> weakPtr() {</div>
+<div class="line">    <a id="_a35" name="_a35"></a><a class="code hl_struct" href="struct__weak.html">_weak&lt;AView&gt;</a> weakPtr() {</div>
 <div class="line">        <span class="keywordflow">return</span> <a class="code hl_struct" href="struct__weak.html">_weak&lt;AView&gt;</a>(sharedPtr());</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a id="a91" name="a91"></a><a class="code hl_function" href="classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47">onGesture</a>(<span class="keyword">const</span> glm::ivec2&amp; origin, <span class="keyword">const</span> AGestureEvent&amp; event);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> onGesture(<span class="keyword">const</span> glm::ivec2&amp; origin, <span class="keyword">const</span> AGestureEvent&amp; event);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onMouseEnter();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a92" name="a92"></a><a class="code hl_function" href="classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7">onPointerMove</a>(glm::vec2 pos, <span class="keyword">const</span> <a id="_a93" name="_a93"></a><a class="code hl_struct" href="structAPointerMoveEvent.html">APointerMoveEvent</a>&amp; event);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPointerMove(glm::vec2 pos, <span class="keyword">const</span> <a id="_a36" name="_a36"></a><a class="code hl_struct" href="structAPointerMoveEvent.html">APointerMoveEvent</a>&amp; event);</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onMouseLeave();</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onDpiChanged();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a94" name="a94"></a><a class="code hl_function" href="classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b">onPointerPressed</a>(<span class="keyword">const</span> <a id="_a95" name="_a95"></a><a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPointerPressed(<span class="keyword">const</span> <a id="_a37" name="_a37"></a><a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a96" name="a96"></a><a class="code hl_function" href="classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b">onPointerReleased</a>(<span class="keyword">const</span> <a id="_a97" name="_a97"></a><a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPointerReleased(<span class="keyword">const</span> <a id="_a38" name="_a38"></a><a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event);</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onPointerDoubleClicked(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a98" name="a98"></a><a class="code hl_function" href="classAViewContainer.html#a495a90385729196ebdd503beec159a45">onScroll</a>(<span class="keyword">const</span> <a id="_a99" name="_a99"></a><a class="code hl_struct" href="structAScrollEvent.html">AScrollEvent</a>&amp; event);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onScroll(<span class="keyword">const</span> <a id="_a39" name="_a39"></a><a class="code hl_struct" href="structAScrollEvent.html">AScrollEvent</a>&amp; event);</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onKeyDown(AInput::Key key);</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onKeyRepeat(AInput::Key key);</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onKeyUp(AInput::Key key);</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onFocusAcquired();</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onFocusLost();</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onCharEntered(char16_t c);</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a id="a100" name="a100"></a><a class="code hl_function" href="classAView.html#a9c3deb7023947adc4c698540db4086c8">handlesNonMouseNavigation</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> handlesNonMouseNavigation();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> forceUpdateLayoutRecursively();</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> enabled = <span class="keyword">true</span>);</div>
 <div class="line"> </div>
@@ -629,25 +679,43 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        setEnabled(<span class="keyword">false</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a101" name="a101"></a><a class="code hl_function" href="classAView.html#ac6292013de2f384cb791f1c91787a362">operator+</a>(<a class="code hl_struct" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> rule) {</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> operator+(<a class="code hl_struct" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> rule) {</div>
 <div class="line">        setCustomStyle(std::move(rule));</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a102" name="a102"></a><a class="code hl_function" href="classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3">onClickPrevented</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onClickPrevented();</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a id="a103" name="a103"></a><a class="code hl_function" href="classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a">invalidateAllStyles</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> invalidateAllStyles();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="a104" name="a104"></a><a class="code hl_function" href="classAView.html#aae643e27fa9578fecad36519f30ed043">invalidateStateStyles</a>();</div>
+<div class="line">    <span class="keywordtype">void</span> invalidateStateStyles() {</div>
+<div class="line">        invalidateStateStylesImpl(getMinimumSizePlusMargin());</div>
+<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60">invalidateAssHelper</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> invalidateAssHelper();</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a id="a105" name="a105"></a><a class="code hl_function" href="classAView.html#a96b967218c79654c2bca5cc8c686a407">wantsTouchscreenKeyboard</a>();</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> wantsTouchscreenKeyboard();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setSkipUntilLayoutUpdate(<span class="keywordtype">bool</span> skipUntilLayoutUpdate) {</div>
+<div class="line">        mSkipUntilLayoutUpdate = skipUntilLayoutUpdate;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setFloating(AFloat f) <span class="keyword">noexcept</span></div>
+<div class="line">    {</div>
+<div class="line">        mFloating = f;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    [[nodiscard]]</div>
+<div class="line">    AFloat getFloating() const noexcept</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> mFloating;</div>
+<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">signals:</div>
-<div class="line">    <a id="_a106" name="_a106"></a><a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> <a id="a107" name="a107"></a><a class="code hl_variable" href="classAView.html#aa0b29b615b99f9b60f08a3669aa19adf">viewGraphSubtreeChanged</a>;</div>
+<div class="line">    <a id="_a40" name="_a40"></a><a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> viewGraphSubtreeChanged;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;bool&gt;</a> hoveredState;</div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> mouseEnter;</div>
@@ -661,168 +729,103 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> enabled;</div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> disabled;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;APointerIndex&gt;</a> <a class="code hl_variable" href="classAView.html#a815fabb561c95b6b90a64686b707ec9e">clickedButton</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;APointerIndex&gt;</a> clickedButton;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> <a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">clicked</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> clicked;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> <a id="a108" name="a108"></a><a class="code hl_variable" href="classAView.html#a129f3b9ae234f84498c7965ad6ee8df4">positionChanged</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> positionChanged;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> <a id="a109" name="a109"></a><a class="code hl_variable" href="classAView.html#accd0aaa185656f113bb1b4127ba36a1e">sizeChanged</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> sizeChanged;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2, glm::ivec2&gt;</a> <a id="a110" name="a110"></a><a class="code hl_variable" href="classAView.html#a5034ce1e3e117e2f4ece91c1d038dbe0">geometryChanged</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2, glm::ivec2&gt;</a> geometryChanged;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> <a id="a111" name="a111"></a><a class="code hl_variable" href="classAView.html#a603b11e87b05b203f321f6be85d45de8">scrolled</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> scrolled;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;AInput::Key&gt;</a> <a id="a112" name="a112"></a><a class="code hl_variable" href="classAView.html#a7299aeca90d52aa7406bebf1b5bb604a">keyPressed</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;AInput::Key&gt;</a> keyPressed;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;AInput::Key&gt;</a> <a id="a113" name="a113"></a><a class="code hl_variable" href="classAView.html#a02446f0c63358a237c2fcb0da0487b8d">keyReleased</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;AInput::Key&gt;</a> keyReleased;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> <a id="a114" name="a114"></a><a class="code hl_variable" href="classAView.html#abec87965389be9d82031e53e2e036bb1">clickedRight</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> clickedRight;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> <a id="a115" name="a115"></a><a class="code hl_variable" href="classAView.html#a8d60b048342b29b46dac2657ce6e781b">clickedRightOrLongPressed</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> clickedRightOrLongPressed;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;APointerIndex&gt;</a> doubleClicked;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> customCssPropertyChanged;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;bool&gt;</a> <a id="a116" name="a116"></a><a class="code hl_variable" href="classAView.html#a96f3c6e2b8c960c5081866e26baa828e">focusState</a>;</div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;bool&gt;</a> focusState;</div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> focusAcquired;</div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;&gt;</a> focusLost;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;_&lt;AView&gt;</a>&gt; childFocused;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    <a id="_a117" name="_a117"></a><a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a> mHovered = <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a>(hoveredState, mouseEnter, mouseLeave);</div>
-<div class="line">    <a id="_a118" name="_a118"></a><a class="code hl_class" href="classASmallVector.html">ASmallVector&lt;APointerIndex, 1&gt;</a> mPressed;</div>
+<div class="line">    <a id="_a41" name="_a41"></a><a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a> mHovered = <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a>(hoveredState, mouseEnter, mouseLeave);</div>
+<div class="line">    <a id="_a42" name="_a42"></a><a class="code hl_class" href="classASmallVector.html">ASmallVector&lt;APointerIndex, 1&gt;</a> mPressed;</div>
 <div class="line">    <span class="comment">//AWatchable&lt;bool&gt; mFocused = AWatchable&lt;bool&gt;(pressedState, pressed, released);</span></div>
 <div class="line">    <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a> mEnabled = <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a>(enabledState, enabled, disabled, <span class="keyword">true</span>);</div>
 <div class="line">    <span class="keywordtype">bool</span> mDirectlyEnabled = <span class="keyword">true</span>;</div>
 <div class="line">    <span class="keywordtype">bool</span> mParentEnabled = <span class="keyword">true</span>;</div>
-<div class="line">    <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a> mHasFocus = <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a>(<a class="code hl_variable" href="classAView.html#a96f3c6e2b8c960c5081866e26baa828e">focusState</a>, focusAcquired, focusLost, <span class="keyword">false</span>);</div>
+<div class="line">    <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a> mHasFocus = <a class="code hl_class" href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt;bool&gt;</a>(focusState, focusAcquired, focusLost, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> notifyParentChildFocused(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> &amp;view);</div>
+<div class="line">    AFloat mFloating = AFloat::NONE;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">struct </span>RenderToTexture {</div>
+<div class="line">        _unique&lt;IRenderViewToTexture&gt; rendererInterface;</div>
+<div class="line">        <a id="_a43" name="_a43"></a><a class="code hl_struct" href="structIRenderViewToTexture_1_1InvalidArea.html">IRenderViewToTexture::InvalidArea</a> invalidArea;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">bool</span> drawFromTexture = <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordtype">bool</span> skipRedrawUntilTextureIsPresented = <span class="keyword">false</span>;</div>
+<div class="line">    };</div>
+<div class="line">    <a class="code hl_class" href="classAOptional.html">AOptional&lt;RenderToTexture&gt;</a> mRenderToTexture;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> invalidateStateStylesImpl(glm::ivec2 prevMinimumSizePlusField);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> notifyParentChildFocused(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; view);</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line">API_AUI_VIEWS std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="classAView.html">AView</a>&amp; view);</div>
-<div class="ttc" id="aclassAAnimator_html"><div class="ttname"><a href="classAAnimator.html">AAnimator</a></div><div class="ttdef"><b>Definition:</b> AAnimator.h:25</div></div>
+<div class="ttc" id="aclassAAnimator_html"><div class="ttname"><a href="classAAnimator.html">AAnimator</a></div><div class="ttdef"><b>Definition:</b> AAnimator.h:26</div></div>
 <div class="ttc" id="aclassAAssHelper_html"><div class="ttname"><a href="classAAssHelper.html">AAssHelper</a></div><div class="ttdoc">Remember, ASS is not a butt. ASS is Aui Style Sheets.</div><div class="ttdef"><b>Definition:</b> AAssHelper.h:32</div></div>
-<div class="ttc" id="aclassABaseWindow_html"><div class="ttname"><a href="classABaseWindow.html">ABaseWindow</a></div><div class="ttdef"><b>Definition:</b> ABaseWindow.h:33</div></div>
 <div class="ttc" id="aclassACursor_html"><div class="ttname"><a href="classACursor.html">ACursor</a></div><div class="ttdoc">Represents cursor type.</div><div class="ttdef"><b>Definition:</b> ACursor.h:27</div></div>
 <div class="ttc" id="aclassAFieldSignalEmitter_3_01bool_01_4_html"><div class="ttname"><a href="classAFieldSignalEmitter_3_01bool_01_4.html">AFieldSignalEmitter&lt; bool &gt;</a></div><div class="ttdef"><b>Definition:</b> AFieldSignalEmitter.h:51</div></div>
-<div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition:</b> AObject.h:51</div></div>
+<div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition:</b> AObject.h:49</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:32</div></div>
 <div class="ttc" id="aclassAPointerIndex_html"><div class="ttname"><a href="classAPointerIndex.html">APointerIndex</a></div><div class="ttdoc">Wrapper class that stores either mouse button index or finger index.</div><div class="ttdef"><b>Definition:</b> APointerIndex.h:21</div></div>
 <div class="ttc" id="aclassAPointerIndex_html_a49a88f55f3c0145e68138f593a285cb6"><div class="ttname"><a href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a></div><div class="ttdeci">AOptional&lt; AInput::Key &gt; button() const noexcept</div><div class="ttdef"><b>Definition:</b> APointerIndex.h:56</div></div>
-<div class="ttc" id="aclassARender_html"><div class="ttname"><a href="classARender.html">ARender</a></div><div class="ttdoc">Rendering facade for IRenderer.</div><div class="ttdef"><b>Definition:</b> ARender.h:28</div></div>
 <div class="ttc" id="aclassASignal_html"><div class="ttname"><a href="classASignal.html">ASignal&lt; Args... &gt;</a></div></div>
 <div class="ttc" id="aclassASmallVector_html"><div class="ttname"><a href="classASmallVector.html">ASmallVector</a></div><div class="ttdoc">Vector-like container consisting of few elements on stack and switches to dynamic allocation vector i...</div><div class="ttdef"><b>Definition:</b> ASmallVector.h:34</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition:</b> AString.h:37</div></div>
 <div class="ttc" id="aclassAStylesheet_html"><div class="ttname"><a href="classAStylesheet.html">AStylesheet</a></div><div class="ttdef"><b>Definition:</b> AStylesheet.h:21</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector&lt; AString &gt;</a></div></div>
-<div class="ttc" id="aclassAViewContainer_html"><div class="ttname"><a href="classAViewContainer.html">AViewContainer</a></div><div class="ttdoc">A view that represents a set of views.</div><div class="ttdef"><b>Definition:</b> AViewContainer.h:65</div></div>
-<div class="ttc" id="aclassAViewContainer_html_a01b482963b8f42828d7cd844f1a7ca1a"><div class="ttname"><a href="classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a">AViewContainer::invalidateAllStyles</a></div><div class="ttdeci">void invalidateAllStyles() override</div><div class="ttdoc">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:413</div></div>
-<div class="ttc" id="aclassAViewContainer_html_a406a7ac1ab42080030489ea9b72e6b47"><div class="ttname"><a href="classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47">AViewContainer::onGesture</a></div><div class="ttdeci">bool onGesture(const glm::ivec2 &amp;origin, const AGestureEvent &amp;event) override</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:490</div></div>
-<div class="ttc" id="aclassAViewContainer_html_a495a90385729196ebdd503beec159a45"><div class="ttname"><a href="classAViewContainer.html#a495a90385729196ebdd503beec159a45">AViewContainer::onScroll</a></div><div class="ttdeci">void onScroll(const AScrollEvent &amp;event) override</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:312</div></div>
-<div class="ttc" id="aclassAViewContainer_html_a5e3c5c7fe6ad14e9e062bad90199d0d7"><div class="ttname"><a href="classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7">AViewContainer::onPointerMove</a></div><div class="ttdeci">void onPointerMove(glm::vec2 pos, const APointerMoveEvent &amp;event) override</div><div class="ttdoc">Handles pointer hover events.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:194</div></div>
-<div class="ttc" id="aclassAViewContainer_html_a69d4971fa92628f15234eed8f0eb999b"><div class="ttname"><a href="classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b">AViewContainer::onPointerReleased</a></div><div class="ttdeci">void onPointerReleased(const APointerReleasedEvent &amp;event) override</div><div class="ttdoc">Called on pointer (mouse) released event.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:280</div></div>
-<div class="ttc" id="aclassAViewContainer_html_a83ee077afb5dfc595ceba3664b75e0b0"><div class="ttname"><a href="classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0">AViewContainer::getContentMinimumWidth</a></div><div class="ttdeci">int getContentMinimumWidth(ALayoutDirection layout) override</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:225</div></div>
-<div class="ttc" id="aclassAViewContainer_html_aa1d0bcd57f85776cf9e964db2afa36fd"><div class="ttname"><a href="classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd">AViewContainer::consumesClick</a></div><div class="ttdeci">bool consumesClick(const glm::ivec2 &amp;pos) override</div><div class="ttdoc">Determines whether this AView processes this click or passes it thru.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:322</div></div>
-<div class="ttc" id="aclassAViewContainer_html_ab4eea3e436d989457f8cb12747d851ec"><div class="ttname"><a href="classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec">AViewContainer::getContentMinimumHeight</a></div><div class="ttdeci">int getContentMinimumHeight(ALayoutDirection layout) override</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:233</div></div>
-<div class="ttc" id="aclassAViewContainer_html_abd66caead2574fdb4da9891a803d014a"><div class="ttname"><a href="classAViewContainer.html#abd66caead2574fdb4da9891a803d014a">AViewContainer::capturesFocus</a></div><div class="ttdeci">bool capturesFocus() override</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:486</div></div>
-<div class="ttc" id="aclassAViewContainer_html_abf15c6d15e978852c9754c27b875de8b"><div class="ttname"><a href="classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b">AViewContainer::onPointerPressed</a></div><div class="ttdeci">void onPointerPressed(const APointerPressedEvent &amp;event) override</div><div class="ttdoc">Called on pointer (mouse) released event.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:240</div></div>
-<div class="ttc" id="aclassAViewContainer_html_ae31e59f7f259b654ffa1a1c29d538c55"><div class="ttname"><a href="classAViewContainer.html#ae31e59f7f259b654ffa1a1c29d538c55">AViewContainer::render</a></div><div class="ttdeci">void render(ClipOptimizationContext context) override</div><div class="ttdoc">Draws this AView. Noone should call this function except rendering routine.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:185</div></div>
-<div class="ttc" id="aclassAViewContainer_html_ae633e5448273fb6a368f6cfa9d3bca60"><div class="ttname"><a href="classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60">AViewContainer::invalidateAssHelper</a></div><div class="ttdeci">void invalidateAssHelper() override</div><div class="ttdoc">Resets mAssHelper.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:497</div></div>
-<div class="ttc" id="aclassAViewContainer_html_ae73910fb8fc93ba42c9e0be1564250cb"><div class="ttname"><a href="classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb">AViewContainer::onViewGraphSubtreeChanged</a></div><div class="ttdeci">void onViewGraphSubtreeChanged() override</div><div class="ttdoc">Called when direct or indirect parent has changed.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:554</div></div>
-<div class="ttc" id="aclassAViewContainer_html_af19dee44d94f7ff63fa60816b48e7de3"><div class="ttname"><a href="classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3">AViewContainer::onClickPrevented</a></div><div class="ttdeci">void onClickPrevented() override</div><div class="ttdoc">Called on ABaseWindow::preventClickOnPointerRelease.</div><div class="ttdef"><b>Definition:</b> AViewContainer.cpp:540</div></div>
-<div class="ttc" id="aclassAView_html"><div class="ttname"><a href="classAView.html">AView</a></div><div class="ttdoc">Base class of all UI objects.</div><div class="ttdef"><b>Definition:</b> AView.h:76</div></div>
-<div class="ttc" id="aclassAView_html_a02446f0c63358a237c2fcb0da0487b8d"><div class="ttname"><a href="classAView.html#a02446f0c63358a237c2fcb0da0487b8d">AView::keyReleased</a></div><div class="ttdeci">emits&lt; AInput::Key &gt; keyReleased</div><div class="ttdoc">Keyboard key released.</div><div class="ttdef"><b>Definition:</b> AView.h:1000</div></div>
-<div class="ttc" id="aclassAView_html_a0291fee9c96836079ecdd0d591d5791c"><div class="ttname"><a href="classAView.html#a0291fee9c96836079ecdd0d591d5791c">AView::mCursor</a></div><div class="ttdeci">AOptional&lt; ACursor &gt; mCursor</div><div class="ttdoc">Determines shape which should pointer take when it's above this AView.</div><div class="ttdef"><b>Definition:</b> AView.h:197</div></div>
-<div class="ttc" id="aclassAView_html_a0569ae03bfeebb23dbea2da2585f0d67"><div class="ttname"><a href="classAView.html#a0569ae03bfeebb23dbea2da2585f0d67">AView::getOverflowMask</a></div><div class="ttdeci">AOverflowMask getOverflowMask() const</div><div class="ttdoc">Controls how does the overflow (stencil) mask is produced.</div><div class="ttdef"><b>Definition:</b> AView.h:419</div></div>
-<div class="ttc" id="aclassAView_html_a11d7426c20f9ef791040935a846960e6"><div class="ttname"><a href="classAView.html#a11d7426c20f9ef791040935a846960e6">AView::removeAssName</a></div><div class="ttdeci">void removeAssName(const AString &amp;assName)</div><div class="ttdoc">Removes an ASS class to this AView.</div><div class="ttdef"><b>Definition:</b> AView.cpp:291</div></div>
-<div class="ttc" id="aclassAView_html_a129f3b9ae234f84498c7965ad6ee8df4"><div class="ttname"><a href="classAView.html#a129f3b9ae234f84498c7965ad6ee8df4">AView::positionChanged</a></div><div class="ttdeci">emits&lt; glm::ivec2 &gt; positionChanged</div><div class="ttdoc">Position changed.</div><div class="ttdef"><b>Definition:</b> AView.h:975</div></div>
-<div class="ttc" id="aclassAView_html_a1934c219a3411ec2917c9cd05f0fe453"><div class="ttname"><a href="classAView.html#a1934c219a3411ec2917c9cd05f0fe453">AView::getSize</a></div><div class="ttdeci">const glm::ivec2 &amp; getSize() const</div><div class="ttdoc">Size, including content area, border and padding.</div><div class="ttdef"><b>Definition:</b> AView.h:362</div></div>
-<div class="ttc" id="aclassAView_html_a1ac0adc58a85edb3bf5fcbd8977fec6b"><div class="ttname"><a href="classAView.html#a1ac0adc58a85edb3bf5fcbd8977fec6b">AView::mSize</a></div><div class="ttdeci">glm::ivec2 mSize</div><div class="ttdoc">Size, including content area, border and padding.</div><div class="ttdef"><b>Definition:</b> AView.h:207</div></div>
-<div class="ttc" id="aclassAView_html_a1b273cbe961c8633b17171b750762135"><div class="ttname"><a href="classAView.html#a1b273cbe961c8633b17171b750762135">AView::transformGestureEventsToDesktop</a></div><div class="ttdeci">bool transformGestureEventsToDesktop(const glm::ivec2 &amp;origin, const AGestureEvent &amp;event)</div><div class="ttdoc">Converts touch screen events to desktop.</div><div class="ttdef"><b>Definition:</b> AView.cpp:593</div></div>
-<div class="ttc" id="aclassAView_html_a22c7f11d281b887e5cf672f4f992d3a3"><div class="ttname"><a href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">AView::mAssNames</a></div><div class="ttdeci">AVector&lt; AString &gt; mAssNames</div><div class="ttdoc">ASS class names.</div><div class="ttdef"><b>Definition:</b> AView.h:253</div></div>
-<div class="ttc" id="aclassAView_html_a274972d0e96c9ad2779fe5dfdeb71727"><div class="ttname"><a href="classAView.html#a274972d0e96c9ad2779fe5dfdeb71727">AView::getTotalFieldVertical</a></div><div class="ttdeci">float getTotalFieldVertical() const</div><div class="ttdef"><b>Definition:</b> AView.cpp:231</div></div>
-<div class="ttc" id="aclassAView_html_a346bb0a269caf3f15e1f90320bd7479d"><div class="ttname"><a href="classAView.html#a346bb0a269caf3f15e1f90320bd7479d">AView::getPadding</a></div><div class="ttdeci">const ABoxFields &amp; getPadding() const</div><div class="ttdoc">Returns the padding.</div><div class="ttdef"><b>Definition:</b> AView.h:496</div></div>
-<div class="ttc" id="aclassAView_html_a37642918735ccb3939f63d85ff56310c"><div class="ttname"><a href="classAView.html#a37642918735ccb3939f63d85ff56310c">AView::hasIndirectParent</a></div><div class="ttdeci">bool hasIndirectParent(const _&lt; AView &gt; &amp;v)</div><div class="ttdoc">Checks if the specified view is an indirect parent of this view.</div><div class="ttdef"><b>Definition:</b> AView.cpp:648</div></div>
-<div class="ttc" id="aclassAView_html_a3f2e024a5acecec85af1aedaa67066e5"><div class="ttname"><a href="classAView.html#a3f2e024a5acecec85af1aedaa67066e5">AView::getTotalFieldHorizontal</a></div><div class="ttdeci">float getTotalFieldHorizontal() const</div><div class="ttdef"><b>Definition:</b> AView.cpp:226</div></div>
-<div class="ttc" id="aclassAView_html_a40d1a378258fac515816c3c1a9028473"><div class="ttname"><a href="classAView.html#a40d1a378258fac515816c3c1a9028473">AView::mPosition</a></div><div class="ttdeci">glm::ivec2 mPosition</div><div class="ttdoc">Top left corner's position relative to top left corner's position of the parent AView.</div><div class="ttdef"><b>Definition:</b> AView.h:202</div></div>
-<div class="ttc" id="aclassAView_html_a4475a69d795612634df68566a0b9d5fb"><div class="ttname"><a href="classAView.html#a4475a69d795612634df68566a0b9d5fb">AView::mSkipUntilLayoutUpdate</a></div><div class="ttdeci">bool mSkipUntilLayoutUpdate</div><div class="ttdoc">If set to true, AViewContainer is obligated ignore this view. This value is set to false by AView::se...</div><div class="ttdef"><b>Definition:</b> AView.h:262</div></div>
-<div class="ttc" id="aclassAView_html_a4e1593b6ae4efe2a6b6b6d376c7070f4"><div class="ttname"><a href="classAView.html#a4e1593b6ae4efe2a6b6b6d376c7070f4">AView::postRender</a></div><div class="ttdeci">virtual void postRender()</div><div class="ttdoc">Performs post-draw routines of this AView. Noone should call this function except rendering routine.</div><div class="ttdef"><b>Definition:</b> AView.cpp:106</div></div>
-<div class="ttc" id="aclassAView_html_a5034ce1e3e117e2f4ece91c1d038dbe0"><div class="ttname"><a href="classAView.html#a5034ce1e3e117e2f4ece91c1d038dbe0">AView::geometryChanged</a></div><div class="ttdeci">emits&lt; glm::ivec2, glm::ivec2 &gt; geometryChanged</div><div class="ttdoc">Geometry (position and size) changed.</div><div class="ttdef"><b>Definition:</b> AView.h:985</div></div>
-<div class="ttc" id="aclassAView_html_a5122d5846227520294bda27e6b45ea4a"><div class="ttname"><a href="classAView.html#a5122d5846227520294bda27e6b45ea4a">AView::mExpanding</a></div><div class="ttdeci">glm::ivec2 mExpanding</div><div class="ttdoc">Expansion coefficient. Hints layout manager how much this AView should be extended relative to other ...</div><div class="ttdef"><b>Definition:</b> AView.h:221</div></div>
-<div class="ttc" id="aclassAView_html_a521f58942c69ff63566ada3e3d774f32"><div class="ttname"><a href="classAView.html#a521f58942c69ff63566ada3e3d774f32">AView::getTotalOccupiedWidth</a></div><div class="ttdeci">float getTotalOccupiedWidth() const</div><div class="ttdef"><b>Definition:</b> AView.h:451</div></div>
-<div class="ttc" id="aclassAView_html_a546a17cc5d955dfa75928d48337c65a7"><div class="ttname"><a href="classAView.html#a546a17cc5d955dfa75928d48337c65a7">AView::getMinSize</a></div><div class="ttdeci">const glm::ivec2 &amp; getMinSize() const</div><div class="ttdef"><b>Definition:</b> AView.h:370</div></div>
-<div class="ttc" id="aclassAView_html_a56b5b208d3138683ae18dfe8d8edbdae"><div class="ttname"><a href="classAView.html#a56b5b208d3138683ae18dfe8d8edbdae">AView::getBorderRadius</a></div><div class="ttdeci">float getBorderRadius() const</div><div class="ttdoc">border-radius, specified in ASS.</div><div class="ttdef"><b>Definition:</b> AView.h:431</div></div>
-<div class="ttc" id="aclassAView_html_a5a90d8af44986418e46ab4dcf5e9182e"><div class="ttname"><a href="classAView.html#a5a90d8af44986418e46ab4dcf5e9182e">AView::mCustomStyleRule</a></div><div class="ttdeci">ass::PropertyListRecursive mCustomStyleRule</div><div class="ttdoc">Custom ASS Rules.</div><div class="ttdef"><b>Definition:</b> AView.h:192</div></div>
-<div class="ttc" id="aclassAView_html_a5bacbb8fc6440c7cf6b9549e580b098e"><div class="ttname"><a href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">AView::mMargin</a></div><div class="ttdeci">ABoxFields mMargin</div><div class="ttdoc">Margin, which defines the spacing around this AView. Processed by the layout manager.</div><div class="ttdef"><b>Definition:</b> AView.h:241</div></div>
-<div class="ttc" id="aclassAView_html_a5d5732f8af15828f75729ba5bde0d4c9"><div class="ttname"><a href="classAView.html#a5d5732f8af15828f75729ba5bde0d4c9">AView::mFixedSize</a></div><div class="ttdeci">glm::ivec2 mFixedSize</div><div class="ttdoc">Fixed size.</div><div class="ttdef"><b>Definition:</b> AView.h:236</div></div>
-<div class="ttc" id="aclassAView_html_a5f31342ebc6f35e57201cc55d3e64b8f"><div class="ttname"><a href="classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f">AView::redraw</a></div><div class="ttdeci">void redraw()</div><div class="ttdoc">Request window manager to redraw this AView.</div><div class="ttdef"><b>Definition:</b> AView.cpp:66</div></div>
-<div class="ttc" id="aclassAView_html_a603b11e87b05b203f321f6be85d45de8"><div class="ttname"><a href="classAView.html#a603b11e87b05b203f321f6be85d45de8">AView::scrolled</a></div><div class="ttdeci">emits&lt; glm::ivec2 &gt; scrolled</div><div class="ttdoc">Scroll event.</div><div class="ttdef"><b>Definition:</b> AView.h:990</div></div>
-<div class="ttc" id="aclassAView_html_a646fbebc295c3a2d36ba3fad6cf80a71"><div class="ttname"><a href="classAView.html#a646fbebc295c3a2d36ba3fad6cf80a71">AView::pack</a></div><div class="ttdeci">void pack()</div><div class="ttdoc">Sets minimal size.</div><div class="ttdef"><b>Definition:</b> AView.cpp:274</div></div>
-<div class="ttc" id="aclassAView_html_a65a8d1574db7e833c6481aecfbf9cadb"><div class="ttname"><a href="classAView.html#a65a8d1574db7e833c6481aecfbf9cadb">AView::mMaxSize</a></div><div class="ttdeci">glm::ivec2 mMaxSize</div><div class="ttdoc">Maximal size.</div><div class="ttdef"><b>Definition:</b> AView.h:231</div></div>
-<div class="ttc" id="aclassAView_html_a67b2a408d7fbcb07fd8c4a5fda68006b"><div class="ttname"><a href="classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b">AView::setExtraStylesheet</a></div><div class="ttdeci">void setExtraStylesheet(_&lt; AStylesheet &gt; extraStylesheet)</div><div class="ttdef"><b>Definition:</b> AView.h:382</div></div>
-<div class="ttc" id="aclassAView_html_a6af1dde86c744d781a729568c7a595a2"><div class="ttname"><a href="classAView.html#a6af1dde86c744d781a729568c7a595a2">AView::getParent</a></div><div class="ttdeci">AViewContainer * getParent() const</div><div class="ttdoc">Parent AView.</div><div class="ttdef"><b>Definition:</b> AView.h:527</div></div>
-<div class="ttc" id="aclassAView_html_a6d4886486fa16bbfda71ddb2546bf517"><div class="ttname"><a href="classAView.html#a6d4886486fa16bbfda71ddb2546bf517">AView::mAss</a></div><div class="ttdeci">std::array&lt; ass::prop::IPropertyBase *, int(ass::prop::PropertySlot::COUNT)&gt; mAss</div><div class="ttdoc">Drawing list, or baking drawing commands so that you don't have to parse the ASS every time.</div><div class="ttdef"><b>Definition:</b> AView.h:187</div></div>
-<div class="ttc" id="aclassAView_html_a6e70ccf042a8ff10deea1f538377eb91"><div class="ttname"><a href="classAView.html#a6e70ccf042a8ff10deea1f538377eb91">AView::composeContextMenu</a></div><div class="ttdeci">virtual AMenuModel composeContextMenu()</div><div class="ttdoc">Produce context (right click) menu.</div><div class="ttdef"><b>Definition:</b> AView.cpp:390</div></div>
-<div class="ttc" id="aclassAView_html_a7299aeca90d52aa7406bebf1b5bb604a"><div class="ttname"><a href="classAView.html#a7299aeca90d52aa7406bebf1b5bb604a">AView::keyPressed</a></div><div class="ttdeci">emits&lt; AInput::Key &gt; keyPressed</div><div class="ttdoc">Keyboard key pressed.</div><div class="ttdef"><b>Definition:</b> AView.h:995</div></div>
-<div class="ttc" id="aclassAView_html_a815fabb561c95b6b90a64686b707ec9e"><div class="ttname"><a href="classAView.html#a815fabb561c95b6b90a64686b707ec9e">AView::clickedButton</a></div><div class="ttdeci">emits&lt; APointerIndex &gt; clickedButton</div><div class="ttdoc">Some mouse button clicked.</div><div class="ttdef"><b>Definition:</b> AView.h:965</div></div>
-<div class="ttc" id="aclassAView_html_a83eb2cea2f2ca2d86351fc34f7ffdf33"><div class="ttname"><a href="classAView.html#a83eb2cea2f2ca2d86351fc34f7ffdf33">AView::addAssName</a></div><div class="ttdeci">void addAssName(const AString &amp;assName)</div><div class="ttdoc">Adds an ASS class to this AView.</div><div class="ttdef"><b>Definition:</b> AView.cpp:279</div></div>
-<div class="ttc" id="aclassAView_html_a8d60b048342b29b46dac2657ce6e781b"><div class="ttname"><a href="classAView.html#a8d60b048342b29b46dac2657ce6e781b">AView::clickedRightOrLongPressed</a></div><div class="ttdeci">emits clickedRightOrLongPressed</div><div class="ttdoc">Right mouse button clicked or long press gesture applied.</div><div class="ttdef"><b>Definition:</b> AView.h:1010</div></div>
-<div class="ttc" id="aclassAView_html_a91e63d78d42435872c5482776046fdfc"><div class="ttname"><a href="classAView.html#a91e63d78d42435872c5482776046fdfc">AView::getOverflow</a></div><div class="ttdeci">AOverflow getOverflow() const</div><div class="ttdoc">Determines whether display graphics that go out of the bounds of this AView or not.</div><div class="ttdef"><b>Definition:</b> AView.h:403</div></div>
-<div class="ttc" id="aclassAView_html_a94e793bd34bdbd3b47a5bd5660747e18"><div class="ttname"><a href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">AView::mPadding</a></div><div class="ttdeci">ABoxFields mPadding</div><div class="ttdoc">Padding, which defines the spacing around content area inside the view. Processed by AView implementa...</div><div class="ttdef"><b>Definition:</b> AView.h:246</div></div>
-<div class="ttc" id="aclassAView_html_a96b967218c79654c2bca5cc8c686a407"><div class="ttname"><a href="classAView.html#a96b967218c79654c2bca5cc8c686a407">AView::wantsTouchscreenKeyboard</a></div><div class="ttdeci">virtual bool wantsTouchscreenKeyboard()</div><div class="ttdoc">Returns true if view is textfield-like view which requires touchscreen keyboard when clicked.</div><div class="ttdef"><b>Definition:</b> AView.cpp:657</div></div>
-<div class="ttc" id="aclassAView_html_a96e6fe3f4798ee783c6d2e2bdd69dbe7"><div class="ttname"><a href="classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7">AView::setMargin</a></div><div class="ttdeci">void setMargin(const ABoxFields &amp;margin)</div><div class="ttdoc">Sets the margin.</div><div class="ttdef"><b>Definition:</b> AView.h:478</div></div>
-<div class="ttc" id="aclassAView_html_a96f3c6e2b8c960c5081866e26baa828e"><div class="ttname"><a href="classAView.html#a96f3c6e2b8c960c5081866e26baa828e">AView::focusState</a></div><div class="ttdeci">emits&lt; bool &gt; focusState</div><div class="ttdoc">Focus state changed.</div><div class="ttdef"><b>Definition:</b> AView.h:1020</div></div>
-<div class="ttc" id="aclassAView_html_a9c3deb7023947adc4c698540db4086c8"><div class="ttname"><a href="classAView.html#a9c3deb7023947adc4c698540db4086c8">AView::handlesNonMouseNavigation</a></div><div class="ttdeci">virtual bool handlesNonMouseNavigation()</div><div class="ttdef"><b>Definition:</b> AView.cpp:432</div></div>
-<div class="ttc" id="aclassAView_html_aa026069609b3bcfc580978ff801861eb"><div class="ttname"><a href="classAView.html#aa026069609b3bcfc580978ff801861eb">AView::getPositionInWindow</a></div><div class="ttdeci">glm::ivec2 getPositionInWindow() const</div><div class="ttdef"><b>Definition:</b> AView.cpp:460</div></div>
-<div class="ttc" id="aclassAView_html_aa0b29b615b99f9b60f08a3669aa19adf"><div class="ttname"><a href="classAView.html#aa0b29b615b99f9b60f08a3669aa19adf">AView::viewGraphSubtreeChanged</a></div><div class="ttdeci">emits viewGraphSubtreeChanged</div><div class="ttdef"><b>Definition:</b> AView.h:948</div></div>
-<div class="ttc" id="aclassAView_html_aa22ab8618b38eab629d44fc6f2e8ea5e"><div class="ttname"><a href="classAView.html#aa22ab8618b38eab629d44fc6f2e8ea5e">AView::getCursor</a></div><div class="ttdeci">const AOptional&lt; ACursor &gt; &amp; getCursor() const</div><div class="ttdoc">Determines shape which should pointer take when it's above this AView.</div><div class="ttdef"><b>Definition:</b> AView.h:535</div></div>
-<div class="ttc" id="aclassAView_html_aa80d3e423a09a2ea728e68560e507281"><div class="ttname"><a href="classAView.html#aa80d3e423a09a2ea728e68560e507281">AView::mTextOverflow</a></div><div class="ttdeci">ATextOverflow mTextOverflow</div><div class="ttdoc">Determines how to display text that go out of the bounds.</div><div class="ttdef"><b>Definition:</b> AView.h:182</div></div>
-<div class="ttc" id="aclassAView_html_aa8b76866565fc34ce1ed970708de8125"><div class="ttname"><a href="classAView.html#aa8b76866565fc34ce1ed970708de8125">AView::extraStylesheet</a></div><div class="ttdeci">const _&lt; AStylesheet &gt; &amp; extraStylesheet() const noexcept</div><div class="ttdef"><b>Definition:</b> AView.h:396</div></div>
-<div class="ttc" id="aclassAView_html_aacf35a2a25b71edbc985e970c394bf29"><div class="ttname"><a href="classAView.html#aacf35a2a25b71edbc985e970c394bf29">AView::click</a></div><div class="ttdeci">void click()</div><div class="ttdef"><b>Definition:</b> AView.h:724</div></div>
-<div class="ttc" id="aclassAView_html_aae643e27fa9578fecad36519f30ed043"><div class="ttname"><a href="classAView.html#aae643e27fa9578fecad36519f30ed043">AView::invalidateStateStyles</a></div><div class="ttdeci">void invalidateStateStyles()</div><div class="ttdoc">Updates state selectors for ASS.</div><div class="ttdef"><b>Definition:</b> AView.cpp:202</div></div>
-<div class="ttc" id="aclassAView_html_ab3c244b2b5d88b895ff9eee41e5f5447"><div class="ttname"><a href="classAView.html#ab3c244b2b5d88b895ff9eee41e5f5447">AView::getMargin</a></div><div class="ttdeci">const ABoxFields &amp; getMargin() const</div><div class="ttdoc">Returns the margin.</div><div class="ttdef"><b>Definition:</b> AView.h:469</div></div>
-<div class="ttc" id="aclassAView_html_ab4bbc6b9ced25ac8a591262143a2d093"><div class="ttname"><a href="classAView.html#ab4bbc6b9ced25ac8a591262143a2d093">AView::getMaxSize</a></div><div class="ttdeci">const glm::ivec2 &amp; getMaxSize() const</div><div class="ttdef"><b>Definition:</b> AView.h:569</div></div>
-<div class="ttc" id="aclassAView_html_abb924b63a9acdb4c837b4ee2e15cd986"><div class="ttname"><a href="classAView.html#abb924b63a9acdb4c837b4ee2e15cd986">AView::getCenterPointInWindow</a></div><div class="ttdeci">glm::ivec2 getCenterPointInWindow() const</div><div class="ttdoc">The center point position of the view relatively to top left corner of the window.</div><div class="ttdef"><b>Definition:</b> AView.h:354</div></div>
-<div class="ttc" id="aclassAView_html_abec87965389be9d82031e53e2e036bb1"><div class="ttname"><a href="classAView.html#abec87965389be9d82031e53e2e036bb1">AView::clickedRight</a></div><div class="ttdeci">emits clickedRight</div><div class="ttdoc">Right mouse button clicked.</div><div class="ttdef"><b>Definition:</b> AView.h:1005</div></div>
-<div class="ttc" id="aclassAView_html_ac33d3edd01436307f555e7ddcbeed144"><div class="ttname"><a href="classAView.html#ac33d3edd01436307f555e7ddcbeed144">AView::mParent</a></div><div class="ttdeci">AViewContainer * mParent</div><div class="ttdoc">Parent AView.</div><div class="ttdef"><b>Definition:</b> AView.h:177</div></div>
-<div class="ttc" id="aclassAView_html_ac385fe5c95866dbe081aac74c7dba519"><div class="ttname"><a href="classAView.html#ac385fe5c95866dbe081aac74c7dba519">AView::setSizeForced</a></div><div class="ttdeci">void setSizeForced(glm::ivec2 size)</div><div class="ttdef"><b>Definition:</b> AView.h:640</div></div>
-<div class="ttc" id="aclassAView_html_ac6292013de2f384cb791f1c91787a362"><div class="ttname"><a href="classAView.html#ac6292013de2f384cb791f1c91787a362">AView::operator+</a></div><div class="ttdeci">void operator+(ass::PropertyListRecursive rule)</div><div class="ttdoc">Helper function for kAUI.h:with_style.</div><div class="ttdef"><b>Definition:</b> AView.h:893</div></div>
-<div class="ttc" id="aclassAView_html_acaef54d28990d25a3edf594e163c1a8b"><div class="ttname"><a href="classAView.html#acaef54d28990d25a3edf594e163c1a8b">AView::getTotalOccupiedHeight</a></div><div class="ttdeci">float getTotalOccupiedHeight() const</div><div class="ttdef"><b>Definition:</b> AView.h:459</div></div>
-<div class="ttc" id="aclassAView_html_accd0aaa185656f113bb1b4127ba36a1e"><div class="ttname"><a href="classAView.html#accd0aaa185656f113bb1b4127ba36a1e">AView::sizeChanged</a></div><div class="ttdeci">emits&lt; glm::ivec2 &gt; sizeChanged</div><div class="ttdoc">Size changed.</div><div class="ttdef"><b>Definition:</b> AView.h:980</div></div>
-<div class="ttc" id="aclassAView_html_ad0b6189b40c29d3c31ef3d3a21ce364b"><div class="ttname"><a href="classAView.html#ad0b6189b40c29d3c31ef3d3a21ce364b">AView::getPosition</a></div><div class="ttdeci">const glm::ivec2 &amp; getPosition() const</div><div class="ttdoc">Top left corner's position relative to top left corner's position of the parent AView.</div><div class="ttdef"><b>Definition:</b> AView.h:339</div></div>
-<div class="ttc" id="aclassAView_html_ae11b78477772c712d635eb2c540ad65d"><div class="ttname"><a href="classAView.html#ae11b78477772c712d635eb2c540ad65d">AView::getFixedSize</a></div><div class="ttdeci">const glm::ivec2 &amp; getFixedSize()</div><div class="ttdoc">Fixed size.</div><div class="ttdef"><b>Definition:</b> AView.h:661</div></div>
-<div class="ttc" id="aclassAView_html_ae881f45d02f968dd3584f267d6300521"><div class="ttname"><a href="classAView.html#ae881f45d02f968dd3584f267d6300521">AView::getWindow</a></div><div class="ttdeci">ABaseWindow * getWindow() const</div><div class="ttdoc">Determines window which this AView belongs to.</div><div class="ttdef"><b>Definition:</b> AView.cpp:47</div></div>
-<div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition:</b> AView.h:970</div></div>
-<div class="ttc" id="aclassAView_html_af409baa975fcd918472e42462b1955b6"><div class="ttname"><a href="classAView.html#af409baa975fcd918472e42462b1955b6">AView::setPadding</a></div><div class="ttdeci">void setPadding(const ABoxFields &amp;padding)</div><div class="ttdoc">Sets the padding.</div><div class="ttdef"><b>Definition:</b> AView.h:505</div></div>
-<div class="ttc" id="aclassAView_html_af46394aa10dbc12a7b9e5cadd5c3e740"><div class="ttname"><a href="classAView.html#af46394aa10dbc12a7b9e5cadd5c3e740">AView::focus</a></div><div class="ttdeci">void focus(bool needFocusChainUpdate=true)</div><div class="ttdoc">Requests focus for this AView.</div><div class="ttdef"><b>Definition:</b> AView.cpp:538</div></div>
-<div class="ttc" id="aclassAView_html_afcab50e0676d2197c64a8d8c2221d741"><div class="ttname"><a href="classAView.html#afcab50e0676d2197c64a8d8c2221d741">AView::mMinSize</a></div><div class="ttdeci">glm::ivec2 mMinSize</div><div class="ttdoc">Minimal size.</div><div class="ttdef"><b>Definition:</b> AView.h:226</div></div>
-<div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdef"><b>Definition:</b> AWindow.h:41</div></div>
-<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:173</div></div>
+<div class="ttc" id="aclassAViewContainerBase_html"><div class="ttname"><a href="classAViewContainerBase.html">AViewContainerBase</a></div><div class="ttdoc">A view that represents a set of views.</div><div class="ttdef"><b>Definition:</b> AViewContainerBase.h:68</div></div>
+<div class="ttc" id="aclassAViewContainer_html"><div class="ttname"><a href="classAViewContainer.html">AViewContainer</a></div><div class="ttdoc">A trivial modifiable view that represents a set of views.</div><div class="ttdef"><b>Definition:</b> AViewContainer.h:33</div></div>
+<div class="ttc" id="aclassAView_html"><div class="ttname"><a href="classAView.html">AView</a></div><div class="ttdoc">Base class of all UI objects.</div><div class="ttdef"><b>Definition:</b> AView.h:77</div></div>
+<div class="ttc" id="aclassAWindowBase_html"><div class="ttname"><a href="classAWindowBase.html">AWindowBase</a></div><div class="ttdef"><b>Definition:</b> AWindowBase.h:33</div></div>
+<div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition:</b> AWindow.h:45</div></div>
+<div class="ttc" id="aclassIRenderViewToTexture_html"><div class="ttname"><a href="classIRenderViewToTexture.html">IRenderViewToTexture</a></div><div class="ttdoc">Rendering view to texture storage interface.</div><div class="ttdef"><b>Definition:</b> IRenderViewToTexture.h:26</div></div>
+<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:177</div></div>
+<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition:</b> AObject.h:196</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
 <div class="ttc" id="agroup__views_html_ga0b5c15e7f44eba2c0eb1705539014892"><div class="ttname"><a href="group__views.html#ga0b5c15e7f44eba2c0eb1705539014892">AOverflow</a></div><div class="ttdeci">AOverflow</div><div class="ttdoc">Controls visibility of the overflowed contents of AView with AView::drawStencilMask.</div><div class="ttdef"><b>Definition:</b> AOverflow.h:25</div></div>
-<div class="ttc" id="agroup__views_html_ga53d6f8ccb0015ea020228de41cfd2162"><div class="ttname"><a href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a></div><div class="ttdeci">Visibility</div><div class="ttdoc">Controls the visibility of AView.</div><div class="ttdef"><b>Definition:</b> Visibility.h:30</div></div>
-<div class="ttc" id="agroup__views_html_gacba678dfa3c1cb4aab689f901f414119"><div class="ttname"><a href="group__views.html#gacba678dfa3c1cb4aab689f901f414119">ATextOverflow</a></div><div class="ttdeci">ATextOverflow</div><div class="ttdoc">Controls behavior of the overflowed text.</div><div class="ttdef"><b>Definition:</b> AOverflow.h:49</div></div>
 <div class="ttc" id="agroup__views_html_gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54"><div class="ttname"><a href="group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54">AOverflow::VISIBLE</a></div><div class="ttdeci">@ VISIBLE</div><div class="ttdoc">Overflowed contents are visible.</div></div>
-<div class="ttc" id="agroup__views_html_gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54"><div class="ttname"><a href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a510222cdd4bc0b765486ba35b2775e54">Visibility::VISIBLE</a></div><div class="ttdeci">@ VISIBLE</div></div>
-<div class="ttc" id="agroup__views_html_gga53d6f8ccb0015ea020228de41cfd2162a5fb351568336ebb294804f81e3c8663d"><div class="ttname"><a href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a5fb351568336ebb294804f81e3c8663d">Visibility::INVISIBLE</a></div><div class="ttdeci">@ INVISIBLE</div></div>
-<div class="ttc" id="agroup__views_html_gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74"><div class="ttname"><a href="group__views.html#gga53d6f8ccb0015ea020228de41cfd2162a9c745ef7d5f5c7618ce90dbec9a62b74">Visibility::GONE</a></div><div class="ttdeci">@ GONE</div></div>
-<div class="ttc" id="agroup__views_html_ggad24a446ec1501a5f65e7c5f90622e4b6a5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="group__views.html#ggad24a446ec1501a5f65e7c5f90622e4b6a5b39c8b553c821e7cddc6da64b5bd2ee">ATextInputAction::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdoc">There's no concrete input action. Let the OS decide which action is the most appropriate.</div></div>
+<div class="ttc" id="agroup__views_html_ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee">ATextInputActionIcon::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdoc">There's no concrete input action. Let the OS decide which action is the most appropriate.</div></div>
 <div class="ttc" id="astructABoxFields_html"><div class="ttname"><a href="structABoxFields.html">ABoxFields</a></div><div class="ttdoc">Represents a rectangle fields. Useful for margin and padding around AViews.</div><div class="ttdef"><b>Definition:</b> ABoxFields.h:21</div></div>
-<div class="ttc" id="astructAFontStyle_html"><div class="ttname"><a href="structAFontStyle.html">AFontStyle</a></div><div class="ttdef"><b>Definition:</b> AFontStyle.h:23</div></div>
 <div class="ttc" id="astructAPointerMoveEvent_html"><div class="ttname"><a href="structAPointerMoveEvent.html">APointerMoveEvent</a></div><div class="ttdoc">Pointing method move event.</div><div class="ttdef"><b>Definition:</b> APointerMoveEvent.h:21</div></div>
 <div class="ttc" id="astructAPointerPressedEvent_html"><div class="ttname"><a href="structAPointerPressedEvent.html">APointerPressedEvent</a></div><div class="ttdoc">Pointing method press event.</div><div class="ttdef"><b>Definition:</b> APointerPressedEvent.h:21</div></div>
 <div class="ttc" id="astructAPointerReleasedEvent_html"><div class="ttname"><a href="structAPointerReleasedEvent.html">APointerReleasedEvent</a></div><div class="ttdoc">Pointing method press event.</div><div class="ttdef"><b>Definition:</b> APointerReleasedEvent.h:19</div></div>
+<div class="ttc" id="astructARect_html"><div class="ttname"><a href="structARect.html">ARect</a></div><div class="ttdoc">Axis aligned 2D rectangle.</div><div class="ttdef"><b>Definition:</b> ARect.h:24</div></div>
+<div class="ttc" id="astructARenderContext_html"><div class="ttname"><a href="structARenderContext.html">ARenderContext</a></div><div class="ttdoc">Render context passed to AView::render.</div><div class="ttdef"><b>Definition:</b> ARenderContext.h:43</div></div>
 <div class="ttc" id="astructAScrollEvent_html"><div class="ttname"><a href="structAScrollEvent.html">AScrollEvent</a></div><div class="ttdoc">Pointing method scroll event.</div><div class="ttdef"><b>Definition:</b> AScrollEvent.h:20</div></div>
-<div class="ttc" id="astructClipOptimizationContext_html"><div class="ttname"><a href="structClipOptimizationContext.html">ClipOptimizationContext</a></div><div class="ttdoc">Axis aligned bounding box where the rendering is performed in, used for optimization.</div><div class="ttdef"><b>Definition:</b> ClipOptimizationContext.h:41</div></div>
+<div class="ttc" id="astructIRenderViewToTexture_1_1InvalidArea_html"><div class="ttname"><a href="structIRenderViewToTexture_1_1InvalidArea.html">IRenderViewToTexture::InvalidArea</a></div><div class="ttdoc">Defines areas to invalidate (redraw).</div><div class="ttdef"><b>Definition:</b> IRenderViewToTexture.h:32</div></div>
+<div class="ttc" id="astructViewActionClick_html"><div class="ttname"><a href="structViewActionClick.html">ViewActionClick</a></div><div class="ttdef"><b>Definition:</b> Click.h:51</div></div>
 <div class="ttc" id="astructViewAssertionSize_html"><div class="ttname"><a href="structViewAssertionSize.html">ViewAssertionSize</a></div><div class="ttdef"><b>Definition:</b> Size.h:22</div></div>
-<div class="ttc" id="astructViewAssertionVisible_html"><div class="ttname"><a href="structViewAssertionVisible.html">ViewAssertionVisible</a></div><div class="ttdef"><b>Definition:</b> Visible.h:19</div></div>
+<div class="ttc" id="astructViewAssertionVisible_html"><div class="ttname"><a href="structViewAssertionVisible.html">ViewAssertionVisible</a></div><div class="ttdef"><b>Definition:</b> Visible.h:20</div></div>
 <div class="ttc" id="astruct__weak_html"><div class="ttname"><a href="struct__weak.html">_weak</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition:</b> SharedPtrTypes.h:51</div></div>
 <div class="ttc" id="astructass_1_1PropertyListRecursive_html"><div class="ttname"><a href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a></div><div class="ttdef"><b>Definition:</b> PropertyListRecursive.h:24</div></div>
 <div class="ttc" id="astructass_1_1PropertyList_html"><div class="ttname"><a href="structass_1_1PropertyList.html">ass::PropertyList</a></div><div class="ttdef"><b>Definition:</b> PropertyList.h:25</div></div>
+<div class="ttc" id="astructaui_1_1ranged__number_html"><div class="ttname"><a href="structaui_1_1ranged__number.html">aui::ranged_number</a></div><div class="ttdoc">Clamps the possible values for a number to the specified range: [min;max].</div><div class="ttdef"><b>Definition:</b> values.h:452</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

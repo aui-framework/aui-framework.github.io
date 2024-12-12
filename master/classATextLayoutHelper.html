@@ -97,19 +97,24 @@ $(document).ready(function(){initNavTree('classATextLayoutHelper.html',''); init
   <div class="headertitle"><div class="title">ATextLayoutHelper Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
+
+<p>Helps mapping prerendered string with positions.  
+ <a href="classATextLayoutHelper.html#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Helps mapping prerendered string with positions. </p>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structATextLayoutHelper_1_1Symbol.html">Symbol</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structATextLayoutHelper_1_1Boundary.html">Boundary</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a41fbfdc76e9485f60fb2fe1e3e16ecba"><td class="memItemLeft" align="right" valign="top"><a id="a41fbfdc76e9485f60fb2fe1e3e16ecba" name="a41fbfdc76e9485f60fb2fe1e3e16ecba"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Line</b> = <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="structATextLayoutHelper_1_1Symbol.html">Symbol</a> &gt;</td></tr>
-<tr class="separator:a41fbfdc76e9485f60fb2fe1e3e16ecba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31a0e199ad1f418b01083ae9de78531"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531">Line</a> = <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="structATextLayoutHelper_1_1Boundary.html">Boundary</a> &gt;</td></tr>
+<tr class="memdesc:ab31a0e199ad1f418b01083ae9de78531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single line of symbols.  <a href="classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531">More...</a><br /></td></tr>
+<tr class="separator:ab31a0e199ad1f418b01083ae9de78531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14d8bbe1fd951d36b999215bcb8e2190"><td class="memItemLeft" align="right" valign="top"><a id="a14d8bbe1fd951d36b999215bcb8e2190" name="a14d8bbe1fd951d36b999215bcb8e2190"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Symbols</b> = <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAVector.html">Line</a> &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Symbols</b> = <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531">Line</a> &gt;</td></tr>
 <tr class="separator:a14d8bbe1fd951d36b999215bcb8e2190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -120,13 +125,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae473a8287d153793c11c2c6cac52e4a2"><td class="memItemLeft" align="right" valign="top"><a id="ae473a8287d153793c11c2c6cac52e4a2" name="ae473a8287d153793c11c2c6cac52e4a2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setSymbols</b> (<a class="el" href="classAVector.html">Symbols</a> symbols)</td></tr>
 <tr class="separator:ae473a8287d153793c11c2c6cac52e4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace26fd2418026bfcd1f4c28494555a7f"><td class="memItemLeft" align="right" valign="top"><a id="ace26fd2418026bfcd1f4c28494555a7f" name="ace26fd2418026bfcd1f4c28494555a7f"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>xToIndex</b> (int x) const</td></tr>
-<tr class="separator:ace26fd2418026bfcd1f4c28494555a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af487812db1308c51ba989f80d13605d0"><td class="memItemLeft" align="right" valign="top"><a id="af487812db1308c51ba989f80d13605d0" name="af487812db1308c51ba989f80d13605d0"></a>
+<a class="el" href="classAOptional.html">AOptional</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>indexToPos</b> (size_t line, size_t column)</td></tr>
+<tr class="separator:af487812db1308c51ba989f80d13605d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45b77169116176f3cb48237d792fe9ca"><td class="memItemLeft" align="right" valign="top"><a id="a45b77169116176f3cb48237d792fe9ca" name="a45b77169116176f3cb48237d792fe9ca"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>posToIndexFixedLineHeight</b> (const glm::ivec2 &amp;position, const <a class="el" href="structAFontStyle.html">AFontStyle</a> &amp;font) const</td></tr>
 <tr class="separator:a45b77169116176f3cb48237d792fe9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ab31a0e199ad1f418b01083ae9de78531" name="ab31a0e199ad1f418b01083ae9de78531"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31a0e199ad1f418b01083ae9de78531">&#9670;&nbsp;</a></span>Line</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531">ATextLayoutHelper::Line</a> =  <a class="el" href="classAVector.html">AVector</a>&lt;<a class="el" href="structATextLayoutHelper_1_1Boundary.html">Boundary</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Single line of symbols. </p>
+<p >Actual size of line is +1 larger than symbol count; to expose last character's right bondary </p>
+
+</div>
+</div>
+
+<p><code>#include &lt;<a class="el" href="ATextLayoutHelper_8h_source.html">AUI/Render/ATextLayoutHelper.h</a>&gt;</code></p>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>aui.views/src/AUI/Render/<a class="el" href="ATextLayoutHelper_8h_source.html">ATextLayoutHelper.h</a></li>
 <li>aui.views/src/AUI/Render/ATextLayoutHelper.cpp</li>

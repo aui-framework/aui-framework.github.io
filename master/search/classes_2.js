@@ -23,11 +23,14 @@ var searchData=
   ['borderbottom_20',['BorderBottom',['../structass_1_1BorderBottom.html',1,'ass']]],
   ['borderleft_21',['BorderLeft',['../structass_1_1BorderLeft.html',1,'ass']]],
   ['borderradius_22',['BorderRadius',['../structass_1_1BorderRadius.html',1,'ass']]],
-  ['both_23',['both',['../structuitest_1_1impl_1_1both.html',1,'uitest::impl']]],
-  ['boxshadow_24',['BoxShadow',['../structass_1_1BoxShadow.html',1,'ass']]],
-  ['boxshadowinner_25',['BoxShadowInner',['../structass_1_1BoxShadowInner.html',1,'ass']]],
-  ['brushhelper_26',['BrushHelper',['../structBrushHelper.html',1,'']]],
-  ['buffer_27',['Buffer',['../structgl_1_1Vao_1_1Buffer.html',1,'gl::Vao']]],
-  ['builder_28',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder']]],
-  ['button_29',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]]
+  ['borderright_23',['BorderRight',['../structass_1_1BorderRight.html',1,'ass']]],
+  ['bordertop_24',['BorderTop',['../structass_1_1BorderTop.html',1,'ass']]],
+  ['both_25',['both',['../structuitest_1_1impl_1_1both.html',1,'uitest::impl']]],
+  ['boundary_26',['Boundary',['../structATextLayoutHelper_1_1Boundary.html',1,'ATextLayoutHelper']]],
+  ['boxshadow_27',['BoxShadow',['../structass_1_1BoxShadow.html',1,'ass']]],
+  ['boxshadowinner_28',['BoxShadowInner',['../structass_1_1BoxShadowInner.html',1,'ass']]],
+  ['brushhelper_29',['BrushHelper',['../structBrushHelper.html',1,'']]],
+  ['buffer_30',['Buffer',['../structgl_1_1Vao_1_1Buffer.html',1,'gl::Vao']]],
+  ['builder_31',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder'],['../classASplitter_1_1Builder.html',1,'ASplitter::Builder&lt; Layout &gt;']]],
+  ['button_32',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]]
 ];

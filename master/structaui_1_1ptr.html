@@ -98,10 +98,10 @@ $(document).ready(function(){initNavTree('structaui_1_1ptr.html',''); initResiza
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a82476ef5b8d0e47b520385d5727c9923"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Deleter  = std::default_delete&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a82476ef5b8d0e47b520385d5727c9923"><td class="memTemplItemLeft" align="right" valign="top">static _unique&lt; T, Deleter &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structaui_1_1ptr.html#a82476ef5b8d0e47b520385d5727c9923">make_unique_with_deleter</a> (T *<a class="el" href="structaui_1_1ptr.html">ptr</a>, Deleter deleter)</td></tr>
-<tr class="memdesc:a82476ef5b8d0e47b520385d5727c9923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates unique_ptr from raw pointer and a deleter.  <a href="structaui_1_1ptr.html#a82476ef5b8d0e47b520385d5727c9923">More...</a><br /></td></tr>
-<tr class="separator:a82476ef5b8d0e47b520385d5727c9923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53daf9b3ceddf96bbf2733bb3b041617"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Deleter  = std::default_delete&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:a53daf9b3ceddf96bbf2733bb3b041617"><td class="memTemplItemLeft" align="right" valign="top">static _unique&lt; T, Deleter &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617">make_unique_with_deleter</a> (T *<a class="el" href="structaui_1_1ptr.html">ptr</a>, Deleter deleter=Deleter{})</td></tr>
+<tr class="memdesc:a53daf9b3ceddf96bbf2733bb3b041617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates unique_ptr from raw pointer and a deleter.  <a href="structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617">More...</a><br /></td></tr>
+<tr class="separator:a53daf9b3ceddf96bbf2733bb3b041617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9696eab52bd0745688055a301d9ef776"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9696eab52bd0745688055a301d9ef776"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">manage</a> (T *raw)</td></tr>
 <tr class="separator:a9696eab52bd0745688055a301d9ef776"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,8 +157,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a82476ef5b8d0e47b520385d5727c9923" name="a82476ef5b8d0e47b520385d5727c9923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82476ef5b8d0e47b520385d5727c9923">&#9670;&nbsp;</a></span>make_unique_with_deleter()</h2>
+<a id="a53daf9b3ceddf96bbf2733bb3b041617" name="a53daf9b3ceddf96bbf2733bb3b041617"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53daf9b3ceddf96bbf2733bb3b041617">&#9670;&nbsp;</a></span>make_unique_with_deleter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,7 +178,7 @@ template&lt;typename T , typename Deleter  = std::default_delete&lt;T&gt;&gt; </
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Deleter&#160;</td>
-          <td class="paramname"><em>deleter</em>&#160;</td>
+          <td class="paramname"><em>deleter</em> = <code>Deleter{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,7 +194,7 @@ template&lt;typename T , typename Deleter  = std::default_delete&lt;T&gt;&gt; </
 </div><div class="memdoc">
 
 <p>Creates unique_ptr from raw pointer and a deleter. </p>
-<p ><code>unique_ptr</code> could not deduce T and Deleter by itself. Use this function to avoid this restriction. </p>
+<p ><code>unique_ptr</code> could not deduce T and Deleter by itself. Use this function to avoid this restriction. <a class="el" href="namespaceBy.html" title="Matcher factory namespace.">By</a> using this function, lifetime of the pointer is delegated to std::unique_ptr. The wrapped pointer will be freed by specified Deleter. Default deleter is std::default_delete. You may want to specialize <code>std::default_delete&lt;T&gt;</code> struct in order to specify default deleter for T, in this case you can omit deleter argument of this function. </p>
 
 </div>
 </div>

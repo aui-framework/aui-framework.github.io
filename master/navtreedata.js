@@ -46,7 +46,7 @@ var NAVTREE =
       [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
       [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
       [ "Writing tests", "md_docs_Writing_tests.html", null ],
-      [ "Writing platform dependent code", "md_docs_Writing_platform_dependent_code.html", null ],
+      [ "Writing platform dependent code", "@ref md_docs_Writing_platform_dependent_code", null ],
       [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ],
       [ "Crosscompiling (Android and iOS)", "md_docs_Crosscompiling.html", null ]
@@ -69,16 +69,17 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"classADeque.html#a7957277c721f922f5be177ceb21da860",
-"classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c",
-"classAString.html#ad9c5f0dd655d291227d084f674661029",
-"classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b",
-"classSoftwareRenderer.html#aa22f54e5ef84fb268c359501bc9d7e2e",
-"group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca",
-"structAScrollEvent.html#accebabadf3ba168d57ff61ef6fc29b2c",
-"structass_1_1prop_1_1Property_3_01VerticalAlign_01_4.html",
-"structaui_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html"
+"@ref md_docs_Writing_platform_dependent_code",
+"classADeque.html#ad1396ac646b307ff34e8e9d594d27181",
+"classAPath.html#abafaeb035c4406f106cb9e556e6360ac",
+"classAStrongByteBufferInputStream.html#a0221c8acf22fa504a1ebd75a65f7d384",
+"classAViewContainerBase.html#a20108c302935d781c9929cbd3380386d",
+"classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274",
+"conceptaui_1_1incrementable.html",
+"structADataBindingDefault_3_01ADrawableView_00_01___3_01IDrawable_01_4_01_4.html",
+"structass_1_1detail_1_1Type.html",
+"structaui_1_1impl_1_1select__overload.html",
+"usergroup4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

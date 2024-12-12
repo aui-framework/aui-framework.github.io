@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classAView.html',''); initResizable();
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Signals and public fields</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -106,7 +107,7 @@ $(document).ready(function(){initNavTree('classAView.html',''); initResizable();
 <div class="textblock"><p >Base class of all UI objects. </p>
 <p >A class that describes the minimum unit that can be placed in a container (including a window) that takes up some space on the screen, responds to changes in size, position, moving the cursor, pressing / releasing keys and buttons, mouse wheel, etc...</p>
 <p >Analogue to Qt's QWidget, Android's View. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a7">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a6">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -115,40 +116,43 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>redraw</b> ()</td></tr>
 <tr class="memdesc:a5f31342ebc6f35e57201cc55d3e64b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request window manager to redraw this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
 <tr class="separator:a5f31342ebc6f35e57201cc55d3e64b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae881f45d02f968dd3584f267d6300521"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classABaseWindow.html">ABaseWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ae881f45d02f968dd3584f267d6300521">getWindow</a> () const</td></tr>
-<tr class="memdesc:ae881f45d02f968dd3584f267d6300521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines window which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> belongs to.  <a href="classAView.html#ae881f45d02f968dd3584f267d6300521">More...</a><br /></td></tr>
-<tr class="separator:ae881f45d02f968dd3584f267d6300521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3932b363ae52d2b298fb52edb17978a5"><td class="memItemLeft" align="right" valign="top"><a id="a3932b363ae52d2b298fb52edb17978a5" name="a3932b363ae52d2b298fb52edb17978a5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStencilMask</b> ()</td></tr>
-<tr class="separator:a3932b363ae52d2b298fb52edb17978a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a963fbdfa517db949b880297405804985"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a963fbdfa517db949b880297405804985">render</a> (<a class="el" href="structClipOptimizationContext.html">ClipOptimizationContext</a> context)</td></tr>
-<tr class="memdesc:a963fbdfa517db949b880297405804985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classAView.html#a963fbdfa517db949b880297405804985">More...</a><br /></td></tr>
-<tr class="separator:a963fbdfa517db949b880297405804985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e1593b6ae4efe2a6b6b6d376c7070f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a4e1593b6ae4efe2a6b6b6d376c7070f4">postRender</a> ()</td></tr>
-<tr class="memdesc:a4e1593b6ae4efe2a6b6b6d376c7070f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs post-draw routines of this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classAView.html#a4e1593b6ae4efe2a6b6b6d376c7070f4">More...</a><br /></td></tr>
-<tr class="separator:a4e1593b6ae4efe2a6b6b6d376c7070f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8dff00216dc18715ecb7c8b5f3ad271"><td class="memItemLeft" align="right" valign="top"><a id="ad8dff00216dc18715ecb7c8b5f3ad271" name="ad8dff00216dc18715ecb7c8b5f3ad271"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>popStencilIfNeeded</b> ()</td></tr>
-<tr class="separator:ad8dff00216dc18715ecb7c8b5f3ad271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9772e6b3644c906d39ef2fee317c0cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAWindowBase.html">AWindowBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a9772e6b3644c906d39ef2fee317c0cfb">getWindow</a> () const</td></tr>
+<tr class="memdesc:a9772e6b3644c906d39ef2fee317c0cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines window which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> belongs to.  <a href="classAView.html#a9772e6b3644c906d39ef2fee317c0cfb">More...</a><br /></td></tr>
+<tr class="separator:a9772e6b3644c906d39ef2fee317c0cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c42dc696ec366b5bfb314d5e832706"><td class="memItemLeft" align="right" valign="top"><a id="ab7c42dc696ec366b5bfb314d5e832706" name="ab7c42dc696ec366b5bfb314d5e832706"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>drawStencilMask</b> (<a class="el" href="structARenderContext.html">ARenderContext</a> ctx)</td></tr>
+<tr class="separator:ab7c42dc696ec366b5bfb314d5e832706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3">render</a> (<a class="el" href="structARenderContext.html">ARenderContext</a> ctx)</td></tr>
+<tr class="memdesc:aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classAView.html#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3">More...</a><br /></td></tr>
+<tr class="separator:aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab44f795e6ad4b5ec5fe19a5c09b5d68"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aab44f795e6ad4b5ec5fe19a5c09b5d68">postRender</a> (<a class="el" href="structARenderContext.html">ARenderContext</a> ctx)</td></tr>
+<tr class="memdesc:aab44f795e6ad4b5ec5fe19a5c09b5d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs post-draw routines of this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <a href="classAView.html#aab44f795e6ad4b5ec5fe19a5c09b5d68">More...</a><br /></td></tr>
+<tr class="separator:aab44f795e6ad4b5ec5fe19a5c09b5d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f16a0938792862c579b8ef0a45209f"><td class="memItemLeft" align="right" valign="top"><a id="a72f16a0938792862c579b8ef0a45209f" name="a72f16a0938792862c579b8ef0a45209f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>popStencilIfNeeded</b> (<a class="el" href="structARenderContext.html">ARenderContext</a> ctx)</td></tr>
+<tr class="separator:a72f16a0938792862c579b8ef0a45209f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a968d81afb56afdf5eab913bccd2cc7b9"><td class="memItemLeft" align="right" valign="top"><a id="a968d81afb56afdf5eab913bccd2cc7b9" name="a968d81afb56afdf5eab913bccd2cc7b9"></a>
 const <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAString.html">AString</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getAssNames</b> () const noexcept</td></tr>
 <tr class="separator:a968d81afb56afdf5eab913bccd2cc7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0b6189b40c29d3c31ef3d3a21ce364b"><td class="memItemLeft" align="right" valign="top"><a id="ad0b6189b40c29d3c31ef3d3a21ce364b" name="ad0b6189b40c29d3c31ef3d3a21ce364b"></a>
-const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const</td></tr>
-<tr class="memdesc:ad0b6189b40c29d3c31ef3d3a21ce364b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top left corner's position relative to top left corner's position of the parent <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
-<tr class="separator:ad0b6189b40c29d3c31ef3d3a21ce364b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb924b63a9acdb4c837b4ee2e15cd986"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#abb924b63a9acdb4c837b4ee2e15cd986">getCenterPointInWindow</a> () const</td></tr>
-<tr class="memdesc:abb924b63a9acdb4c837b4ee2e15cd986"><td class="mdescLeft">&#160;</td><td class="mdescRight">The center point position of the view relatively to top left corner of the window.  <a href="classAView.html#abb924b63a9acdb4c837b4ee2e15cd986">More...</a><br /></td></tr>
-<tr class="separator:abb924b63a9acdb4c837b4ee2e15cd986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1934c219a3411ec2917c9cd05f0fe453"><td class="memItemLeft" align="right" valign="top"><a id="a1934c219a3411ec2917c9cd05f0fe453" name="a1934c219a3411ec2917c9cd05f0fe453"></a>
-const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> () const</td></tr>
-<tr class="memdesc:a1934c219a3411ec2917c9cd05f0fe453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size, including content area, border and padding. <br /></td></tr>
-<tr class="separator:a1934c219a3411ec2917c9cd05f0fe453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a546a17cc5d955dfa75928d48337c65a7"><td class="memItemLeft" align="right" valign="top">const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a546a17cc5d955dfa75928d48337c65a7">getMinSize</a> () const</td></tr>
-<tr class="separator:a546a17cc5d955dfa75928d48337c65a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa360319b1016eef7a599e03c7713e4"><td class="memItemLeft" align="right" valign="top"><a id="a1aa360319b1016eef7a599e03c7713e4" name="a1aa360319b1016eef7a599e03c7713e4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setMinSize</b> (const glm::ivec2 &amp;minSize)</td></tr>
-<tr class="separator:a1aa360319b1016eef7a599e03c7713e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c6ff3f05a68527c5216c4ce87ee0ed2"><td class="memItemLeft" align="right" valign="top"><a id="a4c6ff3f05a68527c5216c4ce87ee0ed2" name="a4c6ff3f05a68527c5216c4ce87ee0ed2"></a>
+glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> () const noexcept</td></tr>
+<tr class="memdesc:a4c6ff3f05a68527c5216c4ce87ee0ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top left corner's position relative to top left corner's position of the parent <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
+<tr class="separator:a4c6ff3f05a68527c5216c4ce87ee0ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e6cd31d4a7ec7b39c9ce5f577900e9"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a32e6cd31d4a7ec7b39c9ce5f577900e9">getCenterPointInWindow</a> () const noexcept</td></tr>
+<tr class="memdesc:a32e6cd31d4a7ec7b39c9ce5f577900e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The center point position of the view relatively to top left corner of the window.  <a href="classAView.html#a32e6cd31d4a7ec7b39c9ce5f577900e9">More...</a><br /></td></tr>
+<tr class="separator:a32e6cd31d4a7ec7b39c9ce5f577900e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6013ec876536dba2a7dabb9701f94b54"><td class="memItemLeft" align="right" valign="top"><a id="a6013ec876536dba2a7dabb9701f94b54" name="a6013ec876536dba2a7dabb9701f94b54"></a>
+glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> () const noexcept</td></tr>
+<tr class="memdesc:a6013ec876536dba2a7dabb9701f94b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size, including content area, border and padding. <br /></td></tr>
+<tr class="separator:a6013ec876536dba2a7dabb9701f94b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4409e3c4993b808d2d7e23f85bc09328"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a4409e3c4993b808d2d7e23f85bc09328">getMinSize</a> () const noexcept</td></tr>
+<tr class="separator:a4409e3c4993b808d2d7e23f85bc09328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9fa6ccea94603fb2240bee243a79ea"><td class="memItemLeft" align="right" valign="top"><a id="a2a9fa6ccea94603fb2240bee243a79ea" name="a2a9fa6ccea94603fb2240bee243a79ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setMinSize</b> (glm::ivec2 minSize) noexcept</td></tr>
+<tr class="separator:a2a9fa6ccea94603fb2240bee243a79ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1abd0cf71d854d4c5128227821b0e5"><td class="memItemLeft" align="right" valign="top"><a id="ade1abd0cf71d854d4c5128227821b0e5" name="ade1abd0cf71d854d4c5128227821b0e5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>markMinContentSizeInvalid</b> ()</td></tr>
+<tr class="separator:ade1abd0cf71d854d4c5128227821b0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b2a408d7fbcb07fd8c4a5fda68006b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b">setExtraStylesheet</a> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAStylesheet.html">AStylesheet</a> &gt; <a class="el" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>)</td></tr>
 <tr class="separator:a67b2a408d7fbcb07fd8c4a5fda68006b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfffb2d8ac173e35e0599b4389efb9e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#abfffb2d8ac173e35e0599b4389efb9e1">setExtraStylesheet</a> (<a class="el" href="classAStylesheet.html">AStylesheet</a> &amp;&amp;<a class="el" href="classAView.html#aa8b76866565fc34ce1ed970708de8125">extraStylesheet</a>)</td></tr>
@@ -162,9 +166,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setMinSize</b> (const
 <tr class="memitem:aa91e801193a830ad38e8adcac88f9b92"><td class="memItemLeft" align="right" valign="top"><a id="aa91e801193a830ad38e8adcac88f9b92" name="aa91e801193a830ad38e8adcac88f9b92"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOverflow</b> (<a class="el" href="group__views.html#ga0b5c15e7f44eba2c0eb1705539014892">AOverflow</a> overflow)</td></tr>
 <tr class="separator:aa91e801193a830ad38e8adcac88f9b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae146ed15d66818e392ade81c35f2575e"><td class="memItemLeft" align="right" valign="top"><a id="ae146ed15d66818e392ade81c35f2575e" name="ae146ed15d66818e392ade81c35f2575e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTextOverflow</b> (<a class="el" href="group__views.html#gacba678dfa3c1cb4aab689f901f414119">ATextOverflow</a> textOverflow)</td></tr>
-<tr class="separator:ae146ed15d66818e392ade81c35f2575e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0569ae03bfeebb23dbea2da2585f0d67"><td class="memItemLeft" align="right" valign="top"><a id="a0569ae03bfeebb23dbea2da2585f0d67" name="a0569ae03bfeebb23dbea2da2585f0d67"></a>
 AOverflowMask&#160;</td><td class="memItemRight" valign="bottom"><b>getOverflowMask</b> () const</td></tr>
 <tr class="memdesc:a0569ae03bfeebb23dbea2da2585f0d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how does the overflow (stencil) mask is produced. <br /></td></tr>
@@ -185,33 +186,41 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getWidth</b> () const<
 <tr class="memitem:a8810645311d5b451a9685cea4c13b19e"><td class="memItemLeft" align="right" valign="top"><a id="a8810645311d5b451a9685cea4c13b19e" name="a8810645311d5b451a9685cea4c13b19e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () const</td></tr>
 <tr class="separator:a8810645311d5b451a9685cea4c13b19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521f58942c69ff63566ada3e3d774f32"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a521f58942c69ff63566ada3e3d774f32">getTotalOccupiedWidth</a> () const</td></tr>
-<tr class="separator:a521f58942c69ff63566ada3e3d774f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaef54d28990d25a3edf594e163c1a8b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#acaef54d28990d25a3edf594e163c1a8b">getTotalOccupiedHeight</a> () const</td></tr>
-<tr class="separator:acaef54d28990d25a3edf594e163c1a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3c244b2b5d88b895ff9eee41e5f5447"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ab3c244b2b5d88b895ff9eee41e5f5447">getMargin</a> () const</td></tr>
-<tr class="memdesc:ab3c244b2b5d88b895ff9eee41e5f5447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">margin</a>.  <a href="classAView.html#ab3c244b2b5d88b895ff9eee41e5f5447">More...</a><br /></td></tr>
-<tr class="separator:ab3c244b2b5d88b895ff9eee41e5f5447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8">getTotalOccupiedWidth</a> () const</td></tr>
+<tr class="separator:a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b76d3ce6659d0b431f8080110b1fb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ab5b76d3ce6659d0b431f8080110b1fb5">getTotalOccupiedHeight</a> () const</td></tr>
+<tr class="separator:ab5b76d3ce6659d0b431f8080110b1fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e167e381210b7045032419131d36ba"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa8e167e381210b7045032419131d36ba">getMinimumSizePlusMargin</a> ()</td></tr>
+<tr class="separator:aa8e167e381210b7045032419131d36ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de8af992ddbbe2237caf1148397b592"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a0de8af992ddbbe2237caf1148397b592">getMargin</a> ()</td></tr>
+<tr class="memdesc:a0de8af992ddbbe2237caf1148397b592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">margin</a>.  <a href="classAView.html#a0de8af992ddbbe2237caf1148397b592">More...</a><br /></td></tr>
+<tr class="separator:a0de8af992ddbbe2237caf1148397b592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e6fe3f4798ee783c6d2e2bdd69dbe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7">setMargin</a> (const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;margin)</td></tr>
 <tr class="memdesc:a96e6fe3f4798ee783c6d2e2bdd69dbe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">margin</a>.  <a href="classAView.html#a96e6fe3f4798ee783c6d2e2bdd69dbe7">More...</a><br /></td></tr>
 <tr class="separator:a96e6fe3f4798ee783c6d2e2bdd69dbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2710b009c20a283c5ed12634ee6c3c8f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a2710b009c20a283c5ed12634ee6c3c8f">consumesClick</a> (const glm::ivec2 &amp;pos)</td></tr>
 <tr class="memdesc:a2710b009c20a283c5ed12634ee6c3c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> processes this click or passes it thru.  <a href="classAView.html#a2710b009c20a283c5ed12634ee6c3c8f">More...</a><br /></td></tr>
 <tr class="separator:a2710b009c20a283c5ed12634ee6c3c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a346bb0a269caf3f15e1f90320bd7479d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a346bb0a269caf3f15e1f90320bd7479d">getPadding</a> () const</td></tr>
-<tr class="memdesc:a346bb0a269caf3f15e1f90320bd7479d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">padding</a>.  <a href="classAView.html#a346bb0a269caf3f15e1f90320bd7479d">More...</a><br /></td></tr>
-<tr class="separator:a346bb0a269caf3f15e1f90320bd7479d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b1246c3cf046ed6767219650e4918b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a96b1246c3cf046ed6767219650e4918b">getPadding</a> ()</td></tr>
+<tr class="memdesc:a96b1246c3cf046ed6767219650e4918b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">padding</a>.  <a href="classAView.html#a96b1246c3cf046ed6767219650e4918b">More...</a><br /></td></tr>
+<tr class="separator:a96b1246c3cf046ed6767219650e4918b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af409baa975fcd918472e42462b1955b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#af409baa975fcd918472e42462b1955b6">setPadding</a> (const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp;padding)</td></tr>
 <tr class="memdesc:af409baa975fcd918472e42462b1955b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">padding</a>.  <a href="classAView.html#af409baa975fcd918472e42462b1955b6">More...</a><br /></td></tr>
 <tr class="separator:af409baa975fcd918472e42462b1955b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2e024a5acecec85af1aedaa67066e5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a3f2e024a5acecec85af1aedaa67066e5">getTotalFieldHorizontal</a> () const</td></tr>
-<tr class="separator:a3f2e024a5acecec85af1aedaa67066e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274972d0e96c9ad2779fe5dfdeb71727"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a274972d0e96c9ad2779fe5dfdeb71727">getTotalFieldVertical</a> () const</td></tr>
-<tr class="separator:a274972d0e96c9ad2779fe5dfdeb71727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6af1dde86c744d781a729568c7a595a2"><td class="memItemLeft" align="right" valign="top"><a id="a6af1dde86c744d781a729568c7a595a2" name="a6af1dde86c744d781a729568c7a595a2"></a>
-<a class="el" href="classAViewContainer.html">AViewContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getParent</b> () const</td></tr>
-<tr class="memdesc:a6af1dde86c744d781a729568c7a595a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
-<tr class="separator:a6af1dde86c744d781a729568c7a595a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a444b6ae4f12c66b8d1b8075c53878330"><td class="memItemLeft" align="right" valign="top"><a id="a444b6ae4f12c66b8d1b8075c53878330" name="a444b6ae4f12c66b8d1b8075c53878330"></a>
+virtual <a class="el" href="classAString.html">AString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>debugString</b> () const</td></tr>
+<tr class="memdesc:a444b6ae4f12c66b8d1b8075c53878330"><td class="mdescLeft">&#160;</td><td class="mdescRight">String which helps to identify this object in debug string output (i.e., for logging) <br /></td></tr>
+<tr class="separator:a444b6ae4f12c66b8d1b8075c53878330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f404f669341de12d919f4bd3cff824"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a60f404f669341de12d919f4bd3cff824">getTotalFieldHorizontal</a> () const</td></tr>
+<tr class="separator:a60f404f669341de12d919f4bd3cff824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01958bec5416fc38a648a1cb39eafd0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a01958bec5416fc38a648a1cb39eafd0b">getTotalFieldVertical</a> () const</td></tr>
+<tr class="separator:a01958bec5416fc38a648a1cb39eafd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c70222033ebbbf806553d0fc3094ba"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a57c70222033ebbbf806553d0fc3094ba">getTotalFieldSize</a> () const</td></tr>
+<tr class="separator:a57c70222033ebbbf806553d0fc3094ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ea1cb2e19932f06f9ceeb7da1f6e27"><td class="memItemLeft" align="right" valign="top"><a id="a61ea1cb2e19932f06f9ceeb7da1f6e27" name="a61ea1cb2e19932f06f9ceeb7da1f6e27"></a>
+<a class="el" href="classAViewContainerBase.html">AViewContainerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getParent</b> () const</td></tr>
+<tr class="memdesc:a61ea1cb2e19932f06f9ceeb7da1f6e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
+<tr class="separator:a61ea1cb2e19932f06f9ceeb7da1f6e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa22ab8618b38eab629d44fc6f2e8ea5e"><td class="memItemLeft" align="right" valign="top"><a id="aa22ab8618b38eab629d44fc6f2e8ea5e" name="aa22ab8618b38eab629d44fc6f2e8ea5e"></a>
 const <a class="el" href="classAOptional.html">AOptional</a>&lt; <a class="el" href="classACursor.html">ACursor</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCursor</b> () const</td></tr>
 <tr class="memdesc:aa22ab8618b38eab629d44fc6f2e8ea5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines shape which should pointer take when it's above this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
@@ -219,19 +228,24 @@ const <a class="el" href="classAOptional.html">AOptional</a>&lt; <a class="el" h
 <tr class="memitem:ae3dc1358881fbe992465bf923b801d55"><td class="memItemLeft" align="right" valign="top"><a id="ae3dc1358881fbe992465bf923b801d55" name="ae3dc1358881fbe992465bf923b801d55"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setCursor</b> (<a class="el" href="classAOptional.html">AOptional</a>&lt; <a class="el" href="classACursor.html">ACursor</a> &gt; cursor)</td></tr>
 <tr class="separator:ae3dc1358881fbe992465bf923b801d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a9e235e61231946d9f06017c1701e91"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a7a9e235e61231946d9f06017c1701e91">getContentMinimumWidth</a> (ALayoutDirection layout)</td></tr>
-<tr class="separator:a7a9e235e61231946d9f06017c1701e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a771d50948bb0ca66cb1a9038f76e416e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a771d50948bb0ca66cb1a9038f76e416e">getContentMinimumHeight</a> (ALayoutDirection layout)</td></tr>
-<tr class="separator:a771d50948bb0ca66cb1a9038f76e416e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ecfca653416e23d3490746ff1c9fc8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a71ecfca653416e23d3490746ff1c9fc8">getContentMinimumWidth</a> ()</td></tr>
+<tr class="separator:a71ecfca653416e23d3490746ff1c9fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21c9fd89567b6841cac56cef63312e71"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a21c9fd89567b6841cac56cef63312e71">getContentMinimumHeight</a> ()</td></tr>
+<tr class="separator:a21c9fd89567b6841cac56cef63312e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f42cf9fcc3a188236887c22e66164e"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ad5f42cf9fcc3a188236887c22e66164e">getContentMinimumSize</a> () noexcept</td></tr>
+<tr class="separator:ad5f42cf9fcc3a188236887c22e66164e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c8f8c11e2fb57611a46a1f5b2bc377f"><td class="memItemLeft" align="right" valign="top"><a id="a9c8f8c11e2fb57611a46a1f5b2bc377f" name="a9c8f8c11e2fb57611a46a1f5b2bc377f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isContentMinimumSizeInvalidated</b> () noexcept</td></tr>
+<tr class="separator:a9c8f8c11e2fb57611a46a1f5b2bc377f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f3ed95a81fce6d6c816e9dc496e12d"><td class="memItemLeft" align="right" valign="top"><a id="ab5f3ed95a81fce6d6c816e9dc496e12d" name="ab5f3ed95a81fce6d6c816e9dc496e12d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasFocus</b> () const</td></tr>
 <tr class="separator:ab5f3ed95a81fce6d6c816e9dc496e12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43a38bdfbee1d0aa689017a0a6b3902a"><td class="memItemLeft" align="right" valign="top"><a id="a43a38bdfbee1d0aa689017a0a6b3902a" name="a43a38bdfbee1d0aa689017a0a6b3902a"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMinimumWidth</b> (ALayoutDirection layout=ALayoutDirection::NONE)</td></tr>
-<tr class="separator:a43a38bdfbee1d0aa689017a0a6b3902a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dfef5ce4c35ad76bef5bd0352714004"><td class="memItemLeft" align="right" valign="top"><a id="a2dfef5ce4c35ad76bef5bd0352714004" name="a2dfef5ce4c35ad76bef5bd0352714004"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMinimumHeight</b> (ALayoutDirection layout=ALayoutDirection::NONE)</td></tr>
-<tr class="separator:a2dfef5ce4c35ad76bef5bd0352714004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3256b37539194428c7b0b4f3af28e4c1"><td class="memItemLeft" align="right" valign="top"><a id="a3256b37539194428c7b0b4f3af28e4c1" name="a3256b37539194428c7b0b4f3af28e4c1"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMinimumWidth</b> ()</td></tr>
+<tr class="separator:a3256b37539194428c7b0b4f3af28e4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0c8f75f493dbd41d2b6da156c184b2"><td class="memItemLeft" align="right" valign="top"><a id="aef0c8f75f493dbd41d2b6da156c184b2" name="aef0c8f75f493dbd41d2b6da156c184b2"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>getMinimumHeight</b> ()</td></tr>
+<tr class="separator:aef0c8f75f493dbd41d2b6da156c184b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80eaa16be0c583615e3f532948a9d7b8"><td class="memItemLeft" align="right" valign="top"><a id="a80eaa16be0c583615e3f532948a9d7b8" name="a80eaa16be0c583615e3f532948a9d7b8"></a>
 glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>getMinimumSize</b> ()</td></tr>
 <tr class="separator:a80eaa16be0c583615e3f532948a9d7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,9 +263,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getContentHeight</b> (
 <tr class="memitem:abf796250c783c5cf84df6b989a95d2c4"><td class="memItemLeft" align="right" valign="top"><a id="abf796250c783c5cf84df6b989a95d2c4" name="abf796250c783c5cf84df6b989a95d2c4"></a>
 const glm::ivec2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getExpanding</b> () const</td></tr>
 <tr class="separator:abf796250c783c5cf84df6b989a95d2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dff85e3a36d4963bb5e7c1eb3dc02c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5">setExpanding</a> (const glm::ivec2 &amp;expanding)</td></tr>
-<tr class="memdesc:a8dff85e3a36d4963bb5e7c1eb3dc02c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the expanding of view.  <a href="classAView.html#a8dff85e3a36d4963bb5e7c1eb3dc02c5">More...</a><br /></td></tr>
-<tr class="separator:a8dff85e3a36d4963bb5e7c1eb3dc02c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f47691e1e4de96c4ac972a587e0d980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980">setExpanding</a> (glm::ivec2 expanding)</td></tr>
+<tr class="memdesc:a2f47691e1e4de96c4ac972a587e0d980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the expanding of view.  <a href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980">More...</a><br /></td></tr>
+<tr class="separator:a2f47691e1e4de96c4ac972a587e0d980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae50ca286a74a3d80e90f5004a0889697"><td class="memItemLeft" align="right" valign="top"><a id="ae50ca286a74a3d80e90f5004a0889697" name="ae50ca286a74a3d80e90f5004a0889697"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setExpanding</b> (int expanding)</td></tr>
 <tr class="separator:ae50ca286a74a3d80e90f5004a0889697"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,18 +287,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getExpandingHorizontal
 <tr class="memitem:a6475805bc426ed1fe427f18425f94070"><td class="memItemLeft" align="right" valign="top"><a id="a6475805bc426ed1fe427f18425f94070" name="a6475805bc426ed1fe427f18425f94070"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getExpandingVertical</b> () const</td></tr>
 <tr class="separator:a6475805bc426ed1fe427f18425f94070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d2f516c5faac4a3613204bc97ad5e4"><td class="memItemLeft" align="right" valign="top"><a id="a14d2f516c5faac4a3613204bc97ad5e4" name="a14d2f516c5faac4a3613204bc97ad5e4"></a>
-<a class="el" href="structAFontStyle.html">AFontStyle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getFontStyle</b> ()</td></tr>
-<tr class="separator:a14d2f516c5faac4a3613204bc97ad5e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e2503240d8817be4b01c0a54f4d94ca"><td class="memItemLeft" align="right" valign="top"><a id="a1e2503240d8817be4b01c0a54f4d94ca" name="a1e2503240d8817be4b01c0a54f4d94ca"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getOpacity</b> () const</td></tr>
-<tr class="separator:a1e2503240d8817be4b01c0a54f4d94ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08d9df88628eb596b90a8f9d9a57d847"><td class="memItemLeft" align="right" valign="top"><a id="a08d9df88628eb596b90a8f9d9a57d847" name="a08d9df88628eb596b90a8f9d9a57d847"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setOpacity</b> (float opacity)</td></tr>
-<tr class="separator:a08d9df88628eb596b90a8f9d9a57d847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a905e58223a40e3b18da4f295fb748c0a"><td class="memItemLeft" align="right" valign="top"><a id="a905e58223a40e3b18da4f295fb748c0a" name="a905e58223a40e3b18da4f295fb748c0a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>invalidateFont</b> ()</td></tr>
-<tr class="separator:a905e58223a40e3b18da4f295fb748c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01741451f9e4f6d13eba47208fd4ac26"><td class="memItemLeft" align="right" valign="top"><a id="a01741451f9e4f6d13eba47208fd4ac26" name="a01741451f9e4f6d13eba47208fd4ac26"></a>
+<a class="el" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getOpacity</b> () const</td></tr>
+<tr class="separator:a01741451f9e4f6d13eba47208fd4ac26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab282e37f6a0676d6cf166cb49cc77b78"><td class="memItemLeft" align="right" valign="top"><a id="ab282e37f6a0676d6cf166cb49cc77b78" name="ab282e37f6a0676d6cf166cb49cc77b78"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setOpacity</b> (<a class="el" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a> opacity)</td></tr>
+<tr class="separator:ab282e37f6a0676d6cf166cb49cc77b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40235018d2910bca3ae1cebe40ddbe2b"><td class="memItemLeft" align="right" valign="top"><a id="a40235018d2910bca3ae1cebe40ddbe2b" name="a40235018d2910bca3ae1cebe40ddbe2b"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (glm::ivec2 position)</td></tr>
 <tr class="separator:a40235018d2910bca3ae1cebe40ddbe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -330,13 +338,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFocused</b> () cons
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isMouseEntered</b> () const</td></tr>
 <tr class="separator:a1ba3e7b742a51b5e0601c78c0f9326e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09cfd11b74d4cfe313f740ad4accb7ec"><td class="memItemLeft" align="right" valign="top"><a id="a09cfd11b74d4cfe313f740ad4accb7ec" name="a09cfd11b74d4cfe313f740ad4accb7ec"></a>
-<a class="el" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibility</b> () const</td></tr>
+Visibility&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibility</b> () const</td></tr>
 <tr class="separator:a09cfd11b74d4cfe313f740ad4accb7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae398225c87a9c9661ab719bb41e10452"><td class="memItemLeft" align="right" valign="top"><a id="ae398225c87a9c9661ab719bb41e10452" name="ae398225c87a9c9661ab719bb41e10452"></a>
-<a class="el" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibilityRecursive</b> () const</td></tr>
+Visibility&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibilityRecursive</b> () const</td></tr>
 <tr class="separator:ae398225c87a9c9661ab719bb41e10452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619d56d3b1d9a451d739a5393a904f26"><td class="memItemLeft" align="right" valign="top"><a id="a619d56d3b1d9a451d739a5393a904f26" name="a619d56d3b1d9a451d739a5393a904f26"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setVisibility</b> (<a class="el" href="group__views.html#ga53d6f8ccb0015ea020228de41cfd2162">Visibility</a> visibility) noexcept</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setVisibility</b> (Visibility visibility) noexcept</td></tr>
 <tr class="separator:a619d56d3b1d9a451d739a5393a904f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681f5b3627ad3a13d4534356390c8773"><td class="memItemLeft" align="right" valign="top"><a id="a681f5b3627ad3a13d4534356390c8773" name="a681f5b3627ad3a13d4534356390c8773"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setVisible</b> (bool <a class="el" href="structViewAssertionVisible.html">visible</a>) noexcept</td></tr>
@@ -436,6 +444,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onCharEntered
 <tr class="separator:a1e0954429f256c126ffa04079a8c6fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c3deb7023947adc4c698540db4086c8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a9c3deb7023947adc4c698540db4086c8">handlesNonMouseNavigation</a> ()</td></tr>
 <tr class="separator:a9c3deb7023947adc4c698540db4086c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc9bd21466473bb7c225f9f98ce97e9"><td class="memItemLeft" align="right" valign="top"><a id="afdc9bd21466473bb7c225f9f98ce97e9" name="afdc9bd21466473bb7c225f9f98ce97e9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>forceUpdateLayoutRecursively</b> ()</td></tr>
+<tr class="separator:afdc9bd21466473bb7c225f9f98ce97e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e3477ab15e421b1124cc9469f1ed863"><td class="memItemLeft" align="right" valign="top"><a id="a4e3477ab15e421b1124cc9469f1ed863" name="a4e3477ab15e421b1124cc9469f1ed863"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setEnabled</b> (bool enabled=true)</td></tr>
 <tr class="separator:a4e3477ab15e421b1124cc9469f1ed863"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -456,7 +467,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a cla
 <tr class="memdesc:ac6292013de2f384cb791f1c91787a362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for <a class="el" href="kAUI_8h_source.html">kAUI.h</a>:with_style. <br /></td></tr>
 <tr class="separator:ac6292013de2f384cb791f1c91787a362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4baedd07aad97c0f2d82f3937acb7362"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a4baedd07aad97c0f2d82f3937acb7362">onClickPrevented</a> ()</td></tr>
-<tr class="memdesc:a4baedd07aad97c0f2d82f3937acb7362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="classABaseWindow.html#a8b5adda729634c0cff12b9d515b33e20" title="Prevents click action on upcoming pointer release.">ABaseWindow::preventClickOnPointerRelease</a>.  <a href="classAView.html#a4baedd07aad97c0f2d82f3937acb7362">More...</a><br /></td></tr>
+<tr class="memdesc:a4baedd07aad97c0f2d82f3937acb7362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on <a class="el" href="classAWindowBase.html#a90ab308c2b58fbdb48a23a050f39144d" title="Prevents click action on upcoming pointer release.">AWindowBase::preventClickOnPointerRelease</a>.  <a href="classAView.html#a4baedd07aad97c0f2d82f3937acb7362">More...</a><br /></td></tr>
 <tr class="separator:a4baedd07aad97c0f2d82f3937acb7362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad461e812a51a1d556ec8219399e659c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ad461e812a51a1d556ec8219399e659c9">invalidateAllStyles</a> ()</td></tr>
 <tr class="memdesc:ad461e812a51a1d556ec8219399e659c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.  <a href="classAView.html#ad461e812a51a1d556ec8219399e659c9">More...</a><br /></td></tr>
@@ -467,9 +478,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a cla
 <tr class="memitem:a2fe107662aec06c7c1ad7aa2eda71c0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a2fe107662aec06c7c1ad7aa2eda71c0c">invalidateAssHelper</a> ()</td></tr>
 <tr class="memdesc:a2fe107662aec06c7c1ad7aa2eda71c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets mAssHelper.  <a href="classAView.html#a2fe107662aec06c7c1ad7aa2eda71c0c">More...</a><br /></td></tr>
 <tr class="separator:a2fe107662aec06c7c1ad7aa2eda71c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96b967218c79654c2bca5cc8c686a407"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a96b967218c79654c2bca5cc8c686a407">wantsTouchscreenKeyboard</a> ()</td></tr>
-<tr class="memdesc:a96b967218c79654c2bca5cc8c686a407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if view is textfield-like view which requires touchscreen keyboard when clicked.  <a href="classAView.html#a96b967218c79654c2bca5cc8c686a407">More...</a><br /></td></tr>
+<tr class="memitem:a96b967218c79654c2bca5cc8c686a407"><td class="memItemLeft" align="right" valign="top"><a id="a96b967218c79654c2bca5cc8c686a407" name="a96b967218c79654c2bca5cc8c686a407"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>wantsTouchscreenKeyboard</b> ()</td></tr>
+<tr class="memdesc:a96b967218c79654c2bca5cc8c686a407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if view is textfield-like view which requires touchscreen keyboard when clicked. <br /></td></tr>
 <tr class="separator:a96b967218c79654c2bca5cc8c686a407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e107013a87ab6460f002c318bad93e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a6e107013a87ab6460f002c318bad93e2">setSkipUntilLayoutUpdate</a> (bool skipUntilLayoutUpdate)</td></tr>
+<tr class="separator:a6e107013a87ab6460f002c318bad93e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de1868cb3897fcac008e000c9b3bc62"><td class="memItemLeft" align="right" valign="top"><a id="a4de1868cb3897fcac008e000c9b3bc62" name="a4de1868cb3897fcac008e000c9b3bc62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFloating</b> (AFloat f) noexcept</td></tr>
+<tr class="memdesc:a4de1868cb3897fcac008e000c9b3bc62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set floating value for <a class="el" href="classAText.html" title="HTML-capable text container.">AText</a>. <br /></td></tr>
+<tr class="separator:a4de1868cb3897fcac008e000c9b3bc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c0be62facef4c94a1fe51382541fd5"><td class="memItemLeft" align="right" valign="top"><a id="a30c0be62facef4c94a1fe51382541fd5" name="a30c0be62facef4c94a1fe51382541fd5"></a>
+AFloat&#160;</td><td class="memItemRight" valign="bottom"><b>getFloating</b> () const noexcept</td></tr>
+<tr class="memdesc:a30c0be62facef4c94a1fe51382541fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating value for <a class="el" href="classAText.html" title="HTML-capable text container.">AText</a>. <br /></td></tr>
+<tr class="separator:a30c0be62facef4c94a1fe51382541fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
 <tr class="memitem:ad735f34c28d2dc51ee846af50e0ac3fe inherit pub_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="ad735f34c28d2dc51ee846af50e0ac3fe" name="ad735f34c28d2dc51ee846af50e0ac3fe"></a>
 <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAObject.html">AObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sharedPtr</b> ()</td></tr>
@@ -507,102 +529,102 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMy
 <tr class="memitem:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memItemLeft" align="right" valign="top"><a id="a640f7f625060ec4c2d8e053058ed342d" name="a640f7f625060ec4c2d8e053058ed342d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>noncopyable</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
 <tr class="separator:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memItemLeft" align="right" valign="top"><a id="a40029c7ea1fc9cdb0225cf3c6b790b58" name="a40029c7ea1fc9cdb0225cf3c6b790b58"></a>
+<a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
+<tr class="separator:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Signals and public fields</h2></td></tr>
-<tr class="memitem:aa0b29b615b99f9b60f08a3669aa19adf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa0b29b615b99f9b60f08a3669aa19adf">viewGraphSubtreeChanged</a></td></tr>
+<tr class="memitem:aa0b29b615b99f9b60f08a3669aa19adf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa0b29b615b99f9b60f08a3669aa19adf">viewGraphSubtreeChanged</a></td></tr>
 <tr class="separator:aa0b29b615b99f9b60f08a3669aa19adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad741cdbf0794914fdb189ed68d603de8"><td class="memItemLeft" align="right" valign="top"><a id="ad741cdbf0794914fdb189ed68d603de8" name="ad741cdbf0794914fdb189ed68d603de8"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hoveredState</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hoveredState</b></td></tr>
 <tr class="separator:ad741cdbf0794914fdb189ed68d603de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d2ca025bb896f18a620a2ac4b4a2d4e"><td class="memItemLeft" align="right" valign="top"><a id="a1d2ca025bb896f18a620a2ac4b4a2d4e" name="a1d2ca025bb896f18a620a2ac4b4a2d4e"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mouseEnter</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mouseEnter</b></td></tr>
 <tr class="separator:a1d2ca025bb896f18a620a2ac4b4a2d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a858730ac96a82142c5261823e6dc4093"><td class="memItemLeft" align="right" valign="top"><a id="a858730ac96a82142c5261823e6dc4093" name="a858730ac96a82142c5261823e6dc4093"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mouseLeave</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mouseLeave</b></td></tr>
 <tr class="separator:a858730ac96a82142c5261823e6dc4093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0edd1dc1c5126604c6712593392ab18"><td class="memItemLeft" align="right" valign="top"><a id="ae0edd1dc1c5126604c6712593392ab18" name="ae0edd1dc1c5126604c6712593392ab18"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; bool, <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pressedState</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; bool, <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pressedState</b></td></tr>
 <tr class="separator:ae0edd1dc1c5126604c6712593392ab18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dc44fe09d577aaef2f6a0d4b671669d"><td class="memItemLeft" align="right" valign="top"><a id="a0dc44fe09d577aaef2f6a0d4b671669d" name="a0dc44fe09d577aaef2f6a0d4b671669d"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pressed</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pressed</b></td></tr>
 <tr class="separator:a0dc44fe09d577aaef2f6a0d4b671669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa43313f1447f4a5a848f76381783d313"><td class="memItemLeft" align="right" valign="top"><a id="aa43313f1447f4a5a848f76381783d313" name="aa43313f1447f4a5a848f76381783d313"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>released</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>released</b></td></tr>
 <tr class="separator:aa43313f1447f4a5a848f76381783d313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4a4a5173c3dea4f0cfae857acd3cbf"><td class="memItemLeft" align="right" valign="top"><a id="a9f4a4a5173c3dea4f0cfae857acd3cbf" name="a9f4a4a5173c3dea4f0cfae857acd3cbf"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>enabledState</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>enabledState</b></td></tr>
 <tr class="separator:a9f4a4a5173c3dea4f0cfae857acd3cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0369ee3599f37d0e4113d6b5eae8b16c"><td class="memItemLeft" align="right" valign="top"><a id="a0369ee3599f37d0e4113d6b5eae8b16c" name="a0369ee3599f37d0e4113d6b5eae8b16c"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>enabled</b></td></tr>
 <tr class="separator:a0369ee3599f37d0e4113d6b5eae8b16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd6d222d54bcccafb1d9b166a8742291"><td class="memItemLeft" align="right" valign="top"><a id="acd6d222d54bcccafb1d9b166a8742291" name="acd6d222d54bcccafb1d9b166a8742291"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>disabled</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>disabled</b></td></tr>
 <tr class="separator:acd6d222d54bcccafb1d9b166a8742291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a815fabb561c95b6b90a64686b707ec9e"><td class="memItemLeft" align="right" valign="top"><a id="a815fabb561c95b6b90a64686b707ec9e" name="a815fabb561c95b6b90a64686b707ec9e"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clickedButton</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>clickedButton</b></td></tr>
 <tr class="memdesc:a815fabb561c95b6b90a64686b707ec9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some mouse button clicked. <br /></td></tr>
 <tr class="separator:a815fabb561c95b6b90a64686b707ec9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2361cde3ebf9e0b410c28dab746029d"><td class="memItemLeft" align="right" valign="top"><a id="af2361cde3ebf9e0b410c28dab746029d" name="af2361cde3ebf9e0b410c28dab746029d"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clicked</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clicked</b></td></tr>
 <tr class="memdesc:af2361cde3ebf9e0b410c28dab746029d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Left mouse button clicked. <br /></td></tr>
 <tr class="separator:af2361cde3ebf9e0b410c28dab746029d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a129f3b9ae234f84498c7965ad6ee8df4"><td class="memItemLeft" align="right" valign="top"><a id="a129f3b9ae234f84498c7965ad6ee8df4" name="a129f3b9ae234f84498c7965ad6ee8df4"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>positionChanged</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>positionChanged</b></td></tr>
 <tr class="memdesc:a129f3b9ae234f84498c7965ad6ee8df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position changed. <br /></td></tr>
 <tr class="separator:a129f3b9ae234f84498c7965ad6ee8df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd0aaa185656f113bb1b4127ba36a1e"><td class="memItemLeft" align="right" valign="top"><a id="accd0aaa185656f113bb1b4127ba36a1e" name="accd0aaa185656f113bb1b4127ba36a1e"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sizeChanged</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sizeChanged</b></td></tr>
 <tr class="memdesc:accd0aaa185656f113bb1b4127ba36a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size changed. <br /></td></tr>
 <tr class="separator:accd0aaa185656f113bb1b4127ba36a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5034ce1e3e117e2f4ece91c1d038dbe0"><td class="memItemLeft" align="right" valign="top"><a id="a5034ce1e3e117e2f4ece91c1d038dbe0" name="a5034ce1e3e117e2f4ece91c1d038dbe0"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2, glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometryChanged</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; glm::ivec2, glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>geometryChanged</b></td></tr>
 <tr class="memdesc:a5034ce1e3e117e2f4ece91c1d038dbe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geometry (position and size) changed. <br /></td></tr>
 <tr class="separator:a5034ce1e3e117e2f4ece91c1d038dbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a603b11e87b05b203f321f6be85d45de8"><td class="memItemLeft" align="right" valign="top"><a id="a603b11e87b05b203f321f6be85d45de8" name="a603b11e87b05b203f321f6be85d45de8"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scrolled</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scrolled</b></td></tr>
 <tr class="memdesc:a603b11e87b05b203f321f6be85d45de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scroll event. <br /></td></tr>
 <tr class="separator:a603b11e87b05b203f321f6be85d45de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7299aeca90d52aa7406bebf1b5bb604a"><td class="memItemLeft" align="right" valign="top"><a id="a7299aeca90d52aa7406bebf1b5bb604a" name="a7299aeca90d52aa7406bebf1b5bb604a"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; AInput::Key &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>keyPressed</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; AInput::Key &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>keyPressed</b></td></tr>
 <tr class="memdesc:a7299aeca90d52aa7406bebf1b5bb604a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard key pressed. <br /></td></tr>
 <tr class="separator:a7299aeca90d52aa7406bebf1b5bb604a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02446f0c63358a237c2fcb0da0487b8d"><td class="memItemLeft" align="right" valign="top"><a id="a02446f0c63358a237c2fcb0da0487b8d" name="a02446f0c63358a237c2fcb0da0487b8d"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; AInput::Key &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>keyReleased</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; AInput::Key &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>keyReleased</b></td></tr>
 <tr class="memdesc:a02446f0c63358a237c2fcb0da0487b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keyboard key released. <br /></td></tr>
 <tr class="separator:a02446f0c63358a237c2fcb0da0487b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec87965389be9d82031e53e2e036bb1"><td class="memItemLeft" align="right" valign="top"><a id="abec87965389be9d82031e53e2e036bb1" name="abec87965389be9d82031e53e2e036bb1"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clickedRight</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clickedRight</b></td></tr>
 <tr class="memdesc:abec87965389be9d82031e53e2e036bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right mouse button clicked. <br /></td></tr>
 <tr class="separator:abec87965389be9d82031e53e2e036bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d60b048342b29b46dac2657ce6e781b"><td class="memItemLeft" align="right" valign="top"><a id="a8d60b048342b29b46dac2657ce6e781b" name="a8d60b048342b29b46dac2657ce6e781b"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clickedRightOrLongPressed</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clickedRightOrLongPressed</b></td></tr>
 <tr class="memdesc:a8d60b048342b29b46dac2657ce6e781b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Right mouse button clicked or long press gesture applied. <br /></td></tr>
 <tr class="separator:a8d60b048342b29b46dac2657ce6e781b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b0d49eba17ed65b7dd10e7dfd4f9df5"><td class="memItemLeft" align="right" valign="top"><a id="a6b0d49eba17ed65b7dd10e7dfd4f9df5" name="a6b0d49eba17ed65b7dd10e7dfd4f9df5"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>doubleClicked</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; <a class="el" href="classAPointerIndex.html">APointerIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>doubleClicked</b></td></tr>
 <tr class="separator:a6b0d49eba17ed65b7dd10e7dfd4f9df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c849bdcafb77adc6255ea3c2703eac7"><td class="memItemLeft" align="right" valign="top"><a id="a1c849bdcafb77adc6255ea3c2703eac7" name="a1c849bdcafb77adc6255ea3c2703eac7"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>customCssPropertyChanged</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>customCssPropertyChanged</b></td></tr>
 <tr class="separator:a1c849bdcafb77adc6255ea3c2703eac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96f3c6e2b8c960c5081866e26baa828e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classASignal.html">emits</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a96f3c6e2b8c960c5081866e26baa828e">focusState</a></td></tr>
+<tr class="memitem:a96f3c6e2b8c960c5081866e26baa828e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a96f3c6e2b8c960c5081866e26baa828e">focusState</a></td></tr>
 <tr class="memdesc:a96f3c6e2b8c960c5081866e26baa828e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Focus state changed.  <a href="classAView.html#a96f3c6e2b8c960c5081866e26baa828e">More...</a><br /></td></tr>
 <tr class="separator:a96f3c6e2b8c960c5081866e26baa828e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ed96583365c2b77ba5be711856641a7"><td class="memItemLeft" align="right" valign="top"><a id="a3ed96583365c2b77ba5be711856641a7" name="a3ed96583365c2b77ba5be711856641a7"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>focusAcquired</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>focusAcquired</b></td></tr>
 <tr class="separator:a3ed96583365c2b77ba5be711856641a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16abc7d57fbd4485fbf2f8e926412cbf"><td class="memItemLeft" align="right" valign="top"><a id="a16abc7d57fbd4485fbf2f8e926412cbf" name="a16abc7d57fbd4485fbf2f8e926412cbf"></a>
-<a class="el" href="classASignal.html">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>focusLost</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&#160;</td><td class="memItemRight" valign="bottom"><b>focusLost</b></td></tr>
 <tr class="separator:a16abc7d57fbd4485fbf2f8e926412cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedba61e9f5d0875786ffcfb10a58fb8e"><td class="memItemLeft" align="right" valign="top"><a id="aedba61e9f5d0875786ffcfb10a58fb8e" name="aedba61e9f5d0875786ffcfb10a58fb8e"></a>
-<a class="el" href="classASignal.html">emits</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>childFocused</b></td></tr>
+<a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>childFocused</b></td></tr>
 <tr class="separator:aedba61e9f5d0875786ffcfb10a58fb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a359759a15142b8e338ed02ad2f6c0a45"><td class="memItemLeft" align="right" valign="top"><a id="a359759a15142b8e338ed02ad2f6c0a45" name="a359759a15142b8e338ed02ad2f6c0a45"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>requestLayoutUpdate</b> ()</td></tr>
-<tr class="separator:a359759a15142b8e338ed02ad2f6c0a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b273cbe961c8633b17171b750762135"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135">transformGestureEventsToDesktop</a> (const glm::ivec2 &amp;origin, const AGestureEvent &amp;event)</td></tr>
 <tr class="memdesc:a1b273cbe961c8633b17171b750762135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts touch screen events to desktop.  <a href="classAView.html#a1b273cbe961c8633b17171b750762135">More...</a><br /></td></tr>
 <tr class="separator:a1b273cbe961c8633b17171b750762135"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -618,6 +640,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (con
 <tr class="memitem:a43e89f0f7a3dfb49d82216e351566bf1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a43e89f0f7a3dfb49d82216e351566bf1">onViewGraphSubtreeChanged</a> ()</td></tr>
 <tr class="memdesc:a43e89f0f7a3dfb49d82216e351566bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when direct or indirect parent has changed.  <a href="classAView.html#a43e89f0f7a3dfb49d82216e351566bf1">More...</a><br /></td></tr>
 <tr class="separator:a43e89f0f7a3dfb49d82216e351566bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dbc24e272ea843ad75fb30c2e36389a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a9dbc24e272ea843ad75fb30c2e36389a">markPixelDataInvalid</a> (<a class="el" href="structARect.html">ARect</a>&lt; int &gt; invalidArea)</td></tr>
+<tr class="memdesc:a9dbc24e272ea843ad75fb30c2e36389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A view requests to redraw it and passes it's coords relative to this.  <a href="classAView.html#a9dbc24e272ea843ad75fb30c2e36389a">More...</a><br /></td></tr>
+<tr class="separator:a9dbc24e272ea843ad75fb30c2e36389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117d11c708d5ecb563043ec75bf95d52"><td class="memItemLeft" align="right" valign="top"><a id="a117d11c708d5ecb563043ec75bf95d52" name="a117d11c708d5ecb563043ec75bf95d52"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>commitStyle</b> ()</td></tr>
+<tr class="separator:a117d11c708d5ecb563043ec75bf95d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
 <tr class="memitem:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memItemLeft" align="right" valign="top"><a id="a98cf3fa4ac279b30860bf228c44306b2" name="a98cf3fa4ac279b30860bf228c44306b2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
@@ -626,14 +654,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a cla
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac33d3edd01436307f555e7ddcbeed144"><td class="memItemLeft" align="right" valign="top"><a id="ac33d3edd01436307f555e7ddcbeed144" name="ac33d3edd01436307f555e7ddcbeed144"></a>
-<a class="el" href="classAViewContainer.html">AViewContainer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mParent</b> = nullptr</td></tr>
-<tr class="memdesc:ac33d3edd01436307f555e7ddcbeed144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
-<tr class="separator:ac33d3edd01436307f555e7ddcbeed144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa80d3e423a09a2ea728e68560e507281"><td class="memItemLeft" align="right" valign="top"><a id="aa80d3e423a09a2ea728e68560e507281" name="aa80d3e423a09a2ea728e68560e507281"></a>
-<a class="el" href="group__views.html#gacba678dfa3c1cb4aab689f901f414119">ATextOverflow</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mTextOverflow</b> = ATextOverflow::NONE</td></tr>
-<tr class="memdesc:aa80d3e423a09a2ea728e68560e507281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines how to display text that go out of the bounds. <br /></td></tr>
-<tr class="separator:aa80d3e423a09a2ea728e68560e507281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a408d3869dd8f7ce7fb82ee21b17db9f2"><td class="memItemLeft" align="right" valign="top"><a id="a408d3869dd8f7ce7fb82ee21b17db9f2" name="a408d3869dd8f7ce7fb82ee21b17db9f2"></a>
+<a class="el" href="classAViewContainerBase.html">AViewContainerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mParent</b> = nullptr</td></tr>
+<tr class="memdesc:a408d3869dd8f7ce7fb82ee21b17db9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. <br /></td></tr>
+<tr class="separator:a408d3869dd8f7ce7fb82ee21b17db9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d4886486fa16bbfda71ddb2546bf517"><td class="memItemLeft" align="right" valign="top"><a id="a6d4886486fa16bbfda71ddb2546bf517" name="a6d4886486fa16bbfda71ddb2546bf517"></a>
 std::array&lt; <a class="el" href="structass_1_1prop_1_1IPropertyBase.html">ass::prop::IPropertyBase</a> *, int(ass::prop::PropertySlot::COUNT)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mAss</b></td></tr>
 <tr class="memdesc:a6d4886486fa16bbfda71ddb2546bf517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing list, or baking drawing commands so that you don't have to parse the ASS every time. <br /></td></tr>
@@ -657,6 +681,15 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mSize</b> = { 2
 <tr class="memitem:a5122d5846227520294bda27e6b45ea4a"><td class="memItemLeft" align="right" valign="top">glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a5122d5846227520294bda27e6b45ea4a">mExpanding</a> = {0, 0}</td></tr>
 <tr class="memdesc:a5122d5846227520294bda27e6b45ea4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expansion coefficient. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container.  <a href="classAView.html#a5122d5846227520294bda27e6b45ea4a">More...</a><br /></td></tr>
 <tr class="separator:a5122d5846227520294bda27e6b45ea4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03620bb4a613bc2c104083ce174e5cb"><td class="memItemLeft" align="right" valign="top"><a id="ac03620bb4a613bc2c104083ce174e5cb" name="ac03620bb4a613bc2c104083ce174e5cb"></a>
+<a class="el" href="classAOptional.html">AOptional</a>&lt; glm::ivec2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mCachedMinContentSize</b></td></tr>
+<tr class="separator:ac03620bb4a613bc2c104083ce174e5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27fcbb47a32d44d3837b6cc080ee43f"><td class="memItemLeft" align="right" valign="top"><a id="ab27fcbb47a32d44d3837b6cc080ee43f" name="ab27fcbb47a32d44d3837b6cc080ee43f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>mMarkedMinContentSizeInvalid</b> = false</td></tr>
+<tr class="separator:ab27fcbb47a32d44d3837b6cc080ee43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e918ba52e98cfb94ff340560dcbcbb7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a8e918ba52e98cfb94ff340560dcbcbb7">mRedrawRequested</a> = false</td></tr>
+<tr class="memdesc:a8e918ba52e98cfb94ff340560dcbcbb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redraw requested flag for this particular view/.  <a href="classAView.html#a8e918ba52e98cfb94ff340560dcbcbb7">More...</a><br /></td></tr>
+<tr class="separator:a8e918ba52e98cfb94ff340560dcbcbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcab50e0676d2197c64a8d8c2221d741"><td class="memItemLeft" align="right" valign="top"><a id="afcab50e0676d2197c64a8d8c2221d741" name="afcab50e0676d2197c64a8d8c2221d741"></a>
 glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mMinSize</b> = {0, 0}</td></tr>
 <tr class="memdesc:afcab50e0676d2197c64a8d8c2221d741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimal size. <br /></td></tr>
@@ -681,14 +714,20 @@ glm::ivec2&#160;</td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> 
 <tr class="memdesc:a22c7f11d281b887e5cf672f4f992d3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASS class names.  <a href="classAView.html#a22c7f11d281b887e5cf672f4f992d3a3">More...</a><br /></td></tr>
 <tr class="separator:a22c7f11d281b887e5cf672f4f992d3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4475a69d795612634df68566a0b9d5fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a4475a69d795612634df68566a0b9d5fb">mSkipUntilLayoutUpdate</a> = true</td></tr>
-<tr class="memdesc:a4475a69d795612634df68566a0b9d5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true, <a class="el" href="classAViewContainer.html" title="A view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry.  <a href="classAView.html#a4475a69d795612634df68566a0b9d5fb">More...</a><br /></td></tr>
+<tr class="memdesc:a4475a69d795612634df68566a0b9d5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If set to true, <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry.  <a href="classAView.html#a4475a69d795612634df68566a0b9d5fb">More...</a><br /></td></tr>
 <tr class="separator:a4475a69d795612634df68566a0b9d5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:af7c2d9ec44c1a16f54ff6edeb4ace4f6"><td class="memItemLeft" align="right" valign="top"><a id="af7c2d9ec44c1a16f54ff6edeb4ace4f6" name="af7c2d9ec44c1a16f54ff6edeb4ace4f6"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>AViewContainerBase</b></td></tr>
+<tr class="separator:af7c2d9ec44c1a16f54ff6edeb4ace4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf57f53a8617c31de58bced0f0ba8e1"><td class="memItemLeft" align="right" valign="top"><a id="a9bf57f53a8617c31de58bced0f0ba8e1" name="a9bf57f53a8617c31de58bced0f0ba8e1"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>AViewContainer</b></td></tr>
 <tr class="separator:a9bf57f53a8617c31de58bced0f0ba8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69bc0ca54899e9bae3bce14c84b95c42"><td class="memItemLeft" align="right" valign="top"><a id="a69bc0ca54899e9bae3bce14c84b95c42" name="a69bc0ca54899e9bae3bce14c84b95c42"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>IRenderViewToTexture</b></td></tr>
+<tr class="separator:a69bc0ca54899e9bae3bce14c84b95c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -736,8 +775,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a87">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -766,7 +803,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 <dl class="section return"><dt>Returns</dt><dd>Can this view capture focus.</dd></dl>
 <p>For containers, capturing focus is redundant. </p>
 
-<p>Reimplemented in <a class="el" href="classASlider.html#a0e6810d98f2994cef20729603e762a12">ASlider</a>, and <a class="el" href="classAViewContainer.html#abd66caead2574fdb4da9891a803d014a">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classASlider.html#a0e6810d98f2994cef20729603e762a12">ASlider</a>, and <a class="el" href="classAViewContainerBase.html#ab706616eb8bbb4002e28abce029ebfb6">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -793,8 +830,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </table>
 </div><div class="memdoc">
 <p >Simulates click on the view. Useful then you want to call <a class="el" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d" title="Left mouse button clicked.">clicked()</a> slots of this view. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a79">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -823,10 +858,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 
 <p>Produce context (right click) menu. </p>
 <dl class="section return"><dt>Returns</dt><dd>menu model </dd></dl>
-
-<p>Reimplemented in <a class="el" href="classAAbstractTypeableView.html#a5055b5200c2cc32a02c81e67498065d1">AAbstractTypeableView</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a37">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -862,9 +893,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> processes this click</dd></dl>
-<p>Used in <a class="el" href="classAViewContainer.html#aeb44d35f2a0eccc8fd1c6f9a7560f71f" title="Finds first direct child view under position.">AViewContainer::getViewAt</a> method subset, thus affecting click event handling. </p>
+<p>Used in <a class="el" href="classAViewContainerBase.html#a96c24aac5b9d50a8cec70d905a104a0e" title="Finds first direct child view under position.">AViewContainer::getViewAt</a> method subset, thus affecting click event handling. </p>
 
-<p>Reimplemented in <a class="el" href="classAWindow.html#a607d322db574df5c957a7b19aede61ce">AWindow</a>, <a class="el" href="classA2FingerTransformArea.html#a9004e7382bc4aa1137cdaa3c65529677">A2FingerTransformArea</a>, <a class="el" href="classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f">AAbstractLabel</a>, <a class="el" href="classAButton.html#ad80e94073674662d0ad29b3662f6025f">AButton</a>, <a class="el" href="classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac">ACheckBox</a>, <a class="el" href="classADividerView.html#a85aab2a154585e0782e2e006042d5775">ADividerView</a>, <a class="el" href="classAGridSplitter.html#ad7c71f294a8283c3c396d09eb4228594">AGridSplitter</a>, <a class="el" href="classASelectableLabel.html#acea414e646b28b000827388f682bc2cb">ASelectableLabel</a>, <a class="el" href="classASpacerExpanding.html#abb29b7ae132b063f11f4a52838cba8cc">ASpacerExpanding</a>, <a class="el" href="classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35">ASpacerFixed</a>, and <a class="el" href="classAViewContainer.html#aa1d0bcd57f85776cf9e964db2afa36fd">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAWindow.html#a607d322db574df5c957a7b19aede61ce">AWindow</a>, <a class="el" href="classA2FingerTransformArea.html#a9004e7382bc4aa1137cdaa3c65529677">A2FingerTransformArea</a>, <a class="el" href="classAAbstractLabel.html#a1e393fdd98d58b9d024e39e6a7cfcb2f">AAbstractLabel</a>, <a class="el" href="classAButton.html#ad80e94073674662d0ad29b3662f6025f">AButton</a>, <a class="el" href="classACheckBox.html#a826a2ea2aa74070f3333aeca746efeac">ACheckBox</a>, <a class="el" href="classADividerView.html#a85aab2a154585e0782e2e006042d5775">ADividerView</a>, <a class="el" href="classAGridSplitter.html#ad7c71f294a8283c3c396d09eb4228594">AGridSplitter</a>, <a class="el" href="classASpacerExpanding.html#abb29b7ae132b063f11f4a52838cba8cc">ASpacerExpanding</a>, <a class="el" href="classASpacerFixed.html#a26cff5cac1c98387ded49f6ec2027d35">ASpacerFixed</a>, and <a class="el" href="classAViewContainerBase.html#aa8b42b477396e4de39687d2b2a737042">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -891,8 +922,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd>mExtraStylesheet </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a50">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -920,13 +949,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>if needFocusChainUpdate is false you need to control focus chain targets outside the focus function </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a84">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="abb924b63a9acdb4c837b4ee2e15cd986" name="abb924b63a9acdb4c837b4ee2e15cd986"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb924b63a9acdb4c837b4ee2e15cd986">&#9670;&nbsp;</a></span>getCenterPointInWindow()</h2>
+<a id="a32e6cd31d4a7ec7b39c9ce5f577900e9" name="a32e6cd31d4a7ec7b39c9ce5f577900e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e6cd31d4a7ec7b39c9ce5f577900e9">&#9670;&nbsp;</a></span>getCenterPointInWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -943,20 +970,18 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>The center point position of the view relatively to top left corner of the window. </p>
 <p >Useful in UI tests: </p><div class="fragment"><div class="line">mWindow-&gt;onPointerMove(mView-&gt;getCenterPointInWindow()); <span class="comment">// triggers on pointer move over the view through window</span></div>
-</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a45">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="a771d50948bb0ca66cb1a9038f76e416e" name="a771d50948bb0ca66cb1a9038f76e416e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a771d50948bb0ca66cb1a9038f76e416e">&#9670;&nbsp;</a></span>getContentMinimumHeight()</h2>
+<a id="a21c9fd89567b6841cac56cef63312e71" name="a21c9fd89567b6841cac56cef63312e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c9fd89567b6841cac56cef63312e71">&#9670;&nbsp;</a></span>getContentMinimumHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -967,8 +992,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
         <tr>
           <td class="memname">int AView::getContentMinimumHeight </td>
           <td>(</td>
-          <td class="paramtype">ALayoutDirection&#160;</td>
-          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -980,12 +1004,38 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>minimal content-area height. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classAAbstractLabel.html#a65949d4523eac52912a0fd63a25854d4">AAbstractLabel</a>, <a class="el" href="classAAbstractTextField.html#aa1d30fc5cfb064423af8c12cab10ac3a">AAbstractTextField</a>, <a class="el" href="classAAbstractTypeableView.html#adbae7713eb7d9818ef729f6857dd6ae5">AAbstractTypeableView</a>, <a class="el" href="classADoubleNumberPicker.html#a757efcfc6443b0daf81b7117446462c3">ADoubleNumberPicker</a>, <a class="el" href="classAGroupBox.html#a5a20a66f7e3927c06946ed49054d1dd3">AGroupBox</a>, <a class="el" href="classANumberPicker.html#ae5931096355856c82ad0d6f56f0f0668">ANumberPicker</a>, <a class="el" href="classAScrollArea.html#aa686c2c309f39c9675654b76e4045397">AScrollArea</a>, <a class="el" href="classASpacerFixed.html#adecb4adaba29315c52692e32d886ed62">ASpacerFixed</a>, <a class="el" href="classAText.html#aca1c2934439c96461cf11f7786e238ec">AText</a>, <a class="el" href="classATextArea.html#ac7e0a6483c8597050a8ba5ad26c62d6e">ATextArea</a>, <a class="el" href="classATreeView_1_1ContainerView.html#a3a9e16de50261df034a74a1d2558b8ad">ATreeView::ContainerView</a>, <a class="el" href="classATreeView.html#a8ad93957c27d657d7509158864e5095c">ATreeView</a>, and <a class="el" href="classAViewContainer.html#ab4eea3e436d989457f8cb12747d851ec">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAAbstractLabel.html#a9e84e07b1f21732af17711fee4334159">AAbstractLabel</a>, <a class="el" href="classAScrollArea.html#ab7c5b9f1c56a5786bc90e8fa1a6996d0">AScrollArea</a>, <a class="el" href="classASpacerFixed.html#a8fa325194a88919cc706eae0bb636080">ASpacerFixed</a>, <a class="el" href="classATextBase.html#ada7aa6fa0114e9c77d8a6518c995cbb9">ATextBase&lt; WordWrappingEngine &gt;</a>, <a class="el" href="classATextBase.html#ada7aa6fa0114e9c77d8a6518c995cbb9">ATextBase&lt; AWordWrappingEngine&lt;&gt; &gt;</a>, <a class="el" href="classATreeView_1_1ContainerView.html#a5fbe7838b7f0e8b1838c165dd068cbdd">ATreeView::ContainerView</a>, <a class="el" href="classATreeView.html#a6b0048f8907409c867e9c31bbd9b3ac1">ATreeView</a>, and <a class="el" href="classAViewContainerBase.html#af436cb02b6ab35bb0fd894b81e76d003">AViewContainerBase</a>.</p>
 
 </div>
 </div>
-<a id="a7a9e235e61231946d9f06017c1701e91" name="a7a9e235e61231946d9f06017c1701e91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a9e235e61231946d9f06017c1701e91">&#9670;&nbsp;</a></span>getContentMinimumWidth()</h2>
+<a id="ad5f42cf9fcc3a188236887c22e66164e" name="ad5f42cf9fcc3a188236887c22e66164e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f42cf9fcc3a188236887c22e66164e">&#9670;&nbsp;</a></span>getContentMinimumSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::ivec2 AView::getContentMinimumSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>minimal content-area size. </dd></dl>
+
+</div>
+</div>
+<a id="a71ecfca653416e23d3490746ff1c9fc8" name="a71ecfca653416e23d3490746ff1c9fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ecfca653416e23d3490746ff1c9fc8">&#9670;&nbsp;</a></span>getContentMinimumWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -996,8 +1046,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
         <tr>
           <td class="memname">int AView::getContentMinimumWidth </td>
           <td>(</td>
-          <td class="paramtype">ALayoutDirection&#160;</td>
-          <td class="paramname"><em>layout</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1009,7 +1058,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>minimal content-area width. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classAAbstractLabel.html#a22381e7341ee6552c31a812fab25e95c">AAbstractLabel</a>, <a class="el" href="classADropdownList.html#a549d9cab0facd18f4904a762aa733d64">ADropdownList</a>, <a class="el" href="classAPageSwitch.html#ab0fe56e98815d5cd29d7b0a93e0577b1">APageSwitch</a>, <a class="el" href="classAScrollArea.html#a3632b3acdb4cf42947d60652d47ac16c">AScrollArea</a>, <a class="el" href="classASpacerFixed.html#ac51602087565fd27e0c4567cce1a8f48">ASpacerFixed</a>, <a class="el" href="classAText.html#a6e4d8cbb0ea0a32f435c272f0df38e1d">AText</a>, <a class="el" href="classATreeView_1_1ContainerView.html#ac4de1ad58f5bb9392e4f14215ae48bdc">ATreeView::ContainerView</a>, and <a class="el" href="classAViewContainer.html#a83ee077afb5dfc595ceba3664b75e0b0">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAAbstractLabel.html#ad98171d7f629e28eeb4649c61a73342d">AAbstractLabel</a>, <a class="el" href="classADropdownList.html#a6808a81a9de662ab5e3ee56e7a9a7d00">ADropdownList</a>, <a class="el" href="classAPageSwitch.html#a1312c2d5b3c8af396d86fd84bb91fa2a">APageSwitch</a>, <a class="el" href="classAScrollArea.html#a767ffd848bb15e9ab986328eceedbdce">AScrollArea</a>, <a class="el" href="classASpacerFixed.html#a254d9515819c06c79d2a29f83932cc2f">ASpacerFixed</a>, <a class="el" href="classATextBase.html#a936c660a6ec852fd1a9c6c3f750eaf7e">ATextBase&lt; WordWrappingEngine &gt;</a>, <a class="el" href="classATextBase.html#a936c660a6ec852fd1a9c6c3f750eaf7e">ATextBase&lt; AWordWrappingEngine&lt;&gt; &gt;</a>, <a class="el" href="classATreeView_1_1ContainerView.html#a71883c8bfdd402f8c735b6b17f46f667">ATreeView::ContainerView</a>, and <a class="el" href="classAViewContainerBase.html#a61875f7975ff51d6b1fae6d1f284a0c8">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1038,13 +1087,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 
 <p>Fixed size. </p>
 <dl class="section return"><dt>Returns</dt><dd>Fixed size. {0, 0} if unspecified. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a74">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="ab3c244b2b5d88b895ff9eee41e5f5447" name="ab3c244b2b5d88b895ff9eee41e5f5447"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3c244b2b5d88b895ff9eee41e5f5447">&#9670;&nbsp;</a></span>getMargin()</h2>
+<a id="a0de8af992ddbbe2237caf1148397b592" name="a0de8af992ddbbe2237caf1148397b592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de8af992ddbbe2237caf1148397b592">&#9670;&nbsp;</a></span>getMargin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1056,7 +1103,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
           <td class="memname">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp; AView::getMargin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -1068,8 +1115,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 
 <p>Returns the <a class="el" href="classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e">margin</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>margin </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a60">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1096,13 +1141,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>maxSize (ignoring fixedSize) </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a69">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="a546a17cc5d955dfa75928d48337c65a7" name="a546a17cc5d955dfa75928d48337c65a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a546a17cc5d955dfa75928d48337c65a7">&#9670;&nbsp;</a></span>getMinSize()</h2>
+<a id="aa8e167e381210b7045032419131d36ba" name="aa8e167e381210b7045032419131d36ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e167e381210b7045032419131d36ba">&#9670;&nbsp;</a></span>getMinimumSizePlusMargin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1111,10 +1154,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const glm::ivec2 &amp; AView::getMinSize </td>
+          <td class="memname">glm::ivec2 AView::getMinimumSizePlusMargin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -1123,14 +1166,39 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>minSize (ignoring fixedSize) </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a48">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>minimum content size plus margin.</dd></dl>
+<p>This value is bare minimum space required for this view. It includes minimal content size + padding + margin which is exact space the view requires. </p>
 
 </div>
 </div>
-<a id="a346bb0a269caf3f15e1f90320bd7479d" name="a346bb0a269caf3f15e1f90320bd7479d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a346bb0a269caf3f15e1f90320bd7479d">&#9670;&nbsp;</a></span>getPadding()</h2>
+<a id="a4409e3c4993b808d2d7e23f85bc09328" name="a4409e3c4993b808d2d7e23f85bc09328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4409e3c4993b808d2d7e23f85bc09328">&#9670;&nbsp;</a></span>getMinSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::ivec2 AView::getMinSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>minSize (ignoring fixedSize) </dd></dl>
+
+</div>
+</div>
+<a id="a96b1246c3cf046ed6767219650e4918b" name="a96b1246c3cf046ed6767219650e4918b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b1246c3cf046ed6767219650e4918b">&#9670;&nbsp;</a></span>getPadding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1142,7 +1210,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
           <td class="memname">const <a class="el" href="structABoxFields.html">ABoxFields</a> &amp; AView::getPadding </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -1154,8 +1222,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 
 <p>Returns the <a class="el" href="classAView.html#a94e793bd34bdbd3b47a5bd5660747e18">padding</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>padding </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a63">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1174,53 +1240,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Coords of this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> relative to window </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a46">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="a3f2e024a5acecec85af1aedaa67066e5" name="a3f2e024a5acecec85af1aedaa67066e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f2e024a5acecec85af1aedaa67066e5">&#9670;&nbsp;</a></span>getTotalFieldHorizontal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float AView::getTotalFieldHorizontal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s margin and padding acquired by width. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a57">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="a274972d0e96c9ad2779fe5dfdeb71727" name="a274972d0e96c9ad2779fe5dfdeb71727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a274972d0e96c9ad2779fe5dfdeb71727">&#9670;&nbsp;</a></span>getTotalFieldVertical()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float AView::getTotalFieldVertical </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s margin and padding acquired by height. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a59">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="acaef54d28990d25a3edf594e163c1a8b" name="acaef54d28990d25a3edf594e163c1a8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaef54d28990d25a3edf594e163c1a8b">&#9670;&nbsp;</a></span>getTotalOccupiedHeight()</h2>
+<a id="a60f404f669341de12d919f4bd3cff824" name="a60f404f669341de12d919f4bd3cff824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f404f669341de12d919f4bd3cff824">&#9670;&nbsp;</a></span>getTotalFieldHorizontal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1229,7 +1253,85 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float AView::getTotalOccupiedHeight </td>
+          <td class="memname">int AView::getTotalFieldHorizontal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s margin and padding acquired by width. </dd></dl>
+
+</div>
+</div>
+<a id="a57c70222033ebbbf806553d0fc3094ba" name="a57c70222033ebbbf806553d0fc3094ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c70222033ebbbf806553d0fc3094ba">&#9670;&nbsp;</a></span>getTotalFieldSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::ivec2 AView::getTotalFieldSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s margin and padding acquired. </dd></dl>
+
+</div>
+</div>
+<a id="a01958bec5416fc38a648a1cb39eafd0b" name="a01958bec5416fc38a648a1cb39eafd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01958bec5416fc38a648a1cb39eafd0b">&#9670;&nbsp;</a></span>getTotalFieldVertical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AView::getTotalFieldVertical </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s margin and padding acquired by height. </dd></dl>
+
+</div>
+</div>
+<a id="ab5b76d3ce6659d0b431f8080110b1fb5" name="ab5b76d3ce6659d0b431f8080110b1fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b76d3ce6659d0b431f8080110b1fb5">&#9670;&nbsp;</a></span>getTotalOccupiedHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AView::getTotalOccupiedHeight </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1242,13 +1344,11 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> acquired by height including content area, padding, border and margin. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a58">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="a521f58942c69ff63566ada3e3d774f32" name="a521f58942c69ff63566ada3e3d774f32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a521f58942c69ff63566ada3e3d774f32">&#9670;&nbsp;</a></span>getTotalOccupiedWidth()</h2>
+<a id="a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8" name="a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370e6d0ab55a8ed8dc7ccdd9b0c0e7d8">&#9670;&nbsp;</a></span>getTotalOccupiedWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1257,7 +1357,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float AView::getTotalOccupiedWidth </td>
+          <td class="memname">int AView::getTotalOccupiedWidth </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1270,19 +1370,17 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>pixel count which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> acquired by width including content area, padding, border and margin. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a55">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="ae881f45d02f968dd3584f267d6300521" name="ae881f45d02f968dd3584f267d6300521"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae881f45d02f968dd3584f267d6300521">&#9670;&nbsp;</a></span>getWindow()</h2>
+<a id="a9772e6b3644c906d39ef2fee317c0cfb" name="a9772e6b3644c906d39ef2fee317c0cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9772e6b3644c906d39ef2fee317c0cfb">&#9670;&nbsp;</a></span>getWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classABaseWindow.html">ABaseWindow</a> * AView::getWindow </td>
+          <td class="memname"><a class="el" href="classAWindowBase.html">AWindowBase</a> * AView::getWindow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1292,8 +1390,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 
 <p>Determines window which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> belongs to. </p>
 <dl class="section return"><dt>Returns</dt><dd>window which this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> belongs to. Could be nullptr </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a40">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1320,10 +1416,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>moveToThread</
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> accepts tab focus </dd></dl>
-
-<p>Reimplemented in <a class="el" href="classAAbstractTextField.html#a7b5e92c7827e623f72e1c9650c28abc2">AAbstractTextField</a>, and <a class="el" href="classAAbstractTypeableView.html#a0e905ae6059acbf92e94c30a053e3d56">AAbstractTypeableView</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a100">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1361,7 +1453,7 @@ The view is reinflated to other layout </li>
 Added/removed/changed ass names of this or parent views </li>
 </ul>
 
-<p>Reimplemented in <a class="el" href="classAViewContainer.html#a01b482963b8f42828d7cd844f1a7ca1a">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAAbstractLabel.html#a6391fbe507babe1e6758852c534c14ef">AAbstractLabel</a>, <a class="el" href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">ATextBase&lt; WordWrappingEngine &gt;</a>, <a class="el" href="classATextBase.html#ad9c379f388b108c9bbc0bd62fa68b4cb">ATextBase&lt; AWordWrappingEngine&lt;&gt; &gt;</a>, and <a class="el" href="classAViewContainerBase.html#abd2dfc9066b58828d03862d4f3ce5898">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1390,7 +1482,7 @@ Added/removed/changed ass names of this or parent views </li>
 
 <p>Resets mAssHelper. </p>
 
-<p>Reimplemented in <a class="el" href="classAViewContainer.html#ae633e5448273fb6a368f6cfa9d3bca60">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAViewContainerBase.html#a20108c302935d781c9929cbd3380386d">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1399,6 +1491,9 @@ Added/removed/changed ass names of this or parent views </li>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void AView::invalidateStateStyles </td>
@@ -1407,6 +1502,11 @@ Added/removed/changed ass names of this or parent views </li>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Updates state selectors for ASS. </p>
@@ -1415,8 +1515,43 @@ Added/removed/changed ass names of this or parent views </li>
 <li>
 Changed state (hover, active, focus) of this view </li>
 </ul>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a104">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
+
+</div>
+</div>
+<a id="a9dbc24e272ea843ad75fb30c2e36389a" name="a9dbc24e272ea843ad75fb30c2e36389a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbc24e272ea843ad75fb30c2e36389a">&#9670;&nbsp;</a></span>markPixelDataInvalid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AView::markPixelDataInvalid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structARect.html">ARect</a>&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>invalidArea</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A view requests to redraw it and passes it's coords relative to this. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">invalidArea</td><td>area to invalidate. Must be in this view's coordinate space. </td></tr>
+  </table>
+  </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A window that manages this invalidation event. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classAWindowBase.html#a486b60d9e79a3d0bf48f3af7e3db9efe">AWindowBase</a>, and <a class="el" href="classAViewContainerBase.html#a8994f292987b286ed34179e99f439d0e">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1443,9 +1578,9 @@ Changed state (hover, active, focus) of this view </li>
 </table>
 </div><div class="memdoc">
 
-<p>Called on <a class="el" href="classABaseWindow.html#a8b5adda729634c0cff12b9d515b33e20" title="Prevents click action on upcoming pointer release.">ABaseWindow::preventClickOnPointerRelease</a>. </p>
+<p>Called on <a class="el" href="classAWindowBase.html#a90ab308c2b58fbdb48a23a050f39144d" title="Prevents click action on upcoming pointer release.">AWindowBase::preventClickOnPointerRelease</a>. </p>
 
-<p>Reimplemented in <a class="el" href="classASplitter.html#a69880ca134ca12fa0acfc1982714822c">ASplitter</a>, and <a class="el" href="classAViewContainer.html#af19dee44d94f7ff63fa60816b48e7de3">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classASplitter.html#a69880ca134ca12fa0acfc1982714822c">ASplitter</a>, and <a class="el" href="classAViewContainerBase.html#a95baf0ebdbe792dc90a29ec920caa23b">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1493,7 +1628,7 @@ Changed state (hover, active, focus) of this view </li>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135" title="Converts touch screen events to desktop.">transformGestureEventsToDesktop</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true, if consumed (handled). True value prevents click. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#a6f89d221f84f8fd86abec2f5ae40dc0b">ABaseWindow</a>, <a class="el" href="classAListView.html#a1fe6ab723b7168060e837126b374043a">AListView</a>, <a class="el" href="classAScrollArea.html#afbcd54f9f12a396420748a06838b87de">AScrollArea</a>, and <a class="el" href="classAViewContainer.html#a406a7ac1ab42080030489ea9b72e6b47">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAWindowBase.html#a51b97d6cafbab1b57f134b16729e0f3d">AWindowBase</a>, <a class="el" href="classAScrollArea.html#afbcd54f9f12a396420748a06838b87de">AScrollArea</a>, and <a class="el" href="classAViewContainerBase.html#a5c34300ea147d4de9df55281d5883a1d">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1540,7 +1675,7 @@ Changed state (hover, active, focus) of this view </li>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the view is pressed, it would still received move events. Use AView::isMouseHover to check is the pointer actually over view or not. See <a class="el" href="classAView.html#a9e1d18e1f5414fc9599325f71e97f2ab" title="Called on pointer (mouse) released event.">AView::onPointerReleased</a> for more info. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#a1242fa2db41e2f416d8e5c2e7c044c4a">ABaseWindow</a>, <a class="el" href="classAWindow.html#a0de97c943cf121559175fc46f4f5a45b">AWindow</a>, <a class="el" href="classA2FingerTransformArea.html#aaaa9709c084ce99d2fe4b9e6d40e539a">A2FingerTransformArea</a>, <a class="el" href="classAAbstractTypeableView.html#a37570cae76dc81c109332aeaac4815c0">AAbstractTypeableView</a>, <a class="el" href="classADragNDropView.html#a79a24c4df7abfe6f71a8677cc4a74f38">ADragNDropView</a>, <a class="el" href="classAGridSplitter.html#a4e6215798efb5c314a6a617936136d9a">AGridSplitter</a>, <a class="el" href="classARulerArea.html#a5df1a3fd72f215be26f9e2f54a57f153">ARulerArea</a>, <a class="el" href="classAScrollbarHandle.html#a9d6d100ef255c0ee345d08d39bf362a7">AScrollbarHandle</a>, <a class="el" href="classASelectableLabel.html#a4818ce7b1dec8eda1d5a3b252d497350">ASelectableLabel</a>, <a class="el" href="classASlider.html#a0d768fa106169967c7c83ce3f016c334">ASlider</a>, <a class="el" href="classASplitter.html#a3d81fcd2756bc311bd4cf92b838625a3">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#a1d8d0d0de1bb9e73c0219d2d6542b533">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainer.html#a5e3c5c7fe6ad14e9e062bad90199d0d7">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAWindow.html#a0de97c943cf121559175fc46f4f5a45b">AWindow</a>, <a class="el" href="classAWindowBase.html#aabe0c6c2c5f176d9be0f3529c21c97e6">AWindowBase</a>, <a class="el" href="classA2FingerTransformArea.html#aaaa9709c084ce99d2fe4b9e6d40e539a">A2FingerTransformArea</a>, <a class="el" href="classADragNDropView.html#a79a24c4df7abfe6f71a8677cc4a74f38">ADragNDropView</a>, <a class="el" href="classAGridSplitter.html#a4e6215798efb5c314a6a617936136d9a">AGridSplitter</a>, <a class="el" href="classARulerArea.html#a5df1a3fd72f215be26f9e2f54a57f153">ARulerArea</a>, <a class="el" href="classAScrollbarHandle.html#a9d6d100ef255c0ee345d08d39bf362a7">AScrollbarHandle</a>, <a class="el" href="classASlider.html#a0d768fa106169967c7c83ce3f016c334">ASlider</a>, <a class="el" href="classASplitter.html#a3d81fcd2756bc311bd4cf92b838625a3">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#a1d8d0d0de1bb9e73c0219d2d6542b533">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainerBase.html#a78144d884418cc69450b79bf195df7cd">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1576,7 +1711,7 @@ Changed state (hover, active, focus) of this view </li>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#acbcbf158381a9f0e05069abcffcf3ea5">ABaseWindow</a>, <a class="el" href="classACustomWindow.html#ad994e4dd3ae33763d98aaa1e09aeb61a">ACustomWindow</a>, <a class="el" href="classA2FingerTransformArea.html#abb8858991ec90c9847a20426affb58da">A2FingerTransformArea</a>, <a class="el" href="classAAbstractTypeableView.html#a1610e371ab07c0dc1f33f73f9862b649">AAbstractTypeableView</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#ac4d152f61a923f860e2f3edfc6d02097">ADragArea::ADraggableHandle</a>, <a class="el" href="classAGridSplitter.html#aa9f9af05b47347613a2ffb4c818c675d">AGridSplitter</a>, <a class="el" href="classAListItem.html#ad7e646a0aec551979e9459398d8185b3">AListItem</a>, <a class="el" href="classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a8ddead08e7d2722704e69cb2f024ab09">AScrollbarHandle</a>, <a class="el" href="classAScrollbar.html#a0fc60c7d8b7b77626b7983a43e51507b">AScrollbar</a>, <a class="el" href="classASelectableLabel.html#ad920592b27005f7124527fcf4c21d62f">ASelectableLabel</a>, <a class="el" href="classASlider.html#ae8b27e20c99191fc0fd34bb3e85aa059">ASlider</a>, <a class="el" href="classASplitter.html#a4e8f9e638a7ad6f16099e73be6774ed0">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#afba0224b949321c63d28f5d24fdbfdae">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainer.html#abf15c6d15e978852c9754c27b875de8b">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classACustomWindow.html#ad994e4dd3ae33763d98aaa1e09aeb61a">ACustomWindow</a>, <a class="el" href="classAWindowBase.html#a5ddd443af011b4bdc351425db187926f">AWindowBase</a>, <a class="el" href="classA2FingerTransformArea.html#abb8858991ec90c9847a20426affb58da">A2FingerTransformArea</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#ac4d152f61a923f860e2f3edfc6d02097">ADragArea::ADraggableHandle</a>, <a class="el" href="classAGridSplitter.html#aa9f9af05b47347613a2ffb4c818c675d">AGridSplitter</a>, <a class="el" href="classAListItem.html#ad7e646a0aec551979e9459398d8185b3">AListItem</a>, <a class="el" href="classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a8ddead08e7d2722704e69cb2f024ab09">AScrollbarHandle</a>, <a class="el" href="classAScrollbar.html#a0fc60c7d8b7b77626b7983a43e51507b">AScrollbar</a>, <a class="el" href="classASlider.html#ae8b27e20c99191fc0fd34bb3e85aa059">ASlider</a>, <a class="el" href="classASplitter.html#a4e8f9e638a7ad6f16099e73be6774ed0">ASplitter</a>, <a class="el" href="classATreeView_1_1ItemView.html#afba0224b949321c63d28f5d24fdbfdae">ATreeView::ItemView</a>, and <a class="el" href="classAViewContainerBase.html#a52d7919b2e271026525836dc1a961b1c">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1748,7 @@ Changed state (hover, active, focus) of this view </li>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>To handle clicks, you should use <a class="el" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d" title="Left mouse button clicked.">AView::clicked</a> signal instead. View still receives pointer move and released events even if cursor goes outside the view boundaries, or other exclusive event appeared (i.e. scrollarea scroll). <a class="el" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d" title="Left mouse button clicked.">AView::clicked</a> emitted only if release event occurred inside view and no other event has prevented click gesture. See <a class="el" href="structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0" title="Whether the pointer release event triggers click event or not.">APointerReleasedEvent::triggerClick</a>. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#a8b251f45c577fbe1b797a1116ace8755">ABaseWindow</a>, <a class="el" href="classACustomWindow.html#a6e594d82e7939027457541a7aee3a4fc">ACustomWindow</a>, <a class="el" href="classA2FingerTransformArea.html#a6c3a3a744582272bcddac000fca67d52">A2FingerTransformArea</a>, <a class="el" href="classAAbstractTypeableView.html#ad8bea8ffb3e7371bc7792a598e9c2f8c">AAbstractTypeableView</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#aa81efc95b631bd2425950817a4506adc">ADragArea::ADraggableHandle</a>, <a class="el" href="classADropdownList.html#a8b7f862613657a839dc1576c9baf96ff">ADropdownList</a>, <a class="el" href="classAGridSplitter.html#a63734a9e908a6bed6b822cf6f396cc81">AGridSplitter</a>, <a class="el" href="classARadioButton.html#ab4ab5757b49e2850c8cb1ef0cc9b9eec">ARadioButton</a>, <a class="el" href="classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a1782caa0d906330e103a408ca27f5dfe">AScrollbarHandle</a>, <a class="el" href="classASelectableLabel.html#a8226aed826f34b6898f6f5ef00c03bd7">ASelectableLabel</a>, <a class="el" href="classASlider.html#aac66e7ba8ef4ebb38c645cb40f7af62b">ASlider</a>, <a class="el" href="classASplitter.html#ac09c8d3db8623742b075c26139dc044e">ASplitter</a>, and <a class="el" href="classAViewContainer.html#a69d4971fa92628f15234eed8f0eb999b">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classACustomWindow.html#a6e594d82e7939027457541a7aee3a4fc">ACustomWindow</a>, <a class="el" href="classAWindowBase.html#aa19cac3bf09bcfb5b444348a0f9b0244">AWindowBase</a>, <a class="el" href="classA2FingerTransformArea.html#a6c3a3a744582272bcddac000fca67d52">A2FingerTransformArea</a>, <a class="el" href="classADragArea_1_1ADraggableHandle.html#aa81efc95b631bd2425950817a4506adc">ADragArea::ADraggableHandle</a>, <a class="el" href="classADropdownList.html#a8b7f862613657a839dc1576c9baf96ff">ADropdownList</a>, <a class="el" href="classAGridSplitter.html#a63734a9e908a6bed6b822cf6f396cc81">AGridSplitter</a>, <a class="el" href="classARadioButton.html#ab4ab5757b49e2850c8cb1ef0cc9b9eec">ARadioButton</a>, <a class="el" href="classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0">AScrollArea</a>, <a class="el" href="classAScrollbarHandle.html#a1782caa0d906330e103a408ca27f5dfe">AScrollbarHandle</a>, <a class="el" href="classASlider.html#aac66e7ba8ef4ebb38c645cb40f7af62b">ASlider</a>, <a class="el" href="classASplitter.html#ac09c8d3db8623742b075c26139dc044e">ASplitter</a>, and <a class="el" href="classAViewContainerBase.html#aae4d5ed258e6db7cc842e4501cc4af40">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1649,7 +1784,7 @@ Changed state (hover, active, focus) of this view </li>
 </dl>
 <p><a class="el" href="namespaceBy.html" title="Matcher factory namespace.">By</a> default, 120 is single mouse wheel click. 120 = mouse scroll down, -120 = mouse scroll up. </p>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#ae3c6b348c19efdb6509e1b3acf7169e5">ABaseWindow</a>, <a class="el" href="classAScrollArea.html#a1ec97c0e09e70449d9644680e1300b8d">AScrollArea</a>, <a class="el" href="classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411">AScrollbar</a>, <a class="el" href="classATextArea.html#aae0df62074c3a91e8c966e4474c1f4eb">ATextArea</a>, <a class="el" href="classATreeView.html#a0b061bb669274d85c1aed14d455850b7">ATreeView</a>, and <a class="el" href="classAViewContainer.html#a495a90385729196ebdd503beec159a45">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAWindowBase.html#addeb1410d7c8c6bd6bfc44939ab810d5">AWindowBase</a>, <a class="el" href="classAScrollArea.html#a1ec97c0e09e70449d9644680e1300b8d">AScrollArea</a>, <a class="el" href="classAScrollbar.html#a0d4c7d90bd55e9d90c40c2fdf0064411">AScrollbar</a>, <a class="el" href="classATreeView.html#a0b061bb669274d85c1aed14d455850b7">ATreeView</a>, and <a class="el" href="classAViewContainerBase.html#aaf5a2329706c7741a50b73e65138120d">AViewContainerBase</a>.</p>
 
 </div>
 </div>
@@ -1680,12 +1815,12 @@ Changed state (hover, active, focus) of this view </li>
 <p >The method is mostly intended to invalidate styles in order to respond to stylesheet rules (mExtraStylesheet) of the new (in)direct parent.</p>
 <p >Emits viewGraphSubtreeChanged signal. </p>
 
-<p>Reimplemented in <a class="el" href="classAViewContainer.html#ae73910fb8fc93ba42c9e0be1564250cb">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAViewContainerBase.html#a430b7b07d3cca87b3475ca377571f1f8">AViewContainerBase</a>.</p>
 
 </div>
 </div>
-<a id="a4e1593b6ae4efe2a6b6b6d376c7070f4" name="a4e1593b6ae4efe2a6b6b6d376c7070f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e1593b6ae4efe2a6b6b6d376c7070f4">&#9670;&nbsp;</a></span>postRender()</h2>
+<a id="aab44f795e6ad4b5ec5fe19a5c09b5d68" name="aab44f795e6ad4b5ec5fe19a5c09b5d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab44f795e6ad4b5ec5fe19a5c09b5d68">&#9670;&nbsp;</a></span>postRender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1696,7 +1831,8 @@ Changed state (hover, active, focus) of this view </li>
         <tr>
           <td class="memname">void AView::postRender </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structARenderContext.html">ARenderContext</a>&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1709,8 +1845,6 @@ Changed state (hover, active, focus) of this view </li>
 
 <p>Performs post-draw routines of this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine. </p>
 <dl class="section see"><dt>See also</dt><dd>AView::drawView </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a43">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1737,13 +1871,11 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a89">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
-<a id="a963fbdfa517db949b880297405804985" name="a963fbdfa517db949b880297405804985"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a963fbdfa517db949b880297405804985">&#9670;&nbsp;</a></span>render()</h2>
+<a id="aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3" name="aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3">&#9670;&nbsp;</a></span>render()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1754,8 +1886,8 @@ Changed state (hover, active, focus) of this view </li>
         <tr>
           <td class="memname">void AView::render </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structClipOptimizationContext.html">ClipOptimizationContext</a>&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structARenderContext.html">ARenderContext</a>&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1767,14 +1899,15 @@ Changed state (hover, active, focus) of this view </li>
 </div><div class="memdoc">
 
 <p>Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine. </p>
-<dl class="section see"><dt>See also</dt><dd>AView::drawView </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>AView::drawView</dd></dl>
+<p><a class="el" href="classAView.html#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3" title="Draws this AView. Noone should call this function except rendering routine.">AView::render</a> is not guaranteed to be called on per-frame basis. Moreover, this method can be called multiple times if render-to-texture caching decides to do so. </p>
 
-<p>Reimplemented in <a class="el" href="classABaseWindow.html#a31889c283aaa993f539bf2b52311c792">ABaseWindow</a>, <a class="el" href="classAAbstractLabel.html#a415eae5586bebe30737ef191a4a2e12a">AAbstractLabel</a>, <a class="el" href="classAAbstractTextField.html#a0c4457d2bccaabafb5fb38810e22f5fa">AAbstractTextField</a>, <a class="el" href="classACircleProgressBar.html#acae1d34a7d3cfc53664a3254073b1574">ACircleProgressBar</a>, <a class="el" href="classADrawableView.html#a86af6b192734ad11a5ed4002409ecd84">ADrawableView</a>, <a class="el" href="classADropdownList.html#a1a4fbffce801e52df7f52c0a5b397a32">ADropdownList</a>, <a class="el" href="classAProgressBar.html#a090f5f768aa28510fb6bc885eb360245">AProgressBar</a>, <a class="el" href="classARulerArea.html#a9d4e471e8df8cbf44fb12224d3592f56">ARulerArea</a>, <a class="el" href="classARulerView.html#ab57b1b8948181aac54054efc76d40828">ARulerView</a>, <a class="el" href="classASelectableLabel.html#aeb518f0e196b57027c459e3e42021cc3">ASelectableLabel</a>, <a class="el" href="classASpinner.html#a8f79d44b4a9dac8853fee6daf1764edc">ASpinner</a>, <a class="el" href="classAText.html#a296d5ed37040964114a33f2d1344a82a">AText</a>, <a class="el" href="classATextArea_1_1TextAreaField.html#a0fdf23722f091e8b461d18b76fd6ce52">ATextArea::TextAreaField</a>, and <a class="el" href="classAViewContainer.html#ae31e59f7f259b654ffa1a1c29d538c55">AViewContainer</a>.</p>
+<p>Reimplemented in <a class="el" href="classAWindowBase.html#ae076272e855ae6573775cb44915f22d3">AWindowBase</a>, <a class="el" href="classAAbstractLabel.html#a84a7daa31c1920a942339fe75ceb6a5d">AAbstractLabel</a>, <a class="el" href="classACircleProgressBar.html#adedb5f4b9c03841981755ef3f46c0b8d">ACircleProgressBar</a>, <a class="el" href="classADrawableView.html#ab65bc38ed964f121d7a1ef46a596bff0">ADrawableView</a>, <a class="el" href="classADropdownList.html#a510428a5ae613ddb4fafa97617ddd74f">ADropdownList</a>, <a class="el" href="classAProgressBar.html#ad34093099d4b71c5f416a3ff36d71e61">AProgressBar</a>, <a class="el" href="classATextBase.html#a0a2da7a4aad318f118f8cbf7b0e97783">ATextBase&lt; WordWrappingEngine &gt;</a>, <a class="el" href="classATextBase.html#a0a2da7a4aad318f118f8cbf7b0e97783">ATextBase&lt; AWordWrappingEngine&lt;&gt; &gt;</a>, <a class="el" href="classAViewContainerBase.html#afee2348e0a4b1e39b0ead8a72cc8997a">AViewContainerBase</a>, <a class="el" href="classARulerArea.html#ab1ef43f2fc41f4683043e70691124cbe">ARulerArea</a>, <a class="el" href="classARulerView.html#aec8c80d58fb6c5a965b7be51a61a05a1">ARulerView</a>, and <a class="el" href="classASpinner.html#a9c632df82fc40271a26373434801c66e">ASpinner</a>.</p>
 
 </div>
 </div>
-<a id="a8dff85e3a36d4963bb5e7c1eb3dc02c5" name="a8dff85e3a36d4963bb5e7c1eb3dc02c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dff85e3a36d4963bb5e7c1eb3dc02c5">&#9670;&nbsp;</a></span>setExpanding()</h2>
+<a id="a2f47691e1e4de96c4ac972a587e0d980" name="a2f47691e1e4de96c4ac972a587e0d980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f47691e1e4de96c4ac972a587e0d980">&#9670;&nbsp;</a></span>setExpanding()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1785,7 +1918,7 @@ Changed state (hover, active, focus) of this view </li>
         <tr>
           <td class="memname">void AView::setExpanding </td>
           <td>(</td>
-          <td class="paramtype">const glm::ivec2 &amp;&#160;</td>
+          <td class="paramtype">glm::ivec2&#160;</td>
           <td class="paramname"><em>expanding</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1828,8 +1961,6 @@ Changed state (hover, active, focus) of this view </li>
 </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd>mExtraStylesheet </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a49">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1883,8 +2014,6 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a61">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1919,8 +2048,6 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a64">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -1953,8 +2080,33 @@ Changed state (hover, active, focus) of this view </li>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a72">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="a6e107013a87ab6460f002c318bad93e2" name="a6e107013a87ab6460f002c318bad93e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e107013a87ab6460f002c318bad93e2">&#9670;&nbsp;</a></span>setSkipUntilLayoutUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AView::setSkipUntilLayoutUpdate </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skipUntilLayoutUpdate</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classAView.html#a4475a69d795612634df68566a0b9d5fb" title="If set to true, AViewContainer is obligated ignore this view. This value is set to false by AView::se...">AView::mSkipUntilLayoutUpdate</a> </dd></dl>
 
 </div>
 </div>
@@ -2007,39 +2159,6 @@ Changed state (hover, active, focus) of this view </li>
 <dt><b><a class="el" href="structALongPressEvent.html" title="Long press event.">ALongPressEvent</a></b> </dt>
 <dd>Shows context menu (if exists) or <a class="el" href="classAView.html#a8d60b048342b29b46dac2657ce6e781b" title="Right mouse button clicked or long press gesture applied.">AView::clickedRightOrLongPressed</a> </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a33">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="a96b967218c79654c2bca5cc8c686a407" name="a96b967218c79654c2bca5cc8c686a407"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96b967218c79654c2bca5cc8c686a407">&#9670;&nbsp;</a></span>wantsTouchscreenKeyboard()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool AView::wantsTouchscreenKeyboard </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns true if view is textfield-like view which requires touchscreen keyboard when clicked. </p>
-
-<p>Reimplemented in <a class="el" href="classAAbstractTextField.html#ae7ba0da7962d26ab85881e4cd2264e61">AAbstractTextField</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a105">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -2051,7 +2170,7 @@ Changed state (hover, active, focus) of this view </li>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classASignal.html">emits</a>&lt;bool&gt; AView::focusState</td>
+          <td class="memname"><a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt;bool&gt; AView::focusState</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2062,8 +2181,6 @@ Changed state (hover, active, focus) of this view </li>
     <tr><td class="paramname">first</td><td>whether focused or not. </td></tr>
   </table>
   </dd>
-</dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a116">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 
 </div>
@@ -2090,8 +2207,6 @@ Changed state (hover, active, focus) of this view </li>
 
 <p>ASS class names. </p>
 <p >Needs keeping order. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a31">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -2118,8 +2233,31 @@ Changed state (hover, active, focus) of this view </li>
 <p>Expansion coefficient. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container. </p>
 <p >It does affect expanding environment inside the container. See expanding <a class="el" href="group__layout__managers.html">layout managers</a> for more info.</p>
 <p >It does not affect parent's size or parent's expanding property. Use AView::setExpanding() on parent, or ::Expanding variant of declarative container notation (Vertical::Expanding, Horizontal::Expanding, Stacked::Expanding) for such case. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a23">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
+
+</div>
+</div>
+<a id="a8e918ba52e98cfb94ff340560dcbcbb7" name="a8e918ba52e98cfb94ff340560dcbcbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e918ba52e98cfb94ff340560dcbcbb7">&#9670;&nbsp;</a></span>mRedrawRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AView::mRedrawRequested = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Redraw requested flag for this particular view/. </p>
+<p >This flag is set in <a class="el" href="classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f" title="Request window manager to redraw this AView.">redraw()</a> method and reset in <a class="el" href="classAView.html#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3" title="Draws this AView. Noone should call this function except rendering routine.">AView::render(ARenderContext context)</a>. <a class="el" href="classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f" title="Request window manager to redraw this AView.">redraw()</a> method does not actually requests redraw of window if mRedrawRequested. This approach ignores sequential <a class="el" href="classAView.html#a5f31342ebc6f35e57201cc55d3e64b8f" title="Request window manager to redraw this AView.">redraw()</a> calls if the view is not even drawn. </p>
 
 </div>
 </div>
@@ -2143,10 +2281,8 @@ Changed state (hover, active, focus) of this view </li>
 </table>
 </div><div class="memdoc">
 
-<p>If set to true, <a class="el" href="classAViewContainer.html" title="A view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry. </p>
-<p >This flag addresses the issue when some container is filled with views by addView during several frames, causing to draw them then their layout is not processed yet. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a32">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
+<p>If set to true, <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry. </p>
+<p >This flag addresses the issue when some container is filled with views by addView during several frames, causing to draw them in wrong place (then their layout is not processed yet). </p>
 
 </div>
 </div>
@@ -2157,13 +2293,11 @@ Changed state (hover, active, focus) of this view </li>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classASignal.html">emits</a> AView::viewGraphSubtreeChanged</td>
+          <td class="memname"><a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a> AView::viewGraphSubtreeChanged</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAView.html#a43e89f0f7a3dfb49d82216e351566bf1" title="Called when direct or indirect parent has changed.">onViewGraphSubtreeChanged()</a> </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2github_2workspace_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#a107">/github/workspace/aui.views/src/AUI/View/AView.h</a>.</dd>
-</dl>
 
 </div>
 </div>
@@ -2178,55 +2312,55 @@ Inheritance diagram for AView:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAView__inherit__graph.png" border="0" usemap="#aAView_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAView_inherit__map" id="aAView_inherit__map">
-<area shape="rect" title="Base class of all UI objects." alt="" coords="333,436,393,463"/>
-<area shape="rect" href="classAAbstractLabel.html" title="Represents an abstract text display view." alt="" coords="471,56,583,83"/>
-<area shape="rect" href="classAAbstractTypeableView.html" title="Basic implementation of type shortcuts and selection for editable text fields." alt="" coords="446,107,607,133"/>
-<area shape="rect" href="classACheckBox.html" title="A check box (without label)." alt="" coords="481,157,572,184"/>
-<area shape="rect" href="classACircleProgressBar_1_1Inner.html" title=" " alt="" coords="441,208,612,235"/>
-<area shape="rect" href="classADividerView.html" title="Base class for AHDividerView and AVDivierView." alt="" coords="477,259,577,285"/>
-<area shape="rect" href="classADrawableView.html" title="Simple view to draw an IDrawable." alt="" coords="469,309,584,336"/>
-<area shape="rect" href="classAProgressBar_1_1Inner.html" title=" " alt="" coords="457,360,596,387"/>
-<area shape="rect" href="classARadioButtonInner.html" title=" " alt="" coords="461,411,592,437"/>
-<area shape="rect" href="classARulerView.html" title="A Photoshop&#45;like ruler for measuring display units." alt="" coords="481,461,572,488"/>
-<area shape="rect" href="classAScrollbarButton.html" title=" " alt="" coords="467,512,587,539"/>
-<area shape="rect" href="classAScrollbarHandle.html" title=" " alt="" coords="465,563,588,589"/>
-<area shape="rect" href="classASlider_1_1Handle.html" title=" " alt="" coords="471,613,582,640"/>
-<area shape="rect" href="classASpacerExpanding.html" title="Expanding view which is useful in UI building." alt="" coords="461,664,592,691"/>
-<area shape="rect" href="classASpacerFixed.html" title="Fixed&#45;size view which is useful in UI building." alt="" coords="475,715,578,741"/>
-<area shape="rect" href="classASpinner.html" title=" " alt="" coords="489,765,564,792"/>
-<area shape="rect" href="classAViewContainer.html" title="A view that represents a set of views." alt="" coords="469,1069,584,1096"/>
-<area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="216,436,285,463"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="28,407,145,433"/>
-<area shape="rect" title=" " alt="" coords="5,458,168,499"/>
-<area shape="rect" href="classAButton.html" title="Button with text, which can be pushed to make some action." alt="" coords="747,5,817,32"/>
-<area shape="rect" href="classALabel.html" title="Represents a simple single&#45;line text display view." alt="" coords="751,56,813,83"/>
-<area shape="rect" href="classAAbstractTextField.html" title="Text field implementation." alt="" coords="715,107,849,133"/>
-<area shape="rect" href="classATextArea_1_1TextAreaField.html" title=" " alt="" coords="697,157,867,184"/>
-<area shape="rect" href="classAHDividerView.html" title="A horizontal line." alt="" coords="727,233,837,260"/>
-<area shape="rect" href="classAVDividerView.html" title="A vertical line." alt="" coords="727,284,837,311"/>
-<area shape="rect" href="classAScrollbarOffsetSpacer.html" title=" " alt="" coords="703,512,861,539"/>
-<area shape="rect" href="classA2FingerTransformArea.html" title="Handles and processes the multitouch scale, transform and rotation events based on two&#45;finger gesture..." alt="" coords="702,563,862,589"/>
-<area shape="rect" href="classABaseWindow.html" title=" " alt="" coords="729,613,835,640"/>
-<area shape="rect" href="classABasicListEditor.html" title="Helper UI to edit list models." alt="" coords="723,664,841,691"/>
-<area shape="rect" href="classAButtonEx.html" title="Unlike AButton, AButtonEx is a container which looks like a button." alt="" coords="741,715,823,741"/>
-<area shape="rect" href="classACheckBoxWrapper.html" title="View container with a checkbox." alt="" coords="713,765,851,792"/>
-<area shape="rect" href="classACircleProgressBar.html" title="A circle&#45;shaped progress bar." alt="" coords="714,816,850,843"/>
-<area shape="rect" href="classADoubleNumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="705,867,859,893"/>
-<area shape="rect" href="classADragArea.html" title="Wrapping container to drag views inside of it." alt="" coords="739,917,825,944"/>
-<area shape="rect" href="classADragArea_1_1ADraggableHandle.html" title=" " alt="" coords="683,968,881,995"/>
-<area shape="rect" href="classADragNDropView.html" title=" " alt="" coords="720,1019,844,1045"/>
-<area shape="rect" href="classAEmbedMenuProvider_1_1MenuContainer.html" title=" " alt="" coords="660,1069,904,1096"/>
-<area shape="rect" href="classAForEachUI.html" title=" " alt="" coords="697,1120,867,1147"/>
-<area shape="rect" href="classAGridSplitter.html" title="A resizable grid layout." alt="" coords="734,1171,830,1197"/>
-<area shape="rect" href="classAGroupBox.html" title="A titled frame." alt="" coords="738,1221,826,1248"/>
-<area shape="rect" href="classAListViewContainer.html" title=" " alt="" coords="713,1272,851,1299"/>
-<area shape="rect" href="classAMenuContainer.html" title=" " alt="" coords="723,1323,841,1349"/>
-<area shape="rect" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="725,1373,839,1400"/>
-<area shape="rect" href="classAOverlappingSurface.html" title=" " alt="" coords="709,1424,855,1451"/>
-<area shape="rect" href="classAPageView.html" title="Like ATabView but without tabs line." alt="" coords="737,1475,827,1501"/>
-<area shape="rect" href="classAPathChooserView.html" title="A text field with &quot;...&quot; button prompting path." alt="" coords="715,1525,849,1552"/>
-<area shape="rect" href="classAProgressBar.html" title="A progress bar." alt="" coords="731,1576,833,1603"/>
-<area shape="rect" href="classARadioButton.html" title="A radio button." alt="" coords="731,1627,833,1653"/>
+<area shape="rect" title="Base class of all UI objects." alt="" coords="333,385,393,412"/>
+<area shape="rect" href="classAAbstractLabel.html" title="Represents an abstract text display view." alt="" coords="471,31,583,57"/>
+<area shape="rect" href="classACheckBox.html" title="A check box (without label)." alt="" coords="481,81,572,108"/>
+<area shape="rect" href="classACircleProgressBar_1_1Inner.html" title=" " alt="" coords="441,132,612,159"/>
+<area shape="rect" href="classADividerView.html" title="Base class for AHDividerView and AVDivierView." alt="" coords="477,183,577,209"/>
+<area shape="rect" href="classADrawableView.html" title="Simple view to draw an IDrawable." alt="" coords="469,233,584,260"/>
+<area shape="rect" href="classAProgressBar_1_1Inner.html" title=" " alt="" coords="457,284,596,311"/>
+<area shape="rect" href="classARadioButtonInner.html" title=" " alt="" coords="461,335,592,361"/>
+<area shape="rect" href="classARulerView.html" title="A Photoshop&#45;like ruler for measuring display units." alt="" coords="481,385,572,412"/>
+<area shape="rect" href="classAScrollbarButton.html" title=" " alt="" coords="467,436,587,463"/>
+<area shape="rect" href="classAScrollbarHandle.html" title=" " alt="" coords="465,487,588,513"/>
+<area shape="rect" href="classASlider_1_1Handle.html" title=" " alt="" coords="471,537,582,564"/>
+<area shape="rect" href="classASpacerExpanding.html" title="Expanding view which is useful in UI building." alt="" coords="461,588,592,615"/>
+<area shape="rect" href="classASpacerFixed.html" title="Fixed&#45;size view which is useful in UI building." alt="" coords="475,639,578,665"/>
+<area shape="rect" href="classASpinner.html" title=" " alt="" coords="489,689,564,716"/>
+<area shape="rect" href="classAViewContainerBase.html" title="A view that represents a set of views." alt="" coords="454,1069,599,1096"/>
+<area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="216,385,285,412"/>
+<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="28,356,145,383"/>
+<area shape="rect" title=" " alt="" coords="5,407,168,449"/>
+<area shape="rect" href="classAButton.html" title="Button with text, which can be pushed to make some action." alt="" coords="753,5,823,32"/>
+<area shape="rect" href="classALabel.html" title="Represents a simple single&#45;line text display view." alt="" coords="757,56,819,83"/>
+<area shape="rect" href="classAHDividerView.html" title="A horizontal line." alt="" coords="733,157,843,184"/>
+<area shape="rect" href="classAVDividerView.html" title="A vertical line." alt="" coords="733,208,843,235"/>
+<area shape="rect" href="classAScrollbarOffsetSpacer.html" title=" " alt="" coords="709,436,867,463"/>
+<area shape="rect" href="classATextBase.html" title=" " alt="" coords="660,487,916,513"/>
+<area shape="rect" href="classABasicListEditor.html" title="Helper UI to edit list models." alt="" coords="729,537,847,564"/>
+<area shape="rect" href="classACheckBoxWrapper.html" title="View container with a checkbox." alt="" coords="719,588,857,615"/>
+<area shape="rect" href="classACircleProgressBar.html" title="A circle&#45;shaped progress bar." alt="" coords="720,639,856,665"/>
+<area shape="rect" href="classADoubleNumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="711,689,865,716"/>
+<area shape="rect" href="classADragArea_1_1ADraggableHandle.html" title=" " alt="" coords="689,740,887,767"/>
+<area shape="rect" href="classADragNDropView.html" title=" " alt="" coords="726,791,850,817"/>
+<area shape="rect" href="classAEmbedMenuProvider_1_1MenuContainer.html" title=" " alt="" coords="666,841,910,868"/>
+<area shape="rect" href="classAForEachUI.html" title=" " alt="" coords="703,892,873,919"/>
+<area shape="rect" href="classAGridSplitter.html" title="A resizable grid layout." alt="" coords="740,943,836,969"/>
+<area shape="rect" href="classAGroupBox.html" title="A titled frame." alt="" coords="744,993,832,1020"/>
+<area shape="rect" href="classAMenuContainer.html" title=" " alt="" coords="729,1044,847,1071"/>
+<area shape="rect" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons." alt="" coords="731,1095,845,1121"/>
+<area shape="rect" href="classAPageView.html" title="Like ATabView but without tabs line." alt="" coords="743,1145,833,1172"/>
+<area shape="rect" href="classAPathChooserView.html" title="A text field with &quot;...&quot; button prompting path." alt="" coords="721,1196,855,1223"/>
+<area shape="rect" href="classAProgressBar.html" title="A progress bar." alt="" coords="737,1247,839,1273"/>
+<area shape="rect" href="classARadioButton.html" title="A radio button." alt="" coords="737,1297,839,1324"/>
+<area shape="rect" href="classARulerArea.html" title="Photoshop&#45;like ruler area for measuring display units." alt="" coords="744,1348,832,1375"/>
+<area shape="rect" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars." alt="" coords="743,1399,833,1425"/>
+<area shape="rect" href="classAScrollAreaViewport.html" title="Inner component of AScrollArea that manages rendering and event handling with custom offset (scroll)." alt="" coords="717,1449,859,1476"/>
+<area shape="rect" href="classAScrollbar.html" title="A single scrollbar." alt="" coords="747,1500,829,1527"/>
+<area shape="rect" href="classASlider.html" title="Slider control." alt="" coords="756,1551,820,1577"/>
+<area shape="rect" href="classASplitter.html" title="A resizeable horizontal or vertical layout." alt="" coords="752,1601,824,1628"/>
+<area shape="rect" href="classATabButtonRow.html" title=" " alt="" coords="729,1652,847,1679"/>
+<area shape="rect" href="classATabView.html" title="Tab host." alt="" coords="747,1703,829,1729"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -2234,17 +2368,16 @@ Collaboration diagram for AView:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAView__coll__graph.png" border="0" usemap="#aAView_coll__map" alt="Collaboration graph"/></div>
 <map name="aAView_coll__map" id="aAView_coll__map">
-<area shape="rect" title="Base class of all UI objects." alt="" coords="649,264,709,291"/>
-<area shape="rect" href="classAViewContainer.html" title="A view that represents a set of views." alt="" coords="933,111,1048,137"/>
-<area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="271,268,341,295"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="28,209,145,236"/>
-<area shape="rect" title=" " alt="" coords="5,261,168,302"/>
-<area shape="rect" href="structScrollbarAppearance.html" title=" " alt="" coords="608,5,751,32"/>
-<area shape="rect" href="classASignal.html" title=" " alt="" coords="243,108,369,135"/>
-<area shape="rect" href="classAAbstractSignal.html" title="Base class for signal." alt="" coords="29,108,145,135"/>
-<area shape="rect" href="structass_1_1PropertyListRecursive.html" title=" " alt="" coords="217,323,395,349"/>
-<area shape="rect" href="structass_1_1PropertyList.html" title=" " alt="" coords="27,327,146,353"/>
-<area shape="rect" href="structABoxFields.html" title="Represents a rectangle fields. Useful for margin and padding around AViews." alt="" coords="262,377,350,404"/>
+<area shape="rect" title="Base class of all UI objects." alt="" coords="301,332,361,359"/>
+<area shape="rect" href="classAViewContainerBase.html" title="A view that represents a set of views." alt="" coords="185,421,331,448"/>
+<area shape="rect" href="classAObject.html" title="A base object class." alt="" coords="270,96,339,123"/>
+<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="146,13,263,39"/>
+<area shape="rect" title=" " alt="" coords="287,5,450,47"/>
+<area shape="rect" href="classASignal.html" title=" " alt="" coords="39,96,165,123"/>
+<area shape="rect" href="classAAbstractSignal.html" title="Base class for signal." alt="" coords="5,13,121,39"/>
+<area shape="rect" href="structass_1_1PropertyListRecursive.html" title=" " alt="" coords="364,96,541,123"/>
+<area shape="rect" href="structass_1_1PropertyList.html" title=" " alt="" coords="475,13,593,39"/>
+<area shape="rect" href="structABoxFields.html" title="Represents a rectangle fields. Useful for margin and padding around AViews." alt="" coords="566,96,654,123"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

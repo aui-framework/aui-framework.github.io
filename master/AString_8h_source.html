@@ -738,7 +738,7 @@ $(document).ready(function(){initNavTree('AString_8h_source.html',''); initResiz
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>    <span class="keywordflow">return</span> s;</div>
 <div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>}</div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span> </div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span><span class="keyword">inline</span> <a class="code hl_class" href="classAString.html">AString</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span> _as(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span><span class="keyword">inline</span> <a class="code hl_class" href="classAString.html">AString</a> <span class="keyword">operator</span><span class="stringliteral">&quot;&quot;</span>_as(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keywordtype">size_t</span> len)</div>
 <div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>{</div>
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    <span class="keywordflow">return</span> {str};</div>
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>}</div>
@@ -748,63 +748,61 @@ $(document).ready(function(){initNavTree('AString_8h_source.html',''); initResiz
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    o &lt;&lt; s.<a class="code hl_function" href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">toStdString</a>();</div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keywordflow">return</span> o;</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>}</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="keyword">namespace </span>std</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>{</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>    <span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01AString_01_4.html">  765</a></span>    <span class="keyword">struct </span>hash&lt;<a class="code hl_class" href="classAString.html">AString</a>&gt;</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>    {</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; t)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>            <span class="keywordflow">return</span> hash&lt;std::u16string&gt;()(t);</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>        }</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    };</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>}</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span> </div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span><span class="keyword">namespace </span>aui::win32 {</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    <span class="comment">/*</span></div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span><span class="comment">     * On Windows, char16_t == wchar_t. WinAPI interfaces use wchar_t widely, so we have some handy functions to</span></div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span><span class="comment">     * convert AString to wchar_t* and back.</span></div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span><span class="comment">     */</span></div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span> </div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* toWchar(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>) {</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        <span class="comment">// NOLINTNEXTLINE(*-pro-type-reinterpret-cast)</span></div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">wchar_t</span> *const<span class="keyword">&gt;</span>(<span class="keywordtype">string</span>.data());</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    }</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span> </div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    <span class="keyword">inline</span> <span class="keywordtype">wchar_t</span>* toWchar(<a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>) {</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>        <span class="comment">// NOLINTNEXTLINE(*-pro-type-reinterpret-cast)</span></div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">wchar_t</span>*<span class="keyword">&gt;</span>(<span class="keywordtype">string</span>.data());</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>    }</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span> </div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    <span class="keyword">inline</span> std::wstring_view toWcharView(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>) {</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        <span class="keywordflow">return</span> {toWchar(<span class="keywordtype">string</span>), <span class="keywordtype">string</span>.length() };</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    }</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span> </div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <span class="keyword">inline</span> <a class="code hl_class" href="classAString.html">AString</a> fromWchar(std::wstring_view <span class="keywordtype">string</span>) {</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>        <span class="comment">// NOLINTNEXTLINE(*-pro-type-reinterpret-cast)</span></div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        <span class="keywordflow">return</span> {<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>char16_t *<span class="keyword">&gt;</span>(<span class="keywordtype">string</span>.data()), <span class="keywordtype">string</span>.size()};</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    }</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>}</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01AString_01_4.html">  764</a></span><span class="keyword">struct </span>std::hash&lt;<a class="code hl_class" href="classAString.html">AString</a>&gt;</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>{</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>    <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; t)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        <span class="keywordflow">return</span> std::hash&lt;std::u16string&gt;()(t);</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    }</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>};</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span> </div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span><span class="keyword">namespace </span>aui::win32 {</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span><span class="comment">     * On Windows, char16_t == wchar_t. WinAPI interfaces use wchar_t widely, so we have some handy functions to</span></div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span><span class="comment">     * convert AString to wchar_t* and back.</span></div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span> </div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* toWchar(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>) {</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>        <span class="comment">// NOLINTNEXTLINE(*-pro-type-reinterpret-cast)</span></div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">wchar_t</span> *const<span class="keyword">&gt;</span>(<span class="keywordtype">string</span>.data());</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    }</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span> </div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    <span class="keyword">inline</span> <span class="keywordtype">wchar_t</span>* toWchar(<a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>) {</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>        <span class="comment">// NOLINTNEXTLINE(*-pro-type-reinterpret-cast)</span></div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">wchar_t</span>*<span class="keyword">&gt;</span>(<span class="keywordtype">string</span>.data());</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>    }</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span> </div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>    <span class="keyword">inline</span> std::wstring_view toWcharView(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>) {</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>        <span class="keywordflow">return</span> {toWchar(<span class="keywordtype">string</span>), <span class="keywordtype">string</span>.length() };</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    }</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span> </div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <span class="keyword">inline</span> <a class="code hl_class" href="classAString.html">AString</a> fromWchar(std::wstring_view <span class="keywordtype">string</span>) {</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>        <span class="comment">// NOLINTNEXTLINE(*-pro-type-reinterpret-cast)</span></div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>        <span class="keywordflow">return</span> {<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>char16_t *<span class="keyword">&gt;</span>(<span class="keywordtype">string</span>.data()), <span class="keywordtype">string</span>.size()};</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    }</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>}</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span> </div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno"><a class="line" href="structfmt_1_1detail_1_1is__string_3_01AString_01_4.html">  800</a></span><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::detail::is_string&lt;<a class="code hl_class" href="classAString.html">AString</a>&gt;: std::false_type {};</div>
 <div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span> </div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno"><a class="line" href="structfmt_1_1detail_1_1is__string_3_01AString_01_4.html">  802</a></span><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::detail::is_string&lt;<a class="code hl_class" href="classAString.html">AString</a>&gt;: std::false_type {};</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span> </div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01AString_01_4.html">  804</a></span><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::formatter&lt;<a class="code hl_class" href="classAString.html">AString</a>&gt;: fmt::formatter&lt;std::string&gt; {</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    <span class="keyword">auto</span> format(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; s, format_context&amp; ctx)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>        <span class="keywordflow">return</span> fmt::formatter&lt;std::string&gt;::format(s.<a class="code hl_function" href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">toStdString</a>(), ctx);</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>    }</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>};</div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span> </div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span> </div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span><span class="comment">// gtest printer for AString</span></div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span><span class="keyword">inline</span> <span class="keywordtype">void</span> PrintTo(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; s, std::ostream* stream) {</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    *stream &lt;&lt; s.<a class="code hl_function" href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">toStdString</a>();</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>}</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01AString_01_4.html">  802</a></span><span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>fmt::formatter&lt;<a class="code hl_class" href="classAString.html">AString</a>&gt;: fmt::formatter&lt;std::string&gt; {</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>    <span class="keyword">auto</span> format(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; s, format_context&amp; ctx)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>        <span class="keywordflow">return</span> fmt::formatter&lt;std::string&gt;::format(s.<a class="code hl_function" href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">toStdString</a>(), ctx);</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    }</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>};</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span> </div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span> </div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span><span class="comment">// gtest printer for AString</span></div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span><span class="keyword">inline</span> <span class="keywordtype">void</span> PrintTo(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; s, std::ostream* stream) {</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    *stream &lt;&lt; s.<a class="code hl_function" href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">toStdString</a>();</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>}</div>
 <div class="ttc" id="aclassAByteBufferView_html"><div class="ttname"><a href="classAByteBufferView.html">AByteBufferView</a></div><div class="ttdoc">Acts like std::string_view but for AByteBuffer.</div><div class="ttdef"><b>Definition:</b> AByteBufferView.h:24</div></div>
 <div class="ttc" id="aclassAByteBuffer_html"><div class="ttname"><a href="classAByteBuffer.html">AByteBuffer</a></div><div class="ttdoc">std::vector-like growing array for byte storage.</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:31</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:32</div></div>
-<div class="ttc" id="aclassAOptional_html_ac2f1093971087a13def94bbd620b7735"><div class="ttname"><a href="classAOptional.html#ac2f1093971087a13def94bbd620b7735">AOptional::valueOrException</a></div><div class="ttdeci">T &amp; valueOrException(const char *message=&quot;empty optional&quot;)</div><div class="ttdoc">value or exception</div><div class="ttdef"><b>Definition:</b> AOptional.h:201</div></div>
+<div class="ttc" id="aclassAOptional_html_ac2f1093971087a13def94bbd620b7735"><div class="ttname"><a href="classAOptional.html#ac2f1093971087a13def94bbd620b7735">AOptional::valueOrException</a></div><div class="ttdeci">T &amp; valueOrException(const char *message=&quot;empty optional&quot;)</div><div class="ttdoc">value or exception</div><div class="ttdef"><b>Definition:</b> AOptional.h:207</div></div>
 <div class="ttc" id="aclassASet_html"><div class="ttname"><a href="classASet.html">ASet</a></div><div class="ttdoc">A std::set with AUI extensions.</div><div class="ttdef"><b>Definition:</b> ASet.h:25</div></div>
 <div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition:</b> AStringVector.h:22</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition:</b> AString.h:37</div></div>
@@ -817,7 +815,7 @@ $(document).ready(function(){initNavTree('AString_8h_source.html',''); initResiz
 <div class="ttc" id="agroup__core_html_ga5eab01bd6015b51aca8bfddb3b525e32"><div class="ttname"><a href="group__core.html#ga5eab01bd6015b51aca8bfddb3b525e32">aui::container::contains</a></div><div class="ttdeci">bool contains(const Container &amp;c, const typename Container::const_reference value) noexcept</div><div class="ttdef"><b>Definition:</b> containers.h:153</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:55</div></div>
 <div class="ttc" id="astructViewAssertionEmpty_html"><div class="ttname"><a href="structViewAssertionEmpty.html">ViewAssertionEmpty</a></div><div class="ttdef"><b>Definition:</b> Empty.h:19</div></div>
-<div class="ttc" id="astructaui_1_1ranged__number_html"><div class="ttname"><a href="structaui_1_1ranged__number.html">aui::ranged_number</a></div><div class="ttdoc">Clamps the possible values for a number to the specified range: [min;max].</div><div class="ttdef"><b>Definition:</b> values.h:451</div></div>
+<div class="ttc" id="astructaui_1_1ranged__number_html"><div class="ttname"><a href="structaui_1_1ranged__number.html">aui::ranged_number</a></div><div class="ttdoc">Clamps the possible values for a number to the specified range: [min;max].</div><div class="ttdef"><b>Definition:</b> values.h:452</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -119,9 +119,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>nextLine</b> () noexc
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a366823907ae2978d777ce5d059354844"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRenderer_1_1IMultiStringCanvas.html#a366823907ae2978d777ce5d059354844">notifySymbolAdded</a> (const <a class="el" href="structATextLayoutHelper_1_1Symbol.html">ATextLayoutHelper::Symbol</a> &amp;symbol) noexcept</td></tr>
-<tr class="memdesc:a366823907ae2978d777ce5d059354844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a> than a symbol was added used to construct a <a class="el" href="classATextLayoutHelper.html">ATextLayoutHelper</a>.  <a href="classIRenderer_1_1IMultiStringCanvas.html#a366823907ae2978d777ce5d059354844">More...</a><br /></td></tr>
-<tr class="separator:a366823907ae2978d777ce5d059354844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcbcfcf57aa2c08d85f32ae9d784205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIRenderer_1_1IMultiStringCanvas.html#a6bcbcfcf57aa2c08d85f32ae9d784205">notifySymbolAdded</a> (const <a class="el" href="structATextLayoutHelper_1_1Boundary.html">ATextLayoutHelper::Boundary</a> &amp;symbol) noexcept</td></tr>
+<tr class="memdesc:a6bcbcfcf57aa2c08d85f32ae9d784205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a> than a symbol was added used to construct a <a class="el" href="classATextLayoutHelper.html" title="Helps mapping prerendered string with positions.">ATextLayoutHelper</a>.  <a href="classIRenderer_1_1IMultiStringCanvas.html#a6bcbcfcf57aa2c08d85f32ae9d784205">More...</a><br /></td></tr>
+<tr class="separator:a6bcbcfcf57aa2c08d85f32ae9d784205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a17b5cd21fa9ad96ca170e70a53ae233d" name="a17b5cd21fa9ad96ca170e70a53ae233d"></a>
@@ -196,7 +196,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Bakes multi string canvas to <a class="el" href="classIRenderer_1_1IPrerenderedString.html">IPrerenderedString</a> which can be used for drawing text. </p>
 <dl class="section note"><dt>Note</dt><dd>invalidates <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a> which speeds up some implementations of <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a>. </dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>instance of <code>ARender::PrerenderedString</code> to drawElements with. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>instance of <code>_&lt;IRenderer::IPrerenderedString&gt;</code> to drawElements with. </dd></dl>
 
 <p>Implemented in <a class="el" href="classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8">OpenGLMultiStringCanvas</a>, and <a class="el" href="classSoftwareMultiStringCanvas.html#aff61fe136db7a32318d9eb9ca70f20d0">SoftwareMultiStringCanvas</a>.</p>
 
@@ -233,8 +233,8 @@ can be called only once. </dd></dl>
 
 </div>
 </div>
-<a id="a366823907ae2978d777ce5d059354844" name="a366823907ae2978d777ce5d059354844"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a366823907ae2978d777ce5d059354844">&#9670;&nbsp;</a></span>notifySymbolAdded()</h2>
+<a id="a6bcbcfcf57aa2c08d85f32ae9d784205" name="a6bcbcfcf57aa2c08d85f32ae9d784205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bcbcfcf57aa2c08d85f32ae9d784205">&#9670;&nbsp;</a></span>notifySymbolAdded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +245,7 @@ can be called only once. </dd></dl>
         <tr>
           <td class="memname">void IRenderer::IMultiStringCanvas::notifySymbolAdded </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structATextLayoutHelper_1_1Symbol.html">ATextLayoutHelper::Symbol</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structATextLayoutHelper_1_1Boundary.html">ATextLayoutHelper::Boundary</a> &amp;&#160;</td>
           <td class="paramname"><em>symbol</em></td><td>)</td>
           <td></td>
         </tr>
@@ -257,14 +257,15 @@ can be called only once. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Notifies <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a> than a symbol was added used to construct a <a class="el" href="classATextLayoutHelper.html">ATextLayoutHelper</a>. </p>
+<p>Notifies <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a> than a symbol was added used to construct a <a class="el" href="classATextLayoutHelper.html" title="Helps mapping prerendered string with positions.">ATextLayoutHelper</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>should be called by the implementation of <a class="el" href="classIRenderer_1_1IMultiStringCanvas.html">IMultiStringCanvas</a>. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">symbol</td><td>symbol to add </td></tr>
+    <tr><td class="paramname">symbol</td><td>symbol data to add </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>at the end of line, implementation must add extra symbol to mark last position. </dd></dl>
 
 </div>
 </div>

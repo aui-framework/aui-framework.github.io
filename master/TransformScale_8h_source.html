@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('TransformScale_8h_source.html',''); in
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_struct" href="structass_1_1prop_1_1Property.html">Property</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structass_1_1TransformScale.html">TransformScale</a>&amp; info) : mInfo(info) {}</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">void</span> renderFor(<a class="code hl_class" href="classAView.html">AView</a>* view) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">void</span> renderFor(<a class="code hl_class" href="classAView.html">AView</a>* view, <span class="keyword">const</span> <a class="code hl_struct" href="structARenderContext.html">ARenderContext</a>&amp; ctx) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            PropertySlot getPropertySlot() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -139,12 +139,16 @@ $(document).ready(function(){initNavTree('TransformScale_8h_source.html',''); in
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; value() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordflow">return</span> mInfo;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        };</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-<div class="ttc" id="aclassAView_html"><div class="ttname"><a href="classAView.html">AView</a></div><div class="ttdoc">Base class of all UI objects.</div><div class="ttdef"><b>Definition:</b> AView.h:76</div></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordtype">void</span> updateInvalidPixelRect(<a class="code hl_struct" href="structARect.html">ARect&lt;int&gt;</a>&amp; invalidRect) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aclassAView_html"><div class="ttname"><a href="classAView.html">AView</a></div><div class="ttdoc">Base class of all UI objects.</div><div class="ttdef"><b>Definition:</b> AView.h:77</div></div>
+<div class="ttc" id="astructARect_html"><div class="ttname"><a href="structARect.html">ARect</a></div><div class="ttdoc">Axis aligned 2D rectangle.</div><div class="ttdef"><b>Definition:</b> ARect.h:24</div></div>
+<div class="ttc" id="astructARenderContext_html"><div class="ttname"><a href="structARenderContext.html">ARenderContext</a></div><div class="ttdoc">Render context passed to AView::render.</div><div class="ttdef"><b>Definition:</b> ARenderContext.h:43</div></div>
 <div class="ttc" id="astructass_1_1TransformScale_html"><div class="ttname"><a href="structass_1_1TransformScale.html">ass::TransformScale</a></div><div class="ttdoc">Controls the rendering scale transform of AView.</div><div class="ttdef"><b>Definition:</b> TransformScale.h:28</div></div>
-<div class="ttc" id="astructass_1_1prop_1_1IPropertyBase_html"><div class="ttname"><a href="structass_1_1prop_1_1IPropertyBase.html">ass::prop::IPropertyBase</a></div><div class="ttdef"><b>Definition:</b> IPropertyBase.h:40</div></div>
+<div class="ttc" id="astructass_1_1prop_1_1IPropertyBase_html"><div class="ttname"><a href="structass_1_1prop_1_1IPropertyBase.html">ass::prop::IPropertyBase</a></div><div class="ttdef"><b>Definition:</b> IPropertyBase.h:42</div></div>
 <div class="ttc" id="astructass_1_1prop_1_1Property_html"><div class="ttname"><a href="structass_1_1prop_1_1Property.html">ass::prop::Property</a></div><div class="ttdef"><b>Definition:</b> IProperty.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

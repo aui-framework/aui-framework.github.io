@@ -114,105 +114,143 @@ $(document).ready(function(){initNavTree('ACursorSelectable_8h_source.html','');
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;glm/glm.hpp&gt;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;AUI/Font/AFontStyle.h&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;AUI/Render/ATextLayoutHelper.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;AUI/Platform/AInput.h&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;AUI/View/AView.h&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classACursorSelectable.html">   26</a></span><span class="keyword">class </span>API_AUI_VIEWS <a class="code hl_class" href="classACursorSelectable.html">ACursorSelectable</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structACursorSelectable_1_1Selection.html">   29</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">Selection</a></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">unsigned</span> begin;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">unsigned</span> end;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">Selection</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> std::tie(begin, end) == std::tie(rhs.begin, rhs.end);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">Selection</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">return</span> !(rhs == *<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">   51</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <a class="code hl_function" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">text</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classACursorSelectable.html#ae1744b705b48d18401882f5f5106a89e">   56</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="classACursorSelectable.html#ae1744b705b48d18401882f5f5106a89e">textLength</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    [[nodiscard]] <a class="code hl_class" href="classAString.html">AString</a> selectedText()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (!hasSelection())</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">auto</span> t = <a class="code hl_struct" href="structViewAssertionText.html">text</a>();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> {t.begin() + selection().begin, t.begin() + selection().end };</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    [[nodiscard]] Selection selection() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;AUI/Render/RenderHints.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;AUI/Platform/AInput.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;AUI/View/AView.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classACursorSelectable.html">   27</a></span><span class="keyword">class </span>API_AUI_VIEWS <a class="code hl_class" href="classACursorSelectable.html">ACursorSelectable</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classACursorSelectable.html">~ACursorSelectable</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structACursorSelectable_1_1Selection.html">   31</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">Selection</a></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">unsigned</span> begin;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">unsigned</span> end;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        [[nodiscard]]</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">Selection</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        [[nodiscard]]</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">Selection</a>&amp; rhs) <span class="keyword">const</span> <span class="keyword">noexcept</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        [[nodiscard]]</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">bool</span> <a class="code hl_struct" href="structViewAssertionEmpty.html">empty</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> begin == end;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">   56</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <a class="code hl_function" href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">text</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classACursorSelectable.html#a323a643dc50b69858cd58b88d44c88c3">   61</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="classACursorSelectable.html#a323a643dc50b69858cd58b88d44c88c3">length</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    [[nodiscard]] <a class="code hl_class" href="classAString.html">AString</a> selectedText()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (!hasSelection())</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">return</span> {};</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">auto</span> t = <a class="code hl_struct" href="structViewAssertionText.html">text</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> {t.begin() + selection().begin, t.begin() + selection().end };</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    [[nodiscard]] <span class="keywordtype">bool</span> hasSelection() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    [[nodiscard]] Selection selection() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    [[nodiscard]] <span class="keywordtype">unsigned</span> cursorIndexByPos(glm::ivec2 pos);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    [[nodiscard]] <span class="keywordtype">int</span> getPosByIndex(<span class="keywordtype">int</span> end, <span class="keywordtype">int</span> begin = 0);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> selectAll();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    [[nodiscard]] <span class="keywordtype">bool</span> hasSelection() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2">   83</a></span>    [[nodiscard]] <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <a class="code hl_function" href="classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2">cursorIndexByPos</a>(glm::ivec2 pos) = 0;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    [[nodiscard]] <span class="keyword">virtual</span> glm::ivec2 getPosByIndex(<span class="keywordtype">size_t</span> index) = 0;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> clearSelection();</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> setSelection(<span class="keywordtype">int</span> cursorIndex) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        mCursorIndex = cursorIndex;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        mCursorSelection = -1;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        onSelectionChanged();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> setSelection(Selection selection) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        mCursorIndex = selection.begin;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        mCursorSelection = selection.end;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        onSelectionChanged();</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">unsigned</span> mCursorIndex = 0;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">unsigned</span> mCursorSelection = -1;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">virtual</span> glm::ivec2 getMouseSelectionPadding() = 0;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">virtual</span> glm::ivec2 getMouseSelectionScroll() = 0;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">virtual</span> <a class="code hl_struct" href="structAFontStyle.html">AFontStyle</a> getMouseSelectionFont() = 0;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isLButtonPressed() = 0;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classAString.html">AString</a> getDisplayText() = 0;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> doRedraw() = 0;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onSelectionChanged() = 0;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> handleMouseDoubleClicked(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">void</span> handleMousePressed(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> handleMouseReleased(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> handleMouseMove(<span class="keyword">const</span> glm::ivec2&amp; pos);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classACursorSelectable.html#a73839c234668a97846e0721e79cf1360">   93</a></span>    [[nodiscard]] <span class="keyword">virtual</span> glm::ivec2 <a class="code hl_function" href="classACursorSelectable.html#a73839c234668a97846e0721e79cf1360">getCursorPosition</a>() = 0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> selectAll();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> clearSelection();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> setSelection(<span class="keywordtype">int</span> cursorIndex) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        mCursorIndex = cursorIndex;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        mCursorSelection.reset();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        onSelectionChanged();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> setSelection(Selection selection) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        mCursorIndex = selection.begin;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        mCursorSelection = selection.end;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        onSelectionChanged();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">unsigned</span> mCursorIndex = 0;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;unsigned&gt;</a> mCursorSelection;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">int</span> drawSelectionPre();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isLButtonPressed() = 0;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classAString.html">AString</a> getDisplayText() = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> cursorSelectableRedraw() = 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onSelectionChanged() = 0;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> drawSelectionPost();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> drawSelectionRects();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> setTextLayoutHelper(<a class="code hl_class" href="classATextLayoutHelper.html">ATextLayoutHelper</a> textLayoutHelper) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        mTextLayoutHelper = std::move(textLayoutHelper);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">int</span> mAbsoluteBegin, mAbsoluteEnd;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">bool</span> mIgnoreSelection = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_class" href="classATextLayoutHelper.html">ATextLayoutHelper</a> mTextLayoutHelper;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="ttc" id="aclassACursorSelectable_html"><div class="ttname"><a href="classACursorSelectable.html">ACursorSelectable</a></div><div class="ttdef"><b>Definition:</b> ACursorSelectable.h:26</div></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> handleMouseDoubleClicked(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> handleMousePressed(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> handleMouseReleased(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> handleMouseMove(<span class="keyword">const</span> glm::ivec2&amp; pos);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">template</span>&lt;aui::invocable Callback&gt;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> drawSelectionBeforeAndAfter(<a class="code hl_class" href="classIRenderer.html">IRenderer</a>&amp; render, std::span&lt;<a class="code hl_struct" href="structARect.html">ARect&lt;int&gt;</a>&gt; rects, Callback&amp;&amp; drawText) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span> (rects.empty()) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            drawText();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keyword">auto</span> drawRects = [&amp;] {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> r : rects) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                render.<a class="code hl_function" href="classIRenderer.html#afe5d29886458c434c94cd8969a93a980">rectangle</a>(<a class="code hl_struct" href="structASolidBrush.html">ASolidBrush</a>{}, r.p1, r.size());</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        };</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <a class="code hl_struct" href="structRenderHints_1_1PushColor.html">RenderHints::PushColor</a> c(render);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            render.<a class="code hl_function" href="classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794">setColor</a>(<a class="code hl_class" href="classAColor.html">AColor</a>(1.f) - <a class="code hl_class" href="classAColor.html">AColor</a>(0x0078d700u));</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            drawRects();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        drawText();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        render.<a class="code hl_function" href="classIRenderer.html#a6ea6868a57253736a7d1bc359a9bb2f0">setBlending</a>(Blending::INVERSE_DST);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_define" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a> { render.<a class="code hl_function" href="classIRenderer.html#a6ea6868a57253736a7d1bc359a9bb2f0">setBlending</a>(Blending::NORMAL); };</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        drawRects();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">bool</span> mIgnoreSelection = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>};</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <span class="keyword">const</span> <a class="code hl_struct" href="structACursorSelectable_1_1Selection.html">ACursorSelectable::Selection</a>&amp; e) <span class="keyword">noexcept</span>{</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    o &lt;&lt; <span class="stringliteral">&quot;Selection&quot;</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">if</span> (e.empty()) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        o &lt;&lt; <span class="stringliteral">&quot;{&quot;</span> &lt;&lt; e.begin &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        o &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; e.begin &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; e.end &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+<div class="ttc" id="aclassAColor_html"><div class="ttname"><a href="classAColor.html">AColor</a></div><div class="ttdoc">Represents a 4-component floating point color.</div><div class="ttdef"><b>Definition:</b> AColor.h:27</div></div>
+<div class="ttc" id="aclassACursorSelectable_html"><div class="ttname"><a href="classACursorSelectable.html">ACursorSelectable</a></div><div class="ttdef"><b>Definition:</b> ACursorSelectable.h:27</div></div>
 <div class="ttc" id="aclassACursorSelectable_html_a056363780f0a6bac958eb68861682c96"><div class="ttname"><a href="classACursorSelectable.html#a056363780f0a6bac958eb68861682c96">ACursorSelectable::text</a></div><div class="ttdeci">virtual const AString &amp; text() const =0</div></div>
-<div class="ttc" id="aclassACursorSelectable_html_ae1744b705b48d18401882f5f5106a89e"><div class="ttname"><a href="classACursorSelectable.html#ae1744b705b48d18401882f5f5106a89e">ACursorSelectable::textLength</a></div><div class="ttdeci">virtual size_t textLength() const =0</div></div>
+<div class="ttc" id="aclassACursorSelectable_html_a323a643dc50b69858cd58b88d44c88c3"><div class="ttname"><a href="classACursorSelectable.html#a323a643dc50b69858cd58b88d44c88c3">ACursorSelectable::length</a></div><div class="ttdeci">virtual size_t length() const =0</div></div>
+<div class="ttc" id="aclassACursorSelectable_html_a4a5c0510de667734666e4336bf30e8e2"><div class="ttname"><a href="classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2">ACursorSelectable::cursorIndexByPos</a></div><div class="ttdeci">virtual unsigned cursorIndexByPos(glm::ivec2 pos)=0</div></div>
+<div class="ttc" id="aclassACursorSelectable_html_a73839c234668a97846e0721e79cf1360"><div class="ttname"><a href="classACursorSelectable.html#a73839c234668a97846e0721e79cf1360">ACursorSelectable::getCursorPosition</a></div><div class="ttdeci">virtual glm::ivec2 getCursorPosition()=0</div></div>
+<div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition:</b> AOptional.h:32</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition:</b> AString.h:37</div></div>
-<div class="ttc" id="aclassATextLayoutHelper_html"><div class="ttname"><a href="classATextLayoutHelper.html">ATextLayoutHelper</a></div><div class="ttdef"><b>Definition:</b> ATextLayoutHelper.h:22</div></div>
-<div class="ttc" id="astructACursorSelectable_1_1Selection_html"><div class="ttname"><a href="structACursorSelectable_1_1Selection.html">ACursorSelectable::Selection</a></div><div class="ttdef"><b>Definition:</b> ACursorSelectable.h:30</div></div>
-<div class="ttc" id="astructAFontStyle_html"><div class="ttname"><a href="structAFontStyle.html">AFontStyle</a></div><div class="ttdef"><b>Definition:</b> AFontStyle.h:23</div></div>
+<div class="ttc" id="aclassIRenderer_html"><div class="ttname"><a href="classIRenderer.html">IRenderer</a></div><div class="ttdoc">Base class for rendering.</div><div class="ttdef"><b>Definition:</b> IRenderer.h:148</div></div>
+<div class="ttc" id="aclassIRenderer_html_a2cecf34e74678f677c18dc0bdb9af794"><div class="ttname"><a href="classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794">IRenderer::setColor</a></div><div class="ttdeci">void setColor(const AColor &amp;color)</div><div class="ttdef"><b>Definition:</b> IRenderer.h:429</div></div>
+<div class="ttc" id="aclassIRenderer_html_a6ea6868a57253736a7d1bc359a9bb2f0"><div class="ttname"><a href="classIRenderer.html#a6ea6868a57253736a7d1bc359a9bb2f0">IRenderer::setBlending</a></div><div class="ttdeci">virtual void setBlending(Blending blending)=0</div><div class="ttdoc">Sets blending mode.</div></div>
+<div class="ttc" id="aclassIRenderer_html_afe5d29886458c434c94cd8969a93a980"><div class="ttname"><a href="classIRenderer.html#afe5d29886458c434c94cd8969a93a980">IRenderer::rectangle</a></div><div class="ttdeci">virtual void rectangle(const ABrush &amp;brush, glm::vec2 position, glm::vec2 size)=0</div><div class="ttdoc">Draws simple rectangle.</div></div>
+<div class="ttc" id="agroup__useful__macros_html_gaee46aadc753cc62a15ea8cd64bdeaa61"><div class="ttname"><a href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">AUI_DEFER</a></div><div class="ttdeci">#define AUI_DEFER</div><div class="ttdoc">Defers execution of the next block to the end of current block (RAII scope).</div><div class="ttdef"><b>Definition:</b> kAUI.h:197</div></div>
+<div class="ttc" id="astructACursorSelectable_1_1Selection_html"><div class="ttname"><a href="structACursorSelectable_1_1Selection.html">ACursorSelectable::Selection</a></div><div class="ttdef"><b>Definition:</b> ACursorSelectable.h:32</div></div>
 <div class="ttc" id="astructAPointerPressedEvent_html"><div class="ttname"><a href="structAPointerPressedEvent.html">APointerPressedEvent</a></div><div class="ttdoc">Pointing method press event.</div><div class="ttdef"><b>Definition:</b> APointerPressedEvent.h:21</div></div>
 <div class="ttc" id="astructAPointerReleasedEvent_html"><div class="ttname"><a href="structAPointerReleasedEvent.html">APointerReleasedEvent</a></div><div class="ttdoc">Pointing method press event.</div><div class="ttdef"><b>Definition:</b> APointerReleasedEvent.h:19</div></div>
+<div class="ttc" id="astructARect_html"><div class="ttname"><a href="structARect.html">ARect</a></div><div class="ttdoc">Axis aligned 2D rectangle.</div><div class="ttdef"><b>Definition:</b> ARect.h:24</div></div>
+<div class="ttc" id="astructASolidBrush_html"><div class="ttname"><a href="structASolidBrush.html">ASolidBrush</a></div><div class="ttdef"><b>Definition:</b> ABrush.h:32</div></div>
+<div class="ttc" id="astructRenderHints_1_1PushColor_html"><div class="ttname"><a href="structRenderHints_1_1PushColor.html">RenderHints::PushColor</a></div><div class="ttdef"><b>Definition:</b> RenderHints.h:79</div></div>
+<div class="ttc" id="astructViewAssertionEmpty_html"><div class="ttname"><a href="structViewAssertionEmpty.html">ViewAssertionEmpty</a></div><div class="ttdef"><b>Definition:</b> Empty.h:19</div></div>
 <div class="ttc" id="astructViewAssertionText_html"><div class="ttname"><a href="structViewAssertionText.html">ViewAssertionText</a></div><div class="ttdef"><b>Definition:</b> Text.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

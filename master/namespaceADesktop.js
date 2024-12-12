@@ -1,7 +1,7 @@
 var namespaceADesktop =
 [
     [ "FileExtension", "structADesktop_1_1FileExtension.html", null ],
-    [ "browseForDir", "namespaceADesktop.html#a4894140d4d28c69a7a3a11bc04b8dcbb", null ],
-    [ "browseForFile", "namespaceADesktop.html#a6e9cf035b6b4b52290a481c2e6a15111", null ],
+    [ "browseForDir", "namespaceADesktop.html#a1b4a7be5670586ce5dff526526be3eb8", null ],
+    [ "browseForFile", "namespaceADesktop.html#ac01c8d6d177936bdf71c94d134c02c07", null ],
     [ "playSystemSound", "namespaceADesktop.html#af25534f4ae5ca80c1f9942801bca5a8d", null ]
 ];

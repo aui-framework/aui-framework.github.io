@@ -5,7 +5,7 @@ var group__curl =
         [ "runAsync", "classACurl_1_1Builder.html#a5540f23420109f46ad40bc0871783fd6", null ],
         [ "runAsync", "classACurl_1_1Builder.html#ab17a2dd6e203e25c1143d46b27033c6c", null ],
         [ "runBlocking", "classACurl_1_1Builder.html#a3d759c8584889a179c9b9248bfba9e5c", null ],
-        [ "toInputStream", "classACurl_1_1Builder.html#acffdde133dea4effb9d2c94c7258bf1d", null ],
+        [ "toInputStream", "classACurl_1_1Builder.html#a25c40b85d3613aebd85539db6423df73", null ],
         [ "withBody", "classACurl_1_1Builder.html#aaf913bd599bee8fc97d9d55b3fb0cdec", null ],
         [ "withBody", "classACurl_1_1Builder.html#a1917191553bcfc4d3b1d5a951bd5684d", null ],
         [ "withErrorCallback", "classACurl_1_1Builder.html#a7832c941b60e76f7e141bd2e9127f82b", null ],

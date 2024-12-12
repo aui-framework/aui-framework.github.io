@@ -7,6 +7,7 @@ var group__useful__macros =
     [ "AUI_ASSERT_UI_THREAD_ONLY", "group__useful__macros.html#ga5ad96f0df87278843d3bb932bf0aaec9", null ],
     [ "AUI_ASSERT_WORKER_THREAD_ONLY", "group__useful__macros.html#ga1a1ce309952c1b43b7e96be67dfec2d4", null ],
     [ "AUI_ASSERTX", "group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c", null ],
+    [ "AUI_BREAKPOINT", "group__useful__macros.html#ga6aa25293269eda01146764856c2a1ee1", null ],
     [ "AUI_DEFER", "group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61", null ],
     [ "AUI_ENTRY", "group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f", null ],
     [ "AUI_MARK_AS_USED", "group__useful__macros.html#gad409f7ab56b7719fecd676abfa776b1f", null ],
@@ -35,7 +36,5 @@ var group__useful__macros =
     [ "AUI_PP_VARIADIC_CALL", "group__useful__macros.html#gaa9e741551b2e22321a61931783442d22", null ],
     [ "do_once", "group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e", null ],
     [ "let", "group__useful__macros.html#ga045dd54932944d8830380f4596d64446", null ],
-    [ "me", "group__useful__macros.html#gac83b72d92d1105a82cd5590c0f65d48b", null ],
-    [ "slot", "group__useful__macros.html#gaaaa072876366972108aef016e7882a99", null ],
     [ "with_style", "group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c", null ]
 ];

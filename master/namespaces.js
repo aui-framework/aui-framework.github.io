@@ -29,6 +29,7 @@ var namespaces =
         [ "Property", "structass_1_1prop_1_1Property.html", null ],
         [ "Property< ACursor >", "structass_1_1prop_1_1Property_3_01ACursor_01_4.html", null ],
         [ "Property< ACursor::System >", "structass_1_1prop_1_1Property_3_01ACursor_1_1System_01_4.html", null ],
+        [ "Property< AFloat >", "structass_1_1prop_1_1Property_3_01AFloat_01_4.html", null ],
         [ "Property< AOverflow >", "structass_1_1prop_1_1Property_3_01AOverflow_01_4.html", null ],
         [ "Property< AOverflowMask >", "structass_1_1prop_1_1Property_3_01AOverflowMask_01_4.html", null ],
         [ "Property< ATextAlign >", "structass_1_1prop_1_1Property_3_01ATextAlign_01_4.html", null ],
@@ -42,6 +43,8 @@ var namespaces =
         [ "Property< BorderBottom >", "structass_1_1prop_1_1Property_3_01BorderBottom_01_4.html", null ],
         [ "Property< BorderLeft >", "structass_1_1prop_1_1Property_3_01BorderLeft_01_4.html", null ],
         [ "Property< BorderRadius >", "structass_1_1prop_1_1Property_3_01BorderRadius_01_4.html", null ],
+        [ "Property< BorderRight >", "structass_1_1prop_1_1Property_3_01BorderRight_01_4.html", null ],
+        [ "Property< BorderTop >", "structass_1_1prop_1_1Property_3_01BorderTop_01_4.html", null ],
         [ "Property< BoxShadow >", "structass_1_1prop_1_1Property_3_01BoxShadow_01_4.html", null ],
         [ "Property< BoxShadowInner >", "structass_1_1prop_1_1Property_3_01BoxShadowInner_01_4.html", null ],
         [ "Property< Expanding >", "structass_1_1prop_1_1Property_3_01Expanding_01_4.html", null ],
@@ -71,6 +74,7 @@ var namespaces =
       ] ],
       [ "AAssSelector", "classass_1_1AAssSelector.html", null ],
       [ "activated", "structass_1_1activated.html", null ],
+      [ "AndSelector", "structass_1_1AndSelector.html", null ],
       [ "BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
       [ "BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
       [ "BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
@@ -80,6 +84,8 @@ var namespaces =
       [ "BorderBottom", "structass_1_1BorderBottom.html", null ],
       [ "BorderLeft", "structass_1_1BorderLeft.html", null ],
       [ "BorderRadius", "structass_1_1BorderRadius.html", null ],
+      [ "BorderRight", "structass_1_1BorderRight.html", null ],
+      [ "BorderTop", "structass_1_1BorderTop.html", null ],
       [ "BoxShadow", "structass_1_1BoxShadow.html", null ],
       [ "BoxShadowInner", "structass_1_1BoxShadowInner.html", null ],
       [ "class_of", "structass_1_1class__of.html", null ],
@@ -106,6 +112,7 @@ var namespaces =
       [ "PropertyList", "structass_1_1PropertyList.html", null ],
       [ "PropertyListRecursive", "structass_1_1PropertyListRecursive.html", "structass_1_1PropertyListRecursive" ],
       [ "Rule", "structass_1_1Rule.html", null ],
+      [ "ScrollbarAppearance", "structass_1_1ScrollbarAppearance.html", "structass_1_1ScrollbarAppearance" ],
       [ "Selected", "structass_1_1Selected.html", null ],
       [ "TextBorder", "structass_1_1TextBorder.html", null ],
       [ "TextColor", "structass_1_1TextColor.html", null ],
@@ -183,12 +190,24 @@ var namespaces =
       ] ],
       [ "detail", null, [
         [ "AbsoluteLayoutCell", "structaui_1_1detail_1_1AbsoluteLayoutCell.html", null ],
+        [ "CharEntry", "classaui_1_1detail_1_1CharEntry.html", null ],
         [ "fmt", "structaui_1_1detail_1_1fmt.html", null ],
         [ "fmt< T, std::enable_if_t< std::is_base_of_v< AString, T > > >", "structaui_1_1detail_1_1fmt_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01AString_00_01T_01_4_01_4_01_4.html", null ],
         [ "LinearLayoutImpl", "classaui_1_1detail_1_1LinearLayoutImpl.html", "classaui_1_1detail_1_1LinearLayoutImpl" ],
         [ "MutexExtras", "structaui_1_1detail_1_1MutexExtras.html", null ],
+        [ "NextLineEntry", "classaui_1_1detail_1_1NextLineEntry.html", null ],
         [ "pointer_to_member", "structaui_1_1detail_1_1pointer__to__member.html", null ],
+        [ "TextBaseEntry", "classaui_1_1detail_1_1TextBaseEntry.html", "classaui_1_1detail_1_1TextBaseEntry" ],
+        [ "WhitespaceEntry", "classaui_1_1detail_1_1WhitespaceEntry.html", null ],
+        [ "WordEntry", "classaui_1_1detail_1_1WordEntry.html", null ],
         [ "SameHelper", "conceptaui_1_1detail_1_1SameHelper.html", null ]
+      ] ],
+      [ "enumerate", null, [
+        [ "basic", null, [
+          [ "ValueToName", "structaui_1_1enumerate_1_1basic_1_1ValueToName.html", null ]
+        ] ],
+        [ "ValueToName", "structaui_1_1enumerate_1_1ValueToName.html", null ],
+        [ "ALL_VALUES", "group__core.html#ga177fb99c6b6cf725dc64202f891678cf", null ]
       ] ],
       [ "impl", null, [
         [ "future", null, [
@@ -320,11 +339,15 @@ var namespaces =
       [ "fast_pimpl", "structaui_1_1fast__pimpl.html", null ],
       [ "function_info", "structaui_1_1function__info.html", null ],
       [ "function_info< Return(Args...)>", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html", null ],
+      [ "HVLayout", "structaui_1_1HVLayout.html", null ],
+      [ "identity", "structaui_1_1identity.html", null ],
       [ "lambda_overloaded", "structaui_1_1lambda__overloaded.html", null ],
       [ "lazy", "structaui_1_1lazy.html", null ],
       [ "lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
       [ "member", "structaui_1_1member.html", null ],
       [ "member< Type(Clazz::*)(Args...) const >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01_4" ],
+      [ "member< Type(Clazz::*)(Args...) const noexcept >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01noexcept_01_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01const_01noexcept_01_4" ],
+      [ "member< Type(Clazz::*)(Args...) noexcept >", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01noexcept_01_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_01noexcept_01_4" ],
       [ "member< Type(Clazz::*)(Args...)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4.html", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_07Args_8_8_8_08_4" ],
       [ "member< Type(Clazz::*)>", "structaui_1_1member_3_01Type_07Clazz_1_1_5_08_4.html", null ],
       [ "no_escape", "structaui_1_1no__escape.html", null ],
@@ -393,6 +416,7 @@ var namespaces =
       ] ],
       [ "formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
       [ "formatter< AString >", "structfmt_1_1formatter_3_01AString_01_4.html", null ],
+      [ "formatter< glm::vec< L, T, Q > >", "structfmt_1_1formatter_3_01glm_1_1vec_3_01L_00_01T_00_01Q_01_4_01_4.html", null ],
       [ "formatter< T, char, std::enable_if_t< aui::is_complete< AEnumerateAllValues< T > > > >", "structfmt_1_1formatter_3_01T_00_01char_00_01std_1_1enable__if__t_3_01aui_1_1is__complete_3_01AEn13eb4d9b2ceb404f0f8c914bb4f5f062.html", null ]
     ] ],
     [ "gl", null, [
@@ -424,9 +448,9 @@ var namespaces =
       [ "VertexBuffer", "classgl_1_1VertexBuffer.html", null ]
     ] ],
     [ "RenderHints", null, [
-      [ "PushColor", "classRenderHints_1_1PushColor.html", null ],
-      [ "PushMask", "classRenderHints_1_1PushMask.html", null ],
-      [ "PushMatrix", "classRenderHints_1_1PushMatrix.html", null ],
+      [ "PushColor", "structRenderHints_1_1PushColor.html", null ],
+      [ "PushMask", "structRenderHints_1_1PushMask.html", null ],
+      [ "PushMatrix", "structRenderHints_1_1PushMatrix.html", null ],
       [ "PushState", "classRenderHints_1_1PushState.html", null ]
     ] ],
     [ "std", null, [

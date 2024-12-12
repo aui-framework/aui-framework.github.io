@@ -6,6 +6,5 @@ var classAListView =
       [ "UNSET", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a666a87025ab0d8965e221050c8948001", null ],
       [ "TOGGLE", "classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a1252c45651289c0b553a30d27bb5ae9b", null ]
     ] ],
-    [ "onGesture", "classAListView.html#a1fe6ab723b7168060e837126b374043a", null ],
     [ "selectItem", "classAListView.html#a7369cc389a88274c38c4f51693734b0f", null ]
 ];

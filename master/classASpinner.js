@@ -1,4 +1,4 @@
 var classASpinner =
 [
-    [ "render", "classASpinner.html#a8f79d44b4a9dac8853fee6daf1764edc", null ]
+    [ "render", "classASpinner.html#a9c632df82fc40271a26373434801c66e", null ]
 ];

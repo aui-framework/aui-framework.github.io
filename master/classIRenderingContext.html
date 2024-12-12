@@ -97,13 +97,13 @@ $(document).ready(function(){initNavTree('classIRenderingContext.html',''); init
 </div><!--header-->
 <div class="contents">
 
-<p>Glue between <a class="el" href="classAWindow.html">AWindow</a> and <a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a>.  
+<p>Glue between <a class="el" href="classAWindow.html" title="Represents a window in the underlying windowing system.">AWindow</a> and <a class="el" href="classIRenderer.html" title="Base class for rendering.">IRenderer</a>.  
  <a href="classIRenderingContext.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Glue between <a class="el" href="classAWindow.html">AWindow</a> and <a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a>. </p>
-<p ><a class="el" href="classIRenderingContext.html" title="Glue between AWindow and IRenderer.">IRenderingContext</a> is linker object between <a class="el" href="classAWindow.html">AWindow</a> and <a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a>, that exposes <a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a> to the client code in order to draw.</p>
-<p >Unlike <a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a>, each <a class="el" href="classAWindow.html">AWindow</a> has it's own instance of <a class="el" href="classIRenderingContext.html" title="Glue between AWindow and IRenderer.">IRenderingContext</a>, thus it can be used to carry platform-specific and window-specific objects, like handles and framebuffers.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIRenderer.html" title="Base class for rendering (for drawing use ARender facade instead).">IRenderer</a> </dd></dl>
+<div class="textblock"><p >Glue between <a class="el" href="classAWindow.html" title="Represents a window in the underlying windowing system.">AWindow</a> and <a class="el" href="classIRenderer.html" title="Base class for rendering.">IRenderer</a>. </p>
+<p ><a class="el" href="classIRenderingContext.html" title="Glue between AWindow and IRenderer.">IRenderingContext</a> is linker object between <a class="el" href="classAWindow.html" title="Represents a window in the underlying windowing system.">AWindow</a> and <a class="el" href="classIRenderer.html" title="Base class for rendering.">IRenderer</a>, that exposes <a class="el" href="classIRenderer.html" title="Base class for rendering.">IRenderer</a> to the client code in order to draw.</p>
+<p >Unlike <a class="el" href="classIRenderer.html" title="Base class for rendering.">IRenderer</a>, each <a class="el" href="classAWindow.html" title="Represents a window in the underlying windowing system.">AWindow</a> has it's own instance of <a class="el" href="classIRenderingContext.html" title="Glue between AWindow and IRenderer.">IRenderingContext</a>, thus it can be used to carry platform-specific and window-specific objects, like handles and framebuffers.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classIRenderer.html" title="Base class for rendering.">IRenderer</a> </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -115,24 +115,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab14a58945af5b028ad418af9878904e7"><td class="memItemLeft" align="right" valign="top"><a id="ab14a58945af5b028ad418af9878904e7" name="ab14a58945af5b028ad418af9878904e7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (const <a class="el" href="structIRenderingContext_1_1Init.html">Init</a> &amp;init)</td></tr>
 <tr class="separator:ab14a58945af5b028ad418af9878904e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23eafa496f9277f6ec64c411978074f7"><td class="memItemLeft" align="right" valign="top"><a id="a23eafa496f9277f6ec64c411978074f7" name="a23eafa496f9277f6ec64c411978074f7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroyNativeWindow</b> (<a class="el" href="classABaseWindow.html">ABaseWindow</a> &amp;window)=0</td></tr>
-<tr class="separator:a23eafa496f9277f6ec64c411978074f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe21d8eca4208403d5158bf95749c78"><td class="memItemLeft" align="right" valign="top"><a id="afbe21d8eca4208403d5158bf95749c78" name="afbe21d8eca4208403d5158bf95749c78"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroyNativeWindow</b> (<a class="el" href="classAWindowBase.html">AWindowBase</a> &amp;window)=0</td></tr>
+<tr class="separator:afbe21d8eca4208403d5158bf95749c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc5a8cf1ee249dce958e346ad19e7e1"><td class="memItemLeft" align="right" valign="top"><a id="a7dc5a8cf1ee249dce958e346ad19e7e1" name="a7dc5a8cf1ee249dce958e346ad19e7e1"></a>
 virtual AImage&#160;</td><td class="memItemRight" valign="bottom"><b>makeScreenshot</b> ()=0</td></tr>
 <tr class="separator:a7dc5a8cf1ee249dce958e346ad19e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793e5c09699c7d33ab72a4713ee7f683"><td class="memItemLeft" align="right" valign="top"><a id="a793e5c09699c7d33ab72a4713ee7f683" name="a793e5c09699c7d33ab72a4713ee7f683"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginPaint</b> (<a class="el" href="classABaseWindow.html">ABaseWindow</a> &amp;window)=0</td></tr>
-<tr class="separator:a793e5c09699c7d33ab72a4713ee7f683"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a28871de70f1fad54588edf1575aa7a"><td class="memItemLeft" align="right" valign="top"><a id="a8a28871de70f1fad54588edf1575aa7a" name="a8a28871de70f1fad54588edf1575aa7a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>endPaint</b> (<a class="el" href="classABaseWindow.html">ABaseWindow</a> &amp;window)=0</td></tr>
-<tr class="separator:a8a28871de70f1fad54588edf1575aa7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab961d6290e1cec7bd1da1448cfd10e65"><td class="memItemLeft" align="right" valign="top"><a id="ab961d6290e1cec7bd1da1448cfd10e65" name="ab961d6290e1cec7bd1da1448cfd10e65"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginResize</b> (<a class="el" href="classABaseWindow.html">ABaseWindow</a> &amp;window)=0</td></tr>
-<tr class="separator:ab961d6290e1cec7bd1da1448cfd10e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeadbd1c2ccd60af5102860630399a691"><td class="memItemLeft" align="right" valign="top"><a id="aeadbd1c2ccd60af5102860630399a691" name="aeadbd1c2ccd60af5102860630399a691"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>endResize</b> (<a class="el" href="classABaseWindow.html">ABaseWindow</a> &amp;window)=0</td></tr>
-<tr class="separator:aeadbd1c2ccd60af5102860630399a691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb66eacba41d593f09a95f1f822d0d77"><td class="memItemLeft" align="right" valign="top"><a id="abb66eacba41d593f09a95f1f822d0d77" name="abb66eacba41d593f09a95f1f822d0d77"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginPaint</b> (<a class="el" href="classAWindowBase.html">AWindowBase</a> &amp;window)=0</td></tr>
+<tr class="separator:abb66eacba41d593f09a95f1f822d0d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c159d953fcc57a913f3af90c87ab3c"><td class="memItemLeft" align="right" valign="top"><a id="a11c159d953fcc57a913f3af90c87ab3c" name="a11c159d953fcc57a913f3af90c87ab3c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>endPaint</b> (<a class="el" href="classAWindowBase.html">AWindowBase</a> &amp;window)=0</td></tr>
+<tr class="separator:a11c159d953fcc57a913f3af90c87ab3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60298bf9a22b9950725c19dce2cc2228"><td class="memItemLeft" align="right" valign="top"><a id="a60298bf9a22b9950725c19dce2cc2228" name="a60298bf9a22b9950725c19dce2cc2228"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>beginResize</b> (<a class="el" href="classAWindowBase.html">AWindowBase</a> &amp;window)=0</td></tr>
+<tr class="separator:a60298bf9a22b9950725c19dce2cc2228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b25d5683498836b9883d14ed0fbf34"><td class="memItemLeft" align="right" valign="top"><a id="aa7b25d5683498836b9883d14ed0fbf34" name="aa7b25d5683498836b9883d14ed0fbf34"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>endResize</b> (<a class="el" href="classAWindowBase.html">AWindowBase</a> &amp;window)=0</td></tr>
+<tr class="separator:aa7b25d5683498836b9883d14ed0fbf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcec373b309e27f07ea5a35ca8249450"><td class="memItemLeft" align="right" valign="top"><a id="adcec373b309e27f07ea5a35ca8249450" name="adcec373b309e27f07ea5a35ca8249450"></a>
+virtual <a class="el" href="classIRenderer.html">IRenderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>renderer</b> ()=0</td></tr>
+<tr class="separator:adcec373b309e27f07ea5a35ca8249450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 <p><code>#include &lt;<a class="el" href="IRenderingContext_8h_source.html">AUI/Platform/IRenderingContext.h</a>&gt;</code></p>

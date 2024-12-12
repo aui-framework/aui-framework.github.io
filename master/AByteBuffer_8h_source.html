@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('AByteBuffer_8h_source.html',''); initR
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        reserve(mCapacity + size);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae">ensureReserved</a>(<span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classAByteBuffer.html#aa67518516cac8be372344af2c38f3059">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAByteBuffer.html#aa67518516cac8be372344af2c38f3059">grow</a>(<span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">auto</span> availableToWrite = getAvailableToWrite();</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">if</span> (availableToWrite &lt; size) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            increaseInternalBuffer((glm::max)(getReserved() * 2, <span class="keywordtype">size_t</span>(size - availableToWrite)));</div>
@@ -257,97 +257,100 @@ $(document).ready(function(){initNavTree('AByteBuffer_8h_source.html',''); initR
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        }</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        mBuffer = other.mBuffer;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        mCapacity = other.mCapacity;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        mSize = other.mSize;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        other.mBuffer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        other.mCapacity = 0;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        other.mSize = 0;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    }</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; other) {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">if</span> (&amp;other == <span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        mBuffer = other.mBuffer;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        mCapacity = other.mCapacity;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        mSize = other.mSize;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keyword">delete</span>[] mBuffer;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        mBuffer = other.mBuffer;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        mCapacity = other.mCapacity;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        mSize = other.mSize;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        other.mBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        other.mCapacity = 0;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        other.mSize = 0;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; other) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">if</span> (&amp;other == <span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordflow">if</span> (mCapacity &lt; other.<a class="code hl_function" href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">size</a>()) {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            reallocate(other.<a class="code hl_function" href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">size</a>());</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        std::memcpy(mBuffer, other.<a class="code hl_function" href="classAByteBuffer.html#afe2d857335823888761116b7acbe6812">data</a>(), other.<a class="code hl_function" href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">size</a>());</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        mSize = other.mSize;</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; r) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; r) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    }</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordtype">char</span>* begin()</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">return</span> mBuffer;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordtype">char</span>* end()</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">return</span> mBuffer + mSize;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordtype">char</span>* endReserved()</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">return</span> mBuffer + mCapacity;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    }</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* begin()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        <span class="keywordflow">return</span> mBuffer;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    }</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* end()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> mBuffer + mSize;</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    T as()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a>(*this).template as&lt;T&gt;();</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <a class="code hl_class" href="classAString.html">AString</a> toHexString()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a>(*this).toHexString();</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <a class="code hl_class" href="classAString.html">AString</a> toBase64String()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a>(*this).toBase64String();</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    iterator erase(iterator begin, iterator end) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(ownsIterator(begin));</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(ownsIterator(end));</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        std::memmove(begin, end, std::distance(end, AByteBuffer::end()));</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        setSize(size() - std::distance(begin, end));</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordflow">return</span> begin;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordtype">bool</span> ownsIterator(iterator i) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <span class="keywordflow">return</span> i &gt;= begin() &amp;&amp; i &lt;= end();</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromStream(<a class="code hl_struct" href="structaui_1_1no__escape.html">aui::no_escape&lt;IInputStream&gt;</a> is);</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromStream(<a class="code hl_struct" href="structaui_1_1no__escape.html">aui::no_escape&lt;IInputStream&gt;</a> is, <span class="keywordtype">size_t</span> sizeRestriction);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; r) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; r) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordtype">char</span>* begin()</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">return</span> mBuffer;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordtype">char</span>* end()</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">return</span> mBuffer + mSize;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordtype">char</span>* endReserved()</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">return</span> mBuffer + mCapacity;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* begin()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">return</span> mBuffer;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* end()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">return</span> mBuffer + mSize;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    T as()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a>(*this).template as&lt;T&gt;();</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <a class="code hl_class" href="classAString.html">AString</a> toHexString()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a>(*this).toHexString();</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    }</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <a class="code hl_class" href="classAString.html">AString</a> toBase64String()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a>(*this).toBase64String();</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    iterator erase(iterator begin, iterator end) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(ownsIterator(begin));</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(ownsIterator(end));</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        std::memmove(begin, end, std::distance(end, AByteBuffer::end()));</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        setSize(size() - std::distance(begin, end));</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordflow">return</span> begin;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordtype">bool</span> ownsIterator(iterator i) <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordflow">return</span> i &gt;= begin() &amp;&amp; i &lt;= end();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    }</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromString(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromHexString(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromBase64String(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; encodedString);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>};</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>API_AUI_CORE std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a> buffer);</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="structASerializable_3_01AByteBuffer_01_4.html">  336</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structASerializable.html">ASerializable</a>&lt;<a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&gt; {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> write(<a class="code hl_class" href="classIOutputStream.html">IOutputStream</a>&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; value) {</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        os.<a class="code hl_function" href="classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72">write</a>(value.data(), value.size());</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>};</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromStream(<a class="code hl_struct" href="structaui_1_1no__escape.html">aui::no_escape&lt;IInputStream&gt;</a> is);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromStream(<a class="code hl_struct" href="structaui_1_1no__escape.html">aui::no_escape&lt;IInputStream&gt;</a> is, <span class="keywordtype">size_t</span> sizeRestriction);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromString(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromHexString(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keyword">static</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a> fromBase64String(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; encodedString);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>};</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>API_AUI_CORE std::ostream&amp; operator&lt;&lt;(std::ostream&amp; o, <a class="code hl_class" href="classAByteBufferView.html">AByteBufferView</a> buffer);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="structASerializable_3_01AByteBuffer_01_4.html">  339</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structASerializable.html">ASerializable</a>&lt;<a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&gt; {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> write(<a class="code hl_class" href="classIOutputStream.html">IOutputStream</a>&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; value) {</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        os.<a class="code hl_function" href="classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72">write</a>(value.data(), value.size());</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    }</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>};</div>
 <div class="ttc" id="aclassAByteBufferView_html"><div class="ttname"><a href="classAByteBufferView.html">AByteBufferView</a></div><div class="ttdoc">Acts like std::string_view but for AByteBuffer.</div><div class="ttdef"><b>Definition:</b> AByteBufferView.h:24</div></div>
 <div class="ttc" id="aclassAByteBuffer_html"><div class="ttname"><a href="classAByteBuffer.html">AByteBuffer</a></div><div class="ttdoc">std::vector-like growing array for byte storage.</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:31</div></div>
 <div class="ttc" id="aclassAByteBuffer_html_a1a7b5197e01e5fea969356677d492cb3"><div class="ttname"><a href="classAByteBuffer.html#a1a7b5197e01e5fea969356677d492cb3">AByteBuffer::reallocate</a></div><div class="ttdeci">void reallocate(size_t s)</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:197</div></div>
@@ -358,7 +361,7 @@ $(document).ready(function(){initNavTree('AByteBuffer_8h_source.html',''); initR
 <div class="ttc" id="aclassAByteBuffer_html_a2b5fe166e41cc0680a5333856f354ff2"><div class="ttname"><a href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">AByteBuffer::size</a></div><div class="ttdeci">size_t size() const noexcept</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:227</div></div>
 <div class="ttc" id="aclassAByteBuffer_html_a600684376b6ebfa4f61659dce8fb7f84"><div class="ttname"><a href="classAByteBuffer.html#a600684376b6ebfa4f61659dce8fb7f84">AByteBuffer::capacity</a></div><div class="ttdeci">size_t capacity() const noexcept</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:234</div></div>
 <div class="ttc" id="aclassAByteBuffer_html_a9827e0b5942c0e672f5dbd5a6ff1134f"><div class="ttname"><a href="classAByteBuffer.html#a9827e0b5942c0e672f5dbd5a6ff1134f">AByteBuffer::at</a></div><div class="ttdeci">const T &amp; at(size_t byteIndex) const</div><div class="ttdoc">Gets value of specified type by byte index relative to the beginning of internal buffer.</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:144</div></div>
-<div class="ttc" id="aclassAByteBuffer_html_aa676b0b018e2bf7d8f9dec52ea7cdfae"><div class="ttname"><a href="classAByteBuffer.html#aa676b0b018e2bf7d8f9dec52ea7cdfae">AByteBuffer::ensureReserved</a></div><div class="ttdeci">void ensureReserved(size_t size)</div><div class="ttdoc">If getReserved() - getSize() is less than size increases internal buffer size enough to store size by...</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:101</div></div>
+<div class="ttc" id="aclassAByteBuffer_html_aa67518516cac8be372344af2c38f3059"><div class="ttname"><a href="classAByteBuffer.html#aa67518516cac8be372344af2c38f3059">AByteBuffer::grow</a></div><div class="ttdeci">void grow(size_t size)</div><div class="ttdoc">If getReserved() - getSize() is less than size increases internal buffer size enough to store size by...</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:101</div></div>
 <div class="ttc" id="aclassAByteBuffer_html_ab5e6422ce4f96ecdfc24a459ee453a34"><div class="ttname"><a href="classAByteBuffer.html#ab5e6422ce4f96ecdfc24a459ee453a34">AByteBuffer::resize</a></div><div class="ttdeci">void resize(size_t s)</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:185</div></div>
 <div class="ttc" id="aclassAByteBuffer_html_abca67368761ae2abe382de0b8abd3e1d"><div class="ttname"><a href="classAByteBuffer.html#abca67368761ae2abe382de0b8abd3e1d">AByteBuffer::setSize</a></div><div class="ttdeci">void setSize(size_t s)</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:160</div></div>
 <div class="ttc" id="aclassAByteBuffer_html_ac2aa13b29f5c79483b061523f02d4697"><div class="ttname"><a href="classAByteBuffer.html#ac2aa13b29f5c79483b061523f02d4697">AByteBuffer::getReserved</a></div><div class="ttdeci">size_t getReserved() const noexcept</div><div class="ttdef"><b>Definition:</b> AByteBuffer.h:241</div></div>
@@ -372,7 +375,7 @@ $(document).ready(function(){initNavTree('AByteBuffer_8h_source.html',''); initR
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:55</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition:</b> Assert.h:74</div></div>
 <div class="ttc" id="astructASerializable_html"><div class="ttname"><a href="structASerializable.html">ASerializable</a></div><div class="ttdef"><b>Definition:</b> serializable.h:26</div></div>
-<div class="ttc" id="astructaui_1_1no__escape_html"><div class="ttname"><a href="structaui_1_1no__escape.html">aui::no_escape</a></div><div class="ttdoc">Does not allow escaping, allowing to accept lvalue ref, rvalue ref, shared_ptr and etc without overhe...</div><div class="ttdef"><b>Definition:</b> values.h:126</div></div>
+<div class="ttc" id="astructaui_1_1no__escape_html"><div class="ttname"><a href="structaui_1_1no__escape.html">aui::no_escape</a></div><div class="ttdoc">Does not allow escaping, allowing to accept lvalue ref, rvalue ref, shared_ptr and etc without overhe...</div><div class="ttdef"><b>Definition:</b> values.h:127</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

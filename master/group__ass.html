@@ -124,13 +124,13 @@ $(document).ready(function(){initNavTree('group__ass.html',''); initResizable();
 <div class="line">},</div>
 </div><!-- fragment -->  </td><td>Set all text fields' border to #00f (blue) on hover   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md1"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Using global style</h2>
 <p >Global stylesheet is applied to the whole program.</p>
 <p >Somewhere in your entry point, you may write: </p><div class="fragment"><div class="line">AStylesheet::global().addRules({</div>
 <div class="line">  {</div>
 <div class="line">    t&lt;ALabel&gt;(),</div>
-<div class="line">    BackgroundSolid { 0xff0000_rgb },</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
 <div class="line">    TextAlign::CENTER,</div>
 <div class="line">  },</div>
 <div class="line">  {</div>
@@ -139,13 +139,13 @@ Using global style</h2>
 <div class="line">    TextAlign::CENTER,</div>
 <div class="line">  },</div>
 <div class="line">});</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md2"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
 Using container stylesheet</h2>
 <p >Container stylesheet is applied only to children (both direct and indirect) of the container.</p>
 <div class="fragment"><div class="line">container-&gt;setExtraStylesheet({</div>
 <div class="line">  {</div>
 <div class="line">    t&lt;ALabel&gt;(),</div>
-<div class="line">    BackgroundSolid { 0xff0000_rgb },</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
 <div class="line">    TextAlign::CENTER,</div>
 <div class="line">  },</div>
 <div class="line">  {</div>
@@ -154,33 +154,171 @@ Using container stylesheet</h2>
 <div class="line">    TextAlign::CENTER,</div>
 <div class="line">  },</div>
 <div class="line">});</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
 Using with_style</h2>
 <p >The code below draws "Hello" label with red background and centered alignment, and "World" label with blue background, using with_style:</p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
 <div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a>{</div>
 <div class="line">  Label { <span class="stringliteral">&quot;Hello&quot;</span> } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
-<div class="line">    BackgroundSolid { 0xff0000_rgb },</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
 <div class="line">    TextAlign::CENTER,</div>
 <div class="line">  },</div>
 <div class="line">  Label { <span class="stringliteral">&quot;World&quot;</span> } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
 <div class="line">    BackgroundSolid { 0x0000ff_rgb },</div>
 <div class="line">  },</div>
 <div class="line">})</div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:284</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition:</b> kAUI.h:287</div></div>
 <div class="ttc" id="astructaui_1_1ui__building_1_1layouted__container__factory_html"><div class="ttname"><a href="structaui_1_1ui__building_1_1layouted__container__factory.html">aui::ui_building::layouted_container_factory</a></div><div class="ttdef"><b>Definition:</b> Declarative.h:173</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
 Using setCustomStyle</h2>
 <p >In case with_style is not applicable, you may use setCustomStyle instead.</p>
 <div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> l = _new&lt;ALabel&gt;(<span class="stringliteral">&quot;Hello world&quot;</span>);</div>
 <div class="line">l-&gt;setCustomStyle({</div>
-<div class="line">  BackgroundSolid { 0xff0000_rgb },</div>
+<div class="line">  BackgroundSolid { AColor::RED },</div>
 <div class="line">  TextAlign::CENTER,</div>
 <div class="line">}),</div>
 <div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a>{ l });</div>
-</div><!-- fragment --><p >See below for BackgroundSolid and other declarations. </p>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
+Selectors</h1>
+<p >As said earlier, first statement in a rule is selector. Here's some examples.</p>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Select all ALabel's</h3>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    t&lt;ALabel&gt;(),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">    TextAlign::CENTER,</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md14"></a>
+Select all ASS name</h3>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    c(<span class="stringliteral">&quot;.highlight&quot;</span>),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">    TextAlign::CENTER,</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"><span class="keyword">auto</span> v = _new&lt;AView&gt;();</div>
+<div class="line">v-&gt;addAssName(<span class="stringliteral">&quot;.highlight&quot;</span>);</div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> { v });</div>
+<div class="line"><span class="comment">// or</span></div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
+<div class="line">    _new&lt;AView&gt;() &lt;&lt; <span class="stringliteral">&quot;.highlight&quot;</span>,</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md15"></a>
+Select all ALabel's or AButton's</h3>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    {t&lt;ALabel&gt;(), t&lt;AButton&gt;()},</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">    TextAlign::CENTER,</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md16"></a>
+Select all labels with ASS name</h3>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    t&lt;ALabel&gt;() &amp;&amp; c(<span class="stringliteral">&quot;.highlight&quot;</span>),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
+<div class="line">    Label { <span class="stringliteral">&quot;Highlighted&quot;</span> } &lt;&lt; <span class="stringliteral">&quot;.highlight&quot;</span>,</div>
+<div class="line">    Label { <span class="stringliteral">&quot;Not highlighted&quot;</span> },</div>
+<div class="line">    Button { <span class="stringliteral">&quot;Not highlighted either&quot;</span> },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md17"></a>
+Select indirect child</h3>
+<div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    c(<span class="stringliteral">&quot;.highlight_container&quot;</span>) &gt;&gt; t&lt;ALabel&gt;(),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">    TextAlign::CENTER,</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
+<div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">        Label { <span class="stringliteral">&quot;Highlighted&quot;</span> },</div>
+<div class="line">        <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> { Label { <span class="stringliteral">&quot;Highlighted&quot;</span> } },</div>
+<div class="line">    } &lt;&lt; <span class="stringliteral">&quot;.highlight_container&quot;</span>,</div>
+<div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">        Label { <span class="stringliteral">&quot;Not highlighted&quot;</span> },</div>
+<div class="line">    },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md18"></a>
+Select direct child</h3>
+<p >Works faster than selecting indirect child </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    c(<span class="stringliteral">&quot;.highlight_container&quot;</span>) &gt; t&lt;ALabel&gt;(),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">    TextAlign::CENTER,</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line">setContents(<a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> {</div>
+<div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">        Label { <span class="stringliteral">&quot;Highlighted&quot;</span> },</div>
+<div class="line">        <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Centered</a> { Label { <span class="stringliteral">&quot;Not highlighted&quot;</span> } },</div>
+<div class="line">    } &lt;&lt; <span class="stringliteral">&quot;.highlight_container&quot;</span>,</div>
+<div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">        Label { <span class="stringliteral">&quot;Not highlighted&quot;</span> },</div>
+<div class="line">    },</div>
+<div class="line">} &lt;&lt; <span class="stringliteral">&quot;.highlight_container&quot;</span>);</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md19"></a>
+Sub selectors</h2>
+<p >Sub selector is kind of a selector that depends on view's state (i.e, pressed or focused). Sub selectors, as well as other selectors don't replace previous rules entirely. Instead, they extend existing rules. However, same properties are replaced.</p>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Hover sub selector</h3>
+<p >Hovered view is a view below mouse cursor. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    t&lt;ALabel&gt;::hover(),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">    TextAlign::CENTER,</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md21"></a>
+Active sub selector</h3>
+<p >Active view is a pressed view. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    t&lt;ALabel&gt;::hover(),</div>
+<div class="line">    BackgroundSolid { AColor::RED },</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md22"></a>
+Focus sub selector</h3>
+<p >Focused view is a view that was clicked and currently receiving keyboard input. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    t&lt;ALabel&gt;::focus(),</div>
+<div class="line">    Border { 1_px, AColor::RED },</div>
+<div class="line">    TextColor { AColor::RED },</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md23"></a>
+Disabled sub selector</h3>
+<p >Disabled view is a view with AView::setEnabled(false) thus not able to change it's state. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>ass;</div>
+<div class="line">AStylesheet::global().addRules({</div>
+<div class="line">  {</div>
+<div class="line">    t&lt;ALabel&gt;::disabled(),</div>
+<div class="line">    Border { 1_px, AColor::RED },</div>
+<div class="line">    TextColor { AColor::RED },</div>
+<div class="line">  },</div>
+<div class="line">});</div>
+</div><!-- fragment --><p >See below for declarations and selectors. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -210,6 +348,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1BorderRadius.html">ass::BorderRadius</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls border radius.  <a href="structass_1_1BorderRadius.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1BorderRight.html">ass::BorderRight</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents right border.  <a href="structass_1_1BorderRight.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1BorderTop.html">ass::BorderTop</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents top border.  <a href="structass_1_1BorderTop.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1BoxShadow.html">ass::BoxShadow</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents box shadow. <a href="structass_1_1BoxShadow.html#details">More...</a><br /></td></tr>
@@ -252,6 +396,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1Padding.html">ass::Padding</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the padding of <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>.  <a href="structass_1_1Padding.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1ScrollbarAppearance.html">ass::ScrollbarAppearance</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls how do scrollbars and content appear in <a class="el" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars.">AScrollArea</a>. This rule is applicable to <a class="el" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars.">AScrollArea</a> only.  <a href="structass_1_1ScrollbarAppearance.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structass_1_1TextBorder.html">ass::TextBorder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the text border of <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>.  <a href="structass_1_1TextBorder.html#details">More...</a><br /></td></tr>

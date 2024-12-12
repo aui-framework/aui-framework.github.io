@@ -154,10 +154,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reserve</b> (size_t <
 void&#160;</td><td class="memItemRight" valign="bottom"><b>increaseInternalBuffer</b> (size_t <a class="el" href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">size</a>)</td></tr>
 <tr class="memdesc:a20c5aca6ff494be78ca31fac4e2f0604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increases internal buffer. <br /></td></tr>
 <tr class="separator:a20c5aca6ff494be78ca31fac4e2f0604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa676b0b018e2bf7d8f9dec52ea7cdfae"><td class="memItemLeft" align="right" valign="top"><a id="aa676b0b018e2bf7d8f9dec52ea7cdfae" name="aa676b0b018e2bf7d8f9dec52ea7cdfae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ensureReserved</b> (size_t <a class="el" href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">size</a>)</td></tr>
-<tr class="memdesc:aa676b0b018e2bf7d8f9dec52ea7cdfae"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code><a class="el" href="classAByteBuffer.html#ac2aa13b29f5c79483b061523f02d4697">getReserved()</a> - <a class="el" href="classAByteBuffer.html#ac5a81b7824aa11a2c08d09475de10d60">getSize()</a></code> is less than <code>size</code> increases internal buffer size enough to store <code>size</code> bytes. <br /></td></tr>
-<tr class="separator:aa676b0b018e2bf7d8f9dec52ea7cdfae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67518516cac8be372344af2c38f3059"><td class="memItemLeft" align="right" valign="top"><a id="aa67518516cac8be372344af2c38f3059" name="aa67518516cac8be372344af2c38f3059"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>grow</b> (size_t <a class="el" href="classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2">size</a>)</td></tr>
+<tr class="memdesc:aa67518516cac8be372344af2c38f3059"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <code><a class="el" href="classAByteBuffer.html#ac2aa13b29f5c79483b061523f02d4697">getReserved()</a> - <a class="el" href="classAByteBuffer.html#ac5a81b7824aa11a2c08d09475de10d60">getSize()</a></code> is less than <code>size</code> increases internal buffer size enough to store <code>size</code> bytes. <br /></td></tr>
+<tr class="separator:aa67518516cac8be372344af2c38f3059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3c412ab50f0fd5ecc243dd8f269474"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAByteBuffer.html#a1e3c412ab50f0fd5ecc243dd8f269474">getAvailableToWrite</a> () const</td></tr>
 <tr class="separator:a1e3c412ab50f0fd5ecc243dd8f269474"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe2d857335823888761116b7acbe6812"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAByteBuffer.html#afe2d857335823888761116b7acbe6812">data</a> () const</td></tr>
@@ -238,10 +238,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>ownsIterator</b> (ite
 <tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classIOutputStream.html">IOutputStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b">operator&lt;&lt;</a> (const T &amp;t)</td></tr>
 <tr class="separator:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_structaui_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structaui_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structaui_1_1noncopyable.html">aui::noncopyable</a></td></tr>
-<tr class="memitem:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memItemLeft" align="right" valign="top"><a id="a640f7f625060ec4c2d8e053058ed342d" name="a640f7f625060ec4c2d8e053058ed342d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>noncopyable</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
-<tr class="separator:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -764,9 +760,8 @@ Inheritance diagram for AByteBuffer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAByteBuffer__inherit__graph.png" border="0" usemap="#aAByteBuffer_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAByteBuffer_inherit__map" id="aAByteBuffer_inherit__map">
-<area shape="rect" title="std::vector&#45;like growing array for byte storage." alt="" coords="19,155,109,181"/>
-<area shape="rect" href="classIOutputStream.html" title=" " alt="" coords="11,80,117,107"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="5,5,123,32"/>
+<area shape="rect" title="std::vector&#45;like growing array for byte storage." alt="" coords="13,80,104,107"/>
+<area shape="rect" href="classIOutputStream.html" title=" " alt="" coords="5,5,112,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -774,9 +769,8 @@ Collaboration diagram for AByteBuffer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAByteBuffer__coll__graph.png" border="0" usemap="#aAByteBuffer_coll__map" alt="Collaboration graph"/></div>
 <map name="aAByteBuffer_coll__map" id="aAByteBuffer_coll__map">
-<area shape="rect" title="std::vector&#45;like growing array for byte storage." alt="" coords="19,155,109,181"/>
-<area shape="rect" href="classIOutputStream.html" title=" " alt="" coords="11,80,117,107"/>
-<area shape="rect" href="structaui_1_1noncopyable.html" title="Forbids copy of your class." alt="" coords="5,5,123,32"/>
+<area shape="rect" title="std::vector&#45;like growing array for byte storage." alt="" coords="13,80,104,107"/>
+<area shape="rect" href="classIOutputStream.html" title=" " alt="" coords="5,5,112,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 </div><!-- contents -->

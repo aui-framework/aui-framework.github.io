@@ -16,6 +16,8 @@ var group__ass =
     [ "ass::BorderBottom", "structass_1_1BorderBottom.html", null ],
     [ "ass::BorderLeft", "structass_1_1BorderLeft.html", null ],
     [ "ass::BorderRadius", "structass_1_1BorderRadius.html", null ],
+    [ "ass::BorderRight", "structass_1_1BorderRight.html", null ],
+    [ "ass::BorderTop", "structass_1_1BorderTop.html", null ],
     [ "ass::BoxShadow", "structass_1_1BoxShadow.html", null ],
     [ "ass::BoxShadowInner", "structass_1_1BoxShadowInner.html", null ],
     [ "ass::Expanding", "structass_1_1Expanding.html", null ],
@@ -30,6 +32,13 @@ var group__ass =
     [ "ass::MinSize", "structass_1_1MinSize.html", null ],
     [ "ass::Opacity", "structass_1_1Opacity.html", null ],
     [ "ass::Padding", "structass_1_1Padding.html", null ],
+    [ "ass::ScrollbarAppearance", "structass_1_1ScrollbarAppearance.html", [
+      [ "AxisValue", "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535", [
+        [ "ALWAYS", "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535aa151c5cc35ac7d69714153c048650260", null ],
+        [ "ON_DEMAND", "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535ab465d406a073cf79466986d9e01c75e3", null ],
+        [ "NEVER", "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535adda6e30ba7832a84361698186384f224", null ]
+      ] ]
+    ] ],
     [ "ass::TextBorder", "structass_1_1TextBorder.html", null ],
     [ "ass::TextColor", "structass_1_1TextColor.html", null ],
     [ "ass::TextShadow", "structass_1_1TextShadow.html", null ],
@@ -41,7 +50,10 @@ var group__ass =
       [ "System", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03", [
         [ "DEFAULT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a80f892002d6dcf4cb956f8fac412a4b6", null ],
         [ "POINTER", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c", null ],
-        [ "TEXT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed", null ]
+        [ "TEXT", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a33e3afd15b2a0c9d8d808bcc7b3e4aed", null ],
+        [ "MOVE", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a0863677ed986e1c26214dbd62d94fb8c", null ],
+        [ "EW_RESIZE", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03ad254f08fdc9d603e37b7f459b2b814a4", null ],
+        [ "NS_RESIZE", "classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03aae41b18b9ff5c7fed48a6ead690e6812", null ]
       ] ]
     ] ],
     [ "AScreenOrientation", "group__ass.html#ga693a0acd61fa6c15b3ea6309d943b146", null ],
