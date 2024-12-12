@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('md_docs_Code_style_and_recommendations
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition:</b> AString.h:37</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md111"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md112"></a>
 Assertions</h1>
 <p >The whole AUI framework's code filled with assertion checks so if you do something wrong the framework will tell you about it. Also in AUI almost every assertion contains a quick tip how to solve the problem. It is recommended to you to do the same. For example:</p>
 <div class="fragment"><div class="line">assert((<span class="stringliteral">&quot;AAbstractThread::processMessages() should not be called from other thread&quot;</span>,</div>
@@ -137,7 +137,7 @@ Assertions</h1>
 </div><!-- fragment --><p >The code above ensures that the function was not called from some other thread. As you can see, the tooltip is produced using extra brace pair and <code>operator,</code>:</p>
 <div class="fragment"><div class="line">assert((<span class="stringliteral">&quot;your message&quot;</span>, expression))</div>
 </div><!-- fragment --><p >Do not put algorithm-necessary code inside <code>assert()</code> since asserts are removed in release builds on some compilers, i.e. don't <code>assert(("someAction failed!", someObject-&gt;someAction() != 0))</code> since it leads to hard-to-find bugs.</p>
-<h2><a class="anchor" id="autotoc_md112"></a>
+<h2><a class="anchor" id="autotoc_md113"></a>
 Assert or exception?</h2>
 <p >Assert is an enemy for the production application since it <em>terminates</em> program execution. Use it when it's condition relies only on the developer. Quick example:</p>
 <div class="fragment"><div class="line">connect(mLoginButton-&gt;clicked, me::loginButtonClicked);</div>
@@ -146,10 +146,10 @@ Assert or exception?</h2>
 <div class="line">  <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(mUsername-&gt;text().length() &lt; 32); <span class="comment">// bad! throw an exception instead so it can be handled: throw AException(&quot;username is too long!&quot;)</span></div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition:</b> Assert.h:55</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md113"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md114"></a>
 STL-like functionality</h1>
 <p >It's hard to say which functionality can be called 'STL-like'. Commonly, any iterator-based algorithm (i.e. <code>aui::binary_search</code>), global functions, trait structs are STL-like functionality. The final goal is to avoid mixed-style expressions like <code>AString::const_iterator</code> which hurts the eyes.</p>
-<h1><a class="anchor" id="autotoc_md114"></a>
+<h1><a class="anchor" id="autotoc_md115"></a>
 Template metaprogramming and macros</h1>
 <p >Both C++ template instantiation mechanism and macro preprocessor are Turing complete. However, writing and understanding C++ template metaprogramming (TMP) and macro preprocessor code requires expert knowledge of C++ and a lot of time to understand. Use TMP deliberately.</p>
 <p >Since TMP and macros often evolve custom syntax and usage scenarios, consider writing especially well documentation with examples when defining public API templates and macros. </p>
