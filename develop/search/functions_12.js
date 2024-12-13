@@ -14,7 +14,7 @@ var searchData=
   ['setcolor_11',['setColor',['../classIRenderer.html#a2cecf34e74678f677c18dc0bdb9af794',1,'IRenderer']]],
   ['setcolorforced_12',['setColorForced',['../classIRenderer.html#a55c5336c483e50cdd796b2072d663a57',1,'IRenderer']]],
   ['setcontents_13',['setContents',['../classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4',1,'AViewContainerBase::setContents()'],['../classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4',1,'AViewContainer::setContents()']]],
-  ['setexpanding_14',['setExpanding',['../classAView.html#a2f47691e1e4de96c4ac972a587e0d980',1,'AView']]],
+  ['setexpanding_14',['setExpanding',['../classAView.html#a2f47691e1e4de96c4ac972a587e0d980',1,'AView::setExpanding(glm::ivec2 expanding)'],['../classAView.html#ae50ca286a74a3d80e90f5004a0889697',1,'AView::setExpanding(int expanding)']]],
   ['setextrastylesheet_15',['setExtraStylesheet',['../classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b',1,'AView::setExtraStylesheet(_&lt; AStylesheet &gt; extraStylesheet)'],['../classAView.html#abfffb2d8ac173e35e0599b4389efb9e1',1,'AView::setExtraStylesheet(AStylesheet &amp;&amp;extraStylesheet)']]],
   ['setfloating_16',['setFloating',['../classAView.html#a4de1868cb3897fcac008e000c9b3bc62',1,'AView']]],
   ['setfocuschaintarget_17',['setFocusChainTarget',['../classAViewContainerBase.html#a0f862cfa649d0d4e1cf2ac2871e902a7',1,'AViewContainerBase']]],

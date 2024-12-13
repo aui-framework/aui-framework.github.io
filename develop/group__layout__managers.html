@@ -145,7 +145,15 @@ Examples</h1>
 <div class="line">);</div>
 </div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_041807.png" alt="" class="inline"/>  </td></tr>
 </table>
-<p >You can specify the expanding if you want the view to grow inside it's container (<a class="el" href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980" title="Changes the expanding of view.">AView::setExpanding</a>): </p><table class="doxtable">
+<h1><a class="anchor" id="autotoc_md25"></a>
+Expanding</h1>
+<p >Expanding (often referred as stretch factor) is a property of any <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Expanding is an expansion coefficient set on per-axis basic (i.e, one value along x axis, another value along y axis), however it's convenient to set both values. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container.</p>
+<p >Horizontal layouts ignore y expanding of their children, Vertical layouts ignore x expanding of their children.</p>
+<p >Views are normally created without any expanding set. When Expanding views appear in a layout they are given a share of space in accordance with their expanding or their minimum size whichever gives more space to them. Expanding is used to change how much space views are given in proportion to one another.</p>
+<p >Expanding view does not affect parent's size or parent's expanding property. Use AView::setExpanding() on parent, or ::Expanding variant of declarative container notation (Vertical::Expanding, Horizontal::Expanding, Stacked::Expanding) for such case.</p>
+<p >Expanding views use free space of their container to grow.</p>
+<p >Free space of a container is determined by its size subtracted by sum of minimum sizes of its children. Please note that your container would probably occupy minimum possible size (determined by minimum sizes of its children). It order to make container larger than minimum possible size, you can specify FixedSize or MinSize or Expanding to the container.</p>
+<p >You can use <a class="el" href="structass_1_1Expanding.html" title="Controls the expanding of AView.">ass::Expanding</a> <a class="el" href="group__ass.html">ass</a> rule, or <a class="el" href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980" title="Changes the expanding of view.">AView::setExpanding</a> method to specify Expanding: </p><table class="doxtable">
 <tr>
 <th>Code </th><th>Result  </th></tr>
 <tr>
@@ -153,9 +161,10 @@ Examples</h1>
 <div class="line">  <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
 <div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;Up&quot;</span>),</div>
 <div class="line">    <a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Horizontal</a> {</div>
-<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Left&quot;</span>),</div>
-<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Center&quot;</span>),</div>
-<div class="line">        _new&lt;AButton&gt;(<span class="stringliteral">&quot;Right&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">      _new&lt;AButton&gt;(<span class="stringliteral">&quot;Left&quot;</span>),</div>
+<div class="line">      _new&lt;AButton&gt;(<span class="stringliteral">&quot;Center&quot;</span>),</div>
+<div class="line">      _new&lt;AButton&gt;(<span class="stringliteral">&quot;Right&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">           <span class="comment">// alias to it-&gt;setExpanding(2) ^^^^^^</span></div>
 <div class="line">    },</div>
 <div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">&quot;Down&quot;</span>),</div>
 <div class="line">  }</div>
@@ -163,7 +172,7 @@ Examples</h1>
 <div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition:</b> kAUI.h:262</div></div>
 </div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_172900.png" alt="" class="inline"/>  </td></tr>
 </table>
-<p >Expanding views push other views in their container if necessary. This is how AExpandingSpacer works. </p><table class="doxtable">
+<p >Expanding views push remaining views in their container: </p><table class="doxtable">
 <tr>
 <th>Code </th><th>Result  </th></tr>
 <tr>
@@ -180,6 +189,16 @@ Examples</h1>
 <div class="line">);</div>
 </div><!-- fragment -->  </td><td><img src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_174121.png" alt="" class="inline"/>  </td></tr>
 </table>
+<p >Expanding view does affect expanding environment inside a single container. If there's one view with expanding set to any positive value it would occupy all free space in the container. If there is a view with expanding equal to 1 and another view with expanding equal to 2 the first view would occupy one third of free space, the second view would occupy two thirds of free space: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">  _new&lt;AButton&gt;(<span class="stringliteral">&quot;Left&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(1); },</div>
+<div class="line">  _new&lt;AButton&gt;(<span class="stringliteral">&quot;Right&quot;</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(2); }, <span class="comment">// will be twice as big as &quot;Left&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p >You can use <a class="el" href="classASpacerExpanding.html" title="Expanding view which is useful in UI building.">ASpacerExpanding</a> as blank expanding view: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structaui_1_1ui__building_1_1layouted__container__factory.html">Vertical</a> {</div>
+<div class="line">  _new&lt;AButton&gt;(<span class="stringliteral">&quot;Left&quot;</span>),</div>
+<div class="line">  SpacerExpanding(),</div>
+<div class="line">  _new&lt;AButton&gt;(<span class="stringliteral">&quot;Right&quot;</span>),</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>FixedSize nullifies Expanding's action (on per axis basic). </dd></dl>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>

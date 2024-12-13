@@ -214,6 +214,7 @@ var group__useful__views =
       [ "removeAssName", "classAView.html#a11d7426c20f9ef791040935a846960e6", null ],
       [ "render", "classAView.html#aa6b34aa9ffcb2b5bbcd06a1f9b44b2b3", null ],
       [ "setExpanding", "classAView.html#a2f47691e1e4de96c4ac972a587e0d980", null ],
+      [ "setExpanding", "classAView.html#ae50ca286a74a3d80e90f5004a0889697", null ],
       [ "setExtraStylesheet", "classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b", null ],
       [ "setExtraStylesheet", "classAView.html#abfffb2d8ac173e35e0599b4389efb9e1", null ],
       [ "setFloating", "classAView.html#a4de1868cb3897fcac008e000c9b3bc62", null ],

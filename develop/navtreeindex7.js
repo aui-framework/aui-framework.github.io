@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structADataBindingDefault_3_01ADoubleNumberPicker_00_01float_01_4.html":[0,2,78],
 "structADataBindingDefault_3_01ADrawableView_00_01___3_01IDrawable_01_4_01_4.html":[0,2,79],
 "structADataBindingDefault_3_01ALabel_00_01AString_01_4.html":[0,2,80],
 "structADataBindingDefault_3_01ANumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html":[0,2,81],
@@ -58,8 +59,8 @@ var NAVTREEINDEX7 =
 "structAPerformanceSection_1_1Data.html":[3,0,2,1,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,1,34,0,0],
 "structAPerformanceSection_1_1Data.html#a372eb9bde361a96b1db310c693b19aef":[3,0,2,1,0,0],
-"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,1,34,0,1],
+"structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a":[3,0,2,1,0,1],
 "structAPointerMoveEvent.html":[0,2,219],
 "structAPointerMoveEvent.html#abe77af725d6d432dea37a8165926ea3e":[0,2,219,0],
 "structAPointerPressedEvent.html":[0,2,220],
@@ -149,10 +150,10 @@ var NAVTREEINDEX7 =
 "structOpenGLRenderer_1_1FontEntryData.html":[0,2,420,0],
 "structRenderHints_1_1PushColor.html":[0,2,7,0],
 "structRenderHints_1_1PushColor.html":[0,0,12,0],
-"structRenderHints_1_1PushMask.html":[0,0,12,1],
 "structRenderHints_1_1PushMask.html":[0,2,7,1],
-"structRenderHints_1_1PushMatrix.html":[0,2,7,2],
+"structRenderHints_1_1PushMask.html":[0,0,12,1],
 "structRenderHints_1_1PushMatrix.html":[0,0,12,2],
+"structRenderHints_1_1PushMatrix.html":[0,2,7,2],
 "structRoundedRect.html":[0,2,430],
 "structSizeInjector.html":[0,2,437],
 "structSqlColumn.html":[0,2,449],
@@ -244,10 +245,9 @@ var NAVTREEINDEX7 =
 "structass_1_1activated.html":[0,0,4,5],
 "structass_1_1button_1_1Default.html":[0,2,1,0,0],
 "structass_1_1button_1_1Default.html":[0,0,4,0,0],
-"structass_1_1class__of.html":[0,0,4,20],
 "structass_1_1class__of.html":[0,2,1,20],
-"structass_1_1debug__selector.html":[0,0,4,21],
+"structass_1_1class__of.html":[0,0,4,20],
 "structass_1_1debug__selector.html":[0,2,1,21],
-"structass_1_1detail_1_1ClassOf.html":[0,0,4,1,0],
-"structass_1_1detail_1_1ClassOf.html":[0,2,1,1,0]
+"structass_1_1debug__selector.html":[0,0,4,21],
+"structass_1_1detail_1_1ClassOf.html":[0,0,4,1,0]
 };
