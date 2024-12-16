@@ -246,9 +246,6 @@ var hierarchy =
       [ "ass::hovered< Base >", "structass_1_1hovered.html", null ]
     ] ],
     [ "aui::dbus::impl::basic_converter< T, dbusType >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", null ],
-    [ "aui::dbus::impl::basic_converter< bool, DBUS_TYPE_BOOLEAN >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
-      [ "aui::dbus::converter< bool >", "structaui_1_1dbus_1_1converter_3_01bool_01_4.html", null ]
-    ] ],
     [ "aui::dbus::impl::basic_converter< const char *, DBUS_TYPE_OBJECT_PATH >", "structaui_1_1dbus_1_1impl_1_1basic__converter.html", [
       [ "aui::dbus::converter< ObjectPath >", "structaui_1_1dbus_1_1converter_3_01ObjectPath_01_4.html", null ]
     ] ],
@@ -327,6 +324,7 @@ var hierarchy =
     [ "aui::jni::Converter< T >", "structaui_1_1jni_1_1Converter.html", null ],
     [ "aui::dbus::converter< AMap< K, V > >", "structaui_1_1dbus_1_1converter_3_01AMap_3_01K_00_01V_01_4_01_4.html", null ],
     [ "aui::dbus::converter< AVector< T > >", "structaui_1_1dbus_1_1converter_3_01AVector_3_01T_01_4_01_4.html", null ],
+    [ "aui::dbus::converter< bool >", "structaui_1_1dbus_1_1converter_3_01bool_01_4.html", null ],
     [ "aui::dbus::converter< std::nullopt_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1nullopt__t_01_4.html", null ],
     [ "aui::jni::Converter< std::string >", "structaui_1_1jni_1_1Converter_3_01std_1_1string_01_4.html", [
       [ "aui::jni::Converter< AString >", "structaui_1_1jni_1_1Converter_3_01AString_01_4.html", null ],
