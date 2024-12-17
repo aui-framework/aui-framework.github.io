@@ -98,65 +98,65 @@ $(document).ready(function(){initNavTree('md_docs_AUI_configure_flags.html','');
 <div class="line">cd build</div>
 <div class="line">cmake .. -DAUI_BUILD_EXAMPLES=TRUE # &lt;-- here</div>
 <div class="line">cmake --build .</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md32"></a>
 AUI C++ code itself</h1>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md33"></a>
 AUI_CATCH_UNHANDLED</h2>
 <p >Whether catch unhandled exceptions in the root of event loops or not. Might be useful to set <code>AUI_CATCH_UNHANDLED=0</code> for debugging.</p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md34"></a>
 AUI_COROUTINES</h2>
 <p >Whether use C++ 20 coroutines support or not.</p>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 AUI_PROFILING</h2>
 <p >When <code>true</code>, AUI profiling features are enabled. This means "Performance" tab in devtools would appear and show performance information. See <a class="el" href="group__profiling.html">Profiling</a></p>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 AUI_SHOW_TOUCHES</h2>
 <p >When <code>true</code>, shows touches visually (like in Android Developer Tools) and performs additional trace logging on touches.</p>
-<h1><a class="anchor" id="autotoc_md40"></a>
+<h1><a class="anchor" id="autotoc_md37"></a>
 aui.build</h1>
-<h2><a class="anchor" id="autotoc_md41"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 AUI_BUILD_EXAMPLES</h2>
 <p >Whether build examples or not.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 AUI_BUILD_FOR</h2>
 <p >Specifies target platform for cross-compilation (see <a class="el" href="md_docs_Crosscompiling.html">cross-compiling</a>).</p>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 AUIB_CACHE_DIR</h2>
 <p >Changes aui.boot's cache dir (which is <code>~/.aui</code> by default).</p>
 <p >Can be defined as environment variable.</p>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md42"></a>
 AUI_INSTALL_RUNTIME_DEPENDENCIES</h2>
 <p >When <code>true</code>, all AUI's dependencies will be installed along with it. <b>WARNING</b> on Linux doing <code>make install</code> with <code>AUI_INSTALL_RUNTIME_DEPENDENCIES=TRUE</code> is dangerous and may cause system instability. It will replace some system libraries with AUI's ones (i.e. <code>libssl</code>, <code>libcrypto</code>, <code>GLEW</code>, etc...) which may produce the following messages:</p>
 <div class="fragment"><div class="line">libssl.so.1.0.0: no version information available (required by openssl)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md45"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md43"></a>
 AUI_NO_HIDPI</h2>
 <p >Disables HIDPI.</p>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md44"></a>
 AUI_NO_TESTS</h2>
 <p >Disables tests.</p>
-<h2><a class="anchor" id="autotoc_md48"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 AUI_SHARED_PTR_FIND_INSTANCES</h2>
 <p >Adds <code>printAllInstances()</code> to AUI's shared pointer type (<code><a class="el" href="class__.html" title="An std::weak_ptr with AUI extensions.">_</a></code>) which prints stacktrace from constructor of every instance of <code>shared_ptr</code> (<code><a class="el" href="class__.html" title="An std::weak_ptr with AUI extensions.">_</a></code>) pointing to that object. Made for debugging purposes to find cycling and unwanted pointers. Dramatically slows the application's performance.</p>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 BUILD_SHARED_LIBS</h2>
 <p >When evaluates to <code>true</code>, libraries are built as shared, as static otherwise.</p>
 <p >When AUI_BUILD_FOR is set, <code>BUILD_SHARED_LIBS</code> is overwritten to <code>false</code> (see <a class="el" href="md_docs_Crosscompiling.html">cross-compiling</a>)</p>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 AUI_IOS_CODE_SIGNING_REQUIRED</h2>
 <p >Disables code signing step on iOS.</p>
-<h1><a class="anchor" id="autotoc_md53"></a>
+<h1><a class="anchor" id="autotoc_md48"></a>
 aui.boot</h1>
-<h2><a class="anchor" id="autotoc_md55"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 AUIB_DISABLE</h2>
 <p >Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 AUIB_ALL_AS</h2>
 <p >All dependencies will be imported with <code>add_subdirectory</code> command instead of <code>find_package</code>. It is useful if you want to work on the dependency along with your project.</p>
 <p >This behaviour can be set for the particular dependency by <code>AUIB_${AUI_MODULE_NAME_UPPER}_AS</code> flag, where <code>${AUI_MODULE_NAME_UPPER}</code> is the dependency name (i.e. for AUI it's <code>-DAUIB_AUI_AS=ON</code>).</p>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 AUIB_SKIP_REPOSITORY_WAIT</h2>
 <p >Disables "Waiting for repository" lock.</p>
-<h2><a class="anchor" id="autotoc_md61"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 AUIB_NO_PRECOMPILED</h2>
 <p >Disables precompiled binaries. </p>
 </div></div><!-- contents -->
