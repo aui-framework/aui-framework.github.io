@@ -10,9 +10,9 @@ var searchData=
   ['empty_7',['Empty',['../structIRenderViewToTexture_1_1InvalidArea_1_1Empty.html',1,'IRenderViewToTexture::InvalidArea']]],
   ['empty_5ftuple_8',['empty_tuple',['../structaui_1_1impl_1_1json_1_1empty__tuple.html',1,'aui::impl::json']]],
   ['enablecachingfortextlayouthelper_9',['enableCachingForTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#a66f353bfd4c56f9092cb13b29316bdf1',1,'IRenderer::IMultiStringCanvas']]],
-  ['end_10',['end',['../classIRenderViewToTexture.html#a686d62e08655700e93f3f2739c9b2e0d',1,'IRenderViewToTexture']]],
-  ['end_11',['END',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22ab1a326c06d88bf042f73d70f50197905',1,'AFileInputStream']]],
-  ['enqueue_12',['enqueue',['../classAMessageQueue.html#a23bfcfffad6123186c9a3c0f42383124',1,'AMessageQueue::enqueue()'],['../classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8',1,'AAbstractThread::enqueue()']]],
+  ['end_10',['END',['../classAFileInputStream.html#ab041cc737360671738da7b5c4dc99e22ab1a326c06d88bf042f73d70f50197905',1,'AFileInputStream']]],
+  ['end_11',['end',['../classIRenderViewToTexture.html#a686d62e08655700e93f3f2739c9b2e0d',1,'IRenderViewToTexture']]],
+  ['enqueue_12',['enqueue',['../classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8',1,'AAbstractThread::enqueue()'],['../classAMessageQueue.html#a23bfcfffad6123186c9a3c0f42383124',1,'AMessageQueue::enqueue()']]],
   ['enterchar_13',['enterChar',['../classAAbstractTypeable.html#a1f6142f8a3f6a30a8ac3cbe7e984ac6d',1,'AAbstractTypeable']]],
   ['enterevent_14',['EnterEvent',['../structADragNDrop_1_1EnterEvent.html',1,'ADragNDrop']]],
   ['entry_15',['Entry',['../classAStacktrace_1_1Entry.html',1,'AStacktrace::Entry'],['../classAWordWrappingEngineBase_1_1Entry.html',1,'AWordWrappingEngineBase::Entry']]],
@@ -26,6 +26,7 @@ var searchData=
   ['executewaitforexit_23',['executeWaitForExit',['../classAProcess.html#a3f74fa0108325de438c33cd0cf5519e2',1,'AProcess']]],
   ['exists_24',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
   ['expanding_25',['Expanding',['../structass_1_1Expanding.html',1,'ass::Expanding'],['../structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html',1,'aui::ui_building::layouted_container_factory_impl_with_expanding&lt; Layout, Container &gt;::Expanding']]],
-  ['extensionchanged_26',['extensionChanged',['../classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85',1,'APath']]],
-  ['extrastylesheet_27',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
+  ['expandingchanged_26',['expandingChanged',['../classAView.html#aeca13875bfe6c60365346d7c08c7c448',1,'AView']]],
+  ['extensionchanged_27',['extensionChanged',['../classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85',1,'APath']]],
+  ['extrastylesheet_28',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
 ];

@@ -228,6 +228,7 @@ var group__useful__views =
       [ "clickedButton", "classAView.html#a815fabb561c95b6b90a64686b707ec9e", null ],
       [ "clickedRight", "classAView.html#abec87965389be9d82031e53e2e036bb1", null ],
       [ "clickedRightOrLongPressed", "classAView.html#a8d60b048342b29b46dac2657ce6e781b", null ],
+      [ "expandingChanged", "classAView.html#aeca13875bfe6c60365346d7c08c7c448", null ],
       [ "focusState", "classAView.html#a96f3c6e2b8c960c5081866e26baa828e", null ],
       [ "geometryChanged", "classAView.html#a5034ce1e3e117e2f4ece91c1d038dbe0", null ],
       [ "keyPressed", "classAView.html#a7299aeca90d52aa7406bebf1b5bb604a", null ],
@@ -250,7 +251,8 @@ var group__useful__views =
       [ "positionChanged", "classAView.html#a129f3b9ae234f84498c7965ad6ee8df4", null ],
       [ "scrolled", "classAView.html#a603b11e87b05b203f321f6be85d45de8", null ],
       [ "sizeChanged", "classAView.html#accd0aaa185656f113bb1b4127ba36a1e", null ],
-      [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ]
+      [ "viewGraphSubtreeChanged", "classAView.html#aa0b29b615b99f9b60f08a3669aa19adf", null ],
+      [ "visibilityChanged", "classAView.html#a75bfaa64b9cde78d71e45b36c44b7780", null ]
     ] ],
     [ "AViewContainer", "classAViewContainer.html", [
       [ "addView", "classAViewContainer.html#a94d32b819a44ed3cdbcc28bb829fa5d3", null ],

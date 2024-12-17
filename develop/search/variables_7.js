@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['imagerendering_0',['imageRendering',['../structATexturedBrush.html#aa0ac62633d7962576270733882033326',1,'ATexturedBrush']]],
-  ['initial_5facceleration_5fcoefficient_1',['INITIAL_ACCELERATION_COEFFICIENT',['../classATouchScroller.html#a1048fb51b31265ffff0954edbd120bf6',1,'ATouchScroller']]],
-  ['isblockclickswhenpressed_2',['isBlockClicksWhenPressed',['../structAViewContainerBase_1_1PointerEventsMapping.html#a8bf55395f8bc236498900dbd51b7ae74',1,'AViewContainerBase::PointerEventsMapping']]]
+  ['highlightredrawrequests_0',['highlightRedrawRequests',['../structAWindowBase_1_1Profiling.html#a2621aebd8d1e049a1e7b890c096eca07',1,'AWindowBase::Profiling']]],
+  ['highlightview_1',['highlightView',['../structAWindowBase_1_1Profiling.html#a34588edd746cd17b76b33e52a866adc7',1,'AWindowBase::Profiling']]]
 ];

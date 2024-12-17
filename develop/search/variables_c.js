@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['origin_0',['origin',['../structAScrollEvent.html#afb585641aa999c42077063ccf83c6ffe',1,'AScrollEvent']]],
-  ['overlaycolor_1',['overlayColor',['../structass_1_1BackgroundImage.html#ae84e6aecde1d3970a6b3504c842419eb',1,'ass::BackgroundImage']]]
+  ['name_0',['name',['../structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a',1,'APerformanceSection::Data']]],
+  ['normal_1',['NORMAL',['../structass_1_1LineHeight.html#acaffe8c33a470029f82189601e62c9cc',1,'ass::LineHeight']]]
 ];
