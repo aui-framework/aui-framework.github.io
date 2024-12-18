@@ -77,9 +77,9 @@ var NAVTREEINDEX =
 "classOpenGLPrerenderedString.html",
 "conceptaui_1_1destructible.html",
 "structADataBindingDefault_3_01ADoubleNumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html",
-"structass_1_1debug__selector.html",
-"structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html",
-"usergroup1.html"
+"structass_1_1TransformScale.html",
+"structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html",
+"structuitest_1_1impl_1_1side__value_3_01ASide_1_1BOTTOM_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
