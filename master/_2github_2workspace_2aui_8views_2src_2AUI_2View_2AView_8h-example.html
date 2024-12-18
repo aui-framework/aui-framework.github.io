@@ -469,8 +469,10 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line">        }</div>
 <div class="line">        mExpanding = expanding;</div>
+<div class="line">        <span class="keywordflow">if</span> (expandingChanged) <a id="a28" name="a28"></a><a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> expandingChanged(expanding);</div>
 <div class="line">        markMinContentSizeInvalid();</div>
 <div class="line">    }</div>
+<div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> setExpanding(<span class="keywordtype">int</span> expanding)</div>
 <div class="line">    {</div>
 <div class="line">        setExpanding({expanding, expanding});</div>
@@ -514,7 +516,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        mSize = size;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setSize(glm::ivec2 size);</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setGeometry(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> <a id="_a28" name="_a28"></a><a class="code hl_struct" href="structViewAssertionSize.html">width</a>, <span class="keywordtype">int</span> <a class="code hl_struct" href="structViewAssertionSize.html">height</a>);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setGeometry(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> <a id="_a29" name="_a29"></a><a class="code hl_struct" href="structViewAssertionSize.html">width</a>, <span class="keywordtype">int</span> <a class="code hl_struct" href="structViewAssertionSize.html">height</a>);</div>
 <div class="line">    <span class="keywordtype">void</span> setGeometry(<span class="keyword">const</span> glm::ivec2&amp; position, <span class="keyword">const</span> glm::ivec2&amp; size) {</div>
 <div class="line">        setGeometry(position.x, position.y, size.x, size.y);</div>
 <div class="line">    }</div>
@@ -531,7 +533,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        <span class="keywordflow">return</span> mFixedSize;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordtype">void</span> setFixedSize(glm::ivec2 size) {</div>
-<div class="line">        <a id="a29" name="a29"></a><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(glm::all(glm::greaterThanEqual(size, glm::ivec2(-100000))), <span class="stringliteral">&quot;abnormal fixed size&quot;</span>);</div>
+<div class="line">        <a id="a30" name="a30"></a><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(glm::all(glm::greaterThanEqual(size, glm::ivec2(-100000))), <span class="stringliteral">&quot;abnormal fixed size&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">if</span> (size == mFixedSize) [[unlikely]] {</div>
 <div class="line">            <span class="keywordflow">return</span>;</div>
 <div class="line">        }</div>
@@ -552,7 +554,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    [[nodiscard]]</div>
-<div class="line">    <span class="keywordtype">bool</span> isPressed(<a id="_a30" name="_a30"></a><a class="code hl_class" href="classAPointerIndex.html">APointerIndex</a> index) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
+<div class="line">    <span class="keywordtype">bool</span> isPressed(<a id="_a31" name="_a31"></a><a class="code hl_class" href="classAPointerIndex.html">APointerIndex</a> index) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">return</span> mPressed.contains(index);</div>
 <div class="line">    }</div>
@@ -577,7 +579,7 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">void</span> setVisibility(Visibility visibility) <span class="keyword">noexcept</span>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> setVisible(<span class="keywordtype">bool</span> <a id="_a31" name="_a31"></a><a class="code hl_struct" href="structViewAssertionVisible.html">visible</a>) <span class="keyword">noexcept</span></div>
+<div class="line">    <span class="keywordtype">void</span> setVisible(<span class="keywordtype">bool</span> <a id="_a32" name="_a32"></a><a class="code hl_struct" href="structViewAssertionVisible.html">visible</a>) <span class="keyword">noexcept</span></div>
 <div class="line">    {</div>
 <div class="line">        setVisibility(<a class="code hl_struct" href="structViewAssertionVisible.html">visible</a> ? Visibility::VISIBLE : Visibility::INVISIBLE);</div>
 <div class="line">    }</div>
@@ -591,8 +593,8 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">        mMouseCollisionPolicy = mouseCollisionPolicy;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">void</span> <a id="_a32" name="_a32"></a><a class="code hl_struct" href="structViewActionClick.html">click</a>() {</div>
-<div class="line">        <a id="a33" name="a33"></a><a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> clickedButton(<a id="a34" name="a34"></a><a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(AInput::LBUTTON));</div>
+<div class="line">    <span class="keywordtype">void</span> <a id="_a33" name="_a33"></a><a class="code hl_struct" href="structViewActionClick.html">click</a>() {</div>
+<div class="line">        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> clickedButton(<a id="a34" name="a34"></a><a class="code hl_function" href="classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6">APointerIndex::button</a>(AInput::LBUTTON));</div>
 <div class="line">        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> clicked();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -738,6 +740,10 @@ $(document).ready(function(){initNavTree('_2github_2workspace_2aui_8views_2src_2
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> sizeChanged;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2, glm::ivec2&gt;</a> geometryChanged;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> expandingChanged;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;Visibility&gt;</a> visibilityChanged;</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classASignal.html">emits&lt;glm::ivec2&gt;</a> scrolled;</div>
 <div class="line"> </div>

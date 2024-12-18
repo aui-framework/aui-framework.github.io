@@ -50,7 +50,8 @@ var searchData=
   ['viewpropertiesview_47',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
   ['views_48',['Views',['../group__useful__views.html',1,'']]],
   ['viscousfluid_49',['ViscousFluid',['../classaui_1_1animation__curves_1_1ViscousFluid.html',1,'aui::animation_curves']]],
-  ['visible_50',['VISIBLE',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'AOverflow.h']]],
-  ['visitheader_51',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
-  ['visitsviewrecursive_52',['visitsViewRecursive',['../classAViewContainerBase.html#a4d25bee475e6413e3d365570f046cc4c',1,'AViewContainerBase']]]
+  ['visibilitychanged_50',['visibilityChanged',['../classAView.html#a75bfaa64b9cde78d71e45b36c44b7780',1,'AView']]],
+  ['visible_51',['VISIBLE',['../group__views.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'AOverflow.h']]],
+  ['visitheader_52',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
+  ['visitsviewrecursive_53',['visitsViewRecursive',['../classAViewContainerBase.html#a4d25bee475e6413e3d365570f046cc4c',1,'AViewContainerBase']]]
 ];

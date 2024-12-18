@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"conceptaui_1_1destructible.html":[0,0,5,54],
+"conceptaui_1_1detail_1_1SameHelper.html":[0,0,5,4,11],
+"conceptaui_1_1factory.html":[0,0,5,70],
 "conceptaui_1_1incrementable.html":[0,0,5,67],
 "conceptaui_1_1invocable.html":[0,0,5,52],
 "conceptaui_1_1jni_1_1ExposableClass.html":[0,0,5,7,37],
@@ -13,8 +16,8 @@ var NAVTREEINDEX6 =
 "conceptaui_1_1same__as.html":[0,0,5,58],
 "conceptaui_1_1semiregular.html":[0,0,5,65],
 "conceptaui_1_1swappable.html":[0,0,5,61],
-"functions.html":[0,4,0],
 "functions.html":[0,4,0,0],
+"functions.html":[0,4,0],
 "functions_a.html":[0,4,0,1],
 "functions_b.html":[0,4,0,2],
 "functions_c.html":[0,4,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "structADataBindingDefault.html":[0,2,72],
 "structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html":[0,2,73],
 "structADataBindingDefault_3_01ACheckBoxWrapper_00_01bool_01_4.html":[0,2,75],
-"structADataBindingDefault_3_01ACheckBox_00_01bool_01_4.html":[0,2,74],
-"structADataBindingDefault_3_01ADoubleNumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html":[0,2,76],
-"structADataBindingDefault_3_01ADoubleNumberPicker_00_01double_01_4.html":[0,2,77],
-"structADataBindingDefault_3_01ADoubleNumberPicker_00_01float_01_4.html":[0,2,78]
+"structADataBindingDefault_3_01ACheckBox_00_01bool_01_4.html":[0,2,74]
 };
