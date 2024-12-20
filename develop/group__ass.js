@@ -1,5 +1,12 @@
 var group__ass =
 [
+    [ "ass::Backdrop", "structass_1_1Backdrop.html", [
+      [ "GaussianBlur", "structass_1_1Backdrop_1_1GaussianBlur.html", null ],
+      [ "GaussianBlurCustom", "structass_1_1Backdrop_1_1GaussianBlurCustom.html", [
+        [ "downscale", "structass_1_1Backdrop_1_1GaussianBlurCustom.html#ad76a43ded083a211c5847bd443ef0790", null ],
+        [ "radius", "structass_1_1Backdrop_1_1GaussianBlurCustom.html#a5a750408a216e43f3b473746e7305a3c", null ]
+      ] ]
+    ] ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
     [ "ass::BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],

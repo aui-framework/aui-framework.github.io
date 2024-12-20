@@ -74,12 +74,12 @@ var NAVTREEINDEX =
 "classAPath.html#abafaeb035c4406f106cb9e556e6360ac",
 "classAStrongByteBufferInputStream.html#a0221c8acf22fa504a1ebd75a65f7d384",
 "classAViewContainerBase.html#a065e6e7cddaa0de5dc6cae91dceca07e",
-"classOpenGLPrerenderedString.html",
-"conceptaui_1_1destructible.html",
-"structADataBindingDefault_3_01ADoubleNumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html",
-"structass_1_1TransformScale.html",
-"structaui_1_1impl_1_1future_1_1OnSuccessCallback_3_01void_01_4.html",
-"structuitest_1_1impl_1_1side__value_3_01ASide_1_1BOTTOM_01_4.html"
+"classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8",
+"conceptaui_1_1default__initializable.html",
+"structADataBindingDefault_3_01AAbstractLabel_00_01AString_01_4.html",
+"structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535adda6e30ba7832a84361698186384f224",
+"structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a",
+"structuitest_1_1impl_1_1both.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

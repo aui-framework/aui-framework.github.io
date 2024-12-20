@@ -2,6 +2,7 @@ var classIRenderer =
 [
     [ "IMultiStringCanvas", "classIRenderer_1_1IMultiStringCanvas.html", "classIRenderer_1_1IMultiStringCanvas" ],
     [ "IPrerenderedString", "classIRenderer_1_1IPrerenderedString.html", null ],
+    [ "backdrops", "classIRenderer.html#af987e0996ea4573aca0108e13ae7627f", null ],
     [ "boxShadow", "classIRenderer.html#aeec32d1da8dc30c10c1257baecb27c89", null ],
     [ "boxShadowInner", "classIRenderer.html#ae93329eded0b5e258780cef99d8ce11e", null ],
     [ "getNewTexture", "classIRenderer.html#a76d78feea6e83dbf5b21d186ee9ce85b", null ],
@@ -32,5 +33,6 @@ var classIRenderer =
     [ "setWindow", "classIRenderer.html#abb524c06b5e38b7b540d235d8e48b036", null ],
     [ "squareSector", "classIRenderer.html#a28977d2227a14c393d14e6b72aef49a4", null ],
     [ "string", "classIRenderer.html#a4e3c00a94301b0c9bc1070f7fcbb76ca", null ],
+    [ "stub", "classIRenderer.html#aa03fc1718fbfe42e79a1cca20f895153", null ],
     [ "translate", "classIRenderer.html#ac89e0663e7c97a9a5641d5867d75a5d9", null ]
 ];

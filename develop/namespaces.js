@@ -34,6 +34,7 @@ var namespaces =
         [ "Property< AOverflowMask >", "structass_1_1prop_1_1Property_3_01AOverflowMask_01_4.html", null ],
         [ "Property< ATextAlign >", "structass_1_1prop_1_1Property_3_01ATextAlign_01_4.html", null ],
         [ "Property< ATextOverflow >", "structass_1_1prop_1_1Property_3_01ATextOverflow_01_4.html", null ],
+        [ "Property< Backdrop >", "structass_1_1prop_1_1Property_3_01Backdrop_01_4.html", null ],
         [ "Property< BackgroundCropping >", "structass_1_1prop_1_1Property_3_01BackgroundCropping_01_4.html", null ],
         [ "Property< BackgroundEffect >", "structass_1_1prop_1_1Property_3_01BackgroundEffect_01_4.html", null ],
         [ "Property< BackgroundGradient >", "structass_1_1prop_1_1Property_3_01BackgroundGradient_01_4.html", null ],
@@ -75,6 +76,7 @@ var namespaces =
       [ "AAssSelector", "classass_1_1AAssSelector.html", null ],
       [ "activated", "structass_1_1activated.html", null ],
       [ "AndSelector", "structass_1_1AndSelector.html", null ],
+      [ "Backdrop", "structass_1_1Backdrop.html", "structass_1_1Backdrop" ],
       [ "BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
       [ "BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
       [ "BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
@@ -392,6 +394,7 @@ var namespaces =
       [ "mapper", "conceptaui_1_1mapper.html", null ],
       [ "factory", "conceptaui_1_1factory.html", null ],
       [ "arithmetic", "conceptaui_1_1arithmetic.html", null ],
+      [ "unsigned_integral", "conceptaui_1_1unsigned__integral.html", null ],
       [ "args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
       [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
       [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ]

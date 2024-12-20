@@ -6,5 +6,6 @@ var searchData=
   ['dataremoved_3',['dataRemoved',['../classIListModel.html#ae6e27f6d155686ad8f60b30723f05284',1,'IListModel::dataRemoved()'],['../classITreeModel.html#a639a0ceccaeb454a504d01cfa4cc86dc',1,'ITreeModel::dataRemoved()']]],
   ['delta_4',['delta',['../structAScrollEvent.html#accebabadf3ba168d57ff61ef6fc29b2c',1,'AScrollEvent']]],
   ['doubleclick_5fmax_5fduration_5',['DOUBLECLICK_MAX_DURATION',['../classAWindowBase.html#af937931476157d79ecc76cbb65aeb841',1,'AWindowBase']]],
-  ['dpimargin_6',['dpiMargin',['../structass_1_1BackgroundImage.html#a3b88e1be2e08ceeb168b33378ab4a697',1,'ass::BackgroundImage']]]
+  ['downscale_6',['downscale',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html#ad76a43ded083a211c5847bd443ef0790',1,'ass::Backdrop::GaussianBlurCustom']]],
+  ['dpimargin_7',['dpiMargin',['../structass_1_1BackgroundImage.html#a3b88e1be2e08ceeb168b33378ab4a697',1,'ass::BackgroundImage']]]
 ];
