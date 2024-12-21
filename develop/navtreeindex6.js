@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"conceptaui_1_1copyable.html":[0,0,5,63],
+"conceptaui_1_1dbus_1_1convertible.html":[0,0,5,3,25],
+"conceptaui_1_1dbus_1_1convertible__or__void.html":[0,0,5,3,26],
 "conceptaui_1_1default__initializable.html":[0,0,5,64],
 "conceptaui_1_1derived__from.html":[0,0,5,51],
 "conceptaui_1_1destructible.html":[0,0,5,54],
@@ -197,13 +200,13 @@ var NAVTREEINDEX6 =
 "group__xml.html#ga06fdf594d32ebd9bf8a564fd832c6f28":[3,0,11,5],
 "hierarchy.html":[0,3],
 "index.html":[],
-"interfaceAUINSApplication.html":[0,2,326],
-"interfaceAUIView.html":[0,2,327],
-"interfaceAUIViewController.html":[0,2,328],
-"interfaceAppDelegate.html":[0,2,223],
-"interfaceMainView.html":[0,2,409],
-"interfaceSceneDelegate.html":[0,2,431],
-"interfaceWindowDelegate.html":[0,2,494],
+"interfaceAUINSApplication.html":[0,2,327],
+"interfaceAUIView.html":[0,2,328],
+"interfaceAUIViewController.html":[0,2,329],
+"interfaceAppDelegate.html":[0,2,224],
+"interfaceMainView.html":[0,2,410],
+"interfaceSceneDelegate.html":[0,2,432],
+"interfaceWindowDelegate.html":[0,2,495],
 "md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_command_line_arguments.html":[2,1],
 "md_docs_AUI_configure_flags.html":[2,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "structACurl_1_1ErrorDescription.html":[3,0,5,0,1],
 "structACurl_1_1Response.html":[3,0,5,0,3],
 "structACursorSelectable_1_1Selection.html":[0,2,66,0],
-"structACursor_1_1Custom.html":[3,0,9,5,0],
-"structACursor_1_1Custom.html":[3,0,9,0,33,0],
-"structACustomShaderBrush.html":[0,2,68],
-"structADataBindingDefault.html":[0,2,72]
+"structACursor_1_1Custom.html":[3,0,9,5,0]
 };

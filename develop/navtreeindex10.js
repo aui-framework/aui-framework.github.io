@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"structuitest_1_1impl_1_1align.html":[0,2,11,0,0],
+"structuitest_1_1impl_1_1align.html":[0,0,16,0,0],
+"structuitest_1_1impl_1_1both.html":[0,2,11,0,1],
 "structuitest_1_1impl_1_1both.html":[0,0,16,0,1],
 "structuitest_1_1impl_1_1greater__of.html":[0,2,11,0,2],
 "structuitest_1_1impl_1_1greater__of.html":[0,0,16,0,2],

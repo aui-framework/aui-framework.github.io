@@ -679,6 +679,7 @@ var hierarchy =
     [ "IDrawable", "classIDrawable.html", [
       [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
       [ "AImageDrawable", "classAImageDrawable.html", null ],
+      [ "ANoiseDrawable", "classANoiseDrawable.html", null ],
       [ "AVectorDrawable", "classAVectorDrawable.html", null ]
     ] ],
     [ "IEnumFORMATETC", null, [

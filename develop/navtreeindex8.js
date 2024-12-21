@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535":[3,0,9,0,26,0],
+"structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535aa151c5cc35ac7d69714153c048650260":[3,0,9,0,26,0,0],
+"structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535ab465d406a073cf79466986d9e01c75e3":[3,0,9,0,26,0,1],
 "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535adda6e30ba7832a84361698186384f224":[3,0,9,0,26,0,2],
 "structass_1_1Selected.html":[0,2,1,46],
 "structass_1_1Selected.html":[0,0,4,46],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "structaui_1_1impl_1_1future_1_1CancellationWrapper.html":[0,0,5,6,0,0],
 "structaui_1_1impl_1_1future_1_1FutureReturnType.html":[0,2,2,5,0,2],
 "structaui_1_1impl_1_1future_1_1FutureReturnType.html":[0,0,5,6,0,2],
-"structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html":[0,0,5,6,0,3],
-"structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html":[0,2,2,5,0,3],
-"structaui_1_1impl_1_1future_1_1Future_1_1Inner.html":[0,2,2,5,0,1,0],
-"structaui_1_1impl_1_1future_1_1Future_1_1Inner.html":[0,0,5,6,0,1,0]
+"structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html":[0,0,5,6,0,3]
 };

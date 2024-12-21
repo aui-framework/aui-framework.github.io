@@ -619,6 +619,7 @@ var annotated =
     [ "AModelMetaBase", "structAModelMetaBase.html", null ],
     [ "AMutex", "structAMutex.html", null ],
     [ "AMutexWrapper", "classAMutexWrapper.html", null ],
+    [ "ANoiseDrawable", "classANoiseDrawable.html", "classANoiseDrawable" ],
     [ "ANoSpaceLeftException", "classANoSpaceLeftException.html", null ],
     [ "ANumberPicker", "classANumberPicker.html", "classANumberPicker" ],
     [ "AObject", "classAObject.html", "classAObject" ],

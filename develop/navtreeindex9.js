@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html":[0,2,2,5,0,3],
+"structaui_1_1impl_1_1future_1_1Future_1_1Inner.html":[0,2,2,5,0,1,0],
+"structaui_1_1impl_1_1future_1_1Future_1_1Inner.html":[0,0,5,6,0,1,0],
 "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a":[0,2,2,5,0,1,0,3],
 "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#a431e9f0127b66804bf0e314477c4bd4a":[0,0,5,6,0,1,0,3],
 "structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405":[0,2,2,5,0,1,0,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "structtuples_1_1detail_1_1functor_1_1mul.html":[0,2,10,0,0,2],
 "structtuples_1_1detail_1_1functor_1_1mul.html":[0,0,15,0,0,2],
 "structtuples_1_1detail_1_1functor_1_1sub.html":[0,2,10,0,0,3],
-"structtuples_1_1detail_1_1functor_1_1sub.html":[0,0,15,0,0,3],
-"structuitest_1_1impl_1_1align.html":[0,2,11,0,0],
-"structuitest_1_1impl_1_1align.html":[0,0,16,0,0],
-"structuitest_1_1impl_1_1both.html":[0,2,11,0,1]
+"structtuples_1_1detail_1_1functor_1_1sub.html":[0,0,15,0,0,3]
 };
