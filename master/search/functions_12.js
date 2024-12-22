@@ -53,13 +53,14 @@ var searchData=
   ['skipuntil_50',['skipUntil',['../classATokenizer.html#a46bc1a1038f8c6d2202811eac67c5f5d',1,'ATokenizer']]],
   ['skipuntilunescaped_51',['skipUntilUnescaped',['../classATokenizer.html#a4b240a2acf3ba5f35c8d88efd0cd6119',1,'ATokenizer']]],
   ['sleep_52',['sleep',['../classAThread.html#a702e3769792fb7cda5f7960b7360ac9b',1,'AThread']]],
-  ['squaresector_53',['squareSector',['../classIRenderer.html#a28977d2227a14c393d14e6b72aef49a4',1,'IRenderer::squareSector()'],['../classSoftwareRenderer.html#a1d549104fc0cdaffc1b9ad4233d27abb',1,'SoftwareRenderer::squareSector()'],['../classOpenGLRenderer.html#a02a654c469882267c3a5d02a8fecb1ef',1,'OpenGLRenderer::squareSector()']]],
+  ['squaresector_53',['squareSector',['../classIRenderer.html#a28977d2227a14c393d14e6b72aef49a4',1,'IRenderer::squareSector()'],['../classOpenGLRenderer.html#a02a654c469882267c3a5d02a8fecb1ef',1,'OpenGLRenderer::squareSector()'],['../classSoftwareRenderer.html#a1d549104fc0cdaffc1b9ad4233d27abb',1,'SoftwareRenderer::squareSector()']]],
   ['start_54',['start',['../classAThread.html#a9234a95574195c1ed42364fe8a7a8329',1,'AThread']]],
   ['stealin_55',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_56',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['string_57',['string',['../classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274',1,'OpenGLRenderer::string()'],['../classIRenderer.html#a4e3c00a94301b0c9bc1070f7fcbb76ca',1,'IRenderer::string()'],['../classSoftwareRenderer.html#a1441fc2d791de0aa28e80802364073df',1,'SoftwareRenderer::string()']]],
   ['stripbeforefunctioncall_58',['stripBeforeFunctionCall',['../classAStacktrace.html#a433c70cff737bf88f1ef839cde918082',1,'AStacktrace']]],
-  ['supplyexception_59',['supplyException',['../classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df',1,'AComplexFutureOperation::supplyException()'],['../classAFuture.html#ad63fde0831188f9a75a7b0e10bd2a50d',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#a2f550fb2f9abba74e364cb54b2f9a914',1,'AFuture&lt; void &gt;::supplyException()']]],
-  ['supplyvalue_60',['supplyValue',['../classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02',1,'AComplexFutureOperation::supplyValue()'],['../classAFuture.html#aa640a25cdc678b93f8d764a83013841f',1,'AFuture::supplyValue()'],['../classAFuture_3_01void_01_4.html#aee857ead4b1496f905155e0b09fb091c',1,'AFuture&lt; void &gt;::supplyValue()']]],
-  ['systemslashdirection_61',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
+  ['stub_59',['stub',['../classIRenderer.html#aa03fc1718fbfe42e79a1cca20f895153',1,'IRenderer']]],
+  ['supplyexception_60',['supplyException',['../classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df',1,'AComplexFutureOperation::supplyException()'],['../classAFuture.html#ad63fde0831188f9a75a7b0e10bd2a50d',1,'AFuture::supplyException()'],['../classAFuture_3_01void_01_4.html#a2f550fb2f9abba74e364cb54b2f9a914',1,'AFuture&lt; void &gt;::supplyException()']]],
+  ['supplyvalue_61',['supplyValue',['../classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02',1,'AComplexFutureOperation::supplyValue()'],['../classAFuture.html#aa640a25cdc678b93f8d764a83013841f',1,'AFuture::supplyValue()'],['../classAFuture_3_01void_01_4.html#aee857ead4b1496f905155e0b09fb091c',1,'AFuture&lt; void &gt;::supplyValue()']]],
+  ['systemslashdirection_62',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];

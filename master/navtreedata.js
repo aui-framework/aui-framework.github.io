@@ -71,15 +71,15 @@ var NAVTREEINDEX =
 [
 "@ref md_docs_Writing_platform_dependent_code",
 "classADeque.html#ad1396ac646b307ff34e8e9d594d27181",
-"classAPath.html#abafaeb035c4406f106cb9e556e6360ac",
-"classAStrongByteBufferInputStream.html#a0221c8acf22fa504a1ebd75a65f7d384",
-"classAViewContainerBase.html#a065e6e7cddaa0de5dc6cae91dceca07e",
-"classOpenGLPrerenderedString.html",
-"conceptaui_1_1destructible.html",
-"structADataBindingDefault_3_01ADoubleNumberPicker_00_01aui_1_1ranged__number_3_01UnderlyingType_00_01min_00_01max_01_4_01_4.html",
-"structass_1_1debug__selector.html",
-"structaui_1_1impl_1_1parallel_1_1LambdaCapturer.html",
-"usergroup1.html"
+"classAPath.html#a7c1302777d5b748bf87a24d078c090e1",
+"classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c",
+"classAViewContainer.html#a94d32b819a44ed3cdbcc28bb829fa5d3",
+"classMyListener.html",
+"conceptaui_1_1copyable.html",
+"structACursor_1_1Custom.html",
+"structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535",
+"structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html",
+"structuitest_1_1impl_1_1align.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

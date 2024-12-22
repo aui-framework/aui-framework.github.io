@@ -180,6 +180,8 @@ var hierarchy =
     [ "ARect< T >", "structARect.html", null ],
     [ "ARenderContext", "structARenderContext.html", null ],
     [ "ARenderingContextOptions", "structARenderingContextOptions.html", null ],
+    [ "AProcess::ArgSingleString", "structAProcess_1_1ArgSingleString.html", null ],
+    [ "AProcess::ArgStringList", "structAProcess_1_1ArgStringList.html", null ],
     [ "AScrollEvent", "structAScrollEvent.html", null ],
     [ "ASerializable< T, T2 >", "structASerializable.html", null ],
     [ "ASerializable< _< T > >", "structASerializable_3_01___3_01T_01_4_01_4.html", null ],
@@ -233,6 +235,7 @@ var hierarchy =
     [ "AWordWrappingEngineBase", "classAWordWrappingEngineBase.html", [
       [ "AWordWrappingEngine< Container >", "classAWordWrappingEngine.html", null ]
     ] ],
+    [ "ass::Backdrop", "structass_1_1Backdrop.html", null ],
     [ "ass::BackgroundCropping", "structass_1_1BackgroundCropping.html", null ],
     [ "ass::BackgroundEffect", "structass_1_1BackgroundEffect.html", null ],
     [ "ass::BackgroundGradient", "structass_1_1BackgroundGradient.html", null ],
@@ -637,6 +640,8 @@ var hierarchy =
     ] ],
     [ "aui::impl::future::FutureReturnType< T >", "structaui_1_1impl_1_1future_1_1FutureReturnType.html", null ],
     [ "aui::impl::future::FutureReturnType< void >", "structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html", null ],
+    [ "ass::Backdrop::GaussianBlur", "structass_1_1Backdrop_1_1GaussianBlur.html", null ],
+    [ "ass::Backdrop::GaussianBlurCustom", "structass_1_1Backdrop_1_1GaussianBlurCustom.html", null ],
     [ "GLContext", "classGLContext.html", null ],
     [ "aui::jni::GlobalRef", "classaui_1_1jni_1_1GlobalRef.html", [
       [ "aui::jni::ArrayView< T >", "classaui_1_1jni_1_1ArrayView.html", null ]
@@ -674,6 +679,7 @@ var hierarchy =
     [ "IDrawable", "classIDrawable.html", [
       [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
       [ "AImageDrawable", "classAImageDrawable.html", null ],
+      [ "ANoiseDrawable", "classANoiseDrawable.html", null ],
       [ "AVectorDrawable", "classAVectorDrawable.html", null ]
     ] ],
     [ "IEnumFORMATETC", null, [
@@ -757,6 +763,7 @@ var hierarchy =
       [ "ass::prop::Property< AOverflowMask >", "structass_1_1prop_1_1Property_3_01AOverflowMask_01_4.html", null ],
       [ "ass::prop::Property< ATextAlign >", "structass_1_1prop_1_1Property_3_01ATextAlign_01_4.html", null ],
       [ "ass::prop::Property< ATextOverflow >", "structass_1_1prop_1_1Property_3_01ATextOverflow_01_4.html", null ],
+      [ "ass::prop::Property< Backdrop >", "structass_1_1prop_1_1Property_3_01Backdrop_01_4.html", null ],
       [ "ass::prop::Property< BackgroundCropping >", "structass_1_1prop_1_1Property_3_01BackgroundCropping_01_4.html", null ],
       [ "ass::prop::Property< BackgroundEffect >", "structass_1_1prop_1_1Property_3_01BackgroundEffect_01_4.html", null ],
       [ "ass::prop::Property< BackgroundGradient >", "structass_1_1prop_1_1Property_3_01BackgroundGradient_01_4.html", null ],
@@ -939,7 +946,8 @@ var hierarchy =
       [ "WinIoCompletionPort", "classWinIoCompletionPort.html", null ],
       [ "aui::win32::Handle", "classaui_1_1win32_1_1Handle.html", null ],
       [ "aui::win32::detail::Win32Object< T >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", null ],
-      [ "gl::Framebuffer", "classgl_1_1Framebuffer.html", null ]
+      [ "gl::Framebuffer", "classgl_1_1Framebuffer.html", null ],
+      [ "gl::Program", "classgl_1_1Program.html", null ]
     ] ],
     [ "NSApplication", null, [
       [ "AUINSApplication", "interfaceAUINSApplication.html", null ]
@@ -979,8 +987,8 @@ var hierarchy =
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
     [ "aui::detail::pointer_to_member< ForcedClazz, Type >", "structaui_1_1detail_1_1pointer__to__member.html", null ],
     [ "AViewContainerBase::PointerEventsMapping", "structAViewContainerBase_1_1PointerEventsMapping.html", null ],
+    [ "AProcess::ProcessCreationInfo", "structAProcess_1_1ProcessCreationInfo.html", null ],
     [ "AWindowBase::Profiling", "structAWindowBase_1_1Profiling.html", null ],
-    [ "gl::Program", "classgl_1_1Program.html", null ],
     [ "ass::prop::Property< PropertyStruct >", "structass_1_1prop_1_1Property.html", null ],
     [ "ass::PropertyList", "structass_1_1PropertyList.html", [
       [ "ass::PropertyListRecursive", "structass_1_1PropertyListRecursive.html", null ],
@@ -1099,7 +1107,7 @@ var hierarchy =
     [ "aui::traits::ternary< std::true_type, OnTrue, OnFalse >", "structaui_1_1traits_1_1ternary_3_01std_1_1true__type_00_01OnTrue_00_01OnFalse_01_4.html", null ],
     [ "testing::Test", null, [
       [ "DynamicVector", "classDynamicVector.html", null ],
-      [ "Process", "classProcess.html", null ],
+      [ "ProcessTest", "classProcessTest.html", null ],
       [ "SignalSlot", "classSignalSlot.html", null ],
       [ "SmallVector", "classSmallVector.html", null ],
       [ "StaticVector", "classStaticVector.html", null ],
@@ -1236,6 +1244,7 @@ var hierarchy =
       [ "AVector< Data >", "classAVector.html", null ],
       [ "AVector< Line >", "classAVector.html", null ],
       [ "AVector< _< AWordWrappingEngineBase::Entry > >", "classAVector.html", null ],
+      [ "AVector< FramebufferFromPool >", "classAVector.html", null ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
