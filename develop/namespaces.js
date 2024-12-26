@@ -123,7 +123,7 @@ var namespaces =
       [ "TransformRotate", "structass_1_1TransformRotate.html", null ],
       [ "TransformScale", "structass_1_1TransformScale.html", null ],
       [ "type_of", "structass_1_1type__of.html", null ],
-      [ "unset_wrap", "structass_1_1unset__wrap.html", null ],
+      [ "unset_wrap", "structass_1_1unset__wrap.html", "structass_1_1unset__wrap" ],
       [ "Sizing", "group__ass.html#gacddcf8eaaf32f1471c17e0a4434bd3d8", [
         [ "NONE", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8ab50339a10e1de285ac99d4c3990b8693", null ],
         [ "FIT", "group__ass.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a12197f0373bd373681e99d73fd509954", null ],

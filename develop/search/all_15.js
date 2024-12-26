@@ -24,12 +24,13 @@ var searchData=
   ['unmapposition_21',['unmapPosition',['../classAWindow.html#ac12087888735e70ce6347293fafdb30f',1,'AWindow']]],
   ['unset_22',['UNSET',['../classAListView.html#a9d28394809b0d6ff7e1783e5b253ff47a666a87025ab0d8965e221050c8948001',1,'AListView']]],
   ['unset_5fwrap_23',['unset_wrap',['../structass_1_1unset__wrap.html',1,'ass']]],
-  ['update_24',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]],
-  ['update_25',['update',['../classASqlBuilder.html#a00e6e1660b07f2ba915597fb4399bb63',1,'ASqlBuilder']]],
-  ['updateorm_26',['updateORM',['../classASqlBuilder.html#ab0bc97cc47532c755b71640ba9f78e31',1,'ASqlBuilder']]],
-  ['url_27',['URL',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d',1,'ATextInputType.h']]],
-  ['useful_20macros_28',['Useful macros',['../group__useful__macros.html',1,'']]],
-  ['useful_5ftemplates_29',['Useful_templates',['../group__useful__templates.html',1,'']]],
-  ['uv1_30',['uv1',['../structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16',1,'ATexturedBrush']]],
-  ['uv2_31',['uv2',['../structATexturedBrush.html#a3c7946b2d5bf403f1b20dead1df337fc',1,'ATexturedBrush']]]
+  ['unset_5fwrap_5ftag_24',['unset_wrap_tag',['../structass_1_1unset__wrap_1_1unset__wrap__tag.html',1,'ass::unset_wrap']]],
+  ['update_25',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]],
+  ['update_26',['update',['../classASqlBuilder.html#a00e6e1660b07f2ba915597fb4399bb63',1,'ASqlBuilder']]],
+  ['updateorm_27',['updateORM',['../classASqlBuilder.html#ab0bc97cc47532c755b71640ba9f78e31',1,'ASqlBuilder']]],
+  ['url_28',['URL',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d',1,'ATextInputType.h']]],
+  ['useful_20macros_29',['Useful macros',['../group__useful__macros.html',1,'']]],
+  ['useful_5ftemplates_30',['Useful_templates',['../group__useful__templates.html',1,'']]],
+  ['uv1_31',['uv1',['../structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16',1,'ATexturedBrush']]],
+  ['uv2_32',['uv2',['../structATexturedBrush.html#a3c7946b2d5bf403f1b20dead1df337fc',1,'ATexturedBrush']]]
 ];

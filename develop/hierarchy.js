@@ -1202,6 +1202,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< T >::unset_wrap_tag", "structass_1_1unset__wrap_1_1unset__wrap__tag.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
       [ "aui::valid::chars::latin", "structaui_1_1valid_1_1chars_1_1latin.html", null ],
       [ "aui::valid::chars::numeric", "structaui_1_1valid_1_1chars_1_1numeric.html", null ],

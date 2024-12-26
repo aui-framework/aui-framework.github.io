@@ -21,5 +21,6 @@ var searchData=
   ['unixiothread_18',['UnixIoThread',['../classUnixIoThread.html',1,'']]],
   ['unknown_19',['Unknown',['../structaui_1_1dbus_1_1Unknown.html',1,'aui::dbus']]],
   ['unset_5fwrap_20',['unset_wrap',['../structass_1_1unset__wrap.html',1,'ass']]],
-  ['update_21',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]]
+  ['unset_5fwrap_5ftag_21',['unset_wrap_tag',['../structass_1_1unset__wrap_1_1unset__wrap__tag.html',1,'ass::unset_wrap']]],
+  ['update_22',['Update',['../classASqlBuilder_1_1Update.html',1,'ASqlBuilder']]]
 ];

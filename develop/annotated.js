@@ -120,7 +120,7 @@ var annotated =
       [ "TransformRotate", "structass_1_1TransformRotate.html", null ],
       [ "TransformScale", "structass_1_1TransformScale.html", null ],
       [ "type_of", "structass_1_1type__of.html", null ],
-      [ "unset_wrap", "structass_1_1unset__wrap.html", null ]
+      [ "unset_wrap", "structass_1_1unset__wrap.html", "structass_1_1unset__wrap" ]
     ] ],
     [ "aui", null, [
       [ "animation_curves", null, [

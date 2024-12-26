@@ -78,8 +78,8 @@ var NAVTREEINDEX =
 "conceptaui_1_1copyable.html",
 "structACursor_1_1Custom.html",
 "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535",
-"structaui_1_1impl_1_1future_1_1FutureReturnType_3_01void_01_4.html",
-"structuitest_1_1impl_1_1align.html"
+"structaui_1_1impl_1_1future_1_1FutureReturnType.html",
+"structtuples_1_1detail_1_1functor_1_1sub.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
