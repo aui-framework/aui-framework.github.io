@@ -688,7 +688,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "IEventLoop", "classIEventLoop.html", [
-      [ "MyEventLoop", "classMyEventLoop.html", null ],
       [ "AEmbedAuiWrap", "classAEmbedAuiWrap.html", [
         [ "AGLEmbedAuiWrap", "classAGLEmbedAuiWrap.html", null ],
         [ "ASoftwareEmbedAuiWrap", "classASoftwareEmbedAuiWrap.html", null ]
@@ -698,7 +697,7 @@ var hierarchy =
       [ "AWindowManager", "classAWindowManager.html", [
         [ "AStubWindowManager", "classAStubWindowManager.html", null ]
       ] ],
-      [ "MyEventLoop", "classMyEventLoop.html", null ]
+      [ "UnixIoEventLoop", "classUnixIoEventLoop.html", null ]
     ] ],
     [ "IFontView", "classIFontView.html", [
       [ "ATextBase< AWordWrappingEngine<> >", "classATextBase.html", null ],

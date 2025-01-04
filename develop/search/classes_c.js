@@ -23,7 +23,6 @@ var searchData=
   ['mutexextras_3c_20std_3a_3ashared_5fmutex_20_3e_20',['MutexExtras&lt; std::shared_mutex &gt;',['../structaui_1_1detail_1_1MutexExtras.html',1,'aui::detail']]],
   ['my_5ftuple_21',['my_tuple',['../structaui_1_1impl_1_1json_1_1my__tuple.html',1,'aui::impl::json']]],
   ['myentry_22',['MyEntry',['../classMyEntry.html',1,'']]],
-  ['myeventloop_23',['MyEventLoop',['../classMyEventLoop.html',1,'']]],
-  ['mylistener_24',['MyListener',['../classMyListener.html',1,'']]],
-  ['mystruct_25',['MyStruct',['../structMyStruct.html',1,'']]]
+  ['mylistener_23',['MyListener',['../classMyListener.html',1,'']]],
+  ['mystruct_24',['MyStruct',['../structMyStruct.html',1,'']]]
 ];

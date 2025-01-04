@@ -74,7 +74,7 @@ var NAVTREEINDEX =
 "classAPath.html#a7c1302777d5b748bf87a24d078c090e1",
 "classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c",
 "classAViewContainer.html#a94d32b819a44ed3cdbcc28bb829fa5d3",
-"classMyListener.html",
+"classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8",
 "conceptaui_1_1copyable.html",
 "structACursor_1_1Custom.html",
 "structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535",

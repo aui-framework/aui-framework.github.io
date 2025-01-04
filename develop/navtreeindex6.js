@@ -205,7 +205,7 @@ var NAVTREEINDEX6 =
 "interfaceAUIViewController.html":[0,2,329],
 "interfaceAppDelegate.html":[0,2,224],
 "interfaceMainView.html":[0,2,410],
-"interfaceSceneDelegate.html":[0,2,432],
+"interfaceSceneDelegate.html":[0,2,431],
 "interfaceWindowDelegate.html":[0,2,495],
 "md_docs_AUI_Boot.html":[1,1],
 "md_docs_AUI_command_line_arguments.html":[2,1],
