@@ -22,8 +22,8 @@ var searchData=
   ['length_19',['length',['../classACursorSelectable.html#a323a643dc50b69858cd58b88d44c88c3',1,'ACursorSelectable::length()'],['../classAAbstractTextField.html#af32ef6283e0cf52cf1b053874b5410f1',1,'AAbstractTextField::length()'],['../classATextArea.html#af937c3bf26c1faf077deed94d25641b2',1,'ATextArea::length()']]],
   ['less_5fof_20',['less_of',['../structuitest_1_1impl_1_1less__of.html',1,'uitest::impl']]],
   ['let_21',['let',['../group__useful__macros.html#ga045dd54932944d8830380f4596d64446',1,'kAUI.h']]],
-  ['line_22',['line',['../classIRenderer.html#a6a294680c11f3a3065e9a29c898322f7',1,'IRenderer']]],
-  ['line_23',['Line',['../classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531',1,'ATextLayoutHelper']]],
+  ['line_22',['Line',['../classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531',1,'ATextLayoutHelper']]],
+  ['line_23',['line',['../classIRenderer.html#a6a294680c11f3a3065e9a29c898322f7',1,'IRenderer']]],
   ['linear_24',['Linear',['../classaui_1_1animation__curves_1_1Linear.html',1,'aui::animation_curves']]],
   ['linearlayoutimpl_25',['LinearLayoutImpl',['../classaui_1_1detail_1_1LinearLayoutImpl.html',1,'aui::detail']]],
   ['linearlayoutimpl_3c_20_5f_3c_20aview_20_3e_20_3e_26',['LinearLayoutImpl&lt; _&lt; AView &gt; &gt;',['../classaui_1_1detail_1_1LinearLayoutImpl.html',1,'aui::detail']]],
@@ -35,5 +35,5 @@ var searchData=
   ['load_32',['load',['../classAProgramModule.html#ad7054588a9c6e5e6c4b9e0b3ccd88041',1,'AProgramModule']]],
   ['log_33',['log',['../classALogger.html#a40ade2b930dbd47aa48011d70d1e4a0b',1,'ALogger']]],
   ['logwriter_34',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
-  ['loop_35',['loop',['../classMyEventLoop.html#a45d9ecc6865823837f8d935e09499066',1,'MyEventLoop::loop()'],['../classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e',1,'AEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568',1,'AScheduler::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()']]]
+  ['loop_35',['loop',['../classUnixIoEventLoop.html#a2999269f99c36d0badb07d24d3089bcd',1,'UnixIoEventLoop::loop()'],['../classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e',1,'AEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568',1,'AScheduler::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()']]]
 ];

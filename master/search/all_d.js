@@ -14,7 +14,7 @@ var searchData=
   ['mapposition_11',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_12',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
   ['margin_13',['Margin',['../structass_1_1Margin.html',1,'ass']]],
-  ['markpixeldatainvalid_14',['markPixelDataInvalid',['../classAViewContainerBase.html#a8994f292987b286ed34179e99f439d0e',1,'AViewContainerBase::markPixelDataInvalid()'],['../classAView.html#a9dbc24e272ea843ad75fb30c2e36389a',1,'AView::markPixelDataInvalid()'],['../classAWindowBase.html#a486b60d9e79a3d0bf48f3af7e3db9efe',1,'AWindowBase::markPixelDataInvalid()']]],
+  ['markpixeldatainvalid_14',['markPixelDataInvalid',['../classAView.html#a9dbc24e272ea843ad75fb30c2e36389a',1,'AView::markPixelDataInvalid()'],['../classAViewContainerBase.html#a8994f292987b286ed34179e99f439d0e',1,'AViewContainerBase::markPixelDataInvalid()'],['../classAWindowBase.html#a486b60d9e79a3d0bf48f3af7e3db9efe',1,'AWindowBase::markPixelDataInvalid()']]],
   ['mass_15',['mAss',['../classAView.html#a6d4886486fa16bbfda71ddb2546bf517',1,'AView']]],
   ['massnames_16',['mAssNames',['../classAView.html#a22c7f11d281b887e5cf672f4f992d3a3',1,'AView']]],
   ['master_17',['Master',['../classMaster.html',1,'']]],
@@ -69,7 +69,6 @@ var searchData=
   ['mutexextras_3c_20std_3a_3ashared_5fmutex_20_3e_66',['MutexExtras&lt; std::shared_mutex &gt;',['../structaui_1_1detail_1_1MutexExtras.html',1,'aui::detail']]],
   ['my_5ftuple_67',['my_tuple',['../structaui_1_1impl_1_1json_1_1my__tuple.html',1,'aui::impl::json']]],
   ['myentry_68',['MyEntry',['../classMyEntry.html',1,'']]],
-  ['myeventloop_69',['MyEventLoop',['../classMyEventLoop.html',1,'']]],
-  ['mylistener_70',['MyListener',['../classMyListener.html',1,'']]],
-  ['mystruct_71',['MyStruct',['../structMyStruct.html',1,'']]]
+  ['mylistener_69',['MyListener',['../classMyListener.html',1,'']]],
+  ['mystruct_70',['MyStruct',['../structMyStruct.html',1,'']]]
 ];
