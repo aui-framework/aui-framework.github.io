@@ -2,9 +2,36 @@ var hierarchy =
 [
     [ "A2DTransform", "structA2DTransform.html", null ],
     [ "AAbstractSignal", "classAAbstractSignal.html", [
-      [ "ASignal< Args... >", "classASignal.html", null ],
-      [ "ASignal< T >", "classASignal.html", null ],
+      [ "ASignal< int64_t >", "classASignal.html", null ],
+      [ "ASignal< ACurl::ErrorDescription >", "classASignal.html", null ],
+      [ "ASignal< AByteBuffer >", "classASignal.html", null ],
       [ "ASignal<>", "classASignal.html", null ],
+      [ "ASignal< double >", "classASignal.html", null ],
+      [ "ASignal< glm::ivec2 >", "classASignal.html", null ],
+      [ "ASignal< glm::ivec2, glm::ivec2 >", "classASignal.html", null ],
+      [ "ASignal< int >", "classASignal.html", null ],
+      [ "ASignal< AString >", "classASignal.html", null ],
+      [ "ASignal< T >", "classASignal.html", null ],
+      [ "ASignal< Selection >", "classASignal.html", null ],
+      [ "ASignal< Visibility >", "classASignal.html", null ],
+      [ "ASignal< ATreeModelIndex >", "classASignal.html", null ],
+      [ "ASignal< std::decay_t< Getter > >", "classASignal.html", null ],
+      [ "ASignal< APath >", "classASignal.html", null ],
+      [ "ASignal< aui::ranged_number >", "classASignal.html", null ],
+      [ "ASignal< glm::vec2 >", "classASignal.html", null ],
+      [ "ASignal< unsigned >", "classASignal.html", null ],
+      [ "ASignal< AListModelSelection< AString > >", "classASignal.html", null ],
+      [ "ASignal< Args... >", "classASignal.html", null ],
+      [ "ASignal< _< AView > >", "classASignal.html", null ],
+      [ "ASignal< bool >", "classASignal.html", null ],
+      [ "ASignal< APointerIndex >", "classASignal.html", null ],
+      [ "ASignal< _< AByteBuffer > >", "classASignal.html", null ],
+      [ "ASignal< AListModelRange< T > >", "classASignal.html", null ],
+      [ "ASignal< AInput::Key >", "classASignal.html", null ],
+      [ "ASignal< A2DTransform >", "classASignal.html", null ],
+      [ "ASignal< bool, APointerIndex >", "classASignal.html", null ],
+      [ "ASignal< SignalArg >", "classASignal.html", null ],
+      [ "ASignal< _< IDrawable > >", "classASignal.html", null ],
       [ "ASignal< Args >", "classASignal.html", null ]
     ] ],
     [ "AAbstractSocket", "classAAbstractSocket.html", [
@@ -27,6 +54,8 @@ var hierarchy =
       [ "ASizeAnimator", "classASizeAnimator.html", null ],
       [ "ATranslationAnimator", "classATranslationAnimator.html", null ]
     ] ],
+    [ "AAnySignalOrPropertyTraits< T >", "structAAnySignalOrPropertyTraits.html", null ],
+    [ "AAnySignalOrPropertyTraits< T >", "structAAnySignalOrPropertyTraits_3_01T_01_4.html", null ],
     [ "AArrayView< T >", "classAArrayView.html", null ],
     [ "AAsyncHolder", "classAAsyncHolder.html", null ],
     [ "ABitField< T >", "classABitField.html", null ],
@@ -69,6 +98,7 @@ var hierarchy =
     [ "ADataBindingDefault< ALabel, AString >", "structADataBindingDefault_3_01ALabel_00_01AString_01_4.html", null ],
     [ "ADataBindingDefault< APathChooserView, APath >", "structADataBindingDefault_3_01APathChooserView_00_01APath_01_4.html", null ],
     [ "ADataBindingDefault< ATextField, AString >", "structADataBindingDefault_3_01ATextField_00_01AString_01_4.html", null ],
+    [ "ADataBindingDefault< Container, _< AView > >", "structADataBindingDefault_3_01Container_00_01___3_01AView_01_4_01_4.html", null ],
     [ "ADataBindingDefault< View, Visibility >", "structADataBindingDefault_3_01View_00_01Visibility_01_4.html", null ],
     [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< Num >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", null ],
     [ "aui::impl::ADataBindingDefaultDoubleNumberPicker< double >", "structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html", [
@@ -167,6 +197,36 @@ var hierarchy =
       [ "AModelMeta< T >", "structAModelMeta.html", null ]
     ] ],
     [ "AOptional< T >", "classAOptional.html", null ],
+    [ "AOptional< _< IDrawable > >", "classAOptional.html", null ],
+    [ "AOptional< _weak< Timer > >", "classAOptional.html", null ],
+    [ "AOptional< AByteBuffer >", "classAOptional.html", null ],
+    [ "AOptional< ACursor >", "classAOptional.html", null ],
+    [ "AOptional< AFileOutputStream >", "classAOptional.html", null ],
+    [ "AOptional< AImage >", "classAOptional.html", null ],
+    [ "AOptional< AInvocationTargetException >", "classAOptional.html", null ],
+    [ "AOptional< ALinearGradientBrush >", "classAOptional.html", null ],
+    [ "AOptional< AMetric >", "classAOptional.html", null ],
+    [ "AOptional< APointerIndex >", "classAOptional.html", null ],
+    [ "AOptional< AString >", "classAOptional.html", null ],
+    [ "AOptional< AVector< Line > >", "classAOptional.html", null ],
+    [ "AOptional< bool >", "classAOptional.html", null ],
+    [ "AOptional< ConsumesClickCache >", "classAOptional.html", null ],
+    [ "AOptional< float >", "classAOptional.html", null ],
+    [ "AOptional< gl::Program >", "classAOptional.html", null ],
+    [ "AOptional< gl::Vao >", "classAOptional.html", null ],
+    [ "AOptional< glm::ivec2 >", "classAOptional.html", null ],
+    [ "AOptional< glm::uvec2 >", "classAOptional.html", null ],
+    [ "AOptional< glm::vec2 >", "classAOptional.html", null ],
+    [ "AOptional< int >", "classAOptional.html", null ],
+    [ "AOptional< LazyStreamBuf >", "classAOptional.html", null ],
+    [ "AOptional< RenderToTexture >", "classAOptional.html", null ],
+    [ "AOptional< RepaintTrap >", "classAOptional.html", null ],
+    [ "AOptional< std::chrono::high_resolution_clock::time_point >", "classAOptional.html", null ],
+    [ "AOptional< std::string >", "classAOptional.html", null ],
+    [ "AOptional< StickToEnd >", "classAOptional.html", null ],
+    [ "AOptional< TextureHelper >", "classAOptional.html", null ],
+    [ "AOptional< unsigned >", "classAOptional.html", null ],
+    [ "AOptional< void >", "classAOptional.html", null ],
     [ "APerformanceSection", "classAPerformanceSection.html", null ],
     [ "APointerIndex", "classAPointerIndex.html", null ],
     [ "APointerMoveEvent", "structAPointerMoveEvent.html", null ],
@@ -175,6 +235,7 @@ var hierarchy =
     [ "APool< T >::APoolDeleter", "structAPool_1_1APoolDeleter.html", null ],
     [ "AppDelegate()", "categoryAppDelegate_07_08.html", null ],
     [ "AProgramModule", "classAProgramModule.html", null ],
+    [ "APropertyDef< M, Getter, Setter, SignalArg >", "structAPropertyDef.html", null ],
     [ "ARaiiHelper< Callback >", "classARaiiHelper.html", null ],
     [ "ARandom", "classARandom.html", null ],
     [ "ARect< T >", "structARect.html", null ],
@@ -199,7 +260,15 @@ var hierarchy =
     [ "ASerializable< T, std::enable_if_t< std::is_base_of_v< IInputStream, T > > >", "structASerializable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__base__of__v_3_01IInputStream_00_01T_01_4_01_4_01_4.html", null ],
     [ "ASharedRaiiHelper", "classASharedRaiiHelper.html", null ],
     [ "AShortcut", "classAShortcut.html", null ],
+    [ "ASlotDefBase", "structASlotDefBase.html", [
+      [ "ASlotDef< ObjectPtr, Invocable >", "structASlotDef.html", null ]
+    ] ],
     [ "ASmallVector< StoredType, StaticVectorSize, Allocator >", "classASmallVector.html", null ],
+    [ "ASmallVector< APointerIndex, 1 >", "classASmallVector.html", null ],
+    [ "ASmallVector< AViewContainerBase::PointerEventsMapping, 1 >", "classASmallVector.html", null ],
+    [ "ASmallVector< glm::u8vec4, 8 >", "classASmallVector.html", null ],
+    [ "ASmallVector< Scroll, 10 >", "classASmallVector.html", null ],
+    [ "ASmallVector< TrackedPoint, 8 >", "classASmallVector.html", null ],
     [ "ASolidBrush", "structASolidBrush.html", null ],
     [ "ASpinlockMutex", "classASpinlockMutex.html", null ],
     [ "ASplitterHelper", "classASplitterHelper.html", null ],
@@ -215,6 +284,8 @@ var hierarchy =
     [ "AStaticVector< ARect< int >, 8 >", "classAStaticVector.html", null ],
     [ "AStringFormatHelper", "structAStringFormatHelper.html", null ],
     [ "AStringLiteral< chars >", "structAStringLiteral.html", null ],
+    [ "AStringLiteral< 'V'>", "structAStringLiteral.html", null ],
+    [ "AStringLiteral< sign >", "structAStringLiteral.html", null ],
     [ "AStylesheet", "classAStylesheet.html", null ],
     [ "AzazaATest::ATest", "structAzazaATest_1_1ATest.html", null ],
     [ "ATextLayoutHelper", "classATextLayoutHelper.html", null ],
@@ -285,6 +356,7 @@ var hierarchy =
       [ "aui::dbus::converter< std::uint8_t >", "structaui_1_1dbus_1_1converter_3_01std_1_1uint8__t_01_4.html", null ]
     ] ],
     [ "aui::BinarySearchNearestToZero< Predicate, Iterator >", "structaui_1_1BinarySearchNearestToZero.html", null ],
+    [ "Binding< Lhs, Destination >", "structBinding.html", null ],
     [ "ass::Border", "structass_1_1Border.html", null ],
     [ "ass::BorderBottom", "structass_1_1BorderBottom.html", null ],
     [ "ass::BorderLeft", "structass_1_1BorderLeft.html", null ],
@@ -378,7 +450,19 @@ var hierarchy =
     [ "DataOptional", "structDataOptional.html", null ],
     [ "aui::impl::slot::decode_type< T >", "structaui_1_1impl_1_1slot_1_1decode__type.html", null ],
     [ "aui::impl::slot::decode_type< _< T > >", "structaui_1_1impl_1_1slot_1_1decode__type_3_01___3_01T_01_4_01_4.html", null ],
+    [ "aui::property_precomputed::detail::DependencyObserverRegistrar", "structaui_1_1property__precomputed_1_1detail_1_1DependencyObserverRegistrar.html", null ],
     [ "std::deque", null, [
+      [ "ADeque< _< IInputStream > >", "classADeque.html", null ],
+      [ "ADeque< std::pair< AString, std::function< void()> > >", "classADeque.html", null ],
+      [ "ADeque< Message >", "classADeque.html", null ],
+      [ "ADeque< WordEntry >", "classADeque.html", null ],
+      [ "ADeque< CharacterData >", "classADeque.html", null ],
+      [ "ADeque< _< AX509 > >", "classADeque.html", null ],
+      [ "ADeque< Observer >", "classADeque.html", null ],
+      [ "ADeque< OpenGLRenderer::FontEntryData >", "classADeque.html", null ],
+      [ "ADeque< CharEntry >", "classADeque.html", null ],
+      [ "ADeque< Pair >", "classADeque.html", null ],
+      [ "ADeque< _< AWindow > >", "classADeque.html", null ],
       [ "ADeque< StoredType, Allocator >", "classADeque.html", null ]
     ] ],
     [ "ARenderingContextOptions::DirectX11", "structARenderingContextOptions_1_1DirectX11.html", null ],
@@ -394,6 +478,7 @@ var hierarchy =
         [ "ITreeModel< AString >", "classITreeModel.html", [
           [ "ViewHierarchyTreeModel", "classViewHierarchyTreeModel.html", null ]
         ] ],
+        [ "Receiver", "classReceiver.html", null ],
         [ "Receiver", "classReceiver.html", null ],
         [ "Receiver", "classReceiver.html", null ],
         [ "AAnimatedDrawable", "classAAnimatedDrawable.html", null ],
@@ -509,6 +594,7 @@ var hierarchy =
                   [ "ACustomWindow", "classACustomWindow.html", [
                     [ "ACustomCaptionWindow", "classACustomCaptionWindow.html", null ]
                   ] ],
+                  [ "MyWindow", "classMyWindow.html", null ],
                   [ "UIClick::TestWindow", "classUIClick_1_1TestWindow.html", null ],
                   [ "UIMultitouchTest::TestWindow", "classUIMultitouchTest_1_1TestWindow.html", null ],
                   [ "UIRenderOptimizationTest::TestWindow", "classUIRenderOptimizationTest_1_1TestWindow.html", null ],
@@ -534,6 +620,7 @@ var hierarchy =
           [ "IRemovableListModel< ItemTo >", "classIRemovableListModel.html", [
             [ "AListModelAdapter< ItemTo, ItemFrom, Adapter >", "classAListModelAdapter.html", null ]
           ] ],
+          [ "IRemovableListModel< ItemFrom >", "classIRemovableListModel.html", null ],
           [ "IValueMutableListModel< StoredType >", "classIValueMutableListModel.html", [
             [ "AListModel< StoredType >", "classAListModel.html", null ]
           ] ],
@@ -545,6 +632,7 @@ var hierarchy =
           [ "ATreeModel< T >", "classATreeModel.html", null ]
         ] ],
         [ "InputStreamAsync", "classInputStreamAsync.html", null ],
+        [ "LogObserver", "classLogObserver.html", null ],
         [ "Master", "classMaster.html", null ],
         [ "ProcessSignalReceiver", "classProcessSignalReceiver.html", null ],
         [ "Receiver", "classReceiver.html", null ],
@@ -612,6 +700,7 @@ var hierarchy =
       [ "fmt::detail::is_string< AString >", "structfmt_1_1detail_1_1is__string_3_01AString_01_4.html", null ]
     ] ],
     [ "aui::fast_pimpl< T, storageSize, storageAlignment >", "structaui_1_1fast__pimpl.html", null ],
+    [ "aui::fast_pimpl< DBusError, sizeof(void *) *3+20, alignof(void *)>", "structaui_1_1fast__pimpl.html", null ],
     [ "aui::impl::json::Field< T >", "structaui_1_1impl_1_1json_1_1Field.html", null ],
     [ "ADesktop::FileExtension", "structADesktop_1_1FileExtension.html", null ],
     [ "aui::impl::first< First, Up >", "structaui_1_1impl_1_1first.html", null ],
@@ -629,11 +718,20 @@ var hierarchy =
     ] ],
     [ "fmt::formatter< ass::unset_wrap< T > >", "structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html", null ],
     [ "fmt::formatter< glm::vec< L, T, Q > >", "structfmt_1_1formatter_3_01glm_1_1vec_3_01L_00_01T_00_01Q_01_4_01_4.html", null ],
+    [ "fmt::formatter< T >", "structfmt_1_1formatter_3_01T_01_4.html", null ],
     [ "FreeType", "classFreeType.html", null ],
     [ "IRenderViewToTexture::InvalidArea::Full", "structIRenderViewToTexture_1_1InvalidArea_1_1Full.html", null ],
     [ "aui::function_info< Return, Args >", "structaui_1_1function__info.html", null ],
+    [ "aui::function_info< Return(&)(Args...) noexcept >", "structaui_1_1function__info_3_01Return_07_6_08_07Args_8_8_8_08_01noexcept_01_4.html", null ],
+    [ "aui::function_info< Return(&)(Args...)>", "structaui_1_1function__info_3_01Return_07_6_08_07Args_8_8_8_08_4.html", null ],
+    [ "aui::function_info< Return(*)(Args...) noexcept >", "structaui_1_1function__info_3_01Return_07_5_08_07Args_8_8_8_08_01noexcept_01_4.html", null ],
+    [ "aui::function_info< Return(*)(Args...)>", "structaui_1_1function__info_3_01Return_07_5_08_07Args_8_8_8_08_4.html", null ],
+    [ "aui::function_info< Return(Args...) noexcept >", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_01noexcept_01_4.html", null ],
     [ "aui::function_info< Return(Args...)>", "structaui_1_1function__info_3_01Return_07Args_8_8_8_08_4.html", null ],
-    [ "aui::impl::future::Future< Value >", "classaui_1_1impl_1_1future_1_1Future.html", null ],
+    [ "aui::impl::future::Future< Value >", "classaui_1_1impl_1_1future_1_1Future.html", [
+      [ "AFuture< int >", "classAFuture.html", null ],
+      [ "AFuture< T >", "classAFuture.html", null ]
+    ] ],
     [ "aui::impl::future::Future< void >", "classaui_1_1impl_1_1future_1_1Future.html", [
       [ "AFuture< T >", "classAFuture.html", null ],
       [ "AFuture< void >", "classAFuture_3_01void_01_4.html", null ]
@@ -859,11 +957,11 @@ var hierarchy =
     [ "aui::ui_building::layouted_container_factory_impl< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", null ],
     [ "aui::ui_building::layouted_container_factory_impl< Layout, AViewContainer >", "structaui_1_1ui__building_1_1layouted__container__factory__impl.html", [
       [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding.html", [
-        [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
-          [ "declarative::Button", "structdeclarative_1_1Button.html", null ]
-        ] ],
         [ "aui::ui_building::layouted_container_factory< AVerticalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
           [ "declarative::RadioGroup", "structdeclarative_1_1RadioGroup.html", null ]
+        ] ],
+        [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
+          [ "declarative::Button", "structdeclarative_1_1Button.html", null ]
         ] ],
         [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", [
           [ "declarative::RadioGroup::Horizontal", "structdeclarative_1_1RadioGroup_1_1Horizontal.html", null ]
@@ -877,6 +975,8 @@ var hierarchy =
       [ "aui::ui_building::layouted_container_factory_impl_with_expanding< Layout, Container >::Expanding", "structaui_1_1ui__building_1_1layouted__container__factory__impl__with__expanding_1_1Expanding.html", null ]
     ] ],
     [ "ass::LayoutSpacing", "structass_1_1LayoutSpacing.html", null ],
+    [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
+    [ "aui::lazy< AWindowBase::Profiling >", "structaui_1_1lazy.html", null ],
     [ "aui::lazy< T >", "structaui_1_1lazy.html", null ],
     [ "aui::lazy< void >", "structaui_1_1lazy_3_01void_01_4.html", null ],
     [ "uitest::impl::less_of< side >", "structuitest_1_1impl_1_1less__of.html", null ],
@@ -909,9 +1009,12 @@ var hierarchy =
     [ "MyStruct", "structMyStruct.html", null ],
     [ "aui::no_escape< T >", "structaui_1_1no__escape.html", null ],
     [ "aui::non_null_lateinit< T >", "structaui_1_1non__null__lateinit.html", [
+      [ "aui::non_null< _< AView > >", "structaui_1_1non__null.html", null ],
       [ "aui::non_null< T >", "structaui_1_1non__null.html", null ]
     ] ],
     [ "aui::noncopyable", "structaui_1_1noncopyable.html", [
+      [ "AMutexWrapper< std::function< void(const AString &prefix, const AString &message, Level level)> >", "classAMutexWrapper.html", null ],
+      [ "APool< ITexture >", "classAPool.html", null ],
       [ "aui::win32::detail::Win32Object< HBITMAP >", "structaui_1_1win32_1_1detail_1_1Win32Object.html", [
         [ "aui::win32::Bitmap", "structaui_1_1win32_1_1Bitmap.html", null ]
       ] ],
@@ -920,7 +1023,16 @@ var hierarchy =
       ] ],
       [ "ADBus", "classADBus.html", null ],
       [ "AMutexWrapper< T >", "classAMutexWrapper.html", null ],
-      [ "AObject", "classAObject.html", null ],
+      [ "AObjectBase", "classAObjectBase.html", [
+        [ "AProperty< _weak< AView > >", "structAProperty.html", null ],
+        [ "AProperty< bool >", "structAProperty.html", null ],
+        [ "AProperty< Gender >", "structAProperty.html", null ],
+        [ "AObject", "classAObject.html", null ],
+        [ "AProperty< T >", "structAProperty.html", null ],
+        [ "aui::property_precomputed::detail::DependencyObserver", "structaui_1_1property__precomputed_1_1detail_1_1DependencyObserver.html", [
+          [ "APropertyPrecomputed< T >", "structAPropertyPrecomputed.html", null ]
+        ] ]
+      ] ],
       [ "APerformanceFrame", "classAPerformanceFrame.html", null ],
       [ "APool< T >", "classAPool.html", null ],
       [ "AProcess", "classAProcess.html", [
@@ -972,15 +1084,25 @@ var hierarchy =
     [ "ass::Opacity", "structass_1_1Opacity.html", null ],
     [ "ARenderingContextOptions::OpenGL", "structARenderingContextOptions_1_1OpenGL.html", null ],
     [ "P", null, [
-      [ "uitest::impl::not$< P >", "structuitest_1_1impl_1_1not_0b.html", null ]
+      [ "uitest::impl::not< P >", "structuitest_1_1impl_1_1not.html", null ]
     ] ],
     [ "ass::Padding", "structass_1_1Padding.html", null ],
     [ "IDrawable::Params", "structIDrawable_1_1Params.html", null ],
     [ "Parent", null, [
       [ "ABaseMap< KeyType, ValueType, Parent >", "classABaseMap.html", [
+        [ "AMap< void *, _< ACurl > >", "classAMap.html", null ],
+        [ "AMap< AUrl, _< AFont > >", "classAMap.html", null ],
         [ "AMap< AString, AFormMultipartEntry >", "classAMap.html", [
           [ "AFormMultipart", "classAFormMultipart.html", null ]
-        ] ]
+        ] ],
+        [ "AMap< AString, AVariant >", "classAMap.html", null ],
+        [ "AMap< std::string_view, AByteBufferView >", "classAMap.html", null ],
+        [ "AMap< int, _< ARadioButton > >", "classAMap.html", null ],
+        [ "AMap< AString, AByteBuffer >", "classAMap.html", null ],
+        [ "AMap< AString, _< T > >", "classAMap.html", null ],
+        [ "AMap< AString, AString >", "classAMap.html", null ],
+        [ "AMap< AString, _< AFontFamily > >", "classAMap.html", null ],
+        [ "AMap< AFont::FontKey, AFont::FontData >", "classAMap.html", null ]
       ] ]
     ] ],
     [ "AText::ParsedFlags", "structAText_1_1ParsedFlags.html", null ],
@@ -988,10 +1110,16 @@ var hierarchy =
     [ "AViewContainerBase::PointerEventsMapping", "structAViewContainerBase_1_1PointerEventsMapping.html", null ],
     [ "AProcess::ProcessCreationInfo", "structAProcess_1_1ProcessCreationInfo.html", null ],
     [ "AWindowBase::Profiling", "structAWindowBase_1_1Profiling.html", null ],
+    [ "aui::detail::signal::ProjectedSignal< AnySignal, Projection >", "structaui_1_1detail_1_1signal_1_1ProjectedSignal.html", null ],
+    [ "aui::detail::signal::projection_info< Projection >", "structaui_1_1detail_1_1signal_1_1projection__info.html", null ],
+    [ "aui::detail::signal::projection_info< Projection >", "structaui_1_1detail_1_1signal_1_1projection__info_3_01Projection_01_4.html", null ],
     [ "ass::prop::Property< PropertyStruct >", "structass_1_1prop_1_1Property.html", null ],
     [ "ass::PropertyList", "structass_1_1PropertyList.html", [
       [ "ass::PropertyListRecursive", "structass_1_1PropertyListRecursive.html", null ],
       [ "ass::Rule", "structass_1_1Rule.html", null ]
+    ] ],
+    [ "PropertyReadProjection", null, [
+      [ "aui::detail::property::PropertyReadWriteProjection< PropertyReadProjection, ProjectionWrite >", "structaui_1_1detail_1_1property_1_1PropertyReadWriteProjection.html", null ]
     ] ],
     [ "aui::ptr", "structaui_1_1ptr.html", null ],
     [ "RenderHints::PushColor", "structRenderHints_1_1PushColor.html", [
@@ -1002,6 +1130,13 @@ var hierarchy =
       [ "RenderHints::PushState", "classRenderHints_1_1PushState.html", null ]
     ] ],
     [ "std::queue", null, [
+      [ "AQueue< Fragment >", "classAQueue.html", null ],
+      [ "AQueue< Callback >", "classAQueue.html", null ],
+      [ "AQueue< _unique< ITexture > >", "classAQueue.html", null ],
+      [ "AQueue< task >", "classAQueue.html", null ],
+      [ "AQueue< GLuint >", "classAQueue.html", null ],
+      [ "AQueue< _unique< T > >", "classAQueue.html", null ],
+      [ "AQueue< std::function< void()> >", "classAQueue.html", null ],
       [ "AQueue< StoredType >", "classAQueue.html", null ]
     ] ],
     [ "R", null, [
@@ -1022,6 +1157,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "gl::Renderbuffer< multisampling >", "classgl_1_1Renderbuffer.html", null ],
+    [ "gl::Renderbuffer< Multisampling::DISABLED >", "classgl_1_1Renderbuffer.html", null ],
     [ "gl::RenderTargetDepth", "structgl_1_1RenderTargetDepth.html", null ],
     [ "gl::RenderTargetRGBA8", "structgl_1_1RenderTargetRGBA8.html", null ],
     [ "gl::impl::resource< T >", "structgl_1_1impl_1_1resource.html", null ],
@@ -1048,6 +1184,9 @@ var hierarchy =
     [ "aui::serialize_raw< T >", "structaui_1_1serialize__raw.html", null ],
     [ "aui::serialize_sized< T >", "structaui_1_1serialize__sized.html", null ],
     [ "std::set", null, [
+      [ "ASet< _< AOverlappingSurface > >", "classASet.html", null ],
+      [ "ASet< AAbstractSignal * >", "classASet.html", null ],
+      [ "ASet< AListModelIndex >", "classASet.html", null ],
       [ "ASet< KeyType, Comparator, Allocator >", "classASet.html", null ]
     ] ],
     [ "std::shared_mutex", null, [
@@ -1056,6 +1195,86 @@ var hierarchy =
       ] ]
     ] ],
     [ "std::shared_ptr", null, [
+      [ "_< MockedViewContainer >", "class__.html", null ],
+      [ "_< ViewPropertiesView >", "class__.html", null ],
+      [ "_< IInputStream >", "class__.html", null ],
+      [ "_< FreeType >", "class__.html", null ],
+      [ "_< Slave >", "class__.html", null ],
+      [ "_< AProgressBar >", "class__.html", null ],
+      [ "_< AScrollbarButton >", "class__.html", null ],
+      [ "_< AScrollAreaViewport >", "class__.html", null ],
+      [ "_< IListModel< T > >", "class__.html", null ],
+      [ "_< IOutputStream >", "class__.html", null ],
+      [ "_< ATimer >", "class__.html", null ],
+      [ "_< IDrawable >", "class__.html", null ],
+      [ "_< UnixIoAsync::Impl >", "class__.html", null ],
+      [ "_< ATreeView >", "class__.html", null ],
+      [ "_< ISqlDriverRow >", "class__.html", null ],
+      [ "_< ACheckBox >", "class__.html", null ],
+      [ "_< IMatcher >", "class__.html", null ],
+      [ "_< Master >", "class__.html", null ],
+      [ "_< AAnimator >", "class__.html", null ],
+      [ "_< ADrawableView >", "class__.html", null ],
+      [ "_< AViewContainer >", "class__.html", null ],
+      [ "_< ARulerView >", "class__.html", null ],
+      [ "_< ALabel >", "class__.html", null ],
+      [ "_< ADoubleNumberPickerField >", "class__.html", null ],
+      [ "_< IListModel< AString > >", "class__.html", null ],
+      [ "_< ATextArea >", "class__.html", null ],
+      [ "_< ASlider::Handle >", "class__.html", null ],
+      [ "_< AEmbedMenuProvider::MenuContainer >", "class__.html", null ],
+      [ "_< ITexture >", "class__.html", null ],
+      [ "_< IRenderer::IPrerenderedString >", "class__.html", null ],
+      [ "_< AScrollbarHandle >", "class__.html", null ],
+      [ "_< ASpacerExpanding >", "class__.html", null ],
+      [ "_< AMenuContainer >", "class__.html", null ],
+      [ "_< AListModelObserver< AString > >", "class__.html", null ],
+      [ "_< AListModelObserver< T > >", "class__.html", null ],
+      [ "_< UIRenderOptimizationTest::TestWindow >", "class__.html", null ],
+      [ "_< AStylesheet >", "class__.html", null ],
+      [ "_< ISqlDriverResult >", "class__.html", null ],
+      [ "_< ATextField >", "class__.html", null ],
+      [ "_< AEmbedAuiWrap::EmbedWindow >", "class__.html", null ],
+      [ "_< OpenGLRenderer >", "class__.html", null ],
+      [ "_< ITreeModel< AString > >", "class__.html", null ],
+      [ "_< AFont >", "class__.html", null ],
+      [ "_< AScrollArea >", "class__.html", null ],
+      [ "_< ViewMock >", "class__.html", null ],
+      [ "_< gl::TextureRenderTarget< gl::InternalFormat::RGBA8, gl::Type::UNSIGNED_BYTE, gl::Format::RGBA > >", "class__.html", null ],
+      [ "_< AAbstractThread >", "class__.html", null ],
+      [ "_< AView >", "class__.html", null ],
+      [ "_< TestWindow >", "class__.html", null ],
+      [ "_< AScrollAreaViewport::Inner >", "class__.html", null ],
+      [ "_< AScrollbar >", "class__.html", null ],
+      [ "_< ASlider >", "class__.html", null ],
+      [ "_< APageView >", "class__.html", null ],
+      [ "_< AFontFamily >", "class__.html", null ],
+      [ "_< AImage >", "class__.html", null ],
+      [ "_< UIMultitouchTest::TestWindow >", "class__.html", null ],
+      [ "_< UIClick::TestWindow >", "class__.html", null ],
+      [ "_< AThread >", "class__.html", null ],
+      [ "_< _< AView > >", "class__.html", null ],
+      [ "_< WinIoAsync::Impl >", "class__.html", null ],
+      [ "_< SliderMock >", "class__.html", null ],
+      [ "_< AWindow >", "class__.html", null ],
+      [ "_< ISqlDatabase >", "class__.html", null ],
+      [ "_< ANumberPickerField >", "class__.html", null ],
+      [ "_< IAnimatedImageFactory >", "class__.html", null ],
+      [ "_< UIViewFocus::TestWindow >", "class__.html", null ],
+      [ "_< UIScrollTest::TestWindow >", "class__.html", null ],
+      [ "_< AAssHelper >", "class__.html", null ],
+      [ "_< IImageFactory >", "class__.html", null ],
+      [ "_< ATreeView::ContainerView >", "class__.html", null ],
+      [ "_< aui::impl::future::CancellationWrapper< aui::impl::future::Future::Inner > >", "class__.html", null ],
+      [ "_< ATabButtonRow >", "class__.html", null ],
+      [ "_< gl::Vao >", "class__.html", null ],
+      [ "_< ARadioButton::Group >", "class__.html", null ],
+      [ "_< AProgressBar::Inner >", "class__.html", null ],
+      [ "_< IListModel< ItemFrom > >", "class__.html", null ],
+      [ "_< AViewContainerBase >", "class__.html", null ],
+      [ "_< AButton >", "class__.html", null ],
+      [ "_< AListViewContainer >", "class__.html", null ],
+      [ "_< ACircleProgressBar::Inner >", "class__.html", null ],
       [ "_< T >", "class__.html", null ]
     ] ],
     [ "uitest::impl::side_value< side >", "structuitest_1_1impl_1_1side__value.html", null ],
@@ -1112,6 +1331,7 @@ var hierarchy =
       [ "StaticVector", "classStaticVector.html", null ],
       [ "testing::UITest", "classtesting_1_1UITest.html", [
         [ "UIClick", "classUIClick.html", null ],
+        [ "UIDataBindingTest", "classUIDataBindingTest.html", null ],
         [ "UIKeyDownRecursive", "classUIKeyDownRecursive.html", null ],
         [ "UIMultitouchTest", "classUIMultitouchTest.html", null ],
         [ "UIPointerBehaviour", "classUIPointerBehaviour.html", null ],
@@ -1201,7 +1421,16 @@ var hierarchy =
       ] ]
     ] ],
     [ "ass::unset_wrap< T >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< AColor >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< AMetric >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< float >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< glm::vec2 >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< Repeat >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< Sizing >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< std::variant< AString, _< IDrawable > > >", "structass_1_1unset__wrap.html", null ],
+    [ "ass::unset_wrap< unsigned >", "structass_1_1unset__wrap.html", null ],
     [ "ass::unset_wrap< T >::unset_wrap_tag", "structass_1_1unset__wrap_1_1unset__wrap__tag.html", null ],
+    [ "User", "structUser.html", null ],
     [ "aui::valid::validator", "structaui_1_1valid_1_1validator.html", [
       [ "aui::valid::chars::latin", "structaui_1_1valid_1_1chars_1_1latin.html", null ],
       [ "aui::valid::chars::numeric", "structaui_1_1valid_1_1chars_1_1numeric.html", null ],
@@ -1230,27 +1459,61 @@ var hierarchy =
       [ "AColor", "classAColor.html", null ]
     ] ],
     [ "std::vector", null, [
-      [ "AVector< AFuture< void > >", "classAVector.html", [
-        [ "AFutureSet< T >", "classAFutureSet.html", null ]
+      [ "AVector< Callback >", "classAVector.html", null ],
+      [ "AVector< FORMATETC >", "classAVector.html", null ],
+      [ "AVector< _< AThreadPool::Worker > >", "classAVector.html", null ],
+      [ "AVector< std::pair< AString, AJson > >", "classAVector.html", [
+        [ "aui::impl::JsonObject", "structaui_1_1impl_1_1JsonObject.html", null ]
       ] ],
+      [ "AVector< ALinearGradientBrush::ColorEntry >", "classAVector.html", null ],
+      [ "AVector< ass::Rule >", "classAVector.html", null ],
+      [ "AVector< ASplitterHelper::Item >", "classAVector.html", null ],
+      [ "AVector< Line >", "classAVector.html", null ],
+      [ "AVector< AMenuItem >", "classAVector.html", null ],
+      [ "AVector< AOptional< AFont::Character > >", "classAVector.html", null ],
+      [ "AVector< ass::PropertyListRecursive::ConditionalPropertyList >", "classAVector.html", null ],
+      [ "AVector< Any >", "classAVector.html", null ],
+      [ "AVector< APerformanceSection::Data >", "classAVector.html", null ],
+      [ "AVector< int >", "classAVector.html", null ],
       [ "AVector< AString >", "classAVector.html", [
         [ "AStringVector", "classAStringVector.html", [
           [ "ACommandLineArgs", "classACommandLineArgs.html", null ]
         ] ]
       ] ],
-      [ "AVector< std::pair< AString, AJson > >", "classAVector.html", [
-        [ "aui::impl::JsonObject", "structaui_1_1impl_1_1JsonObject.html", null ]
-      ] ],
+      [ "AVector< _< IBackgroundEffect > >", "classAVector.html", null ],
+      [ "AVector< ATreeModel::Item >", "classAVector.html", null ],
+      [ "AVector< AVariant >", "classAVector.html", null ],
+      [ "AVector< StoredType >", "classAVector.html", null ],
+      [ "AVector< Util::Rect >", "classAVector.html", null ],
+      [ "AVector< size_t >", "classAVector.html", null ],
+      [ "AVector< _< ass::prop::IPropertyBase > >", "classAVector.html", null ],
       [ "AVector< Data >", "classAVector.html", null ],
-      [ "AVector< Line >", "classAVector.html", null ],
-      [ "AVector< _< AWordWrappingEngineBase::Entry > >", "classAVector.html", null ],
+      [ "AVector< CharEntry >", "classAVector.html", null ],
       [ "AVector< FramebufferFromPool >", "classAVector.html", null ],
+      [ "AVector< AViewEntry >", "classAVector.html", null ],
+      [ "AVector< _< AView > >", "classAVector.html", null ],
+      [ "AVector< _< ass::IAssSubSelector > >", "classAVector.html", null ],
+      [ "AVector< pollfd >", "classAVector.html", null ],
+      [ "AVector< AStacktrace::Entry >", "classAVector.html", null ],
+      [ "AVector< AAdvancedGridLayout::GridCell >", "classAVector.html", null ],
+      [ "AVector< AVector< _< AView > > >", "classAVector.html", null ],
+      [ "AVector< _< gl::Framebuffer::IRenderTarget > >", "classAVector.html", null ],
+      [ "AVector< _< Node > >", "classAVector.html", null ],
+      [ "AVector< AInput::Key >", "classAVector.html", null ],
+      [ "AVector< gl::Vao::Buffer >", "classAVector.html", null ],
+      [ "AVector< OpenGLPrerenderedString::Vertex >", "classAVector.html", null ],
+      [ "AVector< InitializationVariant >", "classAVector.html", null ],
+      [ "AVector< GridCell >", "classAVector.html", null ],
+      [ "AVector< _< slot > >", "classAVector.html", null ],
+      [ "AVector< AFuture< void > >", "classAVector.html", [
+        [ "AFutureSet< T >", "classAFutureSet.html", null ]
+      ] ],
       [ "AVector< StoredType, Allocator >", "classAVector.html", null ]
     ] ],
     [ "OpenGLPrerenderedString::Vertex", "structOpenGLPrerenderedString_1_1Vertex.html", null ],
     [ "aui::ui_building::view_helper< ViewFactory >", "structaui_1_1ui__building_1_1view__helper.html", [
-      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
       [ "aui::ui_building::layouted_container_factory< AVerticalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
+      [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, AButtonEx >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ],
       [ "aui::ui_building::layouted_container_factory< AHorizontalLayout, ARadioGroup >", "structaui_1_1ui__building_1_1layouted__container__factory.html", null ]
     ] ],
     [ "aui::ui_building::view_helper< Expanding >", "structaui_1_1ui__building_1_1view__helper.html", [
@@ -1287,6 +1550,15 @@ var hierarchy =
     [ "ViewAssertionVisible", "structViewAssertionVisible.html", null ],
     [ "aui::animation_curves::ViscousFluid", "classaui_1_1animation__curves_1_1ViscousFluid.html", null ],
     [ "std::weak_ptr", null, [
+      [ "_weak< Node >", "struct__weak.html", null ],
+      [ "_weak< Timer >", "struct__weak.html", null ],
+      [ "_weak< ATreeView::ItemView >", "struct__weak.html", null ],
+      [ "_weak< AMenuContainer >", "struct__weak.html", null ],
+      [ "_weak< AView >", "struct__weak.html", null ],
+      [ "_weak< AOverlappingSurface >", "struct__weak.html", null ],
+      [ "_weak< typename AFuture< T >::Inner >", "struct__weak.html", null ],
+      [ "_weak< ARadioButton >", "struct__weak.html", null ],
+      [ "_weak< AViewContainerBase >", "struct__weak.html", null ],
       [ "_weak< T >", "struct__weak.html", null ]
     ] ],
     [ "ASqlBuilder::WhereStatement::WhereExpr", "classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html", null ],

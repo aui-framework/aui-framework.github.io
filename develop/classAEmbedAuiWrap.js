@@ -1,11 +1,28 @@
 var classAEmbedAuiWrap =
 [
     [ "EmbedWindow", "classAEmbedAuiWrap_1_1EmbedWindow.html", "classAEmbedAuiWrap_1_1EmbedWindow" ],
+    [ "AEmbedAuiWrap", "classAEmbedAuiWrap.html#a3a75361f48020c9cc822def904fa1bf7", null ],
+    [ "clearFocus", "classAEmbedAuiWrap.html#a43a99d1b2bd7cb1194717a2fc7f00243", null ],
+    [ "getWindow", "classAEmbedAuiWrap.html#a70d8f97b95db940ea6b6f644ab344436", null ],
     [ "isUIConsumesMouseAt", "classAEmbedAuiWrap.html#a94e753338ddc99688833742fcc0e192a", null ],
     [ "loop", "classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8", null ],
     [ "notifyProcessMessages", "classAEmbedAuiWrap.html#aeff1e827ec7eb422c407556263583a3e", null ],
     [ "onCharEntered", "classAEmbedAuiWrap.html#a3375a65c1959e874c3d043fb98798ce4", null ],
+    [ "onKeyPressed", "classAEmbedAuiWrap.html#a200f67f5d621a98382bc80ce71e7b764", null ],
+    [ "onKeyReleased", "classAEmbedAuiWrap.html#a7b8e32d68a803b2d53c0b34e8414c034", null ],
+    [ "onNotifyProcessMessages", "classAEmbedAuiWrap.html#a77ae8f1cf426c6a41ac898e16576001a", null ],
     [ "onPointerMove", "classAEmbedAuiWrap.html#a609ccf3fb0e2ab4911ad19d9e509cd6b", null ],
     [ "onPointerPressed", "classAEmbedAuiWrap.html#aa928ba70aa610a4d702ba2f85dbccea9", null ],
-    [ "onPointerReleased", "classAEmbedAuiWrap.html#a75d1be9f96f95913cdcfcef1e0b202fd", null ]
+    [ "onPointerReleased", "classAEmbedAuiWrap.html#a75d1be9f96f95913cdcfcef1e0b202fd", null ],
+    [ "onScroll", "classAEmbedAuiWrap.html#a7717ad0b0466cc1669944d6dab4340d5", null ],
+    [ "requiresRedraw", "classAEmbedAuiWrap.html#a85faa15aa4b39f1e4826a3f40fd59bb2", null ],
+    [ "setContainer", "classAEmbedAuiWrap.html#a0b51a497140661d7251b5b1694733f2f", null ],
+    [ "setCustomDpiRatio", "classAEmbedAuiWrap.html#a9a9e2a09c704501a26dbff02c1c585dd", null ],
+    [ "setViewportSize", "classAEmbedAuiWrap.html#acb73d0f6ac42caac00e81517c3dd17fb", null ],
+    [ "windowInit", "classAEmbedAuiWrap.html#aded4a2888cd8d2222468bb0c693cc7c2", null ],
+    [ "windowMakeCurrent", "classAEmbedAuiWrap.html#af130c619a009af8497d18586daa7e9a9", null ],
+    [ "windowRender", "classAEmbedAuiWrap.html#acbfeb3a3d92f2dc914751a374c4a03fc", null ],
+    [ "mContainer", "classAEmbedAuiWrap.html#a33042a3662a90f88eb3e4519b584331b", null ],
+    [ "mCustomDpiRatio", "classAEmbedAuiWrap.html#a0f43cedfa901c4303bdc70a594e50fa7", null ],
+    [ "mSize", "classAEmbedAuiWrap.html#a05809fbefa18a52a584ec769a675652c", null ]
 ];

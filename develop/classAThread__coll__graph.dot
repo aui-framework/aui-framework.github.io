@@ -1,0 +1,32 @@
+digraph "AThread"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AThread",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Represents a user-defined thread."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="AAbstractThread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAAbstractThread.html",tooltip="Represents an abstract thread. Not all threads are created through AThread - these are interfaced wit..."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mThreadName" ,fontname="Helvetica"];
+  Node3 [label="AString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAString.html",tooltip="Represents a Unicode character string."];
+  Node4 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="std::u16string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mMessageQueue" ,fontname="Helvetica"];
+  Node5 [label="AMessageQueue\< Mutex,\l Args \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAMessageQueue.html",tooltip="Universal thread-safe message (callback) queue implementation."];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cv" ,fontname="Helvetica"];
+  Node6 [label="AConditionVariable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAConditionVariable.html",tooltip="Represents a condition variable."];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex" ,fontname="Helvetica"];
+  Node7 [label="AMutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structAMutex.html",tooltip="Basic syscall-based synchronization primitive."];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="aui::detail::MutexExtras\l\< std::mutex \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaui_1_1detail_1_1MutexExtras.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="std::mutex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="AObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAObject.html",tooltip="A base object class."];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="AObjectBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classAObjectBase.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="aui::noncopyable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaui_1_1noncopyable.html",tooltip="Forbids copy of your class."];
+  Node13 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="std::enable_shared_from\l_this\< AObject \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

@@ -1,14 +1,28 @@
 var classAScrollArea =
 [
-    [ "Builder", "classAScrollArea_1_1Builder.html", null ],
+    [ "Builder", "classAScrollArea_1_1Builder.html", "classAScrollArea_1_1Builder" ],
+    [ "AScrollArea", "classAScrollArea.html#a708418e0713dce732fd54275c43e6758", null ],
+    [ "AScrollArea", "classAScrollArea.html#a7c647e666c0630ecf047d07670d08d4d", null ],
+    [ "contents", "classAScrollArea.html#ae92f8a7def1b3f9c1d056ecdd366a7fc", null ],
     [ "getContentMinimumHeight", "classAScrollArea.html#ab7c5b9f1c56a5786bc90e8fa1a6996d0", null ],
     [ "getContentMinimumWidth", "classAScrollArea.html#a767ffd848bb15e9ab986328eceedbdce", null ],
+    [ "horizontalScrollbar", "classAScrollArea.html#a0df70794576ab75903d9c02c3c07c62b", null ],
     [ "onGesture", "classAScrollArea.html#afbcd54f9f12a396420748a06838b87de", null ],
     [ "onPointerPressed", "classAScrollArea.html#a1551cddc1d9b66876c12325fd4a41f75", null ],
     [ "onPointerReleased", "classAScrollArea.html#a4b1d066e961384ed8792d5a307ccdbf0", null ],
     [ "onScroll", "classAScrollArea.html#a1ec97c0e09e70449d9644680e1300b8d", null ],
+    [ "scroll", "classAScrollArea.html#a45f4287ecc0376f5aa78b529e3b363e6", null ],
+    [ "scroll", "classAScrollArea.html#a77ed1a8d17432939944c1b93379df029", null ],
+    [ "scroll", "classAScrollArea.html#ab11ea391dd529e4d3d8b134b894c9c90", null ],
     [ "scrollTo", "classAScrollArea.html#a563fa4f906204d13ea57de488f877e62", null ],
     [ "scrollTo", "classAScrollArea.html#af80d183863ac414847460c0f6e8b8985", null ],
+    [ "setContents", "classAScrollArea.html#aa19976443fcf60c239113be0879cf972", null ],
+    [ "setScroll", "classAScrollArea.html#aed2fa092c9f0dc049fb55a86bf47064f", null ],
+    [ "setScrollbarAppearance", "classAScrollArea.html#a56133a7927954e574d4656ef133715c2", null ],
+    [ "setScrollX", "classAScrollArea.html#a080ceae4c81454aaf54b4a14167cb39a", null ],
+    [ "setScrollY", "classAScrollArea.html#a461ccfc8584141b714412ea1175ec687", null ],
+    [ "setSize", "classAScrollArea.html#ae2f2ccb3a706952f6686c3968afe9cb6", null ],
     [ "setStickToEnd", "classAScrollArea.html#a2770daab18df7595e3977685d80a242f", null ],
-    [ "setWheelScrollable", "classAScrollArea.html#a9999759647617833d28cf954a3ca7635", null ]
+    [ "setWheelScrollable", "classAScrollArea.html#a9999759647617833d28cf954a3ca7635", null ],
+    [ "verticalScrollbar", "classAScrollArea.html#af4f1276dbb626b133f26303f1804be08", null ]
 ];

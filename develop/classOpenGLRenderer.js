@@ -1,10 +1,21 @@
 var classOpenGLRenderer =
 [
-    [ "FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", null ],
+    [ "FontEntryData", "structOpenGLRenderer_1_1FontEntryData.html", "structOpenGLRenderer_1_1FontEntryData" ],
+    [ "OpenGLRenderer", "classOpenGLRenderer.html#a90d45fb2cbf2da8cb3c08a37017e4e0c", null ],
+    [ "~OpenGLRenderer", "classOpenGLRenderer.html#a610c944c13abff72b83438ae10a1530c", null ],
+    [ "beginPaint", "classOpenGLRenderer.html#a30c38541d90220182fe5e110ac03cc66", null ],
+    [ "bindTemporaryVao", "classOpenGLRenderer.html#af5506abccec4681b73266960755fade8", null ],
     [ "boxShadow", "classOpenGLRenderer.html#aed4a5c52842cfd79a04e118b27699bb1", null ],
     [ "boxShadowInner", "classOpenGLRenderer.html#ac3761c862d5f1682cf8f74512d7b521d", null ],
+    [ "createNewTexture", "classOpenGLRenderer.html#a66d119c402de9535e9565650ad60fd4d", null ],
+    [ "drawRectImpl", "classOpenGLRenderer.html#a033a575adb2820d07578d2697ab2ed0b", null ],
+    [ "endPaint", "classOpenGLRenderer.html#ae1c5ed85f971543cb42c7646289a9865", null ],
+    [ "getDefaultFb", "classOpenGLRenderer.html#a285a3180a578f89d4f8bc7cd627e330f", null ],
+    [ "getProjectionMatrix", "classOpenGLRenderer.html#aa6fd07f69c1b9911c5fcb6e03a5963a0", null ],
+    [ "identityUv", "classOpenGLRenderer.html#adaff79306426684815c30fed529f752a", null ],
+    [ "isVaoAvailable", "classOpenGLRenderer.html#a9a11b556c90d9e0a8c74563ab1c8ead5", null ],
     [ "lines", "classOpenGLRenderer.html#a980988b316dce7203a9ed09f071435cd", null ],
-    [ "lines", "classOpenGLRenderer.html#aa03e448927fac94b0855e71bab9355f5", null ],
+    [ "lines", "classOpenGLRenderer.html#af0b5d3d21dee45445264737156b28c86", null ],
     [ "newMultiStringCanvas", "classOpenGLRenderer.html#a9a4006a09de6c715036e66468c103e5d", null ],
     [ "newRenderViewToTexture", "classOpenGLRenderer.html#af81280a6d8a48a9f2375becbe76b6ced", null ],
     [ "points", "classOpenGLRenderer.html#a126bfa147347b10263b1746c4e1a66b9", null ],
@@ -19,5 +30,7 @@ var classOpenGLRenderer =
     [ "roundedRectangleBorder", "classOpenGLRenderer.html#aa1e7d7d279fd543976e3c177c081f0de", null ],
     [ "setBlending", "classOpenGLRenderer.html#a2d847e5eea2d4780e8bbc6f5ff85452d", null ],
     [ "squareSector", "classOpenGLRenderer.html#a02a654c469882267c3a5d02a8fecb1ef", null ],
-    [ "string", "classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274", null ]
+    [ "string", "classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274", null ],
+    [ "OpenGLMultiStringCanvas", "classOpenGLRenderer.html#a74289c1cd21f56409c914d6590c72e03", null ],
+    [ "OpenGLPrerenderedString", "classOpenGLRenderer.html#aa3a0af9850217d5d6f79742343a2ab9a", null ]
 ];

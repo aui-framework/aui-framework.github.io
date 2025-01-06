@@ -1,5 +1,6 @@
 var classIInputStream =
 [
+    [ "~IInputStream", "classIInputStream.html#a5a1577b291c2bccc8f3c7e3b8a343450", null ],
     [ "deserialize", "classIInputStream.html#a36c4cf58fa8466b92d9af1eb09e25d47", null ],
     [ "operator>>", "classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2", null ],
     [ "operator>>", "classIInputStream.html#a1840a69ad7ecad3ab4cdf58aed3823e2", null ],

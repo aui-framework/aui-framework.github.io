@@ -1,15 +1,75 @@
 var group__useful__templates =
 [
-    [ "aui::parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
-    [ "AOptional< T >", "classAOptional.html", [
+    [ "AOptional", "classAOptional.html", [
+      [ "AOptional", "classAOptional.html#a71b5a85b2e2c09b9d8e4962114b846ec", null ],
+      [ "AOptional", "classAOptional.html#ac4d60eb63686f40192a2ef2458b4f5f3", null ],
+      [ "AOptional", "classAOptional.html#affcac92fdfafc1696c9d589c67dc0f35", null ],
+      [ "AOptional", "classAOptional.html#affcac92fdfafc1696c9d589c67dc0f35", null ],
+      [ "AOptional", "classAOptional.html#a4dfc9de3cfa0c03dd57bc9745d63615f", null ],
+      [ "AOptional", "classAOptional.html#a10c135861ad636f571b1cca65a76eca8", null ],
+      [ "AOptional", "classAOptional.html#ae132e49ce67cc61c1ce81063e1563666", null ],
+      [ "AOptional", "classAOptional.html#a6bca0289e612c07f19baf69126a677ed", null ],
+      [ "~AOptional", "classAOptional.html#ac5494fca2a3514394a785624cb6f7b59", null ],
+      [ "emplace", "classAOptional.html#a04f057dedd91ee1361c5dab02f4f8f4a", null ],
+      [ "hasValue", "classAOptional.html#a1965f0f4ae5a1f509ec519e512ac7e70", null ],
       [ "map", "classAOptional.html#af3365fab5f76668ae9728da5358c6df2", null ],
+      [ "operator bool", "classAOptional.html#abe67e2b2070a1e482a9c517eee7630a5", null ],
+      [ "operator*", "classAOptional.html#ae470f0454c8fec44241c8ca325b95bad", null ],
+      [ "operator*", "classAOptional.html#ae41530bb2424ce88b3aaccab3eef2161", null ],
+      [ "operator->", "classAOptional.html#aafbf4d81adf13b41d29706cd1310e3c5", null ],
+      [ "operator->", "classAOptional.html#a47086cdfa183b59693c7b40b2a4c49f3", null ],
+      [ "operator=", "classAOptional.html#a064864940c4b0985eabf34b986a56dd0", null ],
+      [ "operator=", "classAOptional.html#ae3b43a99e334d79f52bc45791ece1dce", null ],
+      [ "operator=", "classAOptional.html#aee0e0664351c39fd39dec8731ffe8edd", null ],
+      [ "operator=", "classAOptional.html#ae9b37179b2f1cc07593bfb1226b81815", null ],
+      [ "operator=", "classAOptional.html#a16355043bb1bcebbf9b04571c7700215", null ],
+      [ "operator=", "classAOptional.html#aa42f618facb60edc27e33fd747eaa091", null ],
+      [ "operator=", "classAOptional.html#aaca650247563e302a3bba8beed62dd4a", null ],
+      [ "operator==", "classAOptional.html#a911d34bfda3d31f64d86d84ec9fd2849", null ],
+      [ "operator==", "classAOptional.html#a3dc186b53b7a8d4c5227b5defda18912", null ],
+      [ "operator==", "classAOptional.html#ac0b3cdedd41dbd2a625c8ec544c0875c", null ],
+      [ "ptr", "classAOptional.html#afcdf02ce788590c3a73143654746f3ad", null ],
+      [ "ptr", "classAOptional.html#a47af9d30b280eb67252467a409a3b32a", null ],
+      [ "reset", "classAOptional.html#a2254025a9846316f23b04436429567bf", null ],
+      [ "value", "classAOptional.html#aa5980794e5545c2e8c3eea9d3f2b675d", null ],
+      [ "value", "classAOptional.html#a1e1607168a816f199055ca2e7f4f5de6", null ],
       [ "valueOr", "classAOptional.html#a71c3dc1b2ba9b9017348e471833b5d2c", null ],
-      [ "valueOrException", "classAOptional.html#ac2f1093971087a13def94bbd620b7735", null ],
-      [ "valueOrException", "classAOptional.html#a22e06483655aac11d8d1307086d5ba34", null ]
+      [ "valueOrException", "classAOptional.html#acc7b1b682f3989a214d7bafe30e97d95", null ],
+      [ "valueOrException", "classAOptional.html#aa99df63ab91dd9a6d12cb36cda74c216", null ]
     ] ],
-    [ "aui::zip< Containers >", "structaui_1_1zip.html", [
-      [ "iterator", "structaui_1_1zip_1_1iterator.html", null ]
+    [ "zip", "structaui_1_1zip.html", [
+      [ "iterator", "structaui_1_1zip_1_1iterator.html", [
+        [ "iterator", "structaui_1_1zip_1_1iterator.html#af495544b78c3342bf349156c1df77baf", null ],
+        [ "operator!=", "structaui_1_1zip_1_1iterator.html#a8736404199f8cbbd7e2810a26c445f40", null ],
+        [ "operator*", "structaui_1_1zip_1_1iterator.html#a647ec56c1aa49ff10140ac24a6d167eb", null ],
+        [ "operator++", "structaui_1_1zip_1_1iterator.html#abda5fcc4af3c76ea031af21cb1920905", null ],
+        [ "operator==", "structaui_1_1zip_1_1iterator.html#a0b7207e10c32db0dec67100b1229ba1d", null ],
+        [ "iterators_", "structaui_1_1zip_1_1iterator.html#a968cdaaef2fc15c9dd0adfdff6197220", null ]
+      ] ],
+      [ "zip", "structaui_1_1zip.html#aebfdea332dd752e2e6ab1c82cb250db7", null ],
+      [ "begin", "structaui_1_1zip.html#a0d9ee3a82154f5758bd82ac29d41501c", null ],
+      [ "end", "structaui_1_1zip.html#aa1f0b67ea769740be5705a0328e72106", null ]
     ] ],
-    [ "aui::ranged_number< UnderlyingType, min, max >", "structaui_1_1ranged__number.html", null ],
-    [ "aui::fast_pimpl< T, storageSize, storageAlignment >", "structaui_1_1fast__pimpl.html", null ]
+    [ "ranged_number", "structaui_1_1ranged__number.html", [
+      [ "ranged_number", "structaui_1_1ranged__number.html#adf1d1fa555ac31337116b54bf8e2f441", null ],
+      [ "ranged_number", "structaui_1_1ranged__number.html#a46a79cfcec68e8a4397f5da5cf9bc91f", null ],
+      [ "operator UnderlyingType", "structaui_1_1ranged__number.html#a913e61084116491586c07066fa5b761e", null ]
+    ] ],
+    [ "fast_pimpl", "structaui_1_1fast__pimpl.html", [
+      [ "fast_pimpl", "structaui_1_1fast__pimpl.html#acc7e2689c3d25e6bea449b0adccf72f3", null ],
+      [ "fast_pimpl", "structaui_1_1fast__pimpl.html#a6e0b169d444f2b7b65972dcea6dae986", null ],
+      [ "fast_pimpl", "structaui_1_1fast__pimpl.html#a824bcff9f08bc81b10b8a3fe402c0b3b", null ],
+      [ "~fast_pimpl", "structaui_1_1fast__pimpl.html#a5f61a433612d5aa9a47bf8c48dc09e15", null ],
+      [ "operator*", "structaui_1_1fast__pimpl.html#a46b436da7d9f5637a4c14b54fdf6601f", null ],
+      [ "operator*", "structaui_1_1fast__pimpl.html#a8c33e72f75b1d4d9d137527f8318e6e3", null ],
+      [ "operator->", "structaui_1_1fast__pimpl.html#a4ef9271335fc9abddf0106c0e1e37ecb", null ],
+      [ "operator->", "structaui_1_1fast__pimpl.html#a257f80699f4d702529c84ae3edda1f3d", null ],
+      [ "operator=", "structaui_1_1fast__pimpl.html#a089628575714c728ac2170b6b4be6011", null ],
+      [ "operator=", "structaui_1_1fast__pimpl.html#ae2292c7969b149f924bec47f9c859a7f", null ],
+      [ "operator=", "structaui_1_1fast__pimpl.html#aacd845dc8f7cf7650bf9eac988a44d70", null ],
+      [ "ptr", "structaui_1_1fast__pimpl.html#ae2254f494b8afe65f2006ea3bf870acf", null ],
+      [ "ptr", "structaui_1_1fast__pimpl.html#a090fa0bf58dba6e78862e808628c7ddb", null ],
+      [ "value", "structaui_1_1fast__pimpl.html#a415cd134cf3e66c50cfe0956f4d004dd", null ],
+      [ "value", "structaui_1_1fast__pimpl.html#ae0aadb2d0e2868a74050439df7044c8a", null ]
+    ] ]
 ];

@@ -1,11 +1,12 @@
 var classASqlBuilder =
 [
-    [ "Delete", "classASqlBuilder_1_1Delete.html", null ],
-    [ "Insert", "classASqlBuilder_1_1Insert.html", null ],
+    [ "Delete", "classASqlBuilder_1_1Delete.html", "classASqlBuilder_1_1Delete" ],
+    [ "Insert", "classASqlBuilder_1_1Insert.html", "classASqlBuilder_1_1Insert" ],
     [ "Select", "classASqlBuilder_1_1Select.html", "classASqlBuilder_1_1Select" ],
     [ "Statement", "classASqlBuilder_1_1Statement.html", "classASqlBuilder_1_1Statement" ],
-    [ "Update", "classASqlBuilder_1_1Update.html", null ],
+    [ "Update", "classASqlBuilder_1_1Update.html", "classASqlBuilder_1_1Update" ],
     [ "WhereStatement", "classASqlBuilder_1_1WhereStatement.html", "classASqlBuilder_1_1WhereStatement" ],
+    [ "ASqlBuilder", "classASqlBuilder.html#aad1080442f9cd4154625c18de9fd3f7d", null ],
     [ "ins", "classASqlBuilder.html#a05f160d7bbfebe339f2aa8ce9a3d95a1", null ],
     [ "insert", "classASqlBuilder.html#a85275c3681ffeae3701a350cea815cc5", null ],
     [ "insertORM", "classASqlBuilder.html#af7f17585eb009307afc1cb9a42fd0f10", null ],

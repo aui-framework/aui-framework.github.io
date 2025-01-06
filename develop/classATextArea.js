@@ -1,12 +1,27 @@
 var classATextArea =
 [
+    [ "Iterator", "classATextArea.html#abe0fd374a3469c38927db9cea2033605", null ],
+    [ "ATextArea", "classATextArea.html#a822389faf39fa459373762dd57ceffff", null ],
+    [ "ATextArea", "classATextArea.html#a6a9c99e6f44e5b649ec31a2ce6cff0f2", null ],
+    [ "~ATextArea", "classATextArea.html#a46d8dc443cc8f430c90ad23c65e2db63", null ],
+    [ "capturesFocus", "classATextArea.html#a77878bda34d4f3eda7e5277ca2e65189", null ],
     [ "cursorIndexByPos", "classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c", null ],
+    [ "fillStringCanvas", "classATextArea.html#aa1ffb3b8e1a125c0ceb62f6bd7985c41", null ],
     [ "getCursorPosition", "classATextArea.html#a166ab21304b9dd1a7393738c8589e48c", null ],
+    [ "getPosByIndex", "classATextArea.html#a4402fb2892f63fb87eb1829e0407fe09", null ],
+    [ "getText", "classATextArea.html#a9b7a8205e326af6545b470a047f155c1", null ],
     [ "isPasswordField", "classATextArea.html#a70958930a546776094688e422c110594", null ],
     [ "length", "classATextArea.html#af937c3bf26c1faf077deed94d25641b2", null ],
-    [ "text", "classATextArea.html#a270fa624c5bb3301b00c6d5f1e8fc3ca", null ],
+    [ "onCharEntered", "classATextArea.html#a875c2291ffd5e9e5aa25f4a70ed61fdb", null ],
+    [ "render", "classATextArea.html#a4f0a6ae929a58741be335ea4622305b0", null ],
+    [ "setSize", "classATextArea.html#a1a4a066196619466236ba21d0618ffae", null ],
+    [ "setText", "classATextArea.html#a13675c1cbf03c4e2c247420376779422", null ],
     [ "textInputType", "classATextArea.html#a213968d5560eeab22c9855090b33ffae", null ],
     [ "toString", "classATextArea.html#af74dca1f8abfdcdcb5aab416fda78be7", null ],
+    [ "typeableErase", "classATextArea.html#a99412c57c9aa33924e136714e278a32d", null ],
+    [ "typeableFind", "classATextArea.html#ae74d52ae170d513e5132e4228edc4216", null ],
     [ "typeableInsert", "classATextArea.html#a197fd52af34a4333a6e8dc96ba84399b", null ],
-    [ "typeableInsert", "classATextArea.html#aed8e7bf3dbc09389c0b0a8699a6d8969", null ]
+    [ "typeableInsert", "classATextArea.html#aed8e7bf3dbc09389c0b0a8699a6d8969", null ],
+    [ "typeableReverseFind", "classATextArea.html#af2ffdc83c3519b38fb8fe19d9e2f15bb", null ],
+    [ "UITextArea", "classATextArea.html#a69347ca9f3b1b1e32779f851800ee785", null ]
 ];

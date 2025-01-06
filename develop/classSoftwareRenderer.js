@@ -2,8 +2,11 @@ var classSoftwareRenderer =
 [
     [ "boxShadow", "classSoftwareRenderer.html#a3a30b62e82f49f12f8cff51c30822fcc", null ],
     [ "boxShadowInner", "classSoftwareRenderer.html#a950742a6ef8cff36e4aa8351d12359a4", null ],
+    [ "createNewTexture", "classSoftwareRenderer.html#ab4ee5140e0164a9f80035d5f2743ab23", null ],
+    [ "drawLine", "classSoftwareRenderer.html#a6cc7d290fa193e9d5dcc219956e2703d", null ],
+    [ "getProjectionMatrix", "classSoftwareRenderer.html#aa7d1ceb58c9ba994a2630114e3a8af45", null ],
     [ "lines", "classSoftwareRenderer.html#ac8617e868ad6d28d8155de09b9ce3c9f", null ],
-    [ "lines", "classSoftwareRenderer.html#a956dafb2a99c531fa6c30d2646eecb1c", null ],
+    [ "lines", "classSoftwareRenderer.html#ab3b4455d67cea68fbf9a9ba123608b81", null ],
     [ "newMultiStringCanvas", "classSoftwareRenderer.html#a04464150e8a26e635963eb036080fa31", null ],
     [ "newRenderViewToTexture", "classSoftwareRenderer.html#afbf1831638970e6b7d585a19c8186c3a", null ],
     [ "points", "classSoftwareRenderer.html#a21ce91449d708a08269338801642609b", null ],
