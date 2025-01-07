@@ -25,9 +25,11 @@
 var NAVTREE =
 [
     [ "Reference", null, [
-      [ "All AUI modules", "index.html", null ],
+      [ "All AUI Modules", "index.html", null ],
       [ "All AUI Classes", "classes.html", null ],
-      [ "All namespaces", "namespaces.html", "namespaces" ],
+      [ "All Namespaces", "namespaces.html", "namespaces" ],
+      [ "All Views", "group__useful__views.html", null ],
+      [ "All ASS Properties", "group__ass__properties.html", null ],
       [ "All AUI CMake commands", null, [
         [ "aui_app", "md_docs_2aui__app.html", null ],
         [ "aui_executable", "md_docs_2aui__executable.html", null ],

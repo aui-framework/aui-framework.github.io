@@ -25,9 +25,11 @@
 var menudata={children:[
 {text:"Main page",url:"index.html"},
 {text:"Reference",url:"usergroup0.html",children:[
-{text:"All AUI modules",url:"index.html"},
+{text:"All AUI Modules",url:"index.html"},
 {text:"All AUI Classes",url:"classes.html"},
-{text:"All namespaces",url:"namespaces.html"},
+{text:"All Namespaces",url:"namespaces.html"},
+{text:"All Views",url:"group__useful__views.html"},
+{text:"All ASS Properties",url:"group__ass__properties.html"},
 {text:"All AUI CMake commands",url:"usergroup1.html",children:[
 {text:"aui_app",url:"md_docs_2aui__app.html"},
 {text:"aui_executable",url:"md_docs_2aui__executable.html"},
