@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['emits_3814',['emits',['../group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865',1,'ASignal.h']]]
+  ['c_0',['c',['../group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a',1,'ass']]]
 ];

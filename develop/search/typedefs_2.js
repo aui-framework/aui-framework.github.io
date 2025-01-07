@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['id_3815',['id',['../classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b',1,'AAbstractThread']]]
+  ['emits_0',['emits',['../group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865',1,'ASignal.h']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getting_20started_20with_20aui_3907',['Getting started with AUI',['../md_docs_Getting_started_with_AUI.html',1,'']]]
+  ['deprecated_20list_0',['Deprecated List',['../deprecated.html',1,'']]],
+  ['devtools_1',['Devtools',['../md_docs_2Devtools.html',1,'']]]
 ];

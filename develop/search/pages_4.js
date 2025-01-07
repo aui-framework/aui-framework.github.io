@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ide_20plugins_3908',['IDE Plugins',['../md_docs_IDE_Plugins.html',1,'']]]
+  ['flags_0',['AUI configure flags',['../md_docs_2AUI_01configure_01flags.html',1,'']]],
+  ['framework_1',['AUI Framework',['../index.html',1,'']]]
 ];
