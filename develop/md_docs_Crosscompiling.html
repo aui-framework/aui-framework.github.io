@@ -102,12 +102,12 @@ The CMAKE_TOOLCHAIN_FILE way</h1>
 <p>In Android, a Gradle-driven project provides the toolchain for you. You don't even need to specify CMAKE_TOOLCHAIN_FILE, Gradle does it for you.</p>
 <p>In iOS, there's no "official" toolchain so there are community-provided toolchains (like the <a href="https://raw.githubusercontent.com/aui-framework/aui/master/cmake/toolchains/arm64-ios.cmake">one used in AUI</a>).</p>
 <p>AUI.Boot forwards <code>CMAKE_TOOLCHAIN_FILE</code> across all the dependencies.</p>
-<h2><a class="anchor" id="autotoc_md121"></a>
+<h2><a class="anchor" id="autotoc_md120"></a>
 Example</h2>
 <p>Assuming working directory is the build directory:</p>
 <p>To configure the project use </p><div class="fragment"><div class="line">cmake -DAUI_BUILD_FOR=android ..</div>
 </div><!-- fragment --><p>To build the project use </p><div class="fragment"><div class="line">cmake --build . -t apps</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md123"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md121"></a>
 Supported platforms</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -117,7 +117,7 @@ Supported platforms</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>ios</code>   </td><td class="markdownTableBodyNone">macOS   </td><td class="markdownTableBodyNone">iOS   </td><td class="markdownTableBodyNone">Xcode   </td><td class="markdownTableBodyNone"><code>${CMAKE_BINARY_DIR}/app_project</code>   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md124"></a>
+<h2><a class="anchor" id="autotoc_md123"></a>
 Limitations</h2>
 <ol type="1">
 <li>Variables defined in the configure step (including the ones specified with command line by <code>-DVAR=VALUE</code> syntax) are not forwarded to the child CMake configure process. To bypass the limitation, use <code>auib_mark_var_forwardable(VAR)</code> function, where <code>VAR</code> is your variable name.</li>
