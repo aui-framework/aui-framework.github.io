@@ -142,9 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b0408cade52feba74143457055b90e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a761507cc8a2a9fa0e6432f7e1fa2e6df" id="r_a761507cc8a2a9fa0e6432f7e1fa2e6df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classADeque.html">self</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a761507cc8a2a9fa0e6432f7e1fa2e6df">operator&lt;&lt;</a> (StoredType &amp;&amp;rhs) noexcept</td></tr>
 <tr class="separator:a761507cc8a2a9fa0e6432f7e1fa2e6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c2cfa10e0873f3a579ca3249f5c75e6" id="r_a2c2cfa10e0873f3a579ca3249f5c75e6"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer, std::enable_if_t&lt;!std::is_convertible_v&lt; OtherContainer, StoredType &gt;, bool &gt; = true&gt; </td></tr>
-<tr class="memitem:a2c2cfa10e0873f3a579ca3249f5c75e6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classADeque.html">self</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2c2cfa10e0873f3a579ca3249f5c75e6">operator&lt;&lt;</a> (const OtherContainer &amp;c) noexcept</td></tr>
-<tr class="separator:a2c2cfa10e0873f3a579ca3249f5c75e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1640a0f29eba684b5f9a601c11944d37" id="r_a1640a0f29eba684b5f9a601c11944d37"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer&gt; <br />
+requires (!std::is_convertible_v&lt;OtherContainer, StoredType&gt;)</td></tr>
+<tr class="memitem:a1640a0f29eba684b5f9a601c11944d37"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classADeque.html">self</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1640a0f29eba684b5f9a601c11944d37">operator&lt;&lt;</a> (const OtherContainer &amp;c) noexcept</td></tr>
+<tr class="separator:a1640a0f29eba684b5f9a601c11944d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84c3c72732daf6c6b4da9ed3e3671c2" id="r_ad84c3c72732daf6c6b4da9ed3e3671c2"><td class="memItemLeft" align="right" valign="top">StoredType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad84c3c72732daf6c6b4da9ed3e3671c2">first</a> () noexcept</td></tr>
 <tr class="separator:ad84c3c72732daf6c6b4da9ed3e3671c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1396ac646b307ff34e8e9d594d27181" id="r_ad1396ac646b307ff34e8e9d594d27181"><td class="memItemLeft" align="right" valign="top">const StoredType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1396ac646b307ff34e8e9d594d27181">first</a> () const noexcept</td></tr>
@@ -484,15 +485,16 @@ template&lt;class StoredType, class Allocator = std::allocator&lt;StoredType&gt;
 
 </div>
 </div>
-<a id="a2c2cfa10e0873f3a579ca3249f5c75e6" name="a2c2cfa10e0873f3a579ca3249f5c75e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c2cfa10e0873f3a579ca3249f5c75e6">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
+<a id="a1640a0f29eba684b5f9a601c11944d37" name="a1640a0f29eba684b5f9a601c11944d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1640a0f29eba684b5f9a601c11944d37">&#9670;&#160;</a></span>operator&lt;&lt;() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class StoredType, class Allocator = std::allocator&lt;StoredType&gt;&gt; </div>
 <div class="memtemplate">
-template&lt;typename OtherContainer, std::enable_if_t&lt;!std::is_convertible_v&lt; OtherContainer, StoredType &gt;, bool &gt; = true&gt; </div>
+template&lt;typename OtherContainer&gt; <br />
+requires (!std::is_convertible_v&lt;OtherContainer, StoredType&gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
