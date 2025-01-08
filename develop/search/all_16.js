@@ -152,11 +152,11 @@ var searchData=
   ['supplyexception_149',['supplyException',['../classAComplexFutureOperation.html#a339b298708d579b338d3865a2aeec4df',1,'AComplexFutureOperation::supplyException()'],['../classAFuture.html#ad63fde0831188f9a75a7b0e10bd2a50d',1,'AFuture::supplyException()']]],
   ['supplyvalue_150',['supplyValue',['../classAComplexFutureOperation.html#a86ac80e4da6398f318efdb4a3c8c2a02',1,'AComplexFutureOperation::supplyValue()'],['../classAFuture.html#aa640a25cdc678b93f8d764a83013841f',1,'AFuture::supplyValue()']]],
   ['support_151',['Platform support',['../classAFatalException.html#AFatalException_Platform_support',1,'']]],
-  ['supported_20platforms_152',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md121',1,'']]],
+  ['supported_20platforms_152',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md123',1,'']]],
   ['supported_20units_153',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
-  ['svg_154',['Why SVG?',['../md_docs_2aui__app.html#autotoc_md81',1,'']]],
+  ['svg_154',['Why SVG?',['../md_docs_2aui__app.html#autotoc_md87',1,'']]],
   ['swappable_155',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_156',['Syntax',['../md_docs_2aui__app.html#autotoc_md77',1,'Syntax'],['../md_docs_2aui__executable.html#autotoc_md97',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md103',1,'Syntax']]],
+  ['syntax_156',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md103',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md77',1,'Syntax']]],
   ['system_157',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_158',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];

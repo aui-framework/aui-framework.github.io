@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ui_20building_0',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md130',1,'']]],
+  ['ui_20building_0',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md129',1,'']]],
   ['ui_20data_20binding_20with_20let_1',['UI data binding with let',['../group__property__system.html#autotoc_md152',1,'']]],
   ['ui_20declarative_20data_20binding_2',['UI declarative data binding',['../group__property__system.html#UI_declarative_data_binding',1,'']]],
   ['ui_20example_3',['UI example',['../group__signal__slot.html#autotoc_md3',1,'']]],
@@ -38,7 +38,7 @@ var searchData=
   ['useful_20templates_35',['Useful templates',['../group__useful__templates.html',1,'']]],
   ['using_20container_20stylesheet_36',['Using container stylesheet',['../group__ass.html#autotoc_md10',1,'']]],
   ['using_20global_20style_37',['Using global style',['../group__ass.html#autotoc_md9',1,'']]],
-  ['using_20inkscape_38',['Vectorization using Inkscape',['../md_docs_2aui__app.html#autotoc_md82',1,'']]],
+  ['using_20inkscape_38',['Vectorization using Inkscape',['../md_docs_2aui__app.html#autotoc_md88',1,'']]],
   ['using_20same_20dependencies_39',['Using same dependencies',['../md_docs_2AUI_01Boot.html#autotoc_md50',1,'']]],
   ['using_20setcustomstyle_40',['Using setCustomStyle',['../group__ass.html#autotoc_md12',1,'']]],
   ['using_20with_5fstyle_41',['Using with_style',['../group__ass.html#autotoc_md11',1,'']]],
