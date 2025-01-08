@@ -121,45 +121,38 @@ $(function(){initNavTree('By_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;AUI/Common/AString.h&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;UIMatcher.h&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespaceBy.html">   21</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceBy.html">By</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    API_AUI_UITESTS <a class="code hl_class" href="classUIMatcher.html">UIMatcher</a> text(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    API_AUI_UITESTS <a class="code hl_class" href="classUIMatcher.html">UIMatcher</a> name(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; name);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    API_AUI_UITESTS <a class="code hl_class" href="classUIMatcher.html">UIMatcher</a> value(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; value);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>By {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    API_AUI_UITESTS UIMatcher text(<span class="keyword">const</span> AString&amp; text);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    API_AUI_UITESTS UIMatcher name(<span class="keyword">const</span> AString&amp; name);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    API_AUI_UITESTS UIMatcher value(<span class="keyword">const</span> _&lt;AView&gt;&amp; value);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classUIMatcher.html">UIMatcher</a> type() {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">class </span>TypeMatcher: <span class="keyword">public</span> <a class="code hl_class" href="classIMatcher.html">IMatcher</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UIMatcher type() {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">class </span>TypeMatcher: <span class="keyword">public</span> IMatcher {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            ~TypeMatcher() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordtype">bool</span> matches(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; view)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordtype">bool</span> matches(<span class="keyword">const</span> _&lt;AView&gt;&amp; view)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(view.get()) != <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        };</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> { _new&lt;TypeMatcher&gt;() };</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="classUIMatcher.html">UIMatcher</a> exactType() {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">class </span>ExactTypeMatcher: <span class="keyword">public</span> <a class="code hl_class" href="classIMatcher.html">IMatcher</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    UIMatcher exactType() {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">class </span>ExactTypeMatcher: <span class="keyword">public</span> IMatcher {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            ~ExactTypeMatcher() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">bool</span> matches(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; view)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">bool</span> matches(<span class="keyword">const</span> _&lt;AView&gt;&amp; view)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keywordflow">return</span> <span class="keyword">typeid</span>(*view.get()) == <span class="keyword">typeid</span>(T);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        };</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> { _new&lt;ExactTypeMatcher&gt;() };</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
-</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
-<div class="ttc" id="aclassIMatcher_html"><div class="ttname"><a href="classIMatcher.html">IMatcher</a></div><div class="ttdef"><b>Definition</b> IMatcher.h:18</div></div>
-<div class="ttc" id="aclassUIMatcher_html"><div class="ttname"><a href="classUIMatcher.html">UIMatcher</a></div><div class="ttdef"><b>Definition</b> UIMatcher.h:21</div></div>
-<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
-<div class="ttc" id="anamespaceBy_html"><div class="ttname"><a href="namespaceBy.html">By</a></div><div class="ttdoc">Matcher factory namespace.</div><div class="ttdef"><b>Definition</b> By.h:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

@@ -81,6 +81,5 @@ var namespaces =
     ] ],
     [ "AXml", "namespaceAXml.html", [
       [ "read", "group__xml.html#ga06fdf594d32ebd9bf8a564fd832c6f28", null ]
-    ] ],
-    [ "By", "namespaceBy.html", null ]
+    ] ]
 ];

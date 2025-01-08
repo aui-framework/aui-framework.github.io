@@ -28,8 +28,6 @@ var NAVTREE =
       [ "All AUI Modules", "index.html", null ],
       [ "All AUI Classes", "classes.html", null ],
       [ "All Namespaces", "namespaces.html", "namespaces" ],
-      [ "All Views", "group__useful__views.html", null ],
-      [ "All ASS Properties", "group__ass__properties.html", null ],
       [ "All AUI CMake commands", null, [
         [ "aui_app", "md_docs_2aui__app.html", null ],
         [ "aui_executable", "md_docs_2aui__executable.html", null ],
@@ -44,6 +42,15 @@ var NAVTREE =
       [ "Code style and recommendations", "md_docs_2Code_01style_01and_01recommendations.html", null ],
       [ "Troubleshoot list", "md_docs_2Troubleshoot_01list.html", null ],
       [ "Crosscompiling (Android and iOS)", "md_docs_2Crosscompiling.html", null ]
+    ] ],
+    [ "UI Building", null, [
+      [ "Layout Managers", "group__layout__managers.html", null ],
+      [ "Styling", "group__ass.html", null ],
+      [ "Signal-slot", "group__signal__slot.html", null ],
+      [ "Data Binding", "group__property__system.html", null ],
+      [ "Devtools", "md_docs_2Devtools.html", null ],
+      [ "All Views", "group__useful__views.html", null ],
+      [ "All ASS Properties", "group__ass__properties.html", null ]
     ] ],
     [ "Tweaking", null, [
       [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],

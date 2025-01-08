@@ -28,8 +28,6 @@ var menudata={children:[
 {text:"All AUI Modules",url:"index.html"},
 {text:"All AUI Classes",url:"classes.html"},
 {text:"All Namespaces",url:"namespaces.html"},
-{text:"All Views",url:"group__useful__views.html"},
-{text:"All ASS Properties",url:"group__ass__properties.html"},
 {text:"All AUI CMake commands",url:"usergroup1.html",children:[
 {text:"aui_app",url:"md_docs_2aui__app.html"},
 {text:"aui_executable",url:"md_docs_2aui__executable.html"},
@@ -42,6 +40,14 @@ var menudata={children:[
 {text:"Code style and recommendations",url:"md_docs_2Code_01style_01and_01recommendations.html"},
 {text:"Troubleshoot list",url:"md_docs_2Troubleshoot_01list.html"},
 {text:"Crosscompiling (Android and iOS)",url:"md_docs_2Crosscompiling.html"}]},
-{text:"Tweaking",url:"usergroup3.html",children:[
+{text:"UI Building",url:"usergroup3.html",children:[
+{text:"Layout Managers",url:"group__layout__managers.html"},
+{text:"Styling",url:"group__ass.html"},
+{text:"Signal-slot",url:"group__signal__slot.html"},
+{text:"Data Binding",url:"group__property__system.html"},
+{text:"Devtools",url:"md_docs_2Devtools.html"},
+{text:"All Views",url:"group__useful__views.html"},
+{text:"All ASS Properties",url:"group__ass__properties.html"}]},
+{text:"Tweaking",url:"usergroup4.html",children:[
 {text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
 {text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"}]}]}
