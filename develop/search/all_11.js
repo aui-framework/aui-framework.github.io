@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['name_0',['NAME',['../md_docs_2aui__app.html#autotoc_md79',1,'']]],
-  ['name_1',['name',['../md_docs_2Macros.html#autotoc_md138',1,'API_\&lt;module name\&gt;'],['../structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a',1,'APerformanceSection::Data::name'],['../group__ass.html#autotoc_md15',1,'Select all ASS name'],['../group__ass.html#autotoc_md17',1,'Select all labels with ASS name']]],
+  ['name_0',['NAME',['../md_docs_2aui__app.html#autotoc_md80',1,'']]],
+  ['name_1',['name',['../md_docs_2Macros.html#autotoc_md139',1,'API_\&lt;module name\&gt;'],['../structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a',1,'APerformanceSection::Data::name'],['../group__ass.html#autotoc_md15',1,'Select all ASS name'],['../group__ass.html#autotoc_md17',1,'Select all labels with ASS name']]],
   ['nametovaluemap_2',['nameToValueMap',['../classAEnumerate.html#a5935e751b91ec9ece37ed7c7739d7451',1,'AEnumerate']]],
   ['nativesignalid_3',['nativeSignalId',['../classAFatalException.html#a6c6ac322b7e0b04108365d70571563da',1,'AFatalException']]],
   ['needrethrow_4',['needRethrow',['../classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf',1,'AThread::Interrupted']]],

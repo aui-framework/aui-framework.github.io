@@ -158,7 +158,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <div class="fragment"><div class="line"><span class="comment">// user typed &quot;Snezhana&quot;, now let&#39;s check the value in user-&gt;name:</span></div>
 <div class="line">EXPECT_EQ(user-&gt;name, <span class="stringliteral">&quot;Snezhana&quot;</span>);</div>
 </div><!-- fragment --><p>This is basic example of setting up property-to-property connection. ALogger::info("LogObserver") &lt;&lt; "Received value: " &lt;&lt; msg;</p>
-<h1><a class="anchor" id="autotoc_md146"></a>
+<h1><a class="anchor" id="autotoc_md147"></a>
 Declaring Properties</h1>
 <p>There are three ways to define a property in AUI:</p>
 <h2><a class="anchor" id="AProperty"></a>
@@ -182,7 +182,7 @@ AProperty</h2>
 <div class="line">doSomethingWithName(u.name);</div>
 </div><!-- fragment --><p>If it doesn't, simply put an asterisk: </p><div class="fragment"><div class="line">doSomethingWithName(*u.name);</div>
 <div class="line"><span class="comment">//                 ^^^ HERE</span></div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md147"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md148"></a>
 Observing changes</h3>
 <p>All property types offer <code>.changed</code> field which is a signal reporting value changes. Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
@@ -259,7 +259,7 @@ APropertyDef</h2>
 <div class="line">u.name() = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
 <div class="line">doSomethingWithName(u.name());</div>
 </div><!-- fragment --><div class="fragment"><div class="line">doSomethingWithName(*u.name());</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md148"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md149"></a>
 Observing changes</h3>
 <p>Close to <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> u = _new&lt;User&gt;();</div>
@@ -301,10 +301,10 @@ APropertyPrecomputed</h2>
 <div class="ttc" id="astructAPropertyPrecomputed_html"><div class="ttname"><a href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></div><div class="ttdef"><b>Definition</b> APropertyPrecomputed.h:64</div></div>
 </div><!-- fragment --><p>The example above prints "Emma Watson". If we try to update one of dependencies of <code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></code> (i.e., <code>name</code> or <code>surname</code>), <code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></code> responds immediately: </p><div class="fragment"><div class="line">u-&gt;surname = <span class="stringliteral">&quot;Stone&quot;</span>;</div>
 </div><!-- fragment --><p>The example above prints "Emma Stone".</p>
-<h3><a class="anchor" id="autotoc_md149"></a>
+<h3><a class="anchor" id="autotoc_md150"></a>
 Observing changes</h3>
 <p>Similar to <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code>.</p>
-<h3><a class="anchor" id="autotoc_md150"></a>
+<h3><a class="anchor" id="autotoc_md151"></a>
 Valid Expressions</h3>
 <p>Any C++ callable evaluating to <code>T</code> can be used as an expression for <code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a>&lt;T&gt;</code>. However, to formulate correct expression, some rules must be satisfied.</p>
 <p>Dependency tracking only works on other properties. It is the developer's responsibility to ensure all values referenced in the expression are properties, or, at least, non-property values that wouldn't change or whose changes are not interesting. You definitely can use branching inside the expression, but you must be confident about what are you doing. Generally speaking, use as trivial expressions as possible.</p>
@@ -331,7 +331,7 @@ Valid Expressions</h3>
 </div><!-- fragment --><p><code>surname</code> can't trigger re-evaluation anyhow. Re-evaluation can be triggered by <code>name</code> only. So, at the moment, we are interested in <code>name</code> changes only.</p>
 <p><code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></code> might evaluate its expression several times during its lifetime. The developer must make sure that all objects referenced in the expression live longer than <code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></code>.</p>
 <p>The expression should not read from the property it's a binding for. Otherwise, there's an infinite evaluation loop. </p>
-<h1><a class="anchor" id="autotoc_md151"></a>
+<h1><a class="anchor" id="autotoc_md152"></a>
 UI data binding with let</h1>
 <dl class="section note"><dt>Note</dt><dd>This is a comprehensive, straightforward way of setting up a connection. We are demonstrating it here so you can get deeper understanding on how connections are made and what does declarative way do under the hood. This way may be used in favour of declarative way if the latter not work for you. For declarative way, go to <a class="el" href="#UI_declarative_data_binding">UI declarative data binding</a>.</dd></dl>
 <p>This approach allows more control over the binding process by using <code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> which is a procedural way of setting up connections. As a downside, it requires "let" syntax clause which may seem as overkill for such a simple operation.</p>
@@ -674,7 +674,7 @@ dropdownlist</div></div>
 <img src="UIDataBindingTest.Declarative_bidirectional_projection_3.png" alt=""/>
 <div class="caption">
 dropdownlist</div></div>
-    <h1><a class="anchor" id="autotoc_md152"></a>
+    <h1><a class="anchor" id="autotoc_md153"></a>
 Functions</h1>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
