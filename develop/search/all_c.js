@@ -71,7 +71,7 @@ var searchData=
   ['invocable_68',['invocable',['../conceptaui_1_1invocable.html',1,'aui']]],
   ['io_20streams_69',['IO streams',['../group__io.html',1,'']]],
   ['ios_70',['iOS',['../md_docs_2Crosscompiling.html',1,'Crosscompiling (Android and iOS)'],['../md_docs_2Crosscompiling.html#autotoc_md127',1,'iOS']]],
-  ['ios_5fcontroller_71',['IOS_CONTROLLER',['../md_docs_2aui__app.html#autotoc_md96',1,'']]],
+  ['ios_5fcontroller_71',['IOS_CONTROLLER',['../md_docs_2aui__app.html#autotoc_md97',1,'']]],
   ['ios_5fdevice_72',['IOS_DEVICE',['../md_docs_2aui__app.html#autotoc_md95',1,'']]],
   ['ios_5fversion_73',['IOS_VERSION',['../md_docs_2aui__app.html#autotoc_md94',1,'']]],
   ['ioutputstream_74',['IOutputStream',['../classIOutputStream.html',1,'']]],
