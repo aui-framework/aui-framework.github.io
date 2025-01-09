@@ -44,6 +44,7 @@ var NAVTREE =
       [ "Crosscompiling (Android and iOS)", "md_docs_2Crosscompiling.html", null ]
     ] ],
     [ "UI Building", null, [
+      [ "Overview", "md_docs_2UI_01Building_01Overview.html", null ],
       [ "Layout Managers", "group__layout__managers.html", null ],
       [ "Styling", "group__ass.html", null ],
       [ "Signal-slot", "group__signal__slot.html", null ],
