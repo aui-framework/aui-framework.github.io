@@ -27,7 +27,7 @@ var searchData=
   ['let_24',['let',['../group__property__system.html#Label_via_let',1,'Label via let'],['../group__useful__macros.html#ga045dd54932944d8830380f4596d64446',1,'let:&#160;kAUI.h'],['../group__property__system.html#autotoc_md159',1,'UI data binding with let']]],
   ['let_20projection_25',['Label via let projection',['../group__property__system.html#Label_via_let_projection',1,'']]],
   ['libraries_26',['Importing 3rdparty libraries',['../md_docs_2AUI_01Boot.html#autotoc_md32',1,'']]],
-  ['like_20functionality_27',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md114',1,'']]],
+  ['like_20functionality_27',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md116',1,'']]],
   ['limitations_28',['Limitations',['../md_docs_2Crosscompiling.html#autotoc_md124',1,'']]],
   ['line_29',['Line',['../classATextLayoutHelper.html#ab31a0e199ad1f418b01083ae9de78531',1,'ATextLayoutHelper']]],
   ['line_30',['line',['../classIRenderer.html#a6a294680c11f3a3065e9a29c898322f7',1,'IRenderer']]],
