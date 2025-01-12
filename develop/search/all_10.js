@@ -2,7 +2,7 @@ var searchData=
 [
   ['macosapp_0',['MacosApp',['../classMacosApp.html',1,'']]],
   ['macros_1',['Macros',['../md_docs_2Macros.html',1,'']]],
-  ['macros_2',['macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md116',1,'Template metaprogramming and macros'],['../group__useful__macros.html',1,'Useful macros']]],
+  ['macros_2',['macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md115',1,'Template metaprogramming and macros'],['../group__useful__macros.html',1,'Useful macros']]],
   ['mainview_3',['MainView',['../interfaceMainView.html',1,'']]],
   ['make_4',['make',['../classAListModel.html#ae82706f2bc98286bcf9722fd70a79381',1,'AListModel::make()'],['../classAProcess.html#a747b5f3122d91a4303d07f1600040cd3',1,'AProcess::make()'],['../structASqlModel.html#ac4ca0dbb4228a9ce3e53cdffefa27089',1,'ASqlModel::make()']]],
   ['make_5funique_5fwith_5fdeleter_5',['make_unique_with_deleter',['../structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617',1,'aui::ptr']]],
@@ -36,7 +36,7 @@ var searchData=
   ['member_3c_20type_28clazz_3a_3a_2a_29_3e_33',['member&lt; Type(Clazz::*)&gt;',['../structaui_1_1member.html',1,'aui']]],
   ['menucontainer_34',['MenuContainer',['../classAEmbedMenuProvider_1_1MenuContainer.html',1,'AEmbedMenuProvider']]],
   ['mergedwith_35',['mergedWith',['../classAJson.html#a5ee18e70e8401823304e1f56cca503a4',1,'AJson']]],
-  ['metaprogramming_20and_20macros_36',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md116',1,'']]],
+  ['metaprogramming_20and_20macros_36',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md115',1,'']]],
   ['mfixedsize_37',['mFixedSize',['../classAView.html#a5d5732f8af15828f75729ba5bde0d4c9',1,'AView']]],
   ['mfocusnextviewontab_38',['mFocusNextViewOnTab',['../classAWindow.html#a76918d11708d7b6edf4c67df9a1ec8e4',1,'AWindow']]],
   ['mforceupdatecursorguard_39',['mForceUpdateCursorGuard',['../classAWindowBase.html#a0659371b801e657f8d0be8f956fbf718',1,'AWindowBase']]],

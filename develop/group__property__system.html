@@ -134,7 +134,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <div class="line"><span class="keyword">auto</span> window = _new&lt;AWindow&gt;();</div>
 <div class="line">window-&gt;setContents(Centered { tf });</div>
 <div class="line">window-&gt;show();</div>
-<div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:135</div></div>
+<div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:138</div></div>
 <div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:156</div></div>
 <div class="ttc" id="astructaui_1_1ptr_html_a9696eab52bd0745688055a301d9ef776"><div class="ttname"><a href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a></div><div class="ttdeci">static _&lt; T &gt; manage(T *raw)</div><div class="ttdoc">Delegates memory management of the raw pointer T* raw to the shared pointer, which is returned.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:372</div></div>
 </div><!-- fragment --><p>Or simpler: </p><div class="fragment"><div class="line"><span class="comment">// ...</span></div>
@@ -193,16 +193,16 @@ Observing changes</h3>
 <div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition</b> AObject.h:39</div></div>
 </div><!-- fragment --><p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> u = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">&quot;Chloe&quot;</span> });</div>
-<div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(u-&gt;name.changed, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;name.changed, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It&#39;s convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
-<div class="ttc" id="agroup__signal__slot_html_gad38d4b45ed12b1153c419779e546337f"><div class="ttname"><a href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a></div><div class="ttdeci">static void connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:65</div></div>
 </div><!-- fragment --><p>At the moment, the program prints nothing. When we change the property: </p><div class="fragment"><div class="line">u-&gt;name = <span class="stringliteral">&quot;Marinette&quot;</span>;</div>
 </div><!-- fragment --><p>Code produces the following output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
 </div><!-- fragment --><p>As you can see, observer received the update. But, for example, if we would like to display the value via label, the label wouldn't display the current value until the next update. We want the label to display <em>current</em> value without requiring an update. To do this, connect to the property directly, without explicitly asking for <code>changed</code>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> u = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">&quot;Chloe&quot;</span> });</div>
-<div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(u-&gt;name, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;name, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
 </div><!-- fragment --><p>Code above produces the following output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Chloe</div>
-</div><!-- fragment --><p> As you can see, observer receives the value without making updates to the value. The call of <code>LogObserver::log</code> is made by <code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> itself. In this document, we will call this behaviour as "pre-fire".</p>
+</div><!-- fragment --><p> As you can see, observer receives the value without making updates to the value. The call of <code>LogObserver::log</code> is made by <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> itself. In this document, we will call this behaviour as "pre-fire".</p>
 <p>Subsequent changes to field would send updates as well: </p><div class="fragment"><div class="line">u-&gt;name = <span class="stringliteral">&quot;Marinette&quot;</span>;</div>
 </div><!-- fragment --><p>Assignment operation above makes an additional line to output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
 </div><!-- fragment --><p>Whole program output when connecting to property directly: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Chloe</div>
@@ -240,8 +240,8 @@ APropertyDef</h2>
 <div class="line">        <span class="keywordflow">return</span> mName;</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:348</div></div>
-<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:310</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:527</div></div>
+<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
 <div class="ttc" id="astructAPropertyDef_html"><div class="ttname"><a href="structAPropertyDef.html">APropertyDef</a></div><div class="ttdoc">Property implementation to use with custom getter/setter.</div><div class="ttdef"><b>Definition</b> AProperty.h:308</div></div>
 </div><!-- fragment --><p><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> behaves like a class/struct function member: </p><div class="fragment"><div class="line">User u;</div>
 <div class="line">u.name() = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
@@ -265,14 +265,14 @@ Observing changes</h3>
 <div class="line"><span class="keyword">auto</span> u = _new&lt;User&gt;();</div>
 <div class="line">u-&gt;name() = <span class="stringliteral">&quot;Chloe&quot;</span>;</div>
 <div class="line"><span class="comment">// ...</span></div>
-<div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(u-&gt;name().changed, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;name().changed, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
 </div><!-- fragment --><div class="fragment"><div class="line">u-&gt;name() = <span class="stringliteral">&quot;Marinette&quot;</span>;</div>
 </div><!-- fragment --><p>Code produces the following output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
 </div><!-- fragment --><p>Making connection to property directly instead of <code>.changed</code>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> u = _new&lt;User&gt;();</div>
 <div class="line">u-&gt;name() = <span class="stringliteral">&quot;Chloe&quot;</span>;</div>
 <div class="line"><span class="comment">// ...</span></div>
-<div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(u-&gt;name(), <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;name(), <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
 </div><!-- fragment --><p>Code above produces the following output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Chloe</div>
 </div><!-- fragment --><p>Subsequent changes to field would send updates as well: </p><div class="fragment"><div class="line">u-&gt;name() = <span class="stringliteral">&quot;Marinette&quot;</span>;</div>
 </div><!-- fragment --><p>Assignment operation above makes an additional line to output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
@@ -297,7 +297,7 @@ APropertyPrecomputed</h2>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
-<div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(u-&gt;fullName, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;fullName, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
 <div class="ttc" id="astructAPropertyPrecomputed_html"><div class="ttname"><a href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></div><div class="ttdef"><b>Definition</b> APropertyPrecomputed.h:64</div></div>
 </div><!-- fragment --><p>The example above prints "Emma Watson". If we try to update one of dependencies of <code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></code> (i.e., <code>name</code> or <code>surname</code>), <code><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></code> responds immediately: </p><div class="fragment"><div class="line">u-&gt;surname = <span class="stringliteral">&quot;Stone&quot;</span>;</div>
 </div><!-- fragment --><p>The example above prints "Emma Stone".</p>
@@ -334,7 +334,7 @@ Valid Expressions</h3>
 <h1><a class="anchor" id="autotoc_md159"></a>
 UI data binding with let</h1>
 <dl class="section note"><dt>Note</dt><dd>This is a comprehensive, straightforward way of setting up a connection. We are demonstrating it here so you can get deeper understanding on how connections are made and what does declarative way do under the hood. This way may be used in favour of declarative way if the latter not work for you. For declarative way, go to <a class="el" href="#UI_declarative_data_binding">UI declarative data binding</a>.</dd></dl>
-<p>This approach allows more control over the binding process by using <code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> which is a procedural way of setting up connections. As a downside, it requires "let" syntax clause which may seem as overkill for such a simple operation.</p>
+<p>This approach allows more control over the binding process by using <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> which is a procedural way of setting up connections. As a downside, it requires "let" syntax clause which may seem as overkill for such a simple operation.</p>
 <h2><a class="anchor" id="Label_via_let"></a>
 Label via let</h2>
 <p>Use <code>let</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text()</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
@@ -353,7 +353,7 @@ Label via let</h2>
 <div class="line">              <span class="comment">// Data goes from left to right:</span></div>
 <div class="line">              <span class="comment">// current value (pre fire) or changed event</span></div>
 <div class="line">              <span class="comment">// goes to assignment operation of it-&gt;text()</span></div>
-<div class="line">              <a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(user-&gt;name, it-&gt;text());</div>
+<div class="line">              <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(user-&gt;name, it-&gt;text());</div>
 <div class="line">              <span class="comment">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span></div>
 <div class="line">              <span class="comment">// in other words, this connection is essentially the</span></div>
 <div class="line">              <span class="comment">// same as</span></div>
@@ -388,7 +388,7 @@ Label via let projection</h2>
 <div class="line">    <span class="comment">// goes through projection (&amp;AString::uppercase) first</span></div>
 <div class="line">    <span class="comment">// then it goes to assignment operation of it-&gt;text()</span></div>
 <div class="line">    <span class="comment">// property.</span></div>
-<div class="line">    <a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">AObject::connect</a>(user-&gt;name.readProjected(&amp;AString::uppercase), it-&gt;text());</div>
+<div class="line">    <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(user-&gt;name.readProjected(&amp;AString::uppercase), it-&gt;text());</div>
 <div class="line">    <span class="comment">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span></div>
 <div class="line">    <span class="comment">// in other words, this connection is essentially the same as</span></div>
 <div class="line">    <span class="comment">// AObject::connect(user-&gt;name.projected(&amp;AString::uppercase), slot(it)::setText);</span></div>
@@ -407,7 +407,7 @@ text</div></div>
     <p>This way, we've set up data binding with projection.</p>
 <h2><a class="anchor" id="Bidirectional_connection"></a>
 Bidirectional connection</h2>
-<p>In previous examples, we've used <code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
+<p>In previous examples, we've used <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view from model and obtaining data from view back to the model.</p>
 <p>For this example, let's use <a class="el" href="classATextField.html" title="Editable field with text to receive a text input from the user.">ATextField</a> instead of <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> as it's an editable view. In this case, we'd want to use <code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> because we do want <code>user-&gt;name</code> to be aware of changes of the view. </p><div class="fragment"><div class="line">_new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
 <div class="line">  <span class="comment">// Data goes from left to right in the first place</span></div>
@@ -526,10 +526,10 @@ dropdownlist</div></div>
     <h1><a class="anchor" id="UI_declarative_data_binding"></a>
 UI declarative data binding</h1>
 <p>As said earlier, <code>let</code> syntax is a little bit clunky and requires extra boilerplate code to set up.</p>
-<p>Here's where declarative syntax comes into play. The logic behind the syntax is the same as in <code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> (for ease of replacement/understanding).</p>
+<p>Here's where declarative syntax comes into play. The logic behind the syntax is the same as in <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> (for ease of replacement/understanding).</p>
 <p>Declarative syntax uses <code>&amp;</code> and <code>&amp;&amp;</code> operators to set up connections. These were chosen intentionally: <code>&amp;&amp;</code> resembles chain, so we "chaining view and property up".</p>
 <ul>
-<li><code>&amp;</code> sets up one-directional connection (<code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>).</li>
+<li><code>&amp;</code> sets up one-directional connection (<code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>).</li>
 <li><code>&amp;&amp;</code> sets up bidirectional connection (<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code>).</li>
 </ul>
 <p>Also, <code>&gt;</code> operator (resembles arrow) is used to specify the destination slot.</p>
@@ -558,7 +558,7 @@ Label via declarative</h2>
 <p>Note that the label already displays the value stored in User.</p>
 <p>Let's change the name: </p><div class="fragment"><div class="line">user-&gt;name = <span class="stringliteral">&quot;Vasil&quot;</span>;</div>
 </div><!-- fragment --><p><img src="UIDataBindingTest.Label_via_declarative_2.png" alt="" class="inline" title="text"/>    </p>
-<p>In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in <a class="el" href="#Label_via_let">Label via let</a> example) but using declarative syntax. The logic behind <code>&amp;</code> is almost the same as with <code>let</code> and <code><a class="el" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> so projection use cases can be adapted in a similar manner.</p>
+<p>In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in <a class="el" href="#Label_via_let">Label via let</a> example) but using declarative syntax. The logic behind <code>&amp;</code> is almost the same as with <code>let</code> and <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> so projection use cases can be adapted in a similar manner.</p>
 <h2><a class="anchor" id="ADataBindingDefault_for_omitting_view_property"></a>
 ADataBindingDefault for omitting view property</h2>
 <p>In previous example we have explicitly specified <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a>'s property to connect with.</p>
@@ -768,8 +768,9 @@ requires (!<a class="el" href="conceptaui_1_1derived__from.html">aui::derived_fr
 
 <p>Connects signal or property to the slot of the specified non-AObject type. </p>
 <p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><span class="keyword">struct </span>User { <a class="code hl_struct" href="structAProperty.html">AProperty&lt;AString&gt;</a> name }; <span class="comment">// user.name here is non-AObject type</span></div>
-<div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">connect</a>(textField-&gt;text(), user-&gt;name.assignment());</div>
-</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(textField-&gt;text(), user-&gt;name.assignment());</div>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd><code>object</code> arg is accepted by value intentionally &ndash; this way we ensure that it would not be destroyed during connection creation.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">property</td><td>source property. </td></tr>
     <tr><td class="paramname">object</td><td>instance of <code><a class="el" href="classAObject.html" title="A base object class.">AObject</a></code>. </td></tr>
@@ -816,7 +817,7 @@ template&lt;<a class="el" href="conceptAAnyProperty.html">AAnyProperty</a> Prope
 
 <p>Connects property to the slot of the specified object. </p>
 <p>Connects to "changed" signal of the property. Additionally, calls specified function with the current value of the property (pre-fire).</p>
-<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="group__signal__slot.html#gad38d4b45ed12b1153c419779e546337f">connect</a>(textField-&gt;text(), <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(otherObjectRawPtr)::handleText);</div>
+<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(textField-&gt;text(), <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(otherObjectRawPtr)::handleText);</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">property</td><td>property </td></tr>
