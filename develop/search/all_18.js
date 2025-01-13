@@ -39,7 +39,7 @@ var searchData=
   ['useful_20templates_36',['Useful templates',['../group__useful__templates.html',1,'']]],
   ['using_20container_20stylesheet_37',['Using container stylesheet',['../group__ass.html#autotoc_md10',1,'']]],
   ['using_20global_20style_38',['Using global style',['../group__ass.html#autotoc_md9',1,'']]],
-  ['using_20inkscape_39',['Vectorization using Inkscape',['../md_docs_2aui__app.html#autotoc_md84',1,'']]],
+  ['using_20inkscape_39',['Vectorization using Inkscape',['../md_docs_2aui__app.html#autotoc_md85',1,'']]],
   ['using_20same_20dependencies_40',['Using same dependencies',['../md_docs_2AUI_01Boot.html#autotoc_md50',1,'']]],
   ['using_20setcustomstyle_41',['Using setCustomStyle',['../group__ass.html#autotoc_md12',1,'']]],
   ['using_20with_5fstyle_42',['Using with_style',['../group__ass.html#autotoc_md11',1,'']]],
