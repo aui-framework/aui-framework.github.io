@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AUI Framework: APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Struct Template Reference</title>
+<title>AUI Framework: APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,7 +107,7 @@ $(function(){initNavTree('structAPropertyDef.html',''); initResizable(true); });
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Signals and public fields</a> &#124;
 <a href="structAPropertyDef-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a> &raquo; <a class="el" href="group__property__system.html">Property System</a></div></div></div>
+  <div class="headertitle"><div class="title">APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a> &raquo; <a class="el" href="group__property__system.html">Property System</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -155,12 +155,12 @@ M *&#160;</td><td class="memItemRight" valign="bottom"><b>boundObject</b> () con
 <tr class="memitem:ae6180044dbbbcfb59a4abb797b4f3f24" id="r_ae6180044dbbbcfb59a4abb797b4f3f24"><td class="memTemplParams" colspan="2"><a id="ae6180044dbbbcfb59a4abb797b4f3f24" name="ae6180044dbbbcfb59a4abb797b4f3f24"></a>
 template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const Underlying &amp; &gt; Projection&gt; </td></tr>
 <tr class="memitem:ae6180044dbbbcfb59a4abb797b4f3f24"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>readProjected</b> (Projection &amp;&amp;projection) noexcept</td></tr>
-<tr class="memdesc:ae6180044dbbbcfb59a4abb797b4f3f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a readonly projection of this property. <br /></td></tr>
+<tr class="memdesc:ae6180044dbbbcfb59a4abb797b4f3f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a readonly <a class="el" href="group__property__system.html#UIDataBindingTest_Label_via_declarative_projection">projection</a> of this property. <br /></td></tr>
 <tr class="separator:ae6180044dbbbcfb59a4abb797b4f3f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79796c83902226291120377ae6bf0b9e" id="r_a79796c83902226291120377ae6bf0b9e"><td class="memTemplParams" colspan="2"><a id="a79796c83902226291120377ae6bf0b9e" name="a79796c83902226291120377ae6bf0b9e"></a>
 template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const Underlying &amp; &gt; ProjectionRead, <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const std::invoke_result_t&lt; ProjectionRead, Underlying &gt; &amp; &gt; ProjectionWrite&gt; </td></tr>
 <tr class="memitem:a79796c83902226291120377ae6bf0b9e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>biProjected</b> (ProjectionRead &amp;&amp;projectionRead, ProjectionWrite &amp;&amp;projectionWrite) noexcept</td></tr>
-<tr class="memdesc:a79796c83902226291120377ae6bf0b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a bidirectional projection of this property. <br /></td></tr>
+<tr class="memdesc:a79796c83902226291120377ae6bf0b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a bidirectional <a class="el" href="group__property__system.html#UIDataBindingTest_Label_via_declarative_projection">projection</a> of this property. <br /></td></tr>
 <tr class="separator:a79796c83902226291120377ae6bf0b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace3583680a046f426f2da0b1279b28ba" id="r_ace3583680a046f426f2da0b1279b28ba"><td class="memTemplParams" colspan="2"><a id="ace3583680a046f426f2da0b1279b28ba" name="ace3583680a046f426f2da0b1279b28ba"></a>
 template&lt;aui::detail::property::ProjectionBidirectional&lt; Underlying &gt; Projection&gt; </td></tr>
@@ -188,42 +188,90 @@ const <a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee9
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename M, <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; M &amp; &gt; Getter, <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; M &amp;, std::invoke_result_t&lt; Getter, M &amp; &gt; &gt; Setter, typename SignalArg&gt;<br />
-struct APropertyDef&lt; M, Getter, Setter, SignalArg &gt;</div><p>Property implementation to use with custom getter/setter. </p>
-<p>See <a class="el" href="group__property__system.html">property system</a> for more info.</p>
-<div class="fragment"><div class="line">    <span class="keyword">class </span>User: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
-<div class="line">    <span class="keyword">public</span>:</div>
-<div class="line">        <span class="keyword">auto</span> name()<span class="keyword"> const </span>{</div>
-<div class="line">            <span class="keywordflow">return</span> APropertyDef {</div>
-<div class="line">                <span class="keyword">this</span>,</div>
-<div class="line">                &amp;User::getName, <span class="comment">// this works too: &amp;User::mName</span></div>
-<div class="line">                &amp;User::setName,</div>
-<div class="line">                mNameChanged,</div>
-<div class="line">            };</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">private</span>:</div>
-<div class="line">        AString mName;</div>
-<div class="line">        <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AString&gt;</a> mNameChanged;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordtype">void</span> setName(AString name) {</div>
-<div class="line">            <span class="comment">// APropertyDef requires us to emit</span></div>
-<div class="line">            <span class="comment">// changed signal if value is actually</span></div>
-<div class="line">            <span class="comment">// changed</span></div>
-<div class="line">            <span class="keywordflow">if</span> (mName == name) {</div>
-<div class="line">                <span class="keywordflow">return</span>;</div>
-<div class="line">            }</div>
-<div class="line">            mName = std::move(name);</div>
-<div class="line">            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> mNameChanged(mName);</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">const</span> AString&amp; getName()<span class="keyword"> const </span>{</div>
-<div class="line">            <span class="keywordflow">return</span> mName;</div>
-<div class="line">        }</div>
-<div class="line">    };</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md7"></a>
+class APropertyDef&lt; M, Getter, Setter, SignalArg &gt;</div><p>Property implementation to use with custom getter/setter. </p>
+<p>You can use this way if you are required to define custom behaviour on getter/setter. As a downside, you have to write extra boilerplate code: define property, data field, signal, getter and setter checking equality. Also, <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> requires the class to derive <code><a class="el" href="classAObject.html" title="A base object class.">AObject</a></code>. Most of <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s properties are defined this way.</p>
+<p>See <a class="el" href="group__property__system.html">property system</a> for usage examples.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
 Performance considerations</h1>
-<p><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> <a href="https://godbolt.org/z/cYTrc3PPf">does not involve</a> extra runtime overhead between assignment and getter/setter. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a10">/home/runner/work/aui/aui/aui.views/src/AUI/View/AView.h</a>.</dd>
+<p><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> <a href="https://godbolt.org/z/cYTrc3PPf">does not involve</a> extra runtime overhead between assignment and getter/setter.</p>
+<h1><a class="anchor" id="autotoc_md161"></a>
+Declaration</h1>
+<p>To declare a property with custom getter/setter, use <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> template. APropertyDef-based property is defined by const member function as follows: </p><div class="fragment"><div class="line"><span class="keyword">class </span>User : <span class="keyword">public</span> AObject {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">auto</span> name()<span class="keyword"> const </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> APropertyDef {</div>
+<div class="line">            <span class="keyword">this</span>,</div>
+<div class="line">            &amp;User::getName,   <span class="comment">// this works too: &amp;User::mName</span></div>
+<div class="line">            &amp;User::setName,</div>
+<div class="line">            mNameChanged,</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    AString mName;</div>
+<div class="line">    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AString&gt;</a> mNameChanged;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> setName(AString name) {</div>
+<div class="line">        <span class="comment">// APropertyDef requires us to emit</span></div>
+<div class="line">        <span class="comment">// changed signal if value is actually</span></div>
+<div class="line">        <span class="comment">// changed</span></div>
+<div class="line">        <span class="keywordflow">if</span> (mName == name) {</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line">        mName = std::move(name);</div>
+<div class="line">        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> mNameChanged(mName);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> AString&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mName; }</div>
+<div class="line">};</div>
+<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:537</div></div>
+<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
+</div><!-- fragment --><p><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> behaves like a class/struct function member: </p><div class="fragment"><div class="line">User u;</div>
+<div class="line">u.name() = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line">EXPECT_EQ(u.name(), <span class="stringliteral">&quot;Hello&quot;</span>);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Properties defined with <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> instead of <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> impersonate themselves by trailing braces <code>()</code>. We can't get rid of them, as <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> is defined thanks to member function. In comparison to <code>user-&gt;name</code>, think of <code>user-&gt;name()</code> as the same kind of property except defining custom behaviour via function, hence the braces <code>()</code>.</dd></dl>
+<p>For the rest, <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> is identical to <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> including seamless interaction: </p><div class="fragment"><div class="line">User u;</div>
+<div class="line">u.name() = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line">u.name() += <span class="stringliteral">&quot; world!&quot;</span>;</div>
+<div class="line">EXPECT_EQ(u.name(), <span class="stringliteral">&quot;Hello world!&quot;</span>);</div>
+<div class="line">EXPECT_EQ(u.name()-&gt;length(), <a class="code hl_class" href="classAString.html">AString</a>(<span class="stringliteral">&quot;Hello world!&quot;</span>).length());</div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In order to honor getters/setters, <code><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a></code> calls getter/setter instead of using <code>+=</code> on your property directly. Equivalent code will be: <div class="fragment"><div class="line">u.setName(u.getName() + <span class="stringliteral">&quot; world!&quot;</span>)</div>
+</div><!-- fragment --></dd></dl>
+<p>The implicit conversions work the same way as with <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> doSomethingWithName = [](<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; name) { EXPECT_EQ(name, <span class="stringliteral">&quot;Hello&quot;</span>); };</div>
+<div class="line">User u;</div>
+<div class="line">u.name() = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line">doSomethingWithName(u.name());</div>
+</div><!-- fragment --><p>If it doesn't, simply put an asterisk: </p><div class="fragment"><div class="line">doSomethingWithName(*u.name());</div>
+<div class="line"><span class="comment">//                 ^^^ HERE</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="PropertyDefTest_Observing_changes"></a>
+Observing changes</h1>
+<p>All property types offer <code>.changed</code> field which is a signal reporting value changes. Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> AObject {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
+<div class="line">        ALogger::info(<span class="stringliteral">&quot;LogObserver&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;Received value: &quot;</span> &lt;&lt; msg;</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+</div><!-- fragment --><p>The usage is close to <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
+<div class="line"><span class="keyword">auto</span> u = _new&lt;User&gt;();</div>
+<div class="line">u-&gt;name() = <span class="stringliteral">&quot;Chloe&quot;</span>;</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;name().changed, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+<div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
+<div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It&#39;s convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
+</div><!-- fragment --><div class="fragment"><div class="line">u-&gt;name() = <span class="stringliteral">&quot;Marinette&quot;</span>;</div>
+</div><!-- fragment --><p>Code produces the following output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
+</div><!-- fragment --><p>Making connection to property directly instead of <code>.changed</code>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
+<div class="line"><span class="keyword">auto</span> u = _new&lt;User&gt;();</div>
+<div class="line">u-&gt;name() = <span class="stringliteral">&quot;Chloe&quot;</span>;</div>
+<div class="line"><span class="comment">// ...</span></div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(u-&gt;name(), <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(observer)::log);</div>
+</div><!-- fragment --><p>Code above produces the following output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Chloe</div>
+</div><!-- fragment --><p>Subsequent changes to field would send updates as well: </p><div class="fragment"><div class="line">u-&gt;name() = <span class="stringliteral">&quot;Marinette&quot;</span>;</div>
+</div><!-- fragment --><p>Assignment operation above makes an additional line to output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
+</div><!-- fragment --><p>Whole program output when connecting to property directly: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Chloe</div>
+<div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a10">/home/runner/work/aui/aui/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a62ad81ffc5bf8b8aa5defb808984e0a9" name="a62ad81ffc5bf8b8aa5defb808984e0a9"></a>
@@ -248,27 +296,9 @@ template&lt;typename M, <a class="el" href="conceptaui_1_1invocable.html">aui::i
 <div class="line">  mValue = value;</div>
 <div class="line">  <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> mValueChanged(valueChanged);</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>aui.core/src/AUI/Common/<a class="el" href="AProperty_8h_source.html">AProperty.h</a></li>
-</ul>
-<div class="dynheader">
-Collaboration diagram for APropertyDef&lt; M, Getter, Setter, SignalArg &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="structAPropertyDef__coll__graph.png" border="0" usemap="#aAPropertyDef_3_01M_00_01Getter_00_01Setter_00_01SignalArg_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="aAPropertyDef_3_01M_00_01Getter_00_01Setter_00_01SignalArg_01_4_coll__map" id="aAPropertyDef_3_01M_00_01Getter_00_01Setter_00_01SignalArg_01_4_coll__map">
-<area shape="rect" title="Property implementation to use with custom getter/setter." alt="" coords="29,93,218,133"/>
-<area shape="rect" title=" " alt="" coords="5,5,68,31"/>
-<area shape="poly" title=" " alt="" coords="59,39,108,91,104,95,55,42"/>
-<area shape="rect" title=" " alt="" coords="93,5,154,31"/>
-<area shape="poly" title=" " alt="" coords="126,44,126,93,121,93,121,44"/>
-<area shape="rect" href="classASignal.html" title=" " alt="" coords="178,5,413,31"/>
-<area shape="poly" title=" " alt="" coords="264,39,160,95,157,91,261,35"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <p class="footer-inner">
     &copy; 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

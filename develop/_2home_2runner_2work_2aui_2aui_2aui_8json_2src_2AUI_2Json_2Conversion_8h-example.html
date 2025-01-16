@@ -442,6 +442,16 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;APropertyWritable T&gt;</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;T&gt; {</div>
+<div class="line">    <span class="keyword">static</span> AJson toJson(<span class="keyword">const</span> T&amp; t) {</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>.value();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, T&amp; dst) {</div>
+<div class="line">        dst = aui::from_json&lt;typename T::Underlying&gt;(json);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
 <div class="ttc" id="aclassAEnumerate_html_abe246fad40858dec2815bd7087ed707c"><div class="ttname"><a href="classAEnumerate.html#abe246fad40858dec2815bd7087ed707c">AEnumerate::byName</a></div><div class="ttdeci">static enum_t byName(const AString &amp;name)</div><div class="ttdoc">Map runtime name to enum value. Transforms name to uppercase as a fallback. Throws an exception if no...</div><div class="ttdef"><b>Definition</b> AEnumerate.h:121</div></div>
 <div class="ttc" id="aclassAEnumerate_html_afa46b450b5dbb8f6f95cf74067c65633"><div class="ttname"><a href="classAEnumerate.html#afa46b450b5dbb8f6f95cf74067c65633">AEnumerate::valueToNameMap</a></div><div class="ttdeci">static const AMap&lt; enum_t, AString, enum_less &gt; &amp; valueToNameMap()</div><div class="ttdoc">Map runtime enum value to name.</div><div class="ttdef"><b>Definition</b> AEnumerate.h:183</div></div>
 <div class="ttc" id="aclassAJson_html"><div class="ttname"><a href="classAJson.html">AJson</a></div><div class="ttdoc">Json atom.</div><div class="ttdef"><b>Definition</b> AJson.h:79</div></div>
