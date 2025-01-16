@@ -119,10 +119,10 @@ var searchData=
   ['softwarerenderingcontext_116',['SoftwareRenderingContext',['../classSoftwareRenderingContext.html',1,'']]],
   ['softwaretexture_117',['SoftwareTexture',['../classSoftwareTexture.html',1,'']]],
   ['solid_118',['Solid',['../structABorderStyle_1_1Solid.html',1,'ABorderStyle']]],
-  ['sources_119',['Platform specific sources',['../md_docs_2Macros.html#autotoc_md138',1,'']]],
+  ['sources_119',['Platform specific sources',['../md_docs_2Macros.html#autotoc_md136',1,'']]],
   ['spacebetweendashes_120',['spaceBetweenDashes',['../structABorderStyle_1_1Dashed.html#a9d4f5e62eb47ae95d57bb6a18fb156e9',1,'ABorderStyle::Dashed']]],
   ['specific_121',['Windows-specific',['../group__windows__specific.html',1,'']]],
-  ['specific_20sources_122',['Platform specific sources',['../md_docs_2Macros.html#autotoc_md138',1,'']]],
+  ['specific_20sources_122',['Platform specific sources',['../md_docs_2Macros.html#autotoc_md136',1,'']]],
   ['split_5f2x2_123',['SPLIT_2X2',['../group__ass__properties.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aac2d1453e21b91adbf8d873909380ec3',1,'ass']]],
   ['sqlcolumn_124',['SqlColumn',['../structSqlColumn.html',1,'']]],
   ['sqlexception_125',['SQLException',['../classSQLException.html',1,'']]],
@@ -158,7 +158,7 @@ var searchData=
   ['supported_20units_155',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
   ['svg_156',['Why SVG?',['../md_docs_2aui__app.html#autotoc_md91',1,'']]],
   ['swappable_157',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_158',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md86',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md107',1,'Syntax']]],
+  ['syntax_158',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md87',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md107',1,'Syntax']]],
   ['system_159',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_160',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];

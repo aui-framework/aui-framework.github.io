@@ -13,7 +13,7 @@ var searchData=
   ['wherestatement_10',['WhereStatement',['../classASqlBuilder_1_1WhereStatement.html',1,'ASqlBuilder']]],
   ['wholearchive_11',['WHOLEARCHIVE',['../md_docs_2aui__executable.html#WHOLEARCHIVE',1,'WHOLEARCHIVE'],['../md_docs_2aui__module.html#autotoc_md113',1,'WHOLEARCHIVE']]],
   ['why_20svg_12',['Why SVG?',['../md_docs_2aui__app.html#autotoc_md91',1,'']]],
-  ['win32_5fsubsystem_5fconsole_13',['WIN32_SUBSYSTEM_CONSOLE',['../md_docs_2aui__executable.html#autotoc_md87',1,'']]],
+  ['win32_5fsubsystem_5fconsole_13',['WIN32_SUBSYSTEM_CONSOLE',['../md_docs_2aui__executable.html#autotoc_md86',1,'']]],
   ['win32symservice_14',['Win32SymService',['../structWin32SymService.html',1,'']]],
   ['win32wrapwhitespaceargumentswithquots_15',['win32WrapWhitespaceArgumentsWithQuots',['../structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6',1,'AProcess::ArgStringList']]],
   ['windowdelegate_16',['WindowDelegate',['../interfaceWindowDelegate.html',1,'']]],
@@ -52,7 +52,7 @@ var searchData=
   ['write_49',['write',['../classAByteBuffer.html#a792971058a98e6c3b0b02de5369ea8e3',1,'AByteBuffer::write(const char *src, size_t size) override'],['../classAByteBuffer.html#ac2a3dab90d185a33804a0b855d732f07',1,'AByteBuffer::write(IInputStream &amp;stream, size_t size)'],['../classADynamicPipe.html#a636751385ea48b6f010f7f794c282602',1,'ADynamicPipe::write()'],['../classAFileOutputStream.html#abd4ca9831b7176689a9bbe7cf10f62b4',1,'AFileOutputStream::write()'],['../classAPipe.html#a4b86fe3324e01417be2a4b33c87e2279',1,'APipe::write()'],['../classAStringStream.html#a15a65d595eab72e5085adaa26e1f6d2b',1,'AStringStream::write()'],['../classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72',1,'IOutputStream::write(const char *src, size_t size)=0'],['../classIOutputStream.html#a93b76426e175a9eb9b28151b0ec7086e',1,'IOutputStream::write(const T &amp;t)'],['../classPipeOutputStream.html#a9a4834908d84520e7b9eb8a28848ea43',1,'PipeOutputStream::write()'],['../classAWebsocket.html#aa2e066cfdfda0d9eeffbc403f45b62f3',1,'AWebsocket::write()'],['../classATcpSocket.html#a12c9f8ebd57f0189bd2bda6103d1718e',1,'ATcpSocket::write()'],['../classAUdpSocket.html#ae5aa39aacf566e551a6c10bfd87a04e1',1,'AUdpSocket::write()']]],
   ['writecallback_50',['WriteCallback',['../classACurl.html#a752944b2f6dd5c10c45c6447bfc1d2a8',1,'ACurl']]],
   ['writeexception_51',['WriteException',['../classAFileOutputStream_1_1WriteException.html',1,'AFileOutputStream']]],
-  ['writing_20platform_20dependent_20code_52',['Writing platform dependent code',['../md_docs_2Macros.html#autotoc_md136',1,'']]],
+  ['writing_20platform_20dependent_20code_52',['Writing platform dependent code',['../md_docs_2Macros.html#autotoc_md134',1,'']]],
   ['writing_20tests_53',['Writing tests',['../md_docs_2Writing_01tests.html',1,'']]],
   ['writing_20ui_20tests_54',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md156',1,'']]]
 ];
