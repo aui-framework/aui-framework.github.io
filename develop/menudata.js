@@ -51,4 +51,7 @@ var menudata={children:[
 {text:"All ASS Properties",url:"group__ass__properties.html"}]},
 {text:"Tweaking",url:"usergroup4.html",children:[
 {text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
-{text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"}]}]}
+{text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"}]},
+{text:"Preparing to Production",url:"usergroup5.html",children:[
+{text:"Setting App Icon",url:"md_docs_2Setting_01App_01Icon.html"},
+{text:"Packaging Your App",url:"md_docs_2Packaging_01Your_01App.html"}]}]}

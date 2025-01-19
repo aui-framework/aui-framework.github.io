@@ -44,6 +44,8 @@ var NAVTREEINDEX0 =
 "md_docs_2Devtools.html":[2,5],
 "md_docs_2Getting_01started_01with_01AUI.html":[1,0],
 "md_docs_2Macros.html":[1,3],
+"md_docs_2Packaging_01Your_01App.html":[4,1],
+"md_docs_2Setting_01App_01Icon.html":[4,0],
 "md_docs_2Troubleshoot_01list.html":[1,5],
 "md_docs_2UI_01Building_01Overview.html":[2,0],
 "md_docs_2Writing_01tests.html":[1,2],
@@ -103,5 +105,6 @@ var NAVTREEINDEX0 =
 "usergroup2.html":[1],
 "usergroup3.html":[2],
 "usergroup4.html":[3],
+"usergroup5.html":[4],
 "":[0,2,3]
 };

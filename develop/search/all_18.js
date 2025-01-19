@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['ui_20building_0',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md133',1,'']]],
+  ['ui_20building_0',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md128',1,'']]],
   ['ui_20building_20overview_1',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
-  ['ui_20data_20binding_20with_20let_2',['UI data binding with let',['../group__property__system.html#autotoc_md159',1,'']]],
+  ['ui_20data_20binding_20with_20let_2',['UI data binding with let',['../group__property__system.html#autotoc_md164',1,'']]],
   ['ui_20declarative_20data_20binding_3',['UI declarative data binding',['../group__property__system.html#UI_declarative_data_binding',1,'']]],
   ['ui_20example_4',['UI example',['../group__signal__slot.html#autotoc_md3',1,'']]],
-  ['ui_20tests_5',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md156',1,'']]],
+  ['ui_20tests_5',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md160',1,'']]],
   ['ui_5fthread_6',['ui_thread',['../group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb',1,'kAUI.h']]],
   ['ui_5fthreadx_7',['ui_threadX',['../group__useful__macros.html#ga3f61ecfc942915005f2bba5a317b654a',1,'kAUI.h']]],
   ['uimatcher_8',['UIMatcher',['../classUIMatcher.html',1,'']]],
@@ -40,7 +40,7 @@ var searchData=
   ['using_20aui_20distributions_20with_20tt_20find_5fpackage_20tt_37',['Using AUI distributions with &lt;tt&gt;find_package&lt;/tt&gt;',['../md_docs_2AUI_01Boot.html#autotoc_md59',1,'']]],
   ['using_20container_20stylesheet_38',['Using container stylesheet',['../group__ass.html#autotoc_md10',1,'']]],
   ['using_20global_20style_39',['Using global style',['../group__ass.html#autotoc_md9',1,'']]],
-  ['using_20inkscape_40',['Vectorization using Inkscape',['../md_docs_2aui__app.html#autotoc_md92',1,'']]],
+  ['using_20inkscape_40',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md144',1,'']]],
   ['using_20same_20dependencies_41',['Using same dependencies',['../md_docs_2AUI_01Boot.html#autotoc_md54',1,'']]],
   ['using_20setcustomstyle_42',['Using setCustomStyle',['../group__ass.html#autotoc_md12',1,'']]],
   ['using_20with_5fstyle_43',['Using with_style',['../group__ass.html#autotoc_md11',1,'']]],

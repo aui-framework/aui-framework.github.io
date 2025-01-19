@@ -56,6 +56,10 @@ var NAVTREE =
     [ "Tweaking", null, [
       [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
       [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ]
+    ] ],
+    [ "Preparing to Production", null, [
+      [ "Setting App Icon", "md_docs_2Setting_01App_01Icon.html", null ],
+      [ "Packaging Your App", "md_docs_2Packaging_01Your_01App.html", null ]
     ] ]
 ];
 

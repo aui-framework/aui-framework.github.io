@@ -12,6 +12,7 @@ var searchData=
   ['executewaitforexit_9',['executeWaitForExit',['../classAProcess.html#a3f74fa0108325de438c33cd0cf5519e2',1,'AProcess']]],
   ['exists_10',['exists',['../classAPath.html#a75d1783b5aceea2da0a3cd33f8b7bc0c',1,'APath']]],
   ['expanding_11',['expanding',['../classAView.html#a3b66f888724c9a143c6e7cba263bf60b',1,'AView']]],
-  ['extensionchanged_12',['extensionChanged',['../classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85',1,'APath']]],
-  ['extrastylesheet_13',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
+  ['extension_12',['extension',['../classAPath.html#acef706b7e2109da7f7625489f114eaab',1,'APath']]],
+  ['extensionchanged_13',['extensionChanged',['../classAPath.html#af39b9c95e6446b64c89ffcac84fe4c85',1,'APath']]],
+  ['extrastylesheet_14',['extraStylesheet',['../classAView.html#aa8b76866565fc34ce1ed970708de8125',1,'AView']]]
 ];
