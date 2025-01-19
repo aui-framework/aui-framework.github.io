@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_20contributor_0',['Becoming a contributor',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md119',1,'']]],
+  ['a_20contributor_0',['Becoming a contributor',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md116',1,'']]],
   ['a_20subdirectory_1',['Importing project as a subdirectory',['../md_docs_2AUI_01Boot.html#autotoc_md37',1,'']]],
   ['a2dtransform_2',['A2DTransform',['../structA2DTransform.html',1,'']]],
   ['a2fingertransformarea_3',['A2FingerTransformArea',['../classA2FingerTransformArea.html',1,'']]],
@@ -312,7 +312,7 @@ var searchData=
   ['and_309',['And',['../structaui_1_1valid_1_1impl_1_1And.html',1,'aui::valid::impl']]],
   ['and_20aui_20implementation_310',['Differences between Qt and AUI implementation',['../group__signal__slot.html#autotoc_md6',1,'']]],
   ['and_20ios_311',['Crosscompiling (Android and iOS)',['../md_docs_2Crosscompiling.html',1,'']]],
-  ['and_20macros_312',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md118',1,'']]],
+  ['and_20macros_312',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md119',1,'']]],
   ['and_20moving_20apropertyprecomputed_313',['Copying and moving APropertyPrecomputed',['../structAPropertyPrecomputed.html#autotoc_md163',1,'']]],
   ['android_314',['Android',['../md_docs_2Crosscompiling.html#autotoc_md129',1,'']]],
   ['android_20and_20ios_315',['Crosscompiling (Android and iOS)',['../md_docs_2Crosscompiling.html',1,'']]],
@@ -525,7 +525,7 @@ var searchData=
   ['ass_20name_522',['ASS name',['../group__ass.html#autotoc_md15',1,'Select all ASS name'],['../group__ass.html#autotoc_md17',1,'Select all labels with ASS name']]],
   ['ass_20properties_523',['ASS properties',['../group__ass__properties.html',1,'']]],
   ['ass_20selectors_524',['ASS selectors',['../group__ass__selectors.html',1,'']]],
-  ['assert_20or_20exception_525',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md116',1,'']]],
+  ['assert_20or_20exception_525',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md117',1,'']]],
   ['assert_5fnot_5fused_5fwhen_5fnull_526',['assert_not_used_when_null',['../classaui_1_1assert__not__used__when__null.html',1,'aui']]],
   ['assert_5fnot_5fused_5fwhen_5fnull_3c_20display_20_2a_20_3e_527',['assert_not_used_when_null&lt; Display * &gt;',['../classaui_1_1assert__not__used__when__null.html',1,'aui']]],
   ['assertions_528',['Assertions',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md115',1,'']]],

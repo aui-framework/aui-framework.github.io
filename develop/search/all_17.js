@@ -5,7 +5,7 @@ var searchData=
   ['target_2',['TARGET',['../md_docs_2aui__app.html#autotoc_md88',1,'']]],
   ['tell_3',['tell',['../classAStrongByteBufferInputStream.html#af9086be1a67a1e9c3c52600879982ea7',1,'AStrongByteBufferInputStream::tell()'],['../classISeekableInputStream.html#a20de413b233ba5fb6927d7708801cd10',1,'ISeekableInputStream::tell()']]],
   ['temp_4',['TEMP',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b',1,'APath']]],
-  ['template_20metaprogramming_20and_20macros_5',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md118',1,'']]],
+  ['template_20metaprogramming_20and_20macros_5',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md119',1,'']]],
   ['templates_6',['Useful templates',['../group__useful__templates.html',1,'']]],
   ['ternary_7',['ternary',['../structaui_1_1ternary.html',1,'aui::ternary&lt; boolean, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary.html',1,'aui::traits::ternary&lt; value, OnTrue, OnFalse &gt;']]],
   ['ternary_3c_20std_3a_3afalse_5ftype_2c_20ontrue_2c_20onfalse_20_3e_8',['ternary&lt; std::false_type, OnTrue, OnFalse &gt;',['../structaui_1_1ternary.html',1,'aui::ternary&lt; std::false_type, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary.html',1,'aui::traits::ternary&lt; std::false_type, OnTrue, OnFalse &gt;']]],

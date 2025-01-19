@@ -134,7 +134,7 @@ var searchData=
   ['statement_131',['Statement',['../classASqlBuilder_1_1Statement.html',1,'ASqlBuilder']]],
   ['stealin_132',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_133',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
-  ['stl_20like_20functionality_134',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md117',1,'']]],
+  ['stl_20like_20functionality_134',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md118',1,'']]],
   ['streambuf_135',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
   ['streams_136',['IO streams',['../group__io.html',1,'']]],
   ['string_137',['string',['../classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274',1,'OpenGLRenderer::string()'],['../classIRenderer.html#a4e3c00a94301b0c9bc1070f7fcbb76ca',1,'IRenderer::string()'],['../classSoftwareRenderer.html#a1441fc2d791de0aa28e80802364073df',1,'SoftwareRenderer::string()']]],
