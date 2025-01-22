@@ -240,7 +240,7 @@ $(function(){initNavTree('AObject_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    [[nodiscard]] <span class="keywordtype">bool</span> isSignalsEnabled() const noexcept { <span class="keywordflow">return</span> mSignalsEnabled; }</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keyword">template</span> &lt;ASignalInvokable T&gt;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordtype">void</span> operator^(T&amp;&amp; t) {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordtype">void</span> operator^(T&amp;&amp; t) <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (mSignalsEnabled) {</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            <a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>.invokeSignal(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>

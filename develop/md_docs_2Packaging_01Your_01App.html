@@ -118,12 +118,12 @@ $(function(){initNavTree('md_docs_2Packaging_01Your_01App.html',''); initResizab
 <p>In addition, this command populates some <code>CPACK_*</code> variables (if undefined). This approach allows you not to bother about various installation methods but also override the variables if needed. These adjustments are needed to configure the installer packages. AUI replaces installers' defaults with the information passed to <code>aui_app</code>, such as app name, id, icon, license information, authors, etc. to produce production-ready packages out of the box.</p>
 <p>This guide covers various packaging techniques for all supported platforms.</p>
 <dl class="section note"><dt>Note</dt><dd>This guide assumes you have already called <a class="el" href="md_docs_2aui__app.html">aui_app</a> inside your <code>CMakeLists.txt</code>.</dd></dl>
-<h1><a class="anchor" id="autotoc_md138"></a>
+<h1><a class="anchor" id="autotoc_md141"></a>
 Windows</h1>
 <p>Historically, Windows has been associated with installers in the form of executable files (<code>exe</code>s) and Windows Installer files (<code>msi</code>s), often downloaded from the internet. This method can be considered unsecure.</p>
 <p>Although Windows offers its official store and numerous unofficial repositories for distributing software, many developers still opt for traditional methods. This guide will cover the latter.</p>
 <dl class="section note"><dt>Note</dt><dd>Guides about packaging for Windows assume you are running Windows with <a href="https://community.chocolatey.org/">Chocolatey</a> preinstalled. This way the process is easily reproducible (i.e., on a CI/CD runner).</dd></dl>
-<h2><a class="anchor" id="autotoc_md139"></a>
+<h2><a class="anchor" id="autotoc_md142"></a>
 Inno Setup</h2>
 <p><a href="https://cmake.org/cmake/help/latest/cpack_gen/innosetup.html">[CMake Documentation]</a></p>
 <div class="image">
@@ -158,7 +158,7 @@ Installer with AUI's patches applied</div></div>
 </ul>
 <p><a class="el" href="md_docs_2aui__app.html">aui_app</a> generates some image assets for the installer from your icon.</p>
 <p>You can override these values by simply calling <code>set</code> on them. By default, in addition to branding adjustments (such as app logo and name), AUI configures INNOSETUP so the installer won't prompt a UAC dialog (leverage to <em>admin privileges</em>). This way the installation process is more secure from perspective of the end user. Moreover, installation to user's directory allows <code>aui::updater</code> to work without prompting leverage to admin privileges during update installation.</p>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md143"></a>
 WIX</h2>
 <p><a href="https://cmake.org/cmake/help/latest/cpack_gen/wix.html">[CMake Documentation]</a></p>
 <div class="image">
@@ -189,11 +189,11 @@ WIX</h2>
 <img src="wix_logo.png" alt=""/>
 <div class="caption">
 Installer with AUI's patches applied</div></div>
-<h1><a class="anchor" id="autotoc_md141"></a>
+<h1><a class="anchor" id="autotoc_md144"></a>
 macOS</h1>
 <dl class="section note"><dt>Note</dt><dd>Guides about packaging for macOS assume you are running macOS with Xcode preinstalled.</dd></dl>
 <p>The simplest and the most user-friendly installation method is <code>DragNDrop</code> which you are probably looking for.</p>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md145"></a>
 DragNDrop</h2>
 <p>The DranDrop CPack generator creates a DMG image. When opened, a Finder window appears with your application and a symlink to <code>/Applications</code>, effectively prompting the user to copy the application from the medium to his app library.</p>
 <p>Default DMG image produced by CPack is sparse: it's just a regular Finder window with sidebar and top bar showing your application bundle and a symlink. <a class="el" href="md_docs_2aui__app.html">aui_app</a> configures CPack to rearrange icons and place a background image so no extra configuration by a AUI-based project is needed:</p>
@@ -212,7 +212,7 @@ DragNDrop</h2>
 <li><code>CPACK_DMG_BACKGROUND_IMAGE</code> <em> = <code>${_current_app_build_files}/dmg_background.png</code></em> <em>(sets the default DMG background)</em></li>
 <li><code>CPACK_DMG_DS_STORE_SETUP_SCRIPT</code> <em> = <code>${_current_app_build_files}/dmg_ds_store_setup.scpt</code></em> <em>(rearranges icons in DMG)</em></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md143"></a>
+<h1><a class="anchor" id="autotoc_md146"></a>
 Android and iOS</h1>
 <p>Please refer to <a class="el" href="md_docs_2Crosscompiling.html">cross-compiling</a>. </p>
 </div><p class="footer-inner">
