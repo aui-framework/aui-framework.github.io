@@ -38,6 +38,7 @@ var menudata={children:[
 {text:"Writing tests",url:"md_docs_2Writing_01tests.html"},
 {text:"Build-time macros",url:"md_docs_2Macros.html"},
 {text:"Code style and recommendations",url:"md_docs_2Code_01style_01and_01recommendations.html"},
+{text:"clang-format",url:"md_docs_2clang-format.html"},
 {text:"Troubleshoot list",url:"md_docs_2Troubleshoot_01list.html"},
 {text:"Crosscompiling (Android and iOS)",url:"md_docs_2Crosscompiling.html"}]},
 {text:"UI Building",url:"usergroup3.html",children:[

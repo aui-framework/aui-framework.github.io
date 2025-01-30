@@ -40,6 +40,7 @@ var NAVTREE =
       [ "Writing tests", "md_docs_2Writing_01tests.html", null ],
       [ "Build-time macros", "md_docs_2Macros.html", null ],
       [ "Code style and recommendations", "md_docs_2Code_01style_01and_01recommendations.html", null ],
+      [ "clang-format", "md_docs_2clang-format.html", null ],
       [ "Troubleshoot list", "md_docs_2Troubleshoot_01list.html", null ],
       [ "Crosscompiling (Android and iOS)", "md_docs_2Crosscompiling.html", null ]
     ] ],
