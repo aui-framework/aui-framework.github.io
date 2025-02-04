@@ -21,7 +21,7 @@ var searchData=
   ['frompid_18',['fromPid',['../classAProcess.html#a1a84955a61a10abe23278882b311b96e',1,'AProcess']]],
   ['fromrange_19',['fromRange',['../classADynamicVector.html#aeac0e5cae231997dd52a942ab5c94d4c',1,'ADynamicVector::fromRange()'],['../classASmallVector.html#ac68a25e5840359a6b485280194f21913',1,'ASmallVector::fromRange()'],['../classAStaticVector.html#ae16d46cf82883d05115aa61592c19196',1,'AStaticVector::fromRange()'],['../classAVector.html#a275203bce2c8afcff4fcd321058703b8',1,'AVector::fromRange()']]],
   ['fromrrggbb_20',['fromRRGGBB',['../classAColor.html#abf71cfeaef98447ae38e6e9621cc3c83',1,'AColor']]],
-  ['fromstring_21',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid']]],
+  ['fromstring_21',['fromString',['../classAUuid.html#a3c56a6c54f94efafb4e196c0b20f1a3a',1,'AUuid::fromString()'],['../structaui_1_1updater_1_1Semver.html#a3e4cd3ca998ea8650bbf613bdd810b2a',1,'aui::updater::Semver::fromString()']]],
   ['fromurl_22',['fromUrl',['../classIDrawable.html#ae65ce317a418ed8c92858ef04b6e9b04',1,'IDrawable']]],
   ['fromvector_23',['fromVector',['../classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb',1,'AListModel::fromVector(AVector&lt; V &gt; t)'],['../classAListModel.html#a078cb9149f7b11921db72fcc5b441257',1,'AListModel::fromVector(std::vector&lt; V &gt; t)']]],
   ['fromwchar_24',['fromWchar',['../group__windows__specific.html#gaad0b29a69b2fd2e9f82212600b57da3d',1,'aui::win32']]],

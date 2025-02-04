@@ -10,6 +10,7 @@ var searchData=
   ['aui_3a_3ajson_7',['aui::json',['../group__json.html',1,'']]],
   ['aui_3a_3anetwork_8',['aui::network',['../group__network.html',1,'']]],
   ['aui_3a_3auitests_9',['aui::uitests',['../group__uitests.html',1,'']]],
-  ['aui_3a_3aviews_10',['aui::views',['../group__views.html',1,'']]],
-  ['aui_3a_3axml_11',['aui::xml',['../group__xml.html',1,'']]]
+  ['aui_3a_3aupdater_10',['aui::updater',['../group__updater.html',1,'']]],
+  ['aui_3a_3aviews_11',['aui::views',['../group__views.html',1,'']]],
+  ['aui_3a_3axml_12',['aui::xml',['../group__xml.html',1,'']]]
 ];

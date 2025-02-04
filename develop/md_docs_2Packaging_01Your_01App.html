@@ -107,7 +107,10 @@ $(function(){initNavTree('md_docs_2Packaging_01Your_01App.html',''); initResizab
 <div class="contents">
 <div class="textblock"><p>Cross-platform app packaging is a large topic that involves various build systems, platform-specific tools and techniques. AUI unifies package building process while still relying on <code>CMake</code> as the central build system.</p>
 <p>AUI Framework focuses on minimizing efforts for AUI-based project to produce production-ready packages as easily as possible. AUI refrains from self-promotion in placeholders and "default values"; instead it carefully uses the information about your project passed to <a class="el" href="md_docs_2aui__app.html">aui_app</a> where needed.</p>
-<p><a class="el" href="md_docs_2aui__app.html">aui_app</a> is a CMake command provided by AUI that defines platform-specific technical information about your application:</p><ul>
+<p>AUI provides a convenient configure time variable for choosing target packaging method - <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUI_APP_PACKAGING">-DAUI_APP_PACKAGING=...</a>. Furthermore, if you are using <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUI_BUILD_FOR">-DAUI_BUILD_FOR=...</a> (for cross-compiling), <code>AUI_APP_PACKAGING</code> is <a class="el" href="#PACKAGING_WITH_AUI_BUILD_FOR">not required</a> to specify. This page provides full usage examples.</p>
+<p><code>AUI_APP_PACKAGING</code> and <code>AUI_BUILD_FOR</code> are handled by <a class="el" href="md_docs_2aui__app.html">aui_app</a>.</p>
+<p><a class="el" href="md_docs_2aui__app.html">aui_app</a> is a CMake command provided by AUI that defines platform-specific technical information about your application:</p>
+<ul>
 <li>Display name</li>
 <li>Icon</li>
 <li>Vendor (author) information</li>
@@ -115,15 +118,16 @@ $(function(){initNavTree('md_docs_2Packaging_01Your_01App.html',''); initResizab
 <li>Package id (if required by target platform)</li>
 <li>etc...</li>
 </ul>
-<p>In addition, this command populates some <code>CPACK_*</code> variables (if undefined). This approach allows you not to bother about various installation methods but also override the variables if needed. These adjustments are needed to configure the installer packages. AUI replaces installers' defaults with the information passed to <code>aui_app</code>, such as app name, id, icon, license information, authors, etc. to produce production-ready packages out of the box.</p>
+<p>In addition, this command populates some <code>CPACK_*</code> variables (if undefined). This approach allows you not to bother about various installation methods but also override the variables if needed by simply calling <code>set</code> on them, no matter prior to or after <code>aui_app</code> invocation.</p>
+<p>These adjustments are needed to configure the installer packages. AUI replaces installers' defaults with the information passed to <code>aui_app</code>, such as app name, id, icon, license information, authors, etc. to produce production-ready packages out of the box.</p>
 <p>This guide covers various packaging techniques for all supported platforms.</p>
 <dl class="section note"><dt>Note</dt><dd>This guide assumes you have already called <a class="el" href="md_docs_2aui__app.html">aui_app</a> inside your <code>CMakeLists.txt</code>.</dd></dl>
-<h1><a class="anchor" id="autotoc_md140"></a>
+<h1><a class="anchor" id="autotoc_md145"></a>
 Windows</h1>
 <p>Historically, Windows has been associated with installers in the form of executable files (<code>exe</code>s) and Windows Installer files (<code>msi</code>s), often downloaded from the internet. This method can be considered unsecure.</p>
 <p>Although Windows offers its official store and numerous unofficial repositories for distributing software, many developers still opt for traditional methods. This guide will cover the latter.</p>
 <dl class="section note"><dt>Note</dt><dd>Guides about packaging for Windows assume you are running Windows with <a href="https://community.chocolatey.org/">Chocolatey</a> preinstalled. This way the process is easily reproducible (i.e., on a CI/CD runner).</dd></dl>
-<h2><a class="anchor" id="autotoc_md141"></a>
+<h2><a class="anchor" id="INNOSETUP"></a>
 Inno Setup</h2>
 <p><a href="https://cmake.org/cmake/help/latest/cpack_gen/innosetup.html">[CMake Documentation]</a></p>
 <div class="image">
@@ -137,50 +141,73 @@ Installer with AUI's patches applied</div></div>
 <div class="line"><span class="comment"># standard CMake build process</span></div>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCPACK_GENERATOR=INNOSETUP</div>
+<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DAUI_APP_PACKAGING=INNOSETUP</div>
 <div class="line">cmake --build . --config Release</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># packaging</span></div>
-<div class="line">cpack . -c Release</div>
-</div><!-- fragment --><p>The script above produces a file <code>&lt;APP_NAME&gt;-VERSION-ARCH-setup.exe</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code> arg of <a class="el" href="md_docs_2aui__app.html">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
+<div class="line">cpack . -c Release -B artifacts</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># publishing</span></div>
+<div class="line">gh release upload ${{ github.ref }} artifacts/*.*</div>
+</div><!-- fragment --><p>The script above produces a file <code>artifacts/&lt;APP_NAME&gt;-VERSION-windows-ARCH-setup.exe</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code> arg of <a class="el" href="md_docs_2aui__app.html">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
 <p><a class="el" href="md_docs_2aui__app.html">aui_app</a> populates the following INNOSETUP-related variables (if undefined):</p><ul>
 <li><code>CPACK_INNOSETUP_ICON_FILE</code> <em> = <code>${_ico}</code></em> <em>(installer icon)</em></li>
 <li><code>CPACK_INNOSETUP_IGNORE_LICENSE_PAGE</code> <em> = <code>ON</code></em> <em>(skips license page)</em></li>
 <li><code>CPACK_INNOSETUP_IGNORE_README_PAGE</code> <em> = <code>ON</code></em> <em>(skips README page)</em></li>
-<li><code>CPACK_INNOSETUP_INSTALL_ROOT</code> <em> = <code>"{userappdata}"</code></em> <em>(install To AppData)</em></li>
-<li><code>CPACK_INNOSETUP_PROGRAM_MENU_FOLDER</code> <em> = <code>"."</code></em> <em>(omits menu folder)</em></li>
-<li><code>CPACK_INNOSETUP_RUN_EXECUTABLES</code> <em> = <code>${_executable}</code></em> <em>(run the program after installation)</em></li>
+<li><code>CPACK_INNOSETUP_INSTALL_ROOT</code> <em> = <code>"{localappdata}"</code></em> <em>(installs To AppData\Local)</em></li>
+<li><code>CPACK_INNOSETUP_PROGRAM_MENU_FOLDER</code> <em> = <code>"."</code></em> <em>(omits Start menu folder)</em></li>
+<li><code>CPACK_INNOSETUP_RUN_EXECUTABLES</code> <em> = <code>${_executable}</code></em> <em>(runs the program after installation)</em></li>
 <li><code>CPACK_INNOSETUP_SETUP_PrivilegesRequired</code> <em> = <code>"lowest"</code></em> <em>(hence we're installing to user dir, we don't need UAC)</em></li>
 <li><code>CPACK_INNOSETUP_SETUP_UninstallDisplayIcon</code> <em> = <code>"{app}\\\\\\\\bin\\\\\\\\${_executable}.exe"</code></em> <em>(displays app icon in Control Panel/Settings)</em></li>
 <li><code>CPACK_INNOSETUP_SETUP_WizardSmallImageFile</code> <em> = <code>${_ico}</code></em> <em>(small icon inside INNOSETUP window)</em></li>
-<li><code>CPACK_PACKAGE_FILE_NAME</code> <em> = <code>${CPACK_PACKAGE_NAME}-${APP_VERSION}-${_cmake_system_processor_lower}-setup</code></em> <em>(append -setup suffix for INNOSETUP)</em></li>
 <li><code>CPACK_PACKAGE_ICON</code> <em> = <code>${_ico}</code></em> <em>(app icon inside INNOSETUP window)</em></li>
+<li><code>_aui_package_file_name</code> <em> = <code>${_aui_package_file_name}-setup</code></em> <em>(append -setup suffix for INNOSETUP)</em></li>
 </ul>
 <p><a class="el" href="md_docs_2aui__app.html">aui_app</a> generates some image assets for the installer from your icon.</p>
-<p>You can override these values by simply calling <code>set</code> on them. By default, in addition to branding adjustments (such as app logo and name), AUI configures INNOSETUP so the installer won't prompt a UAC dialog (leverage to <em>admin privileges</em>). This way the installation process is more secure from perspective of the end user. Moreover, installation to user's directory allows <code>aui::updater</code> to work without prompting leverage to admin privileges during update installation.</p>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<p>By default, in addition to branding adjustments (such as app logo and name), AUI configures INNOSETUP so the installer won't prompt a UAC dialog (leverage to <em>admin privileges</em>). This way the installation process is more secure from perspective of the end user. Moreover, installation to user's directory allows <a class="el" href="group__updater.html">aui::updater</a> to work without prompting leverage to admin privileges during update installation.</p>
+<h2><a class="anchor" id="PORTABLE_WINDOWS"></a>
+AUI_PORTABLE_ZIP, AUI_PORTABLE_TGZ</h2>
+<dl class="section note"><dt>Note</dt><dd>This packaging method is AUI-specific and provided by <code>aui_app</code> via <code>AUI_APP_PACKAGING</code>.</dd></dl>
+<p>This packaging method creates an <code>*.zip</code> or <code>*.tar.gz</code> archive with your application "preinstalled". After unpacking, no extra actions are needed. The user can launch executable of your application directly.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="group__updater.html">aui::updater</a> requires ZIP portable to be published. Other archive formats such tar <code>tar.gz</code> are not supported.</dd></dl>
+<div class="fragment"><div class="line"><span class="comment"># standard CMake build process</span></div>
+<div class="line">mkdir build</div>
+<div class="line">cd build</div>
+<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DAUI_APP_PACKAGING=AUI_PORTABLE_ZIP</div>
+<div class="line">cmake --build . --config Release</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># packaging</span></div>
+<div class="line">cpack . -c Release -B artifacts</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># publishing</span></div>
+<div class="line">gh release upload ${{ github.ref }} artifacts/*.*</div>
+</div><!-- fragment --><p><code>AUI_PORTABLE_ZIP</code> appends <code>-portable</code> suffix to archive file name, if not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>.</p>
+<h2><a class="anchor" id="autotoc_md146"></a>
 WIX</h2>
 <p><a href="https://cmake.org/cmake/help/latest/cpack_gen/wix.html">[CMake Documentation]</a></p>
 <div class="image">
 <img src="wix.png" alt=""/>
 </div>
 <p>WIX is the installer framework that produces <code>msi</code> packages.</p>
-<dl class="section note"><dt>Note</dt><dd>aui::updater requires application to be installed in user's directory and thus AUI's autoupdating functionality can't be used with WIX.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="group__updater.html">aui::updater</a> requires application to be installed in user's directory and thus AUI's autoupdating functionality can't be used with WIX.</dd></dl>
 <div class="fragment"><div class="line"><span class="comment"># install requirements</span></div>
 <div class="line">choco install wixtoolset</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># standard CMake build process</span></div>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCPACK_GENERATOR=WIX</div>
+<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DAUI_APP_PACKAGING=WIX</div>
 <div class="line">cmake --build . --config Release</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># packaging</span></div>
-<div class="line">cpack . -c Release</div>
-</div><!-- fragment --><p>The script above produces a file <code>&lt;APP_NAME&gt;-VERSION-ARCH.msi</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code> arg of <a class="el" href="md_docs_2aui__app.html">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
+<div class="line">cpack . -c Release -B artifacts</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># publishing</span></div>
+<div class="line">gh release upload ${{ github.ref }} artifacts/*.*</div>
+</div><!-- fragment --><p>The script above produces a file <code>artifacts/&lt;APP_NAME&gt;-VERSION-windows-ARCH.msi</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code> arg of <a class="el" href="md_docs_2aui__app.html">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
 <p><a class="el" href="md_docs_2aui__app.html">aui_app</a> populates the following WIX-related variables (if undefined):</p><ul>
 <li><code>CPACK_WIX_PRODUCT_ICON</code> <em> = <code>${_ico}</code></em> <em>(displays app icon in Control Panel/Settings)</em></li>
-<li><code>CPACK_WIX_PROGRAM_MENU_FOLDER</code> <em> = <code>"."</code></em> <em>(omits menu folder)</em></li>
+<li><code>CPACK_WIX_PROGRAM_MENU_FOLDER</code> <em> = <code>"."</code></em> <em>(omits Start menu folder)</em></li>
 <li><code>CPACK_WIX_UI_BANNER</code> <em> = <code>${_ico}</code></em> <em>(image at top of all installer pages)</em></li>
 <li><code>CPACK_WIX_UI_DIALOG</code> <em> = <code>${_ico}</code></em> <em>(background image used on the welcome and completion dialogs)</em></li>
 </ul>
@@ -189,31 +216,38 @@ WIX</h2>
 <img src="wix_logo.png" alt=""/>
 <div class="caption">
 Installer with AUI's patches applied</div></div>
-<h1><a class="anchor" id="autotoc_md143"></a>
+<h1><a class="anchor" id="autotoc_md147"></a>
 macOS</h1>
 <dl class="section note"><dt>Note</dt><dd>Guides about packaging for macOS assume you are running macOS with Xcode preinstalled.</dd></dl>
 <p>The simplest and the most user-friendly installation method is <code>DragNDrop</code> which you are probably looking for.</p>
-<h2><a class="anchor" id="autotoc_md144"></a>
+<h2><a class="anchor" id="DragNDrop"></a>
 DragNDrop</h2>
-<p>The DranDrop CPack generator creates a DMG image. When opened, a Finder window appears with your application and a symlink to <code>/Applications</code>, effectively prompting the user to copy the application from the medium to his app library.</p>
-<p>Default DMG image produced by CPack is sparse: it's just a regular Finder window with sidebar and top bar showing your application bundle and a symlink. <a class="el" href="md_docs_2aui__app.html">aui_app</a> configures CPack to rearrange icons and place a background image so no extra configuration by a AUI-based project is needed:</p>
+<p><a href="https://cmake.org/cmake/help/latest/cpack_gen/dmg.html">[CMake Documentation]</a></p>
+<p>The DragNDrop CPack generator creates a DMG image. When opened, a Finder window appears with your application and a symlink to <code>/Applications</code>, effectively prompting the user to copy the application from the medium to his app library.</p>
+<p>This packaging method for macOS covers non-install (portable) use case as well. If one chooses to keep your application not in <code>/Applications</code> but in some other place they can do that intuitively by copying your application from DMG image to whatever place they want.</p>
+<p>Default DMG image produced by CPack is sparse: it's just a regular Finder window with sidebar and top bar showing your application bundle and a symlink. <a class="el" href="md_docs_2aui__app.html">aui_app</a> configures CPack to rearrange icons and place a background image so no extra configuration by an AUI-based project is needed:</p>
 <div class="image">
 <img src="dmg.png" alt=""/>
 </div>
 <div class="fragment"><div class="line"><span class="comment"># standard CMake build process</span></div>
 <div class="line">mkdir build</div>
 <div class="line">cd build</div>
-<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DCPACK_GENERATOR=DragNDrop</div>
+<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release -DAUI_APP_PACKAGING=DragNDrop</div>
 <div class="line">cmake --build . --config Release</div>
 <div class="line"> </div>
 <div class="line"><span class="comment"># packaging</span></div>
-<div class="line">cpack . -c Release</div>
-</div><!-- fragment --><p><a class="el" href="md_docs_2aui__app.html">aui_app</a> populates the following DMG-related variables (if undefined):</p><ul>
+<div class="line">cpack . -c Release -B artifacts</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># publishing</span></div>
+<div class="line">gh release upload ${{ github.ref }} artifacts/*.*</div>
+</div><!-- fragment --><p>The script above produces a file <code>artifacts/&lt;APP_NAME&gt;-VERSION-macos-ARCH.dmg</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code> arg of <a class="el" href="md_docs_2aui__app.html">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
+<p><a class="el" href="md_docs_2aui__app.html">aui_app</a> populates the following DMG-related variables (if undefined):</p><ul>
 <li><code>CPACK_DMG_BACKGROUND_IMAGE</code> <em> = <code>${_current_app_build_files}/dmg_background.png</code></em> <em>(sets the default DMG background)</em></li>
 <li><code>CPACK_DMG_DS_STORE_SETUP_SCRIPT</code> <em> = <code>${_current_app_build_files}/dmg_ds_store_setup.scpt</code></em> <em>(rearranges icons in DMG)</em></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md145"></a>
+<h1><a class="anchor" id="PACKAGING_WITH_AUI_BUILD_FOR"></a>
 Android and iOS</h1>
+<p><code>-DAUI_BUILD_FOR=...</code> implies <code>AUI_APP_PACKAGING</code>, no further configuration is needed.</p>
 <p>Please refer to <a class="el" href="md_docs_2Crosscompiling.html">cross-compiling</a>. </p>
 </div><p class="footer-inner">
     &copy; 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their

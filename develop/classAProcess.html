@@ -107,9 +107,12 @@ $(function(){initNavTree('classAProcess.html',''); initResizable(true); });
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classAProcess-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">AProcess Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">AProcess Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Retrieves information about processes.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="AProcess_8h_source.html">AUI/Platform/AProcess.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -175,7 +178,38 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a1a84955a61a10abe23278882b311b96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Retrieves data about processes. </p>
+<div class="textblock"><p>Retrieves information about processes. </p>
+<p>Process model that facilitates process creation, management, and interaction with other processes.</p>
+<dl class="section note"><dt>Note</dt><dd>In a sandboxed environment (especially in iOS and Android) this functionality is mostly irrelevant (except <code><a class="el" href="#adea549494f632443acf8a5533e6ef719">AProcess::self()</a></code>).</dd></dl>
+<p>The <a class="el" href="classAProcess.html" title="Retrieves information about processes.">AProcess</a> class is typically used for creating, controlling, and monitoring subprocesses (including <a class="el" href="#adea549494f632443acf8a5533e6ef719">self</a>) in a platform-independent manner. It provides a way to run external applications from within the application itself, which can be useful for tasks like running scripts, launching other programs, or automating system operations through commands.</p>
+<h1><a class="anchor" id="ProcessTest_Launching_executable"></a>
+Launching executable</h1>
+<p>To start a process, pass the name of application you want to run and optionally provide arguments and working dir for that application. In this code snippet, we are starting another instance of the current executable with specific arguments and capturing its standard output (stdOut). </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_function" href="#adea549494f632443acf8a5533e6ef719">self</a> = <a class="code hl_function" href="#adea549494f632443acf8a5533e6ef719">AProcess::self</a>()-&gt;getPathToExecutable();</div>
+<div class="line"><a class="code hl_struct" href="structAProcess_1_1ArgStringList.html">AProcess::ArgStringList</a> args;</div>
+<div class="line">args.list &lt;&lt; <span class="stringliteral">&quot;--help&quot;</span>;</div>
+<div class="line">args.list &lt;&lt; <span class="stringliteral">&quot;-a&quot;</span>;</div>
+<div class="line"><span class="keyword">auto</span> p = <a class="code hl_function" href="#aeb9102317bbe877db203542d6d69127b">AProcess::create</a>({</div>
+<div class="line">  .executable = <a class="code hl_function" href="#adea549494f632443acf8a5533e6ef719">self</a>,</div>
+<div class="line">  .args = std::move(args),</div>
+<div class="line">  .workDir = <a class="code hl_function" href="#adea549494f632443acf8a5533e6ef719">self</a>.parent(),</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="classAString.html">AString</a> accumulator;</div>
+<div class="line"><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(p-&gt;stdOut, p, [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classAByteBuffer.html">AByteBuffer</a>&amp; buffer) { accumulator += AString::fromUtf8(buffer); });</div>
+<div class="line"> </div>
+<div class="line">p-&gt;run();</div>
+<div class="line"> </div>
+<div class="line">EXPECT_EQ(p-&gt;waitForExitCode(), 0);</div>
+<div class="line">EXPECT_TRUE(accumulator.contains(<span class="stringliteral">&quot;This program contains tests written using Google Test.&quot;</span>)) &lt;&lt; accumulator;</div>
+<div class="ttc" id="aclassAByteBuffer_html"><div class="ttname"><a href="classAByteBuffer.html">AByteBuffer</a></div><div class="ttdoc">std::vector-like growing array for byte storage.</div><div class="ttdef"><b>Definition</b> AByteBuffer.h:31</div></div>
+<div class="ttc" id="aclassAProcess_html_adea549494f632443acf8a5533e6ef719"><div class="ttname"><a href="#adea549494f632443acf8a5533e6ef719">AProcess::self</a></div><div class="ttdeci">static _&lt; AProcess &gt; self()</div><div class="ttdef"><b>Definition</b> AProcessImpl.mm:39</div></div>
+<div class="ttc" id="aclassAProcess_html_aeb9102317bbe877db203542d6d69127b"><div class="ttname"><a href="#aeb9102317bbe877db203542d6d69127b">AProcess::create</a></div><div class="ttdeci">static _&lt; AChildProcess &gt; create(ProcessCreationInfo args)</div><div class="ttdoc">Launches an executable.</div><div class="ttdef"><b>Definition</b> AProcess.cpp:27</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
+<div class="ttc" id="astructAProcess_1_1ArgStringList_html"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html">AProcess::ArgStringList</a></div><div class="ttdoc">Process arguments represented as array of strings.</div><div class="ttdef"><b>Definition</b> AProcess.h:130</div></div>
+</div><!-- fragment --><p>We define an empty string accumulator to collect the output from the process. Then, we connect a lambda function to the <code>stdOut</code> signal of the process. This lambda function converts the received buffer (a byte array) to a UTF-8 string and appends it to <code>accumulator</code>.</p>
+<p>We start the new process by calling its <code>AProcess::run()</code> method, which will execute the specified application with the provided arguments in the given working directory.</p>
+<p>We wait for the process to finish by calling <code><a class="el" href="#a406e61a076feaf56d6b7ae4f408a76a4" title="Wait for process to be finished and returns exit code.">waitForExitCode()</a></code>, which blocks until the process exits and returns its exit code. If the exit code is 0, it means the process completed successfully. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab19ab3bf7470dd32ad2e6e820f3fe603" name="ab19ab3bf7470dd32ad2e6e820f3fe603"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab19ab3bf7470dd32ad2e6e820f3fe603">&#9670;&#160;</a></span>all()</h2>
@@ -383,6 +417,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This function might cause race condition if process is about to die. If process is not found, <code>nullptr</code> is returned so you must check for <code>nullptr</code> before proceeding. However, if non-<code>nullptr</code> is returned, the process handle is "acquired" and guaranteed to be valid during lifetime of <code><a class="el" href="classAProcess.html" title="Retrieves information about processes.">AProcess</a></code> instance.</p>
 <dl class="section return"><dt>Returns</dt><dd>process by id </dd></dl>
 
 </div>

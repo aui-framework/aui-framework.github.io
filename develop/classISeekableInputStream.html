@@ -103,6 +103,7 @@ $(function(){initNavTree('classISeekableInputStream.html',''); initResizable(tru
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classISeekableInputStream-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ISeekableInputStream Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__core.html">aui::core</a> &raquo; <a class="el" href="group__io.html">IO streams</a></div></div></div>
@@ -114,14 +115,22 @@ $(function(){initNavTree('classISeekableInputStream.html',''); initResizable(tru
 
 <p><code>#include &lt;<a class="el" href="ISeekableInputStream_8h_source.html">AUI/IO/ISeekableInputStream.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a428bdb92cfb5aacf3abe32e2aa40348f" id="r_a428bdb92cfb5aacf3abe32e2aa40348f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> { <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348fa19aad9f2fe3ce0023298ab83f7e75775">BEGIN</a>
+, <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df">CURRENT</a>
+, <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348fab1a326c06d88bf042f73d70f50197905">END</a>
+ }</td></tr>
+<tr class="separator:a428bdb92cfb5aacf3abe32e2aa40348f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1885394185beeeef0cc331ae3a3a6f9" id="r_ae1885394185beeeef0cc331ae3a3a6f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1885394185beeeef0cc331ae3a3a6f9">seek</a> (std::streamoff offset, std::ios::seekdir seekDir)=0</td></tr>
-<tr class="memdesc:ae1885394185beeeef0cc331ae3a3a6f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">change reading position, a way of changing depends on seekDir parameter  <br /></td></tr>
-<tr class="separator:ae1885394185beeeef0cc331ae3a3a6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20de413b233ba5fb6927d7708801cd10" id="r_a20de413b233ba5fb6927d7708801cd10"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20de413b233ba5fb6927d7708801cd10">tell</a> ()=0</td></tr>
-<tr class="memdesc:a20de413b233ba5fb6927d7708801cd10"><td class="mdescLeft">&#160;</td><td class="mdescRight">return current reading position  <br /></td></tr>
-<tr class="separator:a20de413b233ba5fb6927d7708801cd10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e80ba7db7af581d63caeb527da976b5" id="r_a5e80ba7db7af581d63caeb527da976b5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e80ba7db7af581d63caeb527da976b5">seek</a> (std::streamoff offset, <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> seekDir)=0</td></tr>
+<tr class="memdesc:a5e80ba7db7af581d63caeb527da976b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">change reading position, a way of changing depends on seekDir parameter  <br /></td></tr>
+<tr class="separator:a5e80ba7db7af581d63caeb527da976b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd2ea599cb520a477b410645beaca0c9" id="r_acd2ea599cb520a477b410645beaca0c9"><td class="memItemLeft" align="right" valign="top">virtual std::streampos&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd2ea599cb520a477b410645beaca0c9">tell</a> () noexcept=0</td></tr>
+<tr class="memdesc:acd2ea599cb520a477b410645beaca0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">return current reading position  <br /></td></tr>
+<tr class="separator:acd2ea599cb520a477b410645beaca0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d473001d0868eb9e35557d34dbcc0d7" id="r_a9d473001d0868eb9e35557d34dbcc0d7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d473001d0868eb9e35557d34dbcc0d7">isEof</a> ()=0</td></tr>
 <tr class="memdesc:a9d473001d0868eb9e35557d34dbcc0d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if end of stream has been reached  <br /></td></tr>
 <tr class="separator:a9d473001d0868eb9e35557d34dbcc0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,7 +159,38 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an input stream with updating reading position. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a428bdb92cfb5aacf3abe32e2aa40348f" name="a428bdb92cfb5aacf3abe32e2aa40348f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a428bdb92cfb5aacf3abe32e2aa40348f">&#9670;&#160;</a></span>Seek</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">ISeekableInputStream::Seek</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a428bdb92cfb5aacf3abe32e2aa40348fa19aad9f2fe3ce0023298ab83f7e75775" name="a428bdb92cfb5aacf3abe32e2aa40348fa19aad9f2fe3ce0023298ab83f7e75775"></a>BEGIN&#160;</td><td class="fielddoc"><p><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> relatively to the begin of file </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df" name="a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df"></a>CURRENT&#160;</td><td class="fielddoc"><p><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> relatively to the current position </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a428bdb92cfb5aacf3abe32e2aa40348fab1a326c06d88bf042f73d70f50197905" name="a428bdb92cfb5aacf3abe32e2aa40348fab1a326c06d88bf042f73d70f50197905"></a>END&#160;</td><td class="fielddoc"><p><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> relative to the end of file </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4508931973b7205fc33754c4fcf2a4d5" name="a4508931973b7205fc33754c4fcf2a4d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4508931973b7205fc33754c4fcf2a4d5">&#9670;&#160;</a></span>fileSize()</h2>
 
@@ -205,12 +245,12 @@ Public Member Functions</h2></td></tr>
 <p>returns true if end of stream has been reached </p>
 <dl class="section return"><dt>Returns</dt><dd>true if end of stream has been reached </dd></dl>
 
-<p>Implemented in <a class="el" href="classAStrongByteBufferInputStream.html#a7206e6ba9535e688287ad8998e73d708">AStrongByteBufferInputStream</a>.</p>
+<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#afe886ff71f87b17c40f0b90df97019ad">AByteBufferInputStream</a>, <a class="el" href="classAFileInputStream.html#ad3a176655c1e9d872debdeb0db8da59b">AFileInputStream</a>, and <a class="el" href="classAStrongByteBufferInputStream.html#a7206e6ba9535e688287ad8998e73d708">AStrongByteBufferInputStream</a>.</p>
 
 </div>
 </div>
-<a id="ae1885394185beeeef0cc331ae3a3a6f9" name="ae1885394185beeeef0cc331ae3a3a6f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1885394185beeeef0cc331ae3a3a6f9">&#9670;&#160;</a></span>seek()</h2>
+<a id="a5e80ba7db7af581d63caeb527da976b5" name="a5e80ba7db7af581d63caeb527da976b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e80ba7db7af581d63caeb527da976b5">&#9670;&#160;</a></span>seek()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +266,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::ios::seekdir</td>          <td class="paramname"><span class="paramname"><em>seekDir</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a></td>          <td class="paramname"><span class="paramname"><em>seekDir</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -238,12 +278,12 @@ Public Member Functions</h2></td></tr>
 
 <p>change reading position, a way of changing depends on seekDir parameter </p>
 
-<p>Implemented in <a class="el" href="classAStrongByteBufferInputStream.html#a58efe1938efdd1755c2a855973a05d50">AStrongByteBufferInputStream</a>.</p>
+<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#aaad4d52989f842020d60a62e76d2193b">AByteBufferInputStream</a>, <a class="el" href="classAFileInputStream.html#afe47e832a641f2a25136f87d91640f8e">AFileInputStream</a>, and <a class="el" href="classAStrongByteBufferInputStream.html#a1e71c45f6eb7473ed299d7ea1dd1252c">AStrongByteBufferInputStream</a>.</p>
 
 </div>
 </div>
-<a id="a20de413b233ba5fb6927d7708801cd10" name="a20de413b233ba5fb6927d7708801cd10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20de413b233ba5fb6927d7708801cd10">&#9670;&#160;</a></span>tell()</h2>
+<a id="acd2ea599cb520a477b410645beaca0c9" name="acd2ea599cb520a477b410645beaca0c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd2ea599cb520a477b410645beaca0c9">&#9670;&#160;</a></span>tell()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +292,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual size_t ISeekableInputStream::tell </td>
+          <td class="memname">virtual std::streampos ISeekableInputStream::tell </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -260,7 +300,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span><span class="mlabel pure-virtual">pure virtual</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -268,7 +308,7 @@ Public Member Functions</h2></td></tr>
 <p>return current reading position </p>
 <dl class="section return"><dt>Returns</dt><dd>current reading pos </dd></dl>
 
-<p>Implemented in <a class="el" href="classAStrongByteBufferInputStream.html#af9086be1a67a1e9c3c52600879982ea7">AStrongByteBufferInputStream</a>.</p>
+<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#a778cd5a47478018b87958965f1a7e7c3">AByteBufferInputStream</a>, <a class="el" href="classAFileInputStream.html#a41dc3942bfcca717ab463043a6d32628">AFileInputStream</a>, and <a class="el" href="classAStrongByteBufferInputStream.html#a0d8398bed424245cc07c61855315bf70">AStrongByteBufferInputStream</a>.</p>
 
 </div>
 </div>

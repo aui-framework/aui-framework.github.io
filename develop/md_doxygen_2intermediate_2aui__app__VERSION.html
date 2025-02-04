@@ -107,11 +107,13 @@ $(function(){initNavTree('md_doxygen_2intermediate_2aui__app__VERSION.html','');
 <div class="contents">
 <div class="textblock"><p><code>APP_VERSION</code> populates the following CMake variables (if undefined):</p><ul>
 <li><code>CPACK_PACKAGE_FILE_NAME</code> <em> = <code>${CPACK_PACKAGE_NAME}-${APP_VERSION}-${_cmake_system_processor_lower}</code> </em></li>
-<li><code>CPACK_PACKAGE_FILE_NAME</code> <em> = <code>${CPACK_PACKAGE_NAME}-${APP_VERSION}-${_cmake_system_processor_lower}-setup</code> </em></li>
 <li><code>CPACK_PACKAGE_VERSION</code> <em> = <code>${APP_VERSION}</code> </em></li>
 <li><code>MACOSX_BUNDLE_BUNDLE_VERSION</code> <em> = <code>${APP_VERSION}</code> </em></li>
 <li><code>MACOSX_BUNDLE_LONG_VERSION_STRING</code> <em> = <code>${APP_VERSION}</code> </em></li>
-<li><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code> <em> = <code>${APP_VERSION}</code> </em> </li>
+<li><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code> <em> = <code>${APP_VERSION}</code> </em></li>
+</ul>
+<p>The following additional variables and properties are affected:</p><ul>
+<li><code>set(_aui_package_file_name "${CPACK_PACKAGE_NAME}-${APP_VERSION}-${_aui_package_file_name}")</code> </li>
 </ul>
 </div><p class="footer-inner">
     &copy; 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their

@@ -111,70 +111,73 @@ $(function(){initNavTree('md_docs_2AUI_01configure_01flags.html',''); initResiza
 <div class="line">cd build</div>
 <div class="line">cmake .. -DAUI_BUILD_EXAMPLES=TRUE # &lt;-- here</div>
 <div class="line">cmake --build .</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md60"></a>
-AUI C++ code itself</h1>
-<h2><a class="anchor" id="autotoc_md61"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md63"></a>
+Common variables</h1>
+<h2><a class="anchor" id="AUI_APP_PACKAGING"></a>
+AUI_APP_PACKAGING</h2>
+<p>Specifies the desired packaging method. This variable accepts CPack generator or one of the packaging methods provided by AUI. See <a class="el" href="md_docs_2Packaging_01Your_01App.html">Packaging Your App</a> for more info.</p>
+<h2><a class="anchor" id="autotoc_md64"></a>
 AUI_CATCH_UNHANDLED</h2>
 <p>Whether catch unhandled exceptions in the root of event loops or not. Might be useful to set <code>AUI_CATCH_UNHANDLED=0</code> for debugging.</p>
-<h2><a class="anchor" id="autotoc_md62"></a>
+<h2><a class="anchor" id="autotoc_md65"></a>
 AUI_COROUTINES</h2>
 <p>Whether to use C++ 20 coroutines support.</p>
-<h2><a class="anchor" id="autotoc_md63"></a>
+<h2><a class="anchor" id="autotoc_md66"></a>
 AUI_ENABLE_ASAN</h2>
 <p>Whether to use AddressSanitizer.</p>
-<h2><a class="anchor" id="autotoc_md64"></a>
+<h2><a class="anchor" id="autotoc_md67"></a>
 AUI_PROFILING</h2>
 <p>When <code>true</code>, AUI profiling features are enabled. This means "Performance" tab in devtools would appear and show performance information. See <a class="el" href="group__profiling.html">Profiling</a></p>
-<h2><a class="anchor" id="autotoc_md65"></a>
+<h2><a class="anchor" id="autotoc_md68"></a>
 AUI_SHOW_TOUCHES</h2>
 <p>When <code>true</code>, shows touches visually (like in Android Developer Tools) and performs additional trace logging on touches.</p>
-<h1><a class="anchor" id="autotoc_md66"></a>
+<h1><a class="anchor" id="autotoc_md69"></a>
 aui.build</h1>
-<h2><a class="anchor" id="autotoc_md67"></a>
+<h2><a class="anchor" id="autotoc_md70"></a>
 AUI_BUILD_EXAMPLES</h2>
 <p>Whether build examples or not.</p>
 <h2><a class="anchor" id="AUI_BUILD_FOR"></a>
 AUI_BUILD_FOR</h2>
 <p>Specifies target platform for cross-compilation (see <a class="el" href="md_docs_2Crosscompiling.html">cross-compiling</a>).</p>
-<h2><a class="anchor" id="autotoc_md68"></a>
+<h2><a class="anchor" id="autotoc_md71"></a>
 AUIB_CACHE_DIR</h2>
 <p>Changes aui.boot's cache dir (which is <code>~/.aui</code> by default).</p>
 <p>Can be defined as environment variable.</p>
-<h2><a class="anchor" id="autotoc_md69"></a>
+<h2><a class="anchor" id="autotoc_md72"></a>
 AUI_INSTALL_RUNTIME_DEPENDENCIES</h2>
 <p>When <code>true</code>, all AUI's dependencies will be installed along with it. <b>WARNING</b> on Linux doing <code>make install</code> with <code>AUI_INSTALL_RUNTIME_DEPENDENCIES=TRUE</code> is dangerous and may cause system instability. It will replace some system libraries with AUI's ones (i.e. <code>libssl</code>, <code>libcrypto</code>, <code>GLEW</code>, etc...) which may produce the following messages:</p>
 <div class="fragment"><div class="line">libssl.so.1.0.0: no version information available (required by openssl)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md70"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
 AUI_NO_HIDPI</h2>
 <p>Disables HIDPI.</p>
-<h2><a class="anchor" id="autotoc_md71"></a>
+<h2><a class="anchor" id="autotoc_md74"></a>
 AUI_NO_TESTS</h2>
 <p>Disables tests.</p>
-<h2><a class="anchor" id="autotoc_md72"></a>
+<h2><a class="anchor" id="autotoc_md75"></a>
 AUI_SHARED_PTR_FIND_INSTANCES</h2>
 <p>Adds <code>printAllInstances()</code> to AUI's shared pointer type (<code><a class="el" href="class__.html" title="An std::weak_ptr with AUI extensions.">_</a></code>) which prints stacktrace from constructor of every instance of <code>shared_ptr</code> (<code><a class="el" href="class__.html" title="An std::weak_ptr with AUI extensions.">_</a></code>) pointing to that object. Made for debugging purposes to find cycling and unwanted pointers. Dramatically slows the application's performance.</p>
-<h2><a class="anchor" id="autotoc_md73"></a>
+<h2><a class="anchor" id="autotoc_md76"></a>
 BUILD_SHARED_LIBS</h2>
 <p>When evaluates to <code>true</code>, libraries are built as shared, as static otherwise.</p>
 <p>When AUI_BUILD_FOR is set, <code>BUILD_SHARED_LIBS</code> is overwritten to <code>false</code> (see <a class="el" href="md_docs_2Crosscompiling.html">cross-compiling</a>)</p>
-<h2><a class="anchor" id="autotoc_md74"></a>
+<h2><a class="anchor" id="autotoc_md77"></a>
 AUI_IOS_CODE_SIGNING_REQUIRED</h2>
 <p>Disables code signing step on iOS.</p>
-<h1><a class="anchor" id="autotoc_md75"></a>
-aui.boot</h1>
+<h1><a class="anchor" id="autotoc_md78"></a>
+aui.boot-specific</h1>
 <h2><a class="anchor" id="AUIB_DISABLE"></a>
 AUIB_DISABLE (=NO)</h2>
 <p>Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
-<h2><a class="anchor" id="autotoc_md76"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 AUIB_ALL_AS (=NO)</h2>
 <p>All dependencies will be imported with <code>add_subdirectory</code> command instead of <code>find_package</code>. It is useful if you want to work on the dependency along with your project.</p>
 <p>This behaviour can be set for the particular dependency by <code>AUIB_${AUI_MODULE_NAME_UPPER}_AS</code> flag, where <code>${AUI_MODULE_NAME_UPPER}</code> is the dependency name (i.e. for AUI it's <code>-DAUIB_AUI_AS=ON</code>).</p>
-<h2><a class="anchor" id="autotoc_md77"></a>
+<h2><a class="anchor" id="autotoc_md80"></a>
 AUIB_SKIP_REPOSITORY_WAIT (=NO)</h2>
 <p>Disables "Waiting for repository" lock.</p>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="AUIB_NO_PRECOMPILED"></a>
 AUIB_NO_PRECOMPILED (=NO)</h2>
-<p>Disables precompiled binaries.</p>
+<p>Disables precompiled binaries, building all dependencies locally. You may want to set up <a class="el" href="md_docs_2AUI_01Boot.html#CI_CACHING">CI caching</a>.</p>
 <h2><a class="anchor" id="AUIB_FORCE_PRECOMPILED"></a>
 AUIB_FORCE_PRECOMPILED (=NO)</h2>
 <p>Disables local compilation. If a precompiled binary was not found, a configure-time error is raised.</p>

@@ -106,11 +106,11 @@ $(function(){initNavTree('classPipe.html',''); initResizable(true); });
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classPipe-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Pipe Class Reference</div></div>
+  <div class="headertitle"><div class="title">Pipe Class Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Unix pipe RAII wrapper.  
+<p>Native pipe RAII wrapper.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Pipe_8h_source.html">AUI/Platform/Pipe.h</a>&gt;</code></p>
@@ -139,16 +139,24 @@ pipe_t&#160;</td><td class="memItemRight" valign="bottom"><b>in</b> () const noe
 <tr class="separator:acf22ddf8d5e956481df04ca43cfd4099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3e2edf0eeaa9287aac0f592de8d479" id="r_acc3e2edf0eeaa9287aac0f592de8d479"><td class="memItemLeft" align="right" valign="top"><a id="acc3e2edf0eeaa9287aac0f592de8d479" name="acc3e2edf0eeaa9287aac0f592de8d479"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>closeOut</b> () noexcept</td></tr>
+<tr class="memdesc:acc3e2edf0eeaa9287aac0f592de8d479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close out. Also known as close(pipe[0]) <br /></td></tr>
 <tr class="separator:acc3e2edf0eeaa9287aac0f592de8d479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3822b020e2527c265cb18889dda9603" id="r_af3822b020e2527c265cb18889dda9603"><td class="memItemLeft" align="right" valign="top"><a id="af3822b020e2527c265cb18889dda9603" name="af3822b020e2527c265cb18889dda9603"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexcept</td></tr>
+<tr class="memdesc:af3822b020e2527c265cb18889dda9603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close in. Also known as close(pipe[1]) <br /></td></tr>
 <tr class="separator:af3822b020e2527c265cb18889dda9603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aa265903c0efc974c980f6020fcc02b" id="r_a6aa265903c0efc974c980f6020fcc02b"><td class="memItemLeft" align="right" valign="top">pipe_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aa265903c0efc974c980f6020fcc02b">stealOut</a> () noexcept</td></tr>
-<tr class="memdesc:a6aa265903c0efc974c980f6020fcc02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steals ownership of the out pipe outside of the <a class="el" href="classPipe.html" title="Unix pipe RAII wrapper.">Pipe</a> class.  <br /></td></tr>
+<tr class="memdesc:a6aa265903c0efc974c980f6020fcc02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steals ownership of the out pipe outside of the <a class="el" href="classPipe.html" title="Native pipe RAII wrapper.">Pipe</a> class.  <br /></td></tr>
 <tr class="separator:a6aa265903c0efc974c980f6020fcc02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a620e36499fea5c32c6b8b217118b9b8b" id="r_a620e36499fea5c32c6b8b217118b9b8b"><td class="memItemLeft" align="right" valign="top">pipe_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a620e36499fea5c32c6b8b217118b9b8b">stealIn</a> () noexcept</td></tr>
-<tr class="memdesc:a620e36499fea5c32c6b8b217118b9b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steals ownership of the in pipe outside of the <a class="el" href="classPipe.html" title="Unix pipe RAII wrapper.">Pipe</a> class.  <br /></td></tr>
+<tr class="memdesc:a620e36499fea5c32c6b8b217118b9b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Steals ownership of the in pipe outside of the <a class="el" href="classPipe.html" title="Native pipe RAII wrapper.">Pipe</a> class.  <br /></td></tr>
 <tr class="separator:a620e36499fea5c32c6b8b217118b9b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b6a91e5eb619a4efb7cb376ed72ce5" id="r_a91b6a91e5eb619a4efb7cb376ed72ce5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91b6a91e5eb619a4efb7cb376ed72ce5">read</a> (char *dst, size_t size) override</td></tr>
+<tr class="memdesc:a91b6a91e5eb619a4efb7cb376ed72ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed.  <br /></td></tr>
+<tr class="separator:a91b6a91e5eb619a4efb7cb376ed72ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d42ba95b05505b5aa34edaa09aa28ae" id="r_a1d42ba95b05505b5aa34edaa09aa28ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d42ba95b05505b5aa34edaa09aa28ae">write</a> (const char *src, size_t size) override</td></tr>
+<tr class="memdesc:a1d42ba95b05505b5aa34edaa09aa28ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes exact <code>size</code> bytes to stream. Blocking (waiting for write all data) is allowed.  <br /></td></tr>
+<tr class="separator:a1d42ba95b05505b5aa34edaa09aa28ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structaui_1_1noncopyable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_structaui_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structaui_1_1noncopyable.html">aui::noncopyable</a></td></tr>
 <tr class="memitem:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable" id="r_a640f7f625060ec4c2d8e053058ed342d"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>noncopyable</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
@@ -156,10 +164,80 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexce
 <tr class="memitem:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable" id="r_a40029c7ea1fc9cdb0225cf3c6b790b58"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
 <tr class="separator:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classIInputStream"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classIInputStream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIInputStream.html">IInputStream</a></td></tr>
+<tr class="memitem:a7b37579b8cb8d97984e18f70b0536846 inherit pub_methods_classIInputStream" id="r_a7b37579b8cb8d97984e18f70b0536846"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a7b37579b8cb8d97984e18f70b0536846">read</a> (std::span&lt; std::byte &gt; destination)</td></tr>
+<tr class="memdesc:a7b37579b8cb8d97984e18f70b0536846 inherit pub_methods_classIInputStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads up to <code>destination.size()</code> bytes from stream. Blocking (waiting for new data) is allowed.  <br /></td></tr>
+<tr class="separator:a7b37579b8cb8d97984e18f70b0536846 inherit pub_methods_classIInputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3fbd41d7e0d03c043d51f27353f9a3 inherit pub_methods_classIInputStream" id="r_a2d3fbd41d7e0d03c043d51f27353f9a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a2d3fbd41d7e0d03c043d51f27353f9a3">readExact</a> (char *dst, size_t size)</td></tr>
+<tr class="memdesc:a2d3fbd41d7e0d03c043d51f27353f9a3 inherit pub_methods_classIInputStream"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads exact <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed.  <br /></td></tr>
+<tr class="separator:a2d3fbd41d7e0d03c043d51f27353f9a3 inherit pub_methods_classIInputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c4cf58fa8466b92d9af1eb09e25d47 inherit pub_methods_classIInputStream" id="r_a36c4cf58fa8466b92d9af1eb09e25d47"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a36c4cf58fa8466b92d9af1eb09e25d47 inherit pub_methods_classIInputStream"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a36c4cf58fa8466b92d9af1eb09e25d47">deserialize</a> ()</td></tr>
+<tr class="separator:a36c4cf58fa8466b92d9af1eb09e25d47 inherit pub_methods_classIInputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1840a69ad7ecad3ab4cdf58aed3823e2 inherit pub_methods_classIInputStream" id="r_a1840a69ad7ecad3ab4cdf58aed3823e2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a1840a69ad7ecad3ab4cdf58aed3823e2 inherit pub_methods_classIInputStream"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classIInputStream.html">IInputStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIInputStream.html#a1840a69ad7ecad3ab4cdf58aed3823e2">operator&gt;&gt;</a> (T &amp;dst)</td></tr>
+<tr class="separator:a1840a69ad7ecad3ab4cdf58aed3823e2 inherit pub_methods_classIInputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02e7702b9f0b97a2df0c0c97572e4f2 inherit pub_methods_classIInputStream" id="r_ac02e7702b9f0b97a2df0c0c97572e4f2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ac02e7702b9f0b97a2df0c0c97572e4f2 inherit pub_methods_classIInputStream"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classIInputStream.html">IInputStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2">operator&gt;&gt;</a> (T &amp;&amp;dst)</td></tr>
+<tr class="separator:ac02e7702b9f0b97a2df0c0c97572e4f2 inherit pub_methods_classIInputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classIOutputStream"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classIOutputStream')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIOutputStream.html">IOutputStream</a></td></tr>
+<tr class="memitem:a93b76426e175a9eb9b28151b0ec7086e inherit pub_methods_classIOutputStream" id="r_a93b76426e175a9eb9b28151b0ec7086e"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a93b76426e175a9eb9b28151b0ec7086e inherit pub_methods_classIOutputStream"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIOutputStream.html#a93b76426e175a9eb9b28151b0ec7086e">write</a> (const T &amp;t)</td></tr>
+<tr class="separator:a93b76426e175a9eb9b28151b0ec7086e inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream" id="r_a8e16537f3b9e67c2becb9cc0249d749b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classIOutputStream.html">IOutputStream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b">operator&lt;&lt;</a> (const T &amp;t)</td></tr>
+<tr class="separator:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Unix pipe RAII wrapper. </p>
+<div class="textblock"><p>Native pipe RAII wrapper. </p>
+<p>On Windows, implemented with CreateNamedPipe.</p>
+<p>On *nix, implemented with pipe(2). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a91b6a91e5eb619a4efb7cb376ed72ce5" name="a91b6a91e5eb619a4efb7cb376ed72ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b6a91e5eb619a4efb7cb376ed72ce5">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Pipe::read </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed. </p>
+<dl>
+<dt><b>Sneaky exceptions</b> </dt>
+<dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>destination buffer </td></tr>
+    <tr><td class="paramname">size</td><td>destination buffer's size. &gt; 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of read bytes (including 0) </dd></dl>
+
+<p>Implements <a class="el" href="classIInputStream.html#a2eeb1071827ea8a9ca61bfd414639588">IInputStream</a>.</p>
+
+</div>
+</div>
 <a id="a620e36499fea5c32c6b8b217118b9b8b" name="a620e36499fea5c32c6b8b217118b9b8b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a620e36499fea5c32c6b8b217118b9b8b">&#9670;&#160;</a></span>stealIn()</h2>
 
@@ -183,7 +261,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexce
 </table>
 </div><div class="memdoc">
 
-<p>Steals ownership of the in pipe outside of the <a class="el" href="classPipe.html" title="Unix pipe RAII wrapper.">Pipe</a> class. </p>
+<p>Steals ownership of the in pipe outside of the <a class="el" href="classPipe.html" title="Native pipe RAII wrapper.">Pipe</a> class. </p>
 <p>Resets the pipe value to zero. Caller is responsible for closing the pipe. </p>
 
 </div>
@@ -211,8 +289,52 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexce
 </table>
 </div><div class="memdoc">
 
-<p>Steals ownership of the out pipe outside of the <a class="el" href="classPipe.html" title="Unix pipe RAII wrapper.">Pipe</a> class. </p>
+<p>Steals ownership of the out pipe outside of the <a class="el" href="classPipe.html" title="Native pipe RAII wrapper.">Pipe</a> class. </p>
 <p>Resets the pipe value to zero. Caller is responsible for closing the pipe. </p>
+
+</div>
+</div>
+<a id="a1d42ba95b05505b5aa34edaa09aa28ae" name="a1d42ba95b05505b5aa34edaa09aa28ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d42ba95b05505b5aa34edaa09aa28ae">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pipe::write </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes exact <code>size</code> bytes to stream. Blocking (waiting for write all data) is allowed. </p>
+<dl>
+<dt><b>Sneaky exceptions</b> </dt>
+<dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>source buffer </td></tr>
+    <tr><td class="paramname">size</td><td>source buffer's size. &gt; 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classIOutputStream.html#a76af21376aaec46a8827699e6a69eb72">IOutputStream</a>.</p>
 
 </div>
 </div>

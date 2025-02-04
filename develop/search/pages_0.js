@@ -19,5 +19,7 @@ var searchData=
   ['aui_5fapp_5fvendor_16',['aui_app_VENDOR',['../md_doxygen_2intermediate_2aui__app__VENDOR.html',1,'']]],
   ['aui_5fapp_5fversion_17',['aui_app_VERSION',['../md_doxygen_2intermediate_2aui__app__VERSION.html',1,'']]],
   ['aui_5fapp_5fwix_18',['aui_app_wix',['../md_doxygen_2intermediate_2aui__app__wix.html',1,'']]],
-  ['aui_5fexecutable_19',['aui_executable',['../md_docs_2aui__executable.html',1,'aui_executable'],['../md_docs_2aui__module.html',1,'aui_executable']]]
+  ['aui_5fexecutable_19',['aui_executable',['../md_docs_2aui__executable.html',1,'']]],
+  ['aui_5flink_20',['aui_link',['../md_docs_2aui__link.html',1,'']]],
+  ['aui_5fmodule_21',['aui_module',['../md_docs_2aui__module.html',1,'']]]
 ];

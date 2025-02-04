@@ -31,6 +31,7 @@ var menudata={children:[
 {text:"All AUI CMake commands",url:"usergroup1.html",children:[
 {text:"aui_app",url:"md_docs_2aui__app.html"},
 {text:"aui_executable",url:"md_docs_2aui__executable.html"},
+{text:"aui_link",url:"md_docs_2aui__link.html"},
 {text:"aui_module",url:"md_docs_2aui__module.html"}]}]},
 {text:"Getting started",url:"usergroup2.html",children:[
 {text:"Getting started with AUI",url:"md_docs_2Getting_01started_01with_01AUI.html"},
@@ -50,9 +51,10 @@ var menudata={children:[
 {text:"Devtools",url:"md_docs_2Devtools.html"},
 {text:"All Views",url:"group__useful__views.html"},
 {text:"All ASS Properties",url:"group__ass__properties.html"}]},
-{text:"Tweaking",url:"usergroup4.html",children:[
-{text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
-{text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"}]},
-{text:"Preparing to Production",url:"usergroup5.html",children:[
+{text:"Preparing to Production",url:"usergroup4.html",children:[
 {text:"Setting App Icon",url:"md_docs_2Setting_01App_01Icon.html"},
-{text:"Packaging Your App",url:"md_docs_2Packaging_01Your_01App.html"}]}]}
+{text:"Packaging Your App",url:"md_docs_2Packaging_01Your_01App.html"}]},
+{text:"Other",url:"usergroup5.html",children:[
+{text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
+{text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"},
+{text:"Runtime Dependency Resolution",url:"md_docs_2Runtime_01Dependency_01Resolution.html"}]}]}

@@ -211,6 +211,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a752944b2f6dd5c10c45c6447bfc1d2a8" id="r_a752944b2f6dd5c10c45c6447bfc1d2a8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752944b2f6dd5c10c45c6447bfc1d2a8">WriteCallback</a> = std::function&lt;size_t(<a class="el" href="classAByteBufferView.html">AByteBufferView</a> data)&gt;</td></tr>
 <tr class="memdesc:a752944b2f6dd5c10c45c6447bfc1d2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A read callback.  <br /></td></tr>
 <tr class="separator:a752944b2f6dd5c10c45c6447bfc1d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d7bbb8a1554048665a96f89ac87dde" id="r_a63d7bbb8a1554048665a96f89ac87dde"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63d7bbb8a1554048665a96f89ac87dde">WriteCallbackV2</a> = std::function&lt;size_t(<a class="el" href="classACurl.html">ACurl</a>&amp; curl, <a class="el" href="classAByteBufferView.html">AByteBufferView</a> data)&gt;</td></tr>
+<tr class="memdesc:a63d7bbb8a1554048665a96f89ac87dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">A read callback.  <br /></td></tr>
+<tr class="separator:a63d7bbb8a1554048665a96f89ac87dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1db17bc7f80a4776b8ca50a8f1af8d7" id="r_ab1db17bc7f80a4776b8ca50a8f1af8d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1db17bc7f80a4776b8ca50a8f1af8d7">ReadCallback</a> = std::function&lt;std::size_t(char* dst, size_t maxLen)&gt;</td></tr>
 <tr class="memdesc:ab1db17bc7f80a4776b8ca50a8f1af8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A read callback.  <br /></td></tr>
 <tr class="separator:ab1db17bc7f80a4776b8ca50a8f1af8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -432,6 +435,31 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>handleSlotExc
 <p>A read callback. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">data</td><td>received data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bytes written to the destination buffer. Zero means buffer does not have enough space to store supplied data (but the stream may be continued in the future), the supplied data is not discarded and being kept in the curl buffers.</dd></dl>
+<p>Unlike regular streams, blocking is not allowed. To indicate buffer overflow, return zero. To indicate end of file, throw an <a class="el" href="classAEOFException.html" title="Thrown when stream has reached end (end of file).">AEOFException</a>. </p>
+
+</div>
+</div>
+<a id="a63d7bbb8a1554048665a96f89ac87dde" name="a63d7bbb8a1554048665a96f89ac87dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d7bbb8a1554048665a96f89ac87dde">&#9670;&#160;</a></span>WriteCallbackV2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a63d7bbb8a1554048665a96f89ac87dde">ACurl::WriteCallbackV2</a> = std::function&lt;size_t(<a class="el" href="classACurl.html">ACurl</a>&amp; curl, <a class="el" href="classAByteBufferView.html">AByteBufferView</a> data)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A read callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">curl</td><td>curl instance </td></tr>
     <tr><td class="paramname">data</td><td>received data </td></tr>
   </table>
   </dd>

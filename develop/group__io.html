@@ -139,6 +139,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPath.html">APath</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An add-on to <a class="el" href="classAString.html" title="Represents a Unicode character string.">AString</a> with functions for working with the path.  <a href="classAPath.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAPathOwner.html">APathOwner</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII-style file owner for storing temporary data on disk.  <a href="structAPathOwner.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAPipe.html">APipe</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thread safe buffer that converts an <a class="el" href="classIInputStream.html" title="Represents an input stream.">IInputStream</a> to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise).  <a href="classAPipe.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,10 +166,35 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classISeekableInputStream.html">ISeekableInputStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an input stream with updating reading position.  <a href="classISeekableInputStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaui_1_1archive_1_1ExtractTo.html">aui::archive::ExtractTo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default extracter for aui::zlib::readZip.  <a href="structaui_1_1archive_1_1ExtractTo.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga1163fcffdb1a7f3c45f940866bf64820" name="ga1163fcffdb1a7f3c45f940866bf64820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1163fcffdb1a7f3c45f940866bf64820">&#9670;&#160;</a></span>AUI_ENUM_FLAG() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AUI_ENUM_FLAG </td>
+          <td>(</td>
+          <td class="paramtype">AFileAccess</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag enum for <a class="el" href="classAPath.html#a1b3c4ac7cbd4bba36223c47157dcb1e5" title="Return true if the current process has specified access flags to path.">APath::isEffectivelyAccessible</a>. </p>
+<p>File is Readable flag.</p>
+<p>File is Writeable flag.</p>
+<p>File is eXecutable flag.</p>
+
+</div>
+</div>
 <a id="gaeb2101528a95328e1bd86b4f52eb81f4" name="gaeb2101528a95328e1bd86b4f52eb81f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaeb2101528a95328e1bd86b4f52eb81f4">&#9670;&#160;</a></span>AUI_ENUM_FLAG() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb2101528a95328e1bd86b4f52eb81f4">&#9670;&#160;</a></span>AUI_ENUM_FLAG() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +233,7 @@ Classes</h2></td></tr>
 </div>
 </div>
 <a id="ga87f7361faaeb6e043938f79698edf5d0" name="ga87f7361faaeb6e043938f79698edf5d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga87f7361faaeb6e043938f79698edf5d0">&#9670;&#160;</a></span>AUI_ENUM_FLAG() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87f7361faaeb6e043938f79698edf5d0">&#9670;&#160;</a></span>AUI_ENUM_FLAG() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,6 +251,37 @@ Classes</h2></td></tr>
 <p>In addition to specified paths, use the system paths (PATH environment variable)</p>
 <p>Do scan recursively (slow)</p>
 <p>Return only one file</p>
+
+</div>
+</div>
+<a id="gad661cb00e1f0e45dab52f4d25474b361" name="gad661cb00e1f0e45dab52f4d25474b361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad661cb00e1f0e45dab52f4d25474b361">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void aui::archive::zip::read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structaui_1_1no__escape.html">aui::no_escape</a>&lt; <a class="el" href="classISeekableInputStream.html">ISeekableInputStream</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(const <a class="el" href="structaui_1_1archive_1_1FileEntry.html">FileEntry</a> &amp;)&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>visitor</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZIP reader. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>ZIP file stream. </td></tr>
+    <tr><td class="paramname">visitor</td><td>zip contents visitor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>ZIP file names are passed to callback. Optionally, the callback might request file contents by <a class="el" href="structaui_1_1archive_1_1FileEntry.html#a8c7d32ebe0ef95175e534e73eef7bccf" title="Opens the zip entry for read.">FileEntry::open()</a>. </p><dl class="section see"><dt>See also</dt><dd>aui::zlib::ExtractTo </dd></dl>
 
 </div>
 </div>

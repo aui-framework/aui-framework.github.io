@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tell_0',['tell',['../classAStrongByteBufferInputStream.html#af9086be1a67a1e9c3c52600879982ea7',1,'AStrongByteBufferInputStream::tell()'],['../classISeekableInputStream.html#a20de413b233ba5fb6927d7708801cd10',1,'ISeekableInputStream::tell()']]],
+  ['tell_0',['tell',['../classAByteBufferInputStream.html#a778cd5a47478018b87958965f1a7e7c3',1,'AByteBufferInputStream::tell()'],['../classAFileInputStream.html#a41dc3942bfcca717ab463043a6d32628',1,'AFileInputStream::tell()'],['../classAStrongByteBufferInputStream.html#a0d8398bed424245cc07c61855315bf70',1,'AStrongByteBufferInputStream::tell()'],['../classISeekableInputStream.html#acd2ea599cb520a477b410645beaca0c9',1,'ISeekableInputStream::tell()']]],
   ['test_1',['test',['../classABitField.html#afc8e3f50b769418a06186380d37114e5',1,'ABitField']]],
   ['testany_2',['testAny',['../classABitField.html#aa5d2a4873168f5262679594a5c695250',1,'ABitField']]],
   ['text_3',['text',['../classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d',1,'AAbstractLabel::text()'],['../classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16',1,'AAbstractTypeableView::text()']]],
@@ -17,7 +17,7 @@ var searchData=
   ['toinputstream_14',['toInputStream',['../classACurl_1_1Builder.html#a25c40b85d3613aebd85539db6423df73',1,'ACurl::Builder']]],
   ['toint_15',['toInt',['../classAString.html#a595b975b64130656d41f02b9103ad807',1,'AString']]],
   ['tointorexception_16',['toIntOrException',['../classAString.html#a0f0025bc8da72d7e0807f06c972362a9',1,'AString']]],
-  ['tolongint_17',['toLongInt',['../classAString.html#a7206a8de8d911964daacb532c104481e',1,'AString']]],
+  ['tolongint_17',['toLongInt',['../classAString.html#a7206a8de8d911964daacb532c104481e',1,'AString::toLongInt()'],['../structaui_1_1updater_1_1Semver.html#a97059ea68d358c912f92b60c9c6e493e',1,'aui::updater::Semver::toLongInt()']]],
   ['tolongintorexception_18',['toLongIntOrException',['../classAString.html#a180d5f0967ffb6d7a989d90b4635d8e9',1,'AString']]],
   ['toname_19',['toName',['../classAEnumerate.html#afa68fcde8a649cfb3240410a4d995428',1,'AEnumerate']]],
   ['tonumber_20',['toNumber',['../classAString.html#ad1932cac297888e42990414ad79640bb',1,'AString']]],
@@ -33,7 +33,8 @@ var searchData=
   ['transformgestureeventstodesktop_30',['transformGestureEventsToDesktop',['../classAView.html#a1b273cbe961c8633b17171b750762135',1,'AView']]],
   ['translate_31',['translate',['../classIRenderer.html#ac89e0663e7c97a9a5641d5867d75a5d9',1,'IRenderer']]],
   ['transparentize_32',['transparentize',['../classAColor.html#a61588fbcbbba8b205248fbd209d4ed0c',1,'AColor']]],
-  ['try_5flock_33',['try_lock',['../classASpinlockMutex.html#a04dce91069ae87e2e3b1b2563b4e693b',1,'ASpinlockMutex']]],
-  ['tryexecute_34',['tryExecute',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#adbe5e1bfd42e4aeed5cb2afee35eff48',1,'aui::impl::future::Future::Inner']]],
-  ['typeableinsert_35',['typeableInsert',['../classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53',1,'AAbstractTextField::typeableInsert(size_t at, const AString &amp;toInsert) override'],['../classAAbstractTextField.html#a2bf33c76efd328235e0b61693edb5205',1,'AAbstractTextField::typeableInsert(size_t at, char16_t toInsert) override'],['../classAAbstractTypeable.html#a34f4610673deed52a5faa23d6b30bd03',1,'AAbstractTypeable::typeableInsert(size_t at, const AString &amp;toInsert)=0'],['../classAAbstractTypeable.html#afccd45e77eae043603eb5322c224cf0f',1,'AAbstractTypeable::typeableInsert(size_t at, char16_t toInsert)=0'],['../classATextArea.html#aed8e7bf3dbc09389c0b0a8699a6d8969',1,'ATextArea::typeableInsert(size_t at, const AString &amp;toInsert) override'],['../classATextArea.html#a197fd52af34a4333a6e8dc96ba84399b',1,'ATextArea::typeableInsert(size_t at, char16_t toInsert) override']]]
+  ['triggerupdateonstartup_33',['triggerUpdateOnStartup',['../classAUpdater.html#a3a002b297aebea3740fe042dbe75f7aa',1,'AUpdater']]],
+  ['try_5flock_34',['try_lock',['../classASpinlockMutex.html#a04dce91069ae87e2e3b1b2563b4e693b',1,'ASpinlockMutex']]],
+  ['tryexecute_35',['tryExecute',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#adbe5e1bfd42e4aeed5cb2afee35eff48',1,'aui::impl::future::Future::Inner']]],
+  ['typeableinsert_36',['typeableInsert',['../classAAbstractTextField.html#ab3fb970a032e2f3d741d6ed4b4208b53',1,'AAbstractTextField::typeableInsert(size_t at, const AString &amp;toInsert) override'],['../classAAbstractTextField.html#a2bf33c76efd328235e0b61693edb5205',1,'AAbstractTextField::typeableInsert(size_t at, char16_t toInsert) override'],['../classAAbstractTypeable.html#a34f4610673deed52a5faa23d6b30bd03',1,'AAbstractTypeable::typeableInsert(size_t at, const AString &amp;toInsert)=0'],['../classAAbstractTypeable.html#afccd45e77eae043603eb5322c224cf0f',1,'AAbstractTypeable::typeableInsert(size_t at, char16_t toInsert)=0'],['../classATextArea.html#aed8e7bf3dbc09389c0b0a8699a6d8969',1,'ATextArea::typeableInsert(size_t at, const AString &amp;toInsert) override'],['../classATextArea.html#a197fd52af34a4333a6e8dc96ba84399b',1,'ATextArea::typeableInsert(size_t at, char16_t toInsert) override']]]
 ];

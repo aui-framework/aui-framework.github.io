@@ -31,6 +31,7 @@ var NAVTREE =
       [ "All AUI CMake commands", null, [
         [ "aui_app", "md_docs_2aui__app.html", null ],
         [ "aui_executable", "md_docs_2aui__executable.html", null ],
+        [ "aui_link", "md_docs_2aui__link.html", null ],
         [ "aui_module", "md_docs_2aui__module.html", null ]
       ] ]
     ] ],
@@ -54,13 +55,14 @@ var NAVTREE =
       [ "All Views", "group__useful__views.html", null ],
       [ "All ASS Properties", "group__ass__properties.html", null ]
     ] ],
-    [ "Tweaking", null, [
-      [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
-      [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ]
-    ] ],
     [ "Preparing to Production", null, [
       [ "Setting App Icon", "md_docs_2Setting_01App_01Icon.html", null ],
       [ "Packaging Your App", "md_docs_2Packaging_01Your_01App.html", null ]
+    ] ],
+    [ "Other", null, [
+      [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
+      [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ],
+      [ "Runtime Dependency Resolution", "md_docs_2Runtime_01Dependency_01Resolution.html", null ]
     ] ]
 ];
 
