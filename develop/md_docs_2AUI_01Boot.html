@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>AUI Framework: AUI Boot</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
 <script src="jquery.js" type="text/javascript"></script>
 <script src="dynsections.js" type="text/javascript"></script>
 <script src="toc.js" type="text/javascript"></script>
@@ -229,7 +229,7 @@ CMAKELISTS_CUSTOM<a class="aui-toc-hash" href="#cmakelists_custom" id="cmakelist
 <h3>
 PRECOMPILED_URL_PREFIX<a class="aui-toc-hash" href="#precompiled_url_prefix" id="precompiled_url_prefix" style="color: var(--fragment-comment) !important">#</a></h3>
 <p>Instead of building the dependency from sources, try to import the precompiled binaries first.</p>
-<h4><a class="anchor" id="autotoc_md53"></a>
+<h4><a class="anchor" id="autotoc_md71"></a>
 PrecompiledUrlPrefix</h4>
 <p>Specifies url prefix where the precompiled binaries downloaded from.</p>
 <h3>
@@ -276,7 +276,7 @@ Producing packages with dependencies managed by AUI Boot<a class="aui-toc-hash" 
 <div class="line">        uses: actions/upload-artifact@v4</div>
 <div class="line">        with:</div>
 <div class="line">          path: ${{github.workspace}}/build/*.tar.gz</div>
-<div class="line">          name: ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }}</div>
+<div class="line">          name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }}</div>
 </div><!-- fragment --><h1>
 Importing AUI without AUI Boot<a class="aui-toc-hash" href="#importing-aui-without-aui-boot" id="importing-aui-without-aui-boot" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not a recommended way of using AUI, as it is not fully covered with tests, and you're basically trying to complicate your life by hardcoding paths in your CMake lists and thus making hardly reproducible projects. Consider <a href="https://github.com/aui-framework/aui/issues">asking questions</a> about AUI Boot on our GitHub page, and we'd help to adapt AUI Boot to your use case.</p>
