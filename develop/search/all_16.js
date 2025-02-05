@@ -174,7 +174,7 @@ var searchData=
   ['supported_20platforms_171',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md127',1,'Supported platforms'],['../group__updater.html#autotoc_md176',1,'Supported platforms']]],
   ['supported_20units_172',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
   ['swappable_173',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_174',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md105',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
+  ['syntax_174',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md104',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
   ['system_175',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_176',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
