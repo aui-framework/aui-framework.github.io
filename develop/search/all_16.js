@@ -90,7 +90,7 @@ var searchData=
   ['setviews_87',['setViews',['../classAViewContainerBase.html#a15d00346ddbb47ef858cd66ba739111a',1,'AViewContainerBase::setViews()'],['../classAViewContainer.html#a15d00346ddbb47ef858cd66ba739111a',1,'AViewContainer::setViews()']]],
   ['setwheelscrollable_88',['setWheelScrollable',['../classAScrollArea.html#a9999759647617833d28cf954a3ca7635',1,'AScrollArea']]],
   ['setwindow_89',['setWindow',['../classIRenderer.html#abb524c06b5e38b7b540d235d8e48b036',1,'IRenderer::setWindow()'],['../classSoftwareRenderer.html#a47e5ccb8ec0cb55d0a23e57296185a5c',1,'SoftwareRenderer::setWindow()']]],
-  ['shaping_90',['Shaping',['../md_docs_2Setting_01App_01Icon.html#autotoc_md154',1,'']]],
+  ['shaping_90',['Shaping',['../md_docs_2Setting_01App_01Icon.html#autotoc_md157',1,'']]],
   ['shared_20library_20resolution_91',['shared library resolution',['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md148',1,'Build-time shared library resolution'],['../md_docs_2Runtime_01Dependency_01Resolution.html#CMAKE_INSTALL',1,'Install-time shared library resolution']]],
   ['sheets_92',['Aui Style Sheets',['../group__ass.html',1,'']]],
   ['shoulddisplayhoveranimations_93',['shouldDisplayHoverAnimations',['../classAWindowBase.html#aa3efdc56a2a7a543b7ba1a70fa3694b4',1,'AWindowBase']]],
@@ -151,7 +151,7 @@ var searchData=
   ['stealin_148',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_149',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['step_150',['Prompt user on every step',['../group__updater.html#autotoc_md183',1,'']]],
-  ['stl_20like_20functionality_151',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md119',1,'']]],
+  ['stl_20like_20functionality_151',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md120',1,'']]],
   ['streambuf_152',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
   ['streams_153',['IO streams',['../group__io.html',1,'']]],
   ['string_154',['string',['../classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274',1,'OpenGLRenderer::string()'],['../classIRenderer.html#a4e3c00a94301b0c9bc1070f7fcbb76ca',1,'IRenderer::string()'],['../classSoftwareRenderer.html#a1441fc2d791de0aa28e80802364073df',1,'SoftwareRenderer::string()']]],
@@ -174,7 +174,7 @@ var searchData=
   ['supported_20platforms_171',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md127',1,'Supported platforms'],['../group__updater.html#autotoc_md176',1,'Supported platforms']]],
   ['supported_20units_172',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
   ['swappable_173',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_174',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md102',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
+  ['syntax_174',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md105',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
   ['system_175',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_176',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];

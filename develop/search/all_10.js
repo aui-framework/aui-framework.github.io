@@ -54,7 +54,7 @@ var searchData=
   ['mminsize_51',['mMinSize',['../classAView.html#afcab50e0676d2197c64a8d8c2221d741',1,'AView']]],
   ['mobile_20project_52',['Replacing AUI mobile project',['../md_docs_2Crosscompiling.html#autotoc_md129',1,'']]],
   ['modelchanged_53',['modelChanged',['../classADataBinding.html#a626f82611dff72cb336300f93c9f6174',1,'ADataBinding']]],
-  ['module_54',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md120',1,'']]],
+  ['module_54',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md119',1,'']]],
   ['module_20name_55',['API_\&lt;module name\&gt;',['../md_docs_2Macros.html#autotoc_md142',1,'']]],
   ['movable_56',['movable',['../conceptaui_1_1movable.html',1,'aui']]],
   ['move_57',['MOVE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a0863677ed986e1c26214dbd62d94fb8c',1,'ACursor']]],
