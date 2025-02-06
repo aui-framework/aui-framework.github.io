@@ -434,7 +434,7 @@ $(function(){initNavTree('ASignal_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> <span class="keyword">template</span> &lt;aui::convertible_to&lt;AObjectBase*&gt; Object, aui::not_overloaded_lambda Lambda&gt;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> <span class="keyword">const</span> _&lt;ConnectionImpl&gt;&amp; connect(Object objectBase, Lambda&amp;&amp; lambda) {</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        AObject* <span class="keywordtype">object</span> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">requires</span> { <span class="keywordtype">object</span> = objectBase; }) {</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_base_of_v&lt;AObject, std::remove_pointer_t&lt;Object&gt;&gt;) {</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> <span class="keywordtype">object</span> = objectBase;</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        }</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; connection = [&amp;]() -&gt; _&lt;ConnectionImpl&gt;&amp; {</div>
