@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['on_5fdemand_0',['ON_DEMAND',['../structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535ab465d406a073cf79466986d9e01c75e3',1,'ass::ScrollbarAppearance']]]
+  ['pointer_0',['POINTER',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c',1,'ACursor']]]
 ];

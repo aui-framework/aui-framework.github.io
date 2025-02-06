@@ -98,29 +98,20 @@ $(function(){initNavTree('classISeekableInputStream.html',''); initResizable(tru
 </div>
 <div class="header">
 <div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#pub-types">Public Types</a> |
 <a href="#pub-methods">Public Member Functions</a> |
 <a href="classISeekableInputStream-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">ISeekableInputStream Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__core.html">aui::core</a> » <a class="el" href="group__io.html">IO streams</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/IO/ISeekableInputStream.h#L9"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/IO/ISeekableInputStream.h#L27"></b>
 <p>Represents an input stream with updating reading position.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="ISeekableInputStream_8h_source.html">AUI/IO/ISeekableInputStream.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a428bdb92cfb5aacf3abe32e2aa40348f" id="r_a428bdb92cfb5aacf3abe32e2aa40348f"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> { <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348fa19aad9f2fe3ce0023298ab83f7e75775">BEGIN</a>
-, <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df">CURRENT</a>
-, <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348fab1a326c06d88bf042f73d70f50197905">END</a>
- }</td></tr>
-<tr class="separator:a428bdb92cfb5aacf3abe32e2aa40348f"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
 Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a5e80ba7db7af581d63caeb527da976b5" id="r_a5e80ba7db7af581d63caeb527da976b5"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e80ba7db7af581d63caeb527da976b5">seek</a> (std::streamoff offset, <a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> seekDir)=0</td></tr>
-<tr class="memdesc:a5e80ba7db7af581d63caeb527da976b5"><td class="mdescLeft"> </td><td class="mdescRight">change reading position, a way of changing depends on seekDir parameter  <br/></td></tr>
-<tr class="separator:a5e80ba7db7af581d63caeb527da976b5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af782894059b664d8b65304a4940f9a7e" id="r_af782894059b664d8b65304a4940f9a7e"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#af782894059b664d8b65304a4940f9a7e">seek</a> (std::streamoff offset, ASeekDir seekDir)=0</td></tr>
+<tr class="memdesc:af782894059b664d8b65304a4940f9a7e"><td class="mdescLeft"> </td><td class="mdescRight">change reading position, a way of changing depends on seekDir parameter  <br/></td></tr>
+<tr class="separator:af782894059b664d8b65304a4940f9a7e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:acd2ea599cb520a477b410645beaca0c9" id="r_acd2ea599cb520a477b410645beaca0c9"><td align="right" class="memItemLeft" valign="top">virtual std::streampos </td><td class="memItemRight" valign="bottom"><a class="el" href="#acd2ea599cb520a477b410645beaca0c9">tell</a> () noexcept=0</td></tr>
 <tr class="memdesc:acd2ea599cb520a477b410645beaca0c9"><td class="mdescLeft"> </td><td class="mdescRight">return current reading position  <br/></td></tr>
 <tr class="separator:acd2ea599cb520a477b410645beaca0c9"><td class="memSeparator" colspan="2"> </td></tr>
@@ -150,40 +141,11 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 <tr class="memitem:ac02e7702b9f0b97a2df0c0c97572e4f2 inherit pub_methods_classIInputStream"><td align="right" class="memTemplItemLeft" valign="top"><a class="el" href="classIInputStream.html">IInputStream</a> &amp; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIInputStream.html#ac02e7702b9f0b97a2df0c0c97572e4f2">operator&gt;&gt;</a> (T &amp;&amp;dst)</td></tr>
 <tr class="separator:ac02e7702b9f0b97a2df0c0c97572e4f2 inherit pub_methods_classIInputStream"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#a428bdb92cfb5aacf3abe32e2aa40348f" id="a428bdb92cfb5aacf3abe32e2aa40348f" name="a428bdb92cfb5aacf3abe32e2aa40348f" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#a4508931973b7205fc33754c4fcf2a4d5" id="a4508931973b7205fc33754c4fcf2a4d5" name="a4508931973b7205fc33754c4fcf2a4d5" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="textblock"><p>Represents an input stream with updating reading position. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation<a class="aui-toc-hash" href="#member-enumeration-documentation" id="member-enumeration-documentation" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#member-function-documentation" id="member-function-documentation" style="color: var(--fragment-comment) !important">#</a></h2>
 
-<h2 class="memtitle"><span class="permalink">◆ </span>Seek<a class="aui-toc-hash" href="#◆ seek" id="◆ seek" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-<tr>
-<td class="mlabels-left">
-<table class="memname">
-<tr>
-<td class="memname">enum class ISeekableInputStream::Seek</td>
-</tr>
-</table>
-</td>
-<td class="mlabels-right">
-<span class="mlabels"><span class="mlabel strong">strong</span></span> </td>
-</tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a428bdb92cfb5aacf3abe32e2aa40348fa19aad9f2fe3ce0023298ab83f7e75775" name="a428bdb92cfb5aacf3abe32e2aa40348fa19aad9f2fe3ce0023298ab83f7e75775"></a>BEGIN </td><td class="fielddoc"><p><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> relatively to the begin of file </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df" name="a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df"></a>CURRENT </td><td class="fielddoc"><p><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> relatively to the current position </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a428bdb92cfb5aacf3abe32e2aa40348fab1a326c06d88bf042f73d70f50197905" name="a428bdb92cfb5aacf3abe32e2aa40348fab1a326c06d88bf042f73d70f50197905"></a>END </td><td class="fielddoc"><p><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a> relative to the end of file </p>
-</td></tr>
-</table>
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a4508931973b7205fc33754c4fcf2a4d5" id="a4508931973b7205fc33754c4fcf2a4d5" name="a4508931973b7205fc33754c4fcf2a4d5" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>fileSize()<a class="aui-toc-hash" href="#◆ filesize()" id="◆ filesize()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink">◆ </span>fileSize()<a class="aui-toc-hash" href="#a9d473001d0868eb9e35557d34dbcc0d7" id="a9d473001d0868eb9e35557d34dbcc0d7" name="a9d473001d0868eb9e35557d34dbcc0d7" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -207,7 +169,7 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 <dl class="section return"><dt>Returns</dt><dd>size of the stream </dd></dl>
 </div>
 </div>
-<a id="a9d473001d0868eb9e35557d34dbcc0d7" name="a9d473001d0868eb9e35557d34dbcc0d7"></a>
+
 <h2 class="memtitle"><span class="permalink">◆ </span>isEof()<a class="aui-toc-hash" href="#◆ iseof()" id="◆ iseof()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +195,7 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 <p>Implemented in <a class="el" href="classAByteBufferInputStream.html#afe886ff71f87b17c40f0b90df97019ad">AByteBufferInputStream</a>, <a class="el" href="classAFileInputStream.html#ad3a176655c1e9d872debdeb0db8da59b">AFileInputStream</a>, and <a class="el" href="classAStrongByteBufferInputStream.html#a7206e6ba9535e688287ad8998e73d708">AStrongByteBufferInputStream</a>.</p>
 </div>
 </div>
-<a id="a5e80ba7db7af581d63caeb527da976b5" name="a5e80ba7db7af581d63caeb527da976b5"></a>
+<a id="af782894059b664d8b65304a4940f9a7e" name="af782894059b664d8b65304a4940f9a7e"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>seek()<a class="aui-toc-hash" href="#◆ seek()" id="◆ seek()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +211,7 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="#a428bdb92cfb5aacf3abe32e2aa40348f">Seek</a></td> <td class="paramname"><span class="paramname"><em>seekDir</em></span> )</td>
+<td class="paramtype">ASeekDir</td> <td class="paramname"><span class="paramname"><em>seekDir</em></span> )</td>
 </tr>
 </table>
 </td>
@@ -259,7 +221,7 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 </table>
 </div><div class="memdoc">
 <p>change reading position, a way of changing depends on seekDir parameter </p>
-<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#aaad4d52989f842020d60a62e76d2193b">AByteBufferInputStream</a>, <a class="el" href="classAFileInputStream.html#afe47e832a641f2a25136f87d91640f8e">AFileInputStream</a>, and <a class="el" href="classAStrongByteBufferInputStream.html#a1e71c45f6eb7473ed299d7ea1dd1252c">AStrongByteBufferInputStream</a>.</p>
+<p>Implemented in <a class="el" href="classAByteBufferInputStream.html#abdc898ec3b5485f22ad5aeae6e7588a4">AByteBufferInputStream</a>, <a class="el" href="classAFileInputStream.html#afa31d1b5ca22f84fa2e96f25de7d67b1">AFileInputStream</a>, and <a class="el" href="classAStrongByteBufferInputStream.html#a1ce1c159a0e13d9fd75a9ac432b4867c">AStrongByteBufferInputStream</a>.</p>
 </div>
 </div>
 <a id="acd2ea599cb520a477b410645beaca0c9" name="acd2ea599cb520a477b410645beaca0c9"></a>
@@ -293,7 +255,7 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#a428bdb92cfb5aacf3abe32e2aa40348f">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#a4508931973b7205fc33754c4fcf2a4d5">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 </div></body>

@@ -150,15 +150,14 @@ var searchData=
   ['createoverlappingsurface_147',['createOverlappingSurface',['../classAWindowBase.html#a5a57fa066729716d909860b981568186',1,'AWindowBase::createOverlappingSurface(const glm::ivec2 &amp;position, const glm::ivec2 &amp;size, bool closeOnClick=true)'],['../classAWindowBase.html#ae5541c371491af2661d944efe2d7d0ee',1,'AWindowBase::createOverlappingSurface(const std::function&lt; AOptional&lt; glm::ivec2 &gt;(unsigned)&gt; &amp;positionFactory, const glm::ivec2 &amp;size, bool closeOnClick=true)']]],
   ['createoverlappingsurfaceimpl_148',['createOverlappingSurfaceImpl',['../classAEmbedAuiWrap_1_1EmbedWindow.html#af952fdcda95705dde271cfa0c6535c01',1,'AEmbedAuiWrap::EmbedWindow::createOverlappingSurfaceImpl()'],['../classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0',1,'AWindow::createOverlappingSurfaceImpl()'],['../classAWindowBase.html#a4f8d14c149c6d39148eb59d079a6cfbf',1,'AWindowBase::createOverlappingSurfaceImpl()']]],
   ['createsocket_149',['createSocket',['../classAAbstractSocket.html#aacd9223f413ec487d2d9ea2707360b08',1,'AAbstractSocket::createSocket()'],['../classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7',1,'ATcpServerSocket::createSocket()'],['../classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0',1,'ATcpSocket::createSocket()'],['../classAUdpSocket.html#aba1eaf99104b3816702bf5ccda32cf5a',1,'AUdpSocket::createSocket()']]],
-  ['creating_20an_20aui_20module_150',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md119',1,'']]],
+  ['creating_20an_20aui_20module_150',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md118',1,'']]],
   ['cropped_151',['CROPPED',['../group__ass__properties.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca',1,'ass']]],
   ['crosscompiling_20android_20and_20ios_152',['Crosscompiling (Android and iOS)',['../md_docs_2Crosscompiling.html',1,'']]],
   ['cubicbezier_153',['CubicBezier',['../classaui_1_1animation__curves_1_1CubicBezier.html',1,'aui::animation_curves']]],
-  ['current_154',['CURRENT',['../classISeekableInputStream.html#a428bdb92cfb5aacf3abe32e2aa40348faa2770969c827f0f2910f6179418462df',1,'ISeekableInputStream']]],
-  ['current_155',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#a9370141f56476f8fe256cc5a39305256',1,'AWindow::current()']]],
-  ['currentthread_156',['CurrentThread',['../classCurrentThread.html',1,'']]],
-  ['cursorindexbypos_157',['cursorIndexByPos',['../classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2',1,'ACursorSelectable::cursorIndexByPos()'],['../classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c',1,'AAbstractTextField::cursorIndexByPos()'],['../classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c',1,'ATextArea::cursorIndexByPos()']]],
-  ['custom_158',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
-  ['customcaptionwindowimplwin32_159',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
-  ['cuttoclipboard_160',['cutToClipboard',['../classAAbstractTypeable.html#a54831fbb3b37af63b7832bc166aec0e2',1,'AAbstractTypeable']]]
+  ['current_154',['current',['../classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574',1,'AThread::current()'],['../classAWindow.html#a9370141f56476f8fe256cc5a39305256',1,'AWindow::current()']]],
+  ['currentthread_155',['CurrentThread',['../classCurrentThread.html',1,'']]],
+  ['cursorindexbypos_156',['cursorIndexByPos',['../classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2',1,'ACursorSelectable::cursorIndexByPos()'],['../classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c',1,'AAbstractTextField::cursorIndexByPos()'],['../classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c',1,'ATextArea::cursorIndexByPos()']]],
+  ['custom_157',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
+  ['customcaptionwindowimplwin32_158',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
+  ['cuttoclipboard_159',['cutToClipboard',['../classAAbstractTypeable.html#a54831fbb3b37af63b7832bc166aec0e2',1,'AAbstractTypeable']]]
 ];
