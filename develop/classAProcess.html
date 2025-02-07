@@ -104,7 +104,7 @@ $(function(){initNavTree('classAProcess.html',''); initResizable(true); });
 <a href="classAProcess-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AProcess Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Platform/AProcess.h#L87"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Platform/AProcess.h#L88"></b>
 <p>Retrieves information about processes.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AProcess_8h_source.html">AUI/Platform/AProcess.h</a>&gt;</code></p>
@@ -200,7 +200,7 @@ Launching executable<a class="aui-toc-hash" href="#ProcessTest_Launching_executa
 <div class="ttc" id="aclassAProcess_html_aeb9102317bbe877db203542d6d69127b"><div class="ttname"><a href="#aeb9102317bbe877db203542d6d69127b">AProcess::create</a></div><div class="ttdeci">static _&lt; AChildProcess &gt; create(ProcessCreationInfo args)</div><div class="ttdoc">Launches an executable.</div><div class="ttdef"><b>Definition</b> AProcess.cpp:27</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
-<div class="ttc" id="astructAProcess_1_1ArgStringList_html"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html">AProcess::ArgStringList</a></div><div class="ttdoc">Process arguments represented as array of strings.</div><div class="ttdef"><b>Definition</b> AProcess.h:130</div></div>
+<div class="ttc" id="astructAProcess_1_1ArgStringList_html"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html">AProcess::ArgStringList</a></div><div class="ttdoc">Process arguments represented as array of strings.</div><div class="ttdef"><b>Definition</b> AProcess.h:131</div></div>
 </div><!-- fragment --><p>We define an empty string accumulator to collect the output from the process. Then, we connect a lambda function to the <code>stdOut</code> signal of the process. This lambda function converts the received buffer (a byte array) to a UTF-8 string and appends it to <code>accumulator</code>.</p>
 <p>We start the new process by calling its <code>AProcess::run()</code> method, which will execute the specified application with the provided arguments in the given working directory.</p>
 <p>We wait for the process to finish by calling <code><a class="el" href="#a406e61a076feaf56d6b7ae4f408a76a4" title="Wait for process to be finished and returns exit code.">waitForExitCode()</a></code>, which blocks until the process exits and returns its exit code. If the exit code is 0, it means the process completed successfully. <b aui-src="aui.core/tests/ProcessTest.cpp#L195"></b> </p>

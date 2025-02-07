@@ -133,209 +133,212 @@ $(function(){initNavTree('AProcess_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include "Pipe.h"</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include "AUI/Platform/unix/UnixIoAsync.h"</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">class </span><a class="code hl_class" href="classAChildProcess.html">AChildProcess</a>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00042">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__core.html#gaa3610507f3842446dc91291a81ebf41e">   42</a></span>AUI_ENUM_FLAG(ASubProcessExecutionFlags) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    MERGE_STDOUT_STDERR = 0b001,</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    TIE_STDOUT = 0b010,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    TIE_STDERR = 0b100, <a class="code hl_enumvalue" href="group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a> = 0,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    DETACHED = 0b1000,</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include "AUI/Common/IStringable.h"</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">class </span><a class="code hl_class" href="classAChildProcess.html">AChildProcess</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00043">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="group__core.html#gaa3610507f3842446dc91291a81ebf41e">   43</a></span>AUI_ENUM_FLAG(ASubProcessExecutionFlags) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    MERGE_STDOUT_STDERR = 0b001,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    TIE_STDOUT = 0b010,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    TIE_STDERR = 0b100, <a class="code hl_enumvalue" href="group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</a> = 0,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    DETACHED = 0b1000,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00067">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classAProcessException.html">   67</a></span><span class="keyword">class </span>AProcessException : <span class="keyword">public</span> AException {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    AProcessException(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; message) : AException(message) {}</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00068">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classAProcessException.html">   68</a></span><span class="keyword">class </span>AProcessException : <span class="keyword">public</span> AException {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    AProcessException(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; message) : AException(message) {}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00087">
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classAProcess.html">   87</a></span><span class="keyword">class </span>API_AUI_CORE <a class="code hl_class" href="classAProcess.html">AProcess</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structaui_1_1noncopyable.html">aui::noncopyable</a> {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classAProcess.html">~AProcess</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9">   94</a></span> <span class="keyword">virtual</span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_function" href="classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9">getModuleName</a>() = 0;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2">   99</a></span> <span class="keyword">virtual</span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_function" href="classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2">getPathToExecutable</a>() = 0;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classAProcess.html#a199a0e08befd7915cef239cc2f21c432">  104</a></span> <span class="keyword">virtual</span> uint32_t <a class="code hl_function" href="classAProcess.html#a199a0e08befd7915cef239cc2f21c432">getPid</a>() const noexcept = 0;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">  110</a></span>    virtual <span class="keywordtype">int</span> <a class="code hl_function" href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">waitForExitCode</a>() = 0;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">  115</a></span>    virtual <span class="keywordtype">size_t</span> <a class="code hl_function" href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">processMemory</a>() const = 0;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00123">
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgSingleString.html">  123</a></span>    struct <a class="code hl_struct" href="structAProcess_1_1ArgSingleString.html">ArgSingleString</a> {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> <a class="code hl_class" href="classAString.html">AString</a> arg;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    };</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00088">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classAProcess.html">   88</a></span><span class="keyword">class </span>API_AUI_CORE <a class="code hl_class" href="classAProcess.html">AProcess</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structaui_1_1noncopyable.html">aui::noncopyable</a> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> <span class="keyword">virtual</span> <a class="code hl_class" href="classAProcess.html">~AProcess</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9">   95</a></span> <span class="keyword">virtual</span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_function" href="classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9">getModuleName</a>() = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2">  100</a></span> <span class="keyword">virtual</span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_function" href="classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2">getPathToExecutable</a>() = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classAProcess.html#a199a0e08befd7915cef239cc2f21c432">  105</a></span> <span class="keyword">virtual</span> uint32_t <a class="code hl_function" href="classAProcess.html#a199a0e08befd7915cef239cc2f21c432">getPid</a>() const noexcept = 0;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">  111</a></span>    virtual <span class="keywordtype">int</span> <a class="code hl_function" href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">waitForExitCode</a>() = 0;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">  116</a></span>    virtual <span class="keywordtype">size_t</span> <a class="code hl_function" href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">processMemory</a>() const = 0;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00124">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgSingleString.html">  124</a></span>    struct <a class="code hl_struct" href="structAProcess_1_1ArgSingleString.html">ArgSingleString</a> {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> <a class="code hl_class" href="classAString.html">AString</a> arg;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    };</div>
 </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00130">
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgStringList.html">  130</a></span> <span class="keyword">struct </span><a class="code hl_struct" href="structAProcess_1_1ArgStringList.html">ArgStringList</a> {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80">  135</a></span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a> <a class="code hl_variable" href="structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80">list</a>;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6">  150</a></span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6">win32WrapWhitespaceArgumentsWithQuots</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    };</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00131">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgStringList.html">  131</a></span> <span class="keyword">struct </span><a class="code hl_struct" href="structAProcess_1_1ArgStringList.html">ArgStringList</a> {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80">  136</a></span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a> <a class="code hl_variable" href="structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80">list</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6">  151</a></span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6">win32WrapWhitespaceArgumentsWithQuots</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    };</div>
 </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00156">
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html">  156</a></span> <span class="keyword">struct </span><a class="code hl_struct" href="structAProcess_1_1ProcessCreationInfo.html">ProcessCreationInfo</a> {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f">  160</a></span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_variable" href="structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f">executable</a>;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html#ae0de8070ce033cf09d5f6db024b2321a">  174</a></span>        std::variant&lt;ArgSingleString, ArgStringList&gt; <a class="code hl_variable" href="structAProcess_1_1ProcessCreationInfo.html#ae0de8070ce033cf09d5f6db024b2321a">args</a>;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546">  180</a></span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_variable" href="structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546">workDir</a>;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    };</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00157">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html">  157</a></span> <span class="keyword">struct </span><a class="code hl_struct" href="structAProcess_1_1ProcessCreationInfo.html">ProcessCreationInfo</a> {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f">  161</a></span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_variable" href="structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f">executable</a>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html#ae0de8070ce033cf09d5f6db024b2321a">  175</a></span>        std::variant&lt;ArgSingleString, ArgStringList&gt; <a class="code hl_variable" href="structAProcess_1_1ProcessCreationInfo.html#ae0de8070ce033cf09d5f6db024b2321a">args</a>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546">  181</a></span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_variable" href="structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546">workDir</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    };</div>
 </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AChildProcess&gt;</a> <a class="code hl_function" href="classAProcess.html#aeb9102317bbe877db203542d6d69127b">create</a>(<a class="code hl_struct" href="structAProcess_1_1ProcessCreationInfo.html">ProcessCreationInfo</a> args);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    [[deprecated(<span class="stringliteral">"use AProcess::create instead"</span>)]]</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00198">
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="classAProcess.html#a747b5f3122d91a4303d07f1600040cd3">  198</a></span> <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AChildProcess&gt;</a> <a class="code hl_function" href="classAProcess.html#a747b5f3122d91a4303d07f1600040cd3">make</a>(<a class="code hl_class" href="classAString.html">AString</a> applicationFile, <a class="code hl_class" href="classAString.html">AString</a> args = {}, <a class="code hl_class" href="classAPath.html">APath</a> workingDirectory = {}) {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> <span class="keywordflow">return</span> create(</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            { .executable = std::move(applicationFile),</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>              .args = ArgSingleString { std::move(args) },</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>              .workDir = std::move(workingDirectory) });</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AChildProcess&gt;</a> <a class="code hl_function" href="classAProcess.html#aeb9102317bbe877db203542d6d69127b">create</a>(<a class="code hl_struct" href="structAProcess_1_1ProcessCreationInfo.html">ProcessCreationInfo</a> args);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    [[deprecated(<span class="stringliteral">"use AProcess::create instead"</span>)]]</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00199">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classAProcess.html#a747b5f3122d91a4303d07f1600040cd3">  199</a></span> <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AChildProcess&gt;</a> <a class="code hl_function" href="classAProcess.html#a747b5f3122d91a4303d07f1600040cd3">make</a>(<a class="code hl_class" href="classAString.html">AString</a> applicationFile, <a class="code hl_class" href="classAString.html">AString</a> args = {}, <a class="code hl_class" href="classAPath.html">APath</a> workingDirectory = {}) {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> <span class="keywordflow">return</span> create(</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            { .executable = std::move(applicationFile),</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>              .args = ArgSingleString { std::move(args) },</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>              .workDir = std::move(workingDirectory) });</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
 </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    [[deprecated(<span class="stringliteral">"use auto process = AProcess::make(); process-&gt;run(); process-&gt;waitForExitCode()"</span>)]]</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> <span class="keyword">static</span> <span class="keywordtype">int</span> executeWaitForExit(</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        AString applicationFile, AString args = {}, APath workingDirectory = {},</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        ASubProcessExecutionFlags flags = ASubProcessExecutionFlags::DEFAULT);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> <span class="keyword">static</span> <span class="keywordtype">void</span> executeAsAdministrator(</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> <span class="keyword">const</span> AString&amp; applicationFile, <span class="keyword">const</span> AString&amp; args = {}, <span class="keyword">const</span> APath&amp; workingDirectory = {});</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> <span class="keyword">static</span> AVector&lt;_&lt;AProcess&gt;&gt; all();</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> <span class="keyword">static</span> _&lt;AProcess&gt; self();</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> <span class="keyword">static</span> _&lt;AProcess&gt; findAnotherSelfInstance(<span class="keyword">const</span> AString&amp; yourProjectName);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> <span class="keyword">static</span> _&lt;AProcess&gt; fromPid(uint32_t pid);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> <span class="keywordtype">void</span> kill() const noexcept;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>};</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    [[deprecated(<span class="stringliteral">"use auto process = AProcess::make(); process-&gt;run(); process-&gt;waitForExitCode()"</span>)]]</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> <span class="keyword">static</span> <span class="keywordtype">int</span> executeWaitForExit(</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        AString applicationFile, AString args = {}, APath workingDirectory = {},</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        ASubProcessExecutionFlags flags = ASubProcessExecutionFlags::DEFAULT);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> <span class="keyword">static</span> <span class="keywordtype">void</span> executeAsAdministrator(</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> <span class="keyword">const</span> AString&amp; applicationFile, <span class="keyword">const</span> AString&amp; args = {}, <span class="keyword">const</span> APath&amp; workingDirectory = {});</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> <span class="keyword">static</span> AVector&lt;_&lt;AProcess&gt;&gt; all();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> <span class="keyword">static</span> _&lt;AProcess&gt; self();</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> <span class="keyword">static</span> _&lt;AProcess&gt; findAnotherSelfInstance(<span class="keyword">const</span> AString&amp; yourProjectName);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> <span class="keyword">static</span> _&lt;AProcess&gt; fromPid(uint32_t pid);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> <span class="keywordtype">void</span> kill() const noexcept;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>};</div>
 </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00264">
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="classAChildProcess.html">  264</a></span>class API_AUI_CORE AChildProcess : public AProcess, public AObject {</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> <span class="keyword">friend</span> <span class="keyword">class </span>AProcess;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    ~AChildProcess();</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; getApplicationFile()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> <span class="keywordflow">return</span> mInfo.executable;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    }</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; getArgs()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> <span class="keywordflow">return</span> mInfo.args;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; getWorkingDirectory()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> <span class="keywordflow">return</span> mInfo.workDir;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00285">
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">  285</a></span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_function" href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">getPathToExecutable</a>()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> <span class="keywordflow">return</span> getApplicationFile();</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00265">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classAChildProcess.html">  265</a></span>class API_AUI_CORE AChildProcess : public AProcess, public AObject, public <a class="code hl_class" href="classIStringable.html">IStringable</a> {</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> <span class="keyword">friend</span> <span class="keyword">class </span>AProcess;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    ~AChildProcess();</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; getApplicationFile()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> <span class="keywordflow">return</span> mInfo.executable;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    }</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; getArgs()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> <span class="keywordflow">return</span> mInfo.args;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> <span class="keyword">const</span> <span class="keyword">auto</span>&amp; getWorkingDirectory()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> <span class="keywordflow">return</span> mInfo.workDir;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00286">
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">  286</a></span> <a class="code hl_class" href="classAPath.html">APath</a> <a class="code hl_function" href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">getPathToExecutable</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> <span class="keywordflow">return</span> getApplicationFile();</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
 </div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> <a class="code hl_class" href="classAOptional.html">AOptional&lt;int&gt;</a> exitCodeNonBlocking() const noexcept {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> <span class="keywordflow">if</span> (mExitCode.hasValue()) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> <span class="keywordflow">return</span> *mExitCode;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        }</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> <span class="keywordtype">bool</span> isFinished() const noexcept {</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> <span class="keywordflow">return</span> mExitCode.hasValue();</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> <span class="keywordtype">void</span> run(ASubProcessExecutionFlags flags = ASubProcessExecutionFlags::DEFAULT);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> <span class="keywordtype">int</span> waitForExitCode() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    uint32_t getPid() const noexcept override;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> <span class="keywordtype">size_t</span> processMemory() const override;</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    APath getModuleName() override;</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    const _&lt;IOutputStream&gt;&amp; getStdInStream()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> <span class="keywordflow">return</span> mStdInStream;</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>signals:</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> finished;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AByteBuffer&gt;</a> stdOut;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AByteBuffer&gt;</a> stdErr;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    AChildProcess() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    ProcessCreationInfo mInfo;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    _&lt;IOutputStream&gt; mStdInStream;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> <a class="code hl_class" href="classAOptional.html">AOptional&lt;int&gt;</a> exitCodeNonBlocking() const noexcept {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> <span class="keywordflow">if</span> (mExitCode.hasValue()) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> <span class="keywordflow">return</span> *mExitCode;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> <span class="keywordtype">bool</span> isFinished() const noexcept {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> <span class="keywordflow">return</span> mExitCode.hasValue();</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> <span class="keywordtype">void</span> run(ASubProcessExecutionFlags flags = ASubProcessExecutionFlags::DEFAULT);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> <span class="keywordtype">int</span> waitForExitCode() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    uint32_t getPid() const noexcept override;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> <span class="keywordtype">size_t</span> processMemory() const override;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    APath getModuleName() override;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    const _&lt;IOutputStream&gt;&amp; getStdInStream()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> <span class="keywordflow">return</span> mStdInStream;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    AString toString() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>signals:</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> finished;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AByteBuffer&gt;</a> stdOut;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AByteBuffer&gt;</a> stdErr;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    AChildProcess() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    ProcessCreationInfo mInfo;</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    AFuture&lt;int&gt; mExitCode;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    PROCESS_INFORMATION mProcessInformation;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    AWin32EventWait mExitEvent;</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    WinIoAsync mStdoutAsync;</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    pid_t mPid;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    _&lt;AThread&gt; mWatchdog;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    UnixIoAsync mStdoutAsync;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>};</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    _&lt;IOutputStream&gt; mStdInStream;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    AFuture&lt;int&gt; mExitCode;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    PROCESS_INFORMATION mProcessInformation;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    AWin32EventWait mExitEvent;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    WinIoAsync mStdoutAsync;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    pid_t mPid;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    _&lt;AThread&gt; mWatchdog;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    UnixIoAsync mStdoutAsync;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>};</div>
 </div>
-<div class="ttc" id="aclassAChildProcess_html"><div class="ttname"><a href="classAChildProcess.html">AChildProcess</a></div><div class="ttdef"><b>Definition</b> AProcess.h:264</div></div>
-<div class="ttc" id="aclassAChildProcess_html_aff6c16ab23dcd59c99be4a7149493c24"><div class="ttname"><a href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">AChildProcess::getPathToExecutable</a></div><div class="ttdeci">APath getPathToExecutable() override</div><div class="ttdef"><b>Definition</b> AProcess.h:285</div></div>
+<div class="ttc" id="aclassAChildProcess_html"><div class="ttname"><a href="classAChildProcess.html">AChildProcess</a></div><div class="ttdef"><b>Definition</b> AProcess.h:265</div></div>
+<div class="ttc" id="aclassAChildProcess_html_aff6c16ab23dcd59c99be4a7149493c24"><div class="ttname"><a href="classAChildProcess.html#aff6c16ab23dcd59c99be4a7149493c24">AChildProcess::getPathToExecutable</a></div><div class="ttdeci">APath getPathToExecutable() override</div><div class="ttdef"><b>Definition</b> AProcess.h:286</div></div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition</b> AOptional.h:32</div></div>
 <div class="ttc" id="aclassAPath_html"><div class="ttname"><a href="classAPath.html">APath</a></div><div class="ttdoc">An add-on to AString with functions for working with the path.</div><div class="ttdef"><b>Definition</b> APath.h:128</div></div>
-<div class="ttc" id="aclassAProcess_html"><div class="ttname"><a href="classAProcess.html">AProcess</a></div><div class="ttdoc">Retrieves information about processes.</div><div class="ttdef"><b>Definition</b> AProcess.h:87</div></div>
+<div class="ttc" id="aclassAProcess_html"><div class="ttname"><a href="classAProcess.html">AProcess</a></div><div class="ttdoc">Retrieves information about processes.</div><div class="ttdef"><b>Definition</b> AProcess.h:88</div></div>
 <div class="ttc" id="aclassAProcess_html_a199a0e08befd7915cef239cc2f21c432"><div class="ttname"><a href="classAProcess.html#a199a0e08befd7915cef239cc2f21c432">AProcess::getPid</a></div><div class="ttdeci">virtual uint32_t getPid() const noexcept=0</div></div>
 <div class="ttc" id="aclassAProcess_html_a30f92106ab07d0c96daf41fd8a9230c2"><div class="ttname"><a href="classAProcess.html#a30f92106ab07d0c96daf41fd8a9230c2">AProcess::getPathToExecutable</a></div><div class="ttdeci">virtual APath getPathToExecutable()=0</div></div>
 <div class="ttc" id="aclassAProcess_html_a406e61a076feaf56d6b7ae4f408a76a4"><div class="ttname"><a href="classAProcess.html#a406e61a076feaf56d6b7ae4f408a76a4">AProcess::waitForExitCode</a></div><div class="ttdeci">virtual int waitForExitCode()=0</div><div class="ttdoc">Wait for process to be finished and returns exit code.</div></div>
-<div class="ttc" id="aclassAProcess_html_a747b5f3122d91a4303d07f1600040cd3"><div class="ttname"><a href="classAProcess.html#a747b5f3122d91a4303d07f1600040cd3">AProcess::make</a></div><div class="ttdeci">static _&lt; AChildProcess &gt; make(AString applicationFile, AString args={}, APath workingDirectory={})</div><div class="ttdoc">Launches an executable.</div><div class="ttdef"><b>Definition</b> AProcess.h:198</div></div>
+<div class="ttc" id="aclassAProcess_html_a747b5f3122d91a4303d07f1600040cd3"><div class="ttname"><a href="classAProcess.html#a747b5f3122d91a4303d07f1600040cd3">AProcess::make</a></div><div class="ttdeci">static _&lt; AChildProcess &gt; make(AString applicationFile, AString args={}, APath workingDirectory={})</div><div class="ttdoc">Launches an executable.</div><div class="ttdef"><b>Definition</b> AProcess.h:199</div></div>
 <div class="ttc" id="aclassAProcess_html_ad13a929b31018052dc459b46eb0cc5c9"><div class="ttname"><a href="classAProcess.html#ad13a929b31018052dc459b46eb0cc5c9">AProcess::getModuleName</a></div><div class="ttdeci">virtual APath getModuleName()=0</div></div>
 <div class="ttc" id="aclassAProcess_html_ae10b6f23b8339a9795c5405ffba21440"><div class="ttname"><a href="classAProcess.html#ae10b6f23b8339a9795c5405ffba21440">AProcess::processMemory</a></div><div class="ttdeci">virtual size_t processMemory() const =0</div><div class="ttdoc">Obtain process memory usage.</div></div>
 <div class="ttc" id="aclassAProcess_html_aeb9102317bbe877db203542d6d69127b"><div class="ttname"><a href="classAProcess.html#aeb9102317bbe877db203542d6d69127b">AProcess::create</a></div><div class="ttdeci">static _&lt; AChildProcess &gt; create(ProcessCreationInfo args)</div><div class="ttdoc">Launches an executable.</div><div class="ttdef"><b>Definition</b> AProcess.cpp:27</div></div>
 <div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition</b> AStringVector.h:22</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
+<div class="ttc" id="aclassIStringable_html"><div class="ttname"><a href="classIStringable.html">IStringable</a></div><div class="ttdoc">Object that can be converted to string.</div><div class="ttdef"><b>Definition</b> IStringable.h:29</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:551</div></div>
 <div class="ttc" id="agroup__views_html_ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee">ATextInputActionIcon::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdoc">There's no concrete input action. Let the OS decide which action is the most appropriate.</div><div class="ttdef"><b>Definition</b> ATextInputActionIcon.h:39</div></div>
-<div class="ttc" id="astructAProcess_1_1ArgSingleString_html"><div class="ttname"><a href="structAProcess_1_1ArgSingleString.html">AProcess::ArgSingleString</a></div><div class="ttdoc">Process arguments represented as a single string.</div><div class="ttdef"><b>Definition</b> AProcess.h:123</div></div>
-<div class="ttc" id="astructAProcess_1_1ArgStringList_html"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html">AProcess::ArgStringList</a></div><div class="ttdoc">Process arguments represented as array of strings.</div><div class="ttdef"><b>Definition</b> AProcess.h:130</div></div>
-<div class="ttc" id="astructAProcess_1_1ArgStringList_html_a6007a7ed88736a6f8fbe1f0b1d642c80"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80">AProcess::ArgStringList::list</a></div><div class="ttdeci">AStringVector list</div><div class="ttdef"><b>Definition</b> AProcess.h:135</div></div>
-<div class="ttc" id="astructAProcess_1_1ArgStringList_html_aab66cfb4ccfe005efa17fb863fdf6ff6"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6">AProcess::ArgStringList::win32WrapWhitespaceArgumentsWithQuots</a></div><div class="ttdeci">bool win32WrapWhitespaceArgumentsWithQuots</div><div class="ttdef"><b>Definition</b> AProcess.h:150</div></div>
-<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html">AProcess::ProcessCreationInfo</a></div><div class="ttdoc">Process creation info.</div><div class="ttdef"><b>Definition</b> AProcess.h:156</div></div>
-<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html_a318c9f6235c6f2a4523e5d3fcb07d53f"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f">AProcess::ProcessCreationInfo::executable</a></div><div class="ttdeci">APath executable</div><div class="ttdef"><b>Definition</b> AProcess.h:160</div></div>
-<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html_a73cc79c723b0f1cfe746ddf59b9a1546"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546">AProcess::ProcessCreationInfo::workDir</a></div><div class="ttdeci">APath workDir</div><div class="ttdef"><b>Definition</b> AProcess.h:180</div></div>
-<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html_ae0de8070ce033cf09d5f6db024b2321a"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html#ae0de8070ce033cf09d5f6db024b2321a">AProcess::ProcessCreationInfo::args</a></div><div class="ttdeci">std::variant&lt; ArgSingleString, ArgStringList &gt; args</div><div class="ttdef"><b>Definition</b> AProcess.h:174</div></div>
+<div class="ttc" id="astructAProcess_1_1ArgSingleString_html"><div class="ttname"><a href="structAProcess_1_1ArgSingleString.html">AProcess::ArgSingleString</a></div><div class="ttdoc">Process arguments represented as a single string.</div><div class="ttdef"><b>Definition</b> AProcess.h:124</div></div>
+<div class="ttc" id="astructAProcess_1_1ArgStringList_html"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html">AProcess::ArgStringList</a></div><div class="ttdoc">Process arguments represented as array of strings.</div><div class="ttdef"><b>Definition</b> AProcess.h:131</div></div>
+<div class="ttc" id="astructAProcess_1_1ArgStringList_html_a6007a7ed88736a6f8fbe1f0b1d642c80"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80">AProcess::ArgStringList::list</a></div><div class="ttdeci">AStringVector list</div><div class="ttdef"><b>Definition</b> AProcess.h:136</div></div>
+<div class="ttc" id="astructAProcess_1_1ArgStringList_html_aab66cfb4ccfe005efa17fb863fdf6ff6"><div class="ttname"><a href="structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6">AProcess::ArgStringList::win32WrapWhitespaceArgumentsWithQuots</a></div><div class="ttdeci">bool win32WrapWhitespaceArgumentsWithQuots</div><div class="ttdef"><b>Definition</b> AProcess.h:151</div></div>
+<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html">AProcess::ProcessCreationInfo</a></div><div class="ttdoc">Process creation info.</div><div class="ttdef"><b>Definition</b> AProcess.h:157</div></div>
+<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html_a318c9f6235c6f2a4523e5d3fcb07d53f"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f">AProcess::ProcessCreationInfo::executable</a></div><div class="ttdeci">APath executable</div><div class="ttdef"><b>Definition</b> AProcess.h:161</div></div>
+<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html_a73cc79c723b0f1cfe746ddf59b9a1546"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546">AProcess::ProcessCreationInfo::workDir</a></div><div class="ttdeci">APath workDir</div><div class="ttdef"><b>Definition</b> AProcess.h:181</div></div>
+<div class="ttc" id="astructAProcess_1_1ProcessCreationInfo_html_ae0de8070ce033cf09d5f6db024b2321a"><div class="ttname"><a href="structAProcess_1_1ProcessCreationInfo.html#ae0de8070ce033cf09d5f6db024b2321a">AProcess::ProcessCreationInfo::args</a></div><div class="ttdeci">std::variant&lt; ArgSingleString, ArgStringList &gt; args</div><div class="ttdef"><b>Definition</b> AProcess.h:175</div></div>
 <div class="ttc" id="astructaui_1_1noncopyable_html"><div class="ttname"><a href="structaui_1_1noncopyable.html">aui::noncopyable</a></div><div class="ttdoc">Forbids copy of your class.</div><div class="ttdef"><b>Definition</b> values.h:40</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
