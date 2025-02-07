@@ -29,7 +29,7 @@ var searchData=
   ['platforms_20unix_20like_20only_26',['platforms UNIX like only',['../md_docs_2Runtime_01Dependency_01Resolution.html#RPATH',1,'Other platforms (UNIX-like only)'],['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md151',1,'Other platforms (UNIX-like only)']]],
   ['platforms_20windows_20only_27',['platforms Windows only',['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md149',1,'DLL platforms (Windows only)'],['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md150',1,'DLL platforms (Windows only)']]],
   ['playsystemsound_28',['playSystemSound',['../namespaceADesktop.html#af25534f4ae5ca80c1f9942801bca5a8d',1,'ADesktop']]],
-  ['plugin_29',['PLUGIN',['../md_docs_2aui__module.html#autotoc_md108',1,'']]],
+  ['plugin_29',['PLUGIN',['../md_docs_2aui__module.html#autotoc_md107',1,'']]],
   ['plugins_30',['IDE Plugins',['../md_docs_2IDE_01Plugins.html',1,'']]],
   ['pointer_31',['POINTER',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c',1,'ACursor']]],
   ['pointer_5fto_5fmember_32',['pointer_to_member',['../conceptaui_1_1pointer__to__member.html',1,'aui']]],

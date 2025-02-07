@@ -150,7 +150,7 @@ var searchData=
   ['stealin_147',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_148',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['step_149',['Prompt user on every step',['../group__updater.html#autotoc_md183',1,'']]],
-  ['stl_20like_20functionality_150',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md119',1,'']]],
+  ['stl_20like_20functionality_150',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md120',1,'']]],
   ['streambuf_151',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
   ['streams_152',['IO streams',['../group__io.html',1,'']]],
   ['string_153',['string',['../classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274',1,'OpenGLRenderer::string()'],['../classIRenderer.html#a4e3c00a94301b0c9bc1070f7fcbb76ca',1,'IRenderer::string()'],['../classSoftwareRenderer.html#a1441fc2d791de0aa28e80802364073df',1,'SoftwareRenderer::string()']]],
@@ -173,7 +173,7 @@ var searchData=
   ['supported_20platforms_170',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md127',1,'Supported platforms'],['../group__updater.html#autotoc_md176',1,'Supported platforms']]],
   ['supported_20units_171',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
   ['swappable_172',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_173',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md101',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
+  ['syntax_173',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md100',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
   ['system_174',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_175',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
