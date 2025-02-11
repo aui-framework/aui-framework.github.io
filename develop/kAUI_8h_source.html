@@ -100,79 +100,79 @@ $(function(){initNavTree('kAUI_8h_source.html',''); initResizable(true); });
 <div class="headertitle"><div class="title">kAUI.h</div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * AUI Framework - Declarative UI toolkit for modern C++20</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * SPDX-License-Identifier: MPL-2.0</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * License, v. 2.0. If a copy of the MPL was not distributed with this</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;range/v3/range_fwd.hpp&gt;</span> <span class="comment">// range-v3 breaks by AUI's let, lol so forward it</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;AUI/Thread/AThreadPool.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;AUI/Thread/AFuture.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gac83b72d92d1105a82cd5590c0f65d48b">   44</a></span><span class="preprocessor">#define me this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">namespace </span>aui::impl::slot {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * AUI Framework - Declarative UI toolkit for modern C++20</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * SPDX-License-Identifier: MPL-2.0</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * License, v. 2.0. If a copy of the MPL was not distributed with this</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;range/v3/range_fwd.hpp&gt;</span> <span class="comment">// range-v3 breaks by AUI's let, lol so forward it</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;AUI/Thread/AThreadPool.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;AUI/Thread/AFuture.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gac83b72d92d1105a82cd5590c0f65d48b">   44</a></span><span class="preprocessor">#define me this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">namespace </span>aui::impl::slot {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" data-end="};" data-start="{" id="foldopen00048">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1slot_1_1decode__type.html">   48</a></span> <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1slot_1_1decode__type.html">decode_type</a> {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> <span class="keyword">using </span>type = T;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1slot_1_1decode__type.html">   48</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1slot_1_1decode__type.html">decode_type</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">using </span>type = T;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" data-end="};" data-start="{" id="foldopen00053">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1slot_1_1decode__type.html">   53</a></span> <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1slot_1_1decode__type.html">decode_type</a>&lt;<a class="code hl_class" href="class__.html">_</a>&lt;T&gt;&gt; {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> <span class="keyword">using </span>type = T;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    };</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1slot_1_1decode__type.html">   53</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1slot_1_1decode__type.html">decode_type</a>&lt;<a class="code hl_class" href="class__.html">_</a>&lt;T&gt;&gt; {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">using </span>type = T;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    };</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> <span class="keyword">using </span>decode_type_t = <span class="keyword">typename</span> decode_type&lt;T&gt;::type;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">   88</a></span><span class="preprocessor">#define slot(v) v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;decltype(v)&gt;&gt;</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span>decode_type_t = <span class="keyword">typename</span> decode_type&lt;T&gt;::type;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">   88</a></span><span class="preprocessor">#define slot(v) v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;decltype(v)&gt;&gt;</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
 <div class="foldopen" data-end="" data-start="" id="foldopen00140">
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">  140</a></span><span class="preprocessor">#define AUI_PERFORM_AS_MEMBER(object, lambda)                                                  \</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">    struct __apply ## __FUNCTION__ ## __LINE__   : std::decay_t&lt;decltype(object)&gt; { \</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">        void operator()() {                                                    \</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">            lambda;                                                            \</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">        }                                                                      \</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">    };                                                                         \</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">    (static_cast&lt;__apply ## __FUNCTION__ ## __LINE__ &amp;&gt;(object))()</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">  140</a></span><span class="preprocessor">#define AUI_PERFORM_AS_MEMBER(object, lambda)                                                  \</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">    struct __apply ## __FUNCTION__ ## __LINE__   : std::decay_t&lt;decltype(object)&gt; { \</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">        void operator()() {                                                    \</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">            lambda;                                                            \</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">        }                                                                      \</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">    };                                                                         \</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">    (static_cast&lt;__apply ## __FUNCTION__ ## __LINE__ &amp;&gt;(object))()</span></div>
 </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gaeddbb3020ebcd7c50fd851ef25cdd4ed">  183</a></span><span class="preprocessor">#define AUI_EMIT_FOREIGN_SIGNAL(object) (*object) ^ object</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">  196</a></span><span class="preprocessor">#define AUI_DEFER ARaiiHelper AUI_PP_CAT($AUI_DEFER_at_line_,  __LINE__) = [&amp;]</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">  262</a></span><span class="preprocessor">#define let ^ [&amp;](const auto&amp; it)</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">  287</a></span><span class="preprocessor">#define with_style + ass::PropertyListRecursive</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">  329</a></span><span class="preprocessor">#define async AThreadPool::global() * [=]()</span></div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">  360</a></span><span class="preprocessor">#define asyncX AThreadPool::global() *</span></div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">  391</a></span><span class="preprocessor">#define do_once if(static bool _aui_once = false; (!_aui_once &amp;&amp; (_aui_once = true)))</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">  397</a></span><span class="preprocessor">#define ui_thread (*getThread()) * [=]()</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga3f61ecfc942915005f2bba5a317b654a">  403</a></span><span class="preprocessor">#define ui_threadX (*getThread()) *</span></div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="preprocessor">#define AUI_REPEAT(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex)</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="preprocessor">#define AUI_REPEAT_ASYNC(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex) AThreadPool::global() &lt;&lt; [=]()</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gaeddbb3020ebcd7c50fd851ef25cdd4ed">  183</a></span><span class="preprocessor">#define AUI_EMIT_FOREIGN_SIGNAL(object) (*object) ^ object</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">  196</a></span><span class="preprocessor">#define AUI_DEFER ARaiiHelper AUI_PP_CAT($AUI_DEFER_at_line_,  __LINE__) = [&amp;]</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">  262</a></span><span class="preprocessor">#define let ^ [&amp;](const auto&amp; it)</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">  287</a></span><span class="preprocessor">#define with_style + ass::PropertyListRecursive</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">  329</a></span><span class="preprocessor">#define async AThreadPool::global() * [=]()</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">  360</a></span><span class="preprocessor">#define asyncX AThreadPool::global() *</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">  391</a></span><span class="preprocessor">#define do_once if(static bool _aui_once = false; (!_aui_once &amp;&amp; (_aui_once = true)))</span></div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">  397</a></span><span class="preprocessor">#define ui_thread (*getThread()) * [=]()</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga3f61ecfc942915005f2bba5a317b654a">  403</a></span><span class="preprocessor">#define ui_threadX (*getThread()) *</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="preprocessor">#define AUI_REPEAT(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex)</span></div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="preprocessor">#define AUI_REPEAT_ASYNC(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex) AThreadPool::global() &lt;&lt; [=]()</span></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 <div class="ttc" id="astructaui_1_1impl_1_1slot_1_1decode__type_html"><div class="ttname"><a href="structaui_1_1impl_1_1slot_1_1decode__type.html">aui::impl::slot::decode_type</a></div><div class="ttdef"><b>Definition</b> kAUI.h:48</div></div>
 </div><!-- fragment --><p class="footer-inner">

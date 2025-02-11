@@ -14,11 +14,13 @@ var searchData=
   ['devtoolspointerinspect_11',['DevtoolsPointerInspect',['../classDevtoolsPointerInspect.html',1,'']]],
   ['devtoolsprofilingoptions_12',['DevtoolsProfilingOptions',['../classDevtoolsProfilingOptions.html',1,'']]],
   ['directparentsubselector_13',['DirectParentSubSelector',['../structass_1_1DirectParentSubSelector.html',1,'ass']]],
-  ['directx11_14',['DirectX11',['../structARenderingContextOptions_1_1DirectX11.html',1,'ARenderingContextOptions']]],
-  ['disabled_15',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
-  ['disabled_16',['disabled',['../structass_1_1disabled.html',1,'ass']]],
-  ['disabled_3c_20detail_3a_3aclassof_20_3e_17',['disabled&lt; detail::ClassOf &gt;',['../structass_1_1disabled.html',1,'ass']]],
-  ['disabled_3c_20detail_3a_3adebug_5fselector_20_3e_18',['disabled&lt; detail::debug_selector &gt;',['../structass_1_1disabled.html',1,'ass']]],
-  ['disabled_3c_20detail_3a_3atype_3c_20t_20_3e_20_3e_19',['disabled&lt; detail::Type&lt; T &gt; &gt;',['../structass_1_1disabled.html',1,'ass']]],
-  ['dropevent_20',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]]
+  ['directsound_14',['DirectSound',['../classDirectSound.html',1,'']]],
+  ['directsoundaudioplayer_15',['DirectSoundAudioPlayer',['../classDirectSoundAudioPlayer.html',1,'']]],
+  ['directx11_16',['DirectX11',['../structARenderingContextOptions_1_1DirectX11.html',1,'ARenderingContextOptions']]],
+  ['disabled_17',['Disabled',['../structass_1_1on__state_1_1Disabled.html',1,'ass::on_state']]],
+  ['disabled_18',['disabled',['../structass_1_1disabled.html',1,'ass']]],
+  ['disabled_3c_20detail_3a_3aclassof_20_3e_19',['disabled&lt; detail::ClassOf &gt;',['../structass_1_1disabled.html',1,'ass']]],
+  ['disabled_3c_20detail_3a_3adebug_5fselector_20_3e_20',['disabled&lt; detail::debug_selector &gt;',['../structass_1_1disabled.html',1,'ass']]],
+  ['disabled_3c_20detail_3a_3atype_3c_20t_20_3e_20_3e_21',['disabled&lt; detail::Type&lt; T &gt; &gt;',['../structass_1_1disabled.html',1,'ass']]],
+  ['dropevent_22',['DropEvent',['../structADragNDrop_1_1DropEvent.html',1,'ADragNDrop']]]
 ];

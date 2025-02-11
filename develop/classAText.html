@@ -986,23 +986,23 @@ glm::ivec2 </td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> = {0
 <p>Unlike ALabel, <a class="el" href="classAText.html" title="HTML-capable text container.">AText</a> is optimized to store, render, word break large texts.</p>
 <p><a class="el" href="classAText.html" title="HTML-capable text container.">AText</a> always prefers expanding in horizontal over vertical.</p>
 <p>To perform word breaking, <a class="el" href="classAText.html" title="HTML-capable text container.">AText</a> requires it's width to be fully defined (either by FixedSize, Expanding or MaxSize), otherwise it would require large minimum width to fit all its children in a single row. By default <a class="el" href="classAText.html" title="HTML-capable text container.">AText</a>'s Expanding is (1, 0) (grow in width, keep minimum height). This behaviour is similar to <a class="el" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars.">AScrollArea</a>.</p>
-<div class="fragment"><div class="line">            AText::fromItems({<span class="stringliteral">"These settings are applicable for render-to-texture optimizations."</span>,</div>
-<div class="line">                              makeLink(<span class="stringliteral">"Learn more"</span>, <span class="stringliteral">"https://aui-framework.github.io/develop/md_docs_Render_to_texture.html"</span>)}),</div>
-<div class="line">            CheckBoxWrapper { Label { <span class="stringliteral">"Highlight redraw requests"</span> } } &amp;&amp; targetWindow-&gt;<a class="code hl_function" href="classAWindowBase.html#a8984852a7ad2410f7e61fd3921c3a3a9">profiling</a>()-&gt;highlightRedrawRequests,</div>
-<div class="line">            AText::fromItems({<span class="stringliteral">"Draws purple rect "</span>, coloredRect(0xff00ff_rgb), <span class="stringliteral">" over view that requested redraw "</span></div>
-<div class="line"> <span class="stringliteral">"(AView::redraw). This can help to find views that causes window to repaint which "</span></div>
-<div class="line"> <span class="stringliteral">"affects application performance and device's battery life."</span>}),</div>
-<div class="line">            CheckBoxWrapper { Label { <span class="stringliteral">"Render to texture decay"</span> } } &amp;&amp; targetWindow-&gt;<a class="code hl_function" href="classAWindowBase.html#a8984852a7ad2410f7e61fd3921c3a3a9">profiling</a>()-&gt;renderToTextureDecay,</div>
-<div class="line">            AText::fromItems({<span class="stringliteral">"Visually displays render to texture optimization by gradually transforming old pixel "</span>,</div>
-<div class="line"> <span class="stringliteral">"data to gray "</span>, coloredRect(AColor::GRAY), <span class="stringliteral">" color. When a view is redrawn it pixel "</span></div>
-<div class="line"> <span class="stringliteral">"data would be represented as unaffected to gray color and seem bright and saturated "</span></div>
-<div class="line"> <span class="stringliteral">"color. From perspective of performance it's good that whole screen transformed to gray "</span></div>
-<div class="line"> <span class="stringliteral">"color and thus no redraw is performed."</span></div>
-<div class="line">                                }),</div>
-<div class="line">            CheckBoxWrapper { Label { <span class="stringliteral">"Breakpoint on AWindow update layout flag"</span> } } &amp;&amp; targetWindow-&gt;<a class="code hl_function" href="classAWindowBase.html#a8984852a7ad2410f7e61fd3921c3a3a9">profiling</a>()-&gt;breakpointOnMarkMinContentSizeInvalid,</div>
-<div class="line">            AText::fromItems({<span class="stringliteral">"Stops the attached debugger at the point when window's update layout flag is set. This "</span></div>
-<div class="line"> <span class="stringliteral">"can be used to walk through stacktrace and find which view and why triggered layout "</span></div>
-<div class="line"> <span class="stringliteral">"update. When breakpoint is triggered, checkbox is unset. Note: when debugger is not attached, behaviour is undefined."</span>}),</div>
+<div class="fragment"><div class="line">            AText::fromItems({<span class="stringliteral">"These settings are applicable for render-to-texture optimizations."</span>,</div>
+<div class="line">                              makeLink(<span class="stringliteral">"Learn more"</span>, <span class="stringliteral">"https://aui-framework.github.io/develop/md_docs_Render_to_texture.html"</span>)}),</div>
+<div class="line">            CheckBoxWrapper { Label { <span class="stringliteral">"Highlight redraw requests"</span> } } &amp;&amp; targetWindow-&gt;<a class="code hl_function" href="classAWindowBase.html#a8984852a7ad2410f7e61fd3921c3a3a9">profiling</a>()-&gt;highlightRedrawRequests,</div>
+<div class="line">            AText::fromItems({<span class="stringliteral">"Draws purple rect "</span>, coloredRect(0xff00ff_rgb), <span class="stringliteral">" over view that requested redraw "</span></div>
+<div class="line">                              <span class="stringliteral">"(AView::redraw). This can help to find views that causes window to repaint which "</span></div>
+<div class="line">                              <span class="stringliteral">"affects application performance and device's battery life."</span>}),</div>
+<div class="line">            CheckBoxWrapper { Label { <span class="stringliteral">"Render to texture decay"</span> } } &amp;&amp; targetWindow-&gt;<a class="code hl_function" href="classAWindowBase.html#a8984852a7ad2410f7e61fd3921c3a3a9">profiling</a>()-&gt;renderToTextureDecay,</div>
+<div class="line">            AText::fromItems({<span class="stringliteral">"Visually displays render to texture optimization by gradually transforming old pixel "</span>,</div>
+<div class="line">                              <span class="stringliteral">"data to gray "</span>, coloredRect(AColor::GRAY), <span class="stringliteral">" color. When a view is redrawn it pixel "</span></div>
+<div class="line">                              <span class="stringliteral">"data would be represented as unaffected to gray color and seem bright and saturated "</span></div>
+<div class="line">                              <span class="stringliteral">"color. From perspective of performance it's good that whole screen transformed to gray "</span></div>
+<div class="line">                              <span class="stringliteral">"color and thus no redraw is performed."</span></div>
+<div class="line">                                }),</div>
+<div class="line">            CheckBoxWrapper { Label { <span class="stringliteral">"Breakpoint on AWindow update layout flag"</span> } } &amp;&amp; targetWindow-&gt;<a class="code hl_function" href="classAWindowBase.html#a8984852a7ad2410f7e61fd3921c3a3a9">profiling</a>()-&gt;breakpointOnMarkMinContentSizeInvalid,</div>
+<div class="line">            AText::fromItems({<span class="stringliteral">"Stops the attached debugger at the point when window's update layout flag is set. This "</span></div>
+<div class="line">                              <span class="stringliteral">"can be used to walk through stacktrace and find which view and why triggered layout "</span></div>
+<div class="line">                              <span class="stringliteral">"update. When breakpoint is triggered, checkbox is unset. Note: when debugger is not attached, behaviour is undefined."</span>}),</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#af9261a3fae3d191ba85ebda8844f604c" id="af9261a3fae3d191ba85ebda8844f604c" name="af9261a3fae3d191ba85ebda8844f604c" style="color: var(--fragment-comment) !important">#</a></h2>
 
 <h2 class="memtitle"><span class="permalink">◆ </span>clearContent()<a class="aui-toc-hash" href="#◆ clearcontent()" id="◆ clearcontent()" style="color: var(--fragment-comment) !important">#</a></h2>

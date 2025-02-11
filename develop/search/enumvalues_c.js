@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right_0',['RIGHT',['../group__ass__properties.html#gga3e1c7d47b24982619c0416fe08a9e494a21507b40c80068eda19865706fdc2403',1,'AFloat.h']]]
+  ['pointer_0',['POINTER',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c',1,'ACursor']]]
 ];

@@ -150,10 +150,11 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 <p>Selects views that are of the specified classes. </p>
 <p>This selector selects views that are of the specified classes. The selector can be accessed explicitly via <code><a class="el" href="structass_1_1class__of.html">ass::class_of</a></code>.</p>
 <p>For example: </p><div class="fragment"><div class="line">{</div>
-<div class="line"> <a class="code hl_typedef" href="#ga82723ad66d023c2cd76b2ca1e72e6a5a">c</a>(<span class="stringliteral">".btn"</span>),</div>
-<div class="line">  BackgroundSolid(...),</div>
+<div class="line">  <a class="code hl_typedef" href="#ga82723ad66d023c2cd76b2ca1e72e6a5a">c</a>(<span class="stringliteral">".btn"</span>),</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a>(...),</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
+<div class="ttc" id="astructass_1_1BackgroundSolid_html"><div class="ttname"><a href="structass_1_1BackgroundSolid.html">ass::BackgroundSolid</a></div><div class="ttdoc">Represents solid (single color) background.</div><div class="ttdef"><b>Definition</b> BackgroundSolid.h:26</div></div>
 </div><!-- fragment --><p> This will select all views that belong to ".btn" ASS class. </p>
 </div>
 </div>
@@ -186,15 +187,39 @@ template&lt;typename T&gt; </div>
 <p>Selects views that are of the specified C++ types. </p>
 <p>This selector selects views that are of the specified classes. The selector can be accessed explicitly via <code><a class="el" href="structass_1_1type__of.html">ass::type_of</a></code>.</p>
 <p>For example: </p><div class="fragment"><div class="line">{</div>
-<div class="line"> <a class="code hl_typedef" href="#gab1309369989373a0f2408455b3a91742">t&lt;AButton&gt;</a>(),</div>
-<div class="line">  BackgroundSolid(...),</div>
+<div class="line">  <a class="code hl_typedef" href="#gab1309369989373a0f2408455b3a91742">t&lt;AButton&gt;</a>(),</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a>(...),</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__ass__selectors_html_gab1309369989373a0f2408455b3a91742"><div class="ttname"><a href="#gab1309369989373a0f2408455b3a91742">ass::t</a></div><div class="ttdeci">type_of&lt; T &gt; t</div><div class="ttdoc">Selects views that are of the specified C++ types.</div><div class="ttdef"><b>Definition</b> type_of.h:71</div></div>
 </div><!-- fragment --><p> This will select all <code><a class="el" href="classAButton.html" title="Button with text, which can be pushed to make some action.">AButton</a></code>s. </p>
 </div>
 </div>
-<h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#gad2bd46136f5f7980d250bed49375bbdd" id="gad2bd46136f5f7980d250bed49375bbdd" name="gad2bd46136f5f7980d250bed49375bbdd" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#ga8103eb626e9bfdf7a9fa670ef9422cc4" id="ga8103eb626e9bfdf7a9fa670ef9422cc4" name="ga8103eb626e9bfdf7a9fa670ef9422cc4" style="color: var(--fragment-comment) !important">#</a></h2>
 
+<h2 class="memtitle"><span class="permalink">◆ </span>operator!()<a class="aui-toc-hash" href="#◆ operator!()" id="◆ operator!()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classass_1_1IAssSubSelector.html">IAssSubSelector</a> &gt; L&gt; </div>
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="structass_1_1NotSelector.html">NotSelector</a>&lt; L &gt; ass::operator! </td>
+<td>(</td>
+<td class="paramtype">L</td> <td class="paramname"><span class="paramname"><em>l</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Makes a logical "NOT" selector. </p>
+<p>In this example, we want to select all views that match ".btn" but don't match ".accent". </p><div class="fragment"><div class="line">{</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".btn-title"</span>) &amp;&amp; !<a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".accent"</span>),</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { 0xe81123_rgb }</div>
+<div class="line">},</div>
+<div class="ttc" id="astructass_1_1class__of_html"><div class="ttname"><a href="structass_1_1class__of.html">ass::class_of</a></div><div class="ttdef"><b>Definition</b> class_of.h:57</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gad2bd46136f5f7980d250bed49375bbdd" name="gad2bd46136f5f7980d250bed49375bbdd"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>operator&amp;&amp;()<a class="aui-toc-hash" href="#◆ operator&amp;&amp;()" id="◆ operator&amp;&amp;()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
@@ -215,10 +240,9 @@ template&lt;<a class="el" href="conceptaui_1_1derived__from.html">aui::derived_f
 </div><div class="memdoc">
 <p>Makes a selector that applies two selectors. </p>
 <p>In this example, we want to select all views that match both ".btn" and ".accent". </p><div class="fragment"><div class="line">{</div>
-<div class="line"> <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".btn-title"</span>) &amp;&amp; <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".accent"</span>),</div>
-<div class="line">  BackgroundSolid { 0xe81123_rgb }</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".btn-title"</span>) &amp;&amp; <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".accent"</span>),</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { 0xe81123_rgb }</div>
 <div class="line">},</div>
-<div class="ttc" id="astructass_1_1class__of_html"><div class="ttname"><a href="structass_1_1class__of.html">ass::class_of</a></div><div class="ttdef"><b>Definition</b> class_of.h:57</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -243,8 +267,8 @@ template&lt;typename L, typename R, std::enable_if_t&lt; std::is_base_of_v&lt; <
 </div><div class="memdoc">
 <p>Makes direct parent subselector. </p>
 <p>In this example, we want to select all views that have direct parent matching ".window-title" ASS class and then select the hovered ".close" subselector within them. </p><div class="fragment"><div class="line">{</div>
-<div class="line"> <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".window-title"</span>) &gt; class_of::hover(<span class="stringliteral">".close"</span>),</div>
-<div class="line">  BackgroundSolid { 0xe81123_rgb }</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".window-title"</span>) &gt; class_of::hover(<span class="stringliteral">".close"</span>),</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { 0xe81123_rgb }</div>
 <div class="line">},</div>
 </div><!-- fragment -->
 </div>
@@ -271,8 +295,8 @@ template&lt;typename L, typename R, std::enable_if_t&lt; std::is_base_of_v&lt; <
 <p>Makes indirect parent subselector. </p>
 <dl class="section note"><dt>Note</dt><dd>This selector is slower than direct parent subselector. If possible, use the latter.</dd></dl>
 <p>In this example, we want to select all views that have indirect parent matching ".window-title" ASS class and then select the hovered ".close" subselector within them. </p><div class="fragment"><div class="line">{</div>
-<div class="line"> <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".window-title"</span>) &gt;&gt; class_of::hover(<span class="stringliteral">".close"</span>),</div>
-<div class="line">  BackgroundSolid { 0xe81123_rgb }</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1class__of.html">class_of</a>(<span class="stringliteral">".window-title"</span>) &gt;&gt; class_of::hover(<span class="stringliteral">".close"</span>),</div>
+<div class="line">  <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { 0xe81123_rgb }</div>
 <div class="line">},</div>
 </div><!-- fragment -->
 </div>

@@ -317,38 +317,38 @@ class ADataBinding&lt; Model &gt;</div><p>Data binding implementation. </p>
 <p>Another example:</p>
 <p><img alt="" class="inline" src="https://github.com/aui-framework/aui/raw/develop/docs/imgs/Screenshot_20230705_173329.png"/> <img alt="" class="inline" src="https://github.com/aui-framework/aui/raw/develop/docs/imgs/Recording_20230705_at_17.51.14.gif"/> </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyWindow(): <a class="code hl_class" href="classAWindow.html">AWindow</a>(<span class="stringliteral">"Test"</span>) {</div>
+<div class="line">    MyWindow(): <a class="code hl_class" href="classAWindow.html">AWindow</a>(<span class="stringliteral">"Test"</span>) {</div>
 <div class="line"> </div>
-<div class="line"> <span class="keyword">struct </span>Model {</div>
-<div class="line"> <span class="keywordtype">int</span> value = 0;</div>
-<div class="line">        };</div>
+<div class="line">        <span class="keyword">struct </span>Model {</div>
+<div class="line">            <span class="keywordtype">int</span> value = 0;</div>
+<div class="line">        };</div>
 <div class="line"> </div>
-<div class="line"> <span class="keyword">auto</span> data = _new&lt;ADataBinding&lt;Model&gt;&gt;(Model{});</div>
+<div class="line">        <span class="keyword">auto</span> data = _new&lt;ADataBinding&lt;Model&gt;&gt;(Model{});</div>
 <div class="line"> </div>
-<div class="line">        data-&gt;addObserver(&amp;Model::value, [](<span class="keywordtype">int</span> v) {</div>
-<div class="line">            ALogger::info(<span class="stringliteral">"Debug"</span>) &lt;&lt; <span class="stringliteral">"New value: "</span> &lt;&lt; v;</div>
-<div class="line">        });</div>
+<div class="line">        data-&gt;addObserver(&amp;Model::value, [](<span class="keywordtype">int</span> v) {</div>
+<div class="line">            ALogger::info(<span class="stringliteral">"Debug"</span>) &lt;&lt; <span class="stringliteral">"New value: "</span> &lt;&lt; v;</div>
+<div class="line">        });</div>
 <div class="line"> </div>
-<div class="line"> <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
-<div class="line">            Vertical {</div>
-<div class="line">                Label { } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line">                    data-&gt;addObserver(&amp;Model::value, [it](<span class="keywordtype">int</span> v) {</div>
-<div class="line">                        it-&gt;setText(<span class="stringliteral">"{}"</span>_format(v));</div>
-<div class="line">                    });</div>
-<div class="line">                },</div>
-<div class="line">                Horizontal{</div>
-<div class="line">                    Button{<span class="stringliteral">"+"</span>}.clicked(<span class="keyword">this</span>, [data] {</div>
-<div class="line">                        data-&gt;getEditableModel().value += 1;</div>
-<div class="line">                        data-&gt;notifyUpdate();</div>
-<div class="line">                    }),</div>
-<div class="line">                    Button{<span class="stringliteral">"-"</span>}.clicked(<span class="keyword">this</span>, [data] {</div>
-<div class="line">                        data-&gt;getEditableModel().value -= 1;</div>
-<div class="line">                        data-&gt;notifyUpdate();</div>
-<div class="line">                    }),</div>
-<div class="line">                },</div>
-<div class="line">            }</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
+<div class="line">            Vertical {</div>
+<div class="line">                Label { } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">                    data-&gt;addObserver(&amp;Model::value, [it](<span class="keywordtype">int</span> v) {</div>
+<div class="line">                        it-&gt;setText(<span class="stringliteral">"{}"</span>_format(v));</div>
+<div class="line">                    });</div>
+<div class="line">                },</div>
+<div class="line">                Horizontal{</div>
+<div class="line">                    Button{<span class="stringliteral">"+"</span>}.clicked(<span class="keyword">this</span>, [data] {</div>
+<div class="line">                        data-&gt;getEditableModel().value += 1;</div>
+<div class="line">                        data-&gt;notifyUpdate();</div>
+<div class="line">                    }),</div>
+<div class="line">                    Button{<span class="stringliteral">"-"</span>}.clicked(<span class="keyword">this</span>, [data] {</div>
+<div class="line">                        data-&gt;getEditableModel().value -= 1;</div>
+<div class="line">                        data-&gt;notifyUpdate();</div>
+<div class="line">                    }),</div>
+<div class="line">                },</div>
+<div class="line">            }</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAViewContainer_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainer::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div><div class="ttdef"><b>Definition</b> AViewContainerBase.cpp:515</div></div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
@@ -507,11 +507,11 @@ template&lt;typename ModelField, typename SetterLambda&gt; </div>
 </dd>
 </dl>
 <p>View type is deduces from the first argument of your lambda. </p><div class="fragment"><div class="line"><span class="keyword">struct </span>Model {</div>
-<div class="line"> <a class="code hl_class" href="classAString.html">AString</a> text;</div>
+<div class="line">  <a class="code hl_class" href="classAString.html">AString</a> text;</div>
 <div class="line">};</div>
 <div class="line"><span class="keyword">auto</span> model = _new&lt;ADataBinding&lt;Model&gt;&gt;(Model{});</div>
 <div class="line">_new&lt;ALabel&gt;() &amp;&amp; model(&amp;Model::text, [](ALabel&amp; view, <span class="keyword">const</span> AString&amp; data) {</div>
-<div class="line">   view.setText(data);</div>
+<div class="line">   view.setText(data);</div>
 <div class="line">});</div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
 </div><!-- fragment -->

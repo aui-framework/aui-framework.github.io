@@ -110,12 +110,12 @@ Always Use Trailing Comma in Initializer Lists<a class="aui-toc-hash" href="#alw
 <th>With Trailing Comma </th><th>Without Trailing Comma  </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">setContents(Vertical {</div>
-<div class="line">  Button { <span class="stringliteral">"Up"</span> },</div>
-<div class="line">  Button { <span class="stringliteral">"Down"</span> },</div>
+<div class="line">  Button { <span class="stringliteral">"Up"</span> },</div>
+<div class="line">  Button { <span class="stringliteral">"Down"</span> },</div>
 <div class="line">});</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line">setContents(Vertical {</div>
-<div class="line">  Button { <span class="stringliteral">"Up"</span> },</div>
-<div class="line">  Button { <span class="stringliteral">"Down"</span> }</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">setContents(Vertical {</div>
+<div class="line">  Button { <span class="stringliteral">"Up"</span> },</div>
+<div class="line">  Button { <span class="stringliteral">"Down"</span> }</div>
 <div class="line">});</div>
 </div><!-- fragment --> </td></tr>
 </table>
@@ -125,11 +125,11 @@ Always Use Trailing Comma in Initializer Lists<a class="aui-toc-hash" href="#alw
 <th>With Trailing Comma </th><th>Without Trailing Comma  </th></tr>
 <tr>
 <td><div class="fragment"><div class="line">setContents(Vertical {</div>
-<div class="line">  Button { <span class="stringliteral">"Up"</span> },</div>
-<div class="line">  Button { <span class="stringliteral">"Down"</span> },</div>
+<div class="line">  Button { <span class="stringliteral">"Up"</span> },</div>
+<div class="line">  Button { <span class="stringliteral">"Down"</span> },</div>
 <div class="line">});</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line">setContents(Vertical {</div>
-<div class="line">  Button { <span class="stringliteral">"Up"</span> }, Button { <span class="stringliteral">"Down"</span> } });</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">setContents(Vertical {</div>
+<div class="line">  Button { <span class="stringliteral">"Up"</span> }, Button { <span class="stringliteral">"Down"</span> } });</div>
 </div><!-- fragment --> </td></tr>
 </table>
 <p>The first example left as is (correct), the second example formatted confusingly.</p>
@@ -138,14 +138,14 @@ Always Use Trailing Comma in Initializer Lists<a class="aui-toc-hash" href="#alw
 Use clang-format off/on<a class="aui-toc-hash" href="#use-clang-format-off/on" id="use-clang-format-off/on" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>In some scenarios clang-format may fight against you, especially with complicated syntax. You can use <code>// clang-format off</code> and <code>// clang-format on</code> to disable and enable clang-format, respectively.</p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>DataOptional {</div>
-<div class="line"> <span class="keywordtype">int</span> v1;</div>
-<div class="line"> <span class="keywordtype">int</span> v2;</div>
+<div class="line">    <span class="keywordtype">int</span> v1;</div>
+<div class="line">    <span class="keywordtype">int</span> v2;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// clang-format off</span></div>
 <div class="line">AJSON_FIELDS(DataOptional,</div>
-<div class="line">             (v1, <span class="stringliteral">"v1"</span>)</div>
-<div class="line">             (v2, <span class="stringliteral">"v2"</span>, AJsonFieldFlags::OPTIONAL))</div>
+<div class="line">             (v1, <span class="stringliteral">"v1"</span>)</div>
+<div class="line">             (v2, <span class="stringliteral">"v2"</span>, AJsonFieldFlags::OPTIONAL))</div>
 <div class="line"><span class="comment">// clang-format on</span></div>
 </div><!-- fragment --><h1>
 AUI's .clang-format<a class="aui-toc-hash" href="#CLANG_FORMAT" id="CLANG_FORMAT" style="color: var(--fragment-comment) !important">#</a></h1>
@@ -157,7 +157,7 @@ AUI's .clang-format<a class="aui-toc-hash" href="#CLANG_FORMAT" id="CLANG_FORMAT
 <div class="line">SpaceAfterCStyleCast: true</div>
 <div class="line"># spaces, not tabs!</div>
 <div class="line">UseTab: Never</div>
-<div class="line"># if (x) doStuff()  is not allowed, bad style</div>
+<div class="line"># if (x) doStuff()  is not allowed, bad style</div>
 <div class="line">AllowShortIfStatementsOnASingleLine: false</div>
 <div class="line">AlignTrailingComments: true</div>
 <div class="line">SpacesBeforeTrailingComments: 3</div>
@@ -201,17 +201,17 @@ AUI's .clang-format<a class="aui-toc-hash" href="#CLANG_FORMAT" id="CLANG_FORMAT
 <div class="line">#</div>
 <div class="line"># after:</div>
 <div class="line"># Centered {</div>
-<div class="line">#   Horizontal {</div>
+<div class="line">#   Horizontal {</div>
 <div class="line">PenaltyIndentedWhitespace: 1000</div>
 <div class="line">BreakBeforeBraces: Attach</div>
 <div class="line">BreakBeforeBinaryOperators: None</div>
 <div class="line"> </div>
 <div class="line"># fix AUI's scary macros.</div>
 <div class="line">Macros:</div>
-<div class="line">  - let=+[]</div>
-<div class="line">  - async=[]</div>
-<div class="line">  - AUI_DECLARATIVE_FOR(a,b,c)=[]</div>
-<div class="line">  - AUI_DECLARATIVE_FOR_EX(a,b,c)=[]</div>
+<div class="line">  - let=+[]</div>
+<div class="line">  - async=[]</div>
+<div class="line">  - AUI_DECLARATIVE_FOR(a,b,c)=[]</div>
+<div class="line">  - AUI_DECLARATIVE_FOR_EX(a,b,c)=[]</div>
 </div><!-- fragment --> </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

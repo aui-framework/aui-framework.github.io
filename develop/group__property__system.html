@@ -120,7 +120,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 </ol>
 <p>Learning curve is relatively flat, so be sure to <a href="https://github.com/aui-framework/aui/issues">ask questions and open issues</a> on our GitHub page.</p>
 <p>Main difference between basic value lying somewhere inside your class and a property is that the latter explicitly ties getter, setter and a signal reporting value changes. Property acts almost transparently, as if there's no extra wrapper around your data. This allows to work with properties in the same way as with their underlying values. You can read the intermediate value of a property and subscribe to its changes via a single <code>connect</code> call. Also, when connecting property to property, it is possible to make them observe changes of each other bia <code>biConnect</code> call: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> user = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Robert"</span> });</div>
@@ -134,7 +134,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <div class="ttc" id="astructaui_1_1ptr_html_a9696eab52bd0745688055a301d9ef776"><div class="ttname"><a href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a></div><div class="ttdeci">static _&lt; T &gt; manage(T *raw)</div><div class="ttdoc">Delegates memory management of the raw pointer T* raw to the shared pointer, which is returned.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:372</div></div>
 </div><!-- fragment --><p>Or simpler: </p><div class="fragment"><div class="line"><span class="comment">// ...</span></div>
 <div class="line">window-&gt;setContents(Centered {</div>
-<div class="line">  tf &amp;&amp; user-&gt;name,</div>
+<div class="line">  tf &amp;&amp; user-&gt;name,</div>
 <div class="line">});</div>
 <div class="line"><span class="comment">// ...</span></div>
 </div><!-- fragment --><p>The code above generates a window with a text field: <img alt="" class="inline" src="UIDataBindingTest.TextField1_1.png" title="text field"/> </p>
@@ -142,7 +142,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <ul>
 <li>Prefills text field with the current <code>user-&gt;name</code> value (pre fire): <div class="fragment"><div class="line">EXPECT_EQ(tf-&gt;text(), <span class="stringliteral">"Robert"</span>);</div>
 </div><!-- fragment --></li>
-<li>Connects <code>user-&gt;named.changed</code> to <code>tf</code> to notify the text field about changes of <code>user-&gt;name</code>: <div class="fragment"><div class="line">user-&gt;name = <span class="stringliteral">"Angela"</span>;           <span class="comment">// changing user-&gt;name programmatically...</span></div>
+<li>Connects <code>user-&gt;named.changed</code> to <code>tf</code> to notify the text field about changes of <code>user-&gt;name</code>: <div class="fragment"><div class="line">user-&gt;name = <span class="stringliteral">"Angela"</span>;           <span class="comment">// changing user-&gt;name programmatically...</span></div>
 <div class="line">EXPECT_EQ(tf-&gt;text(), <span class="stringliteral">"Angela"</span>); <span class="comment">// ...should reflect on the text field</span></div>
 </div><!-- fragment --></li>
 </ul>
@@ -170,32 +170,32 @@ Label via let<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_let" id=
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L145"></b> Use <code>let</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text()</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> user = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Roza"</span> });</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyWindow(<span class="keyword">const</span> _&lt;User&gt;&amp; user) {</div>
-<div class="line"> <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
-<div class="line">            _new&lt;ALabel&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line"> <span class="comment">// Data goes from left to right:</span></div>
-<div class="line"> <span class="comment">// current value (pre fire) or changed event</span></div>
-<div class="line"> <span class="comment">// goes to assignment operation of it-&gt;text()</span></div>
-<div class="line"> <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(user-&gt;name, it-&gt;text());</div>
-<div class="line"> <span class="comment">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span></div>
-<div class="line"> <span class="comment">// in other words, this connection is essentially the</span></div>
-<div class="line"> <span class="comment">// same as</span></div>
-<div class="line"> <span class="comment">// AObject::connect(user-&gt;name, slot(it)::setText);</span></div>
-<div class="line"> <span class="comment">//</span></div>
-<div class="line"> <span class="comment">// if you want user-&gt;name to be aware or it-&gt;text()</span></div>
-<div class="line"> <span class="comment">// changes (i.e., if it were an editable view</span></div>
-<div class="line"> <span class="comment">// like ATextField) use AObject::biConnect instead</span></div>
-<div class="line"> <span class="comment">// (see "Bidirectional connection" sample).</span></div>
-<div class="line">            },</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
+<div class="line">    MyWindow(<span class="keyword">const</span> _&lt;User&gt;&amp; user) {</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
+<div class="line">            _new&lt;ALabel&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">              <span class="comment">// Data goes from left to right:</span></div>
+<div class="line">              <span class="comment">// current value (pre fire) or changed event</span></div>
+<div class="line">              <span class="comment">// goes to assignment operation of it-&gt;text()</span></div>
+<div class="line">              <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(user-&gt;name, it-&gt;text());</div>
+<div class="line">              <span class="comment">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span></div>
+<div class="line">              <span class="comment">// in other words, this connection is essentially the</span></div>
+<div class="line">              <span class="comment">// same as</span></div>
+<div class="line">              <span class="comment">// AObject::connect(user-&gt;name, slot(it)::setText);</span></div>
+<div class="line">              <span class="comment">//</span></div>
+<div class="line">              <span class="comment">// if you want user-&gt;name to be aware or it-&gt;text()</span></div>
+<div class="line">              <span class="comment">// changes (i.e., if it were an editable view</span></div>
+<div class="line">              <span class="comment">// like ATextField) use AObject::biConnect instead</span></div>
+<div class="line">              <span class="comment">// (see "Bidirectional connection" sample).</span></div>
+<div class="line">            },</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="line">_new&lt;MyWindow&gt;(user)-&gt;<a class="code hl_function" href="classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b">show</a>();</div>
 <div class="ttc" id="aclassAViewContainer_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainer::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div><div class="ttdef"><b>Definition</b> AViewContainerBase.cpp:515</div></div>
@@ -213,19 +213,19 @@ Label via let<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_let" id=
 <h2>
 Label via let projection<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_let_projection" id="UIDataBindingTest_Label_via_let_projection" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L206"></b> It's fairly easy to define a projection because one-sided connection requires exactly one projection, obviously. </p><div class="fragment"><div class="line">_new&lt;ALabel&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line"> <span class="comment">// Data goes from left to right:</span></div>
-<div class="line"> <span class="comment">// current value (pre fire) or changed event</span></div>
-<div class="line"> <span class="comment">// goes through projection (&amp;AString::uppercase) first</span></div>
-<div class="line"> <span class="comment">// then it goes to assignment operation of it-&gt;text()</span></div>
-<div class="line"> <span class="comment">// property.</span></div>
-<div class="line"> <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(user-&gt;name.readProjected(&amp;AString::uppercase), it-&gt;text());</div>
-<div class="line"> <span class="comment">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span></div>
-<div class="line"> <span class="comment">// in other words, this connection is essentially the same as</span></div>
-<div class="line"> <span class="comment">// AObject::connect(user-&gt;name.projected(&amp;AString::uppercase), slot(it)::setText);</span></div>
+<div class="line">    <span class="comment">// Data goes from left to right:</span></div>
+<div class="line">    <span class="comment">// current value (pre fire) or changed event</span></div>
+<div class="line">    <span class="comment">// goes through projection (&amp;AString::uppercase) first</span></div>
+<div class="line">    <span class="comment">// then it goes to assignment operation of it-&gt;text()</span></div>
+<div class="line">    <span class="comment">// property.</span></div>
+<div class="line">    <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(user-&gt;name.readProjected(&amp;AString::uppercase), it-&gt;text());</div>
+<div class="line">    <span class="comment">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span></div>
+<div class="line">    <span class="comment">// in other words, this connection is essentially the same as</span></div>
+<div class="line">    <span class="comment">// AObject::connect(user-&gt;name.projected(&amp;AString::uppercase), slot(it)::setText);</span></div>
 <div class="line"> </div>
-<div class="line"> <span class="comment">// if view's property gets changed (i.e., by user or by occasional</span></div>
-<div class="line"> <span class="comment">// ALabel::setText), these changes DO NOT reflect on model</span></div>
-<div class="line"> <span class="comment">// as we requested connect() here instead of biConnect().</span></div>
+<div class="line">    <span class="comment">// if view's property gets changed (i.e., by user or by occasional</span></div>
+<div class="line">    <span class="comment">// ALabel::setText), these changes DO NOT reflect on model</span></div>
+<div class="line">    <span class="comment">// as we requested connect() here instead of biConnect().</span></div>
 <div class="line">},</div>
 </div><!-- fragment --><p>This gives the following result: <img alt="" class="inline" src="UIDataBindingTest.Label_via_declarative_projection_1.png"/> </p>
 <p>Note that the label already displays the <b>projected</b> value stored in User.</p>
@@ -239,15 +239,15 @@ Bidirectional connection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirec
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L263"></b> In previous examples, we've used <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view from model and obtaining data from view back to the model.</p>
 <p>For this example, let's use <a class="el" href="classATextField.html" title="Editable field with text to receive a text input from the user.">ATextField</a> instead of <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> as it's an editable view. In this case, we'd want to use <code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> because we do want <code>user-&gt;name</code> to be aware of changes of the view. </p><div class="fragment"><div class="line">_new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line"> <span class="comment">// Data goes from left to right in the first place</span></div>
-<div class="line"> <span class="comment">// (i.e., user-&gt;name current value overrides it-&gt;text())</span></div>
-<div class="line"> <span class="comment">// if view's property gets changed (i.e., by user),</span></div>
-<div class="line"> <span class="comment">// these changes reflect on model</span></div>
-<div class="line"> <span class="comment">// as we requested biConnect here</span></div>
+<div class="line">  <span class="comment">// Data goes from left to right in the first place</span></div>
+<div class="line">  <span class="comment">// (i.e., user-&gt;name current value overrides it-&gt;text())</span></div>
+<div class="line">  <span class="comment">// if view's property gets changed (i.e., by user),</span></div>
+<div class="line">  <span class="comment">// these changes reflect on model</span></div>
+<div class="line">  <span class="comment">// as we requested biConnect here</span></div>
 <div class="line"> </div>
-<div class="line"> <span class="comment">//                -&gt; value + changes -&gt;</span></div>
-<div class="line"> <a class="code hl_function" href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a>(user-&gt;name, it-&gt;text());</div>
-<div class="line"> <span class="comment">//                &lt;-  changes only   &lt;-</span></div>
+<div class="line">  <span class="comment">//                -&gt; value + changes -&gt;</span></div>
+<div class="line">  <a class="code hl_function" href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a>(user-&gt;name, it-&gt;text());</div>
+<div class="line">  <span class="comment">//                &lt;-  changes only   &lt;-</span></div>
 <div class="line">},</div>
 </div><!-- fragment --><p>This gives the following result: <img alt="" class="inline" src="UIDataBindingTest.Declarative_bidirectional_connection_1.png"/> </p>
 <p>Let's change the name programmatically: </p><div class="fragment"><div class="line">user-&gt;name = <span class="stringliteral">"Vasil"</span>;</div>
@@ -261,18 +261,18 @@ Bidirectional projection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirec
 <p>It is the case for <a class="el" href="classADropdownList.html" title="A button with dropdown list.">ADropdownList</a> with enums. <a class="el" href="classADropdownList.html" title="A button with dropdown list.">ADropdownList</a> works with string list model and indices. It does not know anything about underlying values.</p>
 <p>For example, define enum with <a class="el" href="group__useful__macros.html#ga339936ba5146bdad18838e527f34e9df">AUI_ENUM_VALUES</a> and model:</p>
 <div class="fragment"><div class="line"><span class="keyword">enum class</span> Gender {</div>
-<div class="line">    MALE,</div>
-<div class="line">    FEMALE,</div>
-<div class="line">    OTHER,</div>
+<div class="line">    MALE,</div>
+<div class="line">    FEMALE,</div>
+<div class="line">    OTHER,</div>
 <div class="line">};</div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga339936ba5146bdad18838e527f34e9df">AUI_ENUM_VALUES</a>(Gender,</div>
-<div class="line">                Gender::MALE,</div>
-<div class="line">                Gender::FEMALE,</div>
-<div class="line">                Gender::OTHER)</div>
+<div class="line">                Gender::MALE,</div>
+<div class="line">                Gender::FEMALE,</div>
+<div class="line">                Gender::OTHER)</div>
 <div class="ttc" id="agroup__useful__macros_html_ga339936ba5146bdad18838e527f34e9df"><div class="ttname"><a href="group__useful__macros.html#ga339936ba5146bdad18838e527f34e9df">AUI_ENUM_VALUES</a></div><div class="ttdeci">#define AUI_ENUM_VALUES(enum_t,...)</div><div class="ttdoc">Defines all enum values for AEnumerate.</div><div class="ttdef"><b>Definition</b> AEnumerate.h:208</div></div>
 </div><!-- fragment --> <div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;Gender&gt;</a> gender;</div>
-<div class="line"> <span class="comment">// we've omitted other fields for sake of simplicity</span></div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;Gender&gt;</a> gender;</div>
+<div class="line">    <span class="comment">// we've omitted other fields for sake of simplicity</span></div>
 <div class="line">};</div>
 </div><!-- fragment --><p>Now, let's get a mapping for our <code>Gender</code> enum: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> GENDERS = <a class="code hl_variable" href="group__core.html#ga177fb99c6b6cf725dc64202f891678cf">aui::enumerate::ALL_VALUES&lt;Gender&gt;</a>;</div>
 <div class="ttc" id="agroup__core_html_ga177fb99c6b6cf725dc64202f891678cf"><div class="ttname"><a href="group__core.html#ga177fb99c6b6cf725dc64202f891678cf">aui::enumerate::ALL_VALUES</a></div><div class="ttdeci">constexpr auto ALL_VALUES</div><div class="ttdoc">constexpr std::array of all possible enum values is the order they've been passed to AUI_ENUM_VALUES.</div><div class="ttdef"><b>Definition</b> AEnumerate.h:176</div></div>
@@ -284,13 +284,13 @@ Bidirectional projection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirec
 <div class="line">GENDERS[1]; <span class="comment">// -&gt; FEMALE</span></div>
 <div class="line">GENDERS[2]; <span class="comment">// -&gt; OTHER</span></div>
 </div><!-- fragment --><p>To perform opposite operation (i.e., <code>Gender</code> to int), we can use <code><a class="el" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d" title="Finds the index of the first occurrence of the value.">aui::indexOf</a></code>: </p><div class="fragment"><div class="line"><span class="comment">/* pseudocode */</span></div>
-<div class="line"><a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, Gender::MALE);   <span class="comment">// -&gt; 0</span></div>
+<div class="line"><a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, Gender::MALE);   <span class="comment">// -&gt; 0</span></div>
 <div class="line"><a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, Gender::FEMALE); <span class="comment">// -&gt; 1</span></div>
-<div class="line"><a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, Gender::OTHER);  <span class="comment">// -&gt; 2</span></div>
+<div class="line"><a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, Gender::OTHER);  <span class="comment">// -&gt; 2</span></div>
 <div class="ttc" id="agroup__core_html_ga4cfb55637d96cbb11c9c00bcb6a7998d"><div class="ttname"><a href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a></div><div class="ttdeci">AOptional&lt; size_t &gt; indexOf(const Container &amp;c, const typename Container::const_reference value) noexcept</div><div class="ttdoc">Finds the index of the first occurrence of the value.</div><div class="ttdef"><b>Definition</b> containers.h:227</div></div>
 </div><!-- fragment --><p>To bring these conversions together, let's use overloaded lambda: </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> GENDER_INDEX_PROJECTION = <a class="code hl_struct" href="structaui_1_1lambda__overloaded.html">aui::lambda_overloaded</a> {</div>
-<div class="line">    [](Gender g) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> <a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, g).valueOr(0); },</div>
-<div class="line">    [](<span class="keywordtype">int</span> i) -&gt; Gender { <span class="keywordflow">return</span> GENDERS[i]; },</div>
+<div class="line">    [](Gender g) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> <a class="code hl_function" href="group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d">aui::indexOf</a>(GENDERS, g).valueOr(0); },</div>
+<div class="line">    [](<span class="keywordtype">int</span> i) -&gt; Gender { <span class="keywordflow">return</span> GENDERS[i]; },</div>
 <div class="line">};</div>
 <div class="ttc" id="astructaui_1_1lambda__overloaded_html"><div class="ttname"><a href="structaui_1_1lambda__overloaded.html">aui::lambda_overloaded</a></div><div class="ttdef"><b>Definition</b> callables.h:36</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>It's convenient to use lambda trailing return type syntax (i.e., <code>... -&gt; int</code>, <code>... -&gt; Gender</code>) to make it obvious what do transformations do and how one type is transformed to another.</dd></dl>
@@ -300,32 +300,32 @@ Bidirectional projection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirec
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyWindow(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;User&gt;</a>&amp; user) {</div>
-<div class="line"> <span class="comment">// generate a string list model for genders from GENDERS array defined earlier</span></div>
-<div class="line"> <span class="keyword">auto</span> gendersStr = <a class="code hl_function" href="classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb">AListModel&lt;AString&gt;::fromVector</a>(</div>
-<div class="line">            GENDERS</div>
-<div class="line">            | ranges::views::transform(<a class="code hl_function" href="classAEnumerate.html#afa68fcde8a649cfb3240410a4d995428">AEnumerate&lt;Gender&gt;::toName</a>)</div>
-<div class="line">            | ranges::to_vector);</div>
+<div class="line">    MyWindow(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;User&gt;</a>&amp; user) {</div>
+<div class="line">        <span class="comment">// generate a string list model for genders from GENDERS array defined earlier</span></div>
+<div class="line">        <span class="keyword">auto</span> gendersStr = <a class="code hl_function" href="classAListModel.html#a1e533fa4d29b2861c76fcd00c297c5fb">AListModel&lt;AString&gt;::fromVector</a>(</div>
+<div class="line">            GENDERS</div>
+<div class="line">            | ranges::views::transform(<a class="code hl_function" href="classAEnumerate.html#afa68fcde8a649cfb3240410a4d995428">AEnumerate&lt;Gender&gt;::toName</a>)</div>
+<div class="line">            | ranges::to_vector);</div>
 <div class="line"> </div>
-<div class="line"> <span class="comment">// equivalent:</span></div>
-<div class="line"> <span class="comment">// gendersStr = { "MALE", "FEMALE", "OTHER" }</span></div>
-<div class="line"> <span class="comment">// you can customize the displayed strings by playing with</span></div>
-<div class="line"> <span class="comment">// ranges::views::transform argument.</span></div>
+<div class="line">        <span class="comment">// equivalent:</span></div>
+<div class="line">        <span class="comment">// gendersStr = { "MALE", "FEMALE", "OTHER" }</span></div>
+<div class="line">        <span class="comment">// you can customize the displayed strings by playing with</span></div>
+<div class="line">        <span class="comment">// ranges::views::transform argument.</span></div>
 <div class="line"> </div>
-<div class="line"> <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
-<div class="line">          _new&lt;ADropdownList&gt;(gendersStr) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line"> <span class="comment">// AObject::connect(user-&gt;gender, it-&gt;selectionId());</span></div>
-<div class="line"> <span class="comment">//</span></div>
-<div class="line"> <span class="comment">// The code above would break, because Gender and int</span></div>
-<div class="line"> <span class="comment">// (selectionId() type) are incompatible.</span></div>
-<div class="line"> <span class="comment">//</span></div>
-<div class="line"> <span class="comment">// Instead, define bidirectional projection:</span></div>
-<div class="line"> <a class="code hl_function" href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a>(</div>
-<div class="line">                   user-&gt;gender.biProjected(GENDER_INDEX_PROJECTION),</div>
-<div class="line">                   it-&gt;selectionId());</div>
-<div class="line">              },</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
+<div class="line">          _new&lt;ADropdownList&gt;(gendersStr) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">              <span class="comment">// AObject::connect(user-&gt;gender, it-&gt;selectionId());</span></div>
+<div class="line">              <span class="comment">//</span></div>
+<div class="line">              <span class="comment">// The code above would break, because Gender and int</span></div>
+<div class="line">              <span class="comment">// (selectionId() type) are incompatible.</span></div>
+<div class="line">              <span class="comment">//</span></div>
+<div class="line">              <span class="comment">// Instead, define bidirectional projection:</span></div>
+<div class="line">               <a class="code hl_function" href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a>(</div>
+<div class="line">                   user-&gt;gender.biProjected(GENDER_INDEX_PROJECTION),</div>
+<div class="line">                   it-&gt;selectionId());</div>
+<div class="line">              },</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="line">_new&lt;MyWindow&gt;(user)-&gt;show();</div>
 <div class="ttc" id="aclassAEnumerate_html_afa68fcde8a649cfb3240410a4d995428"><div class="ttname"><a href="classAEnumerate.html#afa68fcde8a649cfb3240410a4d995428">AEnumerate::toName</a></div><div class="ttdeci">static const AString &amp; toName(enum_t value)</div><div class="ttdoc">Map runtime enum value to name. Throws an exception if no such value.</div><div class="ttdef"><b>Definition</b> AEnumerate.h:134</div></div>
@@ -364,18 +364,18 @@ UI declarative data binding<a class="aui-toc-hash" href="#UI_declarative_data_bi
 Label via declarative<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_declarative" id="UIDataBindingTest_Label_via_declarative" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L490"></b> Use <code>&amp;</code> and <code>&gt;</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> user = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Roza"</span> });</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyWindow(<span class="keyword">const</span> _&lt;User&gt;&amp; user) {</div>
-<div class="line"> <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
-<div class="line">          _new&lt;ALabel&gt;() &amp; user-&gt;name &gt; &amp;<a class="code hl_function" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">ALabel::text</a></div>
-<div class="line">        });</div>
-<div class="line">    }</div>
+<div class="line">    MyWindow(<span class="keyword">const</span> _&lt;User&gt;&amp; user) {</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
+<div class="line">          _new&lt;ALabel&gt;() &amp; user-&gt;name &gt; &amp;<a class="code hl_function" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">ALabel::text</a></div>
+<div class="line">        });</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"><span class="keyword">auto</span> window = _new&lt;MyWindow&gt;(user);</div>
 <div class="line">window-&gt;show();</div>
@@ -393,7 +393,7 @@ ADataBindingDefault for omitting view property<a class="aui-toc-hash" href="#UID
 <div class="line"><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classALabel.html">ALabel</a>, <a class="code hl_class" href="classAString.html">AString</a>&gt; {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line"> <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structADataBindingDefault.html#a8b84a1211f21be11840c0f38d5d69c2a">property</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ALabel&gt;</a>&amp; view) { <span class="keywordflow">return</span> view-&gt;text(); }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structADataBindingDefault.html#a8b84a1211f21be11840c0f38d5d69c2a">property</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ALabel&gt;</a>&amp; view) { <span class="keywordflow">return</span> view-&gt;text(); }</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassALabel_html"><div class="ttname"><a href="classALabel.html">ALabel</a></div><div class="ttdoc">Represents a simple single-line text display view.</div><div class="ttdef"><b>Definition</b> ALabel.h:23</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
@@ -410,20 +410,20 @@ ADataBindingDefault for omitting view property<a class="aui-toc-hash" href="#UID
 ADataBindingDefault strong type propagation<a class="aui-toc-hash" href="#UIDataBindingTest_ADataBindingDefault_strong_type_propagation" id="UIDataBindingTest_ADataBindingDefault_strong_type_propagation" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L618"></b> Think of <code><a class="el" href="structADataBindingDefault.html" title="Defines how View handles properties of FieldType type.">ADataBindingDefault</a></code> as we're not only connecting properties to properties, but also creating a "property to view" relationship. This philosophy covers the following scenario.</p>
 <p>In AUI, there's <a class="el" href="structaui_1_1ranged__number.html" title="Clamps the possible values for a number to the specified range: [min;max].">aui::ranged_number</a> template which stores valid value range right inside the type: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;aui::ranged_number&lt;int, 1, 99&gt;</a>&gt; age;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;aui::ranged_number&lt;int, 1, 99&gt;</a>&gt; age;</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>These strong types can be used to propagate their traits on views, i.e., <a class="el" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons.">ANumberPicker</a>. When using declarative syntax, the property system calls <code><a class="el" href="structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf" title="Called then view linked with field.">ADataBindingDefault::setup</a></code> to apply some extra traits of the bound value on the view. Here's an abstract on how <code><a class="el" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons.">ANumberPicker</a></code> defines specialization of <code>ADataBingingDefault</code> with <code><a class="el" href="structaui_1_1ranged__number.html" title="Clamps the possible values for a number to the specified range: [min;max].">aui::ranged_number</a></code>: </p><div class="fragment"><div class="line"><span class="comment">/* PREDEFINED! You don't need to define it! This listing is an example */</span></div>
 <div class="line"><span class="keyword">template</span> &lt;aui::arithmetic UnderlyingType, auto min, auto max&gt;</div>
 <div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classANumberPicker.html">ANumberPicker</a>, aui::ranged_number&lt;UnderlyingType, min, max&gt;&gt; {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line"> <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structADataBindingDefault.html#a8b84a1211f21be11840c0f38d5d69c2a">property</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ANumberPicker&gt;</a>&amp; view) {</div>
-<div class="line"> <span class="keywordflow">return</span> view-&gt;<a class="code hl_function" href="classANumberPicker.html#ac7d73e19178ba3e788205a05b079f08d">value</a>();</div>
-<div class="line">    }</div>
-<div class="line"> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf">setup</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ANumberPicker&gt;</a>&amp; view) {</div>
-<div class="line">        view-&gt;setMin(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MIN);</div>
-<div class="line">        view-&gt;setMax(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MAX);</div>
-<div class="line">    }</div>
-<div class="line"> <span class="comment">// ...</span></div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structADataBindingDefault.html#a8b84a1211f21be11840c0f38d5d69c2a">property</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ANumberPicker&gt;</a>&amp; view) {</div>
+<div class="line">        <span class="keywordflow">return</span> view-&gt;<a class="code hl_function" href="classANumberPicker.html#ac7d73e19178ba3e788205a05b079f08d">value</a>();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structADataBindingDefault.html#a55e3cde07f6e2fdbdd4dc0a15451e8cf">setup</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ANumberPicker&gt;</a>&amp; view) {</div>
+<div class="line">        view-&gt;setMin(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MIN);</div>
+<div class="line">        view-&gt;setMax(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MAX);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// ...</span></div>
 <div class="line">};</div>
 <div class="ttc" id="aclassANumberPicker_html"><div class="ttname"><a href="classANumberPicker.html">ANumberPicker</a></div><div class="ttdoc">A text field for numbers with increase/decrease buttons.</div><div class="ttdef"><b>Definition</b> ANumberPicker.h:24</div></div>
 <div class="ttc" id="aclassANumberPicker_html_ac7d73e19178ba3e788205a05b079f08d"><div class="ttname"><a href="classANumberPicker.html#ac7d73e19178ba3e788205a05b079f08d">ANumberPicker::value</a></div><div class="ttdeci">auto value() const</div><div class="ttdoc">Value property.</div><div class="ttdef"><b>Definition</b> ANumberPicker.h:52</div></div>
@@ -437,19 +437,19 @@ ADataBindingDefault strong type propagation<a class="aui-toc-hash" href="#UIData
 Label via declarative projection<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_declarative_projection" id="UIDataBindingTest_Label_via_declarative_projection" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L692"></b> We can use projections in the same way as with <code>let</code>. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> user = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Roza"</span> });</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyWindow(<span class="keyword">const</span> _&lt;User&gt;&amp; user) {</div>
-<div class="line">        _&lt;ALabel&gt; label;</div>
-<div class="line"> <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
-<div class="line">            _new&lt;ALabel&gt;() &amp; user-&gt;name.readProjected(&amp;AString::uppercase)</div>
-<div class="line">        });</div>
-<div class="line">    }</div>
+<div class="line">    MyWindow(<span class="keyword">const</span> _&lt;User&gt;&amp; user) {</div>
+<div class="line">        _&lt;ALabel&gt; label;</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
+<div class="line">            _new&lt;ALabel&gt;() &amp; user-&gt;name.readProjected(&amp;AString::uppercase)</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"><span class="keyword">auto</span> window = _new&lt;MyWindow&gt;(user);</div>
 <div class="line">window-&gt;show();</div>

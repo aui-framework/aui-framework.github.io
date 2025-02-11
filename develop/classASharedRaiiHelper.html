@@ -118,14 +118,14 @@ static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classASha
 <p>ASharedRaiiHelper is intended to track the completion of multiple futures, exploiting the destruction of <a class="el" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b" title="Add onSuccess callback to the future.">AFuture::onSuccess</a> or <a class="el" href="classAFuture.html#a2c29ecb80f38bac577e9ddcc8535918e" title="Add onError callback to the future.">AFuture::onError</a> callbacks when they called. This approach allows to easily integrate <a class="el" href="classASharedRaiiHelper.html" title="Shared completion marker for multithreaded callback-based future handling.">ASharedRaiiHelper</a> to the existing code.</p>
 <p>Note that the callback will be called even if onSuccess is not.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> marker = ASharedRaiiHelper::make([] {</div>
-<div class="line"> <span class="comment">// will be called when all futures called onSuccess or destroyed</span></div>
+<div class="line">    <span class="comment">// will be called when all futures called onSuccess or destroyed</span></div>
 <div class="line">});</div>
 <div class="line"><span class="keyword">auto</span> future = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
-<div class="line"> <span class="comment">// hard work</span></div>
+<div class="line">    <span class="comment">// hard work</span></div>
 <div class="line">}</div>
-<div class="line"><span class="comment">//                      VVVVVV ASharedRaiiHelper should be captured!</span></div>
+<div class="line"><span class="comment">//                      VVVVVV ASharedRaiiHelper should be captured!</span></div>
 <div class="line">future.onSuccess([<span class="keyword">this</span>, marker]() {</div>
-<div class="line"> <span class="comment">// handle the hard work</span></div>
+<div class="line">    <span class="comment">// handle the hard work</span></div>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// keep the future alive in async holder</span></div>

@@ -109,18 +109,18 @@ $(function(){initNavTree('group__signal__slot.html',''); initResizable(true); })
 <p>All classes that inherit from <a class="el" href="classAObject.html" title="A base object class.">AObject</a> or one of its subclasses (e.g., <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>) can contain signals and slots. Signals are emitted by objects when they change their state in a way that may be interesting to other objects. This is all the object does to communicate. It does not know or care whether anything is receiving the signals it emits. This is true information encapsulation, and ensures that the object can be used as a software component.</p>
 <p><a class="el" href="#ga78df6aa411708ae01bdfcdb3ee98b865">Signal declarations</a> are special public fields of any class that inherit from <a class="el" href="classAObject.html" title="A base object class.">AObject</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>Counter: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
+<div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
-<div class="line">    mValue = value;</div>
-<div class="line"> <a class="code hl_define" href="#gac622150996edd734a10f229eb381a53f">emit</a> valueChanged;</div>
-<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
+<div class="line">    mValue = value;</div>
+<div class="line">    <a class="code hl_define" href="#gac622150996edd734a10f229eb381a53f">emit</a> valueChanged;</div>
+<div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">signals:</div>
-<div class="line"> <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> valueChanged;</div>
+<div class="line">  <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> valueChanged;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line"> <span class="keywordtype">int</span> mValue = 0;</div>
+<div class="line">  <span class="keywordtype">int</span> mValue = 0;</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition</b> AObject.h:39</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:551</div></div>
@@ -145,41 +145,41 @@ Slots<a class="aui-toc-hash" href="#slots" id="slots" style="color: var(--fragme
 Basic example<a class="aui-toc-hash" href="#basic-example" id="basic-example" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Let's use <code>Counter</code> from our previous example: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Counter: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
+<div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
-<div class="line">    mValue = value;</div>
-<div class="line"> <a class="code hl_define" href="#gac622150996edd734a10f229eb381a53f">emit</a> valueChanged(value);</div>
-<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
+<div class="line">    mValue = value;</div>
+<div class="line">    <a class="code hl_define" href="#gac622150996edd734a10f229eb381a53f">emit</a> valueChanged(value);</div>
+<div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">signals:</div>
-<div class="line"> <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;int&gt;</a> valueChanged;</div>
+<div class="line">  <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;int&gt;</a> valueChanged;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line"> <span class="keywordtype">int</span> mValue = 0;</div>
+<div class="line">  <span class="keywordtype">int</span> mValue = 0;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyApp: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  MyApp() {}</div>
+<div class="line">  MyApp() {}</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> run() {</div>
-<div class="line"> <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mCounter-&gt;valueChanged, <span class="keyword">this</span>, &amp;MyApp::printCounter);</div>
-<div class="line">    mCounter-&gt;setValue(123); <span class="comment">// prints "New value: 123"</span></div>
-<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> run() {</div>
+<div class="line">    <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mCounter-&gt;valueChanged, <span class="keyword">this</span>, &amp;MyApp::printCounter);</div>
+<div class="line">    mCounter-&gt;setValue(123); <span class="comment">// prints "New value: 123"</span></div>
+<div class="line">  }</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">  _&lt;Counter&gt; mCounter = _new&lt;Counter&gt;();</div>
+<div class="line">  _&lt;Counter&gt; mCounter = _new&lt;Counter&gt;();</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> printCounter(<span class="keywordtype">int</span> value) {</div>
-<div class="line">    ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
-<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> printCounter(<span class="keywordtype">int</span> value) {</div>
+<div class="line">    ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
+<div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
-<div class="line"> <span class="keyword">auto</span> app = _new&lt;MyApp&gt;();</div>
-<div class="line">  app-&gt;run();</div>
-<div class="line"> <span class="keywordflow">return</span> 0;</div>
+<div class="line">  <span class="keyword">auto</span> app = _new&lt;MyApp&gt;();</div>
+<div class="line">  app-&gt;run();</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:69</div></div>
@@ -187,27 +187,27 @@ Basic example<a class="aui-toc-hash" href="#basic-example" id="basic-example" st
 <div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
 </div><!-- fragment --><p>Furthermore, when connecting to <code>this</code>, <a class="el" href="#gaaaa072876366972108aef016e7882a99" title="Passes some variable and type of the variable separated by comma. It's convenient to use with the con...">slot(this)</a> can be replaced with <a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a>: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, me::printCounter);</div>
 </div><!-- fragment --><p>Lambda can be used as a slot either: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, <span class="keyword">this</span>, [](<span class="keywordtype">int</span> value) {</div>
-<div class="line">  ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
+<div class="line">  ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
 <div class="line">});</div>
 </div><!-- fragment --><p>As with methods, <code>this</code> can be omitted: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, [](<span class="keywordtype">int</span> value) {</div>
-<div class="line">  ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
+<div class="line">  ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
 <div class="line">});</div>
 </div><!-- fragment --><h1>
 UI example<a class="aui-toc-hash" href="#ui-example" id="ui-example" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Knowing basics of signal slots, you can now utilize UI signals: </p><div class="fragment"><div class="line">mOkButton = _new&lt;AButton&gt;(<span class="stringliteral">"OK"</span>);</div>
 <div class="line">...</div>
 <div class="line">connect(mOkButton-&gt;clicked, [] { <span class="comment">// the signal is connected to "this" object</span></div>
-<div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"The button was clicked"</span>;</div>
+<div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"The button was clicked"</span>;</div>
 <div class="line">});</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In lambda, do not capture shared pointer (AUI's <a class="el" href="class__.html" title="An std::weak_ptr with AUI extensions.">_</a>) of signal emitter or receiver object by value. This would cause a memory leak: <div class="fragment"><div class="line">mOkButton = _new&lt;AButton&gt;(<span class="stringliteral">"OK"</span>);</div>
 <div class="line">...</div>
 <div class="line">connect(mOkButton-&gt;clicked, [view] { <span class="comment">// WRONG!!!</span></div>
-<div class="line">    view-&gt;setText(<span class="stringliteral">"clicked"</span>);</div>
+<div class="line">    view-&gt;setText(<span class="stringliteral">"clicked"</span>);</div>
 <div class="line">});</div>
 </div><!-- fragment --> Do this way: <div class="fragment"><div class="line">mOkButton = _new&lt;AButton&gt;(<span class="stringliteral">"OK"</span>);</div>
 <div class="line">...</div>
 <div class="line">connect(mOkButton-&gt;clicked, [view = view.get()] { <span class="comment">// ok</span></div>
-<div class="line">    view-&gt;setText(<span class="stringliteral">"clicked"</span>);</div>
+<div class="line">    view-&gt;setText(<span class="stringliteral">"clicked"</span>);</div>
 <div class="line">});</div>
 </div><!-- fragment --></dd></dl>
 <h2>
@@ -215,65 +215,65 @@ Going further<a class="aui-toc-hash" href="#going-further" id="going-further" st
 <p>Let's take our previous example with <code>Counter</code> and make an UI app. Signal slot reveals it's power when your objects have small handy functions, so lets add <code>increase</code> method to our counter:</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>Counter: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
+<div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
-<div class="line">    mValue = value;</div>
-<div class="line"> <a class="code hl_define" href="#gac622150996edd734a10f229eb381a53f">emit</a> valueChanged(value);</div>
-<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
+<div class="line">    mValue = value;</div>
+<div class="line">    <a class="code hl_define" href="#gac622150996edd734a10f229eb381a53f">emit</a> valueChanged(value);</div>
+<div class="line">  }</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordtype">void</span> increase() {</div>
-<div class="line">    setValue(mCounter + 1);</div>
-<div class="line">  }</div>
+<div class="line">  <span class="keywordtype">void</span> increase() {</div>
+<div class="line">    setValue(mCounter + 1);</div>
+<div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">signals:</div>
-<div class="line"> <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;int&gt;</a> valueChanged;</div>
+<div class="line">  <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;int&gt;</a> valueChanged;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line"> <span class="keywordtype">int</span> mValue = 0;</div>
+<div class="line">  <span class="keywordtype">int</span> mValue = 0;</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyApp: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  MyApp() {</div>
-<div class="line"> <span class="keyword">auto</span> label = _new&lt;ALabel&gt;(<span class="stringliteral">"-"</span>);</div>
-<div class="line"> <span class="keyword">auto</span> button = _new&lt;AButton&gt;(<span class="stringliteral">"Increase"</span>);</div>
+<div class="line">  MyApp() {</div>
+<div class="line">    <span class="keyword">auto</span> label = _new&lt;ALabel&gt;(<span class="stringliteral">"-"</span>);</div>
+<div class="line">    <span class="keyword">auto</span> button = _new&lt;AButton&gt;(<span class="stringliteral">"Increase"</span>);</div>
 <div class="line"> </div>
-<div class="line"> <span class="keyword">using namespace </span>declarative;</div>
-<div class="line">    setContents(Vertical {</div>
-<div class="line">      label,</div>
-<div class="line">      button,</div>
-<div class="line">    });</div>
+<div class="line">    <span class="keyword">using namespace </span>declarative;</div>
+<div class="line">    setContents(Vertical {</div>
+<div class="line">      label,</div>
+<div class="line">      button,</div>
+<div class="line">    });</div>
 <div class="line"> </div>
-<div class="line"> <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(button-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(mCounter)::increase); <span class="comment">// beauty, huh?</span></div>
-<div class="line"> <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mCounter-&gt;valueChanged, label, [label = label.get()](<span class="keywordtype">int</span> value) {</div>
-<div class="line">      label-&gt;setText(<span class="stringliteral">"{}"</span>_format(value));</div>
-<div class="line">    });</div>
-<div class="line">  }</div>
+<div class="line">    <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(button-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(mCounter)::increase); <span class="comment">// beauty, huh?</span></div>
+<div class="line">    <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mCounter-&gt;valueChanged, label, [label = label.get()](<span class="keywordtype">int</span> value) {</div>
+<div class="line">      label-&gt;setText(<span class="stringliteral">"{}"</span>_format(value));</div>
+<div class="line">    });</div>
+<div class="line">  }</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">  _&lt;Counter&gt; mCounter = _new&lt;Counter&gt;();</div>
+<div class="line">  _&lt;Counter&gt; mCounter = _new&lt;Counter&gt;();</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
-<div class="line"> <span class="keyword">auto</span> app = _new&lt;MyApp&gt;();</div>
-<div class="line">  app-&gt;show();</div>
-<div class="line"> <span class="keywordflow">return</span> 0;</div>
+<div class="line">  <span class="keyword">auto</span> app = _new&lt;MyApp&gt;();</div>
+<div class="line">  app-&gt;show();</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
 </div><!-- fragment --><p>This way, by clicking on "Increase", it would increase the counter and immediately display value via label.</p>
 <p>Let's make things more declarative and use <a class="el" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> syntax to set up connections: </p><div class="fragment"><div class="line">MyApp() {</div>
-<div class="line"> <span class="keyword">using namespace </span>declarative;</div>
-<div class="line">  setContents(Vertical {</div>
-<div class="line">    _new&lt;ALabel&gt;(<span class="stringliteral">"-"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line">      connect(counter-&gt;valueChanged, label, [label = it.get()](<span class="keywordtype">int</span> value) {</div>
-<div class="line">        label-&gt;setText(<span class="stringliteral">"{}"</span>_format(value));</div>
-<div class="line">      });</div>
-<div class="line">    },</div>
-<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">"Increase"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line">      connect(it-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(mCounter)::increase);</div>
-<div class="line">    },</div>
-<div class="line">  });</div>
+<div class="line">  <span class="keyword">using namespace </span>declarative;</div>
+<div class="line">  setContents(Vertical {</div>
+<div class="line">    _new&lt;ALabel&gt;(<span class="stringliteral">"-"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">      connect(counter-&gt;valueChanged, label, [label = it.get()](<span class="keywordtype">int</span> value) {</div>
+<div class="line">        label-&gt;setText(<span class="stringliteral">"{}"</span>_format(value));</div>
+<div class="line">      });</div>
+<div class="line">    },</div>
+<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">"Increase"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">      connect(it-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(mCounter)::increase);</div>
+<div class="line">    },</div>
+<div class="line">  });</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 </div><!-- fragment --><p>See also <a class="el" href="group__property__system.html">Property System</a> for making reactive UI's on trivial data.</p>
@@ -282,12 +282,12 @@ Arguments<a class="aui-toc-hash" href="#arguments" id="arguments" style="color: 
 <p>If signal declares arguments (i.e, like <a class="el" href="classAView.html#a7299aeca90d52aa7406bebf1b5bb604a" title="Keyboard key pressed.">AView::keyPressed</a>), you can accept them: </p><div class="fragment"><div class="line">view = _new&lt;ATextField&gt;();</div>
 <div class="line">...</div>
 <div class="line">connect(view-&gt;keyPressed, [](AInput::Key k) { <span class="comment">// the signal is connected to "this" object</span></div>
-<div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"Key was pressed: "</span> &lt;&lt; k;</div>
+<div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"Key was pressed: "</span> &lt;&lt; k;</div>
 <div class="line">});</div>
 </div><!-- fragment --><p>The signals and slots mechanism is type safe: The signature of a signal must match the signature of the receiving slot. Also, a slot may have a shorter signature than the signal it receives because it can ignore extra arguments: </p><div class="fragment"><div class="line">view = _new&lt;ATextField&gt;();</div>
 <div class="line">...</div>
 <div class="line">connect(view-&gt;keyPressed, [] { <span class="comment">// the signal is connected to "this" object</span></div>
-<div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"Key was pressed"</span>;</div>
+<div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"Key was pressed"</span>;</div>
 <div class="line">});</div>
 </div><!-- fragment --><h1>
 Differences between Qt and AUI implementation<a class="aui-toc-hash" href="#differences-between-qt-and-aui-implementation" id="differences-between-qt-and-aui-implementation" style="color: var(--fragment-comment) !important">#</a></h1>
@@ -296,23 +296,23 @@ Differences between Qt and AUI implementation<a class="aui-toc-hash" href="#diff
 <th></th><th>Qt </th><th>AUI  </th></tr>
 <tr>
 <td>Signal declaration </td><td><div class="fragment"><div class="line">signals:</div>
-<div class="line"> <span class="keywordtype">void</span> statusChanged(QString str);</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line">signals:</div>
-<div class="line"> <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AString&gt;</a> statusChanged;</div>
+<div class="line">  <span class="keywordtype">void</span> statusChanged(QString str);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">signals:</div>
+<div class="line">  <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;AString&gt;</a> statusChanged;</div>
 </div><!-- fragment --> </td></tr>
 <tr>
 <td>Slot declaration </td><td><div class="fragment"><div class="line">slots:</div>
-<div class="line"> <span class="keywordtype">void</span> showMessage(QString str);</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line"><span class="keywordtype">void</span> showMessage(<a class="code hl_class" href="classAString.html">AString</a> str);</div>
+<div class="line">  <span class="keywordtype">void</span> showMessage(QString str);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><span class="keywordtype">void</span> showMessage(<a class="code hl_class" href="classAString.html">AString</a> str);</div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
 </div><!-- fragment --> </td></tr>
 <tr>
 <td>Connect from <code>this</code> to <code>this</code> </td><td><div class="fragment"><div class="line">connect(<span class="keyword">this</span>, SIGNAL(statusChanged(QString), <span class="keyword">this</span>, SLOT(showMessage(QString)));</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line">connect(statusChanged, me::showMessage);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(statusChanged, me::showMessage);</div>
 </div><!-- fragment --> </td></tr>
 <tr>
 <td>Connect from the <code>emitter</code> object to the <code>sender</code> object </td><td><div class="fragment"><div class="line">QObject::connect(emitter, SIGNAL(statusChanged(QString), receiver, SLOT(showMessage(QString)));</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(emitter-&gt;statusChanged, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(receiver)::showMessage);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(emitter-&gt;statusChanged, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(receiver)::showMessage);</div>
 </div><!-- fragment --> </td></tr>
 </table>
 <table class="memberdecls">
@@ -391,6 +391,8 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </div><!-- fragment --><p>This code calls slots connected to <code>clicked</code> signal.</p>
 <p>If <a class="el" href="#ga78df6aa411708ae01bdfcdb3ee98b865">signal declaration</a> has arguments, you have to specify them: </p><div class="fragment"><div class="line"><a class="code hl_define" href="#ga00cd4f40ca195cb6b174543dca2a431e">AUI_EMIT_FOREIGN</a>(view, keyPressed, AInput::LCTRL);</div>
 </div><!-- fragment --><p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2app_2minesweeper_2src_2MinesweeperWindow_8cpp-example.html#a3">examples/app/minesweeper/src/MinesweeperWindow.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="gaeddbb3020ebcd7c50fd851ef25cdd4ed" name="gaeddbb3020ebcd7c50fd851ef25cdd4ed"></a>
@@ -415,14 +417,14 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 <tr>
 <td><div class="fragment"><div class="line"><span class="keyword">class </span>SomeObject {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line"> <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> someSignal;</div>
+<div class="line">  <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> someSignal;</div>
 <div class="line">};</div>
 <div class="line">...</div>
 <div class="line">auto obj = _new&lt;SomeObject&gt;();</div>
 <div class="line">(*obj) ^ obj-&gt;someSignal();</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line"><span class="keyword">class </span>SomeObject {</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><span class="keyword">class </span>SomeObject {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line"> <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> someSignal;</div>
+<div class="line">  <a class="code hl_typedef" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> someSignal;</div>
 <div class="line">};</div>
 <div class="line">...</div>
 <div class="line">auto obj = _new&lt;SomeObject&gt;();</div>
@@ -468,7 +470,7 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 <td>without </td><td>with  </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">connect(clicked, <span class="keyword">this</span>, &amp;MyObject::handleClicked);</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line">connect(clicked, me::handleClicked);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(clicked, me::handleClicked);</div>
 </div><!-- fragment --> </td></tr>
 </table>
 </div>
@@ -494,10 +496,12 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 <td>without </td><td>with  </td></tr>
 <tr>
 <td><div class="fragment"><div class="line">connect(clicked, myObject, &amp;MyObject::handleClicked);</div>
-</div><!-- fragment --> </td><td><div class="fragment"><div class="line">connect(clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(myObject)::handleClicked);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(myObject)::handleClicked);</div>
 </div><!-- fragment --> </td></tr>
 </table>
 <dl class="section note"><dt>Note</dt><dd>If you are intended to reference this-&gt; object, consider using <a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a> instead. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2app_2fractal_2src_2FractalWindow_8cpp-example.html#a5">examples/app/fractal/src/FractalWindow.cpp</a>, <a class="el" href="examples_2app_2minesweeper_2src_2Style_8cpp-example.html#a6">examples/app/minesweeper/src/Style.cpp</a>, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8cpp-example.html#a22">examples/ui/views/src/ExampleWindow.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation<a class="aui-toc-hash" href="#ga78df6aa411708ae01bdfcdb3ee98b865" id="ga78df6aa411708ae01bdfcdb3ee98b865" name="ga78df6aa411708ae01bdfcdb3ee98b865" style="color: var(--fragment-comment) !important">#</a></h2>
@@ -701,6 +705,8 @@ template&lt;<a class="el" href="conceptAAnySignal.html">AAnySignal</a> Signal, <
 </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Connection instance </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2app_2minesweeper_2src_2Style_8cpp-example.html#a3">examples/app/minesweeper/src/Style.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <p class="footer-inner">

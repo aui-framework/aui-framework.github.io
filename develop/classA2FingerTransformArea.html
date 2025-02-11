@@ -953,29 +953,29 @@ glm::ivec2 </td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> = {0
 <p>Represents a translucent area that handles and processes multi-finger transformation gestures (i.e. pinch-to-zoom, move, rotate). A2FingerTransformArea is a container, so the transformed view should be somewhere inside. <a class="el" href="classA2FingerTransformArea.html" title="Handles and processes the multitouch scale, transform and rotation events based on two-finger gesture...">A2FingerTransformArea</a> does not apply any transformation though, so you can control transformation behaviour.</p>
 <p>The transformation data is emitted on delta basis via <code>transform</code> signal. This allows to easily incorporate <a class="el" href="classA2FingerTransformArea.html" title="Handles and processes the multitouch scale, transform and rotation events based on two-finger gesture...">A2FingerTransformArea</a> to transforming routines, including limit handling.</p>
 <p>Consider the following example, where the transformation is applied through ASS styles: </p><div class="fragment"><div class="line"><a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> multitouchDemo() {</div>
-<div class="line"> <span class="keywordflow">return</span> _new&lt;A2FingerTransformArea&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {    </div>
-<div class="line">      it-&gt;setCustomStyle({</div>
-<div class="line">        MinSize { 256_dp },</div>
-<div class="line">        Border { 1_px, AColor::BLACK },</div>
-<div class="line">      });</div>
-<div class="line">      _&lt;AView&gt; blackRect = Stacked { _new&lt;ALabel&gt;(<span class="stringliteral">"A2FingerTransformArea"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
-<div class="line">        FixedSize{200_dp, 100_dp},</div>
-<div class="line">        BackgroundSolid{AColor::BLACK},</div>
-<div class="line">        TextColor{AColor::WHITE},</div>
-<div class="line">        ATextAlign::CENTER,</div>
-<div class="line">      }};</div>
-<div class="line"> <a class="code hl_function" href="classALayoutInflater.html#a44bf726dbfd5ebeb42526bca56d86cb4">ALayoutInflater::inflate</a>(it, Stacked { blackRect });</div>
-<div class="line"> <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;transformed, blackRect, [blackRect = blackRect.get(),</div>
-<div class="line">                                           keptTransform = _new&lt;A2DTransform&gt;()](<span class="keyword">const</span> A2DTransform&amp; transform) {</div>
-<div class="line">          keptTransform-&gt;applyDelta(transform);</div>
-<div class="line">          blackRect-&gt;setCustomStyle({</div>
-<div class="line">              TransformOffset{AMetric(keptTransform-&gt;offset.x, AMetric::T_PX),</div>
-<div class="line">                              AMetric(keptTransform-&gt;offset.y, AMetric::T_PX)},</div>
-<div class="line">              TransformScale{keptTransform-&gt;scale},</div>
-<div class="line">              TransformRotate{keptTransform-&gt;rotation},</div>
-<div class="line">          });</div>
-<div class="line">      });</div>
-<div class="line">  };</div>
+<div class="line">  <span class="keywordflow">return</span> _new&lt;A2FingerTransformArea&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {    </div>
+<div class="line">      it-&gt;setCustomStyle({</div>
+<div class="line">        MinSize { 256_dp },</div>
+<div class="line">        Border { 1_px, AColor::BLACK },</div>
+<div class="line">      });</div>
+<div class="line">      _&lt;AView&gt; blackRect = Stacked { _new&lt;ALabel&gt;(<span class="stringliteral">"A2FingerTransformArea"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">        FixedSize{200_dp, 100_dp},</div>
+<div class="line">        BackgroundSolid{AColor::BLACK},</div>
+<div class="line">        TextColor{AColor::WHITE},</div>
+<div class="line">        ATextAlign::CENTER,</div>
+<div class="line">      }};</div>
+<div class="line">      <a class="code hl_function" href="classALayoutInflater.html#a44bf726dbfd5ebeb42526bca56d86cb4">ALayoutInflater::inflate</a>(it, Stacked { blackRect });</div>
+<div class="line">      <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;transformed, blackRect, [blackRect = blackRect.get(),</div>
+<div class="line">                                           keptTransform = _new&lt;A2DTransform&gt;()](<span class="keyword">const</span> A2DTransform&amp; transform) {</div>
+<div class="line">          keptTransform-&gt;applyDelta(transform);</div>
+<div class="line">          blackRect-&gt;setCustomStyle({</div>
+<div class="line">              TransformOffset{AMetric(keptTransform-&gt;offset.x, AMetric::T_PX),</div>
+<div class="line">                              AMetric(keptTransform-&gt;offset.y, AMetric::T_PX)},</div>
+<div class="line">              TransformScale{keptTransform-&gt;scale},</div>
+<div class="line">              TransformRotate{keptTransform-&gt;rotation},</div>
+<div class="line">          });</div>
+<div class="line">      });</div>
+<div class="line">  };</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassALayoutInflater_html_a44bf726dbfd5ebeb42526bca56d86cb4"><div class="ttname"><a href="classALayoutInflater.html#a44bf726dbfd5ebeb42526bca56d86cb4">ALayoutInflater::inflate</a></div><div class="ttdeci">static void inflate(aui::no_escape&lt; AViewContainer &gt; root, const _&lt; AView &gt; &amp;view)</div><div class="ttdoc">Wraps view with root using Stacked layout and expanding.</div><div class="ttdef"><b>Definition</b> ALayoutInflater.cpp:20</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>

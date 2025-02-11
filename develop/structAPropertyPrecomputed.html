@@ -171,23 +171,23 @@ class APropertyPrecomputed&lt; T &gt;</div><p>Readonly property that holds a val
 Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyPrecomputed.cpp#L30"></b> Declare a property with custom expression determining it's value as follows: </p><div class="fragment"><div class="line"></div>
 <div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> surname;</div>
-<div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;] { <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname); };</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> surname;</div>
+<div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;] { <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname); };</div>
 <div class="line">};</div>
 <div class="line"></div>
 <div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:145</div></div>
 </div><!-- fragment --><p>Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line"> <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
-<div class="line">        ALogger::info(<span class="stringliteral">"LogObserver"</span>) &lt;&lt; <span class="stringliteral">"Received value: "</span> &lt;&lt; msg;</div>
-<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
+<div class="line">        ALogger::info(<span class="stringliteral">"LogObserver"</span>) &lt;&lt; <span class="stringliteral">"Received value: "</span> &lt;&lt; msg;</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition</b> AObject.h:39</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
 </div><!-- fragment --><p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> u = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User {</div>
-<div class="line">    .name = <span class="stringliteral">"Emma"</span>,</div>
-<div class="line">    .surname = <span class="stringliteral">"Watson"</span>,</div>
+<div class="line">    .name = <span class="stringliteral">"Emma"</span>,</div>
+<div class="line">    .surname = <span class="stringliteral">"Watson"</span>,</div>
 <div class="line">});</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
@@ -204,21 +204,21 @@ Valid Expressions<a class="aui-toc-hash" href="#PropertyPrecomputedTest_Valid_Ex
 <p><b aui-src="aui.core/tests/PropertyPrecomputed.cpp#L90"></b> Any C++ callable evaluating to <code>T</code> can be used as an expression for <code><a class="el" href="structAPropertyPrecomputed.html" title="Readonly property that holds a value computed by an expression.">APropertyPrecomputed</a>&lt;T&gt;</code>. However, to formulate correct expression, some rules must be satisfied.</p>
 <p>Dependency tracking only works on other properties. It is the developer's responsibility to ensure all values referenced in the expression are properties, or, at least, non-property values that wouldn't change or whose changes are not interesting. You definitely can use branching inside the expression, but you must be confident about what are you doing. Generally speaking, use as trivial expressions as possible.</p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
-<div class="line"> <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> surname;</div>
-<div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;]() -&gt; <a class="code hl_class" href="classAString.html">AString</a> {</div>
-<div class="line"> <span class="keywordflow">if</span> (name-&gt;empty()) {</div>
-<div class="line"> <span class="keywordflow">return</span> <span class="stringliteral">"-"</span>;</div>
-<div class="line">        }</div>
-<div class="line"> <span class="keywordflow">if</span> (surname-&gt;empty()) {</div>
-<div class="line"> <span class="keywordflow">return</span> <span class="stringliteral">"-"</span>;</div>
-<div class="line">        }</div>
-<div class="line"> <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname);</div>
-<div class="line">    };</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> surname;</div>
+<div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;]() -&gt; <a class="code hl_class" href="classAString.html">AString</a> {</div>
+<div class="line">        <span class="keywordflow">if</span> (name-&gt;empty()) {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="stringliteral">"-"</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">if</span> (surname-&gt;empty()) {</div>
+<div class="line">            <span class="keywordflow">return</span> <span class="stringliteral">"-"</span>;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname);</div>
+<div class="line">    };</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>In this expression, we have a fast path return if <code>name</code> is empty. </p><div class="fragment"><div class="line">User u = {</div>
-<div class="line">    .name = <span class="stringliteral">"Emma"</span>,</div>
-<div class="line">    .surname = <span class="stringliteral">"Watson"</span>,</div>
+<div class="line">    .name = <span class="stringliteral">"Emma"</span>,</div>
+<div class="line">    .surname = <span class="stringliteral">"Watson"</span>,</div>
 <div class="line">};</div>
 <div class="line"><span class="comment">// trivial: we've accessed all referenced properties</span></div>
 <div class="line">EXPECT_EQ(u.fullName, <span class="stringliteral">"Emma Watson"</span>);</div>
@@ -230,12 +230,12 @@ Valid Expressions<a class="aui-toc-hash" href="#PropertyPrecomputedTest_Valid_Ex
 Copying and moving APropertyPrecomputed<a class="aui-toc-hash" href="#copying-and-moving-apropertyprecomputed" id="copying-and-moving-apropertyprecomputed" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyPrecomputed.cpp#L145"></b> </p><dl class="section warning"><dt>Warning</dt><dd>Despite the underlying value and factory callback are both copy constructible and movable, the <b>copy and move constructor are explicitly deleted</b> to avoid potential object lifetime errors created by the lambda capture and prevent non-intuitive behaviour.</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line">    AProperty&lt;AString&gt; name;</div>
-<div class="line">    AProperty&lt;AString&gt; surname;</div>
-<div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;] { <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname); };</div>
+<div class="line">    AProperty&lt;AString&gt; name;</div>
+<div class="line">    AProperty&lt;AString&gt; surname;</div>
+<div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;] { <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname); };</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>If copy construction of <code><a class="el" href="structAPropertyPrecomputed.html" title="Readonly property that holds a value computed by an expression.">APropertyPrecomputed</a></code> were possible, consider the following code: </p><div class="fragment"><div class="line">User user { .name = <span class="stringliteral">"Hello"</span> };</div>
-<div class="line"><span class="keyword">auto</span> copy = user;             <span class="comment">// WON'T COMPILE</span></div>
+<div class="line"><span class="keyword">auto</span> copy = user;             <span class="comment">// WON'T COMPILE</span></div>
 <div class="line"><span class="keyword">auto</span> moved = std::move(user); <span class="comment">// WON'T COMPILE</span></div>
 </div><!-- fragment --><p> <code>copy</code> has copied factory function of <code>user</code>, which refers to fields of <code>user</code>, not to <code>copy</code>'s fields. Copy construction of a class or struct discards default values of all fields - this is the way <code><a class="el" href="structAPropertyPrecomputed.html" title="Readonly property that holds a value computed by an expression.">APropertyPrecomputed</a></code>'s factory function is set to <a class="el" href="structAPropertyPrecomputed.html" title="Readonly property that holds a value computed by an expression.">APropertyPrecomputed</a>. </p>
 </div><p class="footer-inner">

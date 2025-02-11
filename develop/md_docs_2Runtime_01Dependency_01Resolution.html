@@ -132,11 +132,11 @@ Other platforms (UNIX-like only)<a class="aui-toc-hash" href="#RPATH" id="RPATH"
 <p>On UNIX-like platforms, a special directory hierarchy should be maintained, for both build tree and portable installations (for compatibility reasons), hence <a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a> copies imported shared objects to <code>${CMAKE_BUILD_DIR}/lib</code>.</p>
 <p>These libraries are picked up by targets defined via <a class="el" href="md_docs_2aui__module.html">aui_module</a> and <a class="el" href="md_docs_2aui__executable.html">aui_executable</a> by adjusting <code>RUNPATH</code>/<code>RPATH</code> which is a special field inside executables indicating where to find required shared libraries.</p>
 <div class="fragment"><div class="line">function(_auib_apply_rpath AUI_MODULE_NAME)</div>
-<div class="line">    if (BUILD_SHARED_LIBS AND AUI_PLATFORM_LINUX)</div>
-<div class="line">        set(_rpath "$ORIGIN;$ORIGIN/../lib")</div>
-<div class="line">        set_target_properties(${AUI_MODULE_NAME} PROPERTIES BUILD_RPATH "${_rpath}"</div>
-<div class="line">                INSTALL_RPATH "${_rpath}")</div>
-<div class="line">    endif()</div>
+<div class="line">    if (BUILD_SHARED_LIBS AND AUI_PLATFORM_LINUX)</div>
+<div class="line">        set(_rpath "$ORIGIN;$ORIGIN/../lib")</div>
+<div class="line">        set_target_properties(${AUI_MODULE_NAME} PROPERTIES BUILD_RPATH "${_rpath}"</div>
+<div class="line">                INSTALL_RPATH "${_rpath}")</div>
+<div class="line">    endif()</div>
 <div class="line">endfunction()</div>
 </div><!-- fragment --><p>Additionally, RPATH is populated by compiler with hardcoded absolute paths to the dependencies hence shared object copying might seem redundant when the entire project with all its dependencies are built on the same machine. Since AUI Boot allows usage of precompiled binaries, instead of paying extra cost determining whether the dependencies are built locally or externally it just copies them to the build tree regardless of their origin.</p>
 <h1>
@@ -147,7 +147,7 @@ Install-time shared library resolution<a class="aui-toc-hash" href="#CMAKE_INSTA
 <div class="line">install_dependencies_for aui/test/aui.boot/Tests/b/repo/aui/build/aui/48af8f8e13e479dbffc65d9a15ab1561/lib/libaui.core.so </div>
 <div class="line">aui/test/aui.boot/Tests/b/prefix/zlib/48af8f8e13e479dbffc65d9a15ab1561/lib/libz.so.1</div>
 <div class="line">Resolved[1]: aui/test/aui.boot/Tests/b/prefix/zlib/48af8f8e13e479dbffc65d9a15ab1561/lib/libz.so.1</div>
-<div class="line">install_dependencies_for aui/test/aui.boot/Tests/b/prefix/zlib/48af8f8e13e479dbffc65d9a15ab1561/lib/libz.so.1  </div>
+<div class="line">install_dependencies_for aui/test/aui.boot/Tests/b/prefix/zlib/48af8f8e13e479dbffc65d9a15ab1561/lib/libz.so.1  </div>
 <div class="line">[Installing aui] -- Installing aui.core</div>
 <div class="line">[Installing aui] -- Installing dependencies for aui.core</div>
 <div class="line">[Installing aui] -- Installing: aui/test/aui.boot/Tests/b/prefix/aui/48af8f8e13e479dbffc65d9a15ab1561/lib/libz.so.1</div>

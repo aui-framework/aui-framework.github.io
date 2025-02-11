@@ -37,6 +37,7 @@ var NAVTREE =
     ] ],
     [ "Getting started", null, [
       [ "Getting started with AUI", "md_docs_2Getting_01started_01with_01AUI.html", null ],
+      [ "Examples", "examples.html", null ],
       [ "AUI Boot", "md_docs_2AUI_01Boot.html", null ],
       [ "Writing tests", "md_docs_2Writing_01tests.html", null ],
       [ "Build-time macros", "md_docs_2Macros.html", null ],

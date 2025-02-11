@@ -130,26 +130,26 @@ const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memI
 <div class="textblock"><p>RAII-style file owner for storing temporary data on disk. </p>
 <p>This class represents a type that transparently converts to underlying APath. When <a class="el" href="structAPathOwner.html" title="RAII-style file owner for storing temporary data on disk.">APathOwner</a> is destructed, the pointed file is cleaned up, too, regardless of it's type.</p>
 <p><a class="el" href="structAPathOwner.html" title="RAII-style file owner for storing temporary data on disk.">APathOwner</a> is designed to simplify management of (temporary) files on disk, ensuring cleanup of the pointed file in RAII (Resource Acquisition Is Initialization) style.</p>
-<div class="fragment"><div class="line">    APathOwner tempFilePath(<a class="code hl_function" href="classAPath.html#a611d0b8dc23d86e11cf240dbb60869f6">APath::nextRandomTemporary</a>());</div>
-<div class="line">    {</div>
-<div class="line">        AFileOutputStream tempFileOs(tempFilePath);</div>
-<div class="line"> <span class="keywordtype">size_t</span> downloadedBytes = 0;</div>
-<div class="line">        *ACurl::Builder(std::move(downloadUrl))</div>
-<div class="line">             .withWriteCallback([&amp;](ACurl&amp; c, AByteBufferView toWrite) {</div>
-<div class="line">                 tempFileOs &lt;&lt; toWrite;</div>
-<div class="line">                 downloadedBytes += toWrite.size();</div>
-<div class="line"> <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> PRECISION = 100;</div>
-<div class="line"> <span class="comment">// NOLINTNEXTLINE(*-integer-division)</span></div>
-<div class="line"> <a class="code hl_function" href="classAUpdater.html#a2d22681af3de65f3456a66a264aca44a">reportDownloadedPercentage</a>(<span class="keywordtype">float</span>(PRECISION * downloadedBytes / <a class="code hl_typedef" href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">c</a>.getContentLength()) / <span class="keywordtype">float</span>(PRECISION));</div>
-<div class="line"> <span class="keywordflow">return</span> toWrite.size();</div>
-<div class="line">             })</div>
-<div class="line">             .runAsync();</div>
-<div class="line">    }</div>
-<div class="line"> <a class="code hl_function" href="group__io.html#gad661cb00e1f0e45dab52f4d25474b361">aui::archive::zip::read</a>(</div>
-<div class="line">        AFileInputStream(tempFilePath), aui::archive::ExtractTo {</div>
-<div class="line">          .prefix = unpackedUpdateDir,</div>
-<div class="line">          .pathProjection = &amp;<a class="code hl_function" href="classAPath.html#adbaff4e13862430cad411daa2ebdc2cb">APath::withoutUppermostFolder</a>,</div>
-<div class="line">        });</div>
+<div class="fragment"><div class="line">    APathOwner tempFilePath(<a class="code hl_function" href="classAPath.html#a611d0b8dc23d86e11cf240dbb60869f6">APath::nextRandomTemporary</a>());</div>
+<div class="line">    {</div>
+<div class="line">        AFileOutputStream tempFileOs(tempFilePath);</div>
+<div class="line">        <span class="keywordtype">size_t</span> downloadedBytes = 0;</div>
+<div class="line">        *ACurl::Builder(std::move(downloadUrl))</div>
+<div class="line">             .withWriteCallback([&amp;](ACurl&amp; c, AByteBufferView toWrite) {</div>
+<div class="line">                 tempFileOs &lt;&lt; toWrite;</div>
+<div class="line">                 downloadedBytes += toWrite.size();</div>
+<div class="line">                 <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> PRECISION = 100;</div>
+<div class="line">                 <span class="comment">// NOLINTNEXTLINE(*-integer-division)</span></div>
+<div class="line">                 <a class="code hl_function" href="classAUpdater.html#a2d22681af3de65f3456a66a264aca44a">reportDownloadedPercentage</a>(<span class="keywordtype">float</span>(PRECISION * downloadedBytes / <a class="code hl_typedef" href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">c</a>.getContentLength()) / <span class="keywordtype">float</span>(PRECISION));</div>
+<div class="line">                 <span class="keywordflow">return</span> toWrite.size();</div>
+<div class="line">             })</div>
+<div class="line">             .runAsync();</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code hl_function" href="group__io.html#gad661cb00e1f0e45dab52f4d25474b361">aui::archive::zip::read</a>(</div>
+<div class="line">        AFileInputStream(tempFilePath), aui::archive::ExtractTo {</div>
+<div class="line">          .prefix = unpackedUpdateDir,</div>
+<div class="line">          .pathProjection = &amp;<a class="code hl_function" href="classAPath.html#adbaff4e13862430cad411daa2ebdc2cb">APath::withoutUppermostFolder</a>,</div>
+<div class="line">        });</div>
 </div><!-- fragment --> <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAPath.html#a611d0b8dc23d86e11cf240dbb60869f6" title="Creates a path to non-existent random file in system temp directory.">APath::nextRandomTemporary()</a> </dd></dl>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their

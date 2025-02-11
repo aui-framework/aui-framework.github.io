@@ -116,15 +116,15 @@ Basic hello world<a class="aui-toc-hash" href="#basic-hello-world" id="basic-hel
 <div class="line"> </div>
 <div class="line"># Use AUI.Boot</div>
 <div class="line">file(</div>
-<div class="line">    DOWNLOAD </div>
-<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake </div>
-<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
+<div class="line">    DOWNLOAD </div>
+<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake </div>
+<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line">include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line"> </div>
 <div class="line"># link AUI</div>
 <div class="line">auib_import(</div>
-<div class="line">    AUI https://github.com/aui-framework/aui </div>
-<div class="line">    COMPONENTS core)</div>
+<div class="line">    AUI https://github.com/aui-framework/aui </div>
+<div class="line">    COMPONENTS core)</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line"># Create the executable. This function automatically links all sources from the src/ folder, creates CMake target and</div>
@@ -140,8 +140,8 @@ Basic hello world<a class="aui-toc-hash" href="#basic-hello-world" id="basic-hel
 <div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">"MyApp"</span>;</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
-<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"Hello world!"</span>;</div>
-<div class="line"> <span class="keywordflow">return</span> 0;</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"Hello world!"</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:69</div></div>
 </div><!-- fragment --><p>AUI.Boot is a CMake script which allows you to manage dependencies. You can specify link to a repository to add an installable (and findable by CMake) dependency. It compiles and links all required dependencies to free you from dependency management and focus you right to development of your application.</p>
@@ -169,15 +169,15 @@ Introduction to UI building<a class="aui-toc-hash" href="#introduction-to-ui-bui
 <div class="line"> </div>
 <div class="line"># Use AUI.Boot</div>
 <div class="line">file(</div>
-<div class="line">    DOWNLOAD </div>
-<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake </div>
-<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
+<div class="line">    DOWNLOAD </div>
+<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake </div>
+<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line">include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line"> </div>
 <div class="line"># link AUI</div>
 <div class="line">auib_import(</div>
-<div class="line">    AUI https://github.com/aui-framework/aui </div>
-<div class="line">    COMPONENTS core views)</div>
+<div class="line">    AUI https://github.com/aui-framework/aui </div>
+<div class="line">    COMPONENTS core views)</div>
 <div class="line"> </div>
 <div class="line"># Create the executable. This function automatically links all sources from the src/ folder, creates CMake target and</div>
 <div class="line"># places the resulting executable to bin/ folder.</div>
@@ -194,20 +194,20 @@ Introduction to UI building<a class="aui-toc-hash" href="#introduction-to-ui-bui
 <div class="line"> </div>
 <div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    MyWindow(): <a class="code hl_class" href="classAWindow.html">AWindow</a>(<span class="stringliteral">"Hello world"</span>, 300_dp, 200_dp)</div>
-<div class="line">    {</div>
-<div class="line"> <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(</div>
-<div class="line">            Stacked {</div>
-<div class="line">                _new&lt;ALabel&gt;(<span class="stringliteral">"Hello world!"</span>)</div>
-<div class="line">            }</div>
-<div class="line">        );</div>
-<div class="line">    }</div>
+<div class="line">    MyWindow(): <a class="code hl_class" href="classAWindow.html">AWindow</a>(<span class="stringliteral">"Hello world"</span>, 300_dp, 200_dp)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(</div>
+<div class="line">            Stacked {</div>
+<div class="line">                _new&lt;ALabel&gt;(<span class="stringliteral">"Hello world!"</span>)</div>
+<div class="line">            }</div>
+<div class="line">        );</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
-<div class="line">    _new&lt;MyWindow&gt;()-&gt;show();</div>
+<div class="line">    _new&lt;MyWindow&gt;()-&gt;show();</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordflow">return</span> 0;</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassAViewContainer_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainer::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div><div class="ttdef"><b>Definition</b> AViewContainerBase.cpp:515</div></div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
@@ -232,7 +232,8 @@ Introduction to UI building<a class="aui-toc-hash" href="#introduction-to-ui-bui
 <img alt="" src="Screenshot_20210408_024201.jpg"/>
 </div>
 <p>See <a class="el" href="group__layout__managers.html">layout managers</a> for more info about layout managers.</p>
-<p>See <a class="el" href="group__ass.html">ASS</a> for more info about styling. </p>
+<p>See <a class="el" href="group__ass.html">ASS</a> for more info about styling.</p>
+<p>See <a class="el" href="examples.html">Examples</a> for examples. </p>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

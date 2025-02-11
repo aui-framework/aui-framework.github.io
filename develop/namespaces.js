@@ -4,6 +4,10 @@ var namespaces =
     [ "AHash", "namespaceAHash.html", null ],
     [ "APlatform", "namespaceAPlatform.html", null ],
     [ "aui", null, [
+      [ "audio", null, [
+        [ "platform", "namespaceaui_1_1audio_1_1platform.html", null ],
+        [ "ABadFormatException", "classaui_1_1audio_1_1ABadFormatException.html", null ]
+      ] ],
       [ "parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
       [ "assert_not_used_when_null", "classaui_1_1assert__not__used__when__null.html", null ],
       [ "atomic_lazy", "structaui_1_1atomic__lazy.html", null ],

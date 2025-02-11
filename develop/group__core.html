@@ -100,6 +100,7 @@ $(function(){initNavTree('group__core.html',''); initResizable(true); });
 <div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
 <a href="#groups">Topics</a> |
 <a href="#nested-classes">Classes</a> |
+<a href="#define-members">Macros</a> |
 <a href="#typedef-members">Typedefs</a> |
 <a href="#var-members">Variables</a> </div>
 <div class="headertitle"><div class="title">aui::core</div></div>
@@ -327,6 +328,12 @@ Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
+Macros<a class="aui-toc-hash" href="#define-members" id="define-members" name="define-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
+<tr class="memitem:gad9bfc0a6304376bef420ce99fbe17e85" id="r_gad9bfc0a6304376bef420ce99fbe17e85"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="#gad9bfc0a6304376bef420ce99fbe17e85">AUI_ENUM_FLAG</a>(name)</td></tr>
+<tr class="memdesc:gad9bfc0a6304376bef420ce99fbe17e85"><td class="mdescLeft"> </td><td class="mdescRight">Make a bitfield-style enum class.  <br/></td></tr>
+<tr class="separator:gad9bfc0a6304376bef420ce99fbe17e85"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">
 Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" name="typedef-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
 <tr class="memitem:ga389f408d67d62017fb38ee1350384275" id="r_ga389f408d67d62017fb38ee1350384275"><td class="memTemplParams" colspan="2"><a id="ga389f408d67d62017fb38ee1350384275" name="ga389f408d67d62017fb38ee1350384275"></a>
 template&lt;typename T&gt; </td></tr>
@@ -341,6 +348,41 @@ Variables<a class="aui-toc-hash" href="#var-members" id="var-members" name="var-
 <tr class="memdesc:ga177fb99c6b6cf725dc64202f891678cf"><td class="mdescLeft"> </td><td class="mdescRight">constexpr std::array of all possible enum values is the order they've been passed to AUI_ENUM_VALUES.  <br/></td></tr>
 <tr class="separator:ga177fb99c6b6cf725dc64202f891678cf"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation<a class="aui-toc-hash" href="#gad9bfc0a6304376bef420ce99fbe17e85" id="gad9bfc0a6304376bef420ce99fbe17e85" name="gad9bfc0a6304376bef420ce99fbe17e85" style="color: var(--fragment-comment) !important">#</a></h2>
+
+<h2 class="memtitle"><span class="permalink">◆ </span>AUI_ENUM_FLAG<a class="aui-toc-hash" href="#◆ aui_enum_flag" id="◆ aui_enum_flag" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define AUI_ENUM_FLAG</td>
+<td>(</td>
+<td class="paramtype"></td> <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                            <span class="keyword">enum class</span> name: int; \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator|(name a, name b) {<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) | <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator&amp;(name a, name b) {<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) &amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator^(name a, name b) {<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) ^ <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator|=(name&amp; a, name b) {<span class="keywordflow">return</span> a = <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) | <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator&amp;=(name&amp; a, name b) {<span class="keywordflow">return</span> a = <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) &amp; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator^=(name&amp; a, name b) {<span class="keywordflow">return</span> a = <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) ^ <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> name operator~(<span class="keyword">const</span> name&amp; a) {<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(~static_cast&lt;int&gt;(a));} \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="group__ass__selectors.html#ga8103eb626e9bfdf7a9fa670ef9422cc4">operator!</a>(<span class="keyword">const</span> name&amp; a) {<span class="keywordflow">return</span> a == <span class="keyword">static_cast&lt;</span>name<span class="keyword">&gt;</span>(0);}                                     \</div>
+<div class="line">                                                                   \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&amp;&amp;(<span class="keyword">const</span> name&amp; a, <span class="keywordtype">bool</span> v) {<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) &amp;&amp; v;}                                     \</div>
+<div class="line">                            <span class="keyword">constexpr</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator||(<span class="keyword">const</span> name&amp; a, <span class="keywordtype">bool</span> v) {<span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a) || v;}                                     \</div>
+<div class="line">\</div>
+<div class="line">                            <span class="keyword">enum class</span> name: <span class="keywordtype">int</span></div>
+<div class="ttc" id="agroup__ass__selectors_html_ga8103eb626e9bfdf7a9fa670ef9422cc4"><div class="ttname"><a href="group__ass__selectors.html#ga8103eb626e9bfdf7a9fa670ef9422cc4">ass::operator!</a></div><div class="ttdeci">NotSelector&lt; L &gt; operator!(L l)</div><div class="ttdoc">Makes a logical "NOT" selector.</div><div class="ttdef"><b>Definition</b> NotSelector.h:52</div></div>
+</div><!-- fragment -->
+<p>Make a bitfield-style enum class. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2Json_2Conversion_8h-example.html#a2">/home/runner/work/aui/aui/aui.json/src/AUI/Json/Conversion.h</a>, and <a class="el" href="examples_2app_2minesweeper_2src_2FieldCell_8h-example.html#a0">examples/app/minesweeper/src/FieldCell.h</a>.</dd>
+</dl>
+</div>
+</div>
 <h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#ga537f82748636c62d35a8ec4ed38a0fe0" id="ga537f82748636c62d35a8ec4ed38a0fe0" name="ga537f82748636c62d35a8ec4ed38a0fe0" style="color: var(--fragment-comment) !important">#</a></h2>
 
 <h2 class="memtitle"><span class="permalink">◆ </span>args()<a class="aui-toc-hash" href="#◆ args()" id="◆ args()" style="color: var(--fragment-comment) !important">#</a></h2>
@@ -364,7 +406,7 @@ Variables<a class="aui-toc-hash" href="#var-members" id="var-members" name="var-
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Arguments passed to program. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2Json_2Conversion_8h-example.html#a4">/home/runner/work/aui/aui/aui.json/src/AUI/Json/Conversion.h</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2Json_2Conversion_8h-example.html#a5">/home/runner/work/aui/aui/aui.json/src/AUI/Json/Conversion.h</a>.</dd>
 </dl>
 </div>
 </div>
@@ -648,7 +690,7 @@ template&lt;typename LContainer, typename RContainer&gt; </div>
 </div><div class="memdoc">
 <p>String literal format caller (see example) (<a href="https://fmt.dev/latest/syntax.html">https://fmt.dev/latest/syntax.html</a>) </p>
 <div class="fragment"><div class="line"><span class="stringliteral">"Hello {}!"</span>_format(<span class="stringliteral">"world"</span>) <span class="comment">// -&gt; "Hello world!"</span></div>
-<div class="line"><span class="stringliteral">"test {:.2}"</span>_format(1.2f)   <span class="comment">// -&gt; "test 1.2"</span></div>
+<div class="line"><span class="stringliteral">"test {:.2}"</span>_format(1.2f)   <span class="comment">// -&gt; "test 1.2"</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -746,9 +788,9 @@ template&lt;typename enum_t&gt; </div>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= []&lt;<span class="keyword">auto</span>... values&gt;(<span class="keyword">typename</span> <a class="code hl_class" href="classAEnumerate.html">AEnumerate&lt;enum_t&gt;::template</a> Values&lt;values...&gt;) {</div>
-<div class="line"> <span class="keyword">constexpr</span> enum_t ITEMS[] = {values...};</div>
-<div class="line"> <span class="keywordflow">return</span> std::to_array(ITEMS);</div>
-<div class="line">    }(<a class="code hl_struct" href="structAEnumerateAllValues.html">AEnumerateAllValues&lt;enum_t&gt;::get</a>())</div>
+<div class="line">        <span class="keyword">constexpr</span> enum_t ITEMS[] = {values...};</div>
+<div class="line">        <span class="keywordflow">return</span> std::to_array(ITEMS);</div>
+<div class="line">    }(<a class="code hl_struct" href="structAEnumerateAllValues.html">AEnumerateAllValues&lt;enum_t&gt;::get</a>())</div>
 <div class="ttc" id="aclassAEnumerate_html"><div class="ttname"><a href="classAEnumerate.html">AEnumerate</a></div><div class="ttdoc">Enum trait to transform enum to name, name to enum, list all enums and vise versa.</div><div class="ttdef"><b>Definition</b> AEnumerate.h:79</div></div>
 <div class="ttc" id="astructAEnumerateAllValues_html"><div class="ttname"><a href="structAEnumerateAllValues.html">AEnumerateAllValues</a></div><div class="ttdef"><b>Definition</b> AEnumerate.h:159</div></div>
 </div><!-- fragment -->
@@ -761,7 +803,7 @@ template&lt;typename enum_t&gt; </div>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#groups">Topics</a></h1><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#typedef-members">Typedefs</a></h1><h1><a href="#var-members">Variables</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#groups">Topics</a></h1><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#define-members">Macros</a></h1><h1><a href="#typedef-members">Typedefs</a></h1><h1><a href="#var-members">Variables</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 </div></body>

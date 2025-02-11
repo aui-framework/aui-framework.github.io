@@ -245,8 +245,8 @@ class AFuture&lt; T &gt;</div><p>Represents a value that will be available at so
 <p>AFuture is used as a result for asynchronous functions.</p>
 <p><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is returned by <a class="el" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> keyword:</p>
 <div class="fragment"><div class="line">AFuture&lt;int&gt; theFuture = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
-<div class="line"> <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
-<div class="line"> <span class="keywordflow">return</span> 123;</div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
+<div class="line">  <span class="keywordflow">return</span> 123;</div>
 <div class="line">};</div>
 <div class="line">...</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// waits for the task, outputs 123</span></div>
@@ -257,8 +257,8 @@ class AFuture&lt; T &gt;</div><p>Represents a value that will be available at so
 </li>
 <li>Use stackless coroutines. C++20 introduced coroutines language feature. That is, you can use co_await operator to <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> value: <div class="fragment"><div class="line">AFuture&lt;int&gt; longOperation();</div>
 <div class="line">AFuture&lt;int&gt; myFunction() {</div>
-<div class="line"> <span class="keywordtype">int</span> resultOfLongOperation = <span class="keyword">co_await</span> longOperation();</div>
-<div class="line"> <span class="keywordflow">return</span> resultOfLongOperation + 1;</div>
+<div class="line">  <span class="keywordtype">int</span> resultOfLongOperation = <span class="keyword">co_await</span> longOperation();</div>
+<div class="line">  <span class="keywordflow">return</span> resultOfLongOperation + 1;</div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
 <li>Use <a class="el" href="classAComplexFutureOperation.html" title="Helper class to construct AFuture values.">AComplexFutureOperation</a>. This class creates <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> (root <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>) and forwards all exceptions to the root <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>. This method is not recommended for trivial usecases, as it requires you to extensivly youse onSuccess method in order to get and process <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> result, leading your code to hardly maintainable spaghetti.</li>
@@ -268,8 +268,8 @@ class AFuture&lt; T &gt;</div><p>Represents a value that will be available at so
 <div class="line">@code{cpp}</div>
 <div class="line"><a class="code hl_class" href="classAFuture.html">AFuture&lt;int&gt;</a> theFuture;</div>
 <div class="line"><a class="code hl_class" href="classAThread.html">AThread</a> t([=] {</div>
-<div class="line"> <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
-<div class="line">  theFuture.<a class="code hl_function" href="#aa640a25cdc678b93f8d764a83013841f">supplyValue</a>(123);</div>
+<div class="line">  <a class="code hl_function" href="classAThread.html#a702e3769792fb7cda5f7960b7360ac9b">AThread::sleep</a>(1000); <span class="comment">// long operation</span></div>
+<div class="line">  theFuture.<a class="code hl_function" href="#aa640a25cdc678b93f8d764a83013841f">supplyValue</a>(123);</div>
 <div class="line">});</div>
 <div class="line"><a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>.start();</div>
 <div class="line">cout &lt;&lt; *theFuture; <span class="comment">// 123</span></div>
@@ -316,7 +316,7 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 <p>onError does not expand <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
 <dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
 <div class="line">private:</div>
-<div class="line"> <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
+<div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
 <div class="line">...</div>
 <div class="line"> </div>
 <div class="line">mAsync &lt;&lt; functionReturningFuture().onSuccess(...); <span class="comment">// or onError</span></div>
@@ -354,7 +354,7 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 <p>onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
 <dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
 <div class="line">private:</div>
-<div class="line"> <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
+<div class="line">  <a class="code hl_class" href="classAAsyncHolder.html">AAsyncHolder</a> mAsync;</div>
 <div class="line">...</div>
 <div class="line"> </div>
 <div class="line">mAsync &lt;&lt; functionReturningFuture().onSuccess(...); <span class="comment">// or onError</span></div>

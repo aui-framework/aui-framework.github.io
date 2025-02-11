@@ -35,6 +35,7 @@ var menudata={children:[
 {text:"aui_module",url:"md_docs_2aui__module.html"}]}]},
 {text:"Getting started",url:"usergroup2.html",children:[
 {text:"Getting started with AUI",url:"md_docs_2Getting_01started_01with_01AUI.html"},
+{text:"Examples",url:"examples.html"},
 {text:"AUI Boot",url:"md_docs_2AUI_01Boot.html"},
 {text:"Writing tests",url:"md_docs_2Writing_01tests.html"},
 {text:"Build-time macros",url:"md_docs_2Macros.html"},

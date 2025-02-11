@@ -16,7 +16,7 @@ var searchData=
   ['variant_13',['Variant',['../structaui_1_1dbus_1_1Variant.html',1,'aui::dbus']]],
   ['vectorization_20using_20inkscape_14',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md155',1,'']]],
   ['vendor_15',['VENDOR',['../md_docs_2aui__app.html#autotoc_md93',1,'']]],
-  ['version_16',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md48',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md96',1,'VERSION']]],
+  ['version_16',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md48',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md95',1,'VERSION']]],
   ['version_17',['Parsing version',['../structaui_1_1updater_1_1Semver.html#VersionTest_Parsing_version',1,'']]],
   ['vertex_18',['Vertex',['../structOpenGLPrerenderedString_1_1Vertex.html',1,'OpenGLPrerenderedString']]],
   ['vertexbuffer_19',['VertexBuffer',['../classgl_1_1VertexBuffer.html',1,'gl']]],
@@ -70,9 +70,11 @@ var searchData=
   ['viewhierarchytreemodel_67',['ViewHierarchyTreeModel',['../classViewHierarchyTreeModel.html',1,'']]],
   ['viewpropertiesview_68',['ViewPropertiesView',['../classViewPropertiesView.html',1,'']]],
   ['views_69',['Views',['../group__useful__views.html',1,'Views'],['../md_docs_2UI_01Building_01Overview.html#autotoc_md158',1,'Views']]],
-  ['viscousfluid_70',['ViscousFluid',['../classaui_1_1animation__curves_1_1ViscousFluid.html',1,'aui::animation_curves']]],
-  ['visibility_71',['visibility',['../classAView.html#ac6390b605d04ab9f013f1a6cae295e23',1,'AView']]],
-  ['visible_72',['VISIBLE',['../group__ass__properties.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'AOverflow.h']]],
-  ['visitheader_73',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
-  ['visitsviewrecursive_74',['visitsViewRecursive',['../classAViewContainerBase.html#a4d25bee475e6413e3d365570f046cc4c',1,'AViewContainerBase']]]
+  ['views_20example_70',['Views Example',['../example_views_example.html',1,'']]],
+  ['viscousfluid_71',['ViscousFluid',['../classaui_1_1animation__curves_1_1ViscousFluid.html',1,'aui::animation_curves']]],
+  ['visibility_72',['visibility',['../classAView.html#ac6390b605d04ab9f013f1a6cae295e23',1,'AView']]],
+  ['visible_73',['VISIBLE',['../group__ass__properties.html#gga0b5c15e7f44eba2c0eb1705539014892a510222cdd4bc0b765486ba35b2775e54',1,'AOverflow.h']]],
+  ['visitheader_74',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
+  ['visitsviewrecursive_75',['visitsViewRecursive',['../classAViewContainerBase.html#a4d25bee475e6413e3d365570f046cc4c',1,'AViewContainerBase']]],
+  ['volume_76',['volume',['../classIAudioPlayer.html#af70dd41b83f47eb594ecd0449c1468c5',1,'IAudioPlayer']]]
 ];

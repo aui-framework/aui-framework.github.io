@@ -106,13 +106,10 @@ $(function(){initNavTree('group__updater.html',''); initResizable(true); });
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L128"></b></p>
 <p>This module is purposed for delivering updates to your end users on distribution methods that do not support that by themselves (i.e., occasional Windows installers, portables for Windows and Linux, macOS app bundles downloaded from your website).</p>
 <p><code>aui.updater</code> module expects your program to be installed to user's directory (i.e., updating does not require admin priveleges). If that's not your case, you'll need to update your <a class="el" href="md_docs_2Packaging_01Your_01App.html#INNOSETUP">installer configuration</a> to install to user's directory (i.e., in <code>AppData</code>).</p>
-<dl class="section note"><dt>Note</dt><dd>Check out our <a href="https://github.com/aui-framework/example_app">app template</a> for a GitHub-hosted app template with auto update implemented. <div class="image">
-<img alt="" src="afljskfllkaf.gif"/>
-</div>
-</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Check out our <a class="el" href="example_app_template.html">Full App Template ⚡</a> for a GitHub-hosted app template with auto update implemented.</dd></dl>
 <h1>
 Supported platforms<a class="aui-toc-hash" href="#supported-platforms" id="supported-platforms" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L145"></b> <code>aui::updater</code> supports the following platforms:</p><ul>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L143"></b> <code>aui::updater</code> supports the following platforms:</p><ul>
 <li><b>Windows</b> - <a class="el" href="md_docs_2Packaging_01Your_01App.html#PORTABLE_WINDOWS">portables</a> only, installers to user's directory only (<a class="el" href="md_docs_2Packaging_01Your_01App.html#INNOSETUP">Inno Setup</a>)</li>
 <li><b>Linux</b> - portables only</li>
 </ul>
@@ -120,20 +117,20 @@ Supported platforms<a class="aui-toc-hash" href="#supported-platforms" id="suppo
 <p>Updating process requires the initial application running instance to be stopped to replace its files with newer ones. Additionally, the updater process starts the newer version of the application after replacing the files (applying/deploying an update). To minimize downtime for end-users, the replacement should be seamless and quick and thus the deployment process just copies newer files (overwriting old ones), it does not involve network operations.</p>
 <h1>
 Getting started<a class="aui-toc-hash" href="#getting-started" id="getting-started" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L159"></b></p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L157"></b></p>
 <p><code><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a></code> lives inside entrypoint of your application. It needs you to pass program arguments. It might decide to terminate process execution via std::exit. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyUpdater : <span class="keyword">public</span> <a class="code hl_class" href="classAUpdater.html">AUpdater</a> {</div>
 <div class="line"><span class="keyword">protected</span>:</div>
-<div class="line"> <a class="code hl_class" href="classAFuture.html">AFuture&lt;void&gt;</a> <a class="code hl_function" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">checkForUpdatesImpl</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> { <span class="comment">/* stub */</span> }; }</div>
-<div class="line">    AFuture&lt;void&gt; <a class="code hl_function" href="classAUpdater.html#a3727ff4ff2c6c907c13ccf216a3c4d2f">downloadUpdateImpl</a>(<span class="keyword">const</span> APath&amp; unpackedUpdateDir)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> { <span class="comment">/* stub */</span> }; }</div>
+<div class="line">    <a class="code hl_class" href="classAFuture.html">AFuture&lt;void&gt;</a> <a class="code hl_function" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">checkForUpdatesImpl</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> { <span class="comment">/* stub */</span> }; }</div>
+<div class="line">    AFuture&lt;void&gt; <a class="code hl_function" href="classAUpdater.html#a3727ff4ff2c6c907c13ccf216a3c4d2f">downloadUpdateImpl</a>(<span class="keyword">const</span> APath&amp; unpackedUpdateDir)<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> { <span class="comment">/* stub */</span> }; }</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
-<div class="line"> <span class="keyword">auto</span> updater = _new&lt;MyUpdater&gt;();</div>
-<div class="line">    updater-&gt;handleStartup(args);</div>
+<div class="line">    <span class="keyword">auto</span> updater = _new&lt;MyUpdater&gt;();</div>
+<div class="line">    updater-&gt;handleStartup(args);</div>
 <div class="line"> </div>
-<div class="line"> <span class="comment">// your program routines (i.e., open a window)</span></div>
-<div class="line">    _new&lt;MainWindow&gt;(updater)-&gt;show();</div>
-<div class="line"> <span class="keywordflow">return</span> 0;</div>
+<div class="line">    <span class="comment">// your program routines (i.e., open a window)</span></div>
+<div class="line">    _new&lt;MainWindow&gt;(updater)-&gt;show();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that will be available at some point in the future.</div><div class="ttdef"><b>Definition</b> AFuture.h:620</div></div>
 <div class="ttc" id="aclassAUpdater_html"><div class="ttname"><a href="classAUpdater.html">AUpdater</a></div><div class="ttdoc">Updater class.</div><div class="ttdef"><b>Definition</b> AUpdater.h:29</div></div>
@@ -144,7 +141,7 @@ Getting started<a class="aui-toc-hash" href="#getting-started" id="getting-start
 </div><!-- fragment --><p>You can pass updater instance to your window (as shown in the example) and display update information from <code><a class="el" href="classAUpdater.html#a1e6e8f3dcd758c1aa6d327102ab46a71" title="State of the updater.">AUpdater::status</a></code> and perform the update when requested.</p>
 <h1>
 Observing update progress<a class="aui-toc-hash" href="#observing-update-progress" id="observing-update-progress" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L192"></b></p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L190"></b></p>
 <p>Status of the <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> to observe from outside, i.e., by UI.</p>
 <p><code>status</code> is updated in UI thread only.</p>
 <p><code>status</code> is designed in such a way the user can use their own custom status types or any of predefined ones:</p><ul>
@@ -157,33 +154,33 @@ Observing update progress<a class="aui-toc-hash" href="#observing-update-progres
 <p>These statuses might be set by <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> itself.</p>
 <p><b aui-src="aui.updater/tests/UpdaterStatusTest.cpp#L61"></b></p>
 <p>Typical observer of status is a UI projection displaying its value. You can even display controls in it: </p><div class="fragment"><div class="line">CustomLayout {} &amp; mUpdater-&gt;status.readProjected([&amp;updater = mUpdater](<span class="keyword">const</span> std::any&amp; status) -&gt; <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> {</div>
-<div class="line"> <span class="keywordflow">if</span> (std::any_cast&lt;AUpdater::StatusIdle&gt;(&amp;status)) {</div>
-<div class="line"> <span class="keywordflow">return</span> _new&lt;AButton&gt;(<span class="stringliteral">"Check for updates"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(updater)::checkForUpdates);</div>
-<div class="line">    }</div>
-<div class="line"> <span class="keywordflow">if</span> (std::any_cast&lt;AUpdater::StatusCheckingForUpdates&gt;(&amp;status)) {</div>
-<div class="line"> <span class="keywordflow">return</span> Label { <span class="stringliteral">"Checking for updates..."</span> };</div>
-<div class="line">    }</div>
-<div class="line"> <span class="keywordflow">if</span> (<span class="keyword">auto</span> downloading = std::any_cast&lt;AUpdater::StatusDownloading&gt;(&amp;status)) {</div>
-<div class="line"> <span class="keywordflow">return</span> Vertical {</div>
-<div class="line">            Label { <span class="stringliteral">"Downloading..."</span> },</div>
-<div class="line">            _new&lt;AProgressBar&gt;() &amp; downloading-&gt;progress,</div>
-<div class="line">        };</div>
-<div class="line">    }</div>
-<div class="line"> <span class="keywordflow">if</span> (std::any_cast&lt;AUpdater::StatusWaitingForApplyAndRestart&gt;(&amp;status)) {</div>
-<div class="line"> <span class="keywordflow">return</span> _new&lt;AButton&gt;(<span class="stringliteral">"Apply update and restart"</span>)</div>
-<div class="line">            .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(updater)::applyUpdateAndRestart);</div>
-<div class="line">    }</div>
-<div class="line"> <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line">    <span class="keywordflow">if</span> (std::any_cast&lt;AUpdater::StatusIdle&gt;(&amp;status)) {</div>
+<div class="line">        <span class="keywordflow">return</span> _new&lt;AButton&gt;(<span class="stringliteral">"Check for updates"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(updater)::checkForUpdates);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (std::any_cast&lt;AUpdater::StatusCheckingForUpdates&gt;(&amp;status)) {</div>
+<div class="line">        <span class="keywordflow">return</span> Label { <span class="stringliteral">"Checking for updates..."</span> };</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> downloading = std::any_cast&lt;AUpdater::StatusDownloading&gt;(&amp;status)) {</div>
+<div class="line">        <span class="keywordflow">return</span> Vertical {</div>
+<div class="line">            Label { <span class="stringliteral">"Downloading..."</span> },</div>
+<div class="line">            _new&lt;AProgressBar&gt;() &amp; downloading-&gt;progress,</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (std::any_cast&lt;AUpdater::StatusWaitingForApplyAndRestart&gt;(&amp;status)) {</div>
+<div class="line">        <span class="keywordflow">return</span> _new&lt;AButton&gt;(<span class="stringliteral">"Apply update and restart"</span>)</div>
+<div class="line">            .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(updater)::applyUpdateAndRestart);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line">}),</div>
 <div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:900</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
 </div><!-- fragment --> <h1>
 Update process<a class="aui-toc-hash" href="#update-process" id="update-process" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L196"></b></p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L194"></b></p>
 <h2>
 Checking for updates<a class="aui-toc-hash" href="#checking-for-updates" id="checking-for-updates" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L198"></b></p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L196"></b></p>
 <p><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> expects <a class="el" href="classAUpdater.html#ad0df1b1eaa58c79f7be6b3b2d4b341f3">AUpdater::checkForUpdates</a> to be called to check for updates. It can be called once per some period of time. It calls user-defined <a class="el" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">AUpdater::checkForUpdatesImpl</a> to perform an update checking.</p>
 <p>The update steps are reported by changing <code><a class="el" href="classAUpdater.html#a1e6e8f3dcd758c1aa6d327102ab46a71" title="State of the updater.">AUpdater::status</a></code> property.</p>
 <div class="mscgraph">
@@ -204,7 +201,7 @@ Checking for updates<a class="aui-toc-hash" href="#checking-for-updates" id="che
 <p>You might want to store update check results (i.e., download url) in your implementation of <a class="el" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">AUpdater::checkForUpdatesImpl</a> so your <a class="el" href="classAUpdater.html#a3727ff4ff2c6c907c13ccf216a3c4d2f">AUpdater::downloadUpdateImpl</a> might reuse this information.</p>
 <h2>
 Downloading the update<a class="aui-toc-hash" href="#downloading-the-update" id="downloading-the-update" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L235"></b></p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L233"></b></p>
 <p>When an update is found, your app should call <a class="el" href="classAUpdater.html#adeb17ffdf5f26b2df85b0b95e56e05e5">AUpdater::downloadUpdate</a> to download and unpack the update. It is up to you to decide when to download an update. If you wish, you can call <a class="el" href="classAUpdater.html#adeb17ffdf5f26b2df85b0b95e56e05e5">AUpdater::downloadUpdate</a> in <a class="el" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">AUpdater::checkForUpdatesImpl</a> to proceed to download process right after update was found (see <a class="el" href="#UPDATER_WORKFLOWS">Updater workflows</a> for more information about update workflow decisions). It calls user-defined <a class="el" href="classAUpdater.html#a3727ff4ff2c6c907c13ccf216a3c4d2f">AUpdater::downloadUpdateImpl</a> which might choose to call default <code><a class="el" href="classAUpdater.html#ae1db715d36c366c823542785e9b4a8a1" title="Typical download and unpack implementation.">AUpdater::downloadAndUnpack</a>(&lt;YOUR DOWNLOAD URL&gt;, unpackedUpdateDir)</code>.</p>
 <div class="mscgraph">
 <img alt="msc_inline_mscgraph_2" border="0" src="msc_inline_mscgraph_2.svg" usemap="#msc_inline_mscgraph_2.map"/>
@@ -217,7 +214,7 @@ Downloading the update<a class="aui-toc-hash" href="#downloading-the-update" id=
 </div>
 <h2>
 Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deploying)-the-update" id="applying-(deploying)-the-update" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L256"></b></p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L254"></b></p>
 <p>At this moment, <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> waits <a class="el" href="classAUpdater.html#ac0945a7562305a181f3481cb8f170717">AUpdater::applyUpdateAndRestart</a> to be called. When <a class="el" href="classAUpdater.html#ac0945a7562305a181f3481cb8f170717">AUpdater::applyUpdateAndRestart</a> is called (i.e., when user accepted update installation), <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> executes the newer copy of your app downloaded before with a special command line argument which is handled by <a class="el" href="classAUpdater.html#a7a5c6b8a79a6bab249f197210d66ee11">AUpdater::handleStartup</a> in that executable. The initial app process is finished, closing your app window as well. From now, your app is in "downtime" state, so we need to apply the update and reopen app back again as quickly as possible. This action is required to perform update installation. The copy then replaces old application (where it actually installed) with itself (that is, the downloaded, newer copy). After operation is complete, it passes the control back to the updated application executable. At last, the newly updated application performs a cleanup after update.</p>
 <div class="mscgraph">
 <img alt="msc_inline_mscgraph_3" border="0" src="msc_inline_mscgraph_3.svg" usemap="#msc_inline_mscgraph_3.map"/>
@@ -232,81 +229,81 @@ Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deployin
 </div>
 <p>After these operations complete, your app is running in its normal lifecycle.</p>
 <p><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> is an abstract class; it needs some functions to be implemented by you.</p>
-<p>In this example, let's implement auto update from GitHub release pages. <b aui-src="aui.updater/tests/UpdaterTest.cpp#L299"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L300"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L301"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L302"></b> </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">"MyUpdater"</span>;</div>
+<p>In this example, let's implement auto update from GitHub release pages. <b aui-src="aui.updater/tests/UpdaterTest.cpp#L297"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L298"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L299"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L300"></b> </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">"MyUpdater"</span>;</div>
 <div class="line"><span class="keyword">class </span>MyUpdater: <span class="keyword">public</span> <a class="code hl_class" href="classAUpdater.html">AUpdater</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    ~MyUpdater() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line">    ~MyUpdater() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">protected</span>:</div>
-<div class="line"> <a class="code hl_class" href="classAFuture.html">AFuture&lt;void&gt;</a> <a class="code hl_function" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">checkForUpdatesImpl</a>()<span class="keyword"> override </span>{</div>
-<div class="line"> <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
-<div class="line"> <span class="keywordflow">try</span> {</div>
-<div class="line"> <span class="keyword">auto</span> githubLatestRelease = aui::updater::github::latestRelease(<span class="stringliteral">"aui-framework"</span>, <span class="stringliteral">"example_app"</span>);</div>
-<div class="line">                ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"Found latest release: "</span> &lt;&lt; githubLatestRelease.tag_name;</div>
-<div class="line"> <span class="keyword">auto</span> ourVersion = <a class="code hl_function" href="structaui_1_1updater_1_1Semver.html#a3e4cd3ca998ea8650bbf613bdd810b2a">aui::updater::Semver::fromString</a>(<a class="code hl_define" href="group__useful__macros.html#gaa250d8839c4736760fdd5c4990fded23">AUI_PP_STRINGIZE</a>(AUI_CMAKE_PROJECT_VERSION));</div>
-<div class="line"> <span class="keyword">auto</span> theirVersion = <a class="code hl_function" href="structaui_1_1updater_1_1Semver.html#a3e4cd3ca998ea8650bbf613bdd810b2a">aui::updater::Semver::fromString</a>(githubLatestRelease.tag_name);</div>
+<div class="line">    <a class="code hl_class" href="classAFuture.html">AFuture&lt;void&gt;</a> <a class="code hl_function" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">checkForUpdatesImpl</a>()<span class="keyword"> override </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                <span class="keyword">auto</span> githubLatestRelease = aui::updater::github::latestRelease(<span class="stringliteral">"aui-framework"</span>, <span class="stringliteral">"example_app"</span>);</div>
+<div class="line">                ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"Found latest release: "</span> &lt;&lt; githubLatestRelease.tag_name;</div>
+<div class="line">                <span class="keyword">auto</span> ourVersion = <a class="code hl_function" href="structaui_1_1updater_1_1Semver.html#a3e4cd3ca998ea8650bbf613bdd810b2a">aui::updater::Semver::fromString</a>(<a class="code hl_define" href="group__useful__macros.html#gaa250d8839c4736760fdd5c4990fded23">AUI_PP_STRINGIZE</a>(AUI_CMAKE_PROJECT_VERSION));</div>
+<div class="line">                <span class="keyword">auto</span> theirVersion = <a class="code hl_function" href="structaui_1_1updater_1_1Semver.html#a3e4cd3ca998ea8650bbf613bdd810b2a">aui::updater::Semver::fromString</a>(githubLatestRelease.tag_name);</div>
 <div class="line"> </div>
-<div class="line"> <span class="keywordflow">if</span> (theirVersion &lt;= ourVersion) {</div>
-<div class="line">                    getThread()-&gt;enqueue([] {</div>
-<div class="line">                      AMessageBox::show(</div>
-<div class="line"> <span class="keyword">nullptr</span>, <span class="stringliteral">"No updates found"</span>, <span class="stringliteral">"You are running the latest version."</span>, AMessageBox::Icon::INFO);</div>
-<div class="line">                    });</div>
-<div class="line"> <span class="keywordflow">return</span>;</div>
-<div class="line">                }</div>
-<div class="line">                aui::updater::AppropriatePortablePackagePredicate predicate {};</div>
-<div class="line"> <span class="keyword">auto</span> it = ranges::find_if(</div>
-<div class="line">                    githubLatestRelease.assets, predicate, &amp;aui::updater::github::LatestReleaseResponse::Asset::name);</div>
-<div class="line"> <span class="keywordflow">if</span> (it == ranges::end(githubLatestRelease.assets)) {</div>
-<div class="line">                    ALogger::warn(LOG_TAG)</div>
-<div class="line">                        &lt;&lt; <span class="stringliteral">"Newer version was found but a package appropriate for your platform is not available. "</span></div>
-<div class="line"> <span class="stringliteral">"Expected: "</span></div>
-<div class="line">                        &lt;&lt; predicate.getQualifierDebug() &lt;&lt; <span class="stringliteral">", got: "</span></div>
-<div class="line">                        &lt;&lt; (githubLatestRelease.assets |</div>
-<div class="line">                            ranges::view::transform(&amp;aui::updater::github::LatestReleaseResponse::Asset::name));</div>
-<div class="line"> <span class="keywordflow">return</span>;</div>
-<div class="line">                }</div>
-<div class="line">                ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"To download: "</span> &lt;&lt; (mDownloadUrl = it-&gt;browser_download_url);</div>
+<div class="line">                <span class="keywordflow">if</span> (theirVersion &lt;= ourVersion) {</div>
+<div class="line">                    getThread()-&gt;enqueue([] {</div>
+<div class="line">                      AMessageBox::show(</div>
+<div class="line">                          <span class="keyword">nullptr</span>, <span class="stringliteral">"No updates found"</span>, <span class="stringliteral">"You are running the latest version."</span>, AMessageBox::Icon::INFO);</div>
+<div class="line">                    });</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line">                aui::updater::AppropriatePortablePackagePredicate predicate {};</div>
+<div class="line">                <span class="keyword">auto</span> it = ranges::find_if(</div>
+<div class="line">                    githubLatestRelease.assets, predicate, &amp;aui::updater::github::LatestReleaseResponse::Asset::name);</div>
+<div class="line">                <span class="keywordflow">if</span> (it == ranges::end(githubLatestRelease.assets)) {</div>
+<div class="line">                    ALogger::warn(LOG_TAG)</div>
+<div class="line">                        &lt;&lt; <span class="stringliteral">"Newer version was found but a package appropriate for your platform is not available. "</span></div>
+<div class="line">                           <span class="stringliteral">"Expected: "</span></div>
+<div class="line">                        &lt;&lt; predicate.getQualifierDebug() &lt;&lt; <span class="stringliteral">", got: "</span></div>
+<div class="line">                        &lt;&lt; (githubLatestRelease.assets |</div>
+<div class="line">                            ranges::view::transform(&amp;aui::updater::github::LatestReleaseResponse::Asset::name));</div>
+<div class="line">                    <span class="keywordflow">return</span>;</div>
+<div class="line">                }</div>
+<div class="line">                ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"To download: "</span> &lt;&lt; (mDownloadUrl = it-&gt;browser_download_url);</div>
 <div class="line"> </div>
-<div class="line">                getThread()-&gt;enqueue([<span class="keyword">this</span>, self = shared_from_this(), version = githubLatestRelease.tag_name] {</div>
-<div class="line">                    if (AMessageBox::show(</div>
-<div class="line">                            nullptr, <span class="stringliteral">"New version found!"</span>, <span class="stringliteral">"Found version: {}\n\nWould you like to update?"</span>_format(version),</div>
-<div class="line">                            AMessageBox::Icon::INFO, AMessageBox::Button::YES_NO) != AMessageBox::ResultButton::YES) {</div>
-<div class="line">                        return;</div>
-<div class="line">                    }</div>
+<div class="line">                getThread()-&gt;enqueue([<span class="keyword">this</span>, self = shared_from_this(), version = githubLatestRelease.tag_name] {</div>
+<div class="line">                    if (AMessageBox::show(</div>
+<div class="line">                            nullptr, <span class="stringliteral">"New version found!"</span>, <span class="stringliteral">"Found version: {}\n\nWould you like to update?"</span>_format(version),</div>
+<div class="line">                            AMessageBox::Icon::INFO, AMessageBox::Button::YES_NO) != AMessageBox::ResultButton::YES) {</div>
+<div class="line">                        return;</div>
+<div class="line">                    }</div>
 <div class="line"> </div>
-<div class="line">                    downloadUpdate();</div>
-<div class="line">                });</div>
+<div class="line">                    downloadUpdate();</div>
+<div class="line">                });</div>
 <div class="line"> </div>
-<div class="line">            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> AException&amp; e) {</div>
-<div class="line">                ALogger::err(LOG_TAG) &lt;&lt; <span class="stringliteral">"Can't check for updates: "</span> &lt;&lt; e;</div>
-<div class="line">                getThread()-&gt;enqueue([] {</div>
-<div class="line">                    AMessageBox::show(</div>
-<div class="line"> <span class="keyword">nullptr</span>, <span class="stringliteral">"Oops!"</span>, <span class="stringliteral">"There is an error occurred while checking for updates. Please try again later."</span>,</div>
-<div class="line">                        AMessageBox::Icon::CRITICAL);</div>
-<div class="line">                });</div>
-<div class="line">            }</div>
-<div class="line">        };</div>
-<div class="line">    }</div>
+<div class="line">            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> AException&amp; e) {</div>
+<div class="line">                ALogger::err(LOG_TAG) &lt;&lt; <span class="stringliteral">"Can't check for updates: "</span> &lt;&lt; e;</div>
+<div class="line">                getThread()-&gt;enqueue([] {</div>
+<div class="line">                    AMessageBox::show(</div>
+<div class="line">                        <span class="keyword">nullptr</span>, <span class="stringliteral">"Oops!"</span>, <span class="stringliteral">"There is an error occurred while checking for updates. Please try again later."</span>,</div>
+<div class="line">                        AMessageBox::Icon::CRITICAL);</div>
+<div class="line">                });</div>
+<div class="line">            }</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
 <div class="line"> </div>
-<div class="line"> <a class="code hl_class" href="classAFuture.html">AFuture&lt;void&gt;</a> downloadUpdateImpl(<span class="keyword">const</span> <a class="code hl_class" href="classAPath.html">APath</a>&amp; unpackedUpdateDir)<span class="keyword"> override </span>{</div>
-<div class="line"> <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
-<div class="line"> <span class="keywordflow">try</span> {</div>
-<div class="line"> <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(!mDownloadUrl.empty(), <span class="stringliteral">"make a successful call to checkForUpdates first"</span>);</div>
-<div class="line">              downloadAndUnpack(mDownloadUrl, unpackedUpdateDir);</div>
-<div class="line">              reportReadyToApplyAndRestart(makeDefaultInstallationCmdline());</div>
-<div class="line">          } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAException.html">AException</a>&amp; e) {</div>
-<div class="line">              ALogger::err(LOG_TAG) &lt;&lt; <span class="stringliteral">"Can't check for updates: "</span> &lt;&lt; e;</div>
-<div class="line">              getThread()-&gt;enqueue([] {</div>
-<div class="line">                AMessageBox::show(</div>
-<div class="line"> <span class="keyword">nullptr</span>, <span class="stringliteral">"Oops!"</span>, <span class="stringliteral">"There is an error occurred while downloading update. Please try again later."</span>,</div>
-<div class="line">                    AMessageBox::Icon::CRITICAL);</div>
-<div class="line">              });</div>
-<div class="line">          }</div>
-<div class="line">        };</div>
-<div class="line">    }</div>
+<div class="line">    <a class="code hl_class" href="classAFuture.html">AFuture&lt;void&gt;</a> downloadUpdateImpl(<span class="keyword">const</span> <a class="code hl_class" href="classAPath.html">APath</a>&amp; unpackedUpdateDir)<span class="keyword"> override </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
+<div class="line">          <span class="keywordflow">try</span> {</div>
+<div class="line">              <a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(!mDownloadUrl.empty(), <span class="stringliteral">"make a successful call to checkForUpdates first"</span>);</div>
+<div class="line">              downloadAndUnpack(mDownloadUrl, unpackedUpdateDir);</div>
+<div class="line">              reportReadyToApplyAndRestart(makeDefaultInstallationCmdline());</div>
+<div class="line">          } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAException.html">AException</a>&amp; e) {</div>
+<div class="line">              ALogger::err(LOG_TAG) &lt;&lt; <span class="stringliteral">"Can't check for updates: "</span> &lt;&lt; e;</div>
+<div class="line">              getThread()-&gt;enqueue([] {</div>
+<div class="line">                AMessageBox::show(</div>
+<div class="line">                    <span class="keyword">nullptr</span>, <span class="stringliteral">"Oops!"</span>, <span class="stringliteral">"There is an error occurred while downloading update. Please try again later."</span>,</div>
+<div class="line">                    AMessageBox::Icon::CRITICAL);</div>
+<div class="line">              });</div>
+<div class="line">          }</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line"> <a class="code hl_class" href="classAString.html">AString</a> mDownloadUrl;</div>
+<div class="line">    <a class="code hl_class" href="classAString.html">AString</a> mDownloadUrl;</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAException_html"><div class="ttname"><a href="classAException.html">AException</a></div><div class="ttdoc">Abstract AUI exception.</div><div class="ttdef"><b>Definition</b> AException.h:28</div></div>
 <div class="ttc" id="aclassAPath_html"><div class="ttname"><a href="classAPath.html">APath</a></div><div class="ttdoc">An add-on to AString with functions for working with the path.</div><div class="ttdef"><b>Definition</b> APath.h:128</div></div>
@@ -316,19 +313,19 @@ Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deployin
 <div class="ttc" id="astructaui_1_1updater_1_1Semver_html_a3e4cd3ca998ea8650bbf613bdd810b2a"><div class="ttname"><a href="structaui_1_1updater_1_1Semver.html#a3e4cd3ca998ea8650bbf613bdd810b2a">aui::updater::Semver::fromString</a></div><div class="ttdeci">static Semver fromString(const AString &amp;version)</div><div class="ttdoc">Parse semver from string.</div><div class="ttdef"><b>Definition</b> Semver.cpp:4</div></div>
 </div><!-- fragment --><h1>
 Updater workflows<a class="aui-toc-hash" href="#UPDATER_WORKFLOWS" id="UPDATER_WORKFLOWS" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L398"></b> When using <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> for your application, you need to consider several factors including usability, user experience, system resources, and particular needs of your project.</p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L396"></b> When using <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> for your application, you need to consider several factors including usability, user experience, system resources, and particular needs of your project.</p>
 <p>Either way, you might want to implement a way to disable auto update feature in your application.</p>
 <h2>
 Prompt user on every step<a class="aui-toc-hash" href="#prompt-user-on-every-step" id="prompt-user-on-every-step" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L404"></b></p>
-<p>This approach is implemented in AUI's <a href="https://github.com/aui-framework/example_app">Example App Template</a>.</p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L402"></b></p>
+<p>This approach is implemented in AUI's <a class="el" href="example_app_template.html">Full App Template ⚡</a>.</p>
 <p>The updater checks for updater periodically or upon user request and informs the user that an update is available. The user then decides whether to proceed with update or not. If they agree the application will download and install the update.</p>
 <p>This way can be considered as better approach because the user may feel they control the situation and the application never does things that user never asked to (trust concerns). On the other hand, such requirement of additional user interaction to can distract them from doing their work, so these interactions should not be annoying.</p>
 <p>You should not use AMessageBox (unless user explicitly asked to check for update) as it literally interrupts the user's workflow, opting them to make a decision before they can continue their work. A great example of a bad auto update implementation is qBittorrent client on Windows: hence this application typically launches on OS startup, it checks for updates in background and pops the message box if update was found, <b>even if user is focused on another application or away from keyboard</b>.</p>
 <h2>
 Silent download<a class="aui-toc-hash" href="#silent-download" id="silent-download" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L422"></b></p>
-<p>This approach is implemented in AUI's <a href="https://github.com/aui-framework/telegram_client">Telegram client</a>, as well as in official Qt-based Telegram Desktop client.</p>
+<p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L420"></b></p>
+<p>This approach is implemented in <a class="el" href="example_app_auigram.html">AUI Telegram Client (AUIgram)</a>, as well as in official Qt-based Telegram Desktop client.</p>
 <p>The updater silently downloads the update in the background while the user continues working within the application or even other tasks. The update then is applied automatically upon restart. Optionally, the application might show a button/message/notification bubble to restart and apply update.</p>
 <p>Despite user trust concerns, this approach allows seamless experience - users don't need to be interrupted during their work. They even might not care about updates. </p>
 <table class="memberdecls">

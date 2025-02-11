@@ -140,12 +140,12 @@ Signals and public fields<a class="aui-toc-hash" href="#pub-attribs" id="pub-att
 <p>Effective blur radius is <code>radius * downscale</code>. However, the downscale part is done by cheap downscaling of the framebuffer texture. Thus, by raising downscale factor you can achieve larger blur radius with approximately same visual result.</p>
 <p>Performance benefit of downscale factor { .radius = 6_dp, .downscale = x } in comparison to { .radius = 6_dp * x, .downscale = 1 } is x^2.</p>
 <div class="fragment"><div class="line">view <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
-<div class="line">  Backdrop { <a class="code hl_struct" href="structass_1_1Backdrop_1_1GaussianBlur.html">Backdrop::GaussianBlur</a> { .radius = 6_dp, .downscale = 4 } },</div>
+<div class="line">  Backdrop { <a class="code hl_struct" href="structass_1_1Backdrop_1_1GaussianBlur.html">Backdrop::GaussianBlur</a> { .radius = 6_dp, .downscale = 4 } },</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
 <div class="ttc" id="astructass_1_1Backdrop_1_1GaussianBlur_html"><div class="ttname"><a href="structass_1_1Backdrop_1_1GaussianBlur.html">ass::Backdrop::GaussianBlur</a></div><div class="ttdoc">Fast gaussian blur.</div><div class="ttdef"><b>Definition</b> Backdrop.h:84</div></div>
 </div><!-- fragment --><p> is visually approximately same as </p><div class="fragment"><div class="line">view <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
-<div class="line">  Backdrop { <a class="code hl_struct" href="structass_1_1Backdrop_1_1GaussianBlur.html">Backdrop::GaussianBlur</a> { .radius = 24_dp } },</div>
+<div class="line">  Backdrop { <a class="code hl_struct" href="structass_1_1Backdrop_1_1GaussianBlur.html">Backdrop::GaussianBlur</a> { .radius = 24_dp } },</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> but 16 times cheaper. </p>
 </div>

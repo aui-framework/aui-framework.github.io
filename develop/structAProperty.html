@@ -231,8 +231,8 @@ class AProperty&lt; T &gt;</div><p>Basic easy-to-use property implementation con
 <h1>
 Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L30"></b> To declare a property inside your data model, use <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> template: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line">    AProperty&lt;AString&gt; name;</div>
-<div class="line">    AProperty&lt;AString&gt; surname;</div>
+<div class="line">    AProperty&lt;AString&gt; name;</div>
+<div class="line">    AProperty&lt;AString&gt; surname;</div>
 <div class="line">};</div>
 </div><!-- fragment --><p><code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>&lt;T&gt;</code> is a container holding an instance of <code>T</code>. You can assign a value to it with <code>operator=</code> and read value with <code>value()</code> method or implicit conversion <code>operator T()</code>.</p>
 <p><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> behaves like a class/struct data member: </p><div class="fragment"><div class="line">User u;</div>
@@ -249,14 +249,14 @@ Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="c
 <div class="line">u.name = <span class="stringliteral">"Hello"</span>;</div>
 <div class="line">doSomethingWithName(u.name);</div>
 </div><!-- fragment --><p>If it doesn't, simply put an asterisk: </p><div class="fragment"><div class="line">doSomethingWithName(*u.name);</div>
-<div class="line"><span class="comment">//                 ^^^ HERE</span></div>
+<div class="line"><span class="comment">//                 ^^^ HERE</span></div>
 </div><!-- fragment --><h1>
 Observing changes<a class="aui-toc-hash" href="#PropertyTest_Observing_changes" id="PropertyTest_Observing_changes" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L91"></b> All property types offer <code>.changed</code> field which is a signal reporting value changes. Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> AObject {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line"> <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
-<div class="line">        ALogger::info(<span class="stringliteral">"LogObserver"</span>) &lt;&lt; <span class="stringliteral">"Received value: "</span> &lt;&lt; msg;</div>
-<div class="line">    }</div>
+<div class="line">    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
+<div class="line">        ALogger::info(<span class="stringliteral">"LogObserver"</span>) &lt;&lt; <span class="stringliteral">"Received value: "</span> &lt;&lt; msg;</div>
+<div class="line">    }</div>
 <div class="line">};</div>
 </div><!-- fragment --><p>Example usage: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> u = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Chloe"</span> });</div>

@@ -106,17 +106,17 @@ Importing AUI<a class="aui-toc-hash" href="#importing-aui" id="importing-aui" st
 <div class="fragment"><div class="line">set(AUI_VERSION v6.2.1)</div>
 <div class="line"> </div>
 <div class="line">file(</div>
-<div class="line">    DOWNLOAD </div>
-<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/${AUI_VERSION}/aui.boot.cmake </div>
-<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
+<div class="line">    DOWNLOAD </div>
+<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/${AUI_VERSION}/aui.boot.cmake </div>
+<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line">include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line">auib_import(</div>
-<div class="line">    AUI https://github.com/aui-framework/aui </div>
-<div class="line">    COMPONENTS core views</div>
-<div class="line">    VERSION ${AUI_VERSION})</div>
+<div class="line">    AUI https://github.com/aui-framework/aui </div>
+<div class="line">    COMPONENTS core views</div>
+<div class="line">    VERSION ${AUI_VERSION})</div>
 <div class="line"> </div>
 <div class="line">aui_link(YOUR_APP PUBLIC aui::core</div>
-<div class="line">                         aui::views)</div>
+<div class="line">                         aui::views)</div>
 </div><!-- fragment --><h1>
 Prebuilt packages<a class="aui-toc-hash" href="#prebuilt-packages" id="prebuilt-packages" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>AUI Boot is a source-first package manager, however, it can pull precompiled packages instead of building them locally. At the moment, GitHub Releases page with carefully formatted archive names is the only supported option. AUI follows these rules, so AUI Boot can pull precompiled package of AUI.</p>
@@ -130,20 +130,20 @@ Prebuilt packages<a class="aui-toc-hash" href="#prebuilt-packages" id="prebuilt-
 <h1>
 CI caching<a class="aui-toc-hash" href="#CI_CACHING" id="CI_CACHING" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>No matter using precompiled binaries or building them locally, it's convenient to cache AUI Boot cache (<code>~/.aui</code>) in your CIs:</p>
-<div class="fragment"><div class="line">      - name: Cache AUI.BOOT deps</div>
-<div class="line">        id: cache-aui-boot</div>
-<div class="line">        uses: actions/cache@v3</div>
-<div class="line">        env:</div>
-<div class="line">          cache-name: aui-boot-${{ matrix.shared_or_static }}-${{ matrix.debug_or_release }}-${{ matrix.arch }}</div>
-<div class="line">        with:</div>
-<div class="line">          path: |</div>
-<div class="line">            ~/.aui</div>
+<div class="fragment"><div class="line">      - name: Cache AUI.BOOT deps</div>
+<div class="line">        id: cache-aui-boot</div>
+<div class="line">        uses: actions/cache@v3</div>
+<div class="line">        env:</div>
+<div class="line">          cache-name: aui-boot-${{ matrix.shared_or_static }}-${{ matrix.debug_or_release }}-${{ matrix.arch }}</div>
+<div class="line">        with:</div>
+<div class="line">          path: |</div>
+<div class="line">            ~/.aui</div>
 <div class="line"> </div>
-<div class="line">          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/CMakeLists.txt') }}</div>
-<div class="line">          restore-keys: |</div>
-<div class="line">            ${{ runner.os }}-build-${{ env.cache-name }}-</div>
-<div class="line">            ${{ runner.os }}-build-</div>
-<div class="line">            ${{ runner.os }}-</div>
+<div class="line">          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/CMakeLists.txt') }}</div>
+<div class="line">          restore-keys: |</div>
+<div class="line">            ${{ runner.os }}-build-${{ env.cache-name }}-</div>
+<div class="line">            ${{ runner.os }}-build-</div>
+<div class="line">            ${{ runner.os }}-</div>
 </div><!-- fragment --><p>This snippet is based on <a href="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/caching-dependencies-to-speed-up-workflows#example-using-the-cache-action">GitHub's cache action example</a>.</p>
 <p>GitHub used npm's <code>package-lock.json</code> in their example's primary key (<code>key</code>). We've adapted their example to AUI Boot and use <code>CMakeLists.txt</code>, as dependencies' versions are "locked" there.</p>
 <p>Using a stricter primary key <code>key</code> with a bunch of additional keys <code>restore-keys</code> is essential. If a cache hit occurs on the primary key, the cache will not be uploaded back to GitHub cache so your primary key must differ when you update dependencies.</p>
@@ -152,7 +152,7 @@ CI caching<a class="aui-toc-hash" href="#CI_CACHING" id="CI_CACHING" style="colo
 Importing 3rdparty libraries<a class="aui-toc-hash" href="#importing-3rdparty-libraries" id="importing-3rdparty-libraries" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>You can import any library that can be imported to your project by compiling it using CMake and finding it's package with <code>find_package</code>, i.e. Sentry: </p><div class="fragment"><div class="line"># importing Sentry with AUI.Boot</div>
 <div class="line">auib_import(sentry https://github.com/getsentry/sentry-native</div>
-<div class="line">            CMAKE_ARGS -DSENTRY_BACKEND=crashpad)</div>
+<div class="line">            CMAKE_ARGS -DSENTRY_BACKEND=crashpad)</div>
 <div class="line">aui_link(YOUR_APP PUBLIC sentry::sentry)</div>
 </div><!-- fragment --><p>For more libraries, please visit <a href="https://github.com/aui-framework/boot">https://github.com/aui-framework/boot</a>.</p>
 <h2>
@@ -161,17 +161,17 @@ Using AUI Boot without AUI<a class="aui-toc-hash" href="#using-aui-boot-without-
 <div class="fragment"><div class="line">set(AUI_VERSION v6.2.1)</div>
 <div class="line"> </div>
 <div class="line">file(</div>
-<div class="line">    DOWNLOAD </div>
-<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/${AUI_VERSION}/aui.boot.cmake </div>
-<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
+<div class="line">    DOWNLOAD </div>
+<div class="line">    https://raw.githubusercontent.com/aui-framework/aui/${AUI_VERSION}/aui.boot.cmake </div>
+<div class="line">    ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 <div class="line">include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">auib_import(fmt https:<span class="comment">//github.com/fmtlib/fmt</span></div>
-<div class="line">            VERSION 9.1.0</div>
-<div class="line">            CMAKE_ARGS -DFMT_TEST=FALSE -DFMT_DOC=FALSE)</div>
+<div class="line">            VERSION 9.1.0</div>
+<div class="line">            CMAKE_ARGS -DFMT_TEST=FALSE -DFMT_DOC=FALSE)</div>
 <div class="line"> </div>
 <div class="line">auib_import(range-v3 https:<span class="comment">//github.com/ericniebler/range-v3</span></div>
-<div class="line">        VERSION 0.12.0</div>
-<div class="line">        CMAKE_ARGS -DRANGE_V3_DOCS=OFF -DRANGE_V3_TESTS=OFF -DRANGE_V3_EXAMPLES=OFF -DRANGE_V3_PERF=OFF -DRANGE_V3_HEADER_CHECKS=OFF)</div>
+<div class="line">        VERSION 0.12.0</div>
+<div class="line">        CMAKE_ARGS -DRANGE_V3_DOCS=OFF -DRANGE_V3_TESTS=OFF -DRANGE_V3_EXAMPLES=OFF -DRANGE_V3_PERF=OFF -DRANGE_V3_HEADER_CHECKS=OFF)</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">target_link_libraries(YOUR_APP PUBLIC fmt::fmt-header-only range-v3::range-v3)</div>
 </div><!-- fragment --><h1>
 Importing project as a subdirectory<a class="aui-toc-hash" href="#importing-project-as-a-subdirectory" id="importing-project-as-a-subdirectory" style="color: var(--fragment-comment) !important">#</a></h1>
@@ -186,16 +186,16 @@ auib_import<a class="aui-toc-hash" href="#auib_import" id="auib_import" style="c
 <h3>
 Signature<a class="aui-toc-hash" href="#signature" id="signature" style="color: var(--fragment-comment) !important">#</a></h3>
 <div class="fragment"><div class="line">auib_import(&lt;PackageName&gt; &lt;URL&gt;</div>
-<div class="line">            [ADD_SUBDIRECTORY]</div>
-<div class="line">            [ARCHIVE]</div>
-<div class="line">            [COMPONENTS components...]</div>
-<div class="line">            [CONFIG_ONLY]</div>
-<div class="line">            [CMAKE_WORKING_DIR workingdir.txt]</div>
-<div class="line">            [CMAKELISTS_CUSTOM cmakelist]</div>
-<div class="line">            [PRECOMPILED_URL_PREFIX &lt;PrecompiledUrlPrefix&gt;]</div>
-<div class="line">            [LINK &lt;STATIC|SHARED&gt;]</div>
-<div class="line">            [REQUIRES dependencies...]</div>
-<div class="line">            [VERSION version])</div>
+<div class="line">            [ADD_SUBDIRECTORY]</div>
+<div class="line">            [ARCHIVE]</div>
+<div class="line">            [COMPONENTS components...]</div>
+<div class="line">            [CONFIG_ONLY]</div>
+<div class="line">            [CMAKE_WORKING_DIR workingdir.txt]</div>
+<div class="line">            [CMAKELISTS_CUSTOM cmakelist]</div>
+<div class="line">            [PRECOMPILED_URL_PREFIX &lt;PrecompiledUrlPrefix&gt;]</div>
+<div class="line">            [LINK &lt;STATIC|SHARED&gt;]</div>
+<div class="line">            [REQUIRES dependencies...]</div>
+<div class="line">            [VERSION version])</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This command copies <code>*.dll</code>, <code>*.so</code> and <code>*.dylib</code> (in case of shared libraries) alongside your executables during configure time. See <a class="el" href="md_docs_2Runtime_01Dependency_01Resolution.html">Runtime Dependency Resolution</a> for more info.</dd></dl>
 <h3>
 PackageName<a class="aui-toc-hash" href="#packagename" id="packagename" style="color: var(--fragment-comment) !important">#</a></h3>
@@ -261,22 +261,22 @@ Producing packages with dependencies managed by AUI Boot<a class="aui-toc-hash" 
 <p>CMake-driven projects produce package configuration with <a href="https://cmake.org/cmake/help/latest/command/configure_file.html">configure_file</a>:</p>
 <div class="fragment"><div class="line">configure_file(cmake/aui-config.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/aui-config.cmake @ONLY)</div>
 <div class="line">install(FILES</div>
-<div class="line">        ${CMAKE_CURRENT_BINARY_DIR}/aui-config.cmake</div>
-<div class="line">        DESTINATION <span class="stringliteral">"."</span>)</div>
+<div class="line">        ${CMAKE_CURRENT_BINARY_DIR}/aui-config.cmake</div>
+<div class="line">        DESTINATION <span class="stringliteral">"."</span>)</div>
 </div><!-- fragment --><p>Inside of <code>aui-config.cmake.in</code>, there's a line: </p><div class="fragment"><div class="line">@AUIB_DEPS@</div>
 </div><!-- fragment --><p><code>AUIB_DEPS</code> contains cmake commands to resolve dependencies of your project. This variable is populated by <code>auib_import</code> calls inside your project during configure time. <code>AUIB_DEPS</code> contains <code>auib_import</code> calls.</p>
 <p>As was mentioned, AUI Boot requires specially formatted (precompiled) package names to use them. For this to work, you can call <code>auib_precompiled_binary</code> inside of your root <code>CMakeLists.txt</code> which configures <code>cpack</code> to produce <code>tar.gz</code> with properly formatted name.</p>
 <div class="fragment"><div class="line">auib_precompiled_binary()</div>
 </div><!-- fragment --><p>At last, use <code>cpack</code> to produce a package.</p>
-<div class="fragment"><div class="line">      - name: Pack</div>
-<div class="line">        working-directory: ${{github.workspace}}/build</div>
-<div class="line">        run: cpack . -C ${{ matrix.debug_or_release }}</div>
+<div class="fragment"><div class="line">      - name: Pack</div>
+<div class="line">        working-directory: ${{github.workspace}}/build</div>
+<div class="line">        run: cpack . -C ${{ matrix.debug_or_release }}</div>
 <div class="line"> </div>
-<div class="line">      - name: Upload</div>
-<div class="line">        uses: actions/upload-artifact@v4</div>
-<div class="line">        with:</div>
-<div class="line">          path: ${{github.workspace}}/build/*.tar.gz</div>
-<div class="line">          name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }}</div>
+<div class="line">      - name: Upload</div>
+<div class="line">        uses: actions/upload-artifact@v4</div>
+<div class="line">        with:</div>
+<div class="line">          path: ${{github.workspace}}/build/*.tar.gz</div>
+<div class="line">          name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }}</div>
 </div><!-- fragment --><h1>
 Importing AUI without AUI Boot<a class="aui-toc-hash" href="#importing-aui-without-aui-boot" id="importing-aui-without-aui-boot" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not a recommended way of using AUI, as it is not fully covered with tests, and you're basically trying to complicate your life by hardcoding paths in your CMake lists and thus making hardly reproducible projects. Consider <a href="https://github.com/aui-framework/aui/issues">asking questions</a> about AUI Boot on our GitHub page, and we'd help to adapt AUI Boot to your use case.</p>
@@ -295,11 +295,11 @@ Using AUI distributions with <code>find_package</code><a class="aui-toc-hash" hr
 <div class="line"> </div>
 <div class="line">include(FetchContent)</div>
 <div class="line">FetchContent_Declare(aui</div>
-<div class="line"> <a class="code hl_enumvalue" href="group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d">URL</a> https:<span class="comment">//github.com/aui-framework/aui/releases/download/${AUI_TEST_DEPLOY_VERSION}/aui_linux-gnu-x86_64-static-debug.tar.gz)</span></div>
+<div class="line">    <a class="code hl_enumvalue" href="group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d">URL</a> https:<span class="comment">//github.com/aui-framework/aui/releases/download/${AUI_TEST_DEPLOY_VERSION}/aui_linux-gnu-x86_64-static-debug.tar.gz)</span></div>
 <div class="line"> </div>
 <div class="line">FetchContent_MakeAvailable(aui)</div>
 <div class="line">FetchContent_GetProperties(aui</div>
-<div class="line">        SOURCE_DIR aui_ROOT</div>
+<div class="line">        SOURCE_DIR aui_ROOT</div>
 <div class="line">)</div>
 <div class="line">find_package(aui REQUIRED)</div>
 <div class="line"> </div>
