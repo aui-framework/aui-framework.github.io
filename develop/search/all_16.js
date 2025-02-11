@@ -142,7 +142,7 @@ var searchData=
   ['solid_139',['Solid',['../structABorderStyle_1_1Solid.html',1,'ABorderStyle']]],
   ['sound_140',['Sound',['../structass_1_1Sound.html',1,'ass']]],
   ['sound_141',['sound',['../structass_1_1Sound.html#ab3de4eed04383a70d4fce0e7fe3e3368',1,'ass::Sound']]],
-  ['source_20files_142',['Source Files',['../example_app_auigram.html#autotoc_md167',1,'Source Files'],['../example_fractal_example.html#autotoc_md171',1,'Source Files'],['../example_minesweeper_game.html#autotoc_md178',1,'Source Files'],['../example_app_template.html#autotoc_md179',1,'Source Files'],['../example_console_hello_world_example.html#autotoc_md180',1,'Source Files'],['../example_prometheus_exporter_template.html#autotoc_md181',1,'Source Files'],['../example_minimal_ui_template.html#autotoc_md188',1,'Source Files'],['../example_minimal_ui_template_with_assets.html#autotoc_md189',1,'Source Files'],['../example_views_example.html#autotoc_md190',1,'Source Files']]],
+  ['source_20files_142',['Source Files',['../example_app_auigram.html#autotoc_md170',1,'Source Files'],['../example_fractal_example.html#autotoc_md171',1,'Source Files'],['../example_minesweeper_game.html#autotoc_md178',1,'Source Files'],['../example_app_template.html#autotoc_md179',1,'Source Files'],['../example_console_hello_world_example.html#autotoc_md180',1,'Source Files'],['../example_prometheus_exporter_template.html#autotoc_md181',1,'Source Files'],['../example_minimal_ui_template.html#autotoc_md188',1,'Source Files'],['../example_minimal_ui_template_with_assets.html#autotoc_md189',1,'Source Files'],['../example_views_example.html#autotoc_md190',1,'Source Files']]],
   ['sources_143',['Platform specific sources',['../md_docs_2Macros.html#autotoc_md137',1,'']]],
   ['spacebetweendashes_144',['spaceBetweenDashes',['../structABorderStyle_1_1Dashed.html#a9d4f5e62eb47ae95d57bb6a18fb156e9',1,'ABorderStyle::Dashed']]],
   ['specific_145',['specific',['../md_docs_2AUI_01configure_01flags.html#autotoc_md78',1,'aui.boot-specific'],['../group__windows__specific.html',1,'Windows-specific']]],
@@ -173,7 +173,7 @@ var searchData=
   ['string_170',['string',['../classOpenGLRenderer.html#a097481085072f278c5cbf93d7280c274',1,'OpenGLRenderer::string()'],['../classIRenderer.html#a4e3c00a94301b0c9bc1070f7fcbb76ca',1,'IRenderer::string()'],['../classSoftwareRenderer.html#a1441fc2d791de0aa28e80802364073df',1,'SoftwareRenderer::string()']]],
   ['stripbeforefunctioncall_171',['stripBeforeFunctionCall',['../classAStacktrace.html#a433c70cff737bf88f1ef839cde918082',1,'AStacktrace']]],
   ['strong_20type_20propagation_172',['ADataBindingDefault strong type propagation',['../group__property__system.html#UIDataBindingTest_ADataBindingDefault_strong_type_propagation',1,'']]],
-  ['structure_173',['Project structure',['../md_docs_2Writing_01tests.html#autotoc_md169',1,'']]],
+  ['structure_173',['Project structure',['../md_docs_2Writing_01tests.html#autotoc_md167',1,'']]],
   ['stub_174',['stub',['../classIRenderer.html#aa03fc1718fbfe42e79a1cca20f895153',1,'IRenderer']]],
   ['stubaudioplayer_175',['StubAudioPlayer',['../classStubAudioPlayer.html',1,'']]],
   ['style_176',['Style',['../structdeclarative_1_1Style.html',1,'declarative']]],
@@ -191,7 +191,7 @@ var searchData=
   ['supported_20platforms_188',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md127',1,'Supported platforms'],['../group__updater.html#autotoc_md191',1,'Supported platforms']]],
   ['supported_20units_189',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
   ['swappable_190',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_191',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md100',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
+  ['syntax_191',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md101',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
   ['system_192',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_193',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
