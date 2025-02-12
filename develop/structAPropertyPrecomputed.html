@@ -104,7 +104,7 @@ $(function(){initNavTree('structAPropertyPrecomputed.html',''); initResizable(tr
 <a href="structAPropertyPrecomputed-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">APropertyPrecomputed&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="group__core.html">aui::core</a> » <a class="el" href="group__property__system.html">Property System</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/APropertyPrecomputed.h#L70"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/APropertyPrecomputed.h#L71"></b>
 <p>Readonly property that holds a value computed by an expression.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="APropertyPrecomputed_8h_source.html">AUI/Common/APropertyPrecomputed.h</a>&gt;</code></p>
@@ -159,7 +159,8 @@ Signals and public fields<a class="aui-toc-hash" href="#pub-attribs" id="pub-att
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Readonly property that holds a value computed by an expression.">#</a></h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br/>
 class APropertyPrecomputed&lt; T &gt;</div><p>Readonly property that holds a value computed by an expression. </p>
-<p><code>APropertyPrecomputed&lt;T&gt;</code> is a readonly property similar to <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>&lt;T&gt;</code>. It holds an instance of <code>T</code> as well. Its value is determined by the C++ function specified in its constructor, typically a C++ lambda expression.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
+<dl class="section user"><dt></dt><dd><code>APropertyPrecomputed&lt;T&gt;</code> is a readonly property similar to <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>&lt;T&gt;</code>. It holds an instance of <code>T</code> as well. Its value is determined by the C++ function specified in its constructor, typically a C++ lambda expression.</dd></dl>
 <p>See <a class="el" href="group__property__system.html">property system</a> for usage info.</p>
 <p>Despite properties offer <a class="el" href="group__property__system.html#UIDataBindingTest_Label_via_declarative_projection">projection methods</a>, you might want to track and process values of several properties.</p>
 <p><code><a class="el" href="structAPropertyPrecomputed.html" title="Readonly property that holds a value computed by an expression.">APropertyPrecomputed</a>&lt;T&gt;</code> is a readonly property similar to <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>&lt;T&gt;</code>. It holds an instance of <code>T</code> as well. Its value is determined by the C++ function specified in its constructor, typically a C++ lambda expression.</p>
@@ -176,7 +177,7 @@ Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="c
 <div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;] { <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname); };</div>
 <div class="line">};</div>
 <div class="line"></div>
-<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:145</div></div>
+<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:146</div></div>
 </div><!-- fragment --><p>Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>

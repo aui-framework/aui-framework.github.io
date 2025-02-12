@@ -102,7 +102,7 @@ $(function(){initNavTree('classAAsyncHolder.html',''); initResizable(true); });
 <a href="classAAsyncHolder-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AAsyncHolder Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Thread/AAsyncHolder.h#L30"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Thread/AAsyncHolder.h#L31"></b>
 <p>Holds a set of futures keeping them valid.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AAsyncHolder_8h_source.html">AUI/Thread/AAsyncHolder.h</a>&gt;</code></p>
@@ -122,7 +122,8 @@ void </td><td class="memItemRight" valign="bottom"><b>waitForAll</b> ()</td></t
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Manages multiple futures.">#</a></h2>
 <div class="textblock"><p>Holds a set of futures keeping them valid. </p>
-<p>Unlike AFutureSet, <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> is intended to hold void futures (<a class="el" href="classAFuture.html">AFuture&lt;void&gt;</a>), however, non-void types can be also supported (but with extra overhead). When <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task is complete, the <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is removed from <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
+<dl class="section user"><dt></dt><dd>Unlike AFutureSet, <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> is intended to hold void futures (<a class="el" href="classAFuture.html">AFuture&lt;void&gt;</a>), however, non-void types can be also supported (but with extra overhead). When <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task is complete, the <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is removed from <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a>.</dd></dl>
 <p>Guarantees that held futures will never be executed or be during execution after <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> is destroyed.</p>
 <p>Cancels all futures in destructor. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8h-example.html#_a6">examples/ui/views/src/ExampleWindow.h</a>.</dd>

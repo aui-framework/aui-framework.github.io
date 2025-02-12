@@ -104,7 +104,8 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="doxygen/intermediate/properties.h#L9"></b>
 <p>Property System is a data binding mechanism based on <a class="el" href="group__signal__slot.html">signal-slot system</a>. </p>
 <p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L32"></b></p>
-<p>AUI property system, a compiler-agnostic alternative to __property or [property]. Based on <a class="el" href="group__signal__slot.html">signal-slot system</a> for platform-independent C++ development. Unlike Qt, AUI's properties don't involve external tools (like <code>moc</code>). They are written in pure C++.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
+<dl class="section user"><dt></dt><dd>AUI property system, a compiler-agnostic alternative to __property or [property]. Based on <a class="el" href="group__signal__slot.html">signal-slot system</a> for platform-independent C++ development. Unlike Qt, AUI's properties don't involve external tools (like <code>moc</code>). They are written in pure C++.</dd></dl>
 <p>AUI property system is relatively complex, as it involves a lot of features in a single place:</p><ol type="1">
 <li>thread safe</li>
 <li>many-to-many relationships between objects</li>
@@ -130,7 +131,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <div class="line">window-&gt;setContents(Centered { tf });</div>
 <div class="line">window-&gt;show();</div>
 <div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:138</div></div>
-<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:145</div></div>
+<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:146</div></div>
 <div class="ttc" id="astructaui_1_1ptr_html_a9696eab52bd0745688055a301d9ef776"><div class="ttname"><a href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a></div><div class="ttdeci">static _&lt; T &gt; manage(T *raw)</div><div class="ttdoc">Delegates memory management of the raw pointer T* raw to the shared pointer, which is returned.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:372</div></div>
 </div><!-- fragment --><p>Or simpler: </p><div class="fragment"><div class="line"><span class="comment">// ...</span></div>
 <div class="line">window-&gt;setContents(Centered {</div>
@@ -155,7 +156,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 </div><!-- fragment --><p>This is basic example of setting up property-to-property connection.</p>
 <h1>
 Declaring Properties<a class="aui-toc-hash" href="#declaring-properties" id="declaring-properties" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L127"></b> There are several ways to define a property in AUI:</p><ul>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L128"></b> There are several ways to define a property in AUI:</p><ul>
 <li><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> - basic wrapper property type for data models</li>
 <li><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> - property-compliant view type to tie custom getter, setter and signal together</li>
 <li><a class="el" href="structAPropertyPrecomputed.html" title="Readonly property that holds a value computed by an expression.">APropertyPrecomputed</a> - readonly property whose value is determined by a callable that references other properties</li>
@@ -163,11 +164,11 @@ Declaring Properties<a class="aui-toc-hash" href="#declaring-properties" id="dec
 <p>Please check their respective documentation pages for an additional information.</p>
 <h1>
 UI data binding with let<a class="aui-toc-hash" href="#ui-data-binding-with-let" id="ui-data-binding-with-let" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L135"></b> </p><dl class="section note"><dt>Note</dt><dd>This is a comprehensive, straightforward way of setting up a connection. We are demonstrating it here so you can get deeper understanding on how connections are made and what does declarative way do under the hood. This way may be used in favour of declarative way if the latter not work for you. For declarative way, go to <a class="el" href="#UI_declarative_data_binding">UI declarative data binding</a>.</dd></dl>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L136"></b> </p><dl class="section note"><dt>Note</dt><dd>This is a comprehensive, straightforward way of setting up a connection. We are demonstrating it here so you can get deeper understanding on how connections are made and what does declarative way do under the hood. This way may be used in favour of declarative way if the latter not work for you. For declarative way, go to <a class="el" href="#UI_declarative_data_binding">UI declarative data binding</a>.</dd></dl>
 <p>This approach allows more control over the binding process by using <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> which is a procedural way of setting up connections. As a downside, it requires "let" syntax clause which may seem as overkill for such a simple operation.</p>
 <h2>
 Label via let<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_let" id="UIDataBindingTest_Label_via_let" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L145"></b> Use <code>let</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text()</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L146"></b> Use <code>let</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text()</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">struct </span>User {</div>
 <div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
@@ -212,7 +213,7 @@ Label via let<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_let" id=
 <p>By simply performing assignment on <code>user</code> we changed <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> display text. Magic, huh?</p>
 <h2>
 Label via let projection<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_let_projection" id="UIDataBindingTest_Label_via_let_projection" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L206"></b> It's fairly easy to define a projection because one-sided connection requires exactly one projection, obviously. </p><div class="fragment"><div class="line">_new&lt;ALabel&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L207"></b> It's fairly easy to define a projection because one-sided connection requires exactly one projection, obviously. </p><div class="fragment"><div class="line">_new&lt;ALabel&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
 <div class="line">    <span class="comment">// Data goes from left to right:</span></div>
 <div class="line">    <span class="comment">// current value (pre fire) or changed event</span></div>
 <div class="line">    <span class="comment">// goes through projection (&amp;AString::uppercase) first</span></div>
@@ -236,7 +237,7 @@ Label via let projection<a class="aui-toc-hash" href="#UIDataBindingTest_Label_v
 <p>This way, we've set up data binding with projection.</p>
 <h2>
 Bidirectional connection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirectional_connection" id="UIDataBindingTest_Bidirectional_connection" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L263"></b> In previous examples, we've used <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L264"></b> In previous examples, we've used <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view from model and obtaining data from view back to the model.</p>
 <p>For this example, let's use <a class="el" href="classATextField.html" title="Editable field with text to receive a text input from the user.">ATextField</a> instead of <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> as it's an editable view. In this case, we'd want to use <code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> because we do want <code>user-&gt;name</code> to be aware of changes of the view. </p><div class="fragment"><div class="line">_new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
 <div class="line">  <span class="comment">// Data goes from left to right in the first place</span></div>
@@ -257,7 +258,7 @@ Bidirectional connection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirec
 </div><!-- fragment --><p>This way we've set up bidirectional projection via <code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> which makes <code>user-&gt;name</code> aware of UI changes.</p>
 <h2>
 Bidirectional projection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirectional_projection" id="UIDataBindingTest_Bidirectional_projection" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L343"></b> Bidirectional connection updates values in both directions, hence it requires the projection to work in both sides as well.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L344"></b> Bidirectional connection updates values in both directions, hence it requires the projection to work in both sides as well.</p>
 <p>It is the case for <a class="el" href="classADropdownList.html" title="A button with dropdown list.">ADropdownList</a> with enums. <a class="el" href="classADropdownList.html" title="A button with dropdown list.">ADropdownList</a> works with string list model and indices. It does not know anything about underlying values.</p>
 <p>For example, define enum with <a class="el" href="group__useful__macros.html#ga339936ba5146bdad18838e527f34e9df">AUI_ENUM_VALUES</a> and model:</p>
 <div class="fragment"><div class="line"><span class="keyword">enum class</span> Gender {</div>
@@ -351,7 +352,7 @@ Bidirectional projection<a class="aui-toc-hash" href="#UIDataBindingTest_Bidirec
 </div>
 <h1>
 UI declarative data binding<a class="aui-toc-hash" href="#UI_declarative_data_binding" id="UI_declarative_data_binding" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L475"></b> As said earlier, <code>let</code> syntax is a little bit clunky and requires extra boilerplate code to set up.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L476"></b> As said earlier, <code>let</code> syntax is a little bit clunky and requires extra boilerplate code to set up.</p>
 <p>Here's where declarative syntax comes into play. The logic behind the syntax is the same as in <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code>/<code><a class="el" href="#ga1eb0abe12d4d0c4db737cc63582791cd" title="Connects source property to the destination property and opposite (bidirectionally).">AObject::biConnect</a></code> (for ease of replacement/understanding).</p>
 <p>Declarative syntax uses <code>&amp;</code> and <code>&amp;&amp;</code> operators to set up connections. These were chosen intentionally: <code>&amp;&amp;</code> resembles chain, so we "chaining view and property up".</p>
 <ul>
@@ -362,7 +363,7 @@ UI declarative data binding<a class="aui-toc-hash" href="#UI_declarative_data_bi
 <p>The example below is essentially the same as <a class="el" href="#UIDataBindingTest_Label_via_let">Label via let</a> but uses declarative connection set up syntax.</p>
 <h2>
 Label via declarative<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_declarative" id="UIDataBindingTest_Label_via_declarative" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L490"></b> Use <code>&amp;</code> and <code>&gt;</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L491"></b> Use <code>&amp;</code> and <code>&gt;</code> expression to connect the model's username property to the label's <a class="el" href="classAAbstractLabel.html#a22750596fa02b042ae73c6fcabad750d">text</a> property. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"><span class="keyword">struct </span>User {</div>
 <div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
 <div class="line">};</div>
@@ -387,7 +388,7 @@ Label via declarative<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_
 <p>In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in <a class="el" href="#UIDataBindingTest_Label_via_let">Label via let</a> example) but using declarative syntax. The logic behind <code>&amp;</code> is almost the same as with <code>let</code> and <code><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a></code> so projection use cases can be adapted in a similar manner.</p>
 <h2>
 ADataBindingDefault for omitting view property<a class="aui-toc-hash" href="#UIDataBindingTest_ADataBindingDefault_for_omitting_view_property" id="UIDataBindingTest_ADataBindingDefault_for_omitting_view_property" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L547"></b> In previous example we have explicitly specified <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a>'s property to connect with.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L548"></b> In previous example we have explicitly specified <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a>'s property to connect with.</p>
 <p>One of notable features of declarative way (in comparison to procedural <code>let</code> way) is that we can omit the view's property to connect with if such <code><a class="el" href="structADataBindingDefault.html" title="Defines how View handles properties of FieldType type.">ADataBindingDefault</a></code> specialization exist for the target view and the property type. Some views have already predefined such specialization for their underlying types. For instance, <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> has such specialization:</p>
 <div class="fragment"><div class="line"><span class="comment">/* PREDEFINED! You don't need to define it! This listing is an example */</span></div>
 <div class="line"><span class="keyword">template</span>&lt;&gt;</div>
@@ -408,7 +409,7 @@ ADataBindingDefault for omitting view property<a class="aui-toc-hash" href="#UID
 <p>In this example, we've omitted the destination property of the connection while maintaining the same behaviour as in <a class="el" href="#UIDataBindingTest_Label_via_declarative">Label via declarative</a>.</p>
 <h2>
 ADataBindingDefault strong type propagation<a class="aui-toc-hash" href="#UIDataBindingTest_ADataBindingDefault_strong_type_propagation" id="UIDataBindingTest_ADataBindingDefault_strong_type_propagation" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L618"></b> Think of <code><a class="el" href="structADataBindingDefault.html" title="Defines how View handles properties of FieldType type.">ADataBindingDefault</a></code> as we're not only connecting properties to properties, but also creating a "property to view" relationship. This philosophy covers the following scenario.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L619"></b> Think of <code><a class="el" href="structADataBindingDefault.html" title="Defines how View handles properties of FieldType type.">ADataBindingDefault</a></code> as we're not only connecting properties to properties, but also creating a "property to view" relationship. This philosophy covers the following scenario.</p>
 <p>In AUI, there's <a class="el" href="structaui_1_1ranged__number.html" title="Clamps the possible values for a number to the specified range: [min;max].">aui::ranged_number</a> template which stores valid value range right inside the type: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
 <div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;aui::ranged_number&lt;int, 1, 99&gt;</a>&gt; age;</div>
 <div class="line">};</div>
@@ -435,7 +436,7 @@ ADataBindingDefault strong type propagation<a class="aui-toc-hash" href="#UIData
 </div><!-- fragment --><p>This example demonstrates how to use declarative binding to propagate strong types. <code><a class="el" href="structaui_1_1ranged__number.html" title="Clamps the possible values for a number to the specified range: [min;max].">aui::ranged_number</a></code> propagates its constraints on <code><a class="el" href="classANumberPicker.html" title="A text field for numbers with increase/decrease buttons.">ANumberPicker</a></code> thanks to <code><a class="el" href="structADataBindingDefault.html" title="Defines how View handles properties of FieldType type.">ADataBindingDefault</a></code> specialization.</p>
 <h2>
 Label via declarative projection<a class="aui-toc-hash" href="#UIDataBindingTest_Label_via_declarative_projection" id="UIDataBindingTest_Label_via_declarative_projection" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L692"></b> We can use projections in the same way as with <code>let</code>. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L693"></b> We can use projections in the same way as with <code>let</code>. </p><div class="fragment"><div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"><span class="keyword">struct </span>User {</div>
 <div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> name;</div>
 <div class="line">};</div>
@@ -466,7 +467,7 @@ Label via declarative projection<a class="aui-toc-hash" href="#UIDataBindingTest
 </div>
 <h2>
 Declarative bidirectional connection<a class="aui-toc-hash" href="#UIDataBindingTest_Declarative_bidirectional_connection" id="UIDataBindingTest_Declarative_bidirectional_connection" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L821"></b> In previous examples, we've used <code>&amp;</code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L822"></b> In previous examples, we've used <code>&amp;</code> to make one directional (one sided) connection. This is perfectly enough for <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> because it cannot be changed by user.</p>
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view from model and obtaining data from view back to the model.</p>
 <p>For this example, let's use <a class="el" href="classATextField.html" title="Editable field with text to receive a text input from the user.">ATextField</a> instead of <a class="el" href="classALabel.html" title="Represents a simple single-line text display view.">ALabel</a> as it's an editable view. In this case, we'd want to use <code>&amp;&amp;</code> because we do want <code>user-&gt;name</code> to be aware of changes of the view. </p><div class="fragment"><div class="line">_new&lt;ATextField&gt;() &amp;&amp; user-&gt;name</div>
 </div><!-- fragment --><p>This gives the following result: <img alt="" class="inline" src="UIDataBindingTest.Declarative_bidirectional_connection_1.png"/> </p>
@@ -477,7 +478,7 @@ Declarative bidirectional connection<a class="aui-toc-hash" href="#UIDataBinding
 </div><!-- fragment --><p>This way we've set up bidirectional projection via <code>&amp;&amp;</code> which makes <code>user-&gt;name</code> aware of UI changes.</p>
 <h2>
 Declarative bidirectional projection<a class="aui-toc-hash" href="#UIDataBindingTest_Declarative_bidirectional_projection" id="UIDataBindingTest_Declarative_bidirectional_projection" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L886"></b> We can use projections in the same way as with <code>let</code>.</p>
+<p><b aui-src="aui.uitests/tests/UIDataBindingTest.cpp#L887"></b> We can use projections in the same way as with <code>let</code>.</p>
 <p>Let's repeat the <a class="el" href="#UIDataBindingTest_Bidirectional_projection">Bidirectional projection</a> sample in declarative way: </p><div class="fragment"><div class="line">_new&lt;ADropdownList&gt;(gendersStr) &amp;&amp; user-&gt;gender.biProjected(GENDER_INDEX_PROJECTION) &gt; &amp;<a class="code hl_function" href="classADropdownList.html#a943759a1bb9bb69a40ee9b2bca0ae088">ADropdownList::selectionId</a></div>
 <div class="ttc" id="aclassADropdownList_html_a943759a1bb9bb69a40ee9b2bca0ae088"><div class="ttname"><a href="classADropdownList.html#a943759a1bb9bb69a40ee9b2bca0ae088">ADropdownList::selectionId</a></div><div class="ttdeci">auto selectionId() const</div><div class="ttdoc">Selected id property.</div><div class="ttdef"><b>Definition</b> ADropdownList.h:50</div></div>
 </div><!-- fragment --><p><img alt="" class="inline" src="UIDataBindingTest.Declarative_bidirectional_projection_1.png"/> </p>

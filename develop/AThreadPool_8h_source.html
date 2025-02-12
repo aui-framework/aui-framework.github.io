@@ -235,109 +235,109 @@ $(function(){initNavTree('AThreadPool_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#include &lt;AUI/Thread/AFuture.h&gt;</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keywordtype">void</span>&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00175">
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classAFutureSet.html">  175</a></span><span class="keyword">class </span><a class="code hl_class" href="classAFutureSet.html">AFutureSet</a> : <span class="keyword">public</span> AVector&lt;AFuture&lt;T&gt;&gt; {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>   <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keyword">using </span>super = AVector&lt;AFuture&lt;T&gt;&gt;;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keyword">using </span>AVector&lt;<a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&gt;::AVector;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00186">
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6">  186</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6">waitForAll</a>() {</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="comment">// wait from the end to avoid idling (see AFuture::wait for details)</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : <a class="code hl_struct" href="structaui_1_1reverse__iterator__wrap.html">aui::reverse_iterator_wrap</a>(*<span class="keyword">this</span>)) {</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            v.operator*();</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keywordtype">void</span>&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00176">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classAFutureSet.html">  176</a></span><span class="keyword">class </span><a class="code hl_class" href="classAFutureSet.html">AFutureSet</a> : <span class="keyword">public</span> AVector&lt;AFuture&lt;T&gt;&gt; {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">using </span>super = AVector&lt;AFuture&lt;T&gt;&gt;;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keyword">using </span>AVector&lt;<a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&gt;::AVector;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00187">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6">  187</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6">waitForAll</a>() {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="comment">// wait from the end to avoid idling (see AFuture::wait for details)</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : <a class="code hl_struct" href="structaui_1_1reverse__iterator__wrap.html">aui::reverse_iterator_wrap</a>(*<span class="keyword">this</span>)) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            v.operator*();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
 </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00197">
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">  197</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">checkForExceptions</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordflow">if</span> (v.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult</a>()) {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                v.operator*();   <span class="comment">// TODO bad design</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        }</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00198">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">  198</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">checkForExceptions</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">if</span> (v.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult</a>()) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                v.operator*();   <span class="comment">// TODO bad design</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
 </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keyword">template</span> &lt;aui::invocable OnComplete&gt;</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00216">
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8">  216</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8">onAllComplete</a>(OnComplete&amp;&amp; onComplete) {</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        <span class="comment">// check if all futures is already complete.</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">if</span> (!v.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult</a>()) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="keywordflow">goto</span> setupTheHell;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            }</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        }</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        onComplete();</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    setupTheHell:</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keyword">struct </span>Temporary {</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            OnComplete onComplete;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <a class="code hl_class" href="classAFutureSet.html">AFutureSet</a> myCopy;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            std::atomic_bool canBeCalled = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        };</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keyword">auto</span> temporary = _new&lt;Temporary&gt;(std::forward&lt;OnComplete&gt;(onComplete), *<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            v.<a class="code hl_function" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a>([temporary](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; v) {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : temporary-&gt;myCopy) {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    <span class="keywordflow">if</span> (!v.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult</a>()) {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                        <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                    }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="comment">// yay! all tasks are completed. the last thing to check if the callback is already called</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <span class="keywordflow">if</span> (temporary-&gt;canBeCalled.exchange(<span class="keyword">false</span>)) {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                    temporary-&gt;onComplete();</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                }</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            });</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">template</span> &lt;aui::invocable OnComplete&gt;</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00217">
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8">  217</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8">onAllComplete</a>(OnComplete&amp;&amp; onComplete) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="comment">// check if all futures is already complete.</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">if</span> (!v.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult</a>()) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="keywordflow">goto</span> setupTheHell;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        onComplete();</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    setupTheHell:</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keyword">struct </span>Temporary {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            OnComplete onComplete;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <a class="code hl_class" href="classAFutureSet.html">AFutureSet</a> myCopy;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            std::atomic_bool canBeCalled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        };</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keyword">auto</span> temporary = _new&lt;Temporary&gt;(std::forward&lt;OnComplete&gt;(onComplete), *<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            v.<a class="code hl_function" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a>([temporary](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; v) {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;T&gt;</a>&amp; v : temporary-&gt;myCopy) {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    <span class="keywordflow">if</span> (!v.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">hasResult</a>()) {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                    }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <span class="comment">// yay! all tasks are completed. the last thing to check if the callback is already called</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                <span class="keywordflow">if</span> (temporary-&gt;canBeCalled.exchange(<span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                    temporary-&gt;onComplete();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            });</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
 </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>};</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>};</div>
 </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> Functor&gt;</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00250">
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">  250</a></span><span class="keyword">auto</span> <a class="code hl_function" href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">AThreadPool::parallel</a>(Iterator begin, Iterator end, Functor&amp;&amp; functor) {</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keyword">using </span>ResultType = <span class="keyword">decltype</span>(std::declval&lt;Functor&gt;()(std::declval&lt;Iterator&gt;(), std::declval&lt;Iterator&gt;()));</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <a class="code hl_class" href="classAFutureSet.html">AFutureSet&lt;ResultType&gt;</a> futureSet;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordtype">size_t</span> itemCount = end - begin;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordtype">size_t</span> affinity = (glm::min)(<a class="code hl_function" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">AThreadPool::global</a>().getTotalWorkerCount(), itemCount);</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">if</span> (affinity == 0)</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">return</span> futureSet;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordtype">size_t</span> itemsPerThread = itemCount / affinity;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> threadIndex = 0; threadIndex &lt; affinity; ++threadIndex) {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keyword">auto</span> forThreadBegin = begin;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        begin += itemsPerThread;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keyword">auto</span> forThreadEnd = threadIndex + 1 == affinity ? end : begin;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        futureSet.push_back(*<span class="keyword">this</span> *</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                                [functor = std::forward&lt;Functor&gt;(functor), forThreadBegin,</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                                 forThreadEnd]() -&gt; <span class="keyword">decltype</span>(<span class="keyword">auto</span>) { <span class="keywordflow">return</span> functor(forThreadBegin, forThreadEnd); });</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    }</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">return</span> futureSet;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> Functor&gt;</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00251">
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">  251</a></span><span class="keyword">auto</span> <a class="code hl_function" href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">AThreadPool::parallel</a>(Iterator begin, Iterator end, Functor&amp;&amp; functor) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">using </span>ResultType = <span class="keyword">decltype</span>(std::declval&lt;Functor&gt;()(std::declval&lt;Iterator&gt;(), std::declval&lt;Iterator&gt;()));</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_class" href="classAFutureSet.html">AFutureSet&lt;ResultType&gt;</a> futureSet;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordtype">size_t</span> itemCount = end - begin;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordtype">size_t</span> affinity = (glm::min)(<a class="code hl_function" href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">AThreadPool::global</a>().getTotalWorkerCount(), itemCount);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">if</span> (affinity == 0)</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <span class="keywordflow">return</span> futureSet;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordtype">size_t</span> itemsPerThread = itemCount / affinity;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> threadIndex = 0; threadIndex &lt; affinity; ++threadIndex) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keyword">auto</span> forThreadBegin = begin;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        begin += itemsPerThread;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keyword">auto</span> forThreadEnd = threadIndex + 1 == affinity ? end : begin;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        futureSet.push_back(*<span class="keyword">this</span> *</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                                [functor = std::forward&lt;Functor&gt;(functor), forThreadBegin,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                                 forThreadEnd]() -&gt; <span class="keyword">decltype</span>(<span class="keyword">auto</span>) { <span class="keywordflow">return</span> functor(forThreadBegin, forThreadEnd); });</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    }</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">return</span> futureSet;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>}</div>
 </div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#include &lt;AUI/Reflect/AReflect.h&gt;</span></div>
-<div class="ttc" id="aclassAFutureSet_html"><div class="ttname"><a href="classAFutureSet.html">AFutureSet</a></div><div class="ttdoc">Manages multiple futures.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:175</div></div>
-<div class="ttc" id="aclassAFutureSet_html_a1b211caf78241e8a388e0b2a7f3947b6"><div class="ttname"><a href="classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6">AFutureSet::waitForAll</a></div><div class="ttdeci">void waitForAll()</div><div class="ttdoc">Wait for the result of every AFuture.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:186</div></div>
-<div class="ttc" id="aclassAFutureSet_html_a6436d6a190457fb37401372f9fd6c417"><div class="ttname"><a href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">AFutureSet::checkForExceptions</a></div><div class="ttdeci">void checkForExceptions() const</div><div class="ttdoc">Find AFutures that encountered an exception. If such AFuture is found, AInvocationTargetException is ...</div><div class="ttdef"><b>Definition</b> AThreadPool.h:197</div></div>
-<div class="ttc" id="aclassAFutureSet_html_abe6e93d89e256e4fb66c34a8ebf1ffb8"><div class="ttname"><a href="classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8">AFutureSet::onAllComplete</a></div><div class="ttdeci">void onAllComplete(OnComplete &amp;&amp;onComplete)</div><div class="ttdoc">Specifies a callback which will be called when all futures in future set would have the result.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:216</div></div>
-<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that will be available at some point in the future.</div><div class="ttdef"><b>Definition</b> AFuture.h:620</div></div>
-<div class="ttc" id="aclassAFuture_html_a0c46bbaafece47c858e18e1ae3a9b27b"><div class="ttname"><a href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">AFuture::onSuccess</a></div><div class="ttdeci">const AFuture &amp; onSuccess(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition</b> AFuture.h:698</div></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#include &lt;AUI/Reflect/AReflect.h&gt;</span></div>
+<div class="ttc" id="aclassAFutureSet_html"><div class="ttname"><a href="classAFutureSet.html">AFutureSet</a></div><div class="ttdoc">Manages multiple futures.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:176</div></div>
+<div class="ttc" id="aclassAFutureSet_html_a1b211caf78241e8a388e0b2a7f3947b6"><div class="ttname"><a href="classAFutureSet.html#a1b211caf78241e8a388e0b2a7f3947b6">AFutureSet::waitForAll</a></div><div class="ttdeci">void waitForAll()</div><div class="ttdoc">Wait for the result of every AFuture.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:187</div></div>
+<div class="ttc" id="aclassAFutureSet_html_a6436d6a190457fb37401372f9fd6c417"><div class="ttname"><a href="classAFutureSet.html#a6436d6a190457fb37401372f9fd6c417">AFutureSet::checkForExceptions</a></div><div class="ttdeci">void checkForExceptions() const</div><div class="ttdoc">Find AFutures that encountered an exception. If such AFuture is found, AInvocationTargetException is ...</div><div class="ttdef"><b>Definition</b> AThreadPool.h:198</div></div>
+<div class="ttc" id="aclassAFutureSet_html_abe6e93d89e256e4fb66c34a8ebf1ffb8"><div class="ttname"><a href="classAFutureSet.html#abe6e93d89e256e4fb66c34a8ebf1ffb8">AFutureSet::onAllComplete</a></div><div class="ttdeci">void onAllComplete(OnComplete &amp;&amp;onComplete)</div><div class="ttdoc">Specifies a callback which will be called when all futures in future set would have the result.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:217</div></div>
+<div class="ttc" id="aclassAFuture_html"><div class="ttname"><a href="classAFuture.html">AFuture</a></div><div class="ttdoc">Represents a value that will be available at some point in the future.</div><div class="ttdef"><b>Definition</b> AFuture.h:621</div></div>
+<div class="ttc" id="aclassAFuture_html_a0c46bbaafece47c858e18e1ae3a9b27b"><div class="ttname"><a href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">AFuture::onSuccess</a></div><div class="ttdeci">const AFuture &amp; onSuccess(Callback &amp;&amp;callback) const noexcept</div><div class="ttdoc">Add onSuccess callback to the future.</div><div class="ttdef"><b>Definition</b> AFuture.h:699</div></div>
 <div class="ttc" id="aclassAQueue_html"><div class="ttname"><a href="classAQueue.html">AQueue</a></div><div class="ttdoc">A std::queue with AUI extensions.</div><div class="ttdef"><b>Definition</b> AQueue.h:24</div></div>
 <div class="ttc" id="aclassAThreadPool_1_1TryLaterException_html"><div class="ttname"><a href="classAThreadPool_1_1TryLaterException.html">AThreadPool::TryLaterException</a></div><div class="ttdef"><b>Definition</b> AThreadPool.h:160</div></div>
 <div class="ttc" id="aclassAThreadPool_html"><div class="ttname"><a href="classAThreadPool.html">AThreadPool</a></div><div class="ttdoc">Thread pool implementation.</div><div class="ttdef"><b>Definition</b> AThreadPool.h:33</div></div>
 <div class="ttc" id="aclassAThreadPool_html_a5ab99db5b16449e777bba101f46844af"><div class="ttname"><a href="classAThreadPool.html#a5ab99db5b16449e777bba101f46844af">AThreadPool::global</a></div><div class="ttdeci">static AThreadPool &amp; global()</div><div class="ttdoc">Global thread pool created with the default constructor.</div><div class="ttdef"><b>Definition</b> AThreadPool.cpp:145</div></div>
 <div class="ttc" id="aclassAThreadPool_html_a9f169592e52d9898532c395e1003c8a2"><div class="ttname"><a href="classAThreadPool.html#a9f169592e52d9898532c395e1003c8a2">AThreadPool::AThreadPool</a></div><div class="ttdeci">AThreadPool(size_t size)</div><div class="ttdoc">Initializes the thread pool with size of threads.</div><div class="ttdef"><b>Definition</b> AThreadPool.cpp:152</div></div>
-<div class="ttc" id="aclassAThreadPool_html_ab193ebe3b3a67a28a5062df037f6e252"><div class="ttname"><a href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">AThreadPool::parallel</a></div><div class="ttdeci">auto parallel(Iterator begin, Iterator end, Functor &amp;&amp;functor)</div><div class="ttdef"><b>Definition</b> AThreadPool.h:250</div></div>
+<div class="ttc" id="aclassAThreadPool_html_ab193ebe3b3a67a28a5062df037f6e252"><div class="ttname"><a href="classAThreadPool.html#ab193ebe3b3a67a28a5062df037f6e252">AThreadPool::parallel</a></div><div class="ttdeci">auto parallel(Iterator begin, Iterator end, Functor &amp;&amp;functor)</div><div class="ttdef"><b>Definition</b> AThreadPool.h:251</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
 <div class="ttc" id="aclassaui_1_1impl_1_1future_1_1Future_html_aa5daf770778f70b6ce98d301d0e8619f"><div class="ttname"><a href="classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f">aui::impl::future::Future::hasResult</a></div><div class="ttdeci">bool hasResult() const noexcept</div><div class="ttdef"><b>Definition</b> AFuture.h:395</div></div>
 <div class="ttc" id="astructaui_1_1reverse__iterator__wrap_html"><div class="ttname"><a href="structaui_1_1reverse__iterator__wrap.html">aui::reverse_iterator_wrap</a></div><div class="ttdef"><b>Definition</b> iterators.h:34</div></div>

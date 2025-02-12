@@ -166,7 +166,7 @@ var searchData=
   ['stealin_163',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_164',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['step_165',['Prompt user on every step',['../group__updater.html#autotoc_md198',1,'']]],
-  ['stl_20like_20functionality_166',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md119',1,'']]],
+  ['stl_20like_20functionality_166',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md120',1,'']]],
   ['stop_167',['stop',['../classIAudioPlayer.html#aa2b734044f180bbc89b9642eae9e911b',1,'IAudioPlayer']]],
   ['streambuf_168',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
   ['streams_169',['IO streams',['../group__io.html',1,'']]],
