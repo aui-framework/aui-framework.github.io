@@ -110,7 +110,7 @@ $(function(){initNavTree('group__core.html',''); initResizable(true); });
 <p>AUI's core central library without graphical components used by other modules. Adds these features to C++:</p><ul>
 <li><a class="el" href="group__signal__slot.html">signal-slot system</a></li>
 <li><a class="el" href="group__property__system.html">property system</a></li>
-<li><a class="el" href="classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43">interruptable threads</a></li>
+<li><a class="el" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">interruptable threads</a></li>
 <li><a class="el" href="group__io.html">input-output</a></li>
 <li><a class="el" href="classAI18n.html">i18n</a></li>
 <li><a class="el" href="classALogger.html">logging</a></li>
@@ -134,8 +134,6 @@ Topics<a class="aui-toc-hash" href="#groups" id="groups" name="groups" style="co
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="group__useful__templates.html">Useful templates</a></td></tr>
 <tr class="memdesc:group__useful__templates"><td class="mdescLeft"> </td><td class="mdescRight">AUI template library. <br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="group__windows__specific.html">Windows-specific</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="group__property__system.html">Property System</a></td></tr>
 <tr class="memdesc:group__property__system"><td class="mdescLeft"> </td><td class="mdescRight">Property System is a data binding mechanism based on <a class="el" href="group__signal__slot.html">signal-slot system</a>. <br/></td></tr>
@@ -326,6 +324,12 @@ Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAWatchdog.html">AWatchdog</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Watchdog helper class.  <a href="classAWatchdog.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAComBase.html">AComBase&lt; Child, Base &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Helper class implementing COM AddRef Release, and QueryInterface.  <a href="classAComBase.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAComPtr.html">AComPtr&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Takes care of AddRef and Release() reference counting mechanism of COM objects.  <a href="classAComPtr.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Macros<a class="aui-toc-hash" href="#define-members" id="define-members" name="define-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
@@ -383,7 +387,7 @@ Variables<a class="aui-toc-hash" href="#var-members" id="var-members" name="var-
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#ga537f82748636c62d35a8ec4ed38a0fe0" id="ga537f82748636c62d35a8ec4ed38a0fe0" name="ga537f82748636c62d35a8ec4ed38a0fe0" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#gafb09429e1504fcd99fad3ad05858638a" id="gafb09429e1504fcd99fad3ad05858638a" name="gafb09429e1504fcd99fad3ad05858638a" style="color: var(--fragment-comment) !important">#</a></h2>
 
 <h2 class="memtitle"><span class="permalink">◆ </span>args()<a class="aui-toc-hash" href="#◆ args()" id="◆ args()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
@@ -393,7 +397,7 @@ Variables<a class="aui-toc-hash" href="#var-members" id="var-members" name="var-
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">const <a class="el" href="classACommandLineArgs.html">ACommandLineArgs</a> &amp; aui::args </td>
+<td class="memname">API_AUI_CORE const <a class="el" href="classACommandLineArgs.html">ACommandLineArgs</a> &amp; aui::args </td>
 <td>(</td>
 <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
 <td></td>
@@ -446,6 +450,23 @@ Variables<a class="aui-toc-hash" href="#var-members" id="var-members" name="var-
 <p>If set, child and parent processes have the same stderr stream</p>
 <p>If set, child process starts in "detached" way; i.e, when this process dies, child won't.</p>
 <p>On *nix systems, the process started with DETACHED flag is daemonized (i.e., reparented to process with pid 1) using double fork technique.</p>
+</div>
+</div>
+<a id="ga4ac5dee46a97cf22173e96253dae9b89" name="ga4ac5dee46a97cf22173e96253dae9b89"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>bitmapToImage()<a class="aui-toc-hash" href="#◆ bitmaptoimage()" id="◆ bitmaptoimage()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">API_AUI_VIEWS AImage aui::win32::bitmapToImage </td>
+<td>(</td>
+<td class="paramtype">HBITMAP</td> <td class="paramname"><span class="paramname"><em>hbitmap</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>HBITMAP to AImage. </p>
+<dl class="windows"><dt><b><a class="el" href="windows.html#_windows000018">Windows-specific</a></b></dt><dd>This API is available on <a class="el" href="windows.html">Windows (operating system)</a> only. </dd></dl>
 </div>
 </div>
 <a id="ga5eab01bd6015b51aca8bfddb3b525e32" name="ga5eab01bd6015b51aca8bfddb3b525e32"></a>
@@ -513,13 +534,55 @@ template&lt;typename Iterator&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>true if container contains an element, false otherwise. </dd></dl>
 </div>
 </div>
-<a id="ga2305696ff6358034fab947ca8cd7812a" name="ga2305696ff6358034fab947ca8cd7812a"></a>
+<a id="gaad0b29a69b2fd2e9f82212600b57da3d" name="gaad0b29a69b2fd2e9f82212600b57da3d"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>fromWchar()<a class="aui-toc-hash" href="#◆ fromwchar()" id="◆ fromwchar()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classAString.html">AString</a> aui::win32::fromWchar </td>
+<td>(</td>
+<td class="paramtype">std::wstring_view</td> <td class="paramname"><span class="paramname"><em>string</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>wchar_t string view to <a class="el" href="classAString.html" title="Represents a Unicode character string.">AString</a>. </p>
+<dl class="windows"><dt><b><a class="el" href="windows.html#_windows000004">Windows-specific</a></b></dt><dd>This API is available on <a class="el" href="windows.html">Windows (operating system)</a> only. </dd></dl>
+</div>
+</div>
+<a id="ga9e048e9b93785fa59990ae6ab85ad0e3" name="ga9e048e9b93785fa59990ae6ab85ad0e3"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>iconToImage()<a class="aui-toc-hash" href="#◆ icontoimage()" id="◆ icontoimage()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">API_AUI_VIEWS AImage aui::win32::iconToImage </td>
+<td>(</td>
+<td class="paramtype">HICON</td> <td class="paramname"><span class="paramname"><em>hIcon</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>HICON to AImage. </p>
+<dl class="windows"><dt><b><a class="el" href="windows.html#_windows000017">Windows-specific</a></b></dt><dd>This API is available on <a class="el" href="windows.html">Windows (operating system)</a> only. </dd></dl>
+</div>
+</div>
+<a id="ga9c70a98a69472dee064480ab983151b7" name="ga9c70a98a69472dee064480ab983151b7"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>importPlugin()<a class="aui-toc-hash" href="#◆ importplugin()" id="◆ importplugin()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">void aui::importPlugin </td>
+<td class="memname">API_AUI_CORE void aui::importPlugin </td>
 <td>(</td>
 <td class="paramtype">const <a class="el" href="classAString.html">AString</a> &amp;</td> <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
 <td></td>
@@ -535,13 +598,13 @@ template&lt;typename Iterator&gt; </div>
 </dl>
 </div>
 </div>
-<a id="ga0088806c40549a1bc72ea08cdb864be9" name="ga0088806c40549a1bc72ea08cdb864be9"></a>
+<a id="ga175e4321bf6ae5b8f076559c40dbb3b5" name="ga175e4321bf6ae5b8f076559c40dbb3b5"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>importPluginPath()<a class="aui-toc-hash" href="#◆ importpluginpath()" id="◆ importpluginpath()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">void aui::importPluginPath </td>
+<td class="memname">API_AUI_CORE void aui::importPluginPath </td>
 <td>(</td>
 <td class="paramtype">const <a class="el" href="classAPath.html">APath</a> &amp;</td> <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
 <td></td>
@@ -764,6 +827,81 @@ template&lt;typename Container&gt; </div>
 </div><div class="memdoc">
 <p>Removes first occurrence of <code>value</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd>If the item is removed, it's index returned. </dd></dl>
+</div>
+</div>
+<a id="ga3004006af806a61f9d5b30b330c258ce" name="ga3004006af806a61f9d5b30b330c258ce"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>toWchar() <span class="overload">[1/2]</span><a class="aui-toc-hash" href="#◆ towchar()-[1/2]" id="◆ towchar()-[1/2]" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">wchar_t * aui::win32::toWchar </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="classAString.html">AString</a> &amp;</td> <td class="paramname"><span class="paramname"><em>string</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classAString.html" title="Represents a Unicode character string.">AString</a> to const wchar_t*. </p>
+<dl class="windows"><dt><b><a class="el" href="windows.html#_windows000002">Windows-specific</a></b></dt><dd>This API is available on <a class="el" href="windows.html">Windows (operating system)</a> only. </dd></dl>
+</div>
+</div>
+<a id="ga6e35f642628b75fdca9cdd63972e4e9c" name="ga6e35f642628b75fdca9cdd63972e4e9c"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>toWchar() <span class="overload">[2/2]</span><a class="aui-toc-hash" href="#◆ towchar()-[2/2]" id="◆ towchar()-[2/2]" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">const wchar_t * aui::win32::toWchar </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classAString.html">AString</a> &amp;</td> <td class="paramname"><span class="paramname"><em>string</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classAString.html" title="Represents a Unicode character string.">AString</a> to const wchar_t*. </p>
+<dl class="windows"><dt><b><a class="el" href="windows.html#_windows000001">Windows-specific</a></b></dt><dd>This API is available on <a class="el" href="windows.html">Windows (operating system)</a> only. </dd></dl>
+</div>
+</div>
+<a id="ga3761573539abae397cfab5e885e3fa2e" name="ga3761573539abae397cfab5e885e3fa2e"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>toWcharView()<a class="aui-toc-hash" href="#◆ towcharview()" id="◆ towcharview()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">std::wstring_view aui::win32::toWcharView </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="classAString.html">AString</a> &amp;</td> <td class="paramname"><span class="paramname"><em>string</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="classAString.html" title="Represents a Unicode character string.">AString</a> to wchar_t string view. </p>
+<dl class="windows"><dt><b><a class="el" href="windows.html#_windows000003">Windows-specific</a></b></dt><dd>This API is available on <a class="el" href="windows.html">Windows (operating system)</a> only. </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation<a class="aui-toc-hash" href="#ga177fb99c6b6cf725dc64202f891678cf" id="ga177fb99c6b6cf725dc64202f891678cf" name="ga177fb99c6b6cf725dc64202f891678cf" style="color: var(--fragment-comment) !important">#</a></h2>

@@ -124,13 +124,13 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">struct </span>WaitHelper {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        WaitHelper(<a class="code hl_class" href="classAConditionVariable.html">AConditionVariable</a>&amp; var) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keyword">auto</span> thread = <a class="code hl_function" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keyword">auto</span> thread = <a class="code hl_function" href="classAThread.html#a455beceab4e80bba85d44a5d4ee15b08">AThread::current</a>();</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            std::unique_lock lock(thread-&gt;mCurrentCV.mutex);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            thread-&gt;mCurrentCV.cv = &amp;var;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        ~WaitHelper() <span class="keyword">noexcept</span>(<span class="keyword">false</span>) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keyword">auto</span> thread = <a class="code hl_function" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keyword">auto</span> thread = <a class="code hl_function" href="classAThread.html#a455beceab4e80bba85d44a5d4ee15b08">AThread::current</a>();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            std::unique_lock lock(thread-&gt;mCurrentCV.mutex);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            thread-&gt;mCurrentCV.cv = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
@@ -141,7 +141,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        Predicate predicate;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="class__.html">_&lt;AAbstractThread&gt;</a> thread;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        PredicateHelper(Predicate predicate) : predicate(std::move(predicate)), thread(<a class="code hl_function" href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a>()) {}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        PredicateHelper(Predicate predicate) : predicate(std::move(predicate)), thread(<a class="code hl_function" href="classAThread.html#a455beceab4e80bba85d44a5d4ee15b08">AThread::current</a>()) {}</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">bool</span> operator()() <span class="keyword">noexcept</span> {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> (thread-&gt;isInterrupted()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> predicate();</div>
@@ -160,7 +160,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            WaitHelper w(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            mImpl.wait(lock);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Lock, <span class="keyword">typename</span> Predicate&gt;</div>
@@ -171,7 +171,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            WaitHelper w(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            mImpl.wait(lock, PredicateHelper(std::forward&lt;Predicate&gt;(predicate)));</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
@@ -183,7 +183,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            WaitHelper w(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            mImpl.wait_for(lock, duration);</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
 </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
@@ -195,7 +195,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            WaitHelper w(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            mImpl.wait_for(lock, duration, PredicateHelper(std::forward&lt;Predicate&gt;(predicate)));</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
 </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
@@ -207,7 +207,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            WaitHelper w(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            mImpl.wait_until(lock, timepoint);</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
 </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
@@ -219,7 +219,7 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            WaitHelper w(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            mImpl.wait_until(lock, duration, PredicateHelper(std::forward&lt;Predicate&gt;(predicate)));</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_function" href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a>();</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
 </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>};</div>
@@ -233,8 +233,8 @@ $(function(){initNavTree('AConditionVariable_8h_source.html',''); initResizable(
 <div class="ttc" id="aclassAConditionVariable_html_ac0de7beaf1c9b3b0806d8bdec30af303"><div class="ttname"><a href="classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303">AConditionVariable::notify_all</a></div><div class="ttdeci">void notify_all() noexcept</div><div class="ttdef"><b>Definition</b> AConditionVariable.h:62</div></div>
 <div class="ttc" id="aclassAConditionVariable_html_af49e24fddafa4d3cf29c0dcef892258e"><div class="ttname"><a href="classAConditionVariable.html#af49e24fddafa4d3cf29c0dcef892258e">AConditionVariable::wait_for</a></div><div class="ttdeci">void wait_for(Lock &amp;lock, Duration duration)</div><div class="ttdef"><b>Definition</b> AConditionVariable.h:104</div></div>
 <div class="ttc" id="aclassAPerformanceSection_html"><div class="ttname"><a href="classAPerformanceSection.html">APerformanceSection</a></div><div class="ttdoc">Defines performance profiling named (and colored) span within RAII range.</div><div class="ttdef"><b>Definition</b> APerformanceSection.h:27</div></div>
-<div class="ttc" id="aclassAThread_html_a1d09d7332e61f6ef39e93d4a1fdc2574"><div class="ttname"><a href="classAThread.html#a1d09d7332e61f6ef39e93d4a1fdc2574">AThread::current</a></div><div class="ttdeci">static _&lt; AAbstractThread &gt; current()</div><div class="ttdef"><b>Definition</b> AThread.cpp:197</div></div>
-<div class="ttc" id="aclassAThread_html_a64c8a94e0bddd90ca609b3cfb5ba007f"><div class="ttname"><a href="classAThread.html#a64c8a94e0bddd90ca609b3cfb5ba007f">AThread::interruptionPoint</a></div><div class="ttdeci">static void interruptionPoint()</div><div class="ttdoc">Interruption point.</div><div class="ttdef"><b>Definition</b> AThread.cpp:207</div></div>
+<div class="ttc" id="aclassAThread_html_a1664a87c918f74c753e435501d0d1885"><div class="ttname"><a href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a></div><div class="ttdeci">static void interruptionPoint()</div><div class="ttdoc">Interruption point.</div></div>
+<div class="ttc" id="aclassAThread_html_a455beceab4e80bba85d44a5d4ee15b08"><div class="ttname"><a href="classAThread.html#a455beceab4e80bba85d44a5d4ee15b08">AThread::current</a></div><div class="ttdeci">static _&lt; AAbstractThread &gt; current()</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their

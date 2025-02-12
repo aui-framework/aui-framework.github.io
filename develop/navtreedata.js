@@ -60,6 +60,14 @@ var NAVTREE =
       [ "Setting App Icon", "md_docs_2Setting_01App_01Icon.html", null ],
       [ "Packaging Your App", "md_docs_2Packaging_01Your_01App.html", null ]
     ] ],
+    [ "Platform Specifics", null, [
+      [ "Windows", "windows.html", null ],
+      [ "Linux", "linux.html", null ],
+      [ "macOS", "macos.html", null ],
+      [ "Android", "android.html", null ],
+      [ "iOS", "ios.html", null ],
+      [ "WebAssembly", "emscripten.html", null ]
+    ] ],
     [ "Other", null, [
       [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
       [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ],
@@ -69,7 +77,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"classaui_1_1assert__not__used__when__null.html"
+"android.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

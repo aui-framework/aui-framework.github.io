@@ -2,6 +2,7 @@ var namespaces =
 [
     [ "ADesktop", "namespaceADesktop.html", "namespaceADesktop" ],
     [ "AHash", "namespaceAHash.html", null ],
+    [ "AMessageBox", "namespaceAMessageBox.html", null ],
     [ "APlatform", "namespaceAPlatform.html", null ],
     [ "aui", null, [
       [ "audio", null, [
@@ -75,15 +76,15 @@ var namespaces =
       [ "unsigned_integral", "conceptaui_1_1unsigned__integral.html", null ],
       [ "is_tuple", "conceptaui_1_1is__tuple.html", null ],
       [ "pointer_to_member", "conceptaui_1_1pointer__to__member.html", null ],
-      [ "args", "group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0", null ],
-      [ "importPlugin", "group__core.html#ga2305696ff6358034fab947ca8cd7812a", null ],
-      [ "importPluginPath", "group__core.html#ga0088806c40549a1bc72ea08cdb864be9", null ],
+      [ "args", "group__core.html#gafb09429e1504fcd99fad3ad05858638a", null ],
+      [ "importPlugin", "group__core.html#ga9c70a98a69472dee064480ab983151b7", null ],
+      [ "importPluginPath", "group__core.html#ga175e4321bf6ae5b8f076559c40dbb3b5", null ],
       [ "indexOf", "group__core.html#ga4cfb55637d96cbb11c9c00bcb6a7998d", null ],
       [ "is_complete", "group__useful__templates.html#ga6f9bb834ae166b6625fc5c91117d8738", null ],
       [ "is_complete< T, decltype(void(sizeof(T)))>", "group__useful__templates.html#ga2f01064dbcf7bb512dcc42776ab95678", null ],
       [ "select_overload", "group__useful__templates.html#ga9457e4a0e33ad1fe42bb558b7f5a224a", null ]
     ] ],
     [ "AXml", "namespaceAXml.html", [
-      [ "read", "group__xml.html#ga06fdf594d32ebd9bf8a564fd832c6f28", null ]
+      [ "read", "group__xml.html#gace12d879af9847e609d29bf60d07d9da", null ]
     ] ]
 ];

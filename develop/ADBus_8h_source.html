@@ -408,8 +408,8 @@ $(function(){initNavTree('ADBus_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            DBusMessageIter sub;</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            dbus_message_iter_recurse(iter, &amp;sub);</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            std::apply([&amp;](<span class="keyword">const</span> <span class="keyword">auto</span>&amp;... <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>){</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                (..., aui::dbus::iter_append(&amp;sub, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>));</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            std::apply([&amp;](<span class="keyword">const</span> <span class="keyword">auto</span>&amp;... <a class="code hl_function" href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">args</a>){</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                (..., aui::dbus::iter_append(&amp;sub, <a class="code hl_function" href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">args</a>));</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            }, t);</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        }</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
@@ -497,7 +497,7 @@ $(function(){initNavTree('ADBus_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        aui::parameter_pack::for_each([&amp;](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; v) {</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>            aui::dbus::iter_append(&amp;dbusArgs, v);</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        }, <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a>...);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        }, <a class="code hl_function" href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">args</a>...);</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        <span class="keyword">auto</span> pending = <a class="code hl_function" href="structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617">aui::ptr::make_unique_with_deleter</a>([&amp;] {</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            DBusPendingCall* pending;</div>
@@ -554,7 +554,7 @@ $(function(){initNavTree('ADBus_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                }</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                <span class="keywordtype">bool</span> hasNext = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                <span class="keyword">auto</span> <a class="code hl_function" href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">args</a> = aui::tuple_visitor&lt;argz&gt;::for_each_make_tuple([&amp;]&lt;<span class="keyword">typename</span> T&gt;() {</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                <span class="keyword">auto</span> <a class="code hl_function" href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">args</a> = aui::tuple_visitor&lt;argz&gt;::for_each_make_tuple([&amp;]&lt;<span class="keyword">typename</span> T&gt;() {</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                    <span class="keywordflow">if</span> (!hasNext) {</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                        <span class="keywordflow">throw</span> ADBus::Exception(<span class="stringliteral">"too few arguments"</span>);</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>                    }</div>
@@ -605,13 +605,13 @@ $(function(){initNavTree('ADBus_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassAMap_html"><div class="ttname"><a href="classAMap.html">AMap</a></div><div class="ttdoc">A std::map with AUI extensions.</div><div class="ttdef"><b>Definition</b> AMap.h:218</div></div>
 <div class="ttc" id="aclassARaiiHelper_html"><div class="ttname"><a href="classARaiiHelper.html">ARaiiHelper</a></div><div class="ttdef"><b>Definition</b> ARaiiHelper.h:17</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
-<div class="ttc" id="aclassAString_html_a9ca49cfa70bd0ca93fde85bfe2784c21"><div class="ttname"><a href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">AString::toStdString</a></div><div class="ttdeci">std::string toStdString() const noexcept</div><div class="ttdef"><b>Definition</b> AString.cpp:338</div></div>
+<div class="ttc" id="aclassAString_html_a9ca49cfa70bd0ca93fde85bfe2784c21"><div class="ttname"><a href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">AString::toStdString</a></div><div class="ttdeci">std::string toStdString() const noexcept</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
 <div class="ttc" id="aclassaui_1_1dbus_1_1ObjectPath_html"><div class="ttname"><a href="classaui_1_1dbus_1_1ObjectPath.html">aui::dbus::ObjectPath</a></div><div class="ttdef"><b>Definition</b> ADBus.h:26</div></div>
 <div class="ttc" id="aconceptaui_1_1convertible__to_html"><div class="ttname"><a href="conceptaui_1_1convertible__to.html">aui::convertible_to</a></div><div class="ttdef"><b>Definition</b> concepts.h:42</div></div>
 <div class="ttc" id="aconceptaui_1_1dbus_1_1convertible__or__void_html"><div class="ttname"><a href="conceptaui_1_1dbus_1_1convertible__or__void.html">aui::dbus::convertible_or_void</a></div><div class="ttdef"><b>Definition</b> ADBus.h:75</div></div>
 <div class="ttc" id="aconceptaui_1_1dbus_1_1convertible_html"><div class="ttname"><a href="conceptaui_1_1dbus_1_1convertible.html">aui::dbus::convertible</a></div><div class="ttdef"><b>Definition</b> ADBus.h:34</div></div>
-<div class="ttc" id="agroup__core_html_ga537f82748636c62d35a8ec4ed38a0fe0"><div class="ttname"><a href="group__core.html#ga537f82748636c62d35a8ec4ed38a0fe0">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div><div class="ttdef"><b>Definition</b> OSAndroid.cpp:29</div></div>
+<div class="ttc" id="agroup__core_html_gafb09429e1504fcd99fad3ad05858638a"><div class="ttname"><a href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition</b> Assert.h:55</div></div>
 <div class="ttc" id="astructaui_1_1dbus_1_1Unknown_html"><div class="ttname"><a href="structaui_1_1dbus_1_1Unknown.html">aui::dbus::Unknown</a></div><div class="ttdef"><b>Definition</b> ADBus.h:39</div></div>
 <div class="ttc" id="astructaui_1_1dbus_1_1Variant_html"><div class="ttname"><a href="structaui_1_1dbus_1_1Variant.html">aui::dbus::Variant</a></div><div class="ttdef"><b>Definition</b> ADBus.h:69</div></div>

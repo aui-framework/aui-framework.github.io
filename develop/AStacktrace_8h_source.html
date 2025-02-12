@@ -162,15 +162,15 @@ $(function(){initNavTree('AStacktrace_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    AStacktrace(aui::range&lt;iterator&gt; range): mEntries(range.begin(), range.end()) {}</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    aui::range&lt;iterator&gt; stripBeforeFunctionCall(<span class="keywordtype">void</span>* pFunction, <span class="keywordtype">int</span> maxAllowedOffsetInBytes = 50);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classAStacktrace.html#a097d72ef98611c7b6481f8983a153f4c">   86</a></span>    <a class="code hl_struct" href="structaui_1_1range.html">aui::range&lt;iterator&gt;</a> <a class="code hl_function" href="classAStacktrace.html#a097d72ef98611c7b6481f8983a153f4c">stripBeforeFunctionCall</a>(<span class="keywordtype">void</span>* pFunction, <span class="keywordtype">int</span> maxAllowedOffsetInBytes = 50);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    AStacktrace(<span class="keyword">const</span> AStacktrace&amp;) = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    AStacktrace(AStacktrace&amp;&amp;) noexcept = default;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> resolveSymbolsIfNeeded() const noexcept;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4">   96</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4">resolveSymbolsIfNeeded</a>() const noexcept;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    const AVector&lt;Entry&gt;&amp; entries() const noexcept {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    const <a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="classAStacktrace_1_1Entry.html">Entry</a>&gt;&amp; entries() const noexcept {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> mEntries;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
@@ -194,13 +194,13 @@ $(function(){initNavTree('AStacktrace_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> mEntries.rend();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">static</span> AStacktrace capture(<span class="keywordtype">unsigned</span> skipFrames = 0, <span class="keywordtype">unsigned</span> maxFrames = 128) noexcept;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classAStacktrace.html#a40c074f612095508f89377c7cf5140d3">  130</a></span>    <span class="keyword">static</span> AStacktrace <a class="code hl_function" href="classAStacktrace.html#a40c074f612095508f89377c7cf5140d3">capture</a>(<span class="keywordtype">unsigned</span> skipFrames = 0, <span class="keywordtype">unsigned</span> maxFrames = 128) noexcept;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>private:</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    mutable AVector&lt;Entry&gt; mEntries;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    mutable <a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="classAStacktrace_1_1Entry.html">Entry</a>&gt; mEntries;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    mutable <span class="keywordtype">bool</span> mSymbolNamesResolved = false;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    explicit AStacktrace(AVector&lt;Entry&gt; entries) : mEntries(std::move(entries)) {}</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    explicit AStacktrace(<a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="classAStacktrace_1_1Entry.html">Entry</a>&gt; entries) : mEntries(std::move(entries)) {}</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>};</div>
 </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
@@ -231,10 +231,16 @@ $(function(){initNavTree('AStacktrace_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition</b> AOptional.h:32</div></div>
+<div class="ttc" id="aclassAStacktrace_1_1Entry_html"><div class="ttname"><a href="classAStacktrace_1_1Entry.html">AStacktrace::Entry</a></div><div class="ttdoc">Stacktrace entry.</div><div class="ttdef"><b>Definition</b> AStacktrace.h:33</div></div>
 <div class="ttc" id="aclassAStacktrace_1_1Entry_html_a3deb4e464ac61926ef732c3f746d0470"><div class="ttname"><a href="classAStacktrace_1_1Entry.html#a3deb4e464ac61926ef732c3f746d0470">AStacktrace::Entry::fileName</a></div><div class="ttdeci">const AOptional&lt; AString &gt; &amp; fileName() const noexcept</div><div class="ttdef"><b>Definition</b> AStacktrace.h:54</div></div>
 <div class="ttc" id="aclassAStacktrace_1_1Entry_html_a61d8534903ade21013d6b272937dc86a"><div class="ttname"><a href="classAStacktrace_1_1Entry.html#a61d8534903ade21013d6b272937dc86a">AStacktrace::Entry::functionName</a></div><div class="ttdeci">const AOptional&lt; AString &gt; &amp; functionName() const noexcept</div><div class="ttdef"><b>Definition</b> AStacktrace.h:47</div></div>
 <div class="ttc" id="aclassAStacktrace_1_1Entry_html_adb06ca26db1ac1f3eea0320130ceff2e"><div class="ttname"><a href="classAStacktrace_1_1Entry.html#adb06ca26db1ac1f3eea0320130ceff2e">AStacktrace::Entry::lineNumber</a></div><div class="ttdeci">AOptional&lt; unsigned &gt; lineNumber() const noexcept</div><div class="ttdef"><b>Definition</b> AStacktrace.h:61</div></div>
 <div class="ttc" id="aclassAStacktrace_html"><div class="ttname"><a href="classAStacktrace.html">AStacktrace</a></div><div class="ttdoc">Stacktrace consisting of a collection of stack function frames.</div><div class="ttdef"><b>Definition</b> AStacktrace.h:28</div></div>
+<div class="ttc" id="aclassAStacktrace_html_a097d72ef98611c7b6481f8983a153f4c"><div class="ttname"><a href="classAStacktrace.html#a097d72ef98611c7b6481f8983a153f4c">AStacktrace::stripBeforeFunctionCall</a></div><div class="ttdeci">aui::range&lt; iterator &gt; stripBeforeFunctionCall(void *pFunction, int maxAllowedOffsetInBytes=50)</div><div class="ttdoc">Tries to find the function pointer in stacktrace and strips stacktrace until function frame.</div></div>
+<div class="ttc" id="aclassAStacktrace_html_a40c074f612095508f89377c7cf5140d3"><div class="ttname"><a href="classAStacktrace.html#a40c074f612095508f89377c7cf5140d3">AStacktrace::capture</a></div><div class="ttdeci">static AStacktrace capture(unsigned skipFrames=0, unsigned maxFrames=128) noexcept</div><div class="ttdoc">Creates stacktrace of the current thread.</div></div>
+<div class="ttc" id="aclassAStacktrace_html_a767ebebab5fd81eb46a7a8f03733e6d4"><div class="ttname"><a href="classAStacktrace.html#a767ebebab5fd81eb46a7a8f03733e6d4">AStacktrace::resolveSymbolsIfNeeded</a></div><div class="ttdeci">void resolveSymbolsIfNeeded() const noexcept</div><div class="ttdoc">Invokes function name resolution with function pointers.</div></div>
+<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
+<div class="ttc" id="astructaui_1_1range_html"><div class="ttname"><a href="structaui_1_1range.html">aui::range</a></div><div class="ttdef"><b>Definition</b> iterators.h:50</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

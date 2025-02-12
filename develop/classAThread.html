@@ -112,7 +112,7 @@ $(function(){initNavTree('classAThread.html',''); initResizable(true); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="nested-classes" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAThread_1_1Interrupted.html">Interrupted</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Exception that is thrown by <code><a class="el" href="#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point.">AThread::interruptionPoint()</a></code>, if interruption is requested for this thread. Handled by <code><a class="el" href="#a9234a95574195c1ed42364fe8a7a8329" title="Start thread execution.">AThread::start</a></code>.  <a href="classAThread_1_1Interrupted.html#details">More...</a><br/></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Exception that is thrown by <code><a class="el" href="#a1664a87c918f74c753e435501d0d1885" title="Interruption point.">AThread::interruptionPoint()</a></code>, if interruption is requested for this thread. Handled by <code><a class="el" href="#a9234a95574195c1ed42364fe8a7a8329" title="Start thread execution.">AThread::start</a></code>.  <a href="classAThread_1_1Interrupted.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
@@ -140,8 +140,8 @@ void </td><td class="memItemRight" valign="bottom"><b>join</b> ()</td></tr>
 <tr class="memdesc:a681dd637685f0e11d5993d4ccd5defb2"><td class="mdescLeft"> </td><td class="mdescRight">Waits for thread to be finished. <br/></td></tr>
 <tr class="separator:a681dd637685f0e11d5993d4ccd5defb2"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pub_methods_classAAbstractThread"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAAbstractThread')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="classAAbstractThread.html">AAbstractThread</a></td></tr>
-<tr class="memitem:aa0086fd4598259bf171ce908ee21c818 inherit pub_methods_classAAbstractThread" id="r_aa0086fd4598259bf171ce908ee21c818"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#aa0086fd4598259bf171ce908ee21c818">getId</a> () const</td></tr>
-<tr class="separator:aa0086fd4598259bf171ce908ee21c818 inherit pub_methods_classAAbstractThread"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2d1b3800c20c3b4416771ac16e48de1b inherit pub_methods_classAAbstractThread" id="r_a2d1b3800c20c3b4416771ac16e48de1b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractThread.html#a2d1b3800c20c3b4416771ac16e48de1b">getId</a> () const</td></tr>
+<tr class="separator:a2d1b3800c20c3b4416771ac16e48de1b inherit pub_methods_classAAbstractThread"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a07b83f2654c632cda3f3c53523547ae8 inherit pub_methods_classAAbstractThread" id="r_a07b83f2654c632cda3f3c53523547ae8"><td align="right" class="memItemLeft" valign="top">
 void </td><td class="memItemRight" valign="bottom"><b>enqueue</b> (<a class="el" href="classAMessageQueue.html">AMessageQueue</a>&lt;&gt;::Message f)</td></tr>
 <tr class="memdesc:a07b83f2654c632cda3f3c53523547ae8 inherit pub_methods_classAAbstractThread"><td class="mdescLeft"> </td><td class="mdescRight">Delivers task for execution (message) to this thread's event queue. Messages are processed by framework itself using <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a>. This behaviour may be overwritten using the <code><a class="el" href="#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> </code> function. <br/></td></tr>
@@ -220,14 +220,14 @@ void </td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMyThre
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Static Public Member Functions<a class="aui-toc-hash" href="#pub-static-methods" id="pub-static-methods" name="pub-static-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a702e3769792fb7cda5f7960b7360ac9b" id="r_a702e3769792fb7cda5f7960b7360ac9b"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a702e3769792fb7cda5f7960b7360ac9b">sleep</a> (std::chrono::milliseconds duration)</td></tr>
-<tr class="memdesc:a702e3769792fb7cda5f7960b7360ac9b"><td class="mdescLeft"> </td><td class="mdescRight">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than specified. <code><a class="el" href="#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread's execution.">AThread::interrupt()</a></code> is supported.  <br/></td></tr>
-<tr class="separator:a702e3769792fb7cda5f7960b7360ac9b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1d09d7332e61f6ef39e93d4a1fdc2574" id="r_a1d09d7332e61f6ef39e93d4a1fdc2574"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d09d7332e61f6ef39e93d4a1fdc2574">current</a> ()</td></tr>
-<tr class="separator:a1d09d7332e61f6ef39e93d4a1fdc2574"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a64c8a94e0bddd90ca609b3cfb5ba007f" id="r_a64c8a94e0bddd90ca609b3cfb5ba007f"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c8a94e0bddd90ca609b3cfb5ba007f">interruptionPoint</a> ()</td></tr>
-<tr class="memdesc:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="mdescLeft"> </td><td class="mdescRight">Interruption point.  <br/></td></tr>
-<tr class="separator:a64c8a94e0bddd90ca609b3cfb5ba007f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1d5a64e999da0381a3552a6292900bbc" id="r_a1d5a64e999da0381a3552a6292900bbc"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d5a64e999da0381a3552a6292900bbc">sleep</a> (std::chrono::milliseconds duration)</td></tr>
+<tr class="memdesc:a1d5a64e999da0381a3552a6292900bbc"><td class="mdescLeft"> </td><td class="mdescRight">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than specified. <code><a class="el" href="#aef367f786f1482c7dd5246eadd994ce5" title="Interrupt thread's execution.">AThread::interrupt()</a></code> is supported.  <br/></td></tr>
+<tr class="separator:a1d5a64e999da0381a3552a6292900bbc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a455beceab4e80bba85d44a5d4ee15b08" id="r_a455beceab4e80bba85d44a5d4ee15b08"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a455beceab4e80bba85d44a5d4ee15b08">current</a> ()</td></tr>
+<tr class="separator:a455beceab4e80bba85d44a5d4ee15b08"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1664a87c918f74c753e435501d0d1885" id="r_a1664a87c918f74c753e435501d0d1885"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1664a87c918f74c753e435501d0d1885">interruptionPoint</a> ()</td></tr>
+<tr class="memdesc:a1664a87c918f74c753e435501d0d1885"><td class="mdescLeft"> </td><td class="mdescRight">Interruption point.  <br/></td></tr>
+<tr class="separator:a1664a87c918f74c753e435501d0d1885"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2cf8612808d1257e33fdde6b95c5b390" id="r_a2cf8612808d1257e33fdde6b95c5b390"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf8612808d1257e33fdde6b95c5b390">setName</a> (<a class="el" href="classAString.html">AString</a> name) noexcept</td></tr>
 <tr class="separator:a2cf8612808d1257e33fdde6b95c5b390"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2f6c4084b6e590abdf46bfe6b13b1cd3" id="r_a2f6c4084b6e590abdf46bfe6b13b1cd3"><td align="right" class="memItemLeft" valign="top"><a id="a2f6c4084b6e590abdf46bfe6b13b1cd3" name="a2f6c4084b6e590abdf46bfe6b13b1cd3"></a>
@@ -235,9 +235,9 @@ static void </td><td class="memItemRight" valign="bottom"><b>processMessages</b
 <tr class="memdesc:a2f6c4084b6e590abdf46bfe6b13b1cd3"><td class="mdescLeft"> </td><td class="mdescRight">Processes messages from other threads of current thread. Called by framework itself using <a class="el" href="classIEventLoop.html">IEventLoop</a>. <br/></td></tr>
 <tr class="separator:a2f6c4084b6e590abdf46bfe6b13b1cd3"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pub_static_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classAObject')"><img alt="-" src="closed.png"/> Static Public Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:a6eecf8e6aa8dfb1d51b68162fab7d2da inherit pub_static_methods_classAObject" id="r_a6eecf8e6aa8dfb1d51b68162fab7d2da"><td align="right" class="memItemLeft" valign="top">
+<tr class="memitem:abe38a866ade883ba79dcb444f6edefd4 inherit pub_static_methods_classAObject" id="r_abe38a866ade883ba79dcb444f6edefd4"><td align="right" class="memItemLeft" valign="top">
 static void </td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
-<tr class="separator:a6eecf8e6aa8dfb1d51b68162fab7d2da inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="separator:abe38a866ade883ba79dcb444f6edefd4 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject" id="r_ga4da6280feaeb063ce8e5b8a069755d6d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnySignal.html">AAnySignal</a> Signal, <a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classAObjectBase.html">AObjectBase</a> &gt; Object, <a class="el" href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a>&lt; Signal &gt; Function&gt; </td></tr>
 <tr class="memitem:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a> (const Signal &amp;signal, Object *object, Function &amp;&amp;function)</td></tr>
 <tr class="memdesc:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal to the slot of the specified object.  <br/></td></tr>
@@ -273,9 +273,9 @@ requires (!<a class="el" href="conceptaui_1_1derived__from.html">aui::derived_fr
 <tr class="memitem:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__property__system.html#ga9bae459e71bd485a16187caf26089228">connect</a> (const Property &amp;property, <a class="el" href="class__.html">_</a>&lt; Object &gt; object, Function &amp;&amp;function)</td></tr>
 <tr class="memdesc:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal or property to the slot of the specified non-AObject type.  <br/></td></tr>
 <tr class="separator:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3f582f50c5d1195d16dfbb9ab92c4727 inherit pub_static_methods_classAObject" id="r_a3f582f50c5d1195d16dfbb9ab92c4727"><td align="right" class="memItemLeft" valign="top">
+<tr class="memitem:a8db699762806ea3d43c675e6f1e82ad5 inherit pub_static_methods_classAObject" id="r_a8db699762806ea3d43c675e6f1e82ad5"><td align="right" class="memItemLeft" valign="top">
 static void </td><td class="memItemRight" valign="bottom"><b>moveToThread</b> (<a class="el" href="structaui_1_1no__escape.html">aui::no_escape</a>&lt; <a class="el" href="classAObject.html">AObject</a> &gt; object, <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
-<tr class="separator:a3f582f50c5d1195d16dfbb9ab92c4727 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="separator:a8db699762806ea3d43c675e6f1e82ad5 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Additional Inherited Members<a class="aui-toc-hash" href="#inherited" id="inherited" name="inherited" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
@@ -295,9 +295,9 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 <tr class="memitem:ab691ef089849fe28d2b7e25178c3ffeb inherit pro_methods_classAAbstractThread" id="r_ab691ef089849fe28d2b7e25178c3ffeb"><td align="right" class="memItemLeft" valign="top">
 void </td><td class="memItemRight" valign="bottom"><b>updateThreadName</b> () noexcept</td></tr>
 <tr class="separator:ab691ef089849fe28d2b7e25178c3ffeb inherit pro_methods_classAAbstractThread"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4c331ecec7cafe3ccfc49f7aad72d084 inherit pro_methods_classAAbstractThread" id="r_a4c331ecec7cafe3ccfc49f7aad72d084"><td align="right" class="memItemLeft" valign="top">
+<tr class="memitem:a5d09d5d6d3f583e212c322924119d550 inherit pro_methods_classAAbstractThread" id="r_a5d09d5d6d3f583e212c322924119d550"><td align="right" class="memItemLeft" valign="top">
 virtual void </td><td class="memItemRight" valign="bottom"><b>processMessagesImpl</b> ()</td></tr>
-<tr class="separator:a4c331ecec7cafe3ccfc49f7aad72d084 inherit pro_methods_classAAbstractThread"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="separator:a5d09d5d6d3f583e212c322924119d550 inherit pro_methods_classAAbstractThread"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pro_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObject')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
 <tr class="memitem:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject" id="r_a98cf3fa4ac279b30860bf228c44306b2"><td align="right" class="memItemLeft" valign="top">
 void </td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
@@ -307,10 +307,10 @@ void </td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="
 <tr class="memitem:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase" id="r_af8f1971268c5b7a2eff3f27021056bea"><td align="right" class="memItemLeft" valign="top">
 void </td><td class="memItemRight" valign="bottom"><b>clearAllIngoingConnections</b> () noexcept</td></tr>
 <tr class="separator:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aace5d4ab46a312d6ae71a7ee71561db3 inherit pro_methods_classAObjectBase" id="r_aace5d4ab46a312d6ae71a7ee71561db3"><td align="right" class="memItemLeft" valign="top">
+<tr class="memitem:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase" id="r_a3b09afce09ed490182435a088d320acc"><td align="right" class="memItemLeft" valign="top">
 virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotException</b> (std::exception_ptr exception)</td></tr>
-<tr class="memdesc:aace5d4ab46a312d6ae71a7ee71561db3 inherit pro_methods_classAObjectBase"><td class="mdescLeft"> </td><td class="mdescRight">Called then an exception has thrown during slot processing of the signal emitted by this object. <br/></td></tr>
-<tr class="separator:aace5d4ab46a312d6ae71a7ee71561db3 inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memdesc:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="mdescLeft"> </td><td class="mdescRight">Called then an exception has thrown during slot processing of the signal emitted by this object. <br/></td></tr>
+<tr class="separator:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pro_attribs_classAAbstractThread"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classAAbstractThread')"><img alt="-" src="closed.png"/> Protected Attributes inherited from <a class="el" href="classAAbstractThread.html">AAbstractThread</a></td></tr>
 <tr class="memitem:adc59629a3e7982dbe78decc466399fea inherit pro_attribs_classAAbstractThread" id="r_adc59629a3e7982dbe78decc466399fea"><td align="right" class="memItemLeft" valign="top">
 <a class="el" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a> </td><td class="memItemRight" valign="bottom"><b>mId</b></td></tr>
@@ -323,7 +323,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 <a class="el" href="classAMessageQueue.html">AMessageQueue</a> </td><td class="memItemRight" valign="bottom"><b>mMessageQueue</b></td></tr>
 <tr class="separator:a8da936ab489cde9a1614906ce70c77fb inherit pro_attribs_classAAbstractThread"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#a1d09d7332e61f6ef39e93d4a1fdc2574" id="a1d09d7332e61f6ef39e93d4a1fdc2574" name="a1d09d7332e61f6ef39e93d4a1fdc2574" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#a455beceab4e80bba85d44a5d4ee15b08" id="a455beceab4e80bba85d44a5d4ee15b08" name="a455beceab4e80bba85d44a5d4ee15b08" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="textblock"><p>Represents a user-defined thread. </p>
 </div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#member-function-documentation" id="member-function-documentation" style="color: var(--fragment-comment) !important">#</a></h2>
 
@@ -335,7 +335,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">_&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; AThread::current </td>
+<td class="memname">static _&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; AThread::current </td>
 <td>(</td>
 <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
 <td></td>
@@ -372,11 +372,11 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 </table>
 </div><div class="memdoc">
 <p>Interrupt thread's execution. </p>
-<p>Raises the interruption flag of the thread. In order to check whether thread interrupted use <a class="el" href="#a64c8a94e0bddd90ca609b3cfb5ba007f" title="Interruption point.">AThread::interruptionPoint()</a> or <a class="el" href="classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a">AAbstractThread::isInterrupted()</a>. </p>
-<p>Reimplemented from <a class="el" href="classAAbstractThread.html#a26b94864a9fcc9ba3749466dd7e9ba43">AAbstractThread</a>.</p>
+<p>Raises the interruption flag of the thread. In order to check whether thread interrupted use <a class="el" href="#a1664a87c918f74c753e435501d0d1885" title="Interruption point.">AThread::interruptionPoint()</a> or <a class="el" href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">AAbstractThread::isInterrupted()</a>. </p>
+<p>Reimplemented from <a class="el" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">AAbstractThread</a>.</p>
 </div>
 </div>
-<a id="a64c8a94e0bddd90ca609b3cfb5ba007f" name="a64c8a94e0bddd90ca609b3cfb5ba007f"></a>
+<a id="a1664a87c918f74c753e435501d0d1885" name="a1664a87c918f74c753e435501d0d1885"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>interruptionPoint()<a class="aui-toc-hash" href="#◆ interruptionpoint()" id="◆ interruptionpoint()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +385,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void AThread::interruptionPoint </td>
+<td class="memname">static void AThread::interruptionPoint </td>
 <td>(</td>
 <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
 <td></td>
@@ -424,7 +424,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if interrupt requested for this thread. </dd></dl>
-<p>Reimplemented from <a class="el" href="classAAbstractThread.html#a2112c2730e01c42f1377a529c738841a">AAbstractThread</a>.</p>
+<p>Reimplemented from <a class="el" href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">AAbstractThread</a>.</p>
 </div>
 </div>
 <a id="a03d72a0f366a3c019e8c6b5a0c652442" name="a03d72a0f366a3c019e8c6b5a0c652442"></a>
@@ -449,7 +449,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 </table>
 </div><div class="memdoc">
 <p>Reset interruption flag. </p>
-<p>Reimplemented from <a class="el" href="classAAbstractThread.html#afebdbf7af6b433d73ae13ac1ef19d206">AAbstractThread</a>.</p>
+<p>Reimplemented from <a class="el" href="classAAbstractThread.html#aadd4a3a7f00ea7ca49759745165e7042">AAbstractThread</a>.</p>
 </div>
 </div>
 <a id="a2cf8612808d1257e33fdde6b95c5b390" name="a2cf8612808d1257e33fdde6b95c5b390"></a>
@@ -481,7 +481,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 </dl>
 </div>
 </div>
-<a id="a702e3769792fb7cda5f7960b7360ac9b" name="a702e3769792fb7cda5f7960b7360ac9b"></a>
+<a id="a1d5a64e999da0381a3552a6292900bbc" name="a1d5a64e999da0381a3552a6292900bbc"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>sleep()<a class="aui-toc-hash" href="#◆ sleep()" id="◆ sleep()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
@@ -490,7 +490,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void AThread::sleep </td>
+<td class="memname">static void AThread::sleep </td>
 <td>(</td>
 <td class="paramtype">std::chrono::milliseconds</td> <td class="paramname"><span class="paramname"><em>duration</em></span></td><td>)</td>
 <td></td>
@@ -516,7 +516,7 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="#inherited">Additional Inherited Members</a></h1><h1><a href="#a1d09d7332e61f6ef39e93d4a1fdc2574">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="#inherited">Additional Inherited Members</a></h1><h1><a href="#a455beceab4e80bba85d44a5d4ee15b08">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 </div></body>

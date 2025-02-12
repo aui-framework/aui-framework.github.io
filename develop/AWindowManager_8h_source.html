@@ -159,8 +159,8 @@ $(function(){initNavTree('AWindowManager_8h_source.html',''); initResizable(true
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> closeAllWindows();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIEventLoop.html#af26f19c03393cca88b5bb4f183838305">notifyProcessMessages</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classIEventLoop.html#a790b37b3115b15f1224c85749d352d04">loop</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783">notifyProcessMessages</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a">loop</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> <a class="code hl_class" href="classADeque.html">ADeque&lt;_&lt;AWindow&gt;</a>&gt;&amp; getWindows()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> mWindows;</div>
@@ -174,14 +174,14 @@ $(function(){initNavTree('AWindowManager_8h_source.html',''); initResizable(true
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_function" href="classIEventLoop.html#af26f19c03393cca88b5bb4f183838305">notifyProcessMessages</a>();</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> initNativeWindow(<span class="keyword">const</span> <a class="code hl_struct" href="structIRenderingContext_1_1Init.html">IRenderingContext::Init</a>&amp; init);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> initNativeWindow(<span class="keyword">const</span> IRenderingContext::Init&amp; init);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    [[nodiscard]] <a class="code hl_class" href="classADeque.html">ADeque&lt;_&lt;T&gt;</a>&gt; getWindowsOfType()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_class" href="classADeque.html">ADeque&lt;_&lt;T&gt;</a>&gt; result;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    [[nodiscard]] ADeque&lt;_&lt;T&gt;&gt; getWindowsOfType()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        ADeque&lt;_&lt;T&gt;&gt; result;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; w : mWindows) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> c = _cast&lt;T&gt;(w)) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                result &lt;&lt; c;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                result &lt;&lt; <a class="code hl_typedef" href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">c</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
@@ -192,13 +192,14 @@ $(function(){initNavTree('AWindowManager_8h_source.html',''); initResizable(true
 <div class="ttc" id="aclassADeque_html"><div class="ttname"><a href="classADeque.html">ADeque</a></div><div class="ttdoc">A std::deque with AUI extensions.</div><div class="ttdef"><b>Definition</b> ADeque.h:27</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
 <div class="ttc" id="aclassAWatchdog_html"><div class="ttname"><a href="classAWatchdog.html">AWatchdog</a></div><div class="ttdoc">Watchdog helper class.</div><div class="ttdef"><b>Definition</b> AWatchdog.h:38</div></div>
+<div class="ttc" id="aclassAWindowManager_html_a778f4e6eac766f892f29dfb44d69700a"><div class="ttname"><a href="classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a">AWindowManager::loop</a></div><div class="ttdeci">void loop() override</div><div class="ttdoc">Do message processing loop.</div></div>
+<div class="ttc" id="aclassAWindowManager_html_af5d873c202c82a87c3cbb164708d0783"><div class="ttname"><a href="classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783">AWindowManager::notifyProcessMessages</a></div><div class="ttdeci">void notifyProcessMessages() override</div><div class="ttdoc">Notifies this IEventLoop that its thread got a new message to process.</div></div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
 <div class="ttc" id="aclassIEventLoop_1_1Handle_html"><div class="ttname"><a href="classIEventLoop_1_1Handle.html">IEventLoop::Handle</a></div><div class="ttdef"><b>Definition</b> IEventLoop.h:33</div></div>
-<div class="ttc" id="aclassIEventLoop_html_a790b37b3115b15f1224c85749d352d04"><div class="ttname"><a href="classIEventLoop.html#a790b37b3115b15f1224c85749d352d04">IEventLoop::loop</a></div><div class="ttdeci">virtual void loop()=0</div><div class="ttdoc">Do message processing loop.</div></div>
 <div class="ttc" id="aclassIEventLoop_html_af26f19c03393cca88b5bb4f183838305"><div class="ttname"><a href="classIEventLoop.html#af26f19c03393cca88b5bb4f183838305">IEventLoop::notifyProcessMessages</a></div><div class="ttdeci">virtual void notifyProcessMessages()=0</div><div class="ttdoc">Notifies this IEventLoop that its thread got a new message to process.</div></div>
-<div class="ttc" id="aclassPipe_html"><div class="ttname"><a href="classPipe.html">Pipe</a></div><div class="ttdoc">Native pipe RAII wrapper.</div><div class="ttdef"><b>Definition</b> Pipe.h:36</div></div>
+<div class="ttc" id="aclassPipe_html"><div class="ttname"><a href="classPipe.html">Pipe</a></div><div class="ttdoc">Native pipe RAII wrapper.</div><div class="ttdef"><b>Definition</b> Pipe.h:37</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
-<div class="ttc" id="astructIRenderingContext_1_1Init_html"><div class="ttname"><a href="structIRenderingContext_1_1Init.html">IRenderingContext::Init</a></div><div class="ttdef"><b>Definition</b> IRenderingContext.h:38</div></div>
+<div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

@@ -10,8 +10,5 @@ var searchData=
   ['hovered_3c_20detail_3a_3aclassof_20_3e_7',['hovered&lt; detail::ClassOf &gt;',['../structass_1_1hovered.html',1,'ass']]],
   ['hovered_3c_20detail_3a_3adebug_5fselector_20_3e_8',['hovered&lt; detail::debug_selector &gt;',['../structass_1_1hovered.html',1,'ass']]],
   ['hovered_3c_20detail_3a_3atype_3c_20t_20_3e_20_3e_9',['hovered&lt; detail::Type&lt; T &gt; &gt;',['../structass_1_1hovered.html',1,'ass']]],
-  ['hvlayout_10',['HVLayout',['../structaui_1_1HVLayout.html',1,'aui']]],
-  ['hvlayout_3c_20alayoutdirection_3a_3ahorizontal_20_3e_11',['HVLayout&lt; ALayoutDirection::HORIZONTAL &gt;',['../structaui_1_1HVLayout.html',1,'aui']]],
-  ['hvlayout_3c_20alayoutdirection_3a_3avertical_20_3e_12',['HVLayout&lt; ALayoutDirection::VERTICAL &gt;',['../structaui_1_1HVLayout.html',1,'aui']]],
-  ['hvlayout_3c_20baselayout_3a_3adirection_20_3e_13',['HVLayout&lt; BaseLayout::DIRECTION &gt;',['../structaui_1_1HVLayout.html',1,'aui']]]
+  ['hvlayout_10',['HVLayout',['../structaui_1_1HVLayout.html',1,'aui']]]
 ];

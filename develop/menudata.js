@@ -55,7 +55,14 @@ var menudata={children:[
 {text:"Preparing to Production",url:"usergroup4.html",children:[
 {text:"Setting App Icon",url:"md_docs_2Setting_01App_01Icon.html"},
 {text:"Packaging Your App",url:"md_docs_2Packaging_01Your_01App.html"}]},
-{text:"Other",url:"usergroup5.html",children:[
+{text:"Platform Specifics",url:"usergroup5.html",children:[
+{text:"Windows",url:"windows.html"},
+{text:"Linux",url:"linux.html"},
+{text:"macOS",url:"macos.html"},
+{text:"Android",url:"android.html"},
+{text:"iOS",url:"ios.html"},
+{text:"WebAssembly",url:"emscripten.html"}]},
+{text:"Other",url:"usergroup6.html",children:[
 {text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
 {text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"},
 {text:"Runtime Dependency Resolution",url:"md_docs_2Runtime_01Dependency_01Resolution.html"}]}]}

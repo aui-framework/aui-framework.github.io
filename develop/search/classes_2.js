@@ -32,10 +32,9 @@ var searchData=
   ['boundary_29',['Boundary',['../structATextLayoutHelper_1_1Boundary.html',1,'ATextLayoutHelper']]],
   ['boxshadow_30',['BoxShadow',['../structass_1_1BoxShadow.html',1,'ass']]],
   ['boxshadowinner_31',['BoxShadowInner',['../structass_1_1BoxShadowInner.html',1,'ass']]],
-  ['brushhelper_32',['BrushHelper',['../structBrushHelper.html',1,'']]],
-  ['buffer_33',['Buffer',['../structgl_1_1Vao_1_1Buffer.html',1,'gl::Vao']]],
-  ['builder_34',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder'],['../classASplitter_1_1Builder.html',1,'ASplitter::Builder&lt; Layout &gt;']]],
-  ['builder_3c_20ahorizontallayout_20_3e_35',['Builder&lt; AHorizontalLayout &gt;',['../classASplitter_1_1Builder.html',1,'ASplitter']]],
-  ['builder_3c_20averticallayout_20_3e_36',['Builder&lt; AVerticalLayout &gt;',['../classASplitter_1_1Builder.html',1,'ASplitter']]],
-  ['button_37',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]]
+  ['buffer_32',['Buffer',['../structgl_1_1Vao_1_1Buffer.html',1,'gl::Vao']]],
+  ['builder_33',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder'],['../classASplitter_1_1Builder.html',1,'ASplitter::Builder&lt; Layout &gt;']]],
+  ['builder_3c_20ahorizontallayout_20_3e_34',['Builder&lt; AHorizontalLayout &gt;',['../classASplitter_1_1Builder.html',1,'ASplitter']]],
+  ['builder_3c_20averticallayout_20_3e_35',['Builder&lt; AVerticalLayout &gt;',['../classASplitter_1_1Builder.html',1,'ASplitter']]],
+  ['button_36',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]]
 ];
