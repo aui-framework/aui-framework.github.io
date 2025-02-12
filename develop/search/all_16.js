@@ -166,7 +166,7 @@ var searchData=
   ['stealin_163',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_164',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['step_165',['Prompt user on every step',['../group__updater.html#autotoc_md198',1,'']]],
-  ['stl_20like_20functionality_166',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md120',1,'']]],
+  ['stl_20like_20functionality_166',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md119',1,'']]],
   ['stop_167',['stop',['../classIAudioPlayer.html#aa2b734044f180bbc89b9642eae9e911b',1,'IAudioPlayer']]],
   ['streambuf_168',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
   ['streams_169',['IO streams',['../group__io.html',1,'']]],
@@ -191,7 +191,7 @@ var searchData=
   ['supported_20platforms_188',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md127',1,'Supported platforms'],['../group__updater.html#autotoc_md191',1,'Supported platforms']]],
   ['supported_20units_189',['Supported units',['../classAMetric.html#autotoc_md30',1,'']]],
   ['swappable_190',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_191',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md101',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
+  ['syntax_191',['Syntax',['../md_docs_2aui__executable.html#autotoc_md82',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md88',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md97',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md90',1,'Syntax']]],
   ['system_192',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['systemslashdirection_193',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
 ];
