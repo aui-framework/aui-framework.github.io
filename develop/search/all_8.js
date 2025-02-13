@@ -23,7 +23,7 @@ var searchData=
   ['event_20handling_20with_20signal_20slot_20',['Event handling with signal-slot',['../md_docs_2UI_01Building_01Overview.html#autotoc_md166',1,'']]],
   ['every_20step_21',['Prompt user on every step',['../group__updater.html#autotoc_md205',1,'']]],
   ['ew_5fresize_22',['EW_RESIZE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03ad254f08fdc9d603e37b7f459b2b814a4',1,'ACursor']]],
-  ['example_23',['Example',['../example_console_hello_world_example.html',1,'Console Hello World Example'],['../example_fractal_example.html',1,'Fractal Example'],['../md_docs_2Crosscompiling.html#autotoc_md127',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md173',1,'Usage Example'],['../example_views_example.html',1,'Views Example']]],
+  ['example_23',['Example',['../example_console_hello_world_example.html',1,'Console Hello World Example'],['../example_fractal_example.html',1,'Fractal Example'],['../md_docs_2Crosscompiling.html#autotoc_md126',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md174',1,'Usage Example'],['../example_views_example.html',1,'Views Example']]],
   ['example_24',['example',['../group__signal__slot.html#autotoc_md2',1,'Basic example'],['../group__signal__slot.html#autotoc_md3',1,'UI example']]],
   ['examples_25',['Examples',['../examples.html#examples_app',1,'Application Examples'],['../examples.html',1,'Examples'],['../group__layout__managers.html#autotoc_md25',1,'Layout Examples']]],
   ['exception_26',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeModelIndex_1_1Exception.html',1,'ATreeModelIndex::Exception']]],

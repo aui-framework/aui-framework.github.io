@@ -35,7 +35,7 @@ var searchData=
   ['setsize_32',['setSize',['../classAByteBuffer.html#abca67368761ae2abe382de0b8abd3e1d',1,'AByteBuffer']]],
   ['setsizeforced_33',['setSizeForced',['../classAView.html#ac385fe5c95866dbe081aac74c7dba519',1,'AView']]],
   ['setskipuntillayoutupdate_34',['setSkipUntilLayoutUpdate',['../classAView.html#a6e107013a87ab6460f002c318bad93e2',1,'AView']]],
-  ['setspacing_35',['setSpacing',['../classAHorizontalLayout.html#a6a09406b8f75bdb6452a633f8095325b',1,'AHorizontalLayout::setSpacing()'],['../classALayout.html#a29e5a404fd9c98607618849845b5bc32',1,'ALayout::setSpacing()'],['../classAVerticalLayout.html#adb7dcbf1164714458e14cfec2944737a',1,'AVerticalLayout::setSpacing()']]],
+  ['setspacing_35',['setSpacing',['../classAAdvancedGridLayout.html#a21097cf0971462408b1088cc2c5c694d',1,'AAdvancedGridLayout::setSpacing()'],['../classAHorizontalLayout.html#a6a09406b8f75bdb6452a633f8095325b',1,'AHorizontalLayout::setSpacing()'],['../classALayout.html#a29e5a404fd9c98607618849845b5bc32',1,'ALayout::setSpacing()'],['../classAVerticalLayout.html#adb7dcbf1164714458e14cfec2944737a',1,'AVerticalLayout::setSpacing()']]],
   ['setsticktoend_36',['setStickToEnd',['../classAScrollArea.html#a2770daab18df7595e3977685d80a242f',1,'AScrollArea::setStickToEnd()'],['../classAScrollbar.html#a1165e75dbf62641bfd2fd15e5f171115',1,'AScrollbar::setStickToEnd()']]],
   ['settext_37',['setText',['../classAMimedData.html#aa02bc659384889d00a53001ecdd46046',1,'AMimedData']]],
   ['settextinputactionicon_38',['setTextInputActionIcon',['../classAAbstractTypeable.html#a66bad94201fdc3855abe2ad9b7b4cae3',1,'AAbstractTypeable']]],
