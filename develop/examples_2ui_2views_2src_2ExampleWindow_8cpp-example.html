@@ -386,7 +386,13 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                 }),</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Message box"</span>)</div>
 <div class="line">                        .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <span class="keyword">this</span>,</div>
-<div class="line">                                 [&amp;] { AMessageBox::show(<span class="keyword">this</span>, <span class="stringliteral">"Title"</span>, <span class="stringliteral">"Message"</span>, AMessageBox::Icon::INFO); }),</div>
+<div class="line">                                 [&amp;] {</div>
+<div class="line">                                     AMessageBox::show(<span class="keyword">this</span>,</div>
+<div class="line">                                                       <span class="stringliteral">"Title"</span>,</div>
+<div class="line">                                                       <span class="stringliteral">"Message"</span>,</div>
+<div class="line">                                                       AMessageBox::Icon::NONE,</div>
+<div class="line">                                                       AMessageBox::Button::OK);</div>
+<div class="line">                                 }),</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Cause assertion fail"</span>)</div>
 <div class="line">                        .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <span class="keyword">this</span>, [&amp;] { <a id="a20" name="a20"></a><a class="code hl_define" href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">AUI_ASSERT_NO_CONDITION</a>(<span class="stringliteral">"assertion fail"</span>); }),</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Cause hang"</span>)</div>
