@@ -44,7 +44,7 @@ var searchData=
   ['updaterdir_41',['updaterDir',['../structAUpdater_1_1GetInstallationDirectoryContext.html#ae23c64b8d8effa6cedd912fc788c1390',1,'AUpdater::GetInstallationDirectoryContext']]],
   ['updates_42',['Checking for updates',['../group__updater.html#autotoc_md202',1,'']]],
   ['url_43',['URL',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d',1,'URL:&#160;ATextInputType.h'],['../md_docs_2AUI_01Boot.html#autotoc_md42',1,'URL']]],
-  ['usage_20example_44',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md126',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md174',1,'Usage Example']]],
+  ['usage_20example_44',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md126',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md173',1,'Usage Example']]],
   ['usage_20with_20default_20qualifier_45',['Typical usage with default qualifier',['../structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html#AppropriatePredicateTest_Typical_usage_with_default_qualifier',1,'']]],
   ['use_20clang_20format_20off_20on_46',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md115',1,'']]],
   ['use_20trailing_20comma_20in_20initializer_20lists_47',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md114',1,'']]],

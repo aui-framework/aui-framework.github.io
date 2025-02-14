@@ -31,6 +31,7 @@ var searchData=
   ['notselector_28',['NotSelector',['../structass_1_1NotSelector.html',1,'ass']]],
   ['novalueexception_29',['NoValueException',['../classAComplexFutureOperation_1_1NoValueException.html',1,'AComplexFutureOperation']]],
   ['ns_5fresize_30',['NS_RESIZE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03aae41b18b9ff5c7fed48a6ead690e6812',1,'ACursor']]],
-  ['number_31',['NUMBER',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fa34f55eca38e0605a84f169ff61a2a396',1,'ATextInputType.h']]],
-  ['numeric_32',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
+  ['nsalert_31',['NSAlert',['https://developer.apple.com/documentation/appkit/nsalert?.html',1,'']]],
+  ['number_32',['NUMBER',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fa34f55eca38e0605a84f169ff61a2a396',1,'ATextInputType.h']]],
+  ['numeric_33',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
 ];

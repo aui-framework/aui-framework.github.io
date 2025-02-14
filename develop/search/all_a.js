@@ -85,5 +85,6 @@ var searchData=
   ['greater_5fof_3c_20aside_3a_3atop_20_3e_82',['greater_of&lt; ASide::TOP &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['gridcell_83',['GridCell',['../structAAdvancedGridLayout_1_1GridCell.html',1,'AAdvancedGridLayout']]],
   ['group_84',['Group',['../classARadioButton_1_1Group.html',1,'ARadioButton']]],
-  ['grow_85',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]]
+  ['grow_85',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]],
+  ['gtkdialog_86',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]]
 ];

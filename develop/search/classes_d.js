@@ -8,5 +8,6 @@ var searchData=
   ['not_24_5',['not$',['../structuitest_1_1impl_1_1not_0b.html',1,'uitest::impl']]],
   ['notselector_6',['NotSelector',['../structass_1_1NotSelector.html',1,'ass']]],
   ['novalueexception_7',['NoValueException',['../classAComplexFutureOperation_1_1NoValueException.html',1,'AComplexFutureOperation']]],
-  ['numeric_8',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
+  ['nsalert_8',['NSAlert',['https://developer.apple.com/documentation/appkit/nsalert?.html',1,'']]],
+  ['numeric_9',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
 ];
