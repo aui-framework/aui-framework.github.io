@@ -1,7 +1,7 @@
 var searchData=
 [
   ['ui_0',['UI',['../examples.html#examples_ui',1,'']]],
-  ['ui_20building_1',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md134',1,'']]],
+  ['ui_20building_1',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md135',1,'']]],
   ['ui_20building_20overview_2',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
   ['ui_20data_20binding_20with_20let_3',['UI data binding with let',['../group__property__system.html#autotoc_md191',1,'']]],
   ['ui_20declarative_20data_20binding_4',['UI declarative data binding',['../group__property__system.html#UI_declarative_data_binding',1,'']]],
@@ -44,7 +44,7 @@ var searchData=
   ['updaterdir_41',['updaterDir',['../structAUpdater_1_1GetInstallationDirectoryContext.html#ae23c64b8d8effa6cedd912fc788c1390',1,'AUpdater::GetInstallationDirectoryContext']]],
   ['updates_42',['Checking for updates',['../group__updater.html#autotoc_md202',1,'']]],
   ['url_43',['URL',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d',1,'URL:&#160;ATextInputType.h'],['../md_docs_2AUI_01Boot.html#autotoc_md42',1,'URL']]],
-  ['usage_20example_44',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md126',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md173',1,'Usage Example']]],
+  ['usage_20example_44',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md126',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md174',1,'Usage Example']]],
   ['usage_20with_20default_20qualifier_45',['Typical usage with default qualifier',['../structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html#AppropriatePredicateTest_Typical_usage_with_default_qualifier',1,'']]],
   ['use_20clang_20format_20off_20on_46',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md115',1,'']]],
   ['use_20trailing_20comma_20in_20initializer_20lists_47',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md114',1,'']]],
@@ -55,7 +55,7 @@ var searchData=
   ['using_20aui_20distributions_20with_20tt_20find_5fpackage_20tt_52',['Using AUI distributions with &lt;tt&gt;find_package&lt;/tt&gt;',['../md_docs_2AUI_01Boot.html#autotoc_md59',1,'']]],
   ['using_20container_20stylesheet_53',['Using container stylesheet',['../group__ass.html#autotoc_md10',1,'']]],
   ['using_20global_20style_54',['Using global style',['../group__ass.html#autotoc_md9',1,'']]],
-  ['using_20inkscape_55',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md160',1,'']]],
+  ['using_20inkscape_55',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md157',1,'']]],
   ['using_20same_20dependencies_56',['Using same dependencies',['../md_docs_2AUI_01Boot.html#autotoc_md54',1,'']]],
   ['using_20setcustomstyle_57',['Using setCustomStyle',['../group__ass.html#autotoc_md12',1,'']]],
   ['using_20with_5fstyle_58',['Using with_style',['../group__ass.html#autotoc_md11',1,'']]],

@@ -5,7 +5,7 @@
 <meta content="IE=9" http-equiv="X-UA-Compatible"/>
 <meta content="Doxygen 1.13.1" name="generator"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>AUI Framework: aui_link</title>
+<title>AUI Framework: Experimental APIs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
 <script src="jquery.js" type="text/javascript"></script>
@@ -76,7 +76,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('md_docs_2aui__link.html',''); initResizable(true); });
+$(function(){initNavTree('experimental_api.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,34 +97,40 @@ $(function(){initNavTree('md_docs_2aui__link.html',''); initResizable(true); });
 </div>
 </div>
 <div><div class="header">
-<div class="headertitle"><div class="title">aui_link</div></div>
+<div class="headertitle"><div class="title">Experimental APIs</div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left">
-<div class="textblock"><p><a class="anchor" id="autotoc_md95"></a></p>
-<p>Alias to <a href="https://cmake.org/cmake/help/latest/command/target_link_libraries.html">target_link_libraries</a> with additional rules (see below)</p>
-<h1>
-Syntax<a class="aui-toc-hash" href="#syntax" id="syntax" style="color: var(--fragment-comment) !important">#</a></h1>
-<div class="fragment"><div class="line">aui_link(aui.example.views PRIVATE aui::core aui::views aui::audio aui::curl)</div>
-</div><!-- fragment --><div class="fragment"><div class="line">aui_link(&lt;target&gt;</div>
-<div class="line">        &lt;PRIVATE|PUBLIC|INTERFACE&gt; &lt;item&gt;...</div>
-<div class="line">        [&lt;PRIVATE|PUBLIC|INTERFACE&gt; &lt;item&gt;...]...)</div>
-</div><!-- fragment --><p>In contrast to <code>target_link_libraries</code>, the only one syntax variant is allowed.</p>
-<p>The <code>PUBLIC</code>, <code>PRIVATE</code> and <code>INTERFACE</code> scope keywords can be used to specify both the link dependencies and the link interface in one command.</p>
-<p>Libraries and targets following <code>PUBLIC</code> are linked to, and are made part of the link interface. Libraries and targets following <code>PRIVATE</code> are linked to, but are not made part of the link interface. Libraries following <code>INTERFACE</code> are appended to the link interface and are not used for linking <code>&lt;target&gt;</code>.</p>
-<p>If building with <code>BUILD_SHARED_LIBS=OFF</code>, the following rules apply:</p><ol type="1">
-<li>Visibility is forced to <code>PUBLIC</code> to propagate static libraries up to the executable.</li>
-<li>Target <code>&lt;item&gt;</code>s with <code>INTERFACE_AUI_WHOLEARCHIVE=TRUE</code> are wrapped with compiler-specific flags during linkage to enable whole archive linking (i.e., forbid dropping of unused symbols). This is essential when linking to binaries with AUI assets.</li>
-<li><p class="startli">The <code>&lt;item&gt;</code>s are reordered this way: from the most dependant target to the less dependant target.</p>
-<p class="startli">If A depends on B; C depends on both A and B, you should write </p><div class="fragment"><div class="line">target_link_libraries(C PRIVATE A B)</div>
-</div><!-- fragment --><p> and not </p><div class="fragment"><div class="line">target_link_libraries(C PRIVATE B A)  #Wrong!</div>
-</div><!-- fragment --> </li>
-</ol>
+<div class="textblock"><p><b aui-src="docs/experimental_api.md#L3"></b> </p><dl class="section note"><dt>Note</dt><dd>This page contains list of experimental APIs and indented for AUI project maintainers. As an AUI user, it's unlikely that you find something useful here.</dd></dl>
+<p>All the newest APIs are expected to be here.</p>
+<p>These APIs are considered experimental and unstable at the moment:</p>
+<dl>
+<dt>Class <a class="el" href="classAAsyncHolder.html">AAsyncHolder</a> </dt>
+<dd><a class="anchor" id="_experimental_api000004"></a> </dd>
+<dt>Class <a class="el" href="classADataBinding.html">ADataBinding&lt; Model &gt;</a> </dt>
+<dd><a class="anchor" id="_experimental_api000007"></a> </dd>
+<dt>Class <a class="el" href="classAFuture.html">AFuture&lt; T &gt;</a> </dt>
+<dd><a class="anchor" id="_experimental_api000005"></a> </dd>
+<dt>Class <a class="el" href="classAFutureSet.html">AFutureSet&lt; T &gt;</a> </dt>
+<dd><a class="anchor" id="_experimental_api000006"></a> </dd>
+<dt>Class <a class="el" href="structAProperty.html">AProperty&lt; T &gt;</a> </dt>
+<dd><a class="anchor" id="_experimental_api000002"></a> </dd>
+<dt>Class <a class="el" href="structAPropertyDef.html">APropertyDef&lt; M, Getter, Setter, SignalArg &gt;</a> </dt>
+<dd><a class="anchor" id="_experimental_api000003"></a> </dd>
+<dt>Class <a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed&lt; T &gt;</a> </dt>
+<dd><a class="anchor" id="_experimental_api000001"></a> </dd>
+<dt>Class <a class="el" href="classAUpdater.html">AUpdater</a> </dt>
+<dd><a class="anchor" id="_experimental_api000008"></a> </dd>
+<dt>Module <a class="el" href="group__property__system.html">property_system</a> </dt>
+<dd><a class="anchor" id="_experimental_api000009"></a> </dd>
+<dt>Module <a class="el" href="group__updater.html">updater</a> </dt>
+<dd><a class="anchor" id="_experimental_api000010"></a></dd>
+</dl>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#syntax">Syntax</a></h1></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
