@@ -73,7 +73,7 @@ var searchData=
   ['building_70',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md134',1,'']]],
   ['building_20aui_20without_20aui_20boot_71',['Building AUI without AUI Boot',['../md_docs_2AUI_01Boot.html#autotoc_md58',1,'']]],
   ['building_20overview_72',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
-  ['button_73',['Button',['../structdeclarative_1_1Button.html',1,'declarative']]],
+  ['button_73',['Button',['../structdeclarative_1_1Button.html',1,'declarative::Button'],['../namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bf',1,'AMessageBox::Button']]],
   ['button_74',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],
   ['by_20aui_20boot_75',['Producing packages with dependencies managed by AUI Boot',['../md_docs_2AUI_01Boot.html#aui_boot_producing_packages',1,'']]],
   ['byid_76',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]],

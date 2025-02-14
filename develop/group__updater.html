@@ -246,8 +246,8 @@ Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deployin
 <div class="line"> </div>
 <div class="line">                <span class="keywordflow">if</span> (theirVersion &lt;= ourVersion) {</div>
 <div class="line">                    getThread()-&gt;enqueue([] {</div>
-<div class="line">                      AMessageBox::show(</div>
-<div class="line">                          <span class="keyword">nullptr</span>, <span class="stringliteral">"No updates found"</span>, <span class="stringliteral">"You are running the latest version."</span>, AMessageBox::Icon::INFO);</div>
+<div class="line">                      <a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(</div>
+<div class="line">                          <span class="keyword">nullptr</span>, <span class="stringliteral">"No updates found"</span>, <span class="stringliteral">"You are running the latest version."</span>, <a class="code hl_enumvalue" href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3">AMessageBox::Icon::INFO</a>);</div>
 <div class="line">                    });</div>
 <div class="line">                    <span class="keywordflow">return</span>;</div>
 <div class="line">                }</div>
@@ -278,9 +278,9 @@ Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deployin
 <div class="line">            } <span class="keywordflow">catch</span> (<span class="keyword">const</span> AException&amp; e) {</div>
 <div class="line">                ALogger::err(LOG_TAG) &lt;&lt; <span class="stringliteral">"Can't check for updates: "</span> &lt;&lt; e;</div>
 <div class="line">                getThread()-&gt;enqueue([] {</div>
-<div class="line">                    AMessageBox::show(</div>
+<div class="line">                    <a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(</div>
 <div class="line">                        <span class="keyword">nullptr</span>, <span class="stringliteral">"Oops!"</span>, <span class="stringliteral">"There is an error occurred while checking for updates. Please try again later."</span>,</div>
-<div class="line">                        AMessageBox::Icon::CRITICAL);</div>
+<div class="line">                        <a class="code hl_enumvalue" href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870">AMessageBox::Icon::CRITICAL</a>);</div>
 <div class="line">                });</div>
 <div class="line">            }</div>
 <div class="line">        };</div>
@@ -295,9 +295,9 @@ Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deployin
 <div class="line">          } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a class="code hl_class" href="classAException.html">AException</a>&amp; e) {</div>
 <div class="line">              ALogger::err(LOG_TAG) &lt;&lt; <span class="stringliteral">"Can't check for updates: "</span> &lt;&lt; e;</div>
 <div class="line">              getThread()-&gt;enqueue([] {</div>
-<div class="line">                AMessageBox::show(</div>
+<div class="line">                <a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(</div>
 <div class="line">                    <span class="keyword">nullptr</span>, <span class="stringliteral">"Oops!"</span>, <span class="stringliteral">"There is an error occurred while downloading update. Please try again later."</span>,</div>
-<div class="line">                    AMessageBox::Icon::CRITICAL);</div>
+<div class="line">                    <a class="code hl_enumvalue" href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870">AMessageBox::Icon::CRITICAL</a>);</div>
 <div class="line">              });</div>
 <div class="line">          }</div>
 <div class="line">        };</div>
@@ -311,6 +311,9 @@ Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deployin
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaa250d8839c4736760fdd5c4990fded23"><div class="ttname"><a href="group__useful__macros.html#gaa250d8839c4736760fdd5c4990fded23">AUI_PP_STRINGIZE</a></div><div class="ttdeci">#define AUI_PP_STRINGIZE(...)</div><div class="ttdoc">Expands and stringifies the only argument.</div><div class="ttdef"><b>Definition</b> APreprocessor.h:28</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gae43a68976a4d8539e92ff86fc034218c"><div class="ttname"><a href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a></div><div class="ttdeci">#define AUI_ASSERTX(condition, what)</div><div class="ttdoc">Asserts that the passed condition evaluates to true. Adds extra message string.</div><div class="ttdef"><b>Definition</b> Assert.h:74</div></div>
+<div class="ttc" id="anamespaceAMessageBox_html_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><div class="ttname"><a href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a></div><div class="ttdeci">API_AUI_VIEWS ResultButton show(AWindow *parent, const AString &amp;title, const AString &amp;message, Icon icon=Icon::NONE, Button b=Button::OK)</div><div class="ttdoc">Displays a message box, blocking the caller thread until the user dismisses the message.</div></div>
+<div class="ttc" id="anamespaceAMessageBox_html_a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3"><div class="ttname"><a href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3">AMessageBox::Icon::INFO</a></div><div class="ttdeci">@ INFO</div><div class="ttdoc">Information icon.</div><div class="ttdef"><b>Definition</b> AMessageBox.h:63</div></div>
+<div class="ttc" id="anamespaceAMessageBox_html_a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870"><div class="ttname"><a href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870">AMessageBox::Icon::CRITICAL</a></div><div class="ttdeci">@ CRITICAL</div><div class="ttdoc">Critical icon.</div><div class="ttdef"><b>Definition</b> AMessageBox.h:73</div></div>
 <div class="ttc" id="astructaui_1_1updater_1_1Semver_html_a0ee0eb7ac25407bca5b6ef4074d196ec"><div class="ttname"><a href="structaui_1_1updater_1_1Semver.html#a0ee0eb7ac25407bca5b6ef4074d196ec">aui::updater::Semver::fromString</a></div><div class="ttdeci">static Semver fromString(const AString &amp;version)</div><div class="ttdoc">Parse semver from string.</div></div>
 </div><!-- fragment --><h1>
 Updater workflows<a class="aui-toc-hash" href="#UPDATER_WORKFLOWS" id="UPDATER_WORKFLOWS" style="color: var(--fragment-comment) !important">#</a></h1>

@@ -171,7 +171,7 @@ $(function(){initNavTree('examples_2app_2minesweeper_2src_2MinesweeperWindow_8cp
 <div class="line">            mReveal = <span class="keyword">true</span>;</div>
 <div class="line">            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> customCssPropertyChanged();</div>
 <div class="line">            redraw();</div>
-<div class="line">            AMessageBox::show(<span class="keyword">this</span>, <span class="stringliteral">"You lost!"</span>, <span class="stringliteral">"You lost! Ahahahhaa!"</span>);</div>
+<div class="line">            <a id="a3" name="a3"></a><a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(<span class="keyword">this</span>, <span class="stringliteral">"You lost!"</span>, <span class="stringliteral">"You lost! Ahahahhaa!"</span>);</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">return</span>;</div>
 <div class="line">    }</div>
@@ -186,7 +186,7 @@ $(function(){initNavTree('examples_2app_2minesweeper_2src_2MinesweeperWindow_8cp
 <div class="line">        mReveal = <span class="keyword">true</span>;</div>
 <div class="line">        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> customCssPropertyChanged();</div>
 <div class="line">        redraw();</div>
-<div class="line">        AMessageBox::show(<span class="keyword">this</span>, <span class="stringliteral">"You won!"</span>, <span class="stringliteral">"Respect +"</span>);</div>
+<div class="line">        <a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(<span class="keyword">this</span>, <span class="stringliteral">"You won!"</span>, <span class="stringliteral">"Respect +"</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (bombCount == 0) {</div>
@@ -204,7 +204,7 @@ $(function(){initNavTree('examples_2app_2minesweeper_2src_2MinesweeperWindow_8cp
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="line"><span class="keywordtype">void</span> MinesweeperWindow::updateCellViewStyle(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)<span class="keyword"> const </span>{</div>
-<div class="line">    <a id="a3" name="a3"></a><a class="code hl_define" href="group__signal__slot.html#ga00cd4f40ca195cb6b174543dca2a431e">AUI_EMIT_FOREIGN</a>(mGrid-&gt;getViews()[y * mFieldColumns + x], customCssPropertyChanged);</div>
+<div class="line">    <a id="a4" name="a4"></a><a class="code hl_define" href="group__signal__slot.html#ga00cd4f40ca195cb6b174543dca2a431e">AUI_EMIT_FOREIGN</a>(mGrid-&gt;getViews()[y * mFieldColumns + x], customCssPropertyChanged);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> MinesweeperWindow::countBombsAround(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) {</div>
@@ -252,7 +252,7 @@ $(function(){initNavTree('examples_2app_2minesweeper_2src_2MinesweeperWindow_8cp
 <div class="line">    pack();</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> MinesweeperWindow::setupEventHandlers(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keyword">const</span> <a id="_a4" name="_a4"></a><a class="code hl_class" href="class__.html">_&lt;CellView&gt;</a>&amp; cell) {</div>
+<div class="line"><span class="keywordtype">void</span> MinesweeperWindow::setupEventHandlers(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keyword">const</span> <a id="_a5" name="_a5"></a><a class="code hl_class" href="class__.html">_&lt;CellView&gt;</a>&amp; cell) {</div>
 <div class="line">    connect(cell-&gt;clicked, <span class="keyword">this</span>, [&amp;, x, y]() {</div>
 <div class="line">        if (mReveal) {</div>
 <div class="line">            return;</div>
@@ -279,6 +279,7 @@ $(function(){initNavTree('examples_2app_2minesweeper_2src_2MinesweeperWindow_8cp
 <div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga00cd4f40ca195cb6b174543dca2a431e"><div class="ttname"><a href="group__signal__slot.html#ga00cd4f40ca195cb6b174543dca2a431e">AUI_EMIT_FOREIGN</a></div><div class="ttdeci">#define AUI_EMIT_FOREIGN(object, signal,...)</div><div class="ttdoc">emits the specified signal in context of specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:352</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
+<div class="ttc" id="anamespaceAMessageBox_html_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><div class="ttname"><a href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a></div><div class="ttdeci">API_AUI_VIEWS ResultButton show(AWindow *parent, const AString &amp;title, const AString &amp;message, Icon icon=Icon::NONE, Button b=Button::OK)</div><div class="ttdoc">Displays a message box, blocking the caller thread until the user dismisses the message.</div></div>
 </div><!-- fragment --> <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

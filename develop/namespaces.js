@@ -2,7 +2,28 @@ var namespaces =
 [
     [ "ADesktop", "namespaceADesktop.html", "namespaceADesktop" ],
     [ "AHash", "namespaceAHash.html", null ],
-    [ "AMessageBox", "namespaceAMessageBox.html", null ],
+    [ "AMessageBox", "namespaceAMessageBox.html", [
+      [ "Button", "namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bf", [
+        [ "OK", "namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564", null ],
+        [ "OK_CANCEL", "namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfacb1315790b542732dedb0c77e73d5d68", null ],
+        [ "YES_NO", "namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfaa8a862c880ca436e818ab6fba32e8f82", null ],
+        [ "YES_NO_CANCEL", "namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfa071c462fbd3fd1002526b7b09b9449fe", null ]
+      ] ],
+      [ "Icon", "namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506", [
+        [ "NONE", "namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693", null ],
+        [ "INFO", "namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3", null ],
+        [ "WARNING", "namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a059e9861e0400dfbe05c98a841f3f96b", null ],
+        [ "CRITICAL", "namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870", null ]
+      ] ],
+      [ "ResultButton", "namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67c", [
+        [ "INVALID", "namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67caccc0377a8afbf50e7094f5c23a8af223", null ],
+        [ "OK", "namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67cae0aa021e21dddbd6d8cecec71e9cf564", null ],
+        [ "CANCEL", "namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67ca2027c027133e22c8929e2874dc44dd36", null ],
+        [ "YES", "namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67ca7469a286259799e5b37e5db9296f00b3", null ],
+        [ "NO", "namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67cac2f3f489a00553e7a01d369c103c7251", null ]
+      ] ],
+      [ "show", "namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2", null ]
+    ] ],
     [ "APlatform", "namespaceAPlatform.html", null ],
     [ "aui", null, [
       [ "audio", null, [

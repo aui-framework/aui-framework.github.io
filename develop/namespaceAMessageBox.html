@@ -108,11 +108,11 @@ $(function(){initNavTree('namespaceAMessageBox.html',''); initResizable(true); }
 <p>AMessageBox provides a set of APIs to display native modal message boxes, giving the user some important information or asking questions.</p>
 <p>Title is a short sentence describing the situation in 2-4 words, typically rendered as emphasized text or in the titlebar. Message contains more information about the state of things. Optionally, buttons or icon can be specified.</p>
 <p>The rest of the application is freezed/blocked until the user dismisses the message box. This means message boxes should be used only in emergency situations, when your application literally can't operate until it recevies a response from the user. Use non-blocking, contextual and structured feedback where possible.</p>
-<div class="fragment"><div class="line">                                     AMessageBox::show(<span class="keyword">this</span>,</div>
+<div class="fragment"><div class="line">                                     <a class="code hl_function" href="#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(<span class="keyword">this</span>,</div>
 <div class="line">                                                       <span class="stringliteral">"Title"</span>,</div>
 <div class="line">                                                       <span class="stringliteral">"Message"</span>,</div>
-<div class="line">                                                       AMessageBox::Icon::NONE,</div>
-<div class="line">                                                       AMessageBox::Button::OK);</div>
+<div class="line">                                                       <a class="code hl_enumvalue" href="#a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693">AMessageBox::Icon::NONE</a>,</div>
+<div class="line">                                                       <a class="code hl_enumvalue" href="#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564">AMessageBox::Button::OK</a>);</div>
 </div><!-- fragment --><dl class="windows"><dt><b><a class="el" href="windows.html#_windows000014">Windows-specific</a></b></dt><dd>Implemented with <a class="elRef" href="https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messagebox?.html">MessageBox</a>. </dd></dl>
 <div class="image">
 <img alt="" src="ajkdhadkjfh.png"/>
@@ -128,35 +128,183 @@ $(function(){initNavTree('namespaceAMessageBox.html',''); initResizable(true); }
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Enumerations<a class="aui-toc-hash" href="#enum-members" id="enum-members" name="enum-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a8d1b9913efea705e934603f7a5036506" id="r_a8d1b9913efea705e934603f7a5036506"><td align="right" class="memItemLeft" valign="top"><a id="a8d1b9913efea705e934603f7a5036506" name="a8d1b9913efea705e934603f7a5036506"></a>enum class  </td><td class="memItemRight" valign="bottom"><b>Icon</b> { <b>NONE</b>
-, <b>INFO</b>
-, <b>WARNING</b>
-, <b>CRITICAL</b>
+<tr class="memitem:a8d1b9913efea705e934603f7a5036506" id="r_a8d1b9913efea705e934603f7a5036506"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1b9913efea705e934603f7a5036506">Icon</a> { <a class="el" href="#a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693">NONE</a>
+, <a class="el" href="#a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3">INFO</a>
+, <a class="el" href="#a8d1b9913efea705e934603f7a5036506a059e9861e0400dfbe05c98a841f3f96b">WARNING</a>
+, <a class="el" href="#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870">CRITICAL</a>
  }</td></tr>
+<tr class="memdesc:a8d1b9913efea705e934603f7a5036506"><td class="mdescLeft"> </td><td class="mdescRight">Specifies icon to be displayed.  <a href="#a8d1b9913efea705e934603f7a5036506">More...</a><br/></td></tr>
 <tr class="separator:a8d1b9913efea705e934603f7a5036506"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8cf32602451dd1c88cd380797b2907bf" id="r_a8cf32602451dd1c88cd380797b2907bf"><td align="right" class="memItemLeft" valign="top"><a id="a8cf32602451dd1c88cd380797b2907bf" name="a8cf32602451dd1c88cd380797b2907bf"></a>enum class  </td><td class="memItemRight" valign="bottom"><b>Button</b> { <b>OK</b>
-, <b>OK_CANCEL</b>
-, <b>YES_NO</b>
-, <b>YES_NO_CANCEL</b>
+<tr class="memitem:a8cf32602451dd1c88cd380797b2907bf" id="r_a8cf32602451dd1c88cd380797b2907bf"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cf32602451dd1c88cd380797b2907bf">Button</a> { <a class="el" href="#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564">OK</a>
+, <a class="el" href="#a8cf32602451dd1c88cd380797b2907bfacb1315790b542732dedb0c77e73d5d68">OK_CANCEL</a>
+, <a class="el" href="#a8cf32602451dd1c88cd380797b2907bfaa8a862c880ca436e818ab6fba32e8f82">YES_NO</a>
+, <a class="el" href="#a8cf32602451dd1c88cd380797b2907bfa071c462fbd3fd1002526b7b09b9449fe">YES_NO_CANCEL</a>
  }</td></tr>
+<tr class="memdesc:a8cf32602451dd1c88cd380797b2907bf"><td class="mdescLeft"> </td><td class="mdescRight">Specifies button(s) to be displayed.  <a href="#a8cf32602451dd1c88cd380797b2907bf">More...</a><br/></td></tr>
 <tr class="separator:a8cf32602451dd1c88cd380797b2907bf"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a58b0d15012070c2fb634111752d0d67c" id="r_a58b0d15012070c2fb634111752d0d67c"><td align="right" class="memItemLeft" valign="top"><a id="a58b0d15012070c2fb634111752d0d67c" name="a58b0d15012070c2fb634111752d0d67c"></a>enum class  </td><td class="memItemRight" valign="bottom"><b>ResultButton</b> { <br/>
-  <b>INVALID</b>
-, <b>OK</b>
-, <b>CANCEL</b>
-, <b>YES</b>
+<tr class="memitem:a58b0d15012070c2fb634111752d0d67c" id="r_a58b0d15012070c2fb634111752d0d67c"><td align="right" class="memItemLeft" valign="top">enum class  </td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b0d15012070c2fb634111752d0d67c">ResultButton</a> { <br/>
+  <a class="el" href="#a58b0d15012070c2fb634111752d0d67caccc0377a8afbf50e7094f5c23a8af223">INVALID</a>
+, <a class="el" href="#a58b0d15012070c2fb634111752d0d67cae0aa021e21dddbd6d8cecec71e9cf564">OK</a>
+, <a class="el" href="#a58b0d15012070c2fb634111752d0d67ca2027c027133e22c8929e2874dc44dd36">CANCEL</a>
+, <a class="el" href="#a58b0d15012070c2fb634111752d0d67ca7469a286259799e5b37e5db9296f00b3">YES</a>
 , <br/>
-  <b>NO</b>
+  <a class="el" href="#a58b0d15012070c2fb634111752d0d67cac2f3f489a00553e7a01d369c103c7251">NO</a>
 <br/>
  }</td></tr>
+<tr class="memdesc:a58b0d15012070c2fb634111752d0d67c"><td class="mdescLeft"> </td><td class="mdescRight">Button that the user has clicked.  <a href="#a58b0d15012070c2fb634111752d0d67c">More...</a><br/></td></tr>
 <tr class="separator:a58b0d15012070c2fb634111752d0d67c"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Functions<a class="aui-toc-hash" href="#func-members" id="func-members" name="func-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a022ae6a7c7fe5fad7548fca5e7ca7dd2" id="r_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><td align="right" class="memItemLeft" valign="top"><a id="a022ae6a7c7fe5fad7548fca5e7ca7dd2" name="a022ae6a7c7fe5fad7548fca5e7ca7dd2"></a>
-API_AUI_VIEWS ResultButton </td><td class="memItemRight" valign="bottom"><b>show</b> (<a class="el" href="classAWindow.html">AWindow</a> *parent, const <a class="el" href="classAString.html">AString</a> &amp;title, const <a class="el" href="classAString.html">AString</a> &amp;message, Icon icon=Icon::NONE, Button b=Button::OK)</td></tr>
+<tr class="memitem:a022ae6a7c7fe5fad7548fca5e7ca7dd2" id="r_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><td align="right" class="memItemLeft" valign="top">API_AUI_VIEWS <a class="el" href="#a58b0d15012070c2fb634111752d0d67c">ResultButton</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a022ae6a7c7fe5fad7548fca5e7ca7dd2">show</a> (<a class="el" href="classAWindow.html">AWindow</a> *parent, const <a class="el" href="classAString.html">AString</a> &amp;title, const <a class="el" href="classAString.html">AString</a> &amp;message, <a class="el" href="#a8d1b9913efea705e934603f7a5036506">Icon</a> icon=<a class="el" href="#a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693">Icon::NONE</a>, <a class="el" href="#a8cf32602451dd1c88cd380797b2907bf">Button</a> b=<a class="el" href="#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564">Button::OK</a>)</td></tr>
+<tr class="memdesc:a022ae6a7c7fe5fad7548fca5e7ca7dd2"><td class="mdescLeft"> </td><td class="mdescRight">Displays a message box, blocking the caller thread until the user dismisses the message.  <br/></td></tr>
 <tr class="separator:a022ae6a7c7fe5fad7548fca5e7ca7dd2"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation<a class="aui-toc-hash" href="#a8cf32602451dd1c88cd380797b2907bf" id="a8cf32602451dd1c88cd380797b2907bf" name="a8cf32602451dd1c88cd380797b2907bf" style="color: var(--fragment-comment) !important">#</a></h2>
+
+<h2 class="memtitle"><span class="permalink">◆ </span>Button<a class="aui-toc-hash" href="#◆ button" id="◆ button" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">enum class <a class="el" href="#a8cf32602451dd1c88cd380797b2907bf">AMessageBox::Button</a></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Specifies button(s) to be displayed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564" name="a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564"></a>OK </td><td class="fielddoc"><p>Display OK button only. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf32602451dd1c88cd380797b2907bfacb1315790b542732dedb0c77e73d5d68" name="a8cf32602451dd1c88cd380797b2907bfacb1315790b542732dedb0c77e73d5d68"></a>OK_CANCEL </td><td class="fielddoc"><p>Display OK and Cancel buttons. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf32602451dd1c88cd380797b2907bfaa8a862c880ca436e818ab6fba32e8f82" name="a8cf32602451dd1c88cd380797b2907bfaa8a862c880ca436e818ab6fba32e8f82"></a>YES_NO </td><td class="fielddoc"><p>Display Yes and No buttons. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8cf32602451dd1c88cd380797b2907bfa071c462fbd3fd1002526b7b09b9449fe" name="a8cf32602451dd1c88cd380797b2907bfa071c462fbd3fd1002526b7b09b9449fe"></a>YES_NO_CANCEL </td><td class="fielddoc"><p>Display Yes, No and Cancel buttons. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="a8d1b9913efea705e934603f7a5036506" name="a8d1b9913efea705e934603f7a5036506"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>Icon<a class="aui-toc-hash" href="#◆ icon" id="◆ icon" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">enum class <a class="el" href="#a8d1b9913efea705e934603f7a5036506">AMessageBox::Icon</a></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Specifies icon to be displayed. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693" name="a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693"></a>NONE </td><td class="fielddoc"><p>No icon is specified. </p>
+<dl class="macos"><dt><b><a class="el" href="macos.html#_macos000003">macOS-specific</a></b></dt><dd>Displays app's bundle icon. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3" name="a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3"></a>INFO </td><td class="fielddoc"><p>Information icon. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8d1b9913efea705e934603f7a5036506a059e9861e0400dfbe05c98a841f3f96b" name="a8d1b9913efea705e934603f7a5036506a059e9861e0400dfbe05c98a841f3f96b"></a>WARNING </td><td class="fielddoc"><p>Warning icon. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870" name="a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870"></a>CRITICAL </td><td class="fielddoc"><p>Critical icon. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a id="a58b0d15012070c2fb634111752d0d67c" name="a58b0d15012070c2fb634111752d0d67c"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>ResultButton<a class="aui-toc-hash" href="#◆ resultbutton" id="◆ resultbutton" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">enum class <a class="el" href="#a58b0d15012070c2fb634111752d0d67c">AMessageBox::ResultButton</a></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p><a class="el" href="#a8cf32602451dd1c88cd380797b2907bf" title="Specifies button(s) to be displayed.">Button</a> that the user has clicked. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a58b0d15012070c2fb634111752d0d67caccc0377a8afbf50e7094f5c23a8af223" name="a58b0d15012070c2fb634111752d0d67caccc0377a8afbf50e7094f5c23a8af223"></a>INVALID </td><td class="fielddoc"><p>Indicates an invalid or undefined result. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a58b0d15012070c2fb634111752d0d67cae0aa021e21dddbd6d8cecec71e9cf564" name="a58b0d15012070c2fb634111752d0d67cae0aa021e21dddbd6d8cecec71e9cf564"></a>OK </td><td class="fielddoc"><p>Indicates the user clicked the OK button. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a58b0d15012070c2fb634111752d0d67ca2027c027133e22c8929e2874dc44dd36" name="a58b0d15012070c2fb634111752d0d67ca2027c027133e22c8929e2874dc44dd36"></a>CANCEL </td><td class="fielddoc"><p>Indicates the user clicked the Cancel button. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a58b0d15012070c2fb634111752d0d67ca7469a286259799e5b37e5db9296f00b3" name="a58b0d15012070c2fb634111752d0d67ca7469a286259799e5b37e5db9296f00b3"></a>YES </td><td class="fielddoc"><p>Indicates the user clicked the Yes button. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a58b0d15012070c2fb634111752d0d67cac2f3f489a00553e7a01d369c103c7251" name="a58b0d15012070c2fb634111752d0d67cac2f3f489a00553e7a01d369c103c7251"></a>NO </td><td class="fielddoc"><p>Indicates the user clicked the No button. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#a022ae6a7c7fe5fad7548fca5e7ca7dd2" id="a022ae6a7c7fe5fad7548fca5e7ca7dd2" name="a022ae6a7c7fe5fad7548fca5e7ca7dd2" style="color: var(--fragment-comment) !important">#</a></h2>
+
+<h2 class="memtitle"><span class="permalink">◆ </span>show()<a class="aui-toc-hash" href="#◆ show()" id="◆ show()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">API_AUI_VIEWS <a class="el" href="#a58b0d15012070c2fb634111752d0d67c">ResultButton</a> AMessageBox::show </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="classAWindow.html">AWindow</a> *</td> <td class="paramname"><span class="paramname"><em>parent</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="classAString.html">AString</a> &amp;</td> <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const <a class="el" href="classAString.html">AString</a> &amp;</td> <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="#a8d1b9913efea705e934603f7a5036506">Icon</a></td> <td class="paramname"><span class="paramname"><em>icon</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693">Icon::NONE</a></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="#a8cf32602451dd1c88cd380797b2907bf">Button</a></td> <td class="paramname"><span class="paramname"><em>b</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564">Button::OK</a></span> )</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Displays a message box, blocking the caller thread until the user dismisses the message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">parent</td><td>the window the message box relates to. The OS might fade out the parent window and/or place the message box within its geometry. Can be <code>nullptr</code>. </td></tr>
+<tr><td class="paramname">title</td><td>title of the message box. </td></tr>
+<tr><td class="paramname">message</td><td>content of the message box. </td></tr>
+<tr><td class="paramname">icon</td><td>icon style for the message box. Defaults to NONE. </td></tr>
+<tr><td class="paramname">b</td><td>buttons to be displayed in the message box. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2app_2fractal_2src_2JumpToCoordsWindow_8cpp-example.html#a2">examples/app/fractal/src/JumpToCoordsWindow.cpp</a>, <a class="el" href="examples_2app_2minesweeper_2src_2MinesweeperWindow_8cpp-example.html#a3">examples/app/minesweeper/src/MinesweeperWindow.cpp</a>, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8cpp-example.html#a12">examples/ui/views/src/ExampleWindow.cpp</a>.</dd>
+</dl>
+</div>
+</div>
 <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

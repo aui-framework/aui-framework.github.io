@@ -60,7 +60,7 @@ var searchData=
   ['modelchanged_57',['modelChanged',['../classADataBinding.html#a626f82611dff72cb336300f93c9f6174',1,'ADataBinding']]],
   ['module_58',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md122',1,'']]],
   ['module_20name_59',['API_\&lt;module name\&gt;',['../md_docs_2Macros.html#autotoc_md148',1,'']]],
-  ['motivation_20rationale_60',['Motivation/rationale',['../example_app_auigram.html#autotoc_md172',1,'']]],
+  ['motivation_20rationale_60',['Motivation/rationale',['../example_app_auigram.html#autotoc_md174',1,'']]],
   ['movable_61',['movable',['../conceptaui_1_1movable.html',1,'aui']]],
   ['move_62',['MOVE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03a0863677ed986e1c26214dbd62d94fb8c',1,'ACursor']]],
   ['move_63',['move',['../classAPath.html#abdc728659668f830ee3f843bec114a9d',1,'APath']]],
