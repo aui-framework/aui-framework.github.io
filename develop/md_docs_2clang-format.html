@@ -101,7 +101,7 @@ $(function(){initNavTree('md_docs_2clang-format.html',''); initResizable(true); 
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="docs/clang-format.md"></b>
 <div class="textblock"><p>clang-format is a de facto standard tool to auto format (C++) code with style described by <code>.clang-format</code> file that typically located inside your project's root directory. AUI <a class="el" href="#CLANG_FORMAT">has such file</a>.</p>
-<p>Since AUI abuses C++'s syntax, it's important to set up appropriate auto formatting, or you will often find yourself struggling with AUI's DSL especially in large portions of layout. For your project, we recommend to start with AUI's formatting configuration listed above. AUI's <a href="https://github.com/aui-framework/example_app">App Template</a> has <code>.clang-format</code> already. Your IDE should pick up it without further configuration.</p>
+<p>Since AUI abuses C++'s syntax, it's important to set up appropriate auto formatting, or you will often find yourself struggling with AUI's DSL especially in large portions of layout, despite the fact we recommend to decompose large AUI DSLs into smaller pieces (i.e., functions). For your project, we recommend to start with AUI's formatting configuration listed below. AUI's <a href="https://github.com/aui-framework/example_app">App Template</a> has <code>.clang-format</code> already. Your IDE should pick up it without further configuration.</p>
 <h1>
 Always Use Trailing Comma in Initializer Lists<a class="aui-toc-hash" href="#always-use-trailing-comma-in-initializer-lists" id="always-use-trailing-comma-in-initializer-lists" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>When it comes to <code>clang-format</code> there's one an unobvious feature when using AUI's DSL. Consider the example:</p>
@@ -149,6 +149,7 @@ Use clang-format off/on<a class="aui-toc-hash" href="#use-clang-format-off/on" i
 <div class="line"><span class="comment">// clang-format on</span></div>
 </div><!-- fragment --><h1>
 AUI's .clang-format<a class="aui-toc-hash" href="#CLANG_FORMAT" id="CLANG_FORMAT" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>Place this <code>.clang-format</code> file in root of your project.</p>
 <div class="fragment"><div class="line"># options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html</div>
 <div class="line">BasedOnStyle: Google</div>
 <div class="line">IndentWidth: 4</div>

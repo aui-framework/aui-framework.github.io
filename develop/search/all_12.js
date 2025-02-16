@@ -35,7 +35,7 @@ var searchData=
   ['opacify_32',['opacify',['../classAColor.html#a6f3a5debba1dfa2577e80ed210ef9ba9',1,'AColor']]],
   ['opacity_33',['Opacity',['../structass_1_1Opacity.html',1,'ass']]],
   ['open_34',['open',['../structaui_1_1archive_1_1FileEntry.html#a8c7d32ebe0ef95175e534e73eef7bccf',1,'aui::archive::FileEntry']]],
-  ['open_20cell_20left_20click_35',['Open cell (left click)',['../example_minesweeper_game.html#autotoc_md183',1,'']]],
+  ['open_20cell_20left_20click_35',['Open cell (left click)',['../example_minesweeper_game.html#autotoc_md184',1,'']]],
   ['opengl_36',['OpenGL',['../structARenderingContextOptions_1_1OpenGL.html',1,'ARenderingContextOptions']]],
   ['openglrenderer_37',['OpenGLRenderer',['../classOpenGLRenderer.html',1,'']]],
   ['openglrenderingcontext_38',['OpenGLRenderingContext',['../classOpenGLRenderingContext.html',1,'']]],
