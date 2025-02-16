@@ -149,6 +149,7 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#pragma once</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;range/v3/range/concepts.hpp&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/Json/AJson.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;AUI/IO/APath.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include "AUI/Traits/parameter_pack.h"</span></div>
@@ -300,13 +301,26 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;std::shared_ptr&lt;T&gt;&gt; {</div>
+<div class="line">    <span class="keyword">static</span> AJson toJson(<span class="keyword">const</span> std::shared_ptr&lt;T&gt;&amp; v) {</div>
+<div class="line">        <span class="keywordflow">return</span> aui::to_json(*v);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, std::shared_ptr&lt;T&gt;&amp; dst) {</div>
+<div class="line">        dst = std::make_shared&lt;T&gt;(aui::from_json&lt;T&gt;(json));</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;<a id="_a10" name="_a10"></a><a class="code hl_class" href="class__.html">_</a>&lt;T&gt;&gt;: <a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;std::shared_ptr&lt;T&gt;&gt; {};</div>
+<div class="line"> </div>
 <div class="line"><span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;int64_t&gt; {</div>
 <div class="line">    <span class="keyword">static</span> AJson toJson(int64_t v) {</div>
 <div class="line">        <span class="keywordflow">return</span> v;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, int64_t&amp; dst) {</div>
-<div class="line">        dst = json.<a id="a10" name="a10"></a>asLongInt();</div>
+<div class="line">        dst = json.<a id="a11" name="a11"></a>asLongInt();</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"><span class="keyword">template</span>&lt;&gt;</div>
@@ -325,7 +339,7 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">        <span class="keywordflow">return</span> v;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, <span class="keywordtype">float</span>&amp; dst) {</div>
-<div class="line">        dst = json.<a id="a11" name="a11"></a>asNumber();</div>
+<div class="line">        dst = json.<a id="a12" name="a12"></a>asNumber();</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
@@ -360,7 +374,7 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">        <span class="keywordflow">return</span> v;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, <span class="keywordtype">bool</span>&amp; dst) {</div>
-<div class="line">        dst = json.<a id="a12" name="a12"></a>asBool();</div>
+<div class="line">        dst = json.<a id="a13" name="a13"></a>asBool();</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
@@ -370,11 +384,11 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">        <span class="keywordflow">return</span> v;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, AString&amp; dst) {</div>
-<div class="line">        dst = json.<a id="a13" name="a13"></a>asString();</div>
+<div class="line">        dst = json.<a id="a14" name="a14"></a>asString();</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"><span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;<a id="_a14" name="_a14"></a><a class="code hl_class" href="classAPath.html">APath</a>&gt; {</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;<a id="_a15" name="_a15"></a><a class="code hl_class" href="classAPath.html">APath</a>&gt; {</div>
 <div class="line">    <span class="keyword">static</span> AJson toJson(APath v) {</div>
 <div class="line">        <span class="keywordflow">return</span> v;</div>
 <div class="line">    }</div>
@@ -389,7 +403,7 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">        <span class="keywordflow">return</span> AJson::Array({aui::to_json(v.first), aui::to_json(v.second)});</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, std::pair&lt;T1, T2&gt;&amp; dst) {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; array = json.<a id="a15" name="a15"></a>asArray();</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; array = json.<a id="a16" name="a16"></a>asArray();</div>
 <div class="line">        dst = { aui::from_json&lt;T1&gt;(array.at(0)), aui::from_json&lt;T2&gt;(array.at(1)) };</div>
 <div class="line">    }</div>
 <div class="line">};</div>
@@ -414,22 +428,27 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;<a id="_a16" name="_a16"></a><a class="code hl_class" href="classAVector.html">AVector</a>&lt;T&gt;, typename std::enable_if_t&lt;aui::has_json_converter&lt;T&gt;&gt;&gt; {</div>
-<div class="line">    <span class="keyword">static</span> AJson toJson(<span class="keyword">const</span> AVector&lt;T&gt;&amp; v) {</div>
+<div class="line"><span class="keyword">template</span>&lt;ranges::v3::range T&gt;</div>
+<div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structAJsonConv.html">AJsonConv</a>&lt;T&gt; {</div>
+<div class="line">    <span class="keyword">static</span> AJson toJson(<span class="keyword">const</span> T&amp; v) {</div>
 <div class="line">        AJson::Array array;</div>
-<div class="line">        array.reserve(v.size());</div>
+<div class="line">        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ranges::v3::sized_range&lt;T&gt;) {</div>
+<div class="line">            array.reserve(v.size());</div>
+<div class="line">        }</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; elem : v) {</div>
 <div class="line">            array &lt;&lt; aui::to_json(elem);</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">return</span> std::move(array);</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, AVector&lt;T&gt;&amp; dst) {</div>
+<div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> fromJson(<span class="keyword">const</span> AJson&amp; json, T&amp; dst) {</div>
 <div class="line">        <span class="keyword">auto</span>&amp; array = json.asArray();</div>
 <div class="line">        dst.clear();</div>
-<div class="line">        dst.reserve(array.size());</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">requires</span>(T&amp;&amp; <a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>) { <a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>.reserve(<span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(0)); }) {</div>
+<div class="line">            dst.reserve(array.size());</div>
+<div class="line">        }</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; elem : array) {</div>
-<div class="line">            dst &lt;&lt; aui::from_json&lt;T&gt;(elem);</div>
+<div class="line">            dst &lt;&lt; aui::from_json&lt;std::decay_t&lt;<span class="keyword">decltype</span>(*dst.begin())&gt;&gt;(elem);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">};</div>
@@ -459,7 +478,7 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="ttc" id="aclassAEnumerate_html_afa46b450b5dbb8f6f95cf74067c65633"><div class="ttname"><a href="classAEnumerate.html#afa46b450b5dbb8f6f95cf74067c65633">AEnumerate::valueToNameMap</a></div><div class="ttdeci">static const AMap&lt; enum_t, AString, enum_less &gt; &amp; valueToNameMap()</div><div class="ttdoc">Map runtime enum value to name.</div><div class="ttdef"><b>Definition</b> AEnumerate.h:183</div></div>
 <div class="ttc" id="aclassAJson_html"><div class="ttname"><a href="classAJson.html">AJson</a></div><div class="ttdoc">Json atom.</div><div class="ttdef"><b>Definition</b> AJson.h:84</div></div>
 <div class="ttc" id="aclassAPath_html"><div class="ttname"><a href="classAPath.html">APath</a></div><div class="ttdoc">An add-on to AString with functions for working with the path.</div><div class="ttdef"><b>Definition</b> APath.h:128</div></div>
-<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
+<div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 <div class="ttc" id="aconceptaui_1_1convertible__to_html"><div class="ttname"><a href="conceptaui_1_1convertible__to.html">aui::convertible_to</a></div><div class="ttdef"><b>Definition</b> concepts.h:42</div></div>
 <div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
 <div class="ttc" id="agroup__ass__selectors_html_gab1309369989373a0f2408455b3a91742"><div class="ttname"><a href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">ass::t</a></div><div class="ttdeci">type_of&lt; T &gt; t</div><div class="ttdoc">Selects views that are of the specified C++ types.</div><div class="ttdef"><b>Definition</b> type_of.h:71</div></div>
@@ -468,11 +487,11 @@ $(function(){initNavTree('_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2J
 <div class="ttc" id="agroup__core_html_gafb09429e1504fcd99fad3ad05858638a"><div class="ttname"><a href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div></div>
 <div class="ttc" id="agroup__useful__templates_html_ga6f9bb834ae166b6625fc5c91117d8738"><div class="ttname"><a href="group__useful__templates.html#ga6f9bb834ae166b6625fc5c91117d8738">aui::is_complete</a></div><div class="ttdeci">constexpr bool is_complete</div><div class="ttdoc">Determines whether T is complete or not.</div><div class="ttdef"><b>Definition</b> types.h:23</div></div>
 <div class="ttc" id="agroup__views_html_ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee"><div class="ttname"><a href="group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a5b39c8b553c821e7cddc6da64b5bd2ee">ATextInputActionIcon::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdoc">There's no concrete input action. Let the OS decide which action is the most appropriate.</div><div class="ttdef"><b>Definition</b> ATextInputActionIcon.h:39</div></div>
-<div class="ttc" id="astructAJsonConvFieldDescriptor_html"><div class="ttname"><a href="structAJsonConvFieldDescriptor.html">AJsonConvFieldDescriptor</a></div><div class="ttdef"><b>Definition</b> Conversion.h:141</div></div>
-<div class="ttc" id="astructAJsonConv_html"><div class="ttname"><a href="structAJsonConv.html">AJsonConv</a></div><div class="ttdef"><b>Definition</b> Conversion.h:42</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1json_1_1Field_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1Field.html">aui::impl::json::Field</a></div><div class="ttdef"><b>Definition</b> Conversion.h:94</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1json_1_1empty__tuple_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1empty__tuple.html">aui::impl::json::empty_tuple</a></div><div class="ttdef"><b>Definition</b> Conversion.h:131</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1json_1_1my__tuple_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1my__tuple.html">aui::impl::json::my_tuple</a></div><div class="ttdef"><b>Definition</b> Conversion.h:116</div></div>
+<div class="ttc" id="astructAJsonConvFieldDescriptor_html"><div class="ttname"><a href="structAJsonConvFieldDescriptor.html">AJsonConvFieldDescriptor</a></div><div class="ttdef"><b>Definition</b> Conversion.h:142</div></div>
+<div class="ttc" id="astructAJsonConv_html"><div class="ttname"><a href="structAJsonConv.html">AJsonConv</a></div><div class="ttdef"><b>Definition</b> Conversion.h:43</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1json_1_1Field_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1Field.html">aui::impl::json::Field</a></div><div class="ttdef"><b>Definition</b> Conversion.h:95</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1json_1_1empty__tuple_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1empty__tuple.html">aui::impl::json::empty_tuple</a></div><div class="ttdef"><b>Definition</b> Conversion.h:132</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1json_1_1my__tuple_html"><div class="ttname"><a href="structaui_1_1impl_1_1json_1_1my__tuple.html">aui::impl::json::my_tuple</a></div><div class="ttdef"><b>Definition</b> Conversion.h:117</div></div>
 </div><!-- fragment --> <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
