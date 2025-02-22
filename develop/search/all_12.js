@@ -56,7 +56,7 @@ var searchData=
   ['operator_5b_5d_53',['operator[]',['../classAListModel.html#ac65199711ed9f613d8b3a9d4d385a1d0',1,'AListModel']]],
   ['or_54',['Or',['../structaui_1_1valid_1_1impl_1_1Or.html',1,'aui::valid::impl']]],
   ['or_20abutton_20s_55',['Select all ALabel&apos;s or AButton&apos;s',['../group__ass.html#autotoc_md16',1,'']]],
-  ['or_20exception_56',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md124',1,'']]],
+  ['or_20exception_56',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md125',1,'']]],
   ['origin_57',['origin',['../structAScrollEvent.html#afb585641aa999c42077063ccf83c6ffe',1,'AScrollEvent']]],
   ['originexe_58',['originExe',['../structAUpdater_1_1GetInstallationDirectoryContext.html#aab48a7435f9b549c2c1b2781cedb8cdd',1,'AUpdater::GetInstallationDirectoryContext']]],
   ['oses_59',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
