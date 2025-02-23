@@ -7,7 +7,7 @@ var searchData=
   ['newrenderviewtotexture_4',['newRenderViewToTexture',['../classOpenGLRenderer.html#af81280a6d8a48a9f2375becbe76b6ced',1,'OpenGLRenderer::newRenderViewToTexture()'],['../classIRenderer.html#ae03f8d57f97d8ece6db7a536f23d31b4',1,'IRenderer::newRenderViewToTexture()'],['../classSoftwareRenderer.html#afbf1831638970e6b7d585a19c8186c3a',1,'SoftwareRenderer::newRenderViewToTexture()']]],
   ['nextline_5',['nextLine',['../classIRenderer_1_1IMultiStringCanvas.html#a04559c8577d9e83e4b15ddd2e02e9b6b',1,'IRenderer::IMultiStringCanvas']]],
   ['nextrandomtemporary_6',['nextRandomTemporary',['../classAPath.html#adda955c535728a9fc182249bfc4e531d',1,'APath']]],
-  ['notify_7',['notify',['../structAProperty.html#a18682f7b8d05cec06cdbecc548a453b6',1,'AProperty']]],
+  ['notify_7',['notify',['../structAProperty.html#a18682f7b8d05cec06cdbecc548a453b6',1,'AProperty::notify()'],['../structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b',1,'APropertyDef::notify()']]],
   ['notify_5fall_8',['notify_all',['../classAConditionVariable.html#ac0de7beaf1c9b3b0806d8bdec30af303',1,'AConditionVariable']]],
   ['notify_5fone_9',['notify_one',['../classAConditionVariable.html#a0f01b279878a7a39c713b08d8e9e0674',1,'AConditionVariable']]],
   ['notifyonsuccesscallback_10',['notifyOnSuccessCallback',['../structaui_1_1impl_1_1future_1_1Future_1_1Inner.html#aa7c5aefcf52dd35751c46ceec94e8405',1,'aui::impl::future::Future::Inner']]],

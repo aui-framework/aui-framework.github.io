@@ -57,6 +57,8 @@ var namespaces =
       [ "non_null", "structaui_1_1non__null.html", null ],
       [ "non_null_lateinit", "structaui_1_1non__null__lateinit.html", null ],
       [ "noncopyable", "structaui_1_1noncopyable.html", null ],
+      [ "PropertyModifier", "classaui_1_1PropertyModifier.html", null ],
+      [ "PropertyModifier< AProperty< T > >", "classaui_1_1PropertyModifier.html", null ],
       [ "ptr", "structaui_1_1ptr.html", null ],
       [ "range", "structaui_1_1range.html", null ],
       [ "ranged_number", "structaui_1_1ranged__number.html", null ],

@@ -334,37 +334,39 @@ $(function(){initNavTree('concepts_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="conceptAPropertyWritable.html">  216</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptAPropertyWritable.html">APropertyWritable</a> = <span class="keyword">requires</span>(T&amp;&amp; t) {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    { t } -&gt; <a class="code hl_concept" href="conceptAPropertyReadable.html">APropertyReadable</a>;</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="comment">// Property has operator= overloaded so it can be used in assignment statement.</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    { t = std::declval&lt;typename std::decay_t&lt;T&gt;::Underlying&gt;() };</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>};</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    t.notify();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">// Property has operator= overloaded so it can be used in assignment statement.</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    { t = std::declval&lt;typename std::decay_t&lt;T&gt;::Underlying&gt;() };</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>};</div>
 </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="conceptAAnyProperty.html">  224</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptAAnyProperty.html">AAnyProperty</a> = <a class="code hl_concept" href="conceptAPropertyReadable.html">APropertyReadable&lt;T&gt;</a> || <a class="code hl_concept" href="conceptAPropertyWritable.html">APropertyWritable&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="conceptAAnySignalOrProperty.html">  227</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a> = <a class="code hl_concept" href="conceptAAnySignal.html">AAnySignal&lt;T&gt;</a> || <a class="code hl_concept" href="conceptAAnyProperty.html">AAnyProperty&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">template</span>&lt;AAnySignalOrProperty T&gt;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="structAAnySignalOrPropertyTraits.html">  231</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keyword">template</span>&lt;AAnySignal T&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00234">
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="structAAnySignalOrPropertyTraits.html">  234</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a>&lt;T&gt; {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keyword">using </span>args = <span class="keyword">typename</span> T::emits_args_t;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>};</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="conceptAAnyProperty.html">  226</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptAAnyProperty.html">AAnyProperty</a> = <a class="code hl_concept" href="conceptAPropertyReadable.html">APropertyReadable&lt;T&gt;</a> || <a class="code hl_concept" href="conceptAPropertyWritable.html">APropertyWritable&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="conceptAAnySignalOrProperty.html">  229</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a> = <a class="code hl_concept" href="conceptAAnySignal.html">AAnySignal&lt;T&gt;</a> || <a class="code hl_concept" href="conceptAAnyProperty.html">AAnyProperty&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">template</span>&lt;AAnySignalOrProperty T&gt;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="structAAnySignalOrPropertyTraits.html">  233</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a>;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keyword">template</span>&lt;AAnySignal T&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00236">
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="structAAnySignalOrPropertyTraits.html">  236</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a>&lt;T&gt; {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keyword">using </span>args = <span class="keyword">typename</span> T::emits_args_t;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>};</div>
 </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keyword">template</span>&lt;AAnyProperty T&gt;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="keyword">struct </span><a class="code hl_struct" href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a> &lt;T&gt;{</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keyword">using </span>args = std::tuple&lt;typename T::Underlying&gt;;</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>};</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="keyword">template</span>&lt;AAnyProperty T&gt;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="keyword">struct </span><a class="code hl_struct" href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a> &lt;T&gt;{</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keyword">using </span>args = std::tuple&lt;typename T::Underlying&gt;;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>};</div>
 <div class="ttc" id="aclassAAbstractSignal_html"><div class="ttname"><a href="classAAbstractSignal.html">AAbstractSignal</a></div><div class="ttdoc">Base class for signal.</div><div class="ttdef"><b>Definition</b> AAbstractSignal.h:366</div></div>
 <div class="ttc" id="aclassAAbstractThread_html"><div class="ttname"><a href="classAAbstractThread.html">AAbstractThread</a></div><div class="ttdoc">Represents an abstract thread. Not all threads are created through AThread - these are interfaced wit...</div><div class="ttdef"><b>Definition</b> AThread.h:32</div></div>
 <div class="ttc" id="aclassAObjectBase_html"><div class="ttname"><a href="classAObjectBase.html">AObjectBase</a></div><div class="ttdef"><b>Definition</b> AObjectBase.h:24</div></div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
-<div class="ttc" id="aconceptAAnyProperty_html"><div class="ttname"><a href="conceptAAnyProperty.html">AAnyProperty</a></div><div class="ttdef"><b>Definition</b> concepts.h:224</div></div>
-<div class="ttc" id="aconceptAAnySignalOrProperty_html"><div class="ttname"><a href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a></div><div class="ttdef"><b>Definition</b> concepts.h:227</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
+<div class="ttc" id="aconceptAAnyProperty_html"><div class="ttname"><a href="conceptAAnyProperty.html">AAnyProperty</a></div><div class="ttdef"><b>Definition</b> concepts.h:226</div></div>
+<div class="ttc" id="aconceptAAnySignalOrProperty_html"><div class="ttname"><a href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a></div><div class="ttdef"><b>Definition</b> concepts.h:229</div></div>
 <div class="ttc" id="aconceptAAnySignal_html"><div class="ttname"><a href="conceptAAnySignal.html">AAnySignal</a></div><div class="ttdef"><b>Definition</b> concepts.h:166</div></div>
 <div class="ttc" id="aconceptACompatibleSlotFor_html"><div class="ttname"><a href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a></div><div class="ttdef"><b>Definition</b> concepts.h:177</div></div>
 <div class="ttc" id="aconceptAPropertyReadable_html"><div class="ttname"><a href="conceptAPropertyReadable.html">APropertyReadable</a></div><div class="ttdef"><b>Definition</b> concepts.h:195</div></div>
@@ -394,7 +396,7 @@ $(function(){initNavTree('concepts_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aconceptaui_1_1swappable_html"><div class="ttname"><a href="conceptaui_1_1swappable.html">aui::swappable</a></div><div class="ttdef"><b>Definition</b> concepts.h:87</div></div>
 <div class="ttc" id="aconceptaui_1_1unsigned__integral_html"><div class="ttname"><a href="conceptaui_1_1unsigned__integral.html">aui::unsigned_integral</a></div><div class="ttdef"><b>Definition</b> concepts.h:148</div></div>
 <div class="ttc" id="agroup__core_html_gafb09429e1504fcd99fad3ad05858638a"><div class="ttname"><a href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div></div>
-<div class="ttc" id="astructAAnySignalOrPropertyTraits_html"><div class="ttname"><a href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a></div><div class="ttdef"><b>Definition</b> concepts.h:231</div></div>
+<div class="ttc" id="astructAAnySignalOrPropertyTraits_html"><div class="ttname"><a href="structAAnySignalOrPropertyTraits.html">AAnySignalOrPropertyTraits</a></div><div class="ttdef"><b>Definition</b> concepts.h:233</div></div>
 <div class="ttc" id="astructASlotDefBase_html"><div class="ttname"><a href="structASlotDefBase.html">ASlotDefBase</a></div><div class="ttdef"><b>Definition</b> concepts.h:185</div></div>
 <div class="ttc" id="astructaui_1_1member_html"><div class="ttname"><a href="structaui_1_1member.html">aui::member</a></div><div class="ttdef"><b>Definition</b> members.h:19</div></div>
 </div><!-- fragment --><p class="footer-inner">

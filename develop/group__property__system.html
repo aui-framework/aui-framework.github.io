@@ -131,7 +131,7 @@ $(function(){initNavTree('group__property__system.html',''); initResizable(true)
 <div class="line">window-&gt;setContents(Centered { tf });</div>
 <div class="line">window-&gt;show();</div>
 <div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:138</div></div>
-<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:146</div></div>
+<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:154</div></div>
 <div class="ttc" id="astructaui_1_1ptr_html_a9696eab52bd0745688055a301d9ef776"><div class="ttname"><a href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a></div><div class="ttdeci">static _&lt; T &gt; manage(T *raw)</div><div class="ttdoc">Delegates memory management of the raw pointer T* raw to the shared pointer, which is returned.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:372</div></div>
 </div><!-- fragment --><p>Or simpler: </p><div class="fragment"><div class="line"><span class="comment">// ...</span></div>
 <div class="line">window-&gt;setContents(Centered {</div>
@@ -397,7 +397,7 @@ ADataBindingDefault for omitting view property<a class="aui-toc-hash" href="#UID
 <div class="line">    <span class="keyword">static</span> <span class="keyword">auto</span> <a class="code hl_function" href="structADataBindingDefault.html#a8b84a1211f21be11840c0f38d5d69c2a">property</a>(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ALabel&gt;</a>&amp; view) { <span class="keywordflow">return</span> view-&gt;text(); }</div>
 <div class="line">};</div>
 <div class="ttc" id="aclassALabel_html"><div class="ttname"><a href="classALabel.html">ALabel</a></div><div class="ttdoc">Represents a simple single-line text display view.</div><div class="ttdef"><b>Definition</b> ALabel.h:23</div></div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
 <div class="ttc" id="astructADataBindingDefault_html"><div class="ttname"><a href="structADataBindingDefault.html">ADataBindingDefault</a></div><div class="ttdoc">Defines how View handles properties of FieldType type.</div><div class="ttdef"><b>Definition</b> ADataBinding.h:37</div></div>
 <div class="ttc" id="astructADataBindingDefault_html_a8b84a1211f21be11840c0f38d5d69c2a"><div class="ttname"><a href="structADataBindingDefault.html#a8b84a1211f21be11840c0f38d5d69c2a">ADataBindingDefault::property</a></div><div class="ttdeci">static auto property(const _&lt; View &gt; &amp;view)</div><div class="ttdoc">Returns property definition for FieldType.</div><div class="ttdef"><b>Definition</b> ADataBinding.h:49</div></div>
 </div><!-- fragment --><p>We can use this predefined specialization to omit the destination property: </p><div class="fragment"><div class="line">_new&lt;ALabel&gt;() &amp; user-&gt;name</div>
@@ -508,6 +508,9 @@ Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAPropertyPrecomputed.html">APropertyPrecomputed&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Readonly property that holds a value computed by an expression.  <a href="structAPropertyPrecomputed.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classaui_1_1PropertyModifier.html">aui::PropertyModifier&lt; Property &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Temporary transparent object that gains write access to underlying property's value, notifying about value changes when destructed.  <a href="classaui_1_1PropertyModifier.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#ga1eb0abe12d4d0c4db737cc63582791cd" id="ga1eb0abe12d4d0c4db737cc63582791cd" name="ga1eb0abe12d4d0c4db737cc63582791cd" style="color: var(--fragment-comment) !important">#</a></h2>

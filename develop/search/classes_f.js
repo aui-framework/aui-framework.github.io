@@ -63,10 +63,12 @@ var searchData=
   ['property_3c_20visibility_20_3e_60',['Property&lt; Visibility &gt;',['../structass_1_1prop_1_1Property.html',1,'ass::prop']]],
   ['propertylist_61',['PropertyList',['../structass_1_1PropertyList.html',1,'ass']]],
   ['propertylistrecursive_62',['PropertyListRecursive',['../structass_1_1PropertyListRecursive.html',1,'ass']]],
-  ['ptr_63',['ptr',['../structaui_1_1ptr.html',1,'aui']]],
-  ['pulseaudioplayer_64',['PulseAudioPlayer',['../classPulseAudioPlayer.html',1,'']]],
-  ['pushcolor_65',['PushColor',['../structRenderHints_1_1PushColor.html',1,'RenderHints']]],
-  ['pushmask_66',['PushMask',['../structRenderHints_1_1PushMask.html',1,'RenderHints']]],
-  ['pushmatrix_67',['PushMatrix',['../structRenderHints_1_1PushMatrix.html',1,'RenderHints']]],
-  ['pushstate_68',['PushState',['../classRenderHints_1_1PushState.html',1,'RenderHints']]]
+  ['propertymodifier_63',['PropertyModifier',['../classaui_1_1PropertyModifier.html',1,'aui']]],
+  ['propertymodifier_3c_20aproperty_3c_20t_20_3e_20_3e_64',['PropertyModifier&lt; AProperty&lt; T &gt; &gt;',['../classaui_1_1PropertyModifier.html',1,'aui']]],
+  ['ptr_65',['ptr',['../structaui_1_1ptr.html',1,'aui']]],
+  ['pulseaudioplayer_66',['PulseAudioPlayer',['../classPulseAudioPlayer.html',1,'']]],
+  ['pushcolor_67',['PushColor',['../structRenderHints_1_1PushColor.html',1,'RenderHints']]],
+  ['pushmask_68',['PushMask',['../structRenderHints_1_1PushMask.html',1,'RenderHints']]],
+  ['pushmatrix_69',['PushMatrix',['../structRenderHints_1_1PushMatrix.html',1,'RenderHints']]],
+  ['pushstate_70',['PushState',['../classRenderHints_1_1PushState.html',1,'RenderHints']]]
 ];

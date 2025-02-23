@@ -104,7 +104,7 @@ $(function(){initNavTree('structAPropertyDef.html',''); initResizable(true); });
 <a href="structAPropertyDef-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a> » <a class="el" href="group__property__system.html">Property System</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/AProperty.h#L306"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/AProperty.h#L347"></b>
 <p>Property implementation to use with custom getter/setter.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AProperty_8h_source.html">AUI/Common/AProperty.h</a>&gt;</code></p>
@@ -160,6 +160,10 @@ template&lt;aui::detail::property::ProjectionBidirectional&lt; Underlying &gt; P
 <tr class="memitem:ace3583680a046f426f2da0b1279b28ba"><td align="right" class="memTemplItemLeft" valign="top">auto </td><td class="memTemplItemRight" valign="bottom"><b>biProjected</b> (Projection &amp;&amp;projectionBidirectional) noexcept</td></tr>
 <tr class="memdesc:ace3583680a046f426f2da0b1279b28ba"><td class="mdescLeft"> </td><td class="mdescRight">Makes a bidirectional projection of this property (by a single <a class="el" href="structaui_1_1lambda__overloaded.html">aui::lambda_overloaded</a>). <br/></td></tr>
 <tr class="separator:ace3583680a046f426f2da0b1279b28ba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a183037c8c709508f60ce7278298f5e8b" id="r_a183037c8c709508f60ce7278298f5e8b"><td align="right" class="memItemLeft" valign="top"><a id="a183037c8c709508f60ce7278298f5e8b" name="a183037c8c709508f60ce7278298f5e8b"></a>
+void </td><td class="memItemRight" valign="bottom"><b>notify</b> ()</td></tr>
+<tr class="memdesc:a183037c8c709508f60ce7278298f5e8b"><td class="mdescLeft"> </td><td class="mdescRight">Notify observers that a change was occurred (no preconditions). <br/></td></tr>
+<tr class="separator:a183037c8c709508f60ce7278298f5e8b"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Signals and public fields<a class="aui-toc-hash" href="#pub-attribs" id="pub-attribs" name="pub-attribs" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
@@ -231,7 +235,7 @@ Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="c
 <div class="line">u.name() += <span class="stringliteral">" world!"</span>;</div>
 <div class="line">EXPECT_EQ(u.name(), <span class="stringliteral">"Hello world!"</span>);</div>
 <div class="line">EXPECT_EQ(u.name()-&gt;length(), <a class="code hl_class" href="classAString.html">AString</a>(<span class="stringliteral">"Hello world!"</span>).length());</div>
-<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:37</div></div>
+<div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In order to honor getters/setters, <code><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a></code> calls getter/setter instead of using <code>+=</code> on your property directly. Equivalent code will be: <div class="fragment"><div class="line">u.setName(u.getName() + <span class="stringliteral">" world!"</span>)</div>
 </div><!-- fragment --></dd></dl>
 <p>The implicit conversions work the same way as with <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> doSomethingWithName = [](<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; name) { EXPECT_EQ(name, <span class="stringliteral">"Hello"</span>); };</div>
@@ -242,7 +246,7 @@ Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="c
 <div class="line"><span class="comment">//                 ^^^ HERE</span></div>
 </div><!-- fragment --><h1>
 Observing changes<a class="aui-toc-hash" href="#PropertyDefTest_Observing_changes" id="PropertyDefTest_Observing_changes" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.core/tests/PropertyDefTest.cpp#L126"></b> All property types offer <code>.changed</code> field which is a signal reporting value changes. Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> AObject {</div>
+<p><b aui-src="aui.core/tests/PropertyDefTest.cpp#L129"></b> All property types offer <code>.changed</code> field which is a signal reporting value changes. Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> AObject {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
 <div class="line">        ALogger::info(<span class="stringliteral">"LogObserver"</span>) &lt;&lt; <span class="stringliteral">"Received value: "</span> &lt;&lt; msg;</div>
