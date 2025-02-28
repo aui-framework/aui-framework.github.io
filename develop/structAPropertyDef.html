@@ -104,7 +104,7 @@ $(function(){initNavTree('structAPropertyDef.html',''); initResizable(true); });
 <a href="structAPropertyDef-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a> » <a class="el" href="group__property__system.html">Property System</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/AProperty.h#L347"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/AProperty.h#L349"></b>
 <p>Property implementation to use with custom getter/setter.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AProperty_8h_source.html">AUI/Common/AProperty.h</a>&gt;</code></p>
@@ -185,8 +185,7 @@ const <a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee9
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename M, aui::invocable&lt; M &amp; &gt; Getter, <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; M &amp;, std::invoke_result_t&lt; Getter, M &amp; &gt; &gt; Setter, typename SignalArg&gt;<br/>
-class APropertyDef&lt; M, Getter, Setter, SignalArg &gt;</div><p>Property implementation to use with custom getter/setter. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
+class APropertyDef&lt; M, Getter, Setter, SignalArg &gt;</div><dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
 <dl class="section user"><dt></dt><dd>You can use this way if you are required to define custom behaviour on getter/setter. As a downside, you have to write extra boilerplate code: define property, data field, signal, getter and setter checking equality. Also, <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> requires the class to derive <code><a class="el" href="classAObject.html" title="A base object class.">AObject</a></code>. Most of <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>'s properties are defined this way.</dd></dl>
 <p>See <a class="el" href="group__property__system.html">property system</a> for usage examples.</p>
 <h1>
@@ -224,7 +223,7 @@ Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="c
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> AString&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mName; }</div>
 <div class="line">};</div>
-<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:555</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:567</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
 </div><!-- fragment --><p><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> behaves like a class/struct function member: </p><div class="fragment"><div class="line">User u;</div>
 <div class="line">u.name() = <span class="stringliteral">"Hello"</span>;</div>
@@ -286,7 +285,6 @@ template&lt;typename M, <a class="el" href="conceptaui_1_1invocable.html">aui::i
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Setter. Can be pointer-to-member(function or field) or lambda. </p>
 <p>The setter implementation typically emits <code>changed</code> signal. If it is, it must emit changes only if value is actually changed. </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> setValue(<span class="keywordtype">int</span> value) {</div>
 <div class="line">  <span class="keywordflow">if</span> (mValue == value) {</div>
 <div class="line">    <span class="keywordflow">return</span>;</div>

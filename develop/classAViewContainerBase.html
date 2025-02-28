@@ -482,6 +482,9 @@ bool </td><td class="memItemRight" valign="bottom"><b>hasIndirectParent</b> (co
 <tr class="memitem:a11d7426c20f9ef791040935a846960e6 inherit pub_methods_classAView" id="r_a11d7426c20f9ef791040935a846960e6"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a11d7426c20f9ef791040935a846960e6">removeAssName</a> (const <a class="el" href="classAString.html">AString</a> &amp;assName)</td></tr>
 <tr class="memdesc:a11d7426c20f9ef791040935a846960e6 inherit pub_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Removes an ASS class to this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>.  <br/></td></tr>
 <tr class="separator:a11d7426c20f9ef791040935a846960e6 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af0377a6a1ec3a4bb85b0435ed0a1dc6c inherit pub_methods_classAView" id="r_af0377a6a1ec3a4bb85b0435ed0a1dc6c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#af0377a6a1ec3a4bb85b0435ed0a1dc6c">setAssName</a> (const <a class="el" href="classAString.html">AString</a> &amp;assName, bool value)</td></tr>
+<tr class="memdesc:af0377a6a1ec3a4bb85b0435ed0a1dc6c inherit pub_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Depending on value, either adds or removes ass name.  <br/></td></tr>
+<tr class="separator:af0377a6a1ec3a4bb85b0435ed0a1dc6c inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac97cfcfb80ca2dacea00cf4a0f161b2c inherit pub_methods_classAView" id="r_ac97cfcfb80ca2dacea00cf4a0f161b2c"><td align="right" class="memItemLeft" valign="top">
 <a class="el" href="classAView.html">AView</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (const <a class="el" href="classAString.html">AString</a> &amp;assName)</td></tr>
 <tr class="separator:ac97cfcfb80ca2dacea00cf4a0f161b2c inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
@@ -897,8 +900,7 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 <tr class="separator:abb2e1ff6eab42cc425bbff3448541e41 inherit pub_static_attribs_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="A view that represents a set of views.">#</a></h2>
-<div class="textblock"><p>A view that represents a set of views. </p>
-<p>AViewContainerBase can store, render, resize, provide events to and handle the child views.</p>
+<div class="textblock"><p>AViewContainerBase can store, render, resize, provide events to and handle the child views.</p>
 <p><a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a> does not control the position and size of the child views by itself; instead, it delegates that responsibility to it's <a class="el" href="group__layout__managers.html">layout manager</a>.</p>
 <p>Since <a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a> is an instance of <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>, <a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a> can handle AViewContainerBases recursively, thus, making possible complex UI by nested AViewContainerBases with different layout managers.</p>
 <p>This class is abstract. The methods for modifying it's views are protected. You can use <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a> which exposes these methods to public or extend <a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a> to make your own container-like view. </p>
@@ -926,7 +928,6 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Adds view to container without exposing it to the layout manager. </p>
 <p>User is obligated to manage view's layout by themselves. Implement applyGeometryToChildren() to do so.</p>
 <p>View is not visible until it's layout is determined. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classAView.html#a4475a69d795612634df68566a0b9d5fb" title="If set to true, AViewContainer is obligated ignore this view. This value is set to false by AView::se...">AView::mSkipUntilLayoutUpdate</a> </dd></dl>
 </div>
@@ -978,7 +979,6 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Determines whether this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> processes this click or passes it thru. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">pos</td><td>mouse position </td></tr>
@@ -1115,7 +1115,6 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Finds first direct child view under position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">pos</td><td>position relative to this container </td></tr>
@@ -1152,7 +1151,6 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Acts as <a class="el" href="#ad62c15d5b3c07470cb8d2eb7f032bd21" title="Finds first direct child view under position.">AViewContainerBase::getViewAt</a> but recursively (may include non-direct child). </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">pos</td><td>position relative to this container </td></tr>
@@ -1195,7 +1193,6 @@ template&lt;<a class="el" href="conceptaui_1_1predicate.html">aui::predicate</a>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Acts as <a class="el" href="#a5c040aade2f725888bd0cbfc458f2f29" title="Acts as AViewContainerBase::getViewAt but recursively (may include non-direct child).">AViewContainerBase::getViewAtRecursive</a> but calls a callback instead of returning value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">pos</td><td>position relative to this container </td></tr>
@@ -1235,7 +1232,6 @@ template&lt;typename T&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Acts as <a class="el" href="#a5c040aade2f725888bd0cbfc458f2f29" title="Acts as AViewContainerBase::getViewAt but recursively (may include non-direct child).">AViewContainerBase::getViewAtRecursive</a> but finds a view castable to specified template type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">pos</td><td>position relative to this container </td></tr>
@@ -1267,7 +1263,6 @@ template&lt;typename T&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Invalidates all styles, causing to iterate over all rules in global and parent stylesheets. </p>
 <p>Unlike <a class="el" href="classAView.html#aae643e27fa9578fecad36519f30ed043" title="Updates state selectors for ASS.">invalidateStateStyles()</a>, completely resets styles for this view, causing it to iterate over all rules in global and parent stylesheets. This operation is much more expensive than invalidateStateStyles because invalidateStateStyles iterates over a small set of rules and performs fewer checks.</p>
 <p>Prefer invalidateAllStyles over invalidateStateStyles when: </p><ul>
 <li>
@@ -1301,7 +1296,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Resets mAssHelper. </p>
 <p>Reimplemented from <a class="el" href="classAView.html#a2233aa09089454ab404ff9182e278e93">AView</a>.</p>
 </div>
 </div>
@@ -1350,7 +1344,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>A view requests to redraw it and passes it's coords relative to this. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">invalidArea</td><td>area to invalidate. Must be in this view's coordinate space. </td></tr>
@@ -1406,7 +1399,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Called on <a class="el" href="classAWindowBase.html#a90ab308c2b58fbdb48a23a050f39144d" title="Prevents click action on upcoming pointer release.">AWindowBase::preventClickOnPointerRelease</a>. </p>
 <p>Reimplemented from <a class="el" href="classAView.html#a06cac0ff72cbb3efbf18c059f99bf52f">AView</a>.</p>
 </div>
 </div>
@@ -1642,7 +1634,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handles pointer hover events. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">pos</td><td>event position </td></tr>
@@ -1676,7 +1667,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Called on pointer (mouse) released event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">event</td><td>event </td></tr>
@@ -1708,7 +1698,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Called on pointer (mouse) released event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">event</td><td>event</td></tr>
@@ -1772,7 +1761,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Called when direct or indirect parent has changed. </p>
 <p>The method is mostly intended to invalidate styles in order to respond to stylesheet rules (mExtraStylesheet) of the new (in)direct parent.</p>
 <p>Emits viewGraphSubtreeChanged signal. </p>
 <p>Reimplemented from <a class="el" href="classAView.html#afea465a5e4251c95beb6fcbb6d5c875b">AView</a>.</p>
@@ -1823,7 +1811,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine. </p>
 <dl class="section see"><dt>See also</dt><dd>AView::drawView</dd></dl>
 <p><a class="el" href="classAView.html#a1c6f0f58602d6acf52461bea2ed83469" title="Draws this AView. Noone should call this function except rendering routine.">AView::render</a> is not guaranteed to be called on per-frame basis. Moreover, this method can be called multiple times if render-to-texture caching decides to do so. </p>
 <p>Reimplemented from <a class="el" href="classAView.html#a1c6f0f58602d6acf52461bea2ed83469">AView</a>.</p>
@@ -1851,7 +1838,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Moves (like via std::move) all children and layout of the specified container to this container. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">container</td><td>container. Must be pure <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a> (cannot be a derivative from <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a>). </td></tr>
@@ -1905,7 +1891,6 @@ Added/removed/changed ass names of this or parent views </li>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Set focus chain target. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">target</td><td>a new focus chain view belonging to this container</td></tr>
@@ -1966,7 +1951,6 @@ template&lt;<a class="el" href="conceptaui_1_1predicate.html">aui::predicate</a>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs recursive view traversal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">callback</td><td>callback to call. Returns true to finish traversal. </td></tr>

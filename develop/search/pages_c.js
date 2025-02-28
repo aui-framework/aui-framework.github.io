@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['packaging_20your_20app_0',['Packaging Your App',['../md_docs_2Packaging_01Your_01App.html',1,'']]],
-  ['plugins_1',['IDE Plugins',['../md_docs_2IDE_01Plugins.html',1,'']]],
-  ['prometheus_20exporter_20template_2',['Prometheus Exporter Template',['../example_prometheus_exporter_template.html',1,'']]]
+  ['operating_20system_0',['operating system',['../android.html',1,'Android (operating system)'],['../ios.html',1,'iOS (operating system)'],['../macos.html',1,'macOS (operating system)'],['../windows.html',1,'Windows (operating system)']]],
+  ['oses_1',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
+  ['overview_2',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]]
 ];

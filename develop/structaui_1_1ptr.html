@@ -151,7 +151,6 @@ template&lt;typename T&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates fake shared pointer to <code>T* raw</code> with empty destructor, which does nothing. It's useful when some function accept shared pointer but you have only raw one. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
 <tr><td class="paramname">T</td><td>any type </td></tr>
@@ -194,7 +193,6 @@ template&lt;typename T, typename Deleter = std::default_delete&lt;T&gt;&gt; </di
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Creates unique_ptr from raw pointer and a deleter. </p>
 <p><code>unique_ptr</code> could not deduce T and Deleter by itself. Use this function to avoid this restriction. By using this function, lifetime of the pointer is delegated to std::unique_ptr. The wrapped pointer will be freed by specified Deleter. Default deleter is std::default_delete. You may want to specialize <code>std::default_delete&lt;T&gt;</code> struct in order to specify default deleter for T, in this case you can omit deleter argument of this function. </p>
 </div>
 </div>
@@ -221,7 +219,6 @@ template&lt;typename T&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Delegates memory management of the raw pointer <code>T* raw</code> to the shared pointer, which is returned. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
 <tr><td class="paramname">T</td><td>any type </td></tr>
@@ -235,6 +232,8 @@ template&lt;typename T&gt; </div>
 </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>shared pointer </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2app_2notes_2src_2main_8cpp-example.html#a26">examples/app/notes/src/main.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="ad6e812de50ef39005c493b5b155fa6f6" name="ad6e812de50ef39005c493b5b155fa6f6"></a>
@@ -264,7 +263,6 @@ template&lt;typename T, typename Deleter&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Delegates memory management of the raw pointer <code>T* raw</code> to the shared pointer, which is returned. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
 <tr><td class="paramname">T</td><td>any type </td></tr>
@@ -305,7 +303,6 @@ template&lt;typename T&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Delegates memory management of the raw pointer <code>T* raw</code> to the unique pointer, which is returned. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
 <tr><td class="paramname">T</td><td>any type </td></tr>

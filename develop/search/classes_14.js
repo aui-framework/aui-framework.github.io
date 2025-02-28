@@ -9,7 +9,7 @@ var searchData=
   ['view_6',['view',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
   ['view_3c_20acheckbox_20_3e_7',['view&lt; ACheckBox &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
   ['view_3c_20acheckboxwrapper_20_3e_8',['view&lt; ACheckBoxWrapper &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
-  ['view_3c_20adrawableview_20_3e_9',['view&lt; ADrawableView &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
+  ['view_3c_20adrawableiconview_20_3e_9',['view&lt; ADrawableIconView &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
   ['view_3c_20agroupbox_20_3e_10',['view&lt; AGroupBox &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
   ['view_3c_20alabel_20_3e_11',['view&lt; ALabel &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],
   ['view_3c_20aradiobutton_20_3e_12',['view&lt; ARadioButton &gt;',['../structaui_1_1ui__building_1_1view.html',1,'aui::ui_building']]],

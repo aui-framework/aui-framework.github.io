@@ -241,7 +241,6 @@ template&lt;typename Value = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Cancels the <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task. </p>
 <p>When <a class="el" href="#a86f6a2302691921a1848b44813710a41" title="Cancels the AFuture's task.">cancel()</a> is called, there are 3 possible cases:</p><ol type="1">
 <li><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task is not taken by <a class="el" href="classAThreadPool.html" title="Thread pool implementation.">AThreadPool</a>. The task is simply removed from the <a class="el" href="classAThreadPool.html" title="Thread pool implementation.">AThreadPool</a> queue.</li>
 <li><a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task is being executed. The task's thread is <a class="el" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">requested for interrupt</a>.</li>
@@ -272,7 +271,6 @@ template&lt;typename Value = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd><code>AInvoсationTargetException</code> thrown if invocation target has thrown an exception. </dd>
@@ -381,7 +379,6 @@ template&lt;typename Value = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd><code>AInvoсationTargetException</code> thrown if invocation target has thrown an exception. </dd>
@@ -412,7 +409,6 @@ template&lt;typename Value = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the task result from the another thread. Sleeps if the task result is not currently available. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd><code>AInvoсationTargetException</code> thrown if invocation target has thrown an exception. </dd>
@@ -443,7 +439,6 @@ template&lt;typename Value = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the supplyValue from the another thread. Sleeps if the supplyValue is not currently available. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd><code>AInvoсationTargetException</code> thrown if invocation target has thrown an exception. </dd>
@@ -474,7 +469,6 @@ template&lt;typename Value = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Sleeps if the supplyValue is not currently available. </p>
 <dl class="section note"><dt>Note</dt><dd>The task will be executed inside <a class="el" href="#a93534534889dea9725ee1f5acbbec3c8" title="Sleeps if the supplyValue is not currently available.">wait()</a> function if the threadpool have not taken the task to execute yet. This behaviour can be disabled by <code>AFutureWait::JUST_WAIT</code> flag. </dd></dl>
 </div>
 </div>

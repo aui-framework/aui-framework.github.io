@@ -1,7 +1,7 @@
 var searchData=
 [
   ['game_0',['Minesweeper Game',['../example_minesweeper_game.html',1,'']]],
-  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md184',1,'']]],
+  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md186',1,'']]],
   ['gatherkineticscrollvalue_2',['gatherKineticScrollValue',['../classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8',1,'ATouchScroller']]],
   ['gaussianblur_3',['GaussianBlur',['../structass_1_1Backdrop_1_1GaussianBlur.html',1,'ass::Backdrop']]],
   ['gaussianblurcustom_4',['GaussianBlurCustom',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html',1,'ass::Backdrop']]],
@@ -62,7 +62,7 @@ var searchData=
   ['gettempworkdir_59',['getTempWorkDir',['../classAUpdater.html#a86a27fd5f850e57c227f6248e7a0bbfe',1,'AUpdater']]],
   ['gettext_60',['getText',['../classACursorSelectable.html#a96d0b28b41e0264a89ab704be6d0ac22',1,'ACursorSelectable::getText()'],['../classAAbstractTextField.html#a86143b2eaa99b16bd2199674360eeb07',1,'AAbstractTextField::getText()'],['../classATextArea.html#a9b7a8205e326af6545b470a047f155c1',1,'ATextArea::getText()']]],
   ['gettextlayouthelper_61',['getTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8',1,'IRenderer::IMultiStringCanvas']]],
-  ['getting_20started_62',['Getting started',['../group__updater.html#autotoc_md206',1,'']]],
+  ['getting_20started_62',['Getting started',['../group__updater.html#autotoc_md214',1,'']]],
   ['getting_20started_20with_20aui_63',['Getting started with AUI',['../md_docs_2Getting_01started_01with_01AUI.html',1,'']]],
   ['gettotalfieldhorizontal_64',['getTotalFieldHorizontal',['../classAView.html#a60f404f669341de12d919f4bd3cff824',1,'AView']]],
   ['gettotalfieldsize_65',['getTotalFieldSize',['../classAView.html#a57c70222033ebbbf806553d0fc3094ba',1,'AView']]],
@@ -77,7 +77,7 @@ var searchData=
   ['getwindow_74',['getWindow',['../classAView.html#a9772e6b3644c906d39ef2fee317c0cfb',1,'AView']]],
   ['glcontext_75',['GLContext',['../classGLContext.html',1,'']]],
   ['global_76',['global',['../classAThreadPool.html#a8252b691d7328a97b22942b514b487d8',1,'AThreadPool::global()'],['../classACurlMulti.html#a0018cb7a092378766766bcf96e098d21',1,'ACurlMulti::global()']]],
-  ['global_20style_77',['Using global style',['../group__ass.html#autotoc_md9',1,'']]],
+  ['global_20style_77',['Using global style',['../group__ass.html#autotoc_md11',1,'']]],
   ['globalref_78',['GlobalRef',['../classaui_1_1jni_1_1GlobalRef.html',1,'aui::jni']]],
   ['go_79',['GO',['../group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a3d6954dd72e53b9015d2a6e6546058f8',1,'ATextInputActionIcon.h']]],
   ['going_20further_80',['Going further',['../group__signal__slot.html#autotoc_md4',1,'']]],

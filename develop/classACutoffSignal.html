@@ -122,11 +122,10 @@ void </td><td class="memItemRight" valign="bottom"><b>resetSignal</b> () noexce
 <tr class="separator:adc988f41edf1ec7ab3f9c8b56c81c488"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#adc988f41edf1ec7ab3f9c8b56c81c488" id="adc988f41edf1ec7ab3f9c8b56c81c488" name="adc988f41edf1ec7ab3f9c8b56c81c488" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="textblock"><p>One-shot event communication. </p>
-<p>Used for guaranteed signal from slave thread to master thread (i.e. wait till slave thread starts). </p>
+<div class="textblock"><p>Used for guaranteed signal from slave thread to master thread (i.e. wait till slave thread starts). </p>
 </div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#member-function-documentation" id="member-function-documentation" style="color: var(--fragment-comment) !important">#</a></h2>
 
-<h2 class="memtitle"><span class="permalink">◆ </span>waitForSignal()<a class="aui-toc-hash" href="#◆ waitforsignal()" id="◆ waitforsignal()" style="color: var(--fragment-comment) !important" title="Flags a signal, causing the waitForSignal() to never block.">#</a></h2>
+<h2 class="memtitle"><span class="permalink">◆ </span>waitForSignal()<a class="aui-toc-hash" href="#◆ waitforsignal()" id="◆ waitforsignal()" style="color: var(--fragment-comment) !important" title="Wait for makeSignal().">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,8 +145,7 @@ void </td><td class="memItemRight" valign="bottom"><b>resetSignal</b> () noexce
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Wait for makeSignal(). </p>
-<p><a class="el" href="#adc988f41edf1ec7ab3f9c8b56c81c488" title="Wait for makeSignal().">waitForSignal()</a> blocks the thread until <a class="el" href="#a846f87917ee35414834b624c281ffd06" title="Flags a signal, causing the waitForSignal() to never block.">makeSignal()</a> is not called by other thread.</p>
+<p>waitForSignal() blocks the thread until <a class="el" href="#a846f87917ee35414834b624c281ffd06" title="Flags a signal, causing the waitForSignal() to never block.">makeSignal()</a> is not called by other thread.</p>
 <p>Unlike condition variable, the second call to <a class="el" href="#a846f87917ee35414834b624c281ffd06" title="Flags a signal, causing the waitForSignal() to never block.">makeSignal()</a> will not block. To override this behaviour, use the <a class="el" href="#a168665e9d2fce2ae9ce8525a76355783" title="Resets the cut off state so the waitForSignal() function would block again.">resetSignal()</a> function. </p>
 </div>
 </div>

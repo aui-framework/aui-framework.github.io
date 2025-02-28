@@ -241,8 +241,7 @@ static constexpr bool </td><td class="memItemRight" valign="bottom"><b>isVoid</
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Represents a value that will be available at some point in the future.">#</a></h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T = void&gt;<br/>
-class AFuture&lt; T &gt;</div><p>Represents a value that will be available at some point in the future. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
+class AFuture&lt; T &gt;</div><dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
 <tr><td class="paramname">T</td><td>result type (void is default)</td></tr>
 </table>
@@ -318,7 +317,6 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Add onError callback to the future. </p>
 <p>The callback will be called on the worker's thread when the async task is returned a result.</p>
 <p>onError does not expand <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
 <dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
@@ -356,7 +354,6 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Add onSuccess callback to the future. </p>
 <p>The callback will be called on the worker's thread when the async task is returned a result.</p>
 <p>onSuccess does not expand <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s lifespan, so when <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> becomes invalid, onSuccess would not be called.</p>
 <dl class="section note"><dt>Note</dt><dd>To expand lifespan, create an <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> inside your window or object; then put the instance of <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> there. Example: <div class="fragment"><div class="line">...</div>
@@ -391,7 +388,6 @@ template&lt;typename T = void&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Pushes the result to <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">v</td><td>value</td></tr>

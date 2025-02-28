@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['render_20to_20texture_0',['Render to texture',['../md_docs_2Render_01to_01texture.html',1,'']]],
-  ['resolution_1',['Runtime Dependency Resolution',['../md_docs_2Runtime_01Dependency_01Resolution.html',1,'']]],
-  ['runtime_20dependency_20resolution_2',['Runtime Dependency Resolution',['../md_docs_2Runtime_01Dependency_01Resolution.html',1,'']]]
+  ['packaging_20your_20app_0',['Packaging Your App',['../md_docs_2Packaging_01Your_01App.html',1,'']]],
+  ['plugins_1',['IDE Plugins',['../md_docs_2IDE_01Plugins.html',1,'']]],
+  ['prometheus_20exporter_20template_2',['Prometheus Exporter Template',['../example_prometheus_exporter_template.html',1,'']]]
 ];

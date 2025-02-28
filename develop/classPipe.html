@@ -182,8 +182,7 @@ void </td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexcept</
 <tr class="separator:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="textblock"><p>Native pipe RAII wrapper. </p>
-<dl class="windows"><dt><b>Windows-specific</b></dt><dd>On Windows, implemented with CreateNamedPipe.</dd></dl>
+<div class="textblock"><dl class="windows"><dt><b>Windows-specific</b></dt><dd>On Windows, implemented with CreateNamedPipe.</dd></dl>
 <p>On *nix, implemented with pipe(2). </p>
 </div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a91b6a91e5eb619a4efb7cb376ed72ce5" id="a91b6a91e5eb619a4efb7cb376ed72ce5" name="a91b6a91e5eb619a4efb7cb376ed72ce5" style="color: var(--fragment-comment) !important">#</a></h2>
 
@@ -211,7 +210,6 @@ void </td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexcept</
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>
@@ -248,7 +246,6 @@ void </td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexcept</
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Steals ownership of the in pipe outside of the <a class="el" href="classPipe.html" title="Native pipe RAII wrapper.">Pipe</a> class. </p>
 <p>Resets the pipe value to zero. Caller is responsible for closing the pipe. </p>
 </div>
 </div>
@@ -273,7 +270,6 @@ void </td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexcept</
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Steals ownership of the out pipe outside of the <a class="el" href="classPipe.html" title="Native pipe RAII wrapper.">Pipe</a> class. </p>
 <p>Resets the pipe value to zero. Caller is responsible for closing the pipe. </p>
 </div>
 </div>
@@ -302,7 +298,6 @@ void </td><td class="memItemRight" valign="bottom"><b>closeIn</b> () noexcept</
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes exact <code>size</code> bytes to stream. Blocking (waiting for write all data) is allowed. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>

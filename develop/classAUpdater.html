@@ -348,8 +348,7 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 <tr class="separator:abb2e1ff6eab42cc425bbff3448541e41 inherit pub_static_attribs_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Updater class.">#</a></h2>
-<div class="textblock"><p>Updater class. </p>
-<dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
+<div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
 <dl class="section user"><dt></dt><dd>AUpdater follows strategy pattern, i.e., you are excepted to call its functions but the behaviour and conditions are yours.</dd></dl>
 <p>Refer to <a class="el" href="group__updater.html">aui::updater</a> for update process overview. </p>
 </div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd" id="a0a63bd72a7f8ec39aa6ac4f8f19732cd" name="a0a63bd72a7f8ec39aa6ac4f8f19732cd" style="color: var(--fragment-comment) !important">#</a></h2>
@@ -374,7 +373,6 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Deploy the downloaded update. </p>
 <p>Basically about replacing files (no network operations will be performed).</p>
 <p>Requires <a class="el" href="#a1e6e8f3dcd758c1aa6d327102ab46a71">status</a> = <a class="el" href="structAUpdater_1_1StatusWaitingForApplyAndRestart.html" title="Waiting to applyUpdateAndRestart call state.">StatusWaitingForApplyAndRestart</a>, otherwise has no effect.</p>
 <p>Terminates current process with <code>std::exit(0)</code></p>
@@ -424,7 +422,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets <code>status</code> to <a class="el" href="structAUpdater_1_1StatusCheckingForUpdates.html">StatusCheckingForUpdates</a> and calls checkForUpdatesImpl, implemented by user. </p>
 <p>Requires <a class="el" href="#a1e6e8f3dcd758c1aa6d327102ab46a71">status</a> = <a class="el" href="structAUpdater_1_1StatusIdle.html" title="Idling.">StatusIdle</a>, otherwise has no effect. </p>
 </div>
 </div>
@@ -453,7 +450,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Deploys update by recursively copying (moving) files from source dir to destination dir. </p>
 <p>Called in newly downloaded executable. </p>
 </div>
 </div>
@@ -482,7 +478,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Typical download and unpack implementation. </p>
 <p>Called by downloadUpdateImpl. Updates AUpdate::status progress. </p>
 </div>
 </div>
@@ -499,7 +494,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets <code>status</code> to <a class="el" href="structAUpdater_1_1StatusDownloading.html">StatusDownloading</a> and calls downloadUpdateImpl, implemented by user. </p>
 <p>An implementation might expect to checkForUpdates to be called first. </p>
 </div>
 </div>
@@ -524,7 +518,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs update delivery to the specified directory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">unpackedUpdateDir</td><td>location to unpack an update to.</td></tr>
@@ -556,7 +549,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Retrieves installation directory based on given context. </p>
 <p>Default implementation guesses installation directory based on </p>
 </div>
 </div>
@@ -581,7 +573,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a module name of your (your_app_name or your_app_name.exe, without a leading path). </p>
 <p>Default implementation determines module name using <a class="el" href="classAProcess.html#a322cd40d05ffd3b4fbadc390f0c24b6e">AProcess::self()</a>.</p>
 <p>The module name is used to construct temporary directory and locate an executable in a downloaded portable. </p>
 </div>
@@ -607,7 +598,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>The path where the update is unpacked to. </p>
 <p>The dir persists between different launches. </p>
 </div>
 </div>
@@ -632,7 +622,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs post update cleanup routines. </p>
 <p>Default implementation deletes <a class="el" href="#a9c77a0a294e2f470efd28c14c21eba17" title="The path where the update is unpacked to.">AUpdater::getUnpackedUpdateDir()</a> dir. </p>
 </div>
 </div>
@@ -657,7 +646,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs a pre-application <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> routine. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">applicationArguments</td><td>arguments to your program.</td></tr>
@@ -698,7 +686,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Checks that updater functionality is available. </p>
 <p>For cases when <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> is available see <a class="el" href="group__updater.html">aui::updater</a> </p>
 </div>
 </div>
@@ -723,7 +710,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Restores install command line state, if any. </p>
 <p><a class="el" href="#a8325386bf22a7f2465531a0e420f3231" title="Performs a pre-application AUpdater routine.">AUpdater::handleStartup</a> will try to restore the state via loadInstallCmdline. If <a class="el" href="structAUpdater_1_1InstallCmdline.html" title="Data required to launch installation child process.">InstallCmdline</a> is successfully restored, <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> immediately triggers update routine with triggerUpdateOnStartup which exits the application.</p>
 <p>The implementation must ensure that subsequent startups would not trigger on-startup update to avoid endless loops in case of failure, i.e, by deleting a file.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a728676e82a3d612e6ec98d3f951a7616" title="Triggers update routine.">triggerUpdateOnStartup</a> </dd>
@@ -752,7 +738,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs <a class="el" href="structAUpdater_1_1InstallCmdline.html" title="Data required to launch installation child process.">InstallCmdline</a> with default arguments. </p>
 <p>By default, installerExecutable is a copy of your application executable. The installation process is triggered via special arguments in installerArguments. </p>
 </div>
 </div>
@@ -777,7 +762,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Being called by downloadUpdateImpl, reports download percentage to <code>status</code>. </p>
 <p>Requires <a class="el" href="#a1e6e8f3dcd758c1aa6d327102ab46a71">status</a> = <a class="el" href="structAUpdater_1_1StatusDownloading.html" title="Downloading state.">StatusDownloading</a>, otherwise has no effect. Updates the value in UI thread. </p>
 </div>
 </div>
@@ -802,7 +786,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Dumps <a class="el" href="structAUpdater_1_1InstallCmdline.html" title="Data required to launch installation child process.">InstallCmdline</a> to temporary download directory, indicating that an update is ready to install. Updates status accordingly. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ab75eaa801613a12ceb6fc39022eba8db" title="Saves install command line to restore state when application is restarted.">saveCmdline</a> </dd>
 <dd>
 <a class="el" href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd" title="Deploy the downloaded update.">applyUpdateAndRestart</a> </dd></dl>
@@ -829,7 +812,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Saves install command line to restore state when application is restarted. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#a5f4967f1812a31361b5fbc81c6285653" title="Restores install command line state, if any.">loadInstallCmdline</a> </dd></dl>
 </div>
 </div>
@@ -854,7 +836,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Triggers update routine. </p>
 <p>The function is called by <a class="el" href="#a8325386bf22a7f2465531a0e420f3231" title="Performs a pre-application AUpdater routine.">AUpdater::handleStartup</a>. If triggerUpdateOnStartup succeeds, it should terminate execution of the current process.</p>
 <p>Requires <a class="el" href="#a1e6e8f3dcd758c1aa6d327102ab46a71">status</a> = <a class="el" href="structAUpdater_1_1StatusWaitingForApplyAndRestart.html" title="Waiting to applyUpdateAndRestart call state.">StatusWaitingForApplyAndRestart</a>.</p>
 <p>If you'd like to disable applying downloaded update on startup, stub this function. </p>
@@ -871,7 +852,6 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </tr>
 </table>
 </div><div class="memdoc">
-<p>State of the updater. </p>
 <p>Status of the <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> to observe from outside, i.e., by UI.</p>
 <p><code>status</code> is updated in UI thread only.</p>
 <p><code>status</code> is designed in such a way the user can use their own custom status types or any of predefined ones:</p><ul>
@@ -904,7 +884,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 <div class="line">}),</div>
 <div class="ttc" id="aclassAUpdater_html_a1e6e8f3dcd758c1aa6d327102ab46a71"><div class="ttname"><a href="#a1e6e8f3dcd758c1aa6d327102ab46a71">AUpdater::status</a></div><div class="ttdeci">AProperty&lt; std::any &gt; status</div><div class="ttdoc">State of the updater.</div><div class="ttdef"><b>Definition</b> AUpdater.h:207</div></div>
 <div class="ttc" id="aclassAUpdater_html_ad0df1b1eaa58c79f7be6b3b2d4b341f3"><div class="ttname"><a href="#ad0df1b1eaa58c79f7be6b3b2d4b341f3">AUpdater::checkForUpdates</a></div><div class="ttdeci">void checkForUpdates()</div><div class="ttdoc">Sets status to StatusCheckingForUpdates and calls checkForUpdatesImpl, implemented by user.</div></div>
-<div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:911</div></div>
+<div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:924</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
 </div><!-- fragment -->

@@ -142,9 +142,8 @@ bool </td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexce
 <tr class="memitem:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td align="right" class="memTemplItemLeft" valign="top"><a class="el" href="classIOutputStream.html">IOutputStream</a> &amp; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classIOutputStream.html#a8e16537f3b9e67c2becb9cc0249d749b">operator&lt;&lt;</a> (const T &amp;t)</td></tr>
 <tr class="separator:a8e16537f3b9e67c2becb9cc0249d749b inherit pub_methods_classIOutputStream"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Represents an input stream.">#</a></h2>
-<div class="textblock"><p>An asynchronous buffer that converts an IInputStream to <a class="el" href="classIOutputStream.html">IOutputStream</a> (and otherwise). </p>
-<p><a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> is similar to the unix pipes. It's slower than <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> but it's capable to store any byte count.</p>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">#</a></h2>
+<div class="textblock"><p>ADynamicPipe is similar to the unix pipes. It's slower than <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a> but it's capable to store any byte count.</p>
 <p>Unlike <a class="el" href="classAPipe.html" title="A thread safe buffer that converts an IInputStream to IOutputStream (and otherwise).">APipe</a>, <a class="el" href="classADynamicPipe.html" title="An asynchronous buffer that converts an IInputStream to IOutputStream (and otherwise).">ADynamicPipe</a> never blocks the thread which can be useful in an asynchronous system. </p>
 </div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a24f3ed96953c57ef1d30bbb85472524e" id="a24f3ed96953c57ef1d30bbb85472524e" name="a24f3ed96953c57ef1d30bbb85472524e" style="color: var(--fragment-comment) !important">#</a></h2>
 
@@ -172,7 +171,6 @@ bool </td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexce
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Reads up to <code>size</code> bytes from stream. Blocking (waiting for new data) is allowed. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>
@@ -213,7 +211,6 @@ bool </td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexce
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes exact <code>size</code> bytes to stream. Blocking (waiting for write all data) is allowed. </p>
 <dl>
 <dt><b>Sneaky exceptions</b> </dt>
 <dd>An implementation can throw any exception that subclasses <a href="#AIOException">AIOException</a>. </dd>
