@@ -89,7 +89,7 @@ var searchData=
   ['io_20streams_86',['IO streams',['../group__io.html',1,'']]],
   ['ios_87',['iOS',['../md_docs_2Packaging_01Your_01App.html#PACKAGING_WITH_AUI_BUILD_FOR',1,'Android and iOS'],['../md_docs_2Crosscompiling.html',1,'Crosscompiling (Android and iOS)'],['../md_docs_2Crosscompiling.html#autotoc_md139',1,'iOS']]],
   ['ios_20operating_20system_88',['iOS (operating system)',['../ios.html',1,'']]],
-  ['ios_5fcontroller_89',['IOS_CONTROLLER',['../md_docs_2aui__app.html#autotoc_md113',1,'']]],
+  ['ios_5fcontroller_89',['IOS_CONTROLLER',['../md_docs_2aui__app.html#autotoc_md112',1,'']]],
   ['ios_5fdevice_90',['IOS_DEVICE',['../md_docs_2aui__app.html#autotoc_md111',1,'']]],
   ['ios_5fversion_91',['IOS_VERSION',['../md_docs_2aui__app.html#autotoc_md110',1,'']]],
   ['ioutputstream_92',['IOutputStream',['../classIOutputStream.html',1,'']]],
