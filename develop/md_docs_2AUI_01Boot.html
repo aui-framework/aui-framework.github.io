@@ -276,7 +276,7 @@ Producing packages with dependencies managed by AUI Boot<a class="aui-toc-hash" 
 <div class="line">        uses: actions/upload-artifact@v4</div>
 <div class="line">        with:</div>
 <div class="line">          path: ${{github.workspace}}/build/*.tar.gz</div>
-<div class="line">          name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }}</div>
+<div class="line">          name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }} ${{ matrix.compiler }}</div>
 </div><!-- fragment --><h1>
 Importing AUI without AUI Boot<a class="aui-toc-hash" href="#importing-aui-without-aui-boot" id="importing-aui-without-aui-boot" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not a recommended way of using AUI, as it is not fully covered with tests, and you're basically trying to complicate your life by hardcoding paths in your CMake lists and thus making hardly reproducible projects. Consider <a href="https://github.com/aui-framework/aui/issues">asking questions</a> about AUI Boot on our GitHub page, and we'd help to adapt AUI Boot to your use case.</p>
