@@ -121,10 +121,10 @@ Importing AUI<a class="aui-toc-hash" href="#importing-aui" id="importing-aui" st
 Prebuilt packages<a class="aui-toc-hash" href="#prebuilt-packages" id="prebuilt-packages" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>AUI Boot is a source-first package manager, however, it can pull precompiled packages instead of building them locally. At the moment, GitHub Releases page with carefully formatted archive names is the only supported option. AUI follows these rules, so AUI Boot can pull precompiled package of AUI.</p>
 <p>To use a precompiled binary, you must specify a tag of a released version from <a href="https://github.com/aui-framework/aui/releases">releases page</a> (for example, <code>v6.2.1</code> or <code>v7.0.0-rc.2</code>). These packages are self-sufficient, i.e., all AUI's dependencies are packed into them, so it is the only downloadable thing you need to set up a development and building with AUI.</p>
-<p>If you would like to force AUI Boot to use precompiled binaries only, you can set <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=NO)</a> :</p>
+<p>If you would like to force AUI Boot to use precompiled binaries only, you can set <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED</a>:</p>
 <div class="fragment"><div class="line">cmake .. -DAUIB_FORCE_PRECOMPILED=TRUE</div>
 </div><!-- fragment --><p>This way AUI Boot will raise an error if it can't resolve dependency without compiling it.</p>
-<p>If usage of precompiled binaries break your built for whatever reason, you can set <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=NO)</a> :</p>
+<p>If usage of precompiled binaries break your built for whatever reason, you can set <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED</a>:</p>
 <div class="fragment"><div class="line">cmake .. -DAUIB_NO_PRECOMPILED=TRUE</div>
 </div><!-- fragment --><p>This way AUI Boot will never try to use precompiled binaries and will try to build then locally.</p>
 <h1>
