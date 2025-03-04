@@ -99,7 +99,7 @@ var searchData=
   ['setvolume_96',['setVolume',['../classIAudioPlayer.html#a3bb042585dd1653952a376d98ce09013',1,'IAudioPlayer']]],
   ['setwheelscrollable_97',['setWheelScrollable',['../classAScrollArea.html#a9999759647617833d28cf954a3ca7635',1,'AScrollArea']]],
   ['setwindow_98',['setWindow',['../classIRenderer.html#abb524c06b5e38b7b540d235d8e48b036',1,'IRenderer::setWindow()'],['../classSoftwareRenderer.html#a47e5ccb8ec0cb55d0a23e57296185a5c',1,'SoftwareRenderer::setWindow()']]],
-  ['shaping_99',['Shaping',['../md_docs_2Setting_01App_01Icon.html#autotoc_md168',1,'']]],
+  ['shaping_99',['Shaping',['../md_docs_2Setting_01App_01Icon.html#autotoc_md169',1,'']]],
   ['shared_20library_20resolution_100',['shared library resolution',['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md160',1,'Build-time shared library resolution'],['../md_docs_2Runtime_01Dependency_01Resolution.html#CMAKE_INSTALL',1,'Install-time shared library resolution']]],
   ['sheets_101',['Aui Style Sheets',['../group__ass.html',1,'']]],
   ['shoulddisplayhoveranimations_102',['shouldDisplayHoverAnimations',['../classAWindowBase.html#aa3efdc56a2a7a543b7ba1a70fa3694b4',1,'AWindowBase']]],
