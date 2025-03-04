@@ -143,89 +143,99 @@ $(function(){initNavTree('ADoubleNumberPicker_8h_source.html',''); initResizable
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">double</span> mMin = 0;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">double</span> mMax = 100;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    ADoubleNumberPicker();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> setValue(<span class="keywordtype">double</span> v);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> setSuffix(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; suffix);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    [[nodiscard]] <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text() <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> mTextField-&gt;text(); }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    [[nodiscard]] <span class="keywordtype">double</span> getValue()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mTextField-&gt;getText().<a class="code hl_function" href="classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d">toDouble</a>().valueOr(0.0); }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    [[nodiscard]] <span class="keywordtype">double</span> getMin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMin; }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    [[nodiscard]] <span class="keywordtype">double</span> getMax()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMax; }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> setMin(<span class="keywordtype">double</span> min);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> setMax(<span class="keywordtype">double</span> max);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">auto</span> value() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keyword">this</span>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            &amp;ADoubleNumberPicker::getValue,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            &amp;ADoubleNumberPicker::setValue,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_variable" href="classADoubleNumberPicker.html#a98b7e99202fa0ee53ebf59f36ce92740">valueChanging</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        };</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> setValue(<span class="keywordtype">double</span> v);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> setSuffix(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; suffix);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    [[nodiscard]] <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text() <span class="keyword">const</span> <span class="keyword">noexcept</span> { <span class="keywordflow">return</span> mTextField-&gt;text(); }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> increase();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> decrease();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> changeBy(<span class="keywordtype">double</span> v);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    [[nodiscard]] <span class="keywordtype">double</span> getValue()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mTextField-&gt;getText().<a class="code hl_function" href="classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d">toDouble</a>().valueOr(0.0); }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    [[nodiscard]] <span class="keywordtype">double</span> getMin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMin; }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   signals:</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">   72</a></span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;double&gt;</a> <a class="code hl_variable" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">valueChanged</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154">   77</a></span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;&gt;</a> <a class="code hl_variable" href="classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154">valueChanging</a>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    [[nodiscard]] <span class="keywordtype">double</span> getMax()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMax; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> setMin(<span class="keywordtype">double</span> min);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> setMax(<span class="keywordtype">double</span> max);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> increase();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> decrease();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> changeBy(<span class="keywordtype">double</span> v);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>   signals:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">   81</a></span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;double&gt;</a> <a class="code hl_variable" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">valueChanged</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classADoubleNumberPicker.html#a98b7e99202fa0ee53ebf59f36ce92740">   86</a></span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;double&gt;</a> <a class="code hl_variable" href="classADoubleNumberPicker.html#a98b7e99202fa0ee53ebf59f36ce92740">valueChanging</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">namespace </span>aui::impl {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Num&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00082">
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">   82</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">ADataBindingDefaultDoubleNumberPicker</a> {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> setup(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ADoubleNumberPicker&gt;</a>&amp; view) {}</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getGetter() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">ADoubleNumberPicker::valueChanged</a>; }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getSetter() { <span class="keywordflow">return</span> &amp;ADoubleNumberPicker::setValue; }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">namespace </span>aui::impl {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Num&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00091">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">   91</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">ADataBindingDefaultDoubleNumberPicker</a> {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> setup(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ADoubleNumberPicker&gt;</a>&amp; view) {}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getGetter() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">ADoubleNumberPicker::valueChanged</a>; }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getSetter() { <span class="keywordflow">return</span> &amp;ADoubleNumberPicker::setValue; }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span> &lt;aui::arithmetic UnderlyingType, auto min, auto max&gt;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(min), UnderlyingType&gt; &amp;&amp; <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(max), UnderlyingType&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00093">
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">   93</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">ADataBindingRangedDoubleNumberPicker</a> {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>   <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> setup(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ADoubleNumberPicker&gt;</a>&amp; view) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        view-&gt;setMin(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MIN);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        view-&gt;setMax(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MAX);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getGetter() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">ADoubleNumberPicker::valueChanged</a>; }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getSetter() { <span class="keywordflow">return</span> &amp;ADoubleNumberPicker::setValue; }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
-</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}   <span class="comment">// namespace aui::impl</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="structADataBindingDefault.html">  107</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classADoubleNumberPicker.html">ADoubleNumberPicker</a>, double&gt; : <a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">aui::impl::ADataBindingDefaultDoubleNumberPicker</a>&lt;double&gt; {};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span> &lt;aui::arithmetic UnderlyingType, auto min, auto max&gt;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(min), UnderlyingType&gt; &amp;&amp; <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(max), UnderlyingType&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00102">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">  102</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">ADataBindingRangedDoubleNumberPicker</a> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>   <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> setup(<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;ADoubleNumberPicker&gt;</a>&amp; view) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        view-&gt;setMin(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MIN);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        view-&gt;setMax(aui::ranged_number&lt;UnderlyingType, min, max&gt;::MAX);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structADataBindingDefault.html">  110</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classADoubleNumberPicker.html">ADoubleNumberPicker</a>, float&gt; : <a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">aui::impl::ADataBindingDefaultDoubleNumberPicker</a>&lt;float&gt; {};</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keyword">template</span> &lt;aui::arithmetic UnderlyingType, auto min, auto max&gt;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(min), UnderlyingType&gt; &amp;&amp; <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(max), UnderlyingType&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00114">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="structADataBindingDefault.html">  114</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classADoubleNumberPicker.html">ADoubleNumberPicker</a>, aui::ranged_number&lt;UnderlyingType, min, max&gt;&gt;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    : <a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">aui::impl::ADataBindingRangedDoubleNumberPicker</a>&lt;UnderlyingType, min, max&gt; {};</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getGetter() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">ADoubleNumberPicker::valueChanged</a>; }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">static</span> <span class="keyword">auto</span> getSetter() { <span class="keywordflow">return</span> &amp;ADoubleNumberPicker::setValue; }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}   <span class="comment">// namespace aui::impl</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="structADataBindingDefault.html">  116</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classADoubleNumberPicker.html">ADoubleNumberPicker</a>, double&gt; : <a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">aui::impl::ADataBindingDefaultDoubleNumberPicker</a>&lt;double&gt; {};</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="structADataBindingDefault.html">  119</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classADoubleNumberPicker.html">ADoubleNumberPicker</a>, float&gt; : <a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">aui::impl::ADataBindingDefaultDoubleNumberPicker</a>&lt;float&gt; {};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keyword">template</span> &lt;aui::arithmetic UnderlyingType, auto min, auto max&gt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(min), UnderlyingType&gt; &amp;&amp; <a class="code hl_concept" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;<span class="keyword">decltype</span>(max), UnderlyingType&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00123">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structADataBindingDefault.html">  123</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structADataBindingDefault.html">ADataBindingDefault</a>&lt;<a class="code hl_class" href="classADoubleNumberPicker.html">ADoubleNumberPicker</a>, aui::ranged_number&lt;UnderlyingType, min, max&gt;&gt;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    : <a class="code hl_struct" href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">aui::impl::ADataBindingRangedDoubleNumberPicker</a>&lt;UnderlyingType, min, max&gt; {};</div>
 </div>
 <div class="ttc" id="aclassAAbstractTextField_html"><div class="ttname"><a href="classAAbstractTextField.html">AAbstractTextField</a></div><div class="ttdoc">Text field implementation.</div><div class="ttdef"><b>Definition</b> AAbstractTextField.h:26</div></div>
 <div class="ttc" id="aclassADoubleNumberPicker_html"><div class="ttname"><a href="classADoubleNumberPicker.html">ADoubleNumberPicker</a></div><div class="ttdoc">A text field for numbers with increase/decrease buttons.</div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:24</div></div>
-<div class="ttc" id="aclassADoubleNumberPicker_html_a40ac674e9843fdf2d9bad54bd02aa154"><div class="ttname"><a href="classADoubleNumberPicker.html#a40ac674e9843fdf2d9bad54bd02aa154">ADoubleNumberPicker::valueChanging</a></div><div class="ttdeci">emits valueChanging</div><div class="ttdoc">Number is changing.</div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:77</div></div>
-<div class="ttc" id="aclassADoubleNumberPicker_html_ad896539f8570931c65df71c98640b221"><div class="ttname"><a href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">ADoubleNumberPicker::valueChanged</a></div><div class="ttdeci">emits&lt; double &gt; valueChanged</div><div class="ttdoc">Number changed.</div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:72</div></div>
+<div class="ttc" id="aclassADoubleNumberPicker_html_a98b7e99202fa0ee53ebf59f36ce92740"><div class="ttname"><a href="classADoubleNumberPicker.html#a98b7e99202fa0ee53ebf59f36ce92740">ADoubleNumberPicker::valueChanging</a></div><div class="ttdeci">emits&lt; double &gt; valueChanging</div><div class="ttdoc">Number is changing.</div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:86</div></div>
+<div class="ttc" id="aclassADoubleNumberPicker_html_ad896539f8570931c65df71c98640b221"><div class="ttname"><a href="classADoubleNumberPicker.html#ad896539f8570931c65df71c98640b221">ADoubleNumberPicker::valueChanged</a></div><div class="ttdeci">emits&lt; double &gt; valueChanged</div><div class="ttdoc">Number changed.</div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:81</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
 <div class="ttc" id="aclassAString_html_ab9b2eda6a2ea7bebd4bdb2a02e22727d"><div class="ttname"><a href="classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d">AString::toDouble</a></div><div class="ttdeci">AOptional&lt; double &gt; toDouble() const noexcept</div><div class="ttdoc">Converts the string to a double number.</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:178</div></div>
 <div class="ttc" id="aconceptaui_1_1convertible__to_html"><div class="ttname"><a href="conceptaui_1_1convertible__to.html">aui::convertible_to</a></div><div class="ttdef"><b>Definition</b> concepts.h:42</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:567</div></div>
 <div class="ttc" id="astructADataBindingDefault_html"><div class="ttname"><a href="structADataBindingDefault.html">ADataBindingDefault</a></div><div class="ttdoc">Defines how View handles properties of FieldType type.</div><div class="ttdef"><b>Definition</b> ADataBinding.h:37</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker_html"><div class="ttname"><a href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">aui::impl::ADataBindingDefaultDoubleNumberPicker</a></div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:82</div></div>
-<div class="ttc" id="astructaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker_html"><div class="ttname"><a href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">aui::impl::ADataBindingRangedDoubleNumberPicker</a></div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:93</div></div>
+<div class="ttc" id="astructAPropertyDef_html"><div class="ttname"><a href="structAPropertyDef.html">APropertyDef</a></div><div class="ttdoc">Property implementation to use with custom getter/setter.</div><div class="ttdef"><b>Definition</b> AProperty.h:220</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker_html"><div class="ttname"><a href="structaui_1_1impl_1_1ADataBindingDefaultDoubleNumberPicker.html">aui::impl::ADataBindingDefaultDoubleNumberPicker</a></div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:91</div></div>
+<div class="ttc" id="astructaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker_html"><div class="ttname"><a href="structaui_1_1impl_1_1ADataBindingRangedDoubleNumberPicker.html">aui::impl::ADataBindingRangedDoubleNumberPicker</a></div><div class="ttdef"><b>Definition</b> ADoubleNumberPicker.h:102</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
