@@ -2,7 +2,7 @@ var searchData=
 [
   ['c_0',['c',['../group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a',1,'ass']]],
   ['cache_1',['Cache',['../classCache.html',1,'']]],
-  ['cache_20invalidation_2',['Build cache invalidation',['../md_docs_2Troubleshoot_01list.html#autotoc_md168',1,'']]],
+  ['cache_20invalidation_2',['Build cache invalidation',['../md_docs_2Troubleshoot_01list.html#autotoc_md169',1,'']]],
   ['cache_3c_20idrawable_2c_20cache_2c_20aurl_20_3e_3',['Cache&lt; IDrawable, Cache, AUrl &gt;',['../classCache.html',1,'']]],
   ['caching_4',['CI caching',['../md_docs_2AUI_01Boot.html#CI_CACHING',1,'']]],
   ['call_5fwrapper_5',['call_wrapper',['../structASignal_1_1call__wrapper.html',1,'ASignal']]],
@@ -161,7 +161,7 @@ var searchData=
   ['createoverlappingsurface_158',['createOverlappingSurface',['../classAWindowBase.html#a5a57fa066729716d909860b981568186',1,'AWindowBase::createOverlappingSurface(const glm::ivec2 &amp;position, const glm::ivec2 &amp;size, bool closeOnClick=true)'],['../classAWindowBase.html#ae5541c371491af2661d944efe2d7d0ee',1,'AWindowBase::createOverlappingSurface(const std::function&lt; AOptional&lt; glm::ivec2 &gt;(unsigned)&gt; &amp;positionFactory, const glm::ivec2 &amp;size, bool closeOnClick=true)']]],
   ['createoverlappingsurfaceimpl_159',['createOverlappingSurfaceImpl',['../classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0',1,'AWindow::createOverlappingSurfaceImpl()'],['../classAWindowBase.html#a4f8d14c149c6d39148eb59d079a6cfbf',1,'AWindowBase::createOverlappingSurfaceImpl()']]],
   ['createsocket_160',['createSocket',['../classAAbstractSocket.html#aacd9223f413ec487d2d9ea2707360b08',1,'AAbstractSocket::createSocket()'],['../classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7',1,'ATcpServerSocket::createSocket()'],['../classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0',1,'ATcpSocket::createSocket()'],['../classAUdpSocket.html#aba1eaf99104b3816702bf5ccda32cf5a',1,'AUdpSocket::createSocket()']]],
-  ['creating_20an_20aui_20module_161',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md125',1,'']]],
+  ['creating_20an_20aui_20module_161',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md126',1,'']]],
   ['critical_162',['CRITICAL',['../namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870',1,'AMessageBox']]],
   ['cropped_163',['CROPPED',['../group__ass__properties.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8a941ab3bad2c5a558ab3cbb16aecf90ca',1,'ass']]],
   ['crosscompiling_20android_20and_20ios_164',['Crosscompiling (Android and iOS)',['../md_docs_2Crosscompiling.html',1,'']]],
@@ -170,5 +170,6 @@ var searchData=
   ['current_167',['current',['../classAThread.html#a455beceab4e80bba85d44a5d4ee15b08',1,'AThread::current()'],['../classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce',1,'AWindow::current()']]],
   ['cursorindexbypos_168',['cursorIndexByPos',['../classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2',1,'ACursorSelectable::cursorIndexByPos()'],['../classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c',1,'AAbstractTextField::cursorIndexByPos()'],['../classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c',1,'ATextArea::cursorIndexByPos()']]],
   ['customcaptionwindowimplwin32_169',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
-  ['cuttoclipboard_170',['cutToClipboard',['../classAAbstractTypeable.html#a54831fbb3b37af63b7832bc166aec0e2',1,'AAbstractTypeable']]]
+  ['customproperty_170',['CustomProperty',['../structass_1_1CustomProperty.html',1,'ass']]],
+  ['cuttoclipboard_171',['cutToClipboard',['../classAAbstractTypeable.html#a54831fbb3b37af63b7832bc166aec0e2',1,'AAbstractTypeable']]]
 ];
