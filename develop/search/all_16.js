@@ -162,7 +162,7 @@ var searchData=
   ['stealin_159',['stealIn',['../classPipe.html#a620e36499fea5c32c6b8b217118b9b8b',1,'Pipe']]],
   ['stealout_160',['stealOut',['../classPipe.html#a6aa265903c0efc974c980f6020fcc02b',1,'Pipe']]],
   ['step_161',['Prompt user on every step',['../group__updater.html#autotoc_md220',1,'']]],
-  ['stl_20like_20functionality_162',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md128',1,'']]],
+  ['stl_20like_20functionality_162',['STL-like functionality',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md126',1,'']]],
   ['stop_163',['stop',['../classIAudioPlayer.html#aa2b734044f180bbc89b9642eae9e911b',1,'IAudioPlayer']]],
   ['streambuf_164',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
   ['streams_165',['IO streams',['../group__io.html',1,'']]],
@@ -187,7 +187,7 @@ var searchData=
   ['supported_20platforms_184',['Supported platforms',['../md_docs_2Crosscompiling.html#autotoc_md135',1,'Supported platforms'],['../group__updater.html#autotoc_md213',1,'Supported platforms']]],
   ['supported_20units_185',['Supported units',['../classAMetric.html#autotoc_md33',1,'']]],
   ['swappable_186',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_187',['Syntax',['../md_docs_2aui__executable.html#autotoc_md90',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md96',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md114',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md98',1,'Syntax']]],
+  ['syntax_187',['Syntax',['../md_docs_2aui__executable.html#autotoc_md90',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md96',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md99',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md106',1,'Syntax']]],
   ['system_188',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['system_189',['system',['../android.html',1,'Android (operating system)'],['../ios.html',1,'iOS (operating system)'],['../macos.html',1,'macOS (operating system)'],['../windows.html',1,'Windows (operating system)']]],
   ['systemslashdirection_190',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
