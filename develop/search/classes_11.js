@@ -48,7 +48,10 @@ var searchData=
   ['statusidle_45',['StatusIdle',['../structAUpdater_1_1StatusIdle.html',1,'AUpdater']]],
   ['statusnotavailable_46',['StatusNotAvailable',['../structAUpdater_1_1StatusNotAvailable.html',1,'AUpdater']]],
   ['statuswaitingforapplyandrestart_47',['StatusWaitingForApplyAndRestart',['../structAUpdater_1_1StatusWaitingForApplyAndRestart.html',1,'AUpdater']]],
-  ['streambuf_48',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
-  ['stubaudioplayer_49',['StubAudioPlayer',['../classStubAudioPlayer.html',1,'']]],
-  ['style_50',['Style',['../structdeclarative_1_1Style.html',1,'declarative']]]
+  ['stbimageloader_48',['StbImageLoader',['../classStbImageLoader.html',1,'']]],
+  ['streambuf_49',['StreamBuf',['../classAStdIStream_1_1StreamBuf.html',1,'AStdIStream']]],
+  ['stubaudioplayer_50',['StubAudioPlayer',['../classStubAudioPlayer.html',1,'']]],
+  ['style_51',['Style',['../structdeclarative_1_1Style.html',1,'declarative']]],
+  ['svgimagefactory_52',['SvgImageFactory',['../classSvgImageFactory.html',1,'']]],
+  ['svgimageloader_53',['SvgImageLoader',['../classSvgImageLoader.html',1,'']]]
 ];

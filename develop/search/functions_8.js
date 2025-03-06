@@ -8,10 +8,12 @@ var searchData=
   ['handlesnonmousenavigation_5',['handlesNonMouseNavigation',['../classAView.html#a6cca09e70e63cc0bbd4161e5d352d102',1,'AView']]],
   ['handlestartup_6',['handleStartup',['../classAUpdater.html#a8325386bf22a7f2465531a0e420f3231',1,'AUpdater']]],
   ['handlewaitforprocess_7',['handleWaitForProcess',['../classAUpdater.html#aa3ccbc2111ed70bbe3e980e01d2830f1',1,'AUpdater']]],
-  ['hasindirectparent_8',['hasIndirectParent',['../classAView.html#a37642918735ccb3939f63d85ff56310c',1,'AView']]],
-  ['hasmany_9',['hasMany',['../structASqlModel.html#abcdb3a737a16a830d7a1271d08c7a27a',1,'ASqlModel']]],
-  ['hasoutgoingconnectionswith_10',['hasOutgoingConnectionsWith',['../classAAbstractSignal.html#a86019a821d72c96767b75c0ad7048584',1,'AAbstractSignal::hasOutgoingConnectionsWith()'],['../classASignal.html#a690014339e8e8baea8c1b7b2fe5755c4',1,'ASignal::hasOutgoingConnectionsWith()']]],
-  ['hasresult_11',['hasResult',['../classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f',1,'aui::impl::future::Future']]],
-  ['hasselection_12',['hasSelection',['../classACursorSelectable.html#a8c7d2652da1ada52cce28464d152ee03',1,'ACursorSelectable']]],
-  ['hasvalue_13',['hasValue',['../classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0',1,'aui::impl::future::Future']]]
+  ['hasanimationfinished_8',['hasAnimationFinished',['../classGifImageFactory.html#ae378f250bebcd9dc047b43b618b03e20',1,'GifImageFactory::hasAnimationFinished()'],['../classIAnimatedImageFactory.html#a6d61d339e27c37c2ec84ac81fa42d09c',1,'IAnimatedImageFactory::hasAnimationFinished()'],['../classWebpImageFactory.html#a2019c89ddc804ea4e2712d13cd5e7f96',1,'WebpImageFactory::hasAnimationFinished()']]],
+  ['hasindirectparent_9',['hasIndirectParent',['../classAView.html#a37642918735ccb3939f63d85ff56310c',1,'AView']]],
+  ['hasmany_10',['hasMany',['../structASqlModel.html#abcdb3a737a16a830d7a1271d08c7a27a',1,'ASqlModel']]],
+  ['hasoutgoingconnectionswith_11',['hasOutgoingConnectionsWith',['../classAAbstractSignal.html#a86019a821d72c96767b75c0ad7048584',1,'AAbstractSignal::hasOutgoingConnectionsWith()'],['../classASignal.html#a690014339e8e8baea8c1b7b2fe5755c4',1,'ASignal::hasOutgoingConnectionsWith()']]],
+  ['hasresult_12',['hasResult',['../classaui_1_1impl_1_1future_1_1Future.html#aa5daf770778f70b6ce98d301d0e8619f',1,'aui::impl::future::Future']]],
+  ['hasselection_13',['hasSelection',['../classACursorSelectable.html#a8c7d2652da1ada52cce28464d152ee03',1,'ACursorSelectable']]],
+  ['hasvalue_14',['hasValue',['../classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0',1,'aui::impl::future::Future']]],
+  ['height_15',['height',['../classAImageView.html#a4c590b67b23884af4e4afd85fe8e7d1c',1,'AImageView']]]
 ];

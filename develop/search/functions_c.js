@@ -12,12 +12,13 @@ var searchData=
   ['mapposition_9',['mapPosition',['../classAWindow.html#a914a33c3e1bf066273a4c56073423c26',1,'AWindow']]],
   ['mappositionto_10',['mapPositionTo',['../classAWindow.html#a1aec53c688d095e3a9903df73e99b556',1,'AWindow']]],
   ['markpixeldatainvalid_11',['markPixelDataInvalid',['../classAWindowBase.html#a486b60d9e79a3d0bf48f3af7e3db9efe',1,'AWindowBase::markPixelDataInvalid()'],['../classAView.html#ad87c8a5512754ef450089eaaf6e84bfb',1,'AView::markPixelDataInvalid()'],['../classAViewContainerBase.html#a8994f292987b286ed34179e99f439d0e',1,'AViewContainerBase::markPixelDataInvalid()']]],
-  ['maximize_12',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
-  ['mergedwith_13',['mergedWith',['../classAJson.html#ac42f2f25622bfac75c24d5a5283812c7',1,'AJson']]],
-  ['minimize_14',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
-  ['move_15',['move',['../classAPath.html#abdc728659668f830ee3f843bec114a9d',1,'APath']]],
-  ['movecursorleft_16',['moveCursorLeft',['../classAAbstractTypeable.html#aebd7c14f224734dd055c3447ab989d32',1,'AAbstractTypeable']]],
-  ['movecursorright_17',['moveCursorRight',['../classAAbstractTypeable.html#a1112048a0135e8be9b81aafa539900a7',1,'AAbstractTypeable']]],
-  ['movetocenter_18',['moveToCenter',['../classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006',1,'AWindow']]],
-  ['mul_19',['mul',['../classAColor.html#a5762b3e4a42ea94374ea2335fba91c26',1,'AColor']]]
+  ['matches_12',['matches',['../classBmpImageLoader.html#a30c9dc3316fc14f698b2fb225a8a1a22',1,'BmpImageLoader::matches()'],['../classGifImageLoader.html#a02607797f734c1dcd14fab4c9d6a132c',1,'GifImageLoader::matches()'],['../classIImageLoader.html#a32d0a0bb7dd7b249c5ec9169575be36a',1,'IImageLoader::matches()'],['../classJpgImageLoader.html#a9e03bb025071e1f69fe97226da56f52a',1,'JpgImageLoader::matches()'],['../classPngImageLoader.html#a9268924c447f30f5d660b959d529e4f4',1,'PngImageLoader::matches()'],['../classSvgImageLoader.html#a417103cd1d7d2cc2d7aac64c7feed7c0',1,'SvgImageLoader::matches()'],['../classWebpImageLoader.html#aff413ddaa161f369678970fcd5efe0ed',1,'WebpImageLoader::matches()']]],
+  ['maximize_13',['maximize',['../classAWindow.html#ad5576c2e3a9ce8c20ef1e5d4dedfebe7',1,'AWindow']]],
+  ['mergedwith_14',['mergedWith',['../classAJson.html#ac42f2f25622bfac75c24d5a5283812c7',1,'AJson']]],
+  ['minimize_15',['minimize',['../classAWindow.html#a271b2fb2651a01713cafa78625f2dadb',1,'AWindow']]],
+  ['move_16',['move',['../classAPath.html#abdc728659668f830ee3f843bec114a9d',1,'APath']]],
+  ['movecursorleft_17',['moveCursorLeft',['../classAAbstractTypeable.html#aebd7c14f224734dd055c3447ab989d32',1,'AAbstractTypeable']]],
+  ['movecursorright_18',['moveCursorRight',['../classAAbstractTypeable.html#a1112048a0135e8be9b81aafa539900a7',1,'AAbstractTypeable']]],
+  ['movetocenter_19',['moveToCenter',['../classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006',1,'AWindow']]],
+  ['mul_20',['mul',['../classAColor.html#a5762b3e4a42ea94374ea2335fba91c26',1,'AColor']]]
 ];

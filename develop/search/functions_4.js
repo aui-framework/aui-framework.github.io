@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data_0',['data',['../classAByteBuffer.html#afe2d857335823888761116b7acbe6812',1,'AByteBuffer']]],
+  ['data_0',['data',['../classAByteBuffer.html#afe2d857335823888761116b7acbe6812',1,'AByteBuffer::data()'],['../classAImageView.html#aaed3e087b4c870d2b778089869122d39',1,'AImageView::data()']]],
   ['debugstring_1',['debugString',['../classAView.html#a2d4fb65e9b49c688f1eca21f1b74e1e9',1,'AView']]],
   ['deployupdate_2',['deployUpdate',['../classAUpdater.html#aca620ed9a922985243357a82a35cf983',1,'AUpdater']]],
   ['deserialize_3',['deserialize',['../classIInputStream.html#a36c4cf58fa8466b92d9af1eb09e25d47',1,'IInputStream']]],

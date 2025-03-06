@@ -53,7 +53,7 @@ var searchData=
   ['shoulddisplayhoveranimations_50',['shouldDisplayHoverAnimations',['../classAWindowBase.html#aa3efdc56a2a7a543b7ba1a70fa3694b4',1,'AWindowBase']]],
   ['show_51',['show',['../classAWindow.html#af7360ab4bb102de6cbdf066e9ab8348b',1,'AWindow::show()'],['../namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2',1,'AMessageBox::show()']]],
   ['signalname_52',['signalName',['../classAFatalException.html#aa9613dd64b50fbccd463afa488971572',1,'AFatalException']]],
-  ['size_53',['size',['../classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2',1,'AByteBuffer::size()'],['../classASmallVector.html#a538812bc06c9f2c2385aaabc6f87be50',1,'ASmallVector::size()'],['../classAView.html#a3bb9d90332539568c963aed3d248326a',1,'AView::size()']]],
+  ['size_53',['size',['../classAByteBuffer.html#a2b5fe166e41cc0680a5333856f354ff2',1,'AByteBuffer::size()'],['../classASmallVector.html#a538812bc06c9f2c2385aaabc6f87be50',1,'ASmallVector::size()'],['../classAImageView.html#aae2fb0ef7b811ccd8fae5a90de2ce751',1,'AImageView::size()'],['../classAView.html#a3bb9d90332539568c963aed3d248326a',1,'AView::size()']]],
   ['skipuntil_54',['skipUntil',['../classATokenizer.html#a46bc1a1038f8c6d2202811eac67c5f5d',1,'ATokenizer']]],
   ['skipuntilunescaped_55',['skipUntilUnescaped',['../classATokenizer.html#a4b240a2acf3ba5f35c8d88efd0cd6119',1,'ATokenizer']]],
   ['sleep_56',['sleep',['../classAThread.html#a1d5a64e999da0381a3552a6292900bbc',1,'AThread']]],
