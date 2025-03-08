@@ -120,165 +120,170 @@ $(function(){initNavTree('AAbstractTypeableView_8h_source.html',''); initResizab
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include "AAbstractTypeable.h"</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">template</span>&lt;aui::derived_from&lt;AView&gt; Super&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00026">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classAAbstractTypeableView.html">   26</a></span><span class="keyword">class </span>AAbstractTypeableView</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        : <span class="keyword">public</span> Super,</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>          <span class="keyword">public</span> AAbstractTypeable,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>          <span class="keyword">public</span> std::conditional_t&lt;aui::derived_from&lt;Super, IFontView&gt;, std::monostate, IFontView&gt; <span class="comment">/* implement</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">                                                                                                       IFontView if</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">                                                                                                       Super doesn't */</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    AAbstractTypeableView() {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(mBlinkTimer-&gt;fired, <span class="keyword">this</span>, [&amp;]() {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            if (this-&gt;hasFocus() &amp;&amp; mCursorBlinkCount &lt; 60) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                mCursorBlinkVisible = !mCursorBlinkVisible;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                mCursorBlinkCount += 1;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                this-&gt;redraw();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        });</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00047">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16">   47</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16">text</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a> {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keyword">this</span>,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            &amp;<a class="code hl_function" href="classACursorSelectable.html#a96d0b28b41e0264a89ab704be6d0ac22">AAbstractTypeable::getText</a>,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            &amp;AAbstractTypeable::setText,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_variable" href="classAAbstractTypeable.html#ac06749997360eb1be5759f98147095cf">textChanging</a>,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        };</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;AUI/Platform/AWindow.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">template</span>&lt;aui::derived_from&lt;AView&gt; Super&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00027">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classAAbstractTypeableView.html">   27</a></span><span class="keyword">class </span>AAbstractTypeableView</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        : <span class="keyword">public</span> Super,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>          <span class="keyword">public</span> AAbstractTypeable,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>          <span class="keyword">public</span> std::conditional_t&lt;aui::derived_from&lt;Super, IFontView&gt;, std::monostate, IFontView&gt; <span class="comment">/* implement</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">                                                                                                       IFontView if</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">                                                                                                       Super doesn't */</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    AAbstractTypeableView() {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(mBlinkTimer-&gt;fired, <span class="keyword">this</span>, [&amp;]() {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            if (this-&gt;hasFocus() &amp;&amp; mCursorBlinkCount &lt; 60) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                mCursorBlinkVisible = !mCursorBlinkVisible;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                mCursorBlinkCount += 1;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                this-&gt;redraw();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00048">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16">   48</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16">text</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a> {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keyword">this</span>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            &amp;<a class="code hl_function" href="classACursorSelectable.html#a96d0b28b41e0264a89ab704be6d0ac22">AAbstractTypeable::getText</a>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            &amp;AAbstractTypeable::setText,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_variable" href="classAAbstractTypeable.html#ac06749997360eb1be5759f98147095cf">textChanging</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classAAbstractTypeableView.html">~AAbstractTypeableView</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> onKeyDown(AInput::Key key)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        Super::onKeyDown(key);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        AAbstractTypeable::handleKey(key);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (key == AInput::Key::RETURN &amp;&amp; !AInput::isKeyDown(AInput::LSHIFT) &amp;&amp; !AInput::isKeyDown(AInput::RSHIFT)) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> this-&gt;actionButtonPressed;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="classAAbstractTypeableView.html">~AAbstractTypeableView</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> onKeyDown(AInput::Key key)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        Super::onKeyDown(key);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (key == AInput::ESCAPE) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <a class="code hl_function" href="classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce">AWindow::current</a>()-&gt;setFocusedView(<span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> onKeyRepeat(AInput::Key key)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        Super::onKeyRepeat(key);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        AAbstractTypeable::handleKey(key);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> onFocusLost()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        Super::onFocusLost();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (mTextChangedFlag) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            mTextChangedFlag = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">if</span> (textChanged) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> textChanged(text());</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> onPointerPressed(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        Super::onPointerPressed(event);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        ACursorSelectable::handleMousePressed(event);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        updateCursorBlinking();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> onPointerDoubleClicked(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        Super::onPointerDoubleClicked(event);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        ACursorSelectable::handleMouseDoubleClicked(event);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        updateCursorBlinking();</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> onPointerMove(glm::vec2 pos, <span class="keyword">const</span> <a class="code hl_struct" href="structAPointerMoveEvent.html">APointerMoveEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        Super::onPointerMove(pos, event);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        ACursorSelectable::handleMouseMove(pos);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> onPointerReleased(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        Super::onPointerReleased(event);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">if</span> (!event.<a class="code hl_variable" href="structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0">triggerClick</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        AAbstractTypeable::handleKey(key);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (key == AInput::Key::RETURN &amp;&amp; !AInput::isKeyDown(AInput::LSHIFT) &amp;&amp; !AInput::isKeyDown(AInput::RSHIFT)) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> this-&gt;actionButtonPressed;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> onKeyRepeat(AInput::Key key)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Super::onKeyRepeat(key);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        AAbstractTypeable::handleKey(key);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> onFocusLost()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        Super::onFocusLost();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">if</span> (mTextChangedFlag) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            mTextChangedFlag = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">if</span> (textChanged) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> textChanged(text());</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> onPointerPressed(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        Super::onPointerPressed(event);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        ACursorSelectable::handleMousePressed(event);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        updateCursorBlinking();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> onPointerDoubleClicked(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerPressedEvent.html">APointerPressedEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        Super::onPointerDoubleClicked(event);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        ACursorSelectable::handleMouseDoubleClicked(event);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        updateCursorBlinking();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> onPointerMove(glm::vec2 pos, <span class="keyword">const</span> <a class="code hl_struct" href="structAPointerMoveEvent.html">APointerMoveEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        Super::onPointerMove(pos, event);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        ACursorSelectable::handleMouseMove(pos);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (event.<a class="code hl_variable" href="structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060">pointerIndex</a> != APointerIndex::button(AInput::RBUTTON)) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            ACursorSelectable::handleMouseReleased(event);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> wantsTouchscreenKeyboard()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> onPointerReleased(<span class="keyword">const</span> <a class="code hl_struct" href="structAPointerReleasedEvent.html">APointerReleasedEvent</a>&amp; event)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        Super::onPointerReleased(event);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">if</span> (!event.<a class="code hl_variable" href="structAPointerReleasedEvent.html#a1721df1466c1635ad2fc30e30fbf66a0">triggerClick</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">if</span> (event.<a class="code hl_variable" href="structAPointerReleasedEvent.html#a3310e50fc049b0d000b6c6df589ad060">pointerIndex</a> != APointerIndex::button(AInput::RBUTTON)) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            ACursorSelectable::handleMouseReleased(event);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> handlesNonMouseNavigation()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> wantsTouchscreenKeyboard()<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> onFocusAcquired()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        Super::onFocusAcquired();</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        updateCursorBlinking();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> invalidateAllStyles()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="comment">// order is intentional</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        this-&gt;invalidateAllStylesFont();</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        Super::invalidateAllStyles();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">bool</span> isLButtonPressed()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> this-&gt;isPressed();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">bool</span> handlesNonMouseNavigation()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> onFocusAcquired()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        Super::onFocusAcquired();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        updateCursorBlinking();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">void</span> invalidateAllStyles()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">// order is intentional</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        this-&gt;invalidateAllStylesFont();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        Super::invalidateAllStyles();</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> drawCursor(<a class="code hl_class" href="classIRenderer.html">IRenderer</a>&amp; renderer, glm::ivec2 position) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">if</span> (!this-&gt;hasFocus()) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        drawCursorImpl(renderer, position, this-&gt;getFontStyle().size);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    AMenuModel composeContextMenu()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> composeContextMenuImpl();</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">void</span> commitStyle()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        Super::commitStyle();</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        this-&gt;commitStyleFont();</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">int</span> getVerticalAlignmentOffset() noexcept {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">return</span> (glm::max)(0, int(glm::ceil((Super::getContentHeight() - this-&gt;getFontStyle().size) / 2.0)));</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> isLButtonPressed()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> this-&gt;isPressed();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> drawCursor(<a class="code hl_class" href="classIRenderer.html">IRenderer</a>&amp; renderer, glm::ivec2 position) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span> (!this-&gt;hasFocus()) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        drawCursorImpl(renderer, position, this-&gt;getFontStyle().size);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    AMenuModel composeContextMenu()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> composeContextMenuImpl();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">void</span> commitStyle()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        Super::commitStyle();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        this-&gt;commitStyleFont();</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">void</span> cursorSelectableRedraw()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        this-&gt;redraw();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">int</span> getVerticalAlignmentOffset() noexcept {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">return</span> (glm::max)(0, int(glm::ceil((Super::getContentHeight() - this-&gt;getFontStyle().size) / 2.0)));</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> onSelectionChanged()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        onCursorIndexChanged();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">if</span> (selectionChanged) <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> selectionChanged(selection());</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordtype">void</span> emitTextChanged(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> textChanged(text);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">void</span> emitTextChanging(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text)<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> textChanging(text);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> cursorSelectableRedraw()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        this-&gt;redraw();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">void</span> onSelectionChanged()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        onCursorIndexChanged();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (selectionChanged) <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> selectionChanged(selection());</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordtype">void</span> emitTextChanged(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> textChanged(text);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">void</span> emitActionButtonPressed()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> actionButtonPressed;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">void</span> emitTextChanging(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; text)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> textChanging(text);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">void</span> typeableInvalidateFont()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        this-&gt;invalidateFont();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">void</span> emitActionButtonPressed()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> actionButtonPressed;</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>};</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">void</span> typeableInvalidateFont()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        this-&gt;invalidateFont();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>};</div>
 </div>
-<div class="ttc" id="aclassAAbstractTypeableView_html"><div class="ttname"><a href="classAAbstractTypeableView.html">AAbstractTypeableView</a></div><div class="ttdoc">Basic implementation of type shortcuts and selection for editable text fields.</div><div class="ttdef"><b>Definition</b> AAbstractTypeableView.h:31</div></div>
-<div class="ttc" id="aclassAAbstractTypeableView_html_aa3ec74fd0794d86b9fc89a8fbed3db16"><div class="ttname"><a href="classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16">AAbstractTypeableView::text</a></div><div class="ttdeci">auto text() const</div><div class="ttdoc">Text property.</div><div class="ttdef"><b>Definition</b> AAbstractTypeableView.h:47</div></div>
+<div class="ttc" id="aclassAAbstractTypeableView_html"><div class="ttname"><a href="classAAbstractTypeableView.html">AAbstractTypeableView</a></div><div class="ttdoc">Basic implementation of type shortcuts and selection for editable text fields.</div><div class="ttdef"><b>Definition</b> AAbstractTypeableView.h:32</div></div>
+<div class="ttc" id="aclassAAbstractTypeableView_html_aa3ec74fd0794d86b9fc89a8fbed3db16"><div class="ttname"><a href="classAAbstractTypeableView.html#aa3ec74fd0794d86b9fc89a8fbed3db16">AAbstractTypeableView::text</a></div><div class="ttdeci">auto text() const</div><div class="ttdoc">Text property.</div><div class="ttdef"><b>Definition</b> AAbstractTypeableView.h:48</div></div>
 <div class="ttc" id="aclassAAbstractTypeable_html_ac06749997360eb1be5759f98147095cf"><div class="ttname"><a href="classAAbstractTypeable.html#ac06749997360eb1be5759f98147095cf">AAbstractTypeable::textChanging</a></div><div class="ttdeci">emits&lt; AString &gt; textChanging</div><div class="ttdoc">When the user changed one or more symbols.</div><div class="ttdef"><b>Definition</b> AAbstractTypeable.h:130</div></div>
 <div class="ttc" id="aclassACursorSelectable_html_a96d0b28b41e0264a89ab704be6d0ac22"><div class="ttname"><a href="classACursorSelectable.html#a96d0b28b41e0264a89ab704be6d0ac22">ACursorSelectable::getText</a></div><div class="ttdeci">virtual const AString &amp; getText() const =0</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
+<div class="ttc" id="aclassAWindow_html_a74d3a5f5dc4bef9c452f457234e736ce"><div class="ttname"><a href="classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce">AWindow::current</a></div><div class="ttdeci">static AWindowBase * current()</div></div>
 <div class="ttc" id="aclassIRenderer_html"><div class="ttname"><a href="classIRenderer.html">IRenderer</a></div><div class="ttdoc">Base class for rendering.</div><div class="ttdef"><b>Definition</b> IRenderer.h:149</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
