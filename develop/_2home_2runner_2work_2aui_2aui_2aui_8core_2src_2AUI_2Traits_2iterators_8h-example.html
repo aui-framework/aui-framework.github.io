@@ -159,7 +159,9 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        <span class="keyword">constexpr</span> range(Iterator mBegin, Iterator mEnd) : mBegin(mBegin), mEnd(mEnd) {}</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">constexpr</span> ~range() {</div>
-<div class="line">            <a id="a0" name="a0"></a><a class="code hl_define" href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a>(range::size)</div>
+<div class="line">            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">requires</span> { std::distance(mBegin, mEnd); }) {</div>
+<div class="line">                <a id="a0" name="a0"></a><a class="code hl_define" href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a>(range::size)</div>
+<div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container&gt;</div>
@@ -179,7 +181,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        [[nodiscard]]</div>
-<div class="line">        <span class="keyword">constexpr</span> std::size_t size() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line">        <span class="keyword">constexpr</span> std::size_t size() <span class="keyword">const</span> <span class="keyword">noexcept</span> <span class="keyword">requires</span> <span class="keyword">requires</span> { std::distance(mBegin, mEnd); }  {</div>
 <div class="line">            <span class="keywordflow">return</span> std::distance(mBegin, mEnd);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
@@ -334,7 +336,7 @@ for (auto&amp; view : <a class="el" href="structaui_1_1reverse__iterator__wrap.h
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">iterator</a></div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaee1b2b611b51a8c6101ff769ed9b6a98"><div class="ttname"><a href="group__useful__macros.html#gaee1b2b611b51a8c6101ff769ed9b6a98">AUI_NO_OPTIMIZE_OUT</a></div><div class="ttdeci">#define AUI_NO_OPTIMIZE_OUT(object)</div><div class="ttdoc">Forbids object from being optimized out by compiler.</div><div class="ttdef"><b>Definition</b> macros.h:40</div></div>
 <div class="ttc" id="astructaui_1_1range_html"><div class="ttname"><a href="structaui_1_1range.html">aui::range</a></div><div class="ttdef"><b>Definition</b> iterators.h:50</div></div>
-<div class="ttc" id="astructaui_1_1zip_html"><div class="ttname"><a href="structaui_1_1zip.html">aui::zip</a></div><div class="ttdoc">Iterates multiple containers in parallel.</div><div class="ttdef"><b>Definition</b> iterators.h:154</div></div>
+<div class="ttc" id="astructaui_1_1zip_html"><div class="ttname"><a href="structaui_1_1zip.html">aui::zip</a></div><div class="ttdoc">Iterates multiple containers in parallel.</div><div class="ttdef"><b>Definition</b> iterators.h:156</div></div>
 </div><!-- fragment --> <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

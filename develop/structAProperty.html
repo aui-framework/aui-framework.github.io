@@ -147,9 +147,8 @@ template&lt;<a class="el" href="conceptaui_1_1convertible__to.html">aui::convert
 template&lt;<a class="el" href="conceptASignalInvokable.html">ASignalInvokable</a> SignalInvokable&gt; </td></tr>
 <tr class="memitem:a6473ed473b56959761ef1cc4ceac0bf8"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>operator^</b> (SignalInvokable &amp;&amp;t)</td></tr>
 <tr class="separator:a6473ed473b56959761ef1cc4ceac0bf8"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a18682f7b8d05cec06cdbecc548a453b6" id="r_a18682f7b8d05cec06cdbecc548a453b6"><td align="right" class="memItemLeft" valign="top"><a id="a18682f7b8d05cec06cdbecc548a453b6" name="a18682f7b8d05cec06cdbecc548a453b6"></a>
-void </td><td class="memItemRight" valign="bottom"><b>notify</b> ()</td></tr>
-<tr class="memdesc:a18682f7b8d05cec06cdbecc548a453b6"><td class="mdescLeft"> </td><td class="mdescRight">Notify observers that a change was occurred (no preconditions). <br/></td></tr>
+<tr class="memitem:a18682f7b8d05cec06cdbecc548a453b6" id="r_a18682f7b8d05cec06cdbecc548a453b6"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a18682f7b8d05cec06cdbecc548a453b6">notify</a> ()</td></tr>
+<tr class="memdesc:a18682f7b8d05cec06cdbecc548a453b6"><td class="mdescLeft"> </td><td class="mdescRight">Notify observers that a change was occurred (no preconditions).  <br/></td></tr>
 <tr class="separator:a18682f7b8d05cec06cdbecc548a453b6"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a494ef6460de118e357ed61610fc8eea2" id="r_a494ef6460de118e357ed61610fc8eea2"><td align="right" class="memItemLeft" valign="top"><a id="a494ef6460de118e357ed61610fc8eea2" name="a494ef6460de118e357ed61610fc8eea2"></a>
 const T &amp; </td><td class="memItemRight" valign="bottom"><b>value</b> () const noexcept</td></tr>
@@ -331,8 +330,35 @@ Non-const operators<a class="aui-toc-hash" href="#PropertyTest_Write_operators" 
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L323"></b> Refer to <a class="el" href="classaui_1_1PropertyModifier.html">aui::PropertyModifier</a>. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2app_2notes_2src_2main_8cpp-example.html#_a0">examples/app/notes/src/main.cpp</a>.</dd>
 </dl>
-</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#ab0229d9ee58c06dacaa012ece0d1d21d" id="ab0229d9ee58c06dacaa012ece0d1d21d" name="ab0229d9ee58c06dacaa012ece0d1d21d" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a18682f7b8d05cec06cdbecc548a453b6" id="a18682f7b8d05cec06cdbecc548a453b6" name="a18682f7b8d05cec06cdbecc548a453b6" style="color: var(--fragment-comment) !important">#</a></h2>
 
+<h2 class="memtitle"><span class="permalink">◆ </span>notify()<a class="aui-toc-hash" href="#◆ notify()" id="◆ notify()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">void <a class="el" href="structAProperty.html">AProperty</a>&lt; T &gt;::notify </td>
+<td>(</td>
+<td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>In common, you won't need to use this function. <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> is reevaluated automatically as soon as one updates the value within property.</p>
+<p>If your scenario goes beyond <a class="el" href="#ab0229d9ee58c06dacaa012ece0d1d21d">writeScope</a> that explicitly defines modification scope within RAII scope, you can modify the underlying value by accessing <code>AProperty::raw</code> and then call <a class="el" href="#a18682f7b8d05cec06cdbecc548a453b6">notify</a> to notify the observers that value is changed. </p>
+</div>
+</div>
+<a id="ab0229d9ee58c06dacaa012ece0d1d21d" name="ab0229d9ee58c06dacaa012ece0d1d21d"></a>
 <h2 class="memtitle"><span class="permalink">◆ </span>writeScope()<a class="aui-toc-hash" href="#◆ writescope()" id="◆ writescope()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
