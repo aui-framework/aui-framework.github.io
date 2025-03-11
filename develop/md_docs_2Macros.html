@@ -103,12 +103,12 @@ $(function(){initNavTree('md_docs_2Macros.html',''); initResizable(true); });
 <div class="textblock"><dl class="section note"><dt>Note</dt><dd>This page is about macros generated in build-time (i.e., platform specifics). For macros defined in C++ code, see <a class="el" href="group__useful__macros.html">Useful macros</a>.</dd></dl>
 <h1>
 Writing platform dependent code<a class="aui-toc-hash" href="#writing-platform-dependent-code" id="writing-platform-dependent-code" style="color: var(--fragment-comment) !important">#</a></h1>
-<p>AUI provides set of <code>AUI_PLATFORM_*</code> and <code>AUI_COMPILER_*</code> definitions for platform and compiler checking to use in both CMake and C++.</p>
+<p>AUI provides a set of <code>AUI_PLATFORM_*</code> and <code>AUI_COMPILER_*</code> definitions for platform and compiler checking to use in both CMake and C++.</p>
 <h2>
 Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-checks" style="color: var(--fragment-comment) !important">#</a></h2>
 <table class="doxtable">
 <tr>
-<th>Platform </th><th>C++ </th><th>CMake </th><th>Platform specific dir  </th></tr>
+<th>Platform </th><th>C++ </th><th>CMake </th><th>Platform specific dir(s)  </th></tr>
 <tr>
 <td><a class="el" href="windows.html">Windows (operating system)</a>  </td><td><div class="fragment"><div class="line"><span class="preprocessor">#if AUI_PLATFORM_WIN</span></div>
 <div class="line">  <span class="comment">// ...</span></div>
@@ -116,7 +116,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_WIN)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/win32</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/win32</code><br/>
+<code>src/platform/win32</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -126,7 +127,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_LINUX)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/linux</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/linux</code><br/>
+<code>src/platform/linux</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -136,7 +138,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_MACOS)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/macos</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/macos</code><br/>
+<code>src/platform/macos</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -146,7 +149,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_ANDROID)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/android</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/android</code><br/>
+<code>src/platform/android</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -157,7 +161,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_IOS)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/ios</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/ios</code><br/>
+<code>src/platform/ios</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -168,7 +173,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_APPLE)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/apple</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/apple</code><br/>
+<code>src/platform/apple</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -179,7 +185,8 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_UNIX)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><p class="starttd"><code>Platform/unix</code> </p>
+</div><!-- fragment --> </td><td><p class="starttd"><code>src/Platform/unix</code><br/>
+<code>src/platform/unix</code> </p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -189,11 +196,13 @@ Platform checks<a class="aui-toc-hash" href="#platform-checks" id="platform-chec
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">if(AUI_PLATFORM_EMSCRIPTEN)</div>
 <div class="line">  # ...</div>
 <div class="line">endif()</div>
-</div><!-- fragment --> </td><td><code>Platform/emscripten</code> </td></tr>
+</div><!-- fragment --> </td><td><code>src/Platform/emscripten</code><br/>
+<code>src/platform/emscripten</code> </td></tr>
 </table>
 <h3>
 Platform specific sources<a class="aui-toc-hash" href="#platform-specific-sources" id="platform-specific-sources" style="color: var(--fragment-comment) !important">#</a></h3>
-<p>With AUI, the platform dependent code can be placed in <code>src/Platform/&lt;PLATFORM_NAME&gt;</code> dir, where <code>&lt;PLATFORM_NAME&gt;</code> is one of the supported platforms (see the table above).</p>
+<p>With AUI, the platform dependent code can be placed in <code>src/Platform/&lt;PLATFORM_NAME&gt;</code> or <code>src/platform/&lt;PLATFORM_NAME&gt;</code> dirs, where <code>&lt;PLATFORM_NAME&gt;</code> is one of the supported platforms (see the table above).</p>
+<dl class="section note"><dt>Note</dt><dd>Both cases (Platform and platform) were added to honor projects with various directory naming agreements.</dd></dl>
 <h2>
 Compiler checks<a class="aui-toc-hash" href="#compiler-checks" id="compiler-checks" style="color: var(--fragment-comment) !important">#</a></h2>
 <table class="doxtable">
