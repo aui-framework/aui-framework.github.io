@@ -8,7 +8,7 @@ var searchData=
   ['temp_5',['TEMP',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b',1,'APath']]],
   ['template_6',['Template',['../example_minimal_ui_template.html',1,'Minimal UI Template'],['../example_prometheus_exporter_template.html',1,'Prometheus Exporter Template']]],
   ['template_20⚡_7',['App Template ⚡',['../example_app_template.html',1,'']]],
-  ['template_20metaprogramming_20and_20macros_8',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md128',1,'']]],
+  ['template_20metaprogramming_20and_20macros_8',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md127',1,'']]],
   ['template_20with_20assets_9',['Minimal UI Template with Assets',['../example_minimal_ui_template_with_assets.html',1,'']]],
   ['templates_10',['Useful templates',['../group__useful__templates.html',1,'']]],
   ['ternary_11',['ternary',['../structaui_1_1ternary.html',1,'aui::ternary&lt; boolean, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary.html',1,'aui::traits::ternary&lt; value, OnTrue, OnFalse &gt;']]],
