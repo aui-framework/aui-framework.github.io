@@ -491,10 +491,54 @@ Macros<a class="aui-toc-hash" href="#define-members" id="define-members" name="d
 <div class="line">    } \</div>
 <div class="line">    AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<span class="keyword">const</span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a>&amp; args)</div>
 <div class="ttc" id="aclassAStringVector_html"><div class="ttname"><a href="classAStringVector.html">AStringVector</a></div><div class="ttdoc">An AVector with string-related functions.</div><div class="ttdef"><b>Definition</b> AStringVector.h:22</div></div>
-</div><!-- fragment --><p>Native entry point varies platform to platform (i.e. Windows requires <code>int main</code> entry point for console applications and <code>WinMain</code> for graphical applications; entry point of an Android application is located in Java code). AUI_ENTRY unifies your entry point, efficiently supporting every platform.</p>
-<p>AUI_ENTRY of a graphical application should be non-blocking since on mobile platforms application's event loop is located outsize of the entry point. On desktop platforms an event loop is created outside AUI_ENTRY in order to unify the mobile and desktop behaviour. If there are no open windows, the event loop breaks causing the application to exit.</p>
-<p>Application arguments (int argc, char** argv) are forwarded to AUI_ENTRY as <code><a class="el" href="classAStringVector.html" title="An AVector with string-related functions.">AStringVector</a> args</code>.</p>
-<dl class="section note"><dt>Note</dt><dd>On Android, iOS and macOS only the main thread is able to initialize graphics context. </dd></dl>
+</div><!-- fragment --><p>Entry point of any AUI application.</p>
+<p>Native entry point varies platform to platform (i.e. Windows requires <code>int main</code> entry point for console applications and <code>WinMain</code> for graphical applications; entry point of an Android application is located in Java code). <code>AUI_ENTRY</code> unifies your entry point, effectively supporting every platform.</p>
+<p><code>AUI_ENTRY</code> of a graphical application should be non-blocking since on mobile platforms application's event loop is located outsize of the entry point. On desktop platforms, an event loop is created outside <code>AUI_ENTRY</code> in order to unify the mobile and desktop behaviour. If there are no open windows, the event loop breaks, causing the application to exit with the exit code returned by <code>AUI_ENTRY</code> earlier, or <code>0</code>.</p>
+<p>Application arguments <code>(int argc, char** argv)</code> are forwarded to <code>AUI_ENTRY</code> as <code><a class="el" href="classAStringVector.html" title="An AVector with string-related functions.">AStringVector</a> args</code>.</p>
+<p>Minimal entrypoint of an UI application:</p>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * AUI Framework - Declarative UI toolkit for modern C++20</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2020-2024 Alex2772 and Contributors</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * SPDX-License-Identifier: MPL-2.0</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
+<div class="line"><span class="comment"> * License, v. 2.0. If a copy of the MPL was not distributed with this</span></div>
+<div class="line"><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include "ExampleWindow.h"</span></div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Platform/Entry.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_define" href="#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
+<div class="line">    _new&lt;ExampleWindow&gt;()-&gt;show();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
+</div><!-- fragment --><p>Minimal entrypoint of a console application: </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * AUI Framework - Declarative UI toolkit for modern C++20</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2020-2022 Alex2772</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * SPDX-License-Identifier: MPL-2.0</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * This Source Code Form is subject to the terms of the Mozilla Public</span></div>
+<div class="line"><span class="comment"> * License, v. 2.0. If a copy of the MPL was not distributed with this</span></div>
+<div class="line"><span class="comment"> * file, You can obtain one at http://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Platform/Entry.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/Logging/ALogger.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">"MyApp"</span>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_define" href="#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
+<div class="line">    ALogger::info(LOG_TAG) &lt;&lt; <span class="stringliteral">"Hello world!"</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Prototype of <code>AUI_ENTRY</code> function you are actually implementing: </p><div class="fragment"><div class="line">AUI_EXPORT <span class="keywordtype">int</span> aui_entry(<span class="keyword">const</span> <a class="code hl_class" href="classAStringVector.html">AStringVector</a>&amp; args);</div>
+</div><!-- fragment --><dl class="android"><dt><b><a class="el" href="android.html#_android000003">Android-specific</a></b></dt><dd>Only the main thread is able to initialize graphics context.</dd></dl>
+<dl class="ios"><dt><b><a class="el" href="ios.html#_ios000003">iOS-specific</a></b></dt><dd>Only the main thread is able to initialize graphics context.</dd></dl>
+<dl class="macos"><dt><b><a class="el" href="macos.html#_macos000002">macOS-specific</a></b></dt><dd>Only the main thread is able to initialize graphics context. </dd></dl>
 </div>
 </div>
 <a id="ga339936ba5146bdad18838e527f34e9df" name="ga339936ba5146bdad18838e527f34e9df"></a>
