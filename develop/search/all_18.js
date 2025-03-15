@@ -56,7 +56,7 @@ var searchData=
   ['using_20aui_20distributions_20with_20tt_20find_5fpackage_20tt_53',['Using AUI distributions with &lt;tt&gt;find_package&lt;/tt&gt;',['../md_docs_2AUI_01Boot.html#autotoc_md65',1,'']]],
   ['using_20container_20stylesheet_54',['Using container stylesheet',['../group__ass.html#autotoc_md12',1,'']]],
   ['using_20global_20style_55',['Using global style',['../group__ass.html#autotoc_md11',1,'']]],
-  ['using_20inkscape_56',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md165',1,'']]],
+  ['using_20inkscape_56',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md166',1,'']]],
   ['using_20same_20dependencies_57',['Using same dependencies',['../md_docs_2AUI_01Boot.html#autotoc_md60',1,'']]],
   ['using_20setcustomstyle_58',['Using setCustomStyle',['../group__ass.html#autotoc_md14',1,'']]],
   ['using_20with_5fstyle_59',['Using with_style',['../group__ass.html#autotoc_md13',1,'']]],
