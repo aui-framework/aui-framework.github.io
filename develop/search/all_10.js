@@ -68,7 +68,7 @@ var searchData=
   ['model_20padding_20margin_65',['Box Model (Padding, Margin)',['../group__ass.html#autotoc_md27',1,'']]],
   ['modelchanged_66',['modelChanged',['../classADataBinding.html#a626f82611dff72cb336300f93c9f6174',1,'ADataBinding']]],
   ['models_67',['Models',['../example_notes_app.html#autotoc_md196',1,'']]],
-  ['module_68',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md125',1,'']]],
+  ['module_68',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md126',1,'']]],
   ['module_20name_69',['API_\&lt;module name\&gt;',['../md_docs_2Macros.html#autotoc_md154',1,'']]],
   ['motivation_20rationale_70',['Motivation/rationale',['../example_app_auigram.html#autotoc_md179',1,'']]],
   ['movable_71',['movable',['../conceptaui_1_1movable.html',1,'aui']]],
