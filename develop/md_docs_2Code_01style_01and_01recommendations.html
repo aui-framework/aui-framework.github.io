@@ -142,7 +142,12 @@ $(function(){initNavTree('md_docs_2Code_01style_01and_01recommendations.html',''
 <div class="line"> </div>
 <div class="line">};</div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
-</div><!-- fragment --><h1>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>With <a class="el" href="group__property__system.html">Property System</a>, a better way of defining data models will be: <div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
+<div class="line">    <a class="code hl_class" href="structAProperty.html">AProperty&lt;AString&gt;</a> username;</div>
+<div class="line">};</div>
+<div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:30</div></div>
+</div><!-- fragment --> It allows aggregate initialization: <code>User u { .username = "Test" };</code></dd></dl>
+<h1>
 Assertions<a class="aui-toc-hash" href="#assertions" id="assertions" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>The whole AUI framework's code filled with assertion checks so if you do something wrong the framework will tell you about it. Also in AUI almost every assertion contains a quick tip how to solve the problem. It is recommended to you to do the same. For example:</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="group__useful__macros.html#gae43a68976a4d8539e92ff86fc034218c">AUI_ASSERTX</a>(mId == std::this_thread::get_id(),</div>
@@ -160,18 +165,54 @@ Assert or exception?<a class="aui-toc-hash" href="#assert-or-exception?" id="ass
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition</b> Assert.h:55</div></div>
 </div><!-- fragment --><h1>
-STL-like functionality<a class="aui-toc-hash" href="#stl-like-functionality" id="stl-like-functionality" style="color: var(--fragment-comment) !important">#</a></h1>
-<p>It's hard to say which functionality can be called 'STL-like'. Commonly, any iterator-based algorithm (i.e. <code>aui::binary_search</code>), global functions, trait structs are STL-like functionality. The final goal is to avoid mixed-style expressions like <code>AString::const_iterator</code> which hurts eyes.</p>
+Code style exceptions<a class="aui-toc-hash" href="#code-style-exceptions" id="code-style-exceptions" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>Commonly, any iterator-based algorithm (i.e. <code>aui::binary_search</code>), global functions, trait structs are STL-like functionality. The final goal is to avoid mixed-style expressions like <code>AString::const_iterator</code> which hurts eyes.</p>
 <h1>
 Template metaprogramming and macros<a class="aui-toc-hash" href="#template-metaprogramming-and-macros" id="template-metaprogramming-and-macros" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Both C++ template instantiation mechanism and macro preprocessor are Turing complete. However, writing and understanding C++ template metaprogramming (TMP) and macro preprocessor code requires expert knowledge of C++ and a lot of time to understand. Use TMP deliberately.</p>
-<p>Since TMP and macros often evolve custom syntax and usage scenarios, consider writing especially well documentation with examples when defining public API templates and macros. </p>
+<p>Since TMP and macros often evolve custom syntax and usage scenarios, consider writing especially well documentation with examples when defining public API templates and macros.</p>
+<h1>
+Improving compiler error messages techniques<a class="aui-toc-hash" href="#improving-compiler-error-messages-techniques" id="improving-compiler-error-messages-techniques" style="color: var(--fragment-comment) !important">#</a></h1>
+<h2>
+Try to break your templates<a class="aui-toc-hash" href="#TRY_TO_BREAK" id="TRY_TO_BREAK" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>After considering actions listed below, try your types/traits/concepts against various awkward types/arguments/use cases.</p>
+<h2>
+Concepts are preferable<a class="aui-toc-hash" href="#concepts-are-preferable" id="concepts-are-preferable" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>Use concepts instead of SFINAE were possible.</p>
+<h2>
+Raise static_assert messages<a class="aui-toc-hash" href="#raise-static_assert-messages" id="raise-static_assert-messages" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>With <code>static_assert</code> with potentially helpful message, use <code>====================&gt;</code> prefix in your message to raise your message among a long list of compiler diagnostics.</p>
+<div class="fragment"></div><!-- fragment --><h2>
+Single line comment error messages<a class="aui-toc-hash" href="#single-line-comment-error-messages" id="single-line-comment-error-messages" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>You can exploit the fact that a compiler prints code lines in its diagnostics. Put a single line comment with long arrow prefix to put potentially helpful messages. Use <a class="el" href="#TRY_TO_BREAK">Try to break your templates</a> technique to discover the lines to put the comments in.</p>
+<p>Cast failure example:</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span>&amp; [a] = <span class="keyword">const_cast&lt;</span>std::remove_cv_t&lt;Clazz&gt;&amp;<span class="keyword">&gt;</span>(clazz); <span class="comment">// ====================&gt; aui::reflect: Clazz is not a SimpleAggregate.</span></div>
+</div><!-- fragment --><p>Overload substitution failure example:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">template&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">requires</span> <span class="keyword">requires</span>(T&amp; t) { std::hash&lt;T&gt;{}(t); }</div>
+<div class="line"><span class="keyword">constexpr</span> std::size_t forEachKey(<span class="keyword">const</span> T&amp; value) { <span class="comment">// ====================&gt; std::hash based specialization</span></div>
+<div class="line">    <span class="keywordflow">return</span> std::hash&lt;T&gt;{}(value);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">requires</span> <span class="keyword">requires</span>(T&amp; <a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>) { { <a class="code hl_typedef" href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">t</a>.base() } -&gt; ranges::range; }  <span class="comment">// ====================&gt; specialization for subranges</span></div>
+<div class="line"><span class="keyword">constexpr</span> std::size_t forEachKey(<span class="keyword">const</span> T&amp; value) {</div>
+<div class="line">...    </div>
+<div class="ttc" id="agroup__ass__selectors_html_gab1309369989373a0f2408455b3a91742"><div class="ttname"><a href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">ass::t</a></div><div class="ttdeci">type_of&lt; T &gt; t</div><div class="ttdoc">Selects views that are of the specified C++ types.</div><div class="ttdef"><b>Definition</b> type_of.h:71</div></div>
+</div><!-- fragment --><p>Produces the following diagnostics:</p>
+<div class="fragment"><div class="line">.../AForEachUI.h:220:92: error: no matching function for call to ‘forEachKey(...)’</div>
+<div class="line">220 |     return AForEachUIBase::Entry { .view = mFactory(t), .id = forEachKey(t) };</div>
+<div class="line">    |                                                               ~~~~~~~~~~^~~</div>
+<div class="line">...View/AForEachUI.h:34:23: note: candidate: template&lt;class T&gt; requires(T&amp; t) {{}(t);} ...</div>
+<div class="line">34 | constexpr std::size_t forEachKey(const T&amp; value) { // ====================&gt; std::hash based specialization</div>
+</div><!-- fragment --><p>This makes it obvious what does this overload do. </p>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#assertions">Assertions</a></h1><h2><a href="#assert-or-exception?">Assert or exception?</a></h2><h1><a href="#stl-like-functionality">STL-like functionality</a></h1><h1><a href="#template-metaprogramming-and-macros">Template metaprogramming and macros</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#assertions">Assertions</a></h1><h2><a href="#assert-or-exception?">Assert or exception?</a></h2><h1><a href="#code-style-exceptions">Code style exceptions</a></h1><h1><a href="#template-metaprogramming-and-macros">Template metaprogramming and macros</a></h1><h1><a href="#improving-compiler-error-messages-techniques">Improving compiler error messages techniques</a></h1><h2><a href="#TRY_TO_BREAK">Try to break your templates</a></h2><h2><a href="#concepts-are-preferable">Concepts are preferable</a></h2><h2><a href="#raise-static_assert-messages">Raise static_assert messages</a></h2><h2><a href="#single-line-comment-error-messages">Single line comment error messages</a></h2><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
