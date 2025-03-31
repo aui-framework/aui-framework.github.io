@@ -10,7 +10,7 @@ var searchData=
   ['ranged_5fnumber_3c_20uint32_5ft_2c_200_2c_20256_20_3e_7',['ranged_number&lt; uint32_t, 0, 256 &gt;',['../structaui_1_1ranged__number.html',1,'aui']]],
   ['ranges_20and_20views_8',['Infinite ranges and views',['../classAForEachUI.html#UIDeclarativeForTest_Infinite_ranges_and_views',1,'']]],
   ['rasterize_9',['rasterize',['../classAVectorDrawable.html#a810a83664d42c3188fa5d6b1f67c5408',1,'AVectorDrawable::rasterize()'],['../classIDrawable.html#ac785f214a9cb83f9f9a67e0ba6ddacfa',1,'IDrawable::rasterize()'],['../classAImageDrawable.html#a26589c9db7ad3fad6b17594f5c1e675a',1,'AImageDrawable::rasterize()']]],
-  ['rationale_10',['Motivation/rationale',['../example_app_auigram.html#autotoc_md186',1,'']]],
+  ['rationale_10',['Motivation/rationale',['../example_app_auigram.html#autotoc_md188',1,'']]],
   ['raw_5fserializable_11',['raw_serializable',['../structaui_1_1raw__serializable.html',1,'aui']]],
   ['raw_5fserializable_3c_20auuid_20_3e_12',['raw_serializable&lt; AUuid &gt;',['../structaui_1_1raw__serializable.html',1,'aui']]],
   ['rawdataat_13',['rawDataAt',['../classAImageView.html#a600e6a32cd975fc84e00b4943bf80083',1,'AImageView']]],
