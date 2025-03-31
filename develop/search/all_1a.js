@@ -15,7 +15,7 @@ var searchData=
   ['webpimageloader_12',['WebpImageLoader',['../classWebpImageLoader.html',1,'']]],
   ['whereexpr_13',['WhereExpr',['../classASqlBuilder_1_1WhereStatement_1_1WhereExpr.html',1,'ASqlBuilder::WhereStatement']]],
   ['wherestatement_14',['WhereStatement',['../classASqlBuilder_1_1WhereStatement.html',1,'ASqlBuilder']]],
-  ['wholearchive_15',['WHOLEARCHIVE',['../md_docs_2aui__executable.html#WHOLEARCHIVE',1,'WHOLEARCHIVE'],['../md_docs_2aui__module.html#autotoc_md118',1,'WHOLEARCHIVE']]],
+  ['wholearchive_15',['WHOLEARCHIVE',['../md_docs_2aui__executable.html#WHOLEARCHIVE',1,'WHOLEARCHIVE'],['../md_docs_2aui__module.html#autotoc_md119',1,'WHOLEARCHIVE']]],
   ['width_16',['width',['../classAImageView.html#a11c25bc37c302cc055aed072337cc962',1,'AImageView']]],
   ['win32_5fsubsystem_5fconsole_17',['WIN32_SUBSYSTEM_CONSOLE',['../md_docs_2aui__executable.html#autotoc_md93',1,'']]],
   ['win32wrapwhitespaceargumentswithquots_18',['win32WrapWhitespaceArgumentsWithQuots',['../structAProcess_1_1ArgStringList.html#aab66cfb4ccfe005efa17fb863fdf6ff6',1,'AProcess::ArgStringList']]],
@@ -50,7 +50,7 @@ var searchData=
   ['withranges_47',['withRanges',['../classACurl_1_1Builder.html#a51513a30f7de339ed1628a54d1fcb081',1,'ACurl::Builder::withRanges(size_t begin, size_t end)'],['../classACurl_1_1Builder.html#ae1e325a67f6f2cf5927e2916e1078975',1,'ACurl::Builder::withRanges(size_t begin)']]],
   ['withtimeout_48',['withTimeout',['../classACurl_1_1Builder.html#a1754a426158bf74d8a1bfef37e4deb59',1,'ACurl::Builder']]],
   ['withwritecallback_49',['withWriteCallback',['../classACurl_1_1Builder.html#a57f315c345c0d1f4da76e5d76f23e366',1,'ACurl::Builder::withWriteCallback(WriteCallback callback)'],['../classACurl_1_1Builder.html#af0ace66a35957f672389411e33403a1a',1,'ACurl::Builder::withWriteCallback(WriteCallbackV2 callback)']]],
-  ['wix_50',['WIX',['../md_docs_2Packaging_01Your_01App.html#autotoc_md161',1,'']]],
+  ['wix_50',['WIX',['../md_docs_2Packaging_01Your_01App.html#autotoc_md159',1,'']]],
   ['workdir_51',['workDir',['../structAProcess_1_1ProcessCreationInfo.html#a73cc79c723b0f1cfe746ddf59b9a1546',1,'AProcess::ProcessCreationInfo']]],
   ['worker_52',['Worker',['../classAThreadPool_1_1Worker.html',1,'AThreadPool']]],
   ['workflows_53',['Updater workflows',['../group__updater.html#UPDATER_WORKFLOWS',1,'']]],
@@ -65,5 +65,5 @@ var searchData=
   ['writescope_62',['writeScope',['../structAProperty.html#ab0229d9ee58c06dacaa012ece0d1d21d',1,'AProperty']]],
   ['writing_20platform_20dependent_20code_63',['Writing platform dependent code',['../md_docs_2Macros.html#autotoc_md151',1,'']]],
   ['writing_20tests_64',['Writing tests',['../md_docs_2Writing_01tests.html',1,'']]],
-  ['writing_20ui_20tests_65',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md185',1,'']]]
+  ['writing_20ui_20tests_65',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md187',1,'']]]
 ];
