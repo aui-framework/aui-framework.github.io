@@ -142,13 +142,13 @@ Methods<a class="aui-toc-hash" href="#methods" id="methods" style="color: var(--
 <div class="line">    }</div>
 </div><!-- fragment --></li>
 <li><code>save()</code>: saves the current list of notes to a JSON file. Also resets the dirty state. <div class="fragment"><div class="line">    <span class="keywordtype">void</span> save() {</div>
-<div class="line">        AFileOutputStream(<span class="stringliteral">"notes.json"</span>) &lt;&lt; aui::to_json(mNotes);</div>
+<div class="line">        AFileOutputStream(<span class="stringliteral">"notes.json"</span>) &lt;&lt; aui::to_json(*mNotes);</div>
 <div class="line">        mDirty = <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
 </div><!-- fragment --></li>
 <li><code>newNote()</code>: creates a new note with a default title and adds it to the list of notes. Sets this note as the currently selected note. <div class="fragment"><div class="line">    <span class="keywordtype">void</span> newNote() {</div>
 <div class="line">        <span class="keyword">auto</span> note = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> Note { .title = <span class="stringliteral">"Untitled"</span> });</div>
-<div class="line">        mNotes &lt;&lt; note;</div>
+<div class="line">        mNotes.writeScope()-&gt;push_back(note);</div>
 <div class="line">        mCurrentNote = std::move(note);</div>
 <div class="line">    }</div>
 </div><!-- fragment --></li>
@@ -164,7 +164,7 @@ Methods<a class="aui-toc-hash" href="#methods" id="methods" style="color: var(--
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> it = ranges::find(*mNotes, *mCurrentNote);</div>
-<div class="line">        it = mNotes-&gt;erase(it);</div>
+<div class="line">        it = mNotes.writeScope()-&gt;erase(it);</div>
 <div class="line">        mCurrentNote = it != mNotes-&gt;end() ? *it : <span class="keyword">nullptr</span>;</div>
 <div class="line">    }</div>
 </div><!-- fragment --></li>
@@ -195,16 +195,8 @@ UI Components and Layout<a class="aui-toc-hash" href="#ui-components-and-layout"
 <li>'Delete' button: deletes current note via <code>deleteCurrentNote()</code> method. It's <code>enabled</code> state is controlled by <code>mCurrentNote</code> property.</li>
 <li>Previews: contains dynamically generated previews of all notes, allowing users to select the one they want to view or edit. <div class="fragment"><div class="line">                      AScrollArea::Builder()</div>
 <div class="line">                          .withContents(</div>
-<div class="line">                          AUI_DECLARATIVE_FOR(note, mNotes, AVerticalLayout) {</div>
-<div class="line">                              <a class="code hl_function" href="group__reflection.html#ga3966ac0a101680f82e263fd2b128db4a">aui::reflect::for_each_field_value</a>(</div>
-<div class="line">                                  *note,</div>
-<div class="line">                                  aui::lambda_overloaded {</div>
-<div class="line">                                    [&amp;](<span class="keyword">auto</span>&amp; field) {},</div>
-<div class="line">                                    [&amp;](APropertyReadable <span class="keyword">auto</span>&amp; field) {</div>
-<div class="line">                                        ALOG_DEBUG(LOG_TAG) &lt;&lt; <span class="stringliteral">"Observing for changes "</span> &lt;&lt; &amp;field;</div>
-<div class="line">                                        <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(field.changed, me::markDirty);</div>
-<div class="line">                                    },</div>
-<div class="line">                                  });</div>
+<div class="line">                          <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(note, *mNotes, AVerticalLayout) {</div>
+<div class="line">                              observeChangesForDirty(note);</div>
 <div class="line">                              <span class="keywordflow">return</span> notePreview(note) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
 <div class="line">                                  <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;clicked, [<span class="keyword">this</span>, note] { mCurrentNote = note; });</div>
 <div class="line">                                  it&amp; mCurrentNote &gt; [note](AView&amp; view, <span class="keyword">const</span> _&lt;Note&gt;&amp; currentNote) {</div>

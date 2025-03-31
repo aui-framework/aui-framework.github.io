@@ -67,7 +67,8 @@ var searchData=
   ['getviewatrecursive_64',['getViewAtRecursive',['../classAViewContainerBase.html#a5c040aade2f725888bd0cbfc458f2f29',1,'AViewContainerBase::getViewAtRecursive(glm::ivec2 pos, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE) const noexcept'],['../classAViewContainerBase.html#a26ab2f2aab3a89c6ee2db5047b226913',1,'AViewContainerBase::getViewAtRecursive(glm::ivec2 pos, const Callback &amp;callback, ABitField&lt; AViewLookupFlags &gt; flags=AViewLookupFlags::NONE)']]],
   ['getviewatrecursiveoftype_65',['getViewAtRecursiveOfType',['../classAViewContainerBase.html#ad0ec2fb488b160cca7b71c3c3c587b90',1,'AViewContainerBase']]],
   ['getviews_66',['getViews',['../classAViewContainerBase.html#ae300cdf811f89c0dae1eb4aeb31c8a38',1,'AViewContainerBase']]],
-  ['getwindow_67',['getWindow',['../classAView.html#a9772e6b3644c906d39ef2fee317c0cfb',1,'AView']]],
-  ['global_68',['global',['../classAThreadPool.html#a8252b691d7328a97b22942b514b487d8',1,'AThreadPool::global()'],['../classACurlMulti.html#a0018cb7a092378766766bcf96e098d21',1,'ACurlMulti::global()']]],
-  ['grow_69',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]]
+  ['getviewscache_67',['getViewsCache',['../classAForEachUIBase.html#a3fea0e0c4186b859f298adab33120e9c',1,'AForEachUIBase::getViewsCache()'],['../classAForEachUI.html#a64c6029c521035c07124b843ece7d165',1,'AForEachUI::getViewsCache()']]],
+  ['getwindow_68',['getWindow',['../classAView.html#a9772e6b3644c906d39ef2fee317c0cfb',1,'AView']]],
+  ['global_69',['global',['../classAThreadPool.html#a8252b691d7328a97b22942b514b487d8',1,'AThreadPool::global()'],['../classACurlMulti.html#a0018cb7a092378766766bcf96e098d21',1,'ACurlMulti::global()']]],
+  ['grow_70',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]]
 ];

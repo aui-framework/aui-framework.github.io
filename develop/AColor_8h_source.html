@@ -253,6 +253,15 @@ $(function(){initNavTree('AColor_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    [[nodiscard]] <a class="code hl_class" href="classAColor.html">AColor</a> toRGB() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>};</div>
 </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00188">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01AColor_01_4.html">  188</a></span><span class="keyword">struct </span>std::hash&lt;<a class="code hl_class" href="classAColor.html">AColor</a>&gt; {</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keyword">auto</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="classAColor.html">AColor</a>&amp; c) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">return</span> std::hash&lt;std::string_view&gt;{}({ <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(&amp;c), <span class="keyword">sizeof</span>(c) });</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>};</div>
+</div>
 <div class="ttc" id="aclassAColor_html"><div class="ttname"><a href="classAColor.html">AColor</a></div><div class="ttdoc">Represents a 4-component floating point color (RGBA).</div><div class="ttdef"><b>Definition</b> AColor.h:26</div></div>
 <div class="ttc" id="aclassAColor_html_a4b520d17507b87d66352ca26eaa165c9"><div class="ttname"><a href="classAColor.html#a4b520d17507b87d66352ca26eaa165c9">AColor::AColor</a></div><div class="ttdeci">constexpr AColor(unsigned int color)</div><div class="ttdoc">Construct with hex integer.</div><div class="ttdef"><b>Definition</b> AColor.h:42</div></div>
 <div class="ttc" id="aclassAColor_html_a5762b3e4a42ea94374ea2335fba91c26"><div class="ttname"><a href="classAColor.html#a5762b3e4a42ea94374ea2335fba91c26">AColor::mul</a></div><div class="ttdeci">constexpr AColor mul(float d) const</div><div class="ttdoc">Multiply all color components except alpha channel (rgb * d, a)</div><div class="ttdef"><b>Definition</b> AColor.h:107</div></div>

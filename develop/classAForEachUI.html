@@ -5,7 +5,7 @@
 <meta content="IE=9" http-equiv="X-UA-Compatible"/>
 <meta content="Doxygen 1.13.1" name="generator"/>
 <meta content="width=device-width, initial-scale=0.8" name="viewport"/>
-<title>AUI Framework: AForEachUI&lt; T, Layout &gt; Class Template Reference</title>
+<title>AUI Framework: AForEachUI&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
 <script src="jquery.js" type="text/javascript"></script>
@@ -100,41 +100,55 @@ $(function(){initNavTree('classAForEachUI.html',''); initResizable(true); });
 <div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
 <a href="#pub-types">Public Types</a> |
 <a href="#pub-methods">Public Member Functions</a> |
+<a href="#pro-methods">Protected Member Functions</a> |
 <a href="classAForEachUI-members.html">List of all members</a> </div>
-<div class="headertitle"><div class="title">AForEachUI&lt; T, Layout &gt; Class Template Reference</div></div>
+<div class="headertitle"><div class="title">AForEachUI&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__views.html">aui::views</a> » <a class="el" href="group__useful__views.html">Views</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/View/AForEachUI.h#L23"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/View/AForEachUI.h#L239"></b>
+<p>Customizable lists display.  
+ <a href="#details">More...</a></p>
+<p><code>#include &lt;<a class="el" href="AForEachUI_8h_source.html">AUI/View/AForEachUI.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:acc13642e9b90e9feb5109f7a18df297c" id="r_acc13642e9b90e9feb5109f7a18df297c"><td align="right" class="memItemLeft" valign="top"><a id="acc13642e9b90e9feb5109f7a18df297c" name="acc13642e9b90e9feb5109f7a18df297c"></a>
-using </td><td class="memItemRight" valign="bottom"><b>List</b> = <a class="el" href="class__.html">_</a>&lt;<a class="el" href="classIListModel.html">IListModel</a>&lt;T&gt;&gt;</td></tr>
-<tr class="separator:acc13642e9b90e9feb5109f7a18df297c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a86cd302b8c5ffd41c86de8853f38f0c6" id="r_a86cd302b8c5ffd41c86de8853f38f0c6"><td align="right" class="memItemLeft" valign="top"><a id="a86cd302b8c5ffd41c86de8853f38f0c6" name="a86cd302b8c5ffd41c86de8853f38f0c6"></a>
-using </td><td class="memItemRight" valign="bottom"><b>Factory</b> = std::function&lt;<a class="el" href="class__.html">_</a>&lt;<a class="el" href="classAView.html">AView</a>&gt;(const T&amp; value, size_t index)&gt;</td></tr>
-<tr class="separator:a86cd302b8c5ffd41c86de8853f38f0c6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac82c3c96e23dac8304409bc6040c88e9" id="r_ac82c3c96e23dac8304409bc6040c88e9"><td align="right" class="memItemLeft" valign="top"><a id="ac82c3c96e23dac8304409bc6040c88e9" name="ac82c3c96e23dac8304409bc6040c88e9"></a>
+using </td><td class="memItemRight" valign="bottom"><b>List</b> = <a class="el" href="structaui_1_1any__view.html">AForEachUIBase::List</a></td></tr>
+<tr class="separator:ac82c3c96e23dac8304409bc6040c88e9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0d49d0245f7f94a7f87b64c2409c75ce" id="r_a0d49d0245f7f94a7f87b64c2409c75ce"><td align="right" class="memItemLeft" valign="top"><a id="a0d49d0245f7f94a7f87b64c2409c75ce" name="a0d49d0245f7f94a7f87b64c2409c75ce"></a>
+using </td><td class="memItemRight" valign="bottom"><b>ListFactory</b> = std::function&lt;<a class="el" href="structaui_1_1any__view.html">List</a>()&gt;</td></tr>
+<tr class="separator:a0d49d0245f7f94a7f87b64c2409c75ce"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a59a40f024226830ed5af60b504d36e01" id="r_a59a40f024226830ed5af60b504d36e01"><td align="right" class="memItemLeft" valign="top"><a id="a59a40f024226830ed5af60b504d36e01" name="a59a40f024226830ed5af60b504d36e01"></a>
+using </td><td class="memItemRight" valign="bottom"><b>ViewFactory</b> = std::function&lt;<a class="el" href="class__.html">_</a>&lt;<a class="el" href="classAView.html">AView</a>&gt;(const T&amp; value)&gt;</td></tr>
+<tr class="separator:a59a40f024226830ed5af60b504d36e01"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_types_classAForEachUIBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classAForEachUIBase')"><img alt="-" src="closed.png"/> Public Types inherited from <a class="el" href="classAForEachUIBase.html">AForEachUIBase</a></td></tr>
+<tr class="memitem:a87811d41e0322e0860218274567eabaa inherit pub_types_classAForEachUIBase" id="r_a87811d41e0322e0860218274567eabaa"><td align="right" class="memItemLeft" valign="top">
+using </td><td class="memItemRight" valign="bottom"><b>List</b> = <a class="el" href="structaui_1_1any__view.html">aui::any_view</a>&lt;<a class="el" href="structAForEachUIBase_1_1Entry.html">Entry</a>&gt;</td></tr>
+<tr class="separator:a87811d41e0322e0860218274567eabaa inherit pub_types_classAForEachUIBase"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a079363d21a5c66c7b04caaff917da607" id="r_a079363d21a5c66c7b04caaff917da607"><td align="right" class="memItemLeft" valign="top"><a id="a079363d21a5c66c7b04caaff917da607" name="a079363d21a5c66c7b04caaff917da607"></a>
- </td><td class="memItemRight" valign="bottom"><b>AForEachUI</b> (const <a class="el" href="class__.html">List</a> &amp;list)</td></tr>
-<tr class="separator:a079363d21a5c66c7b04caaff917da607"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad4f53b3826fb3ab13db317f17fd35b9e" id="r_ad4f53b3826fb3ab13db317f17fd35b9e"><td align="right" class="memItemLeft" valign="top"><a id="ad4f53b3826fb3ab13db317f17fd35b9e" name="ad4f53b3826fb3ab13db317f17fd35b9e"></a>
-void </td><td class="memItemRight" valign="bottom"><b>setModel</b> (const <a class="el" href="class__.html">List</a> &amp;list)</td></tr>
-<tr class="separator:ad4f53b3826fb3ab13db317f17fd35b9e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac4244a5cd169f2342d5d58ba5ae3ee46" id="r_ac4244a5cd169f2342d5d58ba5ae3ee46"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4244a5cd169f2342d5d58ba5ae3ee46">insertItem</a> (size_t at, const T &amp;value) override</td></tr>
-<tr class="separator:ac4244a5cd169f2342d5d58ba5ae3ee46"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8bdfdb0f5bc6b6a03b37210baa02f332" id="r_a8bdfdb0f5bc6b6a03b37210baa02f332"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bdfdb0f5bc6b6a03b37210baa02f332">updateItem</a> (size_t at, const T &amp;value) override</td></tr>
-<tr class="separator:a8bdfdb0f5bc6b6a03b37210baa02f332"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5447c4a770da4a6fc4d7ad34327bdda1" id="r_a5447c4a770da4a6fc4d7ad34327bdda1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5447c4a770da4a6fc4d7ad34327bdda1">removeItem</a> (size_t at) override</td></tr>
-<tr class="separator:a5447c4a770da4a6fc4d7ad34327bdda1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3d7f7f77eaedc385860f2adf996ac2a0" id="r_a3d7f7f77eaedc385860f2adf996ac2a0"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d7f7f77eaedc385860f2adf996ac2a0">onDataCountChanged</a> () override</td></tr>
-<tr class="separator:a3d7f7f77eaedc385860f2adf996ac2a0"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a36c0d583b52546b70e8ac0f16c6b81a8" id="r_a36c0d583b52546b70e8ac0f16c6b81a8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a36c0d583b52546b70e8ac0f16c6b81a8">onDataChanged</a> () override</td></tr>
-<tr class="separator:a36c0d583b52546b70e8ac0f16c6b81a8"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa91d32dc91f74819a9e1761c50473c05" id="r_aa91d32dc91f74819a9e1761c50473c05"><td align="right" class="memItemLeft" valign="top"><a id="aa91d32dc91f74819a9e1761c50473c05" name="aa91d32dc91f74819a9e1761c50473c05"></a>
-void </td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classFactory.html">Factory</a> &amp;f)</td></tr>
-<tr class="separator:aa91d32dc91f74819a9e1761c50473c05"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab1ab1f9fdbfb7249cefec550b6a2dc9b" id="r_ab1ab1f9fdbfb7249cefec550b6a2dc9b"><td class="memTemplParams" colspan="2"><a id="ab1ab1f9fdbfb7249cefec550b6a2dc9b" name="ab1ab1f9fdbfb7249cefec550b6a2dc9b"></a>
+template&lt;aui::detail::RangeFactory&lt; T &gt; RangeFactory&gt; </td></tr>
+<tr class="memitem:ab1ab1f9fdbfb7249cefec550b6a2dc9b"><td align="right" class="memTemplItemLeft" valign="top"> </td><td class="memTemplItemRight" valign="bottom"><b>AForEachUI</b> (RangeFactory &amp;&amp;rangeFactory)</td></tr>
+<tr class="separator:ab1ab1f9fdbfb7249cefec550b6a2dc9b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a351b0f0116a57ef582daa21858973df7" id="r_a351b0f0116a57ef582daa21858973df7"><td class="memTemplParams" colspan="2"><a id="a351b0f0116a57ef582daa21858973df7" name="a351b0f0116a57ef582daa21858973df7"></a>
+template&lt;aui::detail::RangeFactory&lt; T &gt; RangeFactory&gt; </td></tr>
+<tr class="memitem:a351b0f0116a57ef582daa21858973df7"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>setModel</b> (RangeFactory &amp;&amp;rangeFactory)</td></tr>
+<tr class="separator:a351b0f0116a57ef582daa21858973df7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad80e9e8612d0a422c527e18cdcbb6536" id="r_ad80e9e8612d0a422c527e18cdcbb6536"><td class="memTemplParams" colspan="2"><a id="ad80e9e8612d0a422c527e18cdcbb6536" name="ad80e9e8612d0a422c527e18cdcbb6536"></a>
+template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; const T &amp; &gt; ViewFactoryT&gt; </td></tr>
+<tr class="memitem:ad80e9e8612d0a422c527e18cdcbb6536"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (ViewFactoryT &amp;&amp;f)</td></tr>
+<tr class="separator:ad80e9e8612d0a422c527e18cdcbb6536"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac46fd871a23cabf5db3dc28dd0166b27" id="r_ac46fd871a23cabf5db3dc28dd0166b27"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac46fd871a23cabf5db3dc28dd0166b27">invalidate</a> () override</td></tr>
+<tr class="memdesc:ac46fd871a23cabf5db3dc28dd0166b27"><td class="mdescLeft"> </td><td class="mdescRight">Notifies that range was changed or iterators might have invalidated.     <br/></td></tr>
+<tr class="separator:ac46fd871a23cabf5db3dc28dd0166b27"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2b5069c33c722ca6cd43af32dd1abe70" id="r_a2b5069c33c722ca6cd43af32dd1abe70"><td align="right" class="memItemLeft" valign="top"><a id="a2b5069c33c722ca6cd43af32dd1abe70" name="a2b5069c33c722ca6cd43af32dd1abe70"></a>
+void </td><td class="memItemRight" valign="bottom"><b>setLayout</b> (_unique&lt; <a class="el" href="classALayout.html">ALayout</a> &gt; layout)</td></tr>
+<tr class="memdesc:a2b5069c33c722ca6cd43af32dd1abe70"><td class="mdescLeft"> </td><td class="mdescRight">Set new layout manager for this <a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a>. DESTROYS OLD LAYOUT MANAGER WITH ITS VIEWS!!! <br/></td></tr>
+<tr class="separator:a2b5069c33c722ca6cd43af32dd1abe70"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_methods_classAForEachUIBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAForEachUIBase')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="classAForEachUIBase.html">AForEachUIBase</a></td></tr>
+<tr class="memitem:a9fff7e57988122bb3bbe6b79b92b4715 inherit pub_methods_classAForEachUIBase" id="r_a9fff7e57988122bb3bbe6b79b92b4715"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAForEachUIBase.html#a9fff7e57988122bb3bbe6b79b92b4715">setPosition</a> (glm::ivec2 <a class="el" href="classAView.html#afc0c6dce2eb0c78fefe27de88eb7b67c">position</a>) override</td></tr>
+<tr class="separator:a9fff7e57988122bb3bbe6b79b92b4715 inherit pub_methods_classAForEachUIBase"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pub_methods_classAViewContainerBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAViewContainerBase')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="classAViewContainerBase.html">AViewContainerBase</a></td></tr>
 <tr class="memitem:afee2348e0a4b1e39b0ead8a72cc8997a inherit pub_methods_classAViewContainerBase" id="r_afee2348e0a4b1e39b0ead8a72cc8997a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#afee2348e0a4b1e39b0ead8a72cc8997a">render</a> (<a class="el" href="structARenderContext.html">ARenderContext</a> context) override</td></tr>
 <tr class="memdesc:afee2348e0a4b1e39b0ead8a72cc8997a inherit pub_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Draws this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Noone should call this function except rendering routine.  <br/></td></tr>
@@ -423,9 +437,6 @@ int </td><td class="memItemRight" valign="bottom"><b>getExpandingVertical</b> (
 <tr class="memitem:ab282e37f6a0676d6cf166cb49cc77b78 inherit pub_methods_classAView" id="r_ab282e37f6a0676d6cf166cb49cc77b78"><td align="right" class="memItemLeft" valign="top">
 void </td><td class="memItemRight" valign="bottom"><b>setOpacity</b> (<a class="el" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a> opacity)</td></tr>
 <tr class="separator:ab282e37f6a0676d6cf166cb49cc77b78 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa99c56eb51b04d39afc7efae8f987b9b inherit pub_methods_classAView" id="r_aa99c56eb51b04d39afc7efae8f987b9b"><td align="right" class="memItemLeft" valign="top">
-virtual void </td><td class="memItemRight" valign="bottom"><b>setPosition</b> (glm::ivec2 <a class="el" href="classAView.html#afc0c6dce2eb0c78fefe27de88eb7b67c">position</a>)</td></tr>
-<tr class="separator:aa99c56eb51b04d39afc7efae8f987b9b inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac385fe5c95866dbe081aac74c7dba519 inherit pub_methods_classAView" id="r_ac385fe5c95866dbe081aac74c7dba519"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#ac385fe5c95866dbe081aac74c7dba519">setSizeForced</a> (glm::ivec2 <a class="el" href="classAView.html#a3bb9d90332539568c963aed3d248326a">size</a>)</td></tr>
 <tr class="separator:ac385fe5c95866dbe081aac74c7dba519 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af2c23164464ef5a50dade0e76312d2f0 inherit pub_methods_classAView" id="r_af2c23164464ef5a50dade0e76312d2f0"><td align="right" class="memItemLeft" valign="top">
@@ -544,10 +555,10 @@ void </td><td class="memItemRight" valign="bottom"><b>enable</b> ()</td></tr>
 <tr class="memitem:aca3b5435d85715aa328ef8497d4beba9 inherit pub_methods_classAView" id="r_aca3b5435d85715aa328ef8497d4beba9"><td align="right" class="memItemLeft" valign="top">
 void </td><td class="memItemRight" valign="bottom"><b>disable</b> ()</td></tr>
 <tr class="separator:aca3b5435d85715aa328ef8497d4beba9 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac6292013de2f384cb791f1c91787a362 inherit pub_methods_classAView" id="r_ac6292013de2f384cb791f1c91787a362"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>operator+</b> (<a class="el" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> rule)</td></tr>
-<tr class="memdesc:ac6292013de2f384cb791f1c91787a362 inherit pub_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Helper function for <a class="el" href="kAUI_8h_source.html">kAUI.h</a>:with_style. <br/></td></tr>
-<tr class="separator:ac6292013de2f384cb791f1c91787a362 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:afe2dfe6482562177e7404254dcb917d6 inherit pub_methods_classAView" id="r_afe2dfe6482562177e7404254dcb917d6"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>operator&amp;</b> (<a class="el" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> rule)</td></tr>
+<tr class="memdesc:afe2dfe6482562177e7404254dcb917d6 inherit pub_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Helper function for <a class="el" href="kAUI_8h_source.html">kAUI.h</a>:with_style. <br/></td></tr>
+<tr class="separator:afe2dfe6482562177e7404254dcb917d6 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aae643e27fa9578fecad36519f30ed043 inherit pub_methods_classAView" id="r_aae643e27fa9578fecad36519f30ed043"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aae643e27fa9578fecad36519f30ed043">invalidateStateStyles</a> ()</td></tr>
 <tr class="memdesc:aae643e27fa9578fecad36519f30ed043 inherit pub_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Updates state selectors for ASS.  <br/></td></tr>
 <tr class="separator:aae643e27fa9578fecad36519f30ed043 inherit pub_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
@@ -617,6 +628,117 @@ void </td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMyThre
 <tr class="separator:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
+Protected Member Functions<a class="aui-toc-hash" href="#pro-methods" id="pro-methods" name="pro-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
+<tr class="memitem:a64c6029c521035c07124b843ece7d165" id="r_a64c6029c521035c07124b843ece7d165"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAMap.html">aui::for_each_ui::detail::ViewsSharedCache</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c6029c521035c07124b843ece7d165">getViewsCache</a> () override</td></tr>
+<tr class="memdesc:a64c6029c521035c07124b843ece7d165"><td class="mdescLeft"> </td><td class="mdescRight">Returns a cache of views, if any.  <br/></td></tr>
+<tr class="separator:a64c6029c521035c07124b843ece7d165"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pro_methods_classAForEachUIBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAForEachUIBase')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAForEachUIBase.html">AForEachUIBase</a></td></tr>
+<tr class="memitem:a140d6964fa41920a279ae9f0aca0ed76 inherit pro_methods_classAForEachUIBase" id="r_a140d6964fa41920a279ae9f0aca0ed76"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAForEachUIBase.html#a140d6964fa41920a279ae9f0aca0ed76">onViewGraphSubtreeChanged</a> () override</td></tr>
+<tr class="memdesc:a140d6964fa41920a279ae9f0aca0ed76 inherit pro_methods_classAForEachUIBase"><td class="mdescLeft"> </td><td class="mdescRight">Called when direct or indirect parent has changed.  <br/></td></tr>
+<tr class="separator:a140d6964fa41920a279ae9f0aca0ed76 inherit pro_methods_classAForEachUIBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9b375d8afdf1d6500c9deed08b67cce inherit pro_methods_classAForEachUIBase" id="r_ae9b375d8afdf1d6500c9deed08b67cce"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAForEachUIBase.html#ae9b375d8afdf1d6500c9deed08b67cce">applyGeometryToChildren</a> () override</td></tr>
+<tr class="separator:ae9b375d8afdf1d6500c9deed08b67cce inherit pro_methods_classAForEachUIBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad8bc03966aa7322b68fac6b747512fdb inherit pro_methods_classAForEachUIBase" id="r_ad8bc03966aa7322b68fac6b747512fdb"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>setModelImpl</b> (<a class="el" href="structaui_1_1any__view.html">List</a> model)</td></tr>
+<tr class="memdesc:ad8bc03966aa7322b68fac6b747512fdb inherit pro_methods_classAForEachUIBase"><td class="mdescLeft"> </td><td class="mdescRight">Notifies that range was changed or iterators might have invalidated. <br/></td></tr>
+<tr class="separator:ad8bc03966aa7322b68fac6b747512fdb inherit pro_methods_classAForEachUIBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pro_methods_classAViewContainerBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAViewContainerBase')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAViewContainerBase.html">AViewContainerBase</a></td></tr>
+<tr class="memitem:abf186faf03c8c48f1673346fbbebf161 inherit pro_methods_classAViewContainerBase" id="r_abf186faf03c8c48f1673346fbbebf161"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>drawView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view, <a class="el" href="structARenderContext.html">ARenderContext</a> contextOfTheContainer)</td></tr>
+<tr class="separator:abf186faf03c8c48f1673346fbbebf161 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abcea93c3fe9b45162817158666b99c0a inherit pro_methods_classAViewContainerBase" id="r_abcea93c3fe9b45162817158666b99c0a"><td class="memTemplParams" colspan="2">
+template&lt;typename Iterator&gt; </td></tr>
+<tr class="memitem:abcea93c3fe9b45162817158666b99c0a inherit pro_methods_classAViewContainerBase"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>drawViews</b> (Iterator begin, Iterator end, <a class="el" href="structARenderContext.html">ARenderContext</a> contextPassedToContainer)</td></tr>
+<tr class="separator:abcea93c3fe9b45162817158666b99c0a inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abd2dfc9066b58828d03862d4f3ce5898 inherit pro_methods_classAViewContainerBase" id="r_abd2dfc9066b58828d03862d4f3ce5898"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#abd2dfc9066b58828d03862d4f3ce5898">invalidateAllStyles</a> () override</td></tr>
+<tr class="memdesc:abd2dfc9066b58828d03862d4f3ce5898 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.  <br/></td></tr>
+<tr class="separator:abd2dfc9066b58828d03862d4f3ce5898 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a430b7b07d3cca87b3475ca377571f1f8 inherit pro_methods_classAViewContainerBase" id="r_a430b7b07d3cca87b3475ca377571f1f8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#a430b7b07d3cca87b3475ca377571f1f8">onViewGraphSubtreeChanged</a> () override</td></tr>
+<tr class="memdesc:a430b7b07d3cca87b3475ca377571f1f8 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Called when direct or indirect parent has changed.  <br/></td></tr>
+<tr class="separator:a430b7b07d3cca87b3475ca377571f1f8 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a20108c302935d781c9929cbd3380386d inherit pro_methods_classAViewContainerBase" id="r_a20108c302935d781c9929cbd3380386d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#a20108c302935d781c9929cbd3380386d">invalidateAssHelper</a> () override</td></tr>
+<tr class="memdesc:a20108c302935d781c9929cbd3380386d inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Resets mAssHelper.  <br/></td></tr>
+<tr class="separator:a20108c302935d781c9929cbd3380386d inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a15d00346ddbb47ef858cd66ba739111a inherit pro_methods_classAViewContainerBase" id="r_a15d00346ddbb47ef858cd66ba739111a"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>setViews</b> (<a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt; views)</td></tr>
+<tr class="memdesc:a15d00346ddbb47ef858cd66ba739111a inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Replace views. <br/></td></tr>
+<tr class="separator:a15d00346ddbb47ef858cd66ba739111a inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a065e6e7cddaa0de5dc6cae91dceca07e inherit pro_methods_classAViewContainerBase" id="r_a065e6e7cddaa0de5dc6cae91dceca07e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#a065e6e7cddaa0de5dc6cae91dceca07e">addViewCustomLayout</a> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
+<tr class="memdesc:a065e6e7cddaa0de5dc6cae91dceca07e inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Adds view to container without exposing it to the layout manager.  <br/></td></tr>
+<tr class="separator:a065e6e7cddaa0de5dc6cae91dceca07e inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a61a44647cf745717b4904752ad72648b inherit pro_methods_classAViewContainerBase" id="r_a61a44647cf745717b4904752ad72648b"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>addViews</b> (<a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt; views)</td></tr>
+<tr class="memdesc:a61a44647cf745717b4904752ad72648b inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Add all views from vector. <br/></td></tr>
+<tr class="separator:a61a44647cf745717b4904752ad72648b inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a94d32b819a44ed3cdbcc28bb829fa5d3 inherit pro_methods_classAViewContainerBase" id="r_a94d32b819a44ed3cdbcc28bb829fa5d3"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>addView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
+<tr class="memdesc:a94d32b819a44ed3cdbcc28bb829fa5d3 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Add view to the container. <br/></td></tr>
+<tr class="separator:a94d32b819a44ed3cdbcc28bb829fa5d3 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a507d17db67b2627988dee34b8d075958 inherit pro_methods_classAViewContainerBase" id="r_a507d17db67b2627988dee34b8d075958"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>addView</b> (size_t index, const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
+<tr class="memdesc:a507d17db67b2627988dee34b8d075958 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Add view at specific index to the container. <br/></td></tr>
+<tr class="separator:a507d17db67b2627988dee34b8d075958 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab447d7ed76c55646fe88962f893c95e9 inherit pro_methods_classAViewContainerBase" id="r_ab447d7ed76c55646fe88962f893c95e9"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>removeViews</b> (<a class="el" href="structaui_1_1range.html">aui::range</a>&lt; <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt;<a class="el" href="classAVector.html">::iterator</a> &gt; views)</td></tr>
+<tr class="memdesc:ab447d7ed76c55646fe88962f893c95e9 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove views from the container. <br/></td></tr>
+<tr class="separator:ab447d7ed76c55646fe88962f893c95e9 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a893f5dfb66264aa5c0b1e8ea87b31612 inherit pro_methods_classAViewContainerBase" id="r_a893f5dfb66264aa5c0b1e8ea87b31612"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>removeView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
+<tr class="memdesc:a893f5dfb66264aa5c0b1e8ea87b31612 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove view from the container. <br/></td></tr>
+<tr class="separator:a893f5dfb66264aa5c0b1e8ea87b31612 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4050a6197941af693f0d505b23308c5b inherit pro_methods_classAViewContainerBase" id="r_a4050a6197941af693f0d505b23308c5b"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>removeView</b> (<a class="el" href="classAView.html">AView</a> *view)</td></tr>
+<tr class="memdesc:a4050a6197941af693f0d505b23308c5b inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove view from the container. <br/></td></tr>
+<tr class="separator:a4050a6197941af693f0d505b23308c5b inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2437e0ff6714cd4cb0eac7c2a4aa6cff inherit pro_methods_classAViewContainerBase" id="r_a2437e0ff6714cd4cb0eac7c2a4aa6cff"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>removeView</b> (size_t index)</td></tr>
+<tr class="memdesc:a2437e0ff6714cd4cb0eac7c2a4aa6cff inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove view from the container at specified index. <br/></td></tr>
+<tr class="separator:a2437e0ff6714cd4cb0eac7c2a4aa6cff inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7ff74467604e643889f579390602902e inherit pro_methods_classAViewContainerBase" id="r_a7ff74467604e643889f579390602902e"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>removeAllViews</b> ()</td></tr>
+<tr class="memdesc:a7ff74467604e643889f579390602902e inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove all views from container. <br/></td></tr>
+<tr class="separator:a7ff74467604e643889f579390602902e inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab7bcd4a4bc08fc11c9bc1a9ff036f5e4 inherit pro_methods_classAViewContainerBase" id="r_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAViewContainer.html">AViewContainer</a> &gt; &amp;container)</td></tr>
+<tr class="memdesc:ab7bcd4a4bc08fc11c9bc1a9ff036f5e4 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Moves (like via std::move) all children and layout of the specified container to this container.  <br/></td></tr>
+<tr class="separator:ab7bcd4a4bc08fc11c9bc1a9ff036f5e4 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2b5069c33c722ca6cd43af32dd1abe70 inherit pro_methods_classAViewContainerBase" id="r_a2b5069c33c722ca6cd43af32dd1abe70"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>setLayout</b> (_unique&lt; <a class="el" href="classALayout.html">ALayout</a> &gt; layout)</td></tr>
+<tr class="memdesc:a2b5069c33c722ca6cd43af32dd1abe70 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Set new layout manager for this <a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a>. DESTROYS OLD LAYOUT MANAGER WITH ITS VIEWS!!! <br/></td></tr>
+<tr class="separator:a2b5069c33c722ca6cd43af32dd1abe70 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0a4981ddb3cfe97e26d7d27a6d4f7780 inherit pro_methods_classAViewContainerBase" id="r_a0a4981ddb3cfe97e26d7d27a6d4f7780"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>renderChildren</b> (<a class="el" href="structARenderContext.html">ARenderContext</a> contextPassedToContainer)</td></tr>
+<tr class="separator:a0a4981ddb3cfe97e26d7d27a6d4f7780 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pro_methods_classAView"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAView')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAView.html">AView</a></td></tr>
+<tr class="memitem:a1b273cbe961c8633b17171b750762135 inherit pro_methods_classAView" id="r_a1b273cbe961c8633b17171b750762135"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135">transformGestureEventsToDesktop</a> (const glm::ivec2 &amp;origin, const AGestureEvent &amp;event)</td></tr>
+<tr class="memdesc:a1b273cbe961c8633b17171b750762135 inherit pro_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Converts touch screen events to desktop.  <br/></td></tr>
+<tr class="separator:a1b273cbe961c8633b17171b750762135 inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a433c7d9f753ea1170fdb9db475de7bdf inherit pro_methods_classAView" id="r_a433c7d9f753ea1170fdb9db475de7bdf"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (const <a class="el" href="structass_1_1PropertyList.html">ass::PropertyList</a> &amp;propertyList)</td></tr>
+<tr class="separator:a433c7d9f753ea1170fdb9db475de7bdf inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1a7019082a240f8d9ab12a149dcaeca2 inherit pro_methods_classAView" id="r_a1a7019082a240f8d9ab12a149dcaeca2"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (const <a class="el" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> &amp;propertyList)</td></tr>
+<tr class="separator:a1a7019082a240f8d9ab12a149dcaeca2 inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abfc76e070a2e0e458ee116993caea83d inherit pro_methods_classAView" id="r_abfc76e070a2e0e458ee116993caea83d"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAVector.html">AMenuModel</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#abfc76e070a2e0e458ee116993caea83d">composeContextMenu</a> ()</td></tr>
+<tr class="memdesc:abfc76e070a2e0e458ee116993caea83d inherit pro_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Produce context (right click) menu.  <br/></td></tr>
+<tr class="separator:abfc76e070a2e0e458ee116993caea83d inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa3a9e605b71daed7ad2804bb30b1eb8f inherit pro_methods_classAView" id="r_aa3a9e605b71daed7ad2804bb30b1eb8f"><td align="right" class="memItemLeft" valign="top">
+virtual void </td><td class="memItemRight" valign="bottom"><b>commitStyle</b> ()</td></tr>
+<tr class="separator:aa3a9e605b71daed7ad2804bb30b1eb8f inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pro_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObject')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
+<tr class="memitem:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject" id="r_a98cf3fa4ac279b30860bf228c44306b2"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
+<tr class="memdesc:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Set thread of the object. <br/></td></tr>
+<tr class="separator:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pro_methods_classAObjectBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObjectBase')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObjectBase.html">AObjectBase</a></td></tr>
+<tr class="memitem:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase" id="r_af8f1971268c5b7a2eff3f27021056bea"><td align="right" class="memItemLeft" valign="top">
+void </td><td class="memItemRight" valign="bottom"><b>clearAllIngoingConnections</b> () noexcept</td></tr>
+<tr class="separator:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase" id="r_a3b09afce09ed490182435a088d320acc"><td align="right" class="memItemLeft" valign="top">
+virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotException</b> (std::exception_ptr exception)</td></tr>
+<tr class="memdesc:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="mdescLeft"> </td><td class="mdescRight">Called then an exception has thrown during slot processing of the signal emitted by this object. <br/></td></tr>
+<tr class="separator:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">
 Additional Inherited Members<a class="aui-toc-hash" href="#inherited" id="inherited" name="inherited" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
 <tr class="inherit_header pub_static_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classAObject')"><img alt="-" src="closed.png"/> Static Public Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
 <tr class="memitem:abe38a866ade883ba79dcb444f6edefd4 inherit pub_static_methods_classAObject" id="r_abe38a866ade883ba79dcb444f6edefd4"><td align="right" class="memItemLeft" valign="top">
@@ -668,6 +790,9 @@ static void </td><td class="memItemRight" valign="bottom"><b>moveToThread</b> (
 <tr class="inherit_header pub_attribs_classAView"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classAView')"><img alt="-" src="closed.png"/> Signals and public fields inherited from <a class="el" href="classAView.html">AView</a></td></tr>
 <tr class="memitem:aa0b29b615b99f9b60f08a3669aa19adf inherit pub_attribs_classAView" id="r_aa0b29b615b99f9b60f08a3669aa19adf"><td align="right" class="memItemLeft" valign="top"><a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#aa0b29b615b99f9b60f08a3669aa19adf">viewGraphSubtreeChanged</a></td></tr>
 <tr class="separator:aa0b29b615b99f9b60f08a3669aa19adf inherit pub_attribs_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9695a0024e4d0e8b717362f0f35944ce inherit pub_attribs_classAView" id="r_a9695a0024e4d0e8b717362f0f35944ce"><td align="right" class="memItemLeft" valign="top"><a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a9695a0024e4d0e8b717362f0f35944ce">redrawn</a></td></tr>
+<tr class="memdesc:a9695a0024e4d0e8b717362f0f35944ce inherit pub_attribs_classAView"><td class="mdescLeft"> </td><td class="mdescRight">View is painted onto the some surface.  <br/></td></tr>
+<tr class="separator:a9695a0024e4d0e8b717362f0f35944ce inherit pub_attribs_classAView"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ad741cdbf0794914fdb189ed68d603de8 inherit pub_attribs_classAView" id="r_ad741cdbf0794914fdb189ed68d603de8"><td align="right" class="memItemLeft" valign="top">
 <a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; bool &gt; </td><td class="memItemRight" valign="bottom"><b>hoveredState</b></td></tr>
 <tr class="separator:ad741cdbf0794914fdb189ed68d603de8 inherit pub_attribs_classAView"><td class="memSeparator" colspan="2"> </td></tr>
@@ -736,104 +861,18 @@ static void </td><td class="memItemRight" valign="bottom"><b>moveToThread</b> (
 <tr class="memitem:aedba61e9f5d0875786ffcfb10a58fb8e inherit pub_attribs_classAView" id="r_aedba61e9f5d0875786ffcfb10a58fb8e"><td align="right" class="memItemLeft" valign="top">
 <a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt; </td><td class="memItemRight" valign="bottom"><b>childFocused</b></td></tr>
 <tr class="separator:aedba61e9f5d0875786ffcfb10a58fb8e inherit pub_attribs_classAView"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pub_static_attribs_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_classAObject')"><img alt="-" src="closed.png"/> Static Public Attributes inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
+<tr class="memitem:ae877cf776a7569eca5185c24bd4ccd74 inherit pub_static_attribs_classAObject" id="r_ae877cf776a7569eca5185c24bd4ccd74"><td align="right" class="memItemLeft" valign="top">static constexpr <a class="el" href="classAObjectBase.html">AObjectBase</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="classAObject.html#ae877cf776a7569eca5185c24bd4ccd74">GENERIC_OBSERVER</a> = nullptr</td></tr>
+<tr class="memdesc:ae877cf776a7569eca5185c24bd4ccd74 inherit pub_static_attribs_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Indicates that a connection should not be explicitly linked to receiver's lifetime.  <br/></td></tr>
+<tr class="separator:ae877cf776a7569eca5185c24bd4ccd74 inherit pub_static_attribs_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pub_static_attribs_classAObjectBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_classAObjectBase')"><img alt="-" src="closed.png"/> Static Public Attributes inherited from <a class="el" href="classAObjectBase.html">AObjectBase</a></td></tr>
 <tr class="memitem:abb2e1ff6eab42cc425bbff3448541e41 inherit pub_static_attribs_classAObjectBase" id="r_abb2e1ff6eab42cc425bbff3448541e41"><td align="right" class="memItemLeft" valign="top">
 static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><td class="memItemRight" valign="bottom"><b>SIGNAL_SLOT_GLOBAL_SYNC</b></td></tr>
 <tr class="separator:abb2e1ff6eab42cc425bbff3448541e41 inherit pub_static_attribs_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pro_methods_classAViewContainerBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAViewContainerBase')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAViewContainerBase.html">AViewContainerBase</a></td></tr>
-<tr class="memitem:abf186faf03c8c48f1673346fbbebf161 inherit pro_methods_classAViewContainerBase" id="r_abf186faf03c8c48f1673346fbbebf161"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>drawView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view, <a class="el" href="structARenderContext.html">ARenderContext</a> contextOfTheContainer)</td></tr>
-<tr class="separator:abf186faf03c8c48f1673346fbbebf161 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abcea93c3fe9b45162817158666b99c0a inherit pro_methods_classAViewContainerBase" id="r_abcea93c3fe9b45162817158666b99c0a"><td class="memTemplParams" colspan="2">
-template&lt;typename Iterator&gt; </td></tr>
-<tr class="memitem:abcea93c3fe9b45162817158666b99c0a inherit pro_methods_classAViewContainerBase"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>drawViews</b> (Iterator begin, Iterator end, <a class="el" href="structARenderContext.html">ARenderContext</a> contextPassedToContainer)</td></tr>
-<tr class="separator:abcea93c3fe9b45162817158666b99c0a inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abd2dfc9066b58828d03862d4f3ce5898 inherit pro_methods_classAViewContainerBase" id="r_abd2dfc9066b58828d03862d4f3ce5898"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#abd2dfc9066b58828d03862d4f3ce5898">invalidateAllStyles</a> () override</td></tr>
-<tr class="memdesc:abd2dfc9066b58828d03862d4f3ce5898 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.  <br/></td></tr>
-<tr class="separator:abd2dfc9066b58828d03862d4f3ce5898 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a430b7b07d3cca87b3475ca377571f1f8 inherit pro_methods_classAViewContainerBase" id="r_a430b7b07d3cca87b3475ca377571f1f8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#a430b7b07d3cca87b3475ca377571f1f8">onViewGraphSubtreeChanged</a> () override</td></tr>
-<tr class="memdesc:a430b7b07d3cca87b3475ca377571f1f8 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Called when direct or indirect parent has changed.  <br/></td></tr>
-<tr class="separator:a430b7b07d3cca87b3475ca377571f1f8 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a20108c302935d781c9929cbd3380386d inherit pro_methods_classAViewContainerBase" id="r_a20108c302935d781c9929cbd3380386d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#a20108c302935d781c9929cbd3380386d">invalidateAssHelper</a> () override</td></tr>
-<tr class="memdesc:a20108c302935d781c9929cbd3380386d inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Resets mAssHelper.  <br/></td></tr>
-<tr class="separator:a20108c302935d781c9929cbd3380386d inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a15d00346ddbb47ef858cd66ba739111a inherit pro_methods_classAViewContainerBase" id="r_a15d00346ddbb47ef858cd66ba739111a"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>setViews</b> (<a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt; views)</td></tr>
-<tr class="memdesc:a15d00346ddbb47ef858cd66ba739111a inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Replace views. <br/></td></tr>
-<tr class="separator:a15d00346ddbb47ef858cd66ba739111a inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a065e6e7cddaa0de5dc6cae91dceca07e inherit pro_methods_classAViewContainerBase" id="r_a065e6e7cddaa0de5dc6cae91dceca07e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#a065e6e7cddaa0de5dc6cae91dceca07e">addViewCustomLayout</a> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
-<tr class="memdesc:a065e6e7cddaa0de5dc6cae91dceca07e inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Adds view to container without exposing it to the layout manager.  <br/></td></tr>
-<tr class="separator:a065e6e7cddaa0de5dc6cae91dceca07e inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a61a44647cf745717b4904752ad72648b inherit pro_methods_classAViewContainerBase" id="r_a61a44647cf745717b4904752ad72648b"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>addViews</b> (<a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt; views)</td></tr>
-<tr class="memdesc:a61a44647cf745717b4904752ad72648b inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Add all views from vector. <br/></td></tr>
-<tr class="separator:a61a44647cf745717b4904752ad72648b inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a94d32b819a44ed3cdbcc28bb829fa5d3 inherit pro_methods_classAViewContainerBase" id="r_a94d32b819a44ed3cdbcc28bb829fa5d3"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>addView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
-<tr class="memdesc:a94d32b819a44ed3cdbcc28bb829fa5d3 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Add view to the container. <br/></td></tr>
-<tr class="separator:a94d32b819a44ed3cdbcc28bb829fa5d3 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a507d17db67b2627988dee34b8d075958 inherit pro_methods_classAViewContainerBase" id="r_a507d17db67b2627988dee34b8d075958"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>addView</b> (size_t index, const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
-<tr class="memdesc:a507d17db67b2627988dee34b8d075958 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Add view at specific index to the container. <br/></td></tr>
-<tr class="separator:a507d17db67b2627988dee34b8d075958 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a893f5dfb66264aa5c0b1e8ea87b31612 inherit pro_methods_classAViewContainerBase" id="r_a893f5dfb66264aa5c0b1e8ea87b31612"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>removeView</b> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view)</td></tr>
-<tr class="memdesc:a893f5dfb66264aa5c0b1e8ea87b31612 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove view from the container. <br/></td></tr>
-<tr class="separator:a893f5dfb66264aa5c0b1e8ea87b31612 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4050a6197941af693f0d505b23308c5b inherit pro_methods_classAViewContainerBase" id="r_a4050a6197941af693f0d505b23308c5b"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>removeView</b> (<a class="el" href="classAView.html">AView</a> *view)</td></tr>
-<tr class="memdesc:a4050a6197941af693f0d505b23308c5b inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove view from the container. <br/></td></tr>
-<tr class="separator:a4050a6197941af693f0d505b23308c5b inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2437e0ff6714cd4cb0eac7c2a4aa6cff inherit pro_methods_classAViewContainerBase" id="r_a2437e0ff6714cd4cb0eac7c2a4aa6cff"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>removeView</b> (size_t index)</td></tr>
-<tr class="memdesc:a2437e0ff6714cd4cb0eac7c2a4aa6cff inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove view from the container at specified index. <br/></td></tr>
-<tr class="separator:a2437e0ff6714cd4cb0eac7c2a4aa6cff inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7ff74467604e643889f579390602902e inherit pro_methods_classAViewContainerBase" id="r_a7ff74467604e643889f579390602902e"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>removeAllViews</b> ()</td></tr>
-<tr class="memdesc:a7ff74467604e643889f579390602902e inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Remove all views from container. <br/></td></tr>
-<tr class="separator:a7ff74467604e643889f579390602902e inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab7bcd4a4bc08fc11c9bc1a9ff036f5e4 inherit pro_methods_classAViewContainerBase" id="r_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAViewContainer.html">AViewContainer</a> &gt; &amp;container)</td></tr>
-<tr class="memdesc:ab7bcd4a4bc08fc11c9bc1a9ff036f5e4 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Moves (like via std::move) all children and layout of the specified container to this container.  <br/></td></tr>
-<tr class="separator:ab7bcd4a4bc08fc11c9bc1a9ff036f5e4 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2b5069c33c722ca6cd43af32dd1abe70 inherit pro_methods_classAViewContainerBase" id="r_a2b5069c33c722ca6cd43af32dd1abe70"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>setLayout</b> (_unique&lt; <a class="el" href="classALayout.html">ALayout</a> &gt; layout)</td></tr>
-<tr class="memdesc:a2b5069c33c722ca6cd43af32dd1abe70 inherit pro_methods_classAViewContainerBase"><td class="mdescLeft"> </td><td class="mdescRight">Set new layout manager for this <a class="el" href="classAViewContainerBase.html" title="A view that represents a set of views.">AViewContainerBase</a>. DESTROYS OLD LAYOUT MANAGER WITH ITS VIEWS!!! <br/></td></tr>
-<tr class="separator:a2b5069c33c722ca6cd43af32dd1abe70 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0a4981ddb3cfe97e26d7d27a6d4f7780 inherit pro_methods_classAViewContainerBase" id="r_a0a4981ddb3cfe97e26d7d27a6d4f7780"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>renderChildren</b> (<a class="el" href="structARenderContext.html">ARenderContext</a> contextPassedToContainer)</td></tr>
-<tr class="separator:a0a4981ddb3cfe97e26d7d27a6d4f7780 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a51d8a294dd5b8f1c917aa93629304ae5 inherit pro_methods_classAViewContainerBase" id="r_a51d8a294dd5b8f1c917aa93629304ae5"><td align="right" class="memItemLeft" valign="top">
-virtual void </td><td class="memItemRight" valign="bottom"><b>applyGeometryToChildren</b> ()</td></tr>
-<tr class="separator:a51d8a294dd5b8f1c917aa93629304ae5 inherit pro_methods_classAViewContainerBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pro_methods_classAView"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAView')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAView.html">AView</a></td></tr>
-<tr class="memitem:a1b273cbe961c8633b17171b750762135 inherit pro_methods_classAView" id="r_a1b273cbe961c8633b17171b750762135"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#a1b273cbe961c8633b17171b750762135">transformGestureEventsToDesktop</a> (const glm::ivec2 &amp;origin, const AGestureEvent &amp;event)</td></tr>
-<tr class="memdesc:a1b273cbe961c8633b17171b750762135 inherit pro_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Converts touch screen events to desktop.  <br/></td></tr>
-<tr class="separator:a1b273cbe961c8633b17171b750762135 inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a433c7d9f753ea1170fdb9db475de7bdf inherit pro_methods_classAView" id="r_a433c7d9f753ea1170fdb9db475de7bdf"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (const <a class="el" href="structass_1_1PropertyList.html">ass::PropertyList</a> &amp;propertyList)</td></tr>
-<tr class="separator:a433c7d9f753ea1170fdb9db475de7bdf inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1a7019082a240f8d9ab12a149dcaeca2 inherit pro_methods_classAView" id="r_a1a7019082a240f8d9ab12a149dcaeca2"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>applyAssRule</b> (const <a class="el" href="structass_1_1PropertyListRecursive.html">ass::PropertyListRecursive</a> &amp;propertyList)</td></tr>
-<tr class="separator:a1a7019082a240f8d9ab12a149dcaeca2 inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abfc76e070a2e0e458ee116993caea83d inherit pro_methods_classAView" id="r_abfc76e070a2e0e458ee116993caea83d"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAVector.html">AMenuModel</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAView.html#abfc76e070a2e0e458ee116993caea83d">composeContextMenu</a> ()</td></tr>
-<tr class="memdesc:abfc76e070a2e0e458ee116993caea83d inherit pro_methods_classAView"><td class="mdescLeft"> </td><td class="mdescRight">Produce context (right click) menu.  <br/></td></tr>
-<tr class="separator:abfc76e070a2e0e458ee116993caea83d inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa3a9e605b71daed7ad2804bb30b1eb8f inherit pro_methods_classAView" id="r_aa3a9e605b71daed7ad2804bb30b1eb8f"><td align="right" class="memItemLeft" valign="top">
-virtual void </td><td class="memItemRight" valign="bottom"><b>commitStyle</b> ()</td></tr>
-<tr class="separator:aa3a9e605b71daed7ad2804bb30b1eb8f inherit pro_methods_classAView"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pro_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObject')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject" id="r_a98cf3fa4ac279b30860bf228c44306b2"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
-<tr class="memdesc:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Set thread of the object. <br/></td></tr>
-<tr class="separator:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pro_methods_classAObjectBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObjectBase')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObjectBase.html">AObjectBase</a></td></tr>
-<tr class="memitem:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase" id="r_af8f1971268c5b7a2eff3f27021056bea"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>clearAllIngoingConnections</b> () noexcept</td></tr>
-<tr class="separator:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase" id="r_a3b09afce09ed490182435a088d320acc"><td align="right" class="memItemLeft" valign="top">
-virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotException</b> (std::exception_ptr exception)</td></tr>
-<tr class="memdesc:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="mdescLeft"> </td><td class="mdescRight">Called then an exception has thrown during slot processing of the signal emitted by this object. <br/></td></tr>
-<tr class="separator:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="inherit_header pro_attribs_classAForEachUIBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classAForEachUIBase')"><img alt="-" src="closed.png"/> Protected Attributes inherited from <a class="el" href="classAForEachUIBase.html">AForEachUIBase</a></td></tr>
+<tr class="memitem:ac7b40f8e4d2a70a65e3264b40e4b3298 inherit pro_attribs_classAForEachUIBase" id="r_ac7b40f8e4d2a70a65e3264b40e4b3298"><td align="right" class="memItemLeft" valign="top">
+<a class="el" href="classAOptional.html">AOptional</a>&lt; <a class="el" href="structAForEachUIBase_1_1Cache.html">Cache</a> &gt; </td><td class="memItemRight" valign="bottom"><b>mCache</b></td></tr>
+<tr class="separator:ac7b40f8e4d2a70a65e3264b40e4b3298 inherit pro_attribs_classAForEachUIBase"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="inherit_header pro_attribs_classAViewContainerBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classAViewContainerBase')"><img alt="-" src="closed.png"/> Protected Attributes inherited from <a class="el" href="classAViewContainerBase.html">AViewContainerBase</a></td></tr>
 <tr class="memitem:a32fc2eaaece1108a1be07c88847b9fd7 inherit pro_attribs_classAViewContainerBase" id="r_a32fc2eaaece1108a1be07c88847b9fd7"><td align="right" class="memItemLeft" valign="top">
 <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &gt; </td><td class="memItemRight" valign="bottom"><b>mViews</b></td></tr>
@@ -911,49 +950,256 @@ glm::ivec2 </td><td class="memItemRight" valign="bottom"><b>mFixedSize</b> = {0
 <tr class="memdesc:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="mdescLeft"> </td><td class="mdescRight">If set to true, <a class="el" href="classAViewContainer.html" title="A trivial modifiable view that represents a set of views.">AViewContainer</a> is obligated ignore this view. This value is set to false by AView::setGeometry.  <br/></td></tr>
 <tr class="separator:a4475a69d795612634df68566a0b9d5fb inherit pro_attribs_classAView"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#ac4244a5cd169f2342d5d58ba5ae3ee46" id="ac4244a5cd169f2342d5d58ba5ae3ee46" name="ac4244a5cd169f2342d5d58ba5ae3ee46" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Customizable lists display.">#</a></h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br/>
+class AForEachUI&lt; T &gt;</div><p>Used to lazily present possibly large or infinite linear non-hierarchical sequences of data.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
+<dl class="section user"><dt></dt><dd></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If you are familiar with RecyclerView/LazyColumn/LazyRow/LazyVStack/LazyHStack, AForEachUI follows the same set of principles; with an exception: <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> does not provide a scrollable area on its own.</dd></dl>
+<p><a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> is created by using <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> macro.</p>
+<p><a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> mimics <em>ranged for loop</em> semantically.</p>
+<div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> std::array users = { <span class="stringliteral">"Foo"</span>, <span class="stringliteral">"Bar"</span>, <span class="stringliteral">"Lol"</span> };</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; user : users) {</div>
+<div class="line">  fmt::println(<span class="stringliteral">"{}"</span>, user);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> std::array users = { <span class="stringliteral">"Foo"</span>, <span class="stringliteral">"Bar"</span>, <span class="stringliteral">"Lol"</span> };</div>
+<div class="line">...</div>
+<div class="line">setContents(Centered {</div>
+<div class="line">  <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>().withContents(</div>
+<div class="line">    <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(user, users, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">      <span class="keywordflow">return</span> Label { fmt::format(<span class="stringliteral">"{}"</span>, user) };</div>
+<div class="line">    }</div>
+<div class="line">  ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">});</div>
+<div class="ttc" id="aclassAScrollArea_1_1Builder_html"><div class="ttname"><a href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a></div><div class="ttdef"><b>Definition</b> AScrollArea.h:130</div></div>
+<div class="ttc" id="aclassAVerticalLayout_html"><div class="ttname"><a href="classAVerticalLayout.html">AVerticalLayout</a></div><div class="ttdoc">Places views in a column.</div><div class="ttdef"><b>Definition</b> AVerticalLayout.h:41</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga3b247bd8a48a4e7cae4882e19ef45cbc"><div class="ttname"><a href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a></div><div class="ttdeci">#define AUI_DECLARATIVE_FOR(value, model, layout)</div><div class="ttdoc">ranged-for-loop style wrapped for AForEachUI.</div><div class="ttdef"><b>Definition</b> AForEachUI.h:398</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+</div><!-- fragment --><div class="image">
+<img alt="" src="UIDeclarativeForTest.Example_.png"/>
+</div>
+<p><a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> consists of single entry variable name, a potentially <a class="el" href="namespaceaui_1_1react.html">reactive</a> expression evaluating to <em>range</em>, layout name (acceptable are <code><a class="el" href="classAVerticalLayout.html" title="Places views in a column.">AVerticalLayout</a></code> and <code><a class="el" href="classAHorizontalLayout.html" title="Places views in a row.">AHorizontalLayout</a></code>) and a lambda that creates a new view based on data entry. In terms of C++ syntax, the lambda is partially defined by <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> macro; the lambda's body (including curly braces) is left up to developer. The final declaration of <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> returns an instance of <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a>.</p>
+<p><em>range</em> models one-dimensional list.</p>
+<p><a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> works on iterator level by design. In fact, any kind of <em>range</em> (C++20 ranges/range-v3) can be used, starting from bidirectional containers such as <code>std::vector</code> and <code>std::list</code>, lazy non-owning dummies like <code>ranges::views::ints</code> and even fancy <em>range</em> views from <code>std::ranges::views</code> or <code>ranges::views</code> are acceptable. One-directional containers like <code>std::queue</code> or <code>std::stack</code> can't be used because they don't implement <code>begin()</code> and <code>end()</code>. As such, requirements to a <em>range</em> are dictated by <code>ranges::range</code> concept.</p>
+<ul>
+<li><em>range</em> has <code>.begin()</code> method or <code>ranges::begin()</code> overload defined <code>auto it = ranges::begin(rng)</code></li>
+<li><em>range</em> has <code>.end()</code> method or <code>ranges::end()</code> overload defined <code>auto it = ranges::end(rng)</code></li>
+<li>both <code>begin()</code> and <code>end()</code> return an <em>iterator</em></li>
+<li><em>iterator</em> has dereference operator <code>auto&amp; value = *it</code></li>
+<li><em>iterator</em> has increment operator <code>++it</code></li>
+</ul>
+<p>Alternatively, these requirements can be described by a <em>ranged for loop</em>: <code>for (const auto&amp; value : rng) { ... }</code>.</p>
+<p>The range's type is erased with runtime-based <em>range</em> layer <a class="el" href="structaui_1_1any__view.html">aui::any_view</a>.</p>
+<p><a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> can be nested with no restrictions in both directions.</p>
+<h1>
+Examples<a class="aui-toc-hash" href="#examples" id="examples" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>See examples of <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>.</p>
+<h1>
+Lazy Semantics<a class="aui-toc-hash" href="#lazy-semantics" id="lazy-semantics" style="color: var(--fragment-comment) !important">#</a></h1>
+<p><a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> presents all data available. If placed somewhere inside <a class="el" href="classAScrollArea.html">AScrollArea</a> (implies <a class="el" href="classAScrollAreaViewport.html">AScrollAreaViewport</a>), lazy semantics take place. This means that <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> knows scroll position and sliding window size in pixels, making it possible to present a limited set of data that is actually visible, and present data further as soon as the user scrolls down the scroll area.</p>
+<p>Under the hood, <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> stores a pair of iterators of the passed <em>range</em> of presented entries, forming a sliding window subrange. When the user scrolls down the list, both iterators are incremented; when the user scrolls upwards, both iterators are decremented.</p>
+<p>In this scenario, <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> adds an extra requirement to range's iterator:</p>
+<ul>
+<li><em>iterator</em> has decrement operator <code>--it</code></li>
+</ul>
+<p>If this requirement is not satisfied (case of some <code>ranges::views</code>), <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> would not unload old items, unless a <a class="el" href="#AFOREACHUI_UPDATE">data update event</a> occurred.</p>
+<p>The amount of displayed data is governed by <em>range</em> size, <a class="el" href="md_docs_2Render_01to_01texture.html">Render to texture</a> tile size, <a class="el" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars.">AScrollArea</a>'s viewport size and individual entry size. Optimal frequency of sliding during scroll and window size are determined by <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a>. In particular, the sliding is performed once per <a class="el" href="md_docs_2Render_01to_01texture.html">Render to texture</a> tile is passed.</p>
+<dl class="section note"><dt>Note</dt><dd>During rendering inside <a class="el" href="classAScrollArea.html" title="A scrollable container with vertical and horizontal scrollbars.">AScrollArea</a>, the renderer clips visible views more precisely; the goal of lazy semantics of <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> is to optimize view instantiation and layout processing overhead, as well as <em>range</em> views' lazy semantics, thanks to iterators.</dd></dl>
+<h2>
+Scrollbars<a class="aui-toc-hash" href="#scrollbars" id="scrollbars" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>From perspective of layout, lazy semantics is implemented by careful layout updates driven by scroll area events. If possible, the items that appear far from sliding window are unloaded (views are removed). The new items are loaded (new views are instantiated). To avoid content jittering, scroll position is synced with layout updates within <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a>. As such, these hijacking operations may confuse scroll bar.</p>
+<p>In modern software, especially when it comes to infinite lists in web/mobile applications (i.e., news feed), scrollbar might be completely hidden or significantly transparentized.</p>
+<p>This optimization gives a severe performance benefit. Despite the fact that there's a complete mess "under the hood" (scrollbar is the only visual confirmation), the scrolled contents appear normal and natural.</p>
+<div class="image">
+<img alt="" src="edrfgsrgsrg.webp"/>
+<div class="caption">
+A lie is going on behind the scenes</div></div>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L110"></b></p>
+<p>A static range like in the example above will not blow up the machine because <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> is wrapped with a <a class="el" href="classAScrollArea.html">AScrollArea</a>, thus it is not required to evaluate the whole range, which is infinite in our case.</p>
+<p>An attempt to update <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> with a large range still can lead to high resource consumption, due to need of recomposition.</p>
+<h1>
+Initialization<a class="aui-toc-hash" href="#AFOREACHUI_UPDATE" id="AFOREACHUI_UPDATE" style="color: var(--fragment-comment) !important">#</a></h1>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L145"></b></p>
+<p>This section explains how to initialize <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>, manage lifetime of containers and how to make them reactive.</p>
+<p>In <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>, a potentially <a class="el" href="namespaceaui_1_1react.html">reactive</a> expression evaluating to <em>range</em> and the lambda that creates a new views are both lambdas with capture default by value <code>[=]</code>. This means that:</p>
+<ol type="1">
+<li>All mentioned <em>local</em> variables are captured by copying.</li>
+<li>All mentioned class member variables (fields) are captured by reference.</li>
+</ol>
+<p>Both lambdas can be evaluated at any point during lifetime of a <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a>, so the by-value capture makes it's hard to introduce dangling references, by either copying locals or referencing class members.</p>
+<p>Most modern compilers are capable to optimize out copying and initialize *copied* locals just in place.</p>
+<p>An attempt to go out of the scenarios listed below will likely lead to a <code>static_assert</code> with a link to this section.</p>
+<h2>
+Constant global data<a class="aui-toc-hash" href="#UIDeclarativeForTest_Constant_global_data" id="UIDeclarativeForTest_Constant_global_data" style="color: var(--fragment-comment) !important">#</a></h2>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L163"></b> The most straightforward way is using constant global data: <b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L165"></b> <b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L166"></b> <b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L167"></b> <b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L168"></b> </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> COLORS = { <span class="stringliteral">"Red"</span>, <span class="stringliteral">"Green"</span>, <span class="stringliteral">"Blue"</span>, <span class="stringliteral">"Black"</span>, <span class="stringliteral">"White"</span> };</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MyWindow() {</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
+<div class="line">            <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, COLORS, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">              <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
+<div class="line">            }</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
+<div class="line">  <span class="keyword">auto</span> w = _new&lt;MyWindow&gt;();</div>
+<div class="line">  w-&gt;show();</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassAViewContainer_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainer::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div></div>
+<div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
+</div><!-- fragment --><p>It's a good idea to wrap <a class="el" href="classAForEachUI.html" title="Customizable lists display.">AForEachUI</a> with an <a class="el" href="classAScrollArea.html">AScrollArea</a>. </p><div class="fragment"><div class="line"><a class="code hl_function" href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
+<div class="line">    <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>()</div>
+<div class="line">        .withContents(</div>
+<div class="line">            <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, COLORS, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">              <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
+<div class="line">            })</div>
+<div class="line">        .build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">});</div>
+<div class="ttc" id="aclassAViewContainerBase_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainerBase::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div></div>
+</div><!-- fragment --><div class="image">
+<img alt="" src="UIDeclarativeForTest.Constant_global_data2_.png"/>
+</div>
+<h2>
+Infinite ranges and views<a class="aui-toc-hash" href="#UIDeclarativeForTest_Infinite_ranges_and_views" id="UIDeclarativeForTest_Infinite_ranges_and_views" style="color: var(--fragment-comment) !important">#</a></h2>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L220"></b> Most generators, ranges and views are expected to work. </p><div class="fragment"><div class="line"><a class="code hl_function" href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
+<div class="line">    <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>().withContents(</div>
+<div class="line">        <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, ranges::views::ints, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">            <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
+<div class="line">        }</div>
+<div class="line">    ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">});</div>
+</div><!-- fragment --><div class="image">
+<img alt="" src="UIDeclarativeForTest.Infinite_ranges_and_views_.png"/>
+</div>
+<h2>
+Transferring ownership by copying<a class="aui-toc-hash" href="#UIDeclarativeForTest_Transferring_ownership_by_copying" id="UIDeclarativeForTest_Transferring_ownership_by_copying" style="color: var(--fragment-comment) !important">#</a></h2>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L240"></b> When using locals, their immediate values are copied during initialization of AUI_DECLARATIVE_FOR. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> items = <a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> { <span class="stringliteral">"Hello"</span>, <span class="stringliteral">"World"</span>, <span class="stringliteral">"Test"</span> };</div>
+<div class="line">mWindow-&gt; <span class="comment">// hide</span></div>
+<div class="line"><a class="code hl_function" href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
+<div class="line">    <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>().withContents(</div>
+<div class="line">        <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, items, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">           <span class="keywordflow">return</span> Label { i };</div>
+<div class="line">        }</div>
+<div class="line">    ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">});</div>
+<div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
+</div><!-- fragment --><p>As such, an attempt to modify <code>items</code> will not reflect on presentation, because it has own copy of <code>items</code>. </p><div class="fragment"><div class="line">items.push_back(<span class="stringliteral">"Bruh"</span>);</div>
+</div><!-- fragment --><div class="image">
+<img alt="" src="UIDeclarativeForTest.Transferring_ownership_by_copying_.png"/>
+</div>
+<h2>
+Borrowing constant containers<a class="aui-toc-hash" href="#UIDeclarativeForTest_Borrowing_constant_containers" id="UIDeclarativeForTest_Borrowing_constant_containers" style="color: var(--fragment-comment) !important">#</a></h2>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L271"></b> If your container lives inside your class, its value is not copied but referenced. To avoid unobserved iterator invalidation and content changes, <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> requires borrowed containers to be constant. There's a compile-time check to verify this requirement that does work in most cases, like this one.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MyWindow(<a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> colors): mColors(std::move(colors)) {</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
+<div class="line">            <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, mColors, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">              <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
+<div class="line">            }</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="keyword">const</span> AVector&lt;AString&gt; mColors;</div>
+<div class="line">};</div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
+<div class="line">     <span class="keyword">auto</span> w = _new&lt;MyWindow&gt;(AVector&lt;AString&gt;{ <span class="stringliteral">"Red"</span>, <span class="stringliteral">"Green"</span>, <span class="stringliteral">"Blue"</span>, <span class="stringliteral">"Black"</span>, <span class="stringliteral">"White"</span> });</div>
+<div class="line">     w-&gt;show();</div>
+<div class="line">     <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><div class="image">
+<img alt="" src="UIDeclarativeForTest.Borrowing_constant_containers_.png"/>
+</div>
+<p>Marking the borrowed container as const effectively saves you from unintended borrowed data changes. If you'd like to change the container or view options and <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> to respond to the changes, read the section below.</p>
+<h2>
+Reactive lists<a class="aui-toc-hash" href="#UIDeclarativeForTest_Reactive_lists" id="UIDeclarativeForTest_Reactive_lists" style="color: var(--fragment-comment) !important">#</a></h2>
+<p><b aui-src="aui.uitests/tests/UIDeclarativeForTest.cpp#L309"></b> The reason why <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> is so restrictive about using borrowed non-const data is because it stores <em>range</em>'s iterators under the hood. Various containers have different rules on iterator invalidation, but, since it accepts any type of <em>range</em>, we consider using its iterators after a modifying access to the container or a view as unsafe:</p><ul>
+<li>visual presentation by <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> might seem unresponsive to borrowed data changes,</li>
+<li>may lead to program crash.</li>
+</ul>
+<p>To address this issue, we provide a convenient <a class="el" href="group__property__system.html">way</a> to make iterator invalidation <em>observable</em>:</p>
+<ul>
+<li>wrap the container with <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code>,</li>
+<li>dereference <code>mColors</code> in <a class="el" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a> clause.</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">class </span>MyWindow: <span class="keyword">public</span> <a class="code hl_class" href="classAWindow.html">AWindow</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    MyWindow(<a class="code hl_class" href="classAVector.html">AVector&lt;AString&gt;</a> colors): mColors(std::move(colors)) {</div>
+<div class="line">        <a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
+<div class="line">            _new&lt;AButton&gt;(<span class="stringliteral">"Add A new color"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, me::addColor),</div>
+<div class="line">            <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>().withContents(</div>
+<div class="line">              <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, *mColors, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
+<div class="line">                <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
+<div class="line">              }</div>
+<div class="line">            ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">        });</div>
+<div class="line">    }</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    AProperty&lt;AVector&lt;AString&gt;&gt; mColors;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> addColor() {</div>
+<div class="line">        mColors.<a class="code hl_function" href="structAProperty.html#ab0229d9ee58c06dacaa012ece0d1d21d">writeScope</a>()-&gt;push_back(<span class="stringliteral">"A new color"</span>);</div>
+<div class="line">    }</div>
+<div class="line">};</div>
+<div class="line"><a class="code hl_define" href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a> {</div>
+<div class="line">    <span class="keyword">auto</span> w = _new&lt;MyWindow&gt;(AVector&lt;AString&gt;{ <span class="stringliteral">"Red"</span>, <span class="stringliteral">"Green"</span>, <span class="stringliteral">"Blue"</span>, <span class="stringliteral">"Black"</span>, <span class="stringliteral">"White"</span> });</div>
+<div class="line">    w-&gt;show();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:933</div></div>
+<div class="ttc" id="astructAProperty_html_ab0229d9ee58c06dacaa012ece0d1d21d"><div class="ttname"><a href="structAProperty.html#ab0229d9ee58c06dacaa012ece0d1d21d">AProperty::writeScope</a></div><div class="ttdeci">aui::PropertyModifier&lt; AProperty &gt; writeScope() noexcept</div><div class="ttdef"><b>Definition</b> AProperty.h:130</div></div>
+</div><!-- fragment --><div class="image">
+<img alt="" src="UIDeclarativeForTest.Reactive_lists_1.png"/>
+</div>
+<p> Upon clicking "Add A new color" button, the "A new color" label will appear in the list.</p>
+<div class="image">
+<img alt="" src="UIDeclarativeForTest.Reactive_lists_2.png"/>
+</div>
+</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a64c6029c521035c07124b843ece7d165" id="a64c6029c521035c07124b843ece7d165" name="a64c6029c521035c07124b843ece7d165" style="color: var(--fragment-comment) !important">#</a></h2>
 
-<h2 class="memtitle"><span class="permalink">◆ </span>insertItem()<a class="aui-toc-hash" href="#◆ insertitem()" id="◆ insertitem()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink">◆ </span>getViewsCache()<a class="aui-toc-hash" href="#◆ getviewscache()" id="◆ getviewscache()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename Layout&gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
 <tr>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T, Layout &gt;::insertItem </td>
+<td class="memname"><a class="el" href="classAMap.html">aui::for_each_ui::detail::ViewsSharedCache</a> * <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T &gt;::getViewsCache </td>
 <td>(</td>
-<td class="paramtype">size_t</td> <td class="paramname"><span class="paramname"><em>at</em></span>, </td>
-</tr>
-<tr>
-<td class="paramkey"></td>
+<td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
 <td></td>
-<td class="paramtype">const T &amp;</td> <td class="paramname"><span class="paramname"><em>value</em></span> )</td>
 </tr>
 </table>
 </td>
 <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span> </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span> </td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Implements <a class="el" href="classAListModelObserver_1_1IListModelListener.html">AListModelObserver&lt; T &gt;::IListModelListener</a>.</p>
+<p>Called by <code>setModelImpl</code>. The implementation might then use the shared cache to return views from <code>List</code> range.</p>
+<p>The implementation is responsible to clean up the cache. </p>
+<p>Implements <a class="el" href="classAForEachUIBase.html#a3fea0e0c4186b859f298adab33120e9c">AForEachUIBase</a>.</p>
 </div>
 </div>
-<a id="a36c0d583b52546b70e8ac0f16c6b81a8" name="a36c0d583b52546b70e8ac0f16c6b81a8"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>onDataChanged()<a class="aui-toc-hash" href="#◆ ondatachanged()" id="◆ ondatachanged()" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="ac46fd871a23cabf5db3dc28dd0166b27" name="ac46fd871a23cabf5db3dc28dd0166b27"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>invalidate()<a class="aui-toc-hash" href="#◆ invalidate()" id="◆ invalidate()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, typename Layout&gt; </div>
+template&lt;typename T&gt; </div>
 <table class="mlabels">
 <tr>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">void <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T, Layout &gt;::onDataChanged </td>
+<td class="memname">void <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T &gt;::invalidate </td>
 <td>(</td>
 <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
 <td></td>
@@ -965,89 +1211,7 @@ template&lt;typename T, typename Layout&gt; </div>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Implements <a class="el" href="classAListModelObserver_1_1IListModelListener.html">AListModelObserver&lt; T &gt;::IListModelListener</a>.</p>
-</div>
-</div>
-<a id="a3d7f7f77eaedc385860f2adf996ac2a0" name="a3d7f7f77eaedc385860f2adf996ac2a0"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>onDataCountChanged()<a class="aui-toc-hash" href="#◆ ondatacountchanged()" id="◆ ondatacountchanged()" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename Layout&gt; </div>
-<table class="mlabels">
-<tr>
-<td class="mlabels-left">
-<table class="memname">
-<tr>
-<td class="memname">void <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T, Layout &gt;::onDataCountChanged </td>
-<td>(</td>
-<td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-<td></td>
-</tr>
-</table>
-</td>
-<td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span> </td>
-</tr>
-</table>
-</div><div class="memdoc">
-<p>Implements <a class="el" href="classAListModelObserver_1_1IListModelListener.html">AListModelObserver&lt; T &gt;::IListModelListener</a>.</p>
-</div>
-</div>
-<a id="a5447c4a770da4a6fc4d7ad34327bdda1" name="a5447c4a770da4a6fc4d7ad34327bdda1"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>removeItem()<a class="aui-toc-hash" href="#◆ removeitem()" id="◆ removeitem()" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename Layout&gt; </div>
-<table class="mlabels">
-<tr>
-<td class="mlabels-left">
-<table class="memname">
-<tr>
-<td class="memname">void <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T, Layout &gt;::removeItem </td>
-<td>(</td>
-<td class="paramtype">size_t</td> <td class="paramname"><span class="paramname"><em>at</em></span></td><td>)</td>
-<td></td>
-</tr>
-</table>
-</td>
-<td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span> </td>
-</tr>
-</table>
-</div><div class="memdoc">
-<p>Implements <a class="el" href="classAListModelObserver_1_1IListModelListener.html">AListModelObserver&lt; T &gt;::IListModelListener</a>.</p>
-</div>
-</div>
-<a id="a8bdfdb0f5bc6b6a03b37210baa02f332" name="a8bdfdb0f5bc6b6a03b37210baa02f332"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>updateItem()<a class="aui-toc-hash" href="#◆ updateitem()" id="◆ updateitem()" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename Layout&gt; </div>
-<table class="mlabels">
-<tr>
-<td class="mlabels-left">
-<table class="memname">
-<tr>
-<td class="memname">void <a class="el" href="classAForEachUI.html">AForEachUI</a>&lt; T, Layout &gt;::updateItem </td>
-<td>(</td>
-<td class="paramtype">size_t</td> <td class="paramname"><span class="paramname"><em>at</em></span>, </td>
-</tr>
-<tr>
-<td class="paramkey"></td>
-<td></td>
-<td class="paramtype">const T &amp;</td> <td class="paramname"><span class="paramname"><em>value</em></span> )</td>
-</tr>
-</table>
-</td>
-<td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span> </td>
-</tr>
-</table>
-</div><div class="memdoc">
-<p>Implements <a class="el" href="classAListModelObserver_1_1IListModelListener.html">AListModelObserver&lt; T &gt;::IListModelListener</a>.</p>
+<p>Implements <a class="el" href="structaui_1_1react_1_1DependencyObserver.html">aui::react::DependencyObserver</a>.</p>
 </div>
 </div>
 <p class="footer-inner">
@@ -1055,7 +1219,7 @@ template&lt;typename T, typename Layout&gt; </div>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#inherited">Additional Inherited Members</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pro-methods">Protected Member Functions</a></h1><h1><a href="#inherited">Additional Inherited Members</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><h1><a href="#examples">Examples</a></h1><h1><a href="#lazy-semantics">Lazy Semantics</a></h1><h2><a href="#scrollbars">Scrollbars</a></h2><h1><a href="#AFOREACHUI_UPDATE">Initialization</a></h1><h2><a href="#UIDeclarativeForTest_Constant_global_data">Constant global data</a></h2><h2><a href="#UIDeclarativeForTest_Infinite_ranges_and_views">Infinite ranges and views</a></h2><h2><a href="#UIDeclarativeForTest_Transferring_ownership_by_copying">Transferring ownership by copying</a></h2><h2><a href="#UIDeclarativeForTest_Borrowing_constant_containers">Borrowing constant containers</a></h2><h2><a href="#UIDeclarativeForTest_Reactive_lists">Reactive lists</a></h2><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 </div></body>

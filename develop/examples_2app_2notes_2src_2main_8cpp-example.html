@@ -128,6 +128,8 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line"><span class="preprocessor">#include "AUI/Reflect/for_each_field.h"</span></div>
 <div class="line"><span class="preprocessor">#include "AUI/Platform/AMessageBox.h"</span></div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;AUI/View/AForEachUI.h&gt;</span></div>
+<div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">"Notes"</span>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span>declarative;</div>
@@ -211,8 +213,7 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line">        });</div>
 <div class="line">        load();</div>
 <div class="line"> </div>
-<div class="line">        <a id="a19" name="a19"></a><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mNotes-&gt;dataChanged, me::markDirty);</div>
-<div class="line">        <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mNotes-&gt;dataRemoved, me::markDirty);</div>
+<div class="line">        <a id="a19" name="a19"></a><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mNotes.changed, me::markDirty);</div>
 <div class="line"> </div>
 <div class="line">        <a id="a20" name="a20"></a><a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Vertical {</div>
 <div class="line">          ASplitter::Horizontal()</div>
@@ -228,16 +229,8 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line">                      },</div>
 <div class="line">                      AScrollArea::Builder()</div>
 <div class="line">                          .withContents(</div>
-<div class="line">                          AUI_DECLARATIVE_FOR(note, mNotes, AVerticalLayout) {</div>
-<div class="line">                              <a id="a23" name="a23"></a><a class="code hl_function" href="group__reflection.html#ga3966ac0a101680f82e263fd2b128db4a">aui::reflect::for_each_field_value</a>(</div>
-<div class="line">                                  *note,</div>
-<div class="line">                                  aui::lambda_overloaded {</div>
-<div class="line">                                    [&amp;](<span class="keyword">auto</span>&amp; field) {},</div>
-<div class="line">                                    [&amp;](APropertyReadable <span class="keyword">auto</span>&amp; field) {</div>
-<div class="line">                                        ALOG_DEBUG(LOG_TAG) &lt;&lt; <span class="stringliteral">"Observing for changes "</span> &lt;&lt; &amp;field;</div>
-<div class="line">                                        <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(field.changed, me::markDirty);</div>
-<div class="line">                                    },</div>
-<div class="line">                                  });</div>
+<div class="line">                          <a id="a23" name="a23"></a><a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(note, *mNotes, AVerticalLayout) {</div>
+<div class="line">                              observeChangesForDirty(note);</div>
 <div class="line">                              <span class="keywordflow">return</span> notePreview(note) <a id="a24" name="a24"></a><a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
 <div class="line">                                  <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;clicked, [<span class="keyword">this</span>, note] { mCurrentNote = note; });</div>
 <div class="line">                                  it&amp; mCurrentNote &gt; [note](AView&amp; view, <span class="keyword">const</span> _&lt;Note&gt;&amp; currentNote) {</div>
@@ -258,8 +251,7 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line">                            }) &gt; &amp;AView::setEnabled,</div>
 <div class="line">                      },</div>
 <div class="line">                      CustomLayout::Expanding {} &amp; mCurrentNote.readProjected(noteEditor),</div>
-<div class="line">                    } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { MinSize { 200_dp } }</div>
-<div class="line">                        &lt;&lt; <span class="stringliteral">".plain_bg"</span>,</div>
+<div class="line">                    }&lt;&lt; <span class="stringliteral">".plain_bg"</span> <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { MinSize { 200_dp } },</div>
 <div class="line">                  })</div>
 <div class="line">                  .build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { Expanding() },</div>
 <div class="line">        });</div>
@@ -287,13 +279,13 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">void</span> save() {</div>
-<div class="line">        AFileOutputStream(<span class="stringliteral">"notes.json"</span>) &lt;&lt; aui::to_json(mNotes);</div>
+<div class="line">        AFileOutputStream(<span class="stringliteral">"notes.json"</span>) &lt;&lt; aui::to_json(*mNotes);</div>
 <div class="line">        mDirty = <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">void</span> newNote() {</div>
 <div class="line">        <span class="keyword">auto</span> note = <a id="a26" name="a26"></a><a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> Note { .title = <span class="stringliteral">"Untitled"</span> });</div>
-<div class="line">        mNotes &lt;&lt; note;</div>
+<div class="line">        mNotes.writeScope()-&gt;push_back(note);</div>
 <div class="line">        mCurrentNote = std::move(note);</div>
 <div class="line">    }</div>
 <div class="line"></div>
@@ -309,7 +301,7 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> it = ranges::find(*mNotes, *mCurrentNote);</div>
-<div class="line">        it = mNotes-&gt;erase(it);</div>
+<div class="line">        it = mNotes.writeScope()-&gt;erase(it);</div>
 <div class="line">        mCurrentNote = it != mNotes-&gt;end() ? *it : <span class="keyword">nullptr</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -317,8 +309,20 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="line">        mDirty = <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
+<div class="line">    <span class="keywordtype">void</span> observeChangesForDirty(<span class="keyword">const</span> _&lt;Note&gt;&amp; note) {</div>
+<div class="line">        <a id="a31" name="a31"></a><a class="code hl_function" href="group__reflection.html#ga3966ac0a101680f82e263fd2b128db4a">aui::reflect::for_each_field_value</a>(</div>
+<div class="line">                *note,</div>
+<div class="line">                aui::lambda_overloaded {</div>
+<div class="line">                        [&amp;](<span class="keyword">auto</span>&amp; field) {},</div>
+<div class="line">                        [&amp;](APropertyReadable <span class="keyword">auto</span>&amp; field) {</div>
+<div class="line">                            ALOG_DEBUG(LOG_TAG) &lt;&lt; <span class="stringliteral">"Observing for changes "</span> &lt;&lt; &amp;field;</div>
+<div class="line">                            <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(field.changed, me::markDirty);</div>
+<div class="line">                        },</div>
+<div class="line">                });</div>
+<div class="line">    }</div>
+<div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    _&lt;AListModel&lt;_&lt;Note&gt;&gt;&gt; mNotes = _new&lt;AListModel&lt;_&lt;Note&gt;&gt;&gt;();</div>
+<div class="line">    AProperty&lt;AVector&lt;_&lt;Note&gt;&gt;&gt; mNotes;</div>
 <div class="line">    AProperty&lt;_&lt;Note&gt;&gt; mCurrentNote;</div>
 <div class="line">    AProperty&lt;bool&gt; mDirty = <span class="keyword">false</span>;</div>
 <div class="line">};</div>
@@ -332,15 +336,16 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="ttc" id="aclassATextArea_html"><div class="ttname"><a href="classATextArea.html">ATextArea</a></div><div class="ttdoc">Multiline text input area.</div><div class="ttdef"><b>Definition</b> ATextArea.h:48</div></div>
 <div class="ttc" id="aclassAViewContainer_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainer::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div></div>
 <div class="ttc" id="aclassAView_html_a67b2a408d7fbcb07fd8c4a5fda68006b"><div class="ttname"><a href="classAView.html#a67b2a408d7fbcb07fd8c4a5fda68006b">AView::setExtraStylesheet</a></div><div class="ttdeci">void setExtraStylesheet(_&lt; AStylesheet &gt; extraStylesheet)</div><div class="ttdef"><b>Definition</b> AView.h:238</div></div>
-<div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:924</div></div>
+<div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:933</div></div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
 <div class="ttc" id="aclassAWindow_html_a74d3a5f5dc4bef9c452f457234e736ce"><div class="ttname"><a href="classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce">AWindow::current</a></div><div class="ttdeci">static AWindowBase * current()</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:179</div></div>
 <div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
-<div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:138</div></div>
+<div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:156</div></div>
 <div class="ttc" id="agroup__reflection_html_ga3966ac0a101680f82e263fd2b128db4a"><div class="ttname"><a href="group__reflection.html#ga3966ac0a101680f82e263fd2b128db4a">aui::reflect::for_each_field_value</a></div><div class="ttdeci">constexpr void for_each_field_value(Clazz &amp;&amp;clazz, F &amp;&amp;callback)</div><div class="ttdoc">Calls callback for each field value of a clazz.</div><div class="ttdef"><b>Definition</b> for_each_field.h:38</div></div>
-<div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:68</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:86</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga3b247bd8a48a4e7cae4882e19ef45cbc"><div class="ttname"><a href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a></div><div class="ttdeci">#define AUI_DECLARATIVE_FOR(value, model, layout)</div><div class="ttdoc">ranged-for-loop style wrapped for AForEachUI.</div><div class="ttdef"><b>Definition</b> AForEachUI.h:398</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
 <div class="ttc" id="anamespaceAMessageBox_html_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><div class="ttname"><a href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a></div><div class="ttdeci">API_AUI_VIEWS ResultButton show(AWindow *parent, const AString &amp;title, const AString &amp;message, Icon icon=Icon::NONE, Button b=Button::OK)</div><div class="ttdoc">Displays a message box, blocking the caller thread until the user dismisses the message.</div></div>
@@ -356,7 +361,7 @@ $(function(){initNavTree('examples_2app_2notes_2src_2main_8cpp-example.html','')
 <div class="ttc" id="astructass_1_1Margin_html"><div class="ttname"><a href="structass_1_1Margin.html">ass::Margin</a></div><div class="ttdoc">Controls view's margins.</div><div class="ttdef"><b>Definition</b> Margin.h:29</div></div>
 <div class="ttc" id="astructass_1_1Opacity_html"><div class="ttname"><a href="structass_1_1Opacity.html">ass::Opacity</a></div><div class="ttdoc">Controls the opacity of AView.</div><div class="ttdef"><b>Definition</b> Opacity.h:28</div></div>
 <div class="ttc" id="astructass_1_1Padding_html"><div class="ttname"><a href="structass_1_1Padding.html">ass::Padding</a></div><div class="ttdoc">Controls the padding of AView.</div><div class="ttdef"><b>Definition</b> Padding.h:29</div></div>
-<div class="ttc" id="astructaui_1_1ptr_html_a9696eab52bd0745688055a301d9ef776"><div class="ttname"><a href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a></div><div class="ttdeci">static _&lt; T &gt; manage(T *raw)</div><div class="ttdoc">Delegates memory management of the raw pointer T* raw to the shared pointer, which is returned.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:406</div></div>
+<div class="ttc" id="astructaui_1_1ptr_html_a9696eab52bd0745688055a301d9ef776"><div class="ttname"><a href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a></div><div class="ttdeci">static _&lt; T &gt; manage(T *raw)</div><div class="ttdoc">Delegates memory management of the raw pointer T* raw to the shared pointer, which is returned.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:424</div></div>
 </div><!-- fragment --> <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

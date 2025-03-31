@@ -134,7 +134,7 @@ $(function(){initNavTree('AProperty_8h_source.html',''); initResizable(true); })
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">template</span> &lt;aui::convertible_to&lt;T&gt; U&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    AProperty(U&amp;&amp; value) noexcept : raw(std::forward&lt;U&gt;(value)) {}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    AProperty(U&amp;&amp; value) <span class="keyword">noexcept</span>(<span class="keyword">noexcept</span>(T(std::forward&lt;U&gt;(value)))): raw(std::forward&lt;U&gt;(value)) {}</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    AObjectBase* boundObject() {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
@@ -194,7 +194,7 @@ $(function(){initNavTree('AProperty_8h_source.html',''); initResizable(true); })
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    [[nodiscard]]</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">const</span> T&amp; value() const noexcept {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        aui::property_precomputed::addDependency(changed);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_function" href="structaui_1_1react_1_1DependencyObserverRegistrar.html#accda9dac50efd5e1e7b0d06941d274c1">aui::react::DependencyObserverRegistrar::addDependency</a>(changed);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> raw;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
@@ -269,219 +269,245 @@ $(function(){initNavTree('AProperty_8h_source.html',''); initResizable(true); })
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keyword">const</span> Underlying&amp; value() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">return</span> mOwner-&gt;value();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    Underlying&amp; value() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">return</span> mOwner-&gt;raw;</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    Underlying&amp; value() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>Underlying&amp;<span class="keyword">&gt;</span>(mOwner-&gt;value());</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    Underlying* operator-&gt;() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">return</span> &amp;value();</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keyword">const</span> Underlying* operator-&gt;() <span class="keyword">const</span> <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">return</span> &amp;value();</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    Underlying* operator-&gt;() <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">return</span> &amp;value();</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_class" href="structAProperty.html">AProperty&lt;T&gt;</a>* mOwner;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>};</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_class" href="structAProperty.html">AProperty&lt;T&gt;</a>* mOwner;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>};</div>
 </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">template</span> &lt;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">typename</span> M, <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;M&amp;&gt;</a> Getter, <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;M&amp;, std::invoke_result_t&lt;Getter, M&amp;&gt;</a>&gt; Setter,</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">typename</span> SignalArg&gt;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00233">
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="structAPropertyDef.html">  233</a></span><span class="keyword">struct </span>APropertyDef {</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">  237</a></span>    <span class="keyword">const</span> M* <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keyword">using </span>Model = M;</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">  243</a></span>    Getter <a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">  260</a></span>    Setter <a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">using </span>GetterReturnT = <span class="keyword">decltype</span>(std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>));</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keyword">using </span>Underlying = std::decay_t&lt;GetterReturnT&gt;;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">  267</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;SignalArg&gt;</a>&amp; <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keyword">static_assert</span>(<a class="code hl_concept" href="conceptaui_1_1same__as.html">aui::same_as&lt;Underlying , std::decay_t&lt;SignalArg&gt;</a>&gt;, <span class="stringliteral">"different getter result and signal arg?"</span>);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="comment">// this ctor effectively prohibits designated initialization, i.e., this one is not possible:</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="comment">// auto size() const {</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="comment">//     return APropertyDef {</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">//         .base = this,</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="comment">//         .get = &amp;AView::mSize,</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="comment">//         .set = &amp;AView::setSize,</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="comment">//         .changed = mSizeChanged,</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="comment">//     };</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="comment">// }</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="comment">// deduction in designated initializers is relatively recent feature.</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    APropertyDef(<span class="keyword">const</span> M* <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>, Getter <a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, Setter <a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>, <span class="keyword">const</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;SignalArg&gt;</a>&amp; <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>)</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      : <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>(<a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>), <a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>(std::move(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>)), <a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>(std::move(<a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>)), <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>(<a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>) {}</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keyword">template</span> &lt;aui::convertible_to&lt;Underlying&gt; U&gt;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a>&amp; operator=(U&amp;&amp; u) {</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>, *<span class="keyword">const_cast&lt;</span>Model*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>), std::forward&lt;U&gt;(u));</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keyword">template</span> &lt;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">typename</span> M, <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;M&amp;&gt;</a> Getter, <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;M&amp;, std::invoke_result_t&lt;Getter, M&amp;&gt;</a>&gt; Setter,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">typename</span> SignalArg&gt;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00223">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="structAPropertyDef.html">  223</a></span><span class="keyword">struct </span>APropertyDef {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">  227</a></span>    <span class="keyword">const</span> M* <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">using </span>Model = M;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">  233</a></span>    Getter <a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">  250</a></span>    Setter <a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keyword">using </span>GetterReturnT = <span class="keyword">decltype</span>(std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>));</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">using </span>Underlying = std::decay_t&lt;GetterReturnT&gt;;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">  257</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;SignalArg&gt;</a>&amp; <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keyword">static_assert</span>(<a class="code hl_concept" href="conceptaui_1_1same__as.html">aui::same_as&lt;Underlying , std::decay_t&lt;SignalArg&gt;</a>&gt;, <span class="stringliteral">"different getter result and signal arg?"</span>);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// this ctor effectively prohibits designated initialization, i.e., this one is not possible:</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// auto size() const {</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">//     return APropertyDef {</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="comment">//         .base = this,</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="comment">//         .get = &amp;AView::mSize,</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="comment">//         .set = &amp;AView::setSize,</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="comment">//         .changed = mSizeChanged,</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">//     };</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">// }</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="comment">// deduction in designated initializers is relatively recent feature.</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    APropertyDef(<span class="keyword">const</span> M* <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>, Getter <a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, Setter <a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>, <span class="keyword">const</span> <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;SignalArg&gt;</a>&amp; <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      : <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>(<a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>), <a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>(std::move(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>)), <a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>(std::move(<a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>)), <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>(<a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>) {}</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keyword">template</span> &lt;aui::convertible_to&lt;Underlying&gt; U&gt;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a>&amp; operator=(U&amp;&amp; u) {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">set</a>, *<span class="keyword">const_cast&lt;</span>Model*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>), std::forward&lt;U&gt;(u));</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    GetterReturnT value() const noexcept {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordflow">return</span> std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    GetterReturnT operator*() const noexcept {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordflow">return</span> std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    GetterReturnT value() const noexcept {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keyword">const</span> Underlying* operator-&gt;() const noexcept {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> &amp;std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    GetterReturnT operator*() const noexcept {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordflow">return</span> std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">const</span> Underlying* operator-&gt;() const noexcept {</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="keywordflow">return</span> &amp;std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    }</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    [[nodiscard]] <span class="keyword">operator</span> GetterReturnT() const noexcept { <span class="keywordflow">return</span> std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>); }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    M* boundObject()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>M*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    }</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keyword">template</span> &lt;aui::invocable&lt;const Underlying&amp;&gt; Projection&gt;</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    [[nodiscard]]</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00318">
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#ae6180044dbbbcfb59a4abb797b4f3f24">  318</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structAPropertyDef.html#ae6180044dbbbcfb59a4abb797b4f3f24">readProjected</a>(Projection&amp;&amp; projection) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">return</span> aui::detail::property::makeReadonlyProjection(std::move(*<span class="keyword">this</span>), std::forward&lt;Projection&gt;(projection));</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    [[nodiscard]] <span class="keyword">operator</span> GetterReturnT() const noexcept { <span class="keywordflow">return</span> std::invoke(<a class="code hl_variable" href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">get</a>, <a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>); }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    M* boundObject()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>M*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">base</a>);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keyword">template</span> &lt;aui::invocable&lt;const Underlying&amp;&gt; Projection&gt;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    [[nodiscard]]</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00308">
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#ae6180044dbbbcfb59a4abb797b4f3f24">  308</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structAPropertyDef.html#ae6180044dbbbcfb59a4abb797b4f3f24">readProjected</a>(Projection&amp;&amp; projection) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keywordflow">return</span> aui::detail::property::makeReadonlyProjection(std::move(*<span class="keyword">this</span>), std::forward&lt;Projection&gt;(projection));</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
 </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keyword">template</span> &lt;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;const Underlying&amp;&gt;</a> ProjectionRead,</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;const std::invoke_result_t&lt;ProjectionRead, Underlying&gt;</a>&amp;&gt; ProjectionWrite&gt;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    [[nodiscard]]</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00329">
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a79796c83902226291120377ae6bf0b9e">  329</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structAPropertyDef.html#a79796c83902226291120377ae6bf0b9e">biProjected</a>(ProjectionRead&amp;&amp; projectionRead, ProjectionWrite&amp;&amp; projectionWrite) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">return</span> aui::detail::property::makeBidirectionalProjection(</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            std::move(*<span class="keyword">this</span>), std::forward&lt;ProjectionRead&gt;(projectionRead),</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            std::forward&lt;ProjectionWrite&gt;(projectionWrite));</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keyword">template</span> &lt;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;const Underlying&amp;&gt;</a> ProjectionRead,</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <a class="code hl_concept" href="conceptaui_1_1invocable.html">aui::invocable&lt;const std::invoke_result_t&lt;ProjectionRead, Underlying&gt;</a>&amp;&gt; ProjectionWrite&gt;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    [[nodiscard]]</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00319">
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a79796c83902226291120377ae6bf0b9e">  319</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structAPropertyDef.html#a79796c83902226291120377ae6bf0b9e">biProjected</a>(ProjectionRead&amp;&amp; projectionRead, ProjectionWrite&amp;&amp; projectionWrite) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordflow">return</span> aui::detail::property::makeBidirectionalProjection(</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            std::move(*<span class="keyword">this</span>), std::forward&lt;ProjectionRead&gt;(projectionRead),</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            std::forward&lt;ProjectionWrite&gt;(projectionWrite));</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
 </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keyword">template</span> &lt;aui::detail::property::ProjectionB<span class="keywordtype">id</span>irectional&lt;Underlying&gt; Projection&gt;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    [[nodiscard]]</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00340">
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#ace3583680a046f426f2da0b1279b28ba">  340</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structAPropertyDef.html#ace3583680a046f426f2da0b1279b28ba">biProjected</a>(Projection&amp;&amp; projectionBidirectional) <span class="keyword">noexcept</span> {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        <span class="keywordflow">return</span> aui::detail::property::makeBidirectionalProjection(std::move(*<span class="keyword">this</span>), projectionBidirectional);</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    };</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keyword">template</span> &lt;aui::detail::property::ProjectionB<span class="keywordtype">id</span>irectional&lt;Underlying&gt; Projection&gt;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    [[nodiscard]]</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00330">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#ace3583680a046f426f2da0b1279b28ba">  330</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="structAPropertyDef.html#ace3583680a046f426f2da0b1279b28ba">biProjected</a>(Projection&amp;&amp; projectionBidirectional) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keywordflow">return</span> aui::detail::property::makeBidirectionalProjection(std::move(*<span class="keyword">this</span>), projectionBidirectional);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    };</div>
 </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00347">
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b">  347</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b">notify</a>() {</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>.hasOutgoingConnections()) {</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>(this-&gt;value());</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        }</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00337">
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b">  337</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b">notify</a>() {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>.hasOutgoingConnections()) {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <a class="code hl_define" href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a> <a class="code hl_variable" href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">changed</a>(this-&gt;value());</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        }</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    }</div>
+</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classAObject.html">AObject</a>;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keyword">auto</span> assignment() noexcept {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">return</span> aui::detail::property::makeAssignment(std::move(*<span class="keyword">this</span>));</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    }</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>};</div>
 </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classAObject.html">AObject</a>;</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keyword">auto</span> assignment() noexcept {</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordflow">return</span> aui::detail::property::makeAssignment(std::move(*<span class="keyword">this</span>));</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    }</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>};</div>
-</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="comment">// binary operations for properties.</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="comment">// note: sync this PropertyModifier.h</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>[[nodiscard]]</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator==(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">return</span> *lhs == std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>}</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>[[nodiscard]]</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator!=(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="keywordflow">return</span> *lhs != std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>}</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>[[nodiscard]]</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator+(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <span class="keywordflow">return</span> *lhs + std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>}</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>[[nodiscard]]</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator-(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <span class="keywordflow">return</span> *lhs - std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>}</div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="keyword">inline</span> <span class="keyword">decltype</span>(<span class="keyword">auto</span>) <span class="keyword">operator</span>+=(Lhs&amp; lhs, Rhs&amp;&amp; rhs)  {</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">requires</span> { *lhs += std::forward&lt;Rhs&gt;(rhs); }) {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <span class="comment">// const operator?</span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>        <span class="keywordflow">return</span> *lhs += std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        <span class="keywordflow">return</span> *lhs.writeScope() += std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    }</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>}</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="keyword">inline</span> <span class="keyword">decltype</span>(<span class="keyword">auto</span>) <span class="keyword">operator</span>+=(Lhs&amp;&amp; lhs, Rhs&amp;&amp; rhs) {</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <span class="keywordflow">return</span> lhs = *lhs + std::forward&lt;Rhs&gt;(rhs);</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>}</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="comment">// simple check above operators work.</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="keyword">static_assert</span>(<span class="keyword">requires</span> { <a class="code hl_class" href="structAProperty.html">AProperty&lt;int&gt;</a>() + 1; });</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span><span class="comment">// UNCOMMENT THIS to test biProjected</span></div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="comment">static_assert(requires (AProperty&lt;int&gt;&amp; intProperty) {</span></div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span><span class="comment">      [](int) -&gt; AString { return ""; },</span></div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span><span class="comment">      [](const AString&amp;) -&gt; int { return 0; },</span></div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="comment">    }).value() } -&gt; aui::convertible_to&lt;AString&gt;;</span></div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span><span class="comment"></span> </div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span><span class="comment">        [](int) -&gt; AString { return ""; },</span></div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="comment">        [](const AString&amp;) -&gt; int { return 0; },</span></div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span><span class="comment">    }) = "AString" };</span></div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span><span class="comment"></span> </div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="comment"></span> </div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span><span class="comment">        [](int) -&gt; AString { return ""; },</span></div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span><span class="comment">        [](const AString&amp;) -&gt; int { return 0; },</span></div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span><span class="comment">    }) };</span></div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="comment"></span> </div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span><span class="comment">        [](int) -&gt; AString { return ""; },</span></div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span><span class="comment">        [](const AString&amp;) -&gt; int { return 0; },</span></div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="comment">    }).assignment() } -&gt; aui::invocable&lt;AString&gt;;</span></div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="comment">});</span></div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="comment">// binary operations for properties.</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="comment">// note: sync this PropertyModifier.h</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>[[nodiscard]]</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator==(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keywordflow">return</span> *lhs == std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>}</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>[[nodiscard]]</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator!=(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">return</span> *lhs != std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>[[nodiscard]]</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator&lt;&lt;(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">return</span> *lhs &lt;&lt; std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>[[nodiscard]]</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator&gt;&gt;(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>    <span class="keywordflow">return</span> *lhs &gt;&gt; std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>}</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>[[nodiscard]]</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator&lt;(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <span class="keywordflow">return</span> *lhs &lt; std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>}</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>[[nodiscard]]</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator&gt;(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keywordflow">return</span> *lhs &gt; std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>}</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>[[nodiscard]]</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator&lt;=(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="keywordflow">return</span> *lhs &lt;= std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>}</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>[[nodiscard]]</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator&gt;=(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    <span class="keywordflow">return</span> *lhs &gt;= std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>}</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>[[nodiscard]]</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator+(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keywordflow">return</span> *lhs + std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>}</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>[[nodiscard]]</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span><span class="keyword">inline</span> <span class="keyword">auto</span> operator-(<span class="keyword">const</span> Lhs&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <span class="keywordflow">return</span> *lhs - std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>}</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="keyword">inline</span> <span class="keyword">decltype</span>(<span class="keyword">auto</span>) <span class="keyword">operator</span>+=(Lhs&amp; lhs, Rhs&amp;&amp; rhs)  {</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">requires</span> { *lhs += std::forward&lt;Rhs&gt;(rhs); }) {</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        <span class="comment">// const operator?</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <span class="keywordflow">return</span> *lhs += std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        <span class="keywordflow">return</span> *lhs.writeScope() += std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    }</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>}</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span><span class="keyword">template</span>&lt;AAnyProperty Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="keyword">inline</span> <span class="keyword">decltype</span>(<span class="keyword">auto</span>) <span class="keyword">operator</span>+=(Lhs&amp;&amp; lhs, Rhs&amp;&amp; rhs) {</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <span class="keywordflow">return</span> lhs = *lhs + std::forward&lt;Rhs&gt;(rhs);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>}</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span> </div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="comment">// simple check above operators work.</span></div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="keyword">static_assert</span>(<span class="keyword">requires</span> { <a class="code hl_class" href="structAProperty.html">AProperty&lt;int&gt;</a>() + 1; });</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span> </div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00435">
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html">  435</a></span><span class="keyword">template</span> &lt;APropertyReadable T&gt; <span class="keyword">struct </span>fmt::formatter&lt;T&gt; {</div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ParseContext&gt;</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> parse(ParseContext&amp; ctx)</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    {</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        <span class="keywordflow">return</span> ctx.begin();</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    }</div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span> </div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    <span class="keyword">auto</span> format(T&amp; c, format_context&amp; ctx)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>        <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">"{}"</span>, *c);</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    }</div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>};</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span><span class="comment">// UNCOMMENT THIS to test biProjected</span></div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="comment">static_assert(requires (AProperty&lt;int&gt;&amp; intProperty) {</span></div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span><span class="comment">      [](int) -&gt; AString { return ""; },</span></div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span><span class="comment">      [](const AString&amp;) -&gt; int { return 0; },</span></div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="comment">    }).value() } -&gt; aui::convertible_to&lt;AString&gt;;</span></div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="comment"></span> </div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span><span class="comment">        [](int) -&gt; AString { return ""; },</span></div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span><span class="comment">        [](const AString&amp;) -&gt; int { return 0; },</span></div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span><span class="comment">    }) = "AString" };</span></div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="comment"></span> </div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span><span class="comment"></span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span><span class="comment">        [](int) -&gt; AString { return ""; },</span></div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span><span class="comment">        [](const AString&amp;) -&gt; int { return 0; },</span></div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span><span class="comment">    }) };</span></div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span><span class="comment"></span> </div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span><span class="comment">    { intProperty.biProjected(aui::lambda_overloaded {</span></div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span><span class="comment">        [](int) -&gt; AString { return ""; },</span></div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span><span class="comment">        [](const AString&amp;) -&gt; int { return 0; },</span></div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="comment">    }).assignment() } -&gt; aui::invocable&lt;AString&gt;;</span></div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span><span class="comment">});</span></div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span> </div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00461">
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno"><a class="line" href="structfmt_1_1formatter_3_01T_01_4.html">  461</a></span><span class="keyword">template</span> &lt;APropertyReadable T&gt; <span class="keyword">struct </span>fmt::formatter&lt;T&gt; {</div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ParseContext&gt;</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> parse(ParseContext&amp; ctx)</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    {</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>        <span class="keywordflow">return</span> ctx.begin();</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>    }</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    <span class="keyword">auto</span> format(T&amp; c, format_context&amp; ctx)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>        <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">"{}"</span>, *c);</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    }</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>};</div>
 </div>
 <div class="ttc" id="aclassAObject_html"><div class="ttname"><a href="classAObject.html">AObject</a></div><div class="ttdoc">A base object class.</div><div class="ttdef"><b>Definition</b> AObject.h:39</div></div>
 <div class="ttc" id="aclassaui_1_1PropertyModifier_html"><div class="ttname"><a href="classaui_1_1PropertyModifier.html">aui::PropertyModifier</a></div><div class="ttdoc">Temporary transparent object that gains write access to underlying property's value,...</div><div class="ttdef"><b>Definition</b> PropertyModifier.h:26</div></div>
@@ -490,23 +516,24 @@ $(function(){initNavTree('AProperty_8h_source.html',''); initResizable(true); })
 <div class="ttc" id="aconceptaui_1_1default__initializable_html"><div class="ttname"><a href="conceptaui_1_1default__initializable.html">aui::default_initializable</a></div><div class="ttdef"><b>Definition</b> concepts.h:107</div></div>
 <div class="ttc" id="aconceptaui_1_1invocable_html"><div class="ttname"><a href="conceptaui_1_1invocable.html">aui::invocable</a></div><div class="ttdoc">Invokable concept.</div><div class="ttdef"><b>Definition</b> concepts.h:37</div></div>
 <div class="ttc" id="aconceptaui_1_1same__as_html"><div class="ttname"><a href="conceptaui_1_1same__as.html">aui::same_as</a></div><div class="ttdef"><b>Definition</b> concepts.h:70</div></div>
-<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:570</div></div>
-<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:325</div></div>
-<div class="ttc" id="astructAPropertyDef_html"><div class="ttname"><a href="structAPropertyDef.html">APropertyDef</a></div><div class="ttdoc">Property implementation to use with custom getter/setter.</div><div class="ttdef"><b>Definition</b> AProperty.h:233</div></div>
-<div class="ttc" id="astructAPropertyDef_html_a183037c8c709508f60ce7278298f5e8b"><div class="ttname"><a href="structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b">APropertyDef::notify</a></div><div class="ttdeci">void notify()</div><div class="ttdoc">Notify observers that a change was occurred (no preconditions).</div><div class="ttdef"><b>Definition</b> AProperty.h:347</div></div>
-<div class="ttc" id="astructAPropertyDef_html_a1bb1a0c3941698cc8ba887e0bcd6c090"><div class="ttname"><a href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">APropertyDef::base</a></div><div class="ttdeci">const M * base</div><div class="ttdoc">AObject which this property belongs to.</div><div class="ttdef"><b>Definition</b> AProperty.h:237</div></div>
-<div class="ttc" id="astructAPropertyDef_html_a34d82d6c147b2c756e2886dbe2f8601e"><div class="ttname"><a href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">APropertyDef::get</a></div><div class="ttdeci">Getter get</div><div class="ttdoc">Getter. Can be pointer-to-member(function or field) or lambda.</div><div class="ttdef"><b>Definition</b> AProperty.h:243</div></div>
-<div class="ttc" id="astructAPropertyDef_html_a62ad81ffc5bf8b8aa5defb808984e0a9"><div class="ttname"><a href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">APropertyDef::set</a></div><div class="ttdeci">Setter set</div><div class="ttdoc">Setter. Can be pointer-to-member(function or field) or lambda.</div><div class="ttdef"><b>Definition</b> AProperty.h:260</div></div>
-<div class="ttc" id="astructAPropertyDef_html_a79796c83902226291120377ae6bf0b9e"><div class="ttname"><a href="structAPropertyDef.html#a79796c83902226291120377ae6bf0b9e">APropertyDef::biProjected</a></div><div class="ttdeci">auto biProjected(ProjectionRead &amp;&amp;projectionRead, ProjectionWrite &amp;&amp;projectionWrite) noexcept</div><div class="ttdoc">Makes a bidirectional projection of this property.</div><div class="ttdef"><b>Definition</b> AProperty.h:329</div></div>
-<div class="ttc" id="astructAPropertyDef_html_a876e5b8fc0f3fda02585e8265f5b9a29"><div class="ttname"><a href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">APropertyDef::changed</a></div><div class="ttdeci">const emits&lt; SignalArg &gt; &amp; changed</div><div class="ttdoc">Reference to underlying signal emitting on value changes.</div><div class="ttdef"><b>Definition</b> AProperty.h:267</div></div>
-<div class="ttc" id="astructAPropertyDef_html_ace3583680a046f426f2da0b1279b28ba"><div class="ttname"><a href="structAPropertyDef.html#ace3583680a046f426f2da0b1279b28ba">APropertyDef::biProjected</a></div><div class="ttdeci">auto biProjected(Projection &amp;&amp;projectionBidirectional) noexcept</div><div class="ttdoc">Makes a bidirectional projection of this property (by a single aui::lambda_overloaded).</div><div class="ttdef"><b>Definition</b> AProperty.h:340</div></div>
-<div class="ttc" id="astructAPropertyDef_html_ae6180044dbbbcfb59a4abb797b4f3f24"><div class="ttname"><a href="structAPropertyDef.html#ae6180044dbbbcfb59a4abb797b4f3f24">APropertyDef::readProjected</a></div><div class="ttdeci">auto readProjected(Projection &amp;&amp;projection) noexcept</div><div class="ttdoc">Makes a readonly projection of this property.</div><div class="ttdef"><b>Definition</b> AProperty.h:318</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:572</div></div>
+<div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:343</div></div>
+<div class="ttc" id="astructAPropertyDef_html"><div class="ttname"><a href="structAPropertyDef.html">APropertyDef</a></div><div class="ttdoc">Property implementation to use with custom getter/setter.</div><div class="ttdef"><b>Definition</b> AProperty.h:223</div></div>
+<div class="ttc" id="astructAPropertyDef_html_a183037c8c709508f60ce7278298f5e8b"><div class="ttname"><a href="structAPropertyDef.html#a183037c8c709508f60ce7278298f5e8b">APropertyDef::notify</a></div><div class="ttdeci">void notify()</div><div class="ttdoc">Notify observers that a change was occurred (no preconditions).</div><div class="ttdef"><b>Definition</b> AProperty.h:337</div></div>
+<div class="ttc" id="astructAPropertyDef_html_a1bb1a0c3941698cc8ba887e0bcd6c090"><div class="ttname"><a href="structAPropertyDef.html#a1bb1a0c3941698cc8ba887e0bcd6c090">APropertyDef::base</a></div><div class="ttdeci">const M * base</div><div class="ttdoc">AObject which this property belongs to.</div><div class="ttdef"><b>Definition</b> AProperty.h:227</div></div>
+<div class="ttc" id="astructAPropertyDef_html_a34d82d6c147b2c756e2886dbe2f8601e"><div class="ttname"><a href="structAPropertyDef.html#a34d82d6c147b2c756e2886dbe2f8601e">APropertyDef::get</a></div><div class="ttdeci">Getter get</div><div class="ttdoc">Getter. Can be pointer-to-member(function or field) or lambda.</div><div class="ttdef"><b>Definition</b> AProperty.h:233</div></div>
+<div class="ttc" id="astructAPropertyDef_html_a62ad81ffc5bf8b8aa5defb808984e0a9"><div class="ttname"><a href="structAPropertyDef.html#a62ad81ffc5bf8b8aa5defb808984e0a9">APropertyDef::set</a></div><div class="ttdeci">Setter set</div><div class="ttdoc">Setter. Can be pointer-to-member(function or field) or lambda.</div><div class="ttdef"><b>Definition</b> AProperty.h:250</div></div>
+<div class="ttc" id="astructAPropertyDef_html_a79796c83902226291120377ae6bf0b9e"><div class="ttname"><a href="structAPropertyDef.html#a79796c83902226291120377ae6bf0b9e">APropertyDef::biProjected</a></div><div class="ttdeci">auto biProjected(ProjectionRead &amp;&amp;projectionRead, ProjectionWrite &amp;&amp;projectionWrite) noexcept</div><div class="ttdoc">Makes a bidirectional projection of this property.</div><div class="ttdef"><b>Definition</b> AProperty.h:319</div></div>
+<div class="ttc" id="astructAPropertyDef_html_a876e5b8fc0f3fda02585e8265f5b9a29"><div class="ttname"><a href="structAPropertyDef.html#a876e5b8fc0f3fda02585e8265f5b9a29">APropertyDef::changed</a></div><div class="ttdeci">const emits&lt; SignalArg &gt; &amp; changed</div><div class="ttdoc">Reference to underlying signal emitting on value changes.</div><div class="ttdef"><b>Definition</b> AProperty.h:257</div></div>
+<div class="ttc" id="astructAPropertyDef_html_ace3583680a046f426f2da0b1279b28ba"><div class="ttname"><a href="structAPropertyDef.html#ace3583680a046f426f2da0b1279b28ba">APropertyDef::biProjected</a></div><div class="ttdeci">auto biProjected(Projection &amp;&amp;projectionBidirectional) noexcept</div><div class="ttdoc">Makes a bidirectional projection of this property (by a single aui::lambda_overloaded).</div><div class="ttdef"><b>Definition</b> AProperty.h:330</div></div>
+<div class="ttc" id="astructAPropertyDef_html_ae6180044dbbbcfb59a4abb797b4f3f24"><div class="ttname"><a href="structAPropertyDef.html#ae6180044dbbbcfb59a4abb797b4f3f24">APropertyDef::readProjected</a></div><div class="ttdeci">auto readProjected(Projection &amp;&amp;projection) noexcept</div><div class="ttdoc">Makes a readonly projection of this property.</div><div class="ttdef"><b>Definition</b> AProperty.h:308</div></div>
 <div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:30</div></div>
 <div class="ttc" id="astructAProperty_html_a18682f7b8d05cec06cdbecc548a453b6"><div class="ttname"><a href="structAProperty.html#a18682f7b8d05cec06cdbecc548a453b6">AProperty::notify</a></div><div class="ttdeci">void notify()</div><div class="ttdoc">Notify observers that a change was occurred (no preconditions).</div><div class="ttdef"><b>Definition</b> AProperty.h:105</div></div>
 <div class="ttc" id="astructAProperty_html_a2739bc3726a864b8feab98cb10c565cb"><div class="ttname"><a href="structAProperty.html#a2739bc3726a864b8feab98cb10c565cb">AProperty::readProjected</a></div><div class="ttdeci">auto readProjected(Projection &amp;&amp;projection) const noexcept</div><div class="ttdoc">Makes a readonly projection of this property.</div><div class="ttdef"><b>Definition</b> AProperty.h:139</div></div>
 <div class="ttc" id="astructAProperty_html_aa955615436c4177ec81d353b15fb5bd0"><div class="ttname"><a href="structAProperty.html#aa955615436c4177ec81d353b15fb5bd0">AProperty::biProjected</a></div><div class="ttdeci">auto biProjected(Projection &amp;&amp;projectionBidirectional) noexcept</div><div class="ttdoc">Makes a bidirectional projection of this property (by a single aui::lambda_overloaded).</div><div class="ttdef"><b>Definition</b> AProperty.h:160</div></div>
 <div class="ttc" id="astructAProperty_html_ab0229d9ee58c06dacaa012ece0d1d21d"><div class="ttname"><a href="structAProperty.html#ab0229d9ee58c06dacaa012ece0d1d21d">AProperty::writeScope</a></div><div class="ttdeci">aui::PropertyModifier&lt; AProperty &gt; writeScope() noexcept</div><div class="ttdef"><b>Definition</b> AProperty.h:130</div></div>
 <div class="ttc" id="astructAProperty_html_ae2562922cd46888709005f8aa0a6bead"><div class="ttname"><a href="structAProperty.html#ae2562922cd46888709005f8aa0a6bead">AProperty::biProjected</a></div><div class="ttdeci">auto biProjected(ProjectionRead &amp;&amp;projectionRead, ProjectionWrite &amp;&amp;projectionWrite) noexcept</div><div class="ttdoc">Makes a bidirectional projection of this property.</div><div class="ttdef"><b>Definition</b> AProperty.h:149</div></div>
+<div class="ttc" id="astructaui_1_1react_1_1DependencyObserverRegistrar_html_accda9dac50efd5e1e7b0d06941d274c1"><div class="ttname"><a href="structaui_1_1react_1_1DependencyObserverRegistrar.html#accda9dac50efd5e1e7b0d06941d274c1">aui::react::DependencyObserverRegistrar::addDependency</a></div><div class="ttdeci">static void addDependency(const AAbstractSignal &amp;signal)</div><div class="ttdoc">Adds observer to the specified signal, if called inside a reactive expression evaluation.</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

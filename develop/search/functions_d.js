@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../group__reflection.html#gae6568099b28fa1f7700e76d3a4b849dd',1,'AReflect']]],
+  ['name_0',['name',['../classAClass.html#a4cc13e363580ce3029fe5e49aff5fa5f',1,'AClass::name()'],['../group__reflection.html#gae6568099b28fa1f7700e76d3a4b849dd',1,'AReflect::name()']]],
   ['nametovaluemap_1',['nameToValueMap',['../classAEnumerate.html#a5935e751b91ec9ece37ed7c7739d7451',1,'AEnumerate']]],
   ['nativesignalid_2',['nativeSignalId',['../classAFatalException.html#a6c6ac322b7e0b04108365d70571563da',1,'AFatalException']]],
   ['needrethrow_3',['needRethrow',['../classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf',1,'AThread::Interrupted']]],

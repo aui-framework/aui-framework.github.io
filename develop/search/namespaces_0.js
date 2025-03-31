@@ -6,5 +6,6 @@ var searchData=
   ['aplatform_3',['APlatform',['../namespaceAPlatform.html',1,'']]],
   ['aui_3a_3aaudio_3a_3aplatform_4',['platform',['../namespaceaui_1_1audio_1_1platform.html',1,'aui::audio']]],
   ['aui_3a_3aparameter_5fpack_5',['parameter_pack',['../namespaceaui_1_1parameter__pack.html',1,'aui']]],
-  ['axml_6',['AXml',['../namespaceAXml.html',1,'']]]
+  ['aui_3a_3areact_6',['react',['../namespaceaui_1_1react.html',1,'aui']]],
+  ['axml_7',['AXml',['../namespaceAXml.html',1,'']]]
 ];
