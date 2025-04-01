@@ -24,63 +24,61 @@
 */
 var NAVTREE =
 [
-  [ "AUI Framework", "index.html", [
-    [ "glossary", "usergroup0.html", [
-      [ "Namespace List", "namespaces.html", "namespaces" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
-      ] ],
-      [ "Class List", "annotated.html", "annotated" ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ]
-      ] ]
-    ] ],
-    [ "Getting started", "usergroup1.html", [
-      [ "Getting started with AUI", "md_docs_Getting_started_with_AUI.html", null ],
-      [ "AUI Boot", "md_docs_AUI_Boot.html", null ],
-      [ "Writing tests", "md_docs_Writing_tests.html", null ],
-      [ "Writing platform dependent code", "@ref md_docs_Writing_platform_dependent_code", null ],
-      [ "Code style and recommendations", "md_docs_Code_style_and_recommendations.html", null ],
-      [ "Troubleshoot list", "md_docs_Troubleshoot_list.html", null ],
-      [ "Crosscompiling (Android and iOS)", "md_docs_Crosscompiling.html", null ]
-    ] ],
-    [ "Tweaking", "usergroup2.html", [
-      [ "AUI configure flags", "md_docs_AUI_configure_flags.html", null ],
-      [ "AUI command line arguments", "md_docs_AUI_command_line_arguments.html", null ]
-    ] ],
-    [ "Reference", "usergroup3.html", [
-      [ "All AUI Modules", "modules.html", "modules" ],
+    [ "Reference", null, [
+      [ "All AUI Modules", "index.html", null ],
       [ "All AUI Classes", "classes.html", null ],
-      [ "All AUI CMake commands", "usergroup4.html", [
-        [ "aui_app", "md_docs_aui_app.html", null ],
-        [ "aui_executable", "md_docs_aui_executable.html", null ],
-        [ "aui_module", "md_docs_aui_module.html", null ]
+      [ "All Namespaces", "namespaces.html", "namespaces" ],
+      [ "All AUI CMake commands", null, [
+        [ "aui_app", "md_docs_2aui__app.html", null ],
+        [ "aui_executable", "md_docs_2aui__executable.html", null ],
+        [ "aui_link", "md_docs_2aui__link.html", null ],
+        [ "aui_module", "md_docs_2aui__module.html", null ]
       ] ]
+    ] ],
+    [ "Getting started", null, [
+      [ "Getting started with AUI", "md_docs_2Getting_01started_01with_01AUI.html", null ],
+      [ "Examples", "examples.html", null ],
+      [ "AUI Boot", "md_docs_2AUI_01Boot.html", null ],
+      [ "Writing tests", "md_docs_2Writing_01tests.html", null ],
+      [ "Build-time macros", "md_docs_2Macros.html", null ],
+      [ "Code style and recommendations", "md_docs_2Code_01style_01and_01recommendations.html", null ],
+      [ "clang-format", "md_docs_2clang-format.html", null ],
+      [ "Troubleshoot list", "md_docs_2Troubleshoot_01list.html", null ],
+      [ "Crosscompiling (Android and iOS)", "md_docs_2Crosscompiling.html", null ]
+    ] ],
+    [ "UI Building", null, [
+      [ "Overview", "md_docs_2UI_01Building_01Overview.html", null ],
+      [ "Layout Managers", "group__layout__managers.html", null ],
+      [ "Styling", "group__ass.html", null ],
+      [ "Signal-slot", "group__signal__slot.html", null ],
+      [ "Data Binding", "group__property__system.html", null ],
+      [ "Devtools", "md_docs_2Devtools.html", null ],
+      [ "All Views", "group__useful__views.html", null ],
+      [ "All ASS Properties", "group__ass__properties.html", null ]
+    ] ],
+    [ "Preparing to Production", null, [
+      [ "Setting App Icon", "md_docs_2Setting_01App_01Icon.html", null ],
+      [ "Packaging Your App", "md_docs_2Packaging_01Your_01App.html", null ]
+    ] ],
+    [ "Platform Specifics", null, [
+      [ "Windows", "windows.html", null ],
+      [ "Linux", "linux.html", null ],
+      [ "macOS", "macos.html", null ],
+      [ "Android", "android.html", null ],
+      [ "iOS", "ios.html", null ],
+      [ "WebAssembly", "emscripten.html", null ]
+    ] ],
+    [ "Other", null, [
+      [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
+      [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ],
+      [ "Runtime Dependency Resolution", "md_docs_2Runtime_01Dependency_01Resolution.html", null ]
     ] ]
-  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"@ref md_docs_Writing_platform_dependent_code",
-"classADeque.html#ad1396ac646b307ff34e8e9d594d27181",
-"classAPath.html#a7c1302777d5b748bf87a24d078c090e1",
-"classAStringStream.html#ac92ca38e8f2d39b72c0372e53815158c",
-"classAViewContainer.html#a94d32b819a44ed3cdbcc28bb829fa5d3",
-"classOpenGLMultiStringCanvas.html#ac13e27de549aee9dc11a72fa20746cc8",
-"conceptaui_1_1copyable.html",
-"structACursor_1_1Custom.html",
-"structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535",
-"structaui_1_1impl_1_1future_1_1FutureReturnType.html",
-"structtuples_1_1detail_1_1functor_1_1sub.html"
+"android.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';

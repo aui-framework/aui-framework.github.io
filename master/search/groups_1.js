@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['background_5feffect_0',['Background_effect',['../group__background__effect.html',1,'']]]
+  ['background_20effects_0',['Background effects',['../group__background__effect.html',1,'']]]
 ];

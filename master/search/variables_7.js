@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['highlightredrawrequests_0',['highlightRedrawRequests',['../structAWindowBase_1_1Profiling.html#a2621aebd8d1e049a1e7b890c096eca07',1,'AWindowBase::Profiling']]],
-  ['highlightview_1',['highlightView',['../structAWindowBase_1_1Profiling.html#a34588edd746cd17b76b33e52a866adc7',1,'AWindowBase::Profiling']]]
+  ['highlightredrawrequests_0',['highlightRedrawRequests',['../structAWindowBase_1_1Profiling.html#a2cd15cf7e42b198768ce47256e93c2d6',1,'AWindowBase::Profiling']]],
+  ['highlightview_1',['highlightView',['../structAWindowBase_1_1Profiling.html#a75f4cfd6345308429de4c6374784200f',1,'AWindowBase::Profiling']]]
 ];

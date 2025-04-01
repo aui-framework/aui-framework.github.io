@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['aui_20boot_0',['AUI Boot',['../md_docs_AUI_Boot.html',1,'']]],
-  ['aui_20command_20line_20arguments_1',['AUI Command Line Arguments',['../md_docs_AUI_command_line_arguments.html',1,'']]],
-  ['aui_20configure_20flags_2',['AUI configure flags',['../md_docs_AUI_configure_flags.html',1,'']]],
-  ['aui_20framework_3',['AUI Framework',['../index.html',1,'']]],
-  ['aui_5fapp_4',['aui_app',['../md_docs_aui_app.html',1,'']]],
-  ['aui_5fexecutable_5',['aui_executable',['../md_docs_aui_executable.html',1,'(Global Namespace)'],['../md_docs_aui_module.html',1,'(Global Namespace)']]]
+  ['7guis_20cells_0',['7GUIs Cells',['../example_7guis_cells.html',1,'']]],
+  ['7guis_20circle_20drawer_1',['7GUIs Circle Drawer',['../example_7guis_circle_drawer.html',1,'']]],
+  ['7guis_20counter_2',['7GUIs Counter',['../example_7guis_counter.html',1,'']]],
+  ['7guis_20crud_3',['7GUIs CRUD',['../example_7guis_crud.html',1,'']]],
+  ['7guis_20flight_20booker_4',['7GUIs Flight Booker',['../example_7guis_flight_booker.html',1,'']]],
+  ['7guis_20temperature_20converter_5',['7GUIs Temperature Converter',['../example_7guis_temperature_converter.html',1,'']]],
+  ['7guis_20timer_6',['7GUIs Timer',['../example_7guis_timer.html',1,'']]]
 ];

@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['scale_0',['scale',['../structass_1_1BackgroundImage.html#a70a475ba926d1e801390a151bc3d6cad',1,'ass::BackgroundImage']]],
-  ['scalingfactor_1',['scalingFactor',['../structAWindowBase_1_1ScalingParams.html#a99c180cf5f6fda16f32a086c01092c56',1,'AWindowBase::ScalingParams']]],
-  ['scrolled_2',['scrolled',['../classAView.html#a603b11e87b05b203f321f6be85d45de8',1,'AView']]],
-  ['selectionchanged_3',['selectionChanged',['../classAAbstractTypeable.html#a34536e9116cbe41302cbc548f3658d79',1,'AAbstractTypeable']]],
-  ['sizechanged_4',['sizeChanged',['../classAView.html#accd0aaa185656f113bb1b4127ba36a1e',1,'AView']]],
-  ['sizing_5',['sizing',['../structass_1_1BackgroundImage.html#abbf71ff28b3af2080eab553fa1acace0',1,'ass::BackgroundImage']]],
-  ['spacebetweendashes_6',['spaceBetweenDashes',['../structABorderStyle_1_1Dashed.html#a9d4f5e62eb47ae95d57bb6a18fb156e9',1,'ABorderStyle::Dashed']]],
-  ['success_7',['success',['../classACurl.html#a8059c18f914594da57c24286a17674ff',1,'ACurl']]]
+  ['radius_0',['radius',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html#a5a750408a216e43f3b473746e7305a3c',1,'ass::Backdrop::GaussianBlurCustom']]],
+  ['read_1',['read',['../classIAudioPlayer.html#a0b8d4722abeb61abcbb0d00274baba00',1,'IAudioPlayer']]],
+  ['redrawn_2',['redrawn',['../classAView.html#a9695a0024e4d0e8b717362f0f35944ce',1,'AView']]],
+  ['rendertotexturedecay_3',['renderToTextureDecay',['../structAWindowBase_1_1Profiling.html#af3bb342a9b1e1ecd21d5d016cd549148',1,'AWindowBase::Profiling']]],
+  ['rep_4',['rep',['../structass_1_1BackgroundImage.html#aa71cf5009a5d39c4cf14edaaa2a50de8',1,'ass::BackgroundImage']]],
+  ['repeat_5',['repeat',['../structATexturedBrush.html#a9759fd226e78d36217ce417caf320589',1,'ATexturedBrush']]],
+  ['restored_6',['restored',['../classAWindow.html#a892a0cd6e3c56b0d09cdd9b122ce39ac',1,'AWindow']]],
+  ['root_7',['ROOT',['../classATreeModelIndex.html#ad3d3601f7d4e1af414dbdce3a6bbe280',1,'ATreeModelIndex']]],
+  ['rotation_8',['rotation',['../structALinearGradientBrush.html#a7e47f7ec9d3fa75394a039f2c26ba7bc',1,'ALinearGradientBrush']]]
 ];
