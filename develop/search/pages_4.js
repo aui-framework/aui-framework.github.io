@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['emscripten_20webassembly_0',['Emscripten (WebAssembly)',['../emscripten.html',1,'']]],
-  ['example_1',['Example',['../example_console_hello_world_example.html',1,'Console Hello World Example'],['../example_fractal_example.html',1,'Fractal Example'],['../example_views_example.html',1,'Views Example']]],
-  ['examples_2',['Examples',['../examples.html',1,'']]],
-  ['experimental_20apis_3',['Experimental APIs',['../experimental_api.html',1,'']]],
-  ['exporter_20template_4',['Prometheus Exporter Template',['../example_prometheus_exporter_template.html',1,'']]]
+  ['dependency_20resolution_0',['Runtime Dependency Resolution',['../md_docs_2Runtime_01Dependency_01Resolution.html',1,'']]],
+  ['deprecated_20list_1',['Deprecated List',['../deprecated.html',1,'']]],
+  ['desktop_20oses_2',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
+  ['devtools_3',['Devtools',['../md_docs_2Devtools.html',1,'']]],
+  ['drawer_4',['7GUIs Circle Drawer',['../example_7guis_circle_drawer.html',1,'']]]
 ];

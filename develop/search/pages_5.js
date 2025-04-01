@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['flags_0',['AUI configure flags',['../md_docs_2AUI_01configure_01flags.html',1,'']]],
-  ['format_1',['clang-format',['../md_docs_2clang-format.html',1,'']]],
-  ['fractal_20example_2',['Fractal Example',['../example_fractal_example.html',1,'']]],
-  ['framework_3',['AUI Framework',['../index.html',1,'']]]
+  ['emscripten_20webassembly_0',['Emscripten (WebAssembly)',['../emscripten.html',1,'']]],
+  ['example_1',['Example',['../example_console_hello_world_example.html',1,'Console Hello World Example'],['../example_fractal_example.html',1,'Fractal Example'],['../example_views_example.html',1,'Views Example']]],
+  ['examples_2',['Examples',['../examples.html',1,'']]],
+  ['experimental_20apis_3',['Experimental APIs',['../experimental_api.html',1,'']]],
+  ['exporter_20template_4',['Prometheus Exporter Template',['../example_prometheus_exporter_template.html',1,'']]]
 ];
