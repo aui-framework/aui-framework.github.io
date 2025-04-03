@@ -195,11 +195,12 @@ template&lt;aui::detail::property::ProjectionBidirectional&lt; T &gt; Projection
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Signals and public fields<a class="aui-toc-hash" href="#pub-attribs" id="pub-attribs" name="pub-attribs" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:afb3bece8bd55cec980583b542b11637e" id="r_afb3bece8bd55cec980583b542b11637e"><td align="right" class="memItemLeft" valign="top"><a id="afb3bece8bd55cec980583b542b11637e" name="afb3bece8bd55cec980583b542b11637e"></a>
-T </td><td class="memItemRight" valign="bottom"><b>raw</b> {}</td></tr>
+<tr class="memitem:afb3bece8bd55cec980583b542b11637e" id="r_afb3bece8bd55cec980583b542b11637e"><td align="right" class="memItemLeft" valign="top">T </td><td class="memItemRight" valign="bottom"><a class="el" href="#afb3bece8bd55cec980583b542b11637e">raw</a> {}</td></tr>
+<tr class="memdesc:afb3bece8bd55cec980583b542b11637e"><td class="mdescLeft"> </td><td class="mdescRight">Stored value.  <br/></td></tr>
 <tr class="separator:afb3bece8bd55cec980583b542b11637e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8c4a7dedb7d28ab6a515d307566994d3" id="r_a8c4a7dedb7d28ab6a515d307566994d3"><td align="right" class="memItemLeft" valign="top"><a id="a8c4a7dedb7d28ab6a515d307566994d3" name="a8c4a7dedb7d28ab6a515d307566994d3"></a>
 <a class="el" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a>&lt; T &gt; </td><td class="memItemRight" valign="bottom"><b>changed</b></td></tr>
+<tr class="memdesc:a8c4a7dedb7d28ab6a515d307566994d3"><td class="mdescLeft"> </td><td class="mdescRight">Signal that notifies data changes. <br/></td></tr>
 <tr class="separator:a8c4a7dedb7d28ab6a515d307566994d3"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
@@ -355,7 +356,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 <p>In common, you won't need to use this function. <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> is reevaluated automatically as soon as one updates the value within property.</p>
-<p>If your scenario goes beyond <a class="el" href="#ab0229d9ee58c06dacaa012ece0d1d21d">writeScope</a> that explicitly defines modification scope within RAII scope, you can modify the underlying value by accessing <code>AProperty::raw</code> and then call <a class="el" href="#a18682f7b8d05cec06cdbecc548a453b6">notify</a> to notify the observers that value is changed. </p>
+<p>If your scenario goes beyond <a class="el" href="#ab0229d9ee58c06dacaa012ece0d1d21d">writeScope</a> that explicitly defines modification scope within RAII scope, you can modify the underlying value by accessing <code><a class="el" href="#afb3bece8bd55cec980583b542b11637e" title="Stored value.">AProperty::raw</a></code> and then call <a class="el" href="#a18682f7b8d05cec06cdbecc548a453b6">notify</a> to notify the observers that value is changed. </p>
 </div>
 </div>
 <a id="ab0229d9ee58c06dacaa012ece0d1d21d" name="ab0229d9ee58c06dacaa012ece0d1d21d"></a>
@@ -384,6 +385,22 @@ template&lt;typename T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>Temporary transparent object that gains write access to underlying property's value, notifying about value changes when destructed.    See <a class="el" href="classaui_1_1PropertyModifier.html" title="Temporary transparent object that gains write access to underlying property's value,...">aui::PropertyModifier</a>. </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_27guis_2crud_2src_2main_8cpp-example.html#a11">examples/7guis/crud/src/main.cpp</a>, and <a class="el" href="examples_2ui_2contacts_2src_2main_8cpp-example.html#a12">examples/ui/contacts/src/main.cpp</a>.</dd>
 </dl>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation<a class="aui-toc-hash" href="#afb3bece8bd55cec980583b542b11637e" id="afb3bece8bd55cec980583b542b11637e" name="afb3bece8bd55cec980583b542b11637e" style="color: var(--fragment-comment) !important">#</a></h2>
+
+<h2 class="memtitle"><span class="permalink">◆ </span>raw<a class="aui-toc-hash" href="#◆ raw" id="◆ raw" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="memname">
+<tr>
+<td class="memname">T <a class="el" href="structAProperty.html">AProperty</a>&lt; T &gt;::raw {}</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This field stores <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>'s wrapped value. It is not recommended to use this in casual use; although there are might be an use case to modify the value without notifying. You can use <code><a class="el" href="#a18682f7b8d05cec06cdbecc548a453b6" title="Notify observers that a change was occurred (no preconditions).">notify()</a></code> to send a change notification. Use at your own risk. </p>
 </div>
 </div>
 <p class="footer-inner">
