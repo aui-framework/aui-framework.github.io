@@ -29,7 +29,7 @@ var searchData=
   ['example_26',['example',['../group__signal__slot.html#autotoc_md2',1,'Basic example'],['../group__signal__slot.html#autotoc_md3',1,'UI example']]],
   ['examples_27',['Examples',['../examples.html#examples_app',1,'Application Examples'],['../examples.html#autotoc_md222',1,'Building the Examples'],['../examples.html',1,'Examples'],['../classAForEachUI.html#autotoc_md34',1,'Examples'],['../group__layout__managers.html#autotoc_md29',1,'Layout Examples']]],
   ['exception_28',['Exception',['../classACurl_1_1Exception.html',1,'ACurl::Exception'],['../classADBus_1_1Exception.html',1,'ADBus::Exception'],['../classATreeModelIndex_1_1Exception.html',1,'ATreeModelIndex::Exception']]],
-  ['exception_29',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md129',1,'']]],
+  ['exception_29',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md128',1,'']]],
   ['exceptions_30',['Code style exceptions',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md130',1,'']]],
   ['executable_31',['executable',['../structAProcess_1_1ProcessCreationInfo.html#a318c9f6235c6f2a4523e5d3fcb07d53f',1,'AProcess::ProcessCreationInfo::executable'],['../classAProcess.html#ProcessTest_Launching_executable',1,'Launching executable']]],
   ['execute_32',['execute',['../classASqlDatabase.html#a0852d9574c53b89934ec65316c610e3d',1,'ASqlDatabase']]],
