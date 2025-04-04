@@ -2,7 +2,7 @@ var searchData=
 [
   ['radiogroup_0',['RadioGroup',['../structdeclarative_1_1RadioGroup.html',1,'declarative']]],
   ['radius_1',['radius',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html#a5a750408a216e43f3b473746e7305a3c',1,'ass::Backdrop::GaussianBlurCustom']]],
-  ['raise_20static_5fassert_20messages_2',['Raise static_assert messages',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md134',1,'']]],
+  ['raise_20static_5fassert_20messages_2',['Raise static_assert messages',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md132',1,'']]],
   ['range_3',['range',['../structaui_1_1range.html',1,'aui']]],
   ['range_5fconsisting_5fof_4',['range_consisting_of',['../conceptaui_1_1range__consisting__of.html',1,'aui']]],
   ['ranged_5fnumber_5',['ranged_number',['../structaui_1_1ranged__number.html',1,'aui']]],
@@ -40,7 +40,7 @@ var searchData=
   ['redraw_20requests_37',['Highlight redraw requests',['../md_docs_2Render_01to_01texture.html#autotoc_md162',1,'']]],
   ['redrawn_38',['redrawn',['../classAView.html#a9695a0024e4d0e8b717362f0f35944ce',1,'AView']]],
   ['refenence_39',['ASS Refenence',['../group__ass.html#autotoc_md28',1,'']]],
-  ['reference_40',['API Reference',['../md_docs_2UI_01Building_01Overview.html#autotoc_md182',1,'']]],
+  ['reference_40',['API Reference',['../md_docs_2UI_01Building_01Overview.html#autotoc_md184',1,'']]],
   ['reflection_41',['Reflection',['../group__reflection.html',1,'']]],
   ['regex_20library_42',['Regex Library',['../example_7guis_flight_booker.html#autotoc_md194',1,'']]],
   ['regular_43',['regular',['../conceptaui_1_1regular.html',1,'aui']]],
