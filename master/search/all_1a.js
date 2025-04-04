@@ -16,7 +16,7 @@ var searchData=
   ['vao_13',['Vao',['../classgl_1_1Vao.html',1,'gl']]],
   ['variables_14',['variables',['../md_docs_2AUI_01configure_01flags.html#autotoc_md73',1,'Common variables'],['../structaui_1_1reflect_1_1member.html#autotoc_md8',1,'Fields (member variables)']]],
   ['variant_15',['Variant',['../structaui_1_1dbus_1_1Variant.html',1,'aui::dbus']]],
-  ['vectorization_20using_20inkscape_16',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md170',1,'']]],
+  ['vectorization_20using_20inkscape_16',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md173',1,'']]],
   ['vendor_17',['VENDOR',['../md_docs_2aui__app.html#autotoc_md103',1,'']]],
   ['version_18',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md55',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md105',1,'VERSION']]],
   ['version_19',['Parsing version',['../structaui_1_1updater_1_1Semver.html#VersionTest_Parsing_version',1,'']]],
