@@ -19,7 +19,7 @@ var searchData=
   ['variant_16',['Variant',['../structaui_1_1dbus_1_1Variant.html',1,'aui::dbus']]],
   ['vectorization_20using_20inkscape_17',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md176',1,'']]],
   ['vendor_18',['VENDOR',['../md_docs_2aui__app.html#autotoc_md104',1,'']]],
-  ['version_19',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md54',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md107',1,'VERSION']]],
+  ['version_19',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md54',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md106',1,'VERSION']]],
   ['version_20',['Parsing version',['../structaui_1_1updater_1_1Semver.html#VersionTest_Parsing_version',1,'']]],
   ['vertexbuffer_21',['VertexBuffer',['../classgl_1_1VertexBuffer.html',1,'gl']]],
   ['verticalalign_22',['VerticalAlign',['../group__ass__properties.html#ga327847b397ac5aa9eefa2157dbe0961d',1,'VerticalAlign.h']]],
