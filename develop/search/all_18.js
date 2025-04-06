@@ -1,7 +1,7 @@
 var searchData=
 [
   ['t_0',['t',['../group__ass__selectors.html#gab1309369989373a0f2408455b3a91742',1,'ass']]],
-  ['tab_1',['Layout tab',['../md_docs_2Devtools.html#autotoc_md137',1,'']]],
+  ['tab_1',['Layout tab',['../md_docs_2Devtools.html#autotoc_md140',1,'']]],
   ['target_2',['TARGET',['../md_docs_2aui__app.html#autotoc_md101',1,'']]],
   ['techniques_3',['Improving compiler error messages techniques',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md132',1,'']]],
   ['telegram_20client_20auigram_4',['AUI Telegram Client (AUIgram)',['../example_app_auigram.html',1,'']]],
@@ -10,7 +10,7 @@ var searchData=
   ['temperature_20converter_7',['7GUIs Temperature Converter',['../example_7guis_temperature_converter.html',1,'']]],
   ['template_8',['Template',['../example_minimal_ui_template.html',1,'Minimal UI Template'],['../example_prometheus_exporter_template.html',1,'Prometheus Exporter Template']]],
   ['template_20⚡_9',['App Template ⚡',['../example_app_template.html',1,'']]],
-  ['template_20metaprogramming_20and_20macros_10',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md130',1,'']]],
+  ['template_20metaprogramming_20and_20macros_10',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md131',1,'']]],
   ['template_20with_20assets_11',['Minimal UI Template with Assets',['../example_minimal_ui_template_with_assets.html',1,'']]],
   ['templates_12',['templates',['../md_docs_2Code_01style_01and_01recommendations.html#TRY_TO_BREAK',1,'Try to break your templates'],['../group__useful__templates.html',1,'Useful templates']]],
   ['ternary_13',['ternary',['../structaui_1_1ternary.html',1,'aui::ternary&lt; boolean, OnTrue, OnFalse &gt;'],['../structaui_1_1traits_1_1ternary.html',1,'aui::traits::ternary&lt; value, OnTrue, OnFalse &gt;']]],
@@ -43,8 +43,8 @@ var searchData=
   ['texturepacker_3c_20aimage_20_3e_40',['TexturePacker&lt; AImage &gt;',['../classUtil_1_1TexturePacker.html',1,'Util']]],
   ['texturepacker_5flol_41',['TexturePacker_Lol',['../classUtil_1_1TexturePacker__Lol.html',1,'Util']]],
   ['texturerendertarget_42',['TextureRenderTarget',['../classgl_1_1TextureRenderTarget.html',1,'gl']]],
-  ['the_20aui_5fbuild_5ffor_20way_43',['The AUI_BUILD_FOR way',['../md_docs_2Crosscompiling.html#autotoc_md138',1,'']]],
-  ['the_20cmake_5ftoolchain_5ffile_20way_44',['The CMAKE_TOOLCHAIN_FILE way',['../md_docs_2Crosscompiling.html#autotoc_md139',1,'']]],
+  ['the_20aui_5fbuild_5ffor_20way_43',['The AUI_BUILD_FOR way',['../md_docs_2Crosscompiling.html#autotoc_md137',1,'']]],
+  ['the_20cmake_5ftoolchain_5ffile_20way_44',['The CMAKE_TOOLCHAIN_FILE way',['../md_docs_2Crosscompiling.html#autotoc_md138',1,'']]],
   ['the_20examples_45',['Building the Examples',['../examples.html#autotoc_md222',1,'']]],
   ['the_20update_46',['the update',['../group__updater.html#autotoc_md241',1,'Applying (deploying) the update'],['../group__updater.html#autotoc_md240',1,'Downloading the update']]],
   ['threadpool_20size_47',['aui-threadpool-size',['../md_docs_2AUI_01command_01line_01arguments.html#autotoc_md72',1,'']]],
