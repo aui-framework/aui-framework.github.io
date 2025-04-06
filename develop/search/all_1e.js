@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['⚡_0',['App Template ⚡',['../example_app_template.html',1,'']]]
+  ['zip_0',['zip',['../structaui_1_1zip.html',1,'aui']]]
 ];
