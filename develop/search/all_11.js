@@ -51,7 +51,7 @@ var searchData=
   ['link_48',['LINK',['../md_docs_2AUI_01Boot.html#autotoc_md61',1,'']]],
   ['linking_20problems_49',['Linking problems',['../md_docs_2Troubleshoot_01list.html#autotoc_md174',1,'']]],
   ['linux_20based_20desktop_20oses_50',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
-  ['linux_5fdesktop_51',['LINUX_DESKTOP',['../md_docs_2aui__app.html#autotoc_md111',1,'']]],
+  ['linux_5fdesktop_51',['LINUX_DESKTOP',['../md_docs_2aui__app.html#autotoc_md112',1,'']]],
   ['list_52',['List',['../deprecated.html',1,'Deprecated List'],['../example_infinite_lazy_list.html',1,'Infinite Lazy List']]],
   ['list_53',['list',['../structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80',1,'AProcess::ArgStringList::list'],['../md_docs_2Troubleshoot_01list.html',1,'Troubleshoot list']]],
   ['listdir_54',['listDir',['../classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5',1,'APath']]],
