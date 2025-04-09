@@ -37,7 +37,7 @@ var searchData=
   ['playbackstatus_34',['PlaybackStatus',['../classIAudioPlayer.html#adfde5c6cc2d42b93af30c1c8579e6895',1,'IAudioPlayer']]],
   ['playbackstatus_35',['playbackStatus',['../classIAudioPlayer.html#abe584bf0881d2d4cd874c4273da3eb30',1,'IAudioPlayer']]],
   ['playsystemsound_36',['playSystemSound',['../namespaceADesktop.html#a44f8695bc18f540fb8ce120c08b3ca6a',1,'ADesktop']]],
-  ['plugin_37',['PLUGIN',['../md_docs_2aui__module.html#autotoc_md125',1,'']]],
+  ['plugin_37',['PLUGIN',['../md_docs_2aui__module.html#autotoc_md124',1,'']]],
   ['plugins_38',['IDE Plugins',['../md_docs_2IDE_01Plugins.html',1,'']]],
   ['pngimageloader_39',['PngImageLoader',['../classPngImageLoader.html',1,'']]],
   ['pointer_40',['POINTER',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c',1,'ACursor']]],

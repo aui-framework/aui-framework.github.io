@@ -195,7 +195,7 @@ var searchData=
   ['svgimagefactory_192',['SvgImageFactory',['../classSvgImageFactory.html',1,'']]],
   ['svgimageloader_193',['SvgImageLoader',['../classSvgImageLoader.html',1,'']]],
   ['swappable_194',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
-  ['syntax_195',['Syntax',['../md_docs_2aui__executable.html#autotoc_md96',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md102',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md120',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md104',1,'Syntax']]],
+  ['syntax_195',['Syntax',['../md_docs_2aui__executable.html#autotoc_md96',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md102',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md117',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md104',1,'Syntax']]],
   ['system_196',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['system_197',['system',['../android.html',1,'Android (operating system)'],['../ios.html',1,'iOS (operating system)'],['../macos.html',1,'macOS (operating system)'],['../windows.html',1,'Windows (operating system)']]],
   ['systemslashdirection_198',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
