@@ -50,6 +50,7 @@ var NAVTREEINDEX0 =
 "md_docs_2Code_01style_01and_01recommendations.html":[1,5],
 "md_docs_2Crosscompiling.html":[1,8],
 "md_docs_2Devtools.html":[2,5],
+"md_docs_2Forking_01AUI.html":[5,3],
 "md_docs_2Getting_01started_01with_01AUI.html":[1,0],
 "md_docs_2Macros.html":[1,4],
 "md_docs_2Packaging_01Your_01App.html":[3,1],

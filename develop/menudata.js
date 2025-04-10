@@ -65,4 +65,5 @@ var menudata={children:[
 {text:"Other",url:"usergroup6.html",children:[
 {text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
 {text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"},
-{text:"Runtime Dependency Resolution",url:"md_docs_2Runtime_01Dependency_01Resolution.html"}]}]}
+{text:"Runtime Dependency Resolution",url:"md_docs_2Runtime_01Dependency_01Resolution.html"},
+{text:"Forking AUI",url:"md_docs_2Forking_01AUI.html"}]}]}
