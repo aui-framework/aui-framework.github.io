@@ -82,7 +82,7 @@ var searchData=
   ['building_20aui_20without_20aui_20boot_79',['Building AUI without AUI Boot',['../md_docs_2AUI_01Boot.html#autotoc_md73',1,'']]],
   ['building_20overview_80',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
   ['building_20the_20examples_81',['Building the Examples',['../examples.html#autotoc_md228',1,'']]],
-  ['button_82',['Button',['../structdeclarative_1_1Button.html',1,'declarative::Button'],['../namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bf',1,'AMessageBox::Button']]],
+  ['button_82',['Button',['../structdeclarative_1_1Button.html',1,'declarative::Button'],['../structdeclarative_1_1Button.html#a69f1491fd6ad3a1c985040001a31951b',1,'declarative::Button::Button(AString text)'],['../structdeclarative_1_1Button.html#a1ae7268deaf0760d62262e9db731b3ff',1,'declarative::Button::Button(const char *text)'],['../structdeclarative_1_1Button.html#a74dbeeb0682d8b00b2b6413ac8563b80',1,'declarative::Button::Button(Views &amp;&amp;... views)'],['../namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bf',1,'AMessageBox::Button']]],
   ['button_83',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],
   ['by_20aui_20boot_84',['Producing packages with dependencies managed by AUI Boot',['../md_docs_2AUI_01Boot.html#aui_boot_producing_packages',1,'']]],
   ['by_20copying_85',['Transferring ownership by copying',['../classAForEachUI.html#UIDeclarativeForTest_Transferring_ownership_by_copying',1,'']]],

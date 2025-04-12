@@ -96,6 +96,7 @@ var searchData=
   ['greater_5fof_3c_20aside_3a_3atop_20_3e_93',['greater_of&lt; ASide::TOP &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['gridcell_94',['GridCell',['../structAAdvancedGridLayout_1_1GridCell.html',1,'AAdvancedGridLayout']]],
   ['group_95',['Group',['../classARadioButton_1_1Group.html',1,'ARadioButton']]],
-  ['grow_96',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]],
-  ['gtkdialog_97',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]]
+  ['groupbox_96',['GroupBox',['../structdeclarative_1_1GroupBox.html',1,'declarative']]],
+  ['grow_97',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]],
+  ['gtkdialog_98',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]]
 ];

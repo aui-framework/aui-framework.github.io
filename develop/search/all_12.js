@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macos_0',['macOS',['../md_docs_2Packaging_01Your_01App.html#autotoc_md169',1,'']]],
+  ['macos_0',['macOS',['../md_docs_2Packaging_01Your_01App.html#autotoc_md171',1,'']]],
   ['macos_20operating_20system_1',['macOS (operating system)',['../macos.html',1,'']]],
   ['macosapp_2',['MacosApp',['../classMacosApp.html',1,'']]],
   ['macros_3',['Macros',['../md_docs_2Macros.html',1,'']]],
@@ -72,7 +72,7 @@ var searchData=
   ['model_20padding_20margin_69',['Box Model (Padding, Margin)',['../group__ass.html#autotoc_md27',1,'']]],
   ['modelchanged_70',['modelChanged',['../classADataBinding.html#a626f82611dff72cb336300f93c9f6174',1,'ADataBinding']]],
   ['models_71',['Models',['../example_notes_app.html#autotoc_md219',1,'']]],
-  ['module_72',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md131',1,'']]],
+  ['module_72',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md132',1,'']]],
   ['module_20name_73',['API_\&lt;module name\&gt;',['../md_docs_2Macros.html#autotoc_md167',1,'']]],
   ['motivation_20rationale_74',['Motivation/rationale',['../example_app_auigram.html#autotoc_md205',1,'']]],
   ['movable_75',['movable',['../conceptaui_1_1movable.html',1,'aui']]],
@@ -85,7 +85,7 @@ var searchData=
   ['movetocenter_82',['moveToCenter',['../classAWindow.html#a1cc07d0199ccec7230de4c2735c7e006',1,'AWindow']]],
   ['moving_83',['moving',['../classAWindow.html#a84b432f8215f9f91d90bfc3e1ee73f78',1,'AWindow']]],
   ['moving_20aproperty_84',['Moving AProperty',['../structAProperty.html#PropertyTest_Moving_AProperty',1,'']]],
-  ['moving_20apropertyprecomputed_85',['Copying and moving APropertyPrecomputed',['../structAPropertyPrecomputed.html#autotoc_md235',1,'']]],
+  ['moving_20apropertyprecomputed_85',['Copying and moving APropertyPrecomputed',['../structAPropertyPrecomputed.html#autotoc_md236',1,'']]],
   ['mpadding_86',['mPadding',['../classAView.html#a94e793bd34bdbd3b47a5bd5660747e18',1,'AView']]],
   ['mpainterdc_87',['mPainterDC',['../classCommonRenderingContext.html#a2bc09c09d2ffad8fc9ab87e46ff2dec3',1,'CommonRenderingContext']]],
   ['mparent_88',['mParent',['../classAView.html#a408d3869dd8f7ce7fb82ee21b17db9f2',1,'AView']]],

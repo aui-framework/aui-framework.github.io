@@ -125,72 +125,68 @@ $(function(){initNavTree('ARadioGroup_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;AUI/Layout/AVerticalLayout.h&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;AUI/Model/IListModel.h&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00032">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classARadioGroup.html">   32</a></span><span class="keyword">class </span>API_AUI_VIEWS ARadioGroup: <span class="keyword">public</span> AViewContainer {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="class__.html">_&lt;IListModel&lt;AString&gt;</a>&gt; mModel;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class__.html">_&lt;ARadioButton::Group&gt;</a> mGroup;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... RadioButtons&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">explicit</span> ARadioGroup(RadioButtons&amp;&amp;... radioButtons): ARadioGroup() {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_function" href="classAViewContainer.html#a2b5069c33c722ca6cd43af32dd1abe70">setLayout</a>(std::make_unique&lt;AVerticalLayout&gt;());</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="classAViewContainer.html#a15d00346ddbb47ef858cd66ba739111a">setViews</a>({ std::forward&lt;RadioButtons&gt;(radioButtons)... });</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    ARadioGroup();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    ~ARadioGroup() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00049">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classARadioGroup.html#afa33d007ccb7e49e92761d0945714850">   49</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classARadioGroup.html#afa33d007ccb7e49e92761d0945714850">selectionId</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a> {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keyword">this</span>,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            &amp;ARadioGroup::getSelectedId,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            &amp;ARadioGroup::setSelectedId,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            selectionChanged,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        };</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00034">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classARadioGroup.html">   34</a></span><span class="keyword">class </span>API_AUI_VIEWS ARadioGroup : <span class="keyword">public</span> AViewContainer {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="class__.html">_&lt;IListModel&lt;AString&gt;</a>&gt; mModel;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="class__.html">_&lt;ARadioButton::Group&gt;</a> mGroup;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... RadioButtons&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">explicit</span> ARadioGroup(RadioButtons&amp;&amp;... radioButtons) : ARadioGroup() {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="classAViewContainer.html#a2b5069c33c722ca6cd43af32dd1abe70">setLayout</a>(std::make_unique&lt;AVerticalLayout&gt;());</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_function" href="classAViewContainer.html#a15d00346ddbb47ef858cd66ba739111a">setViews</a>({ std::forward&lt;RadioButtons&gt;(radioButtons)... });</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    ARadioGroup();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ~ARadioGroup() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00051">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classARadioGroup.html#afa33d007ccb7e49e92761d0945714850">   51</a></span>    <span class="keyword">auto</span> <a class="code hl_function" href="classARadioGroup.html#afa33d007ccb7e49e92761d0945714850">selectionId</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="structAPropertyDef.html">APropertyDef</a> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keyword">this</span>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            &amp;ARadioGroup::getSelectedId,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            &amp;ARadioGroup::setSelectedId,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            selectionChanged,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        };</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAViewContainer.html#a15d00346ddbb47ef858cd66ba739111a">setViews</a>(<a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&gt; views) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; v : views) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> rb = _cast&lt;ARadioButton&gt;(v)) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                mGroup-&gt;addRadioButton(rb);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <a class="code hl_function" href="classAViewContainer.html#a94d32b819a44ed3cdbcc28bb829fa5d3">addView</a>(v);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> setModel(<span class="keyword">const</span> _&lt;IListModel&lt;AString&gt;&gt;&amp; model);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAViewContainer.html#a15d00346ddbb47ef858cd66ba739111a">setViews</a>(<a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&gt; views) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&amp; v : views) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> rb = _cast&lt;ARadioButton&gt;(v)) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                mGroup-&gt;addRadioButton(rb);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <a class="code hl_function" href="classAViewContainer.html#a94d32b819a44ed3cdbcc28bb829fa5d3">addView</a>(v);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    [[nodiscard]] <span class="keywordtype">bool</span> isSelected()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> mGroup-&gt;isSelected();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    [[nodiscard]] <span class="keywordtype">int</span> getSelectedId()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> mGroup-&gt;getSelectedId();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> setSelectedId(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>signals:</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;int&gt;</a> selectionChanged;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> setModel(<span class="keyword">const</span> _&lt;IListModel&lt;AString&gt;&gt;&amp; model);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    [[nodiscard]] <span class="keywordtype">bool</span> isSelected()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mGroup-&gt;isSelected(); }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    [[nodiscard]] <span class="keywordtype">int</span> getSelectedId()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mGroup-&gt;getSelectedId(); }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> setSelectedId(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>signals:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;int&gt;</a> selectionChanged;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">namespace </span>declarative {</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00083">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structdeclarative_1_1RadioGroup.html">   83</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structdeclarative_1_1RadioGroup.html">RadioGroup</a>: aui::ui_building::view_container_layout&lt;AVerticalLayout, ARadioGroup&gt; {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">using </span>aui::ui_building::view_container_layout&lt;<a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>, <a class="code hl_class" href="classARadioGroup.html">ARadioGroup</a>&gt;::layouted_container_factory;</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00085">
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structdeclarative_1_1RadioGroup_1_1Horizontal.html">   85</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structdeclarative_1_1RadioGroup_1_1Horizontal.html">Horizontal</a>: aui::ui_building::view_container_layout&lt;AHorizontalLayout, ARadioGroup&gt; {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">using </span>aui::ui_building::view_container_layout&lt;<a class="code hl_class" href="classAHorizontalLayout.html">AHorizontalLayout</a>, <a class="code hl_class" href="classARadioGroup.html">ARadioGroup</a>&gt;::layouted_container_factory;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        };</div>
-</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">namespace </span>declarative {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00084">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structdeclarative_1_1RadioGroup.html">   84</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdeclarative_1_1RadioGroup.html">RadioGroup</a> : aui::ui_building::view_container_layout&lt;AVerticalLayout, ARadioGroup&gt; {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">using </span>aui::ui_building::view_container_layout&lt;<a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>, <a class="code hl_class" href="classARadioGroup.html">ARadioGroup</a>&gt;::layouted_container_factory;</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00086">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structdeclarative_1_1RadioGroup_1_1Horizontal.html">   86</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structdeclarative_1_1RadioGroup_1_1Horizontal.html">Horizontal</a> : aui::ui_building::view_container_layout&lt;AHorizontalLayout, ARadioGroup&gt; {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">using </span>aui::ui_building::view_container_layout&lt;<a class="code hl_class" href="classAHorizontalLayout.html">AHorizontalLayout</a>, <a class="code hl_class" href="classARadioGroup.html">ARadioGroup</a>&gt;::layouted_container_factory;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    };</div>
 </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}   <span class="comment">// namespace declarative</span></div>
 <div class="ttc" id="aclassAHorizontalLayout_html"><div class="ttname"><a href="classAHorizontalLayout.html">AHorizontalLayout</a></div><div class="ttdoc">Places views in a row.</div><div class="ttdef"><b>Definition</b> AHorizontalLayout.h:42</div></div>
-<div class="ttc" id="aclassARadioGroup_html"><div class="ttname"><a href="classARadioGroup.html">ARadioGroup</a></div><div class="ttdoc">A group of radio buttons.</div><div class="ttdef"><b>Definition</b> ARadioGroup.h:32</div></div>
-<div class="ttc" id="aclassARadioGroup_html_afa33d007ccb7e49e92761d0945714850"><div class="ttname"><a href="classARadioGroup.html#afa33d007ccb7e49e92761d0945714850">ARadioGroup::selectionId</a></div><div class="ttdeci">auto selectionId() const</div><div class="ttdoc">Selected id property.</div><div class="ttdef"><b>Definition</b> ARadioGroup.h:49</div></div>
+<div class="ttc" id="aclassARadioGroup_html"><div class="ttname"><a href="classARadioGroup.html">ARadioGroup</a></div><div class="ttdoc">A group of radio buttons.</div><div class="ttdef"><b>Definition</b> ARadioGroup.h:34</div></div>
+<div class="ttc" id="aclassARadioGroup_html_afa33d007ccb7e49e92761d0945714850"><div class="ttname"><a href="classARadioGroup.html#afa33d007ccb7e49e92761d0945714850">ARadioGroup::selectionId</a></div><div class="ttdeci">auto selectionId() const</div><div class="ttdoc">Selected id property.</div><div class="ttdef"><b>Definition</b> ARadioGroup.h:51</div></div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
 <div class="ttc" id="aclassAVerticalLayout_html"><div class="ttname"><a href="classAVerticalLayout.html">AVerticalLayout</a></div><div class="ttdoc">Places views in a column.</div><div class="ttdef"><b>Definition</b> AVerticalLayout.h:41</div></div>
 <div class="ttc" id="aclassAViewContainer_html_a15d00346ddbb47ef858cd66ba739111a"><div class="ttname"><a href="classAViewContainer.html#a15d00346ddbb47ef858cd66ba739111a">AViewContainer::setViews</a></div><div class="ttdeci">void setViews(AVector&lt; _&lt; AView &gt; &gt; views)</div><div class="ttdoc">Replace views.</div></div>
@@ -199,8 +195,8 @@ $(function(){initNavTree('ARadioGroup_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:179</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:572</div></div>
 <div class="ttc" id="astructAPropertyDef_html"><div class="ttname"><a href="structAPropertyDef.html">APropertyDef</a></div><div class="ttdoc">Property implementation to use with custom getter/setter.</div><div class="ttdef"><b>Definition</b> AProperty.h:234</div></div>
-<div class="ttc" id="astructdeclarative_1_1RadioGroup_1_1Horizontal_html"><div class="ttname"><a href="structdeclarative_1_1RadioGroup_1_1Horizontal.html">declarative::RadioGroup::Horizontal</a></div><div class="ttdef"><b>Definition</b> ARadioGroup.h:85</div></div>
-<div class="ttc" id="astructdeclarative_1_1RadioGroup_html"><div class="ttname"><a href="structdeclarative_1_1RadioGroup.html">declarative::RadioGroup</a></div><div class="ttdef"><b>Definition</b> ARadioGroup.h:83</div></div>
+<div class="ttc" id="astructdeclarative_1_1RadioGroup_1_1Horizontal_html"><div class="ttname"><a href="structdeclarative_1_1RadioGroup_1_1Horizontal.html">declarative::RadioGroup::Horizontal</a></div><div class="ttdef"><b>Definition</b> ARadioGroup.h:86</div></div>
+<div class="ttc" id="astructdeclarative_1_1RadioGroup_html"><div class="ttname"><a href="structdeclarative_1_1RadioGroup.html">declarative::RadioGroup</a></div><div class="ttdoc">Declarative form of ARadioGroup.</div><div class="ttdef"><b>Definition</b> ARadioGroup.h:84</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
