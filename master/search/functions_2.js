@@ -13,8 +13,9 @@ var searchData=
   ['browsefordir_10',['browseForDir',['../namespaceADesktop.html#a19e8acd5024831ae0e0c8df5038e73dc',1,'ADesktop']]],
   ['browseforfile_11',['browseForFile',['../namespaceADesktop.html#ac4f1b3902c742351c779e85b78d9f6c4',1,'ADesktop']]],
   ['buffer_12',['buffer',['../classAImageView.html#aab80d2d2033be1e15adbe27d99b4b9ca',1,'AImageView']]],
-  ['button_13',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],
-  ['byid_14',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]],
-  ['byname_15',['byName',['../classAEnumerate.html#abe246fad40858dec2815bd7087ed707c',1,'AEnumerate']]],
-  ['bytesperpixel_16',['bytesPerPixel',['../classAImageView.html#a51fd71378d4f04648b0cf183280aac07',1,'AImageView']]]
+  ['button_13',['Button',['../structdeclarative_1_1Button.html#a69f1491fd6ad3a1c985040001a31951b',1,'declarative::Button::Button(AString text)'],['../structdeclarative_1_1Button.html#a1ae7268deaf0760d62262e9db731b3ff',1,'declarative::Button::Button(const char *text)'],['../structdeclarative_1_1Button.html#a74dbeeb0682d8b00b2b6413ac8563b80',1,'declarative::Button::Button(Views &amp;&amp;... views)']]],
+  ['button_14',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],
+  ['byid_15',['byId',['../structASqlModel.html#a34bd03ebb25a53f34937e70367cde947',1,'ASqlModel']]],
+  ['byname_16',['byName',['../classAEnumerate.html#abe246fad40858dec2815bd7087ed707c',1,'AEnumerate']]],
+  ['bytesperpixel_17',['bytesPerPixel',['../classAImageView.html#a51fd71378d4f04648b0cf183280aac07',1,'AImageView']]]
 ];

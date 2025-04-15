@@ -160,32 +160,13 @@ AUI_IOS_CODE_SIGNING_REQUIRED<a class="aui-toc-hash" href="#aui_ios_code_signing
 <p>Disables code signing step on iOS.</p>
 <h1>
 aui.boot-specific<a class="aui-toc-hash" href="#aui.boot-specific" id="aui.boot-specific" style="color: var(--fragment-comment) !important">#</a></h1>
-<h2>
-AUIB_DISABLE (=NO)<a class="aui-toc-hash" href="#AUIB_DISABLE" id="AUIB_DISABLE" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
-<h2>
-AUIB_ALL_AS (=NO)<a class="aui-toc-hash" href="#auib_all_as-(=no)" id="auib_all_as-(=no)" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>All dependencies will be imported with <code>add_subdirectory</code> command instead of <code>find_package</code>. It is useful if you want to work on the dependency along with your project.</p>
-<p>This behaviour can be set for the particular dependency by <code>AUIB_${AUI_MODULE_NAME_UPPER}_AS</code> flag, where <code>${AUI_MODULE_NAME_UPPER}</code> is the dependency name (i.e. for AUI it's <code>-DAUIB_AUI_AS=ON</code>).</p>
-<h2>
-AUIB_SKIP_REPOSITORY_WAIT (=NO)<a class="aui-toc-hash" href="#auib_skip_repository_wait-(=no)" id="auib_skip_repository_wait-(=no)" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>Disables "Waiting for repository" lock.</p>
-<h2>
-AUIB_NO_PRECOMPILED (=NO)<a class="aui-toc-hash" href="#AUIB_NO_PRECOMPILED" id="AUIB_NO_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>Disables precompiled binaries, building all dependencies locally. You may want to set up <a class="el" href="md_docs_2AUI_01Boot.html#CI_CACHING">CI caching</a>.</p>
-<h2>
-AUIB_FORCE_PRECOMPILED (=NO)<a class="aui-toc-hash" href="#AUIB_FORCE_PRECOMPILED" id="AUIB_FORCE_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>Disables local compilation. If a precompiled binary was not found, a configure-time error is raised.</p>
-<h2>
-AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=NO)<a class="aui-toc-hash" href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" id="AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>The <code>AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT</code> flag can be used to enable self-sufficiency of packages produced with AUI Boot. This means that the dependencies required for building these packages are included in the package (<code>tar.gz</code>) archive in the <code>deps/</code> dir.</p>
-<p>See <a class="el" href="md_docs_2AUI_01Boot.html#aui_boot_producing_packages">Producing packages with dependencies managed by AUI Boot</a> </p>
+<p>See <a class="el" href="md_docs_2AUI_01Boot.html#AUIB_VARIABLES">Variables</a>. </p>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#common-variables">Common variables</a></h1><h2><a href="#AUI_APP_PACKAGING">AUI_APP_PACKAGING</a></h2><h2><a href="#aui_catch_unhandled">AUI_CATCH_UNHANDLED</a></h2><h2><a href="#aui_coroutines">AUI_COROUTINES</a></h2><h2><a href="#aui_enable_asan">AUI_ENABLE_ASAN</a></h2><h2><a href="#aui_profiling">AUI_PROFILING</a></h2><h2><a href="#aui_show_touches">AUI_SHOW_TOUCHES</a></h2><h1><a href="#aui.build">aui.build</a></h1><h2><a href="#aui_build_examples">AUI_BUILD_EXAMPLES</a></h2><h2><a href="#AUI_BUILD_FOR">AUI_BUILD_FOR</a></h2><h2><a href="#auib_cache_dir">AUIB_CACHE_DIR</a></h2><h2><a href="#aui_install_runtime_dependencies">AUI_INSTALL_RUNTIME_DEPENDENCIES</a></h2><h2><a href="#aui_no_hidpi">AUI_NO_HIDPI</a></h2><h2><a href="#aui_no_tests">AUI_NO_TESTS</a></h2><h2><a href="#aui_shared_ptr_find_instances">AUI_SHARED_PTR_FIND_INSTANCES</a></h2><h2><a href="#build_shared_libs">BUILD_SHARED_LIBS</a></h2><h2><a href="#aui_ios_code_signing_required">AUI_IOS_CODE_SIGNING_REQUIRED</a></h2><h1><a href="#aui.boot-specific">aui.boot-specific</a></h1><h2><a href="#AUIB_DISABLE">AUIB_DISABLE (=NO)</a></h2><h2><a href="#auib_all_as-(=no)">AUIB_ALL_AS (=NO)</a></h2><h2><a href="#auib_skip_repository_wait-(=no)">AUIB_SKIP_REPOSITORY_WAIT (=NO)</a></h2><h2><a href="#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=NO)</a></h2><h2><a href="#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=NO)</a></h2><h2><a href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT">AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=NO)</a></h2><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#common-variables">Common variables</a></h1><h2><a href="#AUI_APP_PACKAGING">AUI_APP_PACKAGING</a></h2><h2><a href="#aui_catch_unhandled">AUI_CATCH_UNHANDLED</a></h2><h2><a href="#aui_coroutines">AUI_COROUTINES</a></h2><h2><a href="#aui_enable_asan">AUI_ENABLE_ASAN</a></h2><h2><a href="#aui_profiling">AUI_PROFILING</a></h2><h2><a href="#aui_show_touches">AUI_SHOW_TOUCHES</a></h2><h1><a href="#aui.build">aui.build</a></h1><h2><a href="#aui_build_examples">AUI_BUILD_EXAMPLES</a></h2><h2><a href="#AUI_BUILD_FOR">AUI_BUILD_FOR</a></h2><h2><a href="#auib_cache_dir">AUIB_CACHE_DIR</a></h2><h2><a href="#aui_install_runtime_dependencies">AUI_INSTALL_RUNTIME_DEPENDENCIES</a></h2><h2><a href="#aui_no_hidpi">AUI_NO_HIDPI</a></h2><h2><a href="#aui_no_tests">AUI_NO_TESTS</a></h2><h2><a href="#aui_shared_ptr_find_instances">AUI_SHARED_PTR_FIND_INSTANCES</a></h2><h2><a href="#build_shared_libs">BUILD_SHARED_LIBS</a></h2><h2><a href="#aui_ios_code_signing_required">AUI_IOS_CODE_SIGNING_REQUIRED</a></h2><h1><a href="#aui.boot-specific">aui.boot-specific</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->

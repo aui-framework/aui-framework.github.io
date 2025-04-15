@@ -9,7 +9,7 @@ var searchData=
   ['app_20template_20⚡_6',['App Template ⚡',['../example_app_template.html',1,'']]],
   ['arguments_7',['AUI Command Line Arguments',['../md_docs_2AUI_01command_01line_01arguments.html',1,'']]],
   ['assets_8',['Minimal UI Template with Assets',['../example_minimal_ui_template_with_assets.html',1,'']]],
-  ['aui_9',['AUI',['../md_docs_2Contributing_01to_01AUI.html',1,'Contributing to AUI'],['../md_docs_2Getting_01started_01with_01AUI.html',1,'Getting started with AUI']]],
+  ['aui_9',['AUI',['../md_docs_2Contributing_01to_01AUI.html',1,'Contributing to AUI'],['../md_docs_2Forking_01AUI.html',1,'Forking AUI'],['../md_docs_2Getting_01started_01with_01AUI.html',1,'Getting started with AUI']]],
   ['aui_20boot_10',['AUI Boot',['../md_docs_2AUI_01Boot.html',1,'']]],
   ['aui_20box_20model_11',['AUI Box Model',['../md_docs_2ASS_01Box_01Model.html',1,'']]],
   ['aui_20command_20line_20arguments_12',['AUI Command Line Arguments',['../md_docs_2AUI_01command_01line_01arguments.html',1,'']]],
