@@ -17,7 +17,7 @@ var searchData=
   ['variables_14',['Variables',['../md_docs_2AUI_01Boot.html#AUIB_VARIABLES',1,'']]],
   ['variables_15',['variables',['../md_docs_2AUI_01configure_01flags.html#autotoc_md81',1,'Common variables'],['../structaui_1_1reflect_1_1member.html#autotoc_md8',1,'Fields (member variables)']]],
   ['variant_16',['Variant',['../structaui_1_1dbus_1_1Variant.html',1,'aui::dbus']]],
-  ['vectorization_20using_20inkscape_17',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md177',1,'']]],
+  ['vectorization_20using_20inkscape_17',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md180',1,'']]],
   ['vendor_18',['VENDOR',['../md_docs_2aui__app.html#autotoc_md106',1,'']]],
   ['version_19',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md55',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md108',1,'VERSION']]],
   ['version_20',['Parsing version',['../structaui_1_1updater_1_1Semver.html#VersionTest_Parsing_version',1,'']]],
