@@ -478,8 +478,14 @@ Structure<a class="aui-toc-hash" href="#structure" id="structure" style="color: 
 <p>Contains dependencies source code (if any), downloaded by <code>auib_import</code>.</p>
 <ul>
 <li><code>~/.aui/repo/&lt;PackageName&gt;/src</code> - source code of <code>&lt;PackageName&gt;</code>. If it is a git repository, AUI.Boot will try to checkout a specific version first instead of cloning the whole repo again.</li>
+<li><code>~/.aui/repo/&lt;PackageName&gt;/src/FETCHED</code> - indicates the latest download is successful.</li>
 <li><code>~/.aui/repo/&lt;PackageName&gt;/build</code> - <code>&lt;PackageName&gt;</code> build directory. Cleaned up after a successful installation.</li>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;</code> - in case of <a class="el" href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a>, a copy of sourced to be used by CMake's <code>add_subdirectory</code>.</li>
+</ul>
+<p>If the dependency imported as a <a class="el" href="#AUIB_ADD_SUBDIRECTORY">subdirectory</a>, these paths are used instead:</p>
+<ul>
+<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/&lt;PackageName&gt;</code> - a copy of source to be used by CMake's <code>add_subdirectory</code>. The second <code>&lt;PackageName&gt;</code> helps IDEs such as CLion to identify dependency name.</li>
+<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/&lt;PackageName&gt;/FETCHED</code> - indicates the latest download is successful.</li>
+<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/build</code> - build directory.</li>
 </ul>
 <h3>
 ~/.aui/crosscompile-host<a class="aui-toc-hash" href="#~/.aui/crosscompile-host" id="~/.aui/crosscompile-host" style="color: var(--fragment-comment) !important">#</a></h3>
