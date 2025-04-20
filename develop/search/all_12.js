@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macos_0',['macOS',['../md_docs_2Packaging_01Your_01App.html#autotoc_md170',1,'']]],
+  ['macos_0',['macOS',['../md_docs_2Packaging_01Your_01App.html#autotoc_md172',1,'']]],
   ['macos_20operating_20system_1',['macOS (operating system)',['../macos.html',1,'']]],
   ['macosapp_2',['MacosApp',['../classMacosApp.html',1,'']]],
   ['macros_3',['Macros',['../md_docs_2Macros.html',1,'']]],
@@ -71,7 +71,7 @@ var searchData=
   ['model_20padding_20margin_68',['Box Model (Padding, Margin)',['../group__ass.html#autotoc_md27',1,'']]],
   ['modelchanged_69',['modelChanged',['../classADataBinding.html#a626f82611dff72cb336300f93c9f6174',1,'ADataBinding']]],
   ['models_70',['Models',['../example_notes_app.html#autotoc_md220',1,'']]],
-  ['module_71',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md134',1,'']]],
+  ['module_71',['Creating an AUI module',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md132',1,'']]],
   ['module_20name_72',['API_\&lt;module name\&gt;',['../md_docs_2Macros.html#autotoc_md168',1,'']]],
   ['motivation_20rationale_73',['Motivation/rationale',['../example_app_auigram.html#autotoc_md206',1,'']]],
   ['movable_74',['movable',['../conceptaui_1_1movable.html',1,'aui']]],
