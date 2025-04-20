@@ -34,7 +34,7 @@ var searchData=
   ['createoverlappingsurfaceimpl_31',['createOverlappingSurfaceImpl',['../classAWindow.html#aaa3cb42ca6671c7542565146a1951ec0',1,'AWindow::createOverlappingSurfaceImpl()'],['../classAWindowBase.html#a4f8d14c149c6d39148eb59d079a6cfbf',1,'AWindowBase::createOverlappingSurfaceImpl()']]],
   ['createsocket_32',['createSocket',['../classAAbstractSocket.html#aacd9223f413ec487d2d9ea2707360b08',1,'AAbstractSocket::createSocket()'],['../classATcpServerSocket.html#ad7133c04ceffde1d730e0c63d24bfeb7',1,'ATcpServerSocket::createSocket()'],['../classATcpSocket.html#a3b09057a99ba1bd1decb084327efceb0',1,'ATcpSocket::createSocket()'],['../classAUdpSocket.html#aba1eaf99104b3816702bf5ccda32cf5a',1,'AUdpSocket::createSocket()']]],
   ['cropped_33',['cropped',['../classAImageView.html#a341c8b580ccc23f7f9690b162f70958c',1,'AImageView']]],
-  ['current_34',['current',['../classAThread.html#a455beceab4e80bba85d44a5d4ee15b08',1,'AThread::current()'],['../classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce',1,'AWindow::current()']]],
+  ['current_34',['current',['../classAThread.html#ad61c7e9c666d07974d35c65292eb5f26',1,'AThread::current()'],['../classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce',1,'AWindow::current()']]],
   ['cursorindexbypos_35',['cursorIndexByPos',['../classACursorSelectable.html#a4a5c0510de667734666e4336bf30e8e2',1,'ACursorSelectable::cursorIndexByPos()'],['../classAAbstractTextField.html#ad23c616dc3125b9d1520a3e87ab5376c',1,'AAbstractTextField::cursorIndexByPos()'],['../classATextArea.html#a65aeb11e6080ee556aa2091e93fa328c',1,'ATextArea::cursorIndexByPos()']]],
   ['cuttoclipboard_36',['cutToClipboard',['../classAAbstractTypeable.html#a54831fbb3b37af63b7832bc166aec0e2',1,'AAbstractTypeable']]]
 ];
