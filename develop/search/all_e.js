@@ -41,7 +41,7 @@ var searchData=
   ['importing_20project_20as_20a_20subdirectory_38',['Importing project as a subdirectory',['../md_docs_2AUI_01Boot.html#autotoc_md47',1,'']]],
   ['importplugin_39',['importPlugin',['../group__core.html#ga9c70a98a69472dee064480ab983151b7',1,'aui']]],
   ['importpluginpath_40',['importPluginPath',['../group__core.html#ga175e4321bf6ae5b8f076559c40dbb3b5',1,'aui']]],
-  ['improving_20compiler_20error_20messages_20techniques_41',['Improving compiler error messages techniques',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md137',1,'']]],
+  ['improving_20compiler_20error_20messages_20techniques_41',['Improving compiler error messages techniques',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md135',1,'']]],
   ['imultistringcanvas_42',['IMultiStringCanvas',['../classIRenderer_1_1IMultiStringCanvas.html',1,'IRenderer']]],
   ['in_43',['in',['../classPipe.html#acf22ddf8d5e956481df04ca43cfd4099',1,'Pipe']]],
   ['in_20aui_44',['In AUI',['../md_docs_2Writing_01tests.html#autotoc_md192',1,'']]],
