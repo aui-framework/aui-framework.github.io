@@ -9,7 +9,7 @@ var searchData=
   ['ui_20example_6',['UI example',['../group__signal__slot.html#autotoc_md3',1,'']]],
   ['ui_20template_7',['Minimal UI Template',['../example_minimal_ui_template.html',1,'']]],
   ['ui_20template_20with_20assets_8',['Minimal UI Template with Assets',['../example_minimal_ui_template_with_assets.html',1,'']]],
-  ['ui_20tests_9',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md195',1,'']]],
+  ['ui_20tests_9',['Writing UI Tests',['../md_docs_2Writing_01tests.html#autotoc_md196',1,'']]],
   ['ui_5fthread_10',['ui_thread',['../group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb',1,'kAUI.h']]],
   ['ui_5fthreadx_11',['ui_threadX',['../group__useful__macros.html#ga3f61ecfc942915005f2bba5a317b654a',1,'kAUI.h']]],
   ['uimatcher_12',['UIMatcher',['../classUIMatcher.html',1,'']]],

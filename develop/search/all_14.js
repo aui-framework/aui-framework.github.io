@@ -61,7 +61,7 @@ var searchData=
   ['operators_58',['Non-const operators',['../structAProperty.html#PropertyTest_Write_operators',1,'']]],
   ['or_59',['Or',['../structaui_1_1valid_1_1impl_1_1Or.html',1,'aui::valid::impl']]],
   ['or_20abutton_20s_60',['Select all ALabel&apos;s or AButton&apos;s',['../group__ass.html#autotoc_md18',1,'']]],
-  ['or_20exception_61',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md134',1,'']]],
+  ['or_20exception_61',['Assert or exception?',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md132',1,'']]],
   ['origin_62',['origin',['../structAScrollEvent.html#afb585641aa999c42077063ccf83c6ffe',1,'AScrollEvent']]],
   ['originexe_63',['originExe',['../structAUpdater_1_1GetInstallationDirectoryContext.html#aab48a7435f9b549c2c1b2781cedb8cdd',1,'AUpdater::GetInstallationDirectoryContext']]],
   ['oses_64',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
