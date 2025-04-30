@@ -6,5 +6,6 @@ var searchData=
   ['minesweeper_20game_3',['Minesweeper Game',['../example_minesweeper_game.html',1,'']]],
   ['minimal_20ui_20template_4',['Minimal UI Template',['../example_minimal_ui_template.html',1,'']]],
   ['minimal_20ui_20template_20with_20assets_5',['Minimal UI Template with Assets',['../example_minimal_ui_template_with_assets.html',1,'']]],
-  ['model_6',['AUI Box Model',['../md_docs_2ASS_01Box_01Model.html',1,'']]]
+  ['mobile_20project_6',['Replacing AUI mobile project',['../md_docs_2Crosscompiling_01with_01toolchain.html',1,'']]],
+  ['model_7',['AUI Box Model',['../md_docs_2ASS_01Box_01Model.html',1,'']]]
 ];
