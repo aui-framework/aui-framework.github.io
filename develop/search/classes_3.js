@@ -67,6 +67,7 @@ var searchData=
   ['converterprimitive_3c_20jshort_2c_20_27s_27_3e_64',['ConverterPrimitive&lt; jshort, &apos;S&apos;&gt;',['../structaui_1_1jni_1_1ConverterPrimitive.html',1,'aui::jni']]],
   ['coreaudioplayer_65',['CoreAudioPlayer',['../classCoreAudioPlayer.html',1,'']]],
   ['cubicbezier_66',['CubicBezier',['../classaui_1_1animation__curves_1_1CubicBezier.html',1,'aui::animation_curves']]],
-  ['customcaptionwindowimplwin32_67',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
-  ['customproperty_68',['CustomProperty',['../structass_1_1CustomProperty.html',1,'ass']]]
+  ['custom_67',['Custom',['../structACursor_1_1Custom.html',1,'ACursor']]],
+  ['customcaptionwindowimplwin32_68',['CustomCaptionWindowImplWin32',['../classCustomCaptionWindowImplWin32.html',1,'']]],
+  ['customproperty_69',['CustomProperty',['../structass_1_1CustomProperty.html',1,'ass']]]
 ];

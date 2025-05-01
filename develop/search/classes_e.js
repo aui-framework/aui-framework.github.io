@@ -12,5 +12,6 @@ var searchData=
   ['opengl_9',['OpenGL',['../structARenderingContextOptions_1_1OpenGL.html',1,'ARenderingContextOptions']]],
   ['openglrenderer_10',['OpenGLRenderer',['../classOpenGLRenderer.html',1,'']]],
   ['openglrenderingcontext_11',['OpenGLRenderingContext',['../classOpenGLRenderingContext.html',1,'']]],
-  ['or_12',['Or',['../structaui_1_1valid_1_1impl_1_1Or.html',1,'aui::valid::impl']]]
+  ['openglrenderingcontextx11_12',['OpenGLRenderingContextX11',['../classOpenGLRenderingContextX11.html',1,'']]],
+  ['or_13',['Or',['../structaui_1_1valid_1_1impl_1_1Or.html',1,'aui::valid::impl']]]
 ];
