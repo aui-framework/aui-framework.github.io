@@ -322,10 +322,9 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Show window"</span>)</div>
 <div class="line">                        .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <span class="keyword">this</span>,</div>
 <div class="line">                                 [&amp;] {</div>
-<div class="line">                                     <span class="keyword">auto</span> w = _new&lt;AWindow&gt;(<span class="stringliteral">"Basic window"</span>, 400_dp, 300_dp);</div>
+<div class="line">                                     <span class="keyword">auto</span> w = _new&lt;AWindow&gt;(<span class="stringliteral">"Basic window"</span>, 400_dp, 300_dp, <span class="keyword">this</span>, WindowStyle::MODAL);</div>
 <div class="line">                                     fillWindow(w);</div>
 <div class="line">                                     w-&gt;show();</div>
-<div class="line">                                     w-&gt;setWindowStyle(WindowStyle::MODAL);</div>
 <div class="line">                                     mWindows &lt;&lt; w;</div>
 <div class="line">                                 }),</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Show window without caption"</span>)</div>
@@ -334,7 +333,6 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                     <span class="keyword">auto</span> w = _new&lt;ACustomWindow&gt;(<span class="stringliteral">"Custom window without caption"</span>, 400_dp, 300_dp);</div>
 <div class="line">                                     fillWindow(w);</div>
 <div class="line">                                     w-&gt;show();</div>
-<div class="line">                                     w-&gt;setWindowStyle(WindowStyle::MODAL);</div>
 <div class="line">                                     mWindows &lt;&lt; w;</div>
 <div class="line">                                 }),</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Show window custom caption"</span>)</div>
@@ -384,11 +382,12 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Message box"</span>)</div>
 <div class="line">                        .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <span class="keyword">this</span>,</div>
 <div class="line">                                 [&amp;] {</div>
-<div class="line">                                     <a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(<span class="keyword">this</span>,</div>
+<div class="line">                                     <span class="keyword">auto</span> response = <a class="code hl_function" href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a>(<span class="keyword">this</span>,</div>
 <div class="line">                                                       <span class="stringliteral">"Title"</span>,</div>
 <div class="line">                                                       <span class="stringliteral">"Message"</span>,</div>
 <div class="line">                                                       <a class="code hl_enumvalue" href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506ab50339a10e1de285ac99d4c3990b8693">AMessageBox::Icon::NONE</a>,</div>
 <div class="line">                                                       <a class="code hl_enumvalue" href="namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564">AMessageBox::Button::OK</a>);</div>
+<div class="line">                                     ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"Response: "</span> &lt;&lt; int(response);</div>
 <div class="line">                                 }),</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Cause assertion fail"</span>)</div>
 <div class="line">                        .connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a>, <span class="keyword">this</span>, [&amp;] { <a id="a26" name="a26"></a><a class="code hl_define" href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">AUI_ASSERT_NO_CONDITION</a>(<span class="stringliteral">"assertion fail"</span>); }),</div>

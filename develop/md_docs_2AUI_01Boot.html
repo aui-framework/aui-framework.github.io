@@ -469,7 +469,8 @@ Structure<a class="aui-toc-hash" href="#structure" id="structure" style="color: 
 <p>Dependency installations are located in following path: <code>~/.aui/prefix/&lt;PackageName&gt;/&lt;BUILD_SPECIFIER&gt;</code>.</p>
 <p><code>&lt;BUILD_SPECIFIER&gt;</code> is a special hex string that identifies the build configuration, similarly to Conan's <a href="https://docs.conan.io/2/reference/binary_model/package_id.html">package_id</a>. <code>&lt;BUILD_SPECIFIER&gt;</code> is a hashed string that includes information such as version, platform, architecture, or being a static or a shared library. When something changes in this information, it produces a new <code>&lt;BUILD_SPECIFIER&gt;</code> because it represents a different binary.</p>
 <p>Here's how exactly it is computed:</p>
-<div class="fragment"><div class="line">    set(BUILD_SPECIFIER "${TAG_OR_HASH}/${AUI_TARGET_ABI}-${CMAKE_BUILD_TYPE}-${SHARED_OR_STATIC}/${CMAKE_GENERATOR}")</div>
+<div class="fragment"><div class="line">    set(BUILD_SPECIFIER "${TAG_OR_HASH}/${AUI_TARGET_ABI}-${CMAKE_BUILD_TYPE}-${SHARED_OR_STATIC}/${CMAKE_GENERATOR}/${AUIB_IMPORT_CMAKE_ARGS}")</div>
+<div class="line">    string(REPLACE ";" " " BUILD_SPECIFIER "${BUILD_SPECIFIER}")</div>
 <div class="line"> </div>
 <div class="line">    # convert BUILD_SPECIFIER to hash; on windows msvc path length restricted by 260 chars</div>
 <div class="line">    string(MD5 BUILD_SPECIFIER ${BUILD_SPECIFIER})</div>
