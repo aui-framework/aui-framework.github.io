@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['NAME',['../md_docs_2aui__app.html#autotoc_md107',1,'']]],
+  ['name_0',['NAME',['../md_docs_2aui__app.html#autotoc_md108',1,'']]],
   ['name_1',['name',['../md_docs_2Macros.html#autotoc_md167',1,'API_\&lt;module name\&gt;'],['../structAPerformanceSection_1_1Data.html#af0f9915d8d55d9b080fff651fd6d2e6a',1,'APerformanceSection::Data::name'],['../structaui_1_1archive_1_1FileEntry.html#a1431a00a344b40fb3c93a6fa2162eba9',1,'aui::archive::FileEntry::name'],['../classAClass.html#a4cc13e363580ce3029fe5e49aff5fa5f',1,'AClass::name()'],['../group__reflection.html#gae6568099b28fa1f7700e76d3a4b849dd',1,'AReflect::name()'],['../group__ass.html#autotoc_md17',1,'Select all ASS name'],['../group__ass.html#autotoc_md19',1,'Select all labels with ASS name']]],
   ['nametovaluemap_2',['nameToValueMap',['../classAEnumerate.html#a5935e751b91ec9ece37ed7c7739d7451',1,'AEnumerate']]],
   ['nativesignalid_3',['nativeSignalId',['../classAFatalException.html#a6c6ac322b7e0b04108365d70571563da',1,'AFatalException']]],
@@ -33,9 +33,10 @@ var searchData=
   ['notifyprocessmessages_30',['notifyProcessMessages',['../classAEventLoop.html#a4dd0b3afb4cd66af956d5a38b25b5a3f',1,'AEventLoop::notifyProcessMessages()'],['../classIEventLoop.html#af26f19c03393cca88b5bb4f183838305',1,'IEventLoop::notifyProcessMessages()'],['../classAScheduler.html#a297b30aa7fe6ab8fbcfe80299de2e5bc',1,'AScheduler::notifyProcessMessages()'],['../classAEmbedAuiWrap.html#aeff1e827ec7eb422c407556263583a3e',1,'AEmbedAuiWrap::notifyProcessMessages()'],['../classAWindowManager.html#af5d873c202c82a87c3cbb164708d0783',1,'AWindowManager::notifyProcessMessages()']]],
   ['notifysymboladded_31',['notifySymbolAdded',['../classIRenderer_1_1IMultiStringCanvas.html#a6bcbcfcf57aa2c08d85f32ae9d784205',1,'IRenderer::IMultiStringCanvas']]],
   ['notselector_32',['NotSelector',['../structass_1_1NotSelector.html',1,'ass']]],
-  ['novalueexception_33',['NoValueException',['../classAComplexFutureOperation_1_1NoValueException.html',1,'AComplexFutureOperation']]],
-  ['ns_5fresize_34',['NS_RESIZE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03aae41b18b9ff5c7fed48a6ead690e6812',1,'ACursor']]],
-  ['nsalert_35',['NSAlert',['https://developer.apple.com/documentation/appkit/nsalert?.html',1,'']]],
-  ['number_36',['NUMBER',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fa34f55eca38e0605a84f169ff61a2a396',1,'ATextInputType.h']]],
-  ['numeric_37',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
+  ['nottried_33',['NotTried',['../structOpenGLRenderingContext_1_1NotTried.html',1,'OpenGLRenderingContext']]],
+  ['novalueexception_34',['NoValueException',['../classAComplexFutureOperation_1_1NoValueException.html',1,'AComplexFutureOperation']]],
+  ['ns_5fresize_35',['NS_RESIZE',['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03aae41b18b9ff5c7fed48a6ead690e6812',1,'ACursor']]],
+  ['nsalert_36',['NSAlert',['https://developer.apple.com/documentation/appkit/nsalert?.html',1,'']]],
+  ['number_37',['NUMBER',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fa34f55eca38e0605a84f169ff61a2a396',1,'ATextInputType.h']]],
+  ['numeric_38',['numeric',['../structaui_1_1valid_1_1chars_1_1numeric.html',1,'aui::valid::chars']]]
 ];
