@@ -104,10 +104,10 @@ $(function(){initNavTree('structAPropertyDef.html',''); initResizable(true); });
 <a href="structAPropertyDef-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">APropertyDef&lt; M, Getter, Setter, SignalArg &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a> » <a class="el" href="group__property__system.html">Property System</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/AProperty.h#L234"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/APropertyDef.h#L23"></b>
 <p>Property implementation to use with custom getter/setter.  
  <a href="#details">More...</a></p>
-<p><code>#include &lt;<a class="el" href="AProperty_8h_source.html">AUI/Common/AProperty.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="APropertyDef_8h_source.html">AUI/Common/APropertyDef.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
@@ -160,6 +160,8 @@ template&lt;aui::detail::property::ProjectionBidirectional&lt; Underlying &gt; P
 <tr class="memitem:ace3583680a046f426f2da0b1279b28ba"><td align="right" class="memTemplItemLeft" valign="top">auto </td><td class="memTemplItemRight" valign="bottom"><b>biProjected</b> (Projection &amp;&amp;projectionBidirectional) noexcept</td></tr>
 <tr class="memdesc:ace3583680a046f426f2da0b1279b28ba"><td class="mdescLeft"> </td><td class="mdescRight">Makes a bidirectional projection of this property (by a single <a class="el" href="structaui_1_1lambda__overloaded.html">aui::lambda_overloaded</a>). <br/></td></tr>
 <tr class="separator:ace3583680a046f426f2da0b1279b28ba"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a589d1f9088dabef91b23c5894adcc982" id="r_a589d1f9088dabef91b23c5894adcc982"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classaui_1_1PropertyModifier.html">aui::PropertyModifier</a>&lt; <a class="el" href="structAPropertyDef.html">APropertyDef</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a589d1f9088dabef91b23c5894adcc982">writeScope</a> () noexcept</td></tr>
+<tr class="separator:a589d1f9088dabef91b23c5894adcc982"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a183037c8c709508f60ce7278298f5e8b" id="r_a183037c8c709508f60ce7278298f5e8b"><td align="right" class="memItemLeft" valign="top"><a id="a183037c8c709508f60ce7278298f5e8b" name="a183037c8c709508f60ce7278298f5e8b"></a>
 void </td><td class="memItemRight" valign="bottom"><b>notify</b> ()</td></tr>
 <tr class="memdesc:a183037c8c709508f60ce7278298f5e8b"><td class="mdescLeft"> </td><td class="mdescRight">Notify observers that a change was occurred (no preconditions). <br/></td></tr>
@@ -226,7 +228,7 @@ Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="c
 <div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:572</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gac622150996edd734a10f229eb381a53f"><div class="ttname"><a href="group__signal__slot.html#gac622150996edd734a10f229eb381a53f">emit</a></div><div class="ttdeci">#define emit</div><div class="ttdoc">emits the specified signal in context of this object.</div><div class="ttdef"><b>Definition</b> AObject.h:344</div></div>
 </div><!-- fragment --><p><a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> behaves like a class/struct function member: </p><div class="fragment"><div class="line">User u;</div>
-<div class="line">u.name() = <span class="stringliteral">"Hello"</span>;</div>
+<div class="line">u.name() = <span class="stringliteral">"Hello"</span>; <span class="comment">// calls setName implicitly</span></div>
 <div class="line">EXPECT_EQ(u.name(), <span class="stringliteral">"Hello"</span>);</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Properties defined with <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> instead of <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> impersonate themselves by trailing braces <code>()</code>. We can't get rid of them, as <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> is defined thanks to member function. In comparison to <code>user-&gt;name</code>, think of <code>user-&gt;name()</code> as the same kind of property except defining custom behaviour via function, hence the braces <code>()</code>.</dd></dl>
 <p>For the rest, <a class="el" href="structAPropertyDef.html" title="Property implementation to use with custom getter/setter.">APropertyDef</a> is identical to <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> including seamless interaction: </p><div class="fragment"><div class="line">User u;</div>
@@ -272,7 +274,34 @@ Observing changes<a class="aui-toc-hash" href="#PropertyDefTest_Observing_change
 <div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
 </div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8views_2src_2AUI_2View_2AView_8h-example.html#_a10">/home/runner/work/aui/aui/aui.views/src/AUI/View/AView.h</a>.</dd>
 </dl>
-</div><h2 class="groupheader">Member Data Documentation<a class="aui-toc-hash" href="#a62ad81ffc5bf8b8aa5defb808984e0a9" id="a62ad81ffc5bf8b8aa5defb808984e0a9" name="a62ad81ffc5bf8b8aa5defb808984e0a9" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a589d1f9088dabef91b23c5894adcc982" id="a589d1f9088dabef91b23c5894adcc982" name="a589d1f9088dabef91b23c5894adcc982" style="color: var(--fragment-comment) !important">#</a></h2>
+
+<h2 class="memtitle"><span class="permalink">◆ </span>writeScope()<a class="aui-toc-hash" href="#◆ writescope()" id="◆ writescope()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename M, <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; M &amp; &gt; Getter, <a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>&lt; M &amp;, std::invoke_result_t&lt; Getter, M &amp; &gt; &gt; Setter, typename SignalArg&gt; </div>
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="classaui_1_1PropertyModifier.html">aui::PropertyModifier</a>&lt; <a class="el" href="structAPropertyDef.html">APropertyDef</a> &gt; <a class="el" href="structAPropertyDef.html">APropertyDef</a>&lt; M, Getter, Setter, SignalArg &gt;::writeScope </td>
+<td>(</td>
+<td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel noexcept">noexcept</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Temporary transparent object that gains write access to underlying property's value, notifying about value changes when destructed.    See <a class="el" href="classaui_1_1PropertyModifier.html" title="Temporary transparent object that gains write access to underlying property's value,...">aui::PropertyModifier</a>. </dd></dl>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation<a class="aui-toc-hash" href="#a62ad81ffc5bf8b8aa5defb808984e0a9" id="a62ad81ffc5bf8b8aa5defb808984e0a9" name="a62ad81ffc5bf8b8aa5defb808984e0a9" style="color: var(--fragment-comment) !important">#</a></h2>
 
 <h2 class="memtitle"><span class="permalink">◆ </span>set<a class="aui-toc-hash" href="#◆ set" id="◆ set" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">

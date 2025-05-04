@@ -69,10 +69,11 @@ var searchData=
   ['propertylistrecursive_66',['PropertyListRecursive',['../structass_1_1PropertyListRecursive.html',1,'ass']]],
   ['propertymodifier_67',['PropertyModifier',['../classaui_1_1PropertyModifier.html',1,'aui']]],
   ['propertymodifier_3c_20aproperty_3c_20t_20_3e_20_3e_68',['PropertyModifier&lt; AProperty&lt; T &gt; &gt;',['../classaui_1_1PropertyModifier.html',1,'aui']]],
-  ['ptr_69',['ptr',['../structaui_1_1ptr.html',1,'aui']]],
-  ['pulseaudioplayer_70',['PulseAudioPlayer',['../classPulseAudioPlayer.html',1,'']]],
-  ['pushcolor_71',['PushColor',['../structRenderHints_1_1PushColor.html',1,'RenderHints']]],
-  ['pushmask_72',['PushMask',['../structRenderHints_1_1PushMask.html',1,'RenderHints']]],
-  ['pushmatrix_73',['PushMatrix',['../structRenderHints_1_1PushMatrix.html',1,'RenderHints']]],
-  ['pushstate_74',['PushState',['../classRenderHints_1_1PushState.html',1,'RenderHints']]]
+  ['propertymodifier_3c_20apropertydef_3c_20m_2c_20getter_2c_20setter_2c_20signalarg_20_3e_20_3e_69',['PropertyModifier&lt; APropertyDef&lt; M, Getter, Setter, SignalArg &gt; &gt;',['../classaui_1_1PropertyModifier.html',1,'aui']]],
+  ['ptr_70',['ptr',['../structaui_1_1ptr.html',1,'aui']]],
+  ['pulseaudioplayer_71',['PulseAudioPlayer',['../classPulseAudioPlayer.html',1,'']]],
+  ['pushcolor_72',['PushColor',['../structRenderHints_1_1PushColor.html',1,'RenderHints']]],
+  ['pushmask_73',['PushMask',['../structRenderHints_1_1PushMask.html',1,'RenderHints']]],
+  ['pushmatrix_74',['PushMatrix',['../structRenderHints_1_1PushMatrix.html',1,'RenderHints']]],
+  ['pushstate_75',['PushState',['../classRenderHints_1_1PushState.html',1,'RenderHints']]]
 ];
