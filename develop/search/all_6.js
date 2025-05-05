@@ -347,7 +347,7 @@ var searchData=
   ['and_20macros_344',['Template metaprogramming and macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md134',1,'']]],
   ['and_20moving_20apropertyprecomputed_345',['Copying and moving APropertyPrecomputed',['../structAPropertyPrecomputed.html#autotoc_md235',1,'']]],
   ['and_20views_346',['Infinite ranges and views',['../classAForEachUI.html#UIDeclarativeForTest_Infinite_ranges_and_views',1,'']]],
-  ['android_347',['Android',['../md_docs_2Crosscompiling_01with_01toolchain.html#autotoc_md143',1,'']]],
+  ['android_347',['Android',['../md_docs_2Crosscompiling_01with_01toolchain.html#autotoc_md142',1,'']]],
   ['android_20and_20ios_348',['Android and iOS',['../md_docs_2Packaging_01Your_01App.html#PACKAGING_WITH_AUI_BUILD_FOR',1,'Android and iOS'],['../md_docs_2Crosscompiling.html',1,'Crosscompiling (Android and iOS)']]],
   ['android_20operating_20system_349',['Android (operating system)',['../android.html',1,'']]],
   ['android_5fpackage_350',['ANDROID_PACKAGE',['../md_docs_2aui__app.html#autotoc_md120',1,'']]],
