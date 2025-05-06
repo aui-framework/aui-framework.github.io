@@ -65,7 +65,7 @@ var searchData=
   ['init_62',['Init',['../structIRenderingContext_1_1Init.html',1,'IRenderingContext']]],
   ['init_63',['init',['../classAAbstractSocket.html#ac7327028d079cfd1700396f86e47303d',1,'AAbstractSocket']]],
   ['initial_5facceleration_5fcoefficient_64',['INITIAL_ACCELERATION_COEFFICIENT',['../classATouchScroller.html#a1048fb51b31265ffff0954edbd120bf6',1,'ATouchScroller']]],
-  ['initialization_65',['Initialization',['../classAAngleRadians.html#autotoc_md31',1,'Initialization'],['../classAMetric.html#autotoc_md32',1,'Initialization'],['../example_minesweeper_game.html#autotoc_md213',1,'Initialization'],['../classAForEachUI.html#AFOREACHUI_UPDATE',1,'Initialization']]],
+  ['initialization_65',['Initialization',['../classAAngleRadians.html#autotoc_md31',1,'Initialization'],['../classAMetric.html#autotoc_md32',1,'Initialization'],['../example_minesweeper_game.html#autotoc_md219',1,'Initialization'],['../classAForEachUI.html#AFOREACHUI_UPDATE',1,'Initialization']]],
   ['initializer_20lists_66',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md128',1,'']]],
   ['injectwaitformypid_67',['injectWaitForMyPid',['../classAUpdater.html#a73481d7cb050b337bbd3c8d6c788569a',1,'AUpdater']]],
   ['inkscape_68',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md179',1,'']]],

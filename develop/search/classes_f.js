@@ -1,7 +1,7 @@
 var searchData=
 [
   ['packed_5faccessor_0',['packed_accessor',['../structaui_1_1audio_1_1impl_1_1packed__accessor.html',1,'aui::audio::impl']]],
-  ['packed_5faccessor_3c_20asampleformat_3a_3ai32_20_3e_1',['packed_accessor&lt; ASampleFormat::I32 &gt;',['../structaui_1_1audio_1_1impl_1_1packed__accessor.html',1,'aui::audio::impl']]],
+  ['packed_5faccessor_3c_20f_20_3e_1',['packed_accessor&lt; f &gt;',['../structaui_1_1audio_1_1impl_1_1packed__accessor.html',1,'aui::audio::impl']]],
   ['padding_2',['Padding',['../structass_1_1Padding.html',1,'ass']]],
   ['params_3',['Params',['../structIDrawable_1_1Params.html',1,'IDrawable']]],
   ['parentsubselector_4',['ParentSubSelector',['../structass_1_1ParentSubSelector.html',1,'ass']]],
