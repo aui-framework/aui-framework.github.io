@@ -1,7 +1,7 @@
 var searchData=
 [
   ['ui_0',['UI',['../examples.html#examples_ui',1,'']]],
-  ['ui_20building_1',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md154',1,'']]],
+  ['ui_20building_1',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md153',1,'']]],
   ['ui_20building_20overview_2',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
   ['ui_20components_20and_20layout_3',['UI Components and Layout',['../example_notes_app.html#autotoc_md223',1,'']]],
   ['ui_20data_20binding_20with_20let_4',['UI data binding with let',['../group__property__system.html#autotoc_md231',1,'']]],
@@ -45,7 +45,7 @@ var searchData=
   ['updaterdir_42',['updaterDir',['../structAUpdater_1_1GetInstallationDirectoryContext.html#ae23c64b8d8effa6cedd912fc788c1390',1,'AUpdater::GetInstallationDirectoryContext']]],
   ['updates_43',['Checking for updates',['../group__updater.html#autotoc_md245',1,'']]],
   ['url_44',['URL',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d',1,'URL:&#160;ATextInputType.h'],['../md_docs_2AUI_01Boot.html#autotoc_md51',1,'URL']]],
-  ['usage_20example_45',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md144',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md192',1,'Usage Example']]],
+  ['usage_20example_45',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md143',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md192',1,'Usage Example']]],
   ['usage_20with_20default_20qualifier_46',['Typical usage with default qualifier',['../structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html#AppropriatePredicateTest_Typical_usage_with_default_qualifier',1,'']]],
   ['use_20clang_20format_20off_20on_47',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md128',1,'']]],
   ['use_20trailing_20comma_20in_20initializer_20lists_48',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md127',1,'']]],
@@ -56,7 +56,7 @@ var searchData=
   ['using_20aui_20distributions_20with_20tt_20find_5fpackage_20tt_53',['Using AUI distributions with &lt;tt&gt;find_package&lt;/tt&gt;',['../md_docs_2AUI_01Boot.html#autotoc_md74',1,'']]],
   ['using_20container_20stylesheet_54',['Using container stylesheet',['../group__ass.html#autotoc_md12',1,'']]],
   ['using_20global_20style_55',['Using global style',['../group__ass.html#autotoc_md11',1,'']]],
-  ['using_20inkscape_56',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md179',1,'']]],
+  ['using_20inkscape_56',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md176',1,'']]],
   ['using_20setcustomstyle_57',['Using setCustomStyle',['../group__ass.html#autotoc_md14',1,'']]],
   ['using_20with_5fstyle_58',['Using with_style',['../group__ass.html#autotoc_md13',1,'']]],
   ['uv1_59',['uv1',['../structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16',1,'ATexturedBrush']]],
