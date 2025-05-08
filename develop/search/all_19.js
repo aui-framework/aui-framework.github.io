@@ -1,7 +1,7 @@
 var searchData=
 [
   ['t_0',['t',['../group__ass__selectors.html#gab1309369989373a0f2408455b3a91742',1,'ass']]],
-  ['tab_1',['Layout tab',['../md_docs_2Devtools.html#autotoc_md146',1,'']]],
+  ['tab_1',['Layout tab',['../md_docs_2Devtools.html#autotoc_md144',1,'']]],
   ['target_2',['TARGET',['../md_docs_2aui__app.html#autotoc_md114',1,'']]],
   ['target_20depends_20on_20an_20out_20of_20tree_20file_3',['&quot;Imported target ... depends on an out-of-tree file&quot;',['../md_docs_2AUI_01Boot.html#AFKJNJKAN',1,'']]],
   ['techniques_4',['Improving compiler error messages techniques',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md135',1,'']]],
@@ -88,7 +88,7 @@ var searchData=
   ['touintorexception_85',['toUIntOrException',['../classAString.html#ade69a4a70112994e90449008d3cb222f',1,'AString']]],
   ['towchar_86',['toWchar',['../group__core.html#ga6e35f642628b75fdca9cdd63972e4e9c',1,'aui::win32::toWchar(const AString &amp;string)'],['../group__core.html#ga3004006af806a61f9d5b30b330c258ce',1,'aui::win32::toWchar(AString &amp;string)']]],
   ['towcharview_87',['toWcharView',['../group__core.html#ga3761573539abae397cfab5e885e3fa2e',1,'aui::win32']]],
-  ['trailing_20comma_20in_20initializer_20lists_88',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md128',1,'']]],
+  ['trailing_20comma_20in_20initializer_20lists_88',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md127',1,'']]],
   ['traits_89',['traits',['../structaui_1_1pixel__format_1_1traits.html',1,'aui::pixel_format']]],
   ['transferring_20ownership_20by_20copying_90',['Transferring ownership by copying',['../classAForEachUI.html#UIDeclarativeForTest_Transferring_ownership_by_copying',1,'']]],
   ['transformgestureeventstodesktop_91',['transformGestureEventsToDesktop',['../classAView.html#a1b273cbe961c8633b17171b750762135',1,'AView']]],

@@ -48,7 +48,7 @@ var searchData=
   ['usage_20example_45',['Usage Example',['../md_docs_2Writing_01tests.html#autotoc_md192',1,'']]],
   ['usage_20with_20default_20qualifier_46',['Typical usage with default qualifier',['../structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html#AppropriatePredicateTest_Typical_usage_with_default_qualifier',1,'']]],
   ['use_20clang_20format_20off_20on_47',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md129',1,'']]],
-  ['use_20trailing_20comma_20in_20initializer_20lists_48',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md128',1,'']]],
+  ['use_20trailing_20comma_20in_20initializer_20lists_48',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md127',1,'']]],
   ['useful_20macros_49',['Useful macros',['../group__useful__macros.html',1,'']]],
   ['useful_20templates_50',['Useful templates',['../group__useful__templates.html',1,'']]],
   ['user_20on_20every_20step_51',['Prompt user on every step',['../group__updater.html#autotoc_md248',1,'']]],
