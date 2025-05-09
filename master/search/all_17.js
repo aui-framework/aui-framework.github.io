@@ -78,7 +78,7 @@ var searchData=
   ['rendertotexturedecay_75',['renderToTextureDecay',['../structAWindowBase_1_1Profiling.html#af3bb342a9b1e1ecd21d5d016cd549148',1,'AWindowBase::Profiling']]],
   ['rep_76',['rep',['../structass_1_1BackgroundImage.html#aa71cf5009a5d39c4cf14edaaa2a50de8',1,'ass::BackgroundImage']]],
   ['repeat_77',['repeat',['../structATexturedBrush.html#a9759fd226e78d36217ce417caf320589',1,'ATexturedBrush']]],
-  ['replacing_20aui_20mobile_20project_78',['Replacing AUI mobile project',['../md_docs_2Crosscompiling.html#autotoc_md146',1,'']]],
+  ['replacing_20aui_20mobile_20project_78',['Replacing AUI mobile project',['../md_docs_2Crosscompiling.html#autotoc_md145',1,'']]],
   ['reportdownloadedpercentage_79',['reportDownloadedPercentage',['../classAUpdater.html#a2d22681af3de65f3456a66a264aca44a',1,'AUpdater']]],
   ['reportreadytoapplyandrestart_80',['reportReadyToApplyAndRestart',['../classAUpdater.html#a53e3735cb83c9a451db224dbe1630ad6',1,'AUpdater']]],
   ['representation_5ft_81',['representation_t',['../structaui_1_1pixel__format_1_1traits_1_1representation__t.html',1,'aui::pixel_format::traits']]],
