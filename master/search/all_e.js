@@ -95,7 +95,7 @@ var searchData=
   ['invalidation_92',['Build cache invalidation',['../md_docs_2Troubleshoot_01list.html#autotoc_md178',1,'']]],
   ['invocable_93',['invocable',['../conceptaui_1_1invocable.html',1,'aui']]],
   ['io_20streams_94',['IO streams',['../group__io.html',1,'']]],
-  ['ios_95',['iOS',['../md_docs_2Packaging_01Your_01App.html#PACKAGING_WITH_AUI_BUILD_FOR',1,'Android and iOS'],['../md_docs_2Crosscompiling.html',1,'Crosscompiling (Android and iOS)'],['../md_docs_2Crosscompiling.html#autotoc_md148',1,'iOS']]],
+  ['ios_95',['iOS',['../md_docs_2Packaging_01Your_01App.html#PACKAGING_WITH_AUI_BUILD_FOR',1,'Android and iOS'],['../md_docs_2Crosscompiling.html',1,'Crosscompiling (Android and iOS)'],['../md_docs_2Crosscompiling.html#autotoc_md149',1,'iOS']]],
   ['ios_20operating_20system_96',['iOS (operating system)',['../ios.html',1,'']]],
   ['ios_5fcontroller_97',['IOS_CONTROLLER',['../md_docs_2aui__app.html#autotoc_md126',1,'']]],
   ['ios_5fdevice_98',['IOS_DEVICE',['../md_docs_2aui__app.html#autotoc_md125',1,'']]],
