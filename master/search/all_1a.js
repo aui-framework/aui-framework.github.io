@@ -1,7 +1,7 @@
 var searchData=
 [
   ['ui_0',['UI',['../examples.html#examples_ui',1,'']]],
-  ['ui_20building_1',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md153',1,'']]],
+  ['ui_20building_1',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md154',1,'']]],
   ['ui_20building_20overview_2',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
   ['ui_20components_20and_20layout_3',['UI Components and Layout',['../example_notes_app.html#autotoc_md223',1,'']]],
   ['ui_20data_20binding_20with_20let_4',['UI data binding with let',['../group__property__system.html#autotoc_md231',1,'']]],
@@ -47,8 +47,8 @@ var searchData=
   ['url_44',['URL',['../group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d',1,'URL:&#160;ATextInputType.h'],['../md_docs_2AUI_01Boot.html#autotoc_md51',1,'URL']]],
   ['usage_20example_45',['Usage Example',['../md_docs_2Crosscompiling.html#autotoc_md143',1,'Usage Example'],['../md_docs_2Writing_01tests.html#autotoc_md192',1,'Usage Example']]],
   ['usage_20with_20default_20qualifier_46',['Typical usage with default qualifier',['../structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html#AppropriatePredicateTest_Typical_usage_with_default_qualifier',1,'']]],
-  ['use_20clang_20format_20off_20on_47',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md124',1,'']]],
-  ['use_20trailing_20comma_20in_20initializer_20lists_48',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md120',1,'']]],
+  ['use_20clang_20format_20off_20on_47',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md123',1,'']]],
+  ['use_20trailing_20comma_20in_20initializer_20lists_48',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md118',1,'']]],
   ['useful_20macros_49',['Useful macros',['../group__useful__macros.html',1,'']]],
   ['useful_20templates_50',['Useful templates',['../group__useful__templates.html',1,'']]],
   ['user_20on_20every_20step_51',['Prompt user on every step',['../group__updater.html#autotoc_md248',1,'']]],
