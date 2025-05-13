@@ -219,6 +219,7 @@ How to fix "Could not resolve dependency" error<a class="aui-toc-hash" href='#ho
 <h3>
 "looks like a config file does not exist for your project"<a class="aui-toc-hash" href="#AFJKLF" id="AFJKLF" style="color: var(--fragment-comment) !important">#</a></h3>
 <p>This means that library's maintainer didn't bother about handling <code>cmake --install</code> properly. The best option in this scenario will be forking the library and append their <code>CMakeLists.txt</code> on your own.</p>
+<p>Alternatively, you can specify <a class="el" href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a> option.</p>
 <h3>
 "did you mean PACKAGE_NAME?"<a class="aui-toc-hash" href="#AKJFHJ" id="AKJFHJ" style="color: var(--fragment-comment) !important">#</a></h3>
 <p>You have mispelled the package name (the first argument to <code>auib_import</code>). Please change the first argument to <code>auib_import</code> to <code>PACKAGE_NAME</code>.</p>
@@ -261,10 +262,7 @@ Using AUI Boot without AUI<a class="aui-toc-hash" href="#using-aui-boot-without-
 </div><!-- fragment --> <div class="fragment"><div class="line">target_link_libraries(YOUR_APP PUBLIC fmt::fmt-header-only range-v3::range-v3)</div>
 </div><!-- fragment --><h1>
 Importing project as a subdirectory<a class="aui-toc-hash" href="#importing-project-as-a-subdirectory" id="importing-project-as-a-subdirectory" style="color: var(--fragment-comment) !important">#</a></h1>
-<p>Useful for library developers. They can use consumer's project to develop their library.</p>
-<div class="fragment"><div class="line">-DAUIB_LIB_AS=ON</div>
-</div><!-- fragment --><p> , where 'LIB' is external project name. For example, to import AUI as a subdirectory: </p><div class="fragment"><div class="line">-DAUIB_AUI_AS=ON</div>
-</div><!-- fragment --><p>This action disables usage of precompiled binary and validation.</p>
+<p>See <a class="el" href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a></p>
 <h1>
 CMake commands<a class="aui-toc-hash" href="#cmake-commands" id="cmake-commands" style="color: var(--fragment-comment) !important">#</a></h1>
 <h2>
@@ -291,7 +289,12 @@ URL<a class="aui-toc-hash" href="#url" id="url" style="color: var(--fragment-com
 <p>URL to the git repository of the project you want to import.</p>
 <h3>
 ADD_SUBDIRECTORY<a class="aui-toc-hash" href="#AUIB_ADD_SUBDIRECTORY" id="AUIB_ADD_SUBDIRECTORY" style="color: var(--fragment-comment) !important">#</a></h3>
-<p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as project importing mechanism as if <code>AUIB_&lt;PackageName&gt;_AS</code> was specified.</p>
+<p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as project importing mechanism. If <code>AUIB_&lt;PackageName&gt;_AS</code> evaluates to true, <code>ADD_SUBDIRECTORY</code> is implied.</p>
+<p>This action disables usage of precompiled binary and validation.</p>
+<p><code>AUIB_&lt;PackageName&gt;_AS</code> Useful for library developers. They can use consumer's project to develop their library.</p>
+<div class="fragment"><div class="line">-DAUIB_LIB_AS=ON</div>
+</div><!-- fragment --><p> , where 'LIB' is external project name. For example, to import AUI as a subdirectory: </p><div class="fragment"><div class="line">-DAUIB_AUI_AS=ON</div>
+</div><!-- fragment --><p>Another use case is when the dependency fails to provide proper CMake install, making <code>find_package</code> unusable. If you don't care polluting your own build tree with dependency's targets - it is a good alternative to fixing their CMake install on your own, which is a challenging task.</p>
 <h3>
 ARCHIVE<a class="aui-toc-hash" href="#archive" id="archive" style="color: var(--fragment-comment) !important">#</a></h3>
 <p>The provided URL is pointing to zip archive instead of a git repository.</p>
