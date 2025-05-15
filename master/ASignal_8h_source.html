@@ -604,56 +604,61 @@ $(function(){initNavTree('ASignal_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>            receiverPtr = std::move(sharedPtr);</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>        }</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::tuple_size_v&lt;<span class="keyword">decltype</span>(<a class="code hl_function" href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">args</a>)&gt; &gt; 0) {</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            <span class="keyword">using </span>FirstType = <span class="keyword">decltype</span>(std::get&lt;0&gt;(args));</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>            <span class="keyword">static_assert</span>(</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                std::is_reference_v&lt;FirstType&gt;,</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                <span class="stringliteral">"when performing a non-threading call, args is expected to hold const references"</span></div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                <span class="stringliteral">"instead of values"</span>);</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        }</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        lock.unlock();</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>            (std::apply)(outgoingConnection-&gt;func, args);</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>            <span class="keywordflow">if</span> (senderPtr) {</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                senderPtr-&gt;handleSlotException(std::current_exception());</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>            }</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        }</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        <span class="keywordflow">if</span> (AObject::isDisconnected()) {</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            i = outgoingConnections.erase(i);</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        }</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        ++i;</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    }</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>}</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span></div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno"><a class="line" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">  572</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a> = <a class="code hl_class" href="classASignal.html">ASignal</a>&lt;Args...&gt;;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="preprocessor">#define signals public</span></div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="comment"></span> </div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span><span class="comment">// UNCOMMENT THIS to test ProjectedSignal</span></div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="comment"></span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="comment">static_assert(requires (aui::detail::signal::ProjectedSignal&lt;emits&lt;int&gt;, decltype([](int) { return double(0);})&gt; t) {</span></div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span><span class="comment">    requires !decltype(t)::IS_PROJECTION_RETURNS_TUPLE;</span></div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="comment">    { decltype(t)::base } -&gt; aui::same_as&lt;ASignal&lt;int&gt;&amp;&gt;;</span></div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="comment">    { decltype(t)::projection } -&gt; aui::not_overloaded_lambda;</span></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="comment">    { decltype(t)::projection_returns_t{} } -&gt; aui::same_as&lt;double&gt;;</span></div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="comment">    { decltype(t)::emits_args_t{} } -&gt; aui::same_as&lt;std::tuple&lt;double&gt;&gt;;</span></div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="comment">    { decltype(t)::projection_info_t::args{} } -&gt; aui::same_as&lt;std::tuple&lt;int&gt;&gt;;</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="comment">    { decltype(t)::projection_info_t::return_t{} } -&gt; aui::same_as&lt;double&gt;;</span></div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="comment">});</span></div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="comment"></span> </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="comment">static_assert(requires (aui::detail::signal::ProjectedSignal&lt;emits&lt;AString&gt;, decltype(&amp;AString::length)&gt; t) {</span></div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="comment">    requires !decltype(t)::IS_PROJECTION_RETURNS_TUPLE;</span></div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="comment">    { decltype(t)::base } -&gt; aui::same_as&lt;ASignal&lt;AString&gt;&amp;&gt;;</span></div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="comment">    { decltype(t)::emits_args_t{} } -&gt; aui::same_as&lt;std::tuple&lt;size_t&gt;&gt;;</span></div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="comment">    { decltype(t)::projection_returns_t{} } -&gt; aui::same_as&lt;size_t&gt;;</span></div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span><span class="comment">});</span></div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::tuple_size_v&lt;std::remove_cvref_t&lt;<span class="keyword">decltype</span>(<a class="code hl_function" href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">args</a>)&gt;&gt; &gt; 0) {</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>            <span class="keyword">auto</span> check_and_assert_lambda =</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>              []&lt;<span class="keyword">typename</span> TupleType&gt;(TupleType&amp;&amp; nonEmptyTupleArgs) {</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                <span class="keyword">using </span>FirstType = <span class="keyword">decltype</span>(std::get&lt;0&gt;(std::forward&lt;TupleType&gt;(nonEmptyTupleArgs)));</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                <span class="keyword">static_assert</span>(</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                    std::is_reference_v&lt;FirstType&gt; &amp;&amp; std::is_const_v&lt;std::remove_reference_t&lt;FirstType&gt;&gt;,</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                    <span class="stringliteral">"when performing a non-threading call, args is expected to hold const references "</span></div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    <span class="stringliteral">"instead of values"</span>);</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>            };</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span> </div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>            check_and_assert_lambda(args);</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>        }</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        lock.unlock();</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            (std::apply)(outgoingConnection-&gt;func, args);</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            <span class="keywordflow">if</span> (senderPtr) {</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>                senderPtr-&gt;handleSlotException(std::current_exception());</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            }</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        }</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        <span class="keywordflow">if</span> (AObject::isDisconnected()) {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>            i = outgoingConnections.erase(i);</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        }</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        ++i;</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    }</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>}</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span></div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno"><a class="line" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">  577</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a> = <a class="code hl_class" href="classASignal.html">ASignal</a>&lt;Args...&gt;;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span> </div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span><span class="preprocessor">#define signals public</span></div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="comment"></span> </div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="comment">// UNCOMMENT THIS to test ProjectedSignal</span></div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="comment"></span> </div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="comment">static_assert(requires (aui::detail::signal::ProjectedSignal&lt;emits&lt;int&gt;, decltype([](int) { return double(0);})&gt; t) {</span></div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="comment">    requires !decltype(t)::IS_PROJECTION_RETURNS_TUPLE;</span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="comment">    { decltype(t)::base } -&gt; aui::same_as&lt;ASignal&lt;int&gt;&amp;&gt;;</span></div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="comment">    { decltype(t)::projection } -&gt; aui::not_overloaded_lambda;</span></div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="comment">    { decltype(t)::projection_returns_t{} } -&gt; aui::same_as&lt;double&gt;;</span></div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="comment">    { decltype(t)::emits_args_t{} } -&gt; aui::same_as&lt;std::tuple&lt;double&gt;&gt;;</span></div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="comment">    { decltype(t)::projection_info_t::args{} } -&gt; aui::same_as&lt;std::tuple&lt;int&gt;&gt;;</span></div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="comment">    { decltype(t)::projection_info_t::return_t{} } -&gt; aui::same_as&lt;double&gt;;</span></div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="comment">});</span></div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="comment"></span> </div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span><span class="comment">static_assert(requires (aui::detail::signal::ProjectedSignal&lt;emits&lt;AString&gt;, decltype(&amp;AString::length)&gt; t) {</span></div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="comment">    requires !decltype(t)::IS_PROJECTION_RETURNS_TUPLE;</span></div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="comment">    { decltype(t)::base } -&gt; aui::same_as&lt;ASignal&lt;AString&gt;&amp;&gt;;</span></div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="comment">    { decltype(t)::emits_args_t{} } -&gt; aui::same_as&lt;std::tuple&lt;size_t&gt;&gt;;</span></div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span><span class="comment">    { decltype(t)::projection_returns_t{} } -&gt; aui::same_as&lt;size_t&gt;;</span></div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span><span class="comment">});</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span><span class="comment">*/</span></div>
 <div class="ttc" id="aclassAAbstractSignal_html"><div class="ttname"><a href="classAAbstractSignal.html">AAbstractSignal</a></div><div class="ttdoc">Base class for signal.</div><div class="ttdef"><b>Definition</b> AAbstractSignal.h:366</div></div>
 <div class="ttc" id="aclassAAbstractSignal_html_a12847b680cf7cc5647b9704c6d67fb51"><div class="ttname"><a href="classAAbstractSignal.html#a12847b680cf7cc5647b9704c6d67fb51">AAbstractSignal::addIngoingConnectionIn</a></div><div class="ttdeci">static void addIngoingConnectionIn(aui::no_escape&lt; AObjectBase &gt; object, _&lt; Connection &gt; connection)</div><div class="ttdoc">Adds a connection to the specified object.</div></div>
 <div class="ttc" id="aclassAAbstractSignal_html_a14e2b79113e0ab35263cbac5d9d096d4"><div class="ttname"><a href="classAAbstractSignal.html#a14e2b79113e0ab35263cbac5d9d096d4">AAbstractSignal::removeIngoingConnectionIn</a></div><div class="ttdeci">static void removeIngoingConnectionIn(aui::no_escape&lt; AObjectBase &gt; object, Connection &amp;connection, std::unique_lock&lt; ASpinlockMutex &gt; &amp;lock)</div><div class="ttdoc">Removes a connection from the specified object.</div></div>
@@ -671,7 +676,7 @@ $(function(){initNavTree('ASignal_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclass___html_a5cfe74cd1d03e23f8aebdb13cb556873"><div class="ttname"><a href="class__.html#a5cfe74cd1d03e23f8aebdb13cb556873">_::weak</a></div><div class="ttdeci">_weak&lt; T &gt; weak() const</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:270</div></div>
 <div class="ttc" id="aclass___html_afca66562283bb9686c3c8a95bae5a42e"><div class="ttname"><a href="class__.html#afca66562283bb9686c3c8a95bae5a42e">_::value</a></div><div class="ttdeci">std::add_lvalue_reference_t&lt; T &gt; value() const noexcept</div><div class="ttdoc">Dereferences the stored pointer.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:294</div></div>
 <div class="ttc" id="agroup__core_html_gafb09429e1504fcd99fad3ad05858638a"><div class="ttname"><a href="group__core.html#gafb09429e1504fcd99fad3ad05858638a">aui::args</a></div><div class="ttdeci">API_AUI_CORE const ACommandLineArgs &amp; args() noexcept</div></div>
-<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:572</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:577</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gad409f7ab56b7719fecd676abfa776b1f"><div class="ttname"><a href="group__useful__macros.html#gad409f7ab56b7719fecd676abfa776b1f">AUI_MARK_AS_USED</a></div><div class="ttdeci">#define AUI_MARK_AS_USED(variable)</div><div class="ttdoc">Marks the variable as being used.</div><div class="ttdef"><b>Definition</b> macros.h:50</div></div>
 <div class="ttc" id="astructAAbstractSignal_1_1Connection_html"><div class="ttname"><a href="structAAbstractSignal_1_1Connection.html">AAbstractSignal::Connection</a></div><div class="ttdoc">Connection handle.</div><div class="ttdef"><b>Definition</b> AAbstractSignal.h:375</div></div>
 <div class="ttc" id="astructASignal_1_1call__wrapper_html"><div class="ttname"><a href="structASignal_1_1call__wrapper.html">ASignal::call_wrapper</a></div><div class="ttdef"><b>Definition</b> ASignal.h:178</div></div>
