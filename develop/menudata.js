@@ -28,11 +28,13 @@ var menudata={children:[
 {text:"All AUI Modules",url:"index.html"},
 {text:"All AUI Classes",url:"classes.html"},
 {text:"All Namespaces",url:"namespaces.html"},
-{text:"All AUI CMake commands",url:"usergroup1.html",children:[
+{text:"CMake Overview",url:"usergroup1.html",children:[
 {text:"aui_app",url:"md_docs_2aui__app.html"},
 {text:"aui_executable",url:"md_docs_2aui__executable.html"},
 {text:"aui_link",url:"md_docs_2aui__link.html"},
-{text:"aui_module",url:"md_docs_2aui__module.html"}]}]},
+{text:"aui_module",url:"md_docs_2aui__module.html"},
+{text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
+{text:"App Build Overview",url:"md_docs_2App_01Build_01Overview.html"}]}]},
 {text:"Getting started",url:"usergroup2.html",children:[
 {text:"Getting started with AUI",url:"md_docs_2Getting_01started_01with_01AUI.html"},
 {text:"Examples",url:"examples.html"},
@@ -63,7 +65,6 @@ var menudata={children:[
 {text:"iOS",url:"ios.html"},
 {text:"WebAssembly",url:"emscripten.html"}]},
 {text:"Other",url:"usergroup6.html",children:[
-{text:"AUI configure flags",url:"md_docs_2AUI_01configure_01flags.html"},
 {text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"},
 {text:"Runtime Dependency Resolution",url:"md_docs_2Runtime_01Dependency_01Resolution.html"},
 {text:"Forking AUI",url:"md_docs_2Forking_01AUI.html"}]}]}

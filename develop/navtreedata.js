@@ -28,11 +28,13 @@ var NAVTREE =
       [ "All AUI Modules", "index.html", null ],
       [ "All AUI Classes", "classes.html", null ],
       [ "All Namespaces", "namespaces.html", "namespaces" ],
-      [ "All AUI CMake commands", null, [
+      [ "CMake Overview", null, [
         [ "aui_app", "md_docs_2aui__app.html", null ],
         [ "aui_executable", "md_docs_2aui__executable.html", null ],
         [ "aui_link", "md_docs_2aui__link.html", null ],
-        [ "aui_module", "md_docs_2aui__module.html", null ]
+        [ "aui_module", "md_docs_2aui__module.html", null ],
+        [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
+        [ "App Build Overview", "md_docs_2App_01Build_01Overview.html", null ]
       ] ]
     ] ],
     [ "Getting started", null, [
@@ -69,7 +71,6 @@ var NAVTREE =
       [ "WebAssembly", "emscripten.html", null ]
     ] ],
     [ "Other", null, [
-      [ "AUI configure flags", "md_docs_2AUI_01configure_01flags.html", null ],
       [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ],
       [ "Runtime Dependency Resolution", "md_docs_2Runtime_01Dependency_01Resolution.html", null ],
       [ "Forking AUI", "md_docs_2Forking_01AUI.html", null ]
