@@ -13,5 +13,6 @@ var searchData=
   ['gridcell_10',['GridCell',['../structAAdvancedGridLayout_1_1GridCell.html',1,'AAdvancedGridLayout']]],
   ['group_11',['Group',['../classARadioButton_1_1Group.html',1,'ARadioButton']]],
   ['groupbox_12',['GroupBox',['../structdeclarative_1_1GroupBox.html',1,'declarative']]],
-  ['gtkdialog_13',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]]
+  ['gtk4_13',['Gtk4',['../structAPlatformAbstractionOptions_1_1Gtk4.html',1,'APlatformAbstractionOptions']]],
+  ['gtkdialog_14',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]]
 ];

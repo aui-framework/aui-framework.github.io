@@ -117,66 +117,69 @@ $(function(){initNavTree('OpenGLRenderingContextGtk_8h_source.html',''); initRes
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include "RenderingContextGtk.h"</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;AUI/Platform/OpenGLRenderingContext.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00017">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classOpenGLRenderingContextGtk.html">   17</a></span><span class="keyword">class </span>OpenGLRenderingContextGtk: <span class="keyword">public</span> OpenGLRenderingContext, <span class="keyword">public</span> RenderingContextGtk {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    OpenGLRenderingContextGtk(<span class="keyword">const</span> <a class="code hl_struct" href="structARenderingContextOptions_1_1OpenGL.html">ARenderingContextOptions::OpenGL</a>&amp; config, <a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      : OpenGLRenderingContext(config), RenderingContextGtk(window) {}</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    ~OpenGLRenderingContextGtk() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> init(<span class="keyword">const</span> <a class="code hl_struct" href="structIRenderingContext_1_1Init.html">Init</a>&amp; init) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> destroyNativeWindow(<a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> gtkRealize(GtkWidget* widget) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> gtkSnapshot(GtkWidget* widget, GtkSnapshot* snapshot) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> gtkUnrealize(GtkWidget* widget) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> beginResize(<a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> endResize(<a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">auto</span> contextScope() {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">auto</span> prev = gdk_gl_context_get_current();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">auto</span> ctx = ourContext;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">if</span> (ctx != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(prev != ctx);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            gdk_gl_context_make_current(ctx);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617">aui::ptr::make_unique_with_deleter</a>(ctx, [prev](GdkGLContext*) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            gdk_gl_context_clear_current();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            gdk_gl_context_make_current(prev);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        });</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> gtkDoUnderContext(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; callback) <span class="keyword">override</span>; <span class="comment">// this is soo bad</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">struct </span>Texture {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        GdkGLTextureBuilder* builder {};</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        GdkTexture* gl_texture {};</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        GdkTexture* dmabuf_texture {};</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        ~Texture();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    };</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;Texture&gt;</a> mTexture;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static</span> GdkGLContext* ourContext;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    GLuint mFramebufferForGtk = 0;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> mNeedsResize = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span> mHaveBuffers = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    GdkGLAPI mAllowedApis = <span class="keyword">static_cast&lt;</span>GdkGLAPI<span class="keyword">&gt;</span>(GDK_GL_API_GL | GDK_GL_API_GLES);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> realCreateContext(GtkWidget* widget);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> ensureTexture(GtkWidget* widget);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> allocateTexture(GtkWidget* widget);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> ensureBuffers(GtkWidget* widget);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> attachBuffers(GtkWidget* widget);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> deleteBuffers();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> deleteTextures();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> endFramebuffer() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include "gtk_functions.h"</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00018">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classOpenGLRenderingContextGtk.html">   18</a></span><span class="keyword">class </span>OpenGLRenderingContextGtk: <span class="keyword">public</span> OpenGLRenderingContext, <span class="keyword">public</span> RenderingContextGtk {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    OpenGLRenderingContextGtk(<span class="keyword">const</span> <a class="code hl_struct" href="structARenderingContextOptions_1_1OpenGL.html">ARenderingContextOptions::OpenGL</a>&amp; config, <a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      : OpenGLRenderingContext(config), RenderingContextGtk(window) {}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ~OpenGLRenderingContextGtk() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> init(<span class="keyword">const</span> <a class="code hl_struct" href="structIRenderingContext_1_1Init.html">Init</a>&amp; init) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> destroyNativeWindow(<a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> gtkRealize(aui::gtk4_fake::GtkWidget* widget) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> gtkSnapshot(aui::gtk4_fake::GtkWidget* widget, aui::gtk4_fake::GtkSnapshot* snapshot) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> gtkUnrealize(aui::gtk4_fake::GtkWidget* widget) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> beginResize(<a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> endResize(<a class="code hl_class" href="classAWindowBase.html">AWindowBase</a>&amp; window) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">auto</span> contextScope() {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceaui_1_1gtk4__fake.html">aui::gtk4_fake</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">auto</span> prev = gdk_gl_context_get_current();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">auto</span> ctx = ourContext;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">if</span> (ctx != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_define" href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a>(prev != ctx);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            gdk_gl_context_make_current(ctx);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617">aui::ptr::make_unique_with_deleter</a>(ctx, [prev](GdkGLContext*) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            gdk_gl_context_clear_current();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            gdk_gl_context_make_current(prev);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        });</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> gtkDoUnderContext(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; callback) <span class="keyword">override</span>; <span class="comment">// this is soo bad</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">struct </span>Texture {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        aui::gtk4_fake::GdkGLTextureBuilder* builder {};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        aui::gtk4_fake::GdkTexture* gl_texture {};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        aui::gtk4_fake::GdkTexture* dmabuf_texture {};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        ~Texture();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="classAOptional.html">AOptional&lt;Texture&gt;</a> mTexture;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">static</span> aui::gtk4_fake::GdkGLContext* ourContext;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    GLuint mFramebufferForGtk = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> mNeedsResize = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span> mHaveBuffers = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    aui::gtk4_fake::GdkGLAPI mAllowedApis = <span class="keyword">static_cast&lt;</span>aui::gtk4_fake::GdkGLAPI<span class="keyword">&gt;</span>(aui::gtk4_fake::GDK_GL_API_GL | aui::gtk4_fake::GDK_GL_API_GLES);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> realCreateContext(aui::gtk4_fake::GtkWidget* widget);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> ensureTexture(aui::gtk4_fake::GtkWidget* widget);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> allocateTexture(aui::gtk4_fake::GtkWidget* widget);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> ensureBuffers(aui::gtk4_fake::GtkWidget* widget);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> attachBuffers(aui::gtk4_fake::GtkWidget* widget);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> deleteBuffers();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> deleteTextures();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> endFramebuffer() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 </div>
 <div class="ttc" id="aclassAOptional_html"><div class="ttname"><a href="classAOptional.html">AOptional</a></div><div class="ttdoc">Utility wrapper implementing the stack-allocated (fast) optional idiom.</div><div class="ttdef"><b>Definition</b> AOptional.h:33</div></div>
 <div class="ttc" id="aclassAWindowBase_html"><div class="ttname"><a href="classAWindowBase.html">AWindowBase</a></div><div class="ttdef"><b>Definition</b> AWindowBase.h:33</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition</b> Assert.h:55</div></div>
+<div class="ttc" id="anamespaceaui_1_1gtk4__fake_html"><div class="ttname"><a href="namespaceaui_1_1gtk4__fake.html">aui::gtk4_fake</a></div><div class="ttdoc">Provides a fake implementation of GTK4 types and constants, so we wont depend on the gtk4 dev package...</div><div class="ttdef"><b>Definition</b> gtk_functions.h:16</div></div>
 <div class="ttc" id="astructARenderingContextOptions_1_1OpenGL_html"><div class="ttname"><a href="structARenderingContextOptions_1_1OpenGL.html">ARenderingContextOptions::OpenGL</a></div><div class="ttdef"><b>Definition</b> ARenderingContextOptions.h:55</div></div>
 <div class="ttc" id="astructIRenderingContext_1_1Init_html"><div class="ttname"><a href="structIRenderingContext_1_1Init.html">IRenderingContext::Init</a></div><div class="ttdef"><b>Definition</b> IRenderingContext.h:38</div></div>
 <div class="ttc" id="astructaui_1_1ptr_html_a53daf9b3ceddf96bbf2733bb3b041617"><div class="ttname"><a href="structaui_1_1ptr.html#a53daf9b3ceddf96bbf2733bb3b041617">aui::ptr::make_unique_with_deleter</a></div><div class="ttdeci">static _unique&lt; T, Deleter &gt; make_unique_with_deleter(T *ptr, Deleter deleter=Deleter{})</div><div class="ttdoc">Creates unique_ptr from raw pointer and a deleter.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:126</div></div>

@@ -123,14 +123,14 @@ DLL platforms (Windows only)<a class="aui-toc-hash" href="#dll-platforms-(window
 <li>If <em>1.</em> is failed, find dll in <code>PATH</code> environment variable.</li>
 <li>If both <em>1.</em> and <em>2.</em> are failed, show an error message box. (A helpful message indicating that some specific dll was not found is actually a rare case, Windows often displays an error with confusing text such as "error code 0xc000007b").</li>
 </ol>
-<p>On DLL targets, the first way is used: the runtime part of shared libraries (dll) are copied to <code>${CMAKE_BUILD_DIR}/bin</code> directory alongside exe files by <a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a>. </p><div class="fragment"><div class="line">tree build/</div>
+<p>On DLL targets, the first way is used: the runtime part of shared libraries (dll) are copied to <code>${CMAKE_BINARY_DIR}/bin</code> directory alongside exe files by <a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a>. </p><div class="fragment"><div class="line">tree build/</div>
 <div class="line">bin/aui_app.exe</div>
 <div class="line">bin/aui.core.dll</div>
 <div class="line">bin/aui.views.dll</div>
 <div class="line">...</div>
 </div><!-- fragment --><h2>
 Other platforms (UNIX-like only)<a class="aui-toc-hash" href="#RPATH" id="RPATH" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>On UNIX-like platforms, a special directory hierarchy should be maintained, for both build tree and portable installations (for compatibility reasons), hence <a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a> copies imported shared objects to <code>${CMAKE_BUILD_DIR}/lib</code>.</p>
+<p>On UNIX-like platforms, a special directory hierarchy should be maintained, for both build tree and portable installations (for compatibility reasons), hence <a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a> copies imported shared objects to <code>${CMAKE_BINARY_DIR}/lib</code>.</p>
 <p>These libraries are picked up by targets defined via <a class="el" href="md_docs_2aui__module.html">aui_module</a> and <a class="el" href="md_docs_2aui__executable.html">aui_executable</a> by adjusting <code>RUNPATH</code>/<code>RPATH</code> which is a special field inside executables indicating where to find required shared libraries.</p>
 <div class="fragment"><div class="line">function(_auib_apply_rpath AUI_MODULE_NAME)</div>
 <div class="line">    if (BUILD_SHARED_LIBS AND AUI_PLATFORM_LINUX)</div>

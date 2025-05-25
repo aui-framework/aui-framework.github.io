@@ -30,6 +30,7 @@ var namespaces =
         [ "platform", "namespaceaui_1_1audio_1_1platform.html", null ],
         [ "ABadFormatException", "classaui_1_1audio_1_1ABadFormatException.html", null ]
       ] ],
+      [ "gtk4_fake", "namespaceaui_1_1gtk4__fake.html", "namespaceaui_1_1gtk4__fake" ],
       [ "parameter_pack", "namespaceaui_1_1parameter__pack.html", null ],
       [ "react", "namespaceaui_1_1react.html", "namespaceaui_1_1react" ],
       [ "any_view", "structaui_1_1any__view.html", "structaui_1_1any__view" ],

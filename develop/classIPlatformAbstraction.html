@@ -104,13 +104,16 @@ $(function(){initNavTree('classIPlatformAbstraction.html',''); initResizable(tru
 <a href="classIPlatformAbstraction-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">IPlatformAbstraction Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/Platform/linux/IPlatformAbstraction.h#L12"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/Platform/linux/IPlatformAbstraction.h#L39"></b>
 <p>Platform Abstraction Layer.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="IPlatformAbstraction_8h_source.html">AUI/Platform/linux/IPlatformAbstraction.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
+<tr class="memitem:af95f717a19a629628cf7adf0c2aa94b5" id="r_af95f717a19a629628cf7adf0c2aa94b5"><td align="right" class="memItemLeft" valign="top"><a id="af95f717a19a629628cf7adf0c2aa94b5" name="af95f717a19a629628cf7adf0c2aa94b5"></a>
+virtual void </td><td class="memItemRight" valign="bottom"><b>init</b> ()=0</td></tr>
+<tr class="separator:af95f717a19a629628cf7adf0c2aa94b5"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a36c2c6cbfb4fae281d440507a0a411aa" id="r_a36c2c6cbfb4fae281d440507a0a411aa"><td align="right" class="memItemLeft" valign="top"><a id="a36c2c6cbfb4fae281d440507a0a411aa" name="a36c2c6cbfb4fae281d440507a0a411aa"></a>
 virtual <a class="el" href="class__.html">_</a>&lt; <a class="el" href="structACursor_1_1Custom.html">ACursor::Custom</a> &gt; </td><td class="memItemRight" valign="bottom"><b>createCustomCursor</b> (<a class="el" href="classAImageView.html">AImageView</a> image)=0</td></tr>
 <tr class="separator:a36c2c6cbfb4fae281d440507a0a411aa"><td class="memSeparator" colspan="2"> </td></tr>
@@ -241,15 +244,31 @@ static <a class="el" href="classAWindow.html">AWindow</a> *&amp; </td><td class
 static bool &amp; </td><td class="memItemRight" valign="bottom"><b>wasMaximized</b> (<a class="el" href="classAWindow.html">AWindow</a> &amp;window)</td></tr>
 <tr class="separator:a0dc8c32b011fbdbbcdac7d67be6aed04"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="textblock"><p>Runtime layer for switching between multiple displaying options (i.e, Linux = X11 or Wayland).</p>
-<p>This is a direct equivalent of Qt's Platform Abstraction. </p>
+<p>This is a direct equivalent of Qt's Platform Abstraction.</p>
+<dl class="linux"><dt><b>Linux-specific</b></dt><dd>This API is available on <a class="el" href="linux.html">Linux (-based desktop OSes)</a> only. Platform Abstraction Layer is used to choose appropriate core platform UI APIs in runtime.</dd></dl>
+<p>AUI framework is designed to be flexible and adaptable to different desktop environments and UI toolkits. This is achieved through a platform abstraction layer that isolates the core application logic from the specifics of the underlying UI implementation.</p>
+<h1>
+Supported UI Backends<a class="aui-toc-hash" href="#supported-ui-backends" id="supported-ui-backends" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>Currently, the framework supports the following UI backends:</p><ul>
+<li><b>Adwaita:</b> modern UI toolkit based on GTK, commonly used in GNOME.</li>
+<li><b>GTK:</b> widely available widget toolkit.</li>
+<li><b>X11:</b> legacy windowing system (used as a fallback).</li>
+</ul>
+<h1>
+API Selection and Prioritization<a class="aui-toc-hash" href="#api-selection-and-prioritization" id="api-selection-and-prioritization" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>The framework determines the preferred UI backend based on an <code>initializationOrder</code> defined within <a class="el" href="structAPlatformAbstractionOptions.html">APlatformAbstractionOptions</a>. The order prioritizes backends, attempting to initialize them sequentially.</p>
+<h1>
+Dynamic Loading<a class="aui-toc-hash" href="#dynamic-loading" id="dynamic-loading" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>To minimize dependencies and enhance compatibility, the framework utilizes dynamic loading for certain UI backends. For example, the Adwaita backend loads the <code>libadwaita-1.so</code> library at runtime using <code>dlopen</code>.</p>
+<p>The <code>generate_dl_subs</code> function from <code>aui.toolbox</code> is used to automatically generate <code>dlsym</code>-based function implementations based on a list of signatures (<code>*.sigs</code>) that need to be exported from the dynamically loaded libraries. This allows the framework to call functions within the loaded library without requiring explicit linking. </p>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><h1><a href="#supported-ui-backends">Supported UI Backends</a></h1><h1><a href="#api-selection-and-prioritization">API Selection and Prioritization</a></h1><h1><a href="#dynamic-loading">Dynamic Loading</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>
