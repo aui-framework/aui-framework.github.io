@@ -153,7 +153,7 @@ var searchData=
   ['spacerfixed_150',['SpacerFixed',['../structdeclarative_1_1SpacerFixed.html',1,'declarative']]],
   ['specific_151',['aui.boot-specific',['../md_docs_2AUI_01configure_01flags.html#autotoc_md101',1,'']]],
   ['specific_20sources_152',['Platform specific sources',['../md_docs_2Macros.html#autotoc_md168',1,'']]],
-  ['specifics_153',['specifics',['../android.html#autotoc_md42',1,'AUI implementation specifics'],['../macos.html#autotoc_md163',1,'AUI implementation specifics'],['../linux.html#autotoc_md165',1,'AUI implementation specifics'],['../windows.html#autotoc_md196',1,'AUI implementation specifics']]],
+  ['specifics_153',['specifics',['../android.html#autotoc_md42',1,'AUI implementation specifics'],['../linux.html#autotoc_md163',1,'AUI implementation specifics'],['../macos.html#autotoc_md165',1,'AUI implementation specifics'],['../windows.html#autotoc_md196',1,'AUI implementation specifics']]],
   ['split_5f2x2_154',['SPLIT_2X2',['../group__ass__properties.html#ggacddcf8eaaf32f1471c17e0a4434bd3d8aac2d1453e21b91adbf8d873909380ec3',1,'ass']]],
   ['sqlcolumn_155',['SqlColumn',['../structSqlColumn.html',1,'']]],
   ['sqlexception_156',['SQLException',['../classSQLException.html',1,'']]],
@@ -206,7 +206,7 @@ var searchData=
   ['svgimageloader_203',['SvgImageLoader',['../classSvgImageLoader.html',1,'']]],
   ['swappable_204',['swappable',['../conceptaui_1_1swappable.html',1,'aui']]],
   ['sync_205',['Sync',['../structRenderingContextX11_1_1Sync.html',1,'RenderingContextX11']]],
-  ['syntax_206',['Syntax',['../md_docs_2aui__executable.html#autotoc_md103',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md109',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md112',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md119',1,'Syntax']]],
+  ['syntax_206',['Syntax',['../md_docs_2aui__executable.html#autotoc_md103',1,'Syntax'],['../md_docs_2aui__link.html#autotoc_md110',1,'Syntax'],['../md_docs_2aui__module.html#autotoc_md124',1,'Syntax'],['../md_docs_2aui__app.html#autotoc_md111',1,'Syntax']]],
   ['system_207',['System',['../group__property__system.html',1,'Property System'],['../classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03',1,'ACursor::System']]],
   ['system_208',['system',['../android.html',1,'Android (operating system)'],['../ios.html',1,'iOS (operating system)'],['../macos.html',1,'macOS (operating system)'],['../windows.html',1,'Windows (operating system)']]],
   ['systemslashdirection_209',['systemSlashDirection',['../classAPath.html#a009bf83be30970d6b00af798b2445035',1,'APath']]]
