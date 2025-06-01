@@ -127,7 +127,7 @@ $(function(){initNavTree('Entry_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define AUI_ENTRY \</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    AUI_EXPORT int aui_entry(const AStringVector&amp; args); \</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">    AUI_EXPORT int aui_main(int argc, char** argv, int(*aui_entry)(const AStringVector&amp;)); \</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    int fake_main(int argc, char** argv) {                               \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">    static int fake_main(int argc, char** argv) {                               \</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">        return aui_main(argc, argv, aui_entry);\</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    }             \</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">AUI_EXPORT int aui_entry(const AStringVector&amp; args)</span></div>
@@ -170,12 +170,12 @@ $(function(){initNavTree('Entry_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// fake the main function when tests module compiling</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#ifdef AUI_TESTS_MODULE</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#define AUI_ENTRY \</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">    AUI_EXPORT int aui_entry(const AStringVector&amp; args); \</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">    AUI_EXPORT static int aui_entry(const AStringVector&amp; args); \</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">    AUI_EXPORT int aui_main(int argc, char** argv, int(*aui_entry)(const AStringVector&amp;)); \</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">    int fake_main(int argc, char** argv) {                               \</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">    static int fake_main(int argc, char** argv) {                               \</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">        return aui_main(argc, argv, aui_entry);\</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">    } \</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">    AUI_EXPORT int aui_entry(const AStringVector&amp; args)</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">    AUI_EXPORT static int aui_entry(const AStringVector&amp; args)</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define AUI_ENTRY \</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">    AUI_EXPORT int aui_entry(const AStringVector&amp; args); \</span></div>
