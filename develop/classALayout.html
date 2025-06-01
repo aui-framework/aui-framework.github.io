@@ -103,15 +103,15 @@ $(function(){initNavTree('classALayout.html',''); initResizable(true); });
 <a href="classALayout-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">ALayout Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__views.html">aui::views</a> » <a class="el" href="group__layout__managers.html">Layout Managers</a></div></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/Layout/ALayout.h#L251"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/Layout/ALayout.h#L304"></b>
 <p>Base class for all layout managers.  
 </p>
 <p><code>#include &lt;<a class="el" href="ALayout_8h_source.html">AUI/Layout/ALayout.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a1d32a55f4ec3873a196036cefdb4a83f" id="r_a1d32a55f4ec3873a196036cefdb4a83f"><td align="right" class="memItemLeft" valign="top"><a id="a1d32a55f4ec3873a196036cefdb4a83f" name="a1d32a55f4ec3873a196036cefdb4a83f"></a>
-virtual void </td><td class="memItemRight" valign="bottom"><b>onResize</b> (int x, int y, int <a class="el" href="structViewAssertionSize.html">width</a>, int <a class="el" href="structViewAssertionSize.html">height</a>)=0</td></tr>
+<tr class="memitem:a1d32a55f4ec3873a196036cefdb4a83f" id="r_a1d32a55f4ec3873a196036cefdb4a83f"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d32a55f4ec3873a196036cefdb4a83f">onResize</a> (int x, int y, int <a class="el" href="structViewAssertionSize.html">width</a>, int <a class="el" href="structViewAssertionSize.html">height</a>)=0</td></tr>
+<tr class="memdesc:a1d32a55f4ec3873a196036cefdb4a83f"><td class="mdescLeft"> </td><td class="mdescRight">Applies geometry to children.  <br/></td></tr>
 <tr class="separator:a1d32a55f4ec3873a196036cefdb4a83f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a436668efece895a986b263b76d222d0b" id="r_a436668efece895a986b263b76d222d0b"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a436668efece895a986b263b76d222d0b">addView</a> (const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAView.html">AView</a> &gt; &amp;view, <a class="el" href="classAOptional.html">AOptional</a>&lt; size_t &gt; index=std::nullopt)=0</td></tr>
 <tr class="memdesc:a436668efece895a986b263b76d222d0b"><td class="mdescLeft"> </td><td class="mdescRight">Attaches view to the layout.  <br/></td></tr>
@@ -310,6 +310,54 @@ virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotExcepti
 </table>
 </div><div class="memdoc">
 <p>Implemented in <a class="el" href="classAAdvancedGridLayout.html#a429a1268fbabeb10b9c691f34cdeabda">AAdvancedGridLayout</a>, and <a class="el" href="classAGridLayout.html#aefa714798cd40eda4a78ca7050f0bd15">AGridLayout</a>.</p>
+</div>
+</div>
+<a id="a1d32a55f4ec3873a196036cefdb4a83f" name="a1d32a55f4ec3873a196036cefdb4a83f"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>onResize()<a class="aui-toc-hash" href="#◆ onresize()" id="◆ onresize()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">virtual void ALayout::onResize </td>
+<td>(</td>
+<td class="paramtype">int</td> <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int</td> <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int</td> <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int</td> <td class="paramname"><span class="paramname"><em>height</em></span> )</td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">x</td><td>x coordinate in container's coordinate space, add padding if necessary. </td></tr>
+<tr><td class="paramname">y</td><td>y coordinate in container's coordinate space, add padding if necessary. </td></tr>
+<tr><td class="paramname">width</td><td>width of the container, add padding if necessary. </td></tr>
+<tr><td class="paramname">height</td><td>height of the container, add padding if necessary.</td></tr>
+</table>
+</dd>
+</dl>
+<p>See <a class="el" href="group__layout__managers.html">Layout Managers</a> for more info. </p>
+<p>Implemented in <a class="el" href="classAAbsoluteLayout.html#a6a67cfe99ce675090b5d642cc20ba7aa">AAbsoluteLayout</a>, <a class="el" href="classAAdvancedGridLayout.html#a8a3d7037502a70a072f0a15eddbbb0c8">AAdvancedGridLayout</a>, <a class="el" href="classAGridLayout.html#addb5012614ea373b83fe0256945c6356">AGridLayout</a>, <a class="el" href="classAHorizontalLayout.html#aa7c93a322075d5226a73f37dd6f5d1c2">AHorizontalLayout</a>, <a class="el" href="classAStackedLayout.html#a82782a75b609dfa49f1368790727bd38">AStackedLayout</a>, <a class="el" href="classAVerticalLayout.html#a98800d01c0094c8822d47c1d4e382625">AVerticalLayout</a>, and <a class="el" href="classAWordWrappingLayout.html#a1c119a147c189713d8811a89756bfabb">AWordWrappingLayout</a>.</p>
 </div>
 </div>
 <a id="aa71ce247b584f1a2727e88b504e5928e" name="aa71ce247b584f1a2727e88b504e5928e"></a>
