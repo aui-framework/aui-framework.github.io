@@ -107,6 +107,56 @@ $(function(){initNavTree('group__layout__managers.html',''); initResizable(true)
 <a href="#details">More...</a></p>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>In AUI, layout building consists of layout managers. Layout manager determines position and size of container's children <a class="el" href="classAView.html">views</a>. A <a class="el" href="classAViewContainer.html">container</a> is a <a class="el" href="classAView.html">view</a> that consists of other <a class="el" href="classAView.html">views</a>, called children. In general, layout manager does not allow going beyond the border of the <a class="el" href="classAViewContainer.html">container</a>. A <a class="el" href="classAViewContainer.html">container</a> can be a child of an another <a class="el" href="classAViewContainer.html">container</a> i.e., nesting is allowed.</p>
+<p>The <a class="el" href="classALayout.html" title="Base class for all layout managers.">ALayout</a> is the base class for all layout managers in AUI. Layout managers are responsible for:</p>
+<ul>
+<li>Positioning child views within their container</li>
+<li>Calculating minimum sizes</li>
+<li>Handling view additions and removals</li>
+<li>Managing spacing between views</li>
+<li>Respecting view margins and alignment</li>
+<li>Supporting expanding/stretching of views</li>
+</ul>
+<p>Common layout managers include:</p>
+<ul>
+<li><b><a class="el" href="classAHorizontalLayout.html" title="Places views in a row.">AHorizontalLayout</a></b> - Arranges views in a horizontal row</li>
+<li><b><a class="el" href="classAVerticalLayout.html" title="Places views in a column.">AVerticalLayout</a></b> - Arranges views in a vertical column</li>
+<li><b><a class="el" href="classAAdvancedGridLayout.html" title="Grid layout. Unlike AGridLayout, cells may have different sizes.">AAdvancedGridLayout</a></b> - Arranges views in a grid with customizable cell sizing</li>
+<li><b><a class="el" href="classAStackedLayout.html" title="Places views in a stack (along z axis).">AStackedLayout</a></b> - Centeres views, displaying them on top of each other</li>
+</ul>
+<p>Key concepts:</p>
+<ol type="1">
+<li><b>Minimum Size</b> - Layout managers calculate minimum size requirements by:<ul>
+<li>Considering minimum sizes of child views</li>
+<li>Adding margins and spacing</li>
+<li>Respecting fixed size constraints</li>
+</ul>
+</li>
+<li><b><a class="el" href="#EXPANDING">Expanding Views</a></b> - Children can expand to fill available space of their parent:<ul>
+<li>Set via <a class="el" href="classAView.html#a2f47691e1e4de96c4ac972a587e0d980">AView::setExpanding</a> or <a class="el" href="structass_1_1Expanding.html">ass::Expanding</a> on a child</li>
+<li>Requires parent to have <a class="el" href="structass_1_1FixedSize.html">ass::FixedSize</a> or <a class="el" href="structass_1_1MinSize.html">ass::MinSize</a> or <a class="el" href="#EXPANDING">Expanding</a> set to take effect</li>
+<li>Independent for horizontal/vertical directions</li>
+<li>Ignored if <a class="el" href="structass_1_1FixedSize.html">ass::FixedSize</a> is set</li>
+</ul>
+</li>
+<li><b>Spacing</b> - Configurable gaps between views:<ul>
+<li>Set via <a class="el" href="classALayout.html#a29e5a404fd9c98607618849845b5bc32">ALayout::setSpacing()</a> or <a class="el" href="structass_1_1LayoutSpacing.html">ass::LayoutSpacing</a> of the parent view</li>
+<li>Part of minimum size calculations of the parent view</li>
+<li>Applied uniformly between its child views</li>
+</ul>
+</li>
+<li><b>Margins</b> - Space around individual views:<ul>
+<li>Set per-view via ASS or margins property</li>
+<li>Respected during layout</li>
+<li>Part of minimum size calculations of the parent view</li>
+</ul>
+</li>
+<li><b>Layout Direction</b> - Overall flow direction:<ul>
+<li>Horizontal layouts flow left-to-right</li>
+<li>Vertical layouts flow top-to-bottom</li>
+<li>Grid layouts use both directions</li>
+</ul>
+</li>
+</ol>
 <h1>
 Layout Examples<a class="aui-toc-hash" href="#layout-examples" id="layout-examples" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><a class="el" href="classAHorizontalLayout.html">Horizontal</a> layout: </p><table class="doxtable">
@@ -152,7 +202,7 @@ Layout Examples<a class="aui-toc-hash" href="#layout-examples" id="layout-exampl
 </div><!-- fragment --> </td><td><img alt="" class="inline" src="https://github.com/aui-framework/aui/raw/master/docs/imgs/Screenshot_20210714_041807.png"/> </td></tr>
 </table>
 <h1>
-Expanding<a class="aui-toc-hash" href="#expanding" id="expanding" style="color: var(--fragment-comment) !important">#</a></h1>
+Expanding<a class="aui-toc-hash" href="#EXPANDING" id="EXPANDING" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Expanding (often referred as stretch factor) is a property of any <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Expanding is an expansion coefficient set on per-axis basic (i.e, one value along x axis, another value along y axis), however it's convenient to set both values. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container.</p>
 <p>Horizontal layouts ignore y expanding of their children, Vertical layouts ignore x expanding of their children.</p>
 <p>Views are normally created without any expanding set. When Expanding views appear in a layout they are given a share of space in accordance with their expanding or their minimum size whichever gives more space to them. Expanding is used to change how much space views are given in proportion to one another.</p>
@@ -238,7 +288,7 @@ Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#detailed-description">Detailed Description</a></h1><h1><a href="#layout-examples">Layout Examples</a></h1><h1><a href="#expanding">Expanding</a></h1><h1><a href="#nested-classes">Classes</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#detailed-description">Detailed Description</a></h1><h1><a href="#layout-examples">Layout Examples</a></h1><h1><a href="#EXPANDING">Expanding</a></h1><h1><a href="#nested-classes">Classes</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>
