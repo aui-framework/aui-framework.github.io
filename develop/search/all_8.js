@@ -57,7 +57,7 @@ var searchData=
   ['clickedright_54',['clickedRight',['../classAView.html#abec87965389be9d82031e53e2e036bb1',1,'AView']]],
   ['clickedrightorlongpressed_55',['clickedRightOrLongPressed',['../classAView.html#a8d60b048342b29b46dac2657ce6e781b',1,'AView']]],
   ['client_20auigram_56',['AUI Telegram Client (AUIgram)',['../example_app_auigram.html',1,'']]],
-  ['clion_57',['CLion',['../md_docs_2IDE_01Plugins.html#autotoc_md162',1,'']]],
+  ['clion_57',['CLion',['../md_docs_2IDE_01Plugins.html#autotoc_md163',1,'']]],
   ['clippingrects_58',['clippingRects',['../structARenderContext.html#aa1b9055abfbd963b7e41f8782affb0b9',1,'ARenderContext']]],
   ['close_59',['close',['../classACurl.html#a3dad28826ac49b935e11942ca291d504',1,'ACurl::close()'],['../classAWebsocket.html#a336b44b6dea5ddc38a4efd322f676612',1,'AWebsocket::close()']]],
   ['closein_60',['closeIn',['../classPipe.html#af3822b020e2527c265cb18889dda9603',1,'Pipe']]],
