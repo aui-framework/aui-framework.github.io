@@ -291,12 +291,10 @@ URL<a class="aui-toc-hash" href="#url" id="url" style="color: var(--fragment-com
 <p>URL to the git repository of the project you want to import.</p>
 <h3>
 ADD_SUBDIRECTORY<a class="aui-toc-hash" href="#AUIB_ADD_SUBDIRECTORY" id="AUIB_ADD_SUBDIRECTORY" style="color: var(--fragment-comment) !important">#</a></h3>
-<p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as project importing mechanism. If <code>AUIB_&lt;PackageName&gt;_AS</code> evaluates to true, <code>ADD_SUBDIRECTORY</code> is implied.</p>
+<p>See also: <a class="el" href="#AUIB_LIB_AS">AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</a>.</p>
+<p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as the project importing mechanism.</p>
+<p>Potential use case of this is when the dependency fails to provide proper CMake install, making <code>find_package</code> unusable. If you don't care about polluting your own build tree with dependency's targets - it is a good alternative to fixing their CMake install on your own, which is a challenging task.</p>
 <p>This action disables usage of precompiled binary and validation.</p>
-<p><code>AUIB_&lt;PackageName&gt;_AS</code> Useful for library developers. They can use consumer's project to develop their library.</p>
-<div class="fragment"><div class="line">-DAUIB_LIB_AS=ON</div>
-</div><!-- fragment --><p> , where 'LIB' is external project name. For example, to import AUI as a subdirectory: </p><div class="fragment"><div class="line">-DAUIB_AUI_AS=ON</div>
-</div><!-- fragment --><p>Another use case is when the dependency fails to provide proper CMake install, making <code>find_package</code> unusable. If you don't care polluting your own build tree with dependency's targets - it is a good alternative to fixing their CMake install on your own, which is a challenging task.</p>
 <h3>
 ARCHIVE<a class="aui-toc-hash" href="#archive" id="archive" style="color: var(--fragment-comment) !important">#</a></h3>
 <p>The provided URL is pointing to zip archive instead of a git repository.</p>
@@ -332,23 +330,67 @@ REQUIRES<a class="aui-toc-hash" href="#requires" id="requires" style="color: var
 Variables<a class="aui-toc-hash" href="#AUIB_VARIABLES" id="AUIB_VARIABLES" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>See <a class="el" href="md_docs_2AUI_01configure_01flags.html">AUI configure flags</a> on how to set variables.</p>
 <h2>
-AUIB_ALL_AS (=NO)<a class="aui-toc-hash" href="#auib_all_as-(=no)" id="auib_all_as-(=no)" style="color: var(--fragment-comment) !important">#</a></h2>
-<p>All dependencies will be imported with <code>add_subdirectory</code> command instead of <code>find_package</code>. It is useful if you want to work on the dependency along with your project.</p>
-<p>This behaviour can be set for the particular dependency by <code>AUIB_${AUI_MODULE_NAME_UPPER}_AS</code> flag, where <code>${AUI_MODULE_NAME_UPPER}</code> is the dependency name (i.e. for AUI it's <code>-DAUIB_AUI_AS=ON</code>).</p>
+AUIB_ALL_AS (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_ALL_AS" id="AUIB_ALL_AS" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>Equivalent of setting <a class="el" href="#AUIB_LIB_AS">AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</a> for every single library present in the project.</p>
 <h2>
-AUIB_DISABLE (=NO)<a class="aui-toc-hash" href="#AUIB_DISABLE" id="AUIB_DISABLE" style="color: var(--fragment-comment) !important">#</a></h2>
+AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_LIB_AS" id="AUIB_LIB_AS" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as the project importing mechanism. This means that the library becomes a part of your project, within your <code>build/</code> directory. This allows changing the library's code seamlessly.</p>
+<p>It is useful for library developers. They can use consumer's project to change something in their library, without changing <code>CMakeLists.txt</code> of the consumer's project. Setting <code>AUIB_&lt;PackageName&gt;_AS</code> is an equivalent of passing <a class="el" href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a> to <code>auib_import</code>.</p>
+<p>This action disables usage of precompiled binary and validation.</p>
+<p>Usage:</p>
+<div class="fragment"><div class="line">cd build</div>
+<div class="line">cmake .. -DAUIB_LIB_AS=ON</div>
+</div><!-- fragment --><p> Where 'LIB' is library project name. For example, to import AUI as a subdirectory:</p>
+<div class="fragment"><div class="line">cd build</div>
+<div class="line">cmake .. -DAUIB_AUI_AS=ON</div>
+</div><!-- fragment --><p>You can switch <code>AUIB_AUI_AS</code> on an existing build tree, AUI.Boot is capable of switching on-the-fly.</p>
+<p>During the execution of the command above, the location of the LIB is printed:</p>
+<div class="fragment"><div class="line">Imported: aui () (/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui) (version v8.0.0-rc.1)</div>
+</div><!-- fragment --><p>Which points to the LIB's source tree used to build the consumer's project. You can change anything in that directory as part of your development workflow, and these changes will reflect immediately on the consumer's project.</p>
+<p>Your changes will not be overridden by further CMake invocations.</p>
+<p>You can <code>cd</code> and commit changes right from that directory as you complete your work on the library:</p>
+<div class="fragment"><div class="line">cd /home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui</div>
+<div class="line"># don't forget to checkout, we are in detached HEAD state</div>
+<div class="line">git checkout -b feat/a-new-feature</div>
+<div class="line">git commit -m "a new feature"</div>
+<div class="line">git remote set-url origin git@github.com/your-name/your-aui-fork</div>
+<div class="line">git push</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To have write access to the library's repository, it's likely you'll need to make a fork. Optionally, you can upstream your changes in the future.</dd></dl>
+<p>Since you have updated the library, you may want to share your own version of the library within your project. To do this, you need to:</p>
+<ol type="1">
+<li>Acquire the <b>commit hash</b>: <div class="fragment"><div class="line">/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui $ git log</div>
+<div class="line">commit 8b0e838b8cd6274210f4c05ac096e2862c36f25e (HEAD -&gt; feat/a-new-feature, origin/feat/a-new-feature)</div>
+<div class="line">Author: smol boi &lt;uwu@uwu.uwu&gt;</div>
+<div class="line">Date:   Sun Jun 1 21:49:31 2025 +0300</div>
+<div class="line"> </div>
+<div class="line">    Never Gonna Give You Up</div>
+<div class="line">...</div>
+</div><!-- fragment --></li>
+<li>In your <code>CMakeLists.txt</code>, make sure the <b>URL</b> points to your fork, if any: <div class="fragment"><div class="line">auib_import(aui https://github.com/your-name/your-aui-fork</div>
+<div class="line">            VERSION v7.0.0</div>
+<div class="line">)</div>
+</div><!-- fragment --></li>
+<li>Specify <b>commit hash</b> in <code>VERSION</code> field: <div class="fragment"><div class="line">auib_import(aui https://github.com/your-name/your-aui-fork</div>
+<div class="line">            VERSION 8b0e838b8cd6274210f4c05ac096e2862c36f25e</div>
+<div class="line">)</div>
+</div><!-- fragment --></li>
+<li>Commit and push to your project</li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>It is common to delete a feature branch after merging. Be careful: AUI.Boot can't find a commit if it was deleted from a repository.</dd></dl>
+<h2>
+AUIB_DISABLE (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_DISABLE" id="AUIB_DISABLE" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
 <h2>
-AUIB_SKIP_REPOSITORY_WAIT (=NO)<a class="aui-toc-hash" href="#AUIB_SKIP_REPOSITORY_WAIT" id="AUIB_SKIP_REPOSITORY_WAIT" style="color: var(--fragment-comment) !important">#</a></h2>
+AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_SKIP_REPOSITORY_WAIT" id="AUIB_SKIP_REPOSITORY_WAIT" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>Disables "Waiting for repository" <a class="el" href="#REPO_LOCK">lock</a>.</p>
 <h2>
-AUIB_NO_PRECOMPILED (=NO)<a class="aui-toc-hash" href="#AUIB_NO_PRECOMPILED" id="AUIB_NO_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
+AUIB_NO_PRECOMPILED (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_NO_PRECOMPILED" id="AUIB_NO_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>Disables precompiled binaries, building all dependencies locally. You may want to set up <a class="el" href="#CI_CACHING">CI caching</a>.</p>
 <h2>
-AUIB_FORCE_PRECOMPILED (=NO)<a class="aui-toc-hash" href="#AUIB_FORCE_PRECOMPILED" id="AUIB_FORCE_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
+AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_FORCE_PRECOMPILED" id="AUIB_FORCE_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>Disables local compilation. If a precompiled binary was not found, a configure-time error is raised.</p>
 <h2>
-AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=NO)<a class="aui-toc-hash" href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" id="AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" style="color: var(--fragment-comment) !important">#</a></h2>
+AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" id="AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>The <code>AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT</code> flag can be used to enable self-sufficiency of packages produced with AUI Boot. This means that the dependencies required for building these packages are included in the package (<code>tar.gz</code>) archive in the <code>deps/</code> dir.</p>
 <p>See <a class="el" href="#aui_boot_producing_packages">Producing packages with dependencies managed by AUI Boot</a></p>
 <h2>
@@ -434,7 +476,7 @@ Importing AUI without AUI Boot<a class="aui-toc-hash" href="#importing-aui-witho
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not a recommended way of using AUI, as it is not fully covered with tests, and you're basically trying to complicate your life by hardcoding paths in your CMake lists and thus making hardly reproducible projects. Consider <a href="https://github.com/aui-framework/aui/issues">asking questions</a> about AUI Boot on our GitHub page, and we'd help to adapt AUI Boot to your use case.</p>
 <h2>
 Building AUI without AUI Boot<a class="aui-toc-hash" href="#building-aui-without-aui-boot" id="building-aui-without-aui-boot" style="color: var(--fragment-comment) !important">#</a></h2>
-<p><a class="el" href="#AUIB_DISABLE">AUIB_DISABLE (=NO)</a> CMake configure flag can be used to replace <code>auib_import</code> calls to <code>find_package</code>. In this scenario you will need to resolve AUI's dependencies in some other way (i.e, by using Conan).</p>
+<p><a class="el" href="#AUIB_DISABLE">AUIB_DISABLE (=FALSE|TRUE)</a> CMake configure flag can be used to replace <code>auib_import</code> calls to <code>find_package</code>. In this scenario you will need to resolve AUI's dependencies in some other way (i.e, by using Conan).</p>
 <h2>
 Using AUI distributions with <code>find_package</code><a class="aui-toc-hash" href="#using-aui-distributions-with-find_package" id="using-aui-distributions-with-find_package" style="color: var(--fragment-comment) !important">#</a></h2>
 <p>AUI distributions <a href="https://github.com/aui-framework/aui/releases">published on our GitHub releases page</a> are self-sufficient. That is, they have AUI's dependencies bundled, so they can be used by <code>find_package</code>, without even requiring AUI Boot.</p>
@@ -518,7 +560,7 @@ Philosophy behind AUI Boot<a class="aui-toc-hash" href="#philosophy-behind-aui-b
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#importing-aui">Importing AUI</a></h1><h1><a href="#PREBUILT_PACKAGES">Prebuilt packages</a></h1><h1><a href="#CI_CACHING">CI caching</a></h1><h1><a href="#AUI_BOOT_3RDPARTY">Importing 3rdparty libraries</a></h1><h2><a href='#how-to-fix-"could-not-resolve-dependency"-error'>How to fix "Could not resolve dependency" error</a></h2><h3><a href="#AFJKLF">"looks like a config file does not exist for your project"</a></h3><h3><a href="#AKJFHJ">"did you mean PACKAGE_NAME?"</a></h3><h3><a href="#AFKJNJKAN">"Imported target ... depends on an out-of-tree file"</a></h3><h2><a href="#fixing-3rdparty-library's-cmakelists.txt">Fixing 3rdparty library's CMakeLists.txt</a></h2><h1><a href="#using-aui-boot-without-aui">Using AUI Boot without AUI</a></h1><h1><a href="#importing-project-as-a-subdirectory">Importing project as a subdirectory</a></h1><h1><a href="#cmake-commands">CMake commands</a></h1><h2><a href="#auib_import">auib_import</a></h2><h3><a href="#signature">Signature</a></h3><h3><a href="#packagename">PackageName</a></h3><h3><a href="#url">URL</a></h3><h3><a href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a></h3><h3><a href="#archive">ARCHIVE</a></h3><h3><a href="#config_only">CONFIG_ONLY</a></h3><h3><a href="#version">VERSION</a></h3><h3><a href="#components">COMPONENTS</a></h3><h3><a href="#cmake_working_dir">CMAKE_WORKING_DIR</a></h3><h3><a href="#precompiled_url_prefix">PRECOMPILED_URL_PREFIX</a></h3><h3><a href="#link">LINK</a></h3><h3><a href="#requires">REQUIRES</a></h3><h1><a href="#AUIB_VARIABLES">Variables</a></h1><h2><a href="#auib_all_as-(=no)">AUIB_ALL_AS (=NO)</a></h2><h2><a href="#AUIB_DISABLE">AUIB_DISABLE (=NO)</a></h2><h2><a href="#AUIB_SKIP_REPOSITORY_WAIT">AUIB_SKIP_REPOSITORY_WAIT (=NO)</a></h2><h2><a href="#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=NO)</a></h2><h2><a href="#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=NO)</a></h2><h2><a href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT">AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=NO)</a></h2><h2><a href="#auib_validation_level">AUIB_VALIDATION_LEVEL</a></h2><h3><a href="#auib_validation_level-0">AUIB_VALIDATION_LEVEL 0</a></h3><h3><a href="#auib_validation_level-1">AUIB_VALIDATION_LEVEL 1</a></h3><h3><a href="#auib_validation_level-2">AUIB_VALIDATION_LEVEL 2</a></h3><h1><a href="#diamond-shape-graphs">Diamond Shape Graphs</a></h1><h2><a href="#case-1">Case 1</a></h2><h2><a href="#case-2">Case 2</a></h2><h1><a href="#aui_boot_producing_packages">Producing packages with dependencies managed by AUI Boot</a></h1><h1><a href="#importing-aui-without-aui-boot">Importing AUI without AUI Boot</a></h1><h2><a href="#building-aui-without-aui-boot">Building AUI without AUI Boot</a></h2><h2><a href="#using-aui-distributions-with-find_package">Using AUI distributions with find_package</a></h2><h1><a href="#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a></h1><h2><a href="#structure">Structure</a></h2><h3><a href="#~/.aui/prefix">~/.aui/prefix</a></h3><h3><a href="#~/.aui/repo">~/.aui/repo</a></h3><h3><a href="#~/.aui/crosscompile-host">~/.aui/crosscompile-host</a></h3><h3><a href="#REPO_LOCK">~/.aui/repo.lock</a></h3><h1><a href="#philosophy-behind-aui-boot">Philosophy behind AUI Boot</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#importing-aui">Importing AUI</a></h1><h1><a href="#PREBUILT_PACKAGES">Prebuilt packages</a></h1><h1><a href="#CI_CACHING">CI caching</a></h1><h1><a href="#AUI_BOOT_3RDPARTY">Importing 3rdparty libraries</a></h1><h2><a href='#how-to-fix-"could-not-resolve-dependency"-error'>How to fix "Could not resolve dependency" error</a></h2><h3><a href="#AFJKLF">"looks like a config file does not exist for your project"</a></h3><h3><a href="#AKJFHJ">"did you mean PACKAGE_NAME?"</a></h3><h3><a href="#AFKJNJKAN">"Imported target ... depends on an out-of-tree file"</a></h3><h2><a href="#fixing-3rdparty-library's-cmakelists.txt">Fixing 3rdparty library's CMakeLists.txt</a></h2><h1><a href="#using-aui-boot-without-aui">Using AUI Boot without AUI</a></h1><h1><a href="#importing-project-as-a-subdirectory">Importing project as a subdirectory</a></h1><h1><a href="#cmake-commands">CMake commands</a></h1><h2><a href="#auib_import">auib_import</a></h2><h3><a href="#signature">Signature</a></h3><h3><a href="#packagename">PackageName</a></h3><h3><a href="#url">URL</a></h3><h3><a href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a></h3><h3><a href="#archive">ARCHIVE</a></h3><h3><a href="#config_only">CONFIG_ONLY</a></h3><h3><a href="#version">VERSION</a></h3><h3><a href="#components">COMPONENTS</a></h3><h3><a href="#cmake_working_dir">CMAKE_WORKING_DIR</a></h3><h3><a href="#precompiled_url_prefix">PRECOMPILED_URL_PREFIX</a></h3><h3><a href="#link">LINK</a></h3><h3><a href="#requires">REQUIRES</a></h3><h1><a href="#AUIB_VARIABLES">Variables</a></h1><h2><a href="#AUIB_ALL_AS">AUIB_ALL_AS (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_LIB_AS">AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_DISABLE">AUIB_DISABLE (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_SKIP_REPOSITORY_WAIT">AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT">AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=FALSE|TRUE)</a></h2><h2><a href="#auib_validation_level">AUIB_VALIDATION_LEVEL</a></h2><h3><a href="#auib_validation_level-0">AUIB_VALIDATION_LEVEL 0</a></h3><h3><a href="#auib_validation_level-1">AUIB_VALIDATION_LEVEL 1</a></h3><h3><a href="#auib_validation_level-2">AUIB_VALIDATION_LEVEL 2</a></h3><h1><a href="#diamond-shape-graphs">Diamond Shape Graphs</a></h1><h2><a href="#case-1">Case 1</a></h2><h2><a href="#case-2">Case 2</a></h2><h1><a href="#aui_boot_producing_packages">Producing packages with dependencies managed by AUI Boot</a></h1><h1><a href="#importing-aui-without-aui-boot">Importing AUI without AUI Boot</a></h1><h2><a href="#building-aui-without-aui-boot">Building AUI without AUI Boot</a></h2><h2><a href="#using-aui-distributions-with-find_package">Using AUI distributions with find_package</a></h2><h1><a href="#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a></h1><h2><a href="#structure">Structure</a></h2><h3><a href="#~/.aui/prefix">~/.aui/prefix</a></h3><h3><a href="#~/.aui/repo">~/.aui/repo</a></h3><h3><a href="#~/.aui/crosscompile-host">~/.aui/crosscompile-host</a></h3><h3><a href="#REPO_LOCK">~/.aui/repo.lock</a></h3><h1><a href="#philosophy-behind-aui-boot">Philosophy behind AUI Boot</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
