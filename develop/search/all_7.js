@@ -81,7 +81,7 @@ var searchData=
   ['builder_78',['Builder',['../classABasicListEditor_1_1Builder.html',1,'ABasicListEditor::Builder'],['../classACurl_1_1Builder.html',1,'ACurl::Builder'],['../classAGridSplitter_1_1Builder.html',1,'AGridSplitter::Builder'],['../classAScrollArea_1_1Builder.html',1,'AScrollArea::Builder'],['../classASplitter_1_1Builder.html',1,'ASplitter::Builder&lt; Layout &gt;']]],
   ['builder_3c_20ahorizontallayout_20_3e_79',['Builder&lt; AHorizontalLayout &gt;',['../classASplitter_1_1Builder.html',1,'ASplitter']]],
   ['builder_3c_20averticallayout_20_3e_80',['Builder&lt; AVerticalLayout &gt;',['../classASplitter_1_1Builder.html',1,'ASplitter']]],
-  ['building_81',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md163',1,'']]],
+  ['building_81',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md162',1,'']]],
   ['building_20aui_20without_20aui_20boot_82',['Building AUI without AUI Boot',['../md_docs_2AUI_01Boot.html#autotoc_md80',1,'']]],
   ['building_20overview_83',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
   ['building_20the_20examples_84',['Building the Examples',['../examples.html#autotoc_md237',1,'']]],

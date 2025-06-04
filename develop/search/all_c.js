@@ -1,7 +1,7 @@
 var searchData=
 [
   ['game_0',['Minesweeper Game',['../example_minesweeper_game.html',1,'']]],
-  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md221',1,'']]],
+  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md227',1,'']]],
   ['game_20of_20life_2',['Game of Life',['../example_game_of_life.html',1,'']]],
   ['gameoflifewindow_3',['GameOfLifeWindow',['../example_game_of_life.html#autotoc_md219',1,'']]],
   ['gatherkineticscrollvalue_4',['gatherKineticScrollValue',['../classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8',1,'ATouchScroller']]],
