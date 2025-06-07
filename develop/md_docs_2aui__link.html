@@ -101,7 +101,7 @@ $(function(){initNavTree('md_docs_2aui__link.html',''); initResizable(true); });
 <div class="headertitle"><div class="title">aui_link</div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left">
-<div class="textblock"><p><a class="anchor" id="autotoc_md111"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md114"></a></p>
 <p>Alias to <a href="https://cmake.org/cmake/help/latest/command/target_link_libraries.html">target_link_libraries</a> with additional rules (see below)</p>
 <h1>
 Syntax<a class="aui-toc-hash" href="#syntax" id="syntax" style="color: var(--fragment-comment) !important">#</a></h1>
@@ -114,7 +114,7 @@ Syntax<a class="aui-toc-hash" href="#syntax" id="syntax" style="color: var(--fra
 <p>Libraries and targets following <code>PUBLIC</code> are linked to, and are made part of the link interface. Libraries and targets following <code>PRIVATE</code> are linked to, but are not made part of the link interface. Libraries following <code>INTERFACE</code> are appended to the link interface and are not used for linking <code>&lt;target&gt;</code>.</p>
 <p>If building with <code>BUILD_SHARED_LIBS=OFF</code>, the following rules apply:</p><ol type="1">
 <li>Visibility is forced to <code>PUBLIC</code> to propagate static libraries up to the executable.</li>
-<li>Target <code>&lt;item&gt;</code>s with <code>INTERFACE_AUI_WHOLEARCHIVE=TRUE</code> are wrapped with compiler-specific flags during linkage to enable whole archive linking (i.e., forbid dropping of unused symbols). This is essential when linking to binaries with AUI assets.</li>
+<li>Target <code>&lt;item&gt;</code>s with <code>INTERFACE_AUI_WHOLEARCHIVE=TRUE</code> are wrapped with compiler-specific flags during linkage to enable whole archive linking (i.e., forbid dropping of unused symbols). This is essential when linking to binaries with <a class="el" href="assets.html">AUI Assets</a>.</li>
 <li><p class="startli">The <code>&lt;item&gt;</code>s are reordered this way: from the most dependant target to the less dependant target.</p>
 <p class="startli">If A depends on B; C depends on both A and B, you should write </p><div class="fragment"><div class="line">target_link_libraries(C PRIVATE A B)</div>
 </div><!-- fragment --><p> and not </p><div class="fragment"><div class="line">target_link_libraries(C PRIVATE B A)  #Wrong!</div>

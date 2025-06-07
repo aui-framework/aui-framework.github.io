@@ -1,6 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "android.html":[4,3],
+"assets.html#md_docs_2AUI_01Assets":[5,3],
 "classaui_1_1PropertyModifier.html":[0,2,4,28],
 "classaui_1_1PropertyModifier.html":[0,2,4,29],
 "classaui_1_1assert__not__used__when__null.html":[0,2,4,5],
