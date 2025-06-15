@@ -13,7 +13,7 @@ var searchData=
   ['aui_10',['AUI',['../md_docs_2Contributing_01to_01AUI.html',1,'Contributing to AUI'],['../md_docs_2Forking_01AUI.html',1,'Forking AUI'],['../md_docs_2Getting_01started_01with_01AUI.html',1,'Getting started with AUI']]],
   ['aui_20assets_11',['AUI Assets',['../assets.html',1,'']]],
   ['aui_20boot_12',['AUI Boot',['../md_docs_2AUI_01Boot.html',1,'']]],
-  ['aui_20box_20model_13',['AUI Box Model',['../md_docs_2ASS_01Box_01Model.html',1,'']]],
+  ['aui_20box_20model_13',['AUI Box Model',['../AUI_01Box_01Model.html',1,'']]],
   ['aui_20command_20line_20arguments_14',['AUI Command Line Arguments',['../md_docs_2AUI_01command_01line_01arguments.html',1,'']]],
   ['aui_20configure_20flags_15',['AUI configure flags',['../md_docs_2AUI_01configure_01flags.html',1,'']]],
   ['aui_20contacts_16',['AUI Contacts',['../example_contacts.html',1,'']]],

@@ -137,78 +137,86 @@ $(function(){initNavTree('AScrollAreaViewport_8h_source.html',''); initResizable
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classAScrollAreaViewport.html#a534db2f99cc74c39cd25ee05559cbb76">   42</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAScrollAreaViewport.html#a534db2f99cc74c39cd25ee05559cbb76">applyGeometryToChildren</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> setScroll(glm::uvec2 scroll) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (mScroll == scroll) [[unlikely]] {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        mScroll = scroll;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        updateContentsScroll();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> setScrollX(<span class="keywordtype">unsigned</span> scroll) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (mScroll.x == scroll) [[unlikely]] {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        mScroll.x = scroll;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        updateContentsScroll();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> setScrollY(<span class="keywordtype">unsigned</span> scroll) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (mScroll.y == scroll) [[unlikely]] {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        mScroll.y = scroll;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        updateContentsScroll();</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">auto</span> scroll() const noexcept {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> APropertyDef {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keyword">this</span>,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            &amp;AScrollAreaViewport::mScroll,</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            &amp;AScrollAreaViewport::setScroll,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            mScrollChanged,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">template</span>&lt;aui::invocable ApplyLayoutUpdate&gt;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> compensateLayoutUpdatesByScroll(_&lt;AView&gt; anchor, ApplyLayoutUpdate&amp;&amp; applyLayoutUpdate, glm::ivec2 diffMask = glm::ivec2(1, 1));</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    _&lt;Inner&gt; mInner;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    _&lt;AView&gt; mContents;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    glm::uvec2 mScroll = {0, 0};</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;glm::uvec2&gt;</a> mScrollChanged;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> updateContentsScroll();</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00044">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classAScrollAreaViewport.html#a877790dd2e5cca410230c6d67e2ff33f">   44</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAScrollAreaViewport.html#a877790dd2e5cca410230c6d67e2ff33f">consumesClick</a>(<span class="keyword">const</span> glm::ivec2&amp; <a class="code hl_function" href="classAView.html#afc0c6dce2eb0c78fefe27de88eb7b67c">position</a>)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">template</span> &lt;aui::invocable ApplyLayoutUpdate&gt;</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00106">
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classAScrollAreaViewport.html#acac590bc0d81ee5b4ad7aa1794fcfdd6">  106</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classAScrollAreaViewport.html#acac590bc0d81ee5b4ad7aa1794fcfdd6">AScrollAreaViewport::compensateLayoutUpdatesByScroll</a>(</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> anchor, ApplyLayoutUpdate&amp;&amp; applyLayoutUpdate, glm::ivec2 diffMask) {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">auto</span> queryRelativePosition = [&amp;] {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      glm::ivec2 accumulator{};</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> v = anchor.get(); v != <span class="keyword">nullptr</span> &amp;&amp; v-&gt;getParent() != <span class="keyword">this</span>; v = v-&gt;getParent()) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>          accumulator += v-&gt;getPosition();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <span class="keywordflow">return</span> accumulator;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    };</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">auto</span> before = queryRelativePosition();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    applyLayoutUpdate();</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">auto</span> after = queryRelativePosition();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">auto</span> diff = after - before;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    diff *= diffMask;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    mScroll = glm::max(glm::ivec2(mScroll) + diff, glm::ivec2(0));</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    updateContentsScroll();</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> setScroll(glm::uvec2 scroll) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">if</span> (mScroll == scroll) [[unlikely]] {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        mScroll = scroll;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        updateContentsScroll();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> setScrollX(<span class="keywordtype">unsigned</span> scroll) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span> (mScroll.x == scroll) [[unlikely]] {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        mScroll.x = scroll;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        updateContentsScroll();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> setScrollY(<span class="keywordtype">unsigned</span> scroll) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> (mScroll.y == scroll) [[unlikely]] {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        mScroll.y = scroll;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        updateContentsScroll();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">auto</span> scroll() const noexcept {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">return</span> APropertyDef {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keyword">this</span>,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            &amp;AScrollAreaViewport::mScroll,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            &amp;AScrollAreaViewport::setScroll,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            mScrollChanged,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        };</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">template</span>&lt;aui::invocable ApplyLayoutUpdate&gt;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> compensateLayoutUpdatesByScroll(_&lt;AView&gt; anchor, ApplyLayoutUpdate&amp;&amp; applyLayoutUpdate, glm::ivec2 diffMask = glm::ivec2(1, 1));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    _&lt;Inner&gt; mInner;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    _&lt;AView&gt; mContents;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    glm::uvec2 mScroll = {0, 0};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_typedef" href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits&lt;glm::uvec2&gt;</a> mScrollChanged;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> updateContentsScroll();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>};</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span> &lt;aui::invocable ApplyLayoutUpdate&gt;</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00110">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classAScrollAreaViewport.html#acac590bc0d81ee5b4ad7aa1794fcfdd6">  110</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classAScrollAreaViewport.html#acac590bc0d81ee5b4ad7aa1794fcfdd6">AScrollAreaViewport::compensateLayoutUpdatesByScroll</a>(</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> anchor, ApplyLayoutUpdate&amp;&amp; applyLayoutUpdate, glm::ivec2 diffMask) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">auto</span> queryRelativePosition = [&amp;] {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      glm::ivec2 accumulator{};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> v = anchor.get(); v != <span class="keyword">nullptr</span> &amp;&amp; v-&gt;getParent() != <span class="keyword">this</span>; v = v-&gt;getParent()) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>          accumulator += v-&gt;getPosition();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">return</span> accumulator;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    };</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">auto</span> before = queryRelativePosition();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    applyLayoutUpdate();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">auto</span> after = queryRelativePosition();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">auto</span> diff = after - before;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    diff *= diffMask;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    mScroll = glm::max(glm::ivec2(mScroll) + diff, glm::ivec2(0));</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    updateContentsScroll();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
 </div>
 <div class="ttc" id="aclassAScrollAreaViewport_html_a534db2f99cc74c39cd25ee05559cbb76"><div class="ttname"><a href="classAScrollAreaViewport.html#a534db2f99cc74c39cd25ee05559cbb76">AScrollAreaViewport::applyGeometryToChildren</a></div><div class="ttdeci">void applyGeometryToChildren() override</div><div class="ttdoc">Applies geometry to all children with no preconditions.</div></div>
-<div class="ttc" id="aclassAScrollAreaViewport_html_acac590bc0d81ee5b4ad7aa1794fcfdd6"><div class="ttname"><a href="classAScrollAreaViewport.html#acac590bc0d81ee5b4ad7aa1794fcfdd6">AScrollAreaViewport::compensateLayoutUpdatesByScroll</a></div><div class="ttdeci">void compensateLayoutUpdatesByScroll(_&lt; AView &gt; anchor, ApplyLayoutUpdate &amp;&amp;applyLayoutUpdate, glm::ivec2 diffMask=glm::ivec2(1, 1))</div><div class="ttdoc">Compensates layout updates made in applyLayoutUpdate by scrolling by a diff of relative position of a...</div><div class="ttdef"><b>Definition</b> AScrollAreaViewport.h:106</div></div>
+<div class="ttc" id="aclassAScrollAreaViewport_html_a877790dd2e5cca410230c6d67e2ff33f"><div class="ttname"><a href="classAScrollAreaViewport.html#a877790dd2e5cca410230c6d67e2ff33f">AScrollAreaViewport::consumesClick</a></div><div class="ttdeci">bool consumesClick(const glm::ivec2 &amp;position) override</div><div class="ttdoc">Determines whether this AView processes this click or passes it thru.</div><div class="ttdef"><b>Definition</b> AScrollAreaViewport.h:44</div></div>
+<div class="ttc" id="aclassAScrollAreaViewport_html_acac590bc0d81ee5b4ad7aa1794fcfdd6"><div class="ttname"><a href="classAScrollAreaViewport.html#acac590bc0d81ee5b4ad7aa1794fcfdd6">AScrollAreaViewport::compensateLayoutUpdatesByScroll</a></div><div class="ttdeci">void compensateLayoutUpdatesByScroll(_&lt; AView &gt; anchor, ApplyLayoutUpdate &amp;&amp;applyLayoutUpdate, glm::ivec2 diffMask=glm::ivec2(1, 1))</div><div class="ttdoc">Compensates layout updates made in applyLayoutUpdate by scrolling by a diff of relative position of a...</div><div class="ttdef"><b>Definition</b> AScrollAreaViewport.h:110</div></div>
 <div class="ttc" id="aclassAViewContainerBase_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainerBase::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div></div>
+<div class="ttc" id="aclassAView_html_afc0c6dce2eb0c78fefe27de88eb7b67c"><div class="ttname"><a href="classAView.html#afc0c6dce2eb0c78fefe27de88eb7b67c">AView::position</a></div><div class="ttdeci">auto position() const</div><div class="ttdoc">Top left corner's position relative to top left corner's position of the parent AView.</div><div class="ttdef"><b>Definition</b> AView.h:102</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:179</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga78df6aa411708ae01bdfcdb3ee98b865"><div class="ttname"><a href="group__signal__slot.html#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a></div><div class="ttdeci">ASignal&lt; Args... &gt; emits</div><div class="ttdoc">A signal declaration.</div><div class="ttdef"><b>Definition</b> ASignal.h:577</div></div>
 </div><!-- fragment --><p class="footer-inner">

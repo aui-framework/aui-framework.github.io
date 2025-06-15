@@ -1,9 +1,9 @@
 var searchData=
 [
   ['game_0',['Minesweeper Game',['../example_minesweeper_game.html',1,'']]],
-  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md223',1,'']]],
+  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md220',1,'']]],
   ['game_20of_20life_2',['Game of Life',['../example_game_of_life.html',1,'']]],
-  ['gameoflifewindow_3',['GameOfLifeWindow',['../example_game_of_life.html#autotoc_md221',1,'']]],
+  ['gameoflifewindow_3',['GameOfLifeWindow',['../example_game_of_life.html#autotoc_md218',1,'']]],
   ['gatherkineticscrollvalue_4',['gatherKineticScrollValue',['../classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8',1,'ATouchScroller']]],
   ['gaussianblur_5',['GaussianBlur',['../structass_1_1Backdrop_1_1GaussianBlur.html',1,'ass::Backdrop']]],
   ['gaussianblurcustom_6',['GaussianBlurCustom',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html',1,'ass::Backdrop']]],
@@ -92,7 +92,7 @@ var searchData=
   ['globalref_89',['GlobalRef',['../classaui_1_1jni_1_1GlobalRef.html',1,'aui::jni']]],
   ['go_90',['GO',['../group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a3d6954dd72e53b9015d2a6e6546058f8',1,'ATextInputActionIcon.h']]],
   ['going_20further_91',['Going further',['../group__signal__slot.html#autotoc_md4',1,'']]],
-  ['graphs_92',['Diamond Shape Graphs',['../md_docs_2AUI_01Boot.html#autotoc_md78',1,'']]],
+  ['graphs_92',['Diamond Shape Graphs',['../md_docs_2AUI_01Boot.html#autotoc_md75',1,'']]],
   ['greater_5fof_93',['greater_of',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['greater_5fof_3c_20aside_3a_3abottom_20_3e_94',['greater_of&lt; ASide::BOTTOM &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['greater_5fof_3c_20aside_3a_3atop_20_3e_95',['greater_of&lt; ASide::TOP &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
