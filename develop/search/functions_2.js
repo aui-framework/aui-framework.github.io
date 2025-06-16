@@ -11,7 +11,7 @@ var searchData=
   ['boxshadow_8',['boxShadow',['../classOpenGLRenderer.html#aed4a5c52842cfd79a04e118b27699bb1',1,'OpenGLRenderer::boxShadow()'],['../classIRenderer.html#aeec32d1da8dc30c10c1257baecb27c89',1,'IRenderer::boxShadow()'],['../classSoftwareRenderer.html#a3a30b62e82f49f12f8cff51c30822fcc',1,'SoftwareRenderer::boxShadow()']]],
   ['boxshadowinner_9',['boxShadowInner',['../classOpenGLRenderer.html#ac3761c862d5f1682cf8f74512d7b521d',1,'OpenGLRenderer::boxShadowInner()'],['../classIRenderer.html#ae93329eded0b5e258780cef99d8ce11e',1,'IRenderer::boxShadowInner()'],['../classSoftwareRenderer.html#a950742a6ef8cff36e4aa8351d12359a4',1,'SoftwareRenderer::boxShadowInner()']]],
   ['browsefordir_10',['browseForDir',['../namespaceADesktop.html#a19e8acd5024831ae0e0c8df5038e73dc',1,'ADesktop']]],
-  ['browseforfile_11',['browseForFile',['../namespaceADesktop.html#ac4f1b3902c742351c779e85b78d9f6c4',1,'ADesktop']]],
+  ['browseforfile_11',['browseForFile',['../namespaceADesktop.html#a33103ce1fd4cc7136d9f3598ef860f60',1,'ADesktop']]],
   ['buffer_12',['buffer',['../classAImageView.html#aab80d2d2033be1e15adbe27d99b4b9ca',1,'AImageView']]],
   ['button_13',['Button',['../structdeclarative_1_1Button.html#a69f1491fd6ad3a1c985040001a31951b',1,'declarative::Button::Button(AString text)'],['../structdeclarative_1_1Button.html#a1ae7268deaf0760d62262e9db731b3ff',1,'declarative::Button::Button(const char *text)'],['../structdeclarative_1_1Button.html#a74dbeeb0682d8b00b2b6413ac8563b80',1,'declarative::Button::Button(Views &amp;&amp;... views)']]],
   ['button_14',['button',['../classAPointerIndex.html#a49a88f55f3c0145e68138f593a285cb6',1,'APointerIndex']]],

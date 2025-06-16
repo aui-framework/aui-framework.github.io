@@ -24,7 +24,9 @@ var namespaces =
       ] ],
       [ "show", "namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2", null ]
     ] ],
-    [ "APlatform", "namespaceAPlatform.html", null ],
+    [ "APlatform", "namespaceAPlatform.html", [
+      [ "openUrl", "namespaceAPlatform.html#a75bffd201e71456daec351b3052397ac", null ]
+    ] ],
     [ "aui", null, [
       [ "audio", null, [
         [ "platform", "namespaceaui_1_1audio_1_1platform.html", null ],
