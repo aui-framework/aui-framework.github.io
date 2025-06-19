@@ -68,4 +68,5 @@ var menudata={children:[
 {text:"AUI command line arguments",url:"md_docs_2AUI_01command_01line_01arguments.html"},
 {text:"Runtime Dependency Resolution",url:"md_docs_2Runtime_01Dependency_01Resolution.html"},
 {text:"Forking AUI",url:"md_docs_2Forking_01AUI.html"},
-{text:"AUI Assets",url:"assets.html#md_docs_2AUI_01Assets"}]}]}
+{text:"AUI Assets",url:"assets.html#md_docs_2AUI_01Assets"},
+{text:"Contributing to AUI",url:"md_docs_2Contributing_01to_01AUI.html"}]}]}

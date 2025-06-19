@@ -51,6 +51,7 @@ var NAVTREEINDEX0 =
 "md_docs_2AUI_01configure_01flags.html":[0,3,4],
 "md_docs_2App_01Build_01Overview.html":[0,3,5],
 "md_docs_2Code_01style_01and_01recommendations.html":[1,5],
+"md_docs_2Contributing_01to_01AUI.html":[5,4],
 "md_docs_2Crosscompiling.html":[1,8],
 "md_docs_2Devtools.html":[2,5],
 "md_docs_2Forking_01AUI.html":[5,2],

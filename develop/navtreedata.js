@@ -74,7 +74,8 @@ var NAVTREE =
       [ "AUI command line arguments", "md_docs_2AUI_01command_01line_01arguments.html", null ],
       [ "Runtime Dependency Resolution", "md_docs_2Runtime_01Dependency_01Resolution.html", null ],
       [ "Forking AUI", "md_docs_2Forking_01AUI.html", null ],
-      [ "AUI Assets", "assets.html#md_docs_2AUI_01Assets", null ]
+      [ "AUI Assets", "assets.html#md_docs_2AUI_01Assets", null ],
+      [ "Contributing to AUI", "md_docs_2Contributing_01to_01AUI.html", null ]
     ] ]
 ];
 
