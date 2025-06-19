@@ -92,7 +92,7 @@ var searchData=
   ['globalref_89',['GlobalRef',['../classaui_1_1jni_1_1GlobalRef.html',1,'aui::jni']]],
   ['go_90',['GO',['../group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a3d6954dd72e53b9015d2a6e6546058f8',1,'ATextInputActionIcon.h']]],
   ['going_20further_91',['Going further',['../group__signal__slot.html#autotoc_md4',1,'']]],
-  ['graphs_92',['Diamond Shape Graphs',['../md_docs_2AUI_01Boot.html#autotoc_md75',1,'']]],
+  ['graphs_92',['Diamond Shape Graphs',['../md_docs_2AUI_01Boot.html#autotoc_md78',1,'']]],
   ['greater_5fof_93',['greater_of',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['greater_5fof_3c_20aside_3a_3abottom_20_3e_94',['greater_of&lt; ASide::BOTTOM &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['greater_5fof_3c_20aside_3a_3atop_20_3e_95',['greater_of&lt; ASide::TOP &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
