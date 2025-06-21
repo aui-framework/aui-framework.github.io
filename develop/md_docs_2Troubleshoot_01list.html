@@ -117,9 +117,25 @@ Assets<a class="aui-toc-hash" href="#assets" id="assets" style="color: var(--fra
 <li>Try using <a class="el" href="md_docs_2aui__executable.html#WHOLEARCHIVE">WHOLEARCHIVE</a> flag.</li>
 </ol>
 <h1>
-Build cache invalidation<a class="aui-toc-hash" href="#build-cache-invalidation" id="build-cache-invalidation" style="color: var(--fragment-comment) !important">#</a></h1>
+Build cache invalidation<a class="aui-toc-hash" href="#BUILD_CACHE_INVALIDATION" id="BUILD_CACHE_INVALIDATION" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>Symptoms:</p>
+<ol type="1">
+<li>Linking problems</li>
+<li>Newly added/removed files not being recognized by the build system</li>
+<li>Changes in CMake scripts are not "visible" in IDE</li>
+<li>Other weird issues</li>
+</ol>
 <p><a class="el" href="classCache.html">Cache</a> invalidation is one of the software engineering problems (along with naming). There's cheatsheet on how to invalidate caches:</p>
 <ol type="1">
+<li>Reload CMake cache<ul>
+<li>In <b>CLion</b>: File &gt; Reload CMake Project</li>
+<li>In <b>Visual Studio Code</b>: <code>F1</code> &gt; <code>CMake: Configure</code></li>
+<li>In CLI: <div class="fragment"><div class="line">cd &lt;YOUR_BUILD_DIR&gt;</div>
+<div class="line">cmake ..</div>
+</div><!-- fragment --> or <div class="fragment"><div class="line">cmake --build &lt;YOUR_BUILD_DIR&gt;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
 <li>Delete <code>CMakeCache.txt</code> from your CMake binary dir (<code>cmake-build-debug</code> or <code>cmake-build-release</code> in CLion).</li>
 <li>Delete your CMake binary dir.</li>
 <li>Change AUI version (also may need <code>CMakeCache.txt</code> to be deleted)</li>
@@ -130,7 +146,7 @@ Build cache invalidation<a class="aui-toc-hash" href="#build-cache-invalidation"
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#linking-problems">Linking problems</a></h1><h1><a href="#assets">Assets</a></h1><h1><a href="#build-cache-invalidation">Build cache invalidation</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#linking-problems">Linking problems</a></h1><h1><a href="#assets">Assets</a></h1><h1><a href="#BUILD_CACHE_INVALIDATION">Build cache invalidation</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
