@@ -7,7 +7,7 @@ var searchData=
   ['gatherkineticscrollvalue_4',['gatherKineticScrollValue',['../classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8',1,'ATouchScroller']]],
   ['gaussianblur_5',['GaussianBlur',['../structass_1_1Backdrop_1_1GaussianBlur.html',1,'ass::Backdrop']]],
   ['gaussianblurcustom_6',['GaussianBlurCustom',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html',1,'ass::Backdrop']]],
-  ['generation_7',['Documentation generation',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md148',1,'']]],
+  ['generation_7',['Documentation generation',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md151',1,'']]],
   ['generic_20scenario_8',['Generic scenario',['../md_docs_2App_01Build_01Overview.html#BUILD_SCENARIO_GENERIC',1,'']]],
   ['generic_5fobserver_9',['GENERIC_OBSERVER',['../classAObject.html#ae877cf776a7569eca5185c24bd4ccd74',1,'AObject']]],
   ['geometrychanged_10',['geometryChanged',['../classAView.html#a5034ce1e3e117e2f4ece91c1d038dbe0',1,'AView']]],
@@ -93,7 +93,7 @@ var searchData=
   ['globalref_90',['GlobalRef',['../classaui_1_1jni_1_1GlobalRef.html',1,'aui::jni']]],
   ['go_91',['GO',['../group__views.html#ggaec8a763bfbb2044d7b55de90c5a56742a3d6954dd72e53b9015d2a6e6546058f8',1,'ATextInputActionIcon.h']]],
   ['going_20further_92',['Going further',['../group__signal__slot.html#autotoc_md4',1,'']]],
-  ['graphs_93',['Diamond Shape Graphs',['../md_docs_2AUI_01Boot.html#autotoc_md92',1,'']]],
+  ['graphs_93',['Diamond Shape Graphs',['../md_docs_2AUI_01Boot.html#autotoc_md74',1,'']]],
   ['greater_5fof_94',['greater_of',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['greater_5fof_3c_20aside_3a_3abottom_20_3e_95',['greater_of&lt; ASide::BOTTOM &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
   ['greater_5fof_3c_20aside_3a_3atop_20_3e_96',['greater_of&lt; ASide::TOP &gt;',['../structuitest_1_1impl_1_1greater__of.html',1,'uitest::impl']]],
@@ -103,5 +103,5 @@ var searchData=
   ['grow_100',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]],
   ['gtk4_101',['Gtk4',['../structAPlatformAbstractionOptions_1_1Gtk4.html',1,'APlatformAbstractionOptions']]],
   ['gtkdialog_102',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]],
-  ['guides_103',['Guides',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md145',1,'']]]
+  ['guides_103',['Guides',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md149',1,'']]]
 ];
