@@ -120,8 +120,8 @@ $(function(){initNavTree('group__layout__managers.html',''); initResizable(true)
 <ul>
 <li><b><a class="el" href="classAHorizontalLayout.html" title="Places views in a row.">AHorizontalLayout</a></b> - Arranges views in a horizontal row</li>
 <li><b><a class="el" href="classAVerticalLayout.html" title="Places views in a column.">AVerticalLayout</a></b> - Arranges views in a vertical column</li>
-<li><b><a class="el" href="classAAdvancedGridLayout.html" title="Grid layout. Unlike AGridLayout, cells may have different sizes.">AAdvancedGridLayout</a></b> - Arranges views in a grid with customizable cell sizing</li>
 <li><b><a class="el" href="classAStackedLayout.html" title="Places views in a stack (along z axis).">AStackedLayout</a></b> - Centers views, displaying them on top of each other</li>
+<li><b><a class="el" href="classAAdvancedGridLayout.html" title="Grid layout. Unlike AGridLayout, cells may have different sizes.">AAdvancedGridLayout</a></b> - Arranges views in a grid with customizable cell sizing</li>
 </ul>
 <p>Key concepts:</p>
 <ol type="1">
@@ -129,6 +129,7 @@ $(function(){initNavTree('group__layout__managers.html',''); initResizable(true)
 <li>Considering minimum sizes of child views</li>
 <li>Adding margins and spacing</li>
 <li>Respecting fixed size constraints</li>
+<li>Following <a class="el" href="AUI_01Box_01Model.html">AUI Box Model</a>.</li>
 </ul>
 </li>
 <li><b><a class="el" href="#EXPANDING">Expanding Views</a></b> - Children can expand to fill available space of their parent:<ul>
@@ -292,7 +293,7 @@ Implementation details<a class="aui-toc-hash" href="#implementation-details" id=
 <div class="line">                        └─&gt; <a class="code hl_class" href="classAViewContainerBase.html">AViewContainerBase</a>::applyGeometryToChildren()        │</div>
 <div class="line">                            └─&gt; <a class="code hl_class" href="classALayout.html">ALayout</a>::onResize()                              ┘</div>
 <div class="line">                                └─&gt; <a class="code hl_class" href="classAView.html">AView</a>::setGeometry()</div>
-<div class="ttc" id="aclassALayout_html"><div class="ttname"><a href="classALayout.html">ALayout</a></div><div class="ttdoc">Base class for all layout managers.</div><div class="ttdef"><b>Definition</b> ALayout.h:331</div></div>
+<div class="ttc" id="aclassALayout_html"><div class="ttname"><a href="classALayout.html">ALayout</a></div><div class="ttdoc">Base class for all layout managers.</div><div class="ttdef"><b>Definition</b> ALayout.h:333</div></div>
 <div class="ttc" id="aclassAViewContainerBase_html"><div class="ttname"><a href="classAViewContainerBase.html">AViewContainerBase</a></div><div class="ttdoc">A view that represents a set of views.</div><div class="ttdef"><b>Definition</b> AViewContainerBase.h:68</div></div>
 <div class="ttc" id="aclassAView_html"><div class="ttname"><a href="classAView.html">AView</a></div><div class="ttdoc">Base class of all UI objects.</div><div class="ttdef"><b>Definition</b> AView.h:78</div></div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
@@ -310,9 +311,10 @@ Applying size<a class="aui-toc-hash" href="#applying-size" id="applying-size" st
 Size calculation<a class="aui-toc-hash" href="#SIZE_CALCULATION" id="SIZE_CALCULATION" style="color: var(--fragment-comment) !important">#</a></h2>
 <ul>
 <li>Layout manager queries <b>Minimum size</b> which is determined with <a class="el" href="classAView.html#a80eaa16be0c583615e3f532948a9d7b8">AView::getMinimumSize</a> and cached until the view or its children call <a class="el" href="classAView.html#af4c543f417411cd9871fa793c4967175">AView::markMinContentSizeInvalid</a>. It considers:<ul>
-<li>Children minimum sizes (if any)</li>
-<li>Padding</li>
-<li><a class="el" href="structass_1_1LayoutSpacing.html">ass::LayoutSpacing</a></li>
+<li>Children's minimum sizes (if any). A child includes its <a class="el" href="structass_1_1Padding.html">ass::Padding</a> to its minimum size.</li>
+<li>Children's <a class="el" href="structass_1_1Margin.html">ass::Margin</a></li>
+<li>Container's <a class="el" href="structass_1_1Padding.html">ass::Padding</a></li>
+<li>Container's <a class="el" href="structass_1_1LayoutSpacing.html">ass::LayoutSpacing</a></li>
 <li>Other constraints such as <a class="el" href="structass_1_1FixedSize.html">ass::FixedSize</a></li>
 </ul>
 </li>

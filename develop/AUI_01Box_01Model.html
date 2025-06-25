@@ -108,8 +108,8 @@ Box key components<a class="aui-toc-hash" href="#box-key-components" id="box-key
 <p><b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L39"></b></p>
 <ul>
 <li><b>View's content box</b>: the area are whose size is defined by <a class="el" href="classAView.html#ad5f42cf9fcc3a188236887c22e66164e">AView::getContentMinimumSize()</a> and <a class="el" href="classAView.html#ae84f7d8219633174308be2e23033f6af">AView::getContentSize()</a>. The content area is the innermost area, wrapping view's specific contents only (i.e, label's text); control it by implementing <a class="el" href="classAView.html#a993836d84376918d779810c101c29f84">AView::getContentMinimumWidth()</a> and <a class="el" href="classAView.html#a88a4a261aa99edfc5467c4bae478afe0">AView::getContentMinimumHeight()</a>.</li>
-<li><p class="startli"><b>View's box</b>: the area whose size is defined by <a class="el" href="classAView.html#a3bb9d90332539568c963aed3d248326a" title="Size, including content area, border and padding.">AView::size()</a>. Use <a class="el" href="structass_1_1FixedSize.html">ass::FixedSize</a>, <a class="el" href="structass_1_1MinSize.html">ass::MinSize</a> and <a class="el" href="structass_1_1MaxSize.html">ass::MaxSize</a> to control it.</p>
-<p class="startli">Views are responsible to handle its padding properly. As an AUI user, you wouldn't need to bother about that unless you are implementing custom <a class="el" href="classAView.html#a1c6f0f58602d6acf52461bea2ed83469">AView::render()</a>.</p>
+<li><p class="startli"><b>View's box</b>: the area whose size is defined by <a class="el" href="classAView.html#a3bb9d90332539568c963aed3d248326a" title="Size, including content area, border and padding.">AView::size()</a>. Use <a class="el" href="structass_1_1FixedSize.html">ass::FixedSize</a>, <a class="el" href="structass_1_1MinSize.html">ass::MinSize</a> and <a class="el" href="structass_1_1MaxSize.html">ass::MaxSize</a> to define an acceptable size range. Use <a class="el" href="structass_1_1Padding.html">ass::Padding</a> to add a blank space between view's box and view's context box.</p>
+<p class="startli">A view is responsible to handle its padding properly. As an AUI user, you wouldn't need to bother about that unless you are implementing custom <a class="el" href="classAView.html#a1c6f0f58602d6acf52461bea2ed83469">AView::render()</a>.</p>
 <p class="startli"><a class="el" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> and similar <a class="el" href="group__ass.html">Aui Style Sheets</a> properties are fit into this box.</p>
 <p class="startli"><a class="el" href="structass_1_1Border.html">Border</a> property outlines this box from the inner side, and never affects the layout; it's just a visual trait.</p>
 </li>
@@ -156,13 +156,13 @@ Box key components<a class="aui-toc-hash" href="#box-key-components" id="box-key
 </div>
 <h1>
 Comparison to CSS<a class="aui-toc-hash" href="#comparison-to-css" id="comparison-to-css" style="color: var(--fragment-comment) !important">#</a></h1>
-<p><b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L106"></b></p>
-<p>AUI shares principles with <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model">web technologies</a> <b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L108"></b> with some exceptions. In AUI:</p>
+<p><b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L107"></b></p>
+<p>AUI shares principles with <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model">web technologies</a> <b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L109"></b> with some exceptions. In AUI:</p>
 <ul>
 <li>border never affects layout</li>
 <li>element's size includes padding, thus it differs from "content area"</li>
 </ul>
-<p>AUI's box model is equal to CSS's <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#playing_with_box_models">"alternate box model"</a>, <b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L114"></b> with an exception to border. </p>
+<p>AUI's box model is equal to CSS's <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#playing_with_box_models">"alternate box model"</a>, <b aui-src="aui.uitests/tests/UIAssSizingModel.cpp#L115"></b> with an exception to border. </p>
 </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

@@ -2,7 +2,7 @@ var searchData=
 [
   ['ui_0',['UI',['../examples.html#examples_ui',1,'']]],
   ['ui_20backends_1',['Supported UI Backends',['../classIPlatformAbstraction.html#autotoc_md34',1,'']]],
-  ['ui_20building_2',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md165',1,'']]],
+  ['ui_20building_2',['Introduction to UI building',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md164',1,'']]],
   ['ui_20building_20overview_3',['UI Building Overview',['../md_docs_2UI_01Building_01Overview.html',1,'']]],
   ['ui_20components_20and_20layout_4',['UI Components and Layout',['../example_notes_app.html#autotoc_md233',1,'']]],
   ['ui_20data_20binding_20with_20let_5',['UI data binding with let',['../group__property__system.html#autotoc_md243',1,'']]],
@@ -57,7 +57,7 @@ var searchData=
   ['using_20aui_20distributions_20with_20tt_20find_5fpackage_20tt_54',['Using AUI distributions with &lt;tt&gt;find_package&lt;/tt&gt;',['../md_docs_2AUI_01Boot.html#autotoc_md79',1,'']]],
   ['using_20container_20stylesheet_55',['Using container stylesheet',['../group__ass.html#autotoc_md13',1,'']]],
   ['using_20global_20style_56',['Using global style',['../group__ass.html#autotoc_md12',1,'']]],
-  ['using_20inkscape_57',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md189',1,'']]],
+  ['using_20inkscape_57',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md187',1,'']]],
   ['using_20setcustomstyle_58',['Using setCustomStyle',['../group__ass.html#autotoc_md15',1,'']]],
   ['using_20with_5fstyle_59',['Using with_style',['../group__ass.html#autotoc_md14',1,'']]],
   ['uv1_60',['uv1',['../structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16',1,'ATexturedBrush']]],

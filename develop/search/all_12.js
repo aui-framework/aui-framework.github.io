@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macos_0',['macOS',['../md_docs_2Packaging_01Your_01App.html#autotoc_md182',1,'']]],
+  ['macos_0',['macOS',['../md_docs_2Packaging_01Your_01App.html#autotoc_md180',1,'']]],
   ['macos_20operating_20system_1',['macOS (operating system)',['../macos.html',1,'']]],
   ['macosapp_2',['MacosApp',['../classMacosApp.html',1,'']]],
   ['macros_3',['Macros',['../md_docs_2Macros.html',1,'']]],
@@ -67,7 +67,7 @@ var searchData=
   ['mmargin_64',['mMargin',['../classAView.html#a5bacbb8fc6440c7cf6b9549e580b098e',1,'AView']]],
   ['mmaxsize_65',['mMaxSize',['../classAView.html#a65a8d1574db7e833c6481aecfbf9cadb',1,'AView']]],
   ['mminsize_66',['mMinSize',['../classAView.html#afcab50e0676d2197c64a8d8c2221d741',1,'AView']]],
-  ['mobile_20project_67',['mobile project',['../md_docs_2Crosscompiling_01with_01toolchain.html',1,'Replacing AUI mobile project'],['../md_docs_2Crosscompiling.html#autotoc_md160',1,'Replacing AUI mobile project']]],
+  ['mobile_20project_67',['mobile project',['../md_docs_2Crosscompiling_01with_01toolchain.html',1,'Replacing AUI mobile project'],['../md_docs_2Crosscompiling.html#autotoc_md159',1,'Replacing AUI mobile project']]],
   ['mobile_20scenario_68',['Mobile scenario',['../md_docs_2App_01Build_01Overview.html#autotoc_md48',1,'']]],
   ['model_69',['AUI Box Model',['../AUI_01Box_01Model.html',1,'']]],
   ['model_20padding_20margin_70',['Box Model (Padding, Margin)',['../group__ass.html#autotoc_md28',1,'']]],
