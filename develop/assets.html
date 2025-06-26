@@ -131,10 +131,10 @@ aui_compile_assets<a class="aui-toc-hash" href="#aui_compile_assets" id="aui_com
 <div class="fragment"><div class="line">mkdir assets</div>
 </div><!-- fragment --><p>Put your files to that dir:</p>
 <div class="fragment"><div class="line">cp test.txt assets/test.txt</div>
-</div><!-- fragment --><p>Please invoke CMake configure to apply changes in <code>assets/</code> (see <a class="el" href="md_docs_2Troubleshoot_01list.html#BUILD_CACHE_INVALIDATION">Build cache invalidation</a>):</p>
-<div class="fragment"><div class="line">cd build</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Please invoke <a class="el" href="md_docs_2Troubleshoot_01list.html#BUILD_CACHE_INVALIDATION">CMake configure</a> each time you add/remove files in <code>assets/</code>! Otherwise, these files will not appear in your program. <div class="fragment"><div class="line">cd build</div>
 <div class="line">cmake .. # no need to pass arguments in existing build dir</div>
-</div><!-- fragment --><p>From now, you can use the file from C++.</p>
+</div><!-- fragment --></dd></dl>
+<p>From now, you can use the file from C++.</p>
 <div class="fragment"><div class="line"><span class="stringliteral">":background.png"</span>_url.open()</div>
 </div><!-- fragment --><div class="fragment"><div class="line">_new&lt;AView&gt;() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
 <div class="line">  BackgroundImage { <span class="stringliteral">":background.png"</span> },</div>
