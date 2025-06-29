@@ -1,13 +1,13 @@
 var searchData=
 [
   ['game_0',['Minesweeper Game',['../example_minesweeper_game.html',1,'']]],
-  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md228',1,'']]],
+  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md222',1,'']]],
   ['game_20of_20life_2',['Game of Life',['../example_game_of_life.html',1,'']]],
   ['gameoflifewindow_3',['GameOfLifeWindow',['../example_game_of_life.html#autotoc_md220',1,'']]],
   ['gatherkineticscrollvalue_4',['gatherKineticScrollValue',['../classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8',1,'ATouchScroller']]],
   ['gaussianblur_5',['GaussianBlur',['../structass_1_1Backdrop_1_1GaussianBlur.html',1,'ass::Backdrop']]],
   ['gaussianblurcustom_6',['GaussianBlurCustom',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html',1,'ass::Backdrop']]],
-  ['generation_7',['Documentation generation',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md151',1,'']]],
+  ['generation_7',['Documentation generation',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md152',1,'']]],
   ['generic_20scenario_8',['Generic scenario',['../md_docs_2App_01Build_01Overview.html#BUILD_SCENARIO_GENERIC',1,'']]],
   ['generic_5fobserver_9',['GENERIC_OBSERVER',['../classAObject.html#ae877cf776a7569eca5185c24bd4ccd74',1,'AObject']]],
   ['geometrychanged_10',['geometryChanged',['../classAView.html#a5034ce1e3e117e2f4ece91c1d038dbe0',1,'AView']]],
@@ -103,5 +103,5 @@ var searchData=
   ['grow_100',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]],
   ['gtk4_101',['Gtk4',['../structAPlatformAbstractionOptions_1_1Gtk4.html',1,'APlatformAbstractionOptions']]],
   ['gtkdialog_102',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]],
-  ['guides_103',['Guides',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md149',1,'']]]
+  ['guides_103',['Guides',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md150',1,'']]]
 ];

@@ -116,6 +116,7 @@ $(function(){initNavTree('group__layout__managers.html',''); initResizable(true)
 <li>Respecting view margins and alignment</li>
 <li>Supporting expanding/stretching of views</li>
 </ul>
+<dl class="section note"><dt>Note</dt><dd>You can use <a class="el" href="md_docs_2Devtools.html">AUI Devtools</a> to play around with layouts, especially with <a class="el" href="#EXPANDING">Expanding</a> property, to get better understanding on how does layout work in AUI.</dd></dl>
 <p>Common layout managers include:</p>
 <ul>
 <li><b><a class="el" href="classAHorizontalLayout.html" title="Places views in a row.">AHorizontalLayout</a></b> - Arranges views in a horizontal row</li>
@@ -223,6 +224,7 @@ Layout Examples<a class="aui-toc-hash" href="#layout-examples" id="layout-exampl
 <h1>
 Expanding<a class="aui-toc-hash" href="#EXPANDING" id="EXPANDING" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Expanding (often referred as stretch factor) is a property of any <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>. Expanding is an expansion coefficient set on per-axis basic (i.e, one value along x axis, another value along y axis), however it's convenient to set both values. Hints layout manager how much this <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> should be extended relative to other AViews in the same container.</p>
+<dl class="section note"><dt>Note</dt><dd>You can use <a class="el" href="md_docs_2Devtools.html">AUI Devtools</a> to play around with layouts, especially with <a class="el" href="#EXPANDING">Expanding</a> property, to get better understanding on how does layout work in AUI.</dd></dl>
 <p>Horizontal layouts ignore y expanding of their children, Vertical layouts ignore x expanding of their children.</p>
 <p>Views are normally created without any expanding set. When Expanding views appear in a layout they are given a share of space in accordance with their expanding or their minimum size whichever gives more space to them. Expanding is used to change how much space views are given in proportion to one another.</p>
 <p>Expanding view does not affect parent's size or parent's expanding property. Use AView::setExpanding() on parent, or <code>Expanding</code> variant of declarative container notation (<code>Vertical::Expanding</code>, <code>Horizontal::Expanding</code>, <code>Stacked::Expanding</code>) for such case.</p>
@@ -293,7 +295,7 @@ Implementation details<a class="aui-toc-hash" href="#implementation-details" id=
 <div class="line">                        └─&gt; <a class="code hl_class" href="classAViewContainerBase.html">AViewContainerBase</a>::applyGeometryToChildren()        │</div>
 <div class="line">                            └─&gt; <a class="code hl_class" href="classALayout.html">ALayout</a>::onResize()                              ┘</div>
 <div class="line">                                └─&gt; <a class="code hl_class" href="classAView.html">AView</a>::setGeometry()</div>
-<div class="ttc" id="aclassALayout_html"><div class="ttname"><a href="classALayout.html">ALayout</a></div><div class="ttdoc">Base class for all layout managers.</div><div class="ttdef"><b>Definition</b> ALayout.h:333</div></div>
+<div class="ttc" id="aclassALayout_html"><div class="ttname"><a href="classALayout.html">ALayout</a></div><div class="ttdoc">Base class for all layout managers.</div><div class="ttdef"><b>Definition</b> ALayout.h:341</div></div>
 <div class="ttc" id="aclassAViewContainerBase_html"><div class="ttname"><a href="classAViewContainerBase.html">AViewContainerBase</a></div><div class="ttdoc">A view that represents a set of views.</div><div class="ttdef"><b>Definition</b> AViewContainerBase.h:68</div></div>
 <div class="ttc" id="aclassAView_html"><div class="ttname"><a href="classAView.html">AView</a></div><div class="ttdoc">Base class of all UI objects.</div><div class="ttdef"><b>Definition</b> AView.h:78</div></div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
