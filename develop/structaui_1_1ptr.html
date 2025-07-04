@@ -107,30 +107,34 @@ $(function(){initNavTree('structaui_1_1ptr.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">
 Static Public Member Functions<a class="aui-toc-hash" href="#pub-static-methods" id="pub-static-methods" name="pub-static-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a53daf9b3ceddf96bbf2733bb3b041617" id="r_a53daf9b3ceddf96bbf2733bb3b041617"><td class="memTemplParams" colspan="2">template&lt;typename T, typename Deleter = std::default_delete&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:a53daf9b3ceddf96bbf2733bb3b041617"><td align="right" class="memTemplItemLeft" valign="top">static _unique&lt; T, Deleter &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a53daf9b3ceddf96bbf2733bb3b041617">make_unique_with_deleter</a> (T *<a class="el" href="structaui_1_1ptr.html">ptr</a>, Deleter deleter=Deleter{})</td></tr>
-<tr class="memdesc:a53daf9b3ceddf96bbf2733bb3b041617"><td class="mdescLeft"> </td><td class="mdescRight">Creates unique_ptr from raw pointer and a deleter.  <br/></td></tr>
-<tr class="separator:a53daf9b3ceddf96bbf2733bb3b041617"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9696eab52bd0745688055a301d9ef776" id="r_a9696eab52bd0745688055a301d9ef776"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a9696eab52bd0745688055a301d9ef776"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9696eab52bd0745688055a301d9ef776">manage</a> (T *raw)</td></tr>
-<tr class="memdesc:a9696eab52bd0745688055a301d9ef776"><td class="mdescLeft"> </td><td class="mdescRight">Delegates memory management of the raw pointer <code>T* raw</code> to the shared pointer, which is returned.  <br/></td></tr>
-<tr class="separator:a9696eab52bd0745688055a301d9ef776"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad6e812de50ef39005c493b5b155fa6f6" id="r_ad6e812de50ef39005c493b5b155fa6f6"><td class="memTemplParams" colspan="2">template&lt;typename T, typename Deleter&gt; </td></tr>
-<tr class="memitem:ad6e812de50ef39005c493b5b155fa6f6"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad6e812de50ef39005c493b5b155fa6f6">manage</a> (T *raw, Deleter deleter)</td></tr>
-<tr class="memdesc:ad6e812de50ef39005c493b5b155fa6f6"><td class="mdescLeft"> </td><td class="mdescRight">Delegates memory management of the raw pointer <code>T* raw</code> to the shared pointer, which is returned.  <br/></td></tr>
-<tr class="separator:ad6e812de50ef39005c493b5b155fa6f6"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4fc1ff4140186962272135c91a888291" id="r_a4fc1ff4140186962272135c91a888291"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a4fc1ff4140186962272135c91a888291"><td align="right" class="memTemplItemLeft" valign="top">static _unique&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4fc1ff4140186962272135c91a888291">unique</a> (T *raw)</td></tr>
-<tr class="memdesc:a4fc1ff4140186962272135c91a888291"><td class="mdescLeft"> </td><td class="mdescRight">Delegates memory management of the raw pointer <code>T* raw</code> to the unique pointer, which is returned.  <br/></td></tr>
-<tr class="separator:a4fc1ff4140186962272135c91a888291"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa485b42e18d08baafadb85787b393606" id="r_aa485b42e18d08baafadb85787b393606"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
-<tr class="memitem:aa485b42e18d08baafadb85787b393606"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa485b42e18d08baafadb85787b393606">fake</a> (T *raw)</td></tr>
-<tr class="memdesc:aa485b42e18d08baafadb85787b393606"><td class="mdescLeft"> </td><td class="mdescRight">Creates fake shared pointer to <code>T* raw</code> with empty destructor, which does nothing. It's useful when some function accept shared pointer but you have only raw one.  <br/></td></tr>
-<tr class="separator:aa485b42e18d08baafadb85787b393606"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aaf395947a9bce9704245f9c944404dbd" id="r_aaf395947a9bce9704245f9c944404dbd"><td class="memTemplParams" colspan="2">template&lt;typename T, typename Deleter = std::default_delete&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:aaf395947a9bce9704245f9c944404dbd"><td align="right" class="memTemplItemLeft" valign="top">static _unique&lt; T, Deleter &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaf395947a9bce9704245f9c944404dbd">manage_unique</a> (T *<a class="el" href="structaui_1_1ptr.html">ptr</a>, Deleter deleter=Deleter{})</td></tr>
+<tr class="memdesc:aaf395947a9bce9704245f9c944404dbd"><td class="mdescLeft"> </td><td class="mdescRight">Creates unique_ptr from raw pointer and a deleter.  <br/></td></tr>
+<tr class="separator:aaf395947a9bce9704245f9c944404dbd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a42f8c54fdf7e4c67e32badedcdffe775" id="r_a42f8c54fdf7e4c67e32badedcdffe775"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a42f8c54fdf7e4c67e32badedcdffe775"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a42f8c54fdf7e4c67e32badedcdffe775">manage_shared</a> (T *raw)</td></tr>
+<tr class="memdesc:a42f8c54fdf7e4c67e32badedcdffe775"><td class="mdescLeft"> </td><td class="mdescRight">Delegates memory management of the raw pointer <code>T* raw</code> to the shared pointer, which is returned.  <br/></td></tr>
+<tr class="separator:a42f8c54fdf7e4c67e32badedcdffe775"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af2827e79dfd1bba936ff0e70bfd407c5" id="r_af2827e79dfd1bba936ff0e70bfd407c5"><td class="memTemplParams" colspan="2">template&lt;typename T, typename Deleter&gt; </td></tr>
+<tr class="memitem:af2827e79dfd1bba936ff0e70bfd407c5"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af2827e79dfd1bba936ff0e70bfd407c5">manage_shared</a> (T *raw, Deleter deleter)</td></tr>
+<tr class="memdesc:af2827e79dfd1bba936ff0e70bfd407c5"><td class="mdescLeft"> </td><td class="mdescRight">Delegates memory management of the raw pointer <code>T* raw</code> to the shared pointer, which is returned, with a deleter functor.  <br/></td></tr>
+<tr class="separator:af2827e79dfd1bba936ff0e70bfd407c5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2774ba0f0e5927e4bc0ce6ef20572008" id="r_a2774ba0f0e5927e4bc0ce6ef20572008"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a2774ba0f0e5927e4bc0ce6ef20572008"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2774ba0f0e5927e4bc0ce6ef20572008">fake_shared</a> (T *raw)</td></tr>
+<tr class="memdesc:a2774ba0f0e5927e4bc0ce6ef20572008"><td class="mdescLeft"> </td><td class="mdescRight">Creates fake shared pointer to <code>T* raw</code> with empty destructor, which does nothing. It's useful when some function accepts a shared pointer but you have only a raw one.  <br/></td></tr>
+<tr class="separator:a2774ba0f0e5927e4bc0ce6ef20572008"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7e1351cf0cb5e856c84b678ced863e30" id="r_a7e1351cf0cb5e856c84b678ced863e30"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a7e1351cf0cb5e856c84b678ced863e30"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="class__.html">_</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e1351cf0cb5e856c84b678ced863e30">shared_from_this</a> (T *raw)</td></tr>
+<tr class="memdesc:a7e1351cf0cb5e856c84b678ced863e30"><td class="mdescLeft"> </td><td class="mdescRight">Downcasts <code>std::enable_shared_from_this&lt;base class&gt;</code> to the derived class <code>T</code>.  <br/></td></tr>
+<tr class="separator:a7e1351cf0cb5e856c84b678ced863e30"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a44dd88770843903678c199ca67eafaac" id="r_a44dd88770843903678c199ca67eafaac"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a44dd88770843903678c199ca67eafaac"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="struct__weak.html">_weak</a>&lt; T &gt; </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a44dd88770843903678c199ca67eafaac">weak_from_this</a> (T *raw)</td></tr>
+<tr class="memdesc:a44dd88770843903678c199ca67eafaac"><td class="mdescLeft"> </td><td class="mdescRight">Downcasts <code>std::enable_shared_from_this&lt;base class&gt;</code> to the derived class <code>T</code>.  <br/></td></tr>
+<tr class="separator:a44dd88770843903678c199ca67eafaac"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#aa485b42e18d08baafadb85787b393606" id="aa485b42e18d08baafadb85787b393606" name="aa485b42e18d08baafadb85787b393606" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a2774ba0f0e5927e4bc0ce6ef20572008" id="a2774ba0f0e5927e4bc0ce6ef20572008" name="a2774ba0f0e5927e4bc0ce6ef20572008" style="color: var(--fragment-comment) !important">#</a></h2>
 
-<h2 class="memtitle"><span class="permalink">◆ </span>fake()<a class="aui-toc-hash" href="#◆ fake()" id="◆ fake()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink">◆ </span>fake_shared()<a class="aui-toc-hash" href="#◆ fake_shared()" id="◆ fake_shared()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -140,7 +144,7 @@ template&lt;typename T&gt; </div>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname"><a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::fake </td>
+<td class="memname"><a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::fake_shared </td>
 <td>(</td>
 <td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
 <td></td>
@@ -154,53 +158,23 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 <dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
-<tr><td class="paramname">T</td><td>any type </td></tr>
+<tr><td class="paramname">T</td><td>any type. </td></tr>
 </table>
 </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramname">raw</td><td>raw pointer to manage memory of </td></tr>
+<tr><td class="paramname">raw</td><td>raw pointer to manage memory of. </td></tr>
 </table>
 </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>shared pointer </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>shared pointer. </dd></dl>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_27guis_2circle_drawer_2src_2main_8cpp-example.html#a18">examples/7guis/circle_drawer/src/main.cpp</a>, and <a class="el" href="examples_2app_2game_of_life_2src_2main_8cpp-example.html#a24">examples/app/game_of_life/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
-<a id="a53daf9b3ceddf96bbf2733bb3b041617" name="a53daf9b3ceddf96bbf2733bb3b041617"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>make_unique_with_deleter()<a class="aui-toc-hash" href="#◆ make_unique_with_deleter()" id="◆ make_unique_with_deleter()" style="color: var(--fragment-comment) !important">#</a></h2>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename Deleter = std::default_delete&lt;T&gt;&gt; </div>
-<table class="mlabels">
-<tr>
-<td class="mlabels-left">
-<table class="memname">
-<tr>
-<td class="memname">static _unique&lt; T, Deleter &gt; aui::ptr::make_unique_with_deleter </td>
-<td>(</td>
-<td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
-</tr>
-<tr>
-<td class="paramkey"></td>
-<td></td>
-<td class="paramtype">Deleter</td> <td class="paramname"><span class="paramname"><em>deleter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Deleter{}</span> )</td>
-</tr>
-</table>
-</td>
-<td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span> </td>
-</tr>
-</table>
-</div><div class="memdoc">
-<p><code>unique_ptr</code> could not deduce T and Deleter by itself. Use this function to avoid this restriction. By using this function, lifetime of the pointer is delegated to std::unique_ptr. The wrapped pointer will be freed by specified Deleter. Default deleter is std::default_delete. You may want to specialize <code>std::default_delete&lt;T&gt;</code> struct in order to specify default deleter for T, in this case you can omit deleter argument of this function. </p>
-</div>
-</div>
-<a id="a9696eab52bd0745688055a301d9ef776" name="a9696eab52bd0745688055a301d9ef776"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>manage() <span class="overload">[1/2]</span><a class="aui-toc-hash" href="#◆ manage()-[1/2]" id="◆ manage()-[1/2]" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="a42f8c54fdf7e4c67e32badedcdffe775" name="a42f8c54fdf7e4c67e32badedcdffe775"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>manage_shared() <span class="overload">[1/2]</span><a class="aui-toc-hash" href="#◆ manage_shared()-[1/2]" id="◆ manage_shared()-[1/2]" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -210,7 +184,7 @@ template&lt;typename T&gt; </div>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname"><a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::manage </td>
+<td class="memname"><a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::manage_shared </td>
 <td>(</td>
 <td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
 <td></td>
@@ -239,8 +213,8 @@ template&lt;typename T&gt; </div>
 </dl>
 </div>
 </div>
-<a id="ad6e812de50ef39005c493b5b155fa6f6" name="ad6e812de50ef39005c493b5b155fa6f6"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>manage() <span class="overload">[2/2]</span><a class="aui-toc-hash" href="#◆ manage()-[2/2]" id="◆ manage()-[2/2]" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="af2827e79dfd1bba936ff0e70bfd407c5" name="af2827e79dfd1bba936ff0e70bfd407c5"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>manage_shared() <span class="overload">[2/2]</span><a class="aui-toc-hash" href="#◆ manage_shared()-[2/2]" id="◆ manage_shared()-[2/2]" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -250,7 +224,7 @@ template&lt;typename T, typename Deleter&gt; </div>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname"><a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::manage </td>
+<td class="memname"><a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::manage_shared </td>
 <td>(</td>
 <td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>raw</em></span>, </td>
 </tr>
@@ -283,8 +257,54 @@ template&lt;typename T, typename Deleter&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>shared pointer </dd></dl>
 </div>
 </div>
-<a id="a4fc1ff4140186962272135c91a888291" name="a4fc1ff4140186962272135c91a888291"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>unique()<a class="aui-toc-hash" href="#◆ unique()" id="◆ unique()" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="aaf395947a9bce9704245f9c944404dbd" name="aaf395947a9bce9704245f9c944404dbd"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>manage_unique()<a class="aui-toc-hash" href="#◆ manage_unique()" id="◆ manage_unique()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename Deleter = std::default_delete&lt;T&gt;&gt; </div>
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static _unique&lt; T, Deleter &gt; aui::ptr::manage_unique </td>
+<td>(</td>
+<td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">Deleter</td> <td class="paramname"><span class="paramname"><em>deleter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">Deleter{}</span> )</td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+<table class="tparams">
+<tr><td class="paramname">T</td><td>The type of the object to manage. </td></tr>
+<tr><td class="paramname">Deleter</td><td>The type of the custom deleter function or functor. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">ptr</td><td>A raw pointer to the object that the unique pointer will manage. </td></tr>
+<tr><td class="paramname">deleter</td><td>A custom deleter that will be used to destroy the managed object. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A unique pointer that takes ownership of the raw pointer using the specified deleter.</dd></dl>
+<p>Creates a unique pointer with a custom deleter.</p>
+<p><code>unique_ptr</code> could not deduce T and Deleter by itself. Use this function to avoid this restriction. By using this function, the lifetime of the pointer is delegated to std::unique_ptr. Specified Deleter will free the wrapped pointer. The default deleter is std::default_delete. You may want to specialize <code>std::default_delete&lt;T&gt;</code> struct to specify a default deleter for T, in this case you can omit the deleter argument of this function. </p>
+</div>
+</div>
+<a id="a7e1351cf0cb5e856c84b678ced863e30" name="a7e1351cf0cb5e856c84b678ced863e30"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>shared_from_this()<a class="aui-toc-hash" href="#◆ shared_from_this()" id="◆ shared_from_this()" style="color: var(--fragment-comment) !important">#</a></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -294,7 +314,7 @@ template&lt;typename T&gt; </div>
 <td class="mlabels-left">
 <table class="memname">
 <tr>
-<td class="memname">_unique&lt; T &gt; aui::ptr::unique </td>
+<td class="memname">static <a class="el" href="class__.html">_</a>&lt; T &gt; aui::ptr::shared_from_this </td>
 <td>(</td>
 <td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
 <td></td>
@@ -302,23 +322,65 @@ template&lt;typename T&gt; </div>
 </table>
 </td>
 <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span> </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span> </td>
 </tr>
 </table>
 </div><div class="memdoc">
 <dl class="tparams"><dt>Template Parameters</dt><dd>
 <table class="tparams">
-<tr><td class="paramname">T</td><td>any type </td></tr>
+<tr><td class="paramname">T</td><td>class which derived from a class that implements <code>std::enable_shared_from_this</code>. </td></tr>
 </table>
 </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramname">raw</td><td>raw pointer to manage memory of </td></tr>
+<tr><td class="paramname">raw</td><td>pointer to the <code>T</code> class. </td></tr>
 </table>
 </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>unique pointer </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer.</dd></dl>
+<p><code>std::enable_shared_from_this</code> provides a shared pointer to itself, however, if inheritance takes place, type is lost, requiring manual downcasting.</p>
+<p>Downcasts <code>std::enable_shared_from_this&lt;base class&gt;</code> to the derived class <code>T</code> by the aliasing constructor of the shared pointer. This eliminates the need of expensive downcasting, maintaining memory safety. </p>
+</div>
+</div>
+<a id="a44dd88770843903678c199ca67eafaac" name="a44dd88770843903678c199ca67eafaac"></a>
+<h2 class="memtitle"><span class="permalink">◆ </span>weak_from_this()<a class="aui-toc-hash" href="#◆ weak_from_this()" id="◆ weak_from_this()" style="color: var(--fragment-comment) !important">#</a></h2>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+<tr>
+<td class="mlabels-left">
+<table class="memname">
+<tr>
+<td class="memname">static <a class="el" href="struct__weak.html">_weak</a>&lt; T &gt; aui::ptr::weak_from_this </td>
+<td>(</td>
+<td class="paramtype">T *</td> <td class="paramname"><span class="paramname"><em>raw</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</td>
+<td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span> </td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+<table class="tparams">
+<tr><td class="paramname">T</td><td>class which derived from a class that implements <code>std::enable_shared_from_this</code>. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">raw</td><td>pointer to the <code>T</code> class. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Weak pointer.</dd></dl>
+<p><code>std::enable_shared_from_this</code> provides a shared pointer to itself, however, if inheritance takes place, type is lost, requiring manual downcasting.</p>
+<p>Downcasts <code>std::enable_shared_from_this&lt;base class&gt;</code> to the derived class <code>T</code> by the aliasing constructor of the shared pointer. This eliminates the need of expensive downcasting, maintaining memory safety. </p>
 </div>
 </div>
 <p class="footer-inner">

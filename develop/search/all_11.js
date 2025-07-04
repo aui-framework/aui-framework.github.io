@@ -58,7 +58,7 @@ var searchData=
   ['list_55',['List',['../deprecated.html',1,'Deprecated List'],['../example_infinite_lazy_list.html',1,'Infinite Lazy List']]],
   ['list_56',['list',['../structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80',1,'AProcess::ArgStringList::list'],['../md_docs_2Troubleshoot_01list.html',1,'Troubleshoot list']]],
   ['listdir_57',['listDir',['../classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5',1,'APath']]],
-  ['lists_58',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md123',1,'']]],
+  ['lists_58',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md125',1,'']]],
   ['lists_59',['Reactive lists',['../classAForEachUI.html#UIDeclarativeForTest_Reactive_lists',1,'']]],
   ['load_60',['load',['../classAProgramModule.html#aad786882f3306ae28642e2b2c7148393',1,'AProgramModule']]],
   ['loadexception_61',['LoadException',['../classAProgramModule_1_1LoadException.html',1,'AProgramModule']]],

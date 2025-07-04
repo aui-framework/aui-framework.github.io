@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fake_0',['fake',['../structaui_1_1ptr.html#aa485b42e18d08baafadb85787b393606',1,'aui::ptr']]],
+  ['fake_5fshared_0',['fake_shared',['../structaui_1_1ptr.html#a2774ba0f0e5927e4bc0ce6ef20572008',1,'aui::ptr']]],
   ['file_1',['file',['../classAPath.html#ae175e71b884ce2c7d9ccb476a34a9ab1',1,'APath']]],
   ['filename_2',['fileName',['../classAStacktrace_1_1Entry.html#a3deb4e464ac61926ef732c3f746d0470',1,'AStacktrace::Entry']]],
   ['filename_3',['filename',['../classAPath.html#afc37f01cd0dfbad8a50953cac7310382',1,'APath']]],

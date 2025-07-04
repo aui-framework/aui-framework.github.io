@@ -148,7 +148,7 @@ Methods<a class="aui-toc-hash" href="#methods" id="methods" style="color: var(--
 <div class="line">    }</div>
 </div><!-- fragment --></li>
 <li><code>newNote()</code>: creates a new note with a default title and adds it to the list of notes. Sets this note as the currently selected note. <div class="fragment"><div class="line">    <span class="keywordtype">void</span> newNote() {</div>
-<div class="line">        <span class="keyword">auto</span> note = <a class="code hl_function" href="structaui_1_1ptr.html#a9696eab52bd0745688055a301d9ef776">aui::ptr::manage</a>(<span class="keyword">new</span> Note { .title = <span class="stringliteral">"Untitled"</span> });</div>
+<div class="line">        <span class="keyword">auto</span> note = <a class="code hl_function" href="structaui_1_1ptr.html#a42f8c54fdf7e4c67e32badedcdffe775">aui::ptr::manage_shared</a>(<span class="keyword">new</span> Note { .title = <span class="stringliteral">"Untitled"</span> });</div>
 <div class="line">        mNotes.writeScope()-&gt;push_back(note);</div>
 <div class="line">        mCurrentNote = std::move(note);</div>
 <div class="line">    }</div>
