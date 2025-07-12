@@ -103,8 +103,8 @@ $(function(){initNavTree('structaui_1_1no__escape.html',''); initResizable(true)
 <a href="structaui_1_1no__escape-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">aui::no_escape&lt; T &gt; Struct Template Reference</div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Traits/values.h#L128"></b>
-<p>Does not allow escaping, allowing to accept lvalue ref, rvalue ref, shared_ptr and etc without overhead.  
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Traits/values.h#L176"></b>
+<p>A funcntion contract that does not allow escaping, allowing to accept lvalue ref, rvalue ref, shared_ptr and etc without overhead.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="values_8h_source.html">AUI/Traits/values.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -143,9 +143,9 @@ T * </td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const
 T &amp; </td><td class="memItemRight" valign="bottom"><b>operator*</b> () const noexcept</td></tr>
 <tr class="separator:a9145c4ac72c027fecd2afb5ea91bf9db"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Does not allow escaping, allowing to accept lvalue ref, rvalue ref, shared_ptr and etc without overhe...">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="A funcntion contract that does not allow escaping, allowing to accept lvalue ref, rvalue ref,...">#</a></h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br/>
-struct aui::no_escape&lt; T &gt;</div><p>Promises that the contained object wouldn't be copied/moved/referenced outside of the function where the no_escape came to; thus does not take responsibility of deleting the object. This allows to accept any kind of lifetimes: lvalue and rvalue references, pointers, unique_ptr and shared_ptr without ref counter modification.</p>
+struct aui::no_escape&lt; T &gt;</div><p>Promises that the contained object wouldn't be copied/moved/referenced outside the function where the no_escape came to; thus does not take responsibility of deleting the object. This allows to accept any kind of lifetimes: lvalue and rvalue references, pointers, unique_ptr and shared_ptr without ref counter modification.</p>
 <p>Intended to use in function arguments.</p>
 <p>Accepts lvalue ref, rvalue ref, ptr and shared_ptr. Does not accepts null.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>

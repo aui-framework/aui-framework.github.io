@@ -128,169 +128,169 @@ $(function(){initNavTree('AThread_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span><a class="code hl_class" href="classAString.html">AString</a>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">class </span><a class="code hl_class" href="classAConditionVariable.html">AConditionVariable</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00032">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classAAbstractThread.html">   32</a></span><span class="keyword">class </span>API_AUI_CORE AAbstractThread {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">friend</span> <span class="keyword">class </span>IEventLoop;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">friend</span> <span class="keyword">class </span>AThread;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">friend</span> <span class="keyword">class </span>AConditionVariable;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> setupUIThread() <span class="keyword">noexcept</span>;   <span class="comment">// OSDesktop.cpp</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">   42</a></span>    <span class="keyword">typedef</span> std::thread::id <a class="code hl_typedef" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a2d1b3800c20c3b4416771ac16e48de1b">   48</a></span>    <span class="keywordtype">id</span> <a class="code hl_function" href="classAAbstractThread.html#a2d1b3800c20c3b4416771ac16e48de1b">getId</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">enqueue</a>(AMessageQueue&lt;&gt;::Message f);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <a class="code hl_class" href="classAMessageQueue.html">AMessageQueue&lt;&gt;</a>&amp; messageQueue()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> mMessageQueue;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classAAbstractThread.html">~AAbstractThread</a>();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">   67</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">isInterrupted</a>();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#aadd4a3a7f00ea7ca49759745165e7042">   72</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#aadd4a3a7f00ea7ca49759745165e7042">resetInterruptFlag</a>();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">   80</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">interrupt</a>();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">   86</a></span>    IEventLoop* <a class="code hl_function" href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">getCurrentEventLoop</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mCurrentEventLoop; }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Callable&gt;</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00094">
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c">   94</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c">operator&lt;&lt;</a>(Callable fun) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">enqueue</a>(fun);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00035">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classAAbstractThread.html">   35</a></span><span class="keyword">class </span>API_AUI_CORE AAbstractThread {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">friend</span> <span class="keyword">class </span>IEventLoop;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">friend</span> <span class="keyword">class </span>AThread;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">friend</span> <span class="keyword">class </span>AConditionVariable;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">friend</span> <span class="keywordtype">void</span> setupUIThread() <span class="keyword">noexcept</span>;   <span class="comment">// OSDesktop.cpp</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">   45</a></span>    <span class="keyword">typedef</span> std::thread::id <a class="code hl_typedef" href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">id</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a2d1b3800c20c3b4416771ac16e48de1b">   51</a></span>    <span class="keywordtype">id</span> <a class="code hl_function" href="classAAbstractThread.html#a2d1b3800c20c3b4416771ac16e48de1b">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">enqueue</a>(AMessageQueue&lt;&gt;::Message f);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> <a class="code hl_class" href="classAMessageQueue.html">AMessageQueue&lt;&gt;</a>&amp; messageQueue()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">return</span> mMessageQueue;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classAAbstractThread.html">~AAbstractThread</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">   70</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">isInterrupted</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#aadd4a3a7f00ea7ca49759745165e7042">   75</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#aadd4a3a7f00ea7ca49759745165e7042">resetInterruptFlag</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">   83</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">interrupt</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">   89</a></span>    IEventLoop* <a class="code hl_function" href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">getCurrentEventLoop</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mCurrentEventLoop; }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Callable&gt;</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00097">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c">   97</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c">operator&lt;&lt;</a>(Callable fun) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_function" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">enqueue</a>(fun);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
 </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Callable&gt;</div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00104">
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7">  104</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7">operator*</a>(Callable fun) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <a class="code hl_function" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">enqueue</a>(fun);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> Callable&gt;</div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00107">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7">  107</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7">operator*</a>(Callable fun) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_function" href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">enqueue</a>(fun);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
 </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; threadName() const noexcept {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> mThreadName;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d">  117</a></span>    <a class="code hl_class" href="classAStacktrace.html">AStacktrace</a> <a class="code hl_function" href="classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d">threadStacktrace</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; threadName() const noexcept {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">return</span> mThreadName;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">bool</span> messageQueueEmpty() noexcept;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d">  120</a></span>    <a class="code hl_class" href="classAStacktrace.html">AStacktrace</a> <a class="code hl_function" href="classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d">threadStacktrace</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>protected:</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea">  126</a></span>    <span class="keywordtype">id</span> <a class="code hl_variable" href="classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea">mId</a>;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_class" href="classAString.html">AString</a> mThreadName;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <a class="code hl_class" href="classAMessageQueue.html">AMessageQueue</a>&lt;&gt; mMessageQueue;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    AAbstractThread(const <span class="keywordtype">id</span>&amp; <span class="keywordtype">id</span>) noexcept;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> updateThreadName() noexcept;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    virtual <span class="keywordtype">void</span> processMessagesImpl();</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>private:</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    struct {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_struct" href="structAMutex.html">AMutex</a> mutex;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        AConditionVariable* cv = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    } mCurrentCV;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_class" href="classIEventLoop.html">IEventLoop</a>* mCurrentEventLoop = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_struct" href="structAMutex.html">AMutex</a> mEventLoopLock;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_class" href="classAAbstractThread.html">AAbstractThread</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AAbstractThread&gt;</a>&amp; threadStorage();</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>};</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">bool</span> messageQueueEmpty() noexcept;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>protected:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea">  129</a></span>    <span class="keywordtype">id</span> <a class="code hl_variable" href="classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea">mId</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_class" href="classAString.html">AString</a> mThreadName;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_class" href="classAMessageQueue.html">AMessageQueue</a>&lt;&gt; mMessageQueue;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    AAbstractThread(const <span class="keywordtype">id</span>&amp; <span class="keywordtype">id</span>) noexcept;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">void</span> updateThreadName() noexcept;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    virtual <span class="keywordtype">void</span> processMessagesImpl();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>private:</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    struct {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_struct" href="structAMutex.html">AMutex</a> mutex;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        AConditionVariable* cv = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    } mCurrentCV;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_class" href="classIEventLoop.html">IEventLoop</a>* mCurrentEventLoop = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_struct" href="structAMutex.html">AMutex</a> mEventLoopLock;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_class" href="classAAbstractThread.html">AAbstractThread</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">static</span> <a class="code hl_class" href="class__.html">_&lt;AAbstractThread&gt;</a>&amp; threadStorage();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>};</div>
 </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="preprocessor">#include "AUI/Common/AObject.h"</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00169">
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classAThread.html">  169</a></span><span class="keyword">class </span>API_AUI_CORE AThread : <span class="keyword">public</span> AAbstractThread, <span class="keyword">public</span> AObject {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">public</span>:</div>
-<div class="foldopen" data-end="};" data-start="{" id="foldopen00175">
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classAThread_1_1Interrupted.html">  175</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classAThread_1_1Interrupted.html">Interrupted</a> {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">  182</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">needRethrow</a>() const noexcept { <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">AThread::current</a>()-&gt;interrupt(); }</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    };</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">#include "AUI/Common/AObject.h"</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00172">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classAThread.html">  172</a></span><span class="keyword">class </span>API_AUI_CORE AThread : <span class="keyword">public</span> AAbstractThread, <span class="keyword">public</span> AObject {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keyword">public</span>:</div>
+<div class="foldopen" data-end="};" data-start="{" id="foldopen00178">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classAThread_1_1Interrupted.html">  178</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classAThread_1_1Interrupted.html">Interrupted</a> {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">  185</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">needRethrow</a>() const noexcept { <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">AThread::current</a>()-&gt;interrupt(); }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    };</div>
 </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    std::thread* mThread = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    std::function&lt;void()&gt; mFunctor;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    std::atomic_bool mInterrupted = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_class" href="classAThread.html">AThread</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; functor);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    std::thread* mThread = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    std::function&lt;void()&gt; mFunctor;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    std::atomic_bool mInterrupted = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classAThread.html">~AThread</a>();</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordtype">void</span> detach();</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classAThread.html#a34af087795d8556a11516688e1de4b72">  213</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AAbstractThread&gt;</a>&amp; <a class="code hl_function" href="classAThread.html#a34af087795d8556a11516688e1de4b72">main</a>() noexcept;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329">  218</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329">start</a>();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classAThread.html#a1d5a64e999da0381a3552a6292900bbc">  226</a></span>    static <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a1d5a64e999da0381a3552a6292900bbc">sleep</a>(std::chrono::milliseconds duration);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    [[nodiscard]]</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">  232</a></span>    static const <a class="code hl_class" href="class__.html">_</a>&lt;AAbstractThread&gt;&amp; <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">current</a>();</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">  243</a></span>    static <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">interruptionPoint</a>();</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00249">
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">  249</a></span>    static <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">setName</a>(<a class="code hl_class" href="classAString.html">AString</a> name) noexcept {</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keyword">auto</span> cur = <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">current</a>();</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        cur-&gt;mThreadName = std::move(name);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        cur-&gt;updateThreadName();</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_class" href="classAThread.html">AThread</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; functor);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classAThread.html">~AThread</a>();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">void</span> detach();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classAThread.html#a34af087795d8556a11516688e1de4b72">  216</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="class__.html">_&lt;AAbstractThread&gt;</a>&amp; <a class="code hl_function" href="classAThread.html#a34af087795d8556a11516688e1de4b72">main</a>() noexcept;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329">  221</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329">start</a>();</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classAThread.html#a1d5a64e999da0381a3552a6292900bbc">  229</a></span>    static <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a1d5a64e999da0381a3552a6292900bbc">sleep</a>(std::chrono::milliseconds duration);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    [[nodiscard]]</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">  235</a></span>    static const <a class="code hl_class" href="class__.html">_</a>&lt;AAbstractThread&gt;&amp; <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">current</a>();</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">  246</a></span>    static <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a1664a87c918f74c753e435501d0d1885">interruptionPoint</a>();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00252">
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">  252</a></span>    static <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">setName</a>(<a class="code hl_class" href="classAString.html">AString</a> name) noexcept {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keyword">auto</span> cur = <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">current</a>();</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        cur-&gt;mThreadName = std::move(name);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        cur-&gt;updateThreadName();</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    }</div>
 </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3">  258</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3">processMessages</a>() { <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">current</a>()-&gt;processMessagesImpl(); }</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="classAThread.html#af43a40837f9a3192aaa49b0c4db7c0ee">  260</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAThread.html#af43a40837f9a3192aaa49b0c4db7c0ee">isInterrupted</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442">  261</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442">resetInterruptFlag</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">  262</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">interrupt</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classAThread.html#a681dd637685f0e11d5993d4ccd5defb2">  267</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a681dd637685f0e11d5993d4ccd5defb2">join</a>();</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>};</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3">  261</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3">processMessages</a>() { <a class="code hl_function" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">current</a>()-&gt;processMessagesImpl(); }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="classAThread.html#af43a40837f9a3192aaa49b0c4db7c0ee">  263</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classAThread.html#af43a40837f9a3192aaa49b0c4db7c0ee">isInterrupted</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442">  264</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442">resetInterruptFlag</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">  265</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#aef367f786f1482c7dd5246eadd994ce5">interrupt</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="classAThread.html#a681dd637685f0e11d5993d4ccd5defb2">  270</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classAThread.html#a681dd637685f0e11d5993d4ccd5defb2">join</a>();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>};</div>
 </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#include "AConditionVariable.h"</span></div>
-<div class="ttc" id="aclassAAbstractThread_html"><div class="ttname"><a href="classAAbstractThread.html">AAbstractThread</a></div><div class="ttdoc">Represents an abstract thread. Not all threads are created through AThread - these are interfaced wit...</div><div class="ttdef"><b>Definition</b> AThread.h:32</div></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#include "AConditionVariable.h"</span></div>
+<div class="ttc" id="aclassAAbstractThread_html"><div class="ttname"><a href="classAAbstractThread.html">AAbstractThread</a></div><div class="ttdoc">Represents an abstract thread which might be not created with AThread.</div><div class="ttdef"><b>Definition</b> AThread.h:35</div></div>
 <div class="ttc" id="aclassAAbstractThread_html_a07b83f2654c632cda3f3c53523547ae8"><div class="ttname"><a href="classAAbstractThread.html#a07b83f2654c632cda3f3c53523547ae8">AAbstractThread::enqueue</a></div><div class="ttdeci">void enqueue(AMessageQueue&lt;&gt;::Message f)</div><div class="ttdoc">Delivers task for execution (message) to this thread's event queue. Messages are processed by framewo...</div></div>
 <div class="ttc" id="aclassAAbstractThread_html_a2d1b3800c20c3b4416771ac16e48de1b"><div class="ttname"><a href="classAAbstractThread.html#a2d1b3800c20c3b4416771ac16e48de1b">AAbstractThread::getId</a></div><div class="ttdeci">id getId() const</div></div>
-<div class="ttc" id="aclassAAbstractThread_html_a4bd011663d438ba2619d8ca197086fd7"><div class="ttname"><a href="classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7">AAbstractThread::operator*</a></div><div class="ttdeci">void operator*(Callable fun)</div><div class="ttdoc">Enqueue message to make. Helper function for async, asyncX, ui, uiX.</div><div class="ttdef"><b>Definition</b> AThread.h:104</div></div>
+<div class="ttc" id="aclassAAbstractThread_html_a4bd011663d438ba2619d8ca197086fd7"><div class="ttname"><a href="classAAbstractThread.html#a4bd011663d438ba2619d8ca197086fd7">AAbstractThread::operator*</a></div><div class="ttdeci">void operator*(Callable fun)</div><div class="ttdoc">Enqueue message to make. Helper function for async, asyncX, ui, uiX.</div><div class="ttdef"><b>Definition</b> AThread.h:107</div></div>
 <div class="ttc" id="aclassAAbstractThread_html_a587b32072b68324d3a8e3301db95dafb"><div class="ttname"><a href="classAAbstractThread.html#a587b32072b68324d3a8e3301db95dafb">AAbstractThread::interrupt</a></div><div class="ttdeci">virtual void interrupt()</div><div class="ttdoc">Interrupt thread's execution.</div></div>
 <div class="ttc" id="aclassAAbstractThread_html_a5eb92a03cecb64f1d7b6a2f2c6c0fded"><div class="ttname"><a href="classAAbstractThread.html#a5eb92a03cecb64f1d7b6a2f2c6c0fded">AAbstractThread::isInterrupted</a></div><div class="ttdeci">virtual bool isInterrupted()</div></div>
 <div class="ttc" id="aclassAAbstractThread_html_a6e3deafa7fa1ca3735268f2a630da04d"><div class="ttname"><a href="classAAbstractThread.html#a6e3deafa7fa1ca3735268f2a630da04d">AAbstractThread::threadStacktrace</a></div><div class="ttdeci">AStacktrace threadStacktrace() const</div><div class="ttdoc">Retrieve stacktrace of the thread.</div></div>
-<div class="ttc" id="aclassAAbstractThread_html_a8a987230f54ff5e4e61ce86538e96e4d"><div class="ttname"><a href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">AAbstractThread::getCurrentEventLoop</a></div><div class="ttdeci">IEventLoop * getCurrentEventLoop() const</div><div class="ttdoc">Get current event loop for this thread.</div><div class="ttdef"><b>Definition</b> AThread.h:86</div></div>
-<div class="ttc" id="aclassAAbstractThread_html_aa5f8a6665ef4652f6e1789f4c652762c"><div class="ttname"><a href="classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c">AAbstractThread::operator&lt;&lt;</a></div><div class="ttdeci">void operator&lt;&lt;(Callable fun)</div><div class="ttdoc">Enqueue message to make.</div><div class="ttdef"><b>Definition</b> AThread.h:94</div></div>
+<div class="ttc" id="aclassAAbstractThread_html_a8a987230f54ff5e4e61ce86538e96e4d"><div class="ttname"><a href="classAAbstractThread.html#a8a987230f54ff5e4e61ce86538e96e4d">AAbstractThread::getCurrentEventLoop</a></div><div class="ttdeci">IEventLoop * getCurrentEventLoop() const</div><div class="ttdoc">Get current event loop for this thread.</div><div class="ttdef"><b>Definition</b> AThread.h:89</div></div>
+<div class="ttc" id="aclassAAbstractThread_html_aa5f8a6665ef4652f6e1789f4c652762c"><div class="ttname"><a href="classAAbstractThread.html#aa5f8a6665ef4652f6e1789f4c652762c">AAbstractThread::operator&lt;&lt;</a></div><div class="ttdeci">void operator&lt;&lt;(Callable fun)</div><div class="ttdoc">Enqueue message to make.</div><div class="ttdef"><b>Definition</b> AThread.h:97</div></div>
 <div class="ttc" id="aclassAAbstractThread_html_aadd4a3a7f00ea7ca49759745165e7042"><div class="ttname"><a href="classAAbstractThread.html#aadd4a3a7f00ea7ca49759745165e7042">AAbstractThread::resetInterruptFlag</a></div><div class="ttdeci">virtual void resetInterruptFlag()</div><div class="ttdoc">Reset interruption flag.</div></div>
-<div class="ttc" id="aclassAAbstractThread_html_adc59629a3e7982dbe78decc466399fea"><div class="ttname"><a href="classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea">AAbstractThread::mId</a></div><div class="ttdeci">id mId</div><div class="ttdoc">Thread ID.</div><div class="ttdef"><b>Definition</b> AThread.h:126</div></div>
-<div class="ttc" id="aclassAAbstractThread_html_afe8e23b098e75e10aa65f72953c9334b"><div class="ttname"><a href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">AAbstractThread::id</a></div><div class="ttdeci">std::thread::id id</div><div class="ttdoc">Thread ID type.</div><div class="ttdef"><b>Definition</b> AThread.h:42</div></div>
+<div class="ttc" id="aclassAAbstractThread_html_adc59629a3e7982dbe78decc466399fea"><div class="ttname"><a href="classAAbstractThread.html#adc59629a3e7982dbe78decc466399fea">AAbstractThread::mId</a></div><div class="ttdeci">id mId</div><div class="ttdoc">Thread ID.</div><div class="ttdef"><b>Definition</b> AThread.h:129</div></div>
+<div class="ttc" id="aclassAAbstractThread_html_afe8e23b098e75e10aa65f72953c9334b"><div class="ttname"><a href="classAAbstractThread.html#afe8e23b098e75e10aa65f72953c9334b">AAbstractThread::id</a></div><div class="ttdeci">std::thread::id id</div><div class="ttdoc">Thread ID type.</div><div class="ttdef"><b>Definition</b> AThread.h:45</div></div>
 <div class="ttc" id="aclassAConditionVariable_html"><div class="ttname"><a href="classAConditionVariable.html">AConditionVariable</a></div><div class="ttdoc">Represents a condition variable.</div><div class="ttdef"><b>Definition</b> AConditionVariable.h:24</div></div>
 <div class="ttc" id="aclassAMessageQueue_html"><div class="ttname"><a href="classAMessageQueue.html">AMessageQueue</a></div><div class="ttdoc">Universal thread-safe message (callback) queue implementation.</div><div class="ttdef"><b>Definition</b> AMessageQueue.h:29</div></div>
 <div class="ttc" id="aclassAStacktrace_html"><div class="ttname"><a href="classAStacktrace.html">AStacktrace</a></div><div class="ttdoc">Stacktrace consisting of a collection of stack function frames.</div><div class="ttdef"><b>Definition</b> AStacktrace.h:28</div></div>
 <div class="ttc" id="aclassAString_html"><div class="ttname"><a href="classAString.html">AString</a></div><div class="ttdoc">Represents a Unicode character string.</div><div class="ttdef"><b>Definition</b> AString.h:38</div></div>
-<div class="ttc" id="aclassAThread_1_1Interrupted_html"><div class="ttname"><a href="classAThread_1_1Interrupted.html">AThread::Interrupted</a></div><div class="ttdoc">Exception that is thrown by AThread::interruptionPoint(), if interruption is requested for this threa...</div><div class="ttdef"><b>Definition</b> AThread.h:175</div></div>
-<div class="ttc" id="aclassAThread_1_1Interrupted_html_a01d46aa465b849cc5753f09ec31b15cf"><div class="ttname"><a href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">AThread::Interrupted::needRethrow</a></div><div class="ttdeci">void needRethrow() const noexcept</div><div class="ttdoc">Schedules AThread::Interrupted exception to the next interruption point. Sometimes you could not thro...</div><div class="ttdef"><b>Definition</b> AThread.h:182</div></div>
-<div class="ttc" id="aclassAThread_html"><div class="ttname"><a href="classAThread.html">AThread</a></div><div class="ttdoc">Represents a user-defined thread.</div><div class="ttdef"><b>Definition</b> AThread.h:169</div></div>
+<div class="ttc" id="aclassAThread_1_1Interrupted_html"><div class="ttname"><a href="classAThread_1_1Interrupted.html">AThread::Interrupted</a></div><div class="ttdoc">Exception that is thrown by AThread::interruptionPoint(), if interruption is requested for this threa...</div><div class="ttdef"><b>Definition</b> AThread.h:178</div></div>
+<div class="ttc" id="aclassAThread_1_1Interrupted_html_a01d46aa465b849cc5753f09ec31b15cf"><div class="ttname"><a href="classAThread_1_1Interrupted.html#a01d46aa465b849cc5753f09ec31b15cf">AThread::Interrupted::needRethrow</a></div><div class="ttdeci">void needRethrow() const noexcept</div><div class="ttdoc">Schedules AThread::Interrupted exception to the next interruption point. Sometimes you could not thro...</div><div class="ttdef"><b>Definition</b> AThread.h:185</div></div>
+<div class="ttc" id="aclassAThread_html"><div class="ttname"><a href="classAThread.html">AThread</a></div><div class="ttdoc">Represents a user-defined thread.</div><div class="ttdef"><b>Definition</b> AThread.h:172</div></div>
 <div class="ttc" id="aclassAThread_html_a03d72a0f366a3c019e8c6b5a0c652442"><div class="ttname"><a href="classAThread.html#a03d72a0f366a3c019e8c6b5a0c652442">AThread::resetInterruptFlag</a></div><div class="ttdeci">void resetInterruptFlag() override</div><div class="ttdoc">Reset interruption flag.</div></div>
 <div class="ttc" id="aclassAThread_html_a1664a87c918f74c753e435501d0d1885"><div class="ttname"><a href="classAThread.html#a1664a87c918f74c753e435501d0d1885">AThread::interruptionPoint</a></div><div class="ttdeci">static void interruptionPoint()</div><div class="ttdoc">Interruption point.</div></div>
 <div class="ttc" id="aclassAThread_html_a1d5a64e999da0381a3552a6292900bbc"><div class="ttname"><a href="classAThread.html#a1d5a64e999da0381a3552a6292900bbc">AThread::sleep</a></div><div class="ttdeci">static void sleep(std::chrono::milliseconds duration)</div><div class="ttdoc">Sleep for specified duration. Most operation systems guarantee that elasped time will be greater than...</div></div>
-<div class="ttc" id="aclassAThread_html_a2cf8612808d1257e33fdde6b95c5b390"><div class="ttname"><a href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">AThread::setName</a></div><div class="ttdeci">static void setName(AString name) noexcept</div><div class="ttdef"><b>Definition</b> AThread.h:249</div></div>
-<div class="ttc" id="aclassAThread_html_a2f6c4084b6e590abdf46bfe6b13b1cd3"><div class="ttname"><a href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3">AThread::processMessages</a></div><div class="ttdeci">static void processMessages()</div><div class="ttdoc">Processes messages from other threads of current thread. Called by framework itself using IEventLoop.</div><div class="ttdef"><b>Definition</b> AThread.h:258</div></div>
+<div class="ttc" id="aclassAThread_html_a2cf8612808d1257e33fdde6b95c5b390"><div class="ttname"><a href="classAThread.html#a2cf8612808d1257e33fdde6b95c5b390">AThread::setName</a></div><div class="ttdeci">static void setName(AString name) noexcept</div><div class="ttdef"><b>Definition</b> AThread.h:252</div></div>
+<div class="ttc" id="aclassAThread_html_a2f6c4084b6e590abdf46bfe6b13b1cd3"><div class="ttname"><a href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3">AThread::processMessages</a></div><div class="ttdeci">static void processMessages()</div><div class="ttdoc">Processes messages from other threads of current thread. Called by framework itself using IEventLoop.</div><div class="ttdef"><b>Definition</b> AThread.h:261</div></div>
 <div class="ttc" id="aclassAThread_html_a34af087795d8556a11516688e1de4b72"><div class="ttname"><a href="classAThread.html#a34af087795d8556a11516688e1de4b72">AThread::main</a></div><div class="ttdeci">static const _&lt; AAbstractThread &gt; &amp; main() noexcept</div><div class="ttdoc">Returns main thread of the application.</div></div>
 <div class="ttc" id="aclassAThread_html_a681dd637685f0e11d5993d4ccd5defb2"><div class="ttname"><a href="classAThread.html#a681dd637685f0e11d5993d4ccd5defb2">AThread::join</a></div><div class="ttdeci">void join()</div><div class="ttdoc">Waits for thread to be finished.</div></div>
 <div class="ttc" id="aclassAThread_html_a9234a95574195c1ed42364fe8a7a8329"><div class="ttname"><a href="classAThread.html#a9234a95574195c1ed42364fe8a7a8329">AThread::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Start thread execution.</div></div>
