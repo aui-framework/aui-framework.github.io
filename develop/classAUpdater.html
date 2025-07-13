@@ -98,261 +98,20 @@ $(function(){initNavTree('classAUpdater.html',''); initResizable(true); });
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#nested-classes">Classes</a> |
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="#pub-static-methods">Static Public Member Functions</a> |
-<a href="#pub-attribs">Signals and public fields</a> |
-<a href="#pro-methods">Protected Member Functions</a> |
-<a href="#pro-attribs">Protected Attributes</a> |
-<a href="classAUpdater-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AUpdater Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span><div class="ingroups"><a class="el" href="group__updater.html">aui::updater</a></div></div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.updater/src/AUI/Updater/AUpdater.h#L30"></b>
 <p>Updater class.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AUpdater_8h_source.html">AUI/Updater/AUpdater.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="nested-classes" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1GetInstallationDirectoryContext.html">GetInstallationDirectoryContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Context for <a class="el" href="#a9b4c948b9ba2f2ed77dff0911f00e994" title="Retrieves installation directory based on given context.">AUpdater::getInstallationDirectory</a>.  <a href="structAUpdater_1_1GetInstallationDirectoryContext.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1InstallCmdline.html">InstallCmdline</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Data required to launch installation child process.  <a href="structAUpdater_1_1InstallCmdline.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1StatusCheckingForUpdates.html">StatusCheckingForUpdates</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Checking for updates.  <a href="structAUpdater_1_1StatusCheckingForUpdates.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1StatusDownloading.html">StatusDownloading</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Downloading state.  <a href="structAUpdater_1_1StatusDownloading.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1StatusIdle.html">StatusIdle</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Idling.  <a href="structAUpdater_1_1StatusIdle.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1StatusNotAvailable.html">StatusNotAvailable</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight"><a class="el" href="#a7bf8d2b51803eebeded5cb6bda2122ae" title="Checks that updater functionality is available.">AUpdater::isAvailable()</a> evaluated to false.  <a href="structAUpdater_1_1StatusNotAvailable.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structAUpdater_1_1StatusWaitingForApplyAndRestart.html">StatusWaitingForApplyAndRestart</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Waiting to applyUpdateAndRestart call state.  <a href="structAUpdater_1_1StatusWaitingForApplyAndRestart.html#details">More...</a><br/></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a444248ebbc4605cfd6c5578a5be4f6df" id="r_a444248ebbc4605cfd6c5578a5be4f6df"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a444248ebbc4605cfd6c5578a5be4f6df">handlePostUpdateCleanup</a> ()</td></tr>
-<tr class="memdesc:a444248ebbc4605cfd6c5578a5be4f6df"><td class="mdescLeft"> </td><td class="mdescRight">Performs post update cleanup routines.  <br/></td></tr>
-<tr class="separator:a444248ebbc4605cfd6c5578a5be4f6df"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8325386bf22a7f2465531a0e420f3231" id="r_a8325386bf22a7f2465531a0e420f3231"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8325386bf22a7f2465531a0e420f3231">handleStartup</a> (const <a class="el" href="classAStringVector.html">AStringVector</a> &amp;applicationArguments)</td></tr>
-<tr class="memdesc:a8325386bf22a7f2465531a0e420f3231"><td class="mdescLeft"> </td><td class="mdescRight">Performs a pre-application <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> routine.  <br/></td></tr>
-<tr class="separator:a8325386bf22a7f2465531a0e420f3231"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0a63bd72a7f8ec39aa6ac4f8f19732cd" id="r_a0a63bd72a7f8ec39aa6ac4f8f19732cd"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd">applyUpdateAndRestart</a> ()</td></tr>
-<tr class="memdesc:a0a63bd72a7f8ec39aa6ac4f8f19732cd"><td class="mdescLeft"> </td><td class="mdescRight">Deploy the downloaded update.  <br/></td></tr>
-<tr class="separator:a0a63bd72a7f8ec39aa6ac4f8f19732cd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad0df1b1eaa58c79f7be6b3b2d4b341f3" id="r_ad0df1b1eaa58c79f7be6b3b2d4b341f3"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0df1b1eaa58c79f7be6b3b2d4b341f3">checkForUpdates</a> ()</td></tr>
-<tr class="memdesc:ad0df1b1eaa58c79f7be6b3b2d4b341f3"><td class="mdescLeft"> </td><td class="mdescRight">Sets <code>status</code> to <a class="el" href="structAUpdater_1_1StatusCheckingForUpdates.html">StatusCheckingForUpdates</a> and calls checkForUpdatesImpl, implemented by user.  <br/></td></tr>
-<tr class="separator:ad0df1b1eaa58c79f7be6b3b2d4b341f3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adeb17ffdf5f26b2df85b0b95e56e05e5" id="r_adeb17ffdf5f26b2df85b0b95e56e05e5"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb17ffdf5f26b2df85b0b95e56e05e5">downloadUpdate</a> ()</td></tr>
-<tr class="memdesc:adeb17ffdf5f26b2df85b0b95e56e05e5"><td class="mdescLeft"> </td><td class="mdescRight">Sets <code>status</code> to <a class="el" href="structAUpdater_1_1StatusDownloading.html">StatusDownloading</a> and calls downloadUpdateImpl, implemented by user.  <br/></td></tr>
-<tr class="separator:adeb17ffdf5f26b2df85b0b95e56e05e5"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a03c44480aecba335cb259db35317ab73" id="r_a03c44480aecba335cb259db35317ab73"><td align="right" class="memItemLeft" valign="top"><a id="a03c44480aecba335cb259db35317ab73" name="a03c44480aecba335cb259db35317ab73"></a>
-const <a class="el" href="classAOptional.html">AOptional</a>&lt; <a class="el" href="classAString.html">AString</a> &gt; &amp; </td><td class="memItemRight" valign="bottom"><b>getLastDeploymentError</b> () const noexcept</td></tr>
-<tr class="separator:a03c44480aecba335cb259db35317ab73"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAObject')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:gae25b73b057ac29df3f60a13d3634132b inherit pub_methods_classAObject" id="r_gae25b73b057ac29df3f60a13d3634132b"><td class="memTemplParams" colspan="2">template&lt;typename Connectable, <a class="el" href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a>&lt; Connectable &gt; Function&gt; </td></tr>
-<tr class="memitem:gae25b73b057ac29df3f60a13d3634132b inherit pub_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__slot.html#gae25b73b057ac29df3f60a13d3634132b">connect</a> (const Connectable &amp;connectable, Function &amp;&amp;function)</td></tr>
-<tr class="memdesc:gae25b73b057ac29df3f60a13d3634132b inherit pub_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal or property to slot of <code>"this"</code> object.  <br/></td></tr>
-<tr class="separator:gae25b73b057ac29df3f60a13d3634132b inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a18f6c827d53fd70ebc19f60287e0662f inherit pub_methods_classAObject" id="r_a18f6c827d53fd70ebc19f60287e0662f"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>setSignalsEnabled</b> (bool enabled)</td></tr>
-<tr class="separator:a18f6c827d53fd70ebc19f60287e0662f inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8be81ab875e7b856a9ff67fd5e1f8453 inherit pub_methods_classAObject" id="r_a8be81ab875e7b856a9ff67fd5e1f8453"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>isSignalsEnabled</b> () const noexcept</td></tr>
-<tr class="separator:a8be81ab875e7b856a9ff67fd5e1f8453 inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a037ad7e4aaebc6ad0305a33c1c89bd1d inherit pub_methods_classAObject" id="r_a037ad7e4aaebc6ad0305a33c1c89bd1d"><td class="memTemplParams" colspan="2">
-template&lt;<a class="el" href="conceptASignalInvokable.html">ASignalInvokable</a> T&gt; </td></tr>
-<tr class="memitem:a037ad7e4aaebc6ad0305a33c1c89bd1d inherit pub_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>operator^</b> (T &amp;&amp;t) noexcept</td></tr>
-<tr class="separator:a037ad7e4aaebc6ad0305a33c1c89bd1d inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3d713641d477b875da180e3a1a0487ad inherit pub_methods_classAObject" id="r_a3d713641d477b875da180e3a1a0487ad"><td align="right" class="memItemLeft" valign="top">
-const <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; &amp; </td><td class="memItemRight" valign="bottom"><b>getThread</b> () const noexcept</td></tr>
-<tr class="separator:a3d713641d477b875da180e3a1a0487ad inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a69d68b22657b816454da2717c64bc01c inherit pub_methods_classAObject" id="r_a69d68b22657b816454da2717c64bc01c"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>isSlotsCallsOnlyOnMyThread</b> () const noexcept</td></tr>
-<tr class="separator:a69d68b22657b816454da2717c64bc01c inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a10cfd80eb8685793bf5f0970900aacd8 inherit pub_methods_classAObject" id="r_a10cfd80eb8685793bf5f0970900aacd8"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>setSlotsCallsOnlyOnMyThread</b> (bool slotsCallsOnlyOnMyThread)</td></tr>
-<tr class="separator:a10cfd80eb8685793bf5f0970900aacd8 inherit pub_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_methods_classAObjectBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAObjectBase')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="classAObjectBase.html">AObjectBase</a></td></tr>
-<tr class="memitem:ad1e1b583ef544c1e434ba4829af84524 inherit pub_methods_classAObjectBase" id="r_ad1e1b583ef544c1e434ba4829af84524"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AObjectBase</b> (<a class="el" href="classAObjectBase.html">AObjectBase</a> &amp;&amp;rhs) noexcept</td></tr>
-<tr class="separator:ad1e1b583ef544c1e434ba4829af84524 inherit pub_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad9000f6f3e5c19d744f9d89d93a24ae1 inherit pub_methods_classAObjectBase" id="r_ad9000f6f3e5c19d744f9d89d93a24ae1"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AObjectBase</b> (const <a class="el" href="classAObjectBase.html">AObjectBase</a> &amp;rhs) noexcept</td></tr>
-<tr class="separator:ad9000f6f3e5c19d744f9d89d93a24ae1 inherit pub_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3c8df4b2d915043f6b4771feb97f2481 inherit pub_methods_classAObjectBase" id="r_a3c8df4b2d915043f6b4771feb97f2481"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAObjectBase.html">AObjectBase</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classAObjectBase.html">AObjectBase</a> &amp;rhs) noexcept</td></tr>
-<tr class="separator:a3c8df4b2d915043f6b4771feb97f2481 inherit pub_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a468f0107ab5c2d66d4cfaac74c828a33 inherit pub_methods_classAObjectBase" id="r_a468f0107ab5c2d66d4cfaac74c828a33"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAObjectBase.html">AObjectBase</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classAObjectBase.html">AObjectBase</a> &amp;&amp;rhs) noexcept</td></tr>
-<tr class="separator:a468f0107ab5c2d66d4cfaac74c828a33 inherit pub_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_methods_structaui_1_1noncopyable"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_structaui_1_1noncopyable')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="structaui_1_1noncopyable.html">aui::noncopyable</a></td></tr>
-<tr class="memitem:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable" id="r_a640f7f625060ec4c2d8e053058ed342d"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>noncopyable</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
-<tr class="separator:a640f7f625060ec4c2d8e053058ed342d inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable" id="r_a40029c7ea1fc9cdb0225cf3c6b790b58"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structaui_1_1noncopyable.html">noncopyable</a> &amp;)=delete</td></tr>
-<tr class="separator:a40029c7ea1fc9cdb0225cf3c6b790b58 inherit pub_methods_structaui_1_1noncopyable"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Static Public Member Functions<a class="aui-toc-hash" href="#pub-static-methods" id="pub-static-methods" name="pub-static-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a7bf8d2b51803eebeded5cb6bda2122ae" id="r_a7bf8d2b51803eebeded5cb6bda2122ae"><td align="right" class="memItemLeft" valign="top">static bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bf8d2b51803eebeded5cb6bda2122ae">isAvailable</a> ()</td></tr>
-<tr class="memdesc:a7bf8d2b51803eebeded5cb6bda2122ae"><td class="mdescLeft"> </td><td class="mdescRight">Checks that updater functionality is available.  <br/></td></tr>
-<tr class="separator:a7bf8d2b51803eebeded5cb6bda2122ae"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_static_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classAObject')"><img alt="-" src="closed.png"/> Static Public Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:abe38a866ade883ba79dcb444f6edefd4 inherit pub_static_methods_classAObject" id="r_abe38a866ade883ba79dcb444f6edefd4"><td align="right" class="memItemLeft" valign="top">
-static void </td><td class="memItemRight" valign="bottom"><b>disconnect</b> ()</td></tr>
-<tr class="separator:abe38a866ade883ba79dcb444f6edefd4 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject" id="r_ga4da6280feaeb063ce8e5b8a069755d6d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnySignal.html">AAnySignal</a> Signal, <a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classAObjectBase.html">AObjectBase</a> &gt; Object, <a class="el" href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a>&lt; Signal &gt; Function&gt; </td></tr>
-<tr class="memitem:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a> (const Signal &amp;signal, Object *object, Function &amp;&amp;function)</td></tr>
-<tr class="memdesc:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal to the slot of the specified object.  <br/></td></tr>
-<tr class="separator:ga4da6280feaeb063ce8e5b8a069755d6d inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga01817340c5137752bbfb3eff5aed6857 inherit pub_static_methods_classAObject" id="r_ga01817340c5137752bbfb3eff5aed6857"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnyProperty.html">AAnyProperty</a> Property, <a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classAObjectBase.html">AObjectBase</a> &gt; Object, typename Function&gt; </td></tr>
-<tr class="memitem:ga01817340c5137752bbfb3eff5aed6857 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__property__system.html#ga01817340c5137752bbfb3eff5aed6857">connect</a> (const Property &amp;property, Object *object, Function &amp;&amp;function)</td></tr>
-<tr class="memdesc:ga01817340c5137752bbfb3eff5aed6857 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects property to the slot of the specified object.  <br/></td></tr>
-<tr class="separator:ga01817340c5137752bbfb3eff5aed6857 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:gae3434d972657abf3c93ade2536c06b08 inherit pub_static_methods_classAObject" id="r_gae3434d972657abf3c93ade2536c06b08"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAPropertyReadable.html">APropertyReadable</a> PropertySource, <a class="el" href="conceptAPropertyWritable.html">APropertyWritable</a> PropertyDestination&gt; <br/>
-requires requires { { *propertySource } -&gt; <a class="el" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;std::decay_t&lt;decltype(*propertyDestination)&gt;&gt;; }</td></tr>
-<tr class="memitem:gae3434d972657abf3c93ade2536c06b08 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__property__system.html#gae3434d972657abf3c93ade2536c06b08">connect</a> (PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</td></tr>
-<tr class="memdesc:gae3434d972657abf3c93ade2536c06b08 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects source property to the destination property.  <br/></td></tr>
-<tr class="separator:gae3434d972657abf3c93ade2536c06b08 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga1eb0abe12d4d0c4db737cc63582791cd inherit pub_static_methods_classAObject" id="r_ga1eb0abe12d4d0c4db737cc63582791cd"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAPropertyWritable.html">APropertyWritable</a> PropertySource, <a class="el" href="conceptAPropertyWritable.html">APropertyWritable</a> PropertyDestination&gt; <br/>
-requires requires { { *propertySource } -&gt; <a class="el" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;std::decay_t&lt;decltype(*propertyDestination)&gt;&gt;; { *propertyDestination } -&gt; <a class="el" href="conceptaui_1_1convertible__to.html">aui::convertible_to</a>&lt;std::decay_t&lt;decltype(*propertySource)&gt;&gt;; }</td></tr>
-<tr class="memitem:ga1eb0abe12d4d0c4db737cc63582791cd inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">biConnect</a> (PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</td></tr>
-<tr class="memdesc:ga1eb0abe12d4d0c4db737cc63582791cd inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects source property to the destination property and opposite (bidirectionally).  <br/></td></tr>
-<tr class="separator:ga1eb0abe12d4d0c4db737cc63582791cd inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga3ab3f1d1ec0a838a7b20058f311a0f60 inherit pub_static_methods_classAObject" id="r_ga3ab3f1d1ec0a838a7b20058f311a0f60"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a> Connectable, <a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classAObjectBase.html">AObjectBase</a> &gt; Object, <a class="el" href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a>&lt; Connectable &gt; Function&gt; </td></tr>
-<tr class="memitem:ga3ab3f1d1ec0a838a7b20058f311a0f60 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__slot.html#ga3ab3f1d1ec0a838a7b20058f311a0f60">connect</a> (const Connectable &amp;connectable, Object &amp;object, Function &amp;&amp;function)</td></tr>
-<tr class="memdesc:ga3ab3f1d1ec0a838a7b20058f311a0f60 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal or property to the slot of the specified object.  <br/></td></tr>
-<tr class="separator:ga3ab3f1d1ec0a838a7b20058f311a0f60 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga4e9887b84d109f4cabacecc31aa4a769 inherit pub_static_methods_classAObject" id="r_ga4e9887b84d109f4cabacecc31aa4a769"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a> Connectable, <a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classAObjectBase.html">AObjectBase</a> &gt; Object, <a class="el" href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a>&lt; Connectable &gt; Function&gt; </td></tr>
-<tr class="memitem:ga4e9887b84d109f4cabacecc31aa4a769 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__signal__slot.html#ga4e9887b84d109f4cabacecc31aa4a769">connect</a> (const Connectable &amp;connectable, <a class="el" href="class__.html">_</a>&lt; Object &gt; object, Function &amp;&amp;function)</td></tr>
-<tr class="memdesc:ga4e9887b84d109f4cabacecc31aa4a769 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal or property to the slot of the specified object.  <br/></td></tr>
-<tr class="separator:ga4e9887b84d109f4cabacecc31aa4a769 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a02c8b0ddbac4f793b328d04273b7ac13 inherit pub_static_methods_classAObject" id="r_a02c8b0ddbac4f793b328d04273b7ac13"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrProperty</a> Connectable, <a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt; <a class="el" href="classAObjectBase.html">AObjectBase</a> &gt; Object, typename Function&gt; </td></tr>
-<tr class="memitem:a02c8b0ddbac4f793b328d04273b7ac13 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static decltype(auto) </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAObject.html#a02c8b0ddbac4f793b328d04273b7ac13">connect</a> (const Connectable &amp;connectable, <a class="el" href="structASlotDef.html">ASlotDef</a>&lt; Object *, Function &gt; slotDef)</td></tr>
-<tr class="memdesc:a02c8b0ddbac4f793b328d04273b7ac13 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal to the slot of the specified object. Slot is packed to single argument.  <br/></td></tr>
-<tr class="separator:a02c8b0ddbac4f793b328d04273b7ac13 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject" id="r_ga9bae459e71bd485a16187caf26089228"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptAAnyProperty.html">AAnyProperty</a> Property, typename Object, <a class="el" href="conceptACompatibleSlotFor.html">ACompatibleSlotFor</a>&lt; Property &gt; Function&gt; <br/>
-requires (!<a class="el" href="conceptaui_1_1derived__from.html">aui::derived_from</a>&lt;Object, <a class="el" href="classAObject.html">AObject</a>&gt;)</td></tr>
-<tr class="memitem:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject"><td align="right" class="memTemplItemLeft" valign="top">static void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__property__system.html#ga9bae459e71bd485a16187caf26089228">connect</a> (const Property &amp;property, <a class="el" href="class__.html">_</a>&lt; Object &gt; object, Function &amp;&amp;function)</td></tr>
-<tr class="memdesc:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Connects signal or property to the slot of the specified non-AObject type.  <br/></td></tr>
-<tr class="separator:ga9bae459e71bd485a16187caf26089228 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8db699762806ea3d43c675e6f1e82ad5 inherit pub_static_methods_classAObject" id="r_a8db699762806ea3d43c675e6f1e82ad5"><td align="right" class="memItemLeft" valign="top">
-static void </td><td class="memItemRight" valign="bottom"><b>moveToThread</b> (<a class="el" href="structaui_1_1no__escape.html">aui::no_escape</a>&lt; <a class="el" href="classAObject.html">AObject</a> &gt; object, <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
-<tr class="separator:a8db699762806ea3d43c675e6f1e82ad5 inherit pub_static_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Signals and public fields<a class="aui-toc-hash" href="#pub-attribs" id="pub-attribs" name="pub-attribs" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a1e6e8f3dcd758c1aa6d327102ab46a71" id="r_a1e6e8f3dcd758c1aa6d327102ab46a71"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structAProperty.html">AProperty</a>&lt; std::any &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e6e8f3dcd758c1aa6d327102ab46a71">status</a></td></tr>
-<tr class="memdesc:a1e6e8f3dcd758c1aa6d327102ab46a71"><td class="mdescLeft"> </td><td class="mdescRight">State of the updater.  <br/></td></tr>
-<tr class="separator:a1e6e8f3dcd758c1aa6d327102ab46a71"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Protected Member Functions<a class="aui-toc-hash" href="#pro-methods" id="pro-methods" name="pro-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:ad9e171f9580052aef1a244654aa6bc4d" id="r_ad9e171f9580052aef1a244654aa6bc4d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structAUpdater_1_1InstallCmdline.html">InstallCmdline</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9e171f9580052aef1a244654aa6bc4d">makeDefaultInstallationCmdline</a> () const</td></tr>
-<tr class="memdesc:ad9e171f9580052aef1a244654aa6bc4d"><td class="mdescLeft"> </td><td class="mdescRight">Constructs <a class="el" href="structAUpdater_1_1InstallCmdline.html" title="Data required to launch installation child process.">InstallCmdline</a> with default arguments.  <br/></td></tr>
-<tr class="separator:ad9e171f9580052aef1a244654aa6bc4d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a728676e82a3d612e6ec98d3f951a7616" id="r_a728676e82a3d612e6ec98d3f951a7616"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a728676e82a3d612e6ec98d3f951a7616">triggerUpdateOnStartup</a> ()</td></tr>
-<tr class="memdesc:a728676e82a3d612e6ec98d3f951a7616"><td class="mdescLeft"> </td><td class="mdescRight">Triggers update routine.  <br/></td></tr>
-<tr class="separator:a728676e82a3d612e6ec98d3f951a7616"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3727ff4ff2c6c907c13ccf216a3c4d2f" id="r_a3727ff4ff2c6c907c13ccf216a3c4d2f"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAFuture.html">AFuture</a>&lt; void &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a3727ff4ff2c6c907c13ccf216a3c4d2f">downloadUpdateImpl</a> (const <a class="el" href="classAPath.html">APath</a> &amp;unpackedUpdateDir)=0</td></tr>
-<tr class="memdesc:a3727ff4ff2c6c907c13ccf216a3c4d2f"><td class="mdescLeft"> </td><td class="mdescRight">Performs update delivery to the specified directory.  <br/></td></tr>
-<tr class="separator:a3727ff4ff2c6c907c13ccf216a3c4d2f"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a988e31376a10073a79634a25424701ef" id="r_a988e31376a10073a79634a25424701ef"><td align="right" class="memItemLeft" valign="top"><a id="a988e31376a10073a79634a25424701ef" name="a988e31376a10073a79634a25424701ef"></a>
-virtual <a class="el" href="classAFuture.html">AFuture</a>&lt; void &gt; </td><td class="memItemRight" valign="bottom"><b>checkForUpdatesImpl</b> ()=0</td></tr>
-<tr class="memdesc:a988e31376a10073a79634a25424701ef"><td class="mdescLeft"> </td><td class="mdescRight">Check for updates user's implementation. <br/></td></tr>
-<tr class="separator:a988e31376a10073a79634a25424701ef"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae1db715d36c366c823542785e9b4a8a1" id="r_ae1db715d36c366c823542785e9b4a8a1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1db715d36c366c823542785e9b4a8a1">downloadAndUnpack</a> (<a class="el" href="classAString.html">AString</a> downloadUrl, const <a class="el" href="classAPath.html">APath</a> &amp;unpackedUpdateDir)</td></tr>
-<tr class="memdesc:ae1db715d36c366c823542785e9b4a8a1"><td class="mdescLeft"> </td><td class="mdescRight">Typical download and unpack implementation.  <br/></td></tr>
-<tr class="separator:ae1db715d36c366c823542785e9b4a8a1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2d22681af3de65f3456a66a264aca44a" id="r_a2d22681af3de65f3456a66a264aca44a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d22681af3de65f3456a66a264aca44a">reportDownloadedPercentage</a> (<a class="el" href="structaui_1_1ranged__number.html">aui::float_within_0_1</a> progress)</td></tr>
-<tr class="memdesc:a2d22681af3de65f3456a66a264aca44a"><td class="mdescLeft"> </td><td class="mdescRight">Being called by downloadUpdateImpl, reports download percentage to <code>status</code>.  <br/></td></tr>
-<tr class="separator:a2d22681af3de65f3456a66a264aca44a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a04bcf9af4f13dffd48941610d10c1621" id="r_a04bcf9af4f13dffd48941610d10c1621"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a04bcf9af4f13dffd48941610d10c1621">getModuleName</a> () const</td></tr>
-<tr class="memdesc:a04bcf9af4f13dffd48941610d10c1621"><td class="mdescLeft"> </td><td class="mdescRight">Returns a module name of your (your_app_name or your_app_name.exe, without a leading path).  <br/></td></tr>
-<tr class="separator:a04bcf9af4f13dffd48941610d10c1621"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a53e3735cb83c9a451db224dbe1630ad6" id="r_a53e3735cb83c9a451db224dbe1630ad6"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a53e3735cb83c9a451db224dbe1630ad6">reportReadyToApplyAndRestart</a> (<a class="el" href="structAUpdater_1_1InstallCmdline.html">InstallCmdline</a> cmdline)</td></tr>
-<tr class="memdesc:a53e3735cb83c9a451db224dbe1630ad6"><td class="mdescLeft"> </td><td class="mdescRight">Dumps <a class="el" href="structAUpdater_1_1InstallCmdline.html" title="Data required to launch installation child process.">InstallCmdline</a> to temporary download directory, indicating that an update is ready to install. Updates status accordingly.  <br/></td></tr>
-<tr class="separator:a53e3735cb83c9a451db224dbe1630ad6"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a86a27fd5f850e57c227f6248e7a0bbfe" id="r_a86a27fd5f850e57c227f6248e7a0bbfe"><td align="right" class="memItemLeft" valign="top"><a id="a86a27fd5f850e57c227f6248e7a0bbfe" name="a86a27fd5f850e57c227f6248e7a0bbfe"></a>
-virtual <a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><b>getTempWorkDir</b> () const</td></tr>
-<tr class="memdesc:a86a27fd5f850e57c227f6248e7a0bbfe"><td class="mdescLeft"> </td><td class="mdescRight">Working directory for <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a>. By default, points to some path in TEMP. <br/></td></tr>
-<tr class="separator:a86a27fd5f850e57c227f6248e7a0bbfe"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9c77a0a294e2f470efd28c14c21eba17" id="r_a9c77a0a294e2f470efd28c14c21eba17"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c77a0a294e2f470efd28c14c21eba17">getUnpackedUpdateDir</a> () const</td></tr>
-<tr class="memdesc:a9c77a0a294e2f470efd28c14c21eba17"><td class="mdescLeft"> </td><td class="mdescRight">The path where the update is unpacked to.  <br/></td></tr>
-<tr class="separator:a9c77a0a294e2f470efd28c14c21eba17"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5f4967f1812a31361b5fbc81c6285653" id="r_a5f4967f1812a31361b5fbc81c6285653"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAOptional.html">AOptional</a>&lt; <a class="el" href="structAUpdater_1_1InstallCmdline.html">InstallCmdline</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f4967f1812a31361b5fbc81c6285653">loadInstallCmdline</a> () const</td></tr>
-<tr class="memdesc:a5f4967f1812a31361b5fbc81c6285653"><td class="mdescLeft"> </td><td class="mdescRight">Restores install command line state, if any.  <br/></td></tr>
-<tr class="separator:a5f4967f1812a31361b5fbc81c6285653"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab75eaa801613a12ceb6fc39022eba8db" id="r_ab75eaa801613a12ceb6fc39022eba8db"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75eaa801613a12ceb6fc39022eba8db">saveCmdline</a> (const <a class="el" href="structAUpdater_1_1InstallCmdline.html">InstallCmdline</a> &amp;cmdline) const</td></tr>
-<tr class="memdesc:ab75eaa801613a12ceb6fc39022eba8db"><td class="mdescLeft"> </td><td class="mdescRight">Saves install command line to restore state when application is restarted.  <br/></td></tr>
-<tr class="separator:ab75eaa801613a12ceb6fc39022eba8db"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa3ccbc2111ed70bbe3e980e01d2830f1" id="r_aa3ccbc2111ed70bbe3e980e01d2830f1"><td align="right" class="memItemLeft" valign="top"><a id="aa3ccbc2111ed70bbe3e980e01d2830f1" name="aa3ccbc2111ed70bbe3e980e01d2830f1"></a>
-virtual void </td><td class="memItemRight" valign="bottom"><b>handleWaitForProcess</b> (uint32_t pid)</td></tr>
-<tr class="memdesc:aa3ccbc2111ed70bbe3e980e01d2830f1"><td class="mdescLeft"> </td><td class="mdescRight">Handles –aui-updater-wait-for-process. <br/></td></tr>
-<tr class="separator:aa3ccbc2111ed70bbe3e980e01d2830f1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a73481d7cb050b337bbd3c8d6c788569a" id="r_a73481d7cb050b337bbd3c8d6c788569a"><td align="right" class="memItemLeft" valign="top"><a id="a73481d7cb050b337bbd3c8d6c788569a" name="a73481d7cb050b337bbd3c8d6c788569a"></a>
-virtual <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAString.html">AString</a> &gt; </td><td class="memItemRight" valign="bottom"><b>injectWaitForMyPid</b> (<a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAString.html">AString</a> &gt; args)</td></tr>
-<tr class="memdesc:a73481d7cb050b337bbd3c8d6c788569a"><td class="mdescLeft"> </td><td class="mdescRight">Injects –aui-updater-wait-for-process=THIS_PROCESS_PID as the first argument. <br/></td></tr>
-<tr class="separator:a73481d7cb050b337bbd3c8d6c788569a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aca620ed9a922985243357a82a35cf983" id="r_aca620ed9a922985243357a82a35cf983"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#aca620ed9a922985243357a82a35cf983">deployUpdate</a> (const <a class="el" href="classAPath.html">APath</a> &amp;source, const <a class="el" href="classAPath.html">APath</a> &amp;destination)</td></tr>
-<tr class="memdesc:aca620ed9a922985243357a82a35cf983"><td class="mdescLeft"> </td><td class="mdescRight">Deploys update by recursively copying (moving) files from source dir to destination dir.  <br/></td></tr>
-<tr class="separator:aca620ed9a922985243357a82a35cf983"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9b4c948b9ba2f2ed77dff0911f00e994" id="r_a9b4c948b9ba2f2ed77dff0911f00e994"><td align="right" class="memItemLeft" valign="top">virtual <a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b4c948b9ba2f2ed77dff0911f00e994">getInstallationDirectory</a> (const <a class="el" href="structAUpdater_1_1GetInstallationDirectoryContext.html">GetInstallationDirectoryContext</a> &amp;context)</td></tr>
-<tr class="memdesc:a9b4c948b9ba2f2ed77dff0911f00e994"><td class="mdescLeft"> </td><td class="mdescRight">Retrieves installation directory based on given context.  <br/></td></tr>
-<tr class="separator:a9b4c948b9ba2f2ed77dff0911f00e994"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af71fc4f6e0d208f7f2557157789cea68" id="r_af71fc4f6e0d208f7f2557157789cea68"><td align="right" class="memItemLeft" valign="top"><a id="af71fc4f6e0d208f7f2557157789cea68" name="af71fc4f6e0d208f7f2557157789cea68"></a>
-virtual void </td><td class="memItemRight" valign="bottom"><b>cleanupUnpackedUpdateDirBeforeDownloading</b> ()</td></tr>
-<tr class="memdesc:af71fc4f6e0d208f7f2557157789cea68"><td class="mdescLeft"> </td><td class="mdescRight">called by <a class="el" href="#adeb17ffdf5f26b2df85b0b95e56e05e5" title="Sets status to StatusDownloading and calls downloadUpdateImpl, implemented by user.">AUpdater::downloadUpdate</a> before downloading update to cleanup <a class="el" href="#a9c77a0a294e2f470efd28c14c21eba17" title="The path where the update is unpacked to.">AUpdater::getUnpackedUpdateDir()</a> dir. <br/></td></tr>
-<tr class="separator:af71fc4f6e0d208f7f2557157789cea68"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pro_methods_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObject')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject" id="r_a98cf3fa4ac279b30860bf228c44306b2"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>setThread</b> (<a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAAbstractThread.html">AAbstractThread</a> &gt; thread)</td></tr>
-<tr class="memdesc:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Set thread of the object. <br/></td></tr>
-<tr class="separator:a98cf3fa4ac279b30860bf228c44306b2 inherit pro_methods_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pro_methods_classAObjectBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classAObjectBase')"><img alt="-" src="closed.png"/> Protected Member Functions inherited from <a class="el" href="classAObjectBase.html">AObjectBase</a></td></tr>
-<tr class="memitem:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase" id="r_af8f1971268c5b7a2eff3f27021056bea"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>clearAllIngoingConnections</b> () noexcept</td></tr>
-<tr class="separator:af8f1971268c5b7a2eff3f27021056bea inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase" id="r_a3b09afce09ed490182435a088d320acc"><td align="right" class="memItemLeft" valign="top">
-virtual void </td><td class="memItemRight" valign="bottom"><b>handleSlotException</b> (std::exception_ptr exception)</td></tr>
-<tr class="memdesc:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="mdescLeft"> </td><td class="mdescRight">Called then an exception has thrown during slot processing of the signal emitted by this object. <br/></td></tr>
-<tr class="separator:a3b09afce09ed490182435a088d320acc inherit pro_methods_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs" name="pro-attribs" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a2cbfaf88d6b4754f51c2c258c1f03946" id="r_a2cbfaf88d6b4754f51c2c258c1f03946"><td align="right" class="memItemLeft" valign="top"><a id="a2cbfaf88d6b4754f51c2c258c1f03946" name="a2cbfaf88d6b4754f51c2c258c1f03946"></a>
-<a class="el" href="classAAsyncHolder.html">AAsyncHolder</a> </td><td class="memItemRight" valign="bottom"><b>mAsync</b></td></tr>
-<tr class="memdesc:a2cbfaf88d6b4754f51c2c258c1f03946"><td class="mdescLeft"> </td><td class="mdescRight">Holder for async operations. <br/></td></tr>
-<tr class="separator:a2cbfaf88d6b4754f51c2c258c1f03946"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Additional Inherited Members<a class="aui-toc-hash" href="#inherited" id="inherited" name="inherited" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="inherit_header pub_static_attribs_classAObject"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_classAObject')"><img alt="-" src="closed.png"/> Static Public Attributes inherited from <a class="el" href="classAObject.html">AObject</a></td></tr>
-<tr class="memitem:ae877cf776a7569eca5185c24bd4ccd74 inherit pub_static_attribs_classAObject" id="r_ae877cf776a7569eca5185c24bd4ccd74"><td align="right" class="memItemLeft" valign="top">static constexpr <a class="el" href="classAObjectBase.html">AObjectBase</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="classAObject.html#ae877cf776a7569eca5185c24bd4ccd74">GENERIC_OBSERVER</a> = nullptr</td></tr>
-<tr class="memdesc:ae877cf776a7569eca5185c24bd4ccd74 inherit pub_static_attribs_classAObject"><td class="mdescLeft"> </td><td class="mdescRight">Indicates that a connection should not be explicitly linked to receiver's lifetime.  <br/></td></tr>
-<tr class="separator:ae877cf776a7569eca5185c24bd4ccd74 inherit pub_static_attribs_classAObject"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_static_attribs_classAObjectBase"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_classAObjectBase')"><img alt="-" src="closed.png"/> Static Public Attributes inherited from <a class="el" href="classAObjectBase.html">AObjectBase</a></td></tr>
-<tr class="memitem:abb2e1ff6eab42cc425bbff3448541e41 inherit pub_static_attribs_classAObjectBase" id="r_abb2e1ff6eab42cc425bbff3448541e41"><td align="right" class="memItemLeft" valign="top">
-static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><td class="memItemRight" valign="bottom"><b>SIGNAL_SLOT_GLOBAL_SYNC</b></td></tr>
-<tr class="separator:abb2e1ff6eab42cc425bbff3448541e41 inherit pub_static_attribs_classAObjectBase"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Updater class.">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
-<dl class="section user"><dt></dt><dd>AUpdater follows strategy pattern, i.e., you are excepted to call its functions but the behaviour and conditions are yours.</dd></dl>
+<dl class="section user"><dt></dt><dd><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> follows strategy pattern, i.e., you are excepted to call its functions but the behaviour and conditions are yours.</dd></dl>
 <p>Refer to <a class="el" href="group__updater.html">aui::updater</a> for update process overview. </p>
-</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd" id="a0a63bd72a7f8ec39aa6ac4f8f19732cd" name="a0a63bd72a7f8ec39aa6ac4f8f19732cd" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>applyUpdateAndRestart()<a class="aui-toc-hash" href="#◆ applyupdateandrestart()" id="◆ applyupdateandrestart()" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classAUpdater-members.html">&gt; All members, including inherited</a></p>
+<a id="a0a63bd72a7f8ec39aa6ac4f8f19732cd" name="a0a63bd72a7f8ec39aa6ac4f8f19732cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd">◆ </a></span>applyUpdateAndRestart()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -375,8 +134,8 @@ static <a class="el" href="classASpinlockMutex.html">ASpinlockMutex</a> </td><t
 <p>Basically about replacing files (no network operations will be performed).</p>
 <p>Requires <a class="el" href="#a1e6e8f3dcd758c1aa6d327102ab46a71">status</a> = <a class="el" href="structAUpdater_1_1StatusWaitingForApplyAndRestart.html" title="Waiting to applyUpdateAndRestart call state.">StatusWaitingForApplyAndRestart</a>, otherwise has no effect.</p>
 <p>Terminates current process with <code>std::exit(0)</code></p>
-<h1>
-Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deployment" id="debugging-update-deployment" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md43"></a>
+Debugging update deployment</h1>
 <p>You can locate update deployment logs by locating deployment process id (pid). The PID is printed by this function:</p>
 <div class="fragment"><div class="line">[06:49:33][UI thread][AUpdater][INFO]: <a class="code hl_function" href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd">applyUpdateAndRestart</a>: started process pid=3708325, exe=...</div>
 <div class="ttc" id="aclassAUpdater_html_a0a63bd72a7f8ec39aa6ac4f8f19732cd"><div class="ttname"><a href="#a0a63bd72a7f8ec39aa6ac4f8f19732cd">AUpdater::applyUpdateAndRestart</a></div><div class="ttdeci">virtual void applyUpdateAndRestart()</div><div class="ttdoc">Deploy the downloaded update.</div></div>
@@ -409,7 +168,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="ad0df1b1eaa58c79f7be6b3b2d4b341f3" name="ad0df1b1eaa58c79f7be6b3b2d4b341f3"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>checkForUpdates()<a class="aui-toc-hash" href="#◆ checkforupdates()" id="◆ checkforupdates()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0df1b1eaa58c79f7be6b3b2d4b341f3">◆ </a></span>checkForUpdates()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -425,7 +184,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="aca620ed9a922985243357a82a35cf983" name="aca620ed9a922985243357a82a35cf983"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>deployUpdate()<a class="aui-toc-hash" href="#◆ deployupdate()" id="◆ deployupdate()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca620ed9a922985243357a82a35cf983">◆ </a></span>deployUpdate()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -453,7 +212,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="ae1db715d36c366c823542785e9b4a8a1" name="ae1db715d36c366c823542785e9b4a8a1"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>downloadAndUnpack()<a class="aui-toc-hash" href="#◆ downloadandunpack()" id="◆ downloadandunpack()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1db715d36c366c823542785e9b4a8a1">◆ </a></span>downloadAndUnpack()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -481,7 +240,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="adeb17ffdf5f26b2df85b0b95e56e05e5" name="adeb17ffdf5f26b2df85b0b95e56e05e5"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>downloadUpdate()<a class="aui-toc-hash" href="#◆ downloadupdate()" id="◆ downloadupdate()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb17ffdf5f26b2df85b0b95e56e05e5">◆ </a></span>downloadUpdate()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -497,7 +256,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a3727ff4ff2c6c907c13ccf216a3c4d2f" name="a3727ff4ff2c6c907c13ccf216a3c4d2f"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>downloadUpdateImpl()<a class="aui-toc-hash" href="#◆ downloadupdateimpl()" id="◆ downloadupdateimpl()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3727ff4ff2c6c907c13ccf216a3c4d2f">◆ </a></span>downloadUpdateImpl()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -528,7 +287,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a9b4c948b9ba2f2ed77dff0911f00e994" name="a9b4c948b9ba2f2ed77dff0911f00e994"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>getInstallationDirectory()<a class="aui-toc-hash" href="#◆ getinstallationdirectory()" id="◆ getinstallationdirectory()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4c948b9ba2f2ed77dff0911f00e994">◆ </a></span>getInstallationDirectory()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -552,7 +311,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a04bcf9af4f13dffd48941610d10c1621" name="a04bcf9af4f13dffd48941610d10c1621"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>getModuleName()<a class="aui-toc-hash" href="#◆ getmodulename()" id="◆ getmodulename()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04bcf9af4f13dffd48941610d10c1621">◆ </a></span>getModuleName()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -577,7 +336,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a9c77a0a294e2f470efd28c14c21eba17" name="a9c77a0a294e2f470efd28c14c21eba17"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>getUnpackedUpdateDir()<a class="aui-toc-hash" href="#◆ getunpackedupdatedir()" id="◆ getunpackedupdatedir()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c77a0a294e2f470efd28c14c21eba17">◆ </a></span>getUnpackedUpdateDir()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -601,7 +360,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a444248ebbc4605cfd6c5578a5be4f6df" name="a444248ebbc4605cfd6c5578a5be4f6df"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>handlePostUpdateCleanup()<a class="aui-toc-hash" href="#◆ handlepostupdatecleanup()" id="◆ handlepostupdatecleanup()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a444248ebbc4605cfd6c5578a5be4f6df">◆ </a></span>handlePostUpdateCleanup()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -625,7 +384,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a8325386bf22a7f2465531a0e420f3231" name="a8325386bf22a7f2465531a0e420f3231"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>handleStartup()<a class="aui-toc-hash" href="#◆ handlestartup()" id="◆ handlestartup()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8325386bf22a7f2465531a0e420f3231">◆ </a></span>handleStartup()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -665,7 +424,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a7bf8d2b51803eebeded5cb6bda2122ae" name="a7bf8d2b51803eebeded5cb6bda2122ae"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isAvailable()<a class="aui-toc-hash" href="#◆ isavailable()" id="◆ isavailable()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bf8d2b51803eebeded5cb6bda2122ae">◆ </a></span>isAvailable()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -689,7 +448,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a5f4967f1812a31361b5fbc81c6285653" name="a5f4967f1812a31361b5fbc81c6285653"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>loadInstallCmdline()<a class="aui-toc-hash" href="#◆ loadinstallcmdline()" id="◆ loadinstallcmdline()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4967f1812a31361b5fbc81c6285653">◆ </a></span>loadInstallCmdline()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -717,7 +476,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="ad9e171f9580052aef1a244654aa6bc4d" name="ad9e171f9580052aef1a244654aa6bc4d"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>makeDefaultInstallationCmdline()<a class="aui-toc-hash" href="#◆ makedefaultinstallationcmdline()" id="◆ makedefaultinstallationcmdline()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e171f9580052aef1a244654aa6bc4d">◆ </a></span>makeDefaultInstallationCmdline()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -741,7 +500,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a2d22681af3de65f3456a66a264aca44a" name="a2d22681af3de65f3456a66a264aca44a"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>reportDownloadedPercentage()<a class="aui-toc-hash" href="#◆ reportdownloadedpercentage()" id="◆ reportdownloadedpercentage()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d22681af3de65f3456a66a264aca44a">◆ </a></span>reportDownloadedPercentage()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -765,7 +524,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a53e3735cb83c9a451db224dbe1630ad6" name="a53e3735cb83c9a451db224dbe1630ad6"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>reportReadyToApplyAndRestart()<a class="aui-toc-hash" href="#◆ reportreadytoapplyandrestart()" id="◆ reportreadytoapplyandrestart()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e3735cb83c9a451db224dbe1630ad6">◆ </a></span>reportReadyToApplyAndRestart()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -791,7 +550,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="ab75eaa801613a12ceb6fc39022eba8db" name="ab75eaa801613a12ceb6fc39022eba8db"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>saveCmdline()<a class="aui-toc-hash" href="#◆ savecmdline()" id="◆ savecmdline()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75eaa801613a12ceb6fc39022eba8db">◆ </a></span>saveCmdline()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -815,7 +574,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 </div>
 </div>
 <a id="a728676e82a3d612e6ec98d3f951a7616" name="a728676e82a3d612e6ec98d3f951a7616"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>triggerUpdateOnStartup()<a class="aui-toc-hash" href="#◆ triggerupdateonstartup()" id="◆ triggerupdateonstartup()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a728676e82a3d612e6ec98d3f951a7616">◆ </a></span>triggerUpdateOnStartup()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -840,9 +599,9 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
 <p>If you'd like to disable applying downloaded update on startup, stub this function. </p>
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation<a class="aui-toc-hash" href="#a1e6e8f3dcd758c1aa6d327102ab46a71" id="a1e6e8f3dcd758c1aa6d327102ab46a71" name="a1e6e8f3dcd758c1aa6d327102ab46a71" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>status<a class="aui-toc-hash" href="#◆ status" id="◆ status" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1e6e8f3dcd758c1aa6d327102ab46a71" name="a1e6e8f3dcd758c1aa6d327102ab46a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e6e8f3dcd758c1aa6d327102ab46a71">◆ </a></span>status</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -894,7 +653,7 @@ Debugging update deployment<a class="aui-toc-hash" href="#debugging-update-deplo
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="#pub-attribs">Signals and public fields</a></h1><h1><a href="#pro-methods">Protected Member Functions</a></h1><h1><a href="#pro-attribs">Protected Attributes</a></h1><h1><a href="#inherited">Additional Inherited Members</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><h1><a href="#debugging-update-deployment">Debugging update deployment</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

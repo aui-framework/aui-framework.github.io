@@ -98,98 +98,19 @@ $(function(){initNavTree('classAAbstractThread.html',''); initResizable(true); }
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#pub-types">Public Types</a> |
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="#pro-methods">Protected Member Functions</a> |
-<a href="#pro-attribs">Protected Attributes</a> |
-<a href="classAAbstractThread-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AAbstractThread Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Thread/AThread.h#L35"></b>
 <p>Represents an abstract thread which might be not created with <a class="el" href="classAThread.html" title="Represents a user-defined thread.">AThread</a>.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AThread_8h_source.html">AUI/Thread/AThread.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:afe8e23b098e75e10aa65f72953c9334b" id="r_afe8e23b098e75e10aa65f72953c9334b"><td align="right" class="memItemLeft" valign="top"><a id="afe8e23b098e75e10aa65f72953c9334b" name="afe8e23b098e75e10aa65f72953c9334b"></a>
-typedef std::thread::id </td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
-<tr class="memdesc:afe8e23b098e75e10aa65f72953c9334b"><td class="mdescLeft"> </td><td class="mdescRight">Thread ID type. <br/></td></tr>
-<tr class="separator:afe8e23b098e75e10aa65f72953c9334b"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a2d1b3800c20c3b4416771ac16e48de1b" id="r_a2d1b3800c20c3b4416771ac16e48de1b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="#afe8e23b098e75e10aa65f72953c9334b">id</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d1b3800c20c3b4416771ac16e48de1b">getId</a> () const</td></tr>
-<tr class="separator:a2d1b3800c20c3b4416771ac16e48de1b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a07b83f2654c632cda3f3c53523547ae8" id="r_a07b83f2654c632cda3f3c53523547ae8"><td align="right" class="memItemLeft" valign="top"><a id="a07b83f2654c632cda3f3c53523547ae8" name="a07b83f2654c632cda3f3c53523547ae8"></a>
-void </td><td class="memItemRight" valign="bottom"><b>enqueue</b> (<a class="el" href="classAMessageQueue.html">AMessageQueue</a>&lt;&gt;::Message f)</td></tr>
-<tr class="memdesc:a07b83f2654c632cda3f3c53523547ae8"><td class="mdescLeft"> </td><td class="mdescRight">Delivers task for execution (message) to this thread's event queue. Messages are processed by framework itself using <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a>. This behaviour may be overwritten using the <code><a class="el" href="classAThread.html#a2f6c4084b6e590abdf46bfe6b13b1cd3" title="Processes messages from other threads of current thread. Called by framework itself using IEventLoop.">AThread::processMessages()</a> </code> function. <br/></td></tr>
-<tr class="separator:a07b83f2654c632cda3f3c53523547ae8"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a965b3dd4ab74142a0aef5b24b3920cb9" id="r_a965b3dd4ab74142a0aef5b24b3920cb9"><td align="right" class="memItemLeft" valign="top"><a id="a965b3dd4ab74142a0aef5b24b3920cb9" name="a965b3dd4ab74142a0aef5b24b3920cb9"></a>
-const <a class="el" href="classAMessageQueue.html">AMessageQueue</a> &amp; </td><td class="memItemRight" valign="bottom"><b>messageQueue</b> () const</td></tr>
-<tr class="separator:a965b3dd4ab74142a0aef5b24b3920cb9"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5eb92a03cecb64f1d7b6a2f2c6c0fded" id="r_a5eb92a03cecb64f1d7b6a2f2c6c0fded"><td align="right" class="memItemLeft" valign="top">virtual bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb92a03cecb64f1d7b6a2f2c6c0fded">isInterrupted</a> ()</td></tr>
-<tr class="separator:a5eb92a03cecb64f1d7b6a2f2c6c0fded"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aadd4a3a7f00ea7ca49759745165e7042" id="r_aadd4a3a7f00ea7ca49759745165e7042"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#aadd4a3a7f00ea7ca49759745165e7042">resetInterruptFlag</a> ()</td></tr>
-<tr class="memdesc:aadd4a3a7f00ea7ca49759745165e7042"><td class="mdescLeft"> </td><td class="mdescRight">Reset interruption flag.  <br/></td></tr>
-<tr class="separator:aadd4a3a7f00ea7ca49759745165e7042"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a587b32072b68324d3a8e3301db95dafb" id="r_a587b32072b68324d3a8e3301db95dafb"><td align="right" class="memItemLeft" valign="top">virtual void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a587b32072b68324d3a8e3301db95dafb">interrupt</a> ()</td></tr>
-<tr class="memdesc:a587b32072b68324d3a8e3301db95dafb"><td class="mdescLeft"> </td><td class="mdescRight">Interrupt thread's execution.  <br/></td></tr>
-<tr class="separator:a587b32072b68324d3a8e3301db95dafb"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8a987230f54ff5e4e61ce86538e96e4d" id="r_a8a987230f54ff5e4e61ce86538e96e4d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classIEventLoop.html">IEventLoop</a> * </td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a987230f54ff5e4e61ce86538e96e4d">getCurrentEventLoop</a> () const</td></tr>
-<tr class="memdesc:a8a987230f54ff5e4e61ce86538e96e4d"><td class="mdescLeft"> </td><td class="mdescRight">Get current event loop for this thread.  <br/></td></tr>
-<tr class="separator:a8a987230f54ff5e4e61ce86538e96e4d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa5f8a6665ef4652f6e1789f4c652762c" id="r_aa5f8a6665ef4652f6e1789f4c652762c"><td class="memTemplParams" colspan="2">template&lt;class Callable&gt; </td></tr>
-<tr class="memitem:aa5f8a6665ef4652f6e1789f4c652762c"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa5f8a6665ef4652f6e1789f4c652762c">operator&lt;&lt;</a> (Callable fun)</td></tr>
-<tr class="memdesc:aa5f8a6665ef4652f6e1789f4c652762c"><td class="mdescLeft"> </td><td class="mdescRight">Enqueue message to make.  <br/></td></tr>
-<tr class="separator:aa5f8a6665ef4652f6e1789f4c652762c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4bd011663d438ba2619d8ca197086fd7" id="r_a4bd011663d438ba2619d8ca197086fd7"><td class="memTemplParams" colspan="2">template&lt;class Callable&gt; </td></tr>
-<tr class="memitem:a4bd011663d438ba2619d8ca197086fd7"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4bd011663d438ba2619d8ca197086fd7">operator*</a> (Callable fun)</td></tr>
-<tr class="memdesc:a4bd011663d438ba2619d8ca197086fd7"><td class="mdescLeft"> </td><td class="mdescRight">Enqueue message to make. Helper function for async, asyncX, ui, uiX.  <br/></td></tr>
-<tr class="separator:a4bd011663d438ba2619d8ca197086fd7"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a42c36cb1cf973352c90a2f8ff0dc17f4" id="r_a42c36cb1cf973352c90a2f8ff0dc17f4"><td align="right" class="memItemLeft" valign="top"><a id="a42c36cb1cf973352c90a2f8ff0dc17f4" name="a42c36cb1cf973352c90a2f8ff0dc17f4"></a>
-const <a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>threadName</b> () const noexcept</td></tr>
-<tr class="separator:a42c36cb1cf973352c90a2f8ff0dc17f4"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6e3deafa7fa1ca3735268f2a630da04d" id="r_a6e3deafa7fa1ca3735268f2a630da04d"><td align="right" class="memItemLeft" valign="top"><a id="a6e3deafa7fa1ca3735268f2a630da04d" name="a6e3deafa7fa1ca3735268f2a630da04d"></a>
-<a class="el" href="classAStacktrace.html">AStacktrace</a> </td><td class="memItemRight" valign="bottom"><b>threadStacktrace</b> () const</td></tr>
-<tr class="memdesc:a6e3deafa7fa1ca3735268f2a630da04d"><td class="mdescLeft"> </td><td class="mdescRight">Retrieve stacktrace of the thread. <br/></td></tr>
-<tr class="separator:a6e3deafa7fa1ca3735268f2a630da04d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4838a70a247e5ea246b0ba5a940a209e" id="r_a4838a70a247e5ea246b0ba5a940a209e"><td align="right" class="memItemLeft" valign="top"><a id="a4838a70a247e5ea246b0ba5a940a209e" name="a4838a70a247e5ea246b0ba5a940a209e"></a>
-bool </td><td class="memItemRight" valign="bottom"><b>messageQueueEmpty</b> () noexcept</td></tr>
-<tr class="separator:a4838a70a247e5ea246b0ba5a940a209e"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Protected Member Functions<a class="aui-toc-hash" href="#pro-methods" id="pro-methods" name="pro-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a0e9010f4857e328ea5cc4c85b89cda37" id="r_a0e9010f4857e328ea5cc4c85b89cda37"><td align="right" class="memItemLeft" valign="top"><a id="a0e9010f4857e328ea5cc4c85b89cda37" name="a0e9010f4857e328ea5cc4c85b89cda37"></a>
- </td><td class="memItemRight" valign="bottom"><b>AAbstractThread</b> (const <a class="el" href="#afe8e23b098e75e10aa65f72953c9334b">id</a> &amp;<a class="el" href="#afe8e23b098e75e10aa65f72953c9334b">id</a>) noexcept</td></tr>
-<tr class="separator:a0e9010f4857e328ea5cc4c85b89cda37"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab691ef089849fe28d2b7e25178c3ffeb" id="r_ab691ef089849fe28d2b7e25178c3ffeb"><td align="right" class="memItemLeft" valign="top"><a id="ab691ef089849fe28d2b7e25178c3ffeb" name="ab691ef089849fe28d2b7e25178c3ffeb"></a>
-void </td><td class="memItemRight" valign="bottom"><b>updateThreadName</b> () noexcept</td></tr>
-<tr class="separator:ab691ef089849fe28d2b7e25178c3ffeb"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5d09d5d6d3f583e212c322924119d550" id="r_a5d09d5d6d3f583e212c322924119d550"><td align="right" class="memItemLeft" valign="top"><a id="a5d09d5d6d3f583e212c322924119d550" name="a5d09d5d6d3f583e212c322924119d550"></a>
-virtual void </td><td class="memItemRight" valign="bottom"><b>processMessagesImpl</b> ()</td></tr>
-<tr class="separator:a5d09d5d6d3f583e212c322924119d550"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs" name="pro-attribs" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:adc59629a3e7982dbe78decc466399fea" id="r_adc59629a3e7982dbe78decc466399fea"><td align="right" class="memItemLeft" valign="top"><a id="adc59629a3e7982dbe78decc466399fea" name="adc59629a3e7982dbe78decc466399fea"></a>
-<a class="el" href="#afe8e23b098e75e10aa65f72953c9334b">id</a> </td><td class="memItemRight" valign="bottom"><b>mId</b></td></tr>
-<tr class="memdesc:adc59629a3e7982dbe78decc466399fea"><td class="mdescLeft"> </td><td class="mdescRight">Thread ID. <br/></td></tr>
-<tr class="separator:adc59629a3e7982dbe78decc466399fea"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a196a9e4cc6b527bb66b295046dc6c4ec" id="r_a196a9e4cc6b527bb66b295046dc6c4ec"><td align="right" class="memItemLeft" valign="top"><a id="a196a9e4cc6b527bb66b295046dc6c4ec" name="a196a9e4cc6b527bb66b295046dc6c4ec"></a>
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>mThreadName</b></td></tr>
-<tr class="separator:a196a9e4cc6b527bb66b295046dc6c4ec"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8da936ab489cde9a1614906ce70c77fb" id="r_a8da936ab489cde9a1614906ce70c77fb"><td align="right" class="memItemLeft" valign="top"><a id="a8da936ab489cde9a1614906ce70c77fb" name="a8da936ab489cde9a1614906ce70c77fb"></a>
-<a class="el" href="classAMessageQueue.html">AMessageQueue</a> </td><td class="memItemRight" valign="bottom"><b>mMessageQueue</b></td></tr>
-<tr class="separator:a8da936ab489cde9a1614906ce70c77fb"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Represents a user-defined thread.">#</a></h2>
-<div class="textblock"><p>Not all threads are created through AThread - these are interfaced with <a class="el" href="classAAbstractThread.html" title="Represents an abstract thread which might be not created with AThread.">AAbstractThread</a>.</p>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Not all threads are created through <a class="el" href="classAThread.html" title="Represents a user-defined thread.">AThread</a> - these are interfaced with <a class="el" href="classAAbstractThread.html" title="Represents an abstract thread which might be not created with AThread.">AAbstractThread</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classAThread.html#ad61c7e9c666d07974d35c65292eb5f26">AThread::current()</a> </dd></dl>
-</div><h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#a8a987230f54ff5e4e61ce86538e96e4d" id="a8a987230f54ff5e4e61ce86538e96e4d" name="a8a987230f54ff5e4e61ce86538e96e4d" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>getCurrentEventLoop()<a class="aui-toc-hash" href="#◆ getcurrenteventloop()" id="◆ getcurrenteventloop()" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classAAbstractThread-members.html">&gt; All members, including inherited</a></p>
+<a id="a8a987230f54ff5e4e61ce86538e96e4d" name="a8a987230f54ff5e4e61ce86538e96e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a987230f54ff5e4e61ce86538e96e4d">◆ </a></span>getCurrentEventLoop()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -213,7 +134,7 @@ Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs"
 </div>
 </div>
 <a id="a2d1b3800c20c3b4416771ac16e48de1b" name="a2d1b3800c20c3b4416771ac16e48de1b"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>getId()<a class="aui-toc-hash" href="#◆ getid()" id="◆ getid()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1b3800c20c3b4416771ac16e48de1b">◆ </a></span>getId()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -229,7 +150,7 @@ Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs"
 </div>
 </div>
 <a id="a587b32072b68324d3a8e3301db95dafb" name="a587b32072b68324d3a8e3301db95dafb"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>interrupt()<a class="aui-toc-hash" href="#◆ interrupt()" id="◆ interrupt()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a587b32072b68324d3a8e3301db95dafb">◆ </a></span>interrupt()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -254,7 +175,7 @@ Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs"
 </div>
 </div>
 <a id="a5eb92a03cecb64f1d7b6a2f2c6c0fded" name="a5eb92a03cecb64f1d7b6a2f2c6c0fded"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isInterrupted()<a class="aui-toc-hash" href="#◆ isinterrupted()" id="◆ isinterrupted()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb92a03cecb64f1d7b6a2f2c6c0fded">◆ </a></span>isInterrupted()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -279,7 +200,7 @@ Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs"
 </div>
 </div>
 <a id="a4bd011663d438ba2619d8ca197086fd7" name="a4bd011663d438ba2619d8ca197086fd7"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>operator*()<a class="aui-toc-hash" href="#◆ operator*()" id="◆ operator*()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd011663d438ba2619d8ca197086fd7">◆ </a></span>operator*()</h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -316,7 +237,7 @@ template&lt;class Callable&gt; </div>
 </div>
 </div>
 <a id="aa5f8a6665ef4652f6e1789f4c652762c" name="aa5f8a6665ef4652f6e1789f4c652762c"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>operator&lt;&lt;()<a class="aui-toc-hash" href="#◆ operator&lt;&lt;()" id="◆ operator&lt;&lt;()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f8a6665ef4652f6e1789f4c652762c">◆ </a></span>operator&lt;&lt;()</h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -353,7 +274,7 @@ template&lt;class Callable&gt; </div>
 </div>
 </div>
 <a id="aadd4a3a7f00ea7ca49759745165e7042" name="aadd4a3a7f00ea7ca49759745165e7042"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>resetInterruptFlag()<a class="aui-toc-hash" href="#◆ resetinterruptflag()" id="◆ resetinterruptflag()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd4a3a7f00ea7ca49759745165e7042">◆ </a></span>resetInterruptFlag()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -381,7 +302,7 @@ template&lt;class Callable&gt; </div>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pro-methods">Protected Member Functions</a></h1><h1><a href="#pro-attribs">Protected Attributes</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

@@ -98,38 +98,22 @@ $(function(){initNavTree('classAWatchdog.html',''); initResizable(true); });
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="classAWatchdog-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AWatchdog Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Util/AWatchdog.h#L38"></b>
 <p>Watchdog helper class.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AWatchdog_8h_source.html">AUI/Util/AWatchdog.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a45366505121d3cd934428017fcd6ef45" id="r_a45366505121d3cd934428017fcd6ef45"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a45366505121d3cd934428017fcd6ef45">AWatchdog</a> (std::chrono::high_resolution_clock::duration hangDuration=std::chrono::seconds(10))</td></tr>
-<tr class="separator:a45366505121d3cd934428017fcd6ef45"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0be6f6e5960439f21009c20232a5f929" id="r_a0be6f6e5960439f21009c20232a5f929"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Operation&gt; </td></tr>
-<tr class="memitem:a0be6f6e5960439f21009c20232a5f929"><td align="right" class="memTemplItemLeft" valign="top">auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0be6f6e5960439f21009c20232a5f929">runOperation</a> (Operation &amp;&amp;operation) -&gt; decltype(operation())</td></tr>
-<tr class="memdesc:a0be6f6e5960439f21009c20232a5f929"><td class="mdescLeft"> </td><td class="mdescRight">Runs callback which is subject to check for hangs.  <br/></td></tr>
-<tr class="separator:a0be6f6e5960439f21009c20232a5f929"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af523718d5589ef376acb1955308c44aa" id="r_af523718d5589ef376acb1955308c44aa"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#af523718d5589ef376acb1955308c44aa">isHang</a> () const noexcept</td></tr>
-<tr class="memdesc:af523718d5589ef376acb1955308c44aa"><td class="mdescLeft"> </td><td class="mdescRight">Checks for hang state.  <br/></td></tr>
-<tr class="separator:af523718d5589ef376acb1955308c44aa"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Watchdog helper class.">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Watchdog is either hardware or software (as in this case) module which detects hangs of subject (in this case, of a callback).</p>
-<p>AWatchdog catches ANR (Application Not Responsive) errors in GUI AUI applications.</p>
+<p><a class="el" href="classAWatchdog.html" title="Watchdog helper class.">AWatchdog</a> catches ANR (Application Not Responsive) errors in GUI AUI applications.</p>
 <p>It's important to periodically call <a class="el" href="#af523718d5589ef376acb1955308c44aa" title="Checks for hang state.">AWatchdog::isHang</a> in order to check for hangs. It can be done via separate thread or AUI's timers (separate thread is more reliable).</p>
 <dl class="section see"><dt>See also</dt><dd>AWatchdog::run </dd>
 <dd>
 <a class="el" href="#af523718d5589ef376acb1955308c44aa" title="Checks for hang state.">AWatchdog::isHang</a> </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation<a class="aui-toc-hash" href="#a45366505121d3cd934428017fcd6ef45" id="a45366505121d3cd934428017fcd6ef45" name="a45366505121d3cd934428017fcd6ef45" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>AWatchdog()<a class="aui-toc-hash" href="#◆ awatchdog()" id="◆ awatchdog()" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a45366505121d3cd934428017fcd6ef45" name="a45366505121d3cd934428017fcd6ef45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45366505121d3cd934428017fcd6ef45">◆ </a></span>AWatchdog()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -157,9 +141,10 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#af523718d5589ef376acb1955308c44aa" id="af523718d5589ef376acb1955308c44aa" name="af523718d5589ef376acb1955308c44aa" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>isHang()<a class="aui-toc-hash" href="#◆ ishang()" id="◆ ishang()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classAWatchdog-members.html">&gt; All members, including inherited</a></p>
+<a id="af523718d5589ef376acb1955308c44aa" name="af523718d5589ef376acb1955308c44aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af523718d5589ef376acb1955308c44aa">◆ </a></span>isHang()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -183,7 +168,7 @@ Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-metho
 </div>
 </div>
 <a id="a0be6f6e5960439f21009c20232a5f929" name="a0be6f6e5960439f21009c20232a5f929"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>runOperation()<a class="aui-toc-hash" href="#◆ runoperation()" id="◆ runoperation()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0be6f6e5960439f21009c20232a5f929">◆ </a></span>runOperation()</h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -213,7 +198,7 @@ template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

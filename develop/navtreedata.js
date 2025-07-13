@@ -37,9 +37,9 @@ var NAVTREE =
         [ "App Build Overview", "md_docs_2App_01Build_01Overview.html", null ]
       ] ]
     ] ],
-    [ "Getting started", null, [
+    [ "Examples", "examples.html", null ],
+    [ "Introduction", null, [
       [ "Getting started with AUI", "md_docs_2Getting_01started_01with_01AUI.html", null ],
-      [ "Examples", "examples.html", null ],
       [ "AUI Boot", "md_docs_2AUI_01Boot.html", null ],
       [ "Writing tests", "md_docs_2Writing_01tests.html", null ],
       [ "Build-time macros", "md_docs_2Macros.html", null ],
@@ -48,14 +48,18 @@ var NAVTREE =
       [ "Troubleshoot list", "md_docs_2Troubleshoot_01list.html", null ],
       [ "Crosscompiling (Android and iOS)", "md_docs_2Crosscompiling.html", null ]
     ] ],
-    [ "UI Building", null, [
+    [ "UI Architecture", null, [
       [ "Overview", "md_docs_2UI_01Building_01Overview.html", null ],
       [ "Layout Managers", "group__layout__managers.html", null ],
-      [ "Styling", "group__ass.html", null ],
       [ "Signal-slot", "group__signal__slot.html", null ],
       [ "Data Binding", "group__property__system.html", null ],
-      [ "Devtools", "md_docs_2Devtools.html", null ],
-      [ "All Views", "group__useful__views.html", null ],
+      [ "Devtools", "md_docs_2Devtools.html", null ]
+    ] ],
+    [ "Views", null, [
+      [ "All Views", "group__useful__views.html", null ]
+    ] ],
+    [ "Styling", null, [
+      [ "Overview", "group__ass.html", null ],
       [ "All ASS Properties", "group__ass__properties.html", null ]
     ] ],
     [ "Preparing to Production", null, [

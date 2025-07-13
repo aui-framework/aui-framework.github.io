@@ -107,11 +107,11 @@ $(function(){initNavTree('example_minesweeper_game.html',''); initResizable(true
 <div class="image">
 <img alt="" src="Screenshot_20250211_052511.png"/>
 </div>
-<h1>
-Game Logic<a class="aui-toc-hash" href="#game-logic" id="game-logic" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md222"></a>
+Game Logic</h1>
 <p>The entire game logic is located in MinesweeperWindow.cpp.</p>
-<h2>
-Initialization<a class="aui-toc-hash" href="#initialization" id="initialization" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md223"></a>
+Initialization</h2>
 <p>The game starts with <code>beginGame</code> function. <code>beginGame</code> Initializes a new Minesweeper game with specified dimensions and bomb count. Clears any previous game state, sets up the grid layout, initializes cell views, connects click handlers for opening cells and flagging, and finally packs UI elements to be displayed.</p>
 <ul>
 <li>Generates a grid with <code><a class="el" href="classAGridLayout.html" title="Grid layout with fixed-size cells.">AGridLayout</a></code></li>
@@ -140,11 +140,11 @@ Initialization<a class="aui-toc-hash" href="#initialization" id="initialization"
 <div class="line"> </div>
 <div class="line">    pack();</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2>
-Event handling<a class="aui-toc-hash" href="#event-handling" id="event-handling" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md224"></a>
+Event handling</h2>
 <p>As was mentioned, the game handles events by setting signal handlers on <code>CellView</code>. This is done inside <code>setupEventHandlers</code>. Here's a little breakdown:</p>
-<h3>
-Toggle flag (right click)<a class="aui-toc-hash" href="#toggle-flag-(right-click)" id="toggle-flag-(right-click)" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md225"></a>
+Toggle flag (right click)</h3>
 <p>In a minesweeper game, right click toggles the flag. First, we check that game is not finished (<code>mReveal</code>), then we check if cell is open. Finally, we toggle the flag:</p>
 <div class="fragment"><div class="line">    connect(cell-&gt;clickedRight, <span class="keyword">this</span>, [&amp;, x, y]() {</div>
 <div class="line">        if (mReveal) {</div>
@@ -166,8 +166,8 @@ Toggle flag (right click)<a class="aui-toc-hash" href="#toggle-flag-(right-click
 <div class="line">    DONT_PLANT_BOMB_HERE = 16,</div>
 <div class="line">};</div>
 </div><!-- fragment --><p><code>FieldCell</code> is just a bitfield implemented thanks to <a class="el" href="group__core.html#gad9bfc0a6304376bef420ce99fbe17e85">AUI_ENUM_FLAG</a>.</p>
-<h3>
-Open cell (left click)<a class="aui-toc-hash" href="#open-cell-(left-click)" id="open-cell-(left-click)" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md226"></a>
+Open cell (left click)</h3>
 <p>Left click delegates cell opening logic to <code>openCell</code> which contain game-specific logic.</p>
 <div class="fragment"><div class="line">    connect(cell-&gt;clicked, <span class="keyword">this</span>, [&amp;, x, y]() {</div>
 <div class="line">        if (mReveal) {</div>
@@ -175,8 +175,8 @@ Open cell (left click)<a class="aui-toc-hash" href="#open-cell-(left-click)" id=
 <div class="line">        }</div>
 <div class="line">        openCell(x, y, <span class="keyword">true</span>);</div>
 <div class="line">    });</div>
-</div><!-- fragment --><h1>
-Cell style<a class="aui-toc-hash" href="#cell-style" id="cell-style" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md227"></a>
+Cell style</h1>
 <p>In response to user's actions, the game updates its internal state. To visualize the state, <code>updateCellViewStyle</code> function is called. This method updates the style of a cell at coordinates (x, y) based on its state or any other conditions (e.g., game over, win/lose states). It triggers an event to let the framework know that custom styles need to be re-evaluated and applied accordingly.</p>
 <p>In game style sheets, a custom selector tied to <code>CellView</code> is used to display various cell states:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;FieldCell fieldCell&gt;</div>
@@ -245,8 +245,8 @@ Cell style<a class="aui-toc-hash" href="#cell-style" id="cell-style" style="colo
 <div class="line">            RevealSelector {} &gt;&gt; CellSelector&lt;FieldCell::HAS_FLAG | FieldCell::HAS_BOMB&gt;(),</div>
 <div class="line">            BackgroundImage { <span class="stringliteral">":minesweeper/bomb_flag.svg"</span> },</div>
 <div class="line">          },</div>
-</div><!-- fragment --><h1>
-Source Files<a class="aui-toc-hash" href="#source-files" id="source-files" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md228"></a>
+Source Files</h1>
 <ul>
 <li><a href="https://github.com/aui-framework/aui/tree/master/examples/app/minesweeper">Repository</a></li>
 <li><a class="el" href="examples_2app_2minesweeper_2src_2FieldCell_8h-example.html">src/FieldCell.h</a></li>
@@ -264,7 +264,7 @@ Source Files<a class="aui-toc-hash" href="#source-files" id="source-files" style
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#game-logic">Game Logic</a></h1><h2><a href="#initialization">Initialization</a></h2><h2><a href="#event-handling">Event handling</a></h2><h3><a href="#toggle-flag-(right-click)">Toggle flag (right click)</a></h3><h3><a href="#open-cell-(left-click)">Open cell (left click)</a></h3><h1><a href="#cell-style">Cell style</a></h1><h1><a href="#source-files">Source Files</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->

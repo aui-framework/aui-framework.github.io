@@ -103,8 +103,8 @@ $(function(){initNavTree('md_docs_2Runtime_01Dependency_01Resolution.html',''); 
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="docs/Runtime%20Dependency%20Resolution.md"></b>
 <div class="textblock"><p>Runtime dependencies are files that are required by your application during execution. Typically, those files are program modules such as <code>*.dll</code>, <code>*.so</code> or <code>*.dylib</code>.</p>
 <dl class="section note"><dt>Note</dt><dd>Runtime dependencies are not easy to deploy and might require additional building process tinkering. For icons, images, sounds and other resources consider using <a class="el" href="assets.html">AUI Assets</a> to embed them right into your binary.</dd></dl>
-<h1>
-Build-time shared library resolution<a class="aui-toc-hash" href="#build-time-shared-library-resolution" id="build-time-shared-library-resolution" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md183"></a>
+Build-time shared library resolution</h1>
 <p>This section describes how runtime dependencies are resolved during build time (and development).</p>
 <div class="fragment"><div class="line">-- [AUI.BOOT/Runtime Dependency] D:/aui/bin/api-ms-win-crt-convert-l1-1-0.dll -&gt; D:/a/aui/aui/build/bin</div>
 <div class="line">-- [AUI.BOOT/Runtime Dependency] D:/aui/bin/api-ms-win-crt-environment-l1-1-0.dll -&gt; D:/a/aui/aui/build/bin</div>
@@ -116,8 +116,8 @@ Build-time shared library resolution<a class="aui-toc-hash" href="#build-time-sh
 <div class="line">-- [AUI.BOOT/Runtime Dependency] D:/aui/bin/libssl.dll -&gt; D:/a/aui/aui/build/bin</div>
 <div class="line">-- [AUI.BOOT/Runtime Dependency] D:/aui/bin/zlib1.dll -&gt; D:/a/aui/aui/build/bin</div>
 <div class="line">...</div>
-</div><!-- fragment --><h2>
-DLL platforms (Windows only)<a class="aui-toc-hash" href="#dll-platforms-(windows-only)" id="dll-platforms-(windows-only)" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md184"></a>
+DLL platforms (Windows only)</h2>
 <p>Windows runtime linking process is simple. The dll lookup is performed as follows (ordered by priority):</p><ol type="1">
 <li>Find dll in the same directory as exe or dll itself.</li>
 <li>If <em>1.</em> is failed, find dll in <code>PATH</code> environment variable.</li>
@@ -128,8 +128,8 @@ DLL platforms (Windows only)<a class="aui-toc-hash" href="#dll-platforms-(window
 <div class="line">bin/aui.core.dll</div>
 <div class="line">bin/aui.views.dll</div>
 <div class="line">...</div>
-</div><!-- fragment --><h2>
-Other platforms (UNIX-like only)<a class="aui-toc-hash" href="#RPATH" id="RPATH" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><!-- fragment --><h2><a class="anchor" id="RPATH"></a>
+Other platforms (UNIX-like only)</h2>
 <p>On UNIX-like platforms, a special directory hierarchy should be maintained, for both build tree and portable installations (for compatibility reasons), hence <a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a> copies imported shared objects to <code>${CMAKE_BINARY_DIR}/lib</code>.</p>
 <p>These libraries are picked up by targets defined via <a class="el" href="md_docs_2aui__module.html">aui_module</a> and <a class="el" href="md_docs_2aui__executable.html">aui_executable</a> by adjusting <code>RUNPATH</code>/<code>RPATH</code> which is a special field inside executables indicating where to find required shared libraries.</p>
 <div class="fragment"><div class="line">function(_auib_apply_rpath AUI_MODULE_NAME)</div>
@@ -140,8 +140,8 @@ Other platforms (UNIX-like only)<a class="aui-toc-hash" href="#RPATH" id="RPATH"
 <div class="line">    endif()</div>
 <div class="line">endfunction()</div>
 </div><!-- fragment --><p>Additionally, RPATH is populated by compiler with hardcoded absolute paths to the dependencies hence shared object copying might seem redundant when the entire project with all its dependencies are built on the same machine. Since AUI Boot allows usage of precompiled binaries, instead of paying extra cost determining whether the dependencies are built locally or externally it just copies them to the build tree regardless of their origin. </p><dl class="section note"><dt>Note</dt><dd>The hardcoded full path is suitable for the only machine where binary is built. CMake's <a class="el" href="#CMAKE_INSTALL">--install</a> command clears these paths, opting to use an universal RPATH to make these binaries relocable. AUI.Boot populates RPATH on its own, see the section above.</dd></dl>
-<h1>
-Install-time shared library resolution<a class="aui-toc-hash" href="#CMAKE_INSTALL" id="CMAKE_INSTALL" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="CMAKE_INSTALL"></a>
+Install-time shared library resolution</h1>
 <p><code>cmake --install . --prefix=install_prefix</code> produces a portable project installation in <code>install_prefix</code> directory. This involves copying runtime dependencies (for example, <code>.dll</code>, <code>.so</code>, <code>.dylib</code>) alongside executables in a special way so the executables can actually find their dependencies. CPack and <a class="el" href="md_docs_2Packaging_01Your_01App.html">other deployment methods</a> use <code>cpack --install</code> so the behaviour is common.</p>
 <p>In addition to CMake's installation behaviour, targets defined with AUI's <a class="el" href="md_docs_2aui__executable.html">aui_executable</a> and <a class="el" href="md_docs_2aui__module.html">aui_module</a> implement an additional installation behaviour to copy all the required dependencies to installation prefix.</p>
 <div class="fragment"><div class="line">-- Installing aui</div>
@@ -158,8 +158,8 @@ Install-time shared library resolution<a class="aui-toc-hash" href="#CMAKE_INSTA
 <div class="line">...</div>
 </div><!-- fragment --><p>The behavior involves utilizing platform-specific tools to analyze the produced binaries. These tools identify all non-system requirements present in the binaries, mitigating the risk of link-time errors on end-user machines by incorporating these requirements into the installation prefix. If some of the shared libraries was not found during installation, an install-time error is thrown.</p>
 <p>This behaviour can be disabled by setting <code>-DAUI_INSTALL_RUNTIME_DEPENDENCIES=OFF</code>.</p>
-<h2>
-DLL platforms (Windows only)<a class="aui-toc-hash" href="#dll-platforms-(windows-only)" id="dll-platforms-(windows-only)" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md185"></a>
+DLL platforms (Windows only)</h2>
 <p>On Windows, dlls and exes are copied together to the same directory (<code>bin/</code>). </p><div class="fragment"><div class="line">tree install_prefix/</div>
 <div class="line">bin/aui_app.exe</div>
 <div class="line">bin/aui.core.dll</div>
@@ -172,8 +172,8 @@ DLL platforms (Windows only)<a class="aui-toc-hash" href="#dll-platforms-(window
 <div class="line">...</div>
 </div><!-- fragment --> This behaviour is achieved by setting <code>AUI_INSTALL_RUNTIME_DIR</code> target property to <code>"."</code>. To mitigate this behaviour, simply set the property back to "bin" after <code>aui_app</code> call. <div class="fragment"><div class="line">set_target_properties(your_app PROPERTIES AUI_INSTALL_RUNTIME_DIR "bin")</div>
 </div><!-- fragment --></dd></dl>
-<h2>
-Other platforms (UNIX-like only)<a class="aui-toc-hash" href="#other-platforms-(unix-like-only)" id="other-platforms-(unix-like-only)" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md186"></a>
+Other platforms (UNIX-like only)</h2>
 <p><a class="el" href="md_docs_2AUI_01Boot.html">AUI Boot</a> updates RUNPATH/RPATH CMake install variables to follow that convention:</p>
 <ul>
 <li><b>ld</b> (Linux/Android): <div class="fragment"><div class="line">    set(CMAKE_INSTALL_RPATH $ORIGIN/../lib)</div>
@@ -194,7 +194,7 @@ Other platforms (UNIX-like only)<a class="aui-toc-hash" href="#other-platforms-(
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#build-time-shared-library-resolution">Build-time shared library resolution</a></h1><h2><a href="#dll-platforms-(windows-only)">DLL platforms (Windows only)</a></h2><h2><a href="#RPATH">Other platforms (UNIX-like only)</a></h2><h1><a href="#CMAKE_INSTALL">Install-time shared library resolution</a></h1><h2><a href="#dll-platforms-(windows-only)">DLL platforms (Windows only)</a></h2><h2><a href="#other-platforms-(unix-like-only)">Other platforms (UNIX-like only)</a></h2><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->

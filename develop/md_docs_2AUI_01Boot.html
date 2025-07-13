@@ -102,8 +102,8 @@ $(function(){initNavTree('md_docs_2AUI_01Boot.html',''); initResizable(true); })
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="docs/AUI%20Boot.md"></b>
 <div class="textblock"><p>AUI Boot is yet another package manager based on CMake. If a library uses CMake with <a href="https://github.com/cpm-cmake/CPM.cmake/wiki/Preparing-projects-for-CPM.cmake">good CMakeLists</a>, AUI Boot in 99% cases can provide it for you into your project without additional tweaking. It downloads the library, compiles it and places it in <a class="el" href="#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a> folder for future reuse.</p>
-<h1>
-Importing AUI<a class="aui-toc-hash" href="#importing-aui" id="importing-aui" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md51"></a>
+Importing AUI</h1>
 <p>See <a href="https://github.com/aui-framework/aui">AUI's repository</a> to check out the import script with the latest version.</p>
 <div class="fragment"><div class="line">set(AUI_VERSION v6.2.1) # OLD!</div>
 <div class="line"> </div>
@@ -119,8 +119,8 @@ Importing AUI<a class="aui-toc-hash" href="#importing-aui" id="importing-aui" st
 <div class="line"> </div>
 <div class="line">aui_link(YOUR_APP PUBLIC aui::core</div>
 <div class="line">                         aui::views)</div>
-</div><!-- fragment --><h1>
-Prebuilt packages<a class="aui-toc-hash" href="#PREBUILT_PACKAGES" id="PREBUILT_PACKAGES" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="PREBUILT_PACKAGES"></a>
+Prebuilt packages</h1>
 <p>AUI Boot is a source-first package manager, however, it can pull precompiled packages instead of building them locally. At the moment, GitHub Releases page with carefully formatted archive names is the only supported option. AUI follows these rules, so AUI Boot can pull precompiled package of AUI.</p>
 <p>To use a precompiled binary, you must specify a tag of a released version from <a href="https://github.com/aui-framework/aui/releases">releases page</a> (for example, <code>v6.2.1</code> or <code>v7.0.0-rc.2</code>). These packages are self-sufficient, i.e., all AUI's dependencies are packed into them, so it is the only downloadable thing you need to set up a development and building with AUI.</p>
 <p>If you would like to force AUI Boot to use precompiled binaries only, you can set <a class="el" href="#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED</a>:</p>
@@ -129,8 +129,8 @@ Prebuilt packages<a class="aui-toc-hash" href="#PREBUILT_PACKAGES" id="PREBUILT_
 <p>If usage of precompiled binaries break your build for whatever reason, you can set <a class="el" href="#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED</a>:</p>
 <div class="fragment"><div class="line">cmake .. -DAUIB_NO_PRECOMPILED=TRUE</div>
 </div><!-- fragment --><p>This way AUI Boot will never try to use precompiled binaries and will try to build then locally.</p>
-<h1>
-CI caching<a class="aui-toc-hash" href="#CI_CACHING" id="CI_CACHING" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="CI_CACHING"></a>
+CI caching</h1>
 <p>No matter using precompiled binaries or building them locally, it's convenient to cache <a class="el" href="#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a> in your CIs:</p>
 <div class="fragment"><div class="line">      - name: Cache AUI.BOOT deps</div>
 <div class="line">        id: cache-aui-boot</div>
@@ -150,8 +150,8 @@ CI caching<a class="aui-toc-hash" href="#CI_CACHING" id="CI_CACHING" style="colo
 <p>GitHub used npm's <code>package-lock.json</code> in their example's primary key (<code>key</code>). We've adapted their example to AUI Boot and use <code>CMakeLists.txt</code>, as dependencies' versions are "locked" there.</p>
 <p>Using a stricter primary key <code>key</code> with a bunch of additional keys <code>restore-keys</code> is essential. If a cache hit occurs on the primary key, the cache will not be uploaded back to GitHub cache so your primary key must differ when you update dependencies.</p>
 <p>Don't worry updating dependencies: GitHub <code>cache</code> action will restore the cache by using one of fallback keys <code>restore-keys</code> in such case, so you would not lose build speed up. Additionally, since the cache hit occurred on non-primary key, the newer cache will be uploaded to GitHub so the subsequent builds will reuse it.</p>
-<h1>
-Importing 3rdparty libraries<a class="aui-toc-hash" href="#AUI_BOOT_3RDPARTY" id="AUI_BOOT_3RDPARTY" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="AUI_BOOT_3RDPARTY"></a>
+Importing 3rdparty libraries</h1>
 <p>For a maintained list of <code>auib_import</code>ed libraries, please visit <a href="https://github.com/aui-framework/boot">https://github.com/aui-framework/boot</a>.</p>
 <div class="fragment"><div class="line">auib_import(Boost https://github.com/boostorg/boost/releases/download/boost-1.84.0/boost-1.84.0.tar.xz</div>
 <div class="line">    ARCHIVE</div>
@@ -210,26 +210,26 @@ Importing 3rdparty libraries<a class="aui-toc-hash" href="#AUI_BOOT_3RDPARTY" id
 <div class="line">};</div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
 </div><!-- fragment --><p>For more libraries, please visit <a href="https://github.com/aui-framework/boot">https://github.com/aui-framework/boot</a>. </p>
-<h2>
-How to fix "Could not resolve dependency" error<a class="aui-toc-hash" href='#how-to-fix-"could-not-resolve-dependency"-error' id='how-to-fix-"could-not-resolve-dependency"-error' style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md52"></a>
+How to fix "Could not resolve dependency" error</h2>
 <p>Common scenario:</p>
 <ol type="1">
 <li>Remove <a class="el" href="#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a></li>
 <li>Remove your build directory</li>
 </ol>
 <p>And try again.</p>
-<h3>
-"looks like a config file does not exist for your project"<a class="aui-toc-hash" href="#AFJKLF" id="AFJKLF" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="AFJKLF"></a>
+"looks like a config file does not exist for your project"</h3>
 <p>This means that library's maintainer didn't bother about handling <code>cmake --install</code> properly. The best option in this scenario will be forking the library and append their <code>CMakeLists.txt</code> on your own.</p>
 <p>You can consult with <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/">Conan Recipes</a> or <a href="https://github.com/microsoft/vcpkg/tree/master/ports">Vcpkg Ports</a> to see how they have workarounded the broken <code>CMakeLists.txt</code> of the library.</p>
-<h3>
-"did you mean PACKAGE_NAME?"<a class="aui-toc-hash" href="#AKJFHJ" id="AKJFHJ" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="AKJFHJ"></a>
+"did you mean PACKAGE_NAME?"</h3>
 <p>You have mispelled the package name (the first argument to <code>auib_import</code>). Please change the first argument to <code>auib_import</code> to <code>PACKAGE_NAME</code>.</p>
-<h3>
-"Imported target ... depends on an out-of-tree file"<a class="aui-toc-hash" href="#AFKJNJKAN" id="AFKJNJKAN" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="AFKJNJKAN"></a>
+"Imported target ... depends on an out-of-tree file"</h3>
 <p>The library's maintainer have misused CMake. Follow one of possible options provided by AUI.Boot or fix the library by forking it. You can consult with <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/">Conan Recipes</a> or <a href="https://github.com/microsoft/vcpkg/tree/master/ports">Vcpkg Ports</a> to see how they have workarounded the broken <code>CMakeLists.txt</code> of the library.</p>
-<h2>
-Fixing 3rdparty library's CMakeLists.txt<a class="aui-toc-hash" href="#fixing-3rdparty-library's-cmakelists.txt" id="fixing-3rdparty-library's-cmakelists.txt" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md53"></a>
+Fixing 3rdparty library's CMakeLists.txt</h2>
 <p>As was mentioned, AUI.Boot might fail to import a 3rdparty library. Reasons include:</p>
 <ol type="1">
 <li><p class="startli">Misusage of CMake. Mostly, this applies to CMake's <code>install</code> family of commands. Some library maintainers might forget to configure CMake so other CMake projects can actually use their library.</p>
@@ -244,8 +244,8 @@ Fixing 3rdparty library's CMakeLists.txt<a class="aui-toc-hash" href="#fixing-3r
 <li>OpenSSL: arbitrary fixes: <a href="https://github.com/janbar/openssl-cmake/compare/master...aui-framework:openssl-cmake:master">https://github.com/janbar/openssl-cmake/compare/master...aui-framework:openssl-cmake:master</a></li>
 </ol>
 <p>Also, you can consult with <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/">Conan Recipes</a> or <a href="https://github.com/microsoft/vcpkg/tree/master/ports">Vcpkg Ports</a> to see how they have workaround the broken <code>CMakeLists.txt</code> of the library.</p>
-<h1>
-Using AUI Boot without AUI<a class="aui-toc-hash" href="#using-aui-boot-without-aui" id="using-aui-boot-without-aui" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md54"></a>
+Using AUI Boot without AUI</h1>
 <p>AUI Boot does not have any hard dependencies on AUI, so it can be used to manage dependencies on non-AUI projects.</p>
 <div class="fragment"><div class="line">set(AUI_VERSION v6.2.1)</div>
 <div class="line"> </div>
@@ -262,16 +262,16 @@ Using AUI Boot without AUI<a class="aui-toc-hash" href="#using-aui-boot-without-
 <div class="line">        VERSION 0.12.0</div>
 <div class="line">        CMAKE_ARGS -DRANGE_V3_DOCS=OFF -DRANGE_V3_TESTS=OFF -DRANGE_V3_EXAMPLES=OFF -DRANGE_V3_PERF=OFF -DRANGE_V3_HEADER_CHECKS=OFF)</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">target_link_libraries(YOUR_APP PUBLIC fmt::fmt-header-only range-v3::range-v3)</div>
-</div><!-- fragment --><h1>
-Importing project as a subdirectory<a class="aui-toc-hash" href="#importing-project-as-a-subdirectory" id="importing-project-as-a-subdirectory" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md55"></a>
+Importing project as a subdirectory</h1>
 <p>See <a class="el" href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a></p>
-<h1>
-CMake commands<a class="aui-toc-hash" href="#cmake-commands" id="cmake-commands" style="color: var(--fragment-comment) !important">#</a></h1>
-<h2>
-auib_import<a class="aui-toc-hash" href="#auib_import" id="auib_import" style="color: var(--fragment-comment) !important">#</a></h2>
+<h1><a class="anchor" id="autotoc_md56"></a>
+CMake commands</h1>
+<h2><a class="anchor" id="autotoc_md57"></a>
+auib_import</h2>
 <p>If needed, downloads and compiles project. Adds an <code>IMPORTED</code> target. Built on top of <code>find_package</code>.</p>
-<h3>
-Signature<a class="aui-toc-hash" href="#signature" id="signature" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md58"></a>
+Signature</h3>
 <div class="fragment"><div class="line">auib_import(&lt;PackageName&gt; &lt;URL&gt;</div>
 <div class="line">            [ADD_SUBDIRECTORY]</div>
 <div class="line">            [ARCHIVE]</div>
@@ -283,57 +283,57 @@ Signature<a class="aui-toc-hash" href="#signature" id="signature" style="color: 
 <div class="line">            [REQUIRES dependencies...]</div>
 <div class="line">            [VERSION version])</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This command copies <code>*.dll</code>, <code>*.so</code> and <code>*.dylib</code> (in case of shared libraries) alongside your executables during configure time. See <a class="el" href="md_docs_2Runtime_01Dependency_01Resolution.html">Runtime Dependency Resolution</a> for more info.</dd></dl>
-<h3>
-PackageName<a class="aui-toc-hash" href="#packagename" id="packagename" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md59"></a>
+PackageName</h3>
 <p>Specifies the package name which will be passed to <code>find_package</code>. See <a class="el" href="#AUI_BOOT_3RDPARTY">Importing 3rdparty libraries</a>.</p>
-<h3>
-URL<a class="aui-toc-hash" href="#url" id="url" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md60"></a>
+URL</h3>
 <p>URL to the git repository of the project you want to import.</p>
-<h3>
-ADD_SUBDIRECTORY<a class="aui-toc-hash" href="#AUIB_ADD_SUBDIRECTORY" id="AUIB_ADD_SUBDIRECTORY" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="AUIB_ADD_SUBDIRECTORY"></a>
+ADD_SUBDIRECTORY</h3>
 <p>See also: <a class="el" href="#AUIB_LIB_AS">AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</a>.</p>
 <p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as the project importing mechanism.</p>
 <p>Potential use case of this is when the dependency fails to provide proper CMake install, making <code>find_package</code> unusable. If you don't care about polluting your own build tree with dependency's targets - it is a good alternative to fixing their CMake install on your own, which is a challenging task.</p>
 <p>This action disables usage of precompiled binary and validation.</p>
-<h3>
-ARCHIVE<a class="aui-toc-hash" href="#archive" id="archive" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md61"></a>
+ARCHIVE</h3>
 <p>The provided URL is pointing to zip archive instead of a git repository.</p>
 <p>For large dependencies, this might be faster than pulling whole repository.</p>
-<h3>
-CONFIG_ONLY<a class="aui-toc-hash" href="#config_only" id="config_only" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md62"></a>
+CONFIG_ONLY</h3>
 <p>Forces <code>find_package</code> to use the config mode only.</p>
-<h3>
-VERSION<a class="aui-toc-hash" href="#version" id="version" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md63"></a>
+VERSION</h3>
 <p>Commit hash, tag or branch name to <code>checkout</code>.</p>
 <p>When unspecified, AUI.Boot uses the latest version from main branch of the library. Once discovered, <b>AUI.Boot never updates the library version</b>.</p>
 <dl class="section note"><dt>Note</dt><dd>Despite this argument is optional, we still encourage you to use it, to "lock" the version. This makes your builds precisely reproducible on other machines.</dd></dl>
-<h3>
-COMPONENTS<a class="aui-toc-hash" href="#components" id="components" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md64"></a>
+COMPONENTS</h3>
 <p>List of components to import which will be passed to <code>find_package</code>. Also, passed as semicolon-separated list to dependency's <code>CMakeLists.txt</code> via <code>AUIB_COMPONENTS</code> variable.</p>
-<h3>
-CMAKE_WORKING_DIR<a class="aui-toc-hash" href="#cmake_working_dir" id="cmake_working_dir" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md65"></a>
+CMAKE_WORKING_DIR</h3>
 <p>Run cmake in specified directory, in relation to the pulled repo's root directory.</p>
-<h3>
-PRECOMPILED_URL_PREFIX<a class="aui-toc-hash" href="#precompiled_url_prefix" id="precompiled_url_prefix" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md66"></a>
+PRECOMPILED_URL_PREFIX</h3>
 <p>Instead of building the dependency from sources, try to import the precompiled binaries first.</p>
 <h4><a class="anchor" id="autotoc_md67"></a>
 PrecompiledUrlPrefix</h4>
 <p>Specifies url prefix where the precompiled binaries downloaded from.</p>
-<h3>
-LINK<a class="aui-toc-hash" href="#link" id="link" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md68"></a>
+LINK</h3>
 <p>Overrides <code>BUILD_SHARED_LIBS</code> of the dependency, specifying <code>SHARED</code> or <code>STATIC</code> linking.</p>
-<h3>
-REQUIRES<a class="aui-toc-hash" href="#requires" id="requires" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md69"></a>
+REQUIRES</h3>
 <p>List of the package dependencies. Every dependency's root variable (${DEPENDENCY}_ROOT) is checked for existence and validness, then it passed directly to <code>auib_import</code>ed target (via ${DEPENDENCY}_ROOT).</p>
 <p>It is useful when some package root is implicitly defined in your project somewhere and aui.boot does not know about it, thus does not forward.</p>
-<h1>
-Variables<a class="aui-toc-hash" href="#AUIB_VARIABLES" id="AUIB_VARIABLES" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="AUIB_VARIABLES"></a>
+Variables</h1>
 <p>See <a class="el" href="md_docs_2AUI_01configure_01flags.html">AUI configure flags</a> on how to set variables.</p>
-<h2>
-AUIB_ALL_AS (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_ALL_AS" id="AUIB_ALL_AS" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_ALL_AS"></a>
+AUIB_ALL_AS (=FALSE|TRUE)</h2>
 <p>Equivalent of setting <a class="el" href="#AUIB_LIB_AS">AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</a> for every single library present in the project.</p>
-<h2>
-AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_LIB_AS" id="AUIB_LIB_AS" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_LIB_AS"></a>
+AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</h2>
 <p>Uses <code>add_subdirectory</code> instead of <code>find_package</code> as the project importing mechanism. This means that the library becomes a part of your project, within your <code>build/</code> directory. This allows changing the library's code seamlessly.</p>
 <p>It is useful for library developers. They can use consumer's project to change something in their library, without changing <code>CMakeLists.txt</code> of the consumer's project. Setting <code>AUIB_&lt;PackageName&gt;_AS</code> is an equivalent of passing <a class="el" href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a> to <code>auib_import</code>.</p>
 <p>This action disables usage of precompiled binary and validation.</p>
@@ -377,33 +377,33 @@ AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_LIB
 <li>Commit and push to your project</li>
 </ol>
 <dl class="section note"><dt>Note</dt><dd>It is common to delete a feature branch after merging. Be careful: AUI.Boot can't find a commit if it was deleted from a repository.</dd></dl>
-<h2>
-AUIB_DISABLE (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_DISABLE" id="AUIB_DISABLE" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_DISABLE"></a>
+AUIB_DISABLE (=FALSE|TRUE)</h2>
 <p>Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
-<h2>
-AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_SKIP_REPOSITORY_WAIT" id="AUIB_SKIP_REPOSITORY_WAIT" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_SKIP_REPOSITORY_WAIT"></a>
+AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)</h2>
 <p>Disables "Waiting for repository" <a class="el" href="#REPO_LOCK">lock</a>.</p>
-<h2>
-AUIB_NO_PRECOMPILED (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_NO_PRECOMPILED" id="AUIB_NO_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_NO_PRECOMPILED"></a>
+AUIB_NO_PRECOMPILED (=FALSE|TRUE)</h2>
 <p>Disables precompiled binaries, building all dependencies locally. You may want to set up <a class="el" href="#CI_CACHING">CI caching</a>.</p>
-<h2>
-AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_FORCE_PRECOMPILED" id="AUIB_FORCE_PRECOMPILED" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_FORCE_PRECOMPILED"></a>
+AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)</h2>
 <p>Disables local compilation. If a precompiled binary was not found, a configure-time error is raised.</p>
-<h2>
-AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=FALSE|TRUE)<a class="aui-toc-hash" href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" id="AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT"></a>
+AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=FALSE|TRUE)</h2>
 <p>The <code>AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT</code> flag can be used to enable self-sufficiency of packages produced with AUI Boot. This means that the dependencies required for building these packages are included in the package (<code>tar.gz</code>) archive in the <code>deps/</code> dir.</p>
 <p>See <a class="el" href="#aui_boot_producing_packages">Producing packages with dependencies managed by AUI Boot</a></p>
-<h2>
-AUIB_VALIDATION_LEVEL<a class="aui-toc-hash" href="#auib_validation_level" id="auib_validation_level" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md70"></a>
+AUIB_VALIDATION_LEVEL</h2>
 <p>Applies a set of checks on each <em>dependency</em> pulled by AUI.Boot. These checks verify that the <em>dependency</em> follows so-called <a href="https://github.com/cpm-cmake/CPM.cmake/wiki/Preparing-projects-for-CPM.cmake">modern CMake practices</a>. Raising this value may help to localize some errors related to the dependency in your build system that would have appeared somewhere in the future unexpectedly.</p>
 <p>It is a forced measure due to lack of proper CMake usage.</p>
 <p>All AUI's dependencies are marked with the highest validation level.</p>
 <p>Defaults to <code>1</code>.</p>
-<h3>
-AUIB_VALIDATION_LEVEL 0<a class="aui-toc-hash" href="#auib_validation_level-0" id="auib_validation_level-0" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md71"></a>
+AUIB_VALIDATION_LEVEL 0</h3>
 <p>All checks are disabled.</p>
-<h3>
-AUIB_VALIDATION_LEVEL 1<a class="aui-toc-hash" href="#auib_validation_level-1" id="auib_validation_level-1" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md72"></a>
+AUIB_VALIDATION_LEVEL 1</h3>
 <p><em>Covers scenario</em>: <code>cmake --install .</code> of <em>dependency</em> produces a valid local CMake package installation.</p>
 <p><em>Requirements</em>:</p>
 <ol type="1">
@@ -420,8 +420,8 @@ AUIB_VALIDATION_LEVEL 1<a class="aui-toc-hash" href="#auib_validation_level-1" i
 <div class="line">auib_use_system_libs_end()</div>
 </div><!-- fragment --> </li>
 </ol>
-<h3>
-AUIB_VALIDATION_LEVEL 2<a class="aui-toc-hash" href="#auib_validation_level-2" id="auib_validation_level-2" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md73"></a>
+AUIB_VALIDATION_LEVEL 2</h3>
 <p><em>Covers scenario</em>: <code>cmake --install .</code> of <em>dependency</em> produces a <a class="el" href="#PREBUILT_PACKAGES">relocatable binary package</a>.</p>
 <p><em>Requirements</em>:</p>
 <ol type="1">
@@ -433,10 +433,10 @@ AUIB_VALIDATION_LEVEL 2<a class="aui-toc-hash" href="#auib_validation_level-2" i
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>AUI.Boot is capable of replacing absolute paths to libraries by their respective target names in order to support legacy libraries.</dd></dl>
 </li>
 </ol>
-<h1>
-Diamond Shape Graphs<a class="aui-toc-hash" href="#diamond-shape-graphs" id="diamond-shape-graphs" style="color: var(--fragment-comment) !important">#</a></h1>
-<h2>
-Case 1<a class="aui-toc-hash" href="#case-1" id="case-1" style="color: var(--fragment-comment) !important">#</a></h2>
+<h1><a class="anchor" id="autotoc_md74"></a>
+Diamond Shape Graphs</h1>
+<h2><a class="anchor" id="autotoc_md75"></a>
+Case 1</h2>
 <p>For example, your application uses <code>aui.core</code> module, which actually uses <code>ZLIB</code>:</p>
 <p><img alt="image" class="inline" src="https://user-images.githubusercontent.com/19491414/153878183-fa92b4b5-c2f8-4516-8923-71a447cb1aa3.png"/></p>
 <p>When you also want to use <code>ZLIB</code>.</p>
@@ -444,13 +444,13 @@ Case 1<a class="aui-toc-hash" href="#case-1" id="case-1" style="color: var(--fra
 <p><img alt="image" class="inline" src="https://user-images.githubusercontent.com/19491414/153878258-cacdd4f1-8e2c-45d7-87d0-662ae0a02b28.png"/></p>
 <p><b>With AUI.Boot</b>, you'd not even use AUI.Boot's functions! Just use <code>find_package(ZLIB REQUIRED)</code> and link it to your application with <code>target_link_libraries(YourApplication PRIVATE ZLIB::ZLIB)</code>, because AUI.Boot forwards location of used dependencies to your project. Your application and AUI are using the same <code>ZLIB</code>:</p>
 <p><img alt="image" class="inline" src="https://user-images.githubusercontent.com/19491414/153878341-fa379cc6-b12d-4896-a535-4879b9d5640d.png"/></p>
-<h2>
-Case 2<a class="aui-toc-hash" href="#case-2" id="case-2" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md76"></a>
+Case 2</h2>
 <p>Another case is <code>OpenSSL</code> between <code>aui.crypt</code> and <code>aui.curl</code>:</p>
 <p><img alt="image" class="inline" src="https://user-images.githubusercontent.com/19491414/153878364-b214f167-8243-400c-93af-a227af2f961b.png"/></p>
 <p>Because <code>libcurl</code> is not a part of AUI, it uses standard CMake's function to find <code>OpenSSL</code> (<code>find_package</code>).</p>
-<h1>
-Producing packages with dependencies managed by AUI Boot<a class="aui-toc-hash" href="#aui_boot_producing_packages" id="aui_boot_producing_packages" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="aui_boot_producing_packages"></a>
+Producing packages with dependencies managed by AUI Boot</h1>
 <p>AUI distributions <a href="https://github.com/aui-framework/aui/releases">published on our GitHub releases page</a> are produced with help of AUI Boot.</p>
 <p>CMake-driven projects produce package configuration with <a href="https://cmake.org/cmake/help/latest/command/configure_file.html">configure_file</a>:</p>
 <div class="fragment"><div class="line">configure_file(cmake/aui-config.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/aui-config.cmake @ONLY)</div>
@@ -471,14 +471,14 @@ Producing packages with dependencies managed by AUI Boot<a class="aui-toc-hash" 
 <div class="line">        with:</div>
 <div class="line">          path: ${{github.workspace}}/build/*.tar.gz</div>
 <div class="line">          name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }} ${{ matrix.compiler }}</div>
-</div><!-- fragment --><h1>
-Importing AUI without AUI Boot<a class="aui-toc-hash" href="#importing-aui-without-aui-boot" id="importing-aui-without-aui-boot" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md77"></a>
+Importing AUI without AUI Boot</h1>
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not a recommended way of using AUI, as it is not fully covered with tests, and you're basically trying to complicate your life by hardcoding paths in your CMake lists and thus making hardly reproducible projects. Consider <a href="https://github.com/aui-framework/aui/issues">asking questions</a> about AUI Boot on our GitHub page, and we'd help to adapt AUI Boot to your use case.</p>
-<h2>
-Building AUI without AUI Boot<a class="aui-toc-hash" href="#building-aui-without-aui-boot" id="building-aui-without-aui-boot" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md78"></a>
+Building AUI without AUI Boot</h2>
 <p><a class="el" href="#AUIB_DISABLE">AUIB_DISABLE (=FALSE|TRUE)</a> CMake configure flag can be used to replace <code>auib_import</code> calls to <code>find_package</code>. In this scenario you will need to resolve AUI's dependencies in some other way (i.e, by using Conan).</p>
-<h2>
-Using AUI distributions with <code>find_package</code><a class="aui-toc-hash" href="#using-aui-distributions-with-find_package" id="using-aui-distributions-with-find_package" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md79"></a>
+Using AUI distributions with <code>find_package</code></h2>
 <p>AUI distributions <a href="https://github.com/aui-framework/aui/releases">published on our GitHub releases page</a> are self-sufficient. That is, they have AUI's dependencies bundled, so they can be used by <code>find_package</code>, without even requiring AUI Boot.</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.24)</div>
 <div class="line"> </div>
@@ -503,15 +503,15 @@ Using AUI distributions with <code>find_package</code><a class="aui-toc-hash" hr
 <div class="line">aui_link(test_project PUBLIC aui::core aui::views)</div>
 <div class="line">aui_compile_assets(test_project)</div>
 <div class="ttc" id="agroup__views_html_gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d"><div class="ttname"><a href="group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d">ATextInputType::URL</a></div><div class="ttdeci">@ URL</div><div class="ttdoc">Optimize for URLs.</div><div class="ttdef"><b>Definition</b> ATextInputType.h:48</div></div>
-</div><!-- fragment --><h1>
-~/.aui (AUI.Boot Cache Dir)<a class="aui-toc-hash" href="#AUIB_CACHE" id="AUIB_CACHE" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="AUIB_CACHE"></a>
+~/.aui (AUI.Boot Cache Dir)</h1>
 <p>It is a directory located in your home directory (can be changed with <a class="el" href="md_docs_2AUI_01configure_01flags.html#AUIB_CACHE_DIR">AUIB_CACHE_DIR</a>). This directory contains dependencies' source code and installation artifacts of each dependency. AUI.Boot looks up there for built libraries or their source code in order to reduce build latency and bandwidth.</p>
 <p>If a dependency is not present in the cache, AUI.Boot will download a precompiled binary or build it from source, so the subsequent <code>auib_import</code> invocations can reuse that even across different projects.</p>
 <p>On a CI/CD, you can <a class="el" href="#CI_CACHING">cache</a> this directory to drastically improve build times.</p>
-<h2>
-Structure<a class="aui-toc-hash" href="#structure" id="structure" style="color: var(--fragment-comment) !important">#</a></h2>
-<h3>
-~/.aui/prefix<a class="aui-toc-hash" href="#~/.aui/prefix" id="~/.aui/prefix" style="color: var(--fragment-comment) !important">#</a></h3>
+<h2><a class="anchor" id="autotoc_md80"></a>
+Structure</h2>
+<h3><a class="anchor" id="autotoc_md81"></a>
+~/.aui/prefix</h3>
 <p>Contains dependencies produced by <code>cmake -B build -S .</code>, <code>cmake --build build</code> and <code>cmake --install build --prefix=~/.aui/prefix/../</code> series of commands, potentially invoked inside <code>auib_import</code>.</p>
 <p>Dependency installations are located in following path: <code>~/.aui/prefix/&lt;PackageName&gt;/&lt;BUILD_SPECIFIER&gt;</code>.</p>
 <p><code>&lt;BUILD_SPECIFIER&gt;</code> is a special hex string that identifies the build configuration, similarly to Conan's <a href="https://docs.conan.io/2/reference/binary_model/package_id.html">package_id</a>. <code>&lt;BUILD_SPECIFIER&gt;</code> is a hashed string that includes information such as version, platform, architecture, or being a static or a shared library. When something changes in this information, it produces a new <code>&lt;BUILD_SPECIFIER&gt;</code> because it represents a different binary.</p>
@@ -521,8 +521,8 @@ Structure<a class="aui-toc-hash" href="#structure" id="structure" style="color: 
 <div class="line"> </div>
 <div class="line">    # convert BUILD_SPECIFIER to hash; on windows msvc path length restricted by 260 chars</div>
 <div class="line">    string(MD5 BUILD_SPECIFIER ${BUILD_SPECIFIER})</div>
-</div><!-- fragment --><h3>
-~/.aui/repo<a class="aui-toc-hash" href="#~/.aui/repo" id="~/.aui/repo" style="color: var(--fragment-comment) !important">#</a></h3>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md82"></a>
+~/.aui/repo</h3>
 <p>Contains dependencies source code (if any), downloaded by <code>auib_import</code>.</p>
 <ul>
 <li><code>~/.aui/repo/&lt;PackageName&gt;/src</code> - source code of <code>&lt;PackageName&gt;</code>. If it is a git repository, AUI.Boot will try to checkout a specific version first instead of cloning the whole repo again.</li>
@@ -535,14 +535,14 @@ Structure<a class="aui-toc-hash" href="#structure" id="structure" style="color: 
 <li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/&lt;PackageName&gt;/FETCHED</code> - indicates the latest download is successful.</li>
 <li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/build</code> - build directory.</li>
 </ul>
-<h3>
-~/.aui/crosscompile-host<a class="aui-toc-hash" href="#~/.aui/crosscompile-host" id="~/.aui/crosscompile-host" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="autotoc_md83"></a>
+~/.aui/crosscompile-host</h3>
 <p>In case of <a class="el" href="md_docs_2Crosscompiling.html">Crosscompiling (Android and iOS)</a>, contains AUI.Boot sub cache for the host system.</p>
-<h3>
-~/.aui/repo.lock<a class="aui-toc-hash" href="#REPO_LOCK" id="REPO_LOCK" style="color: var(--fragment-comment) !important">#</a></h3>
+<h3><a class="anchor" id="REPO_LOCK"></a>
+~/.aui/repo.lock</h3>
 <p>Lock file of <code>auib_import</code> to forbid multiple parallel processes to modify <code>auib_import</code>.</p>
-<h1>
-Philosophy behind AUI Boot<a class="aui-toc-hash" href="#philosophy-behind-aui-boot" id="philosophy-behind-aui-boot" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md84"></a>
+Philosophy behind AUI Boot</h1>
 <p>AUI Boot follows AUI Project philosophy, i.e, simplify developers' life and improve experience as far as possible. We were needed a CMake-only solution, so we skipped external generators (i.e., those that introduce additional building layer over CMake).</p>
 <p>Despite CMake itself is complex (spoiler: every build system is) but thanks to the complexity <b>CMake actually does the job good enough</b> and its scripting system thankfully allows to download files from internet (and not only that).</p>
 <p>Introducing additional building layer literally multiplies the building complexity by two. Moreover, Android targets already introduce such a layer (called Gradle). For example, if we were using <a href="https://conan.io/">Conan</a>, Android building process would have 4 layers: Gradle, CMake, Conan, CMake (yes, 2 CMake layers).</p>
@@ -560,7 +560,7 @@ Philosophy behind AUI Boot<a class="aui-toc-hash" href="#philosophy-behind-aui-b
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#importing-aui">Importing AUI</a></h1><h1><a href="#PREBUILT_PACKAGES">Prebuilt packages</a></h1><h1><a href="#CI_CACHING">CI caching</a></h1><h1><a href="#AUI_BOOT_3RDPARTY">Importing 3rdparty libraries</a></h1><h2><a href='#how-to-fix-"could-not-resolve-dependency"-error'>How to fix "Could not resolve dependency" error</a></h2><h3><a href="#AFJKLF">"looks like a config file does not exist for your project"</a></h3><h3><a href="#AKJFHJ">"did you mean PACKAGE_NAME?"</a></h3><h3><a href="#AFKJNJKAN">"Imported target ... depends on an out-of-tree file"</a></h3><h2><a href="#fixing-3rdparty-library's-cmakelists.txt">Fixing 3rdparty library's CMakeLists.txt</a></h2><h1><a href="#using-aui-boot-without-aui">Using AUI Boot without AUI</a></h1><h1><a href="#importing-project-as-a-subdirectory">Importing project as a subdirectory</a></h1><h1><a href="#cmake-commands">CMake commands</a></h1><h2><a href="#auib_import">auib_import</a></h2><h3><a href="#signature">Signature</a></h3><h3><a href="#packagename">PackageName</a></h3><h3><a href="#url">URL</a></h3><h3><a href="#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a></h3><h3><a href="#archive">ARCHIVE</a></h3><h3><a href="#config_only">CONFIG_ONLY</a></h3><h3><a href="#version">VERSION</a></h3><h3><a href="#components">COMPONENTS</a></h3><h3><a href="#cmake_working_dir">CMAKE_WORKING_DIR</a></h3><h3><a href="#precompiled_url_prefix">PRECOMPILED_URL_PREFIX</a></h3><h3><a href="#link">LINK</a></h3><h3><a href="#requires">REQUIRES</a></h3><h1><a href="#AUIB_VARIABLES">Variables</a></h1><h2><a href="#AUIB_ALL_AS">AUIB_ALL_AS (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_LIB_AS">AUIB_&lt;PackageName&gt;_AS (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_DISABLE">AUIB_DISABLE (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_SKIP_REPOSITORY_WAIT">AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)</a></h2><h2><a href="#AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT">AUIB_PRODUCED_PACKAGES_SELF_SUFFICIENT (=FALSE|TRUE)</a></h2><h2><a href="#auib_validation_level">AUIB_VALIDATION_LEVEL</a></h2><h3><a href="#auib_validation_level-0">AUIB_VALIDATION_LEVEL 0</a></h3><h3><a href="#auib_validation_level-1">AUIB_VALIDATION_LEVEL 1</a></h3><h3><a href="#auib_validation_level-2">AUIB_VALIDATION_LEVEL 2</a></h3><h1><a href="#diamond-shape-graphs">Diamond Shape Graphs</a></h1><h2><a href="#case-1">Case 1</a></h2><h2><a href="#case-2">Case 2</a></h2><h1><a href="#aui_boot_producing_packages">Producing packages with dependencies managed by AUI Boot</a></h1><h1><a href="#importing-aui-without-aui-boot">Importing AUI without AUI Boot</a></h1><h2><a href="#building-aui-without-aui-boot">Building AUI without AUI Boot</a></h2><h2><a href="#using-aui-distributions-with-find_package">Using AUI distributions with find_package</a></h2><h1><a href="#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a></h1><h2><a href="#structure">Structure</a></h2><h3><a href="#~/.aui/prefix">~/.aui/prefix</a></h3><h3><a href="#~/.aui/repo">~/.aui/repo</a></h3><h3><a href="#~/.aui/crosscompile-host">~/.aui/crosscompile-host</a></h3><h3><a href="#REPO_LOCK">~/.aui/repo.lock</a></h3><h1><a href="#philosophy-behind-aui-boot">Philosophy behind AUI Boot</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->

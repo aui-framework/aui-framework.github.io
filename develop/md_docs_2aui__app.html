@@ -120,8 +120,8 @@ $(function(){initNavTree('md_docs_2aui__app.html',''); initResizable(true); });
 </ul>
 <p>For this reason, <code>aui_app</code> populates some empty <code>CPACK_*</code> variables. This approach allows you not to bother about various installation methods but also override the variables if needed.</p>
 <p>For more info about packaging methods, see <a class="el" href="md_docs_2Packaging_01Your_01App.html">Packaging Your App</a>.</p>
-<h1>
-Syntax<a class="aui-toc-hash" href="#syntax" id="syntax" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md112"></a>
+Syntax</h1>
 <div class="fragment"><div class="line">aui_app(TARGET aui.example.views</div>
 <div class="line">        NAME <span class="stringliteral">"AUI Examples"</span></div>
 <div class="line">        APPLE_BUNDLE_IDENTIFIER <span class="stringliteral">"aui.Examples"</span></div>
@@ -157,8 +157,8 @@ Syntax<a class="aui-toc-hash" href="#syntax" id="syntax" style="color: var(--fra
 <div class="line">    [IOS_DEVICE &lt;target-ios-device&gt;]</div>
 <div class="line">    [IOS_CONTROLLER &lt;custom-ios-controller-class-name&gt;]</div>
 <div class="line">)</div>
-</div><!-- fragment --><h2>
-TARGET<a class="aui-toc-hash" href="#target" id="target" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md113"></a>
+TARGET</h2>
 <p>Specify main executable of the application which will be executed when your application is launched.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -174,8 +174,8 @@ TARGET<a class="aui-toc-hash" href="#target" id="target" style="color: var(--fra
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">iOS   </td><td class="markdownTableBodyNone" colspan="2">+   </td></tr>
 </table>
-<h2>
-NAME<a class="aui-toc-hash" href="#name" id="name" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md114"></a>
+NAME</h2>
 <p>Specify application display name that would appear in system's UIs (i.e., start menu, launchpad, desktop, control panel).</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -209,8 +209,8 @@ NAME<a class="aui-toc-hash" href="#name" id="name" style="color: var(--fragment-
 <li><code>set_property(INSTALL bin/$&lt;TARGET_FILE_NAME:${APP_TARGET}&gt; PROPERTY CPACK_START_MENU_SHORTCUTS "${APP_NAME}")</code></li>
 <li><code>set_target_properties(${APP_TARGET} PROPERTIES OUTPUT_NAME "${APP_NAME}") # rename the bundle to display name</code> </li>
 </ul>
-<h2>
-ICON<a class="aui-toc-hash" href="#aui_app_ICON" id="aui_app_ICON" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="aui_app_ICON"></a>
+ICON</h2>
 <p>Specify SVG icon location (defaults to <code>icon.svg</code> if exists).</p>
 <p>See <a class="el" href="md_docs_2Setting_01App_01Icon.html">Setting App Icon</a> for best practices.</p>
 <table class="markdownTable">
@@ -236,8 +236,8 @@ ICON<a class="aui-toc-hash" href="#aui_app_ICON" id="aui_app_ICON" style="color:
 <li><code>CPACK_WIX_UI_BANNER</code> <em> = <code>${_ico}</code> </em></li>
 <li><code>CPACK_WIX_UI_DIALOG</code> <em> = <code>${_ico}</code> </em> </li>
 </ul>
-<h2>
-VENDOR<a class="aui-toc-hash" href="#vendor" id="vendor" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md116"></a>
+VENDOR</h2>
 <p>Specify application author's name or company.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -256,8 +256,8 @@ VENDOR<a class="aui-toc-hash" href="#vendor" id="vendor" style="color: var(--fra
 <p><code>APP_VENDOR</code> populates the following CMake variables (if undefined):</p><ul>
 <li><code>CPACK_PACKAGE_VENDOR</code> <em> = <code>${APP_VENDOR}</code> </em> </li>
 </ul>
-<h2>
-COPYRIGHT<a class="aui-toc-hash" href="#copyright" id="copyright" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md117"></a>
+COPYRIGHT</h2>
 <p>Specify application copyright string (not file)</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -276,8 +276,8 @@ COPYRIGHT<a class="aui-toc-hash" href="#copyright" id="copyright" style="color: 
 <p><code>APP_COPYRIGHT</code> populates the following CMake variables (if undefined):</p><ul>
 <li><code>MACOSX_BUNDLE_COPYRIGHT</code> <em> = <code>${APP_COPYRIGHT}</code> </em> </li>
 </ul>
-<h2>
-VERSION<a class="aui-toc-hash" href="#version" id="version" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md118"></a>
+VERSION</h2>
 <p>Specify application version. If not set, the value of <code>PROJECT_VERSION</code> used instead.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -303,11 +303,11 @@ VERSION<a class="aui-toc-hash" href="#version" id="version" style="color: var(--
 <p>The following additional variables and properties are affected:</p><ul>
 <li><code>set(_aui_package_file_name "${CPACK_PACKAGE_NAME}-${APP_VERSION}-${_aui_package_file_name}")</code> </li>
 </ul>
-<h2>
-NO_INCLUDE_CPACK<a class="aui-toc-hash" href="#no_include_cpack" id="no_include_cpack" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md126"></a>
+NO_INCLUDE_CPACK</h2>
 <p>By default <code>aui_app</code> includes CPack in order to allow to generate packages using CPack. You can disable this behaviour by specifying <code>NO_INCLUDE_CPACK</code> flag.</p>
-<h2>
-ANDROID_PACKAGE<a class="aui-toc-hash" href="#android_package" id="android_package" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md127"></a>
+ANDROID_PACKAGE</h2>
 <p>Android app package name.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -323,8 +323,8 @@ ANDROID_PACKAGE<a class="aui-toc-hash" href="#android_package" id="android_packa
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone" colspan="3">iOS   </td></tr>
 </table>
-<h2>
-LINUX_DESKTOP<a class="aui-toc-hash" href="#linux_desktop" id="linux_desktop" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md128"></a>
+LINUX_DESKTOP</h2>
 <p>Specify custom <code>*.desktop</code> file. If not set, <code>*.desktop</code> file is generated from <code>aui_app</code> arguments.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -332,8 +332,8 @@ LINUX_DESKTOP<a class="aui-toc-hash" href="#linux_desktop" id="linux_desktop" st
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Linux   </td><td class="markdownTableBodyNone" colspan="2">+   </td></tr>
 </table>
-<h2>
-APPLE_TEAM_ID<a class="aui-toc-hash" href="#apple_team_id" id="apple_team_id" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md129"></a>
+APPLE_TEAM_ID</h2>
 <p>Specify your Apple Team ID (<a href="https://discussions.apple.com/thread/7942941">https://discussions.apple.com/thread/7942941</a>).</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -343,8 +343,8 @@ APPLE_TEAM_ID<a class="aui-toc-hash" href="#apple_team_id" id="apple_team_id" st
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">iOS   </td><td class="markdownTableBodyNone" colspan="2">+   </td></tr>
 </table>
-<h2>
-APPLE_BUNDLE_IDENTIFIER<a class="aui-toc-hash" href="#apple_bundle_identifier" id="apple_bundle_identifier" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md130"></a>
+APPLE_BUNDLE_IDENTIFIER</h2>
 <p>Specify bundle identifier. If not set, the value of <code>NAME</code> used instead.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -354,8 +354,8 @@ APPLE_BUNDLE_IDENTIFIER<a class="aui-toc-hash" href="#apple_bundle_identifier" i
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone" colspan="3">iOS   </td></tr>
 </table>
-<h2>
-APPLE_SIGN_IDENTITY<a class="aui-toc-hash" href="#apple_sign_identity" id="apple_sign_identity" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md131"></a>
+APPLE_SIGN_IDENTITY</h2>
 <p>Specify Apple sign identity. Defaults to "iPhone Developer".</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -365,8 +365,8 @@ APPLE_SIGN_IDENTITY<a class="aui-toc-hash" href="#apple_sign_identity" id="apple
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone" colspan="3">iOS   </td></tr>
 </table>
-<h2>
-IOS_VERSION<a class="aui-toc-hash" href="#ios_version" id="ios_version" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md132"></a>
+IOS_VERSION</h2>
 <p>Specify target iOS platform. Defaults to "14.3".</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -374,8 +374,8 @@ IOS_VERSION<a class="aui-toc-hash" href="#ios_version" id="ios_version" style="c
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone" colspan="3">iOS   </td></tr>
 </table>
-<h2>
-IOS_DEVICE<a class="aui-toc-hash" href="#ios_device" id="ios_device" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md133"></a>
+IOS_DEVICE</h2>
 <p>Specify target iOS device. Applicable values are <code>IPHONE</code>, <code>IPAD</code> or <code>BOTH</code>. Defaults to <code>BOTH</code>.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -383,8 +383,8 @@ IOS_DEVICE<a class="aui-toc-hash" href="#ios_device" id="ios_device" style="colo
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone" colspan="3">iOS   </td></tr>
 </table>
-<h2>
-IOS_CONTROLLER<a class="aui-toc-hash" href="#ios_controller" id="ios_controller" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md134"></a>
+IOS_CONTROLLER</h2>
 <p>Specify custom view controller class name. Defaults to <code><a class="el" href="interfaceAUIViewController.html">AUIViewController</a></code>.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -397,7 +397,7 @@ IOS_CONTROLLER<a class="aui-toc-hash" href="#ios_controller" id="ios_controller"
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#syntax">Syntax</a></h1><h2><a href="#target">TARGET</a></h2><h2><a href="#name">NAME</a></h2><h2><a href="#aui_app_ICON">ICON</a></h2><h2><a href="#vendor">VENDOR</a></h2><h2><a href="#copyright">COPYRIGHT</a></h2><h2><a href="#version">VERSION</a></h2><h2><a href="#no_include_cpack">NO_INCLUDE_CPACK</a></h2><h2><a href="#android_package">ANDROID_PACKAGE</a></h2><h2><a href="#linux_desktop">LINUX_DESKTOP</a></h2><h2><a href="#apple_team_id">APPLE_TEAM_ID</a></h2><h2><a href="#apple_bundle_identifier">APPLE_BUNDLE_IDENTIFIER</a></h2><h2><a href="#apple_sign_identity">APPLE_SIGN_IDENTITY</a></h2><h2><a href="#ios_version">IOS_VERSION</a></h2><h2><a href="#ios_device">IOS_DEVICE</a></h2><h2><a href="#ios_controller">IOS_CONTROLLER</a></h2></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->

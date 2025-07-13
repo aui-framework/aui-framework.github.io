@@ -98,32 +98,15 @@ $(function(){initNavTree('classAAsyncHolder.html',''); initResizable(true); });
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="classAAsyncHolder-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AAsyncHolder Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Thread/AAsyncHolder.h#L31"></b>
 <p>Holds a set of futures keeping them valid.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AAsyncHolder_8h_source.html">AUI/Thread/AAsyncHolder.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:ac777132c8286e47bd40651832244001e" id="r_ac777132c8286e47bd40651832244001e"><td class="memTemplParams" colspan="2"><a id="ac777132c8286e47bd40651832244001e" name="ac777132c8286e47bd40651832244001e"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ac777132c8286e47bd40651832244001e"><td align="right" class="memTemplItemLeft" valign="top"><a class="el" href="classAAsyncHolder.html">AAsyncHolder</a> &amp; </td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (<a class="el" href="classAFuture.html">AFuture</a>&lt; T &gt; future)</td></tr>
-<tr class="separator:ac777132c8286e47bd40651832244001e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a07623f5bd50bc56d46c6048fccf79e71" id="r_a07623f5bd50bc56d46c6048fccf79e71"><td align="right" class="memItemLeft" valign="top"><a id="a07623f5bd50bc56d46c6048fccf79e71" name="a07623f5bd50bc56d46c6048fccf79e71"></a>
-std::size_t </td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
-<tr class="separator:a07623f5bd50bc56d46c6048fccf79e71"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab7d6df66fef41726d36463909dc0cc4a" id="r_ab7d6df66fef41726d36463909dc0cc4a"><td align="right" class="memItemLeft" valign="top"><a id="ab7d6df66fef41726d36463909dc0cc4a" name="ab7d6df66fef41726d36463909dc0cc4a"></a>
-void </td><td class="memItemRight" valign="bottom"><b>waitForAll</b> ()</td></tr>
-<tr class="separator:ab7d6df66fef41726d36463909dc0cc4a"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Manages multiple futures.">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future. </dd></dl>
-<dl class="section user"><dt></dt><dd>Unlike AFutureSet, <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> is intended to hold void futures (<a class="el" href="classAFuture.html">AFuture&lt;void&gt;</a>), however, non-void types can be also supported (but with extra overhead). When <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task is complete, the <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is removed from <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>Unlike <a class="el" href="classAFutureSet.html" title="Manages multiple futures.">AFutureSet</a>, <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> is intended to hold void futures (<a class="el" href="classAFuture.html">AFuture&lt;void&gt;</a>), however, non-void types can be also supported (but with extra overhead). When <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a>'s task is complete, the <a class="el" href="classAFuture.html" title="Represents a value that will be available at some point in the future.">AFuture</a> is removed from <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a>.</dd></dl>
 <p>Guarantees that held futures will never be executed or be during execution after <a class="el" href="classAAsyncHolder.html" title="Holds a set of futures keeping them valid.">AAsyncHolder</a> is destroyed.</p>
 <p>Cancels all futures in destructor. </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_2ui_2infinite_lazy_list_2src_2main_8cpp-example.html#_a1">examples/ui/infinite_lazy_list/src/main.cpp</a>, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8h-example.html#_a6">examples/ui/views/src/ExampleWindow.h</a>.</dd>
@@ -133,7 +116,7 @@ void </td><td class="memItemRight" valign="bottom"><b>waitForAll</b> ()</td></t
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

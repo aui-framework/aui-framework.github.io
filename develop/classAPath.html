@@ -98,565 +98,13 @@ $(function(){initNavTree('classAPath.html',''); initResizable(true); });
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#pub-types">Public Types</a> |
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="#pub-static-methods">Static Public Member Functions</a> |
-<a href="classAPath-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">APath Class Reference<span class="mlabels"><span class="mlabel final">final</span></span><div class="ingroups"><a class="el" href="group__core.html">aui::core</a> » <a class="el" href="group__io.html">IO streams</a></div></div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/IO/APath.h#L128"></b>
 <p>An add-on to <a class="el" href="classAString.html" title="Represents a Unicode character string.">AString</a> with functions for working with the path.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="APath_8h_source.html">AUI/IO/APath.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a38597cac45847bf6ce74272ea0b72ef3" id="r_a38597cac45847bf6ce74272ea0b72ef3"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="#a38597cac45847bf6ce74272ea0b72ef3">DefaultPath</a> { <a class="el" href="#a38597cac45847bf6ce74272ea0b72ef3af11a27bb7f92685193a8b9bb47c6a57f">APPDATA</a>
-, <a class="el" href="#a38597cac45847bf6ce74272ea0b72ef3ac8969f53ec9d9e21e877cb62e584cf5b">TEMP</a>
-, <a class="el" href="#a38597cac45847bf6ce74272ea0b72ef3a3c86b6ae365e77ad726cfebf62d7077a">HOME</a>
- }</td></tr>
-<tr class="separator:a38597cac45847bf6ce74272ea0b72ef3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_types_classAString"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_classAString')"><img alt="-" src="closed.png"/> Public Types inherited from <a class="el" href="classAString.html">AString</a></td></tr>
-<tr class="memitem:aad754ade69e9e143d2c545c3c2e79c02 inherit pub_types_classAString" id="r_aad754ade69e9e143d2c545c3c2e79c02"><td align="right" class="memItemLeft" valign="top">
-using </td><td class="memItemRight" valign="bottom"><b>iterator</b> = super::iterator</td></tr>
-<tr class="separator:aad754ade69e9e143d2c545c3c2e79c02 inherit pub_types_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9b48f8313edbbbe98fd60f44c0a72d28 inherit pub_types_classAString" id="r_a9b48f8313edbbbe98fd60f44c0a72d28"><td align="right" class="memItemLeft" valign="top">
-using </td><td class="memItemRight" valign="bottom"><b>value_type</b> = super::value_type</td></tr>
-<tr class="separator:a9b48f8313edbbbe98fd60f44c0a72d28 inherit pub_types_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acba1866f79e765133f2789e861bce357 inherit pub_types_classAString" id="r_acba1866f79e765133f2789e861bce357"><td align="right" class="memItemLeft" valign="top">
-using </td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = super::const_iterator</td></tr>
-<tr class="separator:acba1866f79e765133f2789e861bce357 inherit pub_types_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a48a1a523da0fefe00aaff34844d2dc6d inherit pub_types_classAString" id="r_a48a1a523da0fefe00aaff34844d2dc6d"><td align="right" class="memItemLeft" valign="top">
-using </td><td class="memItemRight" valign="bottom"><b>reverse_iterator</b> = super::reverse_iterator</td></tr>
-<tr class="separator:a48a1a523da0fefe00aaff34844d2dc6d inherit pub_types_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:afa99f96d749bd2ac8b1daee6ff1575dc inherit pub_types_classAString" id="r_afa99f96d749bd2ac8b1daee6ff1575dc"><td align="right" class="memItemLeft" valign="top">
-using </td><td class="memItemRight" valign="bottom"><b>const_reverse_iterator</b> = super::const_reverse_iterator</td></tr>
-<tr class="separator:afa99f96d749bd2ac8b1daee6ff1575dc inherit pub_types_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:ab4a1f0435b19f8a67372785ab2c7f551" id="r_ab4a1f0435b19f8a67372785ab2c7f551"><td align="right" class="memItemLeft" valign="top"><a id="ab4a1f0435b19f8a67372785ab2c7f551" name="ab4a1f0435b19f8a67372785ab2c7f551"></a>
- </td><td class="memItemRight" valign="bottom"><b>APath</b> (<a class="el" href="classAString.html">AString</a> &amp;&amp;other) noexcept</td></tr>
-<tr class="separator:ab4a1f0435b19f8a67372785ab2c7f551"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af6acc2faa5f028efbce01e9188f4fb6a" id="r_af6acc2faa5f028efbce01e9188f4fb6a"><td align="right" class="memItemLeft" valign="top"><a id="af6acc2faa5f028efbce01e9188f4fb6a" name="af6acc2faa5f028efbce01e9188f4fb6a"></a>
- </td><td class="memItemRight" valign="bottom"><b>APath</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) noexcept</td></tr>
-<tr class="separator:af6acc2faa5f028efbce01e9188f4fb6a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9e6317a71706ebcf1007b14cd244079b" id="r_a9e6317a71706ebcf1007b14cd244079b"><td align="right" class="memItemLeft" valign="top"><a id="a9e6317a71706ebcf1007b14cd244079b" name="a9e6317a71706ebcf1007b14cd244079b"></a>
- </td><td class="memItemRight" valign="bottom"><b>APath</b> (const char *utf8) noexcept</td></tr>
-<tr class="separator:a9e6317a71706ebcf1007b14cd244079b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a58597da2c9bc427fdb9a551e41f92ace" id="r_a58597da2c9bc427fdb9a551e41f92ace"><td align="right" class="memItemLeft" valign="top"><a id="a58597da2c9bc427fdb9a551e41f92ace" name="a58597da2c9bc427fdb9a551e41f92ace"></a>
- </td><td class="memItemRight" valign="bottom"><b>APath</b> (const char *utf8, std::size_t length) noexcept</td></tr>
-<tr class="separator:a58597da2c9bc427fdb9a551e41f92ace"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adc840b0dce32bbe0d7246cb5bf52b4a7" id="r_adc840b0dce32bbe0d7246cb5bf52b4a7"><td align="right" class="memItemLeft" valign="top"><a id="adc840b0dce32bbe0d7246cb5bf52b4a7" name="adc840b0dce32bbe0d7246cb5bf52b4a7"></a>
- </td><td class="memItemRight" valign="bottom"><b>APath</b> (const char16_t *str) noexcept</td></tr>
-<tr class="separator:adc840b0dce32bbe0d7246cb5bf52b4a7"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac27a518c2d392de3a0a0d5f96b3daa82" id="r_ac27a518c2d392de3a0a0d5f96b3daa82"><td align="right" class="memItemLeft" valign="top"><a id="ac27a518c2d392de3a0a0d5f96b3daa82" name="ac27a518c2d392de3a0a0d5f96b3daa82"></a>
- </td><td class="memItemRight" valign="bottom"><b>APath</b> (const char16_t *str, std::size_t length) noexcept</td></tr>
-<tr class="separator:ac27a518c2d392de3a0a0d5f96b3daa82"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abb7e0d8f6c632d915f41a31a52036b00" id="r_abb7e0d8f6c632d915f41a31a52036b00"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#abb7e0d8f6c632d915f41a31a52036b00">touch</a> () const</td></tr>
-<tr class="separator:abb7e0d8f6c632d915f41a31a52036b00"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a009bf83be30970d6b00af798b2445035" id="r_a009bf83be30970d6b00af798b2445035"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a009bf83be30970d6b00af798b2445035">systemSlashDirection</a> () const</td></tr>
-<tr class="memdesc:a009bf83be30970d6b00af798b2445035"><td class="mdescLeft"> </td><td class="mdescRight">Transforms this path to string with platform's native slashes.  <br/></td></tr>
-<tr class="separator:a009bf83be30970d6b00af798b2445035"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aaa8ac6cdefdbb7c5b0a53b0f7255a639" id="r_aaa8ac6cdefdbb7c5b0a53b0f7255a639"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa8ac6cdefdbb7c5b0a53b0f7255a639">absolute</a> () const</td></tr>
-<tr class="memdesc:aaa8ac6cdefdbb7c5b0a53b0f7255a639"><td class="mdescLeft"> </td><td class="mdescRight">Get the absolute (full) path to the file.  <br/></td></tr>
-<tr class="separator:aaa8ac6cdefdbb7c5b0a53b0f7255a639"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af34c9fd2d0ff55d7c9177a108d8a10c5" id="r_af34c9fd2d0ff55d7c9177a108d8a10c5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classADeque.html">ADeque</a>&lt; <a class="el" href="classAPath.html">APath</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#af34c9fd2d0ff55d7c9177a108d8a10c5">listDir</a> (AFileListFlags f=AFileListFlags::DEFAULT_FLAGS) const</td></tr>
-<tr class="memdesc:af34c9fd2d0ff55d7c9177a108d8a10c5"><td class="mdescLeft"> </td><td class="mdescRight">Get list of (by default) direct children of this folder. This function outputs paths including the path listDir was called on.  <br/></td></tr>
-<tr class="separator:af34c9fd2d0ff55d7c9177a108d8a10c5"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac3c9e14431eb5993fef0909e00ef5b08" id="r_ac3c9e14431eb5993fef0909e00ef5b08"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3c9e14431eb5993fef0909e00ef5b08">parent</a> () const</td></tr>
-<tr class="separator:ac3c9e14431eb5993fef0909e00ef5b08"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae175e71b884ce2c7d9ccb476a34a9ab1" id="r_ae175e71b884ce2c7d9ccb476a34a9ab1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#ae175e71b884ce2c7d9ccb476a34a9ab1">file</a> (const <a class="el" href="classAString.html">AString</a> &amp;fileName) const</td></tr>
-<tr class="memdesc:ae175e71b884ce2c7d9ccb476a34a9ab1"><td class="mdescLeft"> </td><td class="mdescRight">Path of the child element. Relevant only for folders.  <br/></td></tr>
-<tr class="separator:ae175e71b884ce2c7d9ccb476a34a9ab1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:afc37f01cd0dfbad8a50953cac7310382" id="r_afc37f01cd0dfbad8a50953cac7310382"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#afc37f01cd0dfbad8a50953cac7310382">filename</a> () const</td></tr>
-<tr class="memdesc:afc37f01cd0dfbad8a50953cac7310382"><td class="mdescLeft"> </td><td class="mdescRight">File name.  <br/></td></tr>
-<tr class="separator:afc37f01cd0dfbad8a50953cac7310382"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4357a906250228535aa063003b567af9" id="r_a4357a906250228535aa063003b567af9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4357a906250228535aa063003b567af9">filenameWithoutExtension</a> () const</td></tr>
-<tr class="memdesc:a4357a906250228535aa063003b567af9"><td class="mdescLeft"> </td><td class="mdescRight">File name without extension.  <br/></td></tr>
-<tr class="separator:a4357a906250228535aa063003b567af9"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acef706b7e2109da7f7625489f114eaab" id="r_acef706b7e2109da7f7625489f114eaab"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#acef706b7e2109da7f7625489f114eaab">extension</a> () const</td></tr>
-<tr class="memdesc:acef706b7e2109da7f7625489f114eaab"><td class="mdescLeft"> </td><td class="mdescRight">File extension.  <br/></td></tr>
-<tr class="separator:acef706b7e2109da7f7625489f114eaab"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adbaff4e13862430cad411daa2ebdc2cb" id="r_adbaff4e13862430cad411daa2ebdc2cb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#adbaff4e13862430cad411daa2ebdc2cb">withoutUppermostFolder</a> () const</td></tr>
-<tr class="memdesc:adbaff4e13862430cad411daa2ebdc2cb"><td class="mdescLeft"> </td><td class="mdescRight">Remove the uppermost folder from this path.  <br/></td></tr>
-<tr class="separator:adbaff4e13862430cad411daa2ebdc2cb"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a75d1783b5aceea2da0a3cd33f8b7bc0c" id="r_a75d1783b5aceea2da0a3cd33f8b7bc0c"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a75d1783b5aceea2da0a3cd33f8b7bc0c">exists</a> () const</td></tr>
-<tr class="separator:a75d1783b5aceea2da0a3cd33f8b7bc0c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7c1302777d5b748bf87a24d078c090e1" id="r_a7c1302777d5b748bf87a24d078c090e1"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c1302777d5b748bf87a24d078c090e1">isRegularFileExists</a> () const</td></tr>
-<tr class="separator:a7c1302777d5b748bf87a24d078c090e1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab2157a1af5be806cc4b8570ddc0fca54" id="r_ab2157a1af5be806cc4b8570ddc0fca54"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2157a1af5be806cc4b8570ddc0fca54">isDirectoryExists</a> () const</td></tr>
-<tr class="separator:ab2157a1af5be806cc4b8570ddc0fca54"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4512a1474619f7a6ccb773dc2ee7fbef" id="r_a4512a1474619f7a6ccb773dc2ee7fbef"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4512a1474619f7a6ccb773dc2ee7fbef">removeFile</a> () const</td></tr>
-<tr class="memdesc:a4512a1474619f7a6ccb773dc2ee7fbef"><td class="mdescLeft"> </td><td class="mdescRight">Delete file. Relevant for empty folders and regular files.  <br/></td></tr>
-<tr class="separator:a4512a1474619f7a6ccb773dc2ee7fbef"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1b5343e5010302e4dd86a28eecc4eb19" id="r_a1b5343e5010302e4dd86a28eecc4eb19"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b5343e5010302e4dd86a28eecc4eb19">removeFileRecursive</a> () const</td></tr>
-<tr class="memdesc:a1b5343e5010302e4dd86a28eecc4eb19"><td class="mdescLeft"> </td><td class="mdescRight">Delete files recursively, including itself.  <br/></td></tr>
-<tr class="separator:a1b5343e5010302e4dd86a28eecc4eb19"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2117945f58886939a71beb9a2a79aba1" id="r_a2117945f58886939a71beb9a2a79aba1"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a2117945f58886939a71beb9a2a79aba1">removeDirContentsRecursive</a> () const</td></tr>
-<tr class="memdesc:a2117945f58886939a71beb9a2a79aba1"><td class="mdescLeft"> </td><td class="mdescRight">Delete directory contents (recursively).  <br/></td></tr>
-<tr class="separator:a2117945f58886939a71beb9a2a79aba1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3086272262834a19139e1324aed5285b" id="r_a3086272262834a19139e1324aed5285b"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a3086272262834a19139e1324aed5285b">makeDir</a> () const</td></tr>
-<tr class="memdesc:a3086272262834a19139e1324aed5285b"><td class="mdescLeft"> </td><td class="mdescRight">Create folder.  <br/></td></tr>
-<tr class="separator:a3086272262834a19139e1324aed5285b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a248a0d9584a2b112f2be2a194c9d1a88" id="r_a248a0d9584a2b112f2be2a194c9d1a88"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a248a0d9584a2b112f2be2a194c9d1a88">makeDirs</a> () const</td></tr>
-<tr class="memdesc:a248a0d9584a2b112f2be2a194c9d1a88"><td class="mdescLeft"> </td><td class="mdescRight">Create all nonexistent folders on the path.  <br/></td></tr>
-<tr class="separator:a248a0d9584a2b112f2be2a194c9d1a88"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a693692266b1444533086c0f7be2c7d2a" id="r_a693692266b1444533086c0f7be2c7d2a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a693692266b1444533086c0f7be2c7d2a">relativelyTo</a> (const <a class="el" href="classAPath.html">APath</a> &amp;dir) const</td></tr>
-<tr class="memdesc:a693692266b1444533086c0f7be2c7d2a"><td class="mdescLeft"> </td><td class="mdescRight">Returns same path but without <code>dir</code> <br/></td></tr>
-<tr class="separator:a693692266b1444533086c0f7be2c7d2a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af39b9c95e6446b64c89ffcac84fe4c85" id="r_af39b9c95e6446b64c89ffcac84fe4c85"><td align="right" class="memItemLeft" valign="top"><a id="af39b9c95e6446b64c89ffcac84fe4c85" name="af39b9c95e6446b64c89ffcac84fe4c85"></a>
-<a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><b>extensionChanged</b> (const <a class="el" href="classAString.html">AString</a> &amp;newExtension) const</td></tr>
-<tr class="memdesc:af39b9c95e6446b64c89ffcac84fe4c85"><td class="mdescLeft"> </td><td class="mdescRight">Returns same path but with extension changed. <br/></td></tr>
-<tr class="separator:af39b9c95e6446b64c89ffcac84fe4c85"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0de41be67e8b34561c29203172e6b58b" id="r_a0de41be67e8b34561c29203172e6b58b"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de41be67e8b34561c29203172e6b58b">isAbsolute</a> () const</td></tr>
-<tr class="memdesc:a0de41be67e8b34561c29203172e6b58b"><td class="mdescLeft"> </td><td class="mdescRight">Checks whether path absolute or not.  <br/></td></tr>
-<tr class="separator:a0de41be67e8b34561c29203172e6b58b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac6fe94d839c51484b6415feb8f1737c0" id="r_ac6fe94d839c51484b6415feb8f1737c0"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6fe94d839c51484b6415feb8f1737c0">isRelative</a> () const</td></tr>
-<tr class="memdesc:ac6fe94d839c51484b6415feb8f1737c0"><td class="mdescLeft"> </td><td class="mdescRight">Checks whether path absolute or not.  <br/></td></tr>
-<tr class="separator:ac6fe94d839c51484b6415feb8f1737c0"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae4036e11737162ffebec2773ab3cb0d8" id="r_ae4036e11737162ffebec2773ab3cb0d8"><td align="right" class="memItemLeft" valign="top"><a id="ae4036e11737162ffebec2773ab3cb0d8" name="ae4036e11737162ffebec2773ab3cb0d8"></a>
-time_t </td><td class="memItemRight" valign="bottom"><b>fileModifyTime</b> () const</td></tr>
-<tr class="separator:ae4036e11737162ffebec2773ab3cb0d8"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a72152bf5e0f11268be3a14279dbdb1ae" id="r_a72152bf5e0f11268be3a14279dbdb1ae"><td align="right" class="memItemLeft" valign="top"><a id="a72152bf5e0f11268be3a14279dbdb1ae" name="a72152bf5e0f11268be3a14279dbdb1ae"></a>
-size_t </td><td class="memItemRight" valign="bottom"><b>fileSize</b> () const</td></tr>
-<tr class="separator:a72152bf5e0f11268be3a14279dbdb1ae"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6b2bf8b0aa6cfc3d01be73248e9dcfbe" id="r_a6b2bf8b0aa6cfc3d01be73248e9dcfbe"><td align="right" class="memItemLeft" valign="top">const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b2bf8b0aa6cfc3d01be73248e9dcfbe">chmod</a> (int newMode) const</td></tr>
-<tr class="memdesc:a6b2bf8b0aa6cfc3d01be73248e9dcfbe"><td class="mdescLeft"> </td><td class="mdescRight">Changes mode (permissions) on file.  <br/></td></tr>
-<tr class="separator:a6b2bf8b0aa6cfc3d01be73248e9dcfbe"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abafaeb035c4406f106cb9e556e6360ac" id="r_abafaeb035c4406f106cb9e556e6360ac"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#abafaeb035c4406f106cb9e556e6360ac">operator/</a> (const <a class="el" href="classAString.html">AString</a> &amp;<a class="el" href="#afc37f01cd0dfbad8a50953cac7310382">filename</a>) const</td></tr>
-<tr class="memdesc:abafaeb035c4406f106cb9e556e6360ac"><td class="mdescLeft"> </td><td class="mdescRight">Path of the child element. Relevant only for folders.  <br/></td></tr>
-<tr class="separator:abafaeb035c4406f106cb9e556e6360ac"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1b3c4ac7cbd4bba36223c47157dcb1e5" id="r_a1b3c4ac7cbd4bba36223c47157dcb1e5"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b3c4ac7cbd4bba36223c47157dcb1e5">isEffectivelyAccessible</a> (AFileAccess flags) const noexcept</td></tr>
-<tr class="memdesc:a1b3c4ac7cbd4bba36223c47157dcb1e5"><td class="mdescLeft"> </td><td class="mdescRight">Return true if the current process has specified access flags to path.  <br/></td></tr>
-<tr class="separator:a1b3c4ac7cbd4bba36223c47157dcb1e5"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_methods_classAString"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classAString')"><img alt="-" src="closed.png"/> Public Member Functions inherited from <a class="el" href="classAString.html">AString</a></td></tr>
-<tr class="memitem:a34ae01a86f66bb63ef6dfd9f89191cce inherit pub_methods_classAString" id="r_a34ae01a86f66bb63ef6dfd9f89191cce"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (<a class="el" href="classAString.html">AString</a> &amp;&amp;other) noexcept</td></tr>
-<tr class="separator:a34ae01a86f66bb63ef6dfd9f89191cce inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2ddc86772025c375410335b527e5a9cc inherit pub_methods_classAString" id="r_a2ddc86772025c375410335b527e5a9cc"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a2ddc86772025c375410335b527e5a9cc">AString</a> (const basic_string &amp;other) noexcept</td></tr>
-<tr class="separator:a2ddc86772025c375410335b527e5a9cc inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac5366542c9f6fc7e9ebedd03f3926619 inherit pub_methods_classAString" id="r_ac5366542c9f6fc7e9ebedd03f3926619"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#ac5366542c9f6fc7e9ebedd03f3926619">AString</a> (const std::string &amp;utf8) noexcept</td></tr>
-<tr class="separator:ac5366542c9f6fc7e9ebedd03f3926619 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a58a51f99504aa295213b1d115ec98d91 inherit pub_methods_classAString" id="r_a58a51f99504aa295213b1d115ec98d91"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) noexcept</td></tr>
-<tr class="separator:a58a51f99504aa295213b1d115ec98d91 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abba495052e9ce129dd123573af47071e inherit pub_methods_classAString" id="r_abba495052e9ce129dd123573af47071e"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const basic_string &amp;rhs, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:abba495052e9ce129dd123573af47071e inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6886964bf038f7b0a0dc93ee9224cb75 inherit pub_methods_classAString" id="r_a6886964bf038f7b0a0dc93ee9224cb75"><td class="memTemplParams" colspan="2">
-template&lt;class Iterator&gt; </td></tr>
-<tr class="memitem:a6886964bf038f7b0a0dc93ee9224cb75 inherit pub_methods_classAString"><td align="right" class="memTemplItemLeft" valign="top"> </td><td class="memTemplItemRight" valign="bottom"><b>AString</b> (Iterator first, Iterator last) noexcept</td></tr>
-<tr class="separator:a6886964bf038f7b0a0dc93ee9224cb75 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0160afeb1c0f7cbf110e5706bbf5725b inherit pub_methods_classAString" id="r_a0160afeb1c0f7cbf110e5706bbf5725b"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (char16_t c) noexcept</td></tr>
-<tr class="separator:a0160afeb1c0f7cbf110e5706bbf5725b inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0949c4d7c858e1c4c7c815450ca3eb38 inherit pub_methods_classAString" id="r_a0949c4d7c858e1c4c7c815450ca3eb38"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a0949c4d7c858e1c4c7c815450ca3eb38">AString</a> (const char *utf8) noexcept</td></tr>
-<tr class="separator:a0949c4d7c858e1c4c7c815450ca3eb38 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1eb7e24ca17238ab4db2f302ac41ef51 inherit pub_methods_classAString" id="r_a1eb7e24ca17238ab4db2f302ac41ef51"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a1eb7e24ca17238ab4db2f302ac41ef51">AString</a> (std::string_view utf8) noexcept</td></tr>
-<tr class="separator:a1eb7e24ca17238ab4db2f302ac41ef51 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae71fa22cdf3d7cfd46e5257463204489 inherit pub_methods_classAString" id="r_ae71fa22cdf3d7cfd46e5257463204489"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:ae71fa22cdf3d7cfd46e5257463204489 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a314b6042b64a8ae96c1a7dab2bffe5dc inherit pub_methods_classAString" id="r_a314b6042b64a8ae96c1a7dab2bffe5dc"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const basic_string &amp;rhs, size_type offset, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:a314b6042b64a8ae96c1a7dab2bffe5dc inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a139b41cdd249a2a36ef7b7588ecfe014 inherit pub_methods_classAString" id="r_a139b41cdd249a2a36ef7b7588ecfe014"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const basic_string &amp;rhs, size_type offset, size_type count, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:a139b41cdd249a2a36ef7b7588ecfe014 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab8a34d8a5c2499fa49369e69e3bb8004 inherit pub_methods_classAString" id="r_ab8a34d8a5c2499fa49369e69e3bb8004"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const char16_t *cStyleString, size_type count) noexcept</td></tr>
-<tr class="separator:ab8a34d8a5c2499fa49369e69e3bb8004 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac57810a02a8a564d53f1f730b22d30d9 inherit pub_methods_classAString" id="r_ac57810a02a8a564d53f1f730b22d30d9"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const char16_t *cStyleString, size_type count, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:ac57810a02a8a564d53f1f730b22d30d9 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a78077913c3758a72bebaadc336d3be04 inherit pub_methods_classAString" id="r_a78077913c3758a72bebaadc336d3be04"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const char16_t *cStyleString) noexcept</td></tr>
-<tr class="separator:a78077913c3758a72bebaadc336d3be04 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a77b232d44bc71f9a9c19102da7f62dd1 inherit pub_methods_classAString" id="r_a77b232d44bc71f9a9c19102da7f62dd1"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (const char16_t *cStyleString, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:a77b232d44bc71f9a9c19102da7f62dd1 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a74a0338a6c910a182b45eb9d7d3ca2cd inherit pub_methods_classAString" id="r_a74a0338a6c910a182b45eb9d7d3ca2cd"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (size_type count, char16_t _Ch) noexcept</td></tr>
-<tr class="separator:a74a0338a6c910a182b45eb9d7d3ca2cd inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa39328231ad8f434a62cb147c19c9923 inherit pub_methods_classAString" id="r_aa39328231ad8f434a62cb147c19c9923"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (size_type count, char16_t _Ch, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:aa39328231ad8f434a62cb147c19c9923 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a14fa2251a453282045b5b2c0aa9e0935 inherit pub_methods_classAString" id="r_a14fa2251a453282045b5b2c0aa9e0935"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (basic_string &amp;&amp;rhs) noexcept</td></tr>
-<tr class="separator:a14fa2251a453282045b5b2c0aa9e0935 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad421c1b61120a3203c6d7b2254b35d42 inherit pub_methods_classAString" id="r_ad421c1b61120a3203c6d7b2254b35d42"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (basic_string &amp;&amp;rhs, const std::allocator&lt; char16_t &gt; &amp;allocator) noexcept</td></tr>
-<tr class="separator:ad421c1b61120a3203c6d7b2254b35d42 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acf4f7e89ced2d1b917fd2b8bc2d6164d inherit pub_methods_classAString" id="r_acf4f7e89ced2d1b917fd2b8bc2d6164d"><td align="right" class="memItemLeft" valign="top">
- </td><td class="memItemRight" valign="bottom"><b>AString</b> (std::initializer_list&lt; char16_t &gt; _Ilist) noexcept</td></tr>
-<tr class="separator:acf4f7e89ced2d1b917fd2b8bc2d6164d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa3fb12846d309e59b5b5a4dcfa5cb41a inherit pub_methods_classAString" id="r_aa3fb12846d309e59b5b5a4dcfa5cb41a"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>push_back</b> (char16_t c) noexcept</td></tr>
-<tr class="separator:aa3fb12846d309e59b5b5a4dcfa5cb41a inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9779d4d0e5e71b2d0b3644612a8dfdca inherit pub_methods_classAString" id="r_a9779d4d0e5e71b2d0b3644612a8dfdca"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>pop_back</b> () noexcept</td></tr>
-<tr class="separator:a9779d4d0e5e71b2d0b3644612a8dfdca inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa4d48c9dc4ff570fb276ebe3b1fef97f inherit pub_methods_classAString" id="r_aa4d48c9dc4ff570fb276ebe3b1fef97f"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>uppercase</b> () const</td></tr>
-<tr class="separator:aa4d48c9dc4ff570fb276ebe3b1fef97f inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad1d1f40a00815936881d6d5099ce3f22 inherit pub_methods_classAString" id="r_ad1d1f40a00815936881d6d5099ce3f22"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>lowercase</b> () const</td></tr>
-<tr class="separator:ad1d1f40a00815936881d6d5099ce3f22 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af491dc9d202f7657a5170275dc4a123c inherit pub_methods_classAString" id="r_af491dc9d202f7657a5170275dc4a123c"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>startsWith</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) const noexcept</td></tr>
-<tr class="separator:af491dc9d202f7657a5170275dc4a123c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a81ef75fa0dc9d4601fb66c05a671ef25 inherit pub_methods_classAString" id="r_a81ef75fa0dc9d4601fb66c05a671ef25"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>startsWith</b> (char16_t c) const noexcept</td></tr>
-<tr class="separator:a81ef75fa0dc9d4601fb66c05a671ef25 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aebaa3df7b8edf613c4b35db6c10deefa inherit pub_methods_classAString" id="r_aebaa3df7b8edf613c4b35db6c10deefa"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>endsWith</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) const noexcept</td></tr>
-<tr class="separator:aebaa3df7b8edf613c4b35db6c10deefa inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a224d95d9190abb0f82bb04ac32aa13e4 inherit pub_methods_classAString" id="r_a224d95d9190abb0f82bb04ac32aa13e4"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>endsWith</b> (char16_t c) const noexcept</td></tr>
-<tr class="separator:a224d95d9190abb0f82bb04ac32aa13e4 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4aa19f472e3621ef27d83522c0c7917e inherit pub_methods_classAString" id="r_a4aa19f472e3621ef27d83522c0c7917e"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAStringVector.html">AStringVector</a> </td><td class="memItemRight" valign="bottom"><b>split</b> (char16_t c) const noexcept</td></tr>
-<tr class="separator:a4aa19f472e3621ef27d83522c0c7917e inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab099505e73cb161cad39e533e86357e5 inherit pub_methods_classAString" id="r_ab099505e73cb161cad39e533e86357e5"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>find</b> (char c, size_type offset=0) const noexcept</td></tr>
-<tr class="separator:ab099505e73cb161cad39e533e86357e5 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6e94d5841c16778bf6bb431b56d9ec39 inherit pub_methods_classAString" id="r_a6e94d5841c16778bf6bb431b56d9ec39"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>find</b> (char16_t c, size_type offset=0) const noexcept</td></tr>
-<tr class="separator:a6e94d5841c16778bf6bb431b56d9ec39 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0c8180ce7a77c92680af8f26b8301b66 inherit pub_methods_classAString" id="r_a0c8180ce7a77c92680af8f26b8301b66"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>find</b> (const <a class="el" href="classAString.html">AString</a> &amp;str, size_type offset=0) const noexcept</td></tr>
-<tr class="separator:a0c8180ce7a77c92680af8f26b8301b66 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0e57e22111884b6e5c3c8d0fc201a519 inherit pub_methods_classAString" id="r_a0e57e22111884b6e5c3c8d0fc201a519"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>rfind</b> (char c, size_type offset=NPOS) const noexcept</td></tr>
-<tr class="separator:a0e57e22111884b6e5c3c8d0fc201a519 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5bbfdbda9b3f534ac4861ef217f38275 inherit pub_methods_classAString" id="r_a5bbfdbda9b3f534ac4861ef217f38275"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>rfind</b> (char16_t c, size_type offset=NPOS) const noexcept</td></tr>
-<tr class="separator:a5bbfdbda9b3f534ac4861ef217f38275 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a68672c125f9a5a68f8c0a087d258b712 inherit pub_methods_classAString" id="r_a68672c125f9a5a68f8c0a087d258b712"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>rfind</b> (const <a class="el" href="classAString.html">AString</a> &amp;str, size_type offset=NPOS) const noexcept</td></tr>
-<tr class="separator:a68672c125f9a5a68f8c0a087d258b712 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a21a6951ea44debb56ebc46d6de34429e inherit pub_methods_classAString" id="r_a21a6951ea44debb56ebc46d6de34429e"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>length</b> () const noexcept</td></tr>
-<tr class="separator:a21a6951ea44debb56ebc46d6de34429e inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa00d4bfdf398f023b6ff08451da53f20 inherit pub_methods_classAString" id="r_aa00d4bfdf398f023b6ff08451da53f20"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>trimLeft</b> (char16_t symbol=' ') const noexcept</td></tr>
-<tr class="separator:aa00d4bfdf398f023b6ff08451da53f20 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab53f44577a4088d2d333771941a0d50d inherit pub_methods_classAString" id="r_ab53f44577a4088d2d333771941a0d50d"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>trimRight</b> (char16_t symbol=' ') const noexcept</td></tr>
-<tr class="separator:ab53f44577a4088d2d333771941a0d50d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab00cd9d0893ae2be143834b5737a614b inherit pub_methods_classAString" id="r_ab00cd9d0893ae2be143834b5737a614b"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>trim</b> (char16_t symbol=' ') const noexcept</td></tr>
-<tr class="separator:ab00cd9d0893ae2be143834b5737a614b inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acf14112d6f998b837ade26bb7c4564f0 inherit pub_methods_classAString" id="r_acf14112d6f998b837ade26bb7c4564f0"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>reserve</b> (size_t s)</td></tr>
-<tr class="separator:acf14112d6f998b837ade26bb7c4564f0 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a23fd312179e8472955a3664f9e8840ac inherit pub_methods_classAString" id="r_a23fd312179e8472955a3664f9e8840ac"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>resize</b> (size_t s)</td></tr>
-<tr class="separator:a23fd312179e8472955a3664f9e8840ac inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adcbfa3a93772ce980ac89a18adbe3c44 inherit pub_methods_classAString" id="r_adcbfa3a93772ce980ac89a18adbe3c44"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>restrictLength</b> (size_t s, const <a class="el" href="classAString.html">AString</a> &amp;stringAtEnd="...") const</td></tr>
-<tr class="separator:adcbfa3a93772ce980ac89a18adbe3c44 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a068af5b8c179a8356840cf906f6a2ca9 inherit pub_methods_classAString" id="r_a068af5b8c179a8356840cf906f6a2ca9"><td align="right" class="memItemLeft" valign="top">
-char16_t * </td><td class="memItemRight" valign="bottom"><b>data</b> () noexcept</td></tr>
-<tr class="separator:a068af5b8c179a8356840cf906f6a2ca9 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aaf706b5d6896a84de619aa4b81710ce8 inherit pub_methods_classAString" id="r_aaf706b5d6896a84de619aa4b81710ce8"><td align="right" class="memItemLeft" valign="top">
-const char16_t * </td><td class="memItemRight" valign="bottom"><b>data</b> () const noexcept</td></tr>
-<tr class="separator:aaf706b5d6896a84de619aa4b81710ce8 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a70918ba6c569a95edd67162f03f88d14 inherit pub_methods_classAString" id="r_a70918ba6c569a95edd67162f03f88d14"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>replaceAll</b> (const <a class="el" href="classAString.html">AString</a> &amp;from, const <a class="el" href="classAString.html">AString</a> &amp;to)</td></tr>
-<tr class="separator:a70918ba6c569a95edd67162f03f88d14 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af255e2316255dd8c7813464eac112cf8 inherit pub_methods_classAString" id="r_af255e2316255dd8c7813464eac112cf8"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>replacedAll</b> (const <a class="el" href="classAString.html">AString</a> &amp;from, const <a class="el" href="classAString.html">AString</a> &amp;to) const</td></tr>
-<tr class="separator:af255e2316255dd8c7813464eac112cf8 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8263a18473a8388f424f063bb09eda2d inherit pub_methods_classAString" id="r_a8263a18473a8388f424f063bb09eda2d"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>replacedAll</b> (char16_t from, char16_t to) const noexcept</td></tr>
-<tr class="separator:a8263a18473a8388f424f063bb09eda2d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af146b526530de7d758e755af5d7e62ec inherit pub_methods_classAString" id="r_af146b526530de7d758e755af5d7e62ec"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>replacedAll</b> (const <a class="el" href="classASet.html">ASet</a>&lt; char16_t &gt; &amp;from, char16_t to) const noexcept</td></tr>
-<tr class="separator:af146b526530de7d758e755af5d7e62ec inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a02c499d6f2469cc11832cd7defbfd747 inherit pub_methods_classAString" id="r_a02c499d6f2469cc11832cd7defbfd747"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>replaceAll</b> (char16_t from, char16_t to) noexcept</td></tr>
-<tr class="separator:a02c499d6f2469cc11832cd7defbfd747 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a512125fb30cc4bb6712160f28b9b4c42 inherit pub_methods_classAString" id="r_a512125fb30cc4bb6712160f28b9b4c42"><td class="memTemplParams" colspan="2">template&lt;typename OtherContainer&gt; </td></tr>
-<tr class="memitem:a512125fb30cc4bb6712160f28b9b4c42 inherit pub_methods_classAString"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classAString.html#a512125fb30cc4bb6712160f28b9b4c42">insertAll</a> (const OtherContainer &amp;c) noexcept</td></tr>
-<tr class="memdesc:a512125fb30cc4bb6712160f28b9b4c42 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Inserts all values of the specified container to the end.  <br/></td></tr>
-<tr class="separator:a512125fb30cc4bb6712160f28b9b4c42 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abb60406e99380d9ac93b2a62f2308228 inherit pub_methods_classAString" id="r_abb60406e99380d9ac93b2a62f2308228"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; float &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#abb60406e99380d9ac93b2a62f2308228">toFloat</a> () const noexcept</td></tr>
-<tr class="memdesc:abb60406e99380d9ac93b2a62f2308228 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to a float number.  <br/></td></tr>
-<tr class="separator:abb60406e99380d9ac93b2a62f2308228 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab9b2eda6a2ea7bebd4bdb2a02e22727d inherit pub_methods_classAString" id="r_ab9b2eda6a2ea7bebd4bdb2a02e22727d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; double &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#ab9b2eda6a2ea7bebd4bdb2a02e22727d">toDouble</a> () const noexcept</td></tr>
-<tr class="memdesc:ab9b2eda6a2ea7bebd4bdb2a02e22727d inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to a double number.  <br/></td></tr>
-<tr class="separator:ab9b2eda6a2ea7bebd4bdb2a02e22727d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad9c5f0dd655d291227d084f674661029 inherit pub_methods_classAString" id="r_ad9c5f0dd655d291227d084f674661029"><td align="right" class="memItemLeft" valign="top">double </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#ad9c5f0dd655d291227d084f674661029">toDoubleOrException</a> () const noexcept</td></tr>
-<tr class="memdesc:ad9c5f0dd655d291227d084f674661029 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to a double number.  <br/></td></tr>
-<tr class="separator:ad9c5f0dd655d291227d084f674661029 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a595b975b64130656d41f02b9103ad807 inherit pub_methods_classAString" id="r_a595b975b64130656d41f02b9103ad807"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; int &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a595b975b64130656d41f02b9103ad807">toInt</a> () const noexcept</td></tr>
-<tr class="memdesc:a595b975b64130656d41f02b9103ad807 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to int value.  <br/></td></tr>
-<tr class="separator:a595b975b64130656d41f02b9103ad807 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0f0025bc8da72d7e0807f06c972362a9 inherit pub_methods_classAString" id="r_a0f0025bc8da72d7e0807f06c972362a9"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a0f0025bc8da72d7e0807f06c972362a9">toIntOrException</a> () const</td></tr>
-<tr class="memdesc:a0f0025bc8da72d7e0807f06c972362a9 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to int value.  <br/></td></tr>
-<tr class="separator:a0f0025bc8da72d7e0807f06c972362a9 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7206a8de8d911964daacb532c104481e inherit pub_methods_classAString" id="r_a7206a8de8d911964daacb532c104481e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; int64_t &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a7206a8de8d911964daacb532c104481e">toLongInt</a> () const noexcept</td></tr>
-<tr class="memdesc:a7206a8de8d911964daacb532c104481e inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to int value.  <br/></td></tr>
-<tr class="separator:a7206a8de8d911964daacb532c104481e inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a180d5f0967ffb6d7a989d90b4635d8e9 inherit pub_methods_classAString" id="r_a180d5f0967ffb6d7a989d90b4635d8e9"><td align="right" class="memItemLeft" valign="top">int64_t </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a180d5f0967ffb6d7a989d90b4635d8e9">toLongIntOrException</a> () const</td></tr>
-<tr class="memdesc:a180d5f0967ffb6d7a989d90b4635d8e9 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to int value.  <br/></td></tr>
-<tr class="separator:a180d5f0967ffb6d7a989d90b4635d8e9 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aef74276f1c87ce89ccbc11a873d59402 inherit pub_methods_classAString" id="r_aef74276f1c87ce89ccbc11a873d59402"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; unsigned &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#aef74276f1c87ce89ccbc11a873d59402">toUInt</a> () const noexcept</td></tr>
-<tr class="memdesc:aef74276f1c87ce89ccbc11a873d59402 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to int value.  <br/></td></tr>
-<tr class="separator:aef74276f1c87ce89ccbc11a873d59402 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ade69a4a70112994e90449008d3cb222f inherit pub_methods_classAString" id="r_ade69a4a70112994e90449008d3cb222f"><td align="right" class="memItemLeft" valign="top">unsigned </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#ade69a4a70112994e90449008d3cb222f">toUIntOrException</a> () const</td></tr>
-<tr class="memdesc:ade69a4a70112994e90449008d3cb222f inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to int value.  <br/></td></tr>
-<tr class="separator:ade69a4a70112994e90449008d3cb222f inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4a5c7b21fc8b2cce2fb88eccbe4bc122 inherit pub_methods_classAString" id="r_a4a5c7b21fc8b2cce2fb88eccbe4bc122"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a4a5c7b21fc8b2cce2fb88eccbe4bc122">toBool</a> () const noexcept</td></tr>
-<tr class="memdesc:a4a5c7b21fc8b2cce2fb88eccbe4bc122 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Converts the string to boolean value.  <br/></td></tr>
-<tr class="separator:a4a5c7b21fc8b2cce2fb88eccbe4bc122 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a00fc7bd0a4ba6862b4e379de82454643 inherit pub_methods_classAString" id="r_a00fc7bd0a4ba6862b4e379de82454643"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>contains</b> (char16_t c) const noexcept</td></tr>
-<tr class="separator:a00fc7bd0a4ba6862b4e379de82454643 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a863240ca5a647e710d471512c7f1fda3 inherit pub_methods_classAString" id="r_a863240ca5a647e710d471512c7f1fda3"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>contains</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) const noexcept</td></tr>
-<tr class="separator:a863240ca5a647e710d471512c7f1fda3 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad1932cac297888e42990414ad79640bb inherit pub_methods_classAString" id="r_ad1932cac297888e42990414ad79640bb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="classAOptional.html">AOptional</a>&lt; int &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#ad1932cac297888e42990414ad79640bb">toNumber</a> (<a class="el" href="structaui_1_1ranged__number.html">aui::ranged_number</a>&lt; int, 2, 36 &gt; base=TO_NUMBER_BASE_DEC) const noexcept</td></tr>
-<tr class="memdesc:ad1932cac297888e42990414ad79640bb inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Returns the string converted to an int using base. Returns std::nullopt if the conversion fails.  <br/></td></tr>
-<tr class="separator:ad1932cac297888e42990414ad79640bb inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aede7c4b7a8d712153fa91f31dc069589 inherit pub_methods_classAString" id="r_aede7c4b7a8d712153fa91f31dc069589"><td align="right" class="memItemLeft" valign="top">int </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#aede7c4b7a8d712153fa91f31dc069589">toNumberOrException</a> (<a class="el" href="structaui_1_1ranged__number.html">aui::ranged_number</a>&lt; int, 2, 36 &gt; base=TO_NUMBER_BASE_DEC) const</td></tr>
-<tr class="memdesc:aede7c4b7a8d712153fa91f31dc069589 inherit pub_methods_classAString"><td class="mdescLeft"> </td><td class="mdescRight">Returns the string converted to an int using base. Throws an exception if the conversion fails.  <br/></td></tr>
-<tr class="separator:aede7c4b7a8d712153fa91f31dc069589 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9ca49cfa70bd0ca93fde85bfe2784c21 inherit pub_methods_classAString" id="r_a9ca49cfa70bd0ca93fde85bfe2784c21"><td align="right" class="memItemLeft" valign="top">std::string </td><td class="memItemRight" valign="bottom"><a class="el" href="classAString.html#a9ca49cfa70bd0ca93fde85bfe2784c21">toStdString</a> () const noexcept</td></tr>
-<tr class="separator:a9ca49cfa70bd0ca93fde85bfe2784c21 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2de859075dc7493f1b57bba6f931bc7a inherit pub_methods_classAString" id="r_a2de859075dc7493f1b57bba6f931bc7a"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>resizeToNullTerminator</b> ()</td></tr>
-<tr class="separator:a2de859075dc7493f1b57bba6f931bc7a inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af24d396100968a1f83837948f8355815 inherit pub_methods_classAString" id="r_af24d396100968a1f83837948f8355815"><td align="right" class="memItemLeft" valign="top">
-iterator </td><td class="memItemRight" valign="bottom"><b>erase</b> (const_iterator begin, const_iterator end) noexcept</td></tr>
-<tr class="separator:af24d396100968a1f83837948f8355815 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9fbcba15ab7b9b5c8cf4ddcef3932b07 inherit pub_methods_classAString" id="r_a9fbcba15ab7b9b5c8cf4ddcef3932b07"><td align="right" class="memItemLeft" valign="top">
-iterator </td><td class="memItemRight" valign="bottom"><b>erase</b> (const_iterator begin) noexcept</td></tr>
-<tr class="separator:a9fbcba15ab7b9b5c8cf4ddcef3932b07 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a95c804e72afc70a256286cc99bdd0d4e inherit pub_methods_classAString" id="r_a95c804e72afc70a256286cc99bdd0d4e"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>erase</b> (size_type offset) noexcept</td></tr>
-<tr class="separator:a95c804e72afc70a256286cc99bdd0d4e inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4da23eb599a6dcfdc98577229f124d30 inherit pub_methods_classAString" id="r_a4da23eb599a6dcfdc98577229f124d30"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>erase</b> (size_type offset, size_type count) noexcept</td></tr>
-<tr class="separator:a4da23eb599a6dcfdc98577229f124d30 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2af27412a592b674e9d8737671be6e4c inherit pub_methods_classAString" id="r_a2af27412a592b674e9d8737671be6e4c"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAByteBuffer.html">AByteBuffer</a> </td><td class="memItemRight" valign="bottom"><b>toUtf8</b> () const noexcept</td></tr>
-<tr class="separator:a2af27412a592b674e9d8737671be6e4c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8101022e4dc89ec826839532313cdfdf inherit pub_methods_classAString" id="r_a8101022e4dc89ec826839532313cdfdf"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>removeAt</b> (unsigned at) noexcept</td></tr>
-<tr class="separator:a8101022e4dc89ec826839532313cdfdf inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4773f0e86f2fdde7adcc049031d64b33 inherit pub_methods_classAString" id="r_a4773f0e86f2fdde7adcc049031d64b33"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>excessSpacesRemoved</b> () const noexcept</td></tr>
-<tr class="separator:a4773f0e86f2fdde7adcc049031d64b33 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a482d60e0d105e1b0b86cec3e603b4263 inherit pub_methods_classAString" id="r_a482d60e0d105e1b0b86cec3e603b4263"><td align="right" class="memItemLeft" valign="top">
-iterator </td><td class="memItemRight" valign="bottom"><b>insert</b> (size_type at, char16_t c) noexcept</td></tr>
-<tr class="separator:a482d60e0d105e1b0b86cec3e603b4263 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a783a338be4b83ece632e6e1dddd489d8 inherit pub_methods_classAString" id="r_a783a338be4b83ece632e6e1dddd489d8"><td align="right" class="memItemLeft" valign="top">
-iterator </td><td class="memItemRight" valign="bottom"><b>insert</b> (size_type at, const <a class="el" href="classAString.html">AString</a> &amp;c) noexcept</td></tr>
-<tr class="separator:a783a338be4b83ece632e6e1dddd489d8 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:addd9d1e442b742fb4fd50704fc720c1c inherit pub_methods_classAString" id="r_addd9d1e442b742fb4fd50704fc720c1c"><td class="memTemplParams" colspan="2">
-template&lt;typename Iterator&gt; </td></tr>
-<tr class="memitem:addd9d1e442b742fb4fd50704fc720c1c inherit pub_methods_classAString"><td align="right" class="memTemplItemLeft" valign="top">iterator </td><td class="memTemplItemRight" valign="bottom"><b>insert</b> (const_iterator at, Iterator begin, Iterator end) noexcept</td></tr>
-<tr class="separator:addd9d1e442b742fb4fd50704fc720c1c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a52cff4a22779b9a9f48a06a5302175bc inherit pub_methods_classAString" id="r_a52cff4a22779b9a9f48a06a5302175bc"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (char c) noexcept</td></tr>
-<tr class="separator:a52cff4a22779b9a9f48a06a5302175bc inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a52b74adf8ac1774d853f009bbb53da70 inherit pub_methods_classAString" id="r_a52b74adf8ac1774d853f009bbb53da70"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (char16_t c) noexcept</td></tr>
-<tr class="separator:a52b74adf8ac1774d853f009bbb53da70 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a88e9aff8bbdfde1bf1537402143fc7a2 inherit pub_methods_classAString" id="r_a88e9aff8bbdfde1bf1537402143fc7a2"><td align="right" class="memItemLeft" valign="top">
-inline <a class="el" href="classAString.html">::AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="classAString.html">AString</a> &amp;str) noexcept</td></tr>
-<tr class="separator:a88e9aff8bbdfde1bf1537402143fc7a2 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae5744a9bed948fc47aa10337f38fd12d inherit pub_methods_classAString" id="r_ae5744a9bed948fc47aa10337f38fd12d"><td align="right" class="memItemLeft" valign="top">
-inline <a class="el" href="classAString.html">::AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const char *str) noexcept</td></tr>
-<tr class="separator:ae5744a9bed948fc47aa10337f38fd12d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0e7f2b14fb7a770eaa36f4a6dff89154 inherit pub_methods_classAString" id="r_a0e7f2b14fb7a770eaa36f4a6dff89154"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>empty</b> () const noexcept</td></tr>
-<tr class="separator:a0e7f2b14fb7a770eaa36f4a6dff89154 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab5bc67450133e2bed51d13675eaa7d7d inherit pub_methods_classAString" id="r_ab5bc67450133e2bed51d13675eaa7d7d"><td align="right" class="memItemLeft" valign="top">
-size_type </td><td class="memItemRight" valign="bottom"><b>size</b> () const noexcept</td></tr>
-<tr class="separator:ab5bc67450133e2bed51d13675eaa7d7d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae818721a74eaff251f4b5befe02ebeec inherit pub_methods_classAString" id="r_ae818721a74eaff251f4b5befe02ebeec"><td align="right" class="memItemLeft" valign="top">
-char16_t </td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_type index) const</td></tr>
-<tr class="separator:ae818721a74eaff251f4b5befe02ebeec inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a00d200070b59bfcd1d560b71b728fdfe inherit pub_methods_classAString" id="r_a00d200070b59bfcd1d560b71b728fdfe"><td align="right" class="memItemLeft" valign="top">
-char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>operator[]</b> (size_type index)</td></tr>
-<tr class="separator:a00d200070b59bfcd1d560b71b728fdfe inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aecc478167d3611e514cd4dbc164a90ea inherit pub_methods_classAString" id="r_aecc478167d3611e514cd4dbc164a90ea"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) const noexcept</td></tr>
-<tr class="separator:aecc478167d3611e514cd4dbc164a90ea inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2285f3441a3bb45d06fd4bc3b553ba7b inherit pub_methods_classAString" id="r_a2285f3441a3bb45d06fd4bc3b553ba7b"><td align="right" class="memItemLeft" valign="top">
-void </td><td class="memItemRight" valign="bottom"><b>clear</b> () noexcept</td></tr>
-<tr class="separator:a2285f3441a3bb45d06fd4bc3b553ba7b inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4fe102cec7e3f4c5cdd6133e6f80c38d inherit pub_methods_classAString" id="r_a4fe102cec7e3f4c5cdd6133e6f80c38d"><td align="right" class="memItemLeft" valign="top">
-char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>front</b> () noexcept</td></tr>
-<tr class="separator:a4fe102cec7e3f4c5cdd6133e6f80c38d inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0eb0e271db4686c993d24b60da402877 inherit pub_methods_classAString" id="r_a0eb0e271db4686c993d24b60da402877"><td align="right" class="memItemLeft" valign="top">
-char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>back</b> () noexcept</td></tr>
-<tr class="separator:a0eb0e271db4686c993d24b60da402877 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a31fea9c738214d8d39808bd92c70187c inherit pub_methods_classAString" id="r_a31fea9c738214d8d39808bd92c70187c"><td align="right" class="memItemLeft" valign="top">
-const char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>front</b> () const noexcept</td></tr>
-<tr class="separator:a31fea9c738214d8d39808bd92c70187c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a51dfbd495234d93f007572ee84a626ea inherit pub_methods_classAString" id="r_a51dfbd495234d93f007572ee84a626ea"><td align="right" class="memItemLeft" valign="top">
-const char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>back</b> () const noexcept</td></tr>
-<tr class="separator:a51dfbd495234d93f007572ee84a626ea inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3a79c2b41201ae9db509c549ecb9e616 inherit pub_methods_classAString" id="r_a3a79c2b41201ae9db509c549ecb9e616"><td align="right" class="memItemLeft" valign="top">
-char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>first</b> () noexcept</td></tr>
-<tr class="separator:a3a79c2b41201ae9db509c549ecb9e616 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a87a27d29c2526559945c8d9fd8437351 inherit pub_methods_classAString" id="r_a87a27d29c2526559945c8d9fd8437351"><td align="right" class="memItemLeft" valign="top">
-char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>last</b> () noexcept</td></tr>
-<tr class="separator:a87a27d29c2526559945c8d9fd8437351 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aef5e38f71b879ec2d903757e5d6fec82 inherit pub_methods_classAString" id="r_aef5e38f71b879ec2d903757e5d6fec82"><td align="right" class="memItemLeft" valign="top">
-const char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>first</b> () const noexcept</td></tr>
-<tr class="separator:aef5e38f71b879ec2d903757e5d6fec82 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac60be5ffd4571169c5774777d7938a6a inherit pub_methods_classAString" id="r_ac60be5ffd4571169c5774777d7938a6a"><td align="right" class="memItemLeft" valign="top">
-const char16_t &amp; </td><td class="memItemRight" valign="bottom"><b>last</b> () const noexcept</td></tr>
-<tr class="separator:ac60be5ffd4571169c5774777d7938a6a inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af4241f5233b32d09ead6392b7d12f81c inherit pub_methods_classAString" id="r_af4241f5233b32d09ead6392b7d12f81c"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAOptional.html">AOptional</a>&lt; char16_t &gt; </td><td class="memItemRight" valign="bottom"><b>firstOpt</b> () const noexcept</td></tr>
-<tr class="separator:af4241f5233b32d09ead6392b7d12f81c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac72199da4b49004a472f71477a66bb70 inherit pub_methods_classAString" id="r_ac72199da4b49004a472f71477a66bb70"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAOptional.html">AOptional</a>&lt; char16_t &gt; </td><td class="memItemRight" valign="bottom"><b>lastOpt</b> () const noexcept</td></tr>
-<tr class="separator:ac72199da4b49004a472f71477a66bb70 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a664bc88898c326c65729f02eea951c2c inherit pub_methods_classAString" id="r_a664bc88898c326c65729f02eea951c2c"><td align="right" class="memItemLeft" valign="top">
-const char16_t * </td><td class="memItemRight" valign="bottom"><b>c_str</b> () const</td></tr>
-<tr class="separator:a664bc88898c326c65729f02eea951c2c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a26e8599beebd808ba6b82228ade4c9c7 inherit pub_methods_classAString" id="r_a26e8599beebd808ba6b82228ade4c9c7"><td align="right" class="memItemLeft" valign="top">
-iterator </td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
-<tr class="separator:a26e8599beebd808ba6b82228ade4c9c7 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a57e48bdaf70d5e8b645e100aa15e31f2 inherit pub_methods_classAString" id="r_a57e48bdaf70d5e8b645e100aa15e31f2"><td align="right" class="memItemLeft" valign="top">
-iterator </td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
-<tr class="separator:a57e48bdaf70d5e8b645e100aa15e31f2 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a90e47232db2617b9690bc3a4e6dfb66c inherit pub_methods_classAString" id="r_a90e47232db2617b9690bc3a4e6dfb66c"><td align="right" class="memItemLeft" valign="top">
-const_iterator </td><td class="memItemRight" valign="bottom"><b>begin</b> () const noexcept</td></tr>
-<tr class="separator:a90e47232db2617b9690bc3a4e6dfb66c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af87e64c6baffafc8ce0199cd8d9b97d1 inherit pub_methods_classAString" id="r_af87e64c6baffafc8ce0199cd8d9b97d1"><td align="right" class="memItemLeft" valign="top">
-const_iterator </td><td class="memItemRight" valign="bottom"><b>end</b> () const noexcept</td></tr>
-<tr class="separator:af87e64c6baffafc8ce0199cd8d9b97d1 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a975e69a32441b261994ebba6c194308c inherit pub_methods_classAString" id="r_a975e69a32441b261994ebba6c194308c"><td align="right" class="memItemLeft" valign="top">
-reverse_iterator </td><td class="memItemRight" valign="bottom"><b>rbegin</b> () noexcept</td></tr>
-<tr class="separator:a975e69a32441b261994ebba6c194308c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa7ed1a9f8a8cbc058f2fdc1dc3304159 inherit pub_methods_classAString" id="r_aa7ed1a9f8a8cbc058f2fdc1dc3304159"><td align="right" class="memItemLeft" valign="top">
-reverse_iterator </td><td class="memItemRight" valign="bottom"><b>rend</b> () noexcept</td></tr>
-<tr class="separator:aa7ed1a9f8a8cbc058f2fdc1dc3304159 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8bb5a8ee797ef3765a91462eba3a84cd inherit pub_methods_classAString" id="r_a8bb5a8ee797ef3765a91462eba3a84cd"><td align="right" class="memItemLeft" valign="top">
-const_reverse_iterator </td><td class="memItemRight" valign="bottom"><b>rbegin</b> () const noexcept</td></tr>
-<tr class="separator:a8bb5a8ee797ef3765a91462eba3a84cd inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abc6ee493aca237d0ab410df08527eae8 inherit pub_methods_classAString" id="r_abc6ee493aca237d0ab410df08527eae8"><td align="right" class="memItemLeft" valign="top">
-const_reverse_iterator </td><td class="memItemRight" valign="bottom"><b>rend</b> () const noexcept</td></tr>
-<tr class="separator:abc6ee493aca237d0ab410df08527eae8 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4340cde4c9f7ef0abd0379e35f661938 inherit pub_methods_classAString" id="r_a4340cde4c9f7ef0abd0379e35f661938"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>append</b> (const <a class="el" href="classAString.html">AString</a> &amp;s) noexcept</td></tr>
-<tr class="separator:a4340cde4c9f7ef0abd0379e35f661938 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab8632166da707bf2bb67fdcd739ad45f inherit pub_methods_classAString" id="r_ab8632166da707bf2bb67fdcd739ad45f"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>append</b> (size_t count, char16_t ch) noexcept</td></tr>
-<tr class="separator:ab8632166da707bf2bb67fdcd739ad45f inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a96e1b02e59ea870cf81957f6d672d1fa inherit pub_methods_classAString" id="r_a96e1b02e59ea870cf81957f6d672d1fa"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classAString.html">AString</a> &amp;value) noexcept</td></tr>
-<tr class="separator:a96e1b02e59ea870cf81957f6d672d1fa inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a54fd5b95d2f3ee97cb5ae3164f2d90f6 inherit pub_methods_classAString" id="r_a54fd5b95d2f3ee97cb5ae3164f2d90f6"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classAString.html">AString</a> &amp;&amp;value) noexcept</td></tr>
-<tr class="separator:a54fd5b95d2f3ee97cb5ae3164f2d90f6 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acad65f4649b3e2cc2547dbd3fee0007c inherit pub_methods_classAString" id="r_acad65f4649b3e2cc2547dbd3fee0007c"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) const noexcept</td></tr>
-<tr class="separator:acad65f4649b3e2cc2547dbd3fee0007c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a771c8ddd35b60324d3a75fc6c473a798 inherit pub_methods_classAString" id="r_a771c8ddd35b60324d3a75fc6c473a798"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator==</b> (const char16_t *other) const noexcept</td></tr>
-<tr class="separator:a771c8ddd35b60324d3a75fc6c473a798 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adce0913d166c1155c1366447b2671f00 inherit pub_methods_classAString" id="r_adce0913d166c1155c1366447b2671f00"><td align="right" class="memItemLeft" valign="top">
-size_t </td><td class="memItemRight" valign="bottom"><b>sizeInBytes</b> () const noexcept</td></tr>
-<tr class="separator:adce0913d166c1155c1366447b2671f00 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a35bc1146816c4e5e61376475c1cd79ea inherit pub_methods_classAString" id="r_a35bc1146816c4e5e61376475c1cd79ea"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classAString.html">AString</a> &amp;other) const noexcept</td></tr>
-<tr class="separator:a35bc1146816c4e5e61376475c1cd79ea inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a445e1ad0a26a11b8f4fb9c16390163cc inherit pub_methods_classAString" id="r_a445e1ad0a26a11b8f4fb9c16390163cc"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const char16_t *other) const noexcept</td></tr>
-<tr class="separator:a445e1ad0a26a11b8f4fb9c16390163cc inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:af37f635c94a65ad77486fef10cc0d6a7 inherit pub_methods_classAString" id="r_af37f635c94a65ad77486fef10cc0d6a7"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator==</b> (const char *other) const noexcept</td></tr>
-<tr class="separator:af37f635c94a65ad77486fef10cc0d6a7 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1e3e14c0a30ad2b679c810d431d63a3c inherit pub_methods_classAString" id="r_a1e3e14c0a30ad2b679c810d431d63a3c"><td align="right" class="memItemLeft" valign="top">
-bool </td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const char *other) const noexcept</td></tr>
-<tr class="separator:a1e3e14c0a30ad2b679c810d431d63a3c inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a65e0c9cc30db8c1cc5477b0bd15b3c15 inherit pub_methods_classAString" id="r_a65e0c9cc30db8c1cc5477b0bd15b3c15"><td class="memTemplParams" colspan="2">
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a65e0c9cc30db8c1cc5477b0bd15b3c15 inherit pub_methods_classAString"><td align="right" class="memTemplItemLeft" valign="top"><a class="el" href="classAString.html">AString</a> </td><td class="memTemplItemRight" valign="bottom"><b>format</b> (Args &amp;&amp;... args) const</td></tr>
-<tr class="separator:a65e0c9cc30db8c1cc5477b0bd15b3c15 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a91f1ab1daee110395d4c63d248edda86 inherit pub_methods_classAString" id="r_a91f1ab1daee110395d4c63d248edda86"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>processEscapes</b> () const</td></tr>
-<tr class="separator:a91f1ab1daee110395d4c63d248edda86 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac4396a609b5888c45588abee05b1ef61 inherit pub_methods_classAString" id="r_ac4396a609b5888c45588abee05b1ef61"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> &amp; </td><td class="memItemRight" valign="bottom"><b>removeAll</b> (char16_t c) noexcept</td></tr>
-<tr class="separator:ac4396a609b5888c45588abee05b1ef61 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aaaa2b9be20001947d1ee9ada1e8749a1 inherit pub_methods_classAString" id="r_aaaa2b9be20001947d1ee9ada1e8749a1"><td align="right" class="memItemLeft" valign="top">
-<a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>substr</b> (std::size_t offset, std::size_t count=npos) const</td></tr>
-<tr class="separator:aaaa2b9be20001947d1ee9ada1e8749a1 inherit pub_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Static Public Member Functions<a class="aui-toc-hash" href="#pub-static-methods" id="pub-static-methods" name="pub-static-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:adcd58a69fa15b39e755d00b375009fbe" id="r_adcd58a69fa15b39e755d00b375009fbe"><td align="right" class="memItemLeft" valign="top">static const <a class="el" href="classAPath.html">APath</a> &amp; </td><td class="memItemRight" valign="bottom"><a class="el" href="#adcd58a69fa15b39e755d00b375009fbe">processTemporaryDir</a> ()</td></tr>
-<tr class="memdesc:adcd58a69fa15b39e755d00b375009fbe"><td class="mdescLeft"> </td><td class="mdescRight">Generates a unique, process-agnostic temporary directory in the system's temp directory.  <br/></td></tr>
-<tr class="separator:adcd58a69fa15b39e755d00b375009fbe"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adda955c535728a9fc182249bfc4e531d" id="r_adda955c535728a9fc182249bfc4e531d"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#adda955c535728a9fc182249bfc4e531d">nextRandomTemporary</a> ()</td></tr>
-<tr class="memdesc:adda955c535728a9fc182249bfc4e531d"><td class="mdescLeft"> </td><td class="mdescRight">Creates a path to non-existent random file in system temp directory.  <br/></td></tr>
-<tr class="separator:adda955c535728a9fc182249bfc4e531d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4dbbb0c2cd7cfa842d581e9a2d1648f3" id="r_a4dbbb0c2cd7cfa842d581e9a2d1648f3"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dbbb0c2cd7cfa842d581e9a2d1648f3">getDefaultPath</a> (<a class="el" href="#a38597cac45847bf6ce74272ea0b72ef3">DefaultPath</a> path)</td></tr>
-<tr class="memdesc:a4dbbb0c2cd7cfa842d581e9a2d1648f3"><td class="mdescLeft"> </td><td class="mdescRight">Get system's default folder.  <br/></td></tr>
-<tr class="separator:a4dbbb0c2cd7cfa842d581e9a2d1648f3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a22c64df6cd12163077f0dbab1c1bc2ce" id="r_a22c64df6cd12163077f0dbab1c1bc2ce"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c64df6cd12163077f0dbab1c1bc2ce">copy</a> (const <a class="el" href="classAPath.html">APath</a> &amp;source, const <a class="el" href="classAPath.html">APath</a> &amp;destination)</td></tr>
-<tr class="memdesc:a22c64df6cd12163077f0dbab1c1bc2ce"><td class="mdescLeft"> </td><td class="mdescRight">Copy regular file.  <br/></td></tr>
-<tr class="separator:a22c64df6cd12163077f0dbab1c1bc2ce"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abdc728659668f830ee3f843bec114a9d" id="r_abdc728659668f830ee3f843bec114a9d"><td align="right" class="memItemLeft" valign="top">static void </td><td class="memItemRight" valign="bottom"><a class="el" href="#abdc728659668f830ee3f843bec114a9d">move</a> (const <a class="el" href="classAPath.html">APath</a> &amp;source, const <a class="el" href="classAPath.html">APath</a> &amp;destination)</td></tr>
-<tr class="memdesc:abdc728659668f830ee3f843bec114a9d"><td class="mdescLeft"> </td><td class="mdescRight">Move regular file.  <br/></td></tr>
-<tr class="separator:abdc728659668f830ee3f843bec114a9d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aceacb773a475221f093fd80dd98de689" id="r_aceacb773a475221f093fd80dd98de689"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="classAPath.html">APath</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="#aceacb773a475221f093fd80dd98de689">workingDir</a> ()</td></tr>
-<tr class="separator:aceacb773a475221f093fd80dd98de689"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7cb7ae7cd431ed5d231de219f4d6ddf1" id="r_a7cb7ae7cd431ed5d231de219f4d6ddf1"><td align="right" class="memItemLeft" valign="top">static <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAPath.html">APath</a> &gt; </td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cb7ae7cd431ed5d231de219f4d6ddf1">find</a> (const <a class="el" href="classAString.html">AString</a> &amp;<a class="el" href="#afc37f01cd0dfbad8a50953cac7310382">filename</a>, const <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="classAPath.html">APath</a> &gt; &amp;locations, APathFinder flags=APathFinder::NONE)</td></tr>
-<tr class="separator:a7cb7ae7cd431ed5d231de219f4d6ddf1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="inherit_header pub_static_methods_classAString"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_classAString')"><img alt="-" src="closed.png"/> Static Public Member Functions inherited from <a class="el" href="classAString.html">AString</a></td></tr>
-<tr class="memitem:abdd4ad601f78a8540e32ea00ae7aa3bd inherit pub_static_methods_classAString" id="r_abdd4ad601f78a8540e32ea00ae7aa3bd"><td align="right" class="memItemLeft" valign="top">
-static <a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>fromLatin1</b> (const <a class="el" href="classAByteBuffer.html">AByteBuffer</a> &amp;buffer)</td></tr>
-<tr class="separator:abdd4ad601f78a8540e32ea00ae7aa3bd inherit pub_static_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9816bb59989d8f3879ad83341a3fed9b inherit pub_static_methods_classAString" id="r_a9816bb59989d8f3879ad83341a3fed9b"><td align="right" class="memItemLeft" valign="top">
-static <a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>fromUtf8</b> (const <a class="el" href="classAByteBufferView.html">AByteBufferView</a> &amp;buffer)</td></tr>
-<tr class="separator:a9816bb59989d8f3879ad83341a3fed9b inherit pub_static_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7589eee7156011bd8f4d07da2f448d6c inherit pub_static_methods_classAString" id="r_a7589eee7156011bd8f4d07da2f448d6c"><td align="right" class="memItemLeft" valign="top">
-static <a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>fromUtf8</b> (const char *buffer, size_t length)</td></tr>
-<tr class="separator:a7589eee7156011bd8f4d07da2f448d6c inherit pub_static_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:afaa54d5646aa126459edf80a188ce538 inherit pub_static_methods_classAString" id="r_afaa54d5646aa126459edf80a188ce538"><td align="right" class="memItemLeft" valign="top">
-static <a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>fromLatin1</b> (const char *buffer)</td></tr>
-<tr class="separator:afaa54d5646aa126459edf80a188ce538 inherit pub_static_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3750b9a92cf603598e52e2fb24ad9d61 inherit pub_static_methods_classAString" id="r_a3750b9a92cf603598e52e2fb24ad9d61"><td align="right" class="memItemLeft" valign="top">
-static <a class="el" href="classAString.html">AString</a> </td><td class="memItemRight" valign="bottom"><b>numberHex</b> (int i) noexcept</td></tr>
-<tr class="separator:a3750b9a92cf603598e52e2fb24ad9d61 inherit pub_static_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab16d5f9dd79b38168e2f013a9bcd7544 inherit pub_static_methods_classAString" id="r_ab16d5f9dd79b38168e2f013a9bcd7544"><td class="memTemplParams" colspan="2">
-template&lt;typename T, std::enable_if_t&lt; std::is_integral_v&lt; std::decay_t&lt; T &gt; &gt;||std::is_floating_point_v&lt; std::decay_t&lt; T &gt; &gt;, int &gt; = 0&gt; </td></tr>
-<tr class="memitem:ab16d5f9dd79b38168e2f013a9bcd7544 inherit pub_static_methods_classAString"><td align="right" class="memTemplItemLeft" valign="top">static <a class="el" href="classAString.html">AString</a> </td><td class="memTemplItemRight" valign="bottom"><b>number</b> (T i) noexcept</td></tr>
-<tr class="separator:ab16d5f9dd79b38168e2f013a9bcd7544 inherit pub_static_methods_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Additional Inherited Members<a class="aui-toc-hash" href="#inherited" id="inherited" name="inherited" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="inherit_header pub_static_attribs_classAString"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_classAString')"><img alt="-" src="closed.png"/> Static Public Attributes inherited from <a class="el" href="classAString.html">AString</a></td></tr>
-<tr class="memitem:a1e5b3a3aacff1e9468ca782ae71f9b0f inherit pub_static_attribs_classAString" id="r_a1e5b3a3aacff1e9468ca782ae71f9b0f"><td align="right" class="memItemLeft" valign="top">
-auto static constexpr </td><td class="memItemRight" valign="bottom"><b>NPOS</b> = super::npos</td></tr>
-<tr class="separator:a1e5b3a3aacff1e9468ca782ae71f9b0f inherit pub_static_attribs_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa969058afa4801c6b496984be9b083ae inherit pub_static_attribs_classAString" id="r_aa969058afa4801c6b496984be9b083ae"><td align="right" class="memItemLeft" valign="top">
-static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBER_BASE_BIN</b> = 2</td></tr>
-<tr class="separator:aa969058afa4801c6b496984be9b083ae inherit pub_static_attribs_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a69f214ef4e46fff2372c9689710c38a5 inherit pub_static_attribs_classAString" id="r_a69f214ef4e46fff2372c9689710c38a5"><td align="right" class="memItemLeft" valign="top">
-static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBER_BASE_OCT</b> = 8</td></tr>
-<tr class="separator:a69f214ef4e46fff2372c9689710c38a5 inherit pub_static_attribs_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4615937026f0f569680891d90b9d60d1 inherit pub_static_attribs_classAString" id="r_a4615937026f0f569680891d90b9d60d1"><td align="right" class="memItemLeft" valign="top">
-static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBER_BASE_DEC</b> = 10</td></tr>
-<tr class="separator:a4615937026f0f569680891d90b9d60d1 inherit pub_static_attribs_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6ccf29c8c3aed9d5b9b50aee7c45b980 inherit pub_static_attribs_classAString" id="r_a6ccf29c8c3aed9d5b9b50aee7c45b980"><td align="right" class="memItemLeft" valign="top">
-static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBER_BASE_HEX</b> = 16</td></tr>
-<tr class="separator:a6ccf29c8c3aed9d5b9b50aee7c45b980 inherit pub_static_attribs_classAString"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section note"><dt>Note</dt><dd>In most file systems, both a regular file and a folder with the same name can exist on the same path.</dd></dl>
 <p>Example usage: </p><div class="fragment"><div class="line">APath someDir = <span class="stringliteral">"someDir"</span>;</div>
 <div class="line">APath filePath = someDir / <span class="stringliteral">"myfile.txt"</span>; <span class="comment">// "/" replaced with a system file separator</span></div>
@@ -669,11 +117,11 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 <b>folder</b> (directory) - a file that may have child files (both regular files and folders) </li>
 </ul>
 </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd>/home/runner/work/aui/aui/aui.json/src/AUI/Json/Conversion.h, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8cpp-example.html#_a23">examples/ui/views/src/ExampleWindow.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2aui_2aui_2aui_8json_2src_2AUI_2Json_2Conversion_8h-example.html#_a15">/home/runner/work/aui/aui/aui.json/src/AUI/Json/Conversion.h</a>, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8cpp-example.html#_a23">examples/ui/views/src/ExampleWindow.cpp</a>.</dd>
 </dl>
-</div><h2 class="groupheader">Member Enumeration Documentation<a class="aui-toc-hash" href="#a38597cac45847bf6ce74272ea0b72ef3" id="a38597cac45847bf6ce74272ea0b72ef3" name="a38597cac45847bf6ce74272ea0b72ef3" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>DefaultPath<a class="aui-toc-hash" href="#◆ defaultpath" id="◆ defaultpath" style="color: var(--fragment-comment) !important">#</a></h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a38597cac45847bf6ce74272ea0b72ef3" name="a38597cac45847bf6ce74272ea0b72ef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38597cac45847bf6ce74272ea0b72ef3">◆ </a></span>DefaultPath</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -703,9 +151,10 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </table>
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#aaa8ac6cdefdbb7c5b0a53b0f7255a639" id="aaa8ac6cdefdbb7c5b0a53b0f7255a639" name="aaa8ac6cdefdbb7c5b0a53b0f7255a639" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>absolute()<a class="aui-toc-hash" href="#◆ absolute()" id="◆ absolute()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classAPath-members.html">&gt; All members, including inherited</a></p>
+<a id="aaa8ac6cdefdbb7c5b0a53b0f7255a639" name="aaa8ac6cdefdbb7c5b0a53b0f7255a639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8ac6cdefdbb7c5b0a53b0f7255a639">◆ </a></span>absolute()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -721,7 +170,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a6b2bf8b0aa6cfc3d01be73248e9dcfbe" name="a6b2bf8b0aa6cfc3d01be73248e9dcfbe"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>chmod()<a class="aui-toc-hash" href="#◆ chmod()" id="◆ chmod()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2bf8b0aa6cfc3d01be73248e9dcfbe">◆ </a></span>chmod()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -745,7 +194,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a22c64df6cd12163077f0dbab1c1bc2ce" name="a22c64df6cd12163077f0dbab1c1bc2ce"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>copy()<a class="aui-toc-hash" href="#◆ copy()" id="◆ copy()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c64df6cd12163077f0dbab1c1bc2ce">◆ </a></span>copy()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -779,7 +228,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a75d1783b5aceea2da0a3cd33f8b7bc0c" name="a75d1783b5aceea2da0a3cd33f8b7bc0c"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>exists()<a class="aui-toc-hash" href="#◆ exists()" id="◆ exists()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d1783b5aceea2da0a3cd33f8b7bc0c">◆ </a></span>exists()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -797,7 +246,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="acef706b7e2109da7f7625489f114eaab" name="acef706b7e2109da7f7625489f114eaab"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>extension()<a class="aui-toc-hash" href="#◆ extension()" id="◆ extension()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acef706b7e2109da7f7625489f114eaab">◆ </a></span>extension()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -821,7 +270,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="ae175e71b884ce2c7d9ccb476a34a9ab1" name="ae175e71b884ce2c7d9ccb476a34a9ab1"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>file()<a class="aui-toc-hash" href="#◆ file()" id="◆ file()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae175e71b884ce2c7d9ccb476a34a9ab1">◆ </a></span>file()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -853,7 +302,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="afc37f01cd0dfbad8a50953cac7310382" name="afc37f01cd0dfbad8a50953cac7310382"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>filename()<a class="aui-toc-hash" href="#◆ filename()" id="◆ filename()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afc37f01cd0dfbad8a50953cac7310382">◆ </a></span>filename()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -877,7 +326,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a4357a906250228535aa063003b567af9" name="a4357a906250228535aa063003b567af9"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>filenameWithoutExtension()<a class="aui-toc-hash" href="#◆ filenamewithoutextension()" id="◆ filenamewithoutextension()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4357a906250228535aa063003b567af9">◆ </a></span>filenameWithoutExtension()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -901,7 +350,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a7cb7ae7cd431ed5d231de219f4d6ddf1" name="a7cb7ae7cd431ed5d231de219f4d6ddf1"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>find()<a class="aui-toc-hash" href="#◆ find()" id="◆ find()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb7ae7cd431ed5d231de219f4d6ddf1">◆ </a></span>find()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -942,7 +391,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a4dbbb0c2cd7cfa842d581e9a2d1648f3" name="a4dbbb0c2cd7cfa842d581e9a2d1648f3"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>getDefaultPath()<a class="aui-toc-hash" href="#◆ getdefaultpath()" id="◆ getdefaultpath()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbbb0c2cd7cfa842d581e9a2d1648f3">◆ </a></span>getDefaultPath()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -967,7 +416,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a0de41be67e8b34561c29203172e6b58b" name="a0de41be67e8b34561c29203172e6b58b"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isAbsolute()<a class="aui-toc-hash" href="#◆ isabsolute()" id="◆ isabsolute()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de41be67e8b34561c29203172e6b58b">◆ </a></span>isAbsolute()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -983,7 +432,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="ab2157a1af5be806cc4b8570ddc0fca54" name="ab2157a1af5be806cc4b8570ddc0fca54"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isDirectoryExists()<a class="aui-toc-hash" href="#◆ isdirectoryexists()" id="◆ isdirectoryexists()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2157a1af5be806cc4b8570ddc0fca54">◆ </a></span>isDirectoryExists()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1000,7 +449,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a1b3c4ac7cbd4bba36223c47157dcb1e5" name="a1b3c4ac7cbd4bba36223c47157dcb1e5"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isEffectivelyAccessible()<a class="aui-toc-hash" href="#◆ iseffectivelyaccessible()" id="◆ iseffectivelyaccessible()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3c4ac7cbd4bba36223c47157dcb1e5">◆ </a></span>isEffectivelyAccessible()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1025,7 +474,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a7c1302777d5b748bf87a24d078c090e1" name="a7c1302777d5b748bf87a24d078c090e1"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isRegularFileExists()<a class="aui-toc-hash" href="#◆ isregularfileexists()" id="◆ isregularfileexists()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c1302777d5b748bf87a24d078c090e1">◆ </a></span>isRegularFileExists()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1042,7 +491,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="ac6fe94d839c51484b6415feb8f1737c0" name="ac6fe94d839c51484b6415feb8f1737c0"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>isRelative()<a class="aui-toc-hash" href="#◆ isrelative()" id="◆ isrelative()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6fe94d839c51484b6415feb8f1737c0">◆ </a></span>isRelative()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1066,7 +515,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="af34c9fd2d0ff55d7c9177a108d8a10c5" name="af34c9fd2d0ff55d7c9177a108d8a10c5"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>listDir()<a class="aui-toc-hash" href="#◆ listdir()" id="◆ listdir()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af34c9fd2d0ff55d7c9177a108d8a10c5">◆ </a></span>listDir()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1084,7 +533,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a3086272262834a19139e1324aed5285b" name="a3086272262834a19139e1324aed5285b"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>makeDir()<a class="aui-toc-hash" href="#◆ makedir()" id="◆ makedir()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3086272262834a19139e1324aed5285b">◆ </a></span>makeDir()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1100,7 +549,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="a248a0d9584a2b112f2be2a194c9d1a88" name="a248a0d9584a2b112f2be2a194c9d1a88"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>makeDirs()<a class="aui-toc-hash" href="#◆ makedirs()" id="◆ makedirs()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a248a0d9584a2b112f2be2a194c9d1a88">◆ </a></span>makeDirs()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1116,7 +565,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="abdc728659668f830ee3f843bec114a9d" name="abdc728659668f830ee3f843bec114a9d"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>move()<a class="aui-toc-hash" href="#◆ move()" id="◆ move()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc728659668f830ee3f843bec114a9d">◆ </a></span>move()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1150,7 +599,7 @@ static constexpr auto </td><td class="memItemRight" valign="bottom"><b>TO_NUMBE
 </div>
 </div>
 <a id="adda955c535728a9fc182249bfc4e531d" name="adda955c535728a9fc182249bfc4e531d"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>nextRandomTemporary()<a class="aui-toc-hash" href="#◆ nextrandomtemporary()" id="◆ nextrandomtemporary()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adda955c535728a9fc182249bfc4e531d">◆ </a></span>nextRandomTemporary()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1176,7 +625,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="abafaeb035c4406f106cb9e556e6360ac" name="abafaeb035c4406f106cb9e556e6360ac"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>operator/()<a class="aui-toc-hash" href="#◆ operator/()" id="◆ operator/()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abafaeb035c4406f106cb9e556e6360ac">◆ </a></span>operator/()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1209,7 +658,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="ac3c9e14431eb5993fef0909e00ef5b08" name="ac3c9e14431eb5993fef0909e00ef5b08"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>parent()<a class="aui-toc-hash" href="#◆ parent()" id="◆ parent()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c9e14431eb5993fef0909e00ef5b08">◆ </a></span>parent()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1233,7 +682,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="adcd58a69fa15b39e755d00b375009fbe" name="adcd58a69fa15b39e755d00b375009fbe"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>processTemporaryDir()<a class="aui-toc-hash" href="#◆ processtemporarydir()" id="◆ processtemporarydir()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd58a69fa15b39e755d00b375009fbe">◆ </a></span>processTemporaryDir()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1260,7 +709,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="a693692266b1444533086c0f7be2c7d2a" name="a693692266b1444533086c0f7be2c7d2a"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>relativelyTo()<a class="aui-toc-hash" href="#◆ relativelyto()" id="◆ relativelyto()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a693692266b1444533086c0f7be2c7d2a">◆ </a></span>relativelyTo()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1282,7 +731,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="a2117945f58886939a71beb9a2a79aba1" name="a2117945f58886939a71beb9a2a79aba1"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>removeDirContentsRecursive()<a class="aui-toc-hash" href="#◆ removedircontentsrecursive()" id="◆ removedircontentsrecursive()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2117945f58886939a71beb9a2a79aba1">◆ </a></span>removeDirContentsRecursive()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1301,7 +750,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="a4512a1474619f7a6ccb773dc2ee7fbef" name="a4512a1474619f7a6ccb773dc2ee7fbef"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>removeFile()<a class="aui-toc-hash" href="#◆ removefile()" id="◆ removefile()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4512a1474619f7a6ccb773dc2ee7fbef">◆ </a></span>removeFile()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1321,7 +770,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="a1b5343e5010302e4dd86a28eecc4eb19" name="a1b5343e5010302e4dd86a28eecc4eb19"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>removeFileRecursive()<a class="aui-toc-hash" href="#◆ removefilerecursive()" id="◆ removefilerecursive()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b5343e5010302e4dd86a28eecc4eb19">◆ </a></span>removeFileRecursive()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1340,7 +789,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="a009bf83be30970d6b00af798b2445035" name="a009bf83be30970d6b00af798b2445035"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>systemSlashDirection()<a class="aui-toc-hash" href="#◆ systemslashdirection()" id="◆ systemslashdirection()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a009bf83be30970d6b00af798b2445035">◆ </a></span>systemSlashDirection()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1357,7 +806,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="abb7e0d8f6c632d915f41a31a52036b00" name="abb7e0d8f6c632d915f41a31a52036b00"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>touch()<a class="aui-toc-hash" href="#◆ touch()" id="◆ touch()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb7e0d8f6c632d915f41a31a52036b00">◆ </a></span>touch()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1373,7 +822,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="adbaff4e13862430cad411daa2ebdc2cb" name="adbaff4e13862430cad411daa2ebdc2cb"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>withoutUppermostFolder()<a class="aui-toc-hash" href="#◆ withoutuppermostfolder()" id="◆ withoutuppermostfolder()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adbaff4e13862430cad411daa2ebdc2cb">◆ </a></span>withoutUppermostFolder()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1397,7 +846,7 @@ APath:processTemporaryDir: </dd></dl>
 </div>
 </div>
 <a id="aceacb773a475221f093fd80dd98de689" name="aceacb773a475221f093fd80dd98de689"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>workingDir()<a class="aui-toc-hash" href="#◆ workingdir()" id="◆ workingdir()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aceacb773a475221f093fd80dd98de689">◆ </a></span>workingDir()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1425,7 +874,7 @@ APath:processTemporaryDir: </dd></dl>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="#inherited">Additional Inherited Members</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

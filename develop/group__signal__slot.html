@@ -107,9 +107,9 @@ $(function(){initNavTree('group__signal__slot.html',''); initResizable(true); })
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Common/AAbstractSignal.h#L23"></b>
 <p>Signal-slots is an object messaging mechanism that creates seamless relations between objects.  
 <a href="#details">More...</a></p>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="A base object class.">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Signal-slots were originally implemented in Qt and it has proven themselves as an object messaging mechanism making it easy to implement the observer pattern without boilerplate code. Signal-slot tracks object existence on the both ends so destruction of either sender or receiver object breaks the link between them. When the sender or receiver object is destroyed slot execution is never possible even in a multithreaded environment. Almost any signal can be connected to almost any slot (even lambda) by any code.</p>
-<p>All classes that inherit from AObject or one of its subclasses (e.g., <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>) can contain signals and slots. Signals are emitted by objects when they change their state in a way that may be interesting to other objects. This is all the object does to communicate. It does not know or care whether anything is receiving the signals it emits. This is true information encapsulation, and ensures that the object can be used as a software component.</p>
+<p>All classes that inherit from <a class="el" href="classAObject.html" title="A base object class.">AObject</a> or one of its subclasses (e.g., <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a>) can contain signals and slots. Signals are emitted by objects when they change their state in a way that may be interesting to other objects. This is all the object does to communicate. It does not know or care whether anything is receiving the signals it emits. This is true information encapsulation, and ensures that the object can be used as a software component.</p>
 <p><a class="el" href="#ga78df6aa411708ae01bdfcdb3ee98b865">Signal declarations</a> are special public fields of any class that inherit from <a class="el" href="classAObject.html" title="A base object class.">AObject</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>Counter: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
@@ -133,19 +133,19 @@ $(function(){initNavTree('group__signal__slot.html',''); initResizable(true); })
 <div class="line">emit valueChanged(mValue);</div>
 </div><!-- fragment --><p>Any member function of a class can be used as a slot.</p>
 <p>You can connect as many signals as you want to a single slot, and a signal can be connected to as many slots as you need.</p>
-<h1>
-Signals<a class="aui-toc-hash" href="#signals" id="signals" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md0"></a>
+Signals</h1>
 <p>Signals are publicly accessible fields that notify an object's client when its internal state has changed in some way that might be interesting or significant. These signals can be emitted from various locations, but it is generally recommended to only emit them from within the class that defines the signal and its subclasses.</p>
 <p>The slots connected to a signal are generaly executed immediately when the signal is emitted like a regular function call. <code>emit</code> returns control after all slots are called. If receiver has AObject::setSlotsCallsOnlyOnMyThread set to true and <code>emit</code> was called on a different thread, <code>emit</code> queues slot execution to the <a class="el" href="classAEventLoop.html" title="Default event loop implementation.">AEventLoop</a> associated with receiver's thread. All <a class="el" href="classAView.html" title="Base class of all UI objects.">AView</a> have this behaviour enabled by default.</p>
-<h1>
-Slots<a class="aui-toc-hash" href="#slots" id="slots" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Slots</h1>
 <p>A slot is triggered by the emission of a related signal. Slot is no more than a regular class method with a signal connected to it.</p>
 <p>When called directly, slots follow standard C++ rules and syntax. However, through a signal-slot connection, any component can invoke a slot regardless of its accessibility level. Visibility scope matters only when creating connection (<a class="el" href="#ga4da6280feaeb063ce8e5b8a069755d6d" title="Connects signal to the slot of the specified object.">AObject::connect</a>). This means a signal from one class can call a private slot in another unrelated class if connection is created within class itself (with access to its private/protected methods).</p>
 <p>Furthermore, slots can be defined as virtual functions, which have been found to be beneficial in practical application development.</p>
 <p>Compared to callbacks, the signals and slots system has some performance overhead due to its increased flexibility. The difference is typically insignificant for real-world applications. In general, emitting a signal connected to various slots can result in an execution time roughly ten times slower than direct function calls. This delay comes from locating the connection object and safely iterating over connections.</p>
 <p>The trade-off between the signals and slots mechanism's simplicity and flexibility compared to pure function calls or callbacks is well-justified for most applications, given its minimal performance cost that users won't perceive.</p>
-<h1>
-Basic example<a class="aui-toc-hash" href="#basic-example" id="basic-example" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Basic example</h1>
 <p>Let's use <code>Counter</code> from our previous example: </p><div class="fragment"><div class="line"><span class="keyword">class </span>Counter: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  Counter() = <span class="keywordflow">default</span>;</div>
@@ -195,8 +195,8 @@ Basic example<a class="aui-toc-hash" href="#basic-example" id="basic-example" st
 </div><!-- fragment --><p>As with methods, <code>this</code> can be omitted: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, [](<span class="keywordtype">int</span> value) {</div>
 <div class="line">  ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
 <div class="line">});</div>
-</div><!-- fragment --><h1>
-UI example<a class="aui-toc-hash" href="#ui-example" id="ui-example" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+UI example</h1>
 <p>Knowing basics of signal slots, you can now utilize UI signals: </p><div class="fragment"><div class="line">mOkButton = _new&lt;AButton&gt;(<span class="stringliteral">"OK"</span>);</div>
 <div class="line">...</div>
 <div class="line">connect(mOkButton-&gt;clicked, [] { <span class="comment">// the signal is connected to "this" object</span></div>
@@ -213,8 +213,8 @@ UI example<a class="aui-toc-hash" href="#ui-example" id="ui-example" style="colo
 <div class="line">    view-&gt;setText(<span class="stringliteral">"clicked"</span>);</div>
 <div class="line">});</div>
 </div><!-- fragment --></dd></dl>
-<h2>
-Going further<a class="aui-toc-hash" href="#going-further" id="going-further" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Going further</h2>
 <p>Let's take our previous example with <code>Counter</code> and make an UI app. Signal slot reveals it's power when your objects have small handy functions, so lets add <code>increase</code> method to our counter:</p>
 <div class="fragment"><div class="line"><span class="keyword">class </span>Counter: <span class="keyword">public</span> <a class="code hl_class" href="classAObject.html">AObject</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
@@ -280,8 +280,8 @@ Going further<a class="aui-toc-hash" href="#going-further" id="going-further" st
 <div class="line">}</div>
 <div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 </div><!-- fragment --><p>See also <a class="el" href="group__property__system.html">Property System</a> for making reactive UI's on trivial data.</p>
-<h1>
-Arguments<a class="aui-toc-hash" href="#arguments" id="arguments" style="color: var(--fragment-comment) !important">#</a></h1>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Arguments</h1>
 <p>If signal declares arguments (i.e, like <a class="el" href="classAView.html#a7299aeca90d52aa7406bebf1b5bb604a" title="Keyboard key pressed.">AView::keyPressed</a>), you can accept them: </p><div class="fragment"><div class="line">view = _new&lt;ATextField&gt;();</div>
 <div class="line">...</div>
 <div class="line">connect(view-&gt;keyPressed, [](AInput::Key k) { <span class="comment">// the signal is connected to "this" object</span></div>
@@ -292,8 +292,8 @@ Arguments<a class="aui-toc-hash" href="#arguments" id="arguments" style="color: 
 <div class="line">connect(view-&gt;keyPressed, [] { <span class="comment">// the signal is connected to "this" object</span></div>
 <div class="line">    ALogger::info(<span class="stringliteral">"Example"</span>) &lt;&lt; <span class="stringliteral">"Key was pressed"</span>;</div>
 <div class="line">});</div>
-</div><!-- fragment --><h1>
-Differences between Qt and AUI implementation<a class="aui-toc-hash" href="#differences-between-qt-and-aui-implementation" id="differences-between-qt-and-aui-implementation" style="color: var(--fragment-comment) !important">#</a></h1>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
+Differences between Qt and AUI implementation</h1>
 <p>Suppose we want to emit <code>statusChanged</code> signal with a string argument and connect it with <code>showMessage</code> slot: </p><table class="doxtable">
 <tr>
 <th></th><th>Qt </th><th>AUI  </th></tr>
@@ -319,8 +319,8 @@ Differences between Qt and AUI implementation<a class="aui-toc-hash" href="#diff
 </div><!-- fragment --> </td></tr>
 </table>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="nested-classes" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAAbstractSignal.html">AAbstractSignal</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Base class for signal.  <a href="classAAbstractSignal.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
@@ -328,8 +328,8 @@ Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">A base object class.  <a href="classAObject.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Macros<a class="aui-toc-hash" href="#define-members" id="define-members" name="define-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
 <tr class="memitem:gac622150996edd734a10f229eb381a53f" id="r_gac622150996edd734a10f229eb381a53f"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="#gac622150996edd734a10f229eb381a53f">emit</a>   (*this) ^</td></tr>
 <tr class="memdesc:gac622150996edd734a10f229eb381a53f"><td class="mdescLeft"> </td><td class="mdescRight">emits the specified signal in context of <code>this</code> object.  <br/></td></tr>
 <tr class="separator:gac622150996edd734a10f229eb381a53f"><td class="memSeparator" colspan="2"> </td></tr>
@@ -346,16 +346,16 @@ Macros<a class="aui-toc-hash" href="#define-members" id="define-members" name="d
 <tr class="memdesc:gaeddbb3020ebcd7c50fd851ef25cdd4ed"><td class="mdescLeft"> </td><td class="mdescRight">Emits a signal of a foreign object.  <br/></td></tr>
 <tr class="separator:gaeddbb3020ebcd7c50fd851ef25cdd4ed"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" name="typedef-members" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
 <tr class="memitem:ga78df6aa411708ae01bdfcdb3ee98b865" id="r_ga78df6aa411708ae01bdfcdb3ee98b865"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ga78df6aa411708ae01bdfcdb3ee98b865"><td align="right" class="memTemplItemLeft" valign="top">using </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga78df6aa411708ae01bdfcdb3ee98b865">emits</a> = <a class="el" href="classASignal.html">ASignal</a>&lt;Args...&gt;</td></tr>
 <tr class="memdesc:ga78df6aa411708ae01bdfcdb3ee98b865"><td class="mdescLeft"> </td><td class="mdescRight">A signal declaration.  <br/></td></tr>
 <tr class="separator:ga78df6aa411708ae01bdfcdb3ee98b865"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation<a class="aui-toc-hash" href="#ga00cd4f40ca195cb6b174543dca2a431e" id="ga00cd4f40ca195cb6b174543dca2a431e" name="ga00cd4f40ca195cb6b174543dca2a431e" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>AUI_EMIT_FOREIGN<a class="aui-toc-hash" href="#◆ aui_emit_foreign" id="◆ aui_emit_foreign" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga00cd4f40ca195cb6b174543dca2a431e" name="ga00cd4f40ca195cb6b174543dca2a431e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00cd4f40ca195cb6b174543dca2a431e">◆ </a></span>AUI_EMIT_FOREIGN</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -397,7 +397,7 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </div>
 </div>
 <a id="gaeddbb3020ebcd7c50fd851ef25cdd4ed" name="gaeddbb3020ebcd7c50fd851ef25cdd4ed"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>AUI_EMIT_FOREIGN_SIGNAL<a class="aui-toc-hash" href="#◆ aui_emit_foreign_signal" id="◆ aui_emit_foreign_signal" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeddbb3020ebcd7c50fd851ef25cdd4ed">◆ </a></span>AUI_EMIT_FOREIGN_SIGNAL</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -434,7 +434,7 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </div>
 </div>
 <a id="gac622150996edd734a10f229eb381a53f" name="gac622150996edd734a10f229eb381a53f"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>emit<a class="aui-toc-hash" href="#◆ emit" id="◆ emit" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac622150996edd734a10f229eb381a53f">◆ </a></span>emit</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -453,7 +453,7 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </div>
 </div>
 <a id="gac83b72d92d1105a82cd5590c0f65d48b" name="gac83b72d92d1105a82cd5590c0f65d48b"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>me<a class="aui-toc-hash" href="#◆ me" id="◆ me" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac83b72d92d1105a82cd5590c0f65d48b">◆ </a></span>me</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -473,7 +473,7 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </div>
 </div>
 <a id="gaaaa072876366972108aef016e7882a99" name="gaaaa072876366972108aef016e7882a99"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>slot<a class="aui-toc-hash" href="#◆ slot" id="◆ slot" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaaa072876366972108aef016e7882a99">◆ </a></span>slot</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -499,9 +499,9 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Typedef Documentation<a class="aui-toc-hash" href="#ga78df6aa411708ae01bdfcdb3ee98b865" id="ga78df6aa411708ae01bdfcdb3ee98b865" name="ga78df6aa411708ae01bdfcdb3ee98b865" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>emits<a class="aui-toc-hash" href="#◆ emits" id="◆ emits" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga78df6aa411708ae01bdfcdb3ee98b865" name="ga78df6aa411708ae01bdfcdb3ee98b865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78df6aa411708ae01bdfcdb3ee98b865">◆ </a></span>emits</h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -523,9 +523,9 @@ template&lt;typename... Args&gt; </div>
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Function Documentation<a class="aui-toc-hash" href="#ga4e9887b84d109f4cabacecc31aa4a769" id="ga4e9887b84d109f4cabacecc31aa4a769" name="ga4e9887b84d109f4cabacecc31aa4a769" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>connect() <span class="overload">[1/4]</span><a class="aui-toc-hash" href="#◆ connect()-[1/4]" id="◆ connect()-[1/4]" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga4e9887b84d109f4cabacecc31aa4a769" name="ga4e9887b84d109f4cabacecc31aa4a769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e9887b84d109f4cabacecc31aa4a769">◆ </a></span>connect() <span class="overload">[1/4]</span></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -571,7 +571,7 @@ template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrPr
 </div>
 </div>
 <a id="gae25b73b057ac29df3f60a13d3634132b" name="gae25b73b057ac29df3f60a13d3634132b"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>connect() <span class="overload">[2/4]</span><a class="aui-toc-hash" href="#◆ connect()-[2/4]" id="◆ connect()-[2/4]" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae25b73b057ac29df3f60a13d3634132b">◆ </a></span>connect() <span class="overload">[2/4]</span></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -610,7 +610,7 @@ template&lt;typename Connectable, <a class="el" href="conceptACompatibleSlotFor.
 </div>
 </div>
 <a id="ga3ab3f1d1ec0a838a7b20058f311a0f60" name="ga3ab3f1d1ec0a838a7b20058f311a0f60"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>connect() <span class="overload">[3/4]</span><a class="aui-toc-hash" href="#◆ connect()-[3/4]" id="◆ connect()-[3/4]" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ab3f1d1ec0a838a7b20058f311a0f60">◆ </a></span>connect() <span class="overload">[3/4]</span></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -654,7 +654,7 @@ template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrPr
 </div>
 </div>
 <a id="ga4da6280feaeb063ce8e5b8a069755d6d" name="ga4da6280feaeb063ce8e5b8a069755d6d"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>connect() <span class="overload">[4/4]</span><a class="aui-toc-hash" href="#◆ connect()-[4/4]" id="◆ connect()-[4/4]" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4da6280feaeb063ce8e5b8a069755d6d">◆ </a></span>connect() <span class="overload">[4/4]</span></h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -704,7 +704,7 @@ template&lt;<a class="el" href="conceptAAnySignal.html">AAnySignal</a> Signal, <
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#detailed-description">Detailed Description</a></h1><h1><a href="#signals">Signals</a></h1><h1><a href="#slots">Slots</a></h1><h1><a href="#basic-example">Basic example</a></h1><h1><a href="#ui-example">UI example</a></h1><h2><a href="#going-further">Going further</a></h2><h1><a href="#arguments">Arguments</a></h1><h1><a href="#differences-between-qt-and-aui-implementation">Differences between Qt and AUI implementation</a></h1><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#define-members">Macros</a></h1><h1><a href="#typedef-members">Typedefs</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

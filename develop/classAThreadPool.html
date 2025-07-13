@@ -98,131 +98,17 @@ $(function(){initNavTree('classAThreadPool.html',''); initResizable(true); });
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#nested-classes">Classes</a> |
-<a href="#pub-types">Public Types</a> |
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="#pub-static-methods">Static Public Member Functions</a> |
-<a href="#pro-types">Protected Types</a> |
-<a href="#pro-attribs">Protected Attributes</a> |
-<a href="classAThreadPool-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AThreadPool Class Reference</div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Thread/AThreadPool.h#L33"></b>
 <p>Thread pool implementation.  
  <a href="#details">More...</a></p>
 <p><code>#include &lt;<a class="el" href="AThreadPool_8h_source.html">AUI/Thread/AThreadPool.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="nested-classes" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAThreadPool_1_1TryLaterException.html">TryLaterException</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:"><td align="right" class="memItemLeft" valign="top">class  </td><td class="memItemRight" valign="bottom"><a class="el" href="classAThreadPool_1_1Worker.html">Worker</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a88d926439dcf3422ca4f7304e202b98c" id="r_a88d926439dcf3422ca4f7304e202b98c"><td align="right" class="memItemLeft" valign="top"><a id="a88d926439dcf3422ca4f7304e202b98c" name="a88d926439dcf3422ca4f7304e202b98c"></a>enum  </td><td class="memItemRight" valign="bottom"><b>Priority</b> { <b>PRIORITY_HIGHEST</b>
-, <b>PRIORITY_MEDIUM</b>
-, <b>PRIORITY_LOWEST</b>
- }</td></tr>
-<tr class="separator:a88d926439dcf3422ca4f7304e202b98c"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a9f169592e52d9898532c395e1003c8a2" id="r_a9f169592e52d9898532c395e1003c8a2"><td align="right" class="memItemLeft" valign="top"> </td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f169592e52d9898532c395e1003c8a2">AThreadPool</a> (size_t size)</td></tr>
-<tr class="memdesc:a9f169592e52d9898532c395e1003c8a2"><td class="mdescLeft"> </td><td class="mdescRight">Initializes the thread pool with size of threads.  <br/></td></tr>
-<tr class="separator:a9f169592e52d9898532c395e1003c8a2"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae8c8db781f899bed41df24db627ba967" id="r_ae8c8db781f899bed41df24db627ba967"><td align="right" class="memItemLeft" valign="top"><a id="ae8c8db781f899bed41df24db627ba967" name="ae8c8db781f899bed41df24db627ba967"></a>
- </td><td class="memItemRight" valign="bottom"><b>AThreadPool</b> ()</td></tr>
-<tr class="memdesc:ae8c8db781f899bed41df24db627ba967"><td class="mdescLeft"> </td><td class="mdescRight">Initializes the thread pool with <code>max(std::thread::hardware_concurrency() - 1, 2)</code> of threads or –aui-threadpool-size=SIZE passed to your application. <br/></td></tr>
-<tr class="separator:ae8c8db781f899bed41df24db627ba967"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a28916540bc70dde32b3c2484b9f9718d" id="r_a28916540bc70dde32b3c2484b9f9718d"><td align="right" class="memItemLeft" valign="top"><a id="a28916540bc70dde32b3c2484b9f9718d" name="a28916540bc70dde32b3c2484b9f9718d"></a>
-size_t </td><td class="memItemRight" valign="bottom"><b>getPendingTaskCount</b> ()</td></tr>
-<tr class="separator:a28916540bc70dde32b3c2484b9f9718d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab32988abbe35d9469d2acb945e6c6b4f" id="r_ab32988abbe35d9469d2acb945e6c6b4f"><td align="right" class="memItemLeft" valign="top"><a id="ab32988abbe35d9469d2acb945e6c6b4f" name="ab32988abbe35d9469d2acb945e6c6b4f"></a>
-size_t </td><td class="memItemRight" valign="bottom"><b>getTotalTaskCount</b> ()</td></tr>
-<tr class="separator:ab32988abbe35d9469d2acb945e6c6b4f"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2003b22b491aeee818da07893201b94c" id="r_a2003b22b491aeee818da07893201b94c"><td align="right" class="memItemLeft" valign="top"><a id="a2003b22b491aeee818da07893201b94c" name="a2003b22b491aeee818da07893201b94c"></a>
-void </td><td class="memItemRight" valign="bottom"><b>run</b> (const std::function&lt; void()&gt; &amp;fun, Priority priority=PRIORITY_MEDIUM)</td></tr>
-<tr class="separator:a2003b22b491aeee818da07893201b94c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a318bf5accde4ad62f1d6cf074282fad7" id="r_a318bf5accde4ad62f1d6cf074282fad7"><td align="right" class="memItemLeft" valign="top"><a id="a318bf5accde4ad62f1d6cf074282fad7" name="a318bf5accde4ad62f1d6cf074282fad7"></a>
-void </td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
-<tr class="separator:a318bf5accde4ad62f1d6cf074282fad7"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a49aa5fa4bd754eef881cb8309eb3ed26" id="r_a49aa5fa4bd754eef881cb8309eb3ed26"><td align="right" class="memItemLeft" valign="top"><a id="a49aa5fa4bd754eef881cb8309eb3ed26" name="a49aa5fa4bd754eef881cb8309eb3ed26"></a>
-void </td><td class="memItemRight" valign="bottom"><b>runLaterTasks</b> ()</td></tr>
-<tr class="separator:a49aa5fa4bd754eef881cb8309eb3ed26"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a489f33171e960dd7d90baa29b023251a" id="r_a489f33171e960dd7d90baa29b023251a"><td align="right" class="memItemLeft" valign="top"><a id="a489f33171e960dd7d90baa29b023251a" name="a489f33171e960dd7d90baa29b023251a"></a>
-void </td><td class="memItemRight" valign="bottom"><b>setWorkersCount</b> (std::size_t workersCount)</td></tr>
-<tr class="separator:a489f33171e960dd7d90baa29b023251a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa6fd21f068283fc958f00d5cdb4336d1" id="r_aa6fd21f068283fc958f00d5cdb4336d1"><td align="right" class="memItemLeft" valign="top"><a id="aa6fd21f068283fc958f00d5cdb4336d1" name="aa6fd21f068283fc958f00d5cdb4336d1"></a>
-void </td><td class="memItemRight" valign="bottom"><b>wakeUpAll</b> ()</td></tr>
-<tr class="separator:aa6fd21f068283fc958f00d5cdb4336d1"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a431694ff9d0a468a15f21d0162f8f11d" id="r_a431694ff9d0a468a15f21d0162f8f11d"><td align="right" class="memItemLeft" valign="top"><a id="a431694ff9d0a468a15f21d0162f8f11d" name="a431694ff9d0a468a15f21d0162f8f11d"></a>
-const <a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAThreadPool_1_1Worker.html">Worker</a> &gt; &gt; &amp; </td><td class="memItemRight" valign="bottom"><b>workers</b> () const</td></tr>
-<tr class="separator:a431694ff9d0a468a15f21d0162f8f11d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad2cb8de49577dfd030d6d1467e5ad54a" id="r_ad2cb8de49577dfd030d6d1467e5ad54a"><td align="right" class="memItemLeft" valign="top"><a id="ad2cb8de49577dfd030d6d1467e5ad54a" name="ad2cb8de49577dfd030d6d1467e5ad54a"></a>
-size_t </td><td class="memItemRight" valign="bottom"><b>getTotalWorkerCount</b> () const</td></tr>
-<tr class="separator:ad2cb8de49577dfd030d6d1467e5ad54a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad4dd012636f5b07db38d7829b29a539c" id="r_ad4dd012636f5b07db38d7829b29a539c"><td align="right" class="memItemLeft" valign="top"><a id="ad4dd012636f5b07db38d7829b29a539c" name="ad4dd012636f5b07db38d7829b29a539c"></a>
-size_t </td><td class="memItemRight" valign="bottom"><b>getIdleWorkerCount</b> () const</td></tr>
-<tr class="separator:ad4dd012636f5b07db38d7829b29a539c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab193ebe3b3a67a28a5062df037f6e252" id="r_ab193ebe3b3a67a28a5062df037f6e252"><td class="memTemplParams" colspan="2">template&lt;typename Iterator, typename Functor&gt; </td></tr>
-<tr class="memitem:ab193ebe3b3a67a28a5062df037f6e252"><td align="right" class="memTemplItemLeft" valign="top">auto </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab193ebe3b3a67a28a5062df037f6e252">parallel</a> (Iterator begin, Iterator end, Functor &amp;&amp;functor)</td></tr>
-<tr class="separator:ab193ebe3b3a67a28a5062df037f6e252"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:afab9f7dedc01653be5ca98235b26a340" id="r_afab9f7dedc01653be5ca98235b26a340"><td class="memTemplParams" colspan="2"><a id="afab9f7dedc01653be5ca98235b26a340" name="afab9f7dedc01653be5ca98235b26a340"></a>
-template&lt;<a class="el" href="conceptaui_1_1invocable.html">aui::invocable</a> Callable&gt; </td></tr>
-<tr class="memitem:afab9f7dedc01653be5ca98235b26a340"><td align="right" class="memTemplItemLeft" valign="top">auto </td><td class="memTemplItemRight" valign="bottom"><b>operator*</b> (Callable fun)</td></tr>
-<tr class="separator:afab9f7dedc01653be5ca98235b26a340"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Static Public Member Functions<a class="aui-toc-hash" href="#pub-static-methods" id="pub-static-methods" name="pub-static-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a4973e31137742cd6900c7ccde0517cdc" id="r_a4973e31137742cd6900c7ccde0517cdc"><td align="right" class="memItemLeft" valign="top"><a id="a4973e31137742cd6900c7ccde0517cdc" name="a4973e31137742cd6900c7ccde0517cdc"></a>
-static void </td><td class="memItemRight" valign="bottom"><b>enqueue</b> (const std::function&lt; void()&gt; &amp;fun, Priority priority=PRIORITY_MEDIUM)</td></tr>
-<tr class="separator:a4973e31137742cd6900c7ccde0517cdc"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8252b691d7328a97b22942b514b487d8" id="r_a8252b691d7328a97b22942b514b487d8"><td align="right" class="memItemLeft" valign="top"><a id="a8252b691d7328a97b22942b514b487d8" name="a8252b691d7328a97b22942b514b487d8"></a>
-static <a class="el" href="classAThreadPool.html">AThreadPool</a> &amp; </td><td class="memItemRight" valign="bottom"><b>global</b> ()</td></tr>
-<tr class="memdesc:a8252b691d7328a97b22942b514b487d8"><td class="mdescLeft"> </td><td class="mdescRight">Global thread pool created with the default constructor. <br/></td></tr>
-<tr class="separator:a8252b691d7328a97b22942b514b487d8"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Protected Types<a class="aui-toc-hash" href="#pro-types" id="pro-types" name="pro-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:aa1336d719ee6d0fff32b0ebd8a13d6d2" id="r_aa1336d719ee6d0fff32b0ebd8a13d6d2"><td align="right" class="memItemLeft" valign="top"><a id="aa1336d719ee6d0fff32b0ebd8a13d6d2" name="aa1336d719ee6d0fff32b0ebd8a13d6d2"></a>
-typedef std::function&lt; void()&gt; </td><td class="memItemRight" valign="bottom"><b>task</b></td></tr>
-<tr class="separator:aa1336d719ee6d0fff32b0ebd8a13d6d2"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Protected Attributes<a class="aui-toc-hash" href="#pro-attribs" id="pro-attribs" name="pro-attribs" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a714a24288f52eb8c8a2a8d2cade4cf4a" id="r_a714a24288f52eb8c8a2a8d2cade4cf4a"><td align="right" class="memItemLeft" valign="top"><a id="a714a24288f52eb8c8a2a8d2cade4cf4a" name="a714a24288f52eb8c8a2a8d2cade4cf4a"></a>
-<a class="el" href="classAVector.html">AVector</a>&lt; <a class="el" href="class__.html">_</a>&lt; <a class="el" href="classAThreadPool_1_1Worker.html">Worker</a> &gt; &gt; </td><td class="memItemRight" valign="bottom"><b>mWorkers</b></td></tr>
-<tr class="separator:a714a24288f52eb8c8a2a8d2cade4cf4a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8ce930df99b6f2a687d016a7ac8f946d" id="r_a8ce930df99b6f2a687d016a7ac8f946d"><td align="right" class="memItemLeft" valign="top"><a id="a8ce930df99b6f2a687d016a7ac8f946d" name="a8ce930df99b6f2a687d016a7ac8f946d"></a>
-<a class="el" href="classAQueue.html">AQueue</a>&lt; task &gt; </td><td class="memItemRight" valign="bottom"><b>mQueueHighest</b></td></tr>
-<tr class="separator:a8ce930df99b6f2a687d016a7ac8f946d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ad4a7d48a00b22234bcd645466b81d062" id="r_ad4a7d48a00b22234bcd645466b81d062"><td align="right" class="memItemLeft" valign="top"><a id="ad4a7d48a00b22234bcd645466b81d062" name="ad4a7d48a00b22234bcd645466b81d062"></a>
-<a class="el" href="classAQueue.html">AQueue</a>&lt; task &gt; </td><td class="memItemRight" valign="bottom"><b>mQueueMedium</b></td></tr>
-<tr class="separator:ad4a7d48a00b22234bcd645466b81d062"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a240c1cbe00a151a22837f675e650c12f" id="r_a240c1cbe00a151a22837f675e650c12f"><td align="right" class="memItemLeft" valign="top"><a id="a240c1cbe00a151a22837f675e650c12f" name="a240c1cbe00a151a22837f675e650c12f"></a>
-<a class="el" href="classAQueue.html">AQueue</a>&lt; task &gt; </td><td class="memItemRight" valign="bottom"><b>mQueueLowest</b></td></tr>
-<tr class="separator:a240c1cbe00a151a22837f675e650c12f"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a759090e6250de446e5d07286c70db8fc" id="r_a759090e6250de446e5d07286c70db8fc"><td align="right" class="memItemLeft" valign="top"><a id="a759090e6250de446e5d07286c70db8fc" name="a759090e6250de446e5d07286c70db8fc"></a>
-<a class="el" href="classAQueue.html">AQueue</a>&lt; task &gt; </td><td class="memItemRight" valign="bottom"><b>mQueueTryLater</b></td></tr>
-<tr class="separator:a759090e6250de446e5d07286c70db8fc"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a5547518738883943d2c91bd8ae9ac798" id="r_a5547518738883943d2c91bd8ae9ac798"><td align="right" class="memItemLeft" valign="top"><a id="a5547518738883943d2c91bd8ae9ac798" name="a5547518738883943d2c91bd8ae9ac798"></a>
-std::mutex </td><td class="memItemRight" valign="bottom"><b>mQueueLock</b></td></tr>
-<tr class="separator:a5547518738883943d2c91bd8ae9ac798"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a75a6d0cd04a546fc6afaf316a1880d6b" id="r_a75a6d0cd04a546fc6afaf316a1880d6b"><td align="right" class="memItemLeft" valign="top"><a id="a75a6d0cd04a546fc6afaf316a1880d6b" name="a75a6d0cd04a546fc6afaf316a1880d6b"></a>
-std::condition_variable </td><td class="memItemRight" valign="bottom"><b>mCV</b></td></tr>
-<tr class="separator:a75a6d0cd04a546fc6afaf316a1880d6b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9ea041318989f56da721b02e0bd8544e" id="r_a9ea041318989f56da721b02e0bd8544e"><td align="right" class="memItemLeft" valign="top"><a id="a9ea041318989f56da721b02e0bd8544e" name="a9ea041318989f56da721b02e0bd8544e"></a>
-size_t </td><td class="memItemRight" valign="bottom"><b>mIdleWorkers</b> = 0</td></tr>
-<tr class="separator:a9ea041318989f56da721b02e0bd8544e"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<a id="details" name="details"></a><h2 class="groupheader">Detailed Description<a class="aui-toc-hash" href="#detailed-description" id="detailed-description" style="color: var(--fragment-comment) !important" title="Global thread pool created with the default constructor.">#</a></h2>
-<div class="textblock"><dl class="section see"><dt>See also</dt><dd>AThreadPool::global() </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation<a class="aui-toc-hash" href="#a9f169592e52d9898532c395e1003c8a2" id="a9f169592e52d9898532c395e1003c8a2" name="a9f169592e52d9898532c395e1003c8a2" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>AThreadPool()<a class="aui-toc-hash" href="#◆ athreadpool()" id="◆ athreadpool()" style="color: var(--fragment-comment) !important">#</a></h2>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a8252b691d7328a97b22942b514b487d8" title="Global thread pool created with the default constructor.">AThreadPool::global()</a> </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9f169592e52d9898532c395e1003c8a2" name="a9f169592e52d9898532c395e1003c8a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f169592e52d9898532c395e1003c8a2">◆ </a></span>AThreadPool()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -242,9 +128,10 @@ size_t </td><td class="memItemRight" valign="bottom"><b>mIdleWorkers</b> = 0</t
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#ab193ebe3b3a67a28a5062df037f6e252" id="ab193ebe3b3a67a28a5062df037f6e252" name="ab193ebe3b3a67a28a5062df037f6e252" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>parallel()<a class="aui-toc-hash" href="#◆ parallel()" id="◆ parallel()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classAThreadPool-members.html">&gt; All members, including inherited</a></p>
+<a id="ab193ebe3b3a67a28a5062df037f6e252" name="ab193ebe3b3a67a28a5062df037f6e252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab193ebe3b3a67a28a5062df037f6e252">◆ </a></span>parallel()</h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -289,7 +176,7 @@ template&lt;typename Iterator, typename Functor&gt; </div>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#nested-classes">Classes</a></h1><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><h1><a href="#pub-static-methods">Static Public Member Functions</a></h1><h1><a href="#pro-types">Protected Types</a></h1><h1><a href="#pro-attribs">Protected Attributes</a></h1><h1><a href="#detailed-description">Detailed Description</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

@@ -98,55 +98,16 @@ $(function(){initNavTree('classAScheduler.html',''); initResizable(true); });
 </div>
 </div>
 <div class="header">
-<div class="summary"><a href="javascript:jumpToSource('view')">View Page Source</a> | <a href="javascript:jumpToSource('edit')">Edit Page Source</a> | 
-<a href="#pub-types">Public Types</a> |
-<a href="#pub-methods">Public Member Functions</a> |
-<a href="classAScheduler-members.html">List of all members</a> </div>
 <div class="headertitle"><div class="title">AScheduler Class Reference<div class="ingroups"><a class="el" href="group__core.html">aui::core</a></div></div></div>
 </div><!--header-->
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.core/src/AUI/Util/AScheduler.h#L58"></b>
 <p>Basic scheduler used for timers.  
 </p>
 <p><code>#include &lt;<a class="el" href="AScheduler_8h_source.html">AUI/Util/AScheduler.h</a>&gt;</code></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Types<a class="aui-toc-hash" href="#pub-types" id="pub-types" name="pub-types" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:a7ad9a6403a87516d2ca605cd7b102ee2" id="r_a7ad9a6403a87516d2ca605cd7b102ee2"><td align="right" class="memItemLeft" valign="top"><a id="a7ad9a6403a87516d2ca605cd7b102ee2" name="a7ad9a6403a87516d2ca605cd7b102ee2"></a>
-using </td><td class="memItemRight" valign="bottom"><b>TimerHandle</b> = <a class="el" href="struct__weak.html">_weak</a>&lt;Timer&gt;</td></tr>
-<tr class="separator:a7ad9a6403a87516d2ca605cd7b102ee2"><td class="memSeparator" colspan="2"> </td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">
-Public Member Functions<a class="aui-toc-hash" href="#pub-methods" id="pub-methods" name="pub-methods" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
-<tr class="memitem:ae04bfc685dc4dd00f2a06b63c9d3caa3" id="r_ae04bfc685dc4dd00f2a06b63c9d3caa3"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="#ae04bfc685dc4dd00f2a06b63c9d3caa3">iteration</a> (<a class="el" href="classABitField.html">ABitField</a>&lt; ASchedulerIteration &gt; flag=ASchedulerIteration::NONE)</td></tr>
-<tr class="memdesc:ae04bfc685dc4dd00f2a06b63c9d3caa3"><td class="mdescLeft"> </td><td class="mdescRight">Performs an iteration.  <br/></td></tr>
-<tr class="separator:ae04bfc685dc4dd00f2a06b63c9d3caa3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a297b30aa7fe6ab8fbcfe80299de2e5bc" id="r_a297b30aa7fe6ab8fbcfe80299de2e5bc"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#a297b30aa7fe6ab8fbcfe80299de2e5bc">notifyProcessMessages</a> () override</td></tr>
-<tr class="memdesc:a297b30aa7fe6ab8fbcfe80299de2e5bc"><td class="mdescLeft"> </td><td class="mdescRight">Notifies this <a class="el" href="classIEventLoop.html">IEventLoop</a> that its thread got a new message to process.  <br/></td></tr>
-<tr class="separator:a297b30aa7fe6ab8fbcfe80299de2e5bc"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aab5b98be54a6068d22442b48d1c8f568" id="r_aab5b98be54a6068d22442b48d1c8f568"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="#aab5b98be54a6068d22442b48d1c8f568">loop</a> () override</td></tr>
-<tr class="memdesc:aab5b98be54a6068d22442b48d1c8f568"><td class="mdescLeft"> </td><td class="mdescRight">Do message processing loop.  <br/></td></tr>
-<tr class="separator:aab5b98be54a6068d22442b48d1c8f568"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a00e7165a31426aeb3d68e7753b5e42a6" id="r_a00e7165a31426aeb3d68e7753b5e42a6"><td class="memTemplParams" colspan="2"><a id="a00e7165a31426aeb3d68e7753b5e42a6" name="a00e7165a31426aeb3d68e7753b5e42a6"></a>
-template&lt;typename Duration&gt; </td></tr>
-<tr class="memitem:a00e7165a31426aeb3d68e7753b5e42a6"><td align="right" class="memTemplItemLeft" valign="top">void </td><td class="memTemplItemRight" valign="bottom"><b>enqueue</b> (Duration timeout, std::function&lt; void()&gt; callback)</td></tr>
-<tr class="separator:a00e7165a31426aeb3d68e7753b5e42a6"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:adcc8bfa4d75bc92bd37d3836cddc151a" id="r_adcc8bfa4d75bc92bd37d3836cddc151a"><td class="memTemplParams" colspan="2">template&lt;typename Duration&gt; </td></tr>
-<tr class="memitem:adcc8bfa4d75bc92bd37d3836cddc151a"><td align="right" class="memTemplItemLeft" valign="top"><a class="el" href="struct__weak.html">TimerHandle</a> </td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adcc8bfa4d75bc92bd37d3836cddc151a">timer</a> (Duration timeout, std::function&lt; void()&gt; callback)</td></tr>
-<tr class="memdesc:adcc8bfa4d75bc92bd37d3836cddc151a"><td class="mdescLeft"> </td><td class="mdescRight">Creates a timer.  <br/></td></tr>
-<tr class="separator:adcc8bfa4d75bc92bd37d3836cddc151a"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a238d4f6258302546fd987939aaa98415" id="r_a238d4f6258302546fd987939aaa98415"><td align="right" class="memItemLeft" valign="top"><a id="a238d4f6258302546fd987939aaa98415" name="a238d4f6258302546fd987939aaa98415"></a>
-void </td><td class="memItemRight" valign="bottom"><b>removeTimer</b> (const <a class="el" href="struct__weak.html">TimerHandle</a> &amp;t)</td></tr>
-<tr class="separator:a238d4f6258302546fd987939aaa98415"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a15ce344ff46013e9909658d6f41dc82c" id="r_a15ce344ff46013e9909658d6f41dc82c"><td align="right" class="memItemLeft" valign="top"><a id="a15ce344ff46013e9909658d6f41dc82c" name="a15ce344ff46013e9909658d6f41dc82c"></a>
-bool </td><td class="memItemRight" valign="bottom"><b>emptyTasks</b> () const noexcept</td></tr>
-<tr class="separator:a15ce344ff46013e9909658d6f41dc82c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a31971a6caeb00c870daa0bd155c558af" id="r_a31971a6caeb00c870daa0bd155c558af"><td align="right" class="memItemLeft" valign="top"><a id="a31971a6caeb00c870daa0bd155c558af" name="a31971a6caeb00c870daa0bd155c558af"></a>
-void </td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
-<tr class="separator:a31971a6caeb00c870daa0bd155c558af"><td class="memSeparator" colspan="2"> </td></tr>
-</table>
-<h2 class="groupheader">Member Function Documentation<a class="aui-toc-hash" href="#ae04bfc685dc4dd00f2a06b63c9d3caa3" id="ae04bfc685dc4dd00f2a06b63c9d3caa3" name="ae04bfc685dc4dd00f2a06b63c9d3caa3" style="color: var(--fragment-comment) !important">#</a></h2>
-
-<h2 class="memtitle"><span class="permalink">◆ </span>iteration()<a class="aui-toc-hash" href="#◆ iteration()" id="◆ iteration()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classAScheduler-members.html">&gt; All members, including inherited</a></p>
+<a id="ae04bfc685dc4dd00f2a06b63c9d3caa3" name="ae04bfc685dc4dd00f2a06b63c9d3caa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04bfc685dc4dd00f2a06b63c9d3caa3">◆ </a></span>iteration()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -168,7 +129,7 @@ void </td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 </div>
 </div>
 <a id="aab5b98be54a6068d22442b48d1c8f568" name="aab5b98be54a6068d22442b48d1c8f568"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>loop()<a class="aui-toc-hash" href="#◆ loop()" id="◆ loop()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5b98be54a6068d22442b48d1c8f568">◆ </a></span>loop()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -192,7 +153,7 @@ void </td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 </div>
 </div>
 <a id="a297b30aa7fe6ab8fbcfe80299de2e5bc" name="a297b30aa7fe6ab8fbcfe80299de2e5bc"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>notifyProcessMessages()<a class="aui-toc-hash" href="#◆ notifyprocessmessages()" id="◆ notifyprocessmessages()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a297b30aa7fe6ab8fbcfe80299de2e5bc">◆ </a></span>notifyProcessMessages()</h2>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -216,7 +177,7 @@ void </td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 </div>
 </div>
 <a id="adcc8bfa4d75bc92bd37d3836cddc151a" name="adcc8bfa4d75bc92bd37d3836cddc151a"></a>
-<h2 class="memtitle"><span class="permalink">◆ </span>timer()<a class="aui-toc-hash" href="#◆ timer()" id="◆ timer()" style="color: var(--fragment-comment) !important">#</a></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc8bfa4d75bc92bd37d3836cddc151a">◆ </a></span>timer()</h2>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -258,7 +219,7 @@ template&lt;typename Duration&gt; </div>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#pub-types">Public Types</a></h1><h1><a href="#pub-methods">Public Member Functions</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>
