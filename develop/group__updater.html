@@ -111,16 +111,16 @@ $(function(){initNavTree('group__updater.html',''); initResizable(true); });
 <dl class="section user"><dt></dt><dd>This module is purposed for delivering updates to your end users on distribution methods that do not support that by themselves (i.e., occasional Windows installers, portables for Windows and Linux, macOS app bundles downloaded from your website).</dd></dl>
 <p><code>aui.updater</code> module expects your program to be installed to user's directory (i.e., updating does not require admin priveleges). If that's not your case, you'll need to update your <a class="el" href="md_docs_2Packaging_01Your_01App.html#INNOSETUP">installer configuration</a> to install to user's directory (i.e., in <code>AppData</code>).</p>
 <dl class="section note"><dt>Note</dt><dd>Check out our <a class="el" href="example_app_template.html">App Template ⚡</a> for a GitHub-hosted app template with auto update implemented.</dd></dl>
-<h1><a class="anchor" id="autotoc_md254"></a>
-Supported platforms</h1>
+<h1>
+Supported platforms<a class="aui-toc-hash" href="#supported-platforms" id="supported-platforms" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L144"></b> <code>aui::updater</code> supports the following platforms:</p><ul>
 <li><b>Windows</b> - <a class="el" href="md_docs_2Packaging_01Your_01App.html#PORTABLE_WINDOWS">portables</a> only, installers to user's directory only (<a class="el" href="md_docs_2Packaging_01Your_01App.html#INNOSETUP">Inno Setup</a>)</li>
 <li><b>Linux</b> - portables only</li>
 </ul>
 <p>On a supported platform, <code>aui::updater</code> checks if the app executable is writable by the current user. If the executable is not writeable, or running on a non-supported platform, <code><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a></code> stubs it's methods (i.e., they do nothing). You can check that the <code>aui::updater</code> functionality is engaged by calling <code><a class="el" href="classAUpdater.html#a7bf8d2b51803eebeded5cb6bda2122ae" title="Checks that updater functionality is available.">AUpdater::isAvailable()</a></code>.</p>
 <p>Updating process requires the initial application running instance to be stopped to replace its files with newer ones. Additionally, the updater process starts the newer version of the application after replacing the files (applying/deploying an update). To minimize downtime for end-users, the replacement should be seamless and quick and thus the deployment process just copies newer files (overwriting old ones), it does not involve network operations.</p>
-<h1><a class="anchor" id="autotoc_md255"></a>
-Getting started</h1>
+<h1>
+Getting started<a class="aui-toc-hash" href="#getting-started" id="getting-started" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L158"></b></p>
 <p><code><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a></code> lives inside entrypoint of your application. It needs you to pass program arguments. It might decide to terminate process execution via std::exit. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyUpdater : <span class="keyword">public</span> <a class="code hl_class" href="classAUpdater.html">AUpdater</a> {</div>
 <div class="line"><span class="keyword">protected</span>:</div>
@@ -143,8 +143,8 @@ Getting started</h1>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
 </div><!-- fragment --><p>You can pass updater instance to your window (as shown in the example) and display update information from <code><a class="el" href="classAUpdater.html#a1e6e8f3dcd758c1aa6d327102ab46a71" title="State of the updater.">AUpdater::status</a></code> and perform the update when requested.</p>
-<h1><a class="anchor" id="autotoc_md256"></a>
-Observing update progress</h1>
+<h1>
+Observing update progress<a class="aui-toc-hash" href="#observing-update-progress" id="observing-update-progress" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L191"></b></p>
 <p>Status of the <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> to observe from outside, i.e., by UI.</p>
 <p><code>status</code> is updated in UI thread only.</p>
@@ -179,11 +179,11 @@ Observing update progress</h1>
 <div class="ttc" id="aclassAView_html_af2361cde3ebf9e0b410c28dab746029d"><div class="ttname"><a href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AView::clicked</a></div><div class="ttdeci">emits clicked</div><div class="ttdoc">Left mouse button clicked.</div><div class="ttdef"><b>Definition</b> AView.h:945</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:215</div></div>
 <div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md257"></a>
-Update process</h1>
+</div><!-- fragment --> <h1>
+Update process<a class="aui-toc-hash" href="#update-process" id="update-process" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L195"></b></p>
-<h2><a class="anchor" id="autotoc_md258"></a>
-Checking for updates</h2>
+<h2>
+Checking for updates<a class="aui-toc-hash" href="#checking-for-updates" id="checking-for-updates" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L197"></b></p>
 <p><a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> expects <a class="el" href="classAUpdater.html#ad0df1b1eaa58c79f7be6b3b2d4b341f3">AUpdater::checkForUpdates</a> to be called to check for updates. It can be called once per some period of time. It calls user-defined <a class="el" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">AUpdater::checkForUpdatesImpl</a> to perform an update checking.</p>
 <p>The update steps are reported by changing <code><a class="el" href="classAUpdater.html#a1e6e8f3dcd758c1aa6d327102ab46a71" title="State of the updater.">AUpdater::status</a></code> property.</p>
@@ -203,8 +203,8 @@ Checking for updates</h2>
 </map>
 </div>
 <p>You might want to store update check results (i.e., download url) in your implementation of <a class="el" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">AUpdater::checkForUpdatesImpl</a> so your <a class="el" href="classAUpdater.html#a3727ff4ff2c6c907c13ccf216a3c4d2f">AUpdater::downloadUpdateImpl</a> might reuse this information.</p>
-<h2><a class="anchor" id="autotoc_md259"></a>
-Downloading the update</h2>
+<h2>
+Downloading the update<a class="aui-toc-hash" href="#downloading-the-update" id="downloading-the-update" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L234"></b></p>
 <p>When an update is found, your app should call <a class="el" href="classAUpdater.html#adeb17ffdf5f26b2df85b0b95e56e05e5">AUpdater::downloadUpdate</a> to download and unpack the update. It is up to you to decide when to download an update. If you wish, you can call <a class="el" href="classAUpdater.html#adeb17ffdf5f26b2df85b0b95e56e05e5">AUpdater::downloadUpdate</a> in <a class="el" href="classAUpdater.html#a988e31376a10073a79634a25424701ef">AUpdater::checkForUpdatesImpl</a> to proceed to download process right after update was found (see <a class="el" href="#UPDATER_WORKFLOWS">Updater workflows</a> for more information about update workflow decisions). It calls user-defined <a class="el" href="classAUpdater.html#a3727ff4ff2c6c907c13ccf216a3c4d2f">AUpdater::downloadUpdateImpl</a> which might choose to call default <code><a class="el" href="classAUpdater.html#ae1db715d36c366c823542785e9b4a8a1" title="Typical download and unpack implementation.">AUpdater::downloadAndUnpack</a>(&lt;YOUR DOWNLOAD URL&gt;, unpackedUpdateDir)</code>.</p>
 <div class="mscgraph">
@@ -216,8 +216,8 @@ Downloading the update</h2>
 <area alt="" coords="158,123,443,134" href="structAUpdater_1_1StatusWaitingForApplyAndRestart.html" shape="rect"/>
 </map>
 </div>
-<h2><a class="anchor" id="autotoc_md260"></a>
-Applying (deploying) the update</h2>
+<h2>
+Applying (deploying) the update<a class="aui-toc-hash" href="#applying-(deploying)-the-update" id="applying-(deploying)-the-update" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L255"></b></p>
 <p>At this moment, <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> waits <a class="el" href="classAUpdater.html#a0a63bd72a7f8ec39aa6ac4f8f19732cd">AUpdater::applyUpdateAndRestart</a> to be called. When <a class="el" href="classAUpdater.html#a0a63bd72a7f8ec39aa6ac4f8f19732cd">AUpdater::applyUpdateAndRestart</a> is called (i.e., when user accepted update installation), <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> executes the newer copy of your app downloaded before with a special command line argument which is handled by <a class="el" href="classAUpdater.html#a8325386bf22a7f2465531a0e420f3231">AUpdater::handleStartup</a> in that executable. The initial app process is finished, closing your app window as well. From now, your app is in "downtime" state, so we need to apply the update and reopen app back again as quickly as possible. This action is required to perform update installation. The copy then replaces old application (where it actually installed) with itself (that is, the downloaded, newer copy). After operation is complete, it passes the control back to the updated application executable. At last, the newly updated application performs a cleanup after update.</p>
 <div class="mscgraph">
@@ -232,8 +232,8 @@ Applying (deploying) the update</h2>
 </map>
 </div>
 <p>After these operations complete, your app is running in its normal lifecycle.</p>
-<h1><a class="anchor" id="UpdaterTest_Typical_Implementation"></a>
-Typical Implementation</h1>
+<h1>
+Typical Implementation<a class="aui-toc-hash" href="#UpdaterTest_Typical_Implementation" id="UpdaterTest_Typical_Implementation" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L294"></b> <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> is an abstract class; it needs some functions to be implemented by you.</p>
 <p>In this example, let's implement auto update from GitHub release pages. <b aui-src="aui.updater/tests/UpdaterTest.cpp#L298"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L299"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L300"></b> <b aui-src="aui.updater/tests/UpdaterTest.cpp#L301"></b> </p><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> LOG_TAG = <span class="stringliteral">"MyUpdater"</span>;</div>
 <div class="line"><span class="keyword">class </span>MyUpdater: <span class="keyword">public</span> <a class="code hl_class" href="classAUpdater.html">AUpdater</a> {</div>
@@ -320,26 +320,26 @@ Typical Implementation</h1>
 <div class="ttc" id="anamespaceAMessageBox_html_a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3"><div class="ttname"><a href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a551b723eafd6a31d444fcb2f5920fbd3">AMessageBox::Icon::INFO</a></div><div class="ttdeci">@ INFO</div><div class="ttdoc">Information icon.</div><div class="ttdef"><b>Definition</b> AMessageBox.h:63</div></div>
 <div class="ttc" id="anamespaceAMessageBox_html_a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870"><div class="ttname"><a href="namespaceAMessageBox.html#a8d1b9913efea705e934603f7a5036506a99cd1c61610c76a57cb8d10d6df6b870">AMessageBox::Icon::CRITICAL</a></div><div class="ttdeci">@ CRITICAL</div><div class="ttdoc">Critical icon.</div><div class="ttdef"><b>Definition</b> AMessageBox.h:73</div></div>
 <div class="ttc" id="astructaui_1_1updater_1_1Semver_html_a0ee0eb7ac25407bca5b6ef4074d196ec"><div class="ttname"><a href="structaui_1_1updater_1_1Semver.html#a0ee0eb7ac25407bca5b6ef4074d196ec">aui::updater::Semver::fromString</a></div><div class="ttdeci">static Semver fromString(const AString &amp;version)</div><div class="ttdoc">Parse semver from string.</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="UPDATER_WORKFLOWS"></a>
-Updater workflows</h1>
+</div><!-- fragment --><h1>
+Updater workflows<a class="aui-toc-hash" href="#UPDATER_WORKFLOWS" id="UPDATER_WORKFLOWS" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L397"></b> When using <a class="el" href="classAUpdater.html" title="Updater class.">AUpdater</a> for your application, you need to consider several factors including usability, user experience, system resources, and particular needs of your project.</p>
 <p>Either way, you might want to implement a way to disable auto update feature in your application.</p>
-<h2><a class="anchor" id="autotoc_md261"></a>
-Prompt user on every step</h2>
+<h2>
+Prompt user on every step<a class="aui-toc-hash" href="#prompt-user-on-every-step" id="prompt-user-on-every-step" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L403"></b></p>
 <p>This approach is implemented in AUI's <a class="el" href="example_app_template.html">App Template ⚡</a>.</p>
 <p>The updater checks for updater periodically or upon user request and informs the user that an update is available. The user then decides whether to proceed with update or not. If they agree the application will download and install the update.</p>
 <p>This way can be considered as better approach because the user may feel they control the situation and the application never does things that user never asked to (trust concerns). On the other hand, such requirement of additional user interaction to can distract them from doing their work, so these interactions should not be annoying.</p>
 <p>You should not use <a class="el" href="namespaceAMessageBox.html" title="Displaying native modal message dialogs.">AMessageBox</a> (unless user explicitly asked to check for update) as it literally interrupts the user's workflow, opting them to make a decision before they can continue their work. A great example of a bad auto update implementation is qBittorrent client on Windows: hence this application typically launches on OS startup, it checks for updates in background and pops the message box if update was found, <b>even if user is focused on another application or away from keyboard</b>.</p>
-<h2><a class="anchor" id="autotoc_md262"></a>
-Silent download</h2>
+<h2>
+Silent download<a class="aui-toc-hash" href="#silent-download" id="silent-download" style="color: var(--fragment-comment) !important">#</a></h2>
 <p><b aui-src="aui.updater/tests/UpdaterTest.cpp#L421"></b></p>
 <p>This approach is implemented in <a class="el" href="example_app_auigram.html">AUI Telegram Client (AUIgram)</a>, as well as in official Qt-based Telegram Desktop client.</p>
 <p>The updater silently downloads the update in the background while the user continues working within the application or even other tasks. The update then is applied automatically upon restart. Optionally, the application might show a button/message/notification bubble to restart and apply update.</p>
 <p>Despite user trust concerns, this approach allows seamless experience - users don't need to be interrupted during their work. They even might not care about updates. </p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader">
+Classes<a class="aui-toc-hash" href="#nested-classes" id="nested-classes" name="nested-classes" style="color: var(--fragment-comment) !important">#</a></h2></td></tr>
 <tr class="memitem:"><td align="right" class="memItemLeft" valign="top">struct  </td><td class="memItemRight" valign="bottom"><a class="el" href="structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html">aui::updater::AppropriatePortablePackagePredicate</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft"> </td><td class="mdescRight">Determines whether the passed package name is a portable package that matches current arch and platform.  <a href="structaui_1_1updater_1_1AppropriatePortablePackagePredicate.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2"> </td></tr>
@@ -355,7 +355,7 @@ Classes</h2></td></tr>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#supported-platforms">Supported platforms</a></h1><h1><a href="#getting-started">Getting started</a></h1><h1><a href="#observing-update-progress">Observing update progress</a></h1><h1><a href="#update-process">Update process</a></h1><h2><a href="#checking-for-updates">Checking for updates</a></h2><h2><a href="#downloading-the-update">Downloading the update</a></h2><h2><a href="#applying-(deploying)-the-update">Applying (deploying) the update</a></h2><h1><a href="#UpdaterTest_Typical_Implementation">Typical Implementation</a></h1><h1><a href="#UPDATER_WORKFLOWS">Updater workflows</a></h1><h2><a href="#prompt-user-on-every-step">Prompt user on every step</a></h2><h2><a href="#silent-download">Silent download</a></h2><h1><a href="#nested-classes">Classes</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

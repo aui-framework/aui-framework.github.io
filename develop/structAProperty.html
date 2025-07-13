@@ -110,8 +110,8 @@ class AProperty&lt; T &gt;</div><dl class="section warning"><dt>Warning</dt><dd>
 <dl class="section user"><dt></dt><dd><code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>&lt;T&gt;</code> is a container holding an instance of <code>T</code>. You can assign a value to it with <code>operator=</code> and read value with <code>value()</code> method or implicit conversion <code>operator T()</code>.</dd></dl>
 <p>See <a class="el" href="group__property__system.html">property system</a> for usage examples.</p>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L28"></b></p>
-<h1><a class="anchor" id="autotoc_md241"></a>
-Declaration</h1>
+<h1>
+Declaration<a class="aui-toc-hash" href="#declaration" id="declaration" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L30"></b> To declare a property inside your data model, use <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> template: </p><div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
 <div class="line">    AProperty&lt;AString&gt; name;</div>
 <div class="line">    AProperty&lt;AString&gt; surname;</div>
@@ -131,8 +131,8 @@ Declaration</h1>
 <div class="line">doSomethingWithName(u.name);</div>
 </div><!-- fragment --><p>If it doesn't, simply put an asterisk: </p><div class="fragment"><div class="line">doSomethingWithName(*u.name);</div>
 <div class="line"><span class="comment">//                 ^^^ HERE</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="PropertyTest_Observing_changes"></a>
-Observing changes</h1>
+</div><!-- fragment --><h1>
+Observing changes<a class="aui-toc-hash" href="#PropertyTest_Observing_changes" id="PropertyTest_Observing_changes" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L98"></b> All property types offer <code>.changed</code> field which is a signal reporting value changes. Let's make little observer object for demonstration: </p><div class="fragment"><div class="line"><span class="keyword">class </span>LogObserver : <span class="keyword">public</span> AObject {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">    <span class="keywordtype">void</span> log(<span class="keyword">const</span> <a class="code hl_class" href="classAString.html">AString</a>&amp; msg) {</div>
@@ -159,8 +159,8 @@ Observing changes</h1>
 </div><!-- fragment --><p>Assignment operation above makes an additional line to output: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
 </div><!-- fragment --><p>Whole program output when connecting to property directly: </p><div class="fragment"><div class="line">[07:58:59][][LogObserver][INFO]: Received value: Chloe</div>
 <div class="line">[07:58:59][][LogObserver][INFO]: Received value: Marinette</div>
-</div><!-- fragment --><h1><a class="anchor" id="PropertyTest_Copy_constructing_AProperty"></a>
-Copy constructing AProperty</h1>
+</div><!-- fragment --><h1>
+Copy constructing AProperty<a class="aui-toc-hash" href="#PropertyTest_Copy_constructing_AProperty" id="PropertyTest_Copy_constructing_AProperty" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L170"></b> Copying <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code> is considered as a valid operation as it's a data holder. However, it's worth to note that <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code> copies it's underlying data field only, the <b>signal-slot relations are not borrowed</b>. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> original = <a class="code hl_function" href="structaui_1_1ptr.html#a42f8c54fdf7e4c67e32badedcdffe775">aui::ptr::manage_shared</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Chloe"</span> });</div>
 <div class="line"> </div>
@@ -173,8 +173,8 @@ Copy constructing AProperty</h1>
 <div class="line">EXPECT_EQ(copy-&gt;name, <span class="stringliteral">"Chloe"</span>); <span class="comment">// still</span></div>
 </div><!-- fragment --><p>In this example, observer is aware of changes <code>"Chloe"</code> -&gt; <code>"Marinette"</code>. The copy is not aware because it is a <b>copy</b>. If we try to change the <code>copy</code>'s name: </p><div class="fragment"><div class="line">copy-&gt;name = <span class="stringliteral">"Adrien"</span>;</div>
 </div><!-- fragment --><p>The observer is not aware about changes in <code>copy</code>. In fact. <code>copy-&gt;name</code> has zero connections.</p>
-<h1><a class="anchor" id="PropertyTest_Copy_assigning_AProperty"></a>
-Copy assigning AProperty</h1>
+<h1>
+Copy assigning AProperty<a class="aui-toc-hash" href="#PropertyTest_Copy_assigning_AProperty" id="PropertyTest_Copy_assigning_AProperty" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L212"></b> The situation with copy assigning <code>auto copy = _new&lt;User&gt;(); *copy = *original;</code> is similar to copy construction <code>auto copy = _new&lt;User&gt;(*original);</code>, except that we are copying to some pre-existing data structure that potentially have signal-slot relations already. So, not only <b>connections should be kept as is</b> but a notification for copy destination's observers is needed.</p>
 <p>As with copy construction, copy operation of <code><a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a></code> does not affect signal-slot relations. Moreover, it notifies the observers. </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> original = <a class="code hl_function" href="structaui_1_1ptr.html#a42f8c54fdf7e4c67e32badedcdffe775">aui::ptr::manage_shared</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Chloe"</span> });</div>
@@ -185,8 +185,8 @@ Copy assigning AProperty</h1>
 <div class="line">User copy { .name = <span class="stringliteral">"Marinette"</span> };</div>
 <div class="line">*original = copy;</div>
 </div><!-- fragment --><p>See, not only the connection remains, but it also receives notification about the change.</p>
-<h1><a class="anchor" id="PropertyTest_Moving_AProperty"></a>
-Moving AProperty</h1>
+<h1>
+Moving AProperty<a class="aui-toc-hash" href="#PropertyTest_Moving_AProperty" id="PropertyTest_Moving_AProperty" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L246"></b> Similary to copy, <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a> is both move assignable and constructible except that underlying value is moved instead of copying. Also, the observers of the source object receive notification that the value was emptied. The <b>signal-slot relations are left unchanged.</b> </p><div class="fragment"><div class="line"><span class="keyword">auto</span> observer = _new&lt;LogObserver&gt;();</div>
 <div class="line"><span class="keyword">auto</span> original = <a class="code hl_function" href="structaui_1_1ptr.html#a42f8c54fdf7e4c67e32badedcdffe775">aui::ptr::manage_shared</a>(<span class="keyword">new</span> User { .name = <span class="stringliteral">"Chloe"</span> });</div>
 <div class="line"> </div>
@@ -212,11 +212,11 @@ Moving AProperty</h1>
 <div class="line">User copy { .name = <span class="stringliteral">"Marinette"</span> };</div>
 <div class="line">*original = std::move(copy);</div>
 </div><!-- fragment --><p>See, not only the connection remains, but it also receives notification about the change. </p>
-<h1><a class="anchor" id="PropertyTest_Write_operators"></a>
-Non-const operators</h1>
+<h1>
+Non-const operators<a class="aui-toc-hash" href="#PropertyTest_Write_operators" id="PropertyTest_Write_operators" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L323"></b> Refer to <a class="el" href="classaui_1_1PropertyModifier.html">aui::PropertyModifier</a>.</p>
-<h1><a class="anchor" id="PropertyTest_AProperty_and_AVector"></a>
-AProperty and AVector</h1>
+<h1>
+AProperty and AVector<a class="aui-toc-hash" href="#PropertyTest_AProperty_and_AVector" id="PropertyTest_AProperty_and_AVector" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyTest.cpp#L326"></b> Assuming you have an <a class="el" href="classAVector.html" title="A std::vector with AUI extensions.">AVector</a> wrapped with <a class="el" href="structAProperty.html" title="Basic easy-to-use property implementation containing T.">AProperty</a>: </p><div class="fragment"><div class="line">AProperty&lt;AVector&lt;int&gt;&gt; ints = <a class="code hl_class" href="classAVector.html">AVector&lt;int&gt;</a>{1, 2, 3};</div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
 </div><!-- fragment --><p>You can use square brackets to access items transparently: </p><div class="fragment"><div class="line">EXPECT_EQ(ints[0], 1);</div>
@@ -322,7 +322,7 @@ template&lt;typename T&gt; </div>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#declaration">Declaration</a></h1><h1><a href="#PropertyTest_Observing_changes">Observing changes</a></h1><h1><a href="#PropertyTest_Copy_constructing_AProperty">Copy constructing AProperty</a></h1><h1><a href="#PropertyTest_Copy_assigning_AProperty">Copy assigning AProperty</a></h1><h1><a href="#PropertyTest_Moving_AProperty">Moving AProperty</a></h1><h1><a href="#PropertyTest_Write_operators">Non-const operators</a></h1><h1><a href="#PropertyTest_AProperty_and_AVector">AProperty and AVector</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>

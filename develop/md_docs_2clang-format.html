@@ -103,8 +103,8 @@ $(function(){initNavTree('md_docs_2clang-format.html',''); initResizable(true); 
 <div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="docs/clang-format.md"></b>
 <div class="textblock"><p>clang-format is a de facto standard tool to auto format (C++) code with style described by <code>.clang-format</code> file that typically located inside your project's root directory. AUI <a class="el" href="#CLANG_FORMAT">has such file</a>.</p>
 <p>Since AUI abuses C++'s syntax, it's important to set up appropriate auto formatting, or you will often find yourself struggling with AUI's DSL especially in large portions of layout, despite the fact we recommend to decompose large AUI DSLs into smaller pieces (i.e., functions). For your project, we recommend to start with AUI's formatting configuration listed below. AUI's <a href="https://github.com/aui-framework/example_app">App Template</a> has <code>.clang-format</code> already. Your IDE should pick up it without further configuration.</p>
-<h1><a class="anchor" id="autotoc_md135"></a>
-Always Use Trailing Comma in Initializer Lists</h1>
+<h1>
+Always Use Trailing Comma in Initializer Lists<a class="aui-toc-hash" href="#always-use-trailing-comma-in-initializer-lists" id="always-use-trailing-comma-in-initializer-lists" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>When it comes to <code>clang-format</code> there's one an unobvious feature when using AUI's DSL. Consider the example:</p>
 <table class="doxtable">
 <tr>
@@ -135,8 +135,8 @@ Always Use Trailing Comma in Initializer Lists</h1>
 </table>
 <p>The first example left as is (correct), the second example formatted confusingly.</p>
 <p>When using any kind of AUI's DSL with initializer lists please always use trailing comma. Not only it helps with reordering, git diffs, etc..., but also <code>.clang-format</code> makes proper formatting for lists with trailing commas.</p>
-<h1><a class="anchor" id="autotoc_md136"></a>
-Use clang-format off/on</h1>
+<h1>
+Use clang-format off/on<a class="aui-toc-hash" href="#use-clang-format-off/on" id="use-clang-format-off/on" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>In some scenarios clang-format may fight against you, especially with complicated syntax. You can use <code>// clang-format off</code> and <code>// clang-format on</code> to disable and enable clang-format, respectively.</p>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>DataOptional {</div>
 <div class="line">    <span class="keywordtype">int</span> v1;</div>
@@ -148,8 +148,8 @@ Use clang-format off/on</h1>
 <div class="line">             (v1, <span class="stringliteral">"v1"</span>)</div>
 <div class="line">             (v2, <span class="stringliteral">"v2"</span>, AJsonFieldFlags::OPTIONAL))</div>
 <div class="line"><span class="comment">// clang-format on</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="CLANG_FORMAT"></a>
-AUI's .clang-format</h1>
+</div><!-- fragment --><h1>
+AUI's .clang-format<a class="aui-toc-hash" href="#CLANG_FORMAT" id="CLANG_FORMAT" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Place this <code>.clang-format</code> file in root of your project.</p>
 <div class="fragment"><div class="line"># options: https://clang.llvm.org/docs/ClangFormatStyleOptions.html</div>
 <div class="line">BasedOnStyle: Google</div>
@@ -223,7 +223,7 @@ AUI's .clang-format</h1>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#always-use-trailing-comma-in-initializer-lists">Always Use Trailing Comma in Initializer Lists</a></h1><h1><a href="#use-clang-format-off/on">Use clang-format off/on</a></h1><h1><a href="#CLANG_FORMAT">AUI's .clang-format</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->

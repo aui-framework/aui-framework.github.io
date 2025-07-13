@@ -109,18 +109,18 @@ $(function(){initNavTree('classIPlatformAbstraction.html',''); initResizable(tru
 <p>This is a direct equivalent of Qt's Platform Abstraction.</p>
 <dl class="linux"><dt><b><a class="el" href="linux.html#_linux000007">Linux-specific</a></b></dt><dd>This API is available on <a class="el" href="linux.html">Linux (-based desktop OSes)</a> only. Platform Abstraction Layer is used to choose appropriate core platform UI APIs in runtime.</dd></dl>
 <p>AUI framework is designed to be flexible and adaptable to different desktop environments and UI toolkits. This is achieved through a platform abstraction layer that isolates the core application logic from the specifics of the underlying UI implementation.</p>
-<h1><a class="anchor" id="autotoc_md34"></a>
-Supported UI Backends</h1>
+<h1>
+Supported UI Backends<a class="aui-toc-hash" href="#supported-ui-backends" id="supported-ui-backends" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>Currently, the framework supports the following UI backends:</p><ul>
 <li><b>Adwaita:</b> modern UI toolkit based on GTK, commonly used in GNOME.</li>
 <li><b>GTK:</b> widely available widget toolkit.</li>
 <li><b>X11:</b> legacy windowing system (used as a fallback).</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md35"></a>
-API Selection and Prioritization</h1>
+<h1>
+API Selection and Prioritization<a class="aui-toc-hash" href="#api-selection-and-prioritization" id="api-selection-and-prioritization" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>The framework determines the preferred UI backend based on an <code>initializationOrder</code> defined within <a class="el" href="structAPlatformAbstractionOptions.html">APlatformAbstractionOptions</a>. The order prioritizes backends, attempting to initialize them sequentially.</p>
-<h1><a class="anchor" id="autotoc_md36"></a>
-Dynamic Loading</h1>
+<h1>
+Dynamic Loading<a class="aui-toc-hash" href="#dynamic-loading" id="dynamic-loading" style="color: var(--fragment-comment) !important">#</a></h1>
 <p>To minimize dependencies and enhance compatibility, the framework utilizes dynamic loading for certain UI backends. For example, the Adwaita backend loads the <code>libadwaita-1.so</code> library at runtime using <code>dlopen</code>.</p>
 <p>The <code>generate_dl_subs</code> function from <code>aui.toolbox</code> is used to automatically generate <code>dlsym</code>-based function implementations based on a list of signatures (<code>*.sigs</code>) that need to be exported from the dynamically loaded libraries. This allows the framework to call functions within the loaded library without requiring explicit linking. </p>
 </div><p class="footer-inner">
@@ -128,7 +128,7 @@ Dynamic Loading</h1>
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#supported-ui-backends">Supported UI Backends</a></h1><h1><a href="#api-selection-and-prioritization">API Selection and Prioritization</a></h1><h1><a href="#dynamic-loading">Dynamic Loading</a></h1><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
 <script>
