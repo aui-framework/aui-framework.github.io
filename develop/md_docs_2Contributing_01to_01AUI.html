@@ -128,6 +128,30 @@ AI<a class="aui-toc-hash" href="#ai" id="ai" style="color: var(--fragment-commen
 </ul>
 <p>Please treat AI as a tool, not as a complete replacement of a software engineer.</p>
 <h1>
+Understanding Story Point Values<a class="aui-toc-hash" href="#understanding-story-point-values" id="understanding-story-point-values" style="color: var(--fragment-comment) !important">#</a></h1>
+<p>Story points are designed as relative measurements of work complexity, deliberately decoupled from time-based metrics ( hours/days/weeks). They provide a general indication of effort required for task completion. It's important to note that story point comparisons across different teams, departments, or organizations are inherently invalid.</p>
+<p>For example, Team A's 100-point sprint delivery might represent more actual work than Team B's 200 points, as each team develops their own story point scale. While this guide isn't meant to standardize story points globally, it offers internal guidelines for consistent estimation.</p>
+<p>Note: All stories include standard overhead for PR reviews, test verification, and deployment processes. This overhead should be factored into estimates and can sometimes exceed the time needed for the primary task.</p>
+<p>This section describes how the story points are determined for AUI tasks.</p>
+<h2>
+1 Point - Minimal Complexity<a class="aui-toc-hash" href="#1-point---minimal-complexity" id="1-point---minimal-complexity" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>These represent the simplest possible changes. They involve single-line or minimal code modifications, such as text corrections or content updates. Tasks typically involve simple configuration value modifications with no logic alterations or risk of breakage. There are no external dependencies, and all necessary information is self-contained within the ticket. The changes are covered by existing tests or basic smoke testing, with no test updates required.</p>
+<h2>
+2 Points - Low Complexity<a class="aui-toc-hash" href="#2-points---low-complexity" id="2-points---low-complexity" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>These tasks represent approximately double the effort of a 1-point story. They may include minor third-party dependency updates with API adjustments and basic method refactoring without output changes. New test creation might be necessary. External dependencies are straightforward, such as Docker image whitelisting, and follow clear documentation or known processes.</p>
+<h2>
+3 Points - Moderate Complexity<a class="aui-toc-hash" href="#3-points---moderate-complexity" id="3-points---moderate-complexity" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>This is the first level where significant uncertainty enters the picture. These tasks require a notable but manageable time investment and may involve multiple external dependencies. They often include major version updates of libraries with breaking changes. Some cross-team communication is required, though clarifications can typically be resolved through a single call or chat. This represents the upper range of typical story size.</p>
+<h2>
+5 Points - High Complexity<a class="aui-toc-hash" href="#5-points---high-complexity" id="5-points---high-complexity" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>These stories are an extended version of 3-point complexity, involving a substantial workload with multiple unknowns to resolve. They often include significant breaking changes across components and require extensive test modifications. Multiple cross-team meetings are likely necessary, and broader stakeholder involvement is common.</p>
+<h2>
+8 Points - Very High Complexity<a class="aui-toc-hash" href="#8-points---very-high-complexity" id="8-points---very-high-complexity" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>This represents the maximum reasonable scope for a single sprint. These stories involve major system changes or refactoring, new integrations, or complete rewrites. They come with significant unknowns at the start and should be considered for splitting into smaller stories. Examples include framework migrations or major library updates. Requirements often have high uncertainty.</p>
+<h2>
+13+ Points - Excessive Complexity<a class="aui-toc-hash" href="#13+-points---excessive-complexity" id="13+-points---excessive-complexity" style="color: var(--fragment-comment) !important">#</a></h2>
+<p>Stories of this size exceed single sprint capacity and typically require multiple sprints to complete. They contain too many unknowns and variables, carrying a high risk of underestimation. Such stories should be split into smaller components or converted to epics. Examples include full API integrations or complete rebranding projects. These large-scale changes are too complex to estimate accurately and manage effectively within a single sprint.</p>
+<h1>
 Guides<a class="aui-toc-hash" href="#guides" id="guides" style="color: var(--fragment-comment) !important">#</a></h1>
 <h2>
 Creating an AUI module<a class="aui-toc-hash" href="#creating-an-aui-module" id="creating-an-aui-module" style="color: var(--fragment-comment) !important">#</a></h2>
@@ -189,7 +213,7 @@ Documentation generation<a class="aui-toc-hash" href="#documentation-generation"
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
     License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
 </p>
-</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#becoming-a-contributor">Becoming a contributor</a></h1><h1><a href="#workflow">Workflow</a></h1><h1><a href="#ai">AI</a></h1><h1><a href="#guides">Guides</a></h1><h2><a href="#creating-an-aui-module">Creating an AUI module</a></h2><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
+</div><div class="contents-rails-right"><div class="aui-toc"><p>Contents</p><h1><a href="#becoming-a-contributor">Becoming a contributor</a></h1><h1><a href="#workflow">Workflow</a></h1><h1><a href="#ai">AI</a></h1><h1><a href="#understanding-story-point-values">Understanding Story Point Values</a></h1><h2><a href="#1-point---minimal-complexity">1 Point - Minimal Complexity</a></h2><h2><a href="#2-points---low-complexity">2 Points - Low Complexity</a></h2><h2><a href="#3-points---moderate-complexity">3 Points - Moderate Complexity</a></h2><h2><a href="#5-points---high-complexity">5 Points - High Complexity</a></h2><h2><a href="#8-points---very-high-complexity">8 Points - Very High Complexity</a></h2><h2><a href="#13+-points---excessive-complexity">13+ Points - Excessive Complexity</a></h2><h1><a href="#guides">Guides</a></h1><h2><a href="#creating-an-aui-module">Creating an AUI module</a></h2><div class="aui-toc-extras"><a href="javascript:jumpToSource('view')"><i class="fa fa-file"></i>View Page Source</a><a href="javascript:jumpToSource('edit')"><i class="fa fa-edit"></i>Edit Page Source</a></div></div></div></div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.12.0-->
 <!-- start footer part -->
