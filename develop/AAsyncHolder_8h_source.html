@@ -155,7 +155,7 @@ $(function(){initNavTree('AAsyncHolder_8h_source.html',''); initResizable(true);
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keyword">auto</span> impl = future.inner().get();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            mFutureSet &lt;&lt; future;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            lock.unlock();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            future.<a class="code hl_function" href="classAFuture.html#a0c46bbaafece47c858e18e1ae3a9b27b">onSuccess</a>([<span class="keyword">this</span>, impl]() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            future.onSuccess([<span class="keyword">this</span>, impl]() {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                std::unique_lock lock(mSync);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                mFutureSet.removeIf([&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classAFuture.html">AFuture&lt;&gt;</a>&amp; f) {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    <span class="keywordflow">return</span> f.inner().get() == impl;</div>
@@ -222,7 +222,7 @@ $(function(){initNavTree('AAsyncHolder_8h_source.html',''); initResizable(true);
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">void</span> wait(std::unique_lock&lt;AMutex&gt;&amp; lock)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keyword">auto</span> copy = mFuture;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            lock.unlock();</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            copy.<a class="code hl_function" href="classaui_1_1impl_1_1future_1_1Future.html#a93534534889dea9725ee1f5acbbec3c8">wait</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            copy.wait();</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            lock.lock();</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
