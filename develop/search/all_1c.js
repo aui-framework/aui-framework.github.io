@@ -15,7 +15,7 @@ var searchData=
   ['ui_5fthreadx_12',['ui_threadX',['../group__useful__macros.html#ga3f61ecfc942915005f2bba5a317b654a',1,'kAUI.h']]],
   ['uimatcher_13',['UIMatcher',['../classUIMatcher.html',1,'']]],
   ['uitest_14',['UITest',['../classtesting_1_1UITest.html',1,'testing']]],
-  ['understanding_20story_20point_20values_15',['Understanding Story Point Values',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md152',1,'']]],
+  ['understanding_20story_20point_20values_15',['Understanding Story Point Values',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md149',1,'']]],
   ['uniform_16',['Uniform',['../classgl_1_1Program_1_1Uniform.html',1,'gl::Program']]],
   ['units_17',['Supported units',['../classAMetric.html#autotoc_md39',1,'']]],
   ['unix_20like_20only_18',['UNIX like only',['../md_docs_2Runtime_01Dependency_01Resolution.html#RPATH',1,'Other platforms (UNIX-like only)'],['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md194',1,'Other platforms (UNIX-like only)']]],

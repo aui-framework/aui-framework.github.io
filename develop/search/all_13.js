@@ -13,7 +13,7 @@ var searchData=
   ['latestreleaseresponse_10',['LatestReleaseResponse',['../structaui_1_1updater_1_1github_1_1LatestReleaseResponse.html',1,'aui::updater::github']]],
   ['latin_11',['latin',['../structaui_1_1valid_1_1chars_1_1latin.html',1,'aui::valid::chars']]],
   ['launching_20executable_12',['Launching executable',['../classAProcess.html#ProcessTest_Launching_executable',1,'']]],
-  ['layout_13',['Layout',['../md_docs_2UI_01Building_01Overview.html#autotoc_md203',1,'Layout'],['../example_notes_app.html#autotoc_md241',1,'UI Components and Layout']]],
+  ['layout_13',['Layout',['../md_docs_2UI_01Building_01Overview.html#autotoc_md201',1,'Layout'],['../example_notes_app.html#autotoc_md241',1,'UI Components and Layout']]],
   ['layout_20examples_14',['Layout Examples',['../group__layout__managers.html#autotoc_md30',1,'']]],
   ['layout_20managers_15',['Layout Managers',['../group__layout__managers.html',1,'']]],
   ['layout_20tab_16',['Layout tab',['../md_docs_2Devtools.html#autotoc_md168',1,'']]],
@@ -70,5 +70,5 @@ var searchData=
   ['logwriter_67',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
   ['looks_20like_20a_20config_20file_20does_20not_20exist_20for_20your_20project_68',['&quot;looks like a config file does not exist for your project&quot;',['../md_docs_2AUI_01Boot.html#AFJKLF',1,'']]],
   ['loop_69',['loop',['../classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e',1,'AEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568',1,'AScheduler::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()'],['../classIAudioPlayer.html#a670fb06519d7e606d2d757b670ed6287',1,'IAudioPlayer::loop()']]],
-  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md155',1,'']]]
+  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md152',1,'']]]
 ];
