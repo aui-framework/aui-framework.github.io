@@ -1,9 +1,9 @@
 var searchData=
 [
   ['game_0',['Minesweeper Game',['../example_minesweeper_game.html',1,'']]],
-  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md229',1,'']]],
+  ['game_20logic_1',['Game Logic',['../example_minesweeper_game.html#autotoc_md230',1,'']]],
   ['game_20of_20life_2',['Game of Life',['../example_game_of_life.html',1,'']]],
-  ['gameoflifewindow_3',['GameOfLifeWindow',['../example_game_of_life.html#autotoc_md227',1,'']]],
+  ['gameoflifewindow_3',['GameOfLifeWindow',['../example_game_of_life.html#autotoc_md228',1,'']]],
   ['gatherkineticscrollvalue_4',['gatherKineticScrollValue',['../classATouchScroller.html#a8ba3c7654e4dbc0095656995722d73e8',1,'ATouchScroller']]],
   ['gaussianblur_5',['GaussianBlur',['../structass_1_1Backdrop_1_1GaussianBlur.html',1,'ass::Backdrop']]],
   ['gaussianblurcustom_6',['GaussianBlurCustom',['../structass_1_1Backdrop_1_1GaussianBlurCustom.html',1,'ass::Backdrop']]],
@@ -70,7 +70,7 @@ var searchData=
   ['gettempworkdir_67',['getTempWorkDir',['../classAUpdater.html#a86a27fd5f850e57c227f6248e7a0bbfe',1,'AUpdater']]],
   ['gettext_68',['getText',['../classACursorSelectable.html#a96d0b28b41e0264a89ab704be6d0ac22',1,'ACursorSelectable::getText()'],['../classAAbstractTextField.html#a86143b2eaa99b16bd2199674360eeb07',1,'AAbstractTextField::getText()'],['../classATextArea.html#a9b7a8205e326af6545b470a047f155c1',1,'ATextArea::getText()']]],
   ['gettextlayouthelper_69',['getTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8',1,'IRenderer::IMultiStringCanvas']]],
-  ['getting_20started_70',['Getting started',['../group__updater.html#autotoc_md262',1,'']]],
+  ['getting_20started_70',['Getting started',['../group__updater.html#autotoc_md263',1,'']]],
   ['getting_20started_20with_20aui_71',['Getting started with AUI',['../md_docs_2Getting_01started_01with_01AUI.html',1,'']]],
   ['gettotalfieldhorizontal_72',['getTotalFieldHorizontal',['../classAView.html#a60f404f669341de12d919f4bd3cff824',1,'AView']]],
   ['gettotalfieldsize_73',['getTotalFieldSize',['../classAView.html#a57c70222033ebbbf806553d0fc3094ba',1,'AView']]],
@@ -103,5 +103,5 @@ var searchData=
   ['grow_100',['grow',['../classAByteBuffer.html#aa67518516cac8be372344af2c38f3059',1,'AByteBuffer']]],
   ['gtk4_101',['Gtk4',['../structAPlatformAbstractionOptions_1_1Gtk4.html',1,'APlatformAbstractionOptions']]],
   ['gtkdialog_102',['GtkDialog',['https://docs.gtk.org/gtk4/class.Dialog',1,'']]],
-  ['guides_103',['Guides',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md159',1,'']]]
+  ['guides_103',['Guides',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md158',1,'']]]
 ];
