@@ -41,7 +41,7 @@ var searchData=
   ['playbackstatus_38',['PlaybackStatus',['../classIAudioPlayer.html#adfde5c6cc2d42b93af30c1c8579e6895',1,'IAudioPlayer']]],
   ['playbackstatus_39',['playbackStatus',['../classIAudioPlayer.html#abe584bf0881d2d4cd874c4273da3eb30',1,'IAudioPlayer']]],
   ['playsystemsound_40',['playSystemSound',['../namespaceADesktop.html#a44f8695bc18f540fb8ce120c08b3ca6a',1,'ADesktop']]],
-  ['plugin_41',['PLUGIN',['../md_docs_2aui__module.html#autotoc_md119',1,'']]],
+  ['plugin_41',['PLUGIN',['../md_docs_2aui__module.html#autotoc_md118',1,'']]],
   ['plugins_42',['IDE Plugins',['../md_docs_2IDE_01Plugins.html',1,'']]],
   ['pngimageloader_43',['PngImageLoader',['../classPngImageLoader.html',1,'']]],
   ['point_20minimal_20complexity_44',['1 Point - Minimal Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md154',1,'']]],
