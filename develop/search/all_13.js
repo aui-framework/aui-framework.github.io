@@ -51,14 +51,14 @@ var searchData=
   ['linenumber_48',['lineNumber',['../classAStacktrace_1_1Entry.html#adb06ca26db1ac1f3eea0320130ceff2e',1,'AStacktrace::Entry']]],
   ['lines_49',['lines',['../classOpenGLRenderer.html#a980988b316dce7203a9ed09f071435cd',1,'OpenGLRenderer::lines(const ABrush &amp;brush, AArrayView&lt; glm::vec2 &gt; points, const ABorderStyle &amp;style, AMetric width) override'],['../classOpenGLRenderer.html#aa03e448927fac94b0855e71bab9355f5',1,'OpenGLRenderer::lines(const ABrush &amp;brush, AArrayView&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points, const ABorderStyle &amp;style, AMetric width) override'],['../classIRenderer.html#a37e3867c7af830ce1813c3605ac6729b',1,'IRenderer::lines(const ABrush &amp;brush, AArrayView&lt; glm::vec2 &gt; points, const ABorderStyle &amp;style, AMetric width)=0'],['../classIRenderer.html#ab3ed7c334b35198b2018dec5410ad692',1,'IRenderer::lines(const ABrush &amp;brush, AArrayView&lt; glm::vec2 &gt; points, const ABorderStyle &amp;style=ABorderStyle::Solid{})'],['../classIRenderer.html#ad368a31df695db9c8c9af396db4d2e05',1,'IRenderer::lines(const ABrush &amp;brush, AArrayView&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points, const ABorderStyle &amp;style, AMetric width)=0'],['../classIRenderer.html#a47243286c06599096028f197f55600c5',1,'IRenderer::lines(const ABrush &amp;brush, AArrayView&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points, const ABorderStyle &amp;style=ABorderStyle::Solid{})'],['../classSoftwareRenderer.html#ac8617e868ad6d28d8155de09b9ce3c9f',1,'SoftwareRenderer::lines(const ABrush &amp;brush, AArrayView&lt; glm::vec2 &gt; points, const ABorderStyle &amp;style, AMetric width) override'],['../classSoftwareRenderer.html#a956dafb2a99c531fa6c30d2646eecb1c',1,'SoftwareRenderer::lines(const ABrush &amp;brush, AArrayView&lt; std::pair&lt; glm::vec2, glm::vec2 &gt; &gt; points, const ABorderStyle &amp;style, AMetric width) override']]],
   ['link_50',['LINK',['../md_docs_2AUI_01Boot.html#autotoc_md68',1,'']]],
-  ['linking_20problems_51',['Linking problems',['../md_docs_2Troubleshoot_01list.html#autotoc_md196',1,'']]],
+  ['linking_20problems_51',['Linking problems',['../md_docs_2Troubleshoot_01list.html#autotoc_md195',1,'']]],
   ['linux_20based_20desktop_20oses_52',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
   ['linux_5fdesktop_53',['LINUX_DESKTOP',['../md_docs_2aui__app.html#autotoc_md128',1,'']]],
   ['liquidfluid_54',['LiquidFluid',['../structass_1_1Backdrop_1_1LiquidFluid.html',1,'ass::Backdrop']]],
   ['list_55',['List',['../deprecated.html',1,'Deprecated List'],['../example_infinite_lazy_list.html',1,'Infinite Lazy List']]],
   ['list_56',['list',['../structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80',1,'AProcess::ArgStringList::list'],['../md_docs_2Troubleshoot_01list.html',1,'Troubleshoot list']]],
   ['listdir_57',['listDir',['../classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5',1,'APath']]],
-  ['lists_58',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md132',1,'']]],
+  ['lists_58',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md135',1,'']]],
   ['lists_59',['Reactive lists',['../classAForEachUI.html#UIDeclarativeForTest_Reactive_lists',1,'']]],
   ['load_60',['load',['../classAProgramModule.html#aad786882f3306ae28642e2b2c7148393',1,'AProgramModule']]],
   ['loadexception_61',['LoadException',['../classAProgramModule_1_1LoadException.html',1,'AProgramModule']]],
@@ -70,5 +70,5 @@ var searchData=
   ['logwriter_67',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
   ['looks_20like_20a_20config_20file_20does_20not_20exist_20for_20your_20project_68',['&quot;looks like a config file does not exist for your project&quot;',['../md_docs_2AUI_01Boot.html#AFJKLF',1,'']]],
   ['loop_69',['loop',['../classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e',1,'AEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568',1,'AScheduler::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()'],['../classIAudioPlayer.html#a670fb06519d7e606d2d757b670ed6287',1,'IAudioPlayer::loop()']]],
-  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md155',1,'']]]
+  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md153',1,'']]]
 ];
