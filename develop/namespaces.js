@@ -28,6 +28,9 @@ var namespaces =
       [ "openUrl", "namespaceAPlatform.html#a75bffd201e71456daec351b3052397ac", null ]
     ] ],
     [ "aui", null, [
+      [ "app_info", "namespaceaui_1_1app__info.html", [
+        [ "name", "namespaceaui_1_1app__info.html#a00756a7d7e06374b4519f431521316e7", null ]
+      ] ],
       [ "audio", null, [
         [ "platform", "namespaceaui_1_1audio_1_1platform.html", null ],
         [ "ABadFormatException", "classaui_1_1audio_1_1ABadFormatException.html", null ]

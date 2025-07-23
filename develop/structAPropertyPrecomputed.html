@@ -178,7 +178,7 @@ Valid Expressions<a class="aui-toc-hash" href="#PropertyPrecomputedTest_Valid_Ex
 Copying and moving APropertyPrecomputed<a class="aui-toc-hash" href="#copying-and-moving-apropertyprecomputed" id="copying-and-moving-apropertyprecomputed" style="color: var(--fragment-comment) !important">#</a></h1>
 <p><b aui-src="aui.core/tests/PropertyPrecomputed.cpp#L156"></b> </p><dl class="section warning"><dt>Warning</dt><dd>Despite the underlying value and factory callback are both copy constructible and movable, the <b>copy and move constructor are explicitly deleted</b> to avoid potential object lifetime errors created by the lambda capture and prevent non-intuitive behaviour.</dd></dl>
 <div class="fragment"><div class="line"><span class="keyword">struct </span>User {</div>
-<div class="line">    AProperty&lt;AString&gt; <a class="code hl_function" href="group__reflection.html#gae6568099b28fa1f7700e76d3a4b849dd">name</a>;</div>
+<div class="line">    AProperty&lt;AString&gt; <a class="code hl_variable" href="namespaceaui_1_1app__info.html#a00756a7d7e06374b4519f431521316e7">name</a>;</div>
 <div class="line">    AProperty&lt;AString&gt; surname;</div>
 <div class="line">    APropertyPrecomputed&lt;AString&gt; fullName = [&amp;] { <span class="keywordflow">return</span> <span class="stringliteral">"{} {}"</span>_format(name, surname); };</div>
 <div class="line">};</div>
