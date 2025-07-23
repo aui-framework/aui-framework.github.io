@@ -90,7 +90,7 @@ var searchData=
   ['touintorexception_87',['toUIntOrException',['../classAString.html#ade69a4a70112994e90449008d3cb222f',1,'AString']]],
   ['towchar_88',['toWchar',['../group__core.html#ga6e35f642628b75fdca9cdd63972e4e9c',1,'aui::win32::toWchar(const AString &amp;string)'],['../group__core.html#ga3004006af806a61f9d5b30b330c258ce',1,'aui::win32::toWchar(AString &amp;string)']]],
   ['towcharview_89',['toWcharView',['../group__core.html#ga3761573539abae397cfab5e885e3fa2e',1,'aui::win32']]],
-  ['trailing_20comma_20in_20initializer_20lists_90',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md135',1,'']]],
+  ['trailing_20comma_20in_20initializer_20lists_90',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md131',1,'']]],
   ['traits_91',['traits',['../structaui_1_1pixel__format_1_1traits.html',1,'aui::pixel_format']]],
   ['transaction_92',['Transaction',['../structTransaction.html',1,'']]],
   ['transferring_20ownership_20by_20copying_93',['Transferring ownership by copying',['../classAForEachUI.html#UIDeclarativeForTest_Transferring_ownership_by_copying',1,'']]],
