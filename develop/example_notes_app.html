@@ -198,7 +198,7 @@ UI Components and Layout<a class="aui-toc-hash" href="#ui-components-and-layout"
 <div class="line">                          .withContents(</div>
 <div class="line">                          <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(note, *mNotes, AVerticalLayout) {</div>
 <div class="line">                              observeChangesForDirty(note);</div>
-<div class="line">                              <span class="keywordflow">return</span> notePreview(note) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">                              <span class="keywordflow">return</span> notePreview(note) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                                  <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;clicked, [<span class="keyword">this</span>, note] { mCurrentNote = note; });</div>
 <div class="line">                                  it&amp; mCurrentNote &gt; [note](AView&amp; view, <span class="keyword">const</span> _&lt;Note&gt;&amp; currentNote) {</div>
 <div class="line">                                      ALOG_DEBUG(LOG_TAG) &lt;&lt; <span class="stringliteral">"currentNote == note "</span> &lt;&lt; currentNote &lt;&lt; <span class="stringliteral">" == "</span> &lt;&lt; note;</div>
@@ -218,14 +218,14 @@ UI Components and Layout<a class="aui-toc-hash" href="#ui-components-and-layout"
 <div class="line">    };</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> Vertical {</div>
-<div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> {} <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { 10_pt }, ATextOverflow::ELLIPSIS } &amp;</div>
+<div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> {} <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { 10_pt }, ATextOverflow::ELLIPSIS } &amp;</div>
 <div class="line">            note-&gt;title.readProjected(StringOneLinePreview {}),</div>
-<div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> {} <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> {} <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                  ATextOverflow::ELLIPSIS,</div>
 <div class="line">                  <a class="code hl_struct" href="structass_1_1Opacity.html">Opacity</a> { 0.7f },</div>
 <div class="line">                } &amp;</div>
 <div class="line">            note-&gt;content.readProjected(StringOneLinePreview {}),</div>
-<div class="line">    } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">    } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">        <a class="code hl_struct" href="structass_1_1Padding.html">Padding</a> { 4_dp, 8_dp },</div>
 <div class="line">        <a class="code hl_struct" href="structass_1_1BorderRadius.html">BorderRadius</a> { 8_dp },</div>
 <div class="line">        <a class="code hl_struct" href="structass_1_1Margin.html">Margin</a> { 4_dp, 8_dp },</div>
@@ -238,15 +238,15 @@ UI Components and Layout<a class="aui-toc-hash" href="#ui-components-and-layout"
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>().withContents(</div>
 <div class="line">        Vertical {</div>
-<div class="line">          _new&lt;TitleTextArea&gt;(<span class="stringliteral">"Untitled"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">          _new&lt;TitleTextArea&gt;(<span class="stringliteral">"Untitled"</span>) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                  it-&gt;setCustomStyle({ <a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { 14_pt }, <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> { 1, 0 } });</div>
 <div class="line">                  <a class="code hl_function" href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a>(note-&gt;title, it-&gt;text());</div>
 <div class="line">                  <span class="keywordflow">if</span> (note-&gt;content-&gt;empty()) {</div>
 <div class="line">                      it-&gt;focus();</div>
 <div class="line">                  }</div>
 <div class="line">              },</div>
-<div class="line">          _new&lt;ATextArea&gt;(<span class="stringliteral">"Text"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a>() } &amp;&amp; note-&gt;content,</div>
-<div class="line">        } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">          _new&lt;ATextArea&gt;(<span class="stringliteral">"Text"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a>() } &amp;&amp; note-&gt;content,</div>
+<div class="line">        } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">          <a class="code hl_struct" href="structass_1_1Padding.html">Padding</a> { 8_dp, 16_dp },</div>
 <div class="line">        });</div>
 <div class="line">}</div>

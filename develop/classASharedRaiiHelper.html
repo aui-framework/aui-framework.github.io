@@ -110,7 +110,7 @@ $(function(){initNavTree('classASharedRaiiHelper.html',''); initResizable(true);
 <div class="fragment"><div class="line"><span class="keyword">auto</span> marker = ASharedRaiiHelper::make([] {</div>
 <div class="line">    <span class="comment">// will be called when all futures called onSuccess or destroyed</span></div>
 <div class="line">});</div>
-<div class="line"><span class="keyword">auto</span> future = <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
+<div class="line"><span class="keyword">auto</span> future = <a class="code hl_define" href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">AUI_THREADPOOL</a> {</div>
 <div class="line">    <span class="comment">// hard work</span></div>
 <div class="line">}</div>
 <div class="line"><span class="comment">//                      VVVVVV ASharedRaiiHelper should be captured!</span></div>
@@ -118,9 +118,9 @@ $(function(){initNavTree('classASharedRaiiHelper.html',''); initResizable(true);
 <div class="line">    <span class="comment">// handle the hard work</span></div>
 <div class="line">});</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// keep the future alive in async holder</span></div>
+<div class="line"><span class="comment">// keep the future alive in AUI_THREADPOOL holder</span></div>
 <div class="line">mAsyncHolder &lt;&lt; future;</div>
-<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga90e4e4afd65596b81ead287be905bc77"><div class="ttname"><a href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">AUI_THREADPOOL</a></div><div class="ttdeci">#define AUI_THREADPOOL</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike AUI_THREADPOOL_X,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
 </div><!-- fragment --> </div><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

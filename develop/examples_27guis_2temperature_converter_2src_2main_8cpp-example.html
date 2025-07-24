@@ -123,7 +123,7 @@ $(function(){initNavTree('examples_27guis_2temperature_converter_2src_2main_8cpp
 <div class="line"><span class="keyword">using namespace </span>declarative;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span> myPicker() {</div>
-<div class="line">    <span class="keywordflow">return</span> _new&lt;ANumberPicker&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">    <span class="keywordflow">return</span> _new&lt;ANumberPicker&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">        it-&gt;setMin(-999);</div>
 <div class="line">        it-&gt;setMax(999);</div>
 <div class="line">    };</div>
@@ -134,13 +134,13 @@ $(function(){initNavTree('examples_27guis_2temperature_converter_2src_2main_8cpp
 <div class="line">    TemperatureConverterWindow() : <a class="code hl_class" href="classAWindow.html">AWindow</a>(<span class="stringliteral">"AUI - 7GUIs - TempConv"</span>, 300_dp, 50_dp) {</div>
 <div class="line">        <a id="a1" name="a1"></a><a class="code hl_function" href="classAViewContainer.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">setContents</a>(Centered {</div>
 <div class="line">          Horizontal {</div>
-<div class="line">            myPicker() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">            myPicker() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                <a id="a2" name="a2"></a><a class="code hl_function" href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">biConnect</a>(it-&gt;value(), mCelsius);</div>
 <div class="line">                it-&gt;focus();</div>
 <div class="line">            },</div>
 <div class="line">            Label { <span class="stringliteral">"°C"</span> },</div>
-<div class="line">            Label { <span class="stringliteral">"="</span> } <a id="a3" name="a3"></a><a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { Margin { {}, 16_dp } },</div>
-<div class="line">            myPicker() <a id="a4" name="a4"></a><a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { <a class="code hl_function" href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">biConnect</a>(it-&gt;value(), mFahrenheit); },</div>
+<div class="line">            Label { <span class="stringliteral">"="</span> } <a id="a3" name="a3"></a><a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { Margin { {}, 16_dp } },</div>
+<div class="line">            myPicker() <a id="a4" name="a4"></a><a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { <a class="code hl_function" href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">biConnect</a>(it-&gt;value(), mFahrenheit); },</div>
 <div class="line">            Label { <span class="stringliteral">"°F"</span> },</div>
 <div class="line">          },</div>
 <div class="line">        });</div>
@@ -161,8 +161,8 @@ $(function(){initNavTree('examples_27guis_2temperature_converter_2src_2main_8cpp
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
 <div class="ttc" id="agroup__property__system_html_ga1eb0abe12d4d0c4db737cc63582791cd"><div class="ttname"><a href="group__property__system.html#ga1eb0abe12d4d0c4db737cc63582791cd">AObject::biConnect</a></div><div class="ttdeci">static void biConnect(PropertySource &amp;&amp;propertySource, PropertyDestination &amp;&amp;propertyDestination)</div><div class="ttdoc">Connects source property to the destination property and opposite (bidirectionally).</div><div class="ttdef"><b>Definition</b> AObject.h:152</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:82</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21e987c335e976425b29dfc0cd7e7849"><div class="ttname"><a href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a></div><div class="ttdeci">#define AUI_WITH_STYLE</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga2fe1c16d6c69d08ec57a44ac47222148"><div class="ttname"><a href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a></div><div class="ttdeci">#define AUI_LET</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
 </div><!-- fragment --> <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their

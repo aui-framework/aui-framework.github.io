@@ -135,7 +135,7 @@ $(function(){initNavTree('examples_27guis_2timer_2src_2main_8cpp-example.html','
 <div class="line">            Horizontal {</div>
 <div class="line">              <a id="_a2" name="_a2"></a><a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Elapsed Time:"</span> },</div>
 <div class="line">              Centered::Expanding {</div>
-<div class="line">                _new&lt;AProgressBar&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">                _new&lt;AProgressBar&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                        it &amp; mElapsedTimeRatio;</div>
 <div class="line">                        it-&gt;setCustomStyle({ <a id="_a3" name="_a3"></a><a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> { 1, 0 } });</div>
 <div class="line">                    },</div>
@@ -146,7 +146,7 @@ $(function(){initNavTree('examples_27guis_2timer_2src_2main_8cpp-example.html','
 <div class="line">            }),</div>
 <div class="line">            Horizontal {</div>
 <div class="line">              <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Duration:"</span> },</div>
-<div class="line">              _new&lt;ASlider&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">              _new&lt;ASlider&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                      it&amp;&amp; mDuration.biProjected(<a id="_a4" name="_a4"></a><a class="code hl_struct" href="structaui_1_1lambda__overloaded.html">aui::lambda_overloaded</a> {</div>
 <div class="line">                        [](high_resolution_clock::duration d) -&gt; aui::float_within_0_1 {</div>
 <div class="line">                            <span class="keywordflow">return</span> float(d.count()) / float(MAX_DURATION.count());</div>
@@ -158,9 +158,9 @@ $(function(){initNavTree('examples_27guis_2timer_2src_2main_8cpp-example.html','
 <div class="line">                      it-&gt;setCustomStyle({ <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> {} });</div>
 <div class="line">                  },</div>
 <div class="line">            },</div>
-<div class="line">            _new&lt;AButton&gt;(<span class="stringliteral">"Reset Timer"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">            _new&lt;AButton&gt;(<span class="stringliteral">"Reset Timer"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                  <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> { 1, 0 },</div>
-<div class="line">                } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { <a id="a5" name="a5"></a><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;clicked, me::reset); },</div>
+<div class="line">                } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { <a id="a5" name="a5"></a><a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;clicked, me::reset); },</div>
 <div class="line">          },</div>
 <div class="line">        });</div>
 <div class="line"> </div>
@@ -195,8 +195,8 @@ $(function(){initNavTree('examples_27guis_2timer_2src_2main_8cpp-example.html','
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:215</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:82</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21e987c335e976425b29dfc0cd7e7849"><div class="ttname"><a href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a></div><div class="ttdeci">#define AUI_WITH_STYLE</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga2fe1c16d6c69d08ec57a44ac47222148"><div class="ttname"><a href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a></div><div class="ttdeci">#define AUI_LET</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
 <div class="ttc" id="astructAPropertyPrecomputed_html"><div class="ttname"><a href="structAPropertyPrecomputed.html">APropertyPrecomputed</a></div><div class="ttdoc">Readonly property that holds a value computed by an expression.</div><div class="ttdef"><b>Definition</b> APropertyPrecomputed.h:51</div></div>
 <div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:30</div></div>

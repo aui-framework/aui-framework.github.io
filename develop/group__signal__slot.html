@@ -186,9 +186,9 @@ Basic example<a class="aui-toc-hash" href="#basic-example" id="basic-example" st
 <div class="line">}</div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:82</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
-</div><!-- fragment --><p>If <code>connect(mCounter-&gt;valueChanged, this, &amp;MyApp::printCounter);</code> looks too long for you, you can use <a class="el" href="#gaaaa072876366972108aef016e7882a99">slot</a> macro: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(<span class="keyword">this</span>)::printCounter);</div>
-<div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
-</div><!-- fragment --><p>Furthermore, when connecting to <code>this</code>, <a class="el" href="#gaaaa072876366972108aef016e7882a99" title="Passes some variable and type of the variable separated by comma. It's convenient to use with the con...">slot(this)</a> can be replaced with <a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a>: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, me::printCounter);</div>
+</div><!-- fragment --><p>If <code>connect(mCounter-&gt;valueChanged, this, &amp;MyApp::printCounter);</code> looks too long for you, you can use <a class="el" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a> macro: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, <a class="code hl_define" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(<span class="keyword">this</span>)::printCounter);</div>
+<div class="ttc" id="agroup__signal__slot_html_ga17f523dcc2e10d3b91bbf7083ba4bb65"><div class="ttname"><a href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a></div><div class="ttdeci">#define AUI_SLOT(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
+</div><!-- fragment --><p>Furthermore, when connecting to <code>this</code>, <a class="el" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65" title="Passes some variable and type of the variable separated by comma. It's convenient to use with the con...">AUI_SLOT(this)</a> can be replaced with <a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a>: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, me::printCounter);</div>
 </div><!-- fragment --><p>Lambda can be used as a slot either: </p><div class="fragment"><div class="line">connect(mCounter-&gt;valueChanged, <span class="keyword">this</span>, [](<span class="keywordtype">int</span> value) {</div>
 <div class="line">  ALogger::info(<span class="stringliteral">"MyApp"</span>) &lt;&lt; value;</div>
 <div class="line">});</div>
@@ -248,7 +248,7 @@ Going further<a class="aui-toc-hash" href="#going-further" id="going-further" st
 <div class="line">      button,</div>
 <div class="line">    });</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(button-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(mCounter)::increase); <span class="comment">// beauty, huh?</span></div>
+<div class="line">    <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(button-&gt;clicked, <a class="code hl_define" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mCounter)::increase); <span class="comment">// beauty, huh?</span></div>
 <div class="line">    <a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(mCounter-&gt;valueChanged, label, [label = label.get()](<span class="keywordtype">int</span> value) {</div>
 <div class="line">      label-&gt;setText(<span class="stringliteral">"{}"</span>_format(value));</div>
 <div class="line">    });</div>
@@ -265,20 +265,20 @@ Going further<a class="aui-toc-hash" href="#going-further" id="going-further" st
 <div class="line">}</div>
 <div class="ttc" id="aclassAWindow_html"><div class="ttname"><a href="classAWindow.html">AWindow</a></div><div class="ttdoc">Represents a window in the underlying windowing system.</div><div class="ttdef"><b>Definition</b> AWindow.h:45</div></div>
 </div><!-- fragment --><p>This way, by clicking on "Increase", it would increase the counter and immediately display value via label.</p>
-<p>Let's make things more declarative and use <a class="el" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> syntax to set up connections: </p><div class="fragment"><div class="line">MyApp() {</div>
+<p>Let's make things more declarative and use <a class="el" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> syntax to set up connections: </p><div class="fragment"><div class="line">MyApp() {</div>
 <div class="line">  <span class="keyword">using namespace </span>declarative;</div>
 <div class="line">  setContents(Vertical {</div>
-<div class="line">    _new&lt;ALabel&gt;(<span class="stringliteral">"-"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">    _new&lt;ALabel&gt;(<span class="stringliteral">"-"</span>) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">      connect(counter-&gt;valueChanged, label, [label = it.get()](<span class="keywordtype">int</span> value) {</div>
 <div class="line">        label-&gt;setText(<span class="stringliteral">"{}"</span>_format(value));</div>
 <div class="line">      });</div>
 <div class="line">    },</div>
-<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">"Increase"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line">      connect(it-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(mCounter)::increase);</div>
+<div class="line">    _new&lt;AButton&gt;(<span class="stringliteral">"Increase"</span>) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
+<div class="line">      connect(it-&gt;clicked, <a class="code hl_define" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mCounter)::increase);</div>
 <div class="line">    },</div>
 <div class="line">  });</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga2fe1c16d6c69d08ec57a44ac47222148"><div class="ttname"><a href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a></div><div class="ttdeci">#define AUI_LET</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 </div><!-- fragment --><p>See also <a class="el" href="group__property__system.html">Property System</a> for making reactive UI's on trivial data.</p>
 <h1>
 Arguments<a class="aui-toc-hash" href="#arguments" id="arguments" style="color: var(--fragment-comment) !important">#</a></h1>
@@ -315,7 +315,7 @@ Differences between Qt and AUI implementation<a class="aui-toc-hash" href="#diff
 </div><!-- fragment --> </td></tr>
 <tr>
 <td>Connect from the <code>emitter</code> object to the <code>sender</code> object </td><td><div class="fragment"><div class="line">QObject::connect(emitter, SIGNAL(statusChanged(QString), receiver, SLOT(showMessage(QString)));</div>
-</div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(emitter-&gt;statusChanged, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(receiver)::showMessage);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(emitter-&gt;statusChanged, <a class="code hl_define" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(receiver)::showMessage);</div>
 </div><!-- fragment --> </td></tr>
 </table>
 <table class="memberdecls">
@@ -339,9 +339,9 @@ Macros<a class="aui-toc-hash" href="#define-members" id="define-members" name="d
 <tr class="memitem:gac83b72d92d1105a82cd5590c0f65d48b" id="r_gac83b72d92d1105a82cd5590c0f65d48b"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a>   this, &amp;std::remove_reference_t&lt;decltype(*this)&gt;</td></tr>
 <tr class="memdesc:gac83b72d92d1105a82cd5590c0f65d48b"><td class="mdescLeft"> </td><td class="mdescRight">Passes the current class and type of the current class separated by comma. It's convenient to use with the connect function:  <br/></td></tr>
 <tr class="separator:gac83b72d92d1105a82cd5590c0f65d48b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:gaaaa072876366972108aef016e7882a99" id="r_gaaaa072876366972108aef016e7882a99"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaaaa072876366972108aef016e7882a99">slot</a>(v)</td></tr>
-<tr class="memdesc:gaaaa072876366972108aef016e7882a99"><td class="mdescLeft"> </td><td class="mdescRight">Passes some variable and type of the variable separated by comma. It's convenient to use with the connect function (see examples).  <br/></td></tr>
-<tr class="separator:gaaaa072876366972108aef016e7882a99"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ga17f523dcc2e10d3b91bbf7083ba4bb65" id="r_ga17f523dcc2e10d3b91bbf7083ba4bb65"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(v)</td></tr>
+<tr class="memdesc:ga17f523dcc2e10d3b91bbf7083ba4bb65"><td class="mdescLeft"> </td><td class="mdescRight">Passes some variable and type of the variable separated by comma. It's convenient to use with the connect function (see examples).  <br/></td></tr>
+<tr class="separator:ga17f523dcc2e10d3b91bbf7083ba4bb65"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:gaeddbb3020ebcd7c50fd851ef25cdd4ed" id="r_gaeddbb3020ebcd7c50fd851ef25cdd4ed"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeddbb3020ebcd7c50fd851ef25cdd4ed">AUI_EMIT_FOREIGN_SIGNAL</a>(object)</td></tr>
 <tr class="memdesc:gaeddbb3020ebcd7c50fd851ef25cdd4ed"><td class="mdescLeft"> </td><td class="mdescRight">Emits a signal of a foreign object.  <br/></td></tr>
 <tr class="separator:gaeddbb3020ebcd7c50fd851ef25cdd4ed"><td class="memSeparator" colspan="2"> </td></tr>
@@ -433,6 +433,33 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </table>
 </div>
 </div>
+<a id="ga17f523dcc2e10d3b91bbf7083ba4bb65" name="ga17f523dcc2e10d3b91bbf7083ba4bb65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">◆ </a></span>AUI_SLOT</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define AUI_SLOT</td>
+<td>(</td>
+<td class="paramtype"></td> <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;<span class="keyword">decltype</span>(v)&gt;&gt;</div>
+</div><!-- fragment --><p>Quick example: </p><table class="doxtable">
+<tr>
+<td>without </td><td>with  </td></tr>
+<tr>
+<td><div class="fragment"><div class="line">connect(clicked, myObject, &amp;MyObject::handleClicked);</div>
+</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(clicked, <a class="code hl_define" href="#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(myObject)::handleClicked);</div>
+</div><!-- fragment --> </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>If you are intended to reference this-&gt; object, consider using <a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a> instead. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_27guis_2flight_booker_2src_2main_8cpp-example.html#a14">examples/7guis/flight_booker/src/main.cpp</a>, <a class="el" href="examples_2app_2fractal_2src_2FractalWindow_8cpp-example.html#a6">examples/app/fractal/src/FractalWindow.cpp</a>, <a class="el" href="examples_2app_2game_of_life_2src_2main_8cpp-example.html#a3">examples/app/game_of_life/src/main.cpp</a>, <a class="el" href="examples_2app_2minesweeper_2src_2Style_8cpp-example.html#a6">examples/app/minesweeper/src/Style.cpp</a>, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8cpp-example.html#a28">examples/ui/views/src/ExampleWindow.cpp</a>.</dd>
+</dl>
+</div>
+</div>
 <a id="gac622150996edd734a10f229eb381a53f" name="gac622150996edd734a10f229eb381a53f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac622150996edd734a10f229eb381a53f">◆ </a></span>emit</h2>
 <div class="memitem">
@@ -470,33 +497,6 @@ Typedefs<a class="aui-toc-hash" href="#typedef-members" id="typedef-members" nam
 </div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(clicked, me::handleClicked);</div>
 </div><!-- fragment --> </td></tr>
 </table>
-</div>
-</div>
-<a id="gaaaa072876366972108aef016e7882a99" name="gaaaa072876366972108aef016e7882a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaaa072876366972108aef016e7882a99">◆ </a></span>slot</h2>
-<div class="memitem">
-<div class="memproto">
-<table class="memname">
-<tr>
-<td class="memname">#define slot</td>
-<td>(</td>
-<td class="paramtype"></td> <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
-<td></td>
-</tr>
-</table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;<span class="keyword">decltype</span>(v)&gt;&gt;</div>
-</div><!-- fragment --><p>Quick example: </p><table class="doxtable">
-<tr>
-<td>without </td><td>with  </td></tr>
-<tr>
-<td><div class="fragment"><div class="line">connect(clicked, myObject, &amp;MyObject::handleClicked);</div>
-</div><!-- fragment -->  </td><td><div class="fragment"><div class="line">connect(clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(myObject)::handleClicked);</div>
-</div><!-- fragment --> </td></tr>
-</table>
-<dl class="section note"><dt>Note</dt><dd>If you are intended to reference this-&gt; object, consider using <a class="el" href="#gac83b72d92d1105a82cd5590c0f65d48b">me</a> instead. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="examples_27guis_2flight_booker_2src_2main_8cpp-example.html#a14">examples/7guis/flight_booker/src/main.cpp</a>, <a class="el" href="examples_2app_2fractal_2src_2FractalWindow_8cpp-example.html#a6">examples/app/fractal/src/FractalWindow.cpp</a>, <a class="el" href="examples_2app_2game_of_life_2src_2main_8cpp-example.html#a3">examples/app/game_of_life/src/main.cpp</a>, <a class="el" href="examples_2app_2minesweeper_2src_2Style_8cpp-example.html#a6">examples/app/minesweeper/src/Style.cpp</a>, and <a class="el" href="examples_2ui_2views_2src_2ExampleWindow_8cpp-example.html#a28">examples/ui/views/src/ExampleWindow.cpp</a>.</dd>
-</dl>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -556,8 +556,9 @@ template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrPr
 </tr>
 </table>
 </div><div class="memdoc">
-<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(view-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(otherObjectSharedPtr)::handleButtonClicked);</div>
-<div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(textField-&gt;text(), <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(otherObjectSharedPtr)::handleText);</div>
+<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(view-&gt;clicked, <a class="code hl_define" href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a>(otherObjectSharedPtr)::handleButtonClicked);</div>
+<div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(textField-&gt;text(), <a class="code hl_define" href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a>(otherObjectSharedPtr)::handleText);</div>
+<div class="ttc" id="agroup__useful__macros_html_ga9c0cc36953313c88d7ab95472c672fdb"><div class="ttname"><a href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a></div><div class="ttdeci">#define AUI_DO_ONCE</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition</b> kAUI.h:391</div></div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd><code>object</code> arg is accepted by value intentionally – this way we ensure that it would not be destroyed during connection creation.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
@@ -641,7 +642,7 @@ template&lt;<a class="el" href="conceptAAnySignalOrProperty.html">AAnySignalOrPr
 </tr>
 </table>
 </div><div class="memdoc">
-<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(view-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(otherObjectRef)::handleButtonClicked);</div>
+<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(view-&gt;clicked, <a class="code hl_define" href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a>(otherObjectRef)::handleButtonClicked);</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">connectable</td><td>signal or property </td></tr>
@@ -685,7 +686,7 @@ template&lt;<a class="el" href="conceptAAnySignal.html">AAnySignal</a> Signal, <
 </tr>
 </table>
 </div><div class="memdoc">
-<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(view-&gt;clicked, <a class="code hl_define" href="#gaaaa072876366972108aef016e7882a99">slot</a>(otherObjectRawPtr)::handleButtonClicked);</div>
+<p>See <a class="el" href="group__signal__slot.html">signal-slot system</a> for more info. </p><div class="fragment"><div class="line"><a class="code hl_function" href="#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(view-&gt;clicked, <a class="code hl_define" href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a>(otherObjectRawPtr)::handleButtonClicked);</div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramname">signal</td><td>signal </td></tr>

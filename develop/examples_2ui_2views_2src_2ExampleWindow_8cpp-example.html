@@ -194,7 +194,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                  Vertical {</div>
 <div class="line">                    Centered { _new&lt;ALabel&gt;(<span class="stringliteral">"ALabel"</span>) },</div>
 <div class="line">                    Centered { _new&lt;AButton&gt;(<span class="stringliteral">"AButton"</span>) },</div>
-<div class="line">                    Centered { _new&lt;ATextField&gt;() <a id="a5" name="a5"></a><a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setText(<span class="stringliteral">"ATextField"</span>); } },</div>
+<div class="line">                    Centered { _new&lt;ATextField&gt;() <a id="a5" name="a5"></a><a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setText(<span class="stringliteral">"ATextField"</span>); } },</div>
 <div class="line">                  }</div>
 <div class="line">                  &lt;&lt; <span class="stringliteral">".all_views_wrap"</span>)</div>
 <div class="line">              .withExpanding() });</div>
@@ -216,16 +216,16 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
 <div class="line">    addView(Horizontal {</div>
-<div class="line">      _new&lt;ADrawableView&gt;(<a class="code hl_function" href="classIDrawable.html#a457544908d20d1c1288a2bab05075838">IDrawable::fromUrl</a>(<span class="stringliteral">":img/logo.svg"</span>)) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a id="_a7" name="_a7"></a><a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 32_dp } },</div>
-<div class="line">      AText::fromString(<span class="stringliteral">"Building beautiful programs in pure C++ without chromium embedded framework"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">      _new&lt;ADrawableView&gt;(<a class="code hl_function" href="classIDrawable.html#a457544908d20d1c1288a2bab05075838">IDrawable::fromUrl</a>(<span class="stringliteral">":img/logo.svg"</span>)) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a id="_a7" name="_a7"></a><a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 32_dp } },</div>
+<div class="line">      AText::fromString(<span class="stringliteral">"Building beautiful programs in pure C++ without chromium embedded framework"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">            Expanding(1, 0),</div>
 <div class="line">          },</div>
-<div class="line">      Horizontal {} <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line">              mAsync &lt;&lt; <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
+<div class="line">      Horizontal {} <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
+<div class="line">              mAsync &lt;&lt; <a class="code hl_define" href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">AUI_THREADPOOL</a> {</div>
 <div class="line">                  <span class="keyword">auto</span> drawable = <a id="a8" name="a8"></a><a class="code hl_function" href="classIDrawable.html#a457544908d20d1c1288a2bab05075838">IDrawable::fromUrl</a>(</div>
 <div class="line">                      <span class="stringliteral">"https://raster.shields.io/github/stars/aui-framework/aui?style=raster&amp;logo=github"</span>);</div>
-<div class="line">                  <a class="code hl_define" href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">ui_thread</a> {</div>
-<div class="line">                      <span class="keyword">auto</span> view = <a id="_a9" name="_a9"></a><a class="code hl_struct" href="structdeclarative_1_1Icon.html">Icon</a> { drawable } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                  <a class="code hl_define" href="group__useful__macros.html#ga175ad8de8f8907a849587a1e3fe60102">AUI_UI_THREAD</a> {</div>
+<div class="line">                      <span class="keyword">auto</span> view = <a id="_a9" name="_a9"></a><a class="code hl_struct" href="structdeclarative_1_1Icon.html">Icon</a> { drawable } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                          <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 80_dp, 20_dp },</div>
 <div class="line">                          <a id="_a10" name="_a10"></a><a class="code hl_struct" href="structass_1_1BackgroundImage.html">BackgroundImage</a> { {}, {}, {}, Sizing::COVER },</div>
 <div class="line">                          <a id="_a11" name="_a11"></a><a class="code hl_struct" href="structass_1_1Margin.html">Margin</a> { 4_dp },</div>
@@ -244,7 +244,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">    <a class="code hl_class" href="class__.html">_&lt;AProgressBar&gt;</a> progressBar = _new&lt;AProgressBar&gt;();</div>
 <div class="line">    <a class="code hl_class" href="class__.html">_&lt;ACircleProgressBar&gt;</a> circleProgressBar = _new&lt;ACircleProgressBar&gt;();</div>
 <div class="line"> </div>
-<div class="line">    addView(tabView = _new&lt;ATabView&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">    addView(tabView = _new&lt;ATabView&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">        it-&gt;addTab(</div>
 <div class="line">            <a class="code hl_class" href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a>().withContents(std::conditional_t&lt;</div>
 <div class="line">                                                aui::platform::current::is_mobile(), Vertical, Horizontal&gt; {</div>
@@ -254,8 +254,8 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                  <a id="_a13" name="_a13"></a><a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Buttons"</span> },</div>
 <div class="line">                  Vertical {</div>
 <div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Common button"</span>),</div>
-<div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Default button"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setDefault(); },</div>
-<div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Disabled button"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setDisabled(); },</div>
+<div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Default button"</span>) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setDefault(); },</div>
+<div class="line">                    _new&lt;AButton&gt;(<span class="stringliteral">"Disabled button"</span>) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setDisabled(); },</div>
 <div class="line">                    <a id="_a14" name="_a14"></a><a class="code hl_struct" href="structdeclarative_1_1Button.html">Button</a> {</div>
 <div class="line">                      <a class="code hl_struct" href="structdeclarative_1_1Icon.html">Icon</a> { <span class="stringliteral">":img/logo.svg"</span> },</div>
 <div class="line">                      <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Button with icon"</span> },</div>
@@ -268,11 +268,11 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line"> </div>
 <div class="line">                <span class="comment">// checkboxes</span></div>
 <div class="line">                <a class="code hl_struct" href="structdeclarative_1_1GroupBox.html">GroupBox</a> {</div>
-<div class="line">                  <a id="_a16" name="_a16"></a><a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Checkboxes"</span> } } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;checked() = <span class="keyword">true</span>; },</div>
+<div class="line">                  <a id="_a16" name="_a16"></a><a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Checkboxes"</span> } } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;checked() = <span class="keyword">true</span>; },</div>
 <div class="line">                  Vertical {</div>
 <div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Unchecked checkbox"</span> } },</div>
-<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Checked checkbox"</span> } } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;checked() = <span class="keyword">true</span>; },</div>
-<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Disabled checkbox"</span> } } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setDisabled(); },</div>
+<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Checked checkbox"</span> } } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;checked() = <span class="keyword">true</span>; },</div>
+<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> { <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Disabled checkbox"</span> } } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setDisabled(); },</div>
 <div class="line">                  },</div>
 <div class="line">                },</div>
 <div class="line"> </div>
@@ -280,10 +280,10 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                <a class="code hl_struct" href="structdeclarative_1_1GroupBox.html">GroupBox</a> {</div>
 <div class="line">                  <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Radiobuttons"</span> },</div>
 <div class="line">                  <a id="_a17" name="_a17"></a><a class="code hl_struct" href="structdeclarative_1_1RadioGroup.html">RadioGroup</a> {</div>
-<div class="line">                    <a id="_a18" name="_a18"></a><a class="code hl_struct" href="structdeclarative_1_1RadioButton.html">RadioButton</a> { <span class="stringliteral">"Radiobutton 1"</span> } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;checked() = <span class="keyword">true</span>; },</div>
+<div class="line">                    <a id="_a18" name="_a18"></a><a class="code hl_struct" href="structdeclarative_1_1RadioButton.html">RadioButton</a> { <span class="stringliteral">"Radiobutton 1"</span> } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;checked() = <span class="keyword">true</span>; },</div>
 <div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1RadioButton.html">RadioButton</a> { <span class="stringliteral">"Radiobutton 2"</span> },</div>
 <div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1RadioButton.html">RadioButton</a> { <span class="stringliteral">"Radiobutton 3"</span> },</div>
-<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1RadioButton.html">RadioButton</a> { <span class="stringliteral">"Disabled radiobutton"</span> } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;disable(); },</div>
+<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1RadioButton.html">RadioButton</a> { <span class="stringliteral">"Disabled radiobutton"</span> } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;disable(); },</div>
 <div class="line">                  },</div>
 <div class="line">                },</div>
 <div class="line"> </div>
@@ -299,20 +299,20 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                      <span class="stringliteral">"Combobox 5"</span>,</div>
 <div class="line">                      <span class="stringliteral">"Combobox 6"</span>,</div>
 <div class="line">                    })),</div>
-<div class="line">                    _new&lt;ADropdownList&gt;(<a class="code hl_function" href="classAListModel.html#ae82706f2bc98286bcf9722fd70a79381">AListModel&lt;AString&gt;::make</a>({ <span class="stringliteral">"Disabled combobox"</span> })) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setDisabled(); },</div>
+<div class="line">                    _new&lt;ADropdownList&gt;(<a class="code hl_function" href="classAListModel.html#ae82706f2bc98286bcf9722fd70a79381">AListModel&lt;AString&gt;::make</a>({ <span class="stringliteral">"Disabled combobox"</span> })) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setDisabled(); },</div>
 <div class="line">                  },</div>
 <div class="line">                },</div>
 <div class="line">                <a class="code hl_struct" href="structdeclarative_1_1GroupBox.html">GroupBox</a> {</div>
 <div class="line">                  <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Drag area"</span> },</div>
 <div class="line"> </div>
-<div class="line">                  _new&lt;ADragArea&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
-<div class="line">                          it <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                  _new&lt;ADragArea&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
+<div class="line">                          it <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                              <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 100_dp },</div>
 <div class="line">                              <a id="_a20" name="_a20"></a><a class="code hl_struct" href="structass_1_1Border.html">Border</a> { 1_px, 0x0_rgb },</div>
 <div class="line">                          };</div>
 <div class="line">                          it-&gt;addView(ADragArea::convertToDraggable(_new&lt;AButton&gt;(<span class="stringliteral">"Drag me!"</span>), <span class="keyword">false</span>));</div>
 <div class="line">                      },</div>
-<div class="line">                } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a id="_a21" name="_a21"></a><a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> {} },</div>
+<div class="line">                } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a id="_a21" name="_a21"></a><a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> {} },</div>
 <div class="line">              },</div>
 <div class="line">              Vertical {</div>
 <div class="line"><span class="preprocessor">#if AUI_PLATFORM_WIN || AUI_PLATFORM_LINUX || AUI_PLATFORM_MACOS</span></div>
@@ -418,8 +418,8 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line"> </div>
 <div class="line">                      <span class="keywordflow">return</span> Vertical {</div>
 <div class="line">                          Horizontal {</div>
-<div class="line">                            _new&lt;AButton&gt;(<span class="stringliteral">"Add"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a id="a28" name="a28"></a><a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(model)::addItem),</div>
-<div class="line">                            _new&lt;AButton&gt;(<span class="stringliteral">"Remove"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(model)::removeItem),</div>
+<div class="line">                            _new&lt;AButton&gt;(<span class="stringliteral">"Add"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a id="a28" name="a28"></a><a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(model)::addItem),</div>
+<div class="line">                            _new&lt;AButton&gt;(<span class="stringliteral">"Remove"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(model)::removeItem),</div>
 <div class="line">                            _new&lt;ASpacerExpanding&gt;(),</div>
 <div class="line">                          },</div>
 <div class="line">                          _new&lt;AListView&gt;(model)</div>
@@ -442,7 +442,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                &amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <span class="keyword">this</span>,</div>
 <div class="line">                                [state] {</div>
 <div class="line">                                    <span class="keyword">static</span> std::default_random_engine re;</div>
-<div class="line">                                    <a class="code hl_define" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a> { re.seed(std::time(<span class="keyword">nullptr</span>)); };</div>
+<div class="line">                                    <a class="code hl_define" href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a> { re.seed(std::time(<span class="keyword">nullptr</span>)); };</div>
 <div class="line">                                    <span class="keyword">static</span> std::uniform_real_distribution&lt;float&gt; d(0.f, 1.f);</div>
 <div class="line">                                    state-&gt;colors.writeScope()-&gt;push_back({ <a id="_a29" name="_a29"></a><a class="code hl_class" href="classAColor.html">AColor</a>(d(re), d(re), d(re), 1.f) });</div>
 <div class="line">                                }),</div>
@@ -457,10 +457,10 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                          },</div>
 <div class="line">                          <a id="a30" name="a30"></a><a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, *state-&gt;colors, <a id="_a31" name="_a31"></a><a class="code hl_class" href="classAWordWrappingLayout.html">AWordWrappingLayout</a>) {</div>
 <div class="line">                              <span class="keywordflow">return</span> Horizontal {</div>
-<div class="line">                                  _new&lt;ALabel&gt;(i.toString()) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                                  _new&lt;ALabel&gt;(i.toString()) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                                      <a id="_a32" name="_a32"></a><a class="code hl_struct" href="structass_1_1TextColor.html">TextColor</a> { i.readableBlackOrWhite() },</div>
 <div class="line">                                  }</div>
-<div class="line">                              } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                              } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                                  <a id="_a33" name="_a33"></a><a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { i },</div>
 <div class="line">                                  <a id="_a34" name="_a34"></a><a class="code hl_struct" href="structass_1_1BorderRadius.html">BorderRadius</a> { 6_pt },</div>
 <div class="line">                                  <a class="code hl_struct" href="structass_1_1Margin.html">Margin</a> { 2_dp, 4_dp },</div>
@@ -504,8 +504,8 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                      <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Slider"</span> },</div>
 <div class="line">                      Vertical {</div>
 <div class="line">                        _new&lt;ASlider&gt;()</div>
-<div class="line">                            .connect(&amp;ASlider::valueChanging, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(progressBar)::setValue)</div>
-<div class="line">                            .connect(&amp;ASlider::valueChanging, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(circleProgressBar)::setValue),</div>
+<div class="line">                            .connect(&amp;ASlider::valueChanging, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(progressBar)::setValue)</div>
+<div class="line">                            .connect(&amp;ASlider::valueChanging, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(circleProgressBar)::setValue),</div>
 <div class="line">                      } },</div>
 <div class="line">                  },</div>
 <div class="line">                },</div>
@@ -517,7 +517,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                                      <a id="a38" name="a38"></a><a class="code hl_function" href="classAWindow.html#a74d3a5f5dc4bef9c452f457234e736ce">AWindow::current</a>()-&gt;<a id="a39" name="a39"></a><a class="code hl_function" href="classAWindowBase.html#affc513d9290ac5f7f6192a0bb77ab6da">setScalingParams</a>(</div>
 <div class="line">                                                          { .scalingFactor = x * 0.25f,</div>
 <div class="line">                                                            .minimalWindowSizeDp = std::nullopt });</div>
-<div class="line">                                                  }) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">                                                  }) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                            it-&gt;setMin(1);</div>
 <div class="line">                            it-&gt;setMax(12);</div>
 <div class="line">                            it-&gt;setValue(4);</div>
@@ -527,7 +527,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                  <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Fields"</span> },</div>
 <div class="line">                  Vertical::Expanding {</div>
 <div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Text field"</span> },</div>
-<div class="line">                    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;focus(); },</div>
+<div class="line">                    _new&lt;ATextField&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;focus(); },</div>
 <div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Number picker"</span> },</div>
 <div class="line">                    _new&lt;ANumberPicker&gt;(),</div>
 <div class="line">                    _new&lt;ADoubleNumberPicker&gt;(),</div>
@@ -543,9 +543,9 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                <span class="stringliteral">"Public License, v. 2.0. If a copy of the MPL was not distributed with this "</span></div>
 <div class="line">                                <span class="stringliteral">"file, You can obtain one at http://mozilla.org/MPL/2.0/."</span>))</div>
 <div class="line">                            .<a id="a40" name="a40"></a>build()</div>
-<div class="line">                        &lt;&lt; <span class="stringliteral">".input-field"</span> <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">                        &lt;&lt; <span class="stringliteral">".input-field"</span> <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setExpanding(); },</div>
 <div class="line">                  } }</div>
-<div class="line">    <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> {} } } }),</div>
+<div class="line">    <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a> {} } } }),</div>
 <div class="line">            <span class="stringliteral">"Common"</span>);</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#if !AUI_PLATFORM_EMSCRIPTEN</span></div>
@@ -557,9 +557,9 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                                                   Horizontal&gt; { Horizontal {</div>
 <div class="line">              Vertical {</div>
 <div class="line">                _new&lt;ALabel&gt;(<span class="stringliteral">"Play music using AUI!"</span>),</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Play .wav music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(mWavAudio)::play),</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Stop .wav music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(mWavAudio)::stop),</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Pause .wav music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(mWavAudio)::pause),</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Play .wav music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mWavAudio)::play),</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Stop .wav music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mWavAudio)::stop),</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Pause .wav music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mWavAudio)::pause),</div>
 <div class="line">                _new&lt;ALabel&gt;(<span class="stringliteral">"Volume control"</span>),</div>
 <div class="line">                _new&lt;ASlider&gt;()</div>
 <div class="line">                    .connect(&amp;ASlider::valueChanging, <span class="keyword">this</span>,</div>
@@ -568,9 +568,9 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                             }) },</div>
 <div class="line">              Vertical {</div>
 <div class="line">                _new&lt;ALabel&gt;(<span class="stringliteral">"Play music using AUI!"</span>),</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Play .ogg music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(mOggAudio)::play),</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Stop .ogg music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(mOggAudio)::stop),</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Pause .ogg music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(mOggAudio)::pause),</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Play .ogg music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mOggAudio)::play),</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Stop .ogg music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mOggAudio)::stop),</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Pause .ogg music"</span>).connect(&amp;<a class="code hl_variable" href="classAView.html#af2361cde3ebf9e0b410c28dab746029d">AButton::clicked</a>, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(mOggAudio)::pause),</div>
 <div class="line">                _new&lt;ALabel&gt;(<span class="stringliteral">"Volume control"</span>),</div>
 <div class="line">                _new&lt;ASlider&gt;()</div>
 <div class="line">                    .connect(&amp;ASlider::valueChanging, <span class="keyword">this</span>,</div>
@@ -578,7 +578,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                 player-&gt;setVolume(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<span class="keywordtype">float</span>(value) * 256.f));</div>
 <div class="line">                             }) },</div>
 <div class="line">              Vertical {</div>
-<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Button produces sound when clicked"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a id="_a41" name="_a41"></a><a class="code hl_struct" href="structass_1_1on__state_1_1Activated.html">ass::on_state::Activated</a> {</div>
+<div class="line">                _new&lt;AButton&gt;(<span class="stringliteral">"Button produces sound when clicked"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a id="_a41" name="_a41"></a><a class="code hl_struct" href="structass_1_1on__state_1_1Activated.html">ass::on_state::Activated</a> {</div>
 <div class="line">                  <a id="_a42" name="_a42"></a><a class="code hl_struct" href="structass_1_1Sound.html">ass::Sound</a> { IAudioPlayer::fromUrl(<span class="stringliteral">":sound/click.ogg"</span>) },</div>
 <div class="line">                } } } } }),</div>
 <div class="line">            <span class="stringliteral">"Sounds"</span>);</div>
@@ -589,11 +589,11 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                std::conditional_t&lt;aui::platform::current::is_mobile(), Vertical, Horizontal&gt; { Horizontal {</div>
 <div class="line">                  Vertical {</div>
 <div class="line">                    _new&lt;ALabel&gt;(<span class="stringliteral">"Gif support!"</span>),</div>
-<div class="line">                    _new&lt;ADrawableView&gt;(<a class="code hl_function" href="classIDrawable.html#a457544908d20d1c1288a2bab05075838">IDrawable::fromUrl</a>(<span class="stringliteral">":img/gf.gif"</span>)) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 100_dp } },   <span class="comment">// gif from https://tenor.com/view/cat-gif-26024730</span></div>
+<div class="line">                    _new&lt;ADrawableView&gt;(<a class="code hl_function" href="classIDrawable.html#a457544908d20d1c1288a2bab05075838">IDrawable::fromUrl</a>(<span class="stringliteral">":img/gf.gif"</span>)) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 100_dp } },   <span class="comment">// gif from https://tenor.com/view/cat-gif-26024730</span></div>
 <div class="line">                  },</div>
 <div class="line">                  Vertical {</div>
 <div class="line">                    _new&lt;ALabel&gt;(<span class="stringliteral">"Animated WebP support!"</span>),</div>
-<div class="line">                    _new&lt;ADrawableView&gt;(<a id="_a43" name="_a43"></a><a class="code hl_class" href="classAUrl.html">AUrl</a>(<span class="stringliteral">":img/anim.webp"</span>)) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 320_px, 240_px } } } } }),</div>
+<div class="line">                    _new&lt;ADrawableView&gt;(<a id="_a43" name="_a43"></a><a class="code hl_class" href="classAUrl.html">AUrl</a>(<span class="stringliteral">":img/anim.webp"</span>)) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 320_px, 240_px } } } } }),</div>
 <div class="line">            <span class="stringliteral">"Images"</span>);</div>
 <div class="line"> </div>
 <div class="line">        it-&gt;addTab(</div>
@@ -618,7 +618,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">              ASplitter::Vertical()</div>
 <div class="line">                      .withItems({ _new&lt;AButton&gt;(<span class="stringliteral">"One"</span>), _new&lt;AButton&gt;(<span class="stringliteral">"Two"</span>), _new&lt;AButton&gt;(<span class="stringliteral">"Three"</span>),</div>
 <div class="line">                                   _new&lt;AButton&gt;(<span class="stringliteral">"Four"</span>), _new&lt;AButton&gt;(<span class="stringliteral">"Five"</span>) })</div>
-<div class="line">                      .build() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">                      .build() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setExpanding(); },</div>
 <div class="line">              _new&lt;ALabel&gt;(<span class="stringliteral">"Grid splitter"</span>),</div>
 <div class="line">              <a id="_a45" name="_a45"></a><a class="code hl_class" href="classAGridSplitter_1_1Builder.html">AGridSplitter::Builder</a>()</div>
 <div class="line">                      .<a id="a46" name="a46"></a>withItems(<a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="classAVector.html">AVector</a>&lt;<a class="code hl_class" href="class__.html">_&lt;AView&gt;</a>&gt;&gt;::generate(</div>
@@ -628,7 +628,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                                  <span class="keywordflow">return</span> _new&lt;AButton&gt;(<span class="stringliteral">"{}x{}"</span>_format(x, y));</div>
 <div class="line">                              });</div>
 <div class="line">                          }))</div>
-<div class="line">                      .build() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">                      .build() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setExpanding(); },</div>
 <div class="line">            },</div>
 <div class="line">            <span class="stringliteral">"Splitters"</span>);</div>
 <div class="line"> </div>
@@ -644,8 +644,8 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                          <span class="stringliteral">"quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "</span></div>
 <div class="line">                          <span class="stringliteral">"consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse "</span></div>
 <div class="line">                          <span class="stringliteral">"cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non "</span></div>
-<div class="line">                          <span class="stringliteral">"proident, sunt in culpa qui officia deserunt mollit anim id est laborum"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { ATextAlign::JUSTIFY },</div>
-<div class="line">                    } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 200_dp } },</div>
+<div class="line">                          <span class="stringliteral">"proident, sunt in culpa qui officia deserunt mollit anim id est laborum"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { ATextAlign::JUSTIFY },</div>
+<div class="line">                    } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 200_dp } },</div>
 <div class="line">                    Vertical::Expanding {</div>
 <div class="line">                      _new&lt;ALabel&gt;(<span class="stringliteral">"Word breaking"</span>),</div>
 <div class="line">                      AText::fromString(</div>
@@ -656,7 +656,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                          <span class="stringliteral">"cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non "</span></div>
 <div class="line">                          <span class="stringliteral">"proident, sunt in culpa qui officia deserunt mollit anim id est laborum"</span>,</div>
 <div class="line">                          { WordBreak::BREAK_ALL }),</div>
-<div class="line">                    } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 200_dp } },</div>
+<div class="line">                    } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 200_dp } },</div>
 <div class="line">                  }),</div>
 <div class="line">                  [] {</div>
 <div class="line">                      <a class="code hl_class" href="class__.html">_&lt;AViewContainer&gt;</a> v1 = Vertical {};</div>
@@ -664,26 +664,26 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt;= 9; ++i) {</div>
 <div class="line">                          v1-&gt;addView(Horizontal {</div>
 <div class="line">                            _new&lt;ALabel&gt;(<span class="stringliteral">"{} px"</span>_format(i + 6)),</div>
-<div class="line">                            _new&lt;ALabel&gt;(<span class="stringliteral">"Hello! [] .~123`"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a id="_a47" name="_a47"></a><a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { <a id="_a48" name="_a48"></a><a class="code hl_class" href="classAMetric.html">AMetric</a>(i + 6, AMetric::T_PX) } } });</div>
+<div class="line">                            _new&lt;ALabel&gt;(<span class="stringliteral">"Hello! [] .~123`"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a id="_a47" name="_a47"></a><a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { <a id="_a48" name="_a48"></a><a class="code hl_class" href="classAMetric.html">AMetric</a>(i + 6, AMetric::T_PX) } } });</div>
 <div class="line">                          v2-&gt;addView(Horizontal {</div>
 <div class="line">                            _new&lt;ALabel&gt;(<span class="stringliteral">"{} px"</span>_format(i + 16)),</div>
-<div class="line">                            _new&lt;ALabel&gt;(<span class="stringliteral">"Hello! [] .~123`"</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { <a class="code hl_class" href="classAMetric.html">AMetric</a>(i + 16, AMetric::T_PX) } } });</div>
+<div class="line">                            _new&lt;ALabel&gt;(<span class="stringliteral">"Hello! [] .~123`"</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { <a class="code hl_class" href="classAMetric.html">AMetric</a>(i + 16, AMetric::T_PX) } } });</div>
 <div class="line">                      }</div>
 <div class="line">                      <span class="keywordflow">return</span> Horizontal { v1, v2 };</div>
 <div class="line">                  }(),</div>
-<div class="line">                } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); }),</div>
+<div class="line">                } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setExpanding(); }),</div>
 <div class="line">            <span class="stringliteral">"Text"</span>);</div>
 <div class="line"> </div>
 <div class="line">        it-&gt;addTab(</div>
 <div class="line">            Vertical {</div>
-<div class="line">              _new&lt;A2FingerTransformArea&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">              _new&lt;A2FingerTransformArea&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                      it-&gt;setCustomStyle({</div>
 <div class="line">                        <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 256_dp },</div>
 <div class="line">                        <a class="code hl_struct" href="structass_1_1Border.html">Border</a> { 1_px, AColor::BLACK },</div>
 <div class="line">                      });</div>
 <div class="line"> </div>
 <div class="line">                      <a class="code hl_class" href="class__.html">_&lt;AView&gt;</a> blackRect = Stacked {</div>
-<div class="line">                          Stacked { _new&lt;AButton&gt;(<span class="stringliteral">"Hi"</span>) } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                          Stacked { _new&lt;AButton&gt;(<span class="stringliteral">"Hi"</span>) } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                            <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 200_dp, 100_dp },</div>
 <div class="line">                            <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { AColor::BLACK },</div>
 <div class="line">                            <a class="code hl_struct" href="structass_1_1TextColor.html">TextColor</a> { AColor::WHITE },</div>
@@ -710,11 +710,11 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">              Horizontal {</div>
 <div class="line">                Centered {</div>
 <div class="line">                  Vertical {</div>
-<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Custom cursor"</span> } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Custom cursor"</span> } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                          <a id="_a51" name="_a51"></a><a class="code hl_class" href="classACursor.html">ACursor</a> { <span class="stringliteral">":img/logo.svg"</span>, 64 },</div>
 <div class="line">                        },</div>
 <div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"github.com/aui-framework/aui"</span> }.clicked(</div>
-<div class="line">                        <span class="keyword">this</span>, [] { <a id="a52" name="a52"></a><a class="code hl_function" href="namespaceAPlatform.html#a75bffd201e71456daec351b3052397ac">APlatform::openUrl</a>(<span class="stringliteral">"https://github.com/aui-framework/aui"</span>); }) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                        <span class="keyword">this</span>, [] { <a id="a52" name="a52"></a><a class="code hl_function" href="namespaceAPlatform.html#a75bffd201e71456daec351b3052397ac">APlatform::openUrl</a>(<span class="stringliteral">"https://github.com/aui-framework/aui"</span>); }) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                          <a class="code hl_struct" href="structass_1_1TextColor.html">TextColor</a> { AColor::BLUE },</div>
 <div class="line">                          <a id="_a53" name="_a53"></a><a class="code hl_struct" href="structass_1_1BorderBottom.html">BorderBottom</a> { 1_px, AColor::BLUE },</div>
 <div class="line">                          <a class="code hl_enumvalue" href="classACursor.html#ab9abb63ef7f5d7d771299ab2c80deb03afd0328e163b3c7a9f659e4ec4720759c">ACursor::POINTER</a>,</div>
@@ -722,17 +722,17 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">                  },</div>
 <div class="line">                },</div>
 <div class="line">                Stacked {</div>
-<div class="line">                  <a class="code hl_struct" href="structdeclarative_1_1Icon.html">Icon</a> { <span class="stringliteral">":img/logo.svg"</span> } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a>(32_dp) },</div>
+<div class="line">                  <a class="code hl_struct" href="structdeclarative_1_1Icon.html">Icon</a> { <span class="stringliteral">":img/logo.svg"</span> } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a>(32_dp) },</div>
 <div class="line">                  Centered {</div>
-<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Blur"</span> } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1Margin.html">Margin</a> { 1_dp, 16_dp } },</div>
-<div class="line">                  } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                    <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Blur"</span> } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1Margin.html">Margin</a> { 1_dp, 16_dp } },</div>
+<div class="line">                  } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                        <a class="code hl_struct" href="structass_1_1Expanding.html">Expanding</a>(1, 0),</div>
 <div class="line">                        <a id="_a54" name="_a54"></a><a class="code hl_struct" href="structass_1_1Backdrop.html">Backdrop</a> { <a id="_a55" name="_a55"></a><a class="code hl_struct" href="structass_1_1Backdrop_1_1GaussianBlur.html">Backdrop::GaussianBlur</a> { .radius = 9_dp } },</div>
 <div class="line">                        <a class="code hl_struct" href="structass_1_1BackgroundSolid.html">BackgroundSolid</a> { AColor::WHITE.transparentize(0.5f) },</div>
 <div class="line">                      },</div>
 <div class="line">                },</div>
 <div class="line">              },</div>
-<div class="line">            } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> { it-&gt;setExpanding(); },</div>
+<div class="line">            } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> { it-&gt;setExpanding(); },</div>
 <div class="line">            <span class="stringliteral">"Others"</span>);</div>
 <div class="line"> </div>
 <div class="line">        it-&gt;setExpanding();</div>
@@ -746,11 +746,11 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">      _new&lt;ASpinnerV2&gt;(),</div>
 <div class="line">      <a class="code hl_struct" href="structdeclarative_1_1CheckBoxWrapper.html">CheckBoxWrapper</a> {</div>
 <div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Enabled"</span> },</div>
-<div class="line">      } <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">      } <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">              it-&gt;check();</div>
-<div class="line">              connect(it-&gt;checked().changed, <a class="code hl_define" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a>(tabView)::setEnabled);</div>
+<div class="line">              connect(it-&gt;checked().changed, <a class="code hl_define" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a>(tabView)::setEnabled);</div>
 <div class="line">          },</div>
-<div class="line">      _new&lt;ALabel&gt;(<span class="stringliteral">"\u00a9 Alex2772, 2021, alex2772.ru"</span>) <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">      _new&lt;ALabel&gt;(<span class="stringliteral">"\u00a9 Alex2772, 2021, alex2772.ru"</span>) <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">              it &lt;&lt; <span class="stringliteral">"#copyright"</span>;</div>
 <div class="line">              it-&gt;setEnabled(<span class="keyword">false</span>);</div>
 <div class="line">          },</div>
@@ -766,7 +766,7 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> surface = createOverlappingSurface({ 0, 0 }, { 100, 100 }, <span class="keyword">false</span>);</div>
 <div class="line">    <a class="code hl_class" href="class__.html">_&lt;AViewContainer&gt;</a> popup = Vertical {</div>
-<div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Drop event"</span> } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">        <a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a> { <span class="stringliteral">"Drop event"</span> } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">              <a class="code hl_struct" href="structass_1_1FontSize.html">FontSize</a> { 18_pt },</div>
 <div class="line">              ATextAlign::CENTER,</div>
 <div class="line">            },</div>
@@ -774,12 +774,12 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="line">            <span class="keywordflow">if</span> (<span class="keyword">auto</span> u = event.data.<a id="a59" name="a59"></a>urls()) {</div>
 <div class="line">                <span class="keyword">auto</span> url = u-&gt;first();</div>
 <div class="line">                <span class="keywordflow">if</span> (<span class="keyword">auto</span> icon = ADesktop::iconOfFile(url.path())) {</div>
-<div class="line">                    <span class="keywordflow">return</span> Centered { _new&lt;ADrawableView&gt;(icon) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 64_dp } } };</div>
+<div class="line">                    <span class="keywordflow">return</span> Centered { _new&lt;ADrawableView&gt;(icon) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { <a class="code hl_struct" href="structass_1_1FixedSize.html">FixedSize</a> { 64_dp } } };</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
 <div class="line">            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line">        }(),</div>
-<div class="line">        AText::fromString(<span class="stringliteral">"Caught drop event. See the logger output for contents."</span>) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { ATextAlign::CENTER, <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 100_dp, 40_dp } },</div>
+<div class="line">        AText::fromString(<span class="stringliteral">"Caught drop event. See the logger output for contents."</span>) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { ATextAlign::CENTER, <a class="code hl_struct" href="structass_1_1MinSize.html">MinSize</a> { 100_dp, 40_dp } },</div>
 <div class="line">        Centered { <a class="code hl_struct" href="structdeclarative_1_1Button.html">Button</a> { <span class="stringliteral">"OK"</span> }.clicked(<span class="keyword">this</span>, [surface] { surface-&gt;close(); }) }</div>
 <div class="line">    };</div>
 <div class="line">    <a class="code hl_function" href="classALayoutInflater.html#ad9f78d5a6152d898027a294548f4c6cc">ALayoutInflater::inflate</a>(surface, popup);</div>
@@ -814,14 +814,14 @@ $(function(){initNavTree('examples_2ui_2views_2src_2ExampleWindow_8cpp-example.h
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:215</div></div>
 <div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
 <div class="ttc" id="agroup__ass__selectors_html_gab1309369989373a0f2408455b3a91742"><div class="ttname"><a href="group__ass__selectors.html#gab1309369989373a0f2408455b3a91742">ass::t</a></div><div class="ttdeci">type_of&lt; T &gt; t</div><div class="ttdoc">Selects views that are of the specified C++ types.</div><div class="ttdef"><b>Definition</b> type_of.h:71</div></div>
-<div class="ttc" id="agroup__signal__slot_html_gaaaa072876366972108aef016e7882a99"><div class="ttname"><a href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">slot</a></div><div class="ttdeci">#define slot(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
+<div class="ttc" id="agroup__signal__slot_html_ga17f523dcc2e10d3b91bbf7083ba4bb65"><div class="ttname"><a href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">AUI_SLOT</a></div><div class="ttdeci">#define AUI_SLOT(v)</div><div class="ttdoc">Passes some variable and type of the variable separated by comma. It's convenient to use with the con...</div><div class="ttdef"><b>Definition</b> kAUI.h:88</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga175ad8de8f8907a849587a1e3fe60102"><div class="ttname"><a href="group__useful__macros.html#ga175ad8de8f8907a849587a1e3fe60102">AUI_UI_THREAD</a></div><div class="ttdeci">#define AUI_UI_THREAD</div><div class="ttdoc">Executes lambda on main thread.</div><div class="ttdef"><b>Definition</b> kAUI.h:397</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21e987c335e976425b29dfc0cd7e7849"><div class="ttname"><a href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a></div><div class="ttdeci">#define AUI_WITH_STYLE</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga2fe1c16d6c69d08ec57a44ac47222148"><div class="ttname"><a href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a></div><div class="ttdeci">#define AUI_LET</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga3b247bd8a48a4e7cae4882e19ef45cbc"><div class="ttname"><a href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a></div><div class="ttdeci">#define AUI_DECLARATIVE_FOR(value, model, layout)</div><div class="ttdoc">ranged-for-loop style wrapped for AForEachUI.</div><div class="ttdef"><b>Definition</b> AForEachUI.h:402</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gacba25f2657a42c1c6a786d5b537b6a7e"><div class="ttname"><a href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">do_once</a></div><div class="ttdeci">#define do_once</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition</b> kAUI.h:391</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga90e4e4afd65596b81ead287be905bc77"><div class="ttname"><a href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">AUI_THREADPOOL</a></div><div class="ttdeci">#define AUI_THREADPOOL</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike AUI_THREADPOOL_X,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga9c0cc36953313c88d7ab95472c672fdb"><div class="ttname"><a href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">AUI_DO_ONCE</a></div><div class="ttdeci">#define AUI_DO_ONCE</div><div class="ttdoc">Executes following function call or {} block once per program execution.</div><div class="ttdef"><b>Definition</b> kAUI.h:391</div></div>
 <div class="ttc" id="agroup__useful__macros_html_gad1f59dbc9cb81d4a8cf90be3beb37541"><div class="ttname"><a href="group__useful__macros.html#gad1f59dbc9cb81d4a8cf90be3beb37541">AUI_ASSERT_NO_CONDITION</a></div><div class="ttdeci">#define AUI_ASSERT_NO_CONDITION(what)</div><div class="ttdoc">Always triggers assertion fail.</div><div class="ttdef"><b>Definition</b> Assert.h:94</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gad659f0d3ab9d98f8631b699c8c030ebb"><div class="ttname"><a href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">ui_thread</a></div><div class="ttdeci">#define ui_thread</div><div class="ttdoc">Executes lambda on main thread.</div><div class="ttdef"><b>Definition</b> kAUI.h:397</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
 <div class="ttc" id="anamespaceADesktop_html_a19e8acd5024831ae0e0c8df5038e73dc"><div class="ttname"><a href="namespaceADesktop.html#a19e8acd5024831ae0e0c8df5038e73dc">ADesktop::browseForDir</a></div><div class="ttdeci">API_AUI_VIEWS AFuture&lt; APath &gt; browseForDir(AWindowBase *parent, const APath &amp;startingLocation={})</div><div class="ttdoc">Opens native browse for directory dialog.</div></div>
 <div class="ttc" id="anamespaceADesktop_html_a33103ce1fd4cc7136d9f3598ef860f60"><div class="ttname"><a href="namespaceADesktop.html#a33103ce1fd4cc7136d9f3598ef860f60">ADesktop::browseForFile</a></div><div class="ttdeci">API_AUI_VIEWS AFuture&lt; APath &gt; browseForFile(AWindowBase *parent, const APath &amp;startingLocation={}, const AVector&lt; FileExtension &gt; &amp;extensions={ { "All", "*" } })</div><div class="ttdoc">Opens native browse for file dialog.</div></div>
 <div class="ttc" id="anamespaceAMessageBox_html_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><div class="ttname"><a href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a></div><div class="ttdeci">API_AUI_VIEWS ResultButton show(AWindow *parent, const AString &amp;title, const AString &amp;message, Icon icon=Icon::NONE, Button b=Button::OK)</div><div class="ttdoc">Displays a message box, blocking the caller thread until the user dismisses the message.</div></div>

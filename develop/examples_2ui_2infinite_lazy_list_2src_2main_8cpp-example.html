@@ -146,7 +146,7 @@ $(function(){initNavTree('examples_2ui_2infinite_lazy_list_2src_2main_8cpp-examp
 <div class="line">            return;</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keyword">auto</span> loadFrom = state-&gt;items-&gt;size(); <span class="comment">// base index to load from.</span></div>
-<div class="line">        state-&gt;asyncTasks &lt;&lt; <a class="code hl_define" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a> {</div>
+<div class="line">        state-&gt;asyncTasks &lt;&lt; <a class="code hl_define" href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">AUI_THREADPOOL</a> {</div>
 <div class="line">            <span class="comment">// perform "loading" task on a worker thread.</span></div>
 <div class="line"> </div>
 <div class="line">            AThread::sleep(500ms); <span class="comment">// imitate hard work here</span></div>
@@ -156,7 +156,7 @@ $(function(){initNavTree('examples_2ui_2infinite_lazy_list_2src_2main_8cpp-examp
 <div class="line">                return aui::ptr::manage_shared(new Item { .value = <span class="stringliteral">"Item {}"</span>_format(loadFrom + i) });</div>
 <div class="line">            });</div>
 <div class="line"> </div>
-<div class="line">            <a class="code hl_define" href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">ui_thread</a> { <span class="comment">// back to main thread.</span></div>
+<div class="line">            <a class="code hl_define" href="group__useful__macros.html#ga175ad8de8f8907a849587a1e3fe60102">AUI_UI_THREAD</a> { <span class="comment">// back to main thread.</span></div>
 <div class="line">                state-&gt;items.writeScope()-&gt;insertAll(loadedItems);</div>
 <div class="line">                state-&gt;needMore = <span class="keyword">false</span>;</div>
 <div class="line">            };</div>
@@ -166,7 +166,7 @@ $(function(){initNavTree('examples_2ui_2infinite_lazy_list_2src_2main_8cpp-examp
 <div class="line">    <span class="keywordflow">return</span> Vertical {</div>
 <div class="line">        <a id="a4" name="a4"></a><a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, *state-&gt;items, <a id="_a5" name="_a5"></a><a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) { <span class="keywordflow">return</span> <a id="_a6" name="_a6"></a><a class="code hl_struct" href="structdeclarative_1_1Label.html">Label</a>{} &amp; i-&gt;value; },</div>
 <div class="line">        Centered {</div>
-<div class="line">          _new&lt;ASpinnerV2&gt;() <a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">          _new&lt;ASpinnerV2&gt;() <a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">                  <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a>(it-&gt;redrawn, <a class="code hl_variable" href="classAObject.html#ae877cf776a7569eca5185c24bd4ccd74">AObject::GENERIC_OBSERVER</a>, [state] {</div>
 <div class="line">                      <span class="comment">// when a spinner appears, we indicate that we need more items.</span></div>
 <div class="line">                      state-&gt;needMore = true;</div>
@@ -189,11 +189,11 @@ $(function(){initNavTree('examples_2ui_2infinite_lazy_list_2src_2main_8cpp-examp
 <div class="ttc" id="aclassAVerticalLayout_html"><div class="ttname"><a href="classAVerticalLayout.html">AVerticalLayout</a></div><div class="ttdoc">Places views in a column.</div><div class="ttdef"><b>Definition</b> AVerticalLayout.h:41</div></div>
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:215</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:82</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga175ad8de8f8907a849587a1e3fe60102"><div class="ttname"><a href="group__useful__macros.html#ga175ad8de8f8907a849587a1e3fe60102">AUI_UI_THREAD</a></div><div class="ttdeci">#define AUI_UI_THREAD</div><div class="ttdoc">Executes lambda on main thread.</div><div class="ttdef"><b>Definition</b> kAUI.h:397</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga2fe1c16d6c69d08ec57a44ac47222148"><div class="ttname"><a href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a></div><div class="ttdeci">#define AUI_LET</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga3b247bd8a48a4e7cae4882e19ef45cbc"><div class="ttname"><a href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a></div><div class="ttdeci">#define AUI_DECLARATIVE_FOR(value, model, layout)</div><div class="ttdoc">ranged-for-loop style wrapped for AForEachUI.</div><div class="ttdef"><b>Definition</b> AForEachUI.h:402</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga90e4e4afd65596b81ead287be905bc77"><div class="ttname"><a href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">AUI_THREADPOOL</a></div><div class="ttdeci">#define AUI_THREADPOOL</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike AUI_THREADPOOL_X,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gad659f0d3ab9d98f8631b699c8c030ebb"><div class="ttname"><a href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">ui_thread</a></div><div class="ttdeci">#define ui_thread</div><div class="ttdoc">Executes lambda on main thread.</div><div class="ttdef"><b>Definition</b> kAUI.h:397</div></div>
-<div class="ttc" id="agroup__useful__macros_html_gada84521eeb4bb9ac422d21429806aff3"><div class="ttname"><a href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">async</a></div><div class="ttdeci">#define async</div><div class="ttdoc">Executes following {} block asynchronously in the global thread pool. Unlike asyncX,...</div><div class="ttdef"><b>Definition</b> kAUI.h:329</div></div>
 <div class="ttc" id="astructAProperty_html"><div class="ttname"><a href="structAProperty.html">AProperty</a></div><div class="ttdoc">Basic easy-to-use property implementation containing T.</div><div class="ttdef"><b>Definition</b> AProperty.h:30</div></div>
 <div class="ttc" id="astructdeclarative_1_1Label_html"><div class="ttname"><a href="structdeclarative_1_1Label.html">declarative::Label</a></div><div class="ttdoc">Declarative form of ALabel.</div><div class="ttdef"><b>Definition</b> ALabel.h:35</div></div>
 </div><!-- fragment --> <p class="footer-inner">

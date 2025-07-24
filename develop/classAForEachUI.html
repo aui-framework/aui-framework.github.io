@@ -123,12 +123,12 @@ class AForEachUI&lt; T &gt;</div><p>Used to lazily present possibly large or inf
 <div class="line">    <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(user, users, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
 <div class="line">      <span class="keywordflow">return</span> Label { fmt::format(<span class="stringliteral">"{}"</span>, user) };</div>
 <div class="line">    }</div>
-<div class="line">  ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">  ).build() <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { FixedSize { 150_dp, 200_dp } },</div>
 <div class="line">});</div>
 <div class="ttc" id="aclassAScrollArea_1_1Builder_html"><div class="ttname"><a href="classAScrollArea_1_1Builder.html">AScrollArea::Builder</a></div><div class="ttdef"><b>Definition</b> AScrollArea.h:130</div></div>
 <div class="ttc" id="aclassAVerticalLayout_html"><div class="ttname"><a href="classAVerticalLayout.html">AVerticalLayout</a></div><div class="ttdoc">Places views in a column.</div><div class="ttdef"><b>Definition</b> AVerticalLayout.h:41</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21e987c335e976425b29dfc0cd7e7849"><div class="ttname"><a href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a></div><div class="ttdeci">#define AUI_WITH_STYLE</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga3b247bd8a48a4e7cae4882e19ef45cbc"><div class="ttname"><a href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a></div><div class="ttdeci">#define AUI_DECLARATIVE_FOR(value, model, layout)</div><div class="ttdoc">ranged-for-loop style wrapped for AForEachUI.</div><div class="ttdef"><b>Definition</b> AForEachUI.h:402</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
 </div><!-- fragment --><div class="image">
 <img alt="" src="UIDeclarativeForTest.Example_.png"/>
 </div>
@@ -211,7 +211,7 @@ Constant global data<a class="aui-toc-hash" href="#UIDeclarativeForTest_Constant
 <div class="line">            <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, COLORS, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
 <div class="line">              <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
 <div class="line">            })</div>
-<div class="line">        .build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">        .build() <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { FixedSize { 150_dp, 200_dp } },</div>
 <div class="line">});</div>
 <div class="ttc" id="aclassAViewContainerBase_html_ab7bcd4a4bc08fc11c9bc1a9ff036f5e4"><div class="ttname"><a href="classAViewContainerBase.html#ab7bcd4a4bc08fc11c9bc1a9ff036f5e4">AViewContainerBase::setContents</a></div><div class="ttdeci">void setContents(const _&lt; AViewContainer &gt; &amp;container)</div><div class="ttdoc">Moves (like via std::move) all children and layout of the specified container to this container.</div></div>
 </div><!-- fragment --><div class="image">
@@ -224,7 +224,7 @@ Infinite ranges and views<a class="aui-toc-hash" href="#UIDeclarativeForTest_Inf
 <div class="line">        <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, ranges::views::ints, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
 <div class="line">            <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
 <div class="line">        }</div>
-<div class="line">    ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">    ).build() <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { FixedSize { 150_dp, 200_dp } },</div>
 <div class="line">});</div>
 </div><!-- fragment --><div class="image">
 <img alt="" src="UIDeclarativeForTest.Infinite_ranges_and_views_.png"/>
@@ -237,7 +237,7 @@ Transferring ownership by copying<a class="aui-toc-hash" href="#UIDeclarativeFor
 <div class="line">        <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, items, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
 <div class="line">           <span class="keywordflow">return</span> Label { i };</div>
 <div class="line">        }</div>
-<div class="line">    ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">    ).build() <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { FixedSize { 150_dp, 200_dp } },</div>
 <div class="line">});</div>
 <div class="ttc" id="aclassAVector_html"><div class="ttname"><a href="classAVector.html">AVector</a></div><div class="ttdoc">A std::vector with AUI extensions.</div><div class="ttdef"><b>Definition</b> AVector.h:39</div></div>
 </div><!-- fragment --><p>As such, an attempt to modify <code>items</code> will not reflect on presentation, because it has own copy of <code>items</code>. </p><div class="fragment"><div class="line">items.push_back(<span class="stringliteral">"Bruh"</span>);</div>
@@ -288,7 +288,7 @@ Reactive lists<a class="aui-toc-hash" href="#UIDeclarativeForTest_Reactive_lists
 <div class="line">              <a class="code hl_define" href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a>(i, *mColors, <a class="code hl_class" href="classAVerticalLayout.html">AVerticalLayout</a>) {</div>
 <div class="line">                <span class="keywordflow">return</span> Label { <span class="stringliteral">"{}"</span>_format(i) };</div>
 <div class="line">              }</div>
-<div class="line">            ).build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FixedSize { 150_dp, 200_dp } },</div>
+<div class="line">            ).build() <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { FixedSize { 150_dp, 200_dp } },</div>
 <div class="line">        });</div>
 <div class="line">    }</div>
 <div class="line"><span class="keyword">private</span>:</div>

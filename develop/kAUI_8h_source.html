@@ -115,7 +115,7 @@ $(function(){initNavTree('kAUI_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;range/v3/range_fwd.hpp&gt;</span> <span class="comment">// range-v3 breaks by AUI's let, lol so forward it</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;range/v3/range_fwd.hpp&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;AUI/Thread/AThreadPool.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;AUI/Thread/AFuture.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
@@ -141,7 +141,7 @@ $(function(){initNavTree('kAUI_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span>decode_type_t = <span class="keyword">typename</span> decode_type&lt;T&gt;::type;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__signal__slot.html#gaaaa072876366972108aef016e7882a99">   88</a></span><span class="preprocessor">#define slot(v) v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;decltype(v)&gt;&gt;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__signal__slot.html#ga17f523dcc2e10d3b91bbf7083ba4bb65">   88</a></span><span class="preprocessor">#define AUI_SLOT(v) v, &amp;aui::impl::slot::decode_type_t&lt;std::decay_t&lt;decltype(v)&gt;&gt;</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
 <div class="foldopen" data-end="" data-start="" id="foldopen00140">
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga0b5c29ea5716ab0c88709f9b472a2f64">  140</a></span><span class="preprocessor">#define AUI_PERFORM_AS_MEMBER(object, lambda)                                                  \</span></div>
@@ -158,20 +158,20 @@ $(function(){initNavTree('kAUI_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gaee46aadc753cc62a15ea8cd64bdeaa61">  196</a></span><span class="preprocessor">#define AUI_DEFER ARaiiHelper AUI_PP_CAT($AUI_DEFER_at_line_,  __LINE__) = [&amp;]</span></div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">  262</a></span><span class="preprocessor">#define let ^ [&amp;](const auto&amp; it)</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">  262</a></span><span class="preprocessor">#define AUI_LET ^ [&amp;](const auto&amp; it)</span></div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">  287</a></span><span class="preprocessor">#define with_style &amp; ass::PropertyListRecursive</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">  287</a></span><span class="preprocessor">#define AUI_WITH_STYLE &amp; ass::PropertyListRecursive</span></div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gada84521eeb4bb9ac422d21429806aff3">  329</a></span><span class="preprocessor">#define async AThreadPool::global() * [=]()</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga90e4e4afd65596b81ead287be905bc77">  329</a></span><span class="preprocessor">#define AUI_THREADPOOL AThreadPool::global() * [=]()</span></div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span></div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga21d729326347c5d74faf857abf18d695">  360</a></span><span class="preprocessor">#define asyncX AThreadPool::global() *</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gabce4b6a0fb14fa159ef35df4a6b57c77">  360</a></span><span class="preprocessor">#define AUI_THREADPOOL_X AThreadPool::global() *</span></div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e">  391</a></span><span class="preprocessor">#define do_once if(static bool _aui_once = false; (!_aui_once &amp;&amp; (_aui_once = true)))</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga9c0cc36953313c88d7ab95472c672fdb">  391</a></span><span class="preprocessor">#define AUI_DO_ONCE if(static bool _aui_once = false; (!_aui_once &amp;&amp; (_aui_once = true)))</span></div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gad659f0d3ab9d98f8631b699c8c030ebb">  397</a></span><span class="preprocessor">#define ui_thread (*AThread::main()) * [=]()</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga175ad8de8f8907a849587a1e3fe60102">  397</a></span><span class="preprocessor">#define AUI_UI_THREAD (*AThread::main()) * [=]()</span></div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="group__useful__macros.html#ga3f61ecfc942915005f2bba5a317b654a">  403</a></span><span class="preprocessor">#define ui_threadX (*AThread::main()) *</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="group__useful__macros.html#gaface1f9df5ce387c24decde8d0472286">  403</a></span><span class="preprocessor">#define AUI_UI_THREAD_X (*AThread::main()) *</span></div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span><span class="preprocessor">#define AUI_REPEAT(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex)</span></div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="preprocessor">#define AUI_REPEAT_ASYNC(times) for(auto repeatStubIndex = 0; repeatStubIndex &lt; times; ++repeatStubIndex) AThreadPool::global() &lt;&lt; [=]()</span></div>

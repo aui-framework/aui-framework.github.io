@@ -146,7 +146,7 @@ $(function(){initNavTree('examples_2ui_2contacts_2src_2main_8cpp-example.html','
 <div class="line">                      .withContents(</div>
 <div class="line">                          Vertical {</div>
 <div class="line">                            _new&lt;ATextField&gt;() &amp;&amp; mSearchQuery,</div>
-<div class="line">                            AText::fromString(predefined::DISCLAIMER) <a id="a5" name="a5"></a><a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { ATextAlign::CENTER },</div>
+<div class="line">                            AText::fromString(predefined::DISCLAIMER) <a id="a5" name="a5"></a><a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { ATextAlign::CENTER },</div>
 <div class="line">                            SpacerFixed(8_dp),</div>
 <div class="line">                            CustomLayout {} &amp; mSearchQuery.readProjected([&amp;](<span class="keyword">const</span> AString&amp; q) {</div>
 <div class="line">                                <span class="keywordflow">if</span> (q.<a id="a6" name="a6"></a>empty()) {</div>
@@ -158,9 +158,9 @@ $(function(){initNavTree('examples_2ui_2contacts_2src_2main_8cpp-example.html','
 <div class="line">                                &amp; mSearchQuery.readProjected([](<span class="keyword">const</span> AString&amp; s) { <span class="keywordflow">return</span> s.empty(); }) &gt; &amp;AView::setVisible</div>
 <div class="line">                                &amp; mContactCount.readProjected([](std::size_t c) {</div>
 <div class="line">                                return <span class="stringliteral">"{} contact(s)"</span>_format(c);</div>
-<div class="line">                            }) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { FontSize { 10_pt }, ATextAlign::CENTER, Margin { 8_dp } },</div>
-<div class="line">                          } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { Padding(0, 8_dp) })</div>
-<div class="line">                      .build() <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { Expanding(0, 1), MinSize(200_dp) },</div>
+<div class="line">                            }) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { FontSize { 10_pt }, ATextAlign::CENTER, Margin { 8_dp } },</div>
+<div class="line">                          } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { Padding(0, 8_dp) })</div>
+<div class="line">                      .build() <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { Expanding(0, 1), MinSize(200_dp) },</div>
 <div class="line"> </div>
 <div class="line">              CustomLayout::Expanding {} &amp; mSelectedContact.readProjected([<span class="keyword">this</span>](<span class="keyword">const</span> _&lt;Contact&gt;&amp; selectedContact) -&gt; _&lt;AView&gt; {</div>
 <div class="line">                  <span class="keyword">auto</span> editor = contactDetails(selectedContact);</div>
@@ -171,8 +171,8 @@ $(function(){initNavTree('examples_2ui_2contacts_2src_2main_8cpp-example.html','
 <div class="line">                      <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(editor-&gt;deleteAction, me::deleteCurrentContact);</div>
 <div class="line">                  }</div>
 <div class="line">                  <span class="keywordflow">return</span> editor;</div>
-<div class="line">              }) <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { Expanding(), MinSize(300_dp), BackgroundSolid { AColor::WHITE } },</div>
-<div class="line">            } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">              }) <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { Expanding(), MinSize(300_dp), BackgroundSolid { AColor::WHITE } },</div>
+<div class="line">            } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">              Padding(0),</div>
 <div class="line">            });</div>
 <div class="line">    }</div>
@@ -208,7 +208,7 @@ $(function(){initNavTree('examples_2ui_2contacts_2src_2main_8cpp-example.html','
 <div class="line">            <span class="keyword">auto</span> firstLetter = groupLetter(firstContact-&gt;displayName);</div>
 <div class="line">            ALogger::info(<span class="stringliteral">"Test"</span>) &lt;&lt; <span class="stringliteral">"Computing view for group "</span> &lt;&lt; AString(1, firstLetter);</div>
 <div class="line">            <span class="keywordflow">return</span> Vertical {</div>
-<div class="line">                Label { firstLetter } <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> {</div>
+<div class="line">                Label { firstLetter } <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> {</div>
 <div class="line">                                        Opacity(0.5f),</div>
 <div class="line">                                        Padding { 12_dp, 0, 4_dp },</div>
 <div class="line">                                        Margin { 0 },</div>
@@ -239,9 +239,9 @@ $(function(){initNavTree('examples_2ui_2contacts_2src_2main_8cpp-example.html','
 <div class="line"> </div>
 <div class="line">    _&lt;AView&gt; contactPreview(<span class="keyword">const</span> _&lt;Contact&gt;&amp; contact) {</div>
 <div class="line">        <span class="keywordflow">return</span> Vertical {</div>
-<div class="line">            Label {} &amp; contact-&gt;displayName <a class="code hl_define" href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a> { Padding { 8_dp, 0 }, Margin { 0 }, ATextOverflow::ELLIPSIS },</div>
+<div class="line">            Label {} &amp; contact-&gt;displayName <a class="code hl_define" href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a> { Padding { 8_dp, 0 }, Margin { 0 }, ATextOverflow::ELLIPSIS },</div>
 <div class="line">            common_views::divider(),</div>
-<div class="line">        } <a id="a14" name="a14"></a><a class="code hl_define" href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a> {</div>
+<div class="line">        } <a id="a14" name="a14"></a><a class="code hl_define" href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a> {</div>
 <div class="line">            <a class="code hl_function" href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">connect</a>(it-&gt;clicked, [<span class="keyword">this</span>, contact] { mSelectedContact = contact; });</div>
 <div class="line">        };</div>
 <div class="line">    }</div>
@@ -264,9 +264,9 @@ $(function(){initNavTree('examples_2ui_2contacts_2src_2main_8cpp-example.html','
 <div class="ttc" id="aclass___html"><div class="ttname"><a href="class__.html">_</a></div><div class="ttdoc">An std::weak_ptr with AUI extensions.</div><div class="ttdef"><b>Definition</b> SharedPtrTypes.h:215</div></div>
 <div class="ttc" id="agroup__ass__selectors_html_ga82723ad66d023c2cd76b2ca1e72e6a5a"><div class="ttname"><a href="group__ass__selectors.html#ga82723ad66d023c2cd76b2ca1e72e6a5a">ass::c</a></div><div class="ttdeci">class_of c</div><div class="ttdoc">Selects views that are of the specified classes.</div><div class="ttdef"><b>Definition</b> class_of.h:84</div></div>
 <div class="ttc" id="agroup__signal__slot_html_ga4da6280feaeb063ce8e5b8a069755d6d"><div class="ttname"><a href="group__signal__slot.html#ga4da6280feaeb063ce8e5b8a069755d6d">AObject::connect</a></div><div class="ttdeci">static decltype(auto) connect(const Signal &amp;signal, Object *object, Function &amp;&amp;function)</div><div class="ttdoc">Connects signal to the slot of the specified object.</div><div class="ttdef"><b>Definition</b> AObject.h:82</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga045dd54932944d8830380f4596d64446"><div class="ttname"><a href="group__useful__macros.html#ga045dd54932944d8830380f4596d64446">let</a></div><div class="ttdeci">#define let</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga21e987c335e976425b29dfc0cd7e7849"><div class="ttname"><a href="group__useful__macros.html#ga21e987c335e976425b29dfc0cd7e7849">AUI_WITH_STYLE</a></div><div class="ttdeci">#define AUI_WITH_STYLE</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
+<div class="ttc" id="agroup__useful__macros_html_ga2fe1c16d6c69d08ec57a44ac47222148"><div class="ttname"><a href="group__useful__macros.html#ga2fe1c16d6c69d08ec57a44ac47222148">AUI_LET</a></div><div class="ttdeci">#define AUI_LET</div><div class="ttdoc">Performs multiple operations on a single object without repeating its name (in place) This function c...</div><div class="ttdef"><b>Definition</b> kAUI.h:262</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga3b247bd8a48a4e7cae4882e19ef45cbc"><div class="ttname"><a href="group__useful__macros.html#ga3b247bd8a48a4e7cae4882e19ef45cbc">AUI_DECLARATIVE_FOR</a></div><div class="ttdeci">#define AUI_DECLARATIVE_FOR(value, model, layout)</div><div class="ttdoc">ranged-for-loop style wrapped for AForEachUI.</div><div class="ttdef"><b>Definition</b> AForEachUI.h:402</div></div>
-<div class="ttc" id="agroup__useful__macros_html_ga626d77a14ebf21eb52de159eb9e75c1c"><div class="ttname"><a href="group__useful__macros.html#ga626d77a14ebf21eb52de159eb9e75c1c">with_style</a></div><div class="ttdeci">#define with_style</div><div class="ttdoc">Allows to define a style to the view right in place.</div><div class="ttdef"><b>Definition</b> kAUI.h:287</div></div>
 <div class="ttc" id="agroup__useful__macros_html_ga9fb2be9313369673815a6892aa7f3a1f"><div class="ttname"><a href="group__useful__macros.html#ga9fb2be9313369673815a6892aa7f3a1f">AUI_ENTRY</a></div><div class="ttdeci">#define AUI_ENTRY</div><div class="ttdoc">Application entry point.</div><div class="ttdef"><b>Definition</b> Entry.h:90</div></div>
 <div class="ttc" id="anamespaceAMessageBox_html_a022ae6a7c7fe5fad7548fca5e7ca7dd2"><div class="ttname"><a href="namespaceAMessageBox.html#a022ae6a7c7fe5fad7548fca5e7ca7dd2">AMessageBox::show</a></div><div class="ttdeci">API_AUI_VIEWS ResultButton show(AWindow *parent, const AString &amp;title, const AString &amp;message, Icon icon=Icon::NONE, Button b=Button::OK)</div><div class="ttdoc">Displays a message box, blocking the caller thread until the user dismisses the message.</div></div>
 <div class="ttc" id="anamespaceAMessageBox_html_a58b0d15012070c2fb634111752d0d67ca7469a286259799e5b37e5db9296f00b3"><div class="ttname"><a href="namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67ca7469a286259799e5b37e5db9296f00b3">AMessageBox::ResultButton::YES</a></div><div class="ttdeci">@ YES</div><div class="ttdoc">Indicates the user clicked the Yes button.</div><div class="ttdef"><b>Definition</b> AMessageBox.h:123</div></div>
