@@ -125,9 +125,11 @@ $(function(){initNavTree('AAudioMixer_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classASpinlockMutex.html">ASpinlockMutex</a> mConcurrentAccessCheck;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::list&lt;_&lt;IAudioPlayer&gt;&gt; mPlayers;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    std::vector&lt;float&gt; mMixBuffer;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::vector&lt;float&gt; mReadBuffer;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="ttc" id="aclassAAudioMixer_html"><div class="ttname"><a href="classAAudioMixer.html">AAudioMixer</a></div><div class="ttdoc">Manages audio players and mixes them into one sound stream.</div><div class="ttdef"><b>Definition</b> AAudioMixer.h:16</div></div>
 <div class="ttc" id="aclassAAudioMixer_html_a24881d8a9b1287ae5ee4ec489015faab"><div class="ttname"><a href="classAAudioMixer.html#a24881d8a9b1287ae5ee4ec489015faab">AAudioMixer::readSoundData</a></div><div class="ttdeci">std::size_t readSoundData(std::span&lt; std::byte &gt; destination)</div><div class="ttdoc">Write mixed audio data into buffer.</div></div>
 <div class="ttc" id="aclassAAudioMixer_html_a7413f6be8cb63e36c0af0c1eabbe9f1f"><div class="ttname"><a href="classAAudioMixer.html#a7413f6be8cb63e36c0af0c1eabbe9f1f">AAudioMixer::removeSoundSource</a></div><div class="ttdeci">void removeSoundSource(aui::non_null&lt; _&lt; IAudioPlayer &gt; &gt; s)</div><div class="ttdoc">Remove sound source if it is represented in list of added sound sources, otherwise do nothing.</div></div>

@@ -7,12 +7,12 @@ var searchData=
   ['of_4',['of',['../structaui_1_1sequence__traits_1_1of.html',1,'aui::sequence_traits']]],
   ['of_20life_5',['Game of Life',['../example_game_of_life.html',1,'']]],
   ['of_20tree_20file_6',['&quot;Imported target ... depends on an out-of-tree file&quot;',['../md_docs_2AUI_01Boot.html#AFKJNJKAN',1,'']]],
-  ['off_20on_7',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md136',1,'']]],
+  ['off_20on_7',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md124',1,'']]],
   ['ok_8',['OK',['../namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfae0aa021e21dddbd6d8cecec71e9cf564',1,'AMessageBox::OK'],['../namespaceAMessageBox.html#a58b0d15012070c2fb634111752d0d67cae0aa021e21dddbd6d8cecec71e9cf564',1,'AMessageBox::OK']]],
   ['ok_5fcancel_9',['OK_CANCEL',['../namespaceAMessageBox.html#a8cf32602451dd1c88cd380797b2907bfacb1315790b542732dedb0c77e73d5d68',1,'AMessageBox']]],
   ['ole_10',['Ole',['../classOle.html',1,'']]],
   ['omitting_20view_20property_11',['ADataBindingDefault for omitting view property',['../group__property__system.html#UIDataBindingTest_ADataBindingDefault_for_omitting_view_property',1,'']]],
-  ['on_12',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md136',1,'']]],
+  ['on_12',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md124',1,'']]],
   ['on_20an_20out_20of_20tree_20file_13',['&quot;Imported target ... depends on an out-of-tree file&quot;',['../md_docs_2AUI_01Boot.html#AFKJNJKAN',1,'']]],
   ['on_20every_20step_14',['Prompt user on every step',['../group__updater.html#autotoc_md269',1,'']]],
   ['on_5fdemand_15',['ON_DEMAND',['../structass_1_1ScrollbarAppearance.html#afd920460dbea946c4261b2c855ea5535ab465d406a073cf79466986d9e01c75e3',1,'ass::ScrollbarAppearance']]],
@@ -73,8 +73,7 @@ var searchData=
   ['other_20platforms_20unix_20like_20only_70',['Other platforms UNIX like only',['../md_docs_2Runtime_01Dependency_01Resolution.html#RPATH',1,'Other platforms (UNIX-like only)'],['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md194',1,'Other platforms (UNIX-like only)']]],
   ['out_71',['out',['../classPipe.html#ad191448b8da4dbcde894f89fb5dd3a3b',1,'Pipe']]],
   ['out_20of_20tree_20file_72',['&quot;Imported target ... depends on an out-of-tree file&quot;',['../md_docs_2AUI_01Boot.html#AFKJNJKAN',1,'']]],
-  ['outputsampleformat_73',['outputSampleFormat',['../classASampleRateConverter.html#aeaadf6fac361d81b8a1f0743ce23dca7',1,'ASampleRateConverter']]],
-  ['overlaycolor_74',['overlayColor',['../structass_1_1BackgroundImage.html#ae84e6aecde1d3970a6b3504c842419eb',1,'ass::BackgroundImage']]],
-  ['overview_75',['Overview',['../md_docs_2App_01Build_01Overview.html',1,'App Build Overview'],['../md_docs_2UI_01Building_01Overview.html',1,'UI Building Overview']]],
-  ['ownership_20by_20copying_76',['Transferring ownership by copying',['../classAForEachUI.html#UIDeclarativeForTest_Transferring_ownership_by_copying',1,'']]]
+  ['overlaycolor_73',['overlayColor',['../structass_1_1BackgroundImage.html#ae84e6aecde1d3970a6b3504c842419eb',1,'ass::BackgroundImage']]],
+  ['overview_74',['Overview',['../md_docs_2App_01Build_01Overview.html',1,'App Build Overview'],['../md_docs_2UI_01Building_01Overview.html',1,'UI Building Overview']]],
+  ['ownership_20by_20copying_75',['Transferring ownership by copying',['../classAForEachUI.html#UIDeclarativeForTest_Transferring_ownership_by_copying',1,'']]]
 ];

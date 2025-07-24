@@ -74,7 +74,7 @@ var searchData=
   ['dll_20platforms_20windows_20only_71',['DLL platforms Windows only',['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md192',1,'DLL platforms (Windows only)'],['../md_docs_2Runtime_01Dependency_01Resolution.html#autotoc_md193',1,'DLL platforms (Windows only)']]],
   ['do_5fonce_72',['do_once',['../group__useful__macros.html#gacba25f2657a42c1c6a786d5b537b6a7e',1,'kAUI.h']]],
   ['doanimation_73',['doAnimation',['../classAAnimator.html#a05e3cd39caff1e66fe6f10f1529ddfe0',1,'AAnimator::doAnimation()'],['../classAFocusAnimator.html#abfee0916b9a3dfe7f65a00fff1b61fbf',1,'AFocusAnimator::doAnimation()'],['../classARotationAnimator.html#adb674115e58fdccbbfb6bfaf1393ab8f',1,'ARotationAnimator::doAnimation()'],['../classASizeAnimator.html#a299061a40c0d53d20cd15636ae22f3df',1,'ASizeAnimator::doAnimation()'],['../classATranslationAnimator.html#a3a94f3c6604936a6d88fbab8499d3608',1,'ATranslationAnimator::doAnimation()']]],
-  ['documentation_20generation_74',['Documentation generation',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md160',1,'']]],
+  ['documentation_20generation_74',['Documentation generation',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md162',1,'']]],
   ['does_20it_20work_75',['How does it work',['../assets.html#autotoc_md50',1,'']]],
   ['does_20not_20exist_20for_20your_20project_76',['&quot;looks like a config file does not exist for your project&quot;',['../md_docs_2AUI_01Boot.html#AFJKLF',1,'']]],
   ['dologfileaccesssafe_77',['doLogFileAccessSafe',['../classALogger.html#a63c7471e4fe2c2dd96e38f72203d1ec7',1,'ALogger']]],

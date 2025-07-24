@@ -109,30 +109,28 @@ $(function(){initNavTree('RequestedAudioFormat_8h_source.html',''); initResizabl
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include "AUI/Audio/AChannelFormat.h"</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include "AUI/Audio/ASampleFormat.h"</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include "AUI/Audio/AAudioFormat.h"</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include "AUI/Traits/platform.h"</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
-<div class="foldopen" data-end="}" data-start="{" id="foldopen00016">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespaceaui_1_1audio_1_1platform.html">   16</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceaui_1_1audio_1_1platform.html">aui::audio::platform</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">constexpr</span> AChannelFormat requested_channels_format = AChannelFormat::STEREO;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">constexpr</span> std::uint32_t requested_sample_rate = 44100;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">constexpr</span> <a class="code hl_enumeration" href="group__audio.html#gac861b313c4cefad8292de0b19fabbe25">ASampleFormat</a> requested_sample_format = aui::platform::current::is_mobile() ? <a class="code hl_enumvalue" href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25abcd774f891b5f9df7099f3ea75dadf8d">ASampleFormat::I16</a> :</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                                                                                            <a class="code hl_enumvalue" href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25acd843ec248d0b4cac64ece9662ce5c72">ASampleFormat::I24</a>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">constexpr</span> <a class="code hl_struct" href="structAAudioFormat.html">AAudioFormat</a> requested_format {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        .channelCount = requested_channels_format,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        .sampleRate = requested_sample_rate,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        .sampleFormat = requested_sample_format</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include "AUI/Audio/AAudioFormat.h"</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include "AUI/Traits/platform.h"</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" data-end="}" data-start="{" id="foldopen00014">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespaceaui_1_1audio_1_1platform.html">   14</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceaui_1_1audio_1_1platform.html">aui::audio::platform</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">constexpr</span> AChannelFormat requested_channels_format = AChannelFormat::STEREO;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">constexpr</span> std::uint32_t requested_sample_rate = 44100;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">constexpr</span> <a class="code hl_enumeration" href="group__audio.html#gac861b313c4cefad8292de0b19fabbe25">ASampleFormat</a> requested_sample_format = aui::platform::current::is_mobile() ? <a class="code hl_enumvalue" href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25abcd774f891b5f9df7099f3ea75dadf8d">ASampleFormat::I16</a> :</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                                                                                            <a class="code hl_enumvalue" href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25acd843ec248d0b4cac64ece9662ce5c72">ASampleFormat::I24</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">constexpr</span> <a class="code hl_struct" href="structAAudioFormat.html">AAudioFormat</a> requested_format {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        .channelCount = requested_channels_format,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        .sampleRate = requested_sample_rate,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        .sampleFormat = requested_sample_format</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 </div>
-<div class="ttc" id="agroup__audio_html_gac861b313c4cefad8292de0b19fabbe25"><div class="ttname"><a href="group__audio.html#gac861b313c4cefad8292de0b19fabbe25">ASampleFormat</a></div><div class="ttdeci">ASampleFormat</div><div class="ttdoc">Sample formats supported for mixing.</div><div class="ttdef"><b>Definition</b> ASampleFormat.h:12</div></div>
-<div class="ttc" id="agroup__audio_html_ggac861b313c4cefad8292de0b19fabbe25abcd774f891b5f9df7099f3ea75dadf8d"><div class="ttname"><a href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25abcd774f891b5f9df7099f3ea75dadf8d">ASampleFormat::I16</a></div><div class="ttdeci">@ I16</div><div class="ttdoc">Signed 16-bit integer.</div><div class="ttdef"><b>Definition</b> ASampleFormat.h:16</div></div>
-<div class="ttc" id="agroup__audio_html_ggac861b313c4cefad8292de0b19fabbe25acd843ec248d0b4cac64ece9662ce5c72"><div class="ttname"><a href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25acd843ec248d0b4cac64ece9662ce5c72">ASampleFormat::I24</a></div><div class="ttdeci">@ I24</div><div class="ttdoc">Signed 24-bit integer.</div><div class="ttdef"><b>Definition</b> ASampleFormat.h:21</div></div>
-<div class="ttc" id="anamespaceaui_1_1audio_1_1platform_html"><div class="ttname"><a href="namespaceaui_1_1audio_1_1platform.html">aui::audio::platform</a></div><div class="ttdoc">Default output format for the current platform.</div><div class="ttdef"><b>Definition</b> RequestedAudioFormat.h:16</div></div>
-<div class="ttc" id="astructAAudioFormat_html"><div class="ttname"><a href="structAAudioFormat.html">AAudioFormat</a></div><div class="ttdoc">Audio format descriptor.</div><div class="ttdef"><b>Definition</b> AAudioFormat.h:13</div></div>
+<div class="ttc" id="agroup__audio_html_gac861b313c4cefad8292de0b19fabbe25"><div class="ttname"><a href="group__audio.html#gac861b313c4cefad8292de0b19fabbe25">ASampleFormat</a></div><div class="ttdeci">ASampleFormat</div><div class="ttdoc">Sample formats supported for mixing.</div><div class="ttdef"><b>Definition</b> AAudioFormat.h:34</div></div>
+<div class="ttc" id="agroup__audio_html_ggac861b313c4cefad8292de0b19fabbe25abcd774f891b5f9df7099f3ea75dadf8d"><div class="ttname"><a href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25abcd774f891b5f9df7099f3ea75dadf8d">ASampleFormat::I16</a></div><div class="ttdeci">@ I16</div><div class="ttdoc">Signed 16-bit integer.</div><div class="ttdef"><b>Definition</b> AAudioFormat.h:38</div></div>
+<div class="ttc" id="agroup__audio_html_ggac861b313c4cefad8292de0b19fabbe25acd843ec248d0b4cac64ece9662ce5c72"><div class="ttname"><a href="group__audio.html#ggac861b313c4cefad8292de0b19fabbe25acd843ec248d0b4cac64ece9662ce5c72">ASampleFormat::I24</a></div><div class="ttdeci">@ I24</div><div class="ttdoc">Signed 24-bit integer.</div><div class="ttdef"><b>Definition</b> AAudioFormat.h:43</div></div>
+<div class="ttc" id="anamespaceaui_1_1audio_1_1platform_html"><div class="ttname"><a href="namespaceaui_1_1audio_1_1platform.html">aui::audio::platform</a></div><div class="ttdoc">Default output format for the current platform.</div><div class="ttdef"><b>Definition</b> RequestedAudioFormat.h:14</div></div>
+<div class="ttc" id="astructAAudioFormat_html"><div class="ttname"><a href="structAAudioFormat.html">AAudioFormat</a></div><div class="ttdoc">Audio format descriptor.</div><div class="ttdef"><b>Definition</b> AAudioFormat.h:80</div></div>
 </div><!-- fragment --><p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation
