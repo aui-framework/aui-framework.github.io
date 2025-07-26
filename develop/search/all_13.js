@@ -70,5 +70,5 @@ var searchData=
   ['logwriter_67',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
   ['looks_20like_20a_20config_20file_20does_20not_20exist_20for_20your_20project_68',['&quot;looks like a config file does not exist for your project&quot;',['../md_docs_2AUI_01Boot.html#AFJKLF',1,'']]],
   ['loop_69',['loop',['../classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e',1,'AEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568',1,'AScheduler::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()'],['../classIAudioPlayer.html#a670fb06519d7e606d2d757b670ed6287',1,'IAudioPlayer::loop()']]],
-  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md153',1,'']]]
+  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md155',1,'']]]
 ];
