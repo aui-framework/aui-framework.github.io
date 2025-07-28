@@ -53,12 +53,12 @@ var searchData=
   ['link_50',['LINK',['../md_docs_2AUI_01Boot.html#autotoc_md68',1,'']]],
   ['linking_20problems_51',['Linking problems',['../md_docs_2Troubleshoot_01list.html#autotoc_md198',1,'']]],
   ['linux_20based_20desktop_20oses_52',['Linux (-based desktop OSes)',['../linux.html',1,'']]],
-  ['linux_5fdesktop_53',['LINUX_DESKTOP',['../md_docs_2aui__app.html#autotoc_md130',1,'']]],
+  ['linux_5fdesktop_53',['LINUX_DESKTOP',['../md_docs_2aui__app.html#autotoc_md128',1,'']]],
   ['liquidfluid_54',['LiquidFluid',['../structass_1_1Backdrop_1_1LiquidFluid.html',1,'ass::Backdrop']]],
   ['list_55',['List',['../deprecated.html',1,'Deprecated List'],['../example_infinite_lazy_list.html',1,'Infinite Lazy List']]],
   ['list_56',['list',['../structAProcess_1_1ArgStringList.html#a6007a7ed88736a6f8fbe1f0b1d642c80',1,'AProcess::ArgStringList::list'],['../md_docs_2Troubleshoot_01list.html',1,'Troubleshoot list']]],
   ['listdir_57',['listDir',['../classAPath.html#af34c9fd2d0ff55d7c9177a108d8a10c5',1,'APath']]],
-  ['lists_58',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md126',1,'']]],
+  ['lists_58',['Always Use Trailing Comma in Initializer Lists',['../md_docs_2clang-format.html#autotoc_md135',1,'']]],
   ['lists_59',['Reactive lists',['../classAForEachUI.html#UIDeclarativeForTest_Reactive_lists',1,'']]],
   ['load_60',['load',['../classAProgramModule.html#aad786882f3306ae28642e2b2c7148393',1,'AProgramModule']]],
   ['loadexception_61',['LoadException',['../classAProgramModule_1_1LoadException.html',1,'AProgramModule']]],
@@ -70,5 +70,5 @@ var searchData=
   ['logwriter_67',['LogWriter',['../structALogger_1_1LogWriter.html',1,'ALogger']]],
   ['looks_20like_20a_20config_20file_20does_20not_20exist_20for_20your_20project_68',['&quot;looks like a config file does not exist for your project&quot;',['../md_docs_2AUI_01Boot.html#AFJKLF',1,'']]],
   ['loop_69',['loop',['../classAEventLoop.html#a0012f3f10188a0e93cf567c7018dae9e',1,'AEventLoop::loop()'],['../classIEventLoop.html#a790b37b3115b15f1224c85749d352d04',1,'IEventLoop::loop()'],['../classAScheduler.html#aab5b98be54a6068d22442b48d1c8f568',1,'AScheduler::loop()'],['../classAEmbedAuiWrap.html#a30230f25152db127b574b4e638fb01d8',1,'AEmbedAuiWrap::loop()'],['../classAWindowManager.html#a778f4e6eac766f892f29dfb44d69700a',1,'AWindowManager::loop()'],['../classIAudioPlayer.html#a670fb06519d7e606d2d757b670ed6287',1,'IAudioPlayer::loop()']]],
-  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md156',1,'']]]
+  ['low_20complexity_70',['2 Points - Low Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md155',1,'']]]
 ];
