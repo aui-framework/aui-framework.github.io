@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['h_0',['h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h']]],
+  ['h_0',['h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h'],['../example_minimal_ui_template_xmake.html#autotoc_md277',1,'src/MainWindow.h']]],
   ['handle_1',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classaui_1_1win32_1_1Handle.html',1,'aui::win32::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
   ['handlepointermove_2',['handlePointerMove',['../classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12',1,'ATouchScroller']]],
   ['handlepointerpressed_3',['handlePointerPressed',['../classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14',1,'ATouchScroller']]],
@@ -30,7 +30,7 @@ var searchData=
   ['hidden_27',['HIDDEN',['../group__ass__properties.html#gga0b5c15e7f44eba2c0eb1705539014892a347e628a8f72626a0611ef842fe9d304',1,'AOverflow.h']]],
   ['hidden_5ffrom_5fthis_28',['HIDDEN_FROM_THIS',['../group__ass__properties.html#gga0b5c15e7f44eba2c0eb1705539014892a132f85d5b4f206b0cf9404c9b895739d',1,'AOverflow.h']]],
   ['high_20complexity_29',['High Complexity',['../md_docs_2Contributing_01to_01AUI.html#autotoc_md157',1,'5 Points - High Complexity'],['../md_docs_2Contributing_01to_01AUI.html#autotoc_md158',1,'8 Points - Very High Complexity']]],
-  ['highlight_20redraw_20requests_30',['Highlight redraw requests',['../md_docs_2Render_01to_01texture.html#autotoc_md188',1,'']]],
+  ['highlight_20redraw_20requests_30',['Highlight redraw requests',['../md_docs_2Render_01to_01texture.html#autotoc_md187',1,'']]],
   ['highlightredrawrequests_31',['highlightRedrawRequests',['../structAWindowBase_1_1Profiling.html#a2cd15cf7e42b198768ce47256e93c2d6',1,'AWindowBase::Profiling']]],
   ['highlightview_32',['highlightView',['../structAWindowBase_1_1Profiling.html#a75f4cfd6345308429de4c6374784200f',1,'AWindowBase::Profiling']]],
   ['home_33',['HOME',['../classAPath.html#a38597cac45847bf6ce74272ea0b72ef3a3c86b6ae365e77ad726cfebf62d7077a',1,'APath']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['your_20app_0',['Packaging Your App',['../md_docs_2Packaging_01Your_01App.html',1,'']]]
+  ['xmake_0',['Minimal UI Template XMake',['../example_minimal_ui_template_xmake.html',1,'']]]
 ];

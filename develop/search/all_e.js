@@ -70,7 +70,7 @@ var searchData=
   ['gettempworkdir_67',['getTempWorkDir',['../classAUpdater.html#a86a27fd5f850e57c227f6248e7a0bbfe',1,'AUpdater']]],
   ['gettext_68',['getText',['../classACursorSelectable.html#a96d0b28b41e0264a89ab704be6d0ac22',1,'ACursorSelectable::getText()'],['../classAAbstractTextField.html#a86143b2eaa99b16bd2199674360eeb07',1,'AAbstractTextField::getText()'],['../classATextArea.html#a9b7a8205e326af6545b470a047f155c1',1,'ATextArea::getText()']]],
   ['gettextlayouthelper_69',['getTextLayoutHelper',['../classIRenderer_1_1IMultiStringCanvas.html#ad38290ef7975caf9e5b4f39ca30801a8',1,'IRenderer::IMultiStringCanvas']]],
-  ['getting_20started_70',['Getting started',['../group__updater.html#autotoc_md275',1,'']]],
+  ['getting_20started_70',['Getting started',['../group__updater.html#autotoc_md284',1,'']]],
   ['getting_20started_20with_20aui_71',['Getting started with AUI',['../md_docs_2Getting_01started_01with_01AUI.html',1,'']]],
   ['gettotalfieldhorizontal_72',['getTotalFieldHorizontal',['../classAView.html#a60f404f669341de12d919f4bd3cff824',1,'AView']]],
   ['gettotalfieldsize_73',['getTotalFieldSize',['../classAView.html#a57c70222033ebbbf806553d0fc3094ba',1,'AView']]],
