@@ -63,7 +63,7 @@ var searchData=
   ['forceupdatecursor_60',['forceUpdateCursor',['../classAWindow.html#a3bb8a070ce8c1530d7419ace2957b72a',1,'AWindow::forceUpdateCursor()'],['../classAWindowBase.html#af82e5cc86f00e157dba120ec150d2ce5',1,'AWindowBase::forceUpdateCursor()']]],
   ['forking_20aui_61',['Forking AUI',['../md_docs_2Forking_01AUI.html',1,'']]],
   ['format_62',['format',['../md_docs_2clang-format.html#CLANG_FORMAT',1,'AUI&apos;s .clang-format'],['../md_docs_2clang-format.html',1,'clang-format'],['../classAImageView.html#aeb5af72550990e5d3d0b7c496dac8f56',1,'AImageView::format()']]],
-  ['format_20off_20on_63',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md117',1,'']]],
+  ['format_20off_20on_63',['Use clang-format off/on',['../md_docs_2clang-format.html#autotoc_md120',1,'']]],
   ['formatetcenumerator_64',['FormatEtcEnumerator',['../classFormatEtcEnumerator.html',1,'']]],
   ['formatter_3c_20ass_3a_3aunset_5fwrap_3c_20t_20_3e_20_3e_65',['formatter&lt; ass::unset_wrap&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01ass_1_1unset__wrap_3_01T_01_4_01_4.html',1,'fmt']]],
   ['formatter_3c_20astring_20_3e_66',['formatter&lt; AString &gt;',['../structfmt_1_1formatter_3_01AString_01_4.html',1,'fmt']]],
