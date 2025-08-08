@@ -291,6 +291,30 @@ $(function(){initNavTree('unset_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> o;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#if defined(FMT_VERSION) &amp;&amp; (FMT_VERSION &gt;= 100000)</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> Char&gt;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keyword">struct </span>fmt::formatter&lt;ass::unset_wrap&lt;T&gt;, Char&gt; {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    fmt::formatter&lt;T, Char&gt; inner;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="comment">// Parse format specs like {:&gt;10}, {:.2f}, etc.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ParseContext&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> parse(ParseContext&amp; ctx) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">return</span> inner.parse(ctx);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="comment">// Format either the value (if set) or the "&lt;unset&gt;" fallback</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> FormatContext&gt;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">auto</span> format(<span class="keyword">const</span> ass::unset_wrap&lt;T&gt;&amp; value, FormatContext&amp; ctx)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">if</span> (value) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">return</span> inner.format(*value, ctx);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> fallback = std::basic_string_view&lt;Char&gt;(FMT_STRING(<span class="stringliteral">"&lt;unset&gt;"</span>));</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="keywordflow">return</span> fmt::format_to(ctx.out(), <span class="stringliteral">"{}"</span>, fallback);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>};</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agroup__useful__macros_html_gaaea31a73fb11ef46f539d8292b33167f"><div class="ttname"><a href="group__useful__macros.html#gaaea31a73fb11ef46f539d8292b33167f">AUI_ASSERT</a></div><div class="ttdeci">#define AUI_ASSERT(condition)</div><div class="ttdoc">Asserts that the passed condition evaluates to true.</div><div class="ttdef"><b>Definition</b> Assert.h:55</div></div>
 <div class="ttc" id="astructass_1_1unset__wrap_1_1unset__wrap__tag_html"><div class="ttname"><a href="structass_1_1unset__wrap_1_1unset__wrap__tag.html">ass::unset_wrap::unset_wrap_tag</a></div><div class="ttdef"><b>Definition</b> unset.h:100</div></div>
 <div class="ttc" id="astructass_1_1unset__wrap_html"><div class="ttname"><a href="structass_1_1unset__wrap.html">ass::unset_wrap</a></div><div class="ttdef"><b>Definition</b> unset.h:28</div></div>
