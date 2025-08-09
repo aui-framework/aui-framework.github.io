@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['h_0',['h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h'],['../example_minimal_ui_template_xmake.html#autotoc_md278',1,'src/MainWindow.h']]],
+  ['h_0',['h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h'],['../example_minimal_ui_template_xmake.html#autotoc_md277',1,'src/MainWindow.h']]],
   ['handle_1',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classaui_1_1win32_1_1Handle.html',1,'aui::win32::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
   ['handlepointermove_2',['handlePointerMove',['../classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12',1,'ATouchScroller']]],
   ['handlepointerpressed_3',['handlePointerPressed',['../classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14',1,'ATouchScroller']]],
@@ -10,7 +10,7 @@ var searchData=
   ['handlesnonmousenavigation_7',['handlesNonMouseNavigation',['../classAView.html#a6cca09e70e63cc0bbd4161e5d352d102',1,'AView']]],
   ['handlestartup_8',['handleStartup',['../classAUpdater.html#a8325386bf22a7f2465531a0e420f3231',1,'AUpdater']]],
   ['handlewaitforprocess_9',['handleWaitForProcess',['../classAUpdater.html#aa3ccbc2111ed70bbe3e980e01d2830f1',1,'AUpdater']]],
-  ['handling_10',['Event handling',['../example_minesweeper_game.html#autotoc_md232',1,'']]],
+  ['handling_10',['Event handling',['../example_minesweeper_game.html#autotoc_md238',1,'']]],
   ['handling_20with_20signal_20slot_11',['Event handling with signal-slot',['../md_docs_2UI_01Building_01Overview.html#autotoc_md203',1,'']]],
   ['hasanimationfinished_12',['hasAnimationFinished',['../classGifImageFactory.html#ae378f250bebcd9dc047b43b618b03e20',1,'GifImageFactory::hasAnimationFinished()'],['../classIAnimatedImageFactory.html#a6d61d339e27c37c2ec84ac81fa42d09c',1,'IAnimatedImageFactory::hasAnimationFinished()'],['../classWebpImageFactory.html#a2019c89ddc804ea4e2712d13cd5e7f96',1,'WebpImageFactory::hasAnimationFinished()']]],
   ['hash_3c_20abytebufferview_20_3e_13',['hash&lt; AByteBufferView &gt;',['../structstd_1_1hash_3_01AByteBufferView_01_4.html',1,'std']]],
@@ -23,7 +23,7 @@ var searchData=
   ['hasselection_20',['hasSelection',['../classACursorSelectable.html#a8c7d2652da1ada52cce28464d152ee03',1,'ACursorSelectable']]],
   ['hasvalue_21',['hasValue',['../classaui_1_1impl_1_1future_1_1Future.html#a11ec964f2ce8f8726b37f0aa5f7ecbb0',1,'aui::impl::future::Future']]],
   ['height_22',['height',['../classAImageView.html#a4c590b67b23884af4e4afd85fe8e7d1c',1,'AImageView']]],
-  ['hello_20world_23',['Basic hello world',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md172',1,'']]],
+  ['hello_20world_23',['Basic hello world',['../md_docs_2Getting_01started_01with_01AUI.html#autotoc_md171',1,'']]],
   ['hello_20world_20example_24',['Console Hello World Example',['../example_console_hello_world_example.html',1,'']]],
   ['helper_25',['Helper',['../structaui_1_1render_1_1brush_1_1gradient_1_1Helper.html',1,'aui::render::brush::gradient']]],
   ['hexable_26',['Hexable',['../structATokenizer_1_1Hexable.html',1,'ATokenizer']]],
