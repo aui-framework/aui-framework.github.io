@@ -496,9 +496,13 @@ Using AUI distributions with <code>find_package</code><a class="aui-toc-hash" hr
 <div class="line">set(AUIB_VALIDATION_LEVEL 2 CACHE STRING <span class="stringliteral">"Package validation level"</span>)</div>
 <div class="line"> </div>
 <div class="line">include(FetchContent)</div>
+<div class="line"><span class="keywordflow">if</span> (DEFINED AUI_TEST_DEPLOY_REPO)</div>
+<div class="line">FetchContent_Declare(aui</div>
+<div class="line">    <a class="code hl_enumvalue" href="group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d">URL</a> ${AUI_TEST_DEPLOY_REPO}/releases/download/${AUI_TEST_DEPLOY_VERSION}/aui_linux-gnu-x86_64-<span class="keyword">static</span>-debug.tar.gz)</div>
+<div class="line"><span class="keywordflow">else</span>()</div>
 <div class="line">FetchContent_Declare(aui</div>
 <div class="line">    <a class="code hl_enumvalue" href="group__views.html#gga2795f63a52f7a5f028abc780bf64758fae6b391a8d2c4d45902a23a8b6585703d">URL</a> https:<span class="comment">//github.com/aui-framework/aui/releases/download/${AUI_TEST_DEPLOY_VERSION}/aui_linux-gnu-x86_64-static-debug.tar.gz)</span></div>
-<div class="line"> </div>
+<div class="line">endif()</div>
 <div class="line">FetchContent_MakeAvailable(aui)</div>
 <div class="line">FetchContent_GetProperties(aui</div>
 <div class="line">        SOURCE_DIR aui_ROOT</div>
