@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['h_0',['h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h'],['../example_minimal_ui_template_xmake.html#autotoc_md277',1,'src/MainWindow.h']]],
+  ['h_0',['h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h'],['../example_minimal_ui_template_xmake.html#autotoc_md278',1,'src/MainWindow.h']]],
   ['handle_1',['Handle',['../classASlider_1_1Handle.html',1,'ASlider::Handle'],['../classaui_1_1win32_1_1Handle.html',1,'aui::win32::Handle'],['../classIEventLoop_1_1Handle.html',1,'IEventLoop::Handle']]],
   ['handlepointermove_2',['handlePointerMove',['../classATouchScroller.html#afb5a7b8c8db5c3c03f9402b83ebfee12',1,'ATouchScroller']]],
   ['handlepointerpressed_3',['handlePointerPressed',['../classATouchScroller.html#aba5ec6ba2d8ba96c59efa09f6722fc14',1,'ATouchScroller']]],

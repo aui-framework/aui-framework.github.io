@@ -98,9 +98,73 @@ $(function(){initNavTree('classgl_1_1Texture2DArray.html',''); initResizable(tru
 </div>
 </div>
 <div class="header">
-<div class="headertitle"><div class="title">gl::Texture2DArray Class Reference</div></div>
+<div class="headertitle"><div class="title">gl::Texture2DArray Class Reference<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
 </div><!--header-->
-<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/GL/Texture2DArray.h#L20"></b>
+<div class="contents aui-toc-contents"><div class="contents-rails-left"><b aui-src="aui.views/src/AUI/GL/Texture2DArray.h#L30"></b>
+<p>Represents a 2D texture array.  
+ <a href="#details">More...</a></p>
+<p><code>#include &lt;<a class="el" href="Texture2DArray_8h_source.html">AUI/GL/Texture2DArray.h</a>&gt;</code></p>
+<a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A 2D texture array is a texture that contains multiple 2D textures, each accessible by its index. It's useful for storing and accessing multiple textures with the same dimensions.</p>
+<p>After creating a 2D texture array, you can use <code>update</code> to update a single texture in the array. You cannot update dimensions of the texture array, so you should create a new one if you want to change the size of the texture array. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9f77bf8a39ecedf6397d34b7d5a1030f" name="a9f77bf8a39ecedf6397d34b7d5a1030f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f77bf8a39ecedf6397d34b7d5a1030f">◆ </a></span>Texture2DArray()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">gl::Texture2DArray::Texture2DArray </td>
+<td>(</td>
+<td class="paramtype">glm::uvec2</td> <td class="paramname"><span class="paramname"><em>textureSize</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">unsigned</td> <td class="paramname"><span class="paramname"><em>textureCount</em></span> )</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">textureSize</td><td>The size of the 2D texture (width and height). </td></tr>
+<tr><td class="paramname">textureCount</td><td>The number of layers in the texture array.</td></tr>
+</table>
+</dd>
+</dl>
+<p>This function allocates storage for a 2D texture array with the specified size and texture count. It binds the texture and uses <code>glTexStorage3D</code> to allocate the storage. </p>
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<p><a href="classgl_1_1Texture2DArray-members.html">&gt; All members, including inherited</a></p>
+<a id="af3b0608aee5ea8ae706b16814b048a59" name="af3b0608aee5ea8ae706b16814b048a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b0608aee5ea8ae706b16814b048a59">◆ </a></span>update()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void gl::Texture2DArray::update </td>
+<td>(</td>
+<td class="paramtype">unsigned</td> <td class="paramname"><span class="paramname"><em>texture</em></span>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="classAImageView.html">AImageView</a></td> <td class="paramname"><span class="paramname"><em>image</em></span> )</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">texture</td><td>The index of the texture to be updated. </td></tr>
+<tr><td class="paramname">image</td><td>The image to be used as the new texture.</td></tr>
+</table>
+</dd>
+</dl>
+<p>This function binds the texture and uploads the provided image as a texture in the 2D texture array. It uses <code>glTexSubImage3D</code> to update the texture.</p>
+<p>This function expects the image to have the same size as the texture size initialized earlier, otherwise, an assertion error is thrown. </p>
+</div>
+</div>
 <p class="footer-inner">
     © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their
     respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation

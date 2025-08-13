@@ -17,7 +17,7 @@ var searchData=
   ['variables_14',['Variables',['../md_docs_2AUI_01Boot.html#AUIB_VARIABLES',1,'']]],
   ['variables_15',['variables',['../md_docs_2AUI_01configure_01flags.html#autotoc_md88',1,'Common variables'],['../structaui_1_1reflect_1_1member.html#autotoc_md8',1,'Fields (member variables)']]],
   ['variant_16',['Variant',['../structaui_1_1dbus_1_1Variant.html',1,'aui::dbus']]],
-  ['vectorization_20using_20inkscape_17',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md197',1,'']]],
+  ['vectorization_20using_20inkscape_17',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md195',1,'']]],
   ['vendor_18',['VENDOR',['../md_docs_2aui__app.html#autotoc_md123',1,'']]],
   ['version_19',['VERSION',['../md_docs_2AUI_01Boot.html#autotoc_md63',1,'VERSION'],['../md_docs_2aui__app.html#autotoc_md125',1,'VERSION']]],
   ['version_20',['Parsing version',['../structaui_1_1updater_1_1Semver.html#VersionTest_Parsing_version',1,'']]],
@@ -81,5 +81,5 @@ var searchData=
   ['visitheader_78',['visitHeader',['../classIXmlDocumentVisitor.html#a057d703edf2a9c14025cedd617a30c25',1,'IXmlDocumentVisitor']]],
   ['visitsviewrecursive_79',['visitsViewRecursive',['../classAViewContainerBase.html#a4d25bee475e6413e3d365570f046cc4c',1,'AViewContainerBase']]],
   ['volume_80',['volume',['../classIAudioPlayer.html#af70dd41b83f47eb594ecd0449c1468c5',1,'IAudioPlayer']]],
-  ['vscode_20c_5fcpp_5fproperties_20json_81',['.vscode/c_cpp_properties.json',['../example_minimal_ui_template_xmake.html#autotoc_md280',1,'']]]
+  ['vscode_20c_5fcpp_5fproperties_20json_81',['.vscode/c_cpp_properties.json',['../example_minimal_ui_template_xmake.html#autotoc_md281',1,'']]]
 ];
