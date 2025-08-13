@@ -57,7 +57,7 @@ var searchData=
   ['using_20aui_5fwith_5fstyle_54',['Using AUI_WITH_STYLE',['../group__ass.html#autotoc_md14',1,'']]],
   ['using_20container_20stylesheet_55',['Using container stylesheet',['../group__ass.html#autotoc_md13',1,'']]],
   ['using_20global_20style_56',['Using global style',['../group__ass.html#autotoc_md12',1,'']]],
-  ['using_20inkscape_57',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md195',1,'']]],
+  ['using_20inkscape_57',['Vectorization using Inkscape',['../md_docs_2Setting_01App_01Icon.html#autotoc_md197',1,'']]],
   ['using_20setcustomstyle_58',['Using setCustomStyle',['../group__ass.html#autotoc_md15',1,'']]],
   ['uv1_59',['uv1',['../structATexturedBrush.html#a4e72fb93e337fdcf314f5c6a2cc21c16',1,'ATexturedBrush']]],
   ['uv2_60',['uv2',['../structATexturedBrush.html#a3c7946b2d5bf403f1b20dead1df337fc',1,'ATexturedBrush']]]
