@@ -6,7 +6,7 @@ var searchData=
   ['macros_3',['Macros',['../md_docs_2Macros.html',1,'']]],
   ['macros_4',['macros',['../md_docs_2Code_01style_01and_01recommendations.html#autotoc_md141',1,'Template metaprogramming and macros'],['../group__useful__macros.html',1,'Useful macros']]],
   ['main_5',['main',['../classAThread.html#a34af087795d8556a11516688e1de4b72',1,'AThread']]],
-  ['main_20cpp_6',['main cpp',['../example_minimal_ui_template.html#autotoc_md265',1,'src/main.cpp'],['../example_minimal_ui_template_with_assets.html#autotoc_md272',1,'src/main.cpp'],['../example_minimal_ui_template_xmake.html#autotoc_md279',1,'src/main.cpp']]],
+  ['main_20cpp_6',['main cpp',['../example_minimal_ui_template.html#autotoc_md268',1,'src/main.cpp'],['../example_minimal_ui_template_with_assets.html#autotoc_md272',1,'src/main.cpp'],['../example_minimal_ui_template_xmake.html#autotoc_md279',1,'src/main.cpp']]],
   ['mainwindow_20class_7',['MainWindow class',['../example_notes_app.html#autotoc_md238',1,'']]],
   ['mainwindow_20cpp_8',['MainWindow cpp',['../example_minimal_ui_template.html#autotoc_md264',1,'src/MainWindow.cpp'],['../example_minimal_ui_template_with_assets.html#autotoc_md271',1,'src/MainWindow.cpp'],['../example_minimal_ui_template_xmake.html#autotoc_md278',1,'src/MainWindow.cpp']]],
   ['mainwindow_20h_9',['MainWindow h',['../example_minimal_ui_template.html#autotoc_md263',1,'src/MainWindow.h'],['../example_minimal_ui_template_with_assets.html#autotoc_md270',1,'src/MainWindow.h'],['../example_minimal_ui_template_xmake.html#autotoc_md277',1,'src/MainWindow.h']]],
