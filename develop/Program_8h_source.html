@@ -206,18 +206,18 @@ $(function(){initNavTree('Program_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    uint32_t mVertex = 0;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    uint32_t mFragment = 0;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">struct </span>UniformCache {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        int32_t <span class="keywordtype">id</span> = UniformState::UNINITIALIZED;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">using </span>Value = std::variant&lt;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            std::nullopt_t, int, float, double, glm::vec2, glm::vec3, glm::vec4, glm::mat3, glm::mat4, glm::dmat4&gt;;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        Value lastValue = std::nullopt;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    };</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">mutable</span> std::array&lt;UniformCache, 64&gt; mUniforms;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">class </span>UniformState {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">enum</span> Value { UNINITIALIZED = -2, DOES_NOT_EXIST = -1 };</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    };</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">class </span>UniformState {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">enum</span> Value { UNINITIALIZED = -2, DOES_NOT_EXIST = -1 };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    };</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">struct </span>UniformCache {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        int32_t <span class="keywordtype">id</span> = UniformState::UNINITIALIZED;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">using </span>Value = std::variant&lt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            std::nullopt_t, int, float, double, glm::vec2, glm::vec3, glm::vec4, glm::mat3, glm::mat4, glm::dmat4&gt;;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        Value lastValue = std::nullopt;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    };</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">mutable</span> std::array&lt;UniformCache, 64&gt; mUniforms;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> sameAsCache(<span class="keyword">const</span> gl::Program::Uniform&amp; uniform, T value)<span class="keyword"> const </span>{</div>
