@@ -1,0 +1,2469 @@
+<!--
+  ~ AUI Framework - Declarative UI toolkit for modern C++20
+  ~ Copyright (C) 2020-2025 Alex2772 and Contributors
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cross-platform base for C++ UI apps">
+      
+      
+        <meta name="author" content="Alex2772">
+      
+      
+        <link rel="canonical" href="https://aui-framework.github.io/aview/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>AView - AUI Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<!-- Add announcement here, including arbitrary HTML -->
+We are migrating to a new documentation engine. Please report presentation issues to <a href="https://github.com/aui-framework/aui/issues/540">#540</a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AUI Framework" class="md-header__button md-logo" aria-label="AUI Framework" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AUI Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AView
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aui-framework/aui" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aui-framework/aui
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AUI Framework" class="md-nav__button md-logo" aria-label="AUI Framework" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AUI Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aui-framework/aui" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aui-framework/aui
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started with AUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aui-assets/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../ui-building-overview/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    UI Architecture
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../useful_views/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Views
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../ass/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Styling
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../windows/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Platform Specifics
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aui-command-line-arguments/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../aui.boot/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-fields-and-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public fields and Signals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public fields and Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#AView::clicked" class="md-nav__link">
+    <span class="md-ellipsis">
+      clicked
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::clickedButton" class="md-nav__link">
+    <span class="md-ellipsis">
+      clickedButton
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::clickedRight" class="md-nav__link">
+    <span class="md-ellipsis">
+      clickedRight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::clickedRightOrLongPressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      clickedRightOrLongPressed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::focusState" class="md-nav__link">
+    <span class="md-ellipsis">
+      focusState
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::geometryChanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      geometryChanged
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::keyPressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      keyPressed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::keyReleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      keyReleased
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::mAss" class="md-nav__link">
+    <span class="md-ellipsis">
+      mAss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::mCursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      mCursor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::mCustomStyleRule" class="md-nav__link">
+    <span class="md-ellipsis">
+      mCustomStyleRule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::mParent" class="md-nav__link">
+    <span class="md-ellipsis">
+      mParent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::mPosition" class="md-nav__link">
+    <span class="md-ellipsis">
+      mPosition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::redrawn" class="md-nav__link">
+    <span class="md-ellipsis">
+      redrawn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::scrolled" class="md-nav__link">
+    <span class="md-ellipsis">
+      scrolled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::viewGraphSubtreeChanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      viewGraphSubtreeChanged
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#AView::addAssName" class="md-nav__link">
+    <span class="md-ellipsis">
+      addAssName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::capturesFocus" class="md-nav__link">
+    <span class="md-ellipsis">
+      capturesFocus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::click" class="md-nav__link">
+    <span class="md-ellipsis">
+      click
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::consumesClick" class="md-nav__link">
+    <span class="md-ellipsis">
+      consumesClick
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::debugString" class="md-nav__link">
+    <span class="md-ellipsis">
+      debugString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      enabled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::expanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      expanding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::extraStylesheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      extraStylesheet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      focus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getBorderRadius" class="md-nav__link">
+    <span class="md-ellipsis">
+      getBorderRadius
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getCenterPointInWindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCenterPointInWindow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getContentMinimumHeight" class="md-nav__link">
+    <span class="md-ellipsis">
+      getContentMinimumHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getContentMinimumSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getContentMinimumSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getContentMinimumWidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      getContentMinimumWidth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getContentSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getContentSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getCursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      getCursor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getFixedSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getFixedSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getFloating" class="md-nav__link">
+    <span class="md-ellipsis">
+      getFloating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getMargin" class="md-nav__link">
+    <span class="md-ellipsis">
+      getMargin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getMaxSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getMaxSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getMinSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getMinSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getMinimumSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getMinimumSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getMinimumSizePlusMargin" class="md-nav__link">
+    <span class="md-ellipsis">
+      getMinimumSizePlusMargin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getOverflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      getOverflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getOverflowMask" class="md-nav__link">
+    <span class="md-ellipsis">
+      getOverflowMask
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getPadding" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPadding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getParent" class="md-nav__link">
+    <span class="md-ellipsis">
+      getParent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getPosition" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPosition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getPositionInWindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      getPositionInWindow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getTotalFieldHorizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTotalFieldHorizontal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getTotalFieldSize" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTotalFieldSize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getTotalFieldVertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTotalFieldVertical
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getTotalOccupiedHeight" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTotalOccupiedHeight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getTotalOccupiedWidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      getTotalOccupiedWidth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::getWindow" class="md-nav__link">
+    <span class="md-ellipsis">
+      getWindow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::handlesNonMouseNavigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      handlesNonMouseNavigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::hasIndirectParent" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasIndirectParent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::invalidateAllStyles" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalidateAllStyles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::invalidateAssHelper" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalidateAssHelper
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::invalidateStateStyles" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalidateStateStyles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::markMinContentSizeInvalid" class="md-nav__link">
+    <span class="md-ellipsis">
+      markMinContentSizeInvalid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::onClickPrevented" class="md-nav__link">
+    <span class="md-ellipsis">
+      onClickPrevented
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::onGesture" class="md-nav__link">
+    <span class="md-ellipsis">
+      onGesture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::onPointerMove" class="md-nav__link">
+    <span class="md-ellipsis">
+      onPointerMove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::onPointerPressed" class="md-nav__link">
+    <span class="md-ellipsis">
+      onPointerPressed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::onPointerReleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      onPointerReleased
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::onScroll" class="md-nav__link">
+    <span class="md-ellipsis">
+      onScroll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      pack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::position" class="md-nav__link">
+    <span class="md-ellipsis">
+      position
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::postRender" class="md-nav__link">
+    <span class="md-ellipsis">
+      postRender
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::redraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      redraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::removeAssName" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeAssName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::render" class="md-nav__link">
+    <span class="md-ellipsis">
+      render
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setAssName" class="md-nav__link">
+    <span class="md-ellipsis">
+      setAssName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setExpanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      setExpanding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setExtraStylesheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      setExtraStylesheet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setFloating" class="md-nav__link">
+    <span class="md-ellipsis">
+      setFloating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setGeometry" class="md-nav__link">
+    <span class="md-ellipsis">
+      setGeometry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setMargin" class="md-nav__link">
+    <span class="md-ellipsis">
+      setMargin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setPadding" class="md-nav__link">
+    <span class="md-ellipsis">
+      setPadding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setSizeForced" class="md-nav__link">
+    <span class="md-ellipsis">
+      setSizeForced
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::setSkipUntilLayoutUpdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      setSkipUntilLayoutUpdate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::size" class="md-nav__link">
+    <span class="md-ellipsis">
+      size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      visibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AView::wantsTouchscreenKeyboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      wantsTouchscreenKeyboard
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aview">AView<a class="headerlink" href="#aview" title="Permanent link">#</a></h1>
+<p>Base class of all UI objects.
+<a href="#detailed-description">More...</a></p>
+<table>
+<tr><td>Header:</td><td><code>#include &lt;AUI/View/AView.h&gt;</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::views)</code></td></tr>
+</table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
+<p>A class that describes the minimum unit that can be placed in a container (including a window) that takes up
+ some space on the screen, responds to changes in size, position, moving the cursor, pressing / releasing
+ keys and buttons, mouse wheel, etc...</p>
+<p>Analogue to Qt's QWidget, Android's View.</p>
+<h2 id="public-fields-and-signals">Public fields and Signals<a class="headerlink" href="#public-fields-and-signals" title="Permanent link">#</a></h2>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::clicked="AView::clicked" id="AView::clicked">clicked<a class="headerlink" href="#AView::clicked" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">clicked</span></code></p>
+<p>Left mouse button clicked.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::clickedButton="AView::clickedButton" id="AView::clickedButton">clickedButton<a class="headerlink" href="#AView::clickedButton" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n"><a href="../apointerindex/">APointerIndex</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">clickedButton</span></code></p>
+<p>Some mouse button clicked.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::clickedRight="AView::clickedRight" id="AView::clickedRight">clickedRight<a class="headerlink" href="#AView::clickedRight" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">clickedRight</span></code></p>
+<p>Right mouse button clicked.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::clickedRightOrLongPressed="AView::clickedRightOrLongPressed" id="AView::clickedRightOrLongPressed">clickedRightOrLongPressed<a class="headerlink" href="#AView::clickedRightOrLongPressed" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">clickedRightOrLongPressed</span></code></p>
+<p>Right mouse button clicked or long press gesture applied.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::focusState="AView::focusState" id="AView::focusState">focusState<a class="headerlink" href="#AView::focusState" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">focusState</span></code></p>
+<p>Focus state changed.</p>
+<p>first whether focused or not.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::geometryChanged="AView::geometryChanged" id="AView::geometryChanged">geometryChanged<a class="headerlink" href="#AView::geometryChanged" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="p">,</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">geometryChanged</span></code></p>
+<p>Geometry (position and size) changed.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::keyPressed="AView::keyPressed" id="AView::keyPressed">keyPressed<a class="headerlink" href="#AView::keyPressed" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n">AInput</span><span class="o">::</span><span class="n">Key</span><span class="o">&gt;</span><span class="w"> </span><span class="n">keyPressed</span></code></p>
+<p>Keyboard key pressed.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::keyReleased="AView::keyReleased" id="AView::keyReleased">keyReleased<a class="headerlink" href="#AView::keyReleased" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n">AInput</span><span class="o">::</span><span class="n">Key</span><span class="o">&gt;</span><span class="w"> </span><span class="n">keyReleased</span></code></p>
+<p>Keyboard key released.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::mAss="AView::mAss" id="AView::mAss">mAss<a class="headerlink" href="#AView::mAss" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n"><a href="../ass/">ass</a></span><span class="o">::</span><span class="n">prop</span><span class="o">::</span><span class="n">IPropertyBase</span><span class="o">*</span><span class="p">,</span><span class="kt">int</span><span class="p">(</span><span class="n"><a href="../ass/">ass</a></span><span class="o">::</span><span class="n">prop</span><span class="o">::</span><span class="n">PropertySlot</span><span class="o">::</span><span class="n">COUNT</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mAss</span></code></p>
+<p>Drawing list, or baking drawing commands so that you don't have to parse the ASS every time.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::mCursor="AView::mCursor" id="AView::mCursor">mCursor<a class="headerlink" href="#AView::mCursor" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../acursor/">ACursor</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCursor</span></code></p>
+<p>Determines shape which should pointer take when it's above this AView.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::mCustomStyleRule="AView::mCustomStyleRule" id="AView::mCustomStyleRule">mCustomStyleRule<a class="headerlink" href="#AView::mCustomStyleRule" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../ass/">ass</a></span><span class="o">::</span><span class="n">PropertyListRecursive</span><span class="w"> </span><span class="n">mCustomStyleRule</span></code></p>
+<p>Custom ASS Rules</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::mParent="AView::mParent" id="AView::mParent">mParent<a class="headerlink" href="#AView::mParent" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../aviewcontainerbase/">AViewContainerBase</a></span><span class="o">*</span><span class="w"> </span><span class="n">mParent</span></code></p>
+<p>Parent AView.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::mPosition="AView::mPosition" id="AView::mPosition">mPosition<a class="headerlink" href="#AView::mPosition" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">mPosition</span></code></p>
+<p>Top left corner's position relative to top left corner's position of the parent AView.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::redrawn="AView::redrawn" id="AView::redrawn">redrawn<a class="headerlink" href="#AView::redrawn" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">redrawn</span></code></p>
+<p>View is painted onto the some surface.</p>
+<p>This signal is emitted when view's AView::postRender() is called. This signal can be used to keep track if view
+is visible; however, AUI performs some optimizations when painting views. For example, a view located somewhere
+in <a href="../ascrollarea/">AScrollArea</a> is not painted until it is outside of AScrollArea's frame or at least barely reaches it.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::scrolled="AView::scrolled" id="AView::scrolled">scrolled<a class="headerlink" href="#AView::scrolled" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scrolled</span></code></p>
+<p>Scroll event.</p>
+<hr />
+<div style="position:absolute;opacity:0">
+<h3 AView::viewGraphSubtreeChanged="AView::viewGraphSubtreeChanged" id="AView::viewGraphSubtreeChanged">viewGraphSubtreeChanged<a class="headerlink" href="#AView::viewGraphSubtreeChanged" title="Permanent link">#</a></h3>
+</div>
+<p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">viewGraphSubtreeChanged</span></code></p>
+<p>onViewGraphSubtreeChanged()</p>
+<h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
+<div style="position:absolute;opacity:0">
+<h3 AView::addAssName_="AView::addAssName()" id="AView::addAssName">addAssName<a class="headerlink" href="#AView::addAssName" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">addAssName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">assName</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Adds an ASS class to this AView.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>assName</code></b>
+<div style="display: table-cell"> new ASS name</div>
+</div>
+</div></dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::capturesFocus_="AView::capturesFocus()" id="AView::capturesFocus">capturesFocus<a class="headerlink" href="#AView::capturesFocus" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">capturesFocus</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Can this view capture focus.</dd>
+</dl>
+<p>For containers, capturing focus is redundant.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::click_="AView::click()" id="AView::click">click<a class="headerlink" href="#AView::click" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">click</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+</dl>
+<p>Simulates click on the view. Useful then you want to call clicked() slots of this view.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::consumesClick_="AView::consumesClick()" id="AView::consumesClick">consumesClick<a class="headerlink" href="#AView::consumesClick" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">consumesClick</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Determines whether this AView processes this click or passes it thru.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>pos</code></b>
+<div style="display: table-cell"> mouse position</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>true if AView processes this click</dd>
+</dl>
+<p>Used in <a href="../aviewcontainer/">AViewContainer</a>::getViewAt method subset, thus affecting click event handling.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::debugString_="AView::debugString()" id="AView::debugString">debugString<a class="headerlink" href="#AView::debugString" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">debugString</span><span class="p">()</span>
+</span></code></pre></div>
+<p>String which helps to identify this object in debug string output (i.e., for logging)</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::enabled_="AView::enabled()" id="AView::enabled">enabled<a class="headerlink" href="#AView::enabled" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">enabled</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Whether view is enabled (i.e., reacts to user).</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::expanding_="AView::expanding()" id="AView::expanding">expanding<a class="headerlink" href="#AView::expanding" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">expanding</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Expansion coefficient. Hints layout manager how much this AView should be extended relative to other
+       AViews in the same container.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>It does affect expanding environment inside the container. See expanding <a href="../layout-managers/">layout managers</a>
+for more info.</p>
+<p>It does not affect parent's size or parent's expanding property. Use AView::setExpanding() on parent, or
+<code>Expanding</code> variant of declarative container notation (<code>Vertical::Expanding</code>, <code>Horizontal::Expanding</code>,
+<code>Stacked::Expanding</code>) for such case.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::extraStylesheet_="AView::extraStylesheet()" id="AView::extraStylesheet">extraStylesheet<a class="headerlink" href="#AView::extraStylesheet" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">AStylesheet</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">extraStylesheet</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::focus_="AView::focus()" id="AView::focus">focus<a class="headerlink" href="#AView::focus" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">focus</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">needFocusChainUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Requests focus for this AView.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>needFocusChainUpdate</code></b>
+<div style="display: table-cell"> if true, focus chain for new focused view will be updated</div>
+</div>
+</div></dd>
+</dl>
+<p>If needFocusChainUpdate is false you need to control focus chain targets outside the focus function</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::getBorderRadius_="AView::getBorderRadius()" id="AView::getBorderRadius">getBorderRadius<a class="headerlink" href="#AView::getBorderRadius" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getBorderRadius</span><span class="p">()</span>
+</span></code></pre></div>
+<p>border-radius, specified in ASS.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getCenterPointInWindow_="AView::getCenterPointInWindow()" id="AView::getCenterPointInWindow">getCenterPointInWindow<a class="headerlink" href="#AView::getCenterPointInWindow" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getCenterPointInWindow</span><span class="p">()</span>
+</span></code></pre></div>
+<p>The center point position of the view relatively to top left corner of the window.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Useful in UI tests:
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">mWindow</span><span class="o">-&gt;</span><span class="n">onPointerMove</span><span class="p">(</span><span class="n">mView</span><span class="o">-&gt;</span><span class="n">getCenterPointInWindow</span><span class="p">());</span><span class="w"> </span><span class="c1">// triggers on pointer move over the view through window</span>
+</span></code></pre></div></p>
+<div style="position:absolute;opacity:0">
+<h3 AView::getContentMinimumHeight_="AView::getContentMinimumHeight()" id="AView::getContentMinimumHeight">getContentMinimumHeight<a class="headerlink" href="#AView::getContentMinimumHeight" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getContentMinimumHeight</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>minimal content-area height.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getContentMinimumSize_="AView::getContentMinimumSize()" id="AView::getContentMinimumSize">getContentMinimumSize<a class="headerlink" href="#AView::getContentMinimumSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getContentMinimumSize</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>minimal content-area size.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getContentMinimumWidth_="AView::getContentMinimumWidth()" id="AView::getContentMinimumWidth">getContentMinimumWidth<a class="headerlink" href="#AView::getContentMinimumWidth" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getContentMinimumWidth</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>minimal content-area width.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getContentSize_="AView::getContentSize()" id="AView::getContentSize">getContentSize<a class="headerlink" href="#AView::getContentSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getContentSize</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>content size</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getCursor_="AView::getCursor()" id="AView::getCursor">getCursor<a class="headerlink" href="#AView::getCursor" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../acursor/">ACursor</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getCursor</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Determines shape which should pointer take when it's above this AView.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getFixedSize_="AView::getFixedSize()" id="AView::getFixedSize">getFixedSize<a class="headerlink" href="#AView::getFixedSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getFixedSize</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Fixed size.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Fixed size. {0, 0} if unspecified.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getFloating_="AView::getFloating()" id="AView::getFloating">getFloating<a class="headerlink" href="#AView::getFloating" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n"><a href="../afloat/">AFloat</a></span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getFloating</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Floating value for AText.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getMargin_="AView::getMargin()" id="AView::getMargin">getMargin<a class="headerlink" href="#AView::getMargin" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aboxfields/">ABoxFields</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getMargin</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Returns the <a href="AView::mMargin">margin</a>.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>margin</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getMaxSize_="AView::getMaxSize()" id="AView::getMaxSize">getMaxSize<a class="headerlink" href="#AView::getMaxSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getMaxSize</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>maxSize (ignoring fixedSize)</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getMinSize_="AView::getMinSize()" id="AView::getMinSize">getMinSize<a class="headerlink" href="#AView::getMinSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getMinSize</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>minSize (ignoring fixedSize)</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getMinimumSize_="AView::getMinimumSize()" id="AView::getMinimumSize">getMinimumSize<a class="headerlink" href="#AView::getMinimumSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getMinimumSize</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Returns the minimum size required for this view.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Minimum size (width, height) this view requires in pixels, excluding margins.</dd>
+</dl>
+<p>The minimum size includes:
+- Minimum content size
+- Padding</p>
+<p>This value represents the absolute minimum dimensions the view needs to properly display its content. It's used
+by layout managers to ensure views aren't sized smaller than what they require to be functional.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::getMinimumSizePlusMargin_="AView::getMinimumSizePlusMargin()" id="AView::getMinimumSizePlusMargin">getMinimumSizePlusMargin<a class="headerlink" href="#AView::getMinimumSizePlusMargin" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getMinimumSizePlusMargin</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>minimum content size plus margin.</dd>
+</dl>
+<p>This value is bare minimum space required for this view. It includes minimal content size + padding + margin which
+is exact space the view requires.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::getOverflow_="AView::getOverflow()" id="AView::getOverflow">getOverflow<a class="headerlink" href="#AView::getOverflow" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n"><a href="../aoverflow/">AOverflow</a></span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getOverflow</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Determines whether display graphics that go out of the bounds of this AView or not.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getOverflowMask_="AView::getOverflowMask()" id="AView::getOverflowMask">getOverflowMask<a class="headerlink" href="#AView::getOverflowMask" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n"><a href="../aoverflowmask/">AOverflowMask</a></span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getOverflowMask</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Controls how does the overflow (stencil) mask is produced.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getPadding_="AView::getPadding()" id="AView::getPadding">getPadding<a class="headerlink" href="#AView::getPadding" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aboxfields/">ABoxFields</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getPadding</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Returns the <a href="AView::mPadding">padding</a>.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>padding</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getParent_="AView::getParent()" id="AView::getParent">getParent<a class="headerlink" href="#AView::getParent" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n"><a href="../aviewcontainerbase/">AViewContainerBase</a></span><span class="o">*</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getParent</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Parent AView.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getPosition_="AView::getPosition()" id="AView::getPosition">getPosition<a class="headerlink" href="#AView::getPosition" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getPosition</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Top left corner's position relative to top left corner's position of the parent AView.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getPositionInWindow_="AView::getPositionInWindow()" id="AView::getPositionInWindow">getPositionInWindow<a class="headerlink" href="#AView::getPositionInWindow" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getPositionInWindow</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Coords of this AView relative to window</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getSize_="AView::getSize()" id="AView::getSize">getSize<a class="headerlink" href="#AView::getSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getSize</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Size, including content area, border and padding.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getTotalFieldHorizontal_="AView::getTotalFieldHorizontal()" id="AView::getTotalFieldHorizontal">getTotalFieldHorizontal<a class="headerlink" href="#AView::getTotalFieldHorizontal" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getTotalFieldHorizontal</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>pixel count which this AView's margin and padding acquired by width.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getTotalFieldSize_="AView::getTotalFieldSize()" id="AView::getTotalFieldSize">getTotalFieldSize<a class="headerlink" href="#AView::getTotalFieldSize" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getTotalFieldSize</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>pixel count which this AView's margin and padding acquired.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getTotalFieldVertical_="AView::getTotalFieldVertical()" id="AView::getTotalFieldVertical">getTotalFieldVertical<a class="headerlink" href="#AView::getTotalFieldVertical" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getTotalFieldVertical</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>pixel count which this AView's margin and padding acquired by height.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getTotalOccupiedHeight_="AView::getTotalOccupiedHeight()" id="AView::getTotalOccupiedHeight">getTotalOccupiedHeight<a class="headerlink" href="#AView::getTotalOccupiedHeight" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getTotalOccupiedHeight</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>pixel count which this AView acquired by height including content area, padding, border and margin.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getTotalOccupiedWidth_="AView::getTotalOccupiedWidth()" id="AView::getTotalOccupiedWidth">getTotalOccupiedWidth<a class="headerlink" href="#AView::getTotalOccupiedWidth" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getTotalOccupiedWidth</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>pixel count which this AView acquired by width including content area, padding, border and margin.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::getWindow_="AView::getWindow()" id="AView::getWindow">getWindow<a class="headerlink" href="#AView::getWindow" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">AWindowBase</span><span class="o">*</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">getWindow</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Determines window which this AView belongs to.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>window which this AView belongs to. Could be nullptr</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::handlesNonMouseNavigation_="AView::handlesNonMouseNavigation()" id="AView::handlesNonMouseNavigation">handlesNonMouseNavigation<a class="headerlink" href="#AView::handlesNonMouseNavigation" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">handlesNonMouseNavigation</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>true if this AView accepts tab focus</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::hasIndirectParent_="AView::hasIndirectParent()" id="AView::hasIndirectParent">hasIndirectParent<a class="headerlink" href="#AView::hasIndirectParent" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">hasIndirectParent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">AView</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Checks if the specified view is an indirect parent of this view.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::invalidateAllStyles_="AView::invalidateAllStyles()" id="AView::invalidateAllStyles">invalidateAllStyles<a class="headerlink" href="#AView::invalidateAllStyles" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">invalidateAllStyles</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Invalidates all styles, causing to iterate over all rules in global and parent stylesheets.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Unlike invalidateStateStyles(), completely resets styles for this view, causing it to iterate over all rules in
+global and parent stylesheets. This operation is much more expensive than invalidateStateStyles because
+invalidateStateStyles iterates over a small set of rules and performs fewer checks.</p>
+<p>Prefer invalidateAllStyles over invalidateStateStyles when:</p>
+<ul>
+  <li>Added/removed rules to applicable stylesheets</li>
+  <li>The view is reinflated to other layout</li>
+  <li>Added/removed/changed <a href="../ass/">ass</a> names of this or parent views</li>
+</ul>
+<div style="position:absolute;opacity:0">
+<h3 AView::invalidateAssHelper_="AView::invalidateAssHelper()" id="AView::invalidateAssHelper">invalidateAssHelper<a class="headerlink" href="#AView::invalidateAssHelper" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">invalidateAssHelper</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Resets mAssHelper.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::invalidateStateStyles_="AView::invalidateStateStyles()" id="AView::invalidateStateStyles">invalidateStateStyles<a class="headerlink" href="#AView::invalidateStateStyles" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">invalidateStateStyles</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Updates state selectors for ASS.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Unlike invalidateAllStyles, iterates on an already calculated small set of rules which is much more cheap that
+invalidateAllStyles.</p>
+<p>Prefer invalidateStateStyles over invalidateAllStyles when:</p>
+<ul>
+  <li>Changed state (hover, active, focus) of this view</li>
+</ul>
+<div style="position:absolute;opacity:0">
+<h3 AView::markMinContentSizeInvalid_="AView::markMinContentSizeInvalid()" id="AView::markMinContentSizeInvalid">markMinContentSizeInvalid<a class="headerlink" href="#AView::markMinContentSizeInvalid" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">markMinContentSizeInvalid</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Marks this view it requires a layout update.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>See <a href="../layout-managers/">layout-managers</a> for more info.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::onClickPrevented_="AView::onClickPrevented()" id="AView::onClickPrevented">onClickPrevented<a class="headerlink" href="#AView::onClickPrevented" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">onClickPrevented</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Called on AWindowBase::preventClickOnPointerRelease.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::onGesture_="AView::onGesture()" id="AView::onGesture">onGesture<a class="headerlink" href="#AView::onGesture" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">onGesture</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">AGestureEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>origin</code></b>
+<div style="display: table-cell"> position where the event(s) started to occur from.</div>
+</div>
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>event</code></b>
+<div style="display: table-cell"> gesture event.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>true, if consumed (handled). True value prevents click.</dd>
+</dl>
+<p>Handles touch screen gesture event.
+The standard implementation <code>AView::onGesture</code> emulates desktop events such as right click
+and scroll.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::onPointerMove_="AView::onPointerMove()" id="AView::onPointerMove">onPointerMove<a class="headerlink" href="#AView::onPointerMove" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">onPointerMove</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../apointermoveevent/">APointerMoveEvent</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Handles pointer hover events</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>pos</code></b>
+<div style="display: table-cell"> event position</div>
+</div>
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>event</code></b>
+<div style="display: table-cell"> event description</div>
+</div>
+</div></dd>
+</dl>
+<p>If the view is pressed, it would still received move events. Use AView::isMouseHover to check is the pointer
+actually over view or not. See AView::onPointerReleased for more info.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::onPointerPressed_="AView::onPointerPressed()" id="AView::onPointerPressed">onPointerPressed<a class="headerlink" href="#AView::onPointerPressed" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">onPointerPressed</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../apointerpressedevent/">APointerPressedEvent</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Called on pointer (mouse) released event.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>event</code></b>
+<div style="display: table-cell"> event</div>
+</div>
+</div></dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::onPointerReleased_="AView::onPointerReleased()" id="AView::onPointerReleased">onPointerReleased<a class="headerlink" href="#AView::onPointerReleased" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">onPointerReleased</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../apointerreleasedevent/">APointerReleasedEvent</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Called on pointer (mouse) released event.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>event</code></b>
+<div style="display: table-cell"> event</div>
+</div>
+</div></dd>
+</dl>
+<p>To handle clicks, you should use AView::clicked signal instead. View still receives pointer move and released
+events even if cursor goes outside the view boundaries, or other exclusive event appeared (i.e. scrollarea
+scroll). AView::clicked emitted only if release event occurred inside view and no other event has prevented
+click gesture. See <a href="../apointerreleasedevent/">APointerReleasedEvent</a>::triggerClick.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::onScroll_="AView::onScroll()" id="AView::onScroll">onScroll<a class="headerlink" href="#AView::onScroll" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">onScroll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../ascrollevent/">AScrollEvent</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>event</code></b>
+<div style="display: table-cell"> event info.</div>
+</div>
+</div></dd>
+</dl>
+<p>Handles mouse wheel events.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::pack_="AView::pack()" id="AView::pack">pack<a class="headerlink" href="#AView::pack" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">pack</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Sets minimal size.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::position_="AView::position()" id="AView::position">position<a class="headerlink" href="#AView::position" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">position</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Top left corner's position relative to top left corner's position of the parent AView.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::postRender_="AView::postRender()" id="AView::postRender">postRender<a class="headerlink" href="#AView::postRender" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">postRender</span><span class="p">(</span><span class="n"><a href="../arendercontext/">ARenderContext</a></span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Performs post-draw routines of this AView. Noone should call this function except rendering routine.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::redraw_="AView::redraw()" id="AView::redraw">redraw<a class="headerlink" href="#AView::redraw" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">redraw</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Request window manager to redraw this AView.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::removeAssName_="AView::removeAssName()" id="AView::removeAssName">removeAssName<a class="headerlink" href="#AView::removeAssName" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">removeAssName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">assName</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Removes an ASS class to this AView.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>assName</code></b>
+<div style="display: table-cell"> ASS name to remove</div>
+</div>
+</div></dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::render_="AView::render()" id="AView::render">render<a class="headerlink" href="#AView::render" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n"><a href="../arendercontext/">ARenderContext</a></span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Draws this AView. Noone should call this function except rendering routine.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>AView::render is not guaranteed to be called on per-frame basis. Moreover, this method can be called multiple
+times if render-to-texture caching decides to do so.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::setAssName_="AView::setAssName()" id="AView::setAssName">setAssName<a class="headerlink" href="#AView::setAssName" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setAssName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">assName</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Depending on value, either adds or removes <a href="../ass/">ass</a> name.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>assName</code></b>
+<div style="display: table-cell"> ASS name to add or remove</div>
+</div>
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>value</code></b>
+<div style="display: table-cell"> boolean that determines actual operation</div>
+</div>
+</div></dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::setExpanding_="AView::setExpanding()" id="AView::setExpanding">setExpanding<a class="headerlink" href="#AView::setExpanding" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setExpanding</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">expanding</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Changes the expanding of view.</p>
+<dl class="doxygen-dl">
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setExpanding</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">expanding</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Changes the expanding of view.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::setExtraStylesheet_="AView::setExtraStylesheet()" id="AView::setExtraStylesheet">setExtraStylesheet<a class="headerlink" href="#AView::setExtraStylesheet" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setExtraStylesheet</span><span class="p">(</span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">AStylesheet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">extraStylesheet</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setExtraStylesheet</span><span class="p">(</span><span class="n">AStylesheet</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">extraStylesheet</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::setFloating_="AView::setFloating()" id="AView::setFloating">setFloating<a class="headerlink" href="#AView::setFloating" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setFloating</span><span class="p">(</span><span class="n"><a href="../afloat/">AFloat</a></span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Set floating value for AText.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::setGeometry_="AView::setGeometry()" id="AView::setGeometry">setGeometry<a class="headerlink" href="#AView::setGeometry" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setGeometry</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sets position and size of the view.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>See <a href="../layout-managers/">layout-managers</a> for more info.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::setMargin_="AView::setMargin()" id="AView::setMargin">setMargin<a class="headerlink" href="#AView::setMargin" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setMargin</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aboxfields/">ABoxFields</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">margin</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sets the <a href="AView::mMargin">margin</a>.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>margin</code></b>
+<div style="display: table-cell"> margin</div>
+</div>
+</div></dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::setPadding_="AView::setPadding()" id="AView::setPadding">setPadding<a class="headerlink" href="#AView::setPadding" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setPadding</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aboxfields/">ABoxFields</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">padding</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sets the <a href="AView::mPadding">padding</a>.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>padding</code></b>
+<div style="display: table-cell"> padding</div>
+</div>
+</div></dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::setSizeForced_="AView::setSizeForced()" id="AView::setSizeForced">setSizeForced<a class="headerlink" href="#AView::setSizeForced" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setSizeForced</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>size</code></b>
+<div style="display: table-cell"></div>
+</div>
+</div></dd>
+</dl>
+<p>Set size ignoring all restrictions (i.e. min size, max size, fixed size, etc...). Used by AAnimator.</p>
+<div style="position:absolute;opacity:0">
+<h3 AView::setSkipUntilLayoutUpdate_="AView::setSkipUntilLayoutUpdate()" id="AView::setSkipUntilLayoutUpdate">setSkipUntilLayoutUpdate<a class="headerlink" href="#AView::setSkipUntilLayoutUpdate" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">setSkipUntilLayoutUpdate</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">skipUntilLayoutUpdate</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::size_="AView::size()" id="AView::size">size<a class="headerlink" href="#AView::size" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">size</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Size, including content area, border and padding.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::visibility_="AView::visibility()" id="AView::visibility">visibility<a class="headerlink" href="#AView::visibility" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">visibility</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Visibility value.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AView::wantsTouchscreenKeyboard_="AView::wantsTouchscreenKeyboard()" id="AView::wantsTouchscreenKeyboard">wantsTouchscreenKeyboard<a class="headerlink" href="#AView::wantsTouchscreenKeyboard" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AView</span><span class="o">::</span><span class="n">wantsTouchscreenKeyboard</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Returns true if view is textfield-like view which requires touchscreen keyboard when clicked.</p>
+<dl class="doxygen-dl">
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/jq2WySpg6m" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/aui-framework/aui" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "announce.dismiss", "content.action.view", "content.action.edit", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

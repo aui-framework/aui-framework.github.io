@@ -1,0 +1,1180 @@
+<!--
+  ~ AUI Framework - Declarative UI toolkit for modern C++20
+  ~ Copyright (C) 2020-2025 Alex2772 and Contributors
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cross-platform base for C++ UI apps">
+      
+      
+        <meta name="author" content="Alex2772">
+      
+      
+        <link rel="canonical" href="https://aui-framework.github.io/aforeachui/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>AForEachUI - AUI Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aforeachui" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<!-- Add announcement here, including arbitrary HTML -->
+We are migrating to a new documentation engine. Please report presentation issues to <a href="https://github.com/aui-framework/aui/issues/540">#540</a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AUI Framework" class="md-header__button md-logo" aria-label="AUI Framework" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AUI Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AForEachUI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aui-framework/aui" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aui-framework/aui
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AUI Framework" class="md-nav__button md-logo" aria-label="AUI Framework" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AUI Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aui-framework/aui" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aui-framework/aui
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started with AUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aui-assets/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../ui-building-overview/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    UI Architecture
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../useful_views/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Views
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../ass/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Styling
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../windows/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Platform Specifics
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aui-command-line-arguments/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../aui.boot/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lazy-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lazy Semantics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lazy Semantics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scrollbars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scrollbars
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#AFOREACHUI_UPDATE" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#UIDeclarativeForTest_Constant_global_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constant global data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UIDeclarativeForTest_Infinite_ranges_and_views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infinite ranges and views
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UIDeclarativeForTest_Transferring_ownership_by_copying" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transferring ownership by copying
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UIDeclarativeForTest_Borrowing_constant_containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Borrowing constant containers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UIDeclarativeForTest_Reactive_lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reactive lists
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#AForEachUI::invalidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalidate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aforeachui">AForEachUI<a class="headerlink" href="#aforeachui" title="Permanent link">#</a></h1>
+<p>Customizable lists display.
+<a href="#detailed-description">More...</a></p>
+<table>
+<tr><td>Header:</td><td><code>#include &lt;AUI/View/AForEachUI.h&gt;</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::views)</code></td></tr>
+</table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
+<p>Used to lazily present possibly large or infinite linear non-hierarchical sequences of data.</p>
+<div class="admonition bug">
+<p class="admonition-title">Experimental Feature</p>
+<p>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future.</p>
+</div>
+<!-- aui:index_alias AUI_DECLARATIVE_FOR -->
+
+<p>If you are familiar with RecyclerView/LazyColumn/LazyRow/LazyVStack/LazyHStack, AForEachUI follows the same set
+of principles; with an exception: AForEachUI does not provide a scrollable area on its own.</p>
+<p>AForEachUI is created by using <a href="./">AUI_DECLARATIVE_FOR</a> macro.</p>
+<p><a href="./">AUI_DECLARATIVE_FOR</a> mimics <em>ranged for loop</em> semantically.</p>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lol&quot;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">users</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="n"><a href="../fmt/">fmt</a></span><span class="o">::</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Lol&quot;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">...</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">().</span><span class="n">withContents</span><span class="p">(</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">users</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../fmt/">fmt</a></span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">).</span><span class="n">build</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FixedSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">150</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">});</span>
+</span></code></pre></div></p>
+<p><img alt="" src="../imgs/UIDeclarativeForTest.Example_.png" /></p>
+<p><a href="./">AUI_DECLARATIVE_FOR</a> consists of single entry variable name, a potentially <a href="aui::react">reactive</a> expression
+evaluating to <em>range</em>, layout name (acceptable are <code><a href="../averticallayout/">AVerticalLayout</a></code> and <code><a href="../ahorizontallayout/">AHorizontalLayout</a></code>) and a lambda that
+creates a new view based on data entry. In terms of C++ syntax, the lambda is partially defined by
+<a href="./">AUI_DECLARATIVE_FOR</a> macro; the lambda's body (including curly braces) is left up to developer. The final
+declaration of <a href="./">AUI_DECLARATIVE_FOR</a> returns an instance of AForEachUI.</p>
+<p><em>range</em> models one-dimensional list.</p>
+<p>AForEachUI works on iterator level by design. In fact, any kind of <em>range</em> (C++20 ranges/range-v3) can be used,
+starting from bidirectional containers such as <code>std::vector</code> and <code>std::list</code>, lazy non-owning dummies like
+<code>ranges::views::ints</code> and even fancy <em>range</em> views from <code>std::ranges::views</code> or <code>ranges::views</code> are acceptable.
+One-directional containers like <code>std::queue</code> or <code>std::stack</code> can't be used because they don't implement <code>begin()</code> and
+<code>end()</code>. As such, requirements to a <em>range</em> are dictated by <code>ranges::range</code> concept.</p>
+<ul>
+<li><em>range</em> has <code>.begin()</code> method or <code>ranges::begin()</code> overload defined <code>auto it = ranges::begin(rng)</code></li>
+<li><em>range</em> has <code>.end()</code> method or <code>ranges::end()</code> overload defined <code>auto it = ranges::end(rng)</code></li>
+<li>both <code>begin()</code> and <code>end()</code> return an <em>iterator</em></li>
+<li><em>iterator</em> has dereference operator <code>auto&amp; value = *it</code></li>
+<li><em>iterator</em> has increment operator <code>++it</code></li>
+</ul>
+<p>Alternatively, these requirements can be described by a <em>ranged for loop</em>: <code>for (const auto&amp; value : rng) { ... }</code>.</p>
+<p>The range's type is erased with runtime-based <em>range</em> layer <a href="../aui_any_view/"><code>aui::any_view</code></a>.</p>
+<p><a href="./">AUI_DECLARATIVE_FOR</a> can be nested with no restrictions in both directions.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<p>See <a href="../examples/">examples</a> of <a href="./">AUI_DECLARATIVE_FOR</a>.</p>
+<h2 id="lazy-semantics">Lazy Semantics<a class="headerlink" href="#lazy-semantics" title="Permanent link">#</a></h2>
+<p>AForEachUI presents all data available. If placed somewhere inside <a href="../ascrollarea/">AScrollArea</a> (implies
+<a href="../ascrollareaviewport/">AScrollAreaViewport</a>), lazy semantics take place. This means that AForEachUI knows scroll position and
+sliding window size in pixels, making it possible to present a limited set of data that is actually visible, and
+present data further as soon as the user scrolls down the scroll area.</p>
+<p>Under the hood, AForEachUI stores a pair of iterators of the passed <em>range</em> of presented entries, forming a
+sliding window subrange. When the user scrolls down the list, both iterators are incremented; when the user scrolls
+upwards, both iterators are decremented.</p>
+<p>In this scenario, AForEachUI adds an extra requirement to range's iterator:</p>
+<ul>
+<li><em>iterator</em> has decrement operator <code>--it</code></li>
+</ul>
+<p>If this requirement is not satisfied (case of some <code>ranges::views</code>), AForEachUI would not unload old items,
+unless a <a href="#AFOREACHUI_UPDATE">data update event</a> occurred.</p>
+<p>The amount of displayed data is governed by <em>range</em> size, <a href="../render-to-texture/">Render to texture</a> tile size, AScrollArea's
+viewport size and individual entry size. Optimal frequency of sliding during scroll and window size are determined by
+AForEachUI. In particular, the sliding is performed once per <a href="../render-to-texture/">Render to texture</a> tile is passed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>During rendering inside <a href="../ascrollarea/">AScrollArea</a>, the renderer clips visible views more precisely; the goal of lazy semantics
+of AForEachUI is to optimize view instantiation and layout processing overhead, as well as <em>range</em> views' lazy
+semantics, thanks to iterators.</p>
+</div>
+<h3 id="scrollbars">Scrollbars<a class="headerlink" href="#scrollbars" title="Permanent link">#</a></h3>
+<p>From perspective of layout, lazy semantics is implemented by careful layout updates driven by scroll area events. If
+possible, the items that appear far from sliding window are unloaded (views are removed). The new items are loaded
+(new views are instantiated). To avoid content jittering, scroll position is synced with layout updates within
+AForEachUI. As such, these hijacking operations may confuse scroll bar.</p>
+<p>In modern software, especially when it comes to infinite lists in web/mobile applications (i.e., news feed),
+scrollbar might be completely hidden or significantly transparentized.</p>
+<p>This optimization gives a severe performance benefit. Despite the fact that there's a complete mess "under the hood"
+(scrollbar is the only visual confirmation), the scrolled contents appear normal and natural.</p>
+<p><img alt="" src="../imgs/edrfgsrgsrg.webp" /> A lie is going on behind the scenes</p>
+<p>clang-format off
+A static range like in the example above will not blow up the machine because AForEachUI is wrapped with a
+<a href="../ascrollarea/">AScrollArea</a>, thus it is not required to evaluate the whole range, which is infinite in our case.</p>
+<p>An attempt to update AForEachUI with a large range still can lead to high resource consumption, due to need of
+recomposition.</p>
+<h2 id="AFOREACHUI_UPDATE">Initialization<a class="headerlink" href="#AFOREACHUI_UPDATE" title="Permanent link">#</a></h2>
+<p>This section explains how to initialize <a href="./">AUI_DECLARATIVE_FOR</a>, manage lifetime of containers and how to make them
+reactive.</p>
+<p>In <a href="./">AUI_DECLARATIVE_FOR</a>, a potentially <a href="aui::react">reactive</a> expression evaluating to <em>range</em> and the lambda
+that creates a new views are both lambdas with capture default by value <code>[=]</code>. This means that:</p>
+<ol>
+<li>All mentioned <em>local</em> variables are captured by copying.</li>
+<li>All mentioned class member variables (fields) are captured by reference.</li>
+</ol>
+<p>Both lambdas can be evaluated at any point during lifetime of a AForEachUI, so the by-value capture makes it's hard
+to introduce dangling references, by either copying locals or referencing class members.</p>
+<p>Most modern compilers are capable to optimize out copying and initialize *copied* locals just in place.</p>
+<p>An attempt to go out of the scenarios listed below will likely lead to a <code>static_assert</code> with a link to this section.</p>
+<h3 id="UIDeclarativeForTest_Constant_global_data">Constant global data<a class="headerlink" href="#UIDeclarativeForTest_Constant_global_data" title="Permanent link">#</a></h3>
+<p>The most straightforward way is using constant global data:
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">COLORS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Green&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Black&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;White&quot;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">            </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">COLORS</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">              </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">};</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="n">w</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">}</span>
+</span></code></pre></div>
+It's a good idea to wrap AForEachUI with an <a href="../ascrollarea/">AScrollArea</a>.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">()</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="p">.</span><span class="n">withContents</span><span class="p">(</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">COLORS</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">              </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="p">})</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">.</span><span class="n">build</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FixedSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">150</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">});</span>
+</span></code></pre></div></p>
+<figure>
+<img alt="" src="../imgs/UIDeclarativeForTest.Constant_global_data2_.png" />
+</figure>
+<h3 id="UIDeclarativeForTest_Infinite_ranges_and_views">Infinite ranges and views<a class="headerlink" href="#UIDeclarativeForTest_Infinite_ranges_and_views" title="Permanent link">#</a></h3>
+<p>Most generators, ranges and views are expected to work.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">().</span><span class="n">withContents</span><span class="p">(</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n">views</span><span class="o">::</span><span class="n">ints</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">).</span><span class="n">build</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FixedSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">150</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">});</span>
+</span></code></pre></div></p>
+<figure>
+<img alt="" src="../imgs/UIDeclarativeForTest.Infinite_ranges_and_views_.png" />
+</figure>
+<h3 id="UIDeclarativeForTest_Transferring_ownership_by_copying">Transferring ownership by copying<a class="headerlink" href="#UIDeclarativeForTest_Transferring_ownership_by_copying" title="Permanent link">#</a></h3>
+<p>When using locals, their immediate values are copied during initialization of AUI_DECLARATIVE_FOR.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Test&quot;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">().</span><span class="n">withContents</span><span class="p">(</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">items</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">           </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p">).</span><span class="n">build</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FixedSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">150</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">});</span>
+</span></code></pre></div>
+As such, an attempt to modify <code>items</code> will not reflect on presentation, because it has own copy of <code>items</code>.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">items</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;Bruh&quot;</span><span class="p">);</span>
+</span></code></pre></div></p>
+<figure>
+<img alt="" src="../imgs/UIDeclarativeForTest.Transferring_ownership_by_copying_.png" />
+</figure>
+<h3 id="UIDeclarativeForTest_Borrowing_constant_containers">Borrowing constant containers<a class="headerlink" href="#UIDeclarativeForTest_Borrowing_constant_containers" title="Permanent link">#</a></h3>
+<p>If your container lives inside your class, its value is not copied but referenced. To avoid unobserved iterator
+invalidation and content changes, <a href="./">AUI_DECLARATIVE_FOR</a> requires borrowed containers to be constant. There's a
+compile-time check to verify this requirement that does work in most cases, like this one.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">colors</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">mColors</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">            </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">mColors</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">              </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mColors</span><span class="p">;</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">};</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">     </span><span class="k">auto</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Green&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Black&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;White&quot;</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">     </span><span class="n">w</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<figure>
+<img alt="" src="../imgs/UIDeclarativeForTest.Borrowing_constant_containers_.png" />
+</figure>
+<p>Marking the borrowed container as const effectively saves you from unintended borrowed data changes. If you'd
+like to change the container or view options and <a href="./">AUI_DECLARATIVE_FOR</a> to respond to the changes, read the section
+below.</p>
+<h3 id="UIDeclarativeForTest_Reactive_lists">Reactive lists<a class="headerlink" href="#UIDeclarativeForTest_Reactive_lists" title="Permanent link">#</a></h3>
+<p>The reason why <a href="./">AUI_DECLARATIVE_FOR</a> is so restrictive about using borrowed non-const data is because it stores
+<em>range</em>'s iterators under the hood. Various containers have different rules on iterator invalidation, but, since
+it accepts any type of <em>range</em>, we consider using its iterators after a modifying access to the container or a
+view as unsafe:</p>
+<ul>
+<li>visual presentation by <a href="./">AUI_DECLARATIVE_FOR</a> might seem unresponsive to borrowed data changes,</li>
+<li>may lead to program crash.</li>
+</ul>
+<p>To address this issue, we provide a convenient <a href="../property-system/">way</a> to make iterator invalidation
+<em>observable</em>:</p>
+<ul>
+<li>wrap the container with <code><a href="../aproperty/">AProperty</a></code>,</li>
+<li>dereference <code>mColors</code> in <a href="./">AUI_DECLARATIVE_FOR</a> clause.</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">colors</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">mColors</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">            </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Add A new color&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">addColor</span><span class="p">),</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">            </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">().</span><span class="n">withContents</span><span class="p">(</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">              </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">mColors</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">              </span><span class="p">}</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="p">).</span><span class="n">build</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FixedSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">150</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mColors</span><span class="p">;</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">addColor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="n">mColors</span><span class="p">.</span><span class="n">writeScope</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="s">&quot;A new color&quot;</span><span class="p">);</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="p">};</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Green&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Black&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;White&quot;</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">    </span><span class="n">w</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="p">}</span>
+</span></code></pre></div>
+<figure>
+<img alt="" src="../imgs/UIDeclarativeForTest.Reactive_lists_1.png" />
+</figure>
+<p>Upon clicking "Add A new color" button, the "A new color" label will appear in the list.</p>
+<figure>
+<img alt="" src="../imgs/UIDeclarativeForTest.Reactive_lists_2.png" />
+</figure>
+<h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
+<div style="position:absolute;opacity:0">
+<h3 AForEachUI::invalidate_="AForEachUI::invalidate()" id="AForEachUI::invalidate">invalidate<a class="headerlink" href="#AForEachUI::invalidate" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AForEachUI</span><span class="o">::</span><span class="n">invalidate</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Notifies that range was changed or iterators might have invalidated.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>You do not need to call this manually, AUI_DECLARATIVE_FOR makes all essential connection automatically.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/jq2WySpg6m" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/aui-framework/aui" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "announce.dismiss", "content.action.view", "content.action.edit", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
