@@ -1111,14 +1111,14 @@ simply set the property back to "bin" after <code><a href="../aui_app/">aui_app<
 <p><a href="../aui.boot/">aui.boot</a> updates RUNPATH/RPATH CMake install variables to follow that convention:</p>
 <ul>
 <li>
-<p><strong>ld</strong> (Linux/Android): 
+<p><strong>ld</strong> (Linux/Android):
 <div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_RPATH</span><span class="w"> </span><span class="err">$</span><span class="s">ORIGIN/../lib</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_RPATH_USE_LINK_PATH</span><span class="w"> </span><span class="s">FALSE</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p><strong>dyld</strong> (macOS/iOS): 
+<p><strong>dyld</strong> (macOS/iOS):
 <div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_NAME_DIR</span><span class="w"> </span><span class="s2">&quot;@rpath&quot;</span><span class="p">)</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_RPATH</span><span class="w"> </span><span class="s2">&quot;@loader_path/../lib&quot;</span><span class="p">)</span>
