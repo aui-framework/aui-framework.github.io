@@ -627,6 +627,15 @@ We are migrating to a new documentation engine. Please report presentation issue
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows-xp-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows XP support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#key-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Key considerations
@@ -904,6 +913,15 @@ We are migrating to a new documentation engine. Please report presentation issue
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#windows-xp-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows XP support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#key-considerations" class="md-nav__link">
     <span class="md-ellipsis">
       Key considerations
@@ -957,6 +975,16 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Windows is a family of operating systems developed by Microsoft. It was first released in 1985 and has since become the
 most popular desktop operating system worldwide, with a market share of about 70%. The latest version for consumer PCs
 and tablets is Windows 11, while certain older versions are still supported and maintained by Microsoft.</p>
+<h2 id="windows-xp-support">Windows XP support<a class="headerlink" href="#windows-xp-support" title="Permanent link">#</a></h2>
+<ul>
+<li>If <strong><a href="https://github.com/Chuyu-Team/VC-LTL5/releases/download/v5.2.2/VC-LTL.Redist.Dlls.zip">ucrtbase.dll</a></strong> is missing, download and place it next to folder where it is missing. </li>
+<li>Compatibility with modern C++ (MSVC v143+ C++20 standard or newer) is provided by <strong><a href="https://github.com/Chuyu-Team/YY-Thunks">YY_Thunks</a></strong> project (span, concepts).</li>
+<li><a href="../aui.boot/">aui.boot</a> relies over v141_xp toolset and cl.exe compiler with <strong>UCRT</strong> runtime by <strong><a href="https://github.com/Chuyu-Team/VC-LTL5">VC-LTL5</a></strong>, that are specified by winxp-x86.cmake cmake toolchain file.</li>
+<li><a href="https://github.com/google/benchmark">google/benchmark</a> is removed, as v141_xp toolset was unable to build that dependency, because <code>#include &lt;versionhelpers.h&gt;</code> is missing.</li>
+<li>Windows XP support lower bound is SP2, as SP1 is not supported.</li>
+<li>In order to bring your own dependencies you would need to use /MT /MTd MSVC runtime and acquire <strong>UCRT</strong> runtime by <strong><a href="https://github.com/Chuyu-Team/VC-LTL5">VC-LTL5</a></strong>.</li>
+<li>If you are searching for v141_xp toolset download link take a look here https://aka.ms/vs/16/release/vs_buildtools.exe.</li>
+</ul>
 <h2 id="key-considerations">Key considerations<a class="headerlink" href="#key-considerations" title="Permanent link">#</a></h2>
 <ul>
 <li>You'll need to <a href="../packaging/">make an installer and potentially a portable package</a> with
