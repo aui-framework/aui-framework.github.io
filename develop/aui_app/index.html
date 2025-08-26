@@ -1490,17 +1490,6 @@ various installation methods but also override the variables if needed.</p>
 <li><code>MACOSX_BUNDLE_BUNDLE_NAME</code>  = <code>${APP_NAME}</code></li>
 <li><code>MACOSX_BUNDLE_EXECUTABLE_NAME</code>  = <code>${APP_NAME}</code></li>
 </ul>
-<p>The following additional variables and properties are affected:</p>
-<ul>
-<li><code>_auib_weak_set_target_property(${APP_TARGET} CPACK_DESKTOP_SHORTCUTS "${APP_NAME}")</code></li>
-<li><code>set(APP_APPLE_BUNDLE_IDENTIFIER ${APP_NAME})</code></li>
-<li><code>set(EXECUTABLE_NAME ${APP_NAME})</code></li>
-<li><code>set(PRODUCT_NAME ${APP_NAME})</code></li>
-<li><code>set(_desktop "[Desktop Entry]\nName=${APP_NAME}\nExec=${_executable}\nType=Application\nTerminal=false\nCategories=Utility")</code></li>
-<li><code>set_property(INSTALL bin/$&lt;TARGET_FILE_NAME:${APP_TARGET}&gt; PROPERTY CPACK_DESKTOP_SHORTCUTS "${APP_NAME}")</code></li>
-<li><code>set_property(INSTALL bin/$&lt;TARGET_FILE_NAME:${APP_TARGET}&gt; PROPERTY CPACK_START_MENU_SHORTCUTS "${APP_NAME}")</code></li>
-<li><code>set_target_properties(${APP_TARGET} PROPERTIES OUTPUT_NAME "${APP_NAME}") # rename the bundle to display name</code></li>
-</ul>
 <h3 id="aui_app_ICON">ICON<a class="headerlink" href="#aui_app_ICON" title="Permanent link">#</a></h3>
 <p>Specify SVG icon location (defaults to <code>icon.svg</code> if exists).</p>
 <p>See <a href="../app-icon/">App Icon</a> for best practices.</p>
@@ -1680,10 +1669,6 @@ chosen.</p>
 <li><code>MACOSX_BUNDLE_BUNDLE_VERSION</code>  = <code>${APP_VERSION}</code></li>
 <li><code>MACOSX_BUNDLE_LONG_VERSION_STRING</code>  = <code>${APP_VERSION}</code></li>
 <li><code>MACOSX_BUNDLE_SHORT_VERSION_STRING</code>  = <code>${APP_VERSION}</code></li>
-</ul>
-<p>The following additional variables and properties are affected:</p>
-<ul>
-<li><code>set(_aui_package_file_name "${CPACK_PACKAGE_NAME}-${APP_VERSION}-${_aui_package_file_name}")</code></li>
 </ul>
 <h3 id="no_include_cpack">NO_INCLUDE_CPACK<a class="headerlink" href="#no_include_cpack" title="Permanent link">#</a></h3>
 <p>By default <code>aui_app</code> includes CPack in order to allow to generate packages using CPack. You can disable this behaviour by specifying <code>NO_INCLUDE_CPACK</code> flag.</p>
