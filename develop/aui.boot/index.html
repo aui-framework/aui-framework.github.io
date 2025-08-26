@@ -2148,19 +2148,29 @@ of its dependencies:</p>
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_BINARY_DIR</span><span class="o">}</span><span class="s">/aui.boot.cmake</span><span class="p">)</span>
 </span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="nb">include</span><span class="p">(</span><span class="o">${</span><span class="nv">CMAKE_CURRENT_BINARY_DIR</span><span class="o">}</span><span class="s">/aui.boot.cmake</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span>
-<span class="normal"><a href="#__codelineno-12-5">5</a></span>
-<span class="normal"><a href="#__codelineno-12-6">6</a></span>
-<span class="normal"><a href="#__codelineno-12-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s"><a href="../fmt/">fmt</a></span><span class="w"> </span><span class="s">https://github.com/fmtlib/<a href="../fmt/">fmt</a></span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">            </span><span class="s">VERSION</span><span class="w"> </span><span class="s">11.2.0</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">            </span><span class="s">CMAKE_ARGS</span><span class="w"> </span><span class="s">-DFMT_TEST=FALSE</span><span class="w"> </span><span class="s">-DFMT_DOC=FALSE</span><span class="p">)</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">range-v3</span><span class="w"> </span><span class="s">https://github.com/ericniebler/range-v3</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="s">VERSION</span><span class="w"> </span><span class="s">0.12.0</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">        </span><span class="s">CMAKE_ARGS</span><span class="w"> </span><span class="s">-DRANGE_V3_DOCS=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_TESTS=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_EXAMPLES=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_PERF=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_HEADER_CHECKS=OFF</span><span class="p">)</span>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nb">if</span><span class="p">(</span><span class="s">AUIB_DISABLE</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="nb">find_package</span><span class="p">(</span><span class="s"><a href="../fmt/">fmt</a></span><span class="w"> </span><span class="s">REQUIRED</span><span class="w"> </span><span class="s">CONFIG</span><span class="p">)</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="nb">find_package</span><span class="p">(</span><span class="s">range-v3</span><span class="w"> </span><span class="s">REQUIRED</span><span class="w"> </span><span class="s">CONFIG</span><span class="p">)</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="nb">else</span><span class="p">()</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="nb">auib_import</span><span class="p">(</span><span class="s"><a href="../fmt/">fmt</a></span><span class="w"> </span><span class="s">https://github.com/fmtlib/<a href="../fmt/">fmt</a></span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">                </span><span class="s">VERSION</span><span class="w"> </span><span class="s">11.2.0</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">                </span><span class="s">CMAKE_ARGS</span><span class="w"> </span><span class="s">-DFMT_TEST=FALSE</span><span class="w"> </span><span class="s">-DFMT_DOC=FALSE</span><span class="p">)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="nb">auib_import</span><span class="p">(</span><span class="s">range-v3</span><span class="w"> </span><span class="s">https://github.com/ericniebler/range-v3</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">            </span><span class="s">VERSION</span><span class="w"> </span><span class="s">0.12.0</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">            </span><span class="s">CMAKE_ARGS</span><span class="w"> </span><span class="s">-DRANGE_V3_DOCS=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_TESTS=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_EXAMPLES=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_PERF=OFF</span><span class="w"> </span><span class="s">-DRANGE_V3_HEADER_CHECKS=OFF</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="nb">endif</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <div class="language-cmake highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">YOUR_APP</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s"><a href="../fmt/">fmt</a>::fmt-header-only</span><span class="w"> </span><span class="s">range-v3::range-v3</span><span class="p">)</span>
 </span></code></pre></div>
