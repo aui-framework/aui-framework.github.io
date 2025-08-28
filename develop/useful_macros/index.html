@@ -754,14 +754,52 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Marks the variable as being used.</p>
 </li>
 <li>
-<p><strong><a href="../aui_enum_values/">AUI_ENUM_VALUES</a></strong></p>
+<p><strong><a href="../aui_perform_as_member/">AUI_PERFORM_AS_MEMBER</a></strong></p>
 <hr />
-<p>Defines all enum values for AEnumerate.</p>
+<p>Performs multiple operations on a single object without repeating its name.</p>
 </li>
 <li>
-<p><strong><a href="../aui_entry/">AUI_ENTRY</a></strong></p>
+<p><strong><a href="../aui_defer/">AUI_DEFER</a></strong></p>
 <hr />
-<p>Application entry point.</p>
+<p>Defers execution of the next block to the end of current block (RAII scope).</p>
+</li>
+<li>
+<p><strong><a href="../aui_let/">AUI_LET</a></strong></p>
+<hr />
+<p>Performs multiple operations on a single object without repeating its name (in place)
+   This function can be used as an operator on object.</p>
+</li>
+<li>
+<p><strong><a href="../aui_with_style/">AUI_WITH_STYLE</a></strong></p>
+<hr />
+<p>Allows to define a style to the view right in place.</p>
+</li>
+<li>
+<p><strong><a href="../aui_threadpool/">AUI_THREADPOOL</a></strong></p>
+<hr />
+<p>Executes following {} block asynchronously in the <a href="AThreadPool::global()">global</a> thread pool. Unlike
+<a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a>, does now allow to set lambda's capture. Lambda's capture is <code>[=]</code>.</p>
+</li>
+<li>
+<p><strong><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a></strong></p>
+<hr />
+<p>Executes following {} block asynchronously in the <a href="AThreadPool::global()">global</a> thread pool. Unlike
+<a href="../aui_threadpool/">AUI_THREADPOOL</a>, allows to set lambda's capture but you should always specify lambda's capture.</p>
+</li>
+<li>
+<p><strong><a href="../aui_do_once/">AUI_DO_ONCE</a></strong></p>
+<hr />
+<p>Executes following function call or {} block once per program execution</p>
+</li>
+<li>
+<p><strong><a href="../aui_ui_thread/">AUI_UI_THREAD</a></strong></p>
+<hr />
+<p>Executes lambda on main thread.</p>
+</li>
+<li>
+<p><strong><a href="../aui_ui_thread_x/">AUI_UI_THREAD_X</a></strong></p>
+<hr />
+<p>Executes lambda on main thread. Allows to determine lambda's capture.</p>
 </li>
 <li>
 <p><strong><a href="../aui_pp_cat/">AUI_PP_CAT</a></strong></p>
@@ -874,54 +912,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Stops program execution in attached debugger as if a breakpoint were set.</p>
 </li>
 <li>
-<p><strong><a href="../aui_perform_as_member/">AUI_PERFORM_AS_MEMBER</a></strong></p>
-<hr />
-<p>Performs multiple operations on a single object without repeating its name.</p>
-</li>
-<li>
-<p><strong><a href="../aui_defer/">AUI_DEFER</a></strong></p>
-<hr />
-<p>Defers execution of the next block to the end of current block (RAII scope).</p>
-</li>
-<li>
-<p><strong><a href="../aui_let/">AUI_LET</a></strong></p>
-<hr />
-<p>Performs multiple operations on a single object without repeating its name (in place)
-   This function can be used as an operator on object.</p>
-</li>
-<li>
-<p><strong><a href="../aui_with_style/">AUI_WITH_STYLE</a></strong></p>
-<hr />
-<p>Allows to define a style to the view right in place.</p>
-</li>
-<li>
-<p><strong><a href="../aui_threadpool/">AUI_THREADPOOL</a></strong></p>
-<hr />
-<p>Executes following {} block asynchronously in the <a href="AThreadPool::global()">global</a> thread pool. Unlike
-<a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a>, does now allow to set lambda's capture. Lambda's capture is <code>[=]</code>.</p>
-</li>
-<li>
-<p><strong><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a></strong></p>
-<hr />
-<p>Executes following {} block asynchronously in the <a href="AThreadPool::global()">global</a> thread pool. Unlike
-<a href="../aui_threadpool/">AUI_THREADPOOL</a>, allows to set lambda's capture but you should always specify lambda's capture.</p>
-</li>
-<li>
-<p><strong><a href="../aui_do_once/">AUI_DO_ONCE</a></strong></p>
-<hr />
-<p>Executes following function call or {} block once per program execution</p>
-</li>
-<li>
-<p><strong><a href="../aui_ui_thread/">AUI_UI_THREAD</a></strong></p>
-<hr />
-<p>Executes lambda on main thread.</p>
-</li>
-<li>
-<p><strong><a href="../aui_ui_thread_x/">AUI_UI_THREAD_X</a></strong></p>
-<hr />
-<p>Executes lambda on main thread. Allows to determine lambda's capture.</p>
-</li>
-<li>
 <p><strong><a href="../aui_assert/">AUI_ASSERT</a></strong></p>
 <hr />
 <p>Asserts that the passed condition evaluates to true.</p>
@@ -935,6 +925,16 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p><strong><a href="../aui_assert_no_condition/">AUI_ASSERT_NO_CONDITION</a></strong></p>
 <hr />
 <p>Always triggers assertion fail.</p>
+</li>
+<li>
+<p><strong><a href="../aui_entry/">AUI_ENTRY</a></strong></p>
+<hr />
+<p>Application entry point.</p>
+</li>
+<li>
+<p><strong><a href="../aui_enum_values/">AUI_ENUM_VALUES</a></strong></p>
+<hr />
+<p>Defines all enum values for AEnumerate.</p>
 </li>
 </ul>
 </div>
