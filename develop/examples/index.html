@@ -905,52 +905,28 @@ user interface customization.</p>
 </thead>
 <tbody>
 <tr>
-<td>[# App Template ⚡</td>
-<td></td>
+<td><a href="../app-template/">App Template ⚡</a></td>
+<td><!-- aui:example-file-count 0 --> GitHub-hosted app project with CI/CD building, <a href="../writing-tests/">testing</a>, releasing, <a href="../updater/">auto updating</a>, code quality checking and more.</td>
 </tr>
 <tr>
-<td>](app-template.md)</td>
-<td><!-- aui:example-file-count 0 --> <!-- aui:example app --> GitHub-hosted app project with CI/CD building, <a href="../writing-tests/">testing</a>, releasing, <a href="../updater/">auto updating</a>, code quality checking and more.  <img alt="" src="../imgs/afljskfllkaf.gif" />  ## Source Code  This example is located outside AUI's source tree. Checkout its <a href="https://github.com/aui-framework/example_app">repository</a>.</td>
+<td><a href="../fractal-example/">Fractal Example</a></td>
+<td><!-- aui:example-file-count 8 --> Fractal viewer application demonstrating usage of custom shaders.</td>
 </tr>
 <tr>
-<td>[# Fractal Example</td>
-<td></td>
+<td><a href="../notes-app/">Notes App</a></td>
+<td><!-- aui:example-file-count 2 --> Note taking app that demonstrates usage of AListModel, <a href="../aproperty/">AProperty</a>, user data saving and loading.</td>
 </tr>
 <tr>
-<td>](fractal-example.md)</td>
-<td><!-- aui:example-file-count 8 --> <!-- aui:example app --> Fractal viewer application demonstrating usage of custom shaders.  <img alt="Fractal" src="https://sun9-42.userapi.com/impf/WruyOdMmMBrRfpjJ7QrhFepZj7obL3VMGxNSaw/Tr8XxKqdVV8.jpg?size=1261x740&amp;quality=96&amp;proxy=1&amp;sign=f6b851a26a7c40a5f1c22367a34f4c71&amp;type=album" />  If you are familiar with OpenGL, you can use custom shaders with AUI. In this example, we're using such shader to display a GPU-computed Mandelbrot set.</td>
+<td><a href="../game-of-life/">Game of Life</a></td>
+<td><!-- aui:example-file-count 2 --> Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.</td>
 </tr>
 <tr>
-<td>[# Notes App</td>
-<td></td>
+<td><a href="../minesweeper-game/">Minesweeper Game</a></td>
+<td><!-- aui:example-file-count 10 --> Minesweeper game implementation driven by <a href="../ass/">ass</a>.</td>
 </tr>
 <tr>
-<td>](notes-app.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example app --> Note taking app that demonstrates usage of AListModel, <a href="../aproperty/">AProperty</a>, user data saving and loading.  <img alt="" src="../imgs/Screenshot_20250228_133823.png" />  The functionality includes loading, saving, creating and deleting notes, as well as marking the UI state as dirty when changes are made.  ## Models  <code>Note</code> struct describes a note:  @dontinclude examples/app/notes/src/main.cpp @skip struct Note @until };  The JSON representation is described as follows:  @line AJSON   ## MainWindow class  The <code>MainWindow</code> class is responsible for managing the overall view and logic related to notes.  ### Fields  - <code>mNotes</code>: a member that holds a list of notes. - <code>mCurrentNote</code>: a property holding a pointer to the currently selected note. - <code>mDirty</code>: a boolean property indicating whether there are unsaved changes in the application.  ### Methods  - <code>load()</code>: loads notes from a JSON file.   <!-- aui:snippet examples/app/notes/src/main.cpp load --> - <code>save()</code>: saves the current list of notes to a JSON file. Also resets the dirty state.   <!-- aui:snippet examples/app/notes/src/main.cpp save --> - <code>newNote()</code>: creates a new note with a default title and adds it to the list of notes. Sets this note as the currently   selected note.   <!-- aui:snippet examples/app/notes/src/main.cpp newNote --> - <code>deleteCurrentNote()</code>: deletes the current note, if one is selected. Prompts the user for confirmation before   proceeding with deletion.   <!-- aui:snippet examples/app/notes/src/main.cpp deleteCurrentNote --> - <code>markDirty()</code>: marks the application state as dirty when changes made that require saving. Such a simple operation is   extracted to a dedicated method, so the <a href="../signals/">signals</a> can be easily connected to.   @skip markDirty()   @until }  ## UI Components and Layout  @dontinclude examples/app/notes/src/main.cpp - <code>TitleTextArea</code>: derivative of <code><a href="../atextarea/">ATextArea</a></code> that focuses next text area when <code>Enter</code> is pressed.   @skip TitleTextArea   @until }; - 'New note' button: creates a new note using <code>newNote()</code>. - 'Save' button: saves application data via <code>save()</code> method. It's <code>enabled</code> state is controlled by <code>mDirty</code> property. - 'Delete' button: deletes current note via <code>deleteCurrentNote()</code> method. It's <code>enabled</code> state is controlled by   <code>mCurrentNote</code> property. - Previews: contains dynamically generated previews of all notes, allowing users to select the one they want to view   or edit.   <!-- aui:snippet examples/app/notes/src/main.cpp scrollarea -->   <code>notePreview()</code> function generates a single preview for a note.   <!-- aui:snippet examples/app/notes/src/main.cpp notePreview --> - Main area of the application is occupied by note editor generated by <code>noteEditor()</code> function. <code>noteEditor()</code> consists   of 2 text areas - one for title, one for contents.   <!-- aui:snippet examples/app/notes/src/main.cpp noteEditor --></td>
-</tr>
-<tr>
-<td>[# Game of Life</td>
-<td></td>
-</tr>
-<tr>
-<td>](game-of-life.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example app --> Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.  <img alt="" src="../imgs/eb3f5607-5dfb-4f58-958c-ed513cf3161e.jpeg" />  Conway's Game of Life, a cellular automaton devised by the mathematician John Conway. The game consists of a grid where each cell can be either alive or dead, and its state evolves over time according to simple rules based on the states of adjacent cells.  &gt; Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur: &gt; &gt; - Any live cell with fewer than two live neighbours dies, as if by underpopulation. &gt; - Any live cell with two or three live neighbours lives on to the next generation. &gt; - Any live cell with more than three live neighbours dies, as if by overpopulation. &gt; - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction. &gt;  &gt; <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia</a>  ## Cells  Represents the grid of cells with their states (<code>CellState::ALIVE</code> or <code>CellState::DEAD</code>). It has methods for initialization and randomization, as well as accessors to get the size and state of individual cells.  Computations are handled asynchronously by an <a href="../athreadpool/">AThreadPool</a>, improving performance during state transitions or rule computations in large grids.  @dontinclude examples/app/game_of_life/src/main.cpp @skip class Cells @until /// end  ## CellsView  Visualizes the grid using a texture. It updates the texture when cells change their states. When the pointer is pressed on the view, it toggles the state of the cell under the cursor.  The grid is composed by lines in <code>drawGrid</code> lambda. These lines are then passed to the rendering, making a single draw call to draw the grid.  @skip class CellsView @until /// end  ## GameOfLifeWindow  This is the main window for the Game of Life application. It sets up the UI with buttons to randomize the grid and start/pause the game, as well as a central area where the <code>CellsView</code> is displayed.  @skip class GameOfLifeWindow @until /// end</td>
-</tr>
-<tr>
-<td>[# Minesweeper Game</td>
-<td></td>
-</tr>
-<tr>
-<td>](minesweeper-game.md)</td>
-<td><!-- aui:example-file-count 10 --> <!-- aui:example app --> Minesweeper game implementation driven by <a href="../ass/">ass</a>.  <img alt="" src="../imgs/Screenshot_20250211_052511.png" />  ## Game Logic  The entire game logic is located in MinesweeperWindow.cpp.  ### Initialization  The game starts with <code>beginGame</code> function. <code>beginGame</code> Initializes a new Minesweeper game with specified dimensions and bomb count. Clears any previous game state, sets up the grid layout, initializes cell views, connects click handlers for opening cells and flagging, and finally packs UI elements to be displayed.  - Generates a grid with <code><a href="../agridlayout/">AGridLayout</a></code> - Dynamically creates <code>CellView</code>s based on game data - Handles user events (left clicks and right clicks)  <!-- aui:snippet examples/app/minesweeper/src/MinesweeperWindow.cpp beginGame -->  ### Event handling  As was mentioned, the game handles events by setting signal handlers on <code>CellView</code>. This is done inside <code>setupEventHandlers</code>. Here's a little breakdown:  #### Toggle flag (right click)  In a minesweeper game, right click toggles the flag. First, we check that game is not finished (<code>mReveal</code>), then we check if cell is open. Finally, we toggle the flag:  <!-- aui:snippet examples/app/minesweeper/src/MinesweeperWindow.cpp clickedRight -->  As you can see, game data is represented by <code>FieldCell</code> enum:  <!-- aui:snippet examples/app/minesweeper/src/FieldCell.h FieldCell -->  <code>FieldCell</code> is just a bitfield implemented thanks to <a href="../aui_enum_flag/">AUI_ENUM_FLAG</a>.  #### Open cell (left click)  Left click delegates cell opening logic to <code>openCell</code> which contain game-specific logic.  <!-- aui:snippet examples/app/minesweeper/src/MinesweeperWindow.cpp clicked -->  ## Cell style  In response to user's actions, the game updates its internal state. To visualize the state, <code>updateCellViewStyle</code> function is called. This method updates the style of a cell at coordinates (x, y) based on its state or any other conditions (e.g., game over, win/lose states). It triggers an event to let the framework know that custom styles need to be re-evaluated and applied accordingly.  In game style sheets, a custom selector tied to <code>CellView</code> is used to display various cell states:  <!-- aui:snippet examples/app/minesweeper/src/Style.cpp CellSelector -->  Such selector is used in style sheets accordingly:  <!-- aui:snippet examples/app/minesweeper/src/Style.cpp open -->  Also, for reveal game state (on win/lose) there's an additional selector:  <!-- aui:snippet examples/app/minesweeper/src/Style.cpp RevealSelector -->  <code>RevealSelector</code> and <code>CellSelector</code> are used together to show game results:  <img alt="" src="../imgs/Screenshot_20250211_051126.png" />  <!-- aui:snippet examples/app/minesweeper/src/Style.cpp reveal --></td>
-</tr>
-<tr>
-<td>[# AUI Telegram Client (AUIgram)</td>
-<td></td>
-</tr>
-<tr>
-<td>](aui-telegram-client-auigram.md)</td>
-<td><!-- aui:example-file-count 0 --> <!-- aui:example app --> Using AUI Framework from perspective of a Telegram client. This project shows how to solve typical problems of a UI application (i.e., dependency management, data binding, styling, asynchronous data loading, <a href="../packaging/">packaging</a>, deploying).  <img alt="AUI Telegram Client" src="https://github.com/aui-framework/telegram_client/blob/f985af77711be2b17b6aab11bfafb2a864800a1e/demo/demo.jpg?raw=true" />  ## Motivation/rationale  We wanted some kind of project/repository to be as an example/reference project of a real life application built entirely with AUI.  Telegram Client is a great example:  - <code>tdlib</code>, which is basis of every Telegram client, uses C++ - almost everyone is familiar with Telegram - there are many challenges for AUI, such as importing <code>tdlib</code> with <a href="../aui.boot/">aui.boot</a> (spoiler: it does the job   perfectly), asynchronous data loading, data binding, animations, assets, full support of Windows, macOS, Linux,   Android, iOS.  ## Source Code  This example is located outside AUI's source tree. Checkout its <a href="https://github.com/aui-framework/telegram_client">repository</a>.</td>
+<td><a href="../aui-telegram-client-auigram/">AUI Telegram Client (AUIgram)</a></td>
+<td><!-- aui:example-file-count 0 --> Using AUI Framework from perspective of a Telegram client. This project shows how to solve typical problems of a UI application (i.e., dependency management, data binding, styling, asynchronous data loading, <a href="../packaging/">packaging</a>, deploying).</td>
 </tr>
 </tbody>
 </table>
@@ -965,60 +941,32 @@ user interface customization.</p>
 </thead>
 <tbody>
 <tr>
-<td>[# <a href="../backdrop/">Backdrop</a></td>
-<td></td>
+<td><a href="../backdrop/">Backdrop</a></td>
+<td><!-- aui:example-file-count 2 --> <a href="../backdrop/">Backdrop</a> effects demo.</td>
 </tr>
 <tr>
-<td>](backdrop.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example ui --> <a href="../backdrop/">Backdrop</a> effects demo.  <img alt="" src="../imgs/454168224-491c728f-9bfd-40c5-b83a-281076b8292f.gif" />  This example demonstrates how <a href="../ass_backdrop/"><code>ass::Backdrop</code></a> effects can be used to produce rich visuals that conform modern design principles.  In this example, a combination of <a href="../ass_backdrop/"><code>ass::Backdrop</code></a> -enabled view and <a href="../ascrollarea/">AScrollArea</a> is used. To raise the <a href="../ass_backdrop/"><code>ass::Backdrop</code></a> above the <a href="../ascrollarea/">AScrollArea</a>, <a href="../astackedlayout/">AStackedLayout</a> layout is used.</td>
+<td><a href="../views-example/">Views Example</a></td>
+<td><!-- aui:example-file-count 9 --> All-in-one views building example.</td>
 </tr>
 <tr>
-<td>[# <a href="../useful_views/">Views</a> Example</td>
-<td></td>
+<td><a href="../aui-contacts/">AUI Contacts</a></td>
+<td><!-- aui:example-file-count 8 --> Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make a contacts-like application.</td>
 </tr>
 <tr>
-<td>](views-example.md)</td>
-<td><!-- aui:example-file-count 9 --> <!-- aui:example ui --> All-in-one views building example.  <img alt="" src="../imgs/Screenshot_20250412_083751.png" />  This example project is used to test various UI things. As framework was growing, this particular project is bloated with various components. At the moment, some efforts are performed to this application to split and categorize things up.</td>
+<td><a href="../minimal-ui-template-with-assets/">Minimal UI Template with Assets</a></td>
+<td><!-- aui:example-file-count 0 --> Minimal UI boilerplate template with <a href="../aui-assets/">AUI Assets</a>.</td>
 </tr>
 <tr>
-<td>[# AUI Contacts</td>
-<td></td>
+<td><a href="../infinite-lazy-list/">Infinite Lazy List</a></td>
+<td><!-- aui:example-file-count 2 --> Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make an infinite lazy list.</td>
 </tr>
 <tr>
-<td>](aui-contacts.md)</td>
-<td><!-- aui:example-file-count 8 --> <!-- aui:example ui --> Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make a contacts-like application.  <img alt="" src="../imgs/Screenshot_20250328_153702.png" />  UI is defined using a declarative syntax, where the structure and layout of the UI are specified as a series of function calls.  The application uses an <a href="../aproperty/">AProperty</a> named <code>mContacts</code> to store a vector of contact objects. Each contact object has properties like <code>displayName</code>, <code>note</code>, etc.</td>
+<td><a href="../minimal-ui-template/">Minimal UI Template</a></td>
+<td><!-- aui:example-file-count 0 --> Minimal UI boilerplate template.</td>
 </tr>
 <tr>
-<td>[# Minimal UI Template with Assets</td>
-<td></td>
-</tr>
-<tr>
-<td>](minimal-ui-template-with-assets.md)</td>
-<td><!-- aui:example-file-count 0 --> <!-- aui:example ui --> Minimal UI boilerplate template with <a href="../aui-assets/">AUI Assets</a>.  <img alt="" src="../imgs/minimal-assets-template.png" />  ## Source Code ### Project Structure   <code>mermaid graph TD     A[project_template_assets_ui] --&gt; B[CMakeLists.txt]     A --&gt; C[src/]     C --&gt; D[MainWindow.h]     C --&gt; E[MainWindow.cpp]     C --&gt; F[main.cpp]     A --&gt; G[assets/img/]     G --&gt; H[logo.svg]</code>  --- ### CMakeLists.txt <code>cmake # Standard routine cmake_minimum_required(VERSION 3.16) project(project_template_assets_ui)  set(AUI_VERSION v8.0.0-rc.8)  # Use AUI.Boot file(         DOWNLOAD         https://raw.githubusercontent.com/aui-framework/aui/${AUI_VERSION}/aui.boot.cmake         ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake) include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)  # import AUI <a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui         COMPONENTS <a href="../core/">core</a> views         VERSION ${AUI_VERSION})   # Create the executable. This function automatically links all sources from the src/ folder, # creates CMake target and places the resulting executable to bin/ folder. <a href="../aui_executable/">aui_executable</a>(${PROJECT_NAME})  # Link required libs <a href="../aui_link/">aui_link</a>(${PROJECT_NAME} PRIVATE <a href="../core/">aui::core</a> aui::views)  <a href="../aui-assets/#aui_compile_assets">aui_compile_assets</a>(${PROJECT_NAME})</code>  ### src/MainWindow.h  <code>cpp #pragma once  #include &lt;AUI/Platform/AWindow.h&gt;  class MainWindow: public <a href="../awindow/">AWindow</a> { public:     MainWindow(); };</code> ### src/MainWindow.cpp <code>cpp #include "MainWindow.h" #include &lt;AUI/Util/UIBuildingHelpers.h&gt; #include &lt;AUI/View/ALabel.h&gt; #include &lt;AUI/View/AButton.h&gt; #include &lt;AUI/Platform/APlatform.h&gt; #include &lt;AUI/View/ADrawableView.h&gt;  using namespace declarative;  MainWindow::MainWindow(): <a href="../awindow/">AWindow</a>("Project template app", 300_dp, 200_dp) {     setContents(         Centered{             Vertical{                 Centered { Icon { ":img/logo.svg" } with_style { FixedSize(64_dp) } },                 Centered { Label { "Hello world from AUI!" } },                 _new&lt;<a href="../abutton/">AButton</a>&gt;("Visit GitHub repo").connect(&amp;<a href="../aview/#AView::clicked">AView::clicked</a>, this, [] {                     APlatform::openUrl("https://github.com/aui-framework/aui");                 }),                 _new&lt;<a href="../abutton/">AButton</a>&gt;("Visit docs").connect(&amp;<a href="../aview/#AView::clicked">AView::clicked</a>, this, [] {                     APlatform::openUrl("https://aui-framework.github.io/");                 }),                 _new&lt;<a href="../abutton/">AButton</a>&gt;("Submit an issue").connect(&amp;<a href="../aview/#AView::clicked">AView::clicked</a>, this, [] {                     APlatform::openUrl("https://github.com/aui-framework/aui/issues/new");                 }),             }         }     ); }</code>  ### src/main.cpp <code>cpp #include &lt;AUI/Platform/Entry.h&gt; #include "MainWindow.h"  <a href="../aui_entry/">AUI_ENTRY</a> {     _new&lt;MainWindow&gt;()-&gt;show();     return 0; };</code>  This example is located outside AUI's source tree. Checkout its <a href="https://github.com/aui-framework/example_assets_ui">repository</a>.</td>
-</tr>
-<tr>
-<td>[# Infinite Lazy List</td>
-<td></td>
-</tr>
-<tr>
-<td>](infinite-lazy-list.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example ui --> Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make an infinite lazy list.  This example demonstrates making an optimal infinite list. That is, when you infinitely scroll down to load new items, the older items are unloaded from memory.  The "loading" action is performed on a worker thread and a delay is simulated by <a href="../athread/">AThread</a>::sleep.  As a bonus, we've added a <a href="../aspinnerv2/">spinner</a> to indicate that loading is in progress.  In this example, we've used functional style and decomposition technique instead of making custom view classes. The idea is hide the implementation specifics of <code>myLazyList</code> that makes a basic <a href="../aview/">AView</a> in return. The overall state of produced lazy list object is controlled by list model.  <code>myLazyList</code> is limited to specific type of model by intention. AUI does not provide some kind of generalization on its own. In fact, we're demonstrating the whole concept in less than 100 lines of code. You certainly can make a generalization that suits your project's needs.</td>
-</tr>
-<tr>
-<td>[# Minimal UI Template</td>
-<td></td>
-</tr>
-<tr>
-<td>](minimal-ui-template.md)</td>
-<td><!-- aui:example-file-count 0 --> <!-- aui:example ui --> Minimal UI boilerplate template.  <img alt="" src="../imgs/minimal-template.png" />  ## Source Code ### Project Structure  <code>mermaid graph TD     A[project_template_ui] --&gt; B[CMakeLists.txt] A --&gt; C[src/] C --&gt; D[MainWindow.h] C --&gt; E[MainWindow.cpp] C --&gt; F[main.cpp]</code>  --- ### CMakeLists.txt <code>cmake # Standard routine cmake_minimum_required(VERSION 3.16) project(project_template_ui)  # Tip: in a production project don't use branch name, use a specific name tag (i.e. v1.1.1), # but for a sandbox project branch name is perfectly enough set(AUI_VERSION v8.0.0-rc.8)  # Use AUI.Boot file(         DOWNLOAD         https://raw.githubusercontent.com/aui-framework/aui/${AUI_VERSION}/aui.boot.cmake         ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake) include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)  # import AUI <a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui         COMPONENTS <a href="../core/">core</a> views         VERSION ${AUI_VERSION})   # Create the executable. This function automatically links all sources from the src/ folder, # creates CMake target and places the resulting executable to bin/ folder. <a href="../aui_executable/">aui_executable</a>(${PROJECT_NAME})  # Link required libs <a href="../aui_link/">aui_link</a>(${PROJECT_NAME} PRIVATE <a href="../core/">aui::core</a> aui::views)</code>  ### src/MainWindow.h  <code>cpp #pragma once  #include &lt;AUI/Platform/AWindow.h&gt;  class MainWindow: public <a href="../awindow/">AWindow</a> { public:     MainWindow(); };</code> ### src/MainWindow.cpp <code>cpp #include "MainWindow.h" #include &lt;AUI/Util/UIBuildingHelpers.h&gt; #include &lt;AUI/View/ALabel.h&gt; #include &lt;AUI/View/AButton.h&gt; #include &lt;AUI/Platform/APlatform.h&gt;  using namespace declarative;  MainWindow::MainWindow(): <a href="../awindow/">AWindow</a>("Project template app", 300_dp, 200_dp) {     setContents(         Centered{             Vertical{                 Centered { Label { "Hello world from AUI!" } },                 _new&lt;<a href="../abutton/">AButton</a>&gt;("Visit GitHub repo").connect(&amp;<a href="../aview/#AView::clicked">AView::clicked</a>, this, [] {                     APlatform::openUrl("https://github.com/aui-framework/aui");                 }),                 _new&lt;<a href="../abutton/">AButton</a>&gt;("Visit docs").connect(&amp;<a href="../aview/#AView::clicked">AView::clicked</a>, this, [] {                     APlatform::openUrl("https://aui-framework.github.io/");                 }),                 _new&lt;<a href="../abutton/">AButton</a>&gt;("Submit an issue").connect(&amp;<a href="../aview/#AView::clicked">AView::clicked</a>, this, [] {                     APlatform::openUrl("https://github.com/aui-framework/aui/issues/new");                 }),             }         }     ); }</code>  ### src/main.cpp <code>cpp #include &lt;AUI/Platform/Entry.h&gt; #include "MainWindow.h"  <a href="../aui_entry/">AUI_ENTRY</a> {     _new&lt;MainWindow&gt;()-&gt;show();     return 0; };</code>  This example is located outside AUI's source tree. Checkout its <a href="https://github.com/aui-framework/example_minimal_ui">repository</a>.</td>
-</tr>
-<tr>
-<td>[# Minimal UI Template XMake</td>
-<td></td>
-</tr>
-<tr>
-<td>](minimal-ui-template-xmake.md)</td>
-<td><!-- aui:example-file-count 3 --> <!-- aui:example ui --> Minimal UI boilerplate template XMake.  <img alt="" src="../imgs/minimal-template.png" />  ## Source Code ### Project Structure  <code>mermaid graph TD     A[project_template_ui_xmake] --&gt; B[xmake.lua]     A --&gt; C[src/]     C --&gt; D[MainWindow.h]     C --&gt; E[MainWindow.cpp]     C --&gt; F[main.cpp]     A --&gt; G[.vscode/]     G --&gt; H[c_cpp_properties.json]</code>  ---  ### xmake.lua <!-- aui:include examples/ui/minimal_ui_xmake/xmake.lua -->  ### src/MainWindow.h <!-- aui:include examples/ui/minimal_ui_xmake/src/MainWindow.h -->  ### src/MainWindow.cpp <!-- aui:include examples/ui/minimal_ui_xmake/src/MainWindow.cpp -->  ### src/main.cpp <!-- aui:include examples/ui/minimal_ui_xmake/src/main.cpp -->  ### .vscode/c_cpp_properties.json <!-- aui:include examples/ui/minimal_ui_xmake/.vscode/c_cpp_properties.json --></td>
+<td><a href="../minimal-ui-template-xmake/">Minimal UI Template XMake</a></td>
+<td><!-- aui:example-file-count 3 --> Minimal UI boilerplate template XMake.</td>
 </tr>
 </tbody>
 </table>
@@ -1033,20 +981,12 @@ user interface customization.</p>
 </thead>
 <tbody>
 <tr>
-<td>[# Console Hello World Example</td>
-<td></td>
+<td><a href="../console-hello-world-example/">Console Hello World Example</a></td>
+<td><!-- aui:example-file-count 2 --> Basic CLI Hello World application.</td>
 </tr>
 <tr>
-<td>](console-hello-world-example.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example desktop --> Basic CLI Hello World application.</td>
-</tr>
-<tr>
-<td>[# Prometheus Exporter Template</td>
-<td></td>
-</tr>
-<tr>
-<td>](prometheus-exporter-template.md)</td>
-<td><!-- aui:example-file-count 0 --> <!-- aui:example desktop --> Example of using <a href="../aui.boot/">aui.boot</a> to pull Prometheus library.  ## Source Code  This example is located outside AUI's source tree. Checkout its <a href="https://github.com/aui-framework/example_prometheus">repository</a>.</td>
+<td><a href="../prometheus-exporter-template/">Prometheus Exporter Template</a></td>
+<td><!-- aui:example-file-count 0 --> Example of using <a href="../aui.boot/">aui.boot</a> to pull Prometheus library.</td>
 </tr>
 </tbody>
 </table>
@@ -1063,60 +1003,32 @@ implementations of these tasks can be compared side by side. AUI project provide
 </thead>
 <tbody>
 <tr>
-<td>[# 7GUIs CRUD</td>
-<td></td>
+<td><a href="../7guis-crud/">7GUIs CRUD</a></td>
+<td><!-- aui:example-file-count 2 --> Create/Read/Update/Delete example.</td>
 </tr>
 <tr>
-<td>](7guis-crud.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example 7guis --> Create/Read/Update/Delete example.  <img alt="" src="../imgs/Screenshot_20250401_074431.png" />  Challenges: separating the domain and presentation logic, managing mutation, building a non-trivial layout.  The task is to build a frame containing the following elements: a textfield Tprefix, a pair of textfields Tname and Tsurname, a listbox L, buttons BC, BU and BD and the three labels as seen in the screenshot. L presents a view of the data in the database that consists of a list of names. At most one entry can be selected in L at a time. By entering a string into Tprefix the user can filter the names whose surname start with the entered prefix—this should happen immediately without having to submit the prefix with enter. Clicking BC will append the resulting name from concatenating the strings in Tname and Tsurname to L. BU and BD are enabled iff an entry in L is selected. In contrast to BC, BU will not append the resulting name but instead replace the selected entry with the new name. BD will remove the selected entry. The layout is to be done like suggested in the screenshot. In particular, L must occupy all the remaining space.  CRUD (Create, Read, Update and Delete) represents a typical graphical business application. The primary challenge is the separation of domain and presentation logic in the source code that is more or less forced on the implementer due to the ability to filter the view by a prefix. Traditionally, some form of MVC pattern is used to achieve the separation of domain and presentation logic. Also, the approach to managing the mutation of the list of names is tested. A good solution will have a good separation between the domain and presentation logic without much overhead (e.g. in the form of toolkit specific concepts or language/paradigm concepts), a mutation management that is fast but not error-prone and a natural representation of the layout (layout builders are allowed, of course, but would increase the overhead).</td>
+<td><a href="../7guis-flight-booker/">7GUIs Flight Booker</a></td>
+<td><!-- aui:example-file-count 2 --> Flight Booker.</td>
 </tr>
 <tr>
-<td>[# 7GUIs Flight Booker</td>
-<td></td>
+<td><a href="../7guis-cells/">7GUIs Cells</a></td>
+<td><!-- aui:example-file-count 15 --> Spreadsheet processor (Excel).</td>
 </tr>
 <tr>
-<td>](7guis-flight-booker.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example 7guis --> Flight Booker.  <img alt="" src="../imgs/wjhsdflksdnjv.webp" />  Challenge: Constraints.  The task is to build a frame containing a combobox C with the two options “one-way flight” and “return flight”, two textfields T1 and T2 representing the start and return date, respectively, and a button B for submitting the selected flight. T2 is enabled iff C’s value is “return flight”. When C has the value “return flight” and T2’s date is strictly before T1’s then B is disabled. When a non-disabled textfield T has an ill-formatted date then T is colored red and B is disabled. When clicking B a message is displayed informing the user of his selection (e.g. “You have booked a one-way flight on 04.04.2014.”). Initially, C has the value “one-way flight” and T1 as well as T2 have the same (arbitrary) date (it is implied that T2 is disabled).  The focus of Flight Booker lies on modelling constraints between widgets on the one hand and modelling constraints within a widget on the other hand. Such constraints are very common in everyday interactions with GUI applications. A good solution for Flight Booker will make the constraints clear, succinct and explicit in the source code and not hidden behind a lot of scaffolding.  ## Regex Library  For validation in this example, we've chosen using regex technology, as it's fairly simple and extensible way to make parsers.  Despite STL provides regex implementation, it varies from compiler to compiler, compiles the regex expression at runtime only, and some platforms may even lack builtin regex library. To avoid possible issues, custom implementation should be used.  Although AUI does not provide a regex parser on its own, nothing stops you from <a href="../aui.boot/#AUI_BOOT_3RDPARTY">using AUI.Boot</a> in order to pull awesome 3rdparty implementation of your choice that suits your exact needs. For this example, we've chosen <a href="https://github.com/hanickadot/compile-time-regular-expressions">ctre</a>, as it evaluates the regex expression at compile-time, emitting effective code, as if we were validating the string manually.</td>
+<td><a href="../7guis-circle-drawer/">7GUIs Circle Drawer</a></td>
+<td><!-- aui:example-file-count 2 --> Undo, redo, dialog control.</td>
 </tr>
 <tr>
-<td>[# 7GUIs Cells</td>
-<td></td>
+<td><a href="../7guis-temperature-converter/">7GUIs Temperature Converter</a></td>
+<td><!-- aui:example-file-count 2 --> Fahrenheit to Celsius and vice versa.</td>
 </tr>
 <tr>
-<td>](7guis-cells.md)</td>
-<td><!-- aui:example-file-count 15 --> <!-- aui:example 7guis --> Spreadsheet processor (Excel).  <img alt="" src="../imgs/wankfdnfkjma.webp" />  Challenges: change propagation, widget customization, implementing a more authentic/involved GUI application.  The task is to create a simple but usable spreadsheet application. The spreadsheet should be scrollable. The rows should be numbered from 0 to 99 and the columns from A to Z. Double-clicking a cell C lets the user change C’s formula. After having finished editing the formula is parsed and evaluated and its updated value is shown in C. In addition, all cells which depend on C must be reevaluated. This process repeats until there are no more changes in the values of any cell ( change propagation). Note that one should not just recompute the value of every cell but only of those cells that depend on another cell’s changed value. If there is an already provided spreadsheet widget it should not be used. Instead, another similar widget (like JTable in Swing) should be customized to become a reusable spreadsheet widget.  Cells is a more authentic and involved task that tests if a particular approach also scales to a somewhat bigger application. The two primary GUI-related challenges are intelligent propagation of changes and widget customization. Admittedly, there is a substantial part that is not necessarily very GUI-related but that is just the nature of a more authentic challenge. A good solution’s change propagation will not involve much effort and the customization of a widget should not prove too difficult. The domain-specific code is clearly separated from the GUI-specific code. The resulting spreadsheet widget is reusable.</td>
+<td><a href="../7guis-counter/">7GUIs Counter</a></td>
+<td><!-- aui:example-file-count 2 --> Simple counter.</td>
 </tr>
 <tr>
-<td>[# 7GUIs Circle Drawer</td>
-<td></td>
-</tr>
-<tr>
-<td>](7guis-circle-drawer.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example 7guis --> Undo, redo, dialog control.  <img alt="" src="../imgs/Screenshot_20250401_090701.png" />  Challenges: undo/redo, custom drawing, dialog control.  The task is to build a frame containing an undo and redo button as well as a canvas area underneath. Left-clicking inside an empty area inside the canvas will create an unfilled circle with a fixed diameter whose center is the left-clicked point. The circle nearest to the mouse pointer such that the distance from its center to the pointer is less than its radius, if it exists, is filled with the color gray. The gray circle is the selected circle C. Right-clicking C will make a popup menu appear with one entry “Adjust diameter..”. Clicking on this entry will open another frame with a slider inside that adjusts the diameter of C. Changes are applied immediately. Closing this frame will mark the last diameter as significant for the undo/redo history. Clicking undo will undo the last significant change (i.e. circle creation or diameter adjustment). Clicking redo will reapply the last undoed change unless new changes were made by the user in the meantime.  Circle Drawer’s goal is, among other things, to test how good the common challenge of implementing an undo/redo functionality for a GUI application can be solved. In an ideal solution the undo/redo functionality comes for free resp. just comes out as a natural consequence of the language / toolkit / paradigm. Moreover, Circle Drawer tests how dialog control, i.e. keeping the relevant context between several successive GUI interaction steps, is achieved in the source code. Last but not least, the ease of custom drawing is tested.</td>
-</tr>
-<tr>
-<td>[# 7GUIs Temperature Converter</td>
-<td></td>
-</tr>
-<tr>
-<td>](7guis-temperature-converter.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example 7guis --> Fahrenheit to Celsius and vice versa.  <img alt="" src="../imgs/wrjikjkedkncbjw.webp" />  Challenges: bidirectional data flow, user-provided text input.  The task is to build a frame containing two textfields TC and TF representing the temperature in Celsius and Fahrenheit, respectively. Initially, both TC and TF are empty. When the user enters a numerical value into TC the corresponding value in TF is automatically updated and vice versa. When the user enters a non-numerical string into TC the value in TF is not updated and vice versa. The formula for converting a temperature C in Celsius into a temperature F in Fahrenheit is C = (F - 32) * (5/9) and the dual direction is F = C * (9/5) + 32.  Temperature Converter increases the complexity of Counter by having bidirectional data flow between the Celsius and Fahrenheit inputs and the need to check the user input for validity. A good solution will make the bidirectional dependency very clear with minimal boilerplate code.  <!-- aui:include examples/7guis/temperature_converter/src/main.cpp -->  ## Comparison to Jetpack Compose  Here's implementation of the same app with Jetpack Compose:  <code>java package ...  import ...  class MainActivity : ComponentActivity() {     override fun onCreate(savedInstanceState: Bundle?) {         super.onCreate(savedInstanceState)         enableEdgeToEdge()         setContent {             CounterTheme {                 Counter()             }         }     } }  @Composable fun TemperatureBiConverter() {     var celsiusInputData by remember { mutableStateOf("0.0") }     var fahrenheitInputData by remember { mutableStateOf("32.0") }     Row(         modifier = Modifier             .fillMaxSize()             .padding(horizontal = 8.dp),         verticalAlignment = Alignment.CenterVertically,         horizontalArrangement = Arrangement.SpaceBetween     ) {         OutlinedTextField(             modifier = Modifier.weight(1f),             value = celsiusInputData,             onValueChange = { input -&gt;                 celsiusInputData = input                 input.toFloatOrNull()?.also {                     fahrenheitInputData = (it * (9f / 5f) + 32f).toString()                 }             },             label = { Text("Celsius") }         )         Text(             text = "=", fontSize = 18.sp,             modifier = Modifier.padding(horizontal = 8.dp)         )         OutlinedTextField(             modifier = Modifier.weight(1f),             value = fahrenheitInputData,             onValueChange = { input -&gt;                 fahrenheitInputData = input                 input.toFloatOrNull()                     ?.also {                         celsiusInputData = ((it - 32) * (5f / 9f)).toString()                     }             },             label = { Text("Fahrenheit") }         )     } }</code></td>
-</tr>
-<tr>
-<td>[# 7GUIs Counter</td>
-<td></td>
-</tr>
-<tr>
-<td>](7guis-counter.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example 7guis --> Simple counter.  <img alt="" src="../imgs/Screenshot_20250401_081123.png" />  Challenge: Understanding the basic ideas of a language/toolkit.  The task is to build a frame containing a label or read-only textfield T and a button B. Initially, the value in T is “0” and each click of B increases the value in T by one.  Counter serves as a gentle introduction to the basics of the language, paradigm and toolkit for one of the simplest GUI applications imaginable. Thus, Counter reveals the required scaffolding and how the very basic features work together to build a GUI application. A good solution will have almost no scaffolding.  <!-- aui:include examples/7guis/counter/src/main.cpp -->  ## Comparison to Jetpack Compose  Here's implementation of the same app with Jetpack Compose:  <code>java package ...  import ...  class MainActivity : ComponentActivity() {     override fun onCreate(savedInstanceState: Bundle?) {         super.onCreate(savedInstanceState)         enableEdgeToEdge()         setContent {             CounterTheme {                 Counter()             }         }     } }  @Composable fun Counter() {     var counter by remember { mutableIntStateOf(0) }     Row(         verticalAlignment = Alignment.CenterVertically,         modifier = Modifier.fillMaxSize(),         horizontalArrangement = Arrangement.SpaceAround     ) {         Text(text = "Counter $counter"),         Button(onClick = { counter++ }) {             Text(text = "Click to increment")         }     } }</code>  <img alt="" src="../imgs/Screenshot_20250401_081455.png" /></td>
-</tr>
-<tr>
-<td>[# 7GUIs Timer</td>
-<td></td>
-</tr>
-<tr>
-<td>](7guis-timer.md)</td>
-<td><!-- aui:example-file-count 2 --> <!-- aui:example 7guis --> Timer example.  <img alt="" src="../imgs/Screenshot_20250401_085438.png" />  Challenges: concurrency, competing user/signal interactions, responsiveness.  The task is to build a frame containing a gauge G for the elapsed time e, a label which shows the elapsed time as a numerical value, a slider S by which the duration d of the timer can be adjusted while the timer is running and a reset button R. Adjusting S must immediately reflect on d and not only when S is released. It follows that while moving S the filled amount of G will (usually) change immediately. When e ≥ d is true then the timer stops (and G will be full). If, thereafter, d is increased such that d &gt; e will be true then the timer restarts to tick until e ≥ d is true again. Clicking R will reset e to zero.  Timer deals with concurrency in the sense that a timer process that updates the elapsed time runs concurrently to the user’s interactions with the GUI application. This also means that the solution to competing user and signal interactions is tested. The fact that slider adjustments must be reflected immediately moreover tests the responsiveness of the solution. A good solution will make it clear that the signal is a timer tick and, as always, has not much scaffolding.</td>
+<td><a href="../7guis-timer/">7GUIs Timer</a></td>
+<td><!-- aui:example-file-count 2 --> Timer example.</td>
 </tr>
 </tbody>
 </table>
