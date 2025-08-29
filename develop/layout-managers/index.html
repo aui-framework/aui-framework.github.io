@@ -724,7 +724,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../useful_views/" class="md-nav__link">
+    <a href="../views/" class="md-nav__link">
       
   
   
@@ -1093,12 +1093,12 @@ beyond the border of the <a href="../aviewcontainer/">container</a>. A <a href="
 another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
 <p>The <a href="../alayout/">ALayout</a> is the base class for all layout managers in AUI. Layout managers are responsible for:</p>
 <ul>
-<li>Positioning child views within their container</li>
+<li>Positioning child <a href="../views/">views</a> within their container</li>
 <li>Calculating minimum sizes</li>
 <li>Handling view additions and removals</li>
-<li>Managing spacing between views</li>
+<li>Managing spacing between <a href="../views/">views</a></li>
 <li>Respecting view margins and alignment</li>
-<li>Supporting expanding/stretching of views</li>
+<li>Supporting expanding/stretching of <a href="../views/">views</a></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1107,15 +1107,15 @@ another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
 </div>
 <p>Common layout managers include:</p>
 <ul>
-<li><strong><a href="../ahorizontallayout/">AHorizontalLayout</a></strong> - Arranges views in a horizontal row</li>
-<li><strong><a href="../averticallayout/">AVerticalLayout</a></strong> - Arranges views in a vertical column</li>
-<li><strong><a href="../astackedlayout/">AStackedLayout</a></strong> - Centers views, displaying them on top of each other</li>
-<li><strong><a href="../aadvancedgridlayout/">AAdvancedGridLayout</a></strong> - Arranges views in a grid with customizable cell sizing</li>
+<li><strong><a href="../ahorizontallayout/">AHorizontalLayout</a></strong> - Arranges <a href="../views/">views</a> in a horizontal row</li>
+<li><strong><a href="../averticallayout/">AVerticalLayout</a></strong> - Arranges <a href="../views/">views</a> in a vertical column</li>
+<li><strong><a href="../astackedlayout/">AStackedLayout</a></strong> - Centers <a href="../views/">views</a>, displaying them on top of each other</li>
+<li><strong><a href="../aadvancedgridlayout/">AAdvancedGridLayout</a></strong> - Arranges <a href="../views/">views</a> in a grid with customizable cell sizing</li>
 </ul>
 <p>Key concepts:</p>
 <ol>
 <li><strong>Minimum Size</strong> - Layout managers calculate minimum size requirements by:</li>
-<li>Considering minimum sizes of child views</li>
+<li>Considering minimum sizes of child <a href="../views/">views</a></li>
 <li>Adding margins and spacing</li>
 <li>Respecting fixed size constraints</li>
 <li>
@@ -1136,7 +1136,7 @@ another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
 <li>Set via <a href="../alayout/#ALayout::setSpacing"><code>ALayout::setSpacing()</code></a> or <a href="../ass_layoutspacing/"><code>ass::LayoutSpacing</code></a> of the parent view</li>
 <li>Part of minimum size calculations of the parent view</li>
 <li>
-<p>Applied uniformly between its child views</p>
+<p>Applied uniformly between its child <a href="../views/">views</a></p>
 </li>
 <li>
 <p><strong>Margins</strong> - Space around individual views:</p>
@@ -1262,13 +1262,13 @@ Hints layout manager how much this <a href="../aview/">AView</a> should be exten
 <a href="#EXPANDING">Expanding</a> property, to get better understanding on how does layout work in AUI.</p>
 </div>
 <p>Horizontal layouts ignore y expanding of their children, Vertical layouts ignore x expanding of their children.</p>
-<p><a href="../useful_views/">Views</a> are normally created without any expanding set. When Expanding views appear in a layout they are given a share
+<p>Views are normally created without any expanding set. When Expanding <a href="../views/">views</a> appear in a layout they are given a share
 of space in accordance with their expanding or their minimum size whichever gives more space to them. Expanding is
-used to change how much space views are given in proportion to one another.</p>
+used to change how much space <a href="../views/">views</a> are given in proportion to one another.</p>
 <p>Expanding view does not affect parent's size or parent's expanding property. Use <a href="../aview/#AView::setExpanding">AView::setExpanding()</a> on parent, or
 <code>Expanding</code> variant of declarative container notation (<code>Vertical::Expanding</code>, <code>Horizontal::Expanding</code>,
 <code>Stacked::Expanding</code>) for such case.</p>
-<p>Expanding views use free space of their container to grow.</p>
+<p>Expanding <a href="../views/">views</a> use free space of their container to grow.</p>
 <p>Free space of a container is determined by its size subtracted by sum of minimum sizes of its children. Please note
 that your container would probably occupy minimum possible size (determined by minimum sizes of its children). It
 order to make container larger than minimum possible size, you can specify FixedSize or MinSize or Expanding to the
@@ -1299,7 +1299,7 @@ container.</p>
   </tr>
 </table>
 
-<p>Expanding views push remaining views in their container:</p>
+<p>Expanding <a href="../views/">views</a> push remaining <a href="../views/">views</a> in their container:</p>
 <table>
   <tr>
     <th>Code</th>
@@ -1369,10 +1369,10 @@ occupy two thirds of free space:
 <li>Size of each view in tree is <a href="#SIZE_CALCULATION">calculated</a> on this phase</li>
 <li><a href="AWindow::redraw">AView::redraw</a> - geometry is applied before rendering</li>
 <li><a href="AViewContainerBase::applyGeometryToChildrenIfNecessary">applyGeometryToChildrenIfNecessary</a> - applies geometry
-  only if really needed (i.e., if there were a resize event, or views were added or removed)</li>
+  only if really needed (i.e., if there were a resize event, or <a href="../views/">views</a> were added or removed)</li>
 <li><a href="AViewContainerBase::applyGeometryToChildren">applyGeometryToChildren</a> - applies geometry to its children with
   no preconditions</li>
-<li><a href="../alayout/#ALayout::onResize"><code>ALayout::onResize()</code></a> - implemented by layout manager, whose have their own algorithms of arranging views</li>
+<li><a href="../alayout/#ALayout::onResize"><code>ALayout::onResize()</code></a> - implemented by layout manager, whose have their own algorithms of arranging <a href="../views/">views</a></li>
 <li><a href="../aview/#AView::setGeometry"><code>AView::setGeometry()</code></a> - sets geometry of a view (which might be a container)</li>
 </ul>
 <h3 id="SIZE_CALCULATION">Size calculation<a class="headerlink" href="#SIZE_CALCULATION" title="Permanent link">#</a></h3>
@@ -1387,59 +1387,57 @@ occupy two thirds of free space:
 </ul>
 </li>
 <li>After minimum sizes of children are calculated, layout manager queries their <strong>expanding</strong> ratios, and gives such
-  views a share of free space if available. Unlike minimum size, <a href="./#EXPANDING">Expanding</a> ratio does not depend on children's
+  <a href="../views/">views</a> a share of free space if available. Unlike minimum size, <a href="./#EXPANDING">Expanding</a> ratio does not depend on children's
   <a href="./#EXPANDING">Expanding</a> ratios.</li>
 </ul>
 <h3 id="special-cases">Special cases<a class="headerlink" href="#special-cases" title="Permanent link">#</a></h3>
 <ul>
 <li><strong><a href="../ascrollarea/">AScrollArea</a></strong>: requires special handling for viewport positioning and size compensation</li>
 <li><strong><a href="../aforeachui/">AForEachUI</a></strong>: manages view inflation/deflation based on visibility</li>
-<li><strong>Performance Optimizations</strong>: <a href="../useful_views/">Views</a> outside viewport may be left unupdated to improve performance</li>
+<li><strong>Performance Optimizations</strong>: Views outside viewport may be left unupdated to improve performance</li>
 </ul>
 <h2 id="related-pages">Related Pages<a class="headerlink" href="#related-pages" title="Permanent link">#</a></h2>
 <div class="grid cards">
 <ul>
-<li>
-<p><strong><a href="../aadvancedgridlayout/">AAdvancedGridLayout</a></strong></p>
+<li><strong><a href="../aadvancedgridlayout/">AAdvancedGridLayout</a></strong></li>
+</ul>
 <hr />
 <p>Grid layout. Unlike <a href="../agridlayout/">AGridLayout</a>, cells may have different sizes.</p>
-</li>
-<li>
-<p><strong><a href="../alayout/">ALayout</a></strong></p>
+<ul>
+<li><strong><a href="../alayout/">ALayout</a></strong></li>
+</ul>
 <hr />
 <p>Base class for all layout managers.</p>
-</li>
-<li>
-<p><strong><a href="../astackedlayout/">AStackedLayout</a></strong></p>
+<ul>
+<li><strong><a href="../astackedlayout/">AStackedLayout</a></strong></li>
+</ul>
 <hr />
-<p>Places views in a stack (along z axis).</p>
-</li>
-<li>
-<p><strong><a href="../ahorizontallayout/">AHorizontalLayout</a></strong></p>
+<p>Places <a href="../views/">views</a> in a stack (along z axis).</p>
+<ul>
+<li><strong><a href="../ahorizontallayout/">AHorizontalLayout</a></strong></li>
+</ul>
 <hr />
-<p>Places views in a row.</p>
-</li>
-<li>
-<p><strong><a href="../aabsolutelayout/">AAbsoluteLayout</a></strong></p>
+<p>Places <a href="../views/">views</a> in a row.</p>
+<ul>
+<li><strong><a href="../aabsolutelayout/">AAbsoluteLayout</a></strong></li>
+</ul>
 <hr />
 <p>Absolute positioning layout. Allows to explicitly set your own coordinates.</p>
-</li>
-<li>
-<p><strong><a href="../averticallayout/">AVerticalLayout</a></strong></p>
+<ul>
+<li><strong><a href="../averticallayout/">AVerticalLayout</a></strong></li>
+</ul>
 <hr />
-<p>Places views in a column.</p>
-</li>
-<li>
-<p><strong><a href="../agridlayout/">AGridLayout</a></strong></p>
+<p>Places <a href="../views/">views</a> in a column.</p>
+<ul>
+<li><strong><a href="../agridlayout/">AGridLayout</a></strong></li>
+</ul>
 <hr />
 <p>Grid layout with fixed-size cells.</p>
-</li>
-<li>
-<p><strong><a href="../awordwrappinglayout/">AWordWrappingLayout</a></strong></p>
+<ul>
+<li><strong><a href="../awordwrappinglayout/">AWordWrappingLayout</a></strong></li>
+</ul>
 <hr />
 <p>Imitates behaviour of word wrapping, but uses <a href="../aview/">views</a> instead words</p>
-</li>
-</ul>
 </div>
 
 

@@ -456,7 +456,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../useful_views/" class="md-nav__link">
+    <a href="../views/" class="md-nav__link">
       
   
   
@@ -847,6 +847,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 <h1 id="aforeachui">AForEachUI<a class="headerlink" href="#aforeachui" title="Permanent link">#</a></h1>
 <p>Customizable lists display.</p>
+<p><img alt="" src="../imgs/views/AForEachUI.png" /></p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/View/AForEachUI.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::views)</code></td></tr>
@@ -887,7 +888,7 @@ declaration of <a href="./">AUI_DECLARATIVE_FOR</a> returns an instance of AForE
 <p><em>range</em> models one-dimensional list.</p>
 <p>AForEachUI works on iterator level by design. In fact, any kind of <em>range</em> (C++20 ranges/range-v3) can be used,
 starting from bidirectional containers such as <code>std::vector</code> and <code>std::list</code>, lazy non-owning dummies like
-<code>ranges::views::ints</code> and even fancy <em>range</em> views from <code>std::ranges::views</code> or <code>ranges::views</code> are acceptable.
+<code>ranges::views::ints</code> and even fancy <em>range</em> <a href="../views/">views</a> from <code>std::ranges::views</code> or <code>ranges::views</code> are acceptable.
 One-directional containers like <code>std::queue</code> or <code>std::stack</code> can't be used because they don't implement <code>begin()</code> and
 <code>end()</code>. As such, requirements to a <em>range</em> are dictated by <code>ranges::range</code> concept.</p>
 <ul>
@@ -921,14 +922,14 @@ viewport size and individual entry size. Optimal frequency of sliding during scr
 AForEachUI. In particular, the sliding is performed once per <a href="../render-to-texture/">Render to texture</a> tile is passed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>During rendering inside <a href="../ascrollarea/">AScrollArea</a>, the renderer clips visible views more precisely; the goal of lazy semantics
+<p>During rendering inside <a href="../ascrollarea/">AScrollArea</a>, the renderer clips visible <a href="../views/">views</a> more precisely; the goal of lazy semantics
 of AForEachUI is to optimize view instantiation and layout processing overhead, as well as <em>range</em> views' lazy
 semantics, thanks to iterators.</p>
 </div>
 <h3 id="scrollbars">Scrollbars<a class="headerlink" href="#scrollbars" title="Permanent link">#</a></h3>
 <p>From perspective of layout, lazy semantics is implemented by careful layout updates driven by scroll area events. If
-possible, the items that appear far from sliding window are unloaded (views are removed). The new items are loaded
-(new views are instantiated). To avoid content jittering, scroll position is synced with layout updates within
+possible, the items that appear far from sliding window are unloaded (<a href="../views/">views</a> are removed). The new items are loaded
+(new <a href="../views/">views</a> are instantiated). To avoid content jittering, scroll position is synced with layout updates within
 AForEachUI. As such, these hijacking operations may confuse scroll bar.</p>
 <p>In modern software, especially when it comes to infinite lists in web/mobile applications (i.e., news feed),
 scrollbar might be completely hidden or significantly transparentized.</p>
@@ -944,7 +945,7 @@ recomposition.</p>
 <p>This section explains how to initialize <a href="./">AUI_DECLARATIVE_FOR</a>, manage lifetime of containers and how to make them
 reactive.</p>
 <p>In <a href="./">AUI_DECLARATIVE_FOR</a>, a potentially <a href="aui::react">reactive</a> expression evaluating to <em>range</em> and the lambda
-that creates a new views are both lambdas with capture default by value <code>[=]</code>. This means that:</p>
+that creates a new <a href="../views/">views</a> are both lambdas with capture default by value <code>[=]</code>. This means that:</p>
 <ol>
 <li>All mentioned <em>local</em> variables are captured by copying.</li>
 <li>All mentioned class member variables (fields) are captured by reference.</li>
@@ -987,10 +988,10 @@ It's a good idea to wrap AForEachUI with an <a href="../ascrollarea/">AScrollAre
 <img alt="" src="../imgs/UIDeclarativeForTest.Constant_global_data2_.png" />
 </figure>
 <h3 id="UIDeclarativeForTest_Infinite_ranges_and_views">Infinite ranges and views<a class="headerlink" href="#UIDeclarativeForTest_Infinite_ranges_and_views" title="Permanent link">#</a></h3>
-<p>Most generators, ranges and views are expected to work.
+<p>Most generators, ranges and <a href="../views/">views</a> are expected to work.
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">setContents</span><span class="p">(</span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">().</span><span class="n">withContents</span><span class="p">(</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n">views</span><span class="o">::</span><span class="n">ints</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n">AUI_DECLARATIVE_FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n"><a href="../views/">views</a></span><span class="o">::</span><span class="n">ints</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="p">}</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">).</span><span class="n">build</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">FixedSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">150</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>

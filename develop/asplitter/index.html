@@ -456,7 +456,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../useful_views/" class="md-nav__link">
+    <a href="../views/" class="md-nav__link">
       
   
   
@@ -754,18 +754,19 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 <h1 id="asplitter">ASplitter<a class="headerlink" href="#asplitter" title="Permanent link">#</a></h1>
 <p>A resizeable horizontal or vertical layout.</p>
+<p><img alt="" src="../imgs/views/ASplitter.png" /></p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/View/ASplitter.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::views)</code></td></tr>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
-<p>ASplitter lets the user control the size of child views by dragging the boundary between them. Any number of views
+<p>ASplitter lets the user control the size of child <a href="../views/">views</a> by dragging the boundary between them. Any number of <a href="../views/">views</a>
 may be controlled by a single splitter.</p>
 <p>Generally, ASplitter mimics behaviour of linear layouts (i.e., <code>Vertical</code> and <code>Horizontal</code>):
 1. if there's no expanding view, both linear layouts and ASplitter leave blank space at the end
-2. expanding views use all available space.</p>
+2. expanding <a href="../views/">views</a> use all available space.</p>
 <p>ASplitter is applying geometry via min size-like logic by custom <a href="../alayout/">ALayout</a> implementation.</p>
-<p>ASplitter tends to reclaim space from non-expanding views in favour to expanding views. As such, there should be at
+<p>ASplitter tends to reclaim space from non-expanding <a href="../views/">views</a> in favour to expanding views. As such, there should be at
 least 1 view with expanding. If there's no such view, ASplitter adds <a href="../aspacerfixed/">ASpacerFixed</a> to the end.</p>
 <p>Valid expandings should be applied before constructing ASplitter. ASplitter does not support changing expanding on
 the fly.</p>

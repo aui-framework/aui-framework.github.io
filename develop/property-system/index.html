@@ -793,7 +793,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../useful_views/" class="md-nav__link">
+    <a href="../views/" class="md-nav__link">
       
   
   
@@ -1251,7 +1251,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <li>three property variants: simple field (<a href="../aproperty/">AProperty</a>), custom getter/setter (<a href="../apropertydef/">APropertyDef</a>) and custom evaluation
    (<a href="../apropertyprecomputed/">APropertyPrecomputed</a>)</li>
 <li>some properties can be readonly</li>
-<li>propagating strong types' traits on views</li>
+<li>propagating strong types' traits on <a href="../views/">views</a></li>
 </ol>
 <p>Learning curve is relatively flat, so be sure to
 <a href="https://github.com/aui-framework/aui/issues">ask questions and open issues</a> on our GitHub page.</p>
@@ -1493,7 +1493,7 @@ to make it obvious what do transformations do and how one type is transformed to
 </span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="c1">// generate a string list model for genders from GENDERS array defined earlier</span>
 </span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">gendersStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AListModel</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;::</span><span class="n">fromVector</span><span class="p">(</span>
 </span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">            </span><span class="n">GENDERS</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n">views</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n"><a href="../aenumerate/">AEnumerate</a></span><span class="o">&lt;</span><span class="n">Gender</span><span class="o">&gt;::</span><span class="n">toName</span><span class="p">)</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n"><a href="../views/">views</a></span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n"><a href="../aenumerate/">AEnumerate</a></span><span class="o">&lt;</span><span class="n">Gender</span><span class="o">&gt;::</span><span class="n">toName</span><span class="p">)</span>
 </span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n">to_vector</span><span class="p">);</span>
 </span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
 </span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">        </span><span class="c1">// equivalent:</span>
@@ -1580,7 +1580,7 @@ and <code><a href="../aobject/#AObject::connect">AObject::connect</a></code> so 
 <p>In previous example we have explicitly specified ALabel's property to connect with.</p>
 <p>One of notable features of declarative way (in comparison to procedural <code><a href="../aui_let/">AUI_LET</a></code> way) is that we can omit the view's
 property to connect with if such <code><a href="../adatabindingdefault/">ADataBindingDefault</a></code> specialization exist for the target view and the property
-type. Some views have already predefined such specialization for their underlying types. For instance, <a href="../alabel/">ALabel</a> has
+type. Some <a href="../views/">views</a> have already predefined such specialization for their underlying types. For instance, <a href="../alabel/">ALabel</a> has
 such specialization:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="cm">/* PREDEFINED! You don&#39;t need to define it! This listing is an example */</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">template</span><span class="o">&lt;&gt;</span>
@@ -1609,7 +1609,7 @@ as in <a href="./#UIDataBindingTest_Label_via_declarative">Label via declarative
 </span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">};</span>
 </span></code></pre></div></p>
-<p>These strong types can be used to propagate their traits on views, i.e., ANumberPicker. When using declarative
+<p>These strong types can be used to propagate their traits on <a href="../views/">views</a>, i.e., ANumberPicker. When using declarative
 syntax, the property system calls <code><a href="../adatabindingdefault/#ADataBindingDefault::setup">ADataBindingDefault::setup</a></code> to apply some extra traits of the bound value on
 the view. Here's an abstract on how <code><a href="../anumberpicker/">ANumberPicker</a></code> defines specialization of <code>ADataBingingDefault</code> with
 <code><a href="../aui_ranged_number/">aui::ranged_number</a></code>:
@@ -1725,28 +1725,26 @@ directions: <code>user.gender -&gt; <a href="../adropdownlist/">ADropdownList</a
 <h2 id="related-pages">Related Pages<a class="headerlink" href="#related-pages" title="Permanent link">#</a></h2>
 <div class="grid cards">
 <ul>
-<li>
-<p><strong><a href="../aui_propertymodifier/">aui::PropertyModifier</a></strong></p>
+<li><strong><a href="../aui_propertymodifier/">aui::PropertyModifier</a></strong></li>
+</ul>
 <hr />
 <p>Temporary transparent object that gains write access to underlying property's value, notifying about value
 changes when destructed.</p>
-</li>
-<li>
-<p><strong><a href="../apropertydef/">APropertyDef</a></strong></p>
+<ul>
+<li><strong><a href="../apropertydef/">APropertyDef</a></strong></li>
+</ul>
 <hr />
 <p>Property implementation to use with custom getter/setter.</p>
-</li>
-<li>
-<p><strong><a href="../apropertyprecomputed/">APropertyPrecomputed</a></strong></p>
+<ul>
+<li><strong><a href="../apropertyprecomputed/">APropertyPrecomputed</a></strong></li>
+</ul>
 <hr />
 <p>Readonly property that holds a value computed by an expression.</p>
-</li>
-<li>
-<p><strong><a href="../aproperty/">AProperty</a></strong></p>
+<ul>
+<li><strong><a href="../aproperty/">AProperty</a></strong></li>
+</ul>
 <hr />
 <p>Observable container of <code>T</code>.</p>
-</li>
-</ul>
 </div>
 
 
