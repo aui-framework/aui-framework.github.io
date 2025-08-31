@@ -1240,8 +1240,8 @@ another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
     <td>
       <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">setContents</span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">Stacked</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">BackgroundSolid</span><span class="p">(</span><span class="mh">0xff0000</span><span class="n">_rgb</span><span class="p">),</span><span class="w"> </span><span class="n">Expanding</span><span class="p">()</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Label</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Test&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_backgroundsolid/">BackgroundSolid</a></span><span class="p">(</span><span class="mh">0xff0000</span><span class="n">_rgb</span><span class="p">),</span><span class="w"> </span><span class="n"><a href="../ass_expanding/">Expanding</a></span><span class="p">()</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Test&quot;</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="p">}</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">);</span>
 </span></code></pre></div>
@@ -1253,7 +1253,7 @@ another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
 </table>
 
 <h2 id="EXPANDING">Expanding<a class="headerlink" href="#EXPANDING" title="Permanent link">#</a></h2>
-<p>Expanding (often referred as stretch factor) is a property of any AView. Expanding is an expansion coefficient set on
+<p><a href="../ass_expanding/">Expanding</a> (often referred as stretch factor) is a property of any AView. <a href="../ass_expanding/">Expanding</a> is an expansion coefficient set on
 per-axis basic (i.e, one value along x axis, another value along y axis), however it's convenient to set both values.
 Hints layout manager how much this <a href="../aview/">AView</a> should be extended relative to other AViews in the same container.</p>
 <div class="admonition note">
@@ -1262,16 +1262,16 @@ Hints layout manager how much this <a href="../aview/">AView</a> should be exten
 <a href="#EXPANDING">Expanding</a> property, to get better understanding on how does layout work in AUI.</p>
 </div>
 <p>Horizontal layouts ignore y expanding of their children, Vertical layouts ignore x expanding of their children.</p>
-<p>Views are normally created without any expanding set. When Expanding <a href="../views/">views</a> appear in a layout they are given a share
-of space in accordance with their expanding or their minimum size whichever gives more space to them. Expanding is
+<p>Views are normally created without any expanding set. When <a href="../ass_expanding/">Expanding</a> <a href="../views/">views</a> appear in a layout they are given a share
+of space in accordance with their expanding or their minimum size whichever gives more space to them. <a href="../ass_expanding/">Expanding</a> is
 used to change how much space <a href="../views/">views</a> are given in proportion to one another.</p>
-<p>Expanding view does not affect parent's size or parent's expanding property. Use <a href="../aview/#AView::setExpanding">AView::setExpanding()</a> on parent, or
-<code>Expanding</code> variant of declarative container notation (<code>Vertical::Expanding</code>, <code>Horizontal::Expanding</code>,
+<p><a href="../ass_expanding/">Expanding</a> view does not affect parent's size or parent's expanding property. Use <a href="../aview/#AView::setExpanding">AView::setExpanding()</a> on parent, or
+<code><a href="../ass_expanding/">Expanding</a></code> variant of declarative container notation (<code>Vertical::Expanding</code>, <code>Horizontal::Expanding</code>,
 <code>Stacked::Expanding</code>) for such case.</p>
-<p>Expanding <a href="../views/">views</a> use free space of their container to grow.</p>
+<p><a href="../ass_expanding/">Expanding</a> <a href="../views/">views</a> use free space of their container to grow.</p>
 <p>Free space of a container is determined by its size subtracted by sum of minimum sizes of its children. Please note
 that your container would probably occupy minimum possible size (determined by minimum sizes of its children). It
-order to make container larger than minimum possible size, you can specify FixedSize or MinSize or Expanding to the
+order to make container larger than minimum possible size, you can specify <a href="../ass_fixedsize/">FixedSize</a> or <a href="../ass_minsize/">MinSize</a> or <a href="../ass_expanding/">Expanding</a> to the
 container.</p>
 <p>You can use <a href="../ass_expanding/">ass::Expanding</a> <a href="../ass/">ASS</a> property, or <a href="../aview/#AView::setExpanding">AView::setExpanding</a> method to specify Expanding:</p>
 <table>
@@ -1291,7 +1291,7 @@ container.</p>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">           </span><span class="c1">// alias to it-&gt;setExpanding(2) ^^^^^^</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Down&quot;</span><span class="p">),</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">MinSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_minsize/">MinSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">);</span>
 </span></code></pre></div>
     </td>
@@ -1299,7 +1299,7 @@ container.</p>
   </tr>
 </table>
 
-<p>Expanding <a href="../views/">views</a> push remaining <a href="../views/">views</a> in their container:</p>
+<p><a href="../ass_expanding/">Expanding</a> <a href="../views/">views</a> push remaining <a href="../views/">views</a> in their container:</p>
 <table>
   <tr>
     <th>Code</th>
@@ -1316,7 +1316,7 @@ container.</p>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Right&quot;</span><span class="p">),</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="p">},</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Down&quot;</span><span class="p">),</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">MinSize</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_minsize/">MinSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">);</span>
 </span></code></pre></div>
     </td>
@@ -1324,7 +1324,7 @@ container.</p>
   </tr>
 </table>
 
-<p>Expanding view does affect expanding environment inside a single container. If there's one view with expanding set to
+<p><a href="../ass_expanding/">Expanding</a> view does affect expanding environment inside a single container. If there's one view with expanding set to
 any positive value it would occupy all free space in the container. If there is a view with expanding equal to 1 and
 another view with expanding equal to 2 the first view would occupy one third of free space, the second view would
 occupy two thirds of free space:
@@ -1336,13 +1336,13 @@ occupy two thirds of free space:
 <p>You can use <a href="../aspacerexpanding/">ASpacerExpanding</a> as blank expanding view:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Left&quot;</span><span class="p">),</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="n">SpacerExpanding</span><span class="p">(),</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="n"><a href="../declarative_spacerexpanding/">SpacerExpanding</a></span><span class="p">(),</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Right&quot;</span><span class="p">),</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span>
 </span></code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FixedSize nullifies Expanding's action (on per axis basic).</p>
+<p><a href="../ass_fixedsize/">FixedSize</a> nullifies Expanding's action (on per axis basic).</p>
 </div>
 <h2 id="implementation-details">Implementation details<a class="headerlink" href="#implementation-details" title="Permanent link">#</a></h2>
 <p>The process of applying position and size involves several key functions:
