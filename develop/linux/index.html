@@ -661,6 +661,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#wayland-support-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wayland support status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aui-implementation-specifics" class="md-nav__link">
     <span class="md-ellipsis">
       AUI implementation specifics
@@ -935,6 +944,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#wayland-support-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wayland support status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aui-implementation-specifics" class="md-nav__link">
     <span class="md-ellipsis">
       AUI implementation specifics
@@ -1030,6 +1048,26 @@ compatibility layers such as WINE to launch your application under Linux.</p>
 </li>
 <li>There are distros designed for smartphones but they're considered unusable at the moment</li>
 </ul>
+<h2 id="wayland-support-status">Wayland support status<a class="headerlink" href="#wayland-support-status" title="Permanent link">#</a></h2>
+<p>AUI currently relies on X11 as its primary windowing system on Linux. As modern Linux distributions like Ubuntu and
+Fedora move away from X11, the application runs through the Xwayland compatibility layer.</p>
+<p>AUI includes experimental Wayland support implemented through GTK. This implementation appears native on GNOME desktop
+environments, while other desktop environments display a window with server-side decorations.</p>
+<p>Rather than directly linking to libraries, AUI uses a dynamic loading approach. This dynamic loading strategy using
+<code>dlopen</code> ensures broad compatibility while enabling a smooth transition toward modern windowing systems.</p>
+<p>To force AUI to use Wayland-friendly backends, use the following snippet inside your <code><a href="../aui_entry/">AUI_ENTRY</a></code>:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n"><a href="../aplatformabstractionoptions/">APlatformAbstractionOptions</a></span><span class="o">::</span><span class="n">set</span><span class="p">({</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">.</span><span class="n">initializationOrder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="n"><a href="../aplatformabstractionoptions/">APlatformAbstractionOptions</a></span><span class="o">::</span><span class="n">Adwaita1</span><span class="p">{},</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="n"><a href="../aplatformabstractionoptions/">APlatformAbstractionOptions</a></span><span class="o">::</span><span class="n">Gtk4</span><span class="p">{},</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="n"><a href="../aplatformabstractionoptions/">APlatformAbstractionOptions</a></span><span class="o">::</span><span class="n">X11</span><span class="p">{},</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">});</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="p">...</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="aui-implementation-specifics">AUI implementation specifics<a class="headerlink" href="#aui-implementation-specifics" title="Permanent link">#</a></h2>
 
 
