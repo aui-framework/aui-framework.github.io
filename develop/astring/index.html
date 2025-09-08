@@ -723,18 +723,45 @@ We are migrating to a new documentation engine. Please report presentation issue
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#AString::AString" class="md-nav__link">
+  <a href="#AString::bytes" class="md-nav__link">
     <span class="md-ellipsis">
-      AString
+      bytes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#AString::insertAll" class="md-nav__link">
+  <a href="#AString::encode" class="md-nav__link">
     <span class="md-ellipsis">
-      insertAll
+      encode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AString::length" class="md-nav__link">
+    <span class="md-ellipsis">
+      length
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AString::resizeToNullTerminator" class="md-nav__link">
+    <span class="md-ellipsis">
+      resizeToNullTerminator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AString::sizeBytes" class="md-nav__link">
+    <span class="md-ellipsis">
+      sizeBytes
     </span>
   </a>
   
@@ -759,15 +786,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#AString::toDoubleOrException" class="md-nav__link">
-    <span class="md-ellipsis">
-      toDoubleOrException
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#AString::toFloat" class="md-nav__link">
     <span class="md-ellipsis">
       toFloat
@@ -786,27 +804,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#AString::toIntOrException" class="md-nav__link">
+  <a href="#AString::toLong" class="md-nav__link">
     <span class="md-ellipsis">
-      toIntOrException
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AString::toLongInt" class="md-nav__link">
-    <span class="md-ellipsis">
-      toLongInt
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AString::toLongIntOrException" class="md-nav__link">
-    <span class="md-ellipsis">
-      toLongIntOrException
+      toLong
     </span>
   </a>
   
@@ -816,15 +816,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#AString::toNumber" class="md-nav__link">
     <span class="md-ellipsis">
       toNumber
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AString::toNumberOrException" class="md-nav__link">
-    <span class="md-ellipsis">
-      toNumberOrException
     </span>
   </a>
   
@@ -849,9 +840,27 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#AString::toUIntOrException" class="md-nav__link">
+  <a href="#AString::toULong" class="md-nav__link">
     <span class="md-ellipsis">
-      toUIntOrException
+      toULong
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AString::toUtf16" class="md-nav__link">
+    <span class="md-ellipsis">
+      toUtf16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AString::toUtf32" class="md-nav__link">
+    <span class="md-ellipsis">
+      toUtf32
     </span>
   </a>
   
@@ -879,92 +888,73 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
 <h1 id="astring">AString<a class="headerlink" href="#astring" title="Permanent link">#</a></h1>
-<p>Represents a Unicode character string.</p>
+<p>Represents a UTF-8 string.</p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/Common/AString.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../core/">aui::core</a>)</code></td></tr>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
-<p>AString stores a string of 16-bit chars, where each char corresponds to one UTF-16 code unit. Unicode characters with
-code values above 65535 are stored using two consecutive chars.</p>
-<p>Unicode is an international standard that supports most of the writing systems in use today.</p>
+<p>AString stores a sequence of 8-bit integers representing UTF-8 code units. Each Unicode character
+(codepoint) is encoded using 1-4 consecutive code units, supporting the full Unicode standard.</p>
+<p>Unicode provides comprehensive support for international writing systems and symbols.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
-<h3 AString::AString_="AString::AString()" id="AString::AString">AString<a class="headerlink" href="#AString::AString" title="Permanent link">#</a></h3>
+<h3 AString::bytes_="AString::bytes()" id="AString::bytes">bytes<a class="headerlink" href="#AString::bytes" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AString</span><span class="o">::</span><span class="n">AString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">basic_string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">bytes_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">bytes</span><span class="p">()</span>
 </span></code></pre></div>
+<p>Returns a view of the raw UTF-8 encoded byte data.</p>
 <dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>other</code></b>
-<div style="display: table-cell"> utf8 string</div>
-</div>
-</div></dd>
 </dl>
 
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">AString</span><span class="o">::</span><span class="n">AString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">utf8</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">bytes_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">bytes</span><span class="p">()</span>
 </span></code></pre></div>
+<p>Returns a view of the raw UTF-8 encoded byte data.</p>
 <dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>utf8</code></b>
-<div style="display: table-cell"> utf8 string</div>
-</div>
-</div></dd>
-</dl>
-
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">AString</span><span class="o">::</span><span class="n">AString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">utf8</span><span class="p">)</span>
-</span></code></pre></div>
-<dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>utf8</code></b>
-<div style="display: table-cell"> utf8 string</div>
-</div>
-</div></dd>
-</dl>
-
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">AString</span><span class="o">::</span><span class="n">AString</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">utf8</span><span class="p">)</span>
-</span></code></pre></div>
-<dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>utf8</code></b>
-<div style="display: table-cell"> utf8 string</div>
-</div>
-</div></dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AString::insertAll_="AString::insertAll()" id="AString::insertAll">insertAll<a class="headerlink" href="#AString::insertAll" title="Permanent link">#</a></h3>
+<h3 AString::encode_="AString::encode()" id="AString::encode">encode<a class="headerlink" href="#AString::encode" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n"><a href="../abytebuffer/">AByteBuffer</a></span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">encode</span><span class="p">(</span><span class="n">AStringEncoding</span><span class="w"> </span><span class="n">encoding</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Inserts all values of the specified container to the end.</p>
+<p>Encodes the string into a null-terminated byte buffer using the specified encoding.</p>
 <dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>c</code></b>
-<div style="display: table-cell"> other container</div>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AString::length_="AString::length()" id="AString::length">length<a class="headerlink" href="#AString::length" title="Permanent link">#</a></h3>
 </div>
-</div></dd>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">size_type</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">length</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Returns the number of Unicode characters in the string</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AString::resizeToNullTerminator_="AString::resizeToNullTerminator()" id="AString::resizeToNullTerminator">resizeToNullTerminator<a class="headerlink" href="#AString::resizeToNullTerminator" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">resizeToNullTerminator</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Resizes the string to the length of its null-terminated content while preserving capacity.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AString::sizeBytes_="AString::sizeBytes()" id="AString::sizeBytes">sizeBytes<a class="headerlink" href="#AString::sizeBytes" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">size_type</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">sizeBytes</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Returns the number of bytes in the UTF-8 encoded string</p>
+<dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
 <h3 AString::toBool_="AString::toBool()" id="AString::toBool">toBool<a class="headerlink" href="#AString::toBool" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toBool</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toBool</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to boolean value.</p>
 <dl class="doxygen-dl">
@@ -975,7 +965,7 @@ code values above 65535 are stored using two consecutive chars.</p>
 <h3 AString::toDouble_="AString::toDouble()" id="AString::toDouble">toDouble<a class="headerlink" href="#AString::toDouble" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toDouble</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toDouble</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to a double number.</p>
 <dl class="doxygen-dl">
@@ -983,19 +973,6 @@ code values above 65535 are stored using two consecutive chars.</p>
 <dd>The string converted to a double number.
 
 If conversion to int is not possible, nullopt is returned.</dd>
-</dl>
-<div style="position:absolute;opacity:0">
-<h3 AString::toDoubleOrException_="AString::toDoubleOrException()" id="AString::toDoubleOrException">toDoubleOrException<a class="headerlink" href="#AString::toDoubleOrException" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toDoubleOrException</span><span class="p">()</span>
-</span></code></pre></div>
-<p>Converts the string to a double number.</p>
-<dl class="doxygen-dl">
-<dt>Returns</dt>
-<dd>The string converted to a double number.
-
-If conversion to int is not possible, exception is thrown.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
 <h3 AString::toFloat_="AString::toFloat()" id="AString::toFloat">toFloat<a class="headerlink" href="#AString::toFloat" title="Permanent link">#</a></h3>
@@ -1014,7 +991,7 @@ If conversion to int is not possible, nullopt is returned.</dd>
 <h3 AString::toInt_="AString::toInt()" id="AString::toInt">toInt<a class="headerlink" href="#AString::toInt" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toInt</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toInt</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to int value.</p>
 <dl class="doxygen-dl">
@@ -1025,102 +1002,89 @@ used.
 If conversion to int is not possible, nullopt is returned.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AString::toIntOrException_="AString::toIntOrException()" id="AString::toIntOrException">toIntOrException<a class="headerlink" href="#AString::toIntOrException" title="Permanent link">#</a></h3>
+<h3 AString::toLong_="AString::toLong()" id="AString::toLong">toLong<a class="headerlink" href="#AString::toLong" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toIntOrException</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toLong</span><span class="p">()</span>
 </span></code></pre></div>
-<p>Converts the string to int value.</p>
+<p>Converts the string to long value.</p>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
 <dd>The string converted to an integer value using base 10. If the string starts with 0x or 0X, the base 16
 used.
 
-If conversion to int is not possible, exception is thrown.</dd>
-</dl>
-<div style="position:absolute;opacity:0">
-<h3 AString::toLongInt_="AString::toLongInt()" id="AString::toLongInt">toLongInt<a class="headerlink" href="#AString::toLongInt" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toLongInt</span><span class="p">()</span>
-</span></code></pre></div>
-<p>Converts the string to int value.</p>
-<dl class="doxygen-dl">
-<dt>Returns</dt>
-<dd>The string converted to an integer value using base 10. If the string starts with 0x or 0X, the base 16
-used.
-
-If conversion to int is not possible, nullopt is returned.</dd>
-</dl>
-<div style="position:absolute;opacity:0">
-<h3 AString::toLongIntOrException_="AString::toLongIntOrException()" id="AString::toLongIntOrException">toLongIntOrException<a class="headerlink" href="#AString::toLongIntOrException" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">int64_t</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toLongIntOrException</span><span class="p">()</span>
-</span></code></pre></div>
-<p>Converts the string to int value.</p>
-<dl class="doxygen-dl">
-<dt>Returns</dt>
-<dd>The string converted to an integer value using base 10. If the string starts with 0x or 0X, the base 16
-used.
-
-If conversion to int is not possible, nullopt is returned.</dd>
+If conversion to long is not possible, nullopt is returned.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
 <h3 AString::toNumber_="AString::toNumber()" id="AString::toNumber">toNumber<a class="headerlink" href="#AString::toNumber" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toNumber</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="o">&gt;</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TO_NUMBER_BASE_DEC</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toNumber</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="o">&gt;</span><span class="w"> </span><span class="n">base</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Returns the string converted to an int using base. Returns std::nullopt if the conversion fails.</p>
-<dl class="doxygen-dl">
-</dl>
-<div style="position:absolute;opacity:0">
-<h3 AString::toNumberOrException_="AString::toNumberOrException()" id="AString::toNumberOrException">toNumberOrException<a class="headerlink" href="#AString::toNumberOrException" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toNumberOrException</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="o">&gt;</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TO_NUMBER_BASE_DEC</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Returns the string converted to an int using base. Throws an exception if the conversion fails.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
 <h3 AString::toStdString_="AString::toStdString()" id="AString::toStdString">toStdString<a class="headerlink" href="#AString::toStdString" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toStdString</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toStdString</span><span class="p">()</span>
 </span></code></pre></div>
+<p>Compatibility method. Guarantees std::string with UTF-8</p>
 <dl class="doxygen-dl">
-<dt>Returns</dt>
-<dd>utf8-encoded std::string.</dd>
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toStdString</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Compatibility method. Guarantees std::string with UTF-8</p>
+<dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
 <h3 AString::toUInt_="AString::toUInt()" id="AString::toUInt">toUInt<a class="headerlink" href="#AString::toUInt" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toUInt</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toUInt</span><span class="p">()</span>
 </span></code></pre></div>
-<p>Converts the string to int value.</p>
+<p>Converts the string to unsigned int value.</p>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
 <dd>The string converted to an integer value using base 10. If the string starts with 0x or 0X, the base 16
 used.
 
-If conversion to int is not possible, exception is thrown.</dd>
+If conversion to unsigned int is not possible, exception is thrown.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AString::toUIntOrException_="AString::toUIntOrException()" id="AString::toUIntOrException">toUIntOrException<a class="headerlink" href="#AString::toUIntOrException" title="Permanent link">#</a></h3>
+<h3 AString::toULong_="AString::toULong()" id="AString::toULong">toULong<a class="headerlink" href="#AString::toULong" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">unsigned</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toUIntOrException</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toULong</span><span class="p">()</span>
 </span></code></pre></div>
-<p>Converts the string to int value.</p>
+<p>Converts the string to unsigned long value.</p>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
 <dd>The string converted to an integer value using base 10. If the string starts with 0x or 0X, the base 16
 used.
 
-If conversion to int is not possible, exception is thrown.</dd>
+If conversion to unsigned long is not possible, exception is thrown.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AString::toUtf16_="AString::toUtf16()" id="AString::toUtf16">toUtf16<a class="headerlink" href="#AString::toUtf16" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">std</span><span class="o">::</span><span class="n">u16string</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toUtf16</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Encodes the UTF-8 string into a UTF-16 string</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AString::toUtf32_="AString::toUtf32()" id="AString::toUtf32">toUtf32<a class="headerlink" href="#AString::toUtf32" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">std</span><span class="o">::</span><span class="n">u32string</span><span class="w"> </span><span class="n">AString</span><span class="o">::</span><span class="n">toUtf32</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Encodes the UTF-8 string into a UTF-32 string</p>
+<dl class="doxygen-dl">
 </dl>
 
 

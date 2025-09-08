@@ -896,6 +896,10 @@ value with <code>value()</code> method or implicit conversion <code>operator T()
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">AProperty</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">surname</span><span class="p">;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">};</span>
 </span></code></pre></div>
+LogObserver() {
+   ON_CALL(*this, log(testing::_)).WillByDefault(<a href="const AString&amp; msg"></a> {
+   });
+}
 <code>AProperty&lt;T&gt;</code> is a container holding an instance of <code>T</code>. You can assign a value to it with <code>operator=</code> and read
 value with <code>value()</code> method or implicit conversion <code>operator T()</code>.</p>
 <p>AProperty behaves like a class/struct data member:
