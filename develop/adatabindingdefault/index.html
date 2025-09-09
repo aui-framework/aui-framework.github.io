@@ -723,7 +723,7 @@ We are migrating to a new documentation engine. Please report presentation issue
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ADataBindingDefault::ASignalwzxhzdk:15" class="md-nav__link">
+  <a href="#ADataBindingDefault::ASignalwzxhzdk:16" class="md-nav__link">
     <span class="md-ellipsis">
       ASignal
     </span>
@@ -739,6 +739,21 @@ We are migrating to a new documentation engine. Please report presentation issue
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ADataBindingDefault::setup" class="md-nav__link">
@@ -795,7 +810,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span></code></pre></div></p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
-<h3 ADataBindingDefault::ASignal_wzxhzdk:16_="ADataBindingDefault::ASignal<FieldType>()" id="ADataBindingDefault::ASignal<FieldType>">ASignal<FieldType><a class="headerlink" href="#ADataBindingDefault::ASignal<FieldType>" title="Permanent link">#</a></h3>
+<h3 ADataBindingDefault::ASignal_wzxhzdk:17_="ADataBindingDefault::ASignal<FieldType>()" id="ADataBindingDefault::ASignal<FieldType>">ASignal<FieldType><a class="headerlink" href="#ADataBindingDefault::ASignal<FieldType>" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">static</span><span class="w"> </span><span class="n">ADataBindingDefault</span><span class="o">::</span><span class="n"><a href="../asignal/">ASignal</a></span><span class="o">&lt;</span><span class="n">FieldType</span><span class="o">&gt;</span><span class="p">(</span><span class="n">View</span><span class="o">::*</span><span class="w"> </span><span class="n">getGetter</span><span class="p">())</span>
@@ -819,11 +834,28 @@ We are migrating to a new documentation engine. Please report presentation issue
 </div>
 </div></dd>
 </dl>
+
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/contacts/src/view/ContactDetailsView.cpp</summary>
+<p><a href="../aui-contacts/">AUI Contacts</a> - Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make a contacts-like application.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">viewer</span><span class="p">(</span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">property</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="hll"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">property</span><span class="p">.</span><span class="n">readProjected</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">editor</span><span class="p">(</span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">property</span><span class="p">);</span>
+</span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 ADataBindingDefault::setup_="ADataBindingDefault::setup()" id="ADataBindingDefault::setup">setup<a class="headerlink" href="#ADataBindingDefault::setup" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ADataBindingDefault</span><span class="o">::</span><span class="n">setup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">View</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ADataBindingDefault</span><span class="o">::</span><span class="n">setup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">View</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Called then view linked with field.</p>
 <dl class="doxygen-dl">
@@ -839,7 +871,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 ADataBindingDefault::void_="ADataBindingDefault::void()" id="ADataBindingDefault::void">void<a class="headerlink" href="#ADataBindingDefault::void" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">static</span><span class="w"> </span><span class="n">ADataBindingDefault</span><span class="o">::</span><span class="kt">void</span><span class="p">(</span><span class="n">View</span><span class="o">::*</span><span class="w"> </span><span class="n">getSetter</span><span class="p">())</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="n">ADataBindingDefault</span><span class="o">::</span><span class="kt">void</span><span class="p">(</span><span class="n">View</span><span class="o">::*</span><span class="w"> </span><span class="n">getSetter</span><span class="p">())</span>
 </span></code></pre></div>
 <p>Returns setter for <a href="../adatabinding/">ADataBinding</a> (deprecated)</p>
 <dl class="doxygen-dl">

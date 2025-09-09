@@ -704,6 +704,15 @@ We are migrating to a new documentation engine. Please report presentation issue
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-types" class="md-nav__link">
     <span class="md-ellipsis">
       Public Types
@@ -764,6 +773,30 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#AThreadPool::global" class="md-nav__link">
     <span class="md-ellipsis">
@@ -772,6 +805,21 @@ We are migrating to a new documentation engine. Please report presentation issue
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#AThreadPool::parallel" class="md-nav__link">
@@ -810,6 +858,22 @@ We are migrating to a new documentation engine. Please report presentation issue
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../core/">aui::core</a>)</code></td></tr>
 </table>
 
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="./">AThreadPool</a>.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">        </span><span class="n">connect</span><span class="p">(</span><span class="n">isRunning</span><span class="p">.</span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">mTimer</span><span class="p">)</span><span class="o">::</span><span class="n">setRunning</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">frame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">        </span><span class="n">mFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">global</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                    </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                    </span><span class="n">get</span><span class="p">(</span><span class="n">mNextPopulation</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                        </span><span class="k">auto</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cellsAround</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></code></pre></div></p>
+</details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AThreadPool::Worker="AThreadPool::Worker" id="AThreadPool::Worker">Worker<a class="headerlink" href="#AThreadPool::Worker" title="Permanent link">#</a></h3>
@@ -863,7 +927,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 AThreadPool::AThreadPool_="AThreadPool::AThreadPool()" id="AThreadPool::AThreadPool">AThreadPool<a class="headerlink" href="#AThreadPool::AThreadPool" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AThreadPool</span><span class="o">::</span><span class="n">AThreadPool</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">AThreadPool</span><span class="o">::</span><span class="n">AThreadPool</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Initializes the thread pool with size of threads.</p>
 <dl class="doxygen-dl">
@@ -876,28 +940,91 @@ We are migrating to a new documentation engine. Please report presentation issue
 </div></dd>
 </dl>
 
+<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="./">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">        </span><span class="n">connect</span><span class="p">(</span><span class="n">isRunning</span><span class="p">.</span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">mTimer</span><span class="p">)</span><span class="o">::</span><span class="n">setRunning</span><span class="p">);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">frame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">        </span><span class="n">mFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">global</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">                    </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">                    </span><span class="n">get</span><span class="p">(</span><span class="n">mNextPopulation</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">                        </span><span class="k">auto</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cellsAround</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></code></pre></div>
+</details>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">AThreadPool</span><span class="o">::</span><span class="n">AThreadPool</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">AThreadPool</span><span class="o">::</span><span class="n">AThreadPool</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Initializes the thread pool with <code>max(std:<img alt="🧵" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f9f5.svg" title=":thread:" />:hardware_concurrency() - 1, 2)</code> of threads
 or --aui-threadpool-size=SIZE passed to your application.</p>
 <dl class="doxygen-dl">
 </dl>
+
+<h2 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="./">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">        </span><span class="n">connect</span><span class="p">(</span><span class="n">isRunning</span><span class="p">.</span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">mTimer</span><span class="p">)</span><span class="o">::</span><span class="n">setRunning</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">frame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="hll"><span class="w">        </span><span class="n">mFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">global</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                    </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">                    </span><span class="n">get</span><span class="p">(</span><span class="n">mNextPopulation</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                        </span><span class="k">auto</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cellsAround</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 AThreadPool::global_="AThreadPool::global()" id="AThreadPool::global">global<a class="headerlink" href="#AThreadPool::global" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">global</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">global</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Global thread pool created with the default constructor.</p>
 <dl class="doxygen-dl">
 </dl>
+
+<h2 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="./">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">        </span><span class="n">connect</span><span class="p">(</span><span class="n">isRunning</span><span class="p">.</span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">mTimer</span><span class="p">)</span><span class="o">::</span><span class="n">setRunning</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">frame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="hll"><span class="w">        </span><span class="n">mFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">global</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mSize</span><span class="p">.</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">                    </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">                    </span><span class="n">get</span><span class="p">(</span><span class="n">mNextPopulation</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">                        </span><span class="k">auto</span><span class="w"> </span><span class="n">around</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cellsAround</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/minesweeper/src/Style.cpp</summary>
+<p><a href="../minesweeper-game/">Minesweeper Game</a> - Minesweeper game implementation driven by <a href="../ass/">ass</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">GlobalStyle</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">GlobalStyle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="n">AStylesheet</span><span class="o">::</span><span class="n">global</span><span class="p">().</span><span class="n">addRules</span><span class="p">({</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">          </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="hll"><span class="w">            </span><span class="n">t</span><span class="o">&lt;</span><span class="n">CellView</span><span class="o">&gt;</span><span class="p">(),</span>
+</span></span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">            </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">26</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span><span class="n"><a href="../ass_backgroundsolid/">BackgroundSolid</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mh">0xdedede</span><span class="n">_rgb</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">            </span><span class="n"><a href="../ass_border/">Border</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="n"><a href="../ametric/">_px</a></span><span class="p">,</span><span class="w"> </span><span class="mh">0xeaeaea</span><span class="n">_rgb</span><span class="w"> </span><span class="p">},</span>
+</span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 AThreadPool::parallel_="AThreadPool::parallel()" id="AThreadPool::parallel">parallel<a class="headerlink" href="#AThreadPool::parallel" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Iterator</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Functor</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">parallel</span><span class="p">(</span><span class="n">Iterator</span><span class="w"> </span><span class="n">begin</span><span class="p">,</span><span class="w"> </span><span class="n">Iterator</span><span class="w"> </span><span class="n">end</span><span class="p">,</span><span class="w"> </span><span class="n">Functor</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">functor</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Iterator</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Functor</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">parallel</span><span class="p">(</span><span class="n">Iterator</span><span class="w"> </span><span class="n">begin</span><span class="p">,</span><span class="w"> </span><span class="n">Iterator</span><span class="w"> </span><span class="n">end</span><span class="p">,</span><span class="w"> </span><span class="n">Functor</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">functor</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>

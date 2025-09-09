@@ -740,6 +740,30 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#AStaticVector::fromRange" class="md-nav__link">
     <span class="md-ellipsis">
@@ -784,6 +808,30 @@ We are migrating to a new documentation engine. Please report presentation issue
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#AStaticVector::removeAll" class="md-nav__link">
@@ -877,8 +925,54 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
   <dd>Container is not empty.</dd>
 </dl>
 
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/contacts/src/view/ContactDetailsView.cpp</summary>
+<p><a href="../aui-contacts/">AUI Contacts</a> - Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make a contacts-like application.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">namespace</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">profilePhoto</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">contact</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">contact</span><span class="o">-&gt;</span><span class="n">displayName</span><span class="p">.</span><span class="n">readProjected</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">first</span><span class="p">()).</span><span class="n">uppercase</span><span class="p">();</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="p">})</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_opacity/">Opacity</a></span><span class="p">(</span><span class="mf">0.5f</span><span class="p">),</span><span class="w"> </span><span class="n"><a href="../ass_fontsize/">FontSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">32</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">64</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="n"><a href="../ass_borderradius/">BorderRadius</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">32</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n"><a href="../ass_backgroundgradient/">BackgroundGradient</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">GRAY</span><span class="p">.</span><span class="n">lighter</span><span class="p">(</span><span class="mf">0.5f</span><span class="p">),</span><span class="w"> </span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">GRAY</span><span class="p">,</span><span class="w"> </span><span class="mi">163</span><span class="n">_deg</span><span class="w"> </span><span class="p">},</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/AST.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">            </span><span class="c1">// should assign it to some operator</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">binaryOperators</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n"><a href="../views/">views</a></span><span class="o">::</span><span class="n">reverse</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">                    </span><span class="n">o</span><span class="p">.</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">temporaryValue</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">                    </span><span class="n"><a href="../aui_assert/">AUI_ASSERT</a></span><span class="p">(</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">owning</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="hll"><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">owning</span><span class="p">);</span>
+</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/main.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">formula</span><span class="o">::</span><span class="n">Range</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;#RANGE?&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">                    </span><span class="n">v</span><span class="p">));</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="hll"><span class="w">            </span><span class="n">connect</span><span class="p">(</span><span class="n">getViews</span><span class="p">().</span><span class="n">first</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">inflateEditor</span><span class="p">);</span>
+</span></span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">inflateEditor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">        </span><span class="n">mState</span><span class="o">-&gt;</span><span class="n">currentExpression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mCell</span><span class="p">.</span><span class="n">expression</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">first</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">first</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -888,12 +982,59 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
   <dt><b>Sneaky assertions</b></dt>
   <dd>Container is not empty.</dd>
 </dl>
+
+<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/contacts/src/view/ContactDetailsView.cpp</summary>
+<p><a href="../aui-contacts/">AUI Contacts</a> - Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make a contacts-like application.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">namespace</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">profilePhoto</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">Contact</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">contact</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">contact</span><span class="o">-&gt;</span><span class="n">displayName</span><span class="p">.</span><span class="n">readProjected</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">first</span><span class="p">()).</span><span class="n">uppercase</span><span class="p">();</span>
+</span></span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="p">})</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_opacity/">Opacity</a></span><span class="p">(</span><span class="mf">0.5f</span><span class="p">),</span><span class="w"> </span><span class="n"><a href="../ass_fontsize/">FontSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">32</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_with_style/">AUI_WITH_STYLE</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">64</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n"><a href="../ass_borderradius/">BorderRadius</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">32</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="n"><a href="../ass_backgroundgradient/">BackgroundGradient</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">GRAY</span><span class="p">.</span><span class="n">lighter</span><span class="p">(</span><span class="mf">0.5f</span><span class="p">),</span><span class="w"> </span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">GRAY</span><span class="p">,</span><span class="w"> </span><span class="mi">163</span><span class="n">_deg</span><span class="w"> </span><span class="p">},</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/AST.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">            </span><span class="c1">// should assign it to some operator</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">binaryOperators</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n"><a href="../views/">views</a></span><span class="o">::</span><span class="n">reverse</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">                    </span><span class="n">o</span><span class="p">.</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">temporaryValue</span><span class="p">);</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="hll"><span class="w">                    </span><span class="n"><a href="../aui_assert/">AUI_ASSERT</a></span><span class="p">(</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">owning</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span>
+</span></span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="hll"><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">owning</span><span class="p">);</span>
+</span></span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/main.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">formula</span><span class="o">::</span><span class="n">Range</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;#RANGE?&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">                    </span><span class="p">},</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">                    </span><span class="n">v</span><span class="p">));</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="hll"><span class="w">            </span><span class="n">connect</span><span class="p">(</span><span class="n">getViews</span><span class="p">().</span><span class="n">first</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">inflateEditor</span><span class="p">);</span>
+</span></span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">inflateEditor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="n">mState</span><span class="o">-&gt;</span><span class="n">currentExpression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mCell</span><span class="p">.</span><span class="n">expression</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 AStaticVector::fromRange_="AStaticVector::fromRange()" id="AStaticVector::fromRange">fromRange<a class="headerlink" href="#AStaticVector::fromRange" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">incrementable</span><span class="w"> </span><span class="n">Iterator</span><span class="p">,</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">Iterator</span><span class="o">&gt;</span><span class="p">())</span><span class="o">&gt;</span><span class="w"> </span><span class="n">UnaryOperation</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">fromRange</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">range</span><span class="o">&lt;</span><span class="n">Iterator</span><span class="o">&gt;</span><span class="w"> </span><span class="n">range</span><span class="p">,</span><span class="w"> </span><span class="n">UnaryOperation</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">transformer</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">incrementable</span><span class="w"> </span><span class="n">Iterator</span><span class="p">,</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">Iterator</span><span class="o">&gt;</span><span class="p">())</span><span class="o">&gt;</span><span class="w"> </span><span class="n">UnaryOperation</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">fromRange</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">range</span><span class="o">&lt;</span><span class="n">Iterator</span><span class="o">&gt;</span><span class="w"> </span><span class="n">range</span><span class="p">,</span><span class="w"> </span><span class="n">UnaryOperation</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">transformer</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Constructs a new vector of transformed items of the range.</p>
 <dl class="doxygen-dl">
@@ -915,7 +1056,7 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::indexOf_="AStaticVector::indexOf()" id="AStaticVector::indexOf">indexOf<a class="headerlink" href="#AStaticVector::indexOf" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">indexOf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">indexOf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -932,8 +1073,8 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::insertAll_="AStaticVector::insertAll()" id="AStaticVector::insertAll">insertAll<a class="headerlink" href="#AStaticVector::insertAll" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -948,8 +1089,8 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 </dl>
 <p>Inserts all values of the specified container to the end.</p>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="n">OtherContainer</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="n">OtherContainer</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -964,8 +1105,8 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 </dl>
 <p>Inserts all values of the specified container to the end.</p>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="n">iterator</span><span class="w"> </span><span class="n">at</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="n">iterator</span><span class="w"> </span><span class="n">at</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -984,8 +1125,8 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 </dl>
 <p>Inserts all values of the specified container.</p>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="n">iterator</span><span class="w"> </span><span class="n">at</span><span class="p">,</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">iterator</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">insertAll</span><span class="p">(</span><span class="n">iterator</span><span class="w"> </span><span class="n">at</span><span class="p">,</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -1007,8 +1148,8 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::isSubsetOf_="AStaticVector::isSubsetOf()" id="AStaticVector::isSubsetOf">isSubsetOf<a class="headerlink" href="#AStaticVector::isSubsetOf" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">isSubsetOf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">OtherContainer</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">isSubsetOf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">OtherContainer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1018,7 +1159,7 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::last_="AStaticVector::last()" id="AStaticVector::last">last<a class="headerlink" href="#AStaticVector::last" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">last</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">last</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1029,8 +1170,24 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
   <dd>Container is not empty.</dd>
 </dl>
 
+<h2 id="examples_2">Examples<a class="headerlink" href="#examples_2" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/AST.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">temporaryValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="p">(</span><span class="s">&quot;SYNTAX&quot;</span><span class="p">);</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="hll"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">last</span><span class="p">().</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">                    </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="hll"><span class="w">                </span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">last</span><span class="p">().</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+</span></span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">                </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">            </span><span class="p">}</span>
+</span></code></pre></div>
+</details>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">last</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">last</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1040,11 +1197,28 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
   <dt><b>Sneaky assertions</b></dt>
   <dd>Container is not empty.</dd>
 </dl>
+
+<h2 id="examples_3">Examples<a class="headerlink" href="#examples_3" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/AST.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">temporaryValue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="p">(</span><span class="s">&quot;SYNTAX&quot;</span><span class="p">);</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="hll"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">last</span><span class="p">().</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">                    </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="hll"><span class="w">                </span><span class="n">binaryOperators</span><span class="p">.</span><span class="n">last</span><span class="p">().</span><span class="n">op</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+</span></span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">                </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">            </span><span class="p">}</span>
+</span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 AStaticVector::removeAll_="AStaticVector::removeAll()" id="AStaticVector::removeAll">removeAll<a class="headerlink" href="#AStaticVector::removeAll" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeAll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeAll</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -1060,7 +1234,7 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::removeAt_="AStaticVector::removeAt()" id="AStaticVector::removeAt">removeAt<a class="headerlink" href="#AStaticVector::removeAt" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeAt</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n"><a href="../">index</a></span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeAt</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n"><a href="../">index</a></span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -1080,7 +1254,7 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::removeFirst_="AStaticVector::removeFirst()" id="AStaticVector::removeFirst">removeFirst<a class="headerlink" href="#AStaticVector::removeFirst" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeFirst</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeFirst</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">StoredType</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -1096,8 +1270,8 @@ allocation. AStaticVector could not contain more than maxSize elements.</p>
 <h3 AStaticVector::removeIf_="AStaticVector::removeIf()" id="AStaticVector::removeIf">removeIf<a class="headerlink" href="#AStaticVector::removeIf" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Predicate</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeIf</span><span class="p">(</span><span class="n">Predicate</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">predicate</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Predicate</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">AStaticVector</span><span class="o">::</span><span class="n">removeIf</span><span class="p">(</span><span class="n">Predicate</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">predicate</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>

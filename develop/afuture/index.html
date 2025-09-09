@@ -713,6 +713,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-methods" class="md-nav__link">
     <span class="md-ellipsis">
       Public Methods
@@ -858,13 +867,29 @@ feature.</p>
 <p>AFuture implements work-stealing algorithm to prevent deadlocks and optimizaze thread usage: when waiting for result,
 AFuture may execute the task (if not default-constructed) on the caller thread instead of waiting. See AFuture::wait
 for details.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">frameComplete</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../atimer/">ATimer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atimer/">ATimer</a></span><span class="o">&gt;</span><span class="p">(</span><span class="mi">100</span><span class="n">ms</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">    </span><span class="n">AFuture</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">mFrame</span><span class="p">;</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">mSize</span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n">CellState</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mStorage</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n">CellState</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mNextPopulation</span><span class="p">;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">CellState</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n">CellState</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">storage</span><span class="p">,</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">position</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></code></pre></div></p>
+</details>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AFuture::map_="AFuture::map()" id="AFuture::map">map<a class="headerlink" href="#AFuture::map" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">map</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">map</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Maps this AFuture to another type of AFuture.</p>
 <dl class="doxygen-dl">
@@ -873,8 +898,8 @@ for details.</p>
 <h3 AFuture::onError_="AFuture::onError()" id="AFuture::onError">onError<a class="headerlink" href="#AFuture::onError" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">const</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">onError</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">const</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">onError</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Add onError callback to the future.</p>
 <dl class="doxygen-dl">
@@ -883,19 +908,19 @@ for details.</p>
 <p>onError does not expand AFuture's lifespan, so when AFuture becomes invalid, onSuccess would not be called.</p>
 <p>To expand lifespan, create an <a href="../aasyncholder/">AAsyncHolder</a> inside your window or object; then put the instance of AFuture there.
 Example:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">...</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="n"><a href="../aasyncholder/">AAsyncHolder</a></span><span class="w"> </span><span class="n">mAsync</span><span class="p">;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">...</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">mAsync</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">functionReturningFuture</span><span class="p">().</span><span class="n">onSuccess</span><span class="p">(...);</span><span class="w"> </span><span class="c1">// or onError</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">...</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="n"><a href="../aasyncholder/">AAsyncHolder</a></span><span class="w"> </span><span class="n">mAsync</span><span class="p">;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">...</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">mAsync</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">functionReturningFuture</span><span class="p">().</span><span class="n">onSuccess</span><span class="p">(...);</span><span class="w"> </span><span class="c1">// or onError</span>
 </span></code></pre></div></p>
 <div style="position:absolute;opacity:0">
 <h3 AFuture::onFinally_="AFuture::onFinally()" id="AFuture::onFinally">onFinally<a class="headerlink" href="#AFuture::onFinally" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">const</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">onFinally</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">const</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">onFinally</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Adds the callback to both onSuccess and onResult.</p>
 <dl class="doxygen-dl">
@@ -904,7 +929,7 @@ Example:
 <h3 AFuture::supplyException_="AFuture::supplyException()" id="AFuture::supplyException">supplyException<a class="headerlink" href="#AFuture::supplyException" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">supplyException</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">exception_ptr</span><span class="w"> </span><span class="n">causedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">current_exception</span><span class="p">())</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">supplyException</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">exception_ptr</span><span class="w"> </span><span class="n">causedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">current_exception</span><span class="p">())</span>
 </span></code></pre></div>
 <p>Stores an exception from std::current_exception to the future.</p>
 <dl class="doxygen-dl">
@@ -913,7 +938,7 @@ Example:
 <h3 AFuture::supplyValue_="AFuture::supplyValue()" id="AFuture::supplyValue">supplyValue<a class="headerlink" href="#AFuture::supplyValue" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">supplyValue</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">supplyValue</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Pushes the result to AFuture.</p>
 <dl class="doxygen-dl">

@@ -731,6 +731,21 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#ass::BackgroundImage::overlayColor" class="md-nav__link">
     <span class="md-ellipsis">
@@ -757,6 +772,21 @@ We are migrating to a new documentation engine. Please report presentation issue
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ass::BackgroundImage::sizing" class="md-nav__link">
@@ -811,6 +841,22 @@ rendered as 96px images, thus becoming blurry, hence usage of SVG icons is recom
 <p><code class="language-cpp highlight"><span class="n">unset_wrap</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="p">,</span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../idrawable/">IDrawable</a></span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">image</span></code></p>
 <p>Url to the image.</p>
 <p>In example, ":icon.svg" references to <code>icon.svg</code> file in your assets. See <a href="../aurl/">AUrl</a> for more info.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">mTexture</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">            </span><span class="n">mTexture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getRenderingContext</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">renderer</span><span class="p">().</span><span class="n">getNewTexture</span><span class="p">();</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">        </span><span class="n">CellsImage</span><span class="w"> </span><span class="n">image</span><span class="p">(</span><span class="n">mCells</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">());</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="hll"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">image</span><span class="p">.</span><span class="n">height</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="hll"><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">image</span><span class="p">.</span><span class="n">width</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="hll"><span class="w">                </span><span class="n">image</span><span class="p">.</span><span class="n">set</span><span class="p">(</span>
+</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                    </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                    </span><span class="n"><a href="../aformattedcolorconverter/">AFormattedColorConverter</a></span><span class="p">(</span>
+</span></code></pre></div>
+</details>
 <hr />
 <div style="position:absolute;opacity:0">
 <h3 ass::BackgroundImage::overlayColor="ass::BackgroundImage::overlayColor" id="ass::BackgroundImage::overlayColor">overlayColor<a class="headerlink" href="#ass::BackgroundImage::overlayColor" title="Permanent link">#</a></h3>
@@ -832,6 +878,37 @@ rendered as 96px images, thus becoming blurry, hence usage of SVG icons is recom
 </div>
 <p><code class="language-cpp highlight"><span class="n">unset_wrap</span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scale</span></code></p>
 <p>Scale of the image by x and y axis. Default is <code>{ 1.0, 1.0 }</code>.</p>
+<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/fractal/src/JumpToCoordsWindow.cpp</summary>
+<p><a href="../fractal-example/">Fractal Example</a> - Fractal viewer application demonstrating usage of custom shaders.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">JumpToCoordsWindow</span><span class="o">::</span><span class="n">JumpToCoordsWindow</span><span class="p">(</span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">FractalView</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fractalView</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">*</span><span class="w"> </span><span class="n">parent</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="p">(</span><span class="s">&quot;Jump to coords&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">854</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="n">parent</span><span class="p">,</span><span class="w"> </span><span class="n">WindowStyle</span><span class="o">::</span><span class="n">NO_RESIZE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">im</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fractalView</span><span class="o">-&gt;</span><span class="n">getPlotPosition</span><span class="p">();</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="o">::</span><span class="n">number</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="n">x</span><span class="p">));</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">im</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="o">::</span><span class="n">number</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="n">y</span><span class="p">));</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="hll"><span class="w">    </span><span class="n">scale</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="o">::</span><span class="n">number</span><span class="p">(</span><span class="n">fractalView</span><span class="o">-&gt;</span><span class="n">getPlotScale</span><span class="p">()));</span>
+</span></span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/fractal/src/FractalView.cpp</summary>
+<p><a href="../fractal-example/">Fractal Example</a> - Fractal viewer application demonstrating usage of custom shaders.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">onScroll</span><span class="p">(</span><span class="n">event</span><span class="p">);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">projectedPos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">dvec2</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">origin</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">dvec2</span><span class="p">(</span><span class="n">getSize</span><span class="p">())</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">dvec2</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">projectedPos</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">mAspectRatio</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">mTransform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">translate</span><span class="p">(</span><span class="n">mTransform</span><span class="p">,</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">dvec3</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">projectedPos</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="n">mTransform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">scale</span><span class="p">(</span><span class="n">mTransform</span><span class="p">,</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">dvec3</span><span class="p">(</span><span class="mf">1.0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">event</span><span class="p">.</span><span class="n">delta</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000.0</span><span class="p">));</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">mTransform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">translate</span><span class="p">(</span><span class="n">mTransform</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">glm</span><span class="o">::</span><span class="n">dvec3</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">projectedPos</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">handleMatrixUpdated</span><span class="p">();</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">redraw</span><span class="p">();</span>
+</span></code></pre></div>
+</details>
 <hr />
 <div style="position:absolute;opacity:0">
 <h3 ass::BackgroundImage::sizing="ass::BackgroundImage::sizing" id="ass::BackgroundImage::sizing">sizing<a class="headerlink" href="#ass::BackgroundImage::sizing" title="Permanent link">#</a></h3>

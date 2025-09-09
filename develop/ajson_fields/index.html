@@ -721,6 +721,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -791,6 +800,22 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n"><a href="../ajson_fields_entry/">AJSON_FIELDS_ENTRY</a></span><span class="p">(</span><span class="n">value2</span><span class="p">)</span>
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">)</span>
 </span></code></pre></div>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/notes/src/main.cpp</summary>
+<p><a href="../notes-app/">Notes App</a> - Note taking app that demonstrates usage of AListModel, <a href="../aproperty/">AProperty</a>, user data saving and loading.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">                      </span><span class="p">},</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">                      </span><span class="c1">/// [scrollarea]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">                      </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">()</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">                          </span><span class="p">.</span><span class="n">withContents</span><span class="p">(</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="hll"><span class="w">                          </span><span class="n"><a href="../aforeachui/">AUI_DECLARATIVE_FOR</a></span><span class="p">(</span><span class="n">note</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">mNotes</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../averticallayout/">AVerticalLayout</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                              </span><span class="n">observeChangesForDirty</span><span class="p">(</span><span class="n">note</span><span class="p">);</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">                              </span><span class="k">return</span><span class="w"> </span><span class="n">notePreview</span><span class="p">(</span><span class="n">note</span><span class="p">)</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                                  </span><span class="n">connect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">mCurrentNote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">note</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">                                  </span><span class="n">it</span><span class="o">&amp;</span><span class="w"> </span><span class="n">mCurrentNote</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="n">note</span><span class="p">](</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">Note</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">currentNote</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                                      </span><span class="n">ALOG_DEBUG</span><span class="p">(</span><span class="n">LOG_TAG</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;currentNote == note &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">currentNote</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; == &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">note</span><span class="p">;</span>
+</span></code></pre></div></p>
+</details>
 
 
 
