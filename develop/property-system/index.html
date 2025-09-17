@@ -1286,11 +1286,11 @@ The code above generates a window with a text field:</p>
 <p>A single call of <code>biConnect</code>:</p>
 <ul>
 <li>Prefills text field with the current <code>user-&gt;name</code> value (pre fire):
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">tf</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">().</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Robert&quot;</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">tf</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Robert&quot;</span><span class="p">);</span>
 </span></code></pre></div></li>
 <li>Connects <code>user-&gt;named.changed</code> to <code>tf</code> to notify the text field about changes of <code>user-&gt;name</code>:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Angela&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// changing user-&gt;name programmatically...</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">tf</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">().</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Angela&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ...should reflect on the text field</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">tf</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Angela&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ...should reflect on the text field</span>
 </span></code></pre></div></li>
 </ul>
 <figure>
