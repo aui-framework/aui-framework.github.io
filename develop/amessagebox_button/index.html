@@ -712,6 +712,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -824,6 +833,22 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">              </span><span class="p">},</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="hll"><span class="w">              </span><span class="n"><a href="../declarative_button/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Redo&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
 </span></span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                </span><span class="n">connect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">redo</span><span class="p">);</span>
+</span></code></pre></div></p>
+</details>
+<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/contacts/src/view/ContactDetailsView.cpp</summary>
+<p><a href="../aui-contacts/">AUI Contacts</a> - Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make a contacts-like application.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="c1">// discard</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">show</span><span class="p">(</span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">*&gt;</span><span class="p">(</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">::</span><span class="n">current</span><span class="p">()),</span><span class="w"> </span><span class="s">&quot;Do you really want to discard?&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;This action is irreversible!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_icon/">Icon</a></span><span class="o">::</span><span class="n">NONE</span><span class="p">,</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_button/">Button</a></span><span class="o">::</span><span class="n">YES_NO</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">ResultButton</span><span class="o">::</span><span class="n">YES</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">mContact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mOriginalContact</span><span class="p">;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">mEditorMode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
 </span></code></pre></div></p>
 </details>
 
