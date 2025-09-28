@@ -1087,10 +1087,11 @@ We are migrating to a new documentation engine. Please report presentation issue
 <a href="../aviewcontainer/">containers</a>.</p>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <p>In AUI, layout building consists of layout managers. Layout manager determines position and size of
-<a href="../aviewcontainer/">container</a>'s children <a href="../aview/">views</a>. A <a href="../aviewcontainer/">container</a> is a <a href="../aview/">AView</a>
-"view" that consists of other <a href="../aview/">views</a>, called children. In general, layout manager does not allow going
+<a href="../aviewcontainer/">container</a>'s children <a href="../aview/">views</a>. A <a href="../aviewcontainer/">container</a> is a <a href="../aview/">view</a>
+that consists of other <a href="../aview/">views</a>, called children. In general, layout manager does not allow going
 beyond the border of the <a href="../aviewcontainer/">container</a>. A <a href="../aviewcontainer/">container</a> can be a child of an
-another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
+another <a href="../aviewcontainer/">container</a>. Such nested combinations allows to replicate nearly any UI layout.</p>
+<p>This approach can be found in many popular declarative UI frameworks.</p>
 <p>The <a href="../alayout/">ALayout</a> is the base class for all layout managers in AUI. Layout managers are responsible for:</p>
 <ul>
 <li>Positioning child <a href="../views/">views</a> within their container</li>
@@ -1114,45 +1115,47 @@ another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
 </ul>
 <p>Key concepts:</p>
 <ol>
-<li><strong>Minimum Size</strong> - Layout managers calculate minimum size requirements by:</li>
+<li>
+<p><strong>Minimum Size</strong> - Layout managers calculate minimum size requirements by:</p>
+<ul>
 <li>Considering minimum sizes of child <a href="../views/">views</a></li>
 <li>Adding margins and spacing</li>
 <li>Respecting fixed size constraints</li>
-<li>
-<p>Following <a href="../aui-box-model/">AUI Box Model</a>.</p>
+<li>Following <a href="../aui-box-model/">AUI Box Model</a>.</li>
+</ul>
 </li>
 <li>
 <p><strong><a href="#EXPANDING">Expanding Views</a></strong> - Children can expand to fill available space of their parent:</p>
-</li>
+<ul>
 <li>Set via <a href="../aview/#AView::setExpanding"><code>AView::setExpanding()</code></a> or <a href="../ass_expanding/"><code>ass::Expanding</code></a> on a child</li>
 <li>Requires parent to have <a href="../ass_fixedsize/"><code>ass::FixedSize</code></a> or <a href="../ass_minsize/"><code>ass::MinSize</code></a> or <a href="./#EXPANDING">Expanding</a> set to take effect</li>
 <li>Independent for horizontal/vertical directions</li>
-<li>
-<p>Ignored if <a href="../ass_fixedsize/"><code>ass::FixedSize</code></a> is set</p>
+<li>Ignored if <a href="../ass_fixedsize/"><code>ass::FixedSize</code></a> is set</li>
+</ul>
 </li>
 <li>
 <p><strong>Spacing</strong> - Configurable gaps between views:</p>
-</li>
+<ul>
 <li>Set via <a href="../alayout/#ALayout::setSpacing"><code>ALayout::setSpacing()</code></a> or <a href="../ass_layoutspacing/"><code>ass::LayoutSpacing</code></a> of the parent view</li>
 <li>Part of minimum size calculations of the parent view</li>
-<li>
-<p>Applied uniformly between its child <a href="../views/">views</a></p>
+<li>Applied uniformly between its child <a href="../views/">views</a></li>
+</ul>
 </li>
 <li>
 <p><strong>Margins</strong> - Space around individual views:</p>
-</li>
+<ul>
 <li>Set per-view via ASS or margins property</li>
 <li>Respected during layout</li>
-<li>
-<p>Part of minimum size calculations of the parent view</p>
+<li>Part of minimum size calculations of the parent view</li>
+</ul>
 </li>
 <li>
 <p><strong>Layout Direction</strong> - Overall flow direction:</p>
-</li>
+<ul>
 <li>Horizontal layouts flow left-to-right</li>
 <li>Vertical layouts flow top-to-bottom</li>
-<li>
-<p>Grid layouts use both directions</p>
+<li>Grid layouts use both directions</li>
+</ul>
 </li>
 <li>
 <p><strong>Relativeness</strong> - children position is relative to parent's position, not an absolute position within a window.</p>
@@ -1246,9 +1249,7 @@ another <a href="../aviewcontainer/">container</a> i.e., nesting is allowed.</p>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">);</span>
 </span></code></pre></div>
     </td>
-    <td>
- ![](imgs/Screenshot_20250625_011101.png)
-    </td>
+    <td><img src="https://github.com/aui-framework/aui/raw/develop/docs/imgs/Screenshot_20250625_011101.png" /></td>
   </tr>
 </table>
 
@@ -1399,45 +1400,47 @@ occupy two thirds of free space:
 <h2 id="related-pages">Related Pages<a class="headerlink" href="#related-pages" title="Permanent link">#</a></h2>
 <div class="grid cards">
 <ul>
-<li><strong><a href="../alayout/">ALayout</a></strong></li>
-</ul>
+<li>
+<p><strong><a href="../alayout/">ALayout</a></strong></p>
 <hr />
 <p>Base class for all layout managers.</p>
-<ul>
-<li><strong><a href="../astackedlayout/">AStackedLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../astackedlayout/">AStackedLayout</a></strong></p>
 <hr />
 <p>Places <a href="../views/">views</a> in a stack (along z axis).</p>
-<ul>
-<li><strong><a href="../ahorizontallayout/">AHorizontalLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../ahorizontallayout/">AHorizontalLayout</a></strong></p>
 <hr />
 <p>Places <a href="../views/">views</a> in a row.</p>
-<ul>
-<li><strong><a href="../aabsolutelayout/">AAbsoluteLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../aabsolutelayout/">AAbsoluteLayout</a></strong></p>
 <hr />
 <p>Absolute positioning layout. Allows to explicitly set your own coordinates.</p>
-<ul>
-<li><strong><a href="../awordwrappinglayout/">AWordWrappingLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../awordwrappinglayout/">AWordWrappingLayout</a></strong></p>
 <hr />
 <p>Imitates behaviour of word wrapping, but uses <a href="../aview/">views</a> instead words</p>
-<ul>
-<li><strong><a href="../agridlayout/">AGridLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../agridlayout/">AGridLayout</a></strong></p>
 <hr />
 <p>Grid layout with fixed-size cells.</p>
-<ul>
-<li><strong><a href="../averticallayout/">AVerticalLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../averticallayout/">AVerticalLayout</a></strong></p>
 <hr />
 <p>Places <a href="../views/">views</a> in a column.</p>
-<ul>
-<li><strong><a href="../aadvancedgridlayout/">AAdvancedGridLayout</a></strong></li>
-</ul>
+</li>
+<li>
+<p><strong><a href="../aadvancedgridlayout/">AAdvancedGridLayout</a></strong></p>
 <hr />
 <p>Grid layout. Unlike <a href="../agridlayout/">AGridLayout</a>, cells may have different sizes.</p>
+</li>
+</ul>
 </div>
 
 
