@@ -1221,7 +1221,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 <h1 id="property-system">Property System<a class="headerlink" href="#property-system" title="Permanent link">#</a></h1>
 <!-- aui:index_alias property-system -->
-<p>Property System is a data binding mechanism based on <a href="../signal_slot/">signal_slot</a> "signal-slot system".</p>
+<p>Property System is a data binding mechanism based on <a href="../signal_slot/">signal-slot system</a>.</p>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <div class="admonition bug">
 <p class="admonition-title">Experimental Feature</p>
@@ -1538,13 +1538,6 @@ to make it obvious what do transformations do and how one type is transformed to
 <p>As said earlier, <code><a href="../aui_let/">AUI_LET</a></code> syntax is a little bit clunky and requires extra boilerplate code to set up.</p>
 <p>Here's where declarative syntax comes into play. The logic behind the syntax is the same as in
 <code><a href="../aobject/#AObject::connect">AObject::connect</a></code>/<code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> (for ease of replacement/understanding).</p>
-<p>Declarative syntax uses <code>&amp;</code> and <code>&amp;&amp;</code> operators to set up connections. These were chosen intentionally: <code>&amp;&amp;</code> resembles
-chain, so we "chaining view and property up".</p>
-<ul>
-<li><code>&amp;</code> sets up one-directional connection (<code><a href="../aobject/#AObject::connect">AObject::connect</a></code>).</li>
-<li><code>&amp;&amp;</code> sets up bidirectional connection (<code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code>).</li>
-</ul>
-<p>Also, <code>&gt;</code> operator (resembles arrow) is used to specify the destination AUI_SLOT.</p>
 <p>The example below is essentially the same as <a href="./#UIDataBindingTest_Label_via_let">Label via let</a> but uses declarative connection set up syntax.</p>
 <h3 id="UIDataBindingTest_Label_via_declarative">Label via declarative<a class="headerlink" href="#UIDataBindingTest_Label_via_declarative" title="Permanent link">#</a></h3>
 <p>Use <code>&amp;</code> and <code>&gt;</code> expression to connect the model's username property to the label's <a href="ALabel::text">text</a>
@@ -1560,7 +1553,7 @@ property.
 </span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="k">public</span><span class="o">:</span>
 </span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">          </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">::</span><span class="n">text</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">          </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">        </span><span class="p">});</span>
 </span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="p">};</span>
@@ -1574,8 +1567,7 @@ Note that the label already displays the value stored in User.</p>
 </span></code></pre></div>
 <img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" />
 In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in
-<a href="./#UIDataBindingTest_Label_via_let">Label via let</a> example) but using declarative syntax. The logic behind <code>&amp;</code> is almost the same as with <code><a href="../aui_let/">AUI_LET</a></code>
-and <code><a href="../aobject/#AObject::connect">AObject::connect</a></code> so projection use cases can be adapted in a similar manner.</p>
+<a href="./#UIDataBindingTest_Label_via_let">Label via let</a> example) but using declarative syntax.</p>
 <h3 id="UIDataBindingTest_ADataBindingDefault_for_omitting_view_property">ADataBindingDefault for omitting view property<a class="headerlink" href="#UIDataBindingTest_ADataBindingDefault_for_omitting_view_property" title="Permanent link">#</a></h3>
 <p>In previous example we have explicitly specified ALabel's property to connect with.</p>
 <p>One of notable features of declarative way (in comparison to procedural <code><a href="../aui_let/">AUI_LET</a></code> way) is that we can omit the view's

@@ -809,21 +809,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#AViewContainerBase::pointerEventsMapping" class="md-nav__link">
     <span class="md-ellipsis">
@@ -887,10 +872,10 @@ possible complex UI by nested AViewContainerBases with different layout managers
 <p>This class is abstract. The methods for modifying it's <a href="../views/">views</a> are protected. You can use <a href="../aviewcontainer/">AViewContainer</a> which exposes
 these methods to public or extend AViewContainerBase to make your own container-like view.</p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 AViewContainerBase::PointerEventsMapping="AViewContainerBase::PointerEventsMapping" id="AViewContainerBase::PointerEventsMapping">PointerEventsMapping<a class="headerlink" href="#AViewContainerBase::PointerEventsMapping" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct AViewContainerBase::PointerEventsMapping</code></p>
 <p><em>Empty structure.</em></p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
@@ -1029,7 +1014,7 @@ returns true. If predicate returns false, the lookup continues.</p>
 <dl class="doxygen-dl">
 </dl>
 
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<p><strong>Examples:</strong></p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/app/minesweeper/src/MinesweeperWindow.cpp</summary>
 <p><a href="../minesweeper-game/">Minesweeper Game</a> - Minesweeper game implementation driven by <a href="../ass/">ass</a>.</p>
@@ -1048,8 +1033,8 @@ returns true. If predicate returns false, the lookup continues.</p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/7guis/cells/src/main.cpp</summary>
 <p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">formula</span><span class="o">::</span><span class="n">Range</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../declarative_label/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;#RANGE?&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;{}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">                      </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">formula</span><span class="o">::</span><span class="n">Range</span><span class="o">&amp;</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;#RANGE?&quot;</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">                    </span><span class="p">},</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">                    </span><span class="n">v</span><span class="p">));</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="hll"><span class="w">            </span><span class="n">connect</span><span class="p">(</span><span class="n">getViews</span><span class="p">().</span><span class="n">first</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">inflateEditor</span><span class="p">);</span>

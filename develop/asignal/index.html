@@ -760,15 +760,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -795,10 +786,10 @@ We are migrating to a new documentation engine. Please report presentation issue
 <!-- aui:index_alias emits -->
 
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 ASignal::call_wrapper="ASignal::call_wrapper" id="ASignal::call_wrapper">call_wrapper<a class="headerlink" href="#ASignal::call_wrapper" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct ASignal::call_wrapper</code></p>
 <p><em>Empty structure.</em></p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
@@ -815,7 +806,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 </dl>
 <p>It's very useful then signal argument values calculation is expensive and you do not want to calculate them if no
 slots connected to the signal.</p>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<p><strong>Examples:</strong></p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/app/minesweeper/src/CellView.cpp</summary>
 <p><a href="../minesweeper-game/">Minesweeper Game</a> - Minesweeper game implementation driven by <a href="../ass/">ass</a>.</p>
@@ -829,6 +820,21 @@ slots connected to the signal.</p>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="n">AFontStyle</span><span class="w"> </span><span class="n">fs</span><span class="p">;</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="n">fs</span><span class="p">.</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getHeight</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="n">fs</span><span class="p">.</span><span class="n">align</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../atextalign/">ATextAlign</a></span><span class="o">::</span><span class="n">CENTER</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/Tokens.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">                        </span><span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">                        </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">reverseByte</span><span class="p">();</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">                        </span><span class="n">out</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">token</span><span class="o">::</span><span class="n">Identifier</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">readStringWhile</span><span class="p">([](</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">isalnum</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">};</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">                        </span><span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">                    </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="p">(</span><span class="s">&quot;UNEXPECTED {}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="p">}</span>
 </span></code></pre></div>
 </details>
 

@@ -754,15 +754,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#examples_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -796,55 +787,42 @@ We are migrating to a new documentation engine. Please report presentation issue
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">DemoGraphView::render</span><span class="p">(</span><span class="n"><a href="../arendercontext/">ARenderContext</a></span><span class="w"> </span><span class="n">ctx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">ctx</span><span class="p">.</span><span class="n">render</span><span class="p">.</span><span class="n">lines</span><span class="p">(</span><span class="n"><a href="../asolidbrush/">ASolidBrush</a></span><span class="p">{</span><span class="mh">0xff0000</span><span class="n">_rgb</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">mPoints</span><span class="p">,</span><span class="w"> </span><span class="n">ABorderStyle</span><span class="o">::</span><span class="n">Dashed</span><span class="p">{},</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">ctx</span><span class="p">.</span><span class="n">render</span><span class="p">.</span><span class="n">lines</span><span class="p">(</span><span class="n"><a href="../asolidbrush/">ASolidBrush</a></span><span class="p">{</span><span class="mh">0xff0000</span><span class="n"><a href="../acolor/">_rgb</a></span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">mPoints</span><span class="p">,</span><span class="w"> </span><span class="n">ABorderStyle</span><span class="o">::</span><span class="n">Dashed</span><span class="p">{},</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">);</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll">
 </span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
 </span></code></pre></div></p>
 </details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 ABorderStyle::Solid="ABorderStyle::Solid" id="ABorderStyle::Solid">Solid<a class="headerlink" href="#ABorderStyle::Solid" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct ABorderStyle::Solid</code></p>
 <p><em>Empty structure.</em></p>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 ABorderStyle::Dashed="ABorderStyle::Dashed" id="ABorderStyle::Dashed">Dashed<a class="headerlink" href="#ABorderStyle::Dashed" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct ABorderStyle::Dashed</code></p>
 <p>Displays a series of short square-ended dashes or line segments.</p>
-<h2 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">#</a></h2>
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dashWidth</span></code>
-</td>
-<td>
+<dl style="padding-left:1em">
+<dt><code class="language-cpp highlight"><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dashWidth</span></code></dt>
+<dd>
 If set, renderer would be forced to keep specified space between dashes.
 The value of this property is expressed in border width units. That is, 1.0 equals square.
 
 If both dashWidth and spaceBetweenDashes are specified, renderer would roughly cut the line dash sequence.
 Otherwise, it would try to adjust unset values in order to achieve smooth results.
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">spaceBetweenDashes</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">spaceBetweenDashes</span></code></dt>
+<dd>
 If set, renderer would be forced to keep specified space between dashes.
 The value of this property is expressed in border width units. That is, 1.0 equals square.
 
 If both dashWidth and spaceBetweenDashes are specified, renderer would roughly cut the line dash sequence.
 Otherwise, it would try to adjust unset values in order to achieve smooth results.
-</td>
-</tr>
-</table>
+</dd>
+</dl>
 
 
 

@@ -806,31 +806,20 @@ transparent or partially transparent.</p>
 </span></code></pre></div></p>
 </details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 ass::Backdrop::GaussianBlurCustom="ass::Backdrop::GaussianBlurCustom" id="ass::Backdrop::GaussianBlurCustom">GaussianBlurCustom<a class="headerlink" href="#ass::Backdrop::GaussianBlurCustom" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct ass::Backdrop::GaussianBlurCustom</code></p>
 <p>Underlying type of GaussianBlur but with customizable downscale. Generally, use GaussianBlur.</p>
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../ametric/">AMetric</a></span><span class="w"> </span><span class="n">radius</span></code>
-</td>
-<td>
+<dl style="padding-left:1em">
+<dt><code class="language-cpp highlight"><span class="n"><a href="../ametric/">AMetric</a></span><span class="w"> </span><span class="n">radius</span></code></dt>
+<dd>
 blur radius.
 Performance costs of radius is O^2. Please use downscale factor to approximate large blur radius.
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="kt">int</span><span class="w"> </span><span class="n">downscale</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="kt">int</span><span class="w"> </span><span class="n">downscale</span></code></dt>
+<dd>
 downscale factor. =1 equals don't affect. Must be positive.
 Effective blur radius is <code>radius * downscale</code>. However, the downscale part is done by cheap downscaling
 of the framebuffer texture. Thus, by raising downscale factor you can achieve larger blur radius with
@@ -849,53 +838,36 @@ is visually approximately same as
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
 </span></code></pre></div>
 but 16 times cheaper.
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span></code></dt>
+<dd>
 
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span></code></dt>
+<dd>
 
-</td>
-</tr>
-</table>
+</dd>
+</dl>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 ass::Backdrop::GaussianBlur="ass::Backdrop::GaussianBlur" id="ass::Backdrop::GaussianBlur">GaussianBlur<a class="headerlink" href="#ass::Backdrop::GaussianBlur" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct ass::Backdrop::GaussianBlur</code></p>
 <p>Fast gaussian blur.
 Strictly speaking, it's not an actual gaussian blur but a faster implementation of it.</p>
 <p>GaussianBlur calculates best downscale parameter applicable for passed radius.</p>
 <p>Downscale factor allows to produce approximately same visual result at drastically lower cost. You can use
 GaussianBlurCustom directly to specify your downscale factor.</p>
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../ametric/">AMetric</a></span><span class="w"> </span><span class="n">radius</span></code>
-</td>
-<td>
+<dl style="padding-left:1em">
+<dt><code class="language-cpp highlight"><span class="n"><a href="../ametric/">AMetric</a></span><span class="w"> </span><span class="n">radius</span></code></dt>
+<dd>
 
-</td>
-</tr>
-</table>
+</dd>
+</dl>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 ass::Backdrop::LiquidFluid="ass::Backdrop::LiquidFluid" id="ass::Backdrop::LiquidFluid">LiquidFluid<a class="headerlink" href="#ass::Backdrop::LiquidFluid" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct ass::Backdrop::LiquidFluid</code></p>
 <p><em>Empty structure.</em></p>
 

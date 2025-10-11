@@ -863,21 +863,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#AProcess::processMemory" class="md-nav__link">
     <span class="md-ellipsis">
@@ -971,51 +956,32 @@ with the provided arguments in the given working directory.</p>
 <p>We wait for the process to finish by calling <code>waitForExitCode()</code>, which blocks until the process exits and
 returns its exit code. If the exit code is 0, it means the process completed successfully.</p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 AProcess::ArgSingleString="AProcess::ArgSingleString" id="AProcess::ArgSingleString">ArgSingleString<a class="headerlink" href="#AProcess::ArgSingleString" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct AProcess::ArgSingleString</code></p>
 <p>Process arguments represented as a single string.
 In general, prefer using AProcess::Args.</p>
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">arg</span></code>
-</td>
-<td>
+<dl style="padding-left:1em">
+<dt><code class="language-cpp highlight"><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">arg</span></code></dt>
+<dd>
 
-</td>
-</tr>
-</table>
+</dd>
+</dl>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 AProcess::ArgStringList="AProcess::ArgStringList" id="AProcess::ArgStringList">ArgStringList<a class="headerlink" href="#AProcess::ArgStringList" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct AProcess::ArgStringList</code></p>
 <p>Process arguments represented as array of strings.</p>
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../astringvector/">AStringVector</a></span><span class="w"> </span><span class="n">list</span></code>
-</td>
-<td>
+<dl style="padding-left:1em">
+<dt><code class="language-cpp highlight"><span class="n"><a href="../astringvector/">AStringVector</a></span><span class="w"> </span><span class="n">list</span></code></dt>
+<dd>
 Argument list.
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">win32WrapWhitespaceArgumentsWithQuots</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">win32WrapWhitespaceArgumentsWithQuots</span></code></dt>
+<dd>
 {<a href="../windows/">windows</a>}
 Takes action only on Windows platform.
 
@@ -1027,33 +993,21 @@ If it does not work for your particular case, you may try setting this to false 
 AProcess::ArgSingleString to take full control of command line during process creation.
 
 Defaults to true.
-</td>
-</tr>
-</table>
+</dd>
+</dl>
+<hr />
 <div style="position:absolute;opacity:0">
 <h3 AProcess::ProcessCreationInfo="AProcess::ProcessCreationInfo" id="AProcess::ProcessCreationInfo">ProcessCreationInfo<a class="headerlink" href="#AProcess::ProcessCreationInfo" title="Permanent link">#</a></h3>
 </div>
-<hr />
 <p><code>struct AProcess::ProcessCreationInfo</code></p>
 <p>Process creation info.</p>
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">executable</span></code>
-</td>
-<td>
+<dl style="padding-left:1em">
+<dt><code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">executable</span></code></dt>
+<dd>
 Target executable file. Mandatory.
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">ArgSingleString</span><span class="p">,</span><span class="n">ArgStringList</span><span class="o">&gt;</span><span class="w"> </span><span class="n">args</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">ArgSingleString</span><span class="p">,</span><span class="n">ArgStringList</span><span class="o">&gt;</span><span class="w"> </span><span class="n">args</span></code></dt>
+<dd>
 Child process arguments.
 
 In common, prefer Args variant.
@@ -1063,17 +1017,12 @@ whitespaces.
 {<a href="../windows/">windows</a>}
 Windows native APIs use arguments as a single string. If ArgStringList variant is chosen, AUI converts array
 of strings to a single command line string value. See ArgStringList for details of this conversion.
-</td>
-</tr>
-<tr>
-<td>
-<code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">workDir</span></code>
-</td>
-<td>
+</dd>
+<dt><code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">workDir</span></code></dt>
+<dd>
 Process working directory. Defaults to working directory of the calling process.
-</td>
-</tr>
-</table>
+</dd>
+</dl>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AProcess::all_="AProcess::all()" id="AProcess::all">all<a class="headerlink" href="#AProcess::all" title="Permanent link">#</a></h3>
@@ -1239,7 +1188,7 @@ handle is "acquired" and guaranteed to be valid during lifetime of <code>AProces
 <dd><a href="../achildprocess/">AChildProcess</a> instance. Use <a href="../achildprocess/#AChildProcess::run">AChildProcess::run</a> to execute.</dd>
 </dl>
 
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<p><strong>Examples:</strong></p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/7guis/flight_booker/src/main.cpp</summary>
 <p><a href="../7guis-flight-booker/">7GUIs Flight Booker</a> - Flight Booker.</p>

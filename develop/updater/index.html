@@ -874,7 +874,65 @@ We are migrating to a new documentation engine. Please report presentation issue
 </div>
 <p>This module is purposed for delivering updates to your end users on distribution methods that do not support that by
 themselves (i.e., occasional Windows installers, portables for Windows and Linux, macOS app bundles downloaded from
-your website).</p>
+your website). Here's small breakdown:</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Distribution method</th>
+<th>Auto updating solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../windows/">Windows (operating system)</a></td>
+<td>Installer/exe</td>
+<td><a href="./">updater</a></td>
+</tr>
+<tr>
+<td><a href="../windows/">Windows (operating system)</a></td>
+<td>Microsoft Store (used rarely)</td>
+<td>Microsoft Store</td>
+</tr>
+<tr>
+<td><a href="../linux/">Linux (-based desktop OSes)</a></td>
+<td>Portables</td>
+<td><a href="./">updater</a></td>
+</tr>
+<tr>
+<td><a href="../linux/">Linux (-based desktop OSes)</a></td>
+<td>Flatpak</td>
+<td>Flathub</td>
+</tr>
+<tr>
+<td><a href="../macos/">macOS (operating system)</a></td>
+<td>DMG (*.app)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a href="../macos/">macOS (operating system)</a></td>
+<td>Apple App Store</td>
+<td>Apple App Store</td>
+</tr>
+<tr>
+<td><a href="../android/">Android (operating system)</a></td>
+<td>APK</td>
+<td>Google Play Store</td>
+</tr>
+<tr>
+<td><a href="../ios/">iOS (operating system)</a></td>
+<td>IPA</td>
+<td>Apple App Store</td>
+</tr>
+</tbody>
+</table>
+<details class="note">
+<summary>What is portable?</summary>
+<p>Portable is a term used to describe a software distribution method that does not require the user to install
+the software on their computer.</p>
+<p>Portable software is typically distributed as a single executable file (i.e., a single file with all
+dependencies packed into it), usually not requiring to "install" it to the system.</p>
+</details>
 <p><code>aui.updater</code> module expects your program to be installed to user's directory (i.e., updating does not require admin
 privileges). If that's not your case, you'll need to update your installer configuration (<a href="../packaging/#INNOSETUP">Inno Setup</a>) to install
 to user's directory (i.e., in <code>AppData</code>).</p>
@@ -1017,7 +1075,7 @@ update.</p>
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">theirVersion</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">ourVersion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                    </span><span class="n">getThread</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">enqueue</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                      </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">show</span><span class="p">(</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                          </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;No updates found&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;You are running the latest version.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_icon/">Icon</a></span><span class="o">::</span><span class="n">INFO</span><span class="p">);</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                          </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;No updates found&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;You are running the latest version.&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="o">::</span><span class="n">INFO</span><span class="p">);</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                    </span><span class="p">});</span>
 </span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                    </span><span class="k">return</span><span class="p">;</span>
 </span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">                </span><span class="p">}</span>
@@ -1038,7 +1096,7 @@ update.</p>
 </span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">                </span><span class="n">getThread</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">enqueue</span><span class="p">([</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shared_from_this</span><span class="p">(),</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">githubLatestRelease</span><span class="p">.</span><span class="n">tag_name</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">show</span><span class="p">(</span>
 </span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">                            </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;New version found!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Found version: {}</span><span class="se">\n\n</span><span class="s">Would you like to update?&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">version</span><span class="p">),</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">                            </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_icon/">Icon</a></span><span class="o">::</span><span class="n">INFO</span><span class="p">,</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_button/">Button</a></span><span class="o">::</span><span class="n">YES_NO</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">ResultButton</span><span class="o">::</span><span class="n">YES</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">                            </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="o">::</span><span class="n">INFO</span><span class="p">,</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../abutton/">Button</a></span><span class="o">::</span><span class="n">YES_NO</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">ResultButton</span><span class="o">::</span><span class="n">YES</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">                        </span><span class="k">return</span><span class="p">;</span>
 </span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">                    </span><span class="p">}</span>
 </span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
@@ -1050,7 +1108,7 @@ update.</p>
 </span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">                </span><span class="n">getThread</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">enqueue</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">                    </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">show</span><span class="p">(</span>
 </span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">                        </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Oops!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There is an error occurred while checking for updates. Please try again later.&quot;</span><span class="p">,</span>
-</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">                        </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_icon/">Icon</a></span><span class="o">::</span><span class="n">CRITICAL</span><span class="p">);</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">                        </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="o">::</span><span class="n">CRITICAL</span><span class="p">);</span>
 </span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">                </span><span class="p">});</span>
 </span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">            </span><span class="p">}</span>
 </span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">        </span><span class="p">};</span>
@@ -1067,7 +1125,7 @@ update.</p>
 </span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">              </span><span class="n">getThread</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">enqueue</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">                </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">show</span><span class="p">(</span>
 </span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">                    </span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Oops!&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There is an error occurred while downloading update. Please try again later.&quot;</span><span class="p">,</span>
-</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">                    </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../declarative_icon/">Icon</a></span><span class="o">::</span><span class="n">CRITICAL</span><span class="p">);</span>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">                    </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="o">::</span><span class="n">CRITICAL</span><span class="p">);</span>
 </span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">              </span><span class="p">});</span>
 </span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">          </span><span class="p">}</span>
 </span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">        </span><span class="p">};</span>
