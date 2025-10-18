@@ -1155,20 +1155,16 @@ simply set the property back to "bin" after <code><a href="../aui_app/">aui_app<
 <h3 id="other-platforms-unix-like-only_1">Other platforms (UNIX-like only)<a class="headerlink" href="#other-platforms-unix-like-only_1" title="Permanent link">#</a></h3>
 <p><a href="../aui.boot/">aui.boot</a> updates RUNPATH/RPATH CMake install variables to follow that convention:</p>
 <ul>
-<li>
-<p><strong>ld</strong> (Linux/Android):
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<li><strong>ld</strong> (Linux/Android): 
+ <div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_RPATH</span><span class="w"> </span><span class="err">$</span><span class="s">ORIGIN/../lib</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_RPATH_USE_LINK_PATH</span><span class="w"> </span><span class="s">FALSE</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>dyld</strong> (macOS/iOS):
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+</span></code></pre></div></td></tr></table></div></li>
+<li><strong>dyld</strong> (macOS/iOS): 
+ <div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_NAME_DIR</span><span class="w"> </span><span class="s2">&quot;@rpath&quot;</span><span class="p">)</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_INSTALL_RPATH</span><span class="w"> </span><span class="s2">&quot;@loader_path/../lib&quot;</span><span class="p">)</span>
-</span></code></pre></div></td></tr></table></div></p>
-</li>
+</span></code></pre></div></td></tr></table></div></li>
 </ul>
 <p>Typical Linux app installation consists of <code>bin/</code> directory where the executables are located and <code>lib/</code> directory
 for shared libraries (*.so). The <code>lib/</code> directory should contain all shared libraries required by the executable.

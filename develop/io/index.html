@@ -751,9 +751,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 <div class="grid cards">
 <ul>
 <li>
-<p><strong><a href="../aioexception/">AIOException</a></strong></p>
+<p><strong><a href="../apipe/">APipe</a></strong></p>
 <hr />
-<p>Exception caused by input/output stream.</p>
+<p>A thread safe buffer that converts an <a href="../iinputstream/">IInputStream</a> to IOutputStream (and otherwise).</p>
 </li>
 <li>
 <p><strong><a href="../apath/">APath</a></strong></p>
@@ -766,9 +766,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>RAII-style file owner for storing temporary data on disk.</p>
 </li>
 <li>
-<p><strong><a href="../astringstream/">AStringStream</a></strong></p>
+<p><strong><a href="../astrongbytebufferinputstream/">AStrongByteBufferInputStream</a></strong></p>
 <hr />
-<p>A buffer input/output stream based on std::string.</p>
+<p>Input stream based on <a href="../abytebuffer/">AByteBuffer</a> with memory control, clears byte buffer on destruction</p>
 </li>
 <li>
 <p><strong><a href="../arandominputstream/">ARandomInputStream</a></strong></p>
@@ -776,29 +776,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>An input stream that generates random bytes.</p>
 </li>
 <li>
-<p><strong><a href="../afileoutputstream/">AFileOutputStream</a></strong></p>
+<p><strong><a href="../astdistream/">AStdIStream</a></strong></p>
 <hr />
-<p>Opens a file for a binary write.</p>
-</li>
-<li>
-<p><strong><a href="../apipe/">APipe</a></strong></p>
-<hr />
-<p>A thread safe buffer that converts an <a href="../iinputstream/">IInputStream</a> to IOutputStream (and otherwise).</p>
-</li>
-<li>
-<p><strong><a href="../afileinputstream/">AFileInputStream</a></strong></p>
-<hr />
-<p>Opens a file for a binary read.</p>
-</li>
-<li>
-<p><strong><a href="../aconcatinputstream/">AConcatInputStream</a></strong></p>
-<hr />
-<p>Concatenates multiple sequential input streams into one.</p>
-</li>
-<li>
-<p><strong><a href="../inputstreamasync/">InputStreamAsync</a></strong></p>
-<hr />
-<p>Converts a basic input stream to an asynchronous input stream so it's read in a separate thread.</p>
+<p>std::istream implementation wrapping AUI's IInputStream.</p>
 </li>
 <li>
 <p><strong><a href="../aeofexception/">AEOFException</a></strong></p>
@@ -806,9 +786,34 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Thrown when stream has reached end (end of file).</p>
 </li>
 <li>
-<p><strong><a href="../iseekableinputstream/">ISeekableInputStream</a></strong></p>
+<p><strong><a href="../adynamicpipe/">ADynamicPipe</a></strong></p>
 <hr />
-<p>Represents an input stream with updating reading position.</p>
+<p>An asynchronous buffer that converts an <a href="../iinputstream/">IInputStream</a> to IOutputStream (and otherwise).</p>
+</li>
+<li>
+<p><strong><a href="../inputstreamasync/">InputStreamAsync</a></strong></p>
+<hr />
+<p>Converts a basic input stream to an asynchronous input stream so it's read in a separate thread.</p>
+</li>
+<li>
+<p><strong><a href="../iinputstream/">IInputStream</a></strong></p>
+<hr />
+<p>Represents an input stream.</p>
+</li>
+<li>
+<p><strong><a href="../astringstream/">AStringStream</a></strong></p>
+<hr />
+<p>A buffer input/output stream based on std::string.</p>
+</li>
+<li>
+<p><strong><a href="../aioexception/">AIOException</a></strong></p>
+<hr />
+<p>Exception caused by input/output stream.</p>
+</li>
+<li>
+<p><strong><a href="../aconcatinputstream/">AConcatInputStream</a></strong></p>
+<hr />
+<p>Concatenates multiple sequential input streams into one.</p>
 </li>
 <li>
 <p><strong><a href="../abytebufferinputstream/">AByteBufferInputStream</a></strong></p>
@@ -816,14 +821,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Converts a <a href="../abytebuffer/">AByteBuffer</a> to an IInputStream.</p>
 </li>
 <li>
-<p><strong><a href="../astdistream/">AStdIStream</a></strong></p>
+<p><strong><a href="../iseekableinputstream/">ISeekableInputStream</a></strong></p>
 <hr />
-<p>std::istream implementation wrapping AUI's IInputStream.</p>
-</li>
-<li>
-<p><strong><a href="../adynamicpipe/">ADynamicPipe</a></strong></p>
-<hr />
-<p>An asynchronous buffer that converts an <a href="../iinputstream/">IInputStream</a> to IOutputStream (and otherwise).</p>
+<p>Represents an input stream with updating reading position.</p>
 </li>
 <li>
 <p><strong><a href="../alimitedinputstream/">ALimitedInputStream</a></strong></p>
@@ -832,14 +832,14 @@ We are migrating to a new documentation engine. Please report presentation issue
    (end of stream)</p>
 </li>
 <li>
-<p><strong><a href="../astrongbytebufferinputstream/">AStrongByteBufferInputStream</a></strong></p>
+<p><strong><a href="../afileinputstream/">AFileInputStream</a></strong></p>
 <hr />
-<p>Input stream based on <a href="../abytebuffer/">AByteBuffer</a> with memory control, clears byte buffer on destruction</p>
+<p>Opens a file for a binary read.</p>
 </li>
 <li>
-<p><strong><a href="../iinputstream/">IInputStream</a></strong></p>
+<p><strong><a href="../afileoutputstream/">AFileOutputStream</a></strong></p>
 <hr />
-<p>Represents an input stream.</p>
+<p>Opens a file for a binary write.</p>
 </li>
 <li>
 <p><strong><a href="../aui_archive_extractto/">aui::archive::ExtractTo</a></strong></p>
