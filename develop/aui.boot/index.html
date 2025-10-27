@@ -815,9 +815,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#imported-target-depends-on-an-out-of-tree-file" class="md-nav__link">
+  <a href="#imported-target-depends-on-hardcoded-path" class="md-nav__link">
     <span class="md-ellipsis">
-      "Imported target ... depends on an out-of-tree file"
+      "Imported target ... depends on hardcoded path"
     </span>
   </a>
   
@@ -1484,9 +1484,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#imported-target-depends-on-an-out-of-tree-file" class="md-nav__link">
+  <a href="#imported-target-depends-on-hardcoded-path" class="md-nav__link">
     <span class="md-ellipsis">
-      "Imported target ... depends on an out-of-tree file"
+      "Imported target ... depends on hardcoded path"
     </span>
   </a>
   
@@ -2018,7 +2018,7 @@ your CIs:</p>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>  id: cache-aui-boot
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>  uses: actions/cache@v3
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>  env:
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    cache-name: aui-boot-${{ matrix.shared_or_static }}-${{ matrix.debug_or_release }}-${{ matrix.arch }}
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    cache-name: aui-boot-${{ matrix.shared_or_static }}-${{ matrix.build_type }}-${{ matrix.arch }}
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>  with:
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>    path: |
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>      ~/.aui
@@ -2134,7 +2134,7 @@ this scenario will be forking the library and append their <code>CMakeLists.txt<
 <h3 id="did-you-mean-package_name">"did you mean PACKAGE_NAME?"<a class="headerlink" href="#did-you-mean-package_name" title="Permanent link">#</a></h3>
 <p>You have mispelled the package name (the first argument to <code>auib_import</code>). Please change the first argument to
 <code>auib_import</code> to <code>PACKAGE_NAME</code>.</p>
-<h3 id="imported-target-depends-on-an-out-of-tree-file">"Imported target ... depends on an out-of-tree file"<a class="headerlink" href="#imported-target-depends-on-an-out-of-tree-file" title="Permanent link">#</a></h3>
+<h3 id="imported-target-depends-on-hardcoded-path">"Imported target ... depends on hardcoded path"<a class="headerlink" href="#imported-target-depends-on-hardcoded-path" title="Permanent link">#</a></h3>
 <p>The library's maintainer have misused CMake. Follow one of possible options provided by AUI.Boot or fix the
 library by forking it. You can consult with
 <a href="https://github.com/conan-io/conan-center-index/tree/master/recipes/">Conan Recipes</a> or
@@ -2443,13 +2443,13 @@ with properly formatted name.</p>
 <span class="normal"><a href="#__codelineno-27-8">8</a></span>
 <span class="normal"><a href="#__codelineno-27-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a>- name: Pack
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a>  working-directory: ${{github.workspace}}/build
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a>  run: cpack . -C ${{ matrix.debug_or_release }}
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3"></a>  run: cpack . -C ${{ matrix.build_type }}
 </span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4"></a>
 </span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5"></a>- name: Upload
 </span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6"></a>  uses: actions/upload-artifact@v4
 </span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7"></a>  with:
 </span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8"></a>    path: ${{github.workspace}}/build/*.tar.gz
-</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9"></a>    name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.debug_or_release }} ${{ matrix.arch }} ${{ matrix.compiler }}
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9"></a>    name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.build_type }} ${{ matrix.arch }} ${{ matrix.compiler }}
 </span></code></pre></div></td></tr></table></div>
 <h2 id="importing-aui-without-aui-boot">Importing AUI without AUI Boot<a class="headerlink" href="#importing-aui-without-aui-boot" title="Permanent link">#</a></h2>
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not
