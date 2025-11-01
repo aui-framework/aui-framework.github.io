@@ -617,15 +617,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#UIDataBindingTest_Bidirectional_projection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bidirectional projection
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -681,15 +672,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#UIDataBindingTest_Declarative_bidirectional_connection" class="md-nav__link">
     <span class="md-ellipsis">
       Declarative bidirectional connection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#UIDataBindingTest_Declarative_bidirectional_projection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declarative bidirectional projection
     </span>
   </a>
   
@@ -1095,15 +1077,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#UIDataBindingTest_Bidirectional_projection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bidirectional projection
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1159,15 +1132,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#UIDataBindingTest_Declarative_bidirectional_connection" class="md-nav__link">
     <span class="md-ellipsis">
       Declarative bidirectional connection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#UIDataBindingTest_Declarative_bidirectional_projection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declarative bidirectional projection
     </span>
   </a>
   
@@ -1323,7 +1287,7 @@ get deeper understanding on how connections are made and what does declarative w
 may be used in favour of declarative way if the latter not work for you. For declarative way, go to
 <a href="./#UI_declarative_data_binding">UI declarative data binding</a>.</p>
 </div>
-<p>This approach allows more control over the binding process by using <code><a href="../aobject/#AObject::connect">AObject::connect</a></code>/<code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> which is
+<p>This approach allows more control over the binding process by using <code><a href="../aobject/">AObject</a>::connect</code>/<code><a href="../aobject/">AObject</a>::biConnect</code> which is
 a procedural way of setting up connections. As a downside, it requires "<a href="../aui_let/">AUI_LET</a>" syntax clause which may seem as overkill
 for such a simple operation.</p>
 <h3 id="UIDataBindingTest_Label_via_let">Label via let<a class="headerlink" href="#UIDataBindingTest_Label_via_let" title="Permanent link">#</a></h3>
@@ -1349,11 +1313,11 @@ property.
 </span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">              </span><span class="c1">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span>
 </span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">              </span><span class="c1">// in other words, this connection is essentially the</span>
 </span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">              </span><span class="c1">// same as</span>
-</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">              </span><span class="c1">// <a href="../aobject/#AObject::connect">AObject::connect</a>(user-&gt;name, <a href="../aui_slot/">AUI_SLOT</a>(it)::setText);</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">              </span><span class="c1">// <a href="../aobject/">AObject</a>::connect(user-&gt;name, <a href="../aui_slot/">AUI_SLOT</a>(it)::setText);</span>
 </span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">              </span><span class="c1">//</span>
 </span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">              </span><span class="c1">// if you want user-&gt;name to be aware or it-&gt;text()</span>
 </span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">              </span><span class="c1">// changes (i.e., if it were an editable view</span>
-</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">              </span><span class="c1">// like <a href="../atextfield/">ATextField</a>) use <a href="../aobject/#AObject::biConnect">AObject::biConnect</a> instead</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">              </span><span class="c1">// like <a href="../atextfield/">ATextField</a>) use <a href="../aobject/">AObject</a>::biConnect instead</span>
 </span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">              </span><span class="c1">// (see &quot;Bidirectional connection&quot; sample).</span>
 </span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="w">            </span><span class="p">},</span>
 </span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="w">        </span><span class="p">});</span>
@@ -1377,31 +1341,24 @@ Note that label already displays the value stored in User.</p>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="c1">// goes through projection (&amp;<a href="../astring/">AString</a>::uppercase) first</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="c1">// then it goes to assignment operation of it-&gt;text()</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="c1">// property.</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">.</span><span class="n">readProjected</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">::</span><span class="n">uppercase</span><span class="p">),</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">());</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="c1">//                -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;  -&gt;</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="c1">// in other words, this connection is essentially the same as</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="c1">// <a href="../aobject/#AObject::connect">AObject::connect</a>(user-&gt;name.projected(&amp;<a href="../astring/">AString</a>::uppercase), <a href="../aui_slot/">AUI_SLOT</a>(it)::setText);</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="c1">// if view&#39;s property gets changed (i.e., by user or by occasional</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="c1">// <a href="../alabel/">ALabel</a>::setText), these changes DO NOT reflect on model</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="c1">// as we requested connect() here instead of biConnect().</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">},</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">-&gt;</span><span class="n">uppercase</span><span class="p">()),</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">());</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">},</span>
 </span></code></pre></div></p>
-<p>This gives the following result:
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_1.png" />
-Note that the label already displays the <strong>projected</strong> value stored in User.</p>
+<p>This gives the following result:</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_1.png" /></p>
+<p>Note that the label already displays the <strong>projected</strong> value stored in User.</p>
 <p>Let's change the name:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_2.png" /></p>
+</span></code></pre></div></p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_2.png" /></p>
 <p>This way, we've set up data binding with projection.</p>
 <h3 id="UIDataBindingTest_Bidirectional_connection">Bidirectional connection<a class="headerlink" href="#UIDataBindingTest_Bidirectional_connection" title="Permanent link">#</a></h3>
-<p>In previous <a href="../examples/">examples</a>, we've used <code><a href="../aobject/#AObject::connect">AObject::connect</a></code> to make one directional (one sided) connection. This is
+<p>In previous <a href="../examples/">examples</a>, we've used <code><a href="../aobject/">AObject</a>::connect</code> to make one directional (one sided) connection. This is
 perfectly enough for <a href="../alabel/">ALabel</a> because it cannot be changed by user.</p>
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view
 from model and obtaining data from view back to the model.</p>
 <p>For this example, let's use <a href="../atextfield/">ATextField</a> instead of <a href="../alabel/">ALabel</a> as it's an editable view. In this case, we'd want to use
-<code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> because we do want <code>user-&gt;name</code> to be aware of changes of the view.
+<code><a href="../aobject/">AObject</a>::biConnect</code> because we do want <code>user-&gt;name</code> to be aware of changes of the view.
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="c1">// Data goes from left to right in the first place</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="c1">// (i.e., user-&gt;name current value overrides it-&gt;text())</span>
@@ -1414,8 +1371,8 @@ from model and obtaining data from view back to the model.</p>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="c1">//                &lt;-  changes only   &lt;-</span>
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">},</span>
 </span></code></pre></div></p>
-<p>This gives the following result:
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png" /></p>
+<p>This gives the following result:</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png" /></p>
 <p>Let's change the name programmatically:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
 </span></code></pre></div></p>
@@ -1425,204 +1382,103 @@ from model and obtaining data from view back to the model.</p>
 <img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png" />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Changed from UI&quot;</span><span class="p">);</span>
 </span></code></pre></div></p>
-<p>This way we've set up bidirectional projection via <code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> which makes <code>user-&gt;name</code> aware of UI
+<p>This way we've set up bidirectional projection via <code><a href="../aobject/">AObject</a>::biConnect</code> which makes <code>user-&gt;name</code> aware of UI
 changes.</p>
-<h3 id="UIDataBindingTest_Bidirectional_projection">Bidirectional projection<a class="headerlink" href="#UIDataBindingTest_Bidirectional_projection" title="Permanent link">#</a></h3>
-<p>Bidirectional connection updates values in both directions, hence it requires the projection to work in both
-sides as well.</p>
-<p>It is the case for <a href="../adropdownlist/">ADropdownList</a> with enums. <a href="../adropdownlist/">ADropdownList</a> works with string list model and indices. It does not
-know anything about underlying values.</p>
-<p>For example, define enum with <a href="../aui_enum_values/">AUI_ENUM_VALUES</a> and model:</p>
-<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Gender</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">MALE</span><span class="p">,</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">FEMALE</span><span class="p">,</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">OTHER</span><span class="p">,</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">};</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="n"><a href="../aui_enum_values/">AUI_ENUM_VALUES</a></span><span class="p">(</span><span class="n">Gender</span><span class="p">,</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">                </span><span class="n">Gender</span><span class="o">::</span><span class="n">MALE</span><span class="p">,</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">                </span><span class="n">Gender</span><span class="o">::</span><span class="n">FEMALE</span><span class="p">,</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">                </span><span class="n">Gender</span><span class="o">::</span><span class="n">OTHER</span><span class="p">)</span>
-</span></code></pre></div>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">Gender</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gender</span><span class="p">;</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="c1">// we&#39;ve omitted other fields for sake of simplicity</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">};</span>
-</span></code></pre></div></p>
-<p>Now, let's get a mapping for our <code>Gender</code> enum:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">GENDERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">enumerate</span><span class="o">::</span><span class="n">ALL_VALUES</span><span class="o">&lt;</span><span class="n">Gender</span><span class="o">&gt;</span><span class="p">;</span>
-</span></code></pre></div></p>
-<p>The compile-time constant above is equivalent to:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="cm">/* pseudocode */</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">GENDERS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">MALE</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">FEMALE</span><span class="p">,</span><span class="w"> </span><span class="n">GENDER</span><span class="o">::</span><span class="n">OTHER</span><span class="w"> </span><span class="p">};</span>
-</span></code></pre></div></p>
-<p>We just using <code>aui::enumerate::ALL_VALUES</code> because it was provided conveniently by <code><a href="../aui_enum_values/">AUI_ENUM_VALUES</a></code> for us.</p>
-<p>It's not hard to guess that we'll use indices of this array to uniquely identify <code>Gender</code> associated with this
-index:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="cm">/* pseudocode */</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">GENDERS</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="c1">// -&gt; MALE</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">GENDERS</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// -&gt; FEMALE</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">GENDERS</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// -&gt; OTHER</span>
-</span></code></pre></div></p>
-<p>To perform opposite operation (i.e., <code>Gender</code> to int), we can use <code>aui::indexOf</code>:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="cm">/* pseudocode */</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">aui</span><span class="o">::</span><span class="n">indexOf</span><span class="p">(</span><span class="n">GENDERS</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">MALE</span><span class="p">);</span><span class="w">   </span><span class="c1">// -&gt; 0</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">aui</span><span class="o">::</span><span class="n">indexOf</span><span class="p">(</span><span class="n">GENDERS</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">FEMALE</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; 1</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">aui</span><span class="o">::</span><span class="n">indexOf</span><span class="p">(</span><span class="n">GENDERS</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">OTHER</span><span class="p">);</span><span class="w">  </span><span class="c1">// -&gt; 2</span>
-</span></code></pre></div></p>
-<p>To bring these conversions together, let's use overloaded lambda:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">GENDER_INDEX_PROJECTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">lambda_overloaded</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="p">[](</span><span class="n">Gender</span><span class="w"> </span><span class="n">g</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">indexOf</span><span class="p">(</span><span class="n">GENDERS</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">).</span><span class="n">valueOr</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">GENDERS</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">};</span>
-</span></code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It's convenient to use lambda trailing return type syntax (i.e., <code>... -&gt; int</code>, <code>... -&gt; Gender</code>)
-to make it obvious what do transformations do and how one type is transformed to another.</p>
-</div>
-<p>The function-like object above detects the direction of transformation and performs as follows:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">GENDER_INDEX_PROJECTION</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; MALE</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">GENDER_INDEX_PROJECTION</span><span class="p">(</span><span class="n">Gender</span><span class="o">::</span><span class="n">MALE</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; 0</span>
-</span></code></pre></div></p>
-<p>It is all what we need to set up bidirectional transformations. Inside AUI_ENTRY:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">manage_shared</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">MALE</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">        </span><span class="c1">// generate a string list model for genders from GENDERS array defined earlier</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">gendersStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AListModel</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;::</span><span class="n">fromVector</span><span class="p">(</span>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">            </span><span class="n">GENDERS</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n"><a href="../views/">views</a></span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n"><a href="../aenumerate/">AEnumerate</a></span><span class="o">&lt;</span><span class="n">Gender</span><span class="o">&gt;::</span><span class="n">toName</span><span class="p">)</span>
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="n">ranges</span><span class="o">::</span><span class="n">to_vector</span><span class="p">);</span>
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">        </span><span class="c1">// equivalent:</span>
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">        </span><span class="c1">// gendersStr = { &quot;MALE&quot;, &quot;FEMALE&quot;, &quot;OTHER&quot; }</span>
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">        </span><span class="c1">// you can customize the displayed strings by playing with</span>
-</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">        </span><span class="c1">// ranges::views::transform argument.</span>
-</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>
-</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="w">          </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">gendersStr</span><span class="p">)</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="w">              </span><span class="c1">// <a href="../aobject/#AObject::connect">AObject::connect</a>(user-&gt;gender, it-&gt;selectionId());</span>
-</span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="w">              </span><span class="c1">//</span>
-</span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="w">              </span><span class="c1">// The code above would break, because Gender and int</span>
-</span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="w">              </span><span class="c1">// (selectionId() type) are incompatible.</span>
-</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="w">              </span><span class="c1">//</span>
-</span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="w">              </span><span class="c1">// Instead, define bidirectional projection:</span>
-</span><span id="__span-20-25"><a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a><span class="w">               </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">biConnect</span><span class="p">(</span>
-</span><span id="__span-20-26"><a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a><span class="w">                   </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">gender</span><span class="p">.</span><span class="n">biProjected</span><span class="p">(</span><span class="n">GENDER_INDEX_PROJECTION</span><span class="p">),</span>
-</span><span id="__span-20-27"><a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a><span class="w">                   </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">selectionId</span><span class="p">());</span>
-</span><span id="__span-20-28"><a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a><span class="w">              </span><span class="p">},</span>
-</span><span id="__span-20-29"><a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a><span class="w">        </span><span class="p">});</span>
-</span><span id="__span-20-30"><a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-20-31"><a id="__codelineno-20-31" name="__codelineno-20-31" href="#__codelineno-20-31"></a><span class="p">};</span>
-</span><span id="__span-20-32"><a id="__codelineno-20-32" name="__codelineno-20-32" href="#__codelineno-20-32"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_projection_1.png" /></p>
-<ul>
-<li>
-<p>If we try to change <code>user-&gt;gender</code> programmatically, <a href="../adropdownlist/">ADropdownList</a> will respond:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">FEMALE</span><span class="p">;</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">dropdownList</span><span class="o">-&gt;</span><span class="n">getSelectedId</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// second option</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_projection_2.png" /></p>
-</li>
-<li>
-<p>If the user changes the value of <a href="../adropdownlist/">ADropdownList</a>, it reflects on the model as well:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">gender</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">OTHER</span><span class="p">);</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_projection_3.png" /></p>
-</li>
-</ul>
 <h2 id="UI_declarative_data_binding">UI declarative data binding<a class="headerlink" href="#UI_declarative_data_binding" title="Permanent link">#</a></h2>
 <p>As said earlier, <code><a href="../aui_let/">AUI_LET</a></code> syntax is a little bit clunky and requires extra boilerplate code to set up.</p>
 <p>Here's where declarative syntax comes into play. The logic behind the syntax is the same as in
-<code><a href="../aobject/#AObject::connect">AObject::connect</a></code>/<code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> (for ease of replacement/understanding).</p>
+<code><a href="../aobject/">AObject</a>::connect</code>/<code><a href="../aobject/">AObject</a>::biConnect</code> (for ease of replacement/understanding).</p>
 <p>The example below is essentially the same as <a href="./#UIDataBindingTest_Label_via_let">Label via let</a> but uses declarative connection set up syntax.</p>
 <h3 id="UIDataBindingTest_Label_via_declarative">Label via declarative<a class="headerlink" href="#UIDataBindingTest_Label_via_declarative" title="Permanent link">#</a></h3>
-<p>Use <code>&amp;</code> and <code>&gt;</code> expression to connect the model's username property to the label's <a href="ALabel::text">text</a>
-property.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="p">};</span>
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>
-</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="k">auto</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">manage_shared</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Roza&quot;</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
-</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">          </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">        </span><span class="p">});</span>
-</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="p">};</span>
-</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="k">auto</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
-</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">};</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">auto</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">manage_shared</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Roza&quot;</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">          </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="p">};</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="k">auto</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
 </span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" />
-Note that the label already displays the value stored in User.</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" /></p>
+<p>Note that the label already displays the value stored in User.</p>
 <p>Let's change the name:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" />
-In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" /></p>
+<p>In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in
 <a href="./#UIDataBindingTest_Label_via_let">Label via let</a> example) but using declarative syntax.</p>
 <h3 id="UIDataBindingTest_ADataBindingDefault_for_omitting_view_property">ADataBindingDefault for omitting view property<a class="headerlink" href="#UIDataBindingTest_ADataBindingDefault_for_omitting_view_property" title="Permanent link">#</a></h3>
-<p>In previous example we have explicitly specified ALabel's property to connect with.</p>
+<div class="admonition failure">
+<p class="admonition-title">Deprecated</p>
+<p>Use <a href="../retained_immediate_ui/">declarative contracts</a> instead.</p>
+</div>
+<p>In the previous example we have explicitly specified ALabel's property to connect with.</p>
 <p>One of notable features of declarative way (in comparison to procedural <code><a href="../aui_let/">AUI_LET</a></code> way) is that we can omit the view's
 property to connect with if such <code><a href="../adatabindingdefault/">ADataBindingDefault</a></code> specialization exist for the target view and the property
 type. Some <a href="../views/">views</a> have already predefined such specialization for their underlying types. For instance, <a href="../alabel/">ALabel</a> has
 such specialization:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="cm">/* PREDEFINED! You don&#39;t need to define it! This listing is an example */</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">template</span><span class="o">&lt;&gt;</span>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc"><a href="../adatabindingdefault/">ADataBindingDefault</a></span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">property</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cm">/* PREDEFINED! You don&#39;t need to define it! This listing is an example */</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">template</span><span class="o">&lt;&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc"><a href="../adatabindingdefault/">ADataBindingDefault</a></span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">property</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">};</span>
 </span></code></pre></div>
 <p>We can use this predefined specialization to omit the destination property:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span>
 </span></code></pre></div></p>
 <p>Behaviour of such connection is equal to <a href="./#UIDataBindingTest_Label_via_declarative">Label via declarative</a>:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" />
-Note that the label already displays the value stored in User.</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" /></p>
+<p>Note that the label already displays the value stored in User.</p>
 <p>Let's change the name:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" />
-In this example, we've omitted the destination property of the connection while maintaining the same behaviour
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" /></p>
+<p>In this example, we've omitted the destination property of the connection while maintaining the same behaviour
 as in <a href="./#UIDataBindingTest_Label_via_declarative">Label via declarative</a>.</p>
 <h3 id="UIDataBindingTest_ADataBindingDefault_strong_type_propagation">ADataBindingDefault strong type propagation<a class="headerlink" href="#UIDataBindingTest_ADataBindingDefault_strong_type_propagation" title="Permanent link">#</a></h3>
+<div class="admonition failure">
+<p class="admonition-title">Deprecated</p>
+<p>Use <a href="../retained_immediate_ui/">declarative contracts</a> instead.</p>
+</div>
 <p>Think of <code><a href="../adatabindingdefault/">ADataBindingDefault</a></code> as we're not only connecting properties to properties, but also creating a
 "property to view" relationship. This philosophy covers the following scenario.</p>
 <p>In AUI, there's <a href="../aui_ranged_number/">aui::ranged_number</a> template which stores valid value range right inside the type:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">};</span>
 </span></code></pre></div></p>
 <p>These strong types can be used to propagate their traits on <a href="../views/">views</a>, i.e., ANumberPicker. When using declarative
 syntax, the property system calls <code><a href="../adatabindingdefault/#ADataBindingDefault::setup">ADataBindingDefault::setup</a></code> to apply some extra traits of the bound value on
 the view. Here's an abstract on how <code><a href="../anumberpicker/">ANumberPicker</a></code> defines specialization of <code>ADataBingingDefault</code> with
 <code><a href="../aui_ranged_number/">aui::ranged_number</a></code>:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="cm">/* PREDEFINED! You don&#39;t need to define it! This listing is an example */</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">arithmetic</span><span class="w"> </span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc"><a href="../adatabindingdefault/">ADataBindingDefault</a></span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="p">,</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">property</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">();</span>
-</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="w">        </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">setMin</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;::</span><span class="n">MIN</span><span class="p">);</span>
-</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="w">        </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">setMax</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;::</span><span class="n">MAX</span><span class="p">);</span>
-</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="w">    </span><span class="c1">// ...</span>
-</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="cm">/* PREDEFINED! You don&#39;t need to define it! This listing is an example */</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">arithmetic</span><span class="w"> </span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc"><a href="../adatabindingdefault/">ADataBindingDefault</a></span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="p">,</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">property</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">();</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">setup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">        </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">setMin</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;::</span><span class="n">MIN</span><span class="p">);</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">        </span><span class="n">view</span><span class="o">-&gt;</span><span class="n">setMax</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="n">UnderlyingType</span><span class="p">,</span><span class="w"> </span><span class="n">min</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="o">&gt;::</span><span class="n">MAX</span><span class="p">);</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="p">};</span>
 </span></code></pre></div></p>
 <p>As you can see, this specialization pulls the min and max values from <code><a href="../aui_ranged_number/">aui::ranged_number</a></code> type and sets them
 to <code><a href="../anumberpicker/">ANumberPicker</a></code>. This way <code><a href="../anumberpicker/">ANumberPicker</a></code> finds out the valid range of values by simply being bound to value
 that has constraints encoded inside its type.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">,</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">,</span>
 </span></code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1631,89 +1487,62 @@ that has constraints encoded inside its type.
 </div>
 <p>By creating this connection, we've done a little bit more. We've set <a href="../anumberpicker/">ANumberPicker</a>::setMin and
 <a href="../anumberpicker/">ANumberPicker</a>::setMax as well:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">numberPicker</span><span class="o">-&gt;</span><span class="n">getMin</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">numberPicker</span><span class="o">-&gt;</span><span class="n">getMax</span><span class="p">(),</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">numberPicker</span><span class="o">-&gt;</span><span class="n">getMin</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">numberPicker</span><span class="o">-&gt;</span><span class="n">getMax</span><span class="p">(),</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span>
 </span></code></pre></div></p>
 <p>This example demonstrates how to use declarative binding to propagate strong types. <code><a href="../aui_ranged_number/">aui::ranged_number</a></code>
 propagates its constraints on <code><a href="../anumberpicker/">ANumberPicker</a></code> thanks to <code><a href="../adatabindingdefault/">ADataBindingDefault</a></code> specialization.</p>
 <h3 id="UIDataBindingTest_Label_via_declarative_projection">Label via declarative projection<a class="headerlink" href="#UIDataBindingTest_Label_via_declarative_projection" title="Permanent link">#</a></h3>
 <p>We can use projections in the same way as with <code><a href="../aui_let/">AUI_LET</a></code>.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">};</span>
-</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>
-</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="k">auto</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">manage_shared</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Roza&quot;</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
-</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-32-11"><a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="w">        </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">label</span><span class="p">;</span>
-</span><span id="__span-32-12"><a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-32-13"><a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a><span class="w">            </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">.</span><span class="n">readProjected</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">::</span><span class="n">uppercase</span><span class="p">)</span>
-</span><span id="__span-32-14"><a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a><span class="w">        </span><span class="p">});</span>
-</span><span id="__span-32-15"><a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-32-16"><a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a><span class="p">};</span>
-</span><span id="__span-32-17"><a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="k">auto</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
-</span><span id="__span-32-18"><a id="__codelineno-32-18" name="__codelineno-32-18" href="#__codelineno-32-18"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="p">};</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="k">auto</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">manage_shared</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Roza&quot;</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyWindow</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">    </span><span class="n">MyWindow</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">            </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">-&gt;</span><span class="n">uppercase</span><span class="p">())</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="p">};</span>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="k">auto</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
 </span></code></pre></div>
 <img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_1.png" /></p>
 <p>Note that the label already displays the <strong>projected</strong> value stored in User.</p>
 <p>Projection applies to value changes as well. Let's change the name:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
-</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">);</span>
-</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">label</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;VASIL&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// projected</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">);</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">label</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;VASIL&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// projected</span>
 </span></code></pre></div>
 <img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_2.png" /></p>
 <h3 id="UIDataBindingTest_Declarative_bidirectional_connection">Declarative bidirectional connection<a class="headerlink" href="#UIDataBindingTest_Declarative_bidirectional_connection" title="Permanent link">#</a></h3>
-<p>In previous <a href="../examples/">examples</a>, we've used <code>&amp;</code> to make one directional (one sided) connection. This is
-perfectly enough for <a href="../alabel/">ALabel</a> because it cannot be changed by user.</p>
+<div class="admonition failure">
+<p class="admonition-title">Deprecated</p>
+<p>Use <a href="../retained_immediate_ui/">declarative contracts</a> instead.</p>
+</div>
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view
-from model and obtaining data from view back to the model.</p>
-<p>For this example, AUI_LET's use <a href="../atextfield/">ATextField</a> instead of <a href="../alabel/">ALabel</a> as it's an editable view. In this case, we'd want to use
-<code>&amp;&amp;</code> because we do want <code>user-&gt;name</code> to be aware of changes of the view.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span>
+from model and obtaining data from view back to the model.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span>
 </span></code></pre></div></p>
-<p>This gives the following result:
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png" /></p>
+<p>This gives the following result:</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png" /></p>
 <p>Let's change the name programmatically:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
 </span></code></pre></div></p>
-<p><a href="../atextfield/">ATextField</a> will respond:
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_2.png" /></p>
-<p>If the user changes the value from UI, these changes will reflect on <code>user-&gt;model</code> as well:
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png" />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Changed from UI&quot;</span><span class="p">);</span>
-</span></code></pre></div></p>
+<p><a href="../atextfield/">ATextField</a> will respond:</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_2.png" /></p>
+<p>If the user changes the value from UI, these changes will reflect on <code>user-&gt;model</code> as well:</p>
+<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png" /></p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Changed from UI&quot;</span><span class="p">);</span>
+</span></code></pre></div>
 <p>This way we've set up bidirectional projection via <code>&amp;&amp;</code> which makes <code>user-&gt;name</code> aware of UI
 changes.</p>
-<h3 id="UIDataBindingTest_Declarative_bidirectional_projection">Declarative bidirectional projection<a class="headerlink" href="#UIDataBindingTest_Declarative_bidirectional_projection" title="Permanent link">#</a></h3>
-<p>We can use projections in the same way as with <code><a href="../aui_let/">AUI_LET</a></code>.</p>
-<p>Let's repeat the <a href="./#UIDataBindingTest_Bidirectional_projection">Bidirectional projection</a> sample in declarative way:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">gendersStr</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">gender</span><span class="p">.</span><span class="n">biProjected</span><span class="p">(</span><span class="n">GENDER_INDEX_PROJECTION</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">::</span><span class="n">selectionId</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_projection_1.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We used the <code>&amp;&amp;</code> operator here instead of <code>&amp;</code> because we want the connection work in both
-directions: <code>user.gender -&gt; <a href="../adropdownlist/">ADropdownList</a></code> and <code><a href="../adropdownlist/">ADropdownList</a> -&gt; user.gender</code>.</p>
-</div>
-<ul>
-<li>
-<p>If we try to change <code>user-&gt;gender</code> programmatically, <a href="../adropdownlist/">ADropdownList</a> will respond:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">gender</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">FEMALE</span><span class="p">;</span>
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">dropdownList</span><span class="o">-&gt;</span><span class="n">getSelectedId</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// second option</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_projection_2.png" /></p>
-</li>
-<li>
-<p>If the user changes the value of <a href="../adropdownlist/">ADropdownList</a>, it reflects on the model as well:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">gender</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="o">::</span><span class="n">OTHER</span><span class="p">);</span>
-</span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_projection_3.png" /></p>
-</li>
-</ul>
 <h2 id="related-pages">Related Pages<a class="headerlink" href="#related-pages" title="Permanent link">#</a></h2>
 <div class="grid cards">
 <ul>

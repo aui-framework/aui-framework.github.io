@@ -713,6 +713,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-methods" class="md-nav__link">
     <span class="md-ellipsis">
       Public Methods
@@ -890,12 +899,28 @@ character (codepoint) is encoded using 1-4 consecutive code units, supporting th
 <p>Unicode provides comprehensive support for international writing systems and symbols.</p>
 <p>AStringView points to constant data. For owning version of AStringView, see <a href="../astring/">AString</a>.</p>
 <p>To work with raw bytes, use AStringView::bytes() function.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/flight_booker/src/main.cpp</summary>
+<p><a href="../7guis-flight-booker/">7GUIs Flight Booker</a> - Flight Booker.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">};</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">formatDate</span><span class="p">(</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="n">date</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;{0:%d}.{0:%m}.{0:%G}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">date</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parseDate</span><span class="p">(</span><span class="n">AStringView</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">bytes</span><span class="p">();</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">match</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">REGEX_DATE</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="n">std</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">match</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div></p>
+</details>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AStringView::data_="AStringView::data()" id="AStringView::data">data<a class="headerlink" href="#AStringView::data" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">data</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">data</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Raw <code>const char*</code> pointer to the string.</p>
 <dl class="doxygen-dl">
@@ -908,7 +933,7 @@ the end.</p>
 <h3 AStringView::encode_="AStringView::encode()" id="AStringView::encode">encode<a class="headerlink" href="#AStringView::encode" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n"><a href="../abytebuffer/">AByteBuffer</a></span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">encode</span><span class="p">(</span><span class="n">AStringEncoding</span><span class="w"> </span><span class="n">encoding</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n"><a href="../abytebuffer/">AByteBuffer</a></span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">encode</span><span class="p">(</span><span class="n">AStringEncoding</span><span class="w"> </span><span class="n">encoding</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Encodes the string into a null-terminated byte buffer using the specified encoding.</p>
 <dl class="doxygen-dl">
@@ -917,7 +942,7 @@ the end.</p>
 <h3 AStringView::length_="AStringView::length()" id="AStringView::length">length<a class="headerlink" href="#AStringView::length" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">size_type</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">length</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">size_type</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">length</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Returns the number of Unicode characters in the string</p>
 <dl class="doxygen-dl">
@@ -926,7 +951,7 @@ the end.</p>
 <h3 AStringView::sizeBytes_="AStringView::sizeBytes()" id="AStringView::sizeBytes">sizeBytes<a class="headerlink" href="#AStringView::sizeBytes" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">size_type</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">sizeBytes</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">size_type</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">sizeBytes</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Returns the number of bytes in the UTF-8 encoded string</p>
 <dl class="doxygen-dl">
@@ -935,7 +960,7 @@ the end.</p>
 <h3 AStringView::substr_="AStringView::substr()" id="AStringView::substr">substr<a class="headerlink" href="#AStringView::substr" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">substr</span><span class="p">(</span><span class="n">size_type</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">size_type</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">npos</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">substr</span><span class="p">(</span><span class="n">size_type</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">size_type</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">npos</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Returns a substring <code>[pos, pos + count)</code>.</p>
 <dl class="doxygen-dl">
@@ -960,7 +985,7 @@ operates on top of UTF-8 code points. `pos` and `count` are interpreted as code 
 <h3 AStringView::toBool_="AStringView::toBool()" id="AStringView::toBool">toBool<a class="headerlink" href="#AStringView::toBool" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toBool</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toBool</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to boolean value.</p>
 <dl class="doxygen-dl">
@@ -971,7 +996,7 @@ operates on top of UTF-8 code points. `pos` and `count` are interpreted as code 
 <h3 AStringView::toDouble_="AStringView::toDouble()" id="AStringView::toDouble">toDouble<a class="headerlink" href="#AStringView::toDouble" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toDouble</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toDouble</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to a double number.</p>
 <dl class="doxygen-dl">
@@ -985,23 +1010,23 @@ If conversion to int is not possible, nullopt is returned.</dd>
 <details class="note">
 <summary><a href="../examples/">examples</a>/7guis/cells/src/Formula.cpp</summary>
 <p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">formula</span><span class="o">::</span><span class="n">Precompiled</span><span class="w"> </span><span class="nf">formula::precompile</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">expression</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="p">.</span><span class="n">toDouble</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span></span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">d</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">expression</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="sc">&#39;=&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="n">stringConstant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">stringConstant</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">formula</span><span class="o">::</span><span class="n">Precompiled</span><span class="w"> </span><span class="nf">formula::precompile</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">expression</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="p">.</span><span class="n">toDouble</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">d</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">expression</span><span class="p">.</span><span class="n">startsWith</span><span class="p">(</span><span class="sc">&#39;=&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="n">stringConstant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="p">](</span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">stringConstant</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="p">}</span>
 </span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
 <h3 AStringView::toFloat_="AStringView::toFloat()" id="AStringView::toFloat">toFloat<a class="headerlink" href="#AStringView::toFloat" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toFloat</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toFloat</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to a float number.</p>
 <dl class="doxygen-dl">
@@ -1014,7 +1039,7 @@ If conversion to int is not possible, nullopt is returned.</dd>
 <h3 AStringView::toInt_="AStringView::toInt()" id="AStringView::toInt">toInt<a class="headerlink" href="#AStringView::toInt" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toInt</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toInt</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to int value.</p>
 <dl class="doxygen-dl">
@@ -1028,7 +1053,7 @@ If conversion to int is not possible, nullopt is returned.</dd>
 <h3 AStringView::toLong_="AStringView::toLong()" id="AStringView::toLong">toLong<a class="headerlink" href="#AStringView::toLong" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toLong</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toLong</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to long value.</p>
 <dl class="doxygen-dl">
@@ -1042,7 +1067,7 @@ If conversion to long is not possible, nullopt is returned.</dd>
 <h3 AStringView::toNumber_="AStringView::toNumber()" id="AStringView::toNumber">toNumber<a class="headerlink" href="#AStringView::toNumber" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toNumber</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="o">&gt;</span><span class="w"> </span><span class="n">base</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toNumber</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="o">&gt;</span><span class="w"> </span><span class="n">base</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Returns the string converted to an int using base. Returns std::nullopt if the conversion fails.</p>
 <dl class="doxygen-dl">
@@ -1051,7 +1076,7 @@ If conversion to long is not possible, nullopt is returned.</dd>
 <h3 AStringView::toUInt_="AStringView::toUInt()" id="AStringView::toUInt">toUInt<a class="headerlink" href="#AStringView::toUInt" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toUInt</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toUInt</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to unsigned int value.</p>
 <dl class="doxygen-dl">
@@ -1065,7 +1090,7 @@ If conversion to unsigned int is not possible, exception is thrown.</dd>
 <h3 AStringView::toULong_="AStringView::toULong()" id="AStringView::toULong">toULong<a class="headerlink" href="#AStringView::toULong" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toULong</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">uint64_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toULong</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Converts the string to unsigned long value.</p>
 <dl class="doxygen-dl">
@@ -1079,7 +1104,7 @@ If conversion to unsigned long is not possible, exception is thrown.</dd>
 <h3 AStringView::toUtf16_="AStringView::toUtf16()" id="AStringView::toUtf16">toUtf16<a class="headerlink" href="#AStringView::toUtf16" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">std</span><span class="o">::</span><span class="n">u16string</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toUtf16</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">std</span><span class="o">::</span><span class="n">u16string</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toUtf16</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Encodes the UTF-8 string into a UTF-16 string</p>
 <dl class="doxygen-dl">
@@ -1088,7 +1113,7 @@ If conversion to unsigned long is not possible, exception is thrown.</dd>
 <h3 AStringView::toUtf32_="AStringView::toUtf32()" id="AStringView::toUtf32">toUtf32<a class="headerlink" href="#AStringView::toUtf32" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">std</span><span class="o">::</span><span class="n">u32string</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toUtf32</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">std</span><span class="o">::</span><span class="n">u32string</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">toUtf32</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Encodes the UTF-8 string into a UTF-32 string</p>
 <dl class="doxygen-dl">

@@ -754,11 +754,11 @@ We are migrating to a new documentation engine. Please report presentation issue
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../core/">aui::core</a>)</code></td></tr>
 </table>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define AUI_THREADPOOL_X <a href="../athreadpool/#AThreadPool::global">AThreadPool::global()</a> *</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define AUI_THREADPOOL_X <a href="../athreadpool/#AThreadPool::global">AThreadPool::global()</a>*</span>
 </span></code></pre></div>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
-<p>When <code><a href="../afuture/">AFuture</a><T></code> is destroyed, the corresponding <code><a href="../aui_threadpool/">AUI_THREADPOOL</a></code> task is either cancelled or removed from
-the execution queue. Use <a href="../afutureset/">AFutureSet</a> or <a href="../aasyncholder/">AAsyncHolder</a> to keep multiple <a href="../afuture/">AFuture</a><T> alive.</p>
+<p>When <code><a href="../afuture/">AFuture</a><T></code> is destroyed, the corresponding <code><a href="../aui_threadpool/">AUI_THREADPOOL</a></code> task is either cancelled or removed
+from the execution queue. Use <a href="../afutureset/">AFutureSet</a> or <a href="../aasyncholder/">AAsyncHolder</a> to keep multiple <a href="../afuture/">AFuture</a><T> alive.</p>
 <p>Example without a return value:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUI_THREADPOOL_X</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"> </span><span class="c1">// a long task</span>
