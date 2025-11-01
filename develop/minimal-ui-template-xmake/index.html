@@ -884,26 +884,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <span class="normal"><a href="#__codelineno-0-17">17</a></span>
 <span class="normal"><a href="#__codelineno-0-18">18</a></span>
 <span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">-- Specify available build configurations</span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">-- Specify available build configurations</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">add_rules</span><span class="p">(</span><span class="s2">&quot;mode.release&quot;</span><span class="p">,</span> <span class="s2">&quot;mode.debug&quot;</span><span class="p">)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">-- Specify compile commands output directory and LSP to analyze C++ code files and highlight IntelliSense</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">add_rules</span><span class="p">(</span><span class="s2">&quot;plugin.compile_commands.autoupdate&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">outputdir</span> <span class="o">=</span> <span class="s2">&quot;.vscode&quot;</span><span class="p">,</span> <span class="n">lsp</span> <span class="o">=</span> <span class="s2">&quot;clangd&quot;</span><span class="p">})</span>
@@ -913,35 +894,16 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1">-- Download aui package to use for targets later</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">add_requires</span><span class="p">(</span><span class="s2">&quot;aui&quot;</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1">-- Use shared GLEW to resolve LNK2019 errors</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">add_requireconfs</span><span class="p">(</span><span class="s2">&quot;**.glew&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">override</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="n">configs</span> <span class="o">=</span> <span class="p">{</span><span class="n">shared</span> <span class="o">=</span> <span class="kc">true</span><span class="p">}})</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1">-- Define our target executable to build</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="n">target</span><span class="p">(</span><span class="s2">&quot;aui-minimal-example&quot;</span><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="c1">-- Add source code and headers to target</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">add_files</span><span class="p">(</span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">add_includedirs</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="c1">-- Add AUI package to target while linking only required components</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="n">add_packages</span><span class="p">(</span><span class="s2">&quot;aui&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">components</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;<a href="../core/">core</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../views/">views</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;xml&quot;</span><span class="p">}})</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="c1">-- Add defines that point to your OS and link against required syslinks/frameworks</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="kr">if</span> <span class="n">is_plat</span><span class="p">(</span><span class="s2">&quot;<a href="../windows/">windows</a>&quot;</span><span class="p">)</span> <span class="kr">then</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>        <span class="n">add_defines</span><span class="p">(</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>            <span class="s2">&quot;AUI_PLATFORM_WIN=1&quot;</span><span class="p">,</span> <span class="s2">&quot;AUI_PLATFORM_LINUX=0&quot;</span><span class="p">,</span> <span class="s2">&quot;AUI_PLATFORM_APPLE=0&quot;</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="p">)</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>        <span class="n">add_syslinks</span><span class="p">(</span><span class="s2">&quot;gdi32&quot;</span><span class="p">,</span> <span class="s2">&quot;ole32&quot;</span><span class="p">)</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>    <span class="kr">elseif</span> <span class="n">is_plat</span><span class="p">(</span><span class="s2">&quot;<a href="../linux/">linux</a>&quot;</span><span class="p">)</span> <span class="kr">then</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="n">add_defines</span><span class="p">(</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>            <span class="s2">&quot;AUI_PLATFORM_WIN=0&quot;</span><span class="p">,</span> <span class="s2">&quot;AUI_PLATFORM_LINUX=1&quot;</span><span class="p">,</span> <span class="s2">&quot;AUI_PLATFORM_APPLE=0&quot;</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="p">)</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>    <span class="kr">elseif</span> <span class="n">is_plat</span><span class="p">(</span><span class="s2">&quot;macosx&quot;</span><span class="p">)</span> <span class="kr">then</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>        <span class="n">add_defines</span><span class="p">(</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>            <span class="s2">&quot;AUI_PLATFORM_WIN=0&quot;</span><span class="p">,</span> <span class="s2">&quot;AUI_PLATFORM_LINUX=0&quot;</span><span class="p">,</span> <span class="s2">&quot;AUI_PLATFORM_APPLE=1&quot;</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>        <span class="p">)</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>    <span class="kr">end</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>    <span class="c1">-- Add defines that point to symbol exports</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>    <span class="n">add_defines</span><span class="p">(</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>        <span class="s2">&quot;API_AUI_VIEWS=AUI_IMPORT&quot;</span><span class="p">,</span> <span class="s2">&quot;API_AUI_IMAGE=AUI_IMPORT&quot;</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>    <span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">-- Define our target executable to build</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="n">target</span><span class="p">(</span><span class="s2">&quot;aui-minimal-example&quot;</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="c1">-- Add source code and headers to target</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">add_files</span><span class="p">(</span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="n">add_includedirs</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="c1">-- Add AUI package to target while linking only required components</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="n">add_packages</span><span class="p">(</span><span class="s2">&quot;aui&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">components</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;<a href="../core/">core</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../views/">views</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;xml&quot;</span><span class="p">}})</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="c1">-- Resolve linking by grouping AUI components into link groups</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="n">add_linkgroups</span><span class="p">(</span><span class="s2">&quot;aui.views&quot;</span><span class="p">,</span> <span class="s2">&quot;aui.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;aui.image&quot;</span><span class="p">,</span> <span class="s2">&quot;aui.core&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">whole</span> <span class="o">=</span> <span class="kc">true</span><span class="p">})</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="srcmainwindowh">src/MainWindow.h<a class="headerlink" href="#srcmainwindowh" title="Permanent link">#</a></h3>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
