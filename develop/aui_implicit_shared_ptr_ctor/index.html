@@ -23,7 +23,7 @@
         <meta name="author" content="Alex2772">
       
       
-        <link rel="canonical" href="https://aui-framework.github.io/develop/aoptional/">
+        <link rel="canonical" href="https://aui-framework.github.io/develop/aui_implicit_shared_ptr_ctor/">
       
       
       
@@ -33,7 +33,7 @@
     
     
       
-        <title>AOptional - AUI Framework</title>
+        <title>aui::implicit_shared_ptr_ctor - AUI Framework</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aoptional" class="md-skip">
+        <a href="#auiimplicit_shared_ptr_ctor" class="md-skip">
           Skip to content
         </a>
       
@@ -155,7 +155,7 @@ We are migrating to a new documentation engine. Please report presentation issue
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AOptional
+              aui::implicit_shared_ptr_ctor
             
           </span>
         </div>
@@ -697,56 +697,6 @@ We are migrating to a new documentation engine. Please report presentation issue
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#public-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Public Methods
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#AOptional::valueOr" class="md-nav__link">
-    <span class="md-ellipsis">
-      valueOr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AOptional::valueOrException" class="md-nav__link">
-    <span class="md-ellipsis">
-      valueOrException
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -761,61 +711,12 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
 
-<h1 id="aoptional">AOptional<a class="headerlink" href="#aoptional" title="Permanent link">#</a></h1>
-<p>Utility wrapper implementing the stack-allocated (fast) optional idiom.</p>
+<h1 id="auiimplicit_shared_ptr_ctor">aui::implicit_shared_ptr_ctor<a class="headerlink" href="#auiimplicit_shared_ptr_ctor" title="Permanent link">#</a></h1>
+<p>Allows to specialize an implicit conversion for <code>shared_ptr&lt;T&gt;</code> from <code>F</code>.</p>
 <table>
-<tr><td>Header:</td><td><code>#include &lt;AUI/Common/AOptional.h&gt;</code></td></tr>
+<tr><td>Header:</td><td><code>#include &lt;AUI/Common/SharedPtrTypes.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../core/">aui::core</a>)</code></td></tr>
 </table>
-
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<details class="note">
-<summary><a href="../examples/">examples</a>/7guis/flight_booker/src/main.cpp</summary>
-<p><a href="../7guis-flight-booker/">7GUIs Flight Booker</a> - Flight Booker.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">REGEX_DATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctre</span><span class="o">::</span><span class="n">match</span><span class="o">&lt;</span><span class="s">&quot;([0-9]+)</span><span class="se">\\</span><span class="s">.([0-9]+)</span><span class="se">\\</span><span class="s">.([0-9]{4})&quot;</span><span class="o">&gt;</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">DateTextFieldState</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n">AOptional</span><span class="o">&lt;</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">parsed</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">    </span><span class="n"><a href="../aspinlockmutex/">ASpinlockMutex</a></span><span class="w"> </span><span class="n">userChangesText</span><span class="p">;</span>
-</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">};</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">auto</span><span class="w"> </span><span class="n">formatDate</span><span class="p">(</span><span class="n">system_clock</span><span class="o">::</span><span class="n">time_point</span><span class="w"> </span><span class="n">date</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;{0:%d}.{0:%m}.{0:%G}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">date</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
-</span></code></pre></div></p>
-</details>
-<h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
-<div style="position:absolute;opacity:0">
-<h3 AOptional::valueOr_="AOptional::valueOr()" id="AOptional::valueOr">valueOr<a class="headerlink" href="#AOptional::valueOr" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">F</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOr</span><span class="p">(</span><span class="n">F</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">alternative</span><span class="p">)</span>
-</span></code></pre></div>
-<p>value or alternative (either value or callback)</p>
-<dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>alternative</code></b>
-<div style="display: table-cell"></div>
-</div>
-</div></dd>
-</dl>
-<div style="position:absolute;opacity:0">
-<h3 AOptional::valueOrException_="AOptional::valueOrException()" id="AOptional::valueOrException">valueOrException<a class="headerlink" href="#AOptional::valueOrException" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOrException</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty optional&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>value or exception</p>
-<dl class="doxygen-dl">
-</dl>
-
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOrException</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty optional&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>value or exception</p>
-<dl class="doxygen-dl">
-</dl>
 
 
 
