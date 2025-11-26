@@ -723,6 +723,60 @@ We are migrating to a new documentation engine. Please report presentation issue
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#AOptional::AOptional" class="md-nav__link">
+    <span class="md-ellipsis">
+      constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AOptional::bool" class="md-nav__link">
+    <span class="md-ellipsis">
+      bool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AOptional::emplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      emplace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AOptional::hasValue" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasValue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AOptional::ptr" class="md-nav__link">
+    <span class="md-ellipsis">
+      ptr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AOptional::value" class="md-nav__link">
+    <span class="md-ellipsis">
+      value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#AOptional::valueOr" class="md-nav__link">
     <span class="md-ellipsis">
       valueOr
@@ -784,11 +838,309 @@ We are migrating to a new documentation engine. Please report presentation issue
 </details>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
+<h3 AOptional::AOptional_="AOptional::AOptional()" id="AOptional::AOptional">constructor<a class="headerlink" href="#AOptional::AOptional" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">explicit</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">AOptional</span><span class="p">(</span><span class="n">U</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Constructs an optional containing the given value (explicit conversion).</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>rhs</code></b>
+<div style="display: table-cell"> Value to store</div>
+</div>
+</div></dd>
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">AOptional</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">AOptional</span><span class="o">&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Copy constructor.</p>
+<dl class="doxygen-dl">
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">AOptional</span><span class="p">(</span><span class="n">AOptional</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Move constructor.</p>
+<dl class="doxygen-dl">
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">AOptional</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">AOptional</span><span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Converting copy constructor.</p>
+<dl class="doxygen-dl">
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">AOptional</span><span class="p">(</span><span class="n">AOptional</span><span class="o">&lt;</span><span class="n">U</span><span class="w"> </span><span class="o">&gt;&amp;&amp;</span><span class="w"> </span><span class="n">rhs</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Converting move constructor.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AOptional::bool_="AOptional::bool()" id="AOptional::bool">bool<a class="headerlink" href="#AOptional::bool" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">explicit</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="kt">bool</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Boolean conversion operator.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>true if contains value, false otherwise</dd>
+</dl>
+
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/minesweeper/src/CellView.cpp</summary>
+<p><a href="../minesweeper-game/">Minesweeper Game</a> - Minesweeper game implementation driven by <a href="../ass/">ass</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">        </span><span class="n">mCellValueCopy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mCell</span><span class="p">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">(</span><span class="n">mCell</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">FieldCell</span><span class="o">::</span><span class="n">OPEN</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field_cell</span><span class="o">::</span><span class="n">getBombCountAround</span><span class="p">(</span><span class="n">mCell</span><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">            </span><span class="n">AFontStyle</span><span class="w"> </span><span class="n">fs</span><span class="p">;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">            </span><span class="n">fs</span><span class="p">.</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getHeight</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">            </span><span class="n">fs</span><span class="p">.</span><span class="n">align</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../atextalign/">ATextAlign</a></span><span class="o">::</span><span class="n">CENTER</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/src/Tokens.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">                        </span><span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;z&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="sc">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">                        </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">reverseByte</span><span class="p">();</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="hll"><span class="w">                        </span><span class="n">out</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">token</span><span class="o">::</span><span class="n">Identifier</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">readStringWhile</span><span class="p">([](</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">isalnum</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">};</span>
+</span></span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">                        </span><span class="k">continue</span><span class="p">;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">                    </span><span class="k">throw</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="p">(</span><span class="s">&quot;UNEXPECTED {}&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<div style="position:absolute;opacity:0">
+<h3 AOptional::emplace_="AOptional::emplace()" id="AOptional::emplace">emplace<a class="headerlink" href="#AOptional::emplace" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">Args</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AOptional</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">emplace</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Constructs the contained value in-place.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>args</code></b>
+<div style="display: table-cell"> Arguments to forward to the constructor</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>Reference to this optional</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AOptional::hasValue_="AOptional::hasValue()" id="AOptional::hasValue">hasValue<a class="headerlink" href="#AOptional::hasValue" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">hasValue</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Checks if the optional contains a value.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>true if contains value, false otherwise</dd>
+</dl>
+
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/flight_booker/src/main.cpp</summary>
+<p><a href="../7guis-flight-booker/">7GUIs Flight Booker</a> - Flight Booker.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="w"> </span><span class="nf">lock</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">userChangesText</span><span class="p">);</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">            </span><span class="n">state</span><span class="p">.</span><span class="n">parsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseDate</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="hll"><span class="w">            </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n"><a href="../ass/">ass</a></span><span class="o">::</span><span class="n">PropertyList</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_backgroundsolid/">BackgroundSolid</a></span><span class="p">(</span><span class="o">!</span><span class="n">state</span><span class="o">-&gt;</span><span class="n">parsed</span><span class="o">-&gt;</span><span class="n">hasValue</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">RED</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">WHITE</span><span class="p">)</span><span class="w"> </span><span class="p">}),</span>
+</span></span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">            </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">::</span><span class="n">setCustomStyle</span><span class="p">);</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">}</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="k">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
+</span></code></pre></div>
+</details>
+<div style="position:absolute;opacity:0">
+<h3 AOptional::ptr_="AOptional::ptr()" id="AOptional::ptr">ptr<a class="headerlink" href="#AOptional::ptr" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">ptr</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Get pointer to contained value.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Pointer to contained value</dd>
+</dl>
+
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">                  </span><span class="p">},</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">          </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="hll"><span class="w">            </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">CellsView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">fake_shared</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mCells</span><span class="p">))</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">                  </span><span class="n"><a href="../ass_expanding/">Expanding</a></span><span class="p">(),</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">                  </span><span class="n"><a href="../ass_backgroundsolid/">BackgroundSolid</a></span><span class="p">(</span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">BLACK</span><span class="p">),</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/circle_drawer/src/main.cpp</summary>
+<p><a href="../7guis-circle-drawer/">7GUIs Circle Drawer</a> - Undo, redo, dialog control.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">                              </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">mState</span><span class="p">.</span><span class="n">history</span><span class="p">.</span><span class="n">nextAction</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mState</span><span class="p">.</span><span class="n">history</span><span class="p">.</span><span class="n">end</span><span class="p">()),</span><span class="w"> </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">::</span><span class="n">setEnabled</span><span class="p">);</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">                      </span><span class="p">},</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">              </span><span class="p">},</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="hll"><span class="w">              </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">CircleDrawArea</span><span class="o">&gt;</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">fake_shared</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mState</span><span class="p">)),</span>
+</span></span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">mState</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">ptr</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Get const pointer to contained value.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Const pointer to contained value</dd>
+</dl>
+
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">                  </span><span class="p">},</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">          </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="hll"><span class="w">            </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">CellsView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">fake_shared</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mCells</span><span class="p">))</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">                  </span><span class="n"><a href="../ass_expanding/">Expanding</a></span><span class="p">(),</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">                  </span><span class="n"><a href="../ass_backgroundsolid/">BackgroundSolid</a></span><span class="p">(</span><span class="n"><a href="../acolor/">AColor</a></span><span class="o">::</span><span class="n">BLACK</span><span class="p">),</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">          </span><span class="p">},</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/circle_drawer/src/main.cpp</summary>
+<p><a href="../7guis-circle-drawer/">7GUIs Circle Drawer</a> - Undo, redo, dialog control.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">                              </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">mState</span><span class="p">.</span><span class="n">history</span><span class="p">.</span><span class="n">nextAction</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">mState</span><span class="p">.</span><span class="n">history</span><span class="p">.</span><span class="n">end</span><span class="p">()),</span><span class="w"> </span><span class="n"><a href="../aui_slot/">AUI_SLOT</a></span><span class="p">(</span><span class="n">it</span><span class="p">)</span><span class="o">::</span><span class="n">setEnabled</span><span class="p">);</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">                      </span><span class="p">},</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">              </span><span class="p">},</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="hll"><span class="w">              </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">CircleDrawArea</span><span class="o">&gt;</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">ptr</span><span class="o">::</span><span class="n">fake_shared</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mState</span><span class="p">)),</span>
+</span></span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">    </span><span class="n">State</span><span class="w"> </span><span class="n">mState</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
+<div style="position:absolute;opacity:0">
+<h3 AOptional::value_="AOptional::value()" id="AOptional::value">value<a class="headerlink" href="#AOptional::value" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">value</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Access the contained value.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Reference to the contained value</dd>
+</dl>
+
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/tests/FormulaTests.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">TEST_F</span><span class="p">(</span><span class="n">Cells_Formula</span><span class="p">,</span><span class="w"> </span><span class="n">ChangePropagation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;=A0+1&quot;</span><span class="p">;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;228&quot;</span><span class="p">;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="hll"><span class="w">    </span><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">value</span><span class="p">.</span><span class="n">value</span><span class="p">()),</span><span class="w"> </span><span class="mi">229</span><span class="p">);</span>
+</span></span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">;</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="hll"><span class="w">    </span><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">value</span><span class="p">.</span><span class="n">value</span><span class="p">()),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span></span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/temperature_converter/src/main.cpp</summary>
+<p><a href="../7guis-temperature-converter/">7GUIs Temperature Converter</a> - Fahrenheit to Celsius and vice versa.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="w">    </span><span class="n">TemperatureConverterWindow</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="p">(</span><span class="s">&quot;AUI - 7GUIs - TempConv&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">          </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">            </span><span class="n">myPicker</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="hll"><span class="w">                </span><span class="n">biConnect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="n">mCelsius</span><span class="p">);</span>
+</span></span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">                </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">focus</span><span class="p">();</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">            </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;°C&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">            </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;=&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_margin/">Margin</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="mi">16</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="hll"><span class="w">            </span><span class="n">myPicker</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">biConnect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="n">mFahrenheit</span><span class="p">);</span><span class="w"> </span><span class="p">},</span>
+</span></span></code></pre></div>
+</details>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">value</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Access the contained value.</p>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>Const reference to the contained value</dd>
+</dl>
+
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/cells/tests/FormulaTests.cpp</summary>
+<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">TEST_F</span><span class="p">(</span><span class="n">Cells_Formula</span><span class="p">,</span><span class="w"> </span><span class="n">ChangePropagation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;=A0+1&quot;</span><span class="p">;</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;228&quot;</span><span class="p">;</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="hll"><span class="w">    </span><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">value</span><span class="p">.</span><span class="n">value</span><span class="p">()),</span><span class="w"> </span><span class="mi">229</span><span class="p">);</span>
+</span></span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="p">;</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="hll"><span class="w">    </span><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">mSpreadsheet</span><span class="p">[{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">}].</span><span class="n">value</span><span class="p">.</span><span class="n">value</span><span class="p">()),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span></span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/7guis/temperature_converter/src/main.cpp</summary>
+<p><a href="../7guis-temperature-converter/">7GUIs Temperature Converter</a> - Fahrenheit to Celsius and vice versa.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">    </span><span class="n">TemperatureConverterWindow</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="p">(</span><span class="s">&quot;AUI - 7GUIs - TempConv&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">        </span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">          </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">            </span><span class="n">myPicker</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="hll"><span class="w">                </span><span class="n">biConnect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="n">mCelsius</span><span class="p">);</span>
+</span></span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">                </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">focus</span><span class="p">();</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">            </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;°C&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">            </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;=&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_margin/">Margin</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="mi">16</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="hll"><span class="w">            </span><span class="n">myPicker</span><span class="p">()</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">biConnect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">(),</span><span class="w"> </span><span class="n">mFahrenheit</span><span class="p">);</span><span class="w"> </span><span class="p">},</span>
+</span></span></code></pre></div>
+</details>
+<div style="position:absolute;opacity:0">
 <h3 AOptional::valueOr_="AOptional::valueOr()" id="AOptional::valueOr">valueOr<a class="headerlink" href="#AOptional::valueOr" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">F</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOr</span><span class="p">(</span><span class="n">F</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">alternative</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">F</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOr</span><span class="p">(</span><span class="n">F</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">alternative</span><span class="p">)</span>
 </span></code></pre></div>
 <p>value or alternative (either value or callback)</p>
 <dl class="doxygen-dl">
@@ -804,14 +1156,14 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 AOptional::valueOrException_="AOptional::valueOrException()" id="AOptional::valueOrException">valueOrException<a class="headerlink" href="#AOptional::valueOrException" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOrException</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty optional&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOrException</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty optional&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>value or exception</p>
 <dl class="doxygen-dl">
 </dl>
 
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOrException</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty optional&quot;</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AOptional</span><span class="o">::</span><span class="n">valueOrException</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;empty optional&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p>value or exception</p>
 <dl class="doxygen-dl">
