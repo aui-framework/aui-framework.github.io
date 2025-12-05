@@ -713,6 +713,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-types" class="md-nav__link">
     <span class="md-ellipsis">
       Public Types
@@ -785,6 +794,22 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span></code></pre></div>
 You may call this before initializating <a href="../windows/">windows</a> in order to define your own settings and priorities.</p>
 <p>The priority can be overridden by <code>--aui-renderer=GRAPHICS_API</code> argument passed to your application.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/opengl_simple/src/main.cpp</summary>
+<p><a href="../opengl-example/">OpenGL Example</a> - Demonstrates how to integrate custom OpenGL rendering with AUI Framework.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">}</span><span class="w">   </span><span class="c1">// namespace</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">// ask aui to provide opengl context for us. (no fallback to software rendering)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="n">ARenderingContextOptions</span><span class="o">::</span><span class="n">set</span><span class="p">({</span>
+</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="p">.</span><span class="n">initializationOrder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="hll"><span class="w">            </span><span class="n">ARenderingContextOptions</span><span class="o">::</span><span class="n">OpenGL</span><span class="p">{},</span>
+</span></span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="p">.</span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ARenderContextFlags</span><span class="o">::</span><span class="n">NO_SMOOTH</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ARenderContextFlags</span><span class="o">::</span><span class="n">NO_VSYNC</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">});</span>
+</span></code></pre></div></p>
+</details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
@@ -797,6 +822,7 @@ You may call this before initializating <a href="../windows/">windows</a> in ord
 <h3 ARenderingContextOptions::OpenGL="ARenderingContextOptions::OpenGL" id="ARenderingContextOptions::OpenGL">OpenGL<a class="headerlink" href="#ARenderingContextOptions::OpenGL" title="Permanent link">#</a></h3>
 </div>
 <p><code>struct ARenderingContextOptions::OpenGL</code></p>
+<p><strong>Examples:</strong></p>
 <p><em>Empty structure.</em></p>
 <hr />
 <div style="position:absolute;opacity:0">
