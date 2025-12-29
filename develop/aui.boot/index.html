@@ -1040,6 +1040,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#auib_isolate_source_dirs-falsetrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUIB_ISOLATE_SOURCE_DIRS (=FALSE|TRUE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#AUIB_NO_PRECOMPILED" class="md-nav__link">
     <span class="md-ellipsis">
       AUIB_NO_PRECOMPILED (=FALSE|TRUE)
@@ -1217,7 +1226,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#auirepo" class="md-nav__link">
+  <a href="#AUIB_REPO_DIR" class="md-nav__link">
     <span class="md-ellipsis">
       ~/.aui/repo
     </span>
@@ -1709,6 +1718,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#auib_isolate_source_dirs-falsetrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUIB_ISOLATE_SOURCE_DIRS (=FALSE|TRUE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#AUIB_NO_PRECOMPILED" class="md-nav__link">
     <span class="md-ellipsis">
       AUIB_NO_PRECOMPILED (=FALSE|TRUE)
@@ -1886,7 +1904,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#auirepo" class="md-nav__link">
+  <a href="#AUIB_REPO_DIR" class="md-nav__link">
     <span class="md-ellipsis">
       ~/.aui/repo
     </span>
@@ -2338,6 +2356,14 @@ from a repository.</p>
 <p>Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
 <h3 id="auib_skip_repository_wait-falsetrue">AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)<a class="headerlink" href="#auib_skip_repository_wait-falsetrue" title="Permanent link">#</a></h3>
 <p>Disables "Waiting for repository".</p>
+<p>This flag is unsafe because one aui.boot process might interfere with the work of another aui.boot process.</p>
+<p>The following flags are recommended to be set to true as well:</p>
+<ul>
+<li><code>AUIB_ISOLATE_SOURCE_DIRS</code></li>
+</ul>
+<h3 id="auib_isolate_source_dirs-falsetrue">AUIB_ISOLATE_SOURCE_DIRS (=FALSE|TRUE)<a class="headerlink" href="#auib_isolate_source_dirs-falsetrue" title="Permanent link">#</a></h3>
+<p>By default, aui.boot will reuse the same <a href="#AUIB_REPO_DIR">repository directory</a> for all dependencies. This flag adds
+unique suffix to each source directory.</p>
 <h3 id="AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=FALSE|TRUE)<a class="headerlink" href="#AUIB_NO_PRECOMPILED" title="Permanent link">#</a></h3>
 <p>Disables precompiled binaries, building all dependencies locally. You may want to set up <a href="./#CI_CACHING">CI caching</a>.</p>
 <h3 id="AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)<a class="headerlink" href="#AUIB_FORCE_PRECOMPILED" title="Permanent link">#</a></h3>
@@ -2542,7 +2568,7 @@ changes in this information, it produces a new <code>&lt;BUILD_SPECIFIER&gt;</co
 </span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="c"># convert BUILD_SPECIFIER to hash; on <a href="../windows/">windows</a> msvc path length restricted by 260 chars</span>
 </span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="nb">string</span><span class="p">(</span><span class="s">MD5</span><span class="w"> </span><span class="s">BUILD_SPECIFIER</span><span class="w"> </span><span class="o">${</span><span class="nv">BUILD_SPECIFIER</span><span class="o">}</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="auirepo">~/.aui/repo<a class="headerlink" href="#auirepo" title="Permanent link">#</a></h3>
+<h3 id="AUIB_REPO_DIR">~/.aui/repo<a class="headerlink" href="#AUIB_REPO_DIR" title="Permanent link">#</a></h3>
 <p>Contains dependencies source code (if any), downloaded by <code>auib_import</code>.</p>
 <ul>
 <li><code>~/.aui/repo/&lt;PackageName&gt;/src</code> - source code of <code>&lt;PackageName&gt;</code>. If it is a git repository, AUI.Boot will try to
