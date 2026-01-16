@@ -877,7 +877,27 @@ developers with AUI Framework app development. These projects cover diversity of
 through to complete application assembly.</p>
 <h2 id="building-the-examples">Building the Examples<a class="headerlink" href="#building-the-examples" title="Permanent link">#</a></h2>
 <p>To build these examples, simply clone <a href="https://github.com/aui-framework/aui">AUI repository</a> and configure CMake with
-<code>-DAUI_BUILD_EXAMPLES=TRUE</code>:</p>
+<code>-DAUI_BUILD_EXAMPLES=TRUE</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0v24h24V0zm7.041 3a5 5 0 0 1 .219 0c1.86 0 3 .6 3.9 1.56L9.78 6.18C9 5.46 8.22 5.04 7.26 5.04c-1.68 0-2.88 1.38-2.88 3.12 0 1.68 1.2 3.12 2.88 3.12 1.14 0 1.86-.48 2.64-1.14l1.38 1.38c-1.02 1.08-2.16 1.8-4.08 1.8a5.1 5.1 0 0 1-5.1-5.16A5.05 5.05 0 0 1 7.04 3zm5.738.12H15v8.1h4.32v1.86h-6.54V3.12zM2.28 19.5h9V21h-9z"/></svg></span> CLion</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VS Code</label><label for="__tabbed_1_3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg></span> Terminal</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open Settings: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>.</li>
+<li>Go to <code>Build, Execution, Deployment</code> &gt; <code>CMake</code>.</li>
+<li>Add <code>-DAUI_BUILD_EXAMPLES=TRUE</code> to <code>CMake options</code>.</li>
+</ol>
+<p><img alt="" src="../imgs/Screenshot_20260116_091639.png" /></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open Settings: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-comma">,</kbd></span>.</li>
+<li>Search for <code>CMake Configure Args</code>.</li>
+<li>Press button <code>Add item</code></li>
+<li>Enter <code>-DAUI_BUILD_EXAMPLES=TRUE</code>.</li>
+</ol>
+<p><img alt="" src="../imgs/getting_started_vscode.png" /></p>
+</div>
+<div class="tabbed-block">
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/aui-framework/aui
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>aui
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mkdir<span class="w"> </span>build
@@ -889,6 +909,9 @@ through to complete application assembly.</p>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># launch any program</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>./aui.example.views
 </span></code></pre></div>
+</div>
+</div>
+</div>
 <p>Some of these examples are located outside<span class="mdx-badge" title="External repository"><span class="mdx-badge__icon"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></span></span> AUI's build tree; such examples should be
 compiled as regular CMake projects.</p>
 <h2 id="app">App<a class="headerlink" href="#app" title="Permanent link">#</a></h2>
