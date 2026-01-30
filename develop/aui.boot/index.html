@@ -1040,15 +1040,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#auib_isolate_source_dirs-falsetrue" class="md-nav__link">
-    <span class="md-ellipsis">
-      AUIB_ISOLATE_SOURCE_DIRS (=FALSE|TRUE)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#AUIB_NO_PRECOMPILED" class="md-nav__link">
     <span class="md-ellipsis">
       AUIB_NO_PRECOMPILED (=FALSE|TRUE)
@@ -1229,6 +1220,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#AUIB_REPO_DIR" class="md-nav__link">
     <span class="md-ellipsis">
       ~/.aui/repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auibuilds" class="md-nav__link">
+    <span class="md-ellipsis">
+      ~/.aui/builds
     </span>
   </a>
   
@@ -1718,15 +1718,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#auib_isolate_source_dirs-falsetrue" class="md-nav__link">
-    <span class="md-ellipsis">
-      AUIB_ISOLATE_SOURCE_DIRS (=FALSE|TRUE)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#AUIB_NO_PRECOMPILED" class="md-nav__link">
     <span class="md-ellipsis">
       AUIB_NO_PRECOMPILED (=FALSE|TRUE)
@@ -1907,6 +1898,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#AUIB_REPO_DIR" class="md-nav__link">
     <span class="md-ellipsis">
       ~/.aui/repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auibuilds" class="md-nav__link">
+    <span class="md-ellipsis">
+      ~/.aui/builds
     </span>
   </a>
   
@@ -2356,14 +2356,6 @@ from a repository.</p>
 <p>Disables aui.boot. All calls to <code>auib_import</code> are forwarded to <code>find_package</code>.</p>
 <h3 id="auib_skip_repository_wait-falsetrue">AUIB_SKIP_REPOSITORY_WAIT (=FALSE|TRUE)<a class="headerlink" href="#auib_skip_repository_wait-falsetrue" title="Permanent link">#</a></h3>
 <p>Disables "Waiting for repository".</p>
-<p>This flag is unsafe because one aui.boot process might interfere with the work of another aui.boot process.</p>
-<p>The following flags are recommended to be set to true as well:</p>
-<ul>
-<li><code>AUIB_ISOLATE_SOURCE_DIRS</code></li>
-</ul>
-<h3 id="auib_isolate_source_dirs-falsetrue">AUIB_ISOLATE_SOURCE_DIRS (=FALSE|TRUE)<a class="headerlink" href="#auib_isolate_source_dirs-falsetrue" title="Permanent link">#</a></h3>
-<p>By default, aui.boot will reuse the same <a href="#AUIB_REPO_DIR">repository directory</a> for all dependencies. This flag adds
-unique suffix to each source directory.</p>
 <h3 id="AUIB_NO_PRECOMPILED">AUIB_NO_PRECOMPILED (=FALSE|TRUE)<a class="headerlink" href="#AUIB_NO_PRECOMPILED" title="Permanent link">#</a></h3>
 <p>Disables precompiled binaries, building all dependencies locally. You may want to set up <a href="./#CI_CACHING">CI caching</a>.</p>
 <h3 id="AUIB_FORCE_PRECOMPILED">AUIB_FORCE_PRECOMPILED (=FALSE|TRUE)<a class="headerlink" href="#AUIB_FORCE_PRECOMPILED" title="Permanent link">#</a></h3>
@@ -2571,17 +2563,20 @@ changes in this information, it produces a new <code>&lt;BUILD_SPECIFIER&gt;</co
 <h3 id="AUIB_REPO_DIR">~/.aui/repo<a class="headerlink" href="#AUIB_REPO_DIR" title="Permanent link">#</a></h3>
 <p>Contains dependencies source code (if any), downloaded by <code>auib_import</code>.</p>
 <ul>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/src</code> - source code of <code>&lt;PackageName&gt;</code>. If it is a git repository, AUI.Boot will try to
-  checkout a specific version first instead of cloning the whole repo again.</li>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/src/FETCHED</code> - indicates the latest download is successful.</li>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/build</code> - <code>&lt;PackageName&gt;</code> build directory. Cleaned up after a successful installation.</li>
+<li><code>~/.aui/repo/&lt;PackageName&gt;-&lt;VERSION_OR_HASH&gt;</code> - source code of <code>&lt;PackageName&gt;</code> for the specific version/hash.
+  If it is a git repository, AUI.Boot will try to checkout that specific version first instead of cloning the whole repo
+  again.</li>
+<li><code>~/.aui/repo/&lt;PackageName&gt;-&lt;VERSION_OR_HASH&gt;/FETCHED</code> - indicates the latest download was successful.</li>
+</ul>
+<h3 id="auibuilds">~/.aui/builds<a class="headerlink" href="#auibuilds" title="Permanent link">#</a></h3>
+<ul>
+<li><code>~/.aui/builds/&lt;PackageName&gt;-&lt;BUILD_SPECIFIER&gt;</code> - <code>&lt;PackageName&gt;</code> build directory for that build configuration.
+  Cleaned up after a successful installation.</li>
 </ul>
 <p>If the dependency imported as a <a href="#AUIB_ADD_SUBDIRECTORY">subdirectory</a>, these paths are used instead:</p>
 <ul>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/&lt;PackageName&gt;</code> - a copy of source to be used by CMake's <code>add_subdirectory</code>.
-  The second <code>&lt;PackageName&gt;</code> helps IDEs such as CLion to identify dependency name.</li>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/&lt;PackageName&gt;/FETCHED</code> - indicates the latest download is successful.</li>
-<li><code>~/.aui/repo/&lt;PackageName&gt;/as/&lt;VERSION&gt;/build</code> - build directory.</li>
+<li><code>~/.aui/builds/&lt;PackageName&gt;-&lt;BUILD_SPECIFIER&gt;-as</code> - <code>&lt;PackageName&gt;</code> build directory for that build configuration.
+  Cleaned up after a successful installation.</li>
 </ul>
 <h3 id="auicrosscompile-host">~/.aui/crosscompile-host<a class="headerlink" href="#auicrosscompile-host" title="Permanent link">#</a></h3>
 <p>In case of <a href="../crosscompiling/">Crosscompiling (Android and iOS)</a>, contains AUI.Boot sub cache for the host system.</p>
