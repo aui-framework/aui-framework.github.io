@@ -2588,6 +2588,9 @@ were needed a CMake-only solution, so we skipped external generators (i.e., thos
 layer over CMake).</p>
 <p>Despite CMake itself is complex (spoiler: every build system is) but thanks to the complexity <strong>CMake actually does the
 job good enough</strong> and its scripting system thankfully allows to download files from internet (and not only that).</p>
+<p>AUI Boot allows to choose <code>find_package</code> or <code>add_subdirectory</code> approach to import AUI's dependencies. Some projects,
+i.e., LibVNCServer, can be used only with <code>find_package</code> approach, whereas others didn't set up CMake Install at all,
+therefore, AUI Boot allows to use <code>add_subdirectory</code> approach.</p>
 <p>Introducing additional building layer literally multiplies the building complexity by two. Moreover, Android targets
 already introduce such a layer (called Gradle). For example, if we were using <a href="https://conan.io/">Conan</a>, Android
 building process would have 4 layers: Gradle, CMake, Conan, CMake (yes, 2 CMake layers).</p>
