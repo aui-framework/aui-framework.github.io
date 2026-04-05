@@ -765,10 +765,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define AUI_ENTRY \</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">    AUI_EXPORT int aui_entry(const <a href="../astringvector/">AStringVector</a>&amp; args); \</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">    AUI_EXPORT int aui_main(int argc, char** argv, int(*aui_entry)(const <a href="../astringvector/">AStringVector</a>&amp;)); \</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">    static int fake_main(int argc, char** argv) {                               \</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cp">        return aui_main(argc, argv, aui_entry);\</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">    }             \</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cp">AUI_EXPORT int aui_entry(const <a href="../astringvector/">AStringVector</a>&amp; args)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">[[maybe_unused]] static int _fake_aui_entry(const <a href="../astringvector/">AStringVector</a>&amp; args)</span>
 </span></code></pre></div>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <p>Entry point of any AUI application.</p>
