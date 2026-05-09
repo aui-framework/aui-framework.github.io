@@ -856,8 +856,7 @@ start/pause the game, as well as a central area where the <code>CellsView</code>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
 <span class="normal"><a href="#__codelineno-0-16">16</a></span>
 <span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.16</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.16</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">NOT</span><span class="w"> </span><span class="p">(</span><span class="s">AUI_PLATFORM_WIN</span><span class="w"> </span><span class="s">OR</span><span class="w"> </span><span class="s">AUI_PLATFORM_LINUX</span><span class="w"> </span><span class="s">OR</span><span class="w"> </span><span class="s">AUI_PLATFORM_MACOS</span><span class="p">))</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nb">return</span><span class="p">()</span>
@@ -865,17 +864,16 @@ start/pause the game, as well as a central area where the <code>CellsView</code>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c"># Uncomment this code to pull AUI:</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c">#</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c"># file(</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c">#         DOWNLOAD</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c">#         https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c">#         ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c"># include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c">#</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c"># <a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c">#             COMPONENTS <a href="../core/">core</a> <a href="../views/">views</a> json)</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nb"><a href="../aui_executable/">aui_executable</a></span><span class="p">(</span><span class="s">aui.example.game_of_life</span><span class="p">)</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.game_of_life</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s"><a href="../views/">aui::views</a></span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c"># # Download aui.boot.cmake (one-time):</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c"># #   curl https://raw.githubusercontent.com/aui-framework/aui/refs/heads/develop/aui.boot.cmake -o aui.boot.cmake</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c"># #</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c"># include(aui.boot.cmake)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c">#</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c"># <a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c">#             COMPONENTS <a href="../core/">core</a> <a href="../views/">views</a> json)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nb"><a href="../aui_executable/">aui_executable</a></span><span class="p">(</span><span class="s">aui.example.game_of_life</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.game_of_life</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s"><a href="../views/">aui::views</a></span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="srcmaincpp">src/main.cpp<a class="headerlink" href="#srcmaincpp" title="Permanent link">#</a></h3>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">  1</a></span>

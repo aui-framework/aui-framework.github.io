@@ -1066,24 +1066,22 @@ changes are made.</p>
 <span class="normal"><a href="#__codelineno-7-13">13</a></span>
 <span class="normal"><a href="#__codelineno-7-14">14</a></span>
 <span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.16</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.16</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c"># Uncomment this code to pull AUI:</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c">#</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c"># file(</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c">#         DOWNLOAD</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c">#         https://raw.githubusercontent.com/aui-framework/aui/master/aui.boot.cmake</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="c">#         ${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c"># include(${CMAKE_CURRENT_BINARY_DIR}/aui.boot.cmake)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="c">#</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="c"># <a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="c">#             COMPONENTS <a href="../core/">core</a> <a href="../views/">views</a> json)</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="nb"><a href="../aui_executable/">aui_executable</a></span><span class="p">(</span><span class="s">aui.example.notes</span><span class="p">)</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="nb"><a href="../aui-assets/#aui_compile_assets">aui_compile_assets</a></span><span class="p">(</span><span class="s">aui.example.notes</span><span class="p">)</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.notes</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s"><a href="../core/">aui::core</a></span><span class="w"> </span><span class="s"><a href="../views/">aui::views</a></span><span class="w"> </span><span class="s">aui::json</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="c"># # Download aui.boot.cmake (one-time):</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c"># #   curl https://raw.githubusercontent.com/aui-framework/aui/refs/heads/develop/aui.boot.cmake -o aui.boot.cmake</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c"># #</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="c"># include(aui.boot.cmake)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c">#</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="c"># <a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="c">#             COMPONENTS <a href="../core/">core</a> <a href="../views/">views</a> json)</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="nb"><a href="../aui_executable/">aui_executable</a></span><span class="p">(</span><span class="s">aui.example.notes</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="nb"><a href="../aui-assets/#aui_compile_assets">aui_compile_assets</a></span><span class="p">(</span><span class="s">aui.example.notes</span><span class="p">)</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.notes</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s"><a href="../core/">aui::core</a></span><span class="w"> </span><span class="s"><a href="../views/">aui::views</a></span><span class="w"> </span><span class="s">aui::json</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="srcmaincpp">src/main.cpp<a class="headerlink" href="#srcmaincpp" title="Permanent link">#</a></h3>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">  1</a></span>
