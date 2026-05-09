@@ -26,7 +26,7 @@
         <link rel="canonical" href="https://aui-framework.github.io/develop/contributing/">
       
       
-        <link rel="prev" href="../app-build-overview/">
+        <link rel="prev" href="../xml/">
       
       
       
@@ -458,7 +458,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../views/" class="md-nav__link">
+    <a href="../views-overview/" class="md-nav__link">
       
   
   
@@ -1129,7 +1129,7 @@ manually review and adjust AI-generated code/documentation. We won't merge chang
 </ul>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># import AUI
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><a href="../aui.boot/">auib_import</a>(aui https://github.com/aui-framework/aui
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        COMPONENTS <a href="../core/">core</a> <a href="../views/">views</a> curl json crypt <a href="../updater/">updater</a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        COMPONENTS <a href="../core/">core</a> <a href="../views/">views</a> <a href="../curl/">curl</a> <a href="../json/">json</a> <a href="../crypt/">crypt</a> <a href="../updater/">updater</a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        ADD_SUBDIRECTORY # &lt;------- here
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        VERSION ${AUI_VERSION})
 </span></code></pre></div>
@@ -1197,7 +1197,7 @@ within the ticket. The changes are covered by existing tests or basic smoke test
 <h3 id="2-points-low-complexity">2 Points - Low Complexity<a class="headerlink" href="#2-points-low-complexity" title="Permanent link">#</a></h3>
 <p>These tasks represent approximately double the effort of a 1-point story. They may include minor third-party dependency
 updates with API adjustments and basic method refactoring without output changes. New test creation might be necessary.
-External dependencies are straightforward, such as Docker image whitelisting, and follow clear documentation or known
+External dependencies are straightforward, such as Docker <a href="../image/">image</a> whitelisting, and follow clear documentation or known
 processes.</p>
 <h3 id="3-points-moderate-complexity">3 Points - Moderate Complexity<a class="headerlink" href="#3-points-moderate-complexity" title="Permanent link">#</a></h3>
 <p>This is the first level where significant uncertainty enters the picture. These tasks require a notable but manageable
@@ -1231,7 +1231,7 @@ large-scale changes are too complex to estimate accurately and manage effectivel
    <code>cmake/aui-config.cmake.in</code>.</li>
 <li>Put the reference to the module in <code>docs/index.md</code>.</li>
 <li>Create <code>aui.my_module</code> dir.</li>
-<li>Copy &amp; paste <code>CMakeLists.txt</code> from any small module (i.e. <code>aui::xml</code>) and configure it for your module.</li>
+<li>Copy &amp; paste <code>CMakeLists.txt</code> from any small module (i.e. <code><a href="../xml/">aui::xml</a></code>) and configure it for your module.</li>
 <li>Use <code>API_AUI_&lt;your module&gt;</code> to export symbols from your module (it's created by the <code><a href="../aui_module/">aui_module</a></code> CMake function).</li>
 </ol>
 <h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h3>
@@ -1302,8 +1302,8 @@ several python scripts to populate documentation:</p>
 <nav class="md-footer__inner" aria-label="Footer" >
     
     
-    <a href="../app-build-overview/" class="md-footer__link md-footer__link--prev"
-       aria-label="Previous: App Build Overview">
+    <a href="../xml/" class="md-footer__link md-footer__link--prev"
+       aria-label="Previous: aui::xml">
         <div class="md-footer__button md-icon">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1313,7 +1313,7 @@ several python scripts to populate documentation:</p>
                 Previous
               </span>
             <div class="md-ellipsis">
-                App Build Overview
+                aui::xml
             </div>
         </div>
     </a>

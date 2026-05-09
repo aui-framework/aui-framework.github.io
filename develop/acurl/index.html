@@ -456,7 +456,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../views/" class="md-nav__link">
+    <a href="../views-overview/" class="md-nav__link">
       
   
   
@@ -891,10 +891,10 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
 <h1 id="acurl">ACurl<a class="headerlink" href="#acurl" title="Permanent link">#</a></h1>
-<p>Easy curl instance.</p>
+<p>Easy <a href="../curl/">curl</a> instance.</p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/Curl/ACurl.h&gt;</code></td></tr>
-<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::curl)</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../curl/">aui::curl</a>)</code></td></tr>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <p>ACurl::Builder is used to construct ACurl.</p>
@@ -1441,7 +1441,7 @@ end of file, throw an AEOFException.</p>
 <p>data received data
 bytes written to the destination buffer. Zero means buffer does not have enough space to store supplied
         data (but the stream may be continued in the future), the supplied data is not discarded and being kept
-        in the curl buffers.
+        in the <a href="../curl/">curl</a> buffers.
 Unlike regular streams, blocking is not allowed. To indicate buffer overflow, return zero. To indicate
 end of file, throw an AEOFException.</p>
 <hr />
@@ -1450,11 +1450,11 @@ end of file, throw an AEOFException.</p>
 </div>
 <p><code class="language-cpp highlight"><span class="k">using</span><span class="w"> </span><span class="n">WriteCallbackV2</span></code></p>
 <p>A read callback.</p>
-<p>curl curl instance
+<p><a href="../curl/">curl</a> <a href="../curl/">curl</a> instance
 data received data
 bytes written to the destination buffer. Zero means buffer does not have enough space to store supplied
         data (but the stream may be continued in the future), the supplied data is not discarded and being kept
-        in the curl buffers.
+        in the <a href="../curl/">curl</a> buffers.
 Unlike regular streams, blocking is not allowed. To indicate buffer overflow, return zero. To indicate
 end of file, throw an AEOFException.</p>
 <hr />
@@ -1462,7 +1462,7 @@ end of file, throw an AEOFException.</p>
 <h3 ACurl::fail="ACurl::fail" id="ACurl::fail">fail<a class="headerlink" href="#ACurl::fail" title="Permanent link">#</a></h3>
 </div>
 <p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n">ErrorDescription</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fail</span></code></p>
-<p>Emitted on network error.</p>
+<p>Emitted on <a href="../network/">network</a> error.</p>
 <p>A protocol-level error (like HTTP(S) 404) is not treated as a fail. Check for response code via the
 <code>getResponseCode()</code> function.</p>
 <hr />
@@ -1480,10 +1480,10 @@ end of file, throw an AEOFException.</p>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ACurl</span><span class="o">::</span><span class="n">close</span><span class="p">()</span>
 </span></code></pre></div>
-<p>Breaks curl loop in the run() method, closing underlying curl connection.</p>
+<p>Breaks <a href="../curl/">curl</a> loop in the run() method, closing underlying <a href="../curl/">curl</a> connection.</p>
 <dl class="doxygen-dl">
 </dl>
-<p>curl does not have a function which immediately stops the transfer
+<p><a href="../curl/">curl</a> does not have a function which immediately stops the transfer
 (see https://curl.se/docs/faq.html#How_do_I_stop_an_ongoing_transfe). The stop functionality is handled in ACurl
 by returning error code on all callbacks. close() function is non-blocking, and some time would be taken until
 the run() method finally returns.</p>

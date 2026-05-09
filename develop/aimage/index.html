@@ -456,7 +456,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../views/" class="md-nav__link">
+    <a href="../views-overview/" class="md-nav__link">
       
   
   
@@ -729,25 +729,40 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
 <h1 id="aimage">AImage<a class="headerlink" href="#aimage" title="Permanent link">#</a></h1>
-<p>Owning image representation.</p>
+<p>Owning <a href="../image/">image</a> representation.</p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/Image/AImage.h&gt;</code></td></tr>
-<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::image)</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../image/">aui::image</a>)</code></td></tr>
 </table>
 
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <details class="note">
+<summary><a href="../examples/">examples</a>/ui/embedded_sdl/src/main.cpp</summary>
+<p><a href="../sdl3/">SDL3</a> - This code demonstrates how to integrate the AUI Framework with <a href="../sdl3/">SDL3</a> to create a window with OpenGL rendering.
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">destroyNativeWindow</span><span class="p">(</span><span class="n">ASurface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">window</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">    </span><span class="n">AImage</span><span class="w"> </span><span class="n">makeScreenshot</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">beginPaint</span><span class="p">(</span><span class="n">ASurface</span><span class="o">&amp;</span><span class="w"> </span><span class="n">window</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="n">glBindFramebuffer</span><span class="p">(</span><span class="n">GL_FRAMEBUFFER</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div></p>
+</details>
+<details class="note">
 <summary><a href="../examples/">examples</a>/app/fractal/src/FractalView.cpp</summary>
 <p><a href="../fractal-example/">Fractal Example</a> - Fractal viewer application demonstrating usage of custom shaders.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">mShader</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">UNIFORM_TR</span><span class="p">,</span><span class="w"> </span><span class="n">mTransform</span><span class="p">);</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">mShader</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">UNIFORM_SQ</span><span class="p">,</span><span class="w"> </span><span class="mf">1.f</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">mTexture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">gl</span><span class="o">::</span><span class="n">Texture2D</span><span class="o">&gt;</span><span class="p">();</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">    </span><span class="n">mTexture</span><span class="o">-&gt;</span><span class="n">tex2D</span><span class="p">(</span><span class="o">*</span><span class="n">AImage</span><span class="o">::</span><span class="n">fromUrl</span><span class="p">(</span><span class="s">&quot;:img/color_scheme_wikipedia.png&quot;</span><span class="p">));</span>
-</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">void</span><span class="w"> </span><span class="n">FractalView</span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n"><a href="../arendercontext/">ARenderContext</a></span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="n">mShader</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">UNIFORM_TR</span><span class="p">,</span><span class="w"> </span><span class="n">mTransform</span><span class="p">);</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">mShader</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">UNIFORM_SQ</span><span class="p">,</span><span class="w"> </span><span class="mf">1.f</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">mTexture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">gl</span><span class="o">::</span><span class="n">Texture2D</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll"><span class="w">    </span><span class="n">mTexture</span><span class="o">-&gt;</span><span class="n">tex2D</span><span class="p">(</span><span class="o">*</span><span class="n">AImage</span><span class="o">::</span><span class="n">fromUrl</span><span class="p">(</span><span class="s">&quot;:img/color_scheme_wikipedia.png&quot;</span><span class="p">));</span>
+</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kt">void</span><span class="w"> </span><span class="n">FractalView</span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n"><a href="../arendercontext/">ARenderContext</a></span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
 </span></code></pre></div></p>
 </details>
 

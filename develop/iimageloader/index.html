@@ -456,7 +456,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../views/" class="md-nav__link">
+    <a href="../views-overview/" class="md-nav__link">
       
   
   
@@ -765,7 +765,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Class-loader of abstract images that can be displayed on the screen.</p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/Image/IImageLoader.h&gt;</code></td></tr>
-<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::image)</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../image/">aui::image</a>)</code></td></tr>
 </table>
 
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
@@ -775,10 +775,10 @@ We are migrating to a new documentation engine. Please report presentation issue
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../iimagefactory/">IImageFactory</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">IImageLoader</span><span class="o">::</span><span class="n">getImageFactory</span><span class="p">(</span><span class="n"><a href="../abytebufferview/">AByteBufferView</a></span><span class="w"> </span><span class="n">buffer</span><span class="p">)</span>
 </span></code></pre></div>
-<p>The drawable (vector) image loader implementation.</p>
+<p>The drawable (vector) <a href="../image/">image</a> loader implementation.</p>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
-<dd>image factory. Can be <code>nullptr</code> if <code>getRasterImage</code> implemented.</dd>
+<dd><a href="../image/">image</a> factory. Can be <code>nullptr</code> if <code>getRasterImage</code> implemented.</dd>
 </dl>
 <p>Called if and only if <code>matches</code> returned true.</p>
 <div style="position:absolute;opacity:0">
@@ -787,7 +787,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../_/">_</a></span><span class="o">&lt;</span><span class="n"><a href="../aimage/">AImage</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">IImageLoader</span><span class="o">::</span><span class="n">getRasterImage</span><span class="p">(</span><span class="n"><a href="../abytebufferview/">AByteBufferView</a></span><span class="w"> </span><span class="n">buffer</span><span class="p">)</span>
 </span></code></pre></div>
-<p>The image loader implementation (raster).</p>
+<p>The <a href="../image/">image</a> loader implementation (raster).</p>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
 <dd>raster image. Can be <code>nullptr</code> if <code>getDrawable</code> implemented.</dd>
@@ -804,11 +804,11 @@ We are migrating to a new documentation engine. Please report presentation issue
 <dd><div style="display: table">
 <div style="display: table-row">
 <b style="display: table-cell; padding-right: 6px"><code>buffer</code></b>
-<div style="display: table-cell"> buffer with the raw image file contents.</div>
+<div style="display: table-cell"> buffer with the raw <a href="../image/">image</a> file contents.</div>
 </div>
 </div></dd>
 <dt>Returns</dt>
-<dd>true, if this IImageLoader accepts image stored in this buffer</dd>
+<dd>true, if this IImageLoader accepts <a href="../image/">image</a> stored in this buffer</dd>
 </dl>
 
 

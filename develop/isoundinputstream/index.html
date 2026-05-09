@@ -456,7 +456,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../views/" class="md-nav__link">
+    <a href="../views-overview/" class="md-nav__link">
       
   
   
@@ -756,7 +756,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Base interface for representing sound input streams of different formats</p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/Audio/ISoundInputStream.h&gt;</code></td></tr>
-<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::audio)</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../audio/">aui::audio</a>)</code></td></tr>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <div class="admonition bug">
@@ -793,14 +793,29 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span></span></code></pre></div>
 </details>
 <details class="note">
+<summary><a href="../examples/">examples</a>/ui/embedded_sdl/src/main.cpp</summary>
+<p><a href="../sdl3/">SDL3</a> - This code demonstrates how to integrate the AUI Framework with <a href="../sdl3/">SDL3</a> to create a window with OpenGL rendering.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">            </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">(),</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">            </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">                </span><span class="p">.</span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Click <a href="../me/">me</a>&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">                </span><span class="p">.</span><span class="n">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">                    </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Test&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="p">;</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="c1">/// [UI]</span>
+</span></code></pre></div>
+</details>
+<details class="note">
 <summary><a href="../examples/">examples</a>/basic/hello_world/src/main.cpp</summary>
 <p><a href="../console-hello-world-example/">Console Hello World Example</a> - Basic CLI Hello World application.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">LOG_TAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MyApp&quot;</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">info</span><span class="p">(</span><span class="n">LOG_TAG</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="p">;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">LOG_TAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MyApp&quot;</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">info</span><span class="p">(</span><span class="n">LOG_TAG</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
 

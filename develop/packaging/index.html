@@ -460,7 +460,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../views/" class="md-nav__link">
+    <a href="../views-overview/" class="md-nav__link">
       
   
   
@@ -1129,7 +1129,7 @@ arg of <a href="../aui_app/">aui_app</a> (unless not overridden by <code>CPACK_P
 <li><code>CPACK_PACKAGE_ICON</code> = <code>${_ico}</code> (app icon inside INNOSETUP window)</li>
 <li><code>_aui_package_file_name</code> = <code>${_aui_package_file_name}-setup</code> (append -setup suffix for INNOSETUP)</li>
 </ul>
-<p><a href="../aui_app/">aui_app</a> generates some image assets for the installer from your icon.</p>
+<p><a href="../aui_app/">aui_app</a> generates some <a href="../image/">image</a> assets for the installer from your icon.</p>
 <p>By default, in addition to branding adjustments (such as app logo and name), AUI configures INNOSETUP so the installer
 won't prompt a UAC dialog (leverage to <em>admin privileges</em>). This way the installation process is more secure from
 perspective of the end user. Moreover, installation to user's directory allows <a href="../updater/">updater</a> to work without prompting
@@ -1188,10 +1188,10 @@ of <a href="../aui_app/">aui_app</a> (unless not overridden by <code>CPACK_PACKA
 <ul>
 <li><code>CPACK_WIX_PRODUCT_ICON</code> = <code>${_ico}</code> (displays app icon in Control Panel/Settings)</li>
 <li><code>CPACK_WIX_PROGRAM_MENU_FOLDER</code> = <code>"."</code> (omits Start menu folder)</li>
-<li><code>CPACK_WIX_UI_BANNER</code> = <code>${_ico}</code> (image at top of all installer pages)</li>
-<li><code>CPACK_WIX_UI_DIALOG</code> = <code>${_ico}</code> (background image used on the welcome and completion dialogs)</li>
+<li><code>CPACK_WIX_UI_BANNER</code> = <code>${_ico}</code> (<a href="../image/">image</a> at top of all installer pages)</li>
+<li><code>CPACK_WIX_UI_DIALOG</code> = <code>${_ico}</code> (background <a href="../image/">image</a> used on the welcome and completion dialogs)</li>
 </ul>
-<p><a href="../aui_app/">aui_app</a> generates some image assets for the installer from your icon.</p>
+<p><a href="../aui_app/">aui_app</a> generates some <a href="../image/">image</a> assets for the installer from your icon.</p>
 <p><img alt="" src="../imgs/wix_logo.png" /></p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">#</a></h2>
 <div class="admonition note">
@@ -1204,11 +1204,11 @@ of <a href="../aui_app/">aui_app</a> (unless not overridden by <code>CPACK_PACKA
 <p>The DragNDrop CPack generator creates a DMG image. When opened, a Finder window appears with your application and a
 symlink to <code>/Applications</code>, effectively prompting the user to copy the application from the medium to his app library.</p>
 <p>This packaging method for macOS covers non-install (portable) use case as well. If one chooses to keep your application
-not in <code>/Applications</code> but in some other place they can do that intuitively by copying your application from DMG image
+not in <code>/Applications</code> but in some other place they can do that intuitively by copying your application from DMG <a href="../image/">image</a>
 to whatever place they want.</p>
-<p>Default DMG image produced by CPack is sparse: it's just a regular Finder window with sidebar and top bar showing
+<p>Default DMG <a href="../image/">image</a> produced by CPack is sparse: it's just a regular Finder window with sidebar and top bar showing
 your application bundle and a symlink. <a href="../aui_app/">aui_app</a> configures CPack to rearrange icons and place a background
-image so no extra configuration by an AUI-based project is needed:</p>
+<a href="../image/">image</a> so no extra configuration by an AUI-based project is needed:</p>
 <p><img alt="" src="../imgs/dmg.png" /></p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># standard CMake build process</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">mkdir</span> <span class="n">build</span>
