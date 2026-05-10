@@ -1233,7 +1233,7 @@ function:</p>
 <p>You can now locate the log file by using subprocess' PID printed earlier:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cat /tmp/aui.3708325.log
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[06:49:33][UI thread][Logger][INFO]: Log file: /tmp/aui.3708325.log
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[06:49:33][UI thread][AUpdater][INFO]: --aui-<a href="../updater/">updater</a>-wait-for-process: 3707546 exited with 0
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[06:49:33][UI thread][AUpdater][INFO]: --<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-wait-for-process: 3707546 exited with 0
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>[06:49:33][UI thread][AUpdater][INFO]: deploying update: /tmp/__aui_update_example_app/download -&gt; /home/...
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[06:49:33][UI thread][AUpdater][ERR]: Can&#39;t deploy update, trying to launch original: ...
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a> - at 0x5555558f3aae <a href="../aui_entry/">aui_entry</a>(<a href="../astringvector/">AStringVector</a> const&amp;)(main.cpp:9)
@@ -1242,7 +1242,7 @@ function:</p>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a> - at 0x7ffff726130b(?:0)
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a> - at 0x555555654195(?:0)
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>Caused by: (<a href="../aioexception/">AIOException</a>) AFileOutputStream: could not open /home/...: Text file busy
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a> - at 0x5555556c0443 aui::impl::lastErrorToException(<a href="../astring/">AString</a>)(ErrorToExceptionImpl.cpp:21)
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a> - at 0x5555556c0443 <a href="../aui/">aui</a>::impl::lastErrorToException(<a href="../astring/">AString</a>)(ErrorToExceptionImpl.cpp:21)
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a> - at 0x55555568ec97 <a href="../afileoutputstream/">AFileOutputStream</a>::open(bool)(AFileOutputStream.cpp:67)
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a> - at 0x55555568ed44 <a href="../afileoutputstream/">AFileOutputStream</a>::AFileOutputStream(<a href="../astring/">AString</a>, bool)(AFileOutputStream.cpp:24)
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a> - at 0x5555556964a2 <a href="../apath/#APath::copy">APath::copy</a>(<a href="../apath/">APath</a> const&amp;, <a href="../apath/">APath</a> const&amp;)(APath.cpp:291)
@@ -1400,7 +1400,7 @@ future.</p>
 </div>
 </div></dd>
 </dl>
-<p>The arguments starting with <code>--aui-<a href="../updater/">updater</a></code> are should be ignored by your application.</p>
+<p>The arguments starting with <code>--<a href="../aui/">aui</a>-<a href="../updater/">updater</a></code> are should be ignored by your application.</p>
 <p>Performs autoupdate-specific routines on startup of your application. In best scenario, this function should be
 called by your application as early as possible.</p>
 <p>This function might terminate current process with std::exit(0), in case of performing autoupdate routines.</p>
@@ -1408,12 +1408,12 @@ called by your application as early as possible.</p>
 AUpdater::loadInstallCmdline. If the latter succeeds, AUpdate::triggerUpdateOnStartup is called to perform
 on-startup update.</p>
 <p>This function handles following arguments to your application:
-- <code>--aui-<a href="../updater/">updater</a>-origin</code> -
-- <code>--aui-<a href="../updater/">updater</a>-wait-for-process</code> - maps to <a href="./#AUpdater::handleWaitForProcess"><code>AUpdater::handleWaitForProcess()</code></a> that instructs AUpdater to wait
+- <code>--<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-origin</code> -
+- <code>--<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-wait-for-process</code> - maps to <a href="./#AUpdater::handleWaitForProcess"><code>AUpdater::handleWaitForProcess()</code></a> that instructs AUpdater to wait
   the specified process to finish before processing next argument(s).
-- <code>--aui-<a href="../updater/">updater</a>-cleanup</code> - maps to <a href="./#AUpdater::handlePostUpdateCleanup"><code>AUpdater::handlePostUpdateCleanup()</code></a> and returns control flow to normal
+- <code>--<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-cleanup</code> - maps to <a href="./#AUpdater::handlePostUpdateCleanup"><code>AUpdater::handlePostUpdateCleanup()</code></a> and returns control flow to normal
   execution of your application (last updating step)
-- <code>--aui-<a href="../updater/">updater</a>-failed</code> - reports last error occurred while update deployment. See AUpdater::getLastDeploymentError().</p>
+- <code>--<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-failed</code> - reports last error occurred while update deployment. See AUpdater::getLastDeploymentError().</p>
 <p>Refer to <a href="../updater/"><code>aui::updater</code></a> for update process overview.</p>
 <div style="position:absolute;opacity:0">
 <h3 AUpdater::handleWaitForProcess_="AUpdater::handleWaitForProcess()" id="AUpdater::handleWaitForProcess">handleWaitForProcess<a class="headerlink" href="#AUpdater::handleWaitForProcess" title="Permanent link">#</a></h3>
@@ -1421,7 +1421,7 @@ on-startup update.</p>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AUpdater</span><span class="o">::</span><span class="n">handleWaitForProcess</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">pid</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Handles --aui-<a href="../updater/">updater</a>-wait-for-process.</p>
+<p>Handles --<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-wait-for-process.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
@@ -1430,7 +1430,7 @@ on-startup update.</p>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">AUpdater</span><span class="o">::</span><span class="n">injectWaitForMyPid</span><span class="p">(</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Injects --aui-<a href="../updater/">updater</a>-wait-for-process=THIS_PROCESS_PID as the first argument.</p>
+<p>Injects --<a href="../aui/">aui</a>-<a href="../updater/">updater</a>-wait-for-process=THIS_PROCESS_PID as the first argument.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
@@ -1471,7 +1471,7 @@ triggered via special arguments in installerArguments.</p>
 <h3 AUpdater::reportDownloadedPercentage_="AUpdater::reportDownloadedPercentage()" id="AUpdater::reportDownloadedPercentage">reportDownloadedPercentage<a class="headerlink" href="#AUpdater::reportDownloadedPercentage" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AUpdater</span><span class="o">::</span><span class="n">reportDownloadedPercentage</span><span class="p">(</span><span class="n">aui</span><span class="o">::</span><span class="n">float_within_0_1</span><span class="w"> </span><span class="n">progress</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AUpdater</span><span class="o">::</span><span class="n">reportDownloadedPercentage</span><span class="p">(</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">float_within_0_1</span><span class="w"> </span><span class="n">progress</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Being called by downloadUpdateImpl, reports download percentage to <code>status</code>.</p>
 <dl class="doxygen-dl">

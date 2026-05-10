@@ -1217,7 +1217,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <li>Use <code>#pragma once</code> instead of C-style include guards</li>
 <li>Use Doxygen (<code>@</code>-style, not <code>\</code>)</li>
 <li>Avoid global functions (at least put them to namespaces)</li>
-<li>Every symbol (class, struct, namespace, file) prefixed with '<code>A</code>', '<code>aui</code>', '<code>AUI_</code>' is a part of AUI's stable public
+<li>Every symbol (class, struct, namespace, file) prefixed with '<code>A</code>', '<code><a href="../aui/">aui</a></code>', '<code>AUI_</code>' is a part of AUI's stable public
   API ready for the external usage. Symbols without such prefixes are called <em>internal</em> and can be also used (if
   possible) when needed. Be careful using internal symbols since there's no guarantee about their API stability.</li>
 <li>Follow visibility in this order when possible: <code>public</code>, <code>protected</code>, <code>private</code>. Header's user is more interested in
@@ -1277,7 +1277,7 @@ Quick example:</p>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="code-style-exceptions">Code style exceptions<a class="headerlink" href="#code-style-exceptions" title="Permanent link">#</a></h2>
-<p>Commonly, any iterator-based algorithm (i.e. <code>aui::binary_search</code>), global functions, trait structs are STL-like
+<p>Commonly, any iterator-based algorithm (i.e. <code><a href="../aui/">aui</a>::binary_search</code>), global functions, trait structs are STL-like
 functionality. The final goal is to avoid mixed-style expressions like <code><a href="../astring/">AString</a>::const_iterator</code> which hurts eyes.</p>
 <h2 id="template-metaprogramming-and-macros">Template metaprogramming and macros<a class="headerlink" href="#template-metaprogramming-and-macros" title="Permanent link">#</a></h2>
 <p>Both C++ template instantiation mechanism and macro preprocessor are Turing complete. However, writing and understanding
@@ -1315,7 +1315,7 @@ message among a long list of compiler diagnostics.</p>
 prefix to put potentially helpful messages. Use <a href="./#TRY_TO_BREAK">Try to break your templates</a> technique to discover the lines to put the comments
 in.</p>
 <p>Cast failure example:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">remove_cv_t</span><span class="o">&lt;</span><span class="n">Clazz</span><span class="o">&gt;&amp;&gt;</span><span class="p">(</span><span class="n">clazz</span><span class="p">);</span><span class="w"> </span><span class="c1">// ====================&gt; aui::reflect: Clazz is not a SimpleAggregate.</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">remove_cv_t</span><span class="o">&lt;</span><span class="n">Clazz</span><span class="o">&gt;&amp;&gt;</span><span class="p">(</span><span class="n">clazz</span><span class="p">);</span><span class="w"> </span><span class="c1">// ====================&gt; <a href="../aui/">aui</a>::reflect: Clazz is not a SimpleAggregate.</span>
 </span></code></pre></div>
 <p>Overload substitution failure example:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">...</span>

@@ -1219,7 +1219,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>Hot code reload and rapid development</p>
 <table>
 <tr><td>Header:</td><td><code>#include &lt;AUI/Remote/AHotCodeReload.h&gt;</code></td></tr>
-<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::remote_tools)</code></td></tr>
+<tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../aui/">aui</a>::remote_tools)</code></td></tr>
 </table>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <p>The development workflow for UI applications can be repetitive and slow, commonly requiring you to:</p>
@@ -1299,7 +1299,7 @@ versions of these functions, so the newer version is called.</p>
 interfere with build process nor require special project structure with complicated state management. It does not
 replace older symbols with newer ones, it keeps them both in memory, so referencing both is safe.</p>
 <h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
-<p><strong>Link to remote_tools module</strong>: <code><a href="../aui_link/">aui_link</a>(my_target PUBLIC aui::remote_tools)</code></p>
+<p><strong>Link to remote_tools module</strong>: <code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../aui/">aui</a>::remote_tools)</code></p>
 <p><strong>Add object files to track</strong>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.769.066.067 23.206l12.76-10.843zm11.438 23.868L7.471 17.587 0 23.934zm.793-.198L12.298.463l1.719 19.24zM12.893 12.959l-5.025 4.298 5.62 2.248z"/></svg></span> CMake</label><label for="__tabbed_1_2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10.5 15.97.41 2.44c-.26.14-.68.27-1.24.39-.57.13-1.24.2-2.01.2-2.21-.04-3.87-.7-4.98-1.96Q1 15.135 1 12.21c.05-2.31.72-4.08 2-5.32C4.32 5.64 5.96 5 7.94 5c.75 0 1.4.07 1.94.19s.94.25 1.2.4l-.58 2.49-1.06-.34c-.4-.1-.86-.15-1.39-.15-1.16-.01-2.12.36-2.87 1.1-.76.73-1.15 1.85-1.18 3.34 0 1.36.37 2.42 1.08 3.2.71.77 1.71 1.17 2.99 1.18l1.33-.12c.43-.08.79-.19 1.1-.32M11 11h2V9h2v2h2v2h-2v2h-2v-2h-2zm7 0h2V9h2v2h2v2h-2v2h-2v-2h-2z"/></svg></span> Manually</label></div>
 <div class="tabbed-content">
@@ -1316,7 +1316,7 @@ replace older symbols with newer ones, it keeps them both in memory, so referenc
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">CMAKE_BUILD_TYPE</span><span class="w"> </span><span class="s">STREQUAL</span><span class="w"> </span><span class="s2">&quot;Debug&quot;</span><span class="p">)</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="c"># recommended: restrict remote_tools to debug builds only</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.hot_code_reload</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">aui::remote_tools</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.hot_code_reload</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s"><a href="../aui/">aui</a>::remote_tools</span><span class="p">)</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nb">aui_enable_hotswap</span><span class="p">(</span><span class="s">aui.example.hot_code_reload</span><span class="p">)</span>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nb">endif</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
@@ -1345,7 +1345,7 @@ replace older symbols with newer ones, it keeps them both in memory, so referenc
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="cp">#if __has_include(&lt;AUI/Remote/AHotCodeReload.h&gt;)</span>
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="c1">// hardcoded path</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">AHotCodeReload</span><span class="o">::</span><span class="n">inst</span><span class="p">().</span><span class="n">addFile</span><span class="p">(</span><span class="s">&quot;/home/projects/aui/cmake-build-debug/CMakeFiles/aui.example.hot_code_reload.dir/src/MyWindow.cpp.o&quot;</span><span class="p">);</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">AHotCodeReload</span><span class="o">::</span><span class="n">inst</span><span class="p">().</span><span class="n">addFile</span><span class="p">(</span><span class="s">&quot;/home/projects/<a href="../aui/">aui</a>/cmake-build-debug/CMakeFiles/aui.example.hot_code_reload.dir/src/MyWindow.cpp.o&quot;</span><span class="p">);</span>
 </span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="cp">#endif</span>
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
@@ -1358,7 +1358,7 @@ replace older symbols with newer ones, it keeps them both in memory, so referenc
 <p><strong>Observe</strong> <code>AHotCodeReload::inst().patchEnd</code> to re-call patched functions to see the effect. For UI, extract
 <code>setContents</code> call to a member function and call it in constructor. Also, connect to
 <code>AHotCodeReload::inst().patchEnd</code> to re-initialize UI components after the patch. Use <code>__has_include</code> to check if
-<code>aui::remote_tools</code> was added in your <code>CMakeLists.txt</code>.</p>
+<code><a href="../aui/">aui</a>::remote_tools</code> was added in your <code>CMakeLists.txt</code>.</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
