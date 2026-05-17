@@ -23,7 +23,7 @@
         <meta name="author" content="Alex2772">
       
       
-        <link rel="canonical" href="https://aui-framework.github.io/develop/contributing/">
+        <link rel="canonical" href="https://aui-framework.github.io/master/contributing/">
       
       
         <link rel="prev" href="../xml/">
@@ -723,15 +723,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workflow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ai" class="md-nav__link">
     <span class="md-ellipsis">
       AI
@@ -904,15 +895,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workflow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ai" class="md-nav__link">
     <span class="md-ellipsis">
       AI
@@ -1057,7 +1039,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
   
-    <a href="https://github.com/aui-framework/aui/edit/develop/docs/contributing.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/aui-framework/aui/edit/master/docs/contributing.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1066,7 +1048,7 @@ We are migrating to a new documentation engine. Please report presentation issue
     
       
     
-    <a href="https://github.com/aui-framework/aui/raw/develop/docs/contributing.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/aui-framework/aui/raw/master/docs/contributing.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1082,30 +1064,18 @@ information.</p>
 <li>Anyone may become an AUI contributor: there are no restrictions.</li>
 <li>Tasks and todos are listed on the <a href="https://github.com/aui-framework/aui/issues">GitHub Issues page</a>. Issues marked
    as <code>good first issue</code> are relatively simple and can be done without deep dive into AUI.</li>
-<li>AUI follows git flow-like branching model. <code>master</code> branch is a release candidate branch. <code>develop</code> branch is current
-   develop branch. Each feature of the framework is created in a separate branch from <code>develop</code> in the <code>feat/</code> folder.
-   pulling changes from your branch to <code>develop</code> is possible only if the merge with your branch does not generate merge
-   conflicts and does not break the build and tests.</li>
+<li>AUI follows git flow-like branching model. <code>master</code> branch is a release candidate branch. Each feature of the
+   framework is created in a separate branch from <code>master</code> in the <code>feat/</code> folder. Pulling changes from your branch to
+   <code>master</code> is possible only if the merge with your branch does not generate merge conflicts and does not break the
+   build and tests.</li>
 </ol>
 <p>That is, if you want to implement a feature, you should fork AUI's repository (if you don't have direct access to
-   it's repository), checkout the <code>develop</code> branch and create a new branch called <code>feat/feature-name</code>, where you work
+   it's repository), checkout the <code>master</code> branch and create a new branch called <code>feat/feature-name</code>, where you work
    under your feature.</p>
 <p>When you have finished your work, you should open a pull request from the <code>feat/feature-name</code> branch of your
-   repository to the <code>develop</code> branch of the AUI's original repository.
+   repository to the <code>master</code> branch of the AUI's original repository.
 5. Contributing to AUI, you agree that your code will be released under
    <a href="https://github.com/aui-framework/aui/blob/master/LICENSE">AUI's license</a>.</p>
-<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">#</a></h2>
-<p><code>master</code> branch contains code of the release candidate. Code of this branch must compile without errors and should pass
-all tests on all supported platforms.
-Each feature of the framework is created in a separate branch in the <code>feat/</code> folder. Pulling changes from your branch to
-<code>master</code> is possible only if the merge with your branch does not generate merge conflicts and does not break the build
-and tests.</p>
-<p>Merges from <code>feat/</code> branch are allowed only to <code>develop</code> branch. <code>develop</code> is the branch were our actual development
-work happens. When we consider <code>develop</code> branch stable enough, we merge <code>develop</code> and <code>master</code> and create a release.</p>
-<p>If you are an external developer (i.e., have no write access to AUI's repository), you will need to create a fork of AUI
-and commit to it. Whilst you can commit to <code>master</code> and <code>develop</code> branches of your own repository, we still recommend to
-follow feature branch workflow. After you finished your work in your feature branch, open pull request from your feature
-branch to AUI's <code>develop</code> branch.</p>
 <h2 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">#</a></h2>
 <p>We'd happily accept your AI-assisted work, as soon as you take complete responsibility thereof, and you have complete
 understanding of the changes you propose. Make sure your AI-assisted work does not violate someone's copyright. Please
@@ -1155,7 +1125,7 @@ manually review and adjust AI-generated code/documentation. We won't merge chang
 <p><strong>Send your changes</strong>: In the terminal window, type these commands (change "ololo" to your GitHub name):</p>
 </li>
 </ul>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git checkout develop
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git checkout master
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git checkout -b feat/your-feature-name
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git remote set-url origin git@github.com:ololo/<a href="../aui/">aui</a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>git add -A
@@ -1168,7 +1138,7 @@ manually review and adjust AI-generated code/documentation. We won't merge chang
 </blockquote>
 <ul>
 <li><strong>Share your work</strong>: Go to your fork on GitHub. It will ask if you want to make a "pull request". Just do it! Make
-   sure the pull request targets the <code>develop</code> branch of the original AUI repository.</li>
+   sure the pull request targets the <code>master</code> branch of the original AUI repository.</li>
 </ul>
 <h2 id="story-points">Story points<a class="headerlink" href="#story-points" title="Permanent link">#</a></h2>
 <p>Story points are designed as relative measurements of work complexity, deliberately decoupled from time-based metrics (
@@ -1257,7 +1227,7 @@ environment.</p>
 </div>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/<a href="../aui/">aui</a>-framework/<a href="../aui/">aui</a>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span><a href="../aui/">aui</a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop<span class="w"> </span><span class="c1"># we do development on develop branch only</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w"> </span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># if you want to use venv</span>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv

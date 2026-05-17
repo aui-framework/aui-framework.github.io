@@ -23,7 +23,7 @@
         <meta name="author" content="Alex2772">
       
       
-        <link rel="canonical" href="https://aui-framework.github.io/develop/apointerindex/">
+        <link rel="canonical" href="https://aui-framework.github.io/master/apointerindex/">
       
       
       
@@ -818,17 +818,17 @@ We are migrating to a new documentation engine. Please report presentation issue
 <details class="note">
 <summary><a href="../examples/">examples</a>/ui/embedded_sdl/src/main.cpp</summary>
 <p><a href="../sdl3/">SDL3</a> - This code demonstrates how to integrate the AUI Framework with <a href="../sdl3/">SDL3</a> to create a window with OpenGL rendering.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">/// [sdlToAPointer]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">sdlToAPointer</span><span class="p">(</span><span class="n">Uint8</span><span class="w"> </span><span class="n">button</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">APointerIndex</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="hll"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">button</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span></span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_BUTTON_LEFT</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">APointerIndex</span><span class="o">::</span><span class="n">button</span><span class="p">(</span><span class="n">AInput</span><span class="o">::</span><span class="n">LBUTTON</span><span class="p">);</span>
-</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_BUTTON_MIDDLE</span><span class="p">:</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">APointerIndex</span><span class="o">::</span><span class="n">button</span><span class="p">(</span><span class="n">AInput</span><span class="o">::</span><span class="n">CBUTTON</span><span class="p">);</span>
-</span></span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_BUTTON_RIGHT</span><span class="p">:</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">APointerIndex</span><span class="o">::</span><span class="n">button</span><span class="p">(</span><span class="n">AInput</span><span class="o">::</span><span class="n">RBUTTON</span><span class="p">);</span>
-</span></span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="k">default</span><span class="o">:</span>
-</span></code></pre></div>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">}</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">/// [sdlToAInput]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">/// [sdlToAPointer]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">sdlToAPointer</span><span class="p">(</span><span class="n">Uint8</span><span class="w"> </span><span class="n">button</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">APointerIndex</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">button</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_BUTTON_LEFT</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">APointerIndex</span><span class="o">::</span><span class="n">button</span><span class="p">(</span><span class="n">AInput</span><span class="o">::</span><span class="n">LBUTTON</span><span class="p">);</span>
+</span></span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">SDL_BUTTON_MIDDLE</span><span class="p">:</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">APointerIndex</span><span class="o">::</span><span class="n">button</span><span class="p">(</span><span class="n">AInput</span><span class="o">::</span><span class="n">CBUTTON</span><span class="p">);</span>
+</span></span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
 <h3 APointerIndex::finger_="APointerIndex::finger()" id="APointerIndex::finger">finger<a class="headerlink" href="#APointerIndex::finger" title="Permanent link">#</a></h3>
