@@ -856,8 +856,13 @@ unavailable, thus all waiting code will wait indefinitely long, leading to resou
 Consider using one of suggested methods of usage instead.</p>
 <p>AFuture provides a set of functions for both "value emitting" side: supplyValue(), supplyException(), and "value
 receiving" side: operator-&gt;(), operator*(), get().</p>
-<p>When AFuture's operation is completed it calls either onSuccess() or onError(). These callbacks are excepted to be
-called in any case. Use onFinally() to handle both.</p>
+<p>When AFuture's operation is completed, it calls either <code>onSuccess()</code> (on success) or <code>onError()</code> (on failure).
+Use <code>onFinally()</code> to handle both cases with a single callback.</p>
+<p>These callbacks are guaranteed to be called in exactly one of two moments:
+- <strong>during resolution</strong> — called by <code>supplyValue()</code>/<code>supplyException()</code> right after the result is stored;
+- <strong>at subscription time</strong> — if the future is already resolved when <code>onSuccess()</code>/<code>onError()</code> is called,
+  the callback is invoked immediately.</p>
+<p>This design eliminates the race condition between checking the resolution state and registering a callback.</p>
 <p>AFuture is a shared_ptr-based wrapper so it can be easily copied, pointing to the same task.</p>
 <p>If all AFutures of the task are destroyed, the task is cancelled. If the task is executing when cancel() is
 called, AFuture waits for the task, however, task's thread is still requested for interrupt. It guarantees that
