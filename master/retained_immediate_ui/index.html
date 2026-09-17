@@ -739,6 +739,57 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why_not_fp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why not a purely functional model (Jetpack Compose / immediate mode)?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why not a purely functional model (Jetpack Compose / immediate mode)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-aui-actually-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      What AUI actually is
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-the-everything-is-a-function-rebuild-on-change-model-does-not-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why the "everything is a function, rebuild on change" model does not fit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aui-already-takes-the-best-of-the-functional-approach-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUI already takes the best of the functional approach - locally
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway-on-ergonomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Takeaway on ergonomics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -977,6 +1028,70 @@ mode in declarative UIs if necessary. Due to growing expectations in regard to d
 suggest using declarative mode only.</p>
 <p>A good example for preferring retained mode to declarative is a simple text editor, where everything goes around of a
 single view.</p>
+<h2 id="why_not_fp">Why not a purely functional model (Jetpack Compose / immediate mode)?<a class="headerlink" href="#why_not_fp" title="Permanent link">#</a></h2>
+<p>A frequently asked design question is whether AUI should have gone the "a view is just a function call, and the tree is
+rebuilt on every change" route, like Jetpack Compose (functional recomposition) or Dear ImGui (immediate mode), instead
+of the current SwiftUI-like model based on persistent view objects and declarative contracts.</p>
+<p>The short answer: the current model is a deliberate fit for a C++ framework targeting desktop, mobile and embedded
+platforms. Adopting a pure "rebuild the tree" model would trade away AUI's <a href="../core/">core</a> performance guarantees for little
+practical gain.</p>
+<h3 id="what-aui-actually-is">What AUI actually is<a class="headerlink" href="#what-aui-actually-is" title="Permanent link">#</a></h3>
+<p>AUI is a <strong>retained-mode</strong> framework:</p>
+<ul>
+<li>The UI is a persistent tree of reference-counted view objects (<code>_&lt;<a href="../aview/">AView</a>&gt;</code>), whose children are stored in a plain
+  container (<code><a href="../avector/">AVector</a>&lt;_&lt;<a href="../aview/">AView</a>&gt;&gt;</code>).</li>
+<li>The declarative <code>Vertical { a, b }</code> syntax is C++20 aggregate initialization over lightweight factory types. It runs
+  <strong>once</strong> to build that tree.</li>
+<li>Reactivity (<code><a href="../aproperty/">AProperty</a></code> / <code><a href="../apropertyprecomputed/">APropertyPrecomputed</a></code> / <code><a href="../aui_react/">AUI_REACT</a></code> + signal/slot
+  <code>connect</code>) <strong>mutates the existing <a href="../views/">views</a> in place</strong> through setters. It does not re-run the building lambda.</li>
+<li>Layout is recomputed <strong>lazily, only when invalidated</strong> (a dirty flag propagated by <code>markMinContentSizeInvalid</code> (in older versions) / <code>requestLayout</code> (in newer versions)), never unconditionally per frame.</li>
+</ul>
+<p>In other words, AUI already provides the immediate-mode-like <em>developer experience</em> while keeping retained-mode
+<em>performance</em>.</p>
+<h3 id="why-the-everything-is-a-function-rebuild-on-change-model-does-not-fit">Why the "everything is a function, rebuild on change" model does not fit<a class="headerlink" href="#why-the-everything-is-a-function-rebuild-on-change-model-does-not-fit" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p><strong>Recomposition needs a heavy runtime that C++ neither has nor wants.</strong> Compose's "call a function, the runtime
+   figures out what to redraw" magic relies on a compiler plugin, a slot table and positional memoization
+   (<code>remember</code>). Emulating that in C++ would mean shipping a large runtime and giving up the zero-overhead,
+   predictable behavior C++ developers expect. AUI gets the equivalent result cheaply: dependencies are tracked
+   automatically inside <code><a href="../aui_react/">AUI_REACT</a></code> via a <code>DependencyObserverScope</code>, with no global recomposition runtime.</p>
+</li>
+<li>
+<p><strong>Rebuilding subtrees defeats the main advantage of retained mode — targeted mutation.</strong> Today, changing an
+   <code><a href="../aproperty/">AProperty</a></code> invokes a <strong>single setter on an existing object</strong>. A pure functional model would either
+   rebuild subtrees (heap allocations plus relayout) or diff them anyway — effectively reinventing a retained tree under
+   the hood, but behind a more expensive front end.</p>
+</li>
+<li>
+<p><strong>AUI is intentionally not immediate mode, precisely because of resource usage.</strong> As noted above, immediate mode is
+   impractical for most applications, especially on mobile, because it re-evaluates layout and redraws everything every
+   frame.</p>
+</li>
+</ol>
+<h3 id="aui-already-takes-the-best-of-the-functional-approach-locally">AUI already takes the best of the functional approach - locally<a class="headerlink" href="#aui-already-takes-the-best-of-the-functional-approach-locally" title="Permanent link">#</a></h3>
+<p>Importantly, AUI does not have to choose between "everything is a function" and "everything is an object". It is a
+hybrid, and it applies functional decomposition <em>surgically</em>, exactly where structural dynamism is needed:</p>
+<ul>
+<li><code><a href="../aui_react/">AUI_REACT</a>(expr)</code> is effectively "a function returning a value", lazily recomputed only when its dependencies change
+  (see <code><a href="../apropertyprecomputed/">APropertyPrecomputed</a></code>).</li>
+<li><code><a href="../aui/">aui</a>::experimental::Dynamic { <a href="../aui_react/">AUI_REACT</a>(...) }</code> is "a function returning a view"; it swaps a <strong>single</strong> subtree via
+  <code>ALayoutInflater</code> when its input changes. This is functional style, but localized.</li>
+<li><code><a href="../aforeachui/">AUI_DECLARATIVE_FOR</a></code> / <code><a href="../aforeachui/">AForEachUI</a></code> is "a function that builds a row from an item", but with a key-based view cache
+  and virtualization inside an <code><a href="../ascrollarea/">AScrollArea</a></code> — conceptually Compose's <code>LazyColumn</code>, implemented on top of a retained
+  tree.</li>
+</ul>
+<p>So functional expressiveness is <strong>available as an opt-in</strong> where it is justified, while the default path stays a cheap
+in-place mutation.</p>
+<h3 id="takeaway-on-ergonomics">Takeaway on ergonomics<a class="headerlink" href="#takeaway-on-ergonomics" title="Permanent link">#</a></h3>
+<p>The right lesson to borrow from Compose is <strong>decomposition into small component functions</strong>, not the recomposition
+model. Prefer writing UI as a set of small factories that return a view:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">notePreview</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">_</span><span class="o">&lt;</span><span class="n">Note</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">note</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">noteEditor</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">_</span><span class="o">&lt;</span><span class="n">Note</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">note</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Each such function is a "component" that is invoked once; dynamism is then expressed through <code><a href="../aproperty/">AProperty</a></code>,
+<code><a href="../aui_react/">AUI_REACT</a></code> and <code>Dynamic</code>. This keeps the code readable (and avoids pushing a single, enormous expression through the
+compiler) without giving up retained-mode performance.</p>
 
 
 
