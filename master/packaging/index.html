@@ -731,6 +731,30 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#APPIMAGE" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUI_APPIMAGE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#macos" class="md-nav__link">
     <span class="md-ellipsis">
       macOS
@@ -988,6 +1012,30 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#APPIMAGE" class="md-nav__link">
+    <span class="md-ellipsis">
+      AUI_APPIMAGE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#macos" class="md-nav__link">
     <span class="md-ellipsis">
       macOS
@@ -1193,6 +1241,33 @@ of <a href="../aui_app/">aui_app</a> (unless not overridden by <code>CPACK_PACKA
 </ul>
 <p><a href="../aui_app/">aui_app</a> generates some <a href="../image/">image</a> assets for the installer from your icon.</p>
 <p><img alt="" src="../imgs/wix_logo.png" /></p>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">#</a></h2>
+<h3 id="APPIMAGE">AUI_APPIMAGE<a class="headerlink" href="#APPIMAGE" title="Permanent link">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This packaging method is AUI-specific and provided by <code><a href="../aui_app/">aui_app</a></code> via <code><a href="../aui-configure-flags/#AUI_APP_PACKAGING">AUI_APP_PACKAGING</a></code>.</p>
+</div>
+<p><a href="https://appimage.org/">AppImage</a> is a distro-independent single-file format: the user downloads the file, makes it
+executable and runs it. AUI uses <a href="https://github.com/linuxdeploy/linuxdeploy">linuxdeploy</a> to bundle your executable,
+its shared library dependencies, the <code>.desktop</code> file and the icon (see <a href="../aui_app/">aui_app</a>).</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># standard CMake build process</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mkdir<span class="w"> </span>build
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">cd</span><span class="w"> </span>build
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release<span class="w"> </span>-DAUI_APP_PACKAGING<span class="o">=</span>AUI_APPIMAGE
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>cmake<span class="w"> </span>--build<span class="w"> </span>.
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># packaging</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>cpack<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>artifacts
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># publishing</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>gh<span class="w"> </span>release<span class="w"> </span>upload<span class="w"> </span><span class="si">${</span><span class="p">{ github.ref </span><span class="si">}</span><span class="o">}</span><span class="w"> </span>artifacts/*.*
+</span></code></pre></div>
+<p>The script above produces a file <code>artifacts/&lt;APP_NAME&gt;.AppImage</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code>
+arg of <a href="../aui_app/">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
+<p><code>linuxdeploy</code> is downloaded automatically on first use unless it is found in <code>PATH</code>; internet access is required in
+this case. The tool is executed with <code>APPIMAGE_EXTRACT_AND_RUN=1</code>, so FUSE is not required on the build machine (i.e.,
+inside a container).</p>
+<p>One can provide their own <code>*.desktop</code> file with <code>LINUX_DESKTOP</code> argument of <a href="../aui_app/">aui_app</a>.</p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1210,17 +1285,17 @@ to whatever place they want.</p>
 your application bundle and a symlink. <a href="../aui_app/">aui_app</a> configures CPack to rearrange icons and place a background
 <a href="../image/">image</a> so no extra configuration by an AUI-based project is needed:</p>
 <p><img alt="" src="../imgs/dmg.png" /></p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># standard CMake build process</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">mkdir</span> <span class="n">build</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">cd</span> <span class="n">build</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span> <span class="o">-</span><span class="n">DAUI_APP_PACKAGING</span><span class="o">=</span><span class="n">DragNDrop</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># packaging</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">cpack</span> <span class="o">.</span> <span class="o">-</span><span class="n">c</span> <span class="n">Release</span> <span class="o">-</span><span class="n">B</span> <span class="n">artifacts</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># publishing</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">gh</span> <span class="n">release</span> <span class="n">upload</span> <span class="err">$</span><span class="p">{{</span> <span class="n">github</span><span class="o">.</span><span class="n">ref</span> <span class="p">}}</span> <span class="n">artifacts</span><span class="o">/*.*</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># standard CMake build process</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">mkdir</span> <span class="n">build</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">cd</span> <span class="n">build</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Release</span> <span class="o">-</span><span class="n">DAUI_APP_PACKAGING</span><span class="o">=</span><span class="n">DragNDrop</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># packaging</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">cpack</span> <span class="o">.</span> <span class="o">-</span><span class="n">c</span> <span class="n">Release</span> <span class="o">-</span><span class="n">B</span> <span class="n">artifacts</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># publishing</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="n">gh</span> <span class="n">release</span> <span class="n">upload</span> <span class="err">$</span><span class="p">{{</span> <span class="n">github</span><span class="o">.</span><span class="n">ref</span> <span class="p">}}</span> <span class="n">artifacts</span><span class="o">/*.*</span>
 </span></code></pre></div>
 <p>The script above produces a file <code>artifacts/&lt;APP_NAME&gt;-VERSION-<a href="../macos/">macos</a>-ARCH.dmg</code>, where <code>&lt;APP_NAME&gt;</code> is the <code>NAME</code> arg of
 <a href="../aui_app/">aui_app</a> (unless not overridden by <code>CPACK_PACKAGE_FILE_NAME</code>).</p>
