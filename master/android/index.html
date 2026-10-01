@@ -374,7 +374,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../aui-assets/" class="md-nav__link">
+    <a href="../app-lifetime/" class="md-nav__link">
       
   
   
@@ -999,6 +999,10 @@ electronics like TVs and wearables.</p>
 <li>smartphones come with high density displays, so you need to use density-independent dimension units such as <a href="../ametric/">_dp</a></li>
 </ul>
 <h2 id="aui-implementation-specifics">AUI implementation specifics<a class="headerlink" href="#aui-implementation-specifics" title="Permanent link">#</a></h2>
+<ul>
+<li><code><a href="../aapplication/#AApplication::activated">AApplication::activated</a></code> (<a href="../app-lifetime/">Application lifetime &amp; instancing</a>) is not wired to <code>onNewIntent</code> yet, so it is never emitted on Android.
+  <code><a href="../aapplication/#AApplication::requestSingleInstanceLock">AApplication::requestSingleInstanceLock</a></code> always succeeds: the system manages the activity lifecycle.</li>
+</ul>
 
 
 

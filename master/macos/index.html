@@ -374,7 +374,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../aui-assets/" class="md-nav__link">
+    <a href="../app-lifetime/" class="md-nav__link">
       
   
   
@@ -1001,6 +1001,15 @@ development for all supported platforms at once:
 <li>Apple laptops include high quality touchpads with high resolution scroll and possibility for multitouch gestures</li>
 </ul>
 <h2 id="aui-implementation-specifics">AUI implementation specifics<a class="headerlink" href="#aui-implementation-specifics" title="Permanent link">#</a></h2>
+<ul>
+<li>macOS launches only one instance of a bundle by itself (unless started with <code>open -n</code> or the executable is run
+  directly). Clicking the Dock icon while the application is running without <a href="../windows/">windows</a> <a href="../asignal/">emits</a>
+  <code><a href="../aapplication/#AApplication::activated">AApplication::activated</a></code> (<a href="../app-lifetime/">Application lifetime &amp; instancing</a>).</li>
+<li><code>Cmd+Q</code> does not call <code>exit()</code>: the main loop is stopped and control returns to <code>aui_main</code>, so destructors and
+  cleanup of your <code><a href="../aui_entry/">AUI_ENTRY</a></code> run normally.</li>
+<li>The app does not terminate when the last window is closed if it is held with <code><a href="../aapplication/#AApplication::hold">AApplication::hold</a></code> or
+  <code><a href="../aapplication/#AApplication::quitOnLastWindowClosed">AApplication::quitOnLastWindowClosed</a></code> is disabled.</li>
+</ul>
 
 
 

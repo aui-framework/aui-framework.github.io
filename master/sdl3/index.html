@@ -370,7 +370,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../aui-assets/" class="md-nav__link">
+    <a href="../app-lifetime/" class="md-nav__link">
       
   
   
@@ -886,6 +886,15 @@ We are migrating to a new documentation engine. Please report presentation issue
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-lifetime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application lifetime
+    </span>
+  </a>
   
 </li>
       
@@ -1791,6 +1800,11 @@ We are migrating to a new documentation engine. Please report presentation issue
 2. Calculates delay time based on refresh rate (e.g., 60Hz → ~16ms delay)
 3. Sleeps the thread for that duration</p>
 <p><strong>Example:</strong> For a 60Hz display: 1000ms / 60 = ~16.67ms delay per frame</p>
+<hr />
+<h2 id="application-lifetime">Application lifetime<a class="headerlink" href="#application-lifetime" title="Permanent link">#</a></h2>
+<p>This application runs its own loop inside <code><a href="../aui_entry/">AUI_ENTRY</a></code>. <code><a href="../aglembedcontext/">AGLEmbedContext</a></code> is not an <code><a href="../awindow/">AWindow</a></code>, so it does not hold the
+application: after <code><a href="../aui_entry/">AUI_ENTRY</a></code> returns, the process exits. <code><a href="../aapplication/#AApplication::hold">AApplication::hold()</a></code> and <code><a href="../aapplication/#AApplication::quit">AApplication::quit()</a></code> do not
+affect the SDL loop. See <a href="../app-lifetime/">Application lifetime &amp; instancing</a> for details.</p>
 <h2 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permanent link">#</a></h2>
 <p><a href="https://github.com/aui-framework/aui/tree/master/examples/ui/embedded_sdl/README.md"><span class="mdx-badge" title=""><span class="mdx-badge__icon"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2m6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.042-.018.75.75 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1"/></svg></span></span></span> Repository </a></p>
 <h3 id="cmakeliststxt">CMakeLists.txt<a class="headerlink" href="#cmakeliststxt" title="Permanent link">#</a></h3>

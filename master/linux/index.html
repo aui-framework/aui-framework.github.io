@@ -374,7 +374,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../aui-assets/" class="md-nav__link">
+    <a href="../app-lifetime/" class="md-nav__link">
       
   
   
@@ -1069,6 +1069,21 @@ environments, while other desktop environments display a window with server-side
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="aui-implementation-specifics">AUI implementation specifics<a class="headerlink" href="#aui-implementation-specifics" title="Permanent link">#</a></h2>
+<ul>
+<li>Single instance (<a href="../app-lifetime/">Application lifetime &amp; instancing</a>): <code><a href="../aapplication/#AApplication::requestSingleInstanceLock">AApplication::requestSingleInstanceLock</a></code> uses <code>GApplication</code> from <code>libgio</code>
+  (loaded dynamically, GTK is not required, so CLI applications work as well). GApplication owns the session D-Bus name
+  equal to the application id and forwards command line, working directory and <code>XDG_ACTIVATION_TOKEN</code> of the secondary
+  instance to the primary one. This works across Flatpak/Snap sandboxes. The GTK and Adwaita backends create their own
+  <code>GApplication</code> with <code>G_APPLICATION_NON_UNIQUE</code>, so they never compete for the bus name.</li>
+<li>If the session bus is unavailable (i.e., ssh session without D-Bus, some containers), <code>libgio</code> can't be loaded or the
+  application id is not a valid one (see <code>g_application_id_is_valid</code>), AUI falls back to an exclusive <code>flock</code> on
+  <code>$XDG_RUNTIME_DIR/<a href="../aui/">aui</a>-&lt;key&gt;-&lt;uid&gt;.lock</code> plus a unix socket next to it (<code>$XDG_RUNTIME_DIR/app/$FLATPAK_ID/</code> under
+  Flatpak; <code>/tmp</code> if <code>$XDG_RUNTIME_DIR</code> is not set). The fallback does not see instances across sandboxes, and a mix of
+  GApplication and fallback instances of the same application is not detected.</li>
+<li><code><a href="../awindow/#AWindow::activate">AWindow::activate</a></code> uses <code>_NET_ACTIVE_WINDOW</code> on X11 and <code>gtk_window_set_startup_id</code> + <code>gtk_window_present</code> on GTK
+  (Wayland). Wayland compositors may refuse to focus the window without a valid activation token; in this case the
+  window is typically highlighted as "needs attention" instead.</li>
+</ul>
 
 
 

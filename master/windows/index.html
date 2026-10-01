@@ -374,7 +374,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../aui-assets/" class="md-nav__link">
+    <a href="../app-lifetime/" class="md-nav__link">
       
   
   
@@ -1016,6 +1016,12 @@ and tablets is Windows 11, while certain older versions are still supported and 
   launching your executables a lot harder</li>
 </ul>
 <h2 id="aui-implementation-specifics">AUI implementation specifics<a class="headerlink" href="#aui-implementation-specifics" title="Permanent link">#</a></h2>
+<ul>
+<li>Single instance (<a href="../app-lifetime/">Application lifetime &amp; instancing</a>): <code><a href="../aapplication/#AApplication::requestSingleInstanceLock">AApplication::requestSingleInstanceLock</a></code> creates a session-local mutex
+  <code>Local\aui.&lt;key&gt;.&lt;sessionId&gt;</code> and listens on the named <a href="../pipe/">pipe</a> <code>\\.\<a href="../pipe/">pipe</a>\aui.&lt;key&gt;.&lt;sessionId&gt;</code>. The secondary instance
+  calls <code>AllowSetForegroundWindow(ASFW_ANY)</code> before forwarding its activation, so the primary is allowed to call
+  <code>SetForegroundWindow</code> (see <code><a href="../awindow/#AWindow::activate">AWindow::activate</a></code>).</li>
+</ul>
 
 
 

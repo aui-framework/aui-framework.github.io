@@ -370,7 +370,7 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
   
-    <a href="../aui-assets/" class="md-nav__link">
+    <a href="../app-lifetime/" class="md-nav__link">
       
   
   
@@ -774,8 +774,14 @@ and <code>WinMain</code> for graphical applications; entry point of an Android a
 unifies your entry point, effectively supporting every platform.</p>
 <p><code>AUI_ENTRY</code> of a graphical application should be non-blocking since on mobile platforms application's event loop is
 located outsize of the entry point. On desktop platforms, an event loop is created outside <code>AUI_ENTRY</code> in order to
-unify the mobile and desktop behaviour. If there are no open <a href="../windows/">windows</a>, the event loop breaks, causing the application
-to exit with the exit code returned by <code>AUI_ENTRY</code> earlier, or <code>0</code>.</p>
+unify the mobile and desktop behaviour. The event loop runs as long as the application is <em>held</em> (by open <a href="../windows/">windows</a> or
+by <a href="../aapplication/#AApplication::hold">AApplication::hold()</a>), then the application exits with the exit code returned by <code>AUI_ENTRY</code> earlier (or the one
+passed to <a href="../aapplication/#AApplication::quit">AApplication::quit()</a>). If nothing holds the application, it exits right after <code>AUI_ENTRY</code> returns, so
+<code>AUI_ENTRY</code> is perfectly fine for CLI applications, even if they link to <code><a href="../views/">aui::views</a></code>.</p>
+<p><code>AUI_ENTRY</code> is called every time the application's executable is launched. That includes a user trying to launch an
+already running application. By default, every launch is an independent process (multi instance). To make the
+application single instanced, call <a href="../aapplication/#AApplication::requestSingleInstanceLock">AApplication::requestSingleInstanceLock()</a> in the beginning of <code>AUI_ENTRY</code>. See
+<a href="../app-lifetime/">Application lifetime &amp; instancing</a> for details.</p>
 <p>Application arguments <code>(int argc, char** argv)</code> are forwarded to <code>AUI_ENTRY</code> as <code><a href="../astringvector/">AStringVector</a> args</code>.</p>
 <p>Minimal entrypoint of an UI application:</p>
 <div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
