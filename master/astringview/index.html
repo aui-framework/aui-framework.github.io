@@ -857,6 +857,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#AStringView::trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      trim
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1097,6 +1106,126 @@ If conversion to unsigned long is not possible, exception is thrown.</dd>
 </span></code></pre></div>
 <p>Encodes the UTF-8 string into a UTF-32 string</p>
 <dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 AStringView::trim_="AStringView::trim()" id="AStringView::trim">trim<a class="headerlink" href="#AStringView::trim" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">trim</span><span class="p">(</span><span class="n"><a href="../achar/">AChar</a></span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Removes leading and trailing occurrences of <code>symbol</code>.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>symbol</code></b>
+<div style="display: table-cell"> symbol to remove.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>trimmed view.</dd>
+</dl>
+<p>Removes only the single symbol. To remove several symbols at once, use trim(AStringView).</p>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">trim</span><span class="p">(</span><span class="n">AStringView</span><span class="w"> </span><span class="n">symbols</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Removes leading and trailing symbols that belong to the set <code>symbols</code> (like <code>str.strip(chars)</code> in
+Python).</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>symbols</code></b>
+<div style="display: table-cell"> set of symbols to remove. Any symbol of this string is removed in any order and quantity.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>trimmed view.
+
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">AStringView</span><span class="p">(</span><span class="s">&quot; </span><span class="se">\t</span><span class="s"> a b </span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">).</span><span class="n">trim</span><span class="p">(</span><span class="s">&quot; </span><span class="se">\t\r\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;a b&quot;</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">AStringView</span><span class="p">(</span><span class="s">&quot;xyhixyx&quot;</span><span class="p">).</span><span class="n">trim</span><span class="p">(</span><span class="s">&quot;xy&quot;</span><span class="p">);</span><span class="w">           </span><span class="c1">// &quot;hi&quot;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="err">```</span><span class="o">&lt;/</span><span class="n">dd</span><span class="o">&gt;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="o">&lt;/</span><span class="n">dl</span><span class="o">&gt;</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s">&quot;position:absolute;opacity:0&quot;</span><span class="w"> </span><span class="n">markdown</span><span class="o">&gt;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="cp">### trimLeft { #AStringView::trimLeft AStringView::trimLeft() } </span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="o">---</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="err">```</span><span class="n">cpp</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">trimLeft</span><span class="p">(</span><span class="n"><a href="../achar/">AChar</a></span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span>
+</span></code></pre></div>
+
+Removes leading occurrences of `symbol`.
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>symbol</code></b>
+<div style="display: table-cell"> symbol to remove.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>view without leading `symbol`s.</dd>
+</dl>
+
+---
+
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">trimLeft</span><span class="p">(</span><span class="n">AStringView</span><span class="w"> </span><span class="n">symbols</span><span class="p">)</span>
+</span></code></pre></div>
+
+Removes leading symbols that belong to the set `symbols` (like `str.lstrip(chars)` in Python).
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>symbols</code></b>
+<div style="display: table-cell"> set of symbols to remove. Not a prefix: any symbol of this string is removed in any order and
+quantity. Empty set removes nothing.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>view without leading `symbols`.</dd>
+</dl>
+<div style="position:absolute;opacity:0" markdown>
+### trimRight { #AStringView::trimRight AStringView::trimRight() } 
+</div>
+
+---
+
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">trimRight</span><span class="p">(</span><span class="n"><a href="../achar/">AChar</a></span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span>
+</span></code></pre></div>
+
+Removes trailing occurrences of `symbol`.
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>symbol</code></b>
+<div style="display: table-cell"> symbol to remove.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>view without trailing `symbol`s.</dd>
+</dl>
+
+---
+
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AStringView</span><span class="w"> </span><span class="n">AStringView</span><span class="o">::</span><span class="n">trimRight</span><span class="p">(</span><span class="n">AStringView</span><span class="w"> </span><span class="n">symbols</span><span class="p">)</span>
+</span></code></pre></div>
+
+Removes trailing symbols that belong to the set `symbols` (like `str.rstrip(chars)` in Python).
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>symbols</code></b>
+<div style="display: table-cell"> set of symbols to remove. Not a suffix: any symbol of this string is removed in any order and
+quantity. Empty set removes nothing.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>view without trailing `symbols`.</dd>
 </dl>
 
 
