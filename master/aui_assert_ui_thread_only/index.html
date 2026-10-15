@@ -753,7 +753,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../views/">aui::views</a>)</code></td></tr>
 </table>
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define AUI_ASSERT_UI_THREAD_ONLY() { <a href="../aui_assertx/">AUI_ASSERTX</a>(<a href="../awindow/#AWindow::current">AWindow::current()</a> == nullptr || <a href="../athread/#AThread::current">AThread::current()</a> == <a href="../awindow/#AWindow::current">AWindow::current()</a>-&gt;getThread(), &quot;this method should be used in ui thread only.&quot;); }</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define AUI_ASSERT_UI_THREAD_ONLY() { <a href="../aui_assertx/">AUI_ASSERTX</a>(ASurface::current() == nullptr || <a href="../athread/#AThread::current">AThread::current()</a> == ASurface::current()-&gt;getThread(), &quot;this method should be used in ui thread only.&quot;); }</span>
 </span></code></pre></div>
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>

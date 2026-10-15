@@ -697,6 +697,47 @@ We are migrating to a new documentation engine. Please report presentation issue
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ATextBase::measureLayoutForWidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      measureLayoutForWidth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ATextBase::shrinksToOccupiedWidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      shrinksToOccupiedWidth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -717,6 +758,27 @@ We are migrating to a new documentation engine. Please report presentation issue
 <tr><td>Header:</td><td><code>#include &lt;AUI/View/ATextBase.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../views/">aui::views</a>)</code></td></tr>
 </table>
+
+<h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
+<div style="position:absolute;opacity:0">
+<h3 ATextBase::measureLayoutForWidth_="ATextBase::measureLayoutForWidth()" id="ATextBase::measureLayoutForWidth">measureLayoutForWidth<a class="headerlink" href="#ATextBase::measureLayoutForWidth" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ATextBase</span><span class="o">::</span><span class="n">measureLayoutForWidth</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Lays the text out for the given width without writing positions, reporting the space it occupies.</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 ATextBase::shrinksToOccupiedWidth_="ATextBase::shrinksToOccupiedWidth()" id="ATextBase::shrinksToOccupiedWidth">shrinksToOccupiedWidth<a class="headerlink" href="#ATextBase::shrinksToOccupiedWidth" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">ATextBase</span><span class="o">::</span><span class="n">shrinksToOccupiedWidth</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Whether this view may report less than the width it was offered, when the text does not fill it.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Editable <a href="../views/">views</a> want to keep the whole width: clicking to the right of the last character must still hit them.</p>
 
 
 

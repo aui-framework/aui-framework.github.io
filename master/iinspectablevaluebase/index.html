@@ -23,7 +23,7 @@
         <meta name="author" content="Alex2772">
       
       
-        <link rel="canonical" href="https://aui-framework.github.io/master/repainttrap/">
+        <link rel="canonical" href="https://aui-framework.github.io/master/iinspectablevaluebase/">
       
       
       
@@ -33,7 +33,7 @@
     
     
       
-        <title>RepaintTrap - AUI Framework</title>
+        <title>IInspectableValueBase - AUI Framework</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#repainttrap" class="md-skip">
+        <a href="#iinspectablevaluebase" class="md-skip">
           Skip to content
         </a>
       
@@ -155,7 +155,7 @@ We are migrating to a new documentation engine. Please report presentation issue
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RepaintTrap
+              IInspectableValueBase
             
           </span>
         </div>
@@ -697,6 +697,56 @@ We are migrating to a new documentation engine. Please report presentation issue
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detailed Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#IInspectableValueBase::renderAsString" class="md-nav__link">
+    <span class="md-ellipsis">
+      renderAsString
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#IInspectableValueBase::renderAsView" class="md-nav__link">
+    <span class="md-ellipsis">
+      renderAsView
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -711,12 +761,39 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
 
-<h1 id="repainttrap">RepaintTrap<a class="headerlink" href="#repainttrap" title="Permanent link">#</a></h1>
-<p>Emitted when addView(s)/removeView/setLayout was called.</p>
+<h1 id="iinspectablevaluebase">IInspectableValueBase<a class="headerlink" href="#iinspectablevaluebase" title="Permanent link">#</a></h1>
+<p>Abstract base for a single inspectable property value.</p>
 <table>
-<tr><td>Header:</td><td><code>#include &lt;AUI/View/AViewContainerBase.h&gt;</code></td></tr>
+<tr><td>Header:</td><td><code>#include &lt;AUI/Util/AInspectable.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../views/">aui::views</a>)</code></td></tr>
 </table>
+<h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
+<p>Provides two rendering paths:
+ - <code>renderAsString()</code> — plain text, suitable for CLI and agentic/AI profilers.
+ - <code>renderAsView()</code> — rich view for the GUI <a href="../devtools/">devtools</a> panel; default implementation wraps
+   <code>renderAsString()</code> in an <code><a href="../alabel/">ALabel</a></code>.</p>
+<p>The primary implementation is <code><a href="../ainspectablevalue/">AInspectableValue</a>&lt;T&gt;</code>, which uses <code>fmt::formatter&lt;T&gt;</code> for
+<code>renderAsString()</code>. Custom rendering can be added by specialising <code><a href="../ainspectablevalue/">AInspectableValue</a>&lt;T&gt;</code>.</p>
+<h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
+<div style="position:absolute;opacity:0">
+<h3 IInspectableValueBase::renderAsString_="IInspectableValueBase::renderAsString()" id="IInspectableValueBase::renderAsString">renderAsString<a class="headerlink" href="#IInspectableValueBase::renderAsString" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">IInspectableValueBase</span><span class="o">::</span><span class="n">renderAsString</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Renders the value as a plain string (CLI / agentic AI profiler path).</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 IInspectableValueBase::renderAsView_="IInspectableValueBase::renderAsView()" id="IInspectableValueBase::renderAsView">renderAsView<a class="headerlink" href="#IInspectableValueBase::renderAsView" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">AArc</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">IInspectableValueBase</span><span class="o">::</span><span class="n">renderAsView</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Renders the value as a view (GUI <a href="../devtools/">devtools</a> path).</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Default implementation returns <code>_new&lt;<a href="../alabel/">ALabel</a>&gt;(renderAsString())</code>.</p>
 
 
 

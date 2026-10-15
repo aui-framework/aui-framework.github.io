@@ -723,6 +723,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#ALayout::computeMinMaxAxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      computeMinMaxAxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ALayout::getAllViews" class="md-nav__link">
     <span class="md-ellipsis">
       getAllViews
@@ -732,9 +741,36 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#ALayout::onResize" class="md-nav__link">
+  <a href="#ALayout::layout" class="md-nav__link">
     <span class="md-ellipsis">
-      onResize
+      layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ALayout::measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      measure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ALayout::onComputeIntrinsicMinMaxAxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      onComputeIntrinsicMinMaxAxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ALayout::onIntrinsicMeasure" class="md-nav__link">
+    <span class="md-ellipsis">
+      onIntrinsicMeasure
     </span>
   </a>
   
@@ -744,6 +780,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#ALayout::removeView" class="md-nav__link">
     <span class="md-ellipsis">
       removeView
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ALayout::requestLayout" class="md-nav__link">
+    <span class="md-ellipsis">
+      requestLayout
     </span>
   </a>
   
@@ -825,19 +870,41 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
+<h3 ALayout::computeMinMaxAxis_="ALayout::computeMinMaxAxis()" id="ALayout::computeMinMaxAxis">computeMinMaxAxis<a class="headerlink" href="#ALayout::computeMinMaxAxis" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">AMinMaxAxis</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">computeMinMaxAxis</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Returns min/max preferred inline (width) size of the layout for a given block (height).</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>height</code></b>
+<div style="display: table-cell"> Content height in px, or -1 for unconstrained.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>`AMinMaxAxis` with `min` and `max` outer widths.</dd>
+</dl>
+<p>Wraps <code>onComputeIntrinsicMinMaxAxis</code> and applies padding, <code><a href="../ass_fixedsize/">ass::FixedSize</a></code>, <code><a href="../ass_minsize/">ass::MinSize</a></code>, <code><a href="../ass_maxsize/">ass::MaxSize</a></code>.
+Result is cached; invalidated by <code>requestLayout()</code>.
+Do <strong>not</strong> override this method — override <code>onComputeIntrinsicMinMaxAxis</code> instead.
+See <a href="../layout-managers/#MEASURE_PIPELINE">Measurement pipeline in detail</a> for the full pipeline.</p>
+<div style="position:absolute;opacity:0">
 <h3 ALayout::getAllViews_="ALayout::getAllViews()" id="ALayout::getAllViews">getAllViews<a class="headerlink" href="#ALayout::getAllViews" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">getAllViews</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">getAllViews</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Visits all <a href="../views/">views</a> in the layout.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 ALayout::onResize_="ALayout::onResize()" id="ALayout::onResize">onResize<a class="headerlink" href="#ALayout::onResize" title="Permanent link">#</a></h3>
+<h3 ALayout::layout_="ALayout::layout()" id="ALayout::layout">layout<a class="headerlink" href="#ALayout::layout" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">onResize</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">layout</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Applies geometry to children.</p>
 <dl class="doxygen-dl">
@@ -863,10 +930,93 @@ We are migrating to a new documentation engine. Please report presentation issue
 </dl>
 <p>See <a href="../layout-managers/">layout-managers</a> for more info.</p>
 <div style="position:absolute;opacity:0">
+<h3 ALayout::measure_="ALayout::measure()" id="ALayout::measure">measure<a class="headerlink" href="#ALayout::measure" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">measure</span><span class="p">(</span><span class="n">AConstraints</span><span class="w"> </span><span class="n">constraints</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Returns the preferred outer size of the layout under given constraints.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>constraints</code></b>
+<div style="display: table-cell"> Constraints describing the available space (see `AConstraints`).</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>Preferred outer `{width, height}` in px.</dd>
+</dl>
+<p>Wraps <code>onIntrinsicMeasure</code> and applies padding, <code><a href="../ass_fixedsize/">ass::FixedSize</a></code>, <code><a href="../ass_minsize/">ass::MinSize</a></code>, <code><a href="../ass_maxsize/">ass::MaxSize</a></code>.
+Result is cached per <code>AConstraints</code> key; invalidated by <code>requestLayout()</code>.
+Do <strong>not</strong> override this method — override <code>onIntrinsicMeasure</code> instead.
+See <a href="../layout-managers/#MEASURE_PIPELINE">Measurement pipeline in detail</a> for the full pipeline.</p>
+<div style="position:absolute;opacity:0">
+<h3 ALayout::onComputeIntrinsicMinMaxAxis_="ALayout::onComputeIntrinsicMinMaxAxis()" id="ALayout::onComputeIntrinsicMinMaxAxis">onComputeIntrinsicMinMaxAxis<a class="headerlink" href="#ALayout::onComputeIntrinsicMinMaxAxis" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">AMinMaxAxis</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">onComputeIntrinsicMinMaxAxis</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Computes the min/max preferred <strong>content</strong> inline (width) size for a given content height.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>height</code></b>
+<div style="display: table-cell"> Content height in px, or -1 for unconstrained.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>`AMinMaxAxis` with `min` and `max` content widths.</dd>
+</dl>
+<p>Override this in a layout manager to report the range of widths the managed children need.
+The public <code>computeMinMaxAxis</code> wraps this method and handles padding, <code><a href="../ass_fixedsize/">ass::FixedSize</a></code>, etc.
+automatically — <strong>never call</strong> <code>onComputeIntrinsicMinMaxAxis</code> directly.
+See <a href="../layout-managers/#MEASURE_PIPELINE">Measurement pipeline in detail</a> for the full pipeline.</p>
+<div style="position:absolute;opacity:0">
+<h3 ALayout::onIntrinsicMeasure_="ALayout::onIntrinsicMeasure()" id="ALayout::onIntrinsicMeasure">onIntrinsicMeasure<a class="headerlink" href="#ALayout::onIntrinsicMeasure" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">virtual</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">onIntrinsicMeasure</span><span class="p">(</span><span class="n">AConstraints</span><span class="w"> </span><span class="n">constraints</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Computes the preferred <strong>content</strong> size under given constraints.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>constraints</code></b>
+<div style="display: table-cell"> Constraints describing the available **content** space (padding already subtracted).</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>Preferred content `{width, height}` in px.</dd>
+</dl>
+<p>Override this in a layout manager to report how much space the managed children need.
+The public <code>measure</code> wraps this method and handles padding, <code><a href="../ass_fixedsize/">ass::FixedSize</a></code>, <code><a href="../ass_minsize/">ass::MinSize</a></code>, <code><a href="../ass_maxsize/">ass::MaxSize</a></code>
+automatically — <strong>never call</strong> <code>onIntrinsicMeasure</code> directly.</p>
+<p>The default implementation delegates to <code>onComputeIntrinsicMinMaxAxis</code> and clamps to constraints.
+See <a href="../layout-managers/#MEASURE_PIPELINE">Measurement pipeline in detail</a> for the full pipeline.</p>
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/game_of_life/src/main.cpp</summary>
+<p><a href="../game-of-life/">Game of Life</a> - Game of Life implementation that uses advanced large dynamic data rendering techniques such as <a href="../itexture/">ITexture</a>, <a href="../aimage/">AImage</a> to be GPU friendly. The computation is performed in <a href="../athreadpool/">AThreadPool</a>.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">        </span><span class="p">(</span><span class="o">*</span><span class="n">mCells</span><span class="p">)[</span><span class="n">position</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="n">mCells</span><span class="p">)[</span><span class="n">position</span><span class="p">];</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">        </span><span class="n">updateTexture</span><span class="p">();</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="hll"><span class="w">    </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">onIntrinsicMeasure</span><span class="p">(</span><span class="n">AConstraints</span><span class="w"> </span><span class="n">constraints</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">mCells</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">SCALE</span><span class="p">);</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n">Cells</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mCells</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
+<div style="position:absolute;opacity:0">
 <h3 ALayout::removeView_="ALayout::removeView()" id="ALayout::removeView">removeView<a class="headerlink" href="#ALayout::removeView" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">removeView</span><span class="p">(</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">no_escape</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">view</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n"><a href="../">index</a></span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">removeView</span><span class="p">(</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">no_escape</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">view</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n"><a href="../">index</a></span><span class="p">)</span>
 </span></code></pre></div>
 <p>Detaches view from the layout.</p>
 <dl class="doxygen-dl">
@@ -885,10 +1035,31 @@ We are migrating to a new documentation engine. Please report presentation issue
 </dl>
 <p>See ABasicLayout for basic implementation of this method.</p>
 <div style="position:absolute;opacity:0">
+<h3 ALayout::requestLayout_="ALayout::requestLayout()" id="ALayout::requestLayout">requestLayout<a class="headerlink" href="#ALayout::requestLayout" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">requestLayout</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Invalidates cached measurement results, triggering a layout recalculation.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Call this whenever the layout manager's content changes in a way that may affect sizes (e.g. a child was
+added/removed, spacing changed). Clears <code>mMeasureCache</code> and <code>mMinMaxSizesCache</code> and propagates the
+invalidation up the view tree so that all ancestor containers re-measure themselves.</p>
+<p>This is the direct replacement for the old <code>markMinContentSizeInvalid()</code> from the Qt-style layout system.
+The two are equivalent — <code>requestLayout()</code> additionally invalidates both measure caches introduced by
+the new <a href="../layout-managers/#MEASURE_PIPELINE">Measurement pipeline in detail</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You rarely need to call this manually. It is called automatically when ASS properties change,
+when a view is resized, or when <code>addView</code>/<code>removeView</code> is called. Override this in a custom layout
+manager only if you maintain extra internal caches that also need clearing.</p>
+</div>
+<div style="position:absolute;opacity:0">
 <h3 ALayout::setSpacing_="ALayout::setSpacing()" id="ALayout::setSpacing">setSpacing<a class="headerlink" href="#ALayout::setSpacing" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">setSpacing</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">spacing</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ALayout</span><span class="o">::</span><span class="n">setSpacing</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">spacing</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Layout spacing.</p>
 <dl class="doxygen-dl">

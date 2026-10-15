@@ -758,10 +758,10 @@ We are migrating to a new documentation engine. Please report presentation issue
 elements to create a visual container, defining the outer appearance of each <a href="../aview/">AView</a> as a rectangular block on-screen.</p>
 <h2 id="box-key-components">Box key components<a class="headerlink" href="#box-key-components" title="Permanent link">#</a></h2>
 <ul>
-<li><strong>View's content box</strong>: the area are whose size is defined by <a href="../aview/#AView::getContentMinimumSize"><code>AView::getContentMinimumSize()</code></a> and
-  <a href="../aview/#AView::getContentSize"><code>AView::getContentSize()</code></a>. The content area is the innermost area, wrapping view's specific contents only (i.e,
-  label's text); control it by implementing <a href="../aview/#AView::getContentMinimumWidth"><code>AView::getContentMinimumWidth()</code></a> and
-  <a href="../aview/#AView::getContentMinimumHeight"><code>AView::getContentMinimumHeight()</code></a>.</li>
+<li><strong>View's content box</strong>: the area are whose size is defined by <a href="../aview/#AView::measure"><code>AView::measure()</code></a> and
+  <a href="../aview/#AView::computeMinMaxAxis"><code>AView::computeMinMaxAxis()</code></a>. The content area is the innermost area, wrapping view's specific contents only (i.e,
+  label's text); control it by implementing <a href="../aview/">AView</a>::onIntrinsicMeasure() and
+  <a href="../aview/">AView</a>::onComputeIntrinsicMinMaxAxis().</li>
 <li><strong>View's box</strong>: the area whose size is defined by <a href="../aview/#AView::size">AView::size()</a>. Use <a href="../ass_fixedsize/"><code>ass::FixedSize</code></a>, <a href="../ass_minsize/"><code>ass::MinSize</code></a> and
   <a href="../ass_maxsize/"><code>ass::MaxSize</code></a> to define an acceptable size range. Use <a href="../ass_padding/"><code>ass::Padding</code></a> to add a blank space between view's box
   and view's context box.</li>

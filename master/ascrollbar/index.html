@@ -731,6 +731,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#AScrollbar::squeezeIntoCrossAxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      squeezeIntoCrossAxis
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -791,6 +800,19 @@ returned.</p>
 </dl>
 <p>When scroll area dimensions is updated (an element added to scroll area) if the scrollbar was scrolled to the end
 (bottom) the scrollbar automatically scrolls to the ends, keeping the scroll position in place.</p>
+<div style="position:absolute;opacity:0">
+<h3 AScrollbar::squeezeIntoCrossAxis_="AScrollbar::squeezeIntoCrossAxis()" id="AScrollbar::squeezeIntoCrossAxis">squeezeIntoCrossAxis<a class="headerlink" href="#AScrollbar::squeezeIntoCrossAxis" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AScrollbar</span><span class="o">::</span><span class="n">squeezeIntoCrossAxis</span><span class="p">(</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">child</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Shrinks the child so that it does not stick out of our cross axis.</p>
+<dl class="doxygen-dl">
+</dl>
+<p><a href="../ass_fixedsize/">ass::FixedSize</a> is law for <a href="../aview/">AView</a>::setSize, so a scrollbar that was laid out thinner than its chrome (i.e. an
+<a href="../ass_fixedsize/">ass::FixedSize</a> on the scrollbar itself) would have its arrows and handle sticking out. Writing the cross axis
+into the child's own fixed size instead would feed back into AScrollbar::chromeThickness, making this scrollbar
+remember its previous thickness, see AScrollbar::onLayout.</p>
 
 
 

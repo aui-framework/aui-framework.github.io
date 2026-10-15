@@ -710,6 +710,21 @@ We are migrating to a new documentation engine. Please report presentation issue
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Detailed Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expanding-contents-fill-the-viewport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expanding contents fill the viewport
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -794,6 +809,12 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <p>This view is intended to store only one single view with setContents()/contents() methods.</p>
 <p>This view does not handle scroll events and touch events related to scroll. Use <a href="../ascrollarea/">AScrollArea</a> for such case.</p>
+<h3 id="expanding-contents-fill-the-viewport">Expanding contents fill the viewport<a class="headerlink" href="#expanding-contents-fill-the-viewport" title="Permanent link">#</a></h3>
+<p>A child set via setContents() that has <code><a href="../ass_expanding/">ass::Expanding</a></code> will always occupy <strong>at least the full viewport size</strong>
+on the expanding axis. The scrollable surface size (<code>setScrollSurfaceSize</code>) acts as a lower bound; the viewport's
+own size acts as another lower bound — the child receives <code>max(scrollSurfaceSize, viewportSize)</code>. This means an
+expanding widget fills the visible area instead of collapsing to its minimum content size.</p>
+<p>Prefer <a href="../ascrollarea/">AScrollArea</a> over using this class directly.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <details class="note">
 <summary><a href="../examples/">examples</a>/ui/<a href="../backdrop/">backdrop</a>/src/main.cpp</summary>
