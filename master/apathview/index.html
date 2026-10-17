@@ -1087,7 +1087,7 @@ type of the file exists on this path.</p>
 <p><strong>Examples:</strong></p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/CMakeLists.txt</summary>
-<p><a href="../views-example/">Views Example</a> - All-in-one <a href="../views/">views</a> building example.</p>
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
 <div class="language-cmake highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.16</span><span class="p">)</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c"># Uncomment this code to pull AUI:</span>
@@ -1173,11 +1173,26 @@ safer just to attempt the desired operation and handle any permission error that
 </dl>
 <p>A file can exist as a regular file or(and) as a folder. This function will return false only if regular
 file does not exists on this path.</p>
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/app/notes/src/main.cpp</summary>
+<p><a href="../notes-app/">Notes App</a> — Note taking app that demonstrates usage of AListModel, <a href="../aproperty/">AProperty</a>, user data saving and loading.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span><span class="c1">/// [load]</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">load</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="hll"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="s">&quot;notes.json&quot;</span><span class="n">_path</span><span class="p">.</span><span class="n">isRegularFileExists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="hll"><span class="w">                </span><span class="k">return</span><span class="p">;</span>
+</span></span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="hll"><span class="w">            </span><span class="p">}</span>
+</span></span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">            </span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">from_json</span><span class="p">(</span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">::</span><span class="n">fromStream</span><span class="p">(</span><span class="n"><a href="../afileinputstream/">AFileInputStream</a></span><span class="p">(</span><span class="s">&quot;notes.json&quot;</span><span class="p">)),</span><span class="w"> </span><span class="n">mNotes</span><span class="p">);</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">            </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">info</span><span class="p">(</span><span class="n">LOG_TAG</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Can&#39;t load notes: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+</span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 APathView::isRelative_="APathView::isRelative()" id="APathView::isRelative">isRelative<a class="headerlink" href="#APathView::isRelative" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">isRelative</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">isRelative</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Checks whether path absolute or not.</p>
 <dl class="doxygen-dl">
@@ -1188,7 +1203,7 @@ file does not exists on this path.</p>
 <h3 APathView::listDir_="APathView::listDir()" id="APathView::listDir">listDir<a class="headerlink" href="#APathView::listDir" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n"><a href="../adeque/">ADeque</a></span><span class="o">&lt;</span><span class="n"><a href="../apath/">APath</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">listDir</span><span class="p">(</span><span class="n">AFileListFlags</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AFileListFlags</span><span class="o">::</span><span class="n">DEFAULT_FLAGS</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n"><a href="../adeque/">ADeque</a></span><span class="o">&lt;</span><span class="n"><a href="../apath/">APath</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">listDir</span><span class="p">(</span><span class="n">AFileListFlags</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AFileListFlags</span><span class="o">::</span><span class="n">DEFAULT_FLAGS</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Get list of (by default) direct children of this folder. This function outputs paths including the path
        listDir was called on.</p>
@@ -1201,7 +1216,7 @@ file does not exists on this path.</p>
 <h3 APathView::makeDir_="APathView::makeDir()" id="APathView::makeDir">makeDir<a class="headerlink" href="#APathView::makeDir" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">makeDir</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">makeDir</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Create folder.</p>
 <dl class="doxygen-dl">
@@ -1212,7 +1227,7 @@ file does not exists on this path.</p>
 <h3 APathView::makeDirs_="APathView::makeDirs()" id="APathView::makeDirs">makeDirs<a class="headerlink" href="#APathView::makeDirs" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">makeDirs</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">makeDirs</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Create all nonexistent folders on the path.</p>
 <dl class="doxygen-dl">
@@ -1223,7 +1238,7 @@ file does not exists on this path.</p>
 <h3 APathView::operator_="APathView::operator()" id="APathView::operator">operator<a class="headerlink" href="#APathView::operator" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="k">operator</span><span class="p">(</span><span class="n"><a href="../astringview/">AStringView</a></span><span class="w"> </span><span class="n">filename</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="k">operator</span><span class="p">(</span><span class="n"><a href="../astringview/">AStringView</a></span><span class="w"> </span><span class="n">filename</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Path of the child element. Relevant only for folders.</p>
 <dl class="doxygen-dl">
@@ -1232,8 +1247,8 @@ file does not exists on this path.</p>
 <div style="display: table-row">
 <b style="display: table-cell; padding-right: 6px"><code>filename</code></b>
 <div style="display: table-cell"> child to produce path to
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;file.txt&quot;</span><span class="p">;</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s">&quot;to&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s">&quot;your&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">filename</span><span class="p">;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;file.txt&quot;</span><span class="p">;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;path&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s">&quot;to&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s">&quot;your&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">filename</span><span class="p">;</span>
 </span></code></pre></div>
 Which would supplyValue into "path/to/your/file.txt"</div>
 </div>
@@ -1245,24 +1260,24 @@ Which would supplyValue into "path/to/your/file.txt"</div>
 <p><strong>Examples:</strong></p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/7guis/cells/src/AST.cpp</summary>
-<p><a href="../7guis-cells/">7GUIs Cells</a> - Spreadsheet processor (Excel).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">got</span><span class="o">&lt;</span><span class="no">token</span><span class="o">::</span><span class="no">Plus</span><span class="o">&gt;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="hll"><span class="w">                    </span><span class="n">handleBinaryOperator</span><span class="p">.</span><span class="k">operator</span><span class="p">()</span><span class="o">&lt;</span><span class="n">BinaryOperatorNodeImpl</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">plus</span><span class="o">&lt;&gt;&gt;&gt;</span><span class="p">(</span><span class="n">Priority</span><span class="o">::</span><span class="n">PLUS_MINUS</span><span class="p">);</span>
-</span></span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
-</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
-</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">got</span><span class="o">&lt;</span><span class="no">token</span><span class="o">::</span><span class="no">Minus</span><span class="o">&gt;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="hll"><span class="w">                    </span><span class="n">handleBinaryOperator</span><span class="p">.</span><span class="k">operator</span><span class="p">()</span><span class="o">&lt;</span><span class="n">BinaryOperatorNodeImpl</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">minus</span><span class="o">&lt;&gt;&gt;&gt;</span><span class="p">(</span><span class="n">Priority</span><span class="o">::</span><span class="n">PLUS_MINUS</span><span class="p">);</span>
+<p><a href="../7guis-cells/">7GUIs Cells</a> — Spreadsheet processor (Excel).</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">got</span><span class="o">&lt;</span><span class="no">token</span><span class="o">::</span><span class="no">Plus</span><span class="o">&gt;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="hll"><span class="w">                    </span><span class="n">handleBinaryOperator</span><span class="p">.</span><span class="k">operator</span><span class="p">()</span><span class="o">&lt;</span><span class="n">BinaryOperatorNodeImpl</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">plus</span><span class="o">&lt;&gt;&gt;&gt;</span><span class="p">(</span><span class="n">Priority</span><span class="o">::</span><span class="n">PLUS_MINUS</span><span class="p">);</span>
+</span></span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="no">got</span><span class="o">&lt;</span><span class="no">token</span><span class="o">::</span><span class="no">Minus</span><span class="o">&gt;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="hll"><span class="w">                    </span><span class="n">handleBinaryOperator</span><span class="p">.</span><span class="k">operator</span><span class="p">()</span><span class="o">&lt;</span><span class="n">BinaryOperatorNodeImpl</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">minus</span><span class="o">&lt;&gt;&gt;&gt;</span><span class="p">(</span><span class="n">Priority</span><span class="o">::</span><span class="n">PLUS_MINUS</span><span class="p">);</span>
 </span></span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
 <h3 APathView::parent_="APathView::parent()" id="APathView::parent">parent<a class="headerlink" href="#APathView::parent" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">parent</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">parent</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1272,22 +1287,22 @@ Which would supplyValue into "path/to/your/file.txt"</div>
 <p><strong>Examples:</strong></p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/tests/LayoutManagerTest.cpp</summary>
-<p><a href="../views-example/">Views Example</a> - All-in-one <a href="../views/">views</a> building example.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w"> </span><span class="o">*/</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">TEST_F</span><span class="p">(</span><span class="n">UILayoutManager</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonsAlignment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="c1">// buttons column should be perfectly aligned</span>
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="n">By</span><span class="o">::</span><span class="n">name</span><span class="p">(</span><span class="s">&quot;Common button&quot;</span><span class="p">)</span>
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">parent</span><span class="p">()</span>
-</span></span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">        </span><span class="p">.</span><span class="n">allChildren</span><span class="p">()</span>
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">        </span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">leftRightAligned</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;elements should be perfectly aligned&quot;</span><span class="p">);</span>
-</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="p">}</span>
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w"> </span><span class="o">*/</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="n">TEST_F</span><span class="p">(</span><span class="n">UILayoutManager</span><span class="p">,</span><span class="w"> </span><span class="n">ButtonsAlignment</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span><span class="c1">// buttons column should be perfectly aligned</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="n">By</span><span class="o">::</span><span class="n">name</span><span class="p">(</span><span class="s">&quot;Common button&quot;</span><span class="p">)</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">parent</span><span class="p">()</span>
+</span></span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">        </span><span class="p">.</span><span class="n">allChildren</span><span class="p">()</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">        </span><span class="p">.</span><span class="n">check</span><span class="p">(</span><span class="n">leftRightAligned</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;elements should be perfectly aligned&quot;</span><span class="p">);</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
 <h3 APathView::relativelyTo_="APathView::relativelyTo()" id="APathView::relativelyTo">relativelyTo<a class="headerlink" href="#APathView::relativelyTo" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">relativelyTo</span><span class="p">(</span><span class="n">APathView</span><span class="w"> </span><span class="n">dir</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">relativelyTo</span><span class="p">(</span><span class="n">APathView</span><span class="w"> </span><span class="n">dir</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Returns same path but without <code>dir</code></p>
 <dl class="doxygen-dl">
@@ -1306,7 +1321,7 @@ Which would supplyValue into "path/to/your/file.txt"</div>
 <h3 APathView::removeDirContentsRecursive_="APathView::removeDirContentsRecursive()" id="APathView::removeDirContentsRecursive">removeDirContentsRecursive<a class="headerlink" href="#APathView::removeDirContentsRecursive" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">removeDirContentsRecursive</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">removeDirContentsRecursive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Delete directory contents (recursively).</p>
 <dl class="doxygen-dl">
@@ -1320,7 +1335,7 @@ removes all contained files (recursively) within that directory but does not rem
 <h3 APathView::removeFile_="APathView::removeFile()" id="APathView::removeFile">removeFile<a class="headerlink" href="#APathView::removeFile" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">removeFile</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">removeFile</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Delete file. Relevant for empty folders and regular files.</p>
 <dl class="doxygen-dl">
@@ -1333,7 +1348,7 @@ removes all contained files (recursively) within that directory but does not rem
 <h3 APathView::removeFileRecursive_="APathView::removeFileRecursive()" id="APathView::removeFileRecursive">removeFileRecursive<a class="headerlink" href="#APathView::removeFileRecursive" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">removeFileRecursive</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">APathView</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">removeFileRecursive</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Delete files recursively, including itself.</p>
 <dl class="doxygen-dl">
@@ -1347,7 +1362,7 @@ first removes all its contents (recursively) before potentially deleting the dir
 <h3 APathView::systemSlashDirection_="APathView::systemSlashDirection()" id="APathView::systemSlashDirection">systemSlashDirection<a class="headerlink" href="#APathView::systemSlashDirection" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">systemSlashDirection</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">systemSlashDirection</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Transforms this path to string with platform's native slashes.</p>
 <dl class="doxygen-dl">
@@ -1356,7 +1371,7 @@ first removes all its contents (recursively) before potentially deleting the dir
 <h3 APathView::touch_="APathView::touch()" id="APathView::touch">touch<a class="headerlink" href="#APathView::touch" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">const</span><span class="w"> </span><span class="n">APathView</span><span class="o">&amp;</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">touch</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">const</span><span class="w"> </span><span class="n">APathView</span><span class="o">&amp;</span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">touch</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1367,7 +1382,7 @@ first removes all its contents (recursively) before potentially deleting the dir
 <h3 APathView::withoutUppermostFolder_="APathView::withoutUppermostFolder()" id="APathView::withoutUppermostFolder">withoutUppermostFolder<a class="headerlink" href="#APathView::withoutUppermostFolder" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">withoutUppermostFolder</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">APathView</span><span class="o">::</span><span class="n">withoutUppermostFolder</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Remove the uppermost folder from this path</p>
 <dl class="doxygen-dl">

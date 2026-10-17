@@ -755,7 +755,7 @@ supported (but with extra overhead). When AFuture's task is complete, the <a hre
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <details class="note">
 <summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.h</summary>
-<p><a href="../views-example/">Views Example</a> - All-in-one <a href="../views/">views</a> building example.
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">onDragEnter</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">EnterEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">private</span><span class="o">:</span>
@@ -764,7 +764,21 @@ supported (but with extra overhead). When AFuture's task is complete, the <a hre
 </span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../iaudioplayer/">IAudioPlayer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mWavAudio</span><span class="p">;</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../iaudioplayer/">IAudioPlayer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mOggAudio</span><span class="p">;</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">};</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/infinite_lazy_list/src/main.cpp</summary>
+<p><a href="../infinite-lazy-list/">Infinite Lazy List</a> — Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make an infinite lazy list.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;&gt;&gt;</span><span class="w"> </span><span class="n">items</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">needMore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="hll"><span class="w">    </span><span class="n">AAsyncHolder</span><span class="w"> </span><span class="n">asyncTasks</span><span class="p">;</span>
+</span></span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">};</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">myLazyList</span><span class="p">(</span><span class="n">_</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">state</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// note that we observe for transition to true here, not the current state of property</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="c1">// see <a href="../aproperty/#PropertyTest_Observing_changes">PropertyTest_Observing_changes</a> for more info</span>
+</span></code></pre></div>
 </details>
 
 

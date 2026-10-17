@@ -1236,6 +1236,7 @@ other bia <code>biConnect</code> call:
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tf</span><span class="w"> </span><span class="p">});</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
 </span></code></pre></div>
+AUI_DOCS_CODE_BEGIN
 Or simpler:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// ...</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
@@ -1243,6 +1244,7 @@ Or simpler:
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">});</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// ...</span>
 </span></code></pre></div>
+AUI_DOCS_CODE_BEGIN
 The code above generates a window with a text field:</p>
 <figure>
 <img alt="text field" src="../imgs/UIDataBindingTest.TextField1_1.png" />
@@ -1251,11 +1253,13 @@ The code above generates a window with a text field:</p>
 <ul>
 <li>Prefills text field with the current <code>user-&gt;name</code> value (pre fire):
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">tf</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Robert&quot;</span><span class="p">);</span>
-</span></code></pre></div></li>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</li>
 <li>Connects <code>user-&gt;named.changed</code> to <code>tf</code> to notify the text field about changes of <code>user-&gt;name</code>:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Angela&quot;</span><span class="p">;</span><span class="w">           </span><span class="c1">// changing user-&gt;name programmatically...</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">tf</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Angela&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ...should reflect on the text field</span>
-</span></code></pre></div></li>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</li>
 </ul>
 <figure>
 <img alt="text field" src="../imgs/UIDataBindingTest.TextField1_2.png" />
@@ -1267,9 +1271,10 @@ The code above generates a window with a text field:</p>
 <figure>
 <img alt="text field" src="../imgs/UIDataBindingTest.TextField1_3.png" />
 </figure>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// user typed &quot;Snezhana&quot;, now let&#39;s check the value in user-&gt;name:</span>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// user typed &quot;Snezhana&quot;, now let&#39;s check the value in user-&gt;name:</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Snezhana&quot;</span><span class="p">);</span>
 </span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This is basic example of setting up property-to-property connection.</p>
 <h2 id="declaring-properties">Declaring Properties<a class="headerlink" href="#declaring-properties" title="Permanent link">#</a></h2>
 <p>There are several ways to define a property in AUI:</p>
@@ -1324,14 +1329,16 @@ property.
 </span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="p">};</span>
 </span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This gives the following result:
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" />
+![](imgs/UIDataBindingTest.Label_via_declarative_1.png)
 Note that label already displays the value stored in User.</p>
 <p>Let's change the name:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
 </span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" /></p>
+AUI_DOCS_CODE_BEGIN
+![](imgs/UIDataBindingTest.Label_via_declarative_2.png)</p>
 <p>By simply performing assignment on <code>user</code> we changed <a href="../alabel/">ALabel</a> display text. Magic, huh?</p>
 <h3 id="UIDataBindingTest_Label_via_let_projection">Label via let projection<a class="headerlink" href="#UIDataBindingTest_Label_via_let_projection" title="Permanent link">#</a></h3>
 <p>It's fairly easy to define a projection because one-sided connection requires exactly one projection, obviously.
@@ -1343,14 +1350,16 @@ Note that label already displays the value stored in User.</p>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="c1">// property.</span>
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="o">-&gt;</span><span class="n">uppercase</span><span class="p">()),</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">());</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">},</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This gives the following result:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_1.png" /></p>
+<p>![](imgs/UIDataBindingTest.Label_via_declarative_projection_1.png)</p>
 <p>Note that the label already displays the <strong>projected</strong> value stored in User.</p>
 <p>Let's change the name:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div></p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_2.png" /></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
+<p>![](imgs/UIDataBindingTest.Label_via_declarative_projection_2.png)</p>
 <p>This way, we've set up data binding with projection.</p>
 <h3 id="UIDataBindingTest_Bidirectional_connection">Bidirectional connection<a class="headerlink" href="#UIDataBindingTest_Bidirectional_connection" title="Permanent link">#</a></h3>
 <p>In previous <a href="../examples/">examples</a>, we've used <code><a href="../aobject/#AObject::connect">AObject::connect</a></code> to make one directional (one sided) connection. This is
@@ -1370,18 +1379,21 @@ from model and obtaining data from view back to the model.</p>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">  </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">biConnect</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">());</span>
 </span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="c1">//                &lt;-  changes only   &lt;-</span>
 </span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">},</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This gives the following result:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png" /></p>
+<p>![](imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png)</p>
 <p>Let's change the name programmatically:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p><a href="../atextfield/">ATextField</a> will respond:
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_2.png" /></p>
+![](imgs/UIDataBindingTest.Declarative_bidirectional_connection_2.png)</p>
 <p>If the user changes the value from UI, these changes will reflect on <code>user-&gt;model</code> as well:
-<img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png" />
+![](imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png)
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Changed from UI&quot;</span><span class="p">);</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This way we've set up bidirectional projection via <code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> which makes <code>user-&gt;name</code> aware of UI
 changes.</p>
 <h2 id="UI_declarative_data_binding">UI declarative data binding<a class="headerlink" href="#UI_declarative_data_binding" title="Permanent link">#</a></h2>
@@ -1390,7 +1402,7 @@ changes.</p>
 <code><a href="../aobject/#AObject::connect">AObject::connect</a></code>/<code><a href="../aobject/#AObject::biConnect">AObject::biConnect</a></code> (for ease of replacement/understanding).</p>
 <p>The example below is essentially the same as <a href="./#UIDataBindingTest_Label_via_let">Label via let</a> but uses declarative connection set up syntax.</p>
 <h3 id="UIDataBindingTest_Label_via_declarative">Label via declarative<a class="headerlink" href="#UIDataBindingTest_Label_via_declarative" title="Permanent link">#</a></h3>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">};</span>
@@ -1408,12 +1420,14 @@ changes.</p>
 </span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="k">auto</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
 </span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
 </span></code></pre></div>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" /></p>
+AUI_DOCS_CODE_BEGIN</p>
+<p>![](imgs/UIDataBindingTest.Label_via_declarative_1.png)</p>
 <p>Note that the label already displays the value stored in User.</p>
 <p>Let's change the name:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div></p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" /></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
+<p>![](imgs/UIDataBindingTest.Label_via_declarative_2.png)</p>
 <p>In this example, we've achieved the same intuitive behaviour of data binding of <code>user-&gt;name</code> (like in
 <a href="./#UIDataBindingTest_Label_via_let">Label via let</a> example) but using declarative syntax.</p>
 <h3 id="UIDataBindingTest_ADataBindingDefault_for_omitting_view_property">ADataBindingDefault for omitting view property<a class="headerlink" href="#UIDataBindingTest_ADataBindingDefault_for_omitting_view_property" title="Permanent link">#</a></h3>
@@ -1435,14 +1449,16 @@ such specialization:</p>
 </span></code></pre></div>
 <p>We can use this predefined specialization to omit the destination property:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>Behaviour of such connection is equal to <a href="./#UIDataBindingTest_Label_via_declarative">Label via declarative</a>:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_1.png" /></p>
+<p>![](imgs/UIDataBindingTest.Label_via_declarative_1.png)</p>
 <p>Note that the label already displays the value stored in User.</p>
 <p>Let's change the name:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div></p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_2.png" /></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
+<p>![](imgs/UIDataBindingTest.Label_via_declarative_2.png)</p>
 <p>In this example, we've omitted the destination property of the connection while maintaining the same behaviour
 as in <a href="./#UIDataBindingTest_Label_via_declarative">Label via declarative</a>.</p>
 <h3 id="UIDataBindingTest_ADataBindingDefault_strong_type_propagation">ADataBindingDefault strong type propagation<a class="headerlink" href="#UIDataBindingTest_ADataBindingDefault_strong_type_propagation" title="Permanent link">#</a></h3>
@@ -1456,7 +1472,8 @@ as in <a href="./#UIDataBindingTest_Label_via_declarative">Label via declarative
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">User</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="n"><a href="../aproperty/">AProperty</a></span><span class="o">&lt;</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">ranged_number</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">};</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>These strong types can be used to propagate their traits on <a href="../views/">views</a>, i.e., ANumberPicker. When using declarative
 syntax, the property system calls <code><a href="../adatabindingdefault/#ADataBindingDefault::setup">ADataBindingDefault::setup</a></code> to apply some extra traits of the bound value on
 the view. Here's an abstract on how <code><a href="../anumberpicker/">ANumberPicker</a></code> defines specialization of <code>ADataBingingDefault</code> with
@@ -1479,7 +1496,8 @@ the view. Here's an abstract on how <code><a href="../anumberpicker/">ANumberPic
 to <code><a href="../anumberpicker/">ANumberPicker</a></code>. This way <code><a href="../anumberpicker/">ANumberPicker</a></code> finds out the valid range of values by simply being bound to value
 that has constraints encoded inside its type.
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">age</span><span class="p">,</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We're using <code>operator&amp;&amp;</code> here to set up bidirectional connection. For more info, go to
@@ -1489,7 +1507,8 @@ that has constraints encoded inside its type.
 <a href="../anumberpicker/">ANumberPicker</a>::setMax as well:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">numberPicker</span><span class="o">-&gt;</span><span class="n">getMin</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">numberPicker</span><span class="o">-&gt;</span><span class="n">getMax</span><span class="p">(),</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This example demonstrates how to use declarative binding to propagate strong types. <code><a href="../aui_ranged_number/">aui::ranged_number</a></code>
 propagates its constraints on <code><a href="../anumberpicker/">ANumberPicker</a></code> thanks to <code><a href="../adatabindingdefault/">ADataBindingDefault</a></code> specialization.</p>
 <h3 id="UIDataBindingTest_Label_via_declarative_projection">Label via declarative projection<a class="headerlink" href="#UIDataBindingTest_Label_via_declarative_projection" title="Permanent link">#</a></h3>
@@ -1512,7 +1531,8 @@ propagates its constraints on <code><a href="../anumberpicker/">ANumberPicker</a
 </span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="k">auto</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MyWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
 </span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="n">window</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
 </span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_1.png" /></p>
+AUI_DOCS_CODE_BEGIN
+![](imgs/UIDataBindingTest.Label_via_declarative_projection_1.png)</p>
 <p>Note that the label already displays the <strong>projected</strong> value stored in User.</p>
 <p>Projection applies to value changes as well. Let's change the name:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
@@ -1520,7 +1540,8 @@ propagates its constraints on <code><a href="../anumberpicker/">ANumberPicker</a
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">);</span>
 </span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">label</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;VASIL&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// projected</span>
 </span></code></pre></div>
-<img alt="" src="../imgs/UIDataBindingTest.Label_via_declarative_projection_2.png" /></p>
+AUI_DOCS_CODE_BEGIN
+![](imgs/UIDataBindingTest.Label_via_declarative_projection_2.png)</p>
 <h3 id="UIDataBindingTest_Declarative_bidirectional_connection">Declarative bidirectional connection<a class="headerlink" href="#UIDataBindingTest_Declarative_bidirectional_connection" title="Permanent link">#</a></h3>
 <div class="admonition failure">
 <p class="admonition-title">Deprecated</p>
@@ -1529,18 +1550,21 @@ propagates its constraints on <code><a href="../anumberpicker/">ANumberPicker</a
 <p>In some cases, you might want to use property-to-property as it's bidirectional. It's used for populating view
 from model and obtaining data from view back to the model.
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atextfield/">ATextField</a></span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span>
-</span></code></pre></div></p>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This gives the following result:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png" /></p>
+<p>![](imgs/UIDataBindingTest.Declarative_bidirectional_connection_1.png)</p>
 <p>Let's change the name programmatically:
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Vasil&quot;</span><span class="p">;</span>
-</span></code></pre></div></p>
-<p><a href="../atextfield/">ATextField</a> will respond:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_2.png" /></p>
-<p>If the user changes the value from UI, these changes will reflect on <code>user-&gt;model</code> as well:</p>
-<p><img alt="" src="../imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png" /></p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Changed from UI&quot;</span><span class="p">);</span>
 </span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
+<p><a href="../atextfield/">ATextField</a> will respond:</p>
+<p>![](imgs/UIDataBindingTest.Declarative_bidirectional_connection_2.png)</p>
+<p>If the user changes the value from UI, these changes will reflect on <code>user-&gt;model</code> as well:</p>
+<p>![](imgs/UIDataBindingTest.Declarative_bidirectional_connection_3.png)</p>
+<p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">user</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Changed from UI&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+AUI_DOCS_CODE_BEGIN</p>
 <p>This way we've set up bidirectional projection via <code>&amp;&amp;</code> which makes <code>user-&gt;name</code> aware of UI
 changes.</p>
 <h2 id="related-pages">Related Pages<a class="headerlink" href="#related-pages" title="Permanent link">#</a></h2>

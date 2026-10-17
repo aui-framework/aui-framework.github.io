@@ -713,6 +713,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#public-types" class="md-nav__link">
     <span class="md-ellipsis">
       Public Types
@@ -901,6 +910,22 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p class="admonition-title">Experimental Feature</p>
 <p>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future.</p>
 </div>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_layoutspacing/">LayoutSpacing</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">4</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}),</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">            </span><span class="s">&quot;Common&quot;</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#if !AUI_PLATFORM_EMSCRIPTEN</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">        </span><span class="n">mWavAudio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">fromUrl</span><span class="p">(</span><span class="s">&quot;:sound/sound1.wav&quot;</span><span class="p">);</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="hll"><span class="w">        </span><span class="n">mOggAudio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">fromUrl</span><span class="p">(</span><span class="s">&quot;:sound/sound1.ogg&quot;</span><span class="p">);</span>
+</span></span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">addTab</span><span class="p">(</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="n"><a href="../ascrollarea/">AScrollArea</a></span><span class="o">::</span><span class="n">Builder</span><span class="p">().</span><span class="n">withContents</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">conditional_t</span><span class="o">&lt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                                                </span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">platform</span><span class="o">::</span><span class="n">current</span><span class="o">::</span><span class="n">is_mobile</span><span class="p">(),</span><span class="w"> </span><span class="n">Vertical</span><span class="p">,</span><span class="w"> </span><span class="n">Horizontal</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span></code></pre></div>
+</details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
@@ -956,7 +981,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::loop_="IAudioPlayer::loop()" id="IAudioPlayer::loop">loop<a class="headerlink" href="#IAudioPlayer::loop" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">loop</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">loop</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -966,7 +991,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::onFinished_="IAudioPlayer::onFinished()" id="IAudioPlayer::onFinished">onFinished<a class="headerlink" href="#IAudioPlayer::onFinished" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">onFinished</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">onFinished</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Called By <a href="../aaudiomixer/">AAudioMixer</a> when the playback is finished.</p>
 <dl class="doxygen-dl">
@@ -976,7 +1001,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::pause_="IAudioPlayer::pause()" id="IAudioPlayer::pause">pause<a class="headerlink" href="#IAudioPlayer::pause" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">pause</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">pause</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Pauses <a href="../audio/">audio</a> playback keeping playback progress.</p>
 <dl class="doxygen-dl">
@@ -985,7 +1010,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::play_="IAudioPlayer::play()" id="IAudioPlayer::play">play<a class="headerlink" href="#IAudioPlayer::play" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">play</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">play</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Starts <a href="../audio/">audio</a> playback, if playback was previously paused, it will continue from where it was paused.</p>
 <dl class="doxygen-dl">
@@ -994,7 +1019,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::playbackStatus_="IAudioPlayer::playbackStatus()" id="IAudioPlayer::playbackStatus">playbackStatus<a class="headerlink" href="#IAudioPlayer::playbackStatus" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">PlaybackStatus</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">playbackStatus</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">PlaybackStatus</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">playbackStatus</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1004,7 +1029,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::resamplerStream_="IAudioPlayer::resamplerStream()" id="IAudioPlayer::resamplerStream">resamplerStream<a class="headerlink" href="#IAudioPlayer::resamplerStream" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n">AAudioResampler</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">resamplerStream</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n">AAudioResampler</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">resamplerStream</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Get resampled stream for playback.</p>
 <dl class="doxygen-dl">
@@ -1013,7 +1038,7 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h3 IAudioPlayer::setLoop_="IAudioPlayer::setLoop()" id="IAudioPlayer::setLoop">setLoop<a class="headerlink" href="#IAudioPlayer::setLoop" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">setLoop</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">loop</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">setLoop</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">loop</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Set loop flag, is loop flag is true then <a href="../audio/">audio</a> playback wouldn't be stopped after it ends and
 sound stream would be rewind.</p>
@@ -1030,7 +1055,7 @@ sound stream would be rewind.</p>
 <h3 IAudioPlayer::setVolume_="IAudioPlayer::setVolume()" id="IAudioPlayer::setVolume">setVolume<a class="headerlink" href="#IAudioPlayer::setVolume" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">setVolume</span><span class="p">(</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n"><a href="../audio/">audio</a></span><span class="o">::</span><span class="n">VolumeLevel</span><span class="w"> </span><span class="n">volume</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">setVolume</span><span class="p">(</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n"><a href="../audio/">audio</a></span><span class="o">::</span><span class="n">VolumeLevel</span><span class="w"> </span><span class="n">volume</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Set level of volume.</p>
 <dl class="doxygen-dl">
@@ -1046,7 +1071,7 @@ sound stream would be rewind.</p>
 <h3 IAudioPlayer::stop_="IAudioPlayer::stop()" id="IAudioPlayer::stop">stop<a class="headerlink" href="#IAudioPlayer::stop" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">stop</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">stop</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Pauses <a href="../audio/">audio</a> playback without keeping playback progress.</p>
 <dl class="doxygen-dl">
@@ -1055,7 +1080,7 @@ sound stream would be rewind.</p>
 <h3 IAudioPlayer::volume_="IAudioPlayer::volume()" id="IAudioPlayer::volume">volume<a class="headerlink" href="#IAudioPlayer::volume" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n"><a href="../audio/">audio</a></span><span class="o">::</span><span class="n">VolumeLevel</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">volume</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n"><a href="../audio/">audio</a></span><span class="o">::</span><span class="n">VolumeLevel</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">volume</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
