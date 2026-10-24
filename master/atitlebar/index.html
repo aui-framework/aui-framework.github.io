@@ -23,7 +23,7 @@
         <meta name="author" content="Alex2772">
       
       
-        <link rel="canonical" href="https://aui-framework.github.io/master/acustomwindow/">
+        <link rel="canonical" href="https://aui-framework.github.io/master/atitlebar/">
       
       
       
@@ -33,7 +33,7 @@
     
     
       
-        <title>ACustomWindow - AUI Framework</title>
+        <title>ATitlebar - AUI Framework</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#acustomwindow" class="md-skip">
+        <a href="#atitlebar" class="md-skip">
           Skip to content
         </a>
       
@@ -155,7 +155,7 @@ We are migrating to a new documentation engine. Please report presentation issue
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ACustomWindow
+              ATitlebar
             
           </span>
         </div>
@@ -1258,11 +1258,53 @@ We are migrating to a new documentation engine. Please report presentation issue
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#public-methods" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Public Methods
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Public Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ATitlebar::drawnControlsInsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawnControlsInsets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ATitlebar::setWindowButtonNativeHover" class="md-nav__link">
+    <span class="md-ellipsis">
+      setWindowButtonNativeHover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ATitlebar::windowButtonAt" class="md-nav__link">
+    <span class="md-ellipsis">
+      windowButtonAt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ATitlebar::windowTitle" class="md-nav__link">
+    <span class="md-ellipsis">
+      windowTitle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1282,29 +1324,53 @@ We are migrating to a new documentation engine. Please report presentation issue
 
 
 
-<h1 id="acustomwindow">ACustomWindow<a class="headerlink" href="#acustomwindow" title="Permanent link">#</a></h1>
-<p>Represents a window without native caption but still draggable by top side.</p>
+<h1 id="atitlebar">ATitlebar<a class="headerlink" href="#atitlebar" title="Permanent link">#</a></h1>
 <table>
-<tr><td>Header:</td><td><code>#include &lt;AUI/Platform/ACustomWindow.h&gt;</code></td></tr>
+<tr><td>Header:</td><td><code>#include &lt;AUI/View/ATitlebar.h&gt;</code></td></tr>
 <tr><td>CMake:</td><td><code><a href="../aui_link/">aui_link</a>(my_target PUBLIC <a href="../views/">aui::views</a>)</code></td></tr>
 </table>
 
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
-<details class="note">
-<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
-<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">                                 </span><span class="p">}),</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Show window without caption&quot;</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">                        </span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">                                 </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">                                     </span><span class="k">auto</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">ACustomWindow</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Custom window without caption&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">);</span>
-</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">                                     </span><span class="n">fillWindow</span><span class="p">(</span><span class="n">w</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                                     </span><span class="n">w</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                                     </span><span class="n">mWindows</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                                 </span><span class="p">}),</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Show window custom caption&quot;</span><span class="p">)</span>
+<h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
+<div style="position:absolute;opacity:0">
+<h3 ATitlebar::drawnControlsInsets_="ATitlebar::drawnControlsInsets()" id="ATitlebar::drawnControlsInsets">drawnControlsInsets<a class="headerlink" href="#ATitlebar::drawnControlsInsets" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n"><a href="../awindowcontrolsinsets/">AWindowControlsInsets</a></span><span class="w"> </span><span class="n">ATitlebar</span><span class="o">::</span><span class="n">drawnControlsInsets</span><span class="p">()</span>
 </span></code></pre></div>
-</details>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>space occupied by the AUI-drawn window buttons of this titlebar, after layout. Zero if the window
+controls are native or missing.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 ATitlebar::setWindowButtonNativeHover_="ATitlebar::setWindowButtonNativeHover()" id="ATitlebar::setWindowButtonNativeHover">setWindowButtonNativeHover<a class="headerlink" href="#ATitlebar::setWindowButtonNativeHover" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ATitlebar</span><span class="o">::</span><span class="n">setWindowButtonNativeHover</span><span class="p">(</span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../awindowcontrols/">AWindowControls</a></span><span class="o">::</span><span class="n"><a href="../abutton/">Button</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">button</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Reflects the pointer hovering a window button handled by the OS (non-client area).</p>
+<dl class="doxygen-dl">
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 ATitlebar::windowButtonAt_="ATitlebar::windowButtonAt()" id="ATitlebar::windowButtonAt">windowButtonAt<a class="headerlink" href="#ATitlebar::windowButtonAt" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../awindowcontrols/">AWindowControls</a></span><span class="o">::</span><span class="n"><a href="../abutton/">Button</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">ATitlebar</span><span class="o">::</span><span class="n">windowButtonAt</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="w"> </span><span class="n">positionInWindow</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>AUI-drawn window button at the specified point (in window coordinates), if any.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 ATitlebar::windowTitle_="ATitlebar::windowTitle()" id="ATitlebar::windowTitle">windowTitle<a class="headerlink" href="#ATitlebar::windowTitle" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n"><a href="../awindowtitle/">AWindowTitle</a></span><span class="o">*</span><span class="w"> </span><span class="n">ATitlebar</span><span class="o">::</span><span class="n">windowTitle</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd><a href="../declarative_windowtitle/">WindowTitle</a> inside this titlebar, if any.</dd>
+</dl>
 
 
 

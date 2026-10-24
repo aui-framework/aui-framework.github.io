@@ -852,6 +852,29 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
     <li class="md-nav__item">
+      <a href="../migration-window-init/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration: WindowStyle to AWindow::Init
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../retained_immediate_ui/" class="md-nav__link">
         
   
@@ -1929,7 +1952,7 @@ circle:</p>
 look of the window. If the user should not interact with the parent meanwhile, call <code>blockUserInput()</code> on the parent
 and <code>blockUserInput(false)</code> before the dialog is destroyed (see <a href="../asurface/">ASurface</a>).</p>
 <h2 id="context-menus">Context menus<a class="headerlink" href="#context-menus" title="Permanent link">#</a></h2>
-<p>Override <code>composeContextMenu()</code> in a view. It returns an <code>AMenuModel</code>, which is a vector of <code>AMenuItem</code>s. It's called
+<p>Override <code>composeContextMenu()</code> in a view. It returns an <code>AMenuModel</code>, which is a vector of <code><a href="../amenuitem/">AMenuItem</a></code>s. It's called
 every time the user right clicks (or long presses) the view, so the content can depend on the current state.
 Returning an empty vector shows no menu.</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">AMenuModel</span><span class="w"> </span><span class="nf">composeContextMenu</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
@@ -1954,7 +1977,7 @@ Returning an empty vector shows no menu.</p>
 </span></code></pre></div>
 <p>Items can be nested with <code>.type = <a href="../amenu/">AMenu</a>::SUBLIST</code> and <code>.subItems</code>. Text <a href="../views/">views</a> such as <a href="../atextfield/">ATextField</a> already provide
 cut/copy/paste/select all this way.</p>
-<p>To open a menu without a right click, call <code><a href="../amenu/">AMenu</a>::show(model)</code>.</p>
+<p>To open a menu without a right click, call <code><a href="../amenu/#AMenu::show">AMenu::show</a>(model)</code>.</p>
 <h2 id="popups-attached-to-a-view">Popups attached to a view<a class="headerlink" href="#popups-attached-to-a-view" title="Permanent link">#</a></h2>
 <p>Dropdown lists and menus use overlapping surfaces: lightweight <a href="../windows/">windows</a> drawn above the window contents.
 <code><a href="../asurface/#ASurface::createOverlappingSurface">ASurface::createOverlappingSurface</a>(position, size)</code> creates one; fill it with <a href="../views/">views</a> and call <code>pack()</code>.

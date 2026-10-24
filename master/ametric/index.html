@@ -29,7 +29,7 @@
         <link rel="prev" href="../property-system/">
       
       
-        <link rel="next" href="../retained_immediate_ui/">
+        <link rel="next" href="../migration-window-init/">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -879,6 +879,29 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-window-init/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration: WindowStyle to AWindow::Init
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1973,18 +1996,32 @@ define lines of exact one or two pixels wide.</p>
 will correctly handle systems with hidpi screens.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h2>
 <details class="note">
+<summary><a href="../examples/">examples</a>/ui/customwindow_titlebar_blur/src/main.cpp</summary>
+<p><a href="../custom-window-titlebar-blur/">Custom window titlebar blur</a> — Window with extended decoration, whose titlebar blurs the contents scrolled under it.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">setContents</span><span class="p">(</span><span class="n">Stacked</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">        </span><span class="n">Vertical</span><span class="o">::</span><span class="n"><a href="../ass_expanding/">Expanding</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// content layer</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">            </span><span class="c1">// keep contents out of the system UI (titlebar controls strip)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="hll"><span class="w">            </span><span class="n"><a href="../declarative_spacerfixed/">SpacerFixed</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">AMetric</span><span class="p">(</span><span class="n">window</span><span class="o">-&gt;</span><span class="n">safeAreaInsets</span><span class="o">-&gt;</span><span class="n">top</span><span class="p">,</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">T_PX</span><span class="p">))</span><span class="w"> </span><span class="p">},</span>
+</span></span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">            </span><span class="n">actualContent</span><span class="p">(),</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="n">Vertical</span><span class="o">::</span><span class="n"><a href="../ass_expanding/">Expanding</a></span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// titlebar layer</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="n">titlebar</span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="n"><a href="../declarative_spacerexpanding/">SpacerExpanding</a></span><span class="w"> </span><span class="p">{},</span><span class="w">   </span><span class="c1">// blank space</span>
+</span></code></pre></div>
+</details>
+<details class="note">
 <summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
 <p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">                  </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aviewcontainer/">AViewContainer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{};</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">                  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                      </span><span class="n">v1</span><span class="o">-&gt;</span><span class="n">addView</span><span class="p">(</span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;{} px&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">)),</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="hll"><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Hello! [] .~123`&quot;</span><span class="p">)</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fontsize/">FontSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">AMetric</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">T_PX</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
-</span></span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">                      </span><span class="n">v2</span><span class="o">-&gt;</span><span class="n">addView</span><span class="p">(</span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;{} px&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span><span class="p">)),</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="hll"><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Hello! [].~123`&quot;</span><span class="p">)</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fontsize/">FontSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">AMetric</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">T_PX</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
-</span></span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">                  </span><span class="p">}</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">                  </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aviewcontainer/">AViewContainer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{};</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">                  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">                      </span><span class="n">v1</span><span class="o">-&gt;</span><span class="n">addView</span><span class="p">(</span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;{} px&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">)),</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="hll"><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Hello! [] .~123`&quot;</span><span class="p">)</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fontsize/">FontSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">AMetric</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">T_PX</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span></span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">                      </span><span class="n">v2</span><span class="o">-&gt;</span><span class="n">addView</span><span class="p">(</span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;{} px&quot;</span><span class="n">_format</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span><span class="p">)),</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="hll"><span class="w">                        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../alabel/">ALabel</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Hello! [].~123`&quot;</span><span class="p">)</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fontsize/">FontSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">AMetric</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">T_PX</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span></span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">                  </span><span class="p">}</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="w"> </span><span class="n">v2</span><span class="w"> </span><span class="p">};</span>
 </span></code></pre></div>
 </details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
@@ -2036,13 +2073,13 @@ will correctly handle systems with hidpi screens.</p>
 <h3 AMetric::AMetric_="AMetric::AMetric()" id="AMetric::AMetric">constructor<a class="headerlink" href="#AMetric::AMetric" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">AMetric</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">constexpr</span><span class="w"> </span><span class="n">AMetric</span><span class="o">::</span><span class="n">AMetric</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Constructor for AMetric a; a = 0 without unit specifier. Can be used only for zero initialization (see
        example)
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">AMetric</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// ok&lt;br /&gt;</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">AMetric</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="n">_dp</span><span class="p">;</span><span class="w"> </span><span class="c1">// ok&lt;br /&gt;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">AMetric</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// produces error&lt;br /&gt;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">AMetric</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// ok&lt;br /&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">AMetric</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="n">_dp</span><span class="p">;</span><span class="w"> </span><span class="c1">// ok&lt;br /&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">AMetric</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// produces error&lt;br /&gt;</span>
 </span></code></pre></div></p>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -2092,14 +2129,14 @@ will correctly handle systems with hidpi screens.</p>
     
     
     
-    <a href="../retained_immediate_ui/" class="md-footer__link md-footer__link--next"
-       aria-label="Next: Retained and immediate UI">
+    <a href="../migration-window-init/" class="md-footer__link md-footer__link--next"
+       aria-label="Next: Migration: WindowStyle to AWindow::Init">
         <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
             <div class="md-ellipsis">
-                Retained and immediate UI
+                Migration: WindowStyle to AWindow::Init
             </div>
         </div>
         <div class="md-footer__button md-icon">
