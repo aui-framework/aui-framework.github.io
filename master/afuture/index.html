@@ -1330,6 +1330,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#AFuture::withTimeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      withTimeout
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1510,6 +1519,34 @@ Example:
 </div></dd>
 </dl>
 <p>After AFuture grabbed the value, supplyValue calls onSuccess listeners with the new value.</p>
+<div style="position:absolute;opacity:0">
+<h3 AFuture::withTimeout_="AFuture::withTimeout()" id="AFuture::withTimeout">withTimeout<a class="headerlink" href="#AFuture::withTimeout" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">AFuture</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">withTimeout</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Creates a future that mirrors this one but fails if this one does not complete in time.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>duration</code></b>
+<div style="display: table-cell"> timeout.</div>
+</div>
+</div></dd>
+<dt>Returns</dt>
+<dd>a new future. It completes with this future's result, or with an exception caused by
+        <a href="../atimeoutexception/">ATimeoutException</a> if the timeout elapsed first.</dd>
+</dl>
+<p>When the timeout elapses, this (source) future is cancelled, so its onCancel handler can abort the underlying
+operation. The source is kept alive by the returned future; when the returned future is cancelled or destroyed,
+the source is cancelled too.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">reply</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">sendRequest</span><span class="p">().</span><span class="n">withTimeout</span><span class="p">(</span><span class="mi">10</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="c1">// timed out (or sendRequest failed)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
