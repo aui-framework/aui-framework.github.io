@@ -553,6 +553,29 @@ We are migrating to a new documentation engine. Please report presentation issue
   
   
     <li class="md-nav__item">
+      <a href="../agentic-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agentic development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ahotcodereload/" class="md-nav__link">
         
   
@@ -661,6 +684,24 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#assets" class="md-nav__link">
     <span class="md-ellipsis">
       Assets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#MSVC_C1001" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSVC v142: internal compiler error C1001
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unresolved-__std_-symbols-on-msvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unresolved __std_* symbols on MSVC
     </span>
   </a>
   
@@ -1447,6 +1488,24 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#MSVC_C1001" class="md-nav__link">
+    <span class="md-ellipsis">
+      MSVC v142: internal compiler error C1001
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unresolved-__std_-symbols-on-msvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unresolved __std_* symbols on MSVC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#BUILD_CACHE_INVALIDATION" class="md-nav__link">
     <span class="md-ellipsis">
       Build cache invalidation
@@ -1508,6 +1567,47 @@ We are migrating to a new documentation engine. Please report presentation issue
    also with the final executable (<code>PUBLIC</code> linking does not solve this issue on Linux).</li>
 <li>Try using <a href="../aui_module/#WHOLEARCHIVE">WHOLEARCHIVE</a> flag.</li>
 </ol>
+<h2 id="MSVC_C1001">MSVC v142: internal compiler error C1001<a class="headerlink" href="#MSVC_C1001" title="Permanent link">#</a></h2>
+<p>Symptoms: MSVC 19.29 (the <code>v142</code> toolset, shipped with Visual Studio 2019) crashes on a file that builds with every other
+compiler, pointing at the first line of the function or of the UI-building expression:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>fatal error C1001: Internal compiler error.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>(compiler file &#39;D:\a\_work\1\s\src\vctools\Compiler\Utc\src\p2\main.c&#39;, line 213)
+</span></code></pre></div>
+<p>The compiler exits with <code>0xC0000005</code>, in Debug and Release alike. MSVC 19.44 and 19.51 are not affected.</p>
+<p>Cause: a compiler bug that AUI's DSL runs into easily. The compiler crashes if a specialization of a constructor template
+is used <strong>only</strong> inside a designated initializer of a temporary aggregate, and nowhere else in the translation unit. In
+AUI, that is <code><a href="../alabel/">Label</a> { "Text" }</code> assigned to a field of <code><a href="../abutton/">Button</a></code> or <code>CheckBox</code>, with <code><a href="../alabel/">Label</a>::text</code> being constructed by a
+template. This code is valid C++, and the crash reproduces without AUI:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Inner</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">U</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Inner</span><span class="p">(</span><span class="n">U</span><span class="o">&amp;&amp;</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Aggregate</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Inner</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Outer</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Aggregate</span><span class="w"> </span><span class="n">member</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Outer</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Outer</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">member</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Aggregate</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// C1001</span>
+</span></code></pre></div>
+<p>The type of a string literal includes its length, so <code><a href="../alabel/">Label</a> { "Copy" }</code> and <code><a href="../alabel/">Label</a> { "Paste" }</code> are different
+specializations. Thus, a file may stop compiling after changing a label, and it may start compiling again after adding an
+unrelated <code><a href="../alabel/">Label</a></code> of the same length. Do not take an accidental fix for a real one: moving the code to another function or
+extracting a helper does not address the cause.</p>
+<p>Solution: pass <code>content</code> and the others positionally. The struct fields are initialized the same way:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// crashes MSVC v142</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Copy&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">.</span><span class="n">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// builds everywhere</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Copy&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span></code></pre></div>
+<p>Alternatively, name the variable (<code><a href="../abutton/">Button</a> button { .content = <a href="../alabel/">Label</a> { "Copy" } };</code>) or upgrade to the <code>v143</code> toolset.</p>
+<p>AUI's own sources have to build with <code>v142</code>, so they use the positional form. <code><a href="../examples/">examples</a>/ui</code> and <code><a href="../examples/">examples</a>/7guis</code> keep the
+designated form for the sake of code snippets, hence these directories are skipped on Windows CI.</p>
+<p>To check a change without pushing it, install the <code>MSVC v142</code> component and build with
+<code>-T v142</code> (Visual Studio generators), or run <code>vcvarsall.bat x64 -vcvars_ver=14.29</code> and compile the file in question with
+<code>cl</code>.</p>
+<h2 id="unresolved-__std_-symbols-on-msvc">Unresolved <code>__std_*</code> symbols on MSVC<a class="headerlink" href="#unresolved-__std_-symbols-on-msvc" title="Permanent link">#</a></h2>
+<p>Symptoms: linking fails with <code>unresolved external symbol __std_rotate</code> (<code>__std_search_1</code>, <code>__std_find_trivial_1</code>, etc.)
+referenced from a library of a dependency, i.e., <code>gtest.lib</code>.</p>
+<p>Cause: the dependency was built by a newer MSVC toolset than the one linking it. <code>&lt;BUILD_SPECIFIER&gt;</code> includes the
+compiler name but not its version, so <a href="../aui.boot/#AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)</a> shared between toolsets gives binaries of one toolset to the other.</p>
+<p>Solution: use a separate cache per toolset. On CI, include the toolset in the cache key and do not fall back to a key of
+another toolset. Locally, set a different <code><a href="../aui-configure-flags/#AUIB_CACHE_DIR">AUIB_CACHE_DIR</a></code> or delete the affected package from the cache.</p>
 <h2 id="BUILD_CACHE_INVALIDATION">Build cache invalidation<a class="headerlink" href="#BUILD_CACHE_INVALIDATION" title="Permanent link">#</a></h2>
 <p>Symptoms:</p>
 <ol>
@@ -1523,11 +1623,11 @@ invalidate caches: </p>
 <li>In <strong>CLion</strong>: File &gt; Reload CMake Project</li>
 <li>In <strong>Visual Studio Code</strong>: <code>F1</code> &gt; <code>CMake: Configure</code></li>
 <li>In CLI:
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>&lt;YOUR_BUILD_DIR&gt;
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cmake<span class="w"> </span>..
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>&lt;YOUR_BUILD_DIR&gt;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cmake<span class="w"> </span>..
 </span></code></pre></div>
     or
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cmake<span class="w"> </span>--build<span class="w"> </span>&lt;YOUR_BUILD_DIR&gt;
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cmake<span class="w"> </span>--build<span class="w"> </span>&lt;YOUR_BUILD_DIR&gt;
 </span></code></pre></div></li>
 <li>Delete <code>CMakeCache.txt</code> from your CMake binary dir (<code>cmake-build-debug</code> or <code>cmake-build-release</code> in CLion).</li>
 <li>Delete your CMake binary dir.</li>

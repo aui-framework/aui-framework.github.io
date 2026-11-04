@@ -1677,7 +1677,7 @@ environments, while other desktop environments display a window with server-side
   <code>GApplication</code> with <code>G_APPLICATION_NON_UNIQUE</code>, so they never compete for the bus name.</li>
 <li>If the session bus is unavailable (i.e., ssh session without D-Bus, some containers), <code>libgio</code> can't be loaded or the
   application id is not a valid one (see <code>g_application_id_is_valid</code>), AUI falls back to an exclusive <code>flock</code> on
-  <code>$XDG_RUNTIME_DIR/<a href="../aui/">aui</a>-&lt;key&gt;-&lt;uid&gt;.lock</code> plus a unix socket next to it (<code>$XDG_RUNTIME_DIR/app/$FLATPAK_ID/</code> under
+  <code>$XDG_RUNTIME_DIR/aui-&lt;key&gt;-&lt;uid&gt;.lock</code> plus a unix socket next to it (<code>$XDG_RUNTIME_DIR/app/$FLATPAK_ID/</code> under
   Flatpak; <code>/tmp</code> if <code>$XDG_RUNTIME_DIR</code> is not set). The fallback does not see instances across sandboxes, and a mix of
   GApplication and fallback instances of the same application is not detected.</li>
 <li><code><a href="../awindow/#AWindow::activate">AWindow::activate</a></code> uses <code>_NET_ACTIVE_WINDOW</code> on X11 and <code>gtk_window_set_startup_id</code> + <code>gtk_window_present</code> on GTK

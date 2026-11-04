@@ -1859,7 +1859,7 @@ various installation methods but also override the variables if needed.</p>
 </table>
 <h3 id="id">ID<a class="headerlink" href="#id" title="Permanent link">#</a></h3>
 <p>Specify reverse-DNS application identifier (i.e., <code>com.example.myapp</code>). Defaults to <code>com.unknown.aui-application</code>.</p>
-<p>This value is available in C++ as <code><a href="../aui/">aui</a>::app_info::app_id</code>. It is used as the icon name and <code>.desktop</code> file name on
+<p>This value is available in C++ as <code>aui::app_info::app_id</code>. It is used as the icon name and <code>.desktop</code> file name on
 Linux and as the default key of the single instance lock (<code><a href="../aapplication/#AApplication::requestSingleInstanceLock">AApplication::requestSingleInstanceLock</a></code>), see
 <a href="../app-lifetime/">Application lifetime &amp; instancing</a>. Applications with the default <code>ID</code> can't request single instance lock, as they would conflict with
 each other.</p>
@@ -1869,7 +1869,7 @@ each other.</p>
 <p>Specify application display name that would appear in system's UIs (i.e., start menu, launchpad, desktop, control panel).</p>
 <p>This value is availabile in C++ via <code>app_info</code> namespace:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/AppInfo.h&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">app_info</span><span class="o">::</span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">appName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">app_info</span><span class="o">::</span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
 <table>
 <thead>

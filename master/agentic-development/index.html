@@ -1,0 +1,2169 @@
+<!--
+  ~ AUI Framework - Declarative UI toolkit for modern C++20
+  ~ Copyright (C) 2020-2025 Alex2772 and Contributors
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  -->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cross-platform base for C++ UI apps">
+      
+      
+        <meta name="author" content="Alex2772">
+      
+      
+        <link rel="canonical" href="https://aui-framework.github.io/master/agentic-development/">
+      
+      
+        <link rel="prev" href="../devtools/">
+      
+      
+        <link rel="next" href="../ahotcodereload/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Agentic development - AUI Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../overrides/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agentic-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+<!-- Add announcement here, including arbitrary HTML -->
+We are migrating to a new documentation engine. Please report presentation issues to <a href="https://github.com/aui-framework/aui/issues/540">#540</a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<!--
+  ~ AUI Framework - Declarative UI toolkit for modern C++20
+  ~ Copyright (C) 2020-2025 Alex2772 and Contributors
+  ~
+  ~ SPDX-License-Identifier: MPL-2.0
+  ~
+  ~ This Source Code Form is subject to the terms of the Mozilla Public
+  ~ License, v. 2.0. If a copy of the MPL was not distributed with this
+  ~ file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  -->
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <a href=".." title="AUI Framework" class="md-header__button md-logo" aria-label="AUI Framework" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Developers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agentic development
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <label class="md-header__button md-icon" for="__search">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </label>
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.598 1.591a.75.75 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786m1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8m0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0M8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0M3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8m13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8m-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13m3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061M2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.75.75 0 0 1-.018 1.042.75.75 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AUI Framework" class="md-nav__button md-logo" aria-label="AUI Framework" data-md-component="logo">
+      
+  <img src="../assets/logo.svg" alt="logo">
+
+    </a>
+    AUI Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aui-framework/aui" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    aui-framework/aui
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started with AUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../ui-building-overview/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    UI
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../app-build-overview/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Build & Deploy
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../windows/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Platforms
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools & Debugging
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Debugging
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devtools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Devtools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Agentic development
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agentic development
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enabling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pairing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pairing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keys-of-aui-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keys of aui-remote
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frame-stream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frame stream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-with-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using with an agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-in-a-headless-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running in a headless environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-aui-remote-with-aui-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging aui-remote with aui-remote
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ahotcodereload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hot Code Reload
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ide-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IDE Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshoot list
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Classes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Macros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aui_app/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    CMake
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::core
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../views/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::views
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../crypt/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::crypt
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../curl/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::curl
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../json/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::json
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../network/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::network
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../updater/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::updater
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../image/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::image
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../xml/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::xml
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../audio/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::audio
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../uitests/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::uitests
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::data
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../sqlite/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    aui::sqlite
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    aui::mysql
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../contributing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#enabling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encryption
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pairing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pairing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pairing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keys-of-aui-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keys of aui-remote
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protocol
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frame-stream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frame stream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-with-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using with an agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-in-a-headless-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running in a headless environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-aui-remote-with-aui-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging aui-remote with aui-remote
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/aui-framework/aui/edit/master/docs/agentic-development.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/aui-framework/aui/raw/master/docs/agentic-development.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="agentic-development">Agentic development<a class="headerlink" href="#agentic-development" title="Permanent link">#</a></h1>
+<p>An AI coding agent can run the whole loop on an AUI application: build, launch, look at the window, click and type, compare
+the result and fix the code. This works through the remote agent of <code>aui::dev_extras</code>, an in-process JSON-RPC 2.0 server
+on a WebSocket.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The agent lets a client click, type and read what is on the screen. Link <code>aui::dev_extras</code> to development builds only
+and never ship it to users.</p>
+</div>
+<h2 id="enabling">Enabling<a class="headerlink" href="#enabling" title="Permanent link">#</a></h2>
+<p>Remote debugging is opt-in: linking <code>aui::dev_extras</code> does nothing by itself, the application has to start
+<a href="../aremotedebug/">ARemoteDebug</a> from its code. Link the module to development builds only:</p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb"><a href="../aui.boot/">auib_import</a></span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">https://github.com/aui-framework/aui</span><span class="w"> </span><span class="s">COMPONENTS</span><span class="w"> </span><span class="s"><a href="../core/">core</a></span><span class="w"> </span><span class="s"><a href="../views/">views</a></span><span class="w"> </span><span class="s">dev_extras</span><span class="w"> </span><span class="s">VERSION</span><span class="w"> </span><span class="o">${</span><span class="nv">AUI_VERSION</span><span class="o">}</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">CMAKE_BUILD_TYPE</span><span class="w"> </span><span class="s">STREQUAL</span><span class="w"> </span><span class="s2">&quot;Debug&quot;</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="c"># recommended: restrict dev_extras to debug builds only</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">aui.example.remote_debug</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s">aui::dev_extras</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nb">endif</span><span class="w"> </span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Then start the agent in <code><a href="../aui_entry/">AUI_ENTRY</a></code>. <code>AUI_DEBUG</code> keeps it out of release builds and <code>__has_include</code> keeps the code
+compiling when <code>aui::dev_extras</code> is not linked:</p>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cp">#if AUI_DEBUG &amp;&amp; __has_include(&lt;AUI/Remote/ARemoteDebug.h&gt;)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/Remote/ARemoteDebug.h&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cp">#define MY_APP_REMOTE_DEBUG 1</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="cp">#endif</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#if MY_APP_REMOTE_DEBUG</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="c1">// opt-in remote debugging: waits for aui-remote (or any JSON-RPC client) on a loopback port.</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../aremotedebug/">ARemoteDebug</a></span><span class="o">::</span><span class="n">start</span><span class="p">(</span><span class="n"><a href="../aremotedebug/">ARemoteDebug</a></span><span class="o">::</span><span class="n">Options</span><span class="o">::</span><span class="n">fromEnvironment</span><span class="p">());</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="c1">// additional feature: you can register your own functions to be called by aui-remote GUI, CLI or an AI agent</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">debug</span><span class="o">-&gt;</span><span class="n">registerFunction</span><span class="p">(</span><span class="s">&quot;show_window&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Show a modal window.&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="n">AMessageBox</span><span class="o">::</span><span class="n">show</span><span class="p">(</span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Remote window&quot;</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">::</span><span class="n">toString</span><span class="p">(</span><span class="n">args</span><span class="p">));</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">&gt;::</span><span class="n">fromValue</span><span class="p">(</span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">::</span><span class="n">Object</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="cp">#endif</span>
+</span></code></pre></div></td></tr></table></div>
+<p>The condition is yours to write: a command line flag, a setting or a debug menu item work as well. The code is the same
+on every platform, including Windows, Android and iOS, where there is no convenient way to set an environment
+variable. The agent listens on <code>127.0.0.1</code> at a random port (set <code>Options::port</code> to pin it) and writes
+<code>~/.aui/remote/&lt;pid&gt;.json</code> with the port and the fingerprint of its certificate. On Android and iOS, where the
+discovery file is out of reach, set <code>Options::writeDiscoveryFile</code> to <code>false</code>, pick a fixed port and forward it
+(<code>adb forward tcp:&lt;port&gt; tcp:&lt;port&gt;</code>).</p>
+<p>The complete application is <code><a href="../examples/">examples</a>/ui/remote_debug</code>.</p>
+<h2 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">#</a></h2>
+<p>The agent speaks <code>wss://</code> only; there is no plain <code>ws://</code> mode. It generates a self-signed certificate on every start
+and publishes its SHA-256 fingerprint as <code>certSha256</code> in the discovery file. A client must accept the server only when
+the certificate matches that fingerprint: the discovery file (readable by its owner only) is the trusted channel, so
+the traffic, including the key and the screenshots' paths, can't be read or altered by whoever sniffs the network.
+<a href="../awebsocket/">AWebsocket</a> does it with <code>Options::expectedFingerprint</code>.</p>
+<p><a href="../awebsocketserver/">AWebsocketServer</a> with <code>Config::tls</code> and <a href="../atlssession/">ATlsSession</a> from <code><a href="../crypt/">aui::crypt</a></code> are the building blocks.</p>
+<h2 id="pairing">Pairing<a class="headerlink" href="#pairing" title="Permanent link">#</a></h2>
+<p>A client that connects for the first time has to be paired, so that nothing on the machine can drive the application
+behind your back:</p>
+<ol>
+<li>The client calls <code>pair.begin</code>. The application writes a 6-digit code to the log and shows it in an overlay over its
+   window.</li>
+<li>A human types the code into the client (the GUI of <code>aui-remote</code>, or tells it to the agent that uses its CLI).</li>
+<li>The client calls <code>pair.confirm</code> with <code>{ code, key }</code>, where <code>key</code> is a random string the client has just generated.</li>
+</ol>
+<p>Pairing is a one-time procedure. The application stores a SHA-256 of the key (not the key itself) next to the path of its
+executable, and the client stores the key the same way, so from now on the client connects with
+<code>wss://127.0.0.1:&lt;port&gt;/?key=&lt;key&gt;</code> and needs no code, even after the application is restarted.
+A code is valid for 2 minutes and 3 attempts (a refused <code>pair.confirm</code> reports <code>data.attemptsLeft</code>); after a few wasted codes <code>pair.begin</code> is refused (<code>RATE_LIMITED</code>, -32007)
+for a period that doubles every time. Until paired, a connection can call nothing but <code>pair.begin</code> and
+<code>pair.confirm</code>; connections with an <code>Origin</code> header (web pages) are rejected altogether.</p>
+<p>To check every scenario while debugging, set <code>Options::pairing</code> (or the environment variable <code>AUI_REMOTE_PAIRING</code>,
+read by <code><a href="../aremotedebug/">ARemoteDebug</a>::Options::fromEnvironment()</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>remember</code></td>
+<td>the default; the client is paired once</td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>the client is trusted until the application exits; after a restart the code is asked again</td>
+</tr>
+<tr>
+<td><code>always</code></td>
+<td>the code is asked on every connection, even from a client with a known key; <code>aui-remote cli</code> opens a connection per command, so only its GUI can work with it</td>
+</tr>
+</tbody>
+</table>
+<p>Where the hashes are kept is <code>Options::trustedKeysFile</code>: by default <code>~/.aui/remote/trusted</code> on desktop and the
+application <a href="../data/">data</a> folder on Android and iOS. On Emscripten nothing survives a reload, so it behaves like <code>session</code>.</p>
+<p>When the client launches the application itself, it passes a key in the environment variable <code>AUI_REMOTE_KEY</code>, and no
+pairing is needed. <code><a href="../aremotedebug/">ARemoteDebug</a>::Options::fromEnvironment()</code> reads it, as in the example above.</p>
+<h3 id="keys-of-aui-remote">Keys of aui-remote<a class="headerlink" href="#keys-of-aui-remote" title="Permanent link">#</a></h3>
+<p>Keys live in <code>~/.aui/remote/clients</code> (mode 0600). There are two kinds:</p>
+<ul>
+<li>the session key, <code>&lt;pid&gt;-&lt;startedAt&gt;.session</code>: valid until the application process exits. <code>launch</code> generates one and
+  passes it in <code>AUI_REMOTE_KEY</code> (picked up by <code>Options::fromEnvironment()</code>), so launched applications need no pairing;</li>
+<li>the paired key, <code>&lt;exe name&gt;-&lt;hash of exe path&gt;.key</code>: valid across restarts of the same executable.</li>
+</ul>
+<p>For any other application, <code>pair &lt;pid&gt;</code> asks it to show a 6-digit code (in its window and log) and <code>pair &lt;pid&gt; --code</code>
+confirms it with a new random key. What is kept depends on the pairing policy of the application
+(<code><a href="../aremotedebug/">ARemoteDebug</a>::Options::pairing</code>, or <code>AUI_REMOTE_PAIRING</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Policy</th>
+<th>The application</th>
+<th>The client keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>remember</code> (default)</td>
+<td>trusts the client after restarts</td>
+<td>the paired key</td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>trusts the client until it exits</td>
+<td>a session key</td>
+</tr>
+<tr>
+<td><code>always</code></td>
+<td>asks for the code on every connection</td>
+<td>nothing</td>
+</tr>
+</tbody>
+</table>
+<p>Every CLI command is a connection of its own, so <code>always</code> is usable from the GUI only. The paired key survives a run of
+the application with <code>session</code> or <code>always</code>: it is deleted only when an application with <code>remember</code> rejects it.</p>
+<p><code>pair</code> on an application that already accepts the stored key answers <code>alreadyPaired</code> without asking for a code. When an
+application rejects a stored key (it forgot the client), the key is deleted and the error says to pair again.</p>
+<p>Applications are discovered through <code>~/.aui/remote/&lt;pid&gt;.json</code>. <code>list</code> deletes the discovery files and the session keys
+of dead processes; paired keys are kept.</p>
+<h2 id="protocol">Protocol<a class="headerlink" href="#protocol" title="Permanent link">#</a></h2>
+<p>Text frames, JSON-RPC 2.0, protocol version 1. Errors carry <code>data.hint</code> with a suggestion for the next step.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>session.hello</code></td>
+<td>protocol version, pid and the list of methods</td>
+</tr>
+<tr>
+<td><code>window.list</code></td>
+<td><a href="../windows/">windows</a> and their ids</td>
+</tr>
+<tr>
+<td><code>window.resize</code></td>
+<td>resizes a window (<code>width</code>, <code>height</code>), answers when the layout is done</td>
+</tr>
+<tr>
+<td><code>window.setScale</code></td>
+<td>the DPI scale on top of the system one (<code>factor</code> or <code>reset</code>)</td>
+</tr>
+<tr>
+<td><code>view.tree</code>, <code>view.find</code>, <code>view.properties</code></td>
+<td>inspect <a href="../views/">views</a>; <code>view.find</code> filters by <code>type</code>, <code>text</code>, <code>assName</code></td>
+</tr>
+<tr>
+<td><code>view.hitTest</code>, <code>view.interactive</code></td>
+<td>the <a href="../views/">views</a> under a point; controls, text fields and <a href="../views/">views</a> with a <code>clicked</code> connection</td>
+</tr>
+<tr>
+<td><code>view.scrollIntoView</code></td>
+<td>scrolls the scroll areas around a view so that it is visible</td>
+</tr>
+<tr>
+<td><code>screenshot</code></td>
+<td>saves a PNG to the temp folder and returns its path; <code>ref</code> crops to a view, <code>crop</code> to an area, <code>scale</code> downscales, <code>annotate</code> numbers the interactive <a href="../views/">views</a></td>
+</tr>
+<tr>
+<td><code>input.pointer</code></td>
+<td><code>click</code>, <code>doubleClick</code>, <code>press</code>, <code>release</code>, <code>move</code>, <code>drag</code>, <code>scroll</code>, <code>longPress</code>, <code>fling</code></td>
+</tr>
+<tr>
+<td><code>input.touch</code></td>
+<td>several fingers at once: <code>pinch</code>, <code>rotate</code> or arbitrary tracks</td>
+</tr>
+<tr>
+<td><code>input.gesture</code></td>
+<td>a long press gesture alone, for clients that hold the finger themselves</td>
+</tr>
+<tr>
+<td><code>input.type</code>, <code>input.key</code></td>
+<td>typed text and key presses with modifiers; they go to the window of <code>ref</code>, or <code>windowId</code></td>
+</tr>
+<tr>
+<td><code>wait.idle</code>, <code>wait.view</code></td>
+<td>wait until nothing is happening / until a view appears or is gone</td>
+</tr>
+<tr>
+<td><code>frames.subscribe</code>, <code>frames.unsubscribe</code>, <code>frames.ack</code></td>
+<td>a stream of window frames with the view tree, see below</td>
+</tr>
+<tr>
+<td><code>diag.log</code></td>
+<td>recent log entries</td>
+</tr>
+<tr>
+<td><code>fn.list</code>, <code>fn.call</code></td>
+<td>application functions, see below</td>
+</tr>
+</tbody>
+</table>
+<p><code>input.pointer</code> with <code>move</code> only moves the mouse, which is how to get a hover state without a click. The <code>pointer</code> param
+selects the device: <code>mouse</code> or <code>finger</code>, which delivers the same actions as touch events of finger 0 (<code>button</code> is
+ignored then). Without it, the pointer is the one native to the platform: <code>finger</code> on Android and iOS, <code>mouse</code> elsewhere;
+<code>session.hello</code> and the discovery file report it as <code>defaultPointer</code>.</p>
+<p><code>click</code> holds the button for 50 ms before releasing it, and the call returns only after the release was delivered.</p>
+<p><code>wait.idle</code> needs a moment with no scheduled frame, no pending layout and an empty message queue of the UI thread. An
+application that renders all the time never has one, so the call ends with <code>TIMEOUT</code> (-32005); wait for a line in the
+log or use <code>wait.view</code> instead.</p>
+<p>Touch gestures always use fingers, whatever <code>pointer</code> says, and the call returns once the last finger is lifted:</p>
+<ul>
+<li><code>longPress</code> holds finger 0 for <code>durationMs</code> (600 by default), then delivers the long press gesture and lifts the
+  finger. AUI has no long press timer of its own: on Android the gesture comes from the system, so the agent sends it
+  the same way. The result has <code>handled</code>; a handled long press is not followed by a click.</li>
+<li><code>fling</code> moves finger 0 by <code>dx</code>, <code>dy</code> with <code>velocity</code> px/s (2000 by default), a move per 16 ms, and lifts it, so the
+  kinetic scroll of <a href="../ascrollarea/">AScrollArea</a> continues on its own; <code>wait.idle</code> waits for it to stop. AUI takes the velocity from
+  the distance between the last moves, so a way shorter than three steps (<code>3 * velocity / 60</code>) gives a slower fling;
+  the result reports the <code>velocity</code> delivered.</li>
+<li><code>input.touch</code> plays <code>fingers: [{ finger, points: [{ x, y, t }] }]</code> (<code>t</code> in ms from the start, up to 30 s; between the
+  points a finger moves smoothly), or a <code>gesture</code> around <code>ref</code> or <code>x</code>, <code>y</code>: <code>pinch</code> (<code>from</code>, <code>to</code>: the distance
+  between two fingers, <code>angle</code> of the line between them) or <code>rotate</code> (<code>degrees</code>, <code>distance</code> between the fingers), both
+  over <code>durationMs</code> (300 by default). AUI handles two-finger gestures in <a href="../a2fingertransformarea/">A2FingerTransformArea</a> (pan, scale, rotation);
+  other <a href="../views/">views</a> see the fingers as separate pointers.</li>
+<li><code>input.gesture</code> with <code>gesture: "longPress"</code> delivers only the gesture at the point. The <code>aui-remote</code> GUI sends it
+  when a finger has been held still for 500 ms in T mode.</li>
+</ul>
+<p><code>screenshot</code> takes <code>crop: { x, y, width, height }</code> in logical pixels of the window (cut by the window, can't be combined
+with <code>ref</code>) and <code>scale</code> in (0, 1], which downscales the result after cropping. <code>scale</code> of the result is pixels of the
+saved <a href="../image/">image</a> per logical pixel, with the downscale included, so dividing a point of the picture by it (and adding the
+origin of <code>crop</code>) always gives window coordinates.</p>
+<p><code>screenshot</code> with <code>annotate: true</code> draws a numbered box over every interactive view that can be seen (set-of-mark) and
+returns <code>marks: [{label, ref, role, text, rect}]</code>, so the numbers on the picture lead straight to refs for
+<code>input.pointer</code>. The <a href="../views/">views</a> are those of <code>view.interactive</code>, minus the ones inside an already marked view (the label of a
+button); <code>rect</code> is in logical pixels of the window. The refs are of a new generation, like after <code>view.interactive</code>. The
+marks are drawn into the saved <a href="../image/">image</a> only: the window and the frame stream don't show them.</p>
+<p><code>window.resize</code> returns once the size has stayed the same for 100 ms with no pending layout, so a screenshot taken right
+after it shows the new size. A window is never smaller than its contents need nor larger than 16384 pixels per axis, and
+the window manager may adjust the size too; in that case the result also has <code>requestedWidth</code>, <code>requestedHeight</code>,
+<code>minWidth</code>, <code>minHeight</code>, <code>maxWidth</code> and <code>maxHeight</code>.</p>
+<p><code>window.setScale</code> does what the Scale slider of the in-process <a href="../devtools/">devtools</a> does: it multiplies the DPI ratio of the window
+by <code>factor</code> (0.25..4, <code><a href="../asurface/#ASurface::setScalingParams">ASurface::setScalingParams</a></code>), so the contents are laid out as on a screen with a different pixel
+density while the window keeps its size in pixels, unless the contents no longer fit: then the window grows to their
+minimum size and stays like that after the scale goes back. <code>reset: true</code> returns to the system scale. It answers when the layout
+has settled, with <code>scalingFactor</code> and the resulting <code>dpi</code>. <code>window.list</code> and every <code>frames.frame</code> report
+<code>scalingFactor</code> too.</p>
+<p>For three seconds after every command, each window shows a pink "this AUI application is being debugged/controlled
+remotely" banner at its top edge. Hover and click also leave a pink pointer on the screen for the same time (an arrow
+for the mouse, a circle for a finger, plus a ripple on click), so someone sitting in front of the application can see
+what the agent is doing. Between <code>press</code> and <code>release</code> both stay on the screen. Both are drawn by <code>aui.dev_extras</code> at the end of the
+frame (<a href="../awindow/#AWindow::postRender"><code>AWindow::postRender</code></a>) and never appear in screenshots: <code>screenshot</code> renders a clean frame first.</p>
+<p>Views are addressed by refs (<code>v&lt;generation&gt;:&lt;id&gt;</code>). A ref stops working when the view dies or the tree was re-listed;
+the agent answers <code>STALE_REF</code> (-32002) and the client should repeat <code>view.find</code>.</p>
+<h2 id="frame-stream">Frame stream<a class="headerlink" href="#frame-stream" title="Permanent link">#</a></h2>
+<p>An interactive client (i.e., a remote debugger window) doesn't poll <code>screenshot</code>. It sends <code>frames.subscribe</code> with
+<code>{ windowId?, scale?, quality? }</code> (<code>scale</code> in (0, 1], default 0.5; JPEG <code>quality</code> 1..100, default 70) and then the
+application pushes a <code>frames.frame</code> notification (a JSON-RPC message without <code>id</code>) every time the window has finished
+rendering a frame. The first one comes right after subscribing. <code>frames.unsubscribe</code> stops the stream, so does closing
+the connection. Subscribing again on the same connection replaces the parameters and restarts with a full tree.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;frames.frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">&quot;seq&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;windowWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;windowHeight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;jpeg&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;base64&gt;&quot;</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;tree&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;base&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;root&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;v1:1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;upsert&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;v1:9&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;<a href="../alabel/">ALabel</a>&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hi&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;x&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;y&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">                                                              </span><span class="nt">&quot;w&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;h&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;absX&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;absY&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                                                              </span><span class="nt">&quot;visible&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">              </span><span class="nt">&quot;remove&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;v1:12&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p><code>width</code> and <code>height</code> are the size of the encoded <a href="../image/">image</a> in pixels, <code>windowWidth</code> and <code>windowHeight</code> are the logical size
+of the window. The tree is a flat map of refs to nodes (<code>type</code>, <code>text</code> and <code>name</code> (ASS names) if there are any, <code>layout</code> of
+a container, geometry relative to the parent and to the window, <code>padding</code> and <code>margin</code> as <code>[left, top, right, bottom]</code>
+unless they are zero, <code>visible</code>, <code>children</code> as refs), the same refs as in <code>view.tree</code>.</p>
+<p>The tree is not sent in full every time: it is a difference against the last tree the client has confirmed with
+<code>frames.ack</code> (params <code>{ seq }</code>), <code>base</code> being the <code>seq</code> of that frame, or <code>null</code> for a full tree. <code>upsert</code> holds every
+node that is new or differs from the base (the whole node replaces the old one), <code>remove</code> holds refs of vanished nodes.
+A client applies the diff to the tree of frame <code>base</code> and then acknowledges the frame. Since frames can be dropped, a
+diff never depends on frames that were not acknowledged.</p>
+<p>There is at most one frame in flight per connection. While one is being sent, newer renders are not queued; when the
+send completes, a frame with the current state is sent. The remote control overlay is not in the frames.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>frames.ack</code> does not show the overlay banner, unlike other commands: otherwise acknowledging a frame would
+render the next one, forever.</p>
+</div>
+<h2 id="application-functions">Application functions<a class="headerlink" href="#application-functions" title="Permanent link">#</a></h2>
+<p>Application specific functions help to reach states that are tedious to click through:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n"><a href="../aremotedebug/">ARemoteDebug</a></span><span class="o">::</span><span class="n">start</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">registerFunction</span><span class="p">(</span><span class="s">&quot;openDocument&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;arguments: { path: string }&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="n">openDocument</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="s">&quot;path&quot;</span><span class="p">].</span><span class="n">asString</span><span class="p">());</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../ajson/">AJson</a></span><span class="o">&gt;::</span><span class="n">fromValue</span><span class="p">(</span><span class="n"><a href="../ajson/">AJson</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>They also answer what the view tree can't. An OpenGL canvas, a game or a video is a single view whatever it shows, so
+a function that reports the state under a point or switches a feature at runtime replaces guessing from screenshots. A
+function can force the order of asynchronous work too, which turns a bug that comes and goes into a reproduction.
+<code>fn.list</code> lists the functions and <code>fn.call</code> runs them; in <code>aui-remote cli</code> these are <code>functions</code> and <code>call</code>.</p>
+<h2 id="using-with-an-agent">Using with an agent<a class="headerlink" href="#using-with-an-agent" title="Permanent link">#</a></h2>
+<p><code>aui-remote</code> (module <code>aui.remote</code>) wraps the protocol into a command line that an agent can call; its GUI installs a
+skill that teaches the agent the loop. It is built for the host along with AUI and comes in <code>bin/</code> of AUI
+distributions, next to <code>aui.toolbox</code>. In a consumer project, find it through the <code>aui</code> entry of
+<code>build/package-lock.json</code>, which AUI.Boot writes on configure:</p>
+<ul>
+<li><code>as_subdirectory</code> is <code>false</code>: the tool is <code>&lt;install_dir&gt;/bin/aui-remote</code>;</li>
+<li><code>as_subdirectory</code> is <code>true</code> (<code>-DAUIB_AUI_AS=ON</code>, see <a href="../aui-configure-flags/">configure flags</a>): AUI is a part of the
+  consumer's build, so build it with <code>cmake --build build -t aui.remote</code> and take <code>build/bin/aui-remote</code>.</li>
+</ul>
+<p>Anything that speaks WebSocket works as well.</p>
+<p>The commands are listed by <code>aui-remote cli help</code>; the skill contains the same table and the instructions for the agent.</p>
+<h2 id="running-in-a-headless-environment">Running in a headless environment<a class="headerlink" href="#running-in-a-headless-environment" title="Permanent link">#</a></h2>
+<p>aui-remote itself does not set up environments: it only talks to AUI applications. How an application behaves on a
+particular desktop is a matter of AUI. A headless environment is optional: an agent prefers one if it can get one, so
+the <a href="../windows/">windows</a> don't get in the user's way, and otherwise works on the desktop. An example that worked on Linux with GNOME
+(mutter 50) and the X11 backend of AUI:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># if dbus-daemon is available, give the compositor a session bus of its own, so it doesn&#39;t touch services and portals</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># of the user&#39;s session:</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">#   export DBUS_SESSION_BUS_ADDRESS=$(dbus-daemon --session --fork --print-address=1)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>mutter<span class="w"> </span>--headless<span class="w"> </span>--wayland<span class="w"> </span>--virtual-monitor<span class="w"> </span>1920x1080<span class="w"> </span>--wayland-display<span class="w"> </span>aui-agent<span class="w"> </span>&gt;<span class="w"> </span>mutter.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">&amp;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nv">MUTTER_PID</span><span class="o">=</span><span class="nv">$!</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># the log says &quot;Using public X11 display :N&quot;; Xwayland&#39;s cookie is the newest of these files</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="nv">XAUTH</span><span class="o">=</span><span class="k">$(</span>ls<span class="w"> </span>-t<span class="w"> </span>/run/user/<span class="k">$(</span>id<span class="w"> </span>-u<span class="k">)</span>/.mutter-Xwaylandauth.*<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1<span class="k">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># X11 backend (the default one of AUI)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>env<span class="w"> </span>-u<span class="w"> </span>WAYLAND_DISPLAY<span class="w"> </span><span class="nv">DISPLAY</span><span class="o">=</span>:N<span class="w"> </span><span class="nv">XAUTHORITY</span><span class="o">=</span><span class="nv">$XAUTH</span><span class="w"> </span>aui-remote<span class="w"> </span>cli<span class="w"> </span>launch<span class="w"> </span>--<span class="w"> </span>./app
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1"># GTK backend (not tried yet)</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>env<span class="w"> </span><span class="nv">WAYLAND_DISPLAY</span><span class="o">=</span>aui-agent<span class="w"> </span><span class="nv">AUI_PA</span><span class="o">=</span>adw1<span class="w"> </span>aui-remote<span class="w"> </span>cli<span class="w"> </span>launch<span class="w"> </span>--<span class="w"> </span>./app
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="nb">kill</span><span class="w"> </span><span class="nv">$MUTTER_PID</span><span class="w">   </span><span class="c1"># by pid: the user&#39;s desktop is mutter too, never kill by name</span>
+</span></code></pre></div>
+<ul>
+<li>The input of <code>click</code>, <code>type</code> and the rest is injected into the application by the agent, so it works there as
+  anywhere else. The window manager is real: modality, focus and size hints behave as on the user's desktop.</li>
+<li><code>echo "Xft.dpi: 144" | xrdb -merge</code> (with <code>DISPLAY</code> and <code>XAUTHORITY</code> of that display) gives the X11 backend a scale of
+  1.5, to check how the app looks on a HiDPI screen.</li>
+<li>To debug how AUI itself interacts with the desktop (pointer grabs, size hints, modality), the input has to go through
+  the OS instead: XTest on that display, i.e. a small Xlib program with <code>XTestFakeMotionEvent</code>,
+  <code>XTestFakeButtonEvent</code>, <code>XTestFakeKeyEvent</code>, and <code>XGetImage</code> for screenshots of the actual window. There it stays
+  inside the virtual monitor. Windows are placed at the center and overlap each other: check what is under the point
+  (<code>XQueryPointer</code>) and activate the window (<code>_NET_ACTIVE_WINDOW</code>) before clicking.</li>
+<li>XTest does not reach Wayland <a href="../windows/">windows</a> (the GTK backend). In a GNOME session (the user's one, with their permission),
+  OS-level input and screenshots of a monitor go through the D-Bus API of mutter:
+  <code>org.gnome.Mutter.RemoteDesktop.CreateSession</code>, then <code>org.gnome.Mutter.ScreenCast.CreateSession</code> with
+  <code>remote-desktop-session-id</code> and <code>RecordMonitor</code>, <code>Start</code>; <code>NotifyPointerMotionAbsolute</code> (monitor pixels),
+  <code>NotifyPointerButton</code> (<code>BTN_LEFT</code> = 0x110), <code>NotifyKeyboardKeysym</code>; the stream is captured with
+  <code>gst-launch-1.0 pipewiresrc path=&lt;node of PipeWireStreamAdded&gt;</code>. The session closes with the D-Bus connection that
+  created it, so all the calls have to come from one process (Python with <code>gi</code>, not separate <code>gdbus</code> calls).</li>
+<li>With no headless environment at hand (macOS, Windows, other desktops), work in the user's environment. The input of
+  <code>aui-remote</code> goes to the application, so it does not take over the user's pointer or keyboard.</li>
+</ul>
+<h2 id="debugging-aui-remote-with-aui-remote">Debugging aui-remote with aui-remote<a class="headerlink" href="#debugging-aui-remote-with-aui-remote" title="Permanent link">#</a></h2>
+<p>In a Debug build of AUI itself (<code>AUI_REMOTE_SELF_DEBUG</code>, on by default there; never in builds that AUI.Boot makes for a
+consumer, nor in release packages) the GUI links <code>aui::dev_extras</code> and starts the remote agent, so the CLI can drive it
+like any other app:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>./build/bin/aui-remote<span class="w"> </span>cli<span class="w"> </span>launch<span class="w"> </span>--<span class="w"> </span><span class="nv">$PWD</span>/build/bin/aui-remote<span class="w">   </span><span class="c1"># prints the pid of the GUI</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>./build/bin/aui-remote<span class="w"> </span>cli<span class="w"> </span>screenshot<span class="w"> </span>--pid<span class="w"> </span>&lt;pid&gt;
+</span></code></pre></div>
+<p>On macOS the executable is <code>build/bin/aui-remote.app/Contents/MacOS/aui-remote</code>.</p>
+<p>Only the GUI starts the agent, CLI invocations don't, and the GUI does not list itself among the connections. The GUI
+shows the frames of the app it inspects inside its own window, so a screenshot of the GUI shows both; compare it with a
+screenshot of the inspected app taken directly.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="md-footer__inner" aria-label="Footer" >
+    
+    
+    <a href="../devtools/" class="md-footer__link md-footer__link--prev"
+       aria-label="Previous: Devtools">
+        <div class="md-footer__button md-icon">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        </div>
+        <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+            <div class="md-ellipsis">
+                Devtools
+            </div>
+        </div>
+    </a>
+    
+    
+    
+    <a href="../ahotcodereload/" class="md-footer__link md-footer__link--next"
+       aria-label="Next: Hot Code Reload">
+        <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+            <div class="md-ellipsis">
+                Hot Code Reload
+            </div>
+        </div>
+        <div class="md-footer__button md-icon">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+        </div>
+    </a>
+    
+</nav>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-grid" style="padding: 0.3rem 0.7rem;line-height:1">
+      <img src="../imgs/logo_white.svg" alt="AUI logo" style="width:50px;height:50px;opacity:0.9;margin-top:16px"/>
+    </div>
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 AUI Framework Contributors. Documentation contributions included herein are the copyrights of their respective owners. The documentation provided herein is licensed under the terms of the GNU Free Documentation License version 1.3 as published by the Free Software Foundation. All trademarks are property of their respective owners.
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/jq2WySpg6m" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/aui-framework/aui" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tracking", "navigation.footer", "navigation.prune", "toc.follow", "search.suggest", "search.highlight", "announce.dismiss", "content.action.view", "content.action.edit", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

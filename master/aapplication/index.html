@@ -1514,11 +1514,11 @@ manage the lifetime by hold() and quit() only.</p>
 <dt>Returns</dt>
 <dd>absolute path to an existing (created on demand) folder.</dd>
 </dl>
-<p>The folder name is derived from <code><a href="../aui/">aui</a>::app_info::app_id</code> (set by <code><a href="../aui_app/">aui_app</a>(ID ...)</code>). If the id is not set, the
-<code><a href="../aui/">aui</a>::app_info::name</code> is used instead. Different applications never share the same folder as long as their
+<p>The folder name is derived from <code>aui::app_info::app_id</code> (set by <code><a href="../aui_app/">aui_app</a>(ID ...)</code>). If the id is not set, the
+<code>aui::app_info::name</code> is used instead. Different applications never share the same folder as long as their
 ids (or names) differ.</p>
 <p>The folder is created by AUI: every call makes sure that it exists (including missing parent folders), so you
-don't need to call <code><a href="../apath/">APath</a>::makeDirs()</code> on it yourself. If the folder is removed while the application is
+don't need to call <code><a href="../apath/#APath::makeDirs">APath::makeDirs()</a></code> on it yourself. If the folder is removed while the application is
 running (i.e., by the user), the next call to dataDir() creates it again; hence, don't cache the folder's
 existence, call dataDir() when you need the path. Files and subfolders inside it are up to you.</p>
 <p>Throws <a href="../aexception/">AException</a> if the application id (or name) is not set, or if the folder can't be created (i.e., no
@@ -1606,7 +1606,7 @@ when the last hold is released, the application exits.</p>
 <dd><div style="display: table">
 <div style="display: table-row">
 <b style="display: table-cell; padding-right: 6px"><code>key</code></b>
-<div style="display: table-cell"> unique key; defaults to `<a href="../aui/">aui</a>::app_info::app_id` (set by `<a href="../aui_app/">aui_app</a>(ID ...)`).</div>
+<div style="display: table-cell"> unique key; defaults to `aui::app_info::app_id` (set by `<a href="../aui_app/">aui_app</a>(ID ...)`).</div>
 </div>
 </div></dd>
 <dt>Returns</dt>

@@ -1328,11 +1328,18 @@ continuously until the animation ends.</p>
 <li><code>AFocusAnimator</code> is used by AUI itself for the focus highlight.</li>
 </ul>
 <p><code>setRepeating(true)</code> makes an animation loop endlessly, which fits a progress indicator. <code>setCurve</code> replaces the
-default easing function with a custom <code>float(float)</code>, i.e., <code><a href="../aui/">aui</a>::animation_curves::Linear</code> or
+default easing function with a custom <code>float(float)</code>, i.e., <code>aui::animation_curves::Linear</code> or
 <code><a href="../aui_animation_curves_cubicbezier/">aui::animation_curves::CubicBezier</a></code>.</p>
 <p>Several animators can be merged with <code>AAnimator::combine({ a, b })</code>.</p>
 <p>To implement your own animator, derive from AAnimator and override <code>doAnimation</code>, which receives the animation
 progress <code>theta</code> (from 0 to 1) and the renderer to apply a transform to.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When animations move to the <a href="../aproperty/">AProperty</a>-based solution, the time of all animations must be controllable from the
+in-process <a href="../devtools/">devtools</a> and from the <code>aui-remote</code> GUI and CLI: pause, resume, step and scale (slow down or speed
+up). Paused time makes screenshots deterministic and lets <code>wait.idle</code> of the remote agent finish in the presence
+of endless animations, such as progress indicators.</p>
+</div>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AAnimator::doAnimation_="AAnimator::doAnimation()" id="AAnimator::doAnimation">doAnimation<a class="headerlink" href="#AAnimator::doAnimation" title="Permanent link">#</a></h3>

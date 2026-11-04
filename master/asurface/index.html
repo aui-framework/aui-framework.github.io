@@ -1388,6 +1388,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#ASurface::closeOverlappingSurfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      closeOverlappingSurfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ASurface::createOverlappingSurface" class="md-nav__link">
     <span class="md-ellipsis">
       createOverlappingSurface
@@ -1451,6 +1460,24 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#ASurface::hasPendingLayout" class="md-nav__link">
+    <span class="md-ellipsis">
+      hasPendingLayout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ASurface::isFrameScheduled" class="md-nav__link">
+    <span class="md-ellipsis">
+      isFrameScheduled
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ASurface::isPreventingClickOnPointerRelease" class="md-nav__link">
     <span class="md-ellipsis">
       isPreventingClickOnPointerRelease
@@ -1472,6 +1499,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#ASurface::onDragEnter" class="md-nav__link">
     <span class="md-ellipsis">
       onDragEnter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ASurface::overlappingSurfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      overlappingSurfaces
     </span>
   </a>
   
@@ -1585,18 +1621,18 @@ belongs to). Typical operations:</p>
 </span></code></pre></div>
 </details>
 <details class="note">
-<summary><a href="../examples/">examples</a>/7guis/circle_drawer/src/main.cpp</summary>
-<p><a href="../7guis-circle-drawer/">7GUIs Circle Drawer</a> — Undo, redo, dialog control.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">              </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Adjust radius...&quot;</span><span class="p">,</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">              </span><span class="p">.</span><span class="n">onAction</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">                  </span><span class="p">[</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">circle</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll"><span class="w">                      </span><span class="k">auto</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">());</span>
-</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">                      </span><span class="k">auto</span><span class="w"> </span><span class="n">radiusPopup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">::</span><span class="n">Init</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                        </span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                        </span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                        </span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                        </span><span class="p">.</span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">::</span><span class="n">Init</span><span class="o">::</span><span class="n">Parent</span><span class="o">&gt;</span><span class="p">(</span>
+<summary><a href="../examples/">examples</a>/app/notes/src/main.cpp</summary>
+<p><a href="../notes-app/">Notes App</a> — Note taking app that demonstrates usage of AListModel, <a href="../aproperty/">AProperty</a>, user <a href="../data/">data</a> saving and loading.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n"><a href="../atextarea/">ATextArea</a></span><span class="o">::</span><span class="n"><a href="../atextarea/">ATextArea</a></span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCharEntered</span><span class="p">(</span><span class="n"><a href="../achar/">AChar</a></span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\r&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll"><span class="w">            </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">focusNextView</span><span class="p">();</span>
+</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n"><a href="../atextarea/">ATextArea</a></span><span class="o">::</span><span class="n">onCharEntered</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">};</span>
 </span></code></pre></div>
 </details>
 <details class="note">
@@ -1615,18 +1651,18 @@ belongs to). Typical operations:</p>
 </span></code></pre></div>
 </details>
 <details class="note">
-<summary><a href="../examples/">examples</a>/app/notes/src/main.cpp</summary>
-<p><a href="../notes-app/">Notes App</a> — Note taking app that demonstrates usage of AListModel, <a href="../aproperty/">AProperty</a>, user <a href="../data/">data</a> saving and loading.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n"><a href="../atextarea/">ATextArea</a></span><span class="o">::</span><span class="n"><a href="../atextarea/">ATextArea</a></span><span class="p">;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCharEntered</span><span class="p">(</span><span class="n"><a href="../achar/">AChar</a></span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\r&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">            </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">focusNextView</span><span class="p">();</span>
-</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="n"><a href="../atextarea/">ATextArea</a></span><span class="o">::</span><span class="n">onCharEntered</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">};</span>
+<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">                  </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Scaling factor&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">                  </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">                    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;</span><span class="p">().</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">::</span><span class="n">valueChanged</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">                                                  </span><span class="p">[](</span><span class="kt">int64_t</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">                                                      </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">setScalingParams</span><span class="p">(</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                                                          </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.25f</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                                                            </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                                                  </span><span class="p">})</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                            </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">setMin</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                            </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">setMax</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
 </span></code></pre></div>
 </details>
 <details class="note">
@@ -1645,18 +1681,18 @@ belongs to). Typical operations:</p>
 </span></code></pre></div>
 </details>
 <details class="note">
-<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
-<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">                  </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Scaling factor&quot;</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">                  </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">&gt;</span><span class="p">().</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../anumberpicker/">ANumberPicker</a></span><span class="o">::</span><span class="n">valueChanged</span><span class="p">,</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                                                  </span><span class="p">[](</span><span class="kt">int64_t</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="hll"><span class="w">                                                      </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">setScalingParams</span><span class="p">(</span>
-</span></span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">                                                          </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.25f</span><span class="p">,</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                                                            </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="w"> </span><span class="p">});</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">                                                  </span><span class="p">})</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">                            </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">setMin</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                            </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">setMax</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+<summary><a href="../examples/">examples</a>/7guis/circle_drawer/src/main.cpp</summary>
+<p><a href="../7guis-circle-drawer/">7GUIs Circle Drawer</a> — Undo, redo, dialog control.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">              </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Adjust radius...&quot;</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">              </span><span class="p">.</span><span class="n">onAction</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                  </span><span class="p">[</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">circle</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="hll"><span class="w">                      </span><span class="k">auto</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">dynamic_cast</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">*&gt;</span><span class="p">(</span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">());</span>
+</span></span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">                      </span><span class="k">auto</span><span class="w"> </span><span class="n">radiusPopup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">::</span><span class="n">Init</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                        </span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">                        </span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">                        </span><span class="p">.</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">                        </span><span class="p">.</span><span class="n">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">::</span><span class="n">Init</span><span class="o">::</span><span class="n">Parent</span><span class="o">&gt;</span><span class="p">(</span>
 </span></code></pre></div>
 </details>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
@@ -1753,10 +1789,20 @@ in order to continue interacting with the parent window.</p>
 <p>When displaying a modal dialog and has blocked the parent window, the application must unblock the parent window
 before the modal dialog destroyed, otherwise, another window will receive the keyboard focus and be activated.</p>
 <div style="position:absolute;opacity:0">
+<h3 ASurface::closeOverlappingSurfaces_="ASurface::closeOverlappingSurfaces()" id="ASurface::closeOverlappingSurfaces">closeOverlappingSurfaces<a class="headerlink" href="#ASurface::closeOverlappingSurfaces" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">closeOverlappingSurfaces</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Closes all overlapping surfaces (context menus, dropdowns, tooltips) attached to this surface.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Subclasses call it from their destructor: ~ASurface can't, closeOverlappingSurfaceImpl is pure virtual there.</p>
+<div style="position:absolute;opacity:0">
 <h3 ASurface::createOverlappingSurface_="ASurface::createOverlappingSurface()" id="ASurface::createOverlappingSurface">createOverlappingSurface<a class="headerlink" href="#ASurface::createOverlappingSurface" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n">AOverlappingSurface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">createOverlappingSurface</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">closeOnClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n">AOverlappingSurface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">createOverlappingSurface</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">closeOnClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -1781,23 +1827,23 @@ usable for tooltips. Do not use that for context menus or other.</div>
 </dl>
 <p>Creates a surface used for context menus and combo boxes. Closure of the surface is controlled by
 <code>closeOnClick</code> param but can be closed manually by calling closeOverlappingSurface.
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">surfaceContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">createOverlappingSurface</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">ALayoutInflater</span><span class="o">::</span><span class="n">inflate</span><span class="p">(</span><span class="n">surfaceContainer</span><span class="p">,</span><span class="w"> </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Item1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="s">&quot;Item2&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Item3&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">});</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">surfaceContainer</span><span class="o">-&gt;</span><span class="n">pack</span><span class="p">();</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">surfaceContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">createOverlappingSurface</span><span class="p">({</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">ALayoutInflater</span><span class="o">::</span><span class="n">inflate</span><span class="p">(</span><span class="n">surfaceContainer</span><span class="p">,</span><span class="w"> </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Item1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="s">&quot;Item2&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n"><a href="../abutton/">Button</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Item3&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">});</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">surfaceContainer</span><span class="o">-&gt;</span><span class="n">pack</span><span class="p">();</span>
 </span></code></pre></div></p>
 <p>To create overlapping surface below some <code>view</code>, use <a href="../aview/">AView</a>::getPositionInWindow:
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">surfaceContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">createOverlappingSurface</span><span class="p">(</span><span class="n">view</span><span class="o">-&gt;</span><span class="n">getPositionInWindow</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">view</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">surfaceContainer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">createOverlappingSurface</span><span class="p">(</span><span class="n">view</span><span class="o">-&gt;</span><span class="n">getPositionInWindow</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">view</span><span class="o">-&gt;</span><span class="n">getSize</span><span class="p">(),</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">});</span>
 </span></code></pre></div></p>
 <p><strong>Examples:</strong></p>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n">AOverlappingSurface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">createOverlappingSurface</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">unsigned</span><span class="p">)</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">positionFactory</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">closeOnClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n">AOverlappingSurface</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">createOverlappingSurface</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">unsigned</span><span class="p">)</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">positionFactory</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">ivec2</span><span class="o">&amp;</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">closeOnClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Arguments</dt>
@@ -1827,7 +1873,7 @@ usable for tooltips. Do not use that for context menus or other.</div>
 <h3 ASurface::current_="ASurface::current()" id="ASurface::current">current<a class="headerlink" href="#ASurface::current" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">static</span><span class="w"> </span><span class="n">ASurface</span><span class="o">*</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">static</span><span class="w"> </span><span class="n">ASurface</span><span class="o">*</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">current</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1838,22 +1884,22 @@ usable for tooltips. Do not use that for context menus or other.</div>
 <details class="note">
 <summary><a href="../examples/">examples</a>/7guis/cells/src/Spreadsheet.h</summary>
 <p><a href="../7guis-cells/">7GUIs Cells</a> — Spreadsheet processor (Excel).</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">        </span><span class="k">struct</span><span class="w"> </span><span class="nc">RangeIterator</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">*</span><span class="w"> </span><span class="n">spreadsheet</span><span class="p">;</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">            </span><span class="n">formula</span><span class="o">::</span><span class="n">Range</span><span class="w"> </span><span class="n">range</span><span class="p">;</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">            </span><span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">            </span><span class="n">RangeIterator</span><span class="w"> </span><span class="k">operator</span><span class="o">++</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="hll"><span class="w">                </span><span class="n">current</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-</span></span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="hll"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span></span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="hll"><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">        </span><span class="k">struct</span><span class="w"> </span><span class="nc">RangeIterator</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="n">Spreadsheet</span><span class="o">*</span><span class="w"> </span><span class="n">spreadsheet</span><span class="p">;</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">            </span><span class="n">formula</span><span class="o">::</span><span class="n">Range</span><span class="w"> </span><span class="n">range</span><span class="p">;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">            </span><span class="n">glm</span><span class="o">::</span><span class="n">uvec2</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">            </span><span class="n">RangeIterator</span><span class="w"> </span><span class="k">operator</span><span class="o">++</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="hll"><span class="w">                </span><span class="n">current</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span></span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="hll"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">range</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="hll"><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
 </span></span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
 <h3 ASurface::enqueueLayoutRoot_="ASurface::enqueueLayoutRoot()" id="ASurface::enqueueLayoutRoot">enqueueLayoutRoot<a class="headerlink" href="#ASurface::enqueueLayoutRoot" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">enqueueLayoutRoot</span><span class="p">(</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">enqueueLayoutRoot</span><span class="p">(</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">view</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Schedules view to be laid out on its own, without laying out the rest of the surface.</p>
 <dl class="doxygen-dl">
@@ -1865,7 +1911,7 @@ the next frame is drawn, instead of dragging the whole view hierarchy through a 
 <h3 ASurface::forceUpdateCursor_="ASurface::forceUpdateCursor()" id="ASurface::forceUpdateCursor">forceUpdateCursor<a class="headerlink" href="#ASurface::forceUpdateCursor" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">forceUpdateCursor</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">forceUpdateCursor</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Updates cursor by triggering onPointerMove on the same position (mMousePos).</p>
 <dl class="doxygen-dl">
@@ -1874,7 +1920,7 @@ the next frame is drawn, instead of dragging the whole view hierarchy through a 
 <h3 ASurface::frameMillis_="ASurface::frameMillis()" id="ASurface::frameMillis">frameMillis<a class="headerlink" href="#ASurface::frameMillis" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">frameMillis</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">frameMillis</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Returns previous frame's rendering duration in millis.</p>
 <dl class="doxygen-dl">
@@ -1886,7 +1932,7 @@ swapping. The value does not include the elapsed time between frames.</p>
 <h3 ASurface::getDpiRatio_="ASurface::getDpiRatio()" id="ASurface::getDpiRatio">getDpiRatio<a class="headerlink" href="#ASurface::getDpiRatio" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">getDpiRatio</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">getDpiRatio</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Returns current dpi ratio</p>
 <dl class="doxygen-dl">
@@ -1896,7 +1942,7 @@ swapping. The value does not include the elapsed time between frames.</p>
 <h3 ASurface::getFps_="ASurface::getFps()" id="ASurface::getFps">getFps<a class="headerlink" href="#ASurface::getFps" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">getFps</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">size_t</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">getFps</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1904,10 +1950,30 @@ swapping. The value does not include the elapsed time between frames.</p>
 </dl>
 <p>FPS is captured every second</p>
 <div style="position:absolute;opacity:0">
+<h3 ASurface::hasPendingLayout_="ASurface::hasPendingLayout()" id="ASurface::hasPendingLayout">hasPendingLayout<a class="headerlink" href="#ASurface::hasPendingLayout" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">hasPendingLayout</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>true if some view is waiting for the layout update.</dd>
+</dl>
+<div style="position:absolute;opacity:0">
+<h3 ASurface::isFrameScheduled_="ASurface::isFrameScheduled()" id="ASurface::isFrameScheduled">isFrameScheduled<a class="headerlink" href="#ASurface::isFrameScheduled" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">isFrameScheduled</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Whether a redraw was requested and the frame is not drawn yet.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Not every platform tracks it: the default implementation returns false.</p>
+<div style="position:absolute;opacity:0">
 <h3 ASurface::isPreventingClickOnPointerRelease_="ASurface::isPreventingClickOnPointerRelease()" id="ASurface::isPreventingClickOnPointerRelease">isPreventingClickOnPointerRelease<a class="headerlink" href="#ASurface::isPreventingClickOnPointerRelease" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">isPreventingClickOnPointerRelease</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">isPreventingClickOnPointerRelease</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 </dl>
@@ -1915,8 +1981,8 @@ swapping. The value does not include the elapsed time between frames.</p>
 <h3 ASurface::iterateOverFocusChain_="ASurface::iterateOverFocusChain()" id="ASurface::iterateOverFocusChain">iterateOverFocusChain<a class="headerlink" href="#ASurface::iterateOverFocusChain" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">iterateOverFocusChain</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">iterateOverFocusChain</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Iterates over focus chain, from parent to child.</p>
 <dl class="doxygen-dl">
@@ -1925,7 +1991,7 @@ swapping. The value does not include the elapsed time between frames.</p>
 <h3 ASurface::onDragEnter_="ASurface::onDragEnter()" id="ASurface::onDragEnter">onDragEnter<a class="headerlink" href="#ASurface::onDragEnter" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">onDragEnter</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">EnterEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">onDragEnter</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">EnterEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Called when the user holds a drag-n-drop object over the window.</p>
 <dl class="doxygen-dl">
@@ -1947,23 +2013,39 @@ onDragDrop() method will be the same.</p>
 <details class="note">
 <summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.h</summary>
 <p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">    </span><span class="n">ExampleWindow</span><span class="p">();</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onDragDrop</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">DropEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="hll"><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">onDragEnter</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">EnterEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
-</span></span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">    </span><span class="n"><a href="../adeque/">ADeque</a></span><span class="o">&lt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mWindows</span><span class="p">;</span>
-</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span><span class="n"><a href="../aasyncholder/">AAsyncHolder</a></span><span class="w"> </span><span class="n">mAsync</span><span class="p">;</span>
-</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../iaudioplayer/">IAudioPlayer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mWavAudio</span><span class="p">;</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w">    </span><span class="n">ExampleWindow</span><span class="p">();</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">onDragDrop</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">DropEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="hll"><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">onDragEnter</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../adragndrop/">ADragNDrop</a></span><span class="o">::</span><span class="n">EnterEvent</span><span class="o">&amp;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+</span></span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">    </span><span class="n"><a href="../adeque/">ADeque</a></span><span class="o">&lt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../awindow/">AWindow</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">mWindows</span><span class="p">;</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">    </span><span class="n"><a href="../aasyncholder/">AAsyncHolder</a></span><span class="w"> </span><span class="n">mAsync</span><span class="p">;</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../iaudioplayer/">IAudioPlayer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mWavAudio</span><span class="p">;</span>
 </span></code></pre></div>
 </details>
+<div style="position:absolute;opacity:0">
+<h3 ASurface::overlappingSurfaces_="ASurface::overlappingSurfaces()" id="ASurface::overlappingSurfaces">overlappingSurfaces<a class="headerlink" href="#ASurface::overlappingSurfaces" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aset/">ASet</a></span><span class="o">&lt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">AOverlappingSurface</span><span class="o">&gt;&gt;&amp;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">overlappingSurfaces</span><span class="p">()</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+<dt>Returns</dt>
+<dd>overlapping surfaces (popups, menus, dropdown lists) that are currently shown over this surface. They are
+drawn above and receive pointer events before the contents of this surface.
+
+!!! note
+
+    Some platforms implement overlapping surfaces as native popup <a href="../windows/">windows</a>, which are <a href="../windows/">windows</a> of their own in
+    the window manager as well (see <a href="../awindow/#AWindow::isPopup">AWindow::isPopup</a>).</dd>
+</dl>
 <div style="position:absolute;opacity:0">
 <h3 ASurface::preventClickOnPointerRelease_="ASurface::preventClickOnPointerRelease()" id="ASurface::preventClickOnPointerRelease">preventClickOnPointerRelease<a class="headerlink" href="#ASurface::preventClickOnPointerRelease" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">preventClickOnPointerRelease</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">preventClickOnPointerRelease</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Prevents click action on upcoming pointer release.</p>
 <dl class="doxygen-dl">
@@ -1975,7 +2057,7 @@ onDragDrop() method will be the same.</p>
 <h3 ASurface::profiling_="ASurface::profiling()" id="ASurface::profiling">profiling<a class="headerlink" href="#ASurface::profiling" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n"><a href="../aui/">aui</a></span><span class="o">::</span><span class="n">lazy</span><span class="o">&lt;</span><span class="n"><a href="../profiling/">Profiling</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n"><a href="../profiling/">profiling</a></span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">aui</span><span class="o">::</span><span class="n">lazy</span><span class="o">&lt;</span><span class="n"><a href="../profiling/">Profiling</a></span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n"><a href="../profiling/">profiling</a></span><span class="p">()</span>
 </span></code></pre></div>
 <p>Get <a href="../profiling/">profiling</a> settings (mutable).</p>
 <dl class="doxygen-dl">
@@ -1984,7 +2066,7 @@ onDragDrop() method will be the same.</p>
 <h3 ASurface::requestHideTouchscreenKeyboard_="ASurface::requestHideTouchscreenKeyboard()" id="ASurface::requestHideTouchscreenKeyboard">requestHideTouchscreenKeyboard<a class="headerlink" href="#ASurface::requestHideTouchscreenKeyboard" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">requestHideTouchscreenKeyboard</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">requestHideTouchscreenKeyboard</span><span class="p">()</span>
 </span></code></pre></div>
 <p>On a mobile touchscreen device, requests hiding system virtual keyboard.</p>
 <dl class="doxygen-dl">
@@ -1993,7 +2075,7 @@ onDragDrop() method will be the same.</p>
 <h3 ASurface::requestShowTouchscreenKeyboard_="ASurface::requestShowTouchscreenKeyboard()" id="ASurface::requestShowTouchscreenKeyboard">requestShowTouchscreenKeyboard<a class="headerlink" href="#ASurface::requestShowTouchscreenKeyboard" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">requestShowTouchscreenKeyboard</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">requestShowTouchscreenKeyboard</span><span class="p">()</span>
 </span></code></pre></div>
 <p>On a mobile touchscreen device, requests system virtual keyboard.</p>
 <dl class="doxygen-dl">
@@ -2002,7 +2084,7 @@ onDragDrop() method will be the same.</p>
 <h3 ASurface::setScalingParams_="ASurface::setScalingParams()" id="ASurface::setScalingParams">setScalingParams<a class="headerlink" href="#ASurface::setScalingParams" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">setScalingParams</span><span class="p">(</span><span class="n">ScalingParams</span><span class="w"> </span><span class="n">params</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">setScalingParams</span><span class="p">(</span><span class="n">ScalingParams</span><span class="w"> </span><span class="n">params</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Sets scaling params</p>
 <dl class="doxygen-dl">
@@ -2013,7 +2095,7 @@ onDragDrop() method will be the same.</p>
 <h3 ASurface::shouldDisplayHoverAnimations_="ASurface::shouldDisplayHoverAnimations()" id="ASurface::shouldDisplayHoverAnimations">shouldDisplayHoverAnimations<a class="headerlink" href="#ASurface::shouldDisplayHoverAnimations" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">shouldDisplayHoverAnimations</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">ASurface</span><span class="o">::</span><span class="n">shouldDisplayHoverAnimations</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Determines whether <a href="../views/">views</a> should display hover animations.</p>
 <dl class="doxygen-dl">

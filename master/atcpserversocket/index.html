@@ -1067,6 +1067,15 @@ We are migrating to a new documentation engine. Please report presentation issue
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ATcpServerSocket::ATcpServerSocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ATcpServerSocket::accept" class="md-nav__link">
     <span class="md-ellipsis">
       accept
@@ -1558,6 +1567,15 @@ We are migrating to a new documentation engine. Please report presentation issue
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#ATcpServerSocket::ATcpServerSocket" class="md-nav__link">
+    <span class="md-ellipsis">
+      constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ATcpServerSocket::accept" class="md-nav__link">
     <span class="md-ellipsis">
       accept
@@ -1605,16 +1623,41 @@ We are migrating to a new documentation engine. Please report presentation issue
 from a worker. See <a href="../network-tcp/">TCP client and server</a>.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
+<h3 ATcpServerSocket::ATcpServerSocket_="ATcpServerSocket::ATcpServerSocket()" id="ATcpServerSocket::ATcpServerSocket">constructor<a class="headerlink" href="#ATcpServerSocket::ATcpServerSocket" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">ATcpServerSocket</span><span class="o">::</span><span class="n">ATcpServerSocket</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">serverPort</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Listens on all interfaces.</p>
+<dl class="doxygen-dl">
+<dt>Arguments</dt>
+<dd><div style="display: table">
+<div style="display: table-row">
+<b style="display: table-cell; padding-right: 6px"><code>serverPort</code></b>
+<div style="display: table-cell"> port to listen; 0 lets the system pick a free port (see `getAddress()`).</div>
+</div>
+</div></dd>
+</dl>
+
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">ATcpServerSocket</span><span class="o">::</span><span class="n">ATcpServerSocket</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../ainet4address/">AInet4Address</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">bindAddress</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Listens on the given address, i.e., <code><a href="../ainet4address/">AInet4Address</a>::fromArray({127, 0, 0, 1}, 0)</code> for loopback only.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Port 0 lets the system pick a free port. The actual address is available through <code>getAddress()</code>.</p>
+<div style="position:absolute;opacity:0">
 <h3 ATcpServerSocket::accept_="ATcpServerSocket::accept()" id="ATcpServerSocket::accept">accept<a class="headerlink" href="#ATcpServerSocket::accept" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../atcpsocket/">ATcpSocket</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">ATcpServerSocket</span><span class="o">::</span><span class="n">accept</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../atcpsocket/">ATcpSocket</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">ATcpServerSocket</span><span class="o">::</span><span class="n">accept</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Blocks the thread until next connection.</p>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
 <dd>new connection</dd>
 </dl>
+<p>Throws if the server socket was closed from another thread, which is the way to stop a thread blocked here.</p>
 
 
 

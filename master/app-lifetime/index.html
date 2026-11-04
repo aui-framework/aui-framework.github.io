@@ -1901,7 +1901,7 @@ and merely hidden when the user closes it:</p>
 <ul>
 <li>Make background work optional (a user setting) and always provide an explicit way to quit (a shortcut, a button or
   a tray menu entry): releasing the <code>Hold</code> (or <code><a href="../aapplication/#AApplication::quit">AApplication::quit()</a></code>) ends the process.</li>
-<li>Pass <code><a href="../aobject/#AObject::GENERIC_OBSERVER">AObject::GENERIC_OBSERVER</a></code> as the receiver for the <code>activated</code> connection in <code><a href="../aui_entry/">AUI_ENTRY</a></code>: it needs no
+<li>Pass <code><a href="../aobject/">AObject</a>::GENERIC_OBSERVER</code> as the receiver for the <code>activated</code> connection in <code><a href="../aui_entry/">AUI_ENTRY</a></code>: it needs no
   receiver object, since <code><a href="../aapplication/">AApplication</a>::inst()</code> outlives everything.</li>
 <li>Code that may relaunch the executable (an <a href="../updater/">updater</a>, an elevation helper, etc.) should run before
   <code>requestSingleInstanceLock()</code>; otherwise the relaunched process would be treated as a second instance.</li>
@@ -1933,7 +1933,7 @@ Hiding the window (as above) is cheaper to restore; destroying it is lighter on 
 </tr>
 <tr>
 <td>Linux (fallback), macOS</td>
-<td><code>flock</code> on <code>$XDG_RUNTIME_DIR/<a href="../aui/">aui</a>-&lt;key&gt;-&lt;uid&gt;.lock</code> (<code>$XDG_RUNTIME_DIR/app/$FLATPAK_ID</code> in Flatpak)</td>
+<td><code>flock</code> on <code>$XDG_RUNTIME_DIR/aui-&lt;key&gt;-&lt;uid&gt;.lock</code> (<code>$XDG_RUNTIME_DIR/app/$FLATPAK_ID</code> in Flatpak)</td>
 <td>unix domain socket next to the lock file</td>
 </tr>
 </tbody>

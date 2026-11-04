@@ -1436,6 +1436,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#AProcess::terminate" class="md-nav__link">
+    <span class="md-ellipsis">
+      terminate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#AProcess::waitForExitCode" class="md-nav__link">
     <span class="md-ellipsis">
       waitForExitCode
@@ -1509,7 +1518,10 @@ UTF-8 string and appends it to <code>accumulator</code>.</p>
 <p>We start the new process by calling its <code>AProcess::run()</code> method, which will execute the specified application
 with the provided arguments in the given working directory.</p>
 <p>We wait for the process to finish by calling <code>waitForExitCode()</code>, which blocks until the process exits and
-returns its exit code. If the exit code is 0, it means the process completed successfully.</p>
+returns its exit code. If the exit code is 0, it means the process completed successfully.
+Child side of the environment tests: prints variables requested by AUI_TEST_PROBE (comma separated names). It is
+started by ProcessEnvironmentTest and does nothing when run on its own.
+/ Runs the child and returns what it printed.</p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
@@ -1576,6 +1588,26 @@ of strings to a single command line string value. See ArgStringList for details 
 <dt><code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">workDir</span></code></dt>
 <dd>
 Process working directory. Defaults to working directory of the calling process.
+</dd>
+<dt><code class="language-cpp highlight"><span class="n"><a href="../amap/">AMap</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="p">,</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">environment</span></code></dt>
+<dd>
+Environment variables of the child process. They are added to the environment of the calling process (or
+used alone if <code>inheritEnvironment</code> is false). A variable replaces an inherited one with the same name.
+</dd>
+<dt><code class="language-cpp highlight"><span class="kt">bool</span><span class="w"> </span><span class="n">inheritEnvironment</span></code></dt>
+<dd>
+Whether the child process gets the environment of the calling process in addition to <code>environment</code>.
+Defaults to true.
+</dd>
+<dt><code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">stdOutFile</span></code></dt>
+<dd>
+If set, the stdout of the child process goes to this file (created or truncated) instead of a <a href="../pipe/">pipe</a> or
+<code>ASubProcessExecutionFlags::TIE_STDOUT</code>, and <code>stdOut</code> is not emitted. Lets a detached process outlive this one
+without holding its streams.
+</dd>
+<dt><code class="language-cpp highlight"><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">stdErrFile</span></code></dt>
+<dd>
+If set, the stderr of the child process goes to this file. See <code>stdOutFile</code>.
 </dd>
 </dl>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
@@ -1745,32 +1777,32 @@ handle is "acquired" and guaranteed to be valid during lifetime of <code>AProces
 
 <p><strong>Examples:</strong></p>
 <details class="note">
-<summary><a href="../examples/">examples</a>/7guis/flight_booker/src/main.cpp</summary>
-<p><a href="../7guis-flight-booker/">7GUIs Flight Booker</a> — Flight Booker.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="c1">// Set contents</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">      </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="hll"><span class="w">        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">AListModel</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;::</span><span class="n">make</span><span class="p">({</span><span class="w"> </span><span class="s">&quot;one-way flight&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;return flight&quot;</span><span class="w"> </span><span class="p">}))</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
-</span></span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="hll"><span class="w">                </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">state</span><span class="o">-&gt;</span><span class="n">isReturnFlight</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">selectionId</span><span class="p">());</span>
-</span></span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="hll"><span class="w">                </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">selectionId</span><span class="p">().</span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">GENERIC_OBSERVER</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">newSelection</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span></span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="hll"><span class="w">                    </span><span class="n">state</span><span class="o">-&gt;</span><span class="n">isReturnFlight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSelection</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-</span></span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="hll"><span class="w">                </span><span class="p">});</span>
-</span></span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="hll"><span class="w">            </span><span class="p">},</span>
+<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">                </span><span class="n"><a href="../declarative_groupbox/">GroupBox</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">                  </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Dropdown lists&quot;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">                  </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">                    </span><span class="c1">/// [dropdown]</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="hll"><span class="w">                    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">AListModel</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;::</span><span class="n">make</span><span class="p">({</span>
+</span></span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 1&quot;</span><span class="p">,</span>
+</span></span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 2&quot;</span><span class="p">,</span>
+</span></span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 3&quot;</span><span class="p">,</span>
+</span></span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 4&quot;</span><span class="p">,</span>
+</span></span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 5&quot;</span><span class="p">,</span>
 </span></span></code></pre></div>
 </details>
 <details class="note">
-<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
-<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">                </span><span class="n"><a href="../declarative_groupbox/">GroupBox</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">                  </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Dropdown lists&quot;</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">                  </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">                    </span><span class="c1">/// [dropdown]</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="hll"><span class="w">                    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">AListModel</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;::</span><span class="n">make</span><span class="p">({</span>
-</span></span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 1&quot;</span><span class="p">,</span>
-</span></span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 2&quot;</span><span class="p">,</span>
-</span></span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 3&quot;</span><span class="p">,</span>
-</span></span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 4&quot;</span><span class="p">,</span>
-</span></span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;Dropdown list 5&quot;</span><span class="p">,</span>
+<summary><a href="../examples/">examples</a>/7guis/flight_booker/src/main.cpp</summary>
+<p><a href="../7guis-flight-booker/">7GUIs Flight Booker</a> — Flight Booker.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="c1">// Set contents</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="n">window</span><span class="o">-&gt;</span><span class="n">setContents</span><span class="p">(</span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">      </span><span class="n">Vertical</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="hll"><span class="w">        </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../adropdownlist/">ADropdownList</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">AListModel</span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;::</span><span class="n">make</span><span class="p">({</span><span class="w"> </span><span class="s">&quot;one-way flight&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;return flight&quot;</span><span class="w"> </span><span class="p">}))</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="hll"><span class="w">                </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n"><a href="../aui_react/">AUI_REACT</a></span><span class="p">(</span><span class="n">state</span><span class="o">-&gt;</span><span class="n">isReturnFlight</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">selectionId</span><span class="p">());</span>
+</span></span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="hll"><span class="w">                </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">selectionId</span><span class="p">().</span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../aobject/">AObject</a></span><span class="o">::</span><span class="n">GENERIC_OBSERVER</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">newSelection</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="hll"><span class="w">                    </span><span class="n">state</span><span class="o">-&gt;</span><span class="n">isReturnFlight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newSelection</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span></span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="hll"><span class="w">                </span><span class="p">});</span>
+</span></span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="hll"><span class="w">            </span><span class="p">},</span>
 </span></span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
@@ -1793,10 +1825,21 @@ handle is "acquired" and guaranteed to be valid during lifetime of <code>AProces
 <dd><a href="../data/">data</a> about this process.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
+<h3 AProcess::terminate_="AProcess::terminate()" id="AProcess::terminate">terminate<a class="headerlink" href="#AProcess::terminate" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AProcess</span><span class="o">::</span><span class="n">terminate</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Asks the process to exit.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Sends SIGTERM on unix, so the process has a chance to clean up. Windows has no such way for an arbitrary process,
+so it is killed there.</p>
+<div style="position:absolute;opacity:0">
 <h3 AProcess::waitForExitCode_="AProcess::waitForExitCode()" id="AProcess::waitForExitCode">waitForExitCode<a class="headerlink" href="#AProcess::waitForExitCode" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AProcess</span><span class="o">::</span><span class="n">waitForExitCode</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">AProcess</span><span class="o">::</span><span class="n">waitForExitCode</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Wait for process to be finished and returns exit code.</p>
 <dl class="doxygen-dl">

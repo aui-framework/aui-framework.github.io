@@ -1267,30 +1267,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
-  <a href="#public-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Public Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Public Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#AComplexFutureOperation::NoValueException" class="md-nav__link">
-    <span class="md-ellipsis">
-      NoValueException
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#public-methods" class="md-nav__link">
     <span class="md-ellipsis">
       Public Methods
@@ -1304,24 +1280,6 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#AComplexFutureOperation::makeFuture" class="md-nav__link">
     <span class="md-ellipsis">
       makeFuture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AComplexFutureOperation::supplyException" class="md-nav__link">
-    <span class="md-ellipsis">
-      supplyException
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#AComplexFutureOperation::supplyValue" class="md-nav__link">
-    <span class="md-ellipsis">
-      supplyValue
     </span>
   </a>
   
@@ -1357,16 +1315,8 @@ We are migrating to a new documentation engine. Please report presentation issue
 <h2 id="detailed-description">Detailed Description<a class="headerlink" href="#detailed-description" title="Permanent link">#</a></h2>
 <p>AComplexFutureOperation is used to handle results and errors of multiple sequential futures.</p>
 <p>AComplexFutureOperation is intended to construct a future with makeFuture(). makeFuture() must be called.</p>
-<p>If AComplexFutureOperation get destroyed, it reports error to it's future if it does not have a result.
-AComplexFutureOperation should be carried with <a href="../afuture/">AFuture</a>::onSuccess callbacks of other futures or any other
-callback-based structure, hence the destruction without result is treated as an error.</p>
-<h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
-<hr />
-<div style="position:absolute;opacity:0">
-<h3 AComplexFutureOperation::NoValueException="AComplexFutureOperation::NoValueException" id="AComplexFutureOperation::NoValueException">NoValueException<a class="headerlink" href="#AComplexFutureOperation::NoValueException" title="Permanent link">#</a></h3>
-</div>
-<p><code>class AComplexFutureOperation::NoValueException</code></p>
-<p><em>Empty structure.</em></p>
+<p>If AComplexFutureOperation and its copies of the resolver are destroyed without a result, the future fails with
+AFutureAbandonedException.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AComplexFutureOperation::makeFuture_="AComplexFutureOperation::makeFuture()" id="AComplexFutureOperation::makeFuture">makeFuture<a class="headerlink" href="#AComplexFutureOperation::makeFuture" title="Permanent link">#</a></h3>
@@ -1378,31 +1328,6 @@ callback-based structure, hence the destruction without result is treated as an 
 <dl class="doxygen-dl">
 </dl>
 <p><a href="../afuture/">AFuture</a><T> can be created only once.</p>
-<div style="position:absolute;opacity:0">
-<h3 AComplexFutureOperation::supplyException_="AComplexFutureOperation::supplyException()" id="AComplexFutureOperation::supplyException">supplyException<a class="headerlink" href="#AComplexFutureOperation::supplyException" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AComplexFutureOperation</span><span class="o">::</span><span class="n">supplyException</span><span class="p">()</span>
-</span></code></pre></div>
-<p>Pushes the result of operation to it's <a href="../afuture/">AFuture</a><T>.</p>
-<dl class="doxygen-dl">
-</dl>
-<div style="position:absolute;opacity:0">
-<h3 AComplexFutureOperation::supplyValue_="AComplexFutureOperation::supplyValue()" id="AComplexFutureOperation::supplyValue">supplyValue<a class="headerlink" href="#AComplexFutureOperation::supplyValue" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AComplexFutureOperation</span><span class="o">::</span><span class="n">supplyValue</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Pushes the result of operation to it's <a href="../afuture/">AFuture</a><T>.</p>
-<dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>value</code></b>
-<div style="display: table-cell"> operation</div>
-</div>
-</div></dd>
-</dl>
 
 
 

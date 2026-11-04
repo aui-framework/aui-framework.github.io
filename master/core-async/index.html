@@ -866,6 +866,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#running-code-on-a-particular-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running code on a particular thread
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cancelling" class="md-nav__link">
     <span class="md-ellipsis">
       Cancelling
@@ -878,6 +887,51 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#coroutines" class="md-nav__link">
     <span class="md-ellipsis">
       Coroutines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waiting-for-a-future-inside-an-asynchronous-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waiting for a future inside an asynchronous function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-a-callback-based-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapping a callback-based API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fire-and-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fire and forget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-futures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining futures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coming-from-other-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coming from other languages
     </span>
   </a>
   
@@ -1690,6 +1744,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
       
         <li class="md-nav__item">
+  <a href="#running-code-on-a-particular-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running code on a particular thread
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cancelling" class="md-nav__link">
     <span class="md-ellipsis">
       Cancelling
@@ -1702,6 +1765,51 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#coroutines" class="md-nav__link">
     <span class="md-ellipsis">
       Coroutines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waiting-for-a-future-inside-an-asynchronous-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waiting for a future inside an asynchronous function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrapping-a-callback-based-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrapping a callback-based API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fire-and-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fire and forget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-futures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combining futures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coming-from-other-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coming from other languages
     </span>
   </a>
   
@@ -1820,12 +1928,12 @@ your own lambda: <code><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a> [&amp
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">mAsync</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n"><a href="../aui_threadpool/">AUI_THREADPOOL</a></span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">heavyComputation</span><span class="p">();</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="p">}).</span><span class="n">onSuccess</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="p">}).</span><span class="n">onValue</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="c1">// callback thread is not specified, so jump to the UI thread when touching <a href="../views/">views</a></span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="n"><a href="../aui_ui_thread/">AUI_UI_THREAD</a></span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="n">mResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="p">};</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="p">}).</span><span class="n">onError</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="p">}).</span><span class="n">onException</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">            </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">err</span><span class="p">(</span><span class="s">&quot;Downloader&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Failed: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="p">});</span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
@@ -1835,70 +1943,280 @@ your own lambda: <code><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a> [&amp
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">mResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">};</span>
 </span></code></pre></div>
-<p><code>onSuccess</code>, <code>onError</code> and <code>onFinally</code> are called exactly once when the future resolves, or immediately if it has
+<p><code>onValue</code>, <code>onException</code> and <code>onFinally</code> are called exactly once when the future resolves, or immediately if it has
 already resolved. They don't keep the future alive, so something has to own it: that's the job of <a href="../aasyncholder/">AAsyncHolder</a>
-(a set of <code><a href="../afuture/">AFuture</a>&lt;&gt;</code> that cancels everything in the destructor, so a callback can't run on a dead <code>this</code>).</p>
+(a set of <code><a href="../afuture/">AFuture</a>&lt;&gt;</code> that cancels everything in the destructor, so a callback can't run on a dead <code>this</code>).
+Calling <code>onValue</code> on a temporary future and dropping the result produces a compiler warning for this reason.</p>
+<p>An exception reaches <code>onException</code> and <code>*future</code> wrapped into <a href="../ainvocationtargetexception/">AInvocationTargetException</a>. Every future between the
+throw and the catch adds one level, so the chain of causes shows the whole path through nested coroutines.</p>
 <p><code><a href="../aui_ui_thread/">AUI_UI_THREAD</a> { ... };</code> posts a lambda to the main thread's event loop.</p>
+<h2 id="running-code-on-a-particular-thread">Running code on a particular thread<a class="headerlink" href="#running-code-on-a-particular-thread" title="Permanent link">#</a></h2>
+<p><a href="../aabstractthread/#AAbstractThread::async"><code>AAbstractThread::async()</code></a> runs a lambda on a given thread and returns an <a href="../afuture/">AFuture</a> of its result. The usual target is
+the UI thread, from a worker or a <a href="../network/">network</a> callback:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">async</span><span class="p">([</span><span class="k">this</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mLabel</span><span class="o">-&gt;</span><span class="n">text</span><span class="p">();</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+<p>The lambda runs when the thread processes its messages, never inline. If it returns an <code><a href="../afuture/">AFuture</a>&lt;T&gt;</code>, the result is
+<code><a href="../afuture/">AFuture</a>&lt;T&gt;</code>, not <code><a href="../afuture/">AFuture</a>&lt;<a href="../afuture/">AFuture</a>&lt;T&gt;&gt;</code>. Don't block on the result on that same thread: the lambda can't run while
+the thread waits.</p>
 <h2 id="cancelling">Cancelling<a class="headerlink" href="#cancelling" title="Permanent link">#</a></h2>
 <p>Cancel a future explicitly with <code>cancel()</code>, or just destroy the last copy. If the task is already running, its thread
 gets interrupted: blocking calls like <code><a href="../athread/#AThread::sleep">AThread::sleep</a></code>, waiting on an <code><a href="../aconditionvariable/">AConditionVariable</a></code> and <code><a href="../athread/#AThread::interruptionPoint">AThread::interruptionPoint()</a></code>
 throw an exception that unwinds the task.</p>
-<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a></span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">called</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="n">ms</span><span class="p">);</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="n">ADD_FAILURE</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;this line should not have reached&quot;</span><span class="p">;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">};</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="n">ms</span><span class="p">);</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">future</span><span class="p">.</span><span class="n">cancel</span><span class="p">();</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="n">ms</span><span class="p">);</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">called</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;lambda has not called either&quot;</span><span class="p">;</span>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">called</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">future</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a></span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">called</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="n">ms</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="n">ADD_FAILURE</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;this line should not have reached&quot;</span><span class="p">;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">};</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="n">ms</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">future</span><span class="p">.</span><span class="n">cancel</span><span class="p">();</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="n">ms</span><span class="p">);</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">ASSERT_TRUE</span><span class="p">(</span><span class="n">called</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;lambda has not called either&quot;</span><span class="p">;</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Use <code><a href="../athread/#AThread::interruptionPoint">AThread::interruptionPoint()</a></code> inside long loops to make them cancellable:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a></span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">items</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">interruptionPoint</span><span class="p">();</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">process</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../aui_threadpool_x/">AUI_THREADPOOL_X</a></span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">items</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">interruptionPoint</span><span class="p">();</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="n">process</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">};</span>
 </span></code></pre></div>
 <h2 id="coroutines">Coroutines<a class="headerlink" href="#coroutines" title="Permanent link">#</a></h2>
 <p>On compilers with C++20 coroutine support, an <a href="../afuture/">AFuture</a> can be a coroutine return type and be awaited with <code>co_await</code>.
 The coroutine resumes on the thread that started it, so UI code can stay linear:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">MyView</span><span class="o">::</span><span class="n">load</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">asyncSleep</span><span class="p">(</span><span class="mi">500</span><span class="n">ms</span><span class="p">);</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">loadSomethingAsync</span><span class="p">();</span><span class="w">   </span><span class="c1">// any function returning <a href="../afuture/">AFuture</a>&lt;T&gt;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">setText</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w">                               </span><span class="c1">// we&#39;re back on the original thread</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">MyView</span><span class="o">::</span><span class="n">load</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">asyncSleep</span><span class="p">(</span><span class="mi">500</span><span class="n">ms</span><span class="p">);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">loadSomethingAsync</span><span class="p">();</span><span class="w">   </span><span class="c1">// any function returning <a href="../afuture/">AFuture</a>&lt;T&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">setText</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w">                               </span><span class="c1">// we&#39;re back on the original thread</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Keep the returned future in an <a href="../aasyncholder/">AAsyncHolder</a>.</p>
+<p>A coroutine is cancelled together with its future: when the last copy of the future is destroyed, the coroutine stops
+at its next <code>co_await</code> with an exception that unwinds it.</p>
+<p><code>co_await</code> of a future returns to the thread the coroutine was on, so it never moves the coroutine. To do that, use
+<a href="../aabstractthread/#AAbstractThread::switchTo"><code>AAbstractThread::switchTo()</code></a>, for example to run blocking code on a thread of your own and get back to the UI:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">MyView</span><span class="o">::</span><span class="n">reload</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n">mDatabaseThread</span><span class="o">-&gt;</span><span class="n">switchTo</span><span class="p">();</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mDatabase</span><span class="o">-&gt;</span><span class="n">queryTitle</span><span class="p">();</span><span class="w">   </span><span class="c1">// blocking, on mDatabaseThread</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">switchTo</span><span class="p">();</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">setText</span><span class="p">(</span><span class="n">title</span><span class="p">);</span><span class="w">                         </span><span class="c1">// UI thread</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>switchTo</code> suspends the coroutine and posts its resumption to the thread's message queue with <code>enqueue</code>, like
+<code><a href="../aui_ui_thread/">AUI_UI_THREAD</a> { ... }</code> posts a lambda. The coroutine continues when the thread processes its messages, so the thread
+must run an event loop: the UI thread has one; a thread of your own needs an <a href="../aeventloop/">AEventLoop</a>. <code>switchTo</code> does not
+suspend if the coroutine is on that thread already. The coroutine stays on the thread until the next switch, including
+after a following <code>co_await future</code>: an awaited future resumes the coroutine through the queue of the thread it
+was suspended on.</p>
+<h2 id="waiting-for-a-future-inside-an-asynchronous-function">Waiting for a future inside an asynchronous function<a class="headerlink" href="#waiting-for-a-future-inside-an-asynchronous-function" title="Permanent link">#</a></h2>
+<p>A function that returns an <code><a href="../afuture/">AFuture</a></code> often has to wait for another future first. There are three ways:</p>
+<ul>
+<li><strong><code>co_await</code></strong>, in a coroutine. The coroutine suspends; the thread keeps running.</li>
+<li><strong><code>then</code></strong>, without coroutines. The next step goes into a callback; if it returns another <code><a href="../afuture/">AFuture</a></code>, <code>then</code>
+  returns that future's result, so the steps don't nest:
+  <div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../aimage/">AImage</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">loadAvatar</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">userId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fetchUser</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">userId</span><span class="p">)).</span><span class="n">then</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n">User</span><span class="o">&amp;</span><span class="w"> </span><span class="n">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">fetchImage</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">avatarUrl</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">}</span>
+</span></code></pre></div>
+  <code><a href="../afuture/">AFuture</a>&lt;&gt;::all</code> and <code><a href="../afuture/">AFuture</a>&lt;&gt;::any</code> combine several futures the same way, and <a href="../aabstractthread/#AAbstractThread::async"><code>AAbstractThread::async()</code></a> returns
+  the result of a future its lambda returns. Inside <a href="../afuture/#AFuture::create"><code>AFuture::create()</code></a>, hand a future over with
+  <code>resolver.supplyFrom(other)</code>.</li>
+<li><strong><code>*future</code></strong>, only on a thread pool thread. The worker runs other tasks of the pool while waiting (a stackful
+  coroutine), so the pool doesn't deadlock; don't hold locks across the wait. Anywhere else <code>*future</code> blocks the
+  thread: never do it on the UI thread or in a C++20 coroutine.</li>
+</ul>
+<h2 id="wrapping-a-callback-based-api">Wrapping a callback-based API<a class="headerlink" href="#wrapping-a-callback-based-api" title="Permanent link">#</a></h2>
+<p><a href="../afuture/#AFuture::create"><code>AFuture::create()</code></a> turns a callback-based API (a native dialog, a <a href="../network/">network</a> library, a timer) into a future. Its body
+gets an <a href="../afuture/#AFuture::Resolver"><code>AFuture::Resolver</code></a>, the producer side of the future, and may move it anywhere: to another thread, into a
+callback.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../apath/">APath</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">browseForFile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../apath/">APath</a></span><span class="o">&gt;::</span><span class="n">create</span><span class="p">([](</span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../apath/">APath</a></span><span class="o">&gt;::</span><span class="n">Resolver</span><span class="w"> </span><span class="n">resolver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="n">nativeDialog</span><span class="p">.</span><span class="n">show</span><span class="p">([</span><span class="n">resolver</span><span class="p">](</span><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">            </span><span class="n">resolver</span><span class="p">.</span><span class="n">supplyValue</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">path</span><span class="p">));</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The future keeps its promise even if the code around it doesn't:</p>
+<ul>
+<li>the first <code>supplyValue</code> or <code>supplyException</code> wins, later ones are ignored;</li>
+<li>an exception thrown by the body of <code>create</code> fails the future;</li>
+<li>if every copy of the resolver is destroyed without a result (a forgotten branch, an early return, an exception in a
+  callback), the future fails with <a href="../afutureabandonedexception/">AFutureAbandonedException</a> instead of hanging forever.</li>
+</ul>
+<p>The resolver also tells whether anybody still waits: <code>isCancelled()</code> and <code>onCancel(callback)</code> let the producer stop
+the work when the future is cancelled.</p>
+<p>A future that is complete from the start is made with <a href="../afuture/#AFuture::fromValue"><code>AFuture::fromValue()</code></a> or <a href="../afuture/#AFuture::fromException"><code>AFuture::fromException()</code></a>.</p>
+<h2 id="fire-and-forget">Fire and forget<a class="headerlink" href="#fire-and-forget" title="Permanent link">#</a></h2>
+<p>Destroying the last copy of a future cancels the operation. When the result is not needed, but the operation has to
+finish anyway (sending a log, saving a file), call <a href="../afuture/#AFuture::keepAlive"><code>AFuture::keepAlive()</code></a>:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">sendAnalytics</span><span class="p">(</span><span class="n">event</span><span class="p">).</span><span class="n">onException</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;Analytics&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">}).</span><span class="n">keepAlive</span><span class="p">();</span>
+</span></code></pre></div>
+<p>The operation then runs until it completes or fails, and the callbacks are still called.</p>
+<h2 id="combining-futures">Combining futures<a class="headerlink" href="#combining-futures" title="Permanent link">#</a></h2>
+<p><a href="../afuture/#AFuture::all"><code>AFuture::all()</code></a> waits for several futures and gives their values as a tuple; it fails as soon as one of them fails.
+<a href="../afuture/#AFuture::any"><code>AFuture::any()</code></a> takes the first future to complete or fail; the value comes as a variant whose <a href="../">index</a> is the position of
+that future. <code>void</code> futures give <code>std::monostate</code>. Both drop the futures that are still running once they are done, so
+those are cancelled.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">MyView</span><span class="o">::</span><span class="n">load</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">avatar</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;::</span><span class="n">all</span><span class="p">(</span><span class="n">loadUser</span><span class="p">(</span><span class="n">mId</span><span class="p">),</span><span class="w"> </span><span class="n">loadAvatar</span><span class="p">(</span><span class="n">mId</span><span class="p">));</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>future.withTimeout(5s)</code> fails with <a href="../atimeoutexception/">ATimeoutException</a> as the cause if <code>future</code> does not complete in time. It works
+like <code><a href="../afuture/">AFuture</a>&lt;&gt;::any(future, <a href="../athread/#AThread::asyncSleep">AThread::asyncSleep</a>(5s))</code> that keeps the type of the value, except that on timeout
+<code>future</code> is cancelled even if somebody else holds it, so its producer can abort the operation.</p>
+<h2 id="coming-from-other-languages">Coming from other languages<a class="headerlink" href="#coming-from-other-languages" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>AUI</th>
+<th>JavaScript</th>
+<th>Kotlin</th>
+<th>C#</th>
+<th>Rust</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code><a href="../afuture/">AFuture</a>&lt;T&gt;</code></td>
+<td><code>Promise&lt;T&gt;</code></td>
+<td><code>Deferred&lt;T&gt;</code></td>
+<td><code>Task&lt;T&gt;</code></td>
+<td><code>impl Future&lt;Output = T&gt;</code></td>
+</tr>
+<tr>
+<td><code><a href="../aui_threadpool/">AUI_THREADPOOL</a> { ... }</code></td>
+<td><code>new Worker(...)</code></td>
+<td><code>async(Dispatchers.Default)</code></td>
+<td><code>Task.Run(...)</code></td>
+<td><code>tokio::spawn_blocking(...)</code></td>
+</tr>
+<tr>
+<td><code><a href="../afuture/">AFuture</a>&lt;T&gt;::create(...)</code></td>
+<td><code>new Promise((resolve, reject) =&gt; ...)</code></td>
+<td><code>suspendCancellableCoroutine</code></td>
+<td><code>TaskCompletionSource&lt;T&gt;</code></td>
+<td><code>oneshot::channel()</code></td>
+</tr>
+<tr>
+<td><code>Resolver::onCancel</code></td>
+<td><code>AbortSignal</code></td>
+<td><code>invokeOnCancellation</code></td>
+<td><code>CancellationToken</code></td>
+<td>drop of the receiver</td>
+</tr>
+<tr>
+<td><code>onValue</code> / <code>onException</code> / <code>onFinally</code></td>
+<td><code>then</code> / <code>catch</code> / <code>finally</code></td>
+<td><code>invokeOnCompletion</code></td>
+<td><code>ContinueWith</code></td>
+<td><code>.map(...)</code> / <code>.or_else(...)</code></td>
+</tr>
+<tr>
+<td><code>thread-&gt;async(...)</code></td>
+<td><code>postMessage</code> to a worker</td>
+<td><code>async(Dispatchers.Main)</code></td>
+<td><code>Dispatcher.InvokeAsync(...)</code></td>
+<td><code>spawn</code> on a local executor</td>
+</tr>
+<tr>
+<td><code>co_await thread-&gt;switchTo()</code></td>
+<td>—</td>
+<td><code>withContext(Dispatchers.Main)</code></td>
+<td><code>await dispatcher</code> (<code>SwitchTo</code>)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>co_await future</code></td>
+<td><code>await promise</code></td>
+<td><code>deferred.await()</code></td>
+<td><code>await task</code></td>
+<td><code>future.await</code></td>
+</tr>
+<tr>
+<td><code>then(...)</code></td>
+<td><code>then(v =&gt; ...)</code></td>
+<td><code>async { f(d.await()) }</code></td>
+<td><code>ContinueWith(t =&gt; ...)</code></td>
+<td><code>.map(...)</code></td>
+</tr>
+<tr>
+<td><code><a href="../afuture/">AFuture</a>&lt;&gt;::all(...)</code></td>
+<td><code>Promise.all</code></td>
+<td><code>awaitAll</code></td>
+<td><code>Task.WhenAll</code></td>
+<td><code>join!</code></td>
+</tr>
+<tr>
+<td><code><a href="../afuture/">AFuture</a>&lt;&gt;::any(...)</code></td>
+<td><code>Promise.race</code></td>
+<td><code>select</code></td>
+<td><code>Task.WhenAny</code></td>
+<td><code>select!</code></td>
+</tr>
+<tr>
+<td><code>withTimeout(duration)</code></td>
+<td><code>AbortSignal.timeout</code></td>
+<td><code>withTimeout</code></td>
+<td><code>WaitAsync(timeout)</code></td>
+<td><code>tokio::time::timeout</code></td>
+</tr>
+<tr>
+<td><code>fromValue</code> / <code>fromException</code></td>
+<td><code>Promise.resolve</code> / <code>Promise.reject</code></td>
+<td><code>CompletableDeferred(value)</code></td>
+<td><code>Task.FromResult</code> / <code>FromException</code></td>
+<td><code>ready(...)</code></td>
+</tr>
+<tr>
+<td><code><a href="../aasyncholder/">AAsyncHolder</a></code></td>
+<td>—</td>
+<td><code>CoroutineScope</code></td>
+<td>—</td>
+<td><code>JoinSet</code></td>
+</tr>
+<tr>
+<td><code>keepAlive()</code></td>
+<td>default behavior</td>
+<td><code>GlobalScope.launch</code></td>
+<td>default behavior</td>
+<td><code>tokio::spawn</code></td>
+</tr>
+</tbody>
+</table>
+<p>The main difference from JavaScript and C#: destroying the last copy of an <code><a href="../afuture/">AFuture</a></code> cancels the operation, as in
+Kotlin's structured concurrency and in Rust, where dropping a future stops it. Keep the future (in a field or an
+<a href="../aasyncholder/">AAsyncHolder</a>) while you need the result, or call <code>keepAlive()</code>.</p>
 <h2 id="periodic-work-with-atimer">Periodic work with ATimer<a class="headerlink" href="#periodic-work-with-atimer" title="Permanent link">#</a></h2>
 <p><a href="../atimer/">ATimer</a> <a href="../asignal/">emits</a> <code>fired</code> every <code>period</code> until stopped. It is started explicitly:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Clock</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../aobject/">AObject</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">public</span><span class="o">:</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">Clock</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="n">connect</span><span class="p">(</span><span class="n">mTimer</span><span class="o">-&gt;</span><span class="n">fired</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">tick</span><span class="p">);</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="n">mTimer</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">tick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="c1">// ...</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">private</span><span class="o">:</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../atimer/">ATimer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atimer/">ATimer</a></span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">);</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">};</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Clock</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n"><a href="../aobject/">AObject</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">public</span><span class="o">:</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">Clock</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">        </span><span class="n">connect</span><span class="p">(</span><span class="n">mTimer</span><span class="o">-&gt;</span><span class="n">fired</span><span class="p">,</span><span class="w"> </span><span class="n"><a href="../me/">me</a></span><span class="o">::</span><span class="n">tick</span><span class="p">);</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">        </span><span class="n">mTimer</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">tick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="k">private</span><span class="o">:</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="n">_</span><span class="o">&lt;</span><span class="n"><a href="../atimer/">ATimer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">mTimer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../atimer/">ATimer</a></span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="p">};</span>
 </span></code></pre></div>
 <p><code>fired</code> is emitted from a dedicated timer thread. If the receiver is a view (or any <a href="../aobject/">AObject</a> with
 <code>setSlotsCallsOnlyOnMyThread(true)</code>), the slot is invoked on the receiver's thread instead. See <a href="../signal_slot/">signal_slot</a>.</p>
@@ -1906,26 +2224,26 @@ The coroutine resumes on the thread that started it, so UI code can stay linear:
 <h2 id="protecting-shared-data">Protecting shared data<a class="headerlink" href="#protecting-shared-data" title="Permanent link">#</a></h2>
 <p>A plain <a href="../amutex/">AMutex</a> works with <code>std::unique_lock</code>. If the <a href="../data/">data</a> should never be touched without the lock, wrap it in
 <a href="../amutexwrapper/">AMutexWrapper</a>. Debug builds check that the mutex is held when you access the value.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n"><a href="../amutexwrapper/">AMutexWrapper</a></span><span class="o">&lt;</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">log</span><span class="p">;</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">append</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">line</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">log</span><span class="p">);</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">log</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n"><a href="../amutexwrapper/">AMutexWrapper</a></span><span class="o">&lt;</span><span class="n"><a href="../avector/">AVector</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">log</span><span class="p">;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">append</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">line</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unique_lock</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">log</span><span class="p">);</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">log</span><span class="o">-&gt;</span><span class="n">push_back</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="your-own-threads">Your own threads<a class="headerlink" href="#your-own-threads" title="Permanent link">#</a></h2>
 <p>Most of the time the thread pool is enough. If you need a dedicated thread, create an <a href="../athread/">AThread</a>:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">auto</span><span class="w"> </span><span class="kr">thread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../athread/">AThread</a></span><span class="o">&gt;</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Worker&quot;</span><span class="p">);</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">isInterrupted</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">        </span><span class="c1">// ...</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="n">ms</span><span class="p">);</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">});</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="kr">thread</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1">// ...</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="kr">thread</span><span class="o">-&gt;</span><span class="n">interrupt</span><span class="p">();</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="kr">thread</span><span class="o">-&gt;</span><span class="n">join</span><span class="p">();</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">auto</span><span class="w"> </span><span class="kr">thread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../athread/">AThread</a></span><span class="o">&gt;</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Worker&quot;</span><span class="p">);</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">current</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">isInterrupted</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="c1">// ...</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="n">ms</span><span class="p">);</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">});</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kr">thread</span><span class="o">-&gt;</span><span class="n">start</span><span class="p">();</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="c1">// ...</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="kr">thread</span><span class="o">-&gt;</span><span class="n">interrupt</span><span class="p">();</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="kr">thread</span><span class="o">-&gt;</span><span class="n">join</span><span class="p">();</span>
 </span></code></pre></div>
 <p><code><a href="../athread/#AThread::sleep">AThread::sleep</a></code> throws on interruption, so a sleeping thread wakes immediately when <code>interrupt()</code> is called.</p>
 

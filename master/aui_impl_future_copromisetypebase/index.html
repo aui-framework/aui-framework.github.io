@@ -1277,9 +1277,9 @@ We are migrating to a new documentation engine. Please report presentation issue
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aui::impl::future::CoPromiseTypeBase::future" class="md-nav__link">
+  <a href="#aui::impl::future::CoPromiseTypeBase::handles" class="md-nav__link">
     <span class="md-ellipsis">
-      future
+      handles
     </span>
   </a>
   
@@ -1337,15 +1337,6 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#aui::impl::future::CoPromiseTypeBase::return_" class="md-nav__link">
-    <span class="md-ellipsis">
-      return_
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#aui::impl::future::CoPromiseTypeBase::unhandled_exception" class="md-nav__link">
     <span class="md-ellipsis">
       unhandled_exception
@@ -1391,12 +1382,12 @@ coroutine's lifecycle, result delivery, exception propagation, and co_await inte
 <h2 id="public-fields-and-signals">Public fields and Signals<a class="headerlink" href="#public-fields-and-signals" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::CoPromiseTypeBase::future="aui::impl::future::CoPromiseTypeBase::future" id="aui::impl::future::CoPromiseTypeBase::future">future<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::future" title="Permanent link">#</a></h3>
+<h3 aui::impl::future::CoPromiseTypeBase::handles="aui::impl::future::CoPromiseTypeBase::handles" id="aui::impl::future::CoPromiseTypeBase::handles">handles<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::handles" title="Permanent link">#</a></h3>
 </div>
-<p><code class="language-cpp highlight"><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">future</span></code></p>
-<p>The future object that will be returned to the caller of the coroutine.</p>
-<p>This future is fulfilled when the coroutine completes (via return_value or return_void)
-or when an unhandled exception occurs.</p>
+<p><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="n">typenameAFuture</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">Resolver</span><span class="o">&gt;</span><span class="w"> </span><span class="n">handles</span></code></p>
+<p>The future returned to the caller of the coroutine and the resolver the coroutine completes it with.</p>
+<p>If the coroutine frame is destroyed without a result (for example, a pending resumption is dropped), the
+resolver fails the future with AFutureAbandonedException.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 aui::impl::future::CoPromiseTypeBase::await_transform_="aui::impl::future::CoPromiseTypeBase::await_transform()" id="aui::impl::future::CoPromiseTypeBase::await_transform">await_transform<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::await_transform" title="Permanent link">#</a></h3>
@@ -1407,39 +1398,16 @@ or when an unhandled exception occurs.</p>
 </span></code></pre></div>
 <p>Overload of await_transform for types that are already Cpp20Awaiter.</p>
 <dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>nestedAwaiter</code></b>
-<div style="display: table-cell"> The awaiter to wrap.</div>
-</div>
-</div></dd>
-<dt>Returns</dt>
-<dd>An Awaiter that delegates to the nested awaiter while adding cancellation
-        detection via parentFuture.</dd>
 </dl>
-<p>Wraps a nested Awaiter with cancellation support. Before resuming, checks if the
-parent future has been destroyed (via parentFuture weak pointer). If so, throws
-<a href="../athread/#AThread::Interrupted">AThread::Interrupted</a> to abort the coroutine gracefully instead of resuming into
-a destroyed frame.</p>
+<p>Before resuming, checks whether the future of this coroutine is cancelled. If so, throws <a href="../athread/#AThread::Interrupted">AThread::Interrupted</a>
+to unwind the coroutine instead of continuing work nobody waits for.</p>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">Cpp20HasPromiseType</span><span class="w"> </span><span class="n">NestedAwaitable</span><span class="w"> </span><span class="o">&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">auto</span><span class="w"> </span><span class="n">CoPromiseTypeBase</span><span class="o">::</span><span class="n">await_transform</span><span class="p">(</span><span class="n">NestedAwaitable</span><span class="w"> </span><span class="n">nestedAwaitable</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Overload of await_transform for types that have a promise_type (like <a href="../afuture/">AFuture</a><T>).</p>
 <dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>nestedAwaitable</code></b>
-<div style="display: table-cell"> The awaitable to transform.</div>
-</div>
-</div></dd>
-<dt>Returns</dt>
-<dd>An Awaiter (via the other overload) after converting via operator co_await.</dd>
 </dl>
-<p>Converts the awaitable into an Awaiter via the free operator co_await function,
-then delegates to the Cpp20Awaiter overload to wrap it with cancellation support.</p>
 <div style="position:absolute;opacity:0">
 <h3 aui::impl::future::CoPromiseTypeBase::final_suspend_="aui::impl::future::CoPromiseTypeBase::final_suspend()" id="aui::impl::future::CoPromiseTypeBase::final_suspend">final_suspend<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::final_suspend" title="Permanent link">#</a></h3>
 </div>
@@ -1459,9 +1427,6 @@ then delegates to the Cpp20Awaiter overload to wrap it with cancellation support
 </span></code></pre></div>
 <p>Called by the compiler to obtain the return value for the caller of the coroutine.</p>
 <dl class="doxygen-dl">
-<dt>Returns</dt>
-<dd><a href="../afuture/">AFuture</a><T> that the caller receives. The future is moved out, leaving the
-        internal future member in a moved-from state.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
 <h3 aui::impl::future::CoPromiseTypeBase::initial_suspend_="aui::impl::future::CoPromiseTypeBase::initial_suspend()" id="aui::impl::future::CoPromiseTypeBase::initial_suspend">initial_suspend<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::initial_suspend" title="Permanent link">#</a></h3>
@@ -1475,37 +1440,14 @@ then delegates to the Cpp20Awaiter overload to wrap it with cancellation support
 <dd>std::suspend_never, meaning the coroutine starts executing right away (not lazily).</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::CoPromiseTypeBase::return__="aui::impl::future::CoPromiseTypeBase::return_()" id="aui::impl::future::CoPromiseTypeBase::return_">return_<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::return_" title="Permanent link">#</a></h3>
-</div>
-<hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="o">&gt;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">CoPromiseTypeBase</span><span class="o">::</span><span class="n">return_</span><span class="p">(</span><span class="n">F</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">v</span><span class="p">)</span>
-</span></code></pre></div>
-<p>Handles both return_void and return_value.</p>
-<p>This is a unified implementation used by both derived promise types. It locks the
-weak pointer to the future and, if the future is still alive, calls <code><a href="../afuture/#AFuture::supplyValue">AFuture::supplyValue()</a></code> to propagate the
-value to whoever is awaiting the future.</p>
-<dl class="doxygen-dl">
-<dt>Arguments</dt>
-<dd><div style="display: table">
-<div style="display: table-row">
-<b style="display: table-cell; padding-right: 6px"><code>v</code></b>
-<div style="display: table-cell"> The value(s) to supply to the future.</div>
-</div>
-</div></dd>
-</dl>
-<div style="position:absolute;opacity:0">
 <h3 aui::impl::future::CoPromiseTypeBase::unhandled_exception_="aui::impl::future::CoPromiseTypeBase::unhandled_exception()" id="aui::impl::future::CoPromiseTypeBase::unhandled_exception">unhandled_exception<a class="headerlink" href="#aui::impl::future::CoPromiseTypeBase::unhandled_exception" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">CoPromiseTypeBase</span><span class="o">::</span><span class="n">unhandled_exception</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">CoPromiseTypeBase</span><span class="o">::</span><span class="n">unhandled_exception</span><span class="p">()</span>
 </span></code></pre></div>
-<p>Handles unhandled exceptions thrown within the coroutine body.</p>
+<p>Passes an exception escaped from the coroutine body to the future. Ignored if the future is cancelled.</p>
 <dl class="doxygen-dl">
 </dl>
-<p>Attempts to lock the weak pointer to the future's inner state. If the future is still alive, calls
-<code><a href="../afuture/#AFuture::supplyException">AFuture::supplyException()</a></code> to propagate the exception to whoever is awaiting the future. If the future has
-already been destroyed, the exception is silently discarded.</p>
 
 
 

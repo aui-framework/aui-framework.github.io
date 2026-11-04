@@ -1355,18 +1355,18 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#srcmainwindowcpp_1" class="md-nav__link">
+  <a href="#srcmaincpp_1" class="md-nav__link">
     <span class="md-ellipsis">
-      src/MainWindow.cpp
+      src/main.cpp
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#srcmaincpp_1" class="md-nav__link">
+  <a href="#srcmainwindowcpp_1" class="md-nav__link">
     <span class="md-ellipsis">
-      src/main.cpp
+      src/MainWindow.cpp
     </span>
   </a>
   
@@ -1466,22 +1466,22 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">-- Specify C++ standard to use, as AUI uses C++20 by default</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">set_languages</span><span class="p">(</span><span class="s2">&quot;c++20&quot;</span><span class="p">)</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">-- Download <a href="../aui/">aui</a> package to use for targets later</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">add_requires</span><span class="p">(</span><span class="s2">&quot;<a href="../aui/">aui</a>&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">-- Download aui package to use for targets later</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">add_requires</span><span class="p">(</span><span class="s2">&quot;aui&quot;</span><span class="p">)</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1">-- Define our target executable to build</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">target</span><span class="p">(</span><span class="s2">&quot;<a href="../aui/">aui</a>-assets-minimal-example&quot;</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">target</span><span class="p">(</span><span class="s2">&quot;aui-assets-minimal-example&quot;</span><span class="p">)</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="c1">-- Add source code and headers to target</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="n">add_files</span><span class="p">(</span><span class="s2">&quot;src/*.cpp&quot;</span><span class="p">)</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">add_includedirs</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">)</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="c1">-- Add AUI package to target while linking only required components</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">add_packages</span><span class="p">(</span><span class="s2">&quot;<a href="../aui/">aui</a>&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">components</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;<a href="../core/">core</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../image/">image</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../views/">views</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../xml/">xml</a>&quot;</span><span class="p">}})</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">add_packages</span><span class="p">(</span><span class="s2">&quot;aui&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">components</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;<a href="../core/">core</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../image/">image</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../views/">views</a>&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../xml/">xml</a>&quot;</span><span class="p">}})</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="c1">-- Resolve linking by grouping AUI components into link groups</span>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="n">add_linkgroups</span><span class="p">(</span><span class="s2">&quot;aui.views&quot;</span><span class="p">,</span> <span class="s2">&quot;aui.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;aui.image&quot;</span><span class="p">,</span> <span class="s2">&quot;aui.core&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">whole</span> <span class="o">=</span> <span class="kc">true</span><span class="p">})</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="c1">-- Pack assets before building the target</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="n">on_prepare</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="n">import</span><span class="p">(</span><span class="s2">&quot;xmake.aui&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">alias</span> <span class="o">=</span> <span class="s2">&quot;<a href="../aui/">aui</a>&quot;</span><span class="p">})</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="n"><a href="../aui/">aui</a></span><span class="p">.</span><span class="n">assets</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="n">import</span><span class="p">(</span><span class="s2">&quot;xmake.aui&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">alias</span> <span class="o">=</span> <span class="s2">&quot;aui&quot;</span><span class="p">})</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="n">aui</span><span class="p">.</span><span class="n">assets</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="kr">end</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="xmakeauilua">xmake/aui.lua<a class="headerlink" href="#xmakeauilua" title="Permanent link">#</a></h3>
@@ -1542,13 +1542,13 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">import</span><span class="p">(</span><span class="s2">&quot;core.project.config&quot;</span><span class="p">)</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kr">function</span> <span class="nf">_get_gen_path</span><span class="p">()</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="kr">return</span> <span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">builddir</span><span class="p">()),</span> <span class="s2">&quot;.gens&quot;</span><span class="p">,</span> <span class="s2">&quot;<a href="../aui/">aui</a>&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="kr">return</span> <span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">config</span><span class="p">.</span><span class="n">builddir</span><span class="p">()),</span> <span class="s2">&quot;.gens&quot;</span><span class="p">,</span> <span class="s2">&quot;aui&quot;</span><span class="p">)</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kr">end</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="kr">function</span> <span class="nf">_get_aui_package</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>  <span class="c1">-- Get the <a href="../aui/">aui</a> package from target</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>  <span class="c1">-- Get the aui package from target</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>  <span class="kr">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">pkg</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">target</span><span class="p">:</span><span class="n">pkgs</span><span class="p">())</span> <span class="kr">do</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="kr">if</span> <span class="n">pkg</span><span class="p">:</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;<a href="../aui/">aui</a>&quot;</span> <span class="kr">then</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="kr">if</span> <span class="n">pkg</span><span class="p">:</span><span class="n">name</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;aui&quot;</span> <span class="kr">then</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>      <span class="kr">return</span> <span class="n">pkg</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>    <span class="kr">end</span>
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>  <span class="kr">end</span>
@@ -1576,10 +1576,10 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="kr">end</span>
 </span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a>
 </span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="kr">function</span> <span class="nf">assets</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
-</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39"></a>  <span class="c1">-- Get <a href="../aui/">aui</a> package install directory</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39"></a>  <span class="c1">-- Get aui package install directory</span>
 </span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40"></a>  <span class="kd">local</span> <span class="n">aui_pkg</span> <span class="o">=</span> <span class="n">_get_aui_package</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
 </span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41"></a>  <span class="kr">if</span> <span class="ow">not</span> <span class="n">aui_pkg</span> <span class="kr">then</span>
-</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="n">raise</span><span class="p">(</span><span class="s2">&quot;<a href="../aui/">aui</a> package not found in target&quot;</span><span class="p">)</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="n">raise</span><span class="p">(</span><span class="s2">&quot;aui package not found in target&quot;</span><span class="p">)</span>
 </span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43"></a>  <span class="kr">end</span>
 </span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44"></a>
 </span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45"></a>  <span class="kd">local</span> <span class="n">aui_installdir</span> <span class="o">=</span> <span class="n">aui_pkg</span><span class="p">:</span><span class="n">installdir</span><span class="p">()</span>
@@ -1654,13 +1654,13 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">                </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;:img/logo.svg&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="p">(</span><span class="mi">64</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">                </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Hello world from AUI!&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Visit GitHub repo&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/<a href="../aui/">aui</a>-framework/<a href="../aui/">aui</a>&quot;</span><span class="p">);</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/aui-framework/aui&quot;</span><span class="p">);</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">                </span><span class="p">}),</span>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Visit docs&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://<a href="../aui/">aui</a>-framework.github.io/&quot;</span><span class="p">);</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://aui-framework.github.io/&quot;</span><span class="p">);</span>
 </span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">                </span><span class="p">}),</span>
 </span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Submit an issue&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/<a href="../aui/">aui</a>-framework/<a href="../aui/">aui</a>/issues/new&quot;</span><span class="p">);</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/aui-framework/aui/issues/new&quot;</span><span class="p">);</span>
 </span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">                </span><span class="p">}),</span>
 </span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">            </span><span class="p">}</span>
 </span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">        </span><span class="p">}</span>
@@ -1740,73 +1740,73 @@ We are migrating to a new documentation engine. Please report presentation issue
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">MainWindow</span><span class="p">();</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">};</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="srcmainwindowcpp_1">src/MainWindow.cpp<a class="headerlink" href="#srcmainwindowcpp_1" title="Permanent link">#</a></h3>
-<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span>
-<span class="normal"><a href="#__codelineno-7-24">24</a></span>
-<span class="normal"><a href="#__codelineno-7-25">25</a></span>
-<span class="normal"><a href="#__codelineno-7-26">26</a></span>
-<span class="normal"><a href="#__codelineno-7-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/Util/UIBuildingHelpers.h&gt;</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/View/ALabel.h&gt;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/View/AButton.h&gt;</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/Platform/APlatform.h&gt;</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/View/ADrawableView.h&gt;</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">MainWindow</span><span class="o">::</span><span class="n">MainWindow</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="p">(</span><span class="s">&quot;Project template app&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="n">setContents</span><span class="p">(</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">        </span><span class="n">Centered</span><span class="p">{</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">            </span><span class="n">Vertical</span><span class="p">{</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">                </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;:img/logo.svg&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="p">(</span><span class="mi">64</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">                </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Hello world from AUI!&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Visit GitHub repo&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/<a href="../aui/">aui</a>-framework/<a href="../aui/">aui</a>&quot;</span><span class="p">);</span>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">                </span><span class="p">}),</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Visit docs&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://<a href="../aui/">aui</a>-framework.github.io/&quot;</span><span class="p">);</span>
-</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">                </span><span class="p">}),</span>
-</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Submit an issue&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/<a href="../aui/">aui</a>-framework/<a href="../aui/">aui</a>/issues/new&quot;</span><span class="p">);</span>
-</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">                </span><span class="p">}),</span>
-</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
 <h3 id="srcmaincpp_1">src/main.cpp<a class="headerlink" href="#srcmaincpp_1" title="Permanent link">#</a></h3>
-<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span>
-<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MainWindow.h&quot;</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MainWindow</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="p">};</span>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;MainWindow.h&quot;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n"><a href="../aui_entry/">AUI_ENTRY</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">_new</span><span class="o">&lt;</span><span class="n">MainWindow</span><span class="o">&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">};</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="srcmainwindowcpp_1">src/MainWindow.cpp<a class="headerlink" href="#srcmainwindowcpp_1" title="Permanent link">#</a></h3>
+<div class="language-cpp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/Util/UIBuildingHelpers.h&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/View/ALabel.h&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/View/AButton.h&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/Platform/APlatform.h&gt;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;AUI/View/ADrawableView.h&gt;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">declarative</span><span class="p">;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="n">MainWindow</span><span class="o">::</span><span class="n">MainWindow</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="n"><a href="../awindow/">AWindow</a></span><span class="p">(</span><span class="s">&quot;Project template app&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="n">setContents</span><span class="p">(</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="n">Centered</span><span class="p">{</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">            </span><span class="n">Vertical</span><span class="p">{</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">                </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;:img/logo.svg&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="p">(</span><span class="mi">64</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">                </span><span class="n">Centered</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alabel/">Label</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Hello world from AUI!&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Visit GitHub repo&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/aui-framework/aui&quot;</span><span class="p">);</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">                </span><span class="p">}),</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Visit docs&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://aui-framework.github.io/&quot;</span><span class="p">);</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">                </span><span class="p">}),</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">                </span><span class="n">_new</span><span class="o">&lt;</span><span class="n"><a href="../abutton/">AButton</a></span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Submit an issue&quot;</span><span class="p">).</span><span class="n">connect</span><span class="p">(</span><span class="o">&amp;</span><span class="n"><a href="../aview/">AView</a></span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">                    </span><span class="n"><a href="../aplatform/">APlatform</a></span><span class="o">::</span><span class="n">openUrl</span><span class="p">(</span><span class="s">&quot;https://github.com/aui-framework/aui/issues/new&quot;</span><span class="p">);</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">                </span><span class="p">}),</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 
 
