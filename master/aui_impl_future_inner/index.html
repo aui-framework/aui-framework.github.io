@@ -1385,7 +1385,7 @@ becomes zero. The last future cancels the operation; the last resolver of a pend
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::Inner::State="aui::impl::future::Inner::State" id="aui::impl::future::Inner::State">State<a class="headerlink" href="#aui::impl::future::Inner::State" title="Permanent link">#</a></h3>
+<h3 aui::impl::future::Inner::State id="aui::impl::future::Inner::State">State<a class="headerlink" href="#aui::impl::future::Inner::State" title="Permanent link">#</a></h3>
 </div>
 <p><code>enum class aui::impl::future::Inner::State</code></p>
 <table>
@@ -1429,14 +1429,14 @@ becomes zero. The last future cancels the operation; the last resolver of a pend
 <h2 id="public-fields-and-signals">Public fields and Signals<a class="headerlink" href="#public-fields-and-signals" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::Inner::mutex="aui::impl::future::Inner::mutex" id="aui::impl::future::Inner::mutex">mutex<a class="headerlink" href="#aui::impl::future::Inner::mutex" title="Permanent link">#</a></h3>
+<h3 aui::impl::future::Inner::mutex id="aui::impl::future::Inner::mutex">mutex<a class="headerlink" href="#aui::impl::future::Inner::mutex" title="Permanent link">#</a></h3>
 </div>
 <p><code class="language-cpp highlight"><span class="n"><a href="../aspinlockmutex/">ASpinlockMutex</a></span><span class="w"> </span><span class="n">mutex</span></code></p>
 <p>Spinlock mutex is used here because <a href="../afuture/">AFuture</a> makes frequent calls to mutex and never locks for a long
 time. Durations are small enough so it is worth to just busy wait instead of making syscalls.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::Inner::isSettled_="aui::impl::future::Inner::isSettled()" id="aui::impl::future::Inner::isSettled">isSettled<a class="headerlink" href="#aui::impl::future::Inner::isSettled" title="Permanent link">#</a></h3>
+<h3 aui::impl::future::Inner::isSettled_ id="aui::impl::future::Inner::isSettled">isSettled<a class="headerlink" href="#aui::impl::future::Inner::isSettled" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">Inner</span><span class="o">::</span><span class="n">isSettled</span><span class="p">()</span>
@@ -1446,7 +1446,7 @@ time. Durations are small enough so it is worth to just busy wait instead of mak
 <dd>true if nothing is going to happen to the state anymore, so waiting is over.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::Inner::subscribe_="aui::impl::future::Inner::subscribe()" id="aui::impl::future::Inner::subscribe">subscribe<a class="headerlink" href="#aui::impl::future::Inner::subscribe" title="Permanent link">#</a></h3>
+<h3 aui::impl::future::Inner::subscribe_ id="aui::impl::future::Inner::subscribe">subscribe<a class="headerlink" href="#aui::impl::future::Inner::subscribe" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">V</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">E</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">C</span><span class="w"> </span><span class="o">&gt;</span>
@@ -1457,7 +1457,7 @@ the state is settled already. Pass NoCallback to skip one.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 aui::impl::future::Inner::tryExecute_="aui::impl::future::Inner::tryExecute()" id="aui::impl::future::Inner::tryExecute">tryExecute<a class="headerlink" href="#aui::impl::future::Inner::tryExecute" title="Permanent link">#</a></h3>
+<h3 aui::impl::future::Inner::tryExecute_ id="aui::impl::future::Inner::tryExecute">tryExecute<a class="headerlink" href="#aui::impl::future::Inner::tryExecute" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">Inner</span><span class="o">::</span><span class="n">tryExecute</span><span class="p">()</span>

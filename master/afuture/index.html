@@ -1612,7 +1612,7 @@ itself. See <a href="./#AFuture::wait"><code>AFuture::wait()</code></a> for deta
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 AFuture::Resolver="AFuture::Resolver" id="AFuture::Resolver">Resolver<a class="headerlink" href="#AFuture::Resolver" title="Permanent link">#</a></h3>
+<h3 AFuture::Resolver id="AFuture::Resolver">Resolver<a class="headerlink" href="#AFuture::Resolver" title="Permanent link">#</a></h3>
 </div>
 <p><code>class AFuture::Resolver</code></p>
 <p>The producer side of an AFuture.
@@ -1633,7 +1633,7 @@ counterparts of <code>AbortSignal</code> in JavaScript and <code>CancellationTok
 </dl>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::AFuture_="AFuture::AFuture()" id="AFuture::AFuture">constructor<a class="headerlink" href="#AFuture::AFuture" title="Permanent link">#</a></h3>
+<h3 AFuture::AFuture_ id="AFuture::AFuture">constructor<a class="headerlink" href="#AFuture::AFuture" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">AFuture</span><span class="o">::</span><span class="n">AFuture</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">nullptr_t</span><span class="p">)</span>
@@ -1642,7 +1642,7 @@ counterparts of <code>AbortSignal</code> in JavaScript and <code>CancellationTok
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::all_="AFuture::all()" id="AFuture::all">all<a class="headerlink" href="#AFuture::all" title="Permanent link">#</a></h3>
+<h3 AFuture::all_ id="AFuture::all">all<a class="headerlink" href="#AFuture::all" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">impl</span><span class="o">::</span><span class="n">future</span><span class="o">::</span><span class="n">Storage</span><span class="o">&lt;</span><span class="n">Types</span><span class="o">&gt;</span><span class="p">...</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="n">AFuture</span><span class="o">&lt;</span><span class="n">Types</span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">futures</span><span class="p">)</span>
@@ -1658,7 +1658,7 @@ running are cancelled unless somebody else holds them. When it is cancelled, the
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">avatar</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">co_await</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&lt;&gt;::</span><span class="n">all</span><span class="p">(</span><span class="n">loadUser</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"> </span><span class="n">loadAvatar</span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </span></code></pre></div>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::any_="AFuture::any()" id="AFuture::any">any<a class="headerlink" href="#AFuture::any" title="Permanent link">#</a></h3>
+<h3 AFuture::any_ id="AFuture::any">any<a class="headerlink" href="#AFuture::any" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">impl</span><span class="o">::</span><span class="n">future</span><span class="o">::</span><span class="n">Storage</span><span class="o">&lt;</span><span class="n">Types</span><span class="o">&gt;</span><span class="p">...</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">any</span><span class="p">(</span><span class="n">AFuture</span><span class="o">&lt;</span><span class="n">Types</span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">futures</span><span class="p">)</span>
@@ -1687,7 +1687,7 @@ are dropped, so they are cancelled unless somebody else holds them.</p>
 </span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::cancel_="AFuture::cancel()" id="AFuture::cancel">cancel<a class="headerlink" href="#AFuture::cancel" title="Permanent link">#</a></h3>
+<h3 AFuture::cancel_ id="AFuture::cancel">cancel<a class="headerlink" href="#AFuture::cancel" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">cancel</span><span class="p">()</span>
@@ -1703,7 +1703,7 @@ are dropped, so they are cancelled unless somebody else holds them.</p>
 <p>The <code>onValue</code>/<code>onException</code> callbacks are dropped without a call; the producer is notified through
 <code>Resolver::onCancel</code>. Destroying the last AFuture of the operation calls cancel().</p>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::create_="AFuture::create()" id="AFuture::create">create<a class="headerlink" href="#AFuture::create" title="Permanent link">#</a></h3>
+<h3 AFuture::create_ id="AFuture::create">create<a class="headerlink" href="#AFuture::create" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AFuture</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="n">Body</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">body</span><span class="p">)</span>
@@ -1730,7 +1730,7 @@ future fails with <a href="../afutureabandonedexception/">AFutureAbandonedExcept
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::fromException_="AFuture::fromException()" id="AFuture::fromException">fromException<a class="headerlink" href="#AFuture::fromException" title="Permanent link">#</a></h3>
+<h3 AFuture::fromException_ id="AFuture::fromException">fromException<a class="headerlink" href="#AFuture::fromException" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AFuture</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">fromException</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">exception_ptr</span><span class="w"> </span><span class="n">causedBy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">current_exception</span><span class="p">())</span>
@@ -1739,7 +1739,7 @@ future fails with <a href="../afutureabandonedexception/">AFutureAbandonedExcept
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::fromValue_="AFuture::fromValue()" id="AFuture::fromValue">fromValue<a class="headerlink" href="#AFuture::fromValue" title="Permanent link">#</a></h3>
+<h3 AFuture::fromValue_ id="AFuture::fromValue">fromValue<a class="headerlink" href="#AFuture::fromValue" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">static</span><span class="w"> </span><span class="n">AFuture</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">fromValue</span><span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
@@ -1748,7 +1748,7 @@ future fails with <a href="../afutureabandonedexception/">AFutureAbandonedExcept
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::hasException_="AFuture::hasException()" id="AFuture::hasException">hasException<a class="headerlink" href="#AFuture::hasException" title="Permanent link">#</a></h3>
+<h3 AFuture::hasException_ id="AFuture::hasException">hasException<a class="headerlink" href="#AFuture::hasException" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">hasException</span><span class="p">()</span>
@@ -1758,7 +1758,7 @@ future fails with <a href="../afutureabandonedexception/">AFutureAbandonedExcept
 <dd>true if the exception was received.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::hasResult_="AFuture::hasResult()" id="AFuture::hasResult">hasResult<a class="headerlink" href="#AFuture::hasResult" title="Permanent link">#</a></h3>
+<h3 AFuture::hasResult_ id="AFuture::hasResult">hasResult<a class="headerlink" href="#AFuture::hasResult" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">hasResult</span><span class="p">()</span>
@@ -1768,7 +1768,7 @@ future fails with <a href="../afutureabandonedexception/">AFutureAbandonedExcept
 <dd>true if the value or the exception was received.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::hasValue_="AFuture::hasValue()" id="AFuture::hasValue">hasValue<a class="headerlink" href="#AFuture::hasValue" title="Permanent link">#</a></h3>
+<h3 AFuture::hasValue_ id="AFuture::hasValue">hasValue<a class="headerlink" href="#AFuture::hasValue" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">hasValue</span><span class="p">()</span>
@@ -1795,7 +1795,7 @@ obtained without waiting.</dd>
 </span></code></pre></div>
 </details>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::inner_="AFuture::inner()" id="AFuture::inner">inner<a class="headerlink" href="#AFuture::inner" title="Permanent link">#</a></h3>
+<h3 AFuture::inner_ id="AFuture::inner">inner<a class="headerlink" href="#AFuture::inner" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">inner</span><span class="p">()</span>
@@ -1804,7 +1804,7 @@ obtained without waiting.</dd>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::isCancelled_="AFuture::isCancelled()" id="AFuture::isCancelled">isCancelled<a class="headerlink" href="#AFuture::isCancelled" title="Permanent link">#</a></h3>
+<h3 AFuture::isCancelled_ id="AFuture::isCancelled">isCancelled<a class="headerlink" href="#AFuture::isCancelled" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">isCancelled</span><span class="p">()</span>
@@ -1814,7 +1814,7 @@ obtained without waiting.</dd>
 <dd>true if the future was cancelled before it got a result.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::isWaitNeeded_="AFuture::isWaitNeeded()" id="AFuture::isWaitNeeded">isWaitNeeded<a class="headerlink" href="#AFuture::isWaitNeeded" title="Permanent link">#</a></h3>
+<h3 AFuture::isWaitNeeded_ id="AFuture::isWaitNeeded">isWaitNeeded<a class="headerlink" href="#AFuture::isWaitNeeded" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">isWaitNeeded</span><span class="p">()</span>
@@ -1824,7 +1824,7 @@ obtained without waiting.</dd>
 <dd>true if call to wait() function would cause thread block.</dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::keepAlive_="AFuture::keepAlive()" id="AFuture::keepAlive">keepAlive<a class="headerlink" href="#AFuture::keepAlive" title="Permanent link">#</a></h3>
+<h3 AFuture::keepAlive_ id="AFuture::keepAlive">keepAlive<a class="headerlink" href="#AFuture::keepAlive" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">keepAlive</span><span class="p">()</span>
@@ -1838,7 +1838,7 @@ subscribed with <code>onValue</code>/<code>onException</code> are still called.<
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">sendAnalytics</span><span class="p">(</span><span class="n">event</span><span class="p">).</span><span class="n">onException</span><span class="p">([](</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="o">&amp;</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n"><a href="../alogger/">ALogger</a></span><span class="o">::</span><span class="n">warn</span><span class="p">(</span><span class="s">&quot;Analytics&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="p">}).</span><span class="n">keepAlive</span><span class="p">();</span>
 </span></code></pre></div>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::onCancel_="AFuture::onCancel()" id="AFuture::onCancel">onCancel<a class="headerlink" href="#AFuture::onCancel" title="Permanent link">#</a></h3>
+<h3 AFuture::onCancel_ id="AFuture::onCancel">onCancel<a class="headerlink" href="#AFuture::onCancel" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
@@ -1857,7 +1857,7 @@ this future, otherwise the future can't be cancelled by destruction.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::onError_="AFuture::onError()" id="AFuture::onError">onError<a class="headerlink" href="#AFuture::onError" title="Permanent link">#</a></h3>
+<h3 AFuture::onError_ id="AFuture::onError">onError<a class="headerlink" href="#AFuture::onError" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">const</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">onError</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
@@ -1871,7 +1871,7 @@ this future, otherwise the future can't be cancelled by destruction.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::onException_="AFuture::onException()" id="AFuture::onException">onException<a class="headerlink" href="#AFuture::onException" title="Permanent link">#</a></h3>
+<h3 AFuture::onException_ id="AFuture::onException">onException<a class="headerlink" href="#AFuture::onException" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="o">&lt;</span><span class="k">const</span><span class="w"> </span><span class="n"><a href="../aexception/">AException</a></span><span class="w"> </span><span class="o">&amp;&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
@@ -1888,7 +1888,7 @@ leads to the original exception. Like <code>onValue</code>, it is not called if 
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::onFinally_="AFuture::onFinally()" id="AFuture::onFinally">onFinally<a class="headerlink" href="#AFuture::onFinally" title="Permanent link">#</a></h3>
+<h3 AFuture::onFinally_ id="AFuture::onFinally">onFinally<a class="headerlink" href="#AFuture::onFinally" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
@@ -1904,7 +1904,7 @@ leads to the original exception. Like <code>onValue</code>, it is not called if 
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::onSuccess_="AFuture::onSuccess()" id="AFuture::onSuccess">onSuccess<a class="headerlink" href="#AFuture::onSuccess" title="Permanent link">#</a></h3>
+<h3 AFuture::onSuccess_ id="AFuture::onSuccess">onSuccess<a class="headerlink" href="#AFuture::onSuccess" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="k">const</span><span class="w"> </span><span class="n">AFuture</span><span class="o">&amp;</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">onSuccess</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
@@ -1918,7 +1918,7 @@ leads to the original exception. Like <code>onValue</code>, it is not called if 
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::onValue_="AFuture::onValue()" id="AFuture::onValue">onValue<a class="headerlink" href="#AFuture::onValue" title="Permanent link">#</a></h3>
+<h3 AFuture::onValue_ id="AFuture::onValue">onValue<a class="headerlink" href="#AFuture::onValue" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="n">aui</span><span class="o">::</span><span class="n">impl</span><span class="o">::</span><span class="n">future</span><span class="o">::</span><span class="n">OnValueCallback</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Callback</span><span class="w"> </span><span class="o">&gt;</span>
@@ -1956,7 +1956,7 @@ future alive, put it into an <a href="../aasyncholder/">AAsyncHolder</a> of your
 
 <p><strong>Examples:</strong></p>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::then_="AFuture::then()" id="AFuture::then">then<a class="headerlink" href="#AFuture::then" title="Permanent link">#</a></h3>
+<h3 AFuture::then_ id="AFuture::then">then<a class="headerlink" href="#AFuture::then" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">then</span><span class="p">(</span><span class="n">Callback</span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">callback</span><span class="p">)</span>
@@ -1973,7 +1973,7 @@ future alive, put it into an <a href="../aasyncholder/">AAsyncHolder</a> of your
 <p>If the callback throws, the returned future fails with the exception. If this future fails, the returned one
 fails as well. The returned future holds this one: dropping the returned future drops this one.</p>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::wait_="AFuture::wait()" id="AFuture::wait">wait<a class="headerlink" href="#AFuture::wait" title="Permanent link">#</a></h3>
+<h3 AFuture::wait_ id="AFuture::wait">wait<a class="headerlink" href="#AFuture::wait" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">wait</span><span class="p">(</span><span class="n">AFutureWait</span><span class="w"> </span><span class="n">flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AFutureWait</span><span class="o">::</span><span class="n">DEFAULT</span><span class="p">)</span>
@@ -1987,7 +1987,7 @@ yet. This behaviour can be disabled by <code>AFutureWait::JUST_WAIT</code> flag.
 <code><a href="../athread/#AThread::interruptionPoint">AThread::interruptionPoint()</a></code>: if <code>wait</code>'s caller's thread is interrupted, this function throws an
 <code><a href="../athread/#AThread::Interrupted">AThread::Interrupted</a></code> exception.</p>
 <div style="position:absolute;opacity:0">
-<h3 AFuture::withTimeout_="AFuture::withTimeout()" id="AFuture::withTimeout">withTimeout<a class="headerlink" href="#AFuture::withTimeout" title="Permanent link">#</a></h3>
+<h3 AFuture::withTimeout_ id="AFuture::withTimeout">withTimeout<a class="headerlink" href="#AFuture::withTimeout" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="n">AFuture</span><span class="w"> </span><span class="n">AFuture</span><span class="o">::</span><span class="n">withTimeout</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span>

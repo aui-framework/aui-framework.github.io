@@ -1479,7 +1479,7 @@ from the application id specified in <code><a href="../aui_app/">aui_app</a>(ID 
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 AApplication::Hold="AApplication::Hold" id="AApplication::Hold">Hold<a class="headerlink" href="#AApplication::Hold" title="Permanent link">#</a></h3>
+<h3 AApplication::Hold id="AApplication::Hold">Hold<a class="headerlink" href="#AApplication::Hold" title="Permanent link">#</a></h3>
 </div>
 <p><code>class AApplication::Hold</code></p>
 <p>RAII object that keeps the application alive.
@@ -1488,7 +1488,7 @@ While at least one Hold exists, the main event loop keeps running even if there 
 <h2 id="public-fields-and-signals">Public fields and Signals<a class="headerlink" href="#public-fields-and-signals" title="Permanent link">#</a></h2>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 AApplication::activated="AApplication::activated" id="AApplication::activated">activated<a class="headerlink" href="#AApplication::activated" title="Permanent link">#</a></h3>
+<h3 AApplication::activated id="AApplication::activated">activated<a class="headerlink" href="#AApplication::activated" title="Permanent link">#</a></h3>
 </div>
 <p><code class="language-cpp highlight"><span class="n"><a href="../asignal/">emits</a></span><span class="o">&lt;</span><span class="n"><a href="../aactivation/">AActivation</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">activated</span></code></p>
 <p>Emitted on the main thread when another instance of the application was launched and redirected to this
@@ -1496,7 +1496,7 @@ one.</p>
 <p>Not emitted for the first launch: handle it in <code><a href="../aui_entry/">AUI_ENTRY</a></code>.</p>
 <hr />
 <div style="position:absolute;opacity:0">
-<h3 AApplication::quitOnLastWindowClosed="AApplication::quitOnLastWindowClosed" id="AApplication::quitOnLastWindowClosed">quitOnLastWindowClosed<a class="headerlink" href="#AApplication::quitOnLastWindowClosed" title="Permanent link">#</a></h3>
+<h3 AApplication::quitOnLastWindowClosed id="AApplication::quitOnLastWindowClosed">quitOnLastWindowClosed<a class="headerlink" href="#AApplication::quitOnLastWindowClosed" title="Permanent link">#</a></h3>
 </div>
 <p><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="kt">atomic_bool</span><span class="w"> </span><span class="n">quitOnLastWindowClosed</span></code></p>
 <p>Whether a shown <a href="../awindow/">AWindow</a> holds the application.</p>
@@ -1504,7 +1504,7 @@ one.</p>
 manage the lifetime by hold() and quit() only.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::dataDir_="AApplication::dataDir()" id="AApplication::dataDir">dataDir<a class="headerlink" href="#AApplication::dataDir" title="Permanent link">#</a></h3>
+<h3 AApplication::dataDir_ id="AApplication::dataDir">dataDir<a class="headerlink" href="#AApplication::dataDir" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">dataDir</span><span class="p">()</span>
@@ -1526,7 +1526,7 @@ permissions).</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n"><a href="../apath/">APath</a></span><span class="w"> </span><span class="n">settings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">inst</span><span class="p">().</span><span class="n">dataDir</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s">&quot;settings.json&quot;</span><span class="p">;</span>
 </span></code></pre></div>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::hasSingleInstanceLock_="AApplication::hasSingleInstanceLock()" id="AApplication::hasSingleInstanceLock">hasSingleInstanceLock<a class="headerlink" href="#AApplication::hasSingleInstanceLock" title="Permanent link">#</a></h3>
+<h3 AApplication::hasSingleInstanceLock_ id="AApplication::hasSingleInstanceLock">hasSingleInstanceLock<a class="headerlink" href="#AApplication::hasSingleInstanceLock" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">hasSingleInstanceLock</span><span class="p">()</span>
@@ -1535,7 +1535,7 @@ permissions).</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::hold_="AApplication::hold()" id="AApplication::hold">hold<a class="headerlink" href="#AApplication::hold" title="Permanent link">#</a></h3>
+<h3 AApplication::hold_ id="AApplication::hold">hold<a class="headerlink" href="#AApplication::hold" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">_</span><span class="o">&lt;</span><span class="n">Hold</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">hold</span><span class="p">()</span>
@@ -1552,7 +1552,7 @@ when the last hold is released, the application exits.</p>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">state</span><span class="o">-&gt;</span><span class="n">lifetimeHold</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"> </span><span class="c1">// allow the application to exit</span>
 </span></code></pre></div>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::holdCount_="AApplication::holdCount()" id="AApplication::holdCount">holdCount<a class="headerlink" href="#AApplication::holdCount" title="Permanent link">#</a></h3>
+<h3 AApplication::holdCount_ id="AApplication::holdCount">holdCount<a class="headerlink" href="#AApplication::holdCount" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">holdCount</span><span class="p">()</span>
@@ -1561,7 +1561,7 @@ when the last hold is released, the application exits.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::isHeld_="AApplication::isHeld()" id="AApplication::isHeld">isHeld<a class="headerlink" href="#AApplication::isHeld" title="Permanent link">#</a></h3>
+<h3 AApplication::isHeld_ id="AApplication::isHeld">isHeld<a class="headerlink" href="#AApplication::isHeld" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">isHeld</span><span class="p">()</span>
@@ -1570,7 +1570,7 @@ when the last hold is released, the application exits.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::isQuitRequested_="AApplication::isQuitRequested()" id="AApplication::isQuitRequested">isQuitRequested<a class="headerlink" href="#AApplication::isQuitRequested" title="Permanent link">#</a></h3>
+<h3 AApplication::isQuitRequested_ id="AApplication::isQuitRequested">isQuitRequested<a class="headerlink" href="#AApplication::isQuitRequested" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">isQuitRequested</span><span class="p">()</span>
@@ -1579,7 +1579,7 @@ when the last hold is released, the application exits.</p>
 <dl class="doxygen-dl">
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::quit_="AApplication::quit()" id="AApplication::quit">quit<a class="headerlink" href="#AApplication::quit" title="Permanent link">#</a></h3>
+<h3 AApplication::quit_ id="AApplication::quit">quit<a class="headerlink" href="#AApplication::quit" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">quit</span><span class="p">(</span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">exitCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">)</span>
@@ -1595,7 +1595,7 @@ when the last hold is released, the application exits.</p>
 </div></dd>
 </dl>
 <div style="position:absolute;opacity:0">
-<h3 AApplication::requestSingleInstanceLock_="AApplication::requestSingleInstanceLock()" id="AApplication::requestSingleInstanceLock">requestSingleInstanceLock<a class="headerlink" href="#AApplication::requestSingleInstanceLock" title="Permanent link">#</a></h3>
+<h3 AApplication::requestSingleInstanceLock_ id="AApplication::requestSingleInstanceLock">requestSingleInstanceLock<a class="headerlink" href="#AApplication::requestSingleInstanceLock" title="Permanent link">#</a></h3>
 </div>
 <hr />
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">bool</span><span class="w"> </span><span class="n">AApplication</span><span class="o">::</span><span class="n">requestSingleInstanceLock</span><span class="p">(</span><span class="n"><a href="../aoptional/">AOptional</a></span><span class="o">&lt;</span><span class="n"><a href="../astring/">AString</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">)</span>
