@@ -759,9 +759,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#requires" class="md-nav__link">
+  <a href="#AUIB_OVERRIDE" class="md-nav__link">
     <span class="md-ellipsis">
-      REQUIRES
+      OVERRIDE
     </span>
   </a>
   
@@ -920,6 +920,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#case-2" class="md-nav__link">
     <span class="md-ellipsis">
       Case 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 3
     </span>
   </a>
   
@@ -2293,9 +2302,9 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
-  <a href="#requires" class="md-nav__link">
+  <a href="#AUIB_OVERRIDE" class="md-nav__link">
     <span class="md-ellipsis">
-      REQUIRES
+      OVERRIDE
     </span>
   </a>
   
@@ -2454,6 +2463,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   <a href="#case-2" class="md-nav__link">
     <span class="md-ellipsis">
       Case 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 3
     </span>
   </a>
   
@@ -2928,7 +2946,7 @@ of its dependencies:</p>
 </span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">            </span><span class="s">[CMAKE_WORKING_DIR</span><span class="w"> </span><span class="s">workingdir.txt]</span>
 </span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">            </span><span class="s">[PRECOMPILED_URL_PREFIX</span><span class="w"> </span><span class="s">&lt;PrecompiledUrlPrefix&gt;]</span>
 </span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">            </span><span class="s">[LINK</span><span class="w"> </span><span class="s">&lt;STATIC|SHARED&gt;]</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">            </span><span class="s">[REQUIRES</span><span class="w"> </span><span class="s">dependencies...]</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">            </span><span class="s">[OVERRIDE</span><span class="w"> </span><span class="s">packages...]</span>
 </span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">            </span><span class="s">[VERSION</span><span class="w"> </span><span class="s">version]</span><span class="p">)</span>
 </span></code></pre></div>
 <div class="admonition note">
@@ -2983,11 +3001,39 @@ dependency's <code>CMakeLists.txt</code> via <code>AUIB_COMPONENTS</code> variab
 <p>Instead of building the dependency from sources, try to import the precompiled binaries first.</p>
 <h4 id="link">LINK<a class="headerlink" href="#link" title="Permanent link">#</a></h4>
 <p>Overrides <code>BUILD_SHARED_LIBS</code> of the dependency, specifying <code>SHARED</code> or <code>STATIC</code> linking.</p>
-<h4 id="requires">REQUIRES<a class="headerlink" href="#requires" title="Permanent link">#</a></h4>
-<p>List of the package dependencies. Every dependency's root variable (${DEPENDENCY}_ROOT) is checked for existence and
-validness, then it passed directly to <code>auib_import</code>ed target (via ${DEPENDENCY}_ROOT).</p>
-<p>It is useful when some package root is implicitly defined in your project somewhere and aui.boot does not know about it,
-thus does not forward.</p>
+<h4 id="AUIB_OVERRIDE">OVERRIDE<a class="headerlink" href="#AUIB_OVERRIDE" title="Permanent link">#</a></h4>
+<p>Packages, already imported by your project, that replace the dependency's own imports of them. Use it when the
+dependency imports a package with <code>auib_import</code> itself, and your project imports the same package: the dependency is
+then built against your build of the package, whatever version it asks for.</p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">https://github.com/aui-framework/aui</span><span class="w"> </span><span class="s">VERSION</span><span class="w"> </span><span class="o">${</span><span class="nv">AUI_VERSION</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c"># aui.spine is a library on top of AUI and imports AUI of its own version: build it against ours</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui.spine</span><span class="w"> </span><span class="s">https://github.com/aui-framework/aui.spine</span><span class="w"> </span><span class="s">VERSION</span><span class="w"> </span><span class="o">${</span><span class="nv">AUI_SPINE_VERSION</span><span class="o">}</span><span class="w"> </span><span class="s">OVERRIDE</span><span class="w"> </span><span class="s">aui</span><span class="p">)</span>
+</span></code></pre></div>
+<p>For a dependency that is not imported as a subdirectory, it means:</p>
+<ul>
+<li><code>auib_import</code> of an OVERRIDE package inside the dependency's build uses your project's build of that package instead
+  of the version the dependency asks for. The dependency and your project link the same binary of it.</li>
+<li>Builds of OVERRIDE packages are a part of the dependency's <a href="#AUIB_CACHE">build specifier</a>: when you update an
+  OVERRIDE package (i.e., bump AUI), the dependency is rebuilt instead of reusing a binary compiled against the old
+  version.</li>
+<li>Precompiled binaries of the dependency are not used: they are built against their own versions of the packages.</li>
+</ul>
+<p>A dependency imported as a subdirectory uses your project's targets of OVERRIDE packages. A prebuilt dependency can't be
+built against a package imported as a subdirectory: import both as subdirectories.</p>
+<p>The version of an OVERRIDE package is yours: the dependency must be compatible with it. Each OVERRIDE package must be
+imported before the dependency. Every package root variable (<code>${PACKAGE}_ROOT</code>) is also passed to the dependency's
+build.</p>
+<p><code>REQUIRES</code> is a deprecated name of <code>OVERRIDE</code>.</p>
+<p>A package must have a single build in your project, otherwise two ABIs of it are mixed in one binary. AUI.Boot fails the
+configure in these cases, suggesting OVERRIDE:</p>
+<ul>
+<li>the dependency's build imports a package your project has already imported, and the package is not in OVERRIDE;</li>
+<li>a package is imported again with another version, i.e., your project imports <code>fmt</code> of another version after
+  <code>aui</code>, which has imported its own <code>fmt</code>;</li>
+<li>your project imports a package after a dependency that has been built against its own copy of it.</li>
+</ul>
+<p>To use the version of a shared package another dependency brings (i.e., <code>fmt</code> of AUI), import that dependency first and
+use its targets. To use your version, import the package first and pass it to that dependency via OVERRIDE.</p>
 <h2 id="AUIB_VARIABLES">Variables<a class="headerlink" href="#AUIB_VARIABLES" title="Permanent link">#</a></h2>
 <p>See <a href="../aui-configure-flags/">AUI Configure Flags</a> on how to set variables.</p>
 <h3 id="AUIB_ALL_AS">AUIB_ALL_AS (=FALSE|TRUE)<a class="headerlink" href="#AUIB_ALL_AS" title="Permanent link">#</a></h3>
@@ -3000,28 +3046,28 @@ changing <code>CMakeLists.txt</code> of the consumer's project. Setting <code>AU
 <a href="./#AUIB_ADD_SUBDIRECTORY">ADD_SUBDIRECTORY</a> to <code>auib_import</code>.</p>
 <p>This action disables usage of precompiled binary and validation.</p>
 <p>Usage:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>cd build
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>cmake .. -DAUIB_LIB_AS=ON
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>cd build
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>cmake .. -DAUIB_LIB_AS=ON
 </span></code></pre></div>
 Where 'LIB' is library project name. For example, to import AUI as a subdirectory:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>cd build
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>cmake .. -DAUIB_AUI_AS=ON
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>cd build
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>cmake .. -DAUIB_AUI_AS=ON
 </span></code></pre></div>
 <p>You can switch <code>AUIB_AUI_AS</code> on an existing build tree, AUI.Boot is capable of switching on-the-fly.</p>
 <p>During the execution of the command above, the location of the LIB is printed:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Imported: aui () (/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui) (version v8.0.0-rc.1)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Imported: aui () (/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui) (version v8.0.0-rc.1)
 </span></code></pre></div>
 <p>Which points to the LIB's source tree used to build the consumer's project. You can change anything in that
 directory as part of your development workflow, and these changes will reflect immediately on the consumer's
 project.</p>
 <p>Your changes will not be overridden by further CMake invocations.</p>
 <p>You can <code>cd</code> and commit changes right from that directory as you complete your work on the library:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">cd</span><span class="w"> </span>/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1"># don&#39;t forget to checkout, we are in detached HEAD state</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feat/a-new-feature
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;a new feature&quot;</span>
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com/your-name/your-aui-fork
-</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>git<span class="w"> </span>push
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">cd</span><span class="w"> </span>/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="c1"># don&#39;t forget to checkout, we are in detached HEAD state</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feat/a-new-feature
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;a new feature&quot;</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com/your-name/your-aui-fork
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>git<span class="w"> </span>push
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3032,23 +3078,23 @@ upstream your changes in the future.</p>
 this, you need to:</p>
 <ol>
 <li>Acquire the <strong>commit hash</strong>:
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>commit<span class="w"> </span>8b0e838b8cd6274210f4c05ac096e2862c36f25e<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>feat/a-new-feature,<span class="w"> </span>origin/feat/a-new-feature<span class="o">)</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>Author:<span class="w"> </span>smol<span class="w"> </span>boi<span class="w"> </span>&lt;uwu@uwu.uwu&gt;
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Date:<span class="w">   </span>Sun<span class="w"> </span>Jun<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">21</span>:49:31<span class="w"> </span><span class="m">2025</span><span class="w"> </span>+0300
-</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
-</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">    </span>Never<span class="w"> </span>Gonna<span class="w"> </span>Give<span class="w"> </span>You<span class="w"> </span>Up
-</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>...
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>/home/user/.aui/repo/aui/as/v8.0.0-rc.1/aui<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>commit<span class="w"> </span>8b0e838b8cd6274210f4c05ac096e2862c36f25e<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>feat/a-new-feature,<span class="w"> </span>origin/feat/a-new-feature<span class="o">)</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Author:<span class="w"> </span>smol<span class="w"> </span>boi<span class="w"> </span>&lt;uwu@uwu.uwu&gt;
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>Date:<span class="w">   </span>Sun<span class="w"> </span>Jun<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">21</span>:49:31<span class="w"> </span><span class="m">2025</span><span class="w"> </span>+0300
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span>Never<span class="w"> </span>Gonna<span class="w"> </span>Give<span class="w"> </span>You<span class="w"> </span>Up
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>...
 </span></code></pre></div></li>
 <li>In your <code>CMakeLists.txt</code>, make sure the <strong>URL</strong> points to your fork, if any:
-    <div class="language-cmake highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">https://github.com/your-name/your-aui-fork</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">            </span><span class="s">VERSION</span><span class="w"> </span><span class="s">v8.0.0-rc.8</span>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span>
+    <div class="language-cmake highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">https://github.com/your-name/your-aui-fork</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">            </span><span class="s">VERSION</span><span class="w"> </span><span class="s">v8.0.0-rc.8</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">)</span>
 </span></code></pre></div></li>
 <li>Specify <strong>commit hash</strong> in <code>VERSION</code> field:
-    <div class="language-cmake highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">https://github.com/your-name/your-aui-fork</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">            </span><span class="s">VERSION</span><span class="w"> </span><span class="s">8b0e838b8cd6274210f4c05ac096e2862c36f25e</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="p">)</span>
+    <div class="language-cmake highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">https://github.com/your-name/your-aui-fork</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">            </span><span class="s">VERSION</span><span class="w"> </span><span class="s">8b0e838b8cd6274210f4c05ac096e2862c36f25e</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span>
 </span></code></pre></div></li>
 <li>Commit and push to your project</li>
 </ol>
@@ -3090,13 +3136,13 @@ appeared somewhere in the future unexpectedly.</p>
    <em>consumer</em> can actually use the functionality provided by the <em>dependency</em>. If such property refer to a local file,
    this file must be located in AUI.Boot's cache dir (<code>~/aui</code>). In case of <em>dependency</em>'s dependencies (aka grand
    dependencies), those be imported by a prior <code>auib_import</code>.
-   <div class="language-cmake highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">ZLIB</span><span class="w"> </span><span class="s">https://github.com/aui-framework/zlib</span><span class="p">)</span>
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">Freetype</span><span class="w"> </span><span class="s">https://github.com/freetype/freetype</span>
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">            </span><span class="s">CONFIG_ONLY</span>
-</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">            </span><span class="s">CMAKE_ARGS</span><span class="w"> </span><span class="s">...</span>
-</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="p">)</span>
-</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="c"># Freetype depends on ZLIB, must refer to one located in</span>
-</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="c"># ~/.aui/prefix/zlib/.../libz.a, not the system one: /usr/libz.so</span>
+   <div class="language-cmake highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">ZLIB</span><span class="w"> </span><span class="s">https://github.com/aui-framework/zlib</span><span class="p">)</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">Freetype</span><span class="w"> </span><span class="s">https://github.com/freetype/freetype</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">            </span><span class="s">CONFIG_ONLY</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">            </span><span class="s">CMAKE_ARGS</span><span class="w"> </span><span class="s">...</span>
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="p">)</span>
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="c"># Freetype depends on ZLIB, must refer to one located in</span>
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="c"># ~/.aui/prefix/zlib/.../libz.a, not the system one: /usr/libz.so</span>
 </span></code></pre></div></li>
 </ol>
 <p>As an exception, a system file can be mentioned via CMake target. System packages must be wrapped with
@@ -3114,8 +3160,8 @@ appeared somewhere in the future unexpectedly.</p>
 <li>If a target depend on another library, it should express it by referring on exported target of that library instead
    of referring to its file.</li>
 </ol>
-<div class="language-cmake highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">awesomelib</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="o">${</span><span class="nv">ZLIB_LIBRARIES</span><span class="o">}</span><span class="p">)</span><span class="w"> </span><span class="c"># WRONG!</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">awesomelib</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">ZLIB::ZLIB</span><span class="p">)</span><span class="w"> </span><span class="c"># GOOD!</span>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">awesomelib</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="o">${</span><span class="nv">ZLIB_LIBRARIES</span><span class="o">}</span><span class="p">)</span><span class="w"> </span><span class="c"># WRONG!</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">awesomelib</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">ZLIB::ZLIB</span><span class="p">)</span><span class="w"> </span><span class="c"># GOOD!</span>
 </span></code></pre></div>
 <p>!!! note</p>
 <div class="language-text highlight"><pre><span></span><code>   AUI.Boot is capable of replacing absolute paths to libraries by their respective target names in order to support
@@ -3134,47 +3180,60 @@ appeared somewhere in the future unexpectedly.</p>
 <p>Another case is <code>OpenSSL</code> between <code>aui.crypt</code> and <code>aui.curl</code>:</p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/19491414/153878364-b214f167-8243-400c-93af-a227af2f961b.png" /></p>
 <p>Because <code>libcurl</code> is not a part of AUI, it uses standard CMake's function to find <code>OpenSSL</code> (<code>find_package</code>).</p>
+<h3 id="case-3">Case 3<a class="headerlink" href="#case-3" title="Permanent link">#</a></h3>
+<p>A dependency imports a package with <code>auib_import</code> itself, for example <code>aui.spine</code> imports <code>aui</code> of a version it was
+developed with. Your project imports <code>aui</code> of another version, then <code>aui.spine</code>. To build <code>aui.spine</code> against your <code>aui</code>,
+pass it via <a href="#AUIB_OVERRIDE">OVERRIDE</a>:</p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">auib_import</span><span class="p">(</span><span class="s">aui.spine</span><span class="w"> </span><span class="s">https://github.com/aui-framework/aui.spine</span><span class="w"> </span><span class="s">VERSION</span><span class="w"> </span><span class="s">...</span><span class="w"> </span><span class="s">OVERRIDE</span><span class="w"> </span><span class="s">aui</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Without that, <code>aui.spine</code> would be compiled against its own copy of <code>aui</code>, and the layout of AUI classes it shares with
+your project (i.e., <code><a href="../aview/">AView</a></code>) would differ, which crashes at runtime. AUI.Boot rejects such a configuration.</p>
+<p>Every project vendors its own <code>aui.boot.cmake</code>, and the newest copy in the dependency tree is used: inside a dependency's
+build, your project's copy replaces the dependency's one unless the latter is newer, and a subdirectory's copy does not
+redefine your project's copy unless it is newer. A dependency whose vendored copy predates this behaviour still builds
+its own copy of an OVERRIDE package; AUI.Boot detects that after configuring the dependency and fails, asking to update
+<code>aui.boot.cmake</code> in that dependency.</p>
 <h2 id="AUIB_PRODUCING_PACKAGES">Producing packages with dependencies managed by AUI Boot<a class="headerlink" href="#AUIB_PRODUCING_PACKAGES" title="Permanent link">#</a></h2>
 <p>AUI distributions <a href="https://github.com/aui-framework/aui/releases">published on our GitHub releases page</a> are produced with help of AUI Boot.</p>
 <p>CMake-driven projects produce package configuration with <a href="https://cmake.org/cmake/help/latest/command/configure_file.html">configure_file</a>:</p>
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
-<span class="normal"><a href="#__codelineno-29-2">2</a></span>
-<span class="normal"><a href="#__codelineno-29-3">3</a></span>
-<span class="normal"><a href="#__codelineno-29-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="nb">configure_file</span><span class="p">(</span><span class="s">cmake/aui-config.cmake.in</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_BINARY_DIR</span><span class="o">}</span><span class="s">/aui-config.cmake</span><span class="w"> </span><span class="s">@ONLY</span><span class="p">)</span>
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="nb">install</span><span class="p">(</span><span class="s">FILES</span>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">        </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_BINARY_DIR</span><span class="o">}</span><span class="s">/aui-config.cmake</span>
-</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">        </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="nb">configure_file</span><span class="p">(</span><span class="s">cmake/aui-config.cmake.in</span><span class="w"> </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_BINARY_DIR</span><span class="o">}</span><span class="s">/aui-config.cmake</span><span class="w"> </span><span class="s">@ONLY</span><span class="p">)</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="nb">install</span><span class="p">(</span><span class="s">FILES</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">        </span><span class="o">${</span><span class="nv">CMAKE_CURRENT_BINARY_DIR</span><span class="o">}</span><span class="s">/aui-config.cmake</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">        </span><span class="s">DESTINATION</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Inside of <code>aui-config.cmake.in</code>, there's a line:
-<div class="language-cmake highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="err">@AUIB_DEPS@</span>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="err">@AUIB_DEPS@</span>
 </span></code></pre></div></p>
 <p><code>AUIB_DEPS</code> contains cmake commands to resolve dependencies of your project. This variable is populated by <code>auib_import</code>
 calls inside your project during configure time. <code>AUIB_DEPS</code> contains <code>auib_import</code> calls.</p>
 <p>As was mentioned, AUI Boot requires specially formatted (precompiled) package names to use them. For this to work, you
 can call <code>auib_precompiled_binary</code> inside of your root <code>CMakeLists.txt</code> which configures <code>cpack</code> to produce <code>tar.gz</code>
 with properly formatted name.</p>
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="nb">auib_precompiled_binary</span><span class="p">()</span>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="nb">auib_precompiled_binary</span><span class="p">()</span>
 </span></code></pre></div></td></tr></table></div>
 <p>At last, use <code>cpack</code> to produce a package.</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-32-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a>- name: Pack
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a>  working-directory: ${{github.workspace}}/build
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a>  run: cpack . -C ${{ matrix.build_type }}
-</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a>
-</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5"></a>- name: Upload
-</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6"></a>  uses: actions/upload-artifact@v4
-</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7"></a>  if: matrix.generator != &#39;Visual Studio 17 2022&#39;
-</span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8"></a>  with:
-</span><span id="__span-32-9"><a id="__codelineno-32-9" name="__codelineno-32-9"></a>    path: ${{github.workspace}}/build/*.tar.gz
-</span><span id="__span-32-10"><a id="__codelineno-32-10" name="__codelineno-32-10"></a>    name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.build_type }} ${{ matrix.arch }} ${{ matrix.compiler }}
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a>- name: Pack
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2"></a>  working-directory: ${{github.workspace}}/build
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3"></a>  run: cpack . -C ${{ matrix.build_type }}
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4"></a>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5"></a>- name: Upload
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6"></a>  uses: actions/upload-artifact@v4
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7"></a>  if: matrix.generator != &#39;Visual Studio 17 2022&#39;
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8"></a>  with:
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9"></a>    path: ${{github.workspace}}/build/*.tar.gz
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10"></a>    name: aui ${{ runner.os }} ${{ matrix.shared_or_static }} ${{ matrix.build_type }} ${{ matrix.arch }} ${{ matrix.compiler }}
 </span></code></pre></div></td></tr></table></div>
 <h2 id="importing-aui-without-aui-boot">Importing AUI without AUI Boot<a class="headerlink" href="#importing-aui-without-aui-boot" title="Permanent link">#</a></h2>
 <p>In some cases, AUI Boot might not cover your particular needs, and you would like to build without it. It is still not
@@ -3188,57 +3247,57 @@ you will need to resolve AUI's dependencies in some other way (i.e, by using Con
 <p>AUI distributions <a href="https://github.com/aui-framework/aui/releases">published on our GitHub releases page</a> are
 self-sufficient. That is, they have AUI's dependencies bundled, so they can be used by <code>find_package</code>, without even
 requiring AUI Boot.</p>
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-33-10">10</a></span>
-<span class="normal"><a href="#__codelineno-33-11">11</a></span>
-<span class="normal"><a href="#__codelineno-33-12">12</a></span>
-<span class="normal"><a href="#__codelineno-33-13">13</a></span>
-<span class="normal"><a href="#__codelineno-33-14">14</a></span>
-<span class="normal"><a href="#__codelineno-33-15">15</a></span>
-<span class="normal"><a href="#__codelineno-33-16">16</a></span>
-<span class="normal"><a href="#__codelineno-33-17">17</a></span>
-<span class="normal"><a href="#__codelineno-33-18">18</a></span>
-<span class="normal"><a href="#__codelineno-33-19">19</a></span>
-<span class="normal"><a href="#__codelineno-33-20">20</a></span>
-<span class="normal"><a href="#__codelineno-33-21">21</a></span>
-<span class="normal"><a href="#__codelineno-33-22">22</a></span>
-<span class="normal"><a href="#__codelineno-33-23">23</a></span>
-<span class="normal"><a href="#__codelineno-33-24">24</a></span>
-<span class="normal"><a href="#__codelineno-33-25">25</a></span>
-<span class="normal"><a href="#__codelineno-33-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.24</span><span class="p">)</span>
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2"></a>
-</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="nb">project</span><span class="p">(</span><span class="s">test_project</span><span class="p">)</span>
-</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4"></a>
-</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="nb">set</span><span class="p">(</span><span class="s">AUIB_FORCE_PRECOMPILED</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">BOOL</span><span class="w"> </span><span class="s2">&quot;Force used precompiled binaries&quot;</span><span class="p">)</span>
-</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="nb">set</span><span class="p">(</span><span class="s">AUI_TEST_DEPLOY_VERSION</span><span class="w"> </span><span class="s">v6.2.1</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">BOOL</span><span class="w"> </span><span class="s2">&quot;AUI version&quot;</span><span class="p">)</span>
-</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="c"># raise aui.boot validation level.</span>
-</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="nb">set</span><span class="p">(</span><span class="s">AUIB_VALIDATION_LEVEL</span><span class="w"> </span><span class="s">2</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;Package validation level&quot;</span><span class="p">)</span>
-</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9"></a>
-</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10"></a><span class="nb">include</span><span class="p">(</span><span class="s">FetchContent</span><span class="p">)</span>
-</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">DEFINED</span><span class="w"> </span><span class="s">AUI_TEST_DEPLOY_REPO</span><span class="p">)</span>
-</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="nb">FetchContent_Declare</span><span class="p">(</span><span class="s">aui</span>
-</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13"></a><span class="w">    </span><span class="s">URL</span><span class="w"> </span><span class="o">${</span><span class="nv">AUI_TEST_DEPLOY_REPO</span><span class="o">}</span><span class="s">/releases/download/</span><span class="o">${</span><span class="nv">AUI_TEST_DEPLOY_VERSION</span><span class="o">}</span><span class="s">/aui_linux-gnu-x86_64-static-debug.tar.gz</span><span class="p">)</span>
-</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="nb">else</span><span class="p">()</span>
-</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15"></a><span class="nb">FetchContent_Declare</span><span class="p">(</span><span class="s">aui</span>
-</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16"></a><span class="w">    </span><span class="s">URL</span><span class="w"> </span><span class="s">https://github.com/aui-framework/aui/releases/download/</span><span class="o">${</span><span class="nv">AUI_TEST_DEPLOY_VERSION</span><span class="o">}</span><span class="s">/aui_linux-gnu-x86_64-static-debug.tar.gz</span><span class="p">)</span>
-</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="nb">endif</span><span class="p">()</span>
-</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18"></a><span class="nb">FetchContent_MakeAvailable</span><span class="p">(</span><span class="s">aui</span><span class="p">)</span>
-</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19"></a><span class="nb">FetchContent_GetProperties</span><span class="p">(</span><span class="s">aui</span>
-</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="w">        </span><span class="s">SOURCE_DIR</span><span class="w"> </span><span class="s">aui_ROOT</span>
-</span><span id="__span-33-21"><a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="p">)</span>
-</span><span id="__span-33-22"><a id="__codelineno-33-22" name="__codelineno-33-22"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
-</span><span id="__span-33-23"><a id="__codelineno-33-23" name="__codelineno-33-23"></a>
-</span><span id="__span-33-24"><a id="__codelineno-33-24" name="__codelineno-33-24"></a><span class="nb"><a href="../aui_executable/">aui_executable</a></span><span class="p">(</span><span class="s">test_project</span><span class="p">)</span>
-</span><span id="__span-33-25"><a id="__codelineno-33-25" name="__codelineno-33-25"></a><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">test_project</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s"><a href="../core/">aui::core</a></span><span class="w"> </span><span class="s"><a href="../views/">aui::views</a></span><span class="p">)</span>
-</span><span id="__span-33-26"><a id="__codelineno-33-26" name="__codelineno-33-26"></a><span class="nb"><a href="../aui-assets/#aui_compile_assets">aui_compile_assets</a></span><span class="p">(</span><span class="s">test_project</span><span class="p">)</span>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span>
+<span class="normal"><a href="#__codelineno-35-12">12</a></span>
+<span class="normal"><a href="#__codelineno-35-13">13</a></span>
+<span class="normal"><a href="#__codelineno-35-14">14</a></span>
+<span class="normal"><a href="#__codelineno-35-15">15</a></span>
+<span class="normal"><a href="#__codelineno-35-16">16</a></span>
+<span class="normal"><a href="#__codelineno-35-17">17</a></span>
+<span class="normal"><a href="#__codelineno-35-18">18</a></span>
+<span class="normal"><a href="#__codelineno-35-19">19</a></span>
+<span class="normal"><a href="#__codelineno-35-20">20</a></span>
+<span class="normal"><a href="#__codelineno-35-21">21</a></span>
+<span class="normal"><a href="#__codelineno-35-22">22</a></span>
+<span class="normal"><a href="#__codelineno-35-23">23</a></span>
+<span class="normal"><a href="#__codelineno-35-24">24</a></span>
+<span class="normal"><a href="#__codelineno-35-25">25</a></span>
+<span class="normal"><a href="#__codelineno-35-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span><span class="w"> </span><span class="s">3.24</span><span class="p">)</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2"></a>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="nb">project</span><span class="p">(</span><span class="s">test_project</span><span class="p">)</span>
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4"></a>
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="nb">set</span><span class="p">(</span><span class="s">AUIB_FORCE_PRECOMPILED</span><span class="w"> </span><span class="s">ON</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">BOOL</span><span class="w"> </span><span class="s2">&quot;Force used precompiled binaries&quot;</span><span class="p">)</span>
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="nb">set</span><span class="p">(</span><span class="s">AUI_TEST_DEPLOY_VERSION</span><span class="w"> </span><span class="s">v6.2.1</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">BOOL</span><span class="w"> </span><span class="s2">&quot;AUI version&quot;</span><span class="p">)</span>
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="c"># raise aui.boot validation level.</span>
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="nb">set</span><span class="p">(</span><span class="s">AUIB_VALIDATION_LEVEL</span><span class="w"> </span><span class="s">2</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;Package validation level&quot;</span><span class="p">)</span>
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9"></a>
+</span><span id="__span-35-10"><a id="__codelineno-35-10" name="__codelineno-35-10"></a><span class="nb">include</span><span class="p">(</span><span class="s">FetchContent</span><span class="p">)</span>
+</span><span id="__span-35-11"><a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">DEFINED</span><span class="w"> </span><span class="s">AUI_TEST_DEPLOY_REPO</span><span class="p">)</span>
+</span><span id="__span-35-12"><a id="__codelineno-35-12" name="__codelineno-35-12"></a><span class="nb">FetchContent_Declare</span><span class="p">(</span><span class="s">aui</span>
+</span><span id="__span-35-13"><a id="__codelineno-35-13" name="__codelineno-35-13"></a><span class="w">    </span><span class="s">URL</span><span class="w"> </span><span class="o">${</span><span class="nv">AUI_TEST_DEPLOY_REPO</span><span class="o">}</span><span class="s">/releases/download/</span><span class="o">${</span><span class="nv">AUI_TEST_DEPLOY_VERSION</span><span class="o">}</span><span class="s">/aui_linux-gnu-x86_64-static-debug.tar.gz</span><span class="p">)</span>
+</span><span id="__span-35-14"><a id="__codelineno-35-14" name="__codelineno-35-14"></a><span class="nb">else</span><span class="p">()</span>
+</span><span id="__span-35-15"><a id="__codelineno-35-15" name="__codelineno-35-15"></a><span class="nb">FetchContent_Declare</span><span class="p">(</span><span class="s">aui</span>
+</span><span id="__span-35-16"><a id="__codelineno-35-16" name="__codelineno-35-16"></a><span class="w">    </span><span class="s">URL</span><span class="w"> </span><span class="s">https://github.com/aui-framework/aui/releases/download/</span><span class="o">${</span><span class="nv">AUI_TEST_DEPLOY_VERSION</span><span class="o">}</span><span class="s">/aui_linux-gnu-x86_64-static-debug.tar.gz</span><span class="p">)</span>
+</span><span id="__span-35-17"><a id="__codelineno-35-17" name="__codelineno-35-17"></a><span class="nb">endif</span><span class="p">()</span>
+</span><span id="__span-35-18"><a id="__codelineno-35-18" name="__codelineno-35-18"></a><span class="nb">FetchContent_MakeAvailable</span><span class="p">(</span><span class="s">aui</span><span class="p">)</span>
+</span><span id="__span-35-19"><a id="__codelineno-35-19" name="__codelineno-35-19"></a><span class="nb">FetchContent_GetProperties</span><span class="p">(</span><span class="s">aui</span>
+</span><span id="__span-35-20"><a id="__codelineno-35-20" name="__codelineno-35-20"></a><span class="w">        </span><span class="s">SOURCE_DIR</span><span class="w"> </span><span class="s">aui_ROOT</span>
+</span><span id="__span-35-21"><a id="__codelineno-35-21" name="__codelineno-35-21"></a><span class="p">)</span>
+</span><span id="__span-35-22"><a id="__codelineno-35-22" name="__codelineno-35-22"></a><span class="nb">find_package</span><span class="p">(</span><span class="s">aui</span><span class="w"> </span><span class="s">REQUIRED</span><span class="p">)</span>
+</span><span id="__span-35-23"><a id="__codelineno-35-23" name="__codelineno-35-23"></a>
+</span><span id="__span-35-24"><a id="__codelineno-35-24" name="__codelineno-35-24"></a><span class="nb"><a href="../aui_executable/">aui_executable</a></span><span class="p">(</span><span class="s">test_project</span><span class="p">)</span>
+</span><span id="__span-35-25"><a id="__codelineno-35-25" name="__codelineno-35-25"></a><span class="nb"><a href="../aui_link/">aui_link</a></span><span class="p">(</span><span class="s">test_project</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s"><a href="../core/">aui::core</a></span><span class="w"> </span><span class="s"><a href="../views/">aui::views</a></span><span class="p">)</span>
+</span><span id="__span-35-26"><a id="__codelineno-35-26" name="__codelineno-35-26"></a><span class="nb"><a href="../aui-assets/#aui_compile_assets">aui_compile_assets</a></span><span class="p">(</span><span class="s">test_project</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="AUIB_CACHE">~/.aui (AUI.Boot Cache Dir)<a class="headerlink" href="#AUIB_CACHE" title="Permanent link">#</a></h2>
 <p>It is a directory located in your home directory (can be changed with <a href="../aui-configure-flags/#AUIB_CACHE_DIR">AUIB_CACHE_DIR</a>). This
@@ -3257,15 +3316,37 @@ subsequent <code>auib_import</code> invocations can reuse that even across diffe
 that includes information such as version, platform, architecture, or being a static or a shared library. When something
 changes in this information, it produces a new <code>&lt;BUILD_SPECIFIER&gt;</code> because it represents a different binary.</p>
 <p>Here's how exactly it is computed:</p>
-<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
-<span class="normal"><a href="#__codelineno-34-2">2</a></span>
-<span class="normal"><a href="#__codelineno-34-3">3</a></span>
-<span class="normal"><a href="#__codelineno-34-4">4</a></span>
-<span class="normal"><a href="#__codelineno-34-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="nb">set</span><span class="p">(</span><span class="s">BUILD_SPECIFIER</span><span class="w"> </span><span class="s2">&quot;${TAG_OR_HASH}/${AUI_TARGET_TRIPLET}-${CMAKE_BUILD_TYPE}-${SHARED_OR_STATIC}/${AUIB_IMPORT_CMAKE_ARGS}&quot;</span><span class="p">)</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="nb">string</span><span class="p">(</span><span class="s">REPLACE</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="s">BUILD_SPECIFIER</span><span class="w"> </span><span class="s2">&quot;${BUILD_SPECIFIER}&quot;</span><span class="p">)</span>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3"></a>
-</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="c"># convert BUILD_SPECIFIER to hash; on <a href="../windows/">windows</a> msvc path length restricted by 260 chars</span>
-</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="nb">string</span><span class="p">(</span><span class="s">MD5</span><span class="w"> </span><span class="s">BUILD_SPECIFIER_HASH</span><span class="w"> </span><span class="o">${</span><span class="nv">BUILD_SPECIFIER</span><span class="o">}</span><span class="p">)</span>
+<div class="language-cmake highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span>
+<span class="normal"><a href="#__codelineno-36-14">14</a></span>
+<span class="normal"><a href="#__codelineno-36-15">15</a></span>
+<span class="normal"><a href="#__codelineno-36-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="nb">set</span><span class="p">(</span><span class="s">BUILD_SPECIFIER</span><span class="w"> </span><span class="s2">&quot;${TAG_OR_HASH}/${AUI_TARGET_TRIPLET}-${CMAKE_BUILD_TYPE}-${SHARED_OR_STATIC}/${AUIB_IMPORT_CMAKE_ARGS}&quot;</span><span class="p">)</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="nb">string</span><span class="p">(</span><span class="s">REPLACE</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="s">BUILD_SPECIFIER</span><span class="w"> </span><span class="s2">&quot;${BUILD_SPECIFIER}&quot;</span><span class="p">)</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3"></a>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="c"># each OVERRIDE package is identified by its own BUILD_SPECIFIER_HASH, so the specifier is transitive</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">_inherited</span><span class="p">)</span>
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">_deps_specifier</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">    </span><span class="nb">foreach</span><span class="w"> </span><span class="p">(</span><span class="s">_entry</span><span class="w"> </span><span class="o">${</span><span class="nv">_inherited</span><span class="o">}</span><span class="p">)</span>
+</span><span id="__span-36-8"><a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">        </span><span class="nb">_auib_split_inherited_entry</span><span class="p">(</span><span class="s2">&quot;${_entry}&quot;</span><span class="w"> </span><span class="s">_dep_name</span><span class="w"> </span><span class="s">_dep_prefix</span><span class="p">)</span>
+</span><span id="__span-36-9"><a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="w">        </span><span class="nb">get_filename_component</span><span class="p">(</span><span class="s">_dep_hash</span><span class="w"> </span><span class="s2">&quot;${_dep_prefix}&quot;</span><span class="w"> </span><span class="s">NAME</span><span class="p">)</span>
+</span><span id="__span-36-10"><a id="__codelineno-36-10" name="__codelineno-36-10"></a><span class="w">        </span><span class="nb">string</span><span class="p">(</span><span class="s">APPEND</span><span class="w"> </span><span class="s">_deps_specifier</span><span class="w"> </span><span class="s2">&quot; ${_dep_name}@${_dep_hash}&quot;</span><span class="p">)</span>
+</span><span id="__span-36-11"><a id="__codelineno-36-11" name="__codelineno-36-11"></a><span class="w">    </span><span class="nb">endforeach</span><span class="p">()</span>
+</span><span id="__span-36-12"><a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">    </span><span class="nb">set</span><span class="p">(</span><span class="s">BUILD_SPECIFIER</span><span class="w"> </span><span class="s2">&quot;${BUILD_SPECIFIER}/deps:${_deps_specifier}&quot;</span><span class="p">)</span>
+</span><span id="__span-36-13"><a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="nb">endif</span><span class="p">()</span>
+</span><span id="__span-36-14"><a id="__codelineno-36-14" name="__codelineno-36-14"></a>
+</span><span id="__span-36-15"><a id="__codelineno-36-15" name="__codelineno-36-15"></a><span class="c"># convert BUILD_SPECIFIER to hash; on <a href="../windows/">windows</a> msvc path length restricted by 260 chars</span>
+</span><span id="__span-36-16"><a id="__codelineno-36-16" name="__codelineno-36-16"></a><span class="nb">string</span><span class="p">(</span><span class="s">MD5</span><span class="w"> </span><span class="s">BUILD_SPECIFIER_HASH</span><span class="w"> </span><span class="o">${</span><span class="nv">BUILD_SPECIFIER</span><span class="o">}</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="AUIB_REPO_DIR">~/.aui/repo<a class="headerlink" href="#AUIB_REPO_DIR" title="Permanent link">#</a></h3>
 <p>Contains dependencies source code (if any), downloaded by <code>auib_import</code>.</p>
