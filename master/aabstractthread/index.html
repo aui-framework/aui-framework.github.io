@@ -1450,22 +1450,80 @@ processing the message, the future fails with <a href="../afutureabandonedexcept
 <p>Don't block on the returned future on this same thread: the message can't be processed while the thread
 waits for it. In a coroutine, <code>co_await</code> it instead, or continue on this thread with <code>switchTo</code>.</p>
 </div>
+<p><strong>Examples:</strong></p>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/<a href="../views/">views</a>/src/ExampleWindow.cpp</summary>
+<p><a href="../views-example/">Views Example</a> — All-in-one <a href="../views/">views</a> building example.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">        </span><span class="n"><a href="../ass_expanding/">Expanding</a></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="n">Horizontal</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="n"><a href="../aui_let/">AUI_LET</a></span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">              </span><span class="c1">// the window is under construction here, so the call is bound to the container instead of `this`</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">              </span><span class="n">mAsync</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n"><a href="../athreadpool/">AThreadPool</a></span><span class="o">::</span><span class="n">global</span><span class="p">().</span><span class="n">async</span><span class="p">([</span><span class="n">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_weak</span><span class="o">&lt;</span><span class="n"><a href="../aviewcontainer/">AViewContainer</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">it</span><span class="p">)]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="hll"><span class="w">                  </span><span class="k">auto</span><span class="w"> </span><span class="n">drawable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../idrawable/">IDrawable</a></span><span class="o">::</span><span class="n">fromUrl</span><span class="p">(</span>
+</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="hll"><span class="w">                      </span><span class="s">&quot;https://raster.shields.io/github/stars/aui-framework/aui?style=raster&amp;logo=github&quot;</span><span class="p">);</span>
+</span></span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="hll"><span class="w">                  </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">enqueue</span><span class="p">(</span><span class="n">container</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">container</span><span class="p">,</span><span class="w"> </span><span class="n">drawable</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="hll"><span class="w">                      </span><span class="k">auto</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n"><a href="../adrawableview/">Icon</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">drawable</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n"><a href="../aui_override_style/">AUI_OVERRIDE_STYLE</a></span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="hll"><span class="w">                          </span><span class="n"><a href="../ass_fixedsize/">FixedSize</a></span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">80</span><span class="n"><a href="../ametric/">_dp</a></span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="n"><a href="../ametric/">_dp</a></span><span class="w"> </span><span class="p">},</span>
+</span></span></code></pre></div>
+</details>
+<details class="note">
+<summary><a href="../examples/">examples</a>/ui/infinite_lazy_list/src/main.cpp</summary>
+<p><a href="../infinite-lazy-list/">Infinite Lazy List</a> — Usage of <a href="../aforeachui/">AUI_DECLARATIVE_FOR</a> to make an infinite lazy list.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">newState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// we&#39;re interested in transitions to true state only.</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">            </span><span class="k">return</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">loadFrom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">state</span><span class="o">-&gt;</span><span class="n">items</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="c1">// base <a href="../">index</a> to load from.</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">        </span><span class="n">state</span><span class="o">-&gt;</span><span class="n">asyncTasks</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n"><a href="../athreadpool/">AThreadPool</a></span><span class="o">::</span><span class="n">global</span><span class="p">().</span><span class="n">async</span><span class="p">([</span><span class="n">state</span><span class="p">,</span><span class="w"> </span><span class="n">loadFrom</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="hll"><span class="w">            </span><span class="c1">// perform &quot;loading&quot; task on a worker thread.</span>
+</span></span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="hll">
+</span></span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="hll"><span class="w">            </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="n">ms</span><span class="p">);</span><span class="w"> </span><span class="c1">// imitate hard work here</span>
+</span></span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="hll">
+</span></span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="hll"><span class="w">            </span><span class="c1">// aka &quot;loaded&quot; from backend storage of some kind</span>
+</span></span></code></pre></div>
+</details>
 <div style="position:absolute;opacity:0">
 <h3 AAbstractThread::enqueue_ id="AAbstractThread::enqueue">enqueue<a class="headerlink" href="#AAbstractThread::enqueue" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">enqueue</span><span class="p">(</span><span class="n"><a href="../amessagequeue/">AMessageQueue</a></span><span class="o">&lt;&gt;::</span><span class="n">Message</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">enqueue</span><span class="p">(</span><span class="n"><a href="../amessagequeue/">AMessageQueue</a></span><span class="o">&lt;&gt;::</span><span class="n">Message</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Delivers task for execution (message) to this thread's event queue. Messages are processed by framework
        itself using AEventLoop. This behaviour may be overwritten using the <code><a href="../athread/#AThread::processMessages">AThread::processMessages()</a>
        </code> function.</p>
 <dl class="doxygen-dl">
 </dl>
+
+<p><strong>Examples:</strong></p>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Context</span><span class="p">,</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="w"> </span><span class="n">Fn</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">enqueue</span><span class="p">(</span><span class="n">Context</span><span class="o">*</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">Fn</span><span class="w"> </span><span class="n">fn</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Delivers <code>fn</code> to this thread's queue; drops it if <code>context</code> is destroyed by then.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>The counterpart of <code>QMetaObject::invokeMethod(context, fn)</code> in Qt. <code>fn</code> runs when this thread processes its
+messages and only if <code>context</code> is still alive. <code>context</code> is held for the duration of the call, so it can't be
+destroyed in the middle of it. Use it instead of a lambda that captures a raw <code>this</code> and is posted to another
+thread:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">mAsync</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n"><a href="../athreadpool/">AThreadPool</a></span><span class="o">::</span><span class="n">global</span><span class="p">().</span><span class="n">async</span><span class="p">([</span><span class="n">path</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">loadText</span><span class="p">(</span><span class="n">path</span><span class="p">);</span><span class="w"> </span><span class="p">}).</span><span class="n">onValue</span><span class="p">([</span><span class="k">this</span><span class="p">](</span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">enqueue</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">text</span><span class="p">)]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">mLabel</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span><span class="n">text</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">});</span>
+</span></code></pre></div>
+<p><code>context</code> has to be owned by a shared pointer, like every <a href="../aobject/">AObject</a> created with <code>_new</code>.</p>
+<p><strong>Examples:</strong></p>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Context</span><span class="p">,</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">invocable</span><span class="w"> </span><span class="n">Fn</span><span class="w"> </span><span class="o">&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">enqueue</span><span class="p">(</span><span class="n">_weak</span><span class="o">&lt;</span><span class="n">Context</span><span class="o">&gt;</span><span class="w"> </span><span class="n">context</span><span class="p">,</span><span class="w"> </span><span class="n">Fn</span><span class="w"> </span><span class="n">fn</span><span class="p">)</span>
+</span></code></pre></div>
+<dl class="doxygen-dl">
+</dl>
+<p>The same as <code>enqueue(Context*, Fn)</code> for an object that is referred to by a weak pointer.</p>
+<p><strong>Examples:</strong></p>
 <div style="position:absolute;opacity:0">
 <h3 AAbstractThread::getCurrentEventLoop_ id="AAbstractThread::getCurrentEventLoop">getCurrentEventLoop<a class="headerlink" href="#AAbstractThread::getCurrentEventLoop" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">IEventLoop</span><span class="o">*</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">getCurrentEventLoop</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">IEventLoop</span><span class="o">*</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">getCurrentEventLoop</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Get current event loop for this thread.</p>
 <dl class="doxygen-dl">
@@ -1476,7 +1534,7 @@ waits for it. In a coroutine, <code>co_await</code> it instead, or continue on t
 <h3 AAbstractThread::getId_ id="AAbstractThread::getId">getId<a class="headerlink" href="#AAbstractThread::getId" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">id</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">getId</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">id</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">getId</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1486,7 +1544,7 @@ waits for it. In a coroutine, <code>co_await</code> it instead, or continue on t
 <h3 AAbstractThread::interrupt_ id="AAbstractThread::interrupt">interrupt<a class="headerlink" href="#AAbstractThread::interrupt" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">interrupt</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">interrupt</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Interrupt thread's execution.</p>
 <dl class="doxygen-dl">
@@ -1497,7 +1555,7 @@ waits for it. In a coroutine, <code>co_await</code> it instead, or continue on t
 <h3 AAbstractThread::isInterrupted_ id="AAbstractThread::isInterrupted">isInterrupted<a class="headerlink" href="#AAbstractThread::isInterrupted" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">isInterrupted</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">isInterrupted</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
@@ -1507,7 +1565,7 @@ waits for it. In a coroutine, <code>co_await</code> it instead, or continue on t
 <h3 AAbstractThread::notifyCurrentEventLoop_ id="AAbstractThread::notifyCurrentEventLoop">notifyCurrentEventLoop<a class="headerlink" href="#AAbstractThread::notifyCurrentEventLoop" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">notifyCurrentEventLoop</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">notifyCurrentEventLoop</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Notifies the current event loop of this thread (if any) that there are messages to process.</p>
 <dl class="doxygen-dl">
@@ -1518,7 +1576,7 @@ destructor nulling out mCurrentEventLoop. Safe to call from any thread.</p>
 <h3 AAbstractThread::resetInterruptFlag_ id="AAbstractThread::resetInterruptFlag">resetInterruptFlag<a class="headerlink" href="#AAbstractThread::resetInterruptFlag" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">resetInterruptFlag</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">resetInterruptFlag</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Reset interruption flag.</p>
 <dl class="doxygen-dl">
@@ -1527,22 +1585,22 @@ destructor nulling out mCurrentEventLoop. Safe to call from any thread.</p>
 <h3 AAbstractThread::switchTo_ id="AAbstractThread::switchTo">switchTo<a class="headerlink" href="#AAbstractThread::switchTo" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">switchTo</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">switchTo</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Continues the coroutine on this thread: <code>co_await <a href="../athread/#AThread::main">AThread::main()</a>-&gt;switchTo();</code>.</p>
 <dl class="doxygen-dl">
 </dl>
-<p>Suspends the coroutine and posts its resumption to this thread with <code>enqueue</code>, the same way as
-<code><a href="../aui_ui_thread/">AUI_UI_THREAD</a> { ... }</code> posts a lambda. The coroutine continues when this thread processes its messages: the UI
-thread does it in its event loop; a thread of your own needs an <a href="../aeventloop/">AEventLoop</a> (or calls
-<code><a href="../athread/#AThread::processMessages">AThread::processMessages()</a></code>). Does not suspend if the coroutine is on this thread already. The coroutine stays
-on this thread until the next switch: a following <code>co_await future</code> resumes here too.</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">MyView</span><span class="o">::</span><span class="n">reload</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n">mDatabaseThread</span><span class="o">-&gt;</span><span class="n">switchTo</span><span class="p">();</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mDatabase</span><span class="o">-&gt;</span><span class="n">queryTitle</span><span class="p">();</span><span class="w">  </span><span class="c1">// blocking, on mDatabaseThread</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">switchTo</span><span class="p">();</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="n">setText</span><span class="p">(</span><span class="n">title</span><span class="p">);</span><span class="w">                        </span><span class="c1">// UI thread</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
+<p>Suspends the coroutine and posts its resumption to this thread with <code>enqueue</code>. The coroutine continues when this
+thread processes its messages: the UI thread does it in its event loop; a thread of your own needs an
+<a href="../aeventloop/">AEventLoop</a> (or calls <code><a href="../athread/#AThread::processMessages">AThread::processMessages()</a></code>). Does not suspend if the coroutine is on this thread
+already. The coroutine stays on this thread until the next switch: a following <code>co_await future</code> resumes here
+too.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">MyView</span><span class="o">::</span><span class="n">reload</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n">mDatabaseThread</span><span class="o">-&gt;</span><span class="n">switchTo</span><span class="p">();</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mDatabase</span><span class="o">-&gt;</span><span class="n">queryTitle</span><span class="p">();</span><span class="w">  </span><span class="c1">// blocking, on mDatabaseThread</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="k">co_await</span><span class="w"> </span><span class="n"><a href="../athread/">AThread</a></span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">switchTo</span><span class="p">();</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="n">setText</span><span class="p">(</span><span class="n">title</span><span class="p">);</span><span class="w">                        </span><span class="c1">// UI thread</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>If the thread never processes its messages, the coroutine is never resumed. If the thread stops without
 processing the message, the coroutine is destroyed; a coroutine returning <a href="../afuture/">AFuture</a> then fails with
@@ -1551,7 +1609,7 @@ processing the message, the coroutine is destroyed; a coroutine returning <a hre
 <h3 AAbstractThread::threadStacktrace_ id="AAbstractThread::threadStacktrace">threadStacktrace<a class="headerlink" href="#AAbstractThread::threadStacktrace" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n"><a href="../astacktrace/">AStacktrace</a></span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">threadStacktrace</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n"><a href="../astacktrace/">AStacktrace</a></span><span class="w"> </span><span class="n">AAbstractThread</span><span class="o">::</span><span class="n">threadStacktrace</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Retrieve stacktrace of the thread.</p>
 <dl class="doxygen-dl">

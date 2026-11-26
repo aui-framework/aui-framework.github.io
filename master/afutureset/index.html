@@ -1336,7 +1336,8 @@ We are migrating to a new documentation engine. Please report presentation issue
 <p>This API is experimental. Experimental APIs are likely to contain bugs, might be changed or removed in the future.</p>
 </div>
 <p>AFutureSet involves functions to efficiently manage multiple AFutures.</p>
-<p>Guarantees that held futures will never be executed or be during execution after <a href="../aasyncholder/">AAsyncHolder</a> is destroyed.</p>
+<p>Destroying AFutureSet destroys its futures: the operations nobody else holds are cancelled, but running tasks are not
+waited for (see <a href="../afuture/">AFuture</a>). To wait for them, use AAsyncHolder.</p>
 <h2 id="public-methods">Public Methods<a class="headerlink" href="#public-methods" title="Permanent link">#</a></h2>
 <div style="position:absolute;opacity:0">
 <h3 AFutureSet::checkForExceptions_ id="AFutureSet::checkForExceptions">checkForExceptions<a class="headerlink" href="#AFutureSet::checkForExceptions" title="Permanent link">#</a></h3>

@@ -1852,7 +1852,7 @@ button; the test types a name, presses the button and checks the label.</p>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="processing-the-ui">Processing the UI<a class="headerlink" href="#processing-the-ui" title="Permanent link">#</a></h2>
 <p>A UI is not updated by itself in a test; nothing runs an event loop for you. Layout, style changes and queued messages
-(for example, lambdas posted with <code><a href="../aui_ui_thread/">AUI_UI_THREAD</a></code>) are processed when you call
+(for example, lambdas posted with <code><a href="../athread/#AThread::main">AThread::main()</a>-&gt;enqueue</code>) are processed when you call
 <code>uitest::frame()</code>. Every <code>perform</code> and <code>check</code> of <a href="../uimatcher/">UIMatcher</a> calls it before and after the action, so most tests
 never need it. Call it explicitly when you changed something directly and want to look at the result:</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">label</span><span class="o">-&gt;</span><span class="n">setVisibility</span><span class="p">(</span><span class="n">Visibility</span><span class="o">::</span><span class="n">GONE</span><span class="p">);</span>

@@ -1429,8 +1429,8 @@ implemented on top of <a href="../atcpserversocket/">ATcpServerSocket</a>.</p>
 </span></code></pre></div>
 <h3 id="threading">Threading<a class="headerlink" href="#threading" title="Permanent link">#</a></h3>
 <p>One thread accepts connections and one thread per connection reads from the socket. Every callback is called from
-one of these threads, never from the thread that created the server; marshal to your thread (i.e., <code><a href="../aui_ui_thread/">AUI_UI_THREAD</a></code>)
-if needed. <code>Connection::send*</code> may be called from any thread.</p>
+one of these threads, never from the thread that created the server; marshal to your thread (i.e., with
+<code><a href="../athread/#AThread::main">AThread::main()</a>-&gt;enqueue(this, ...)</code>) if needed. <code>Connection::send*</code> may be called from any thread.</p>
 <h3 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">#</a></h3>
 <p>Set <code>Config::tls</code> to serve <code>wss://</code>. A client that fails the handshake, i.e., one that speaks plain <code>ws://</code>, is
 dropped without any response.</p>
