@@ -621,6 +621,21 @@ We are migrating to a new documentation engine. Please report presentation issue
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.745 0v.129a2.752 2.752 0 1 1-5.504 0V0H0v24h24V0zm-3.291 21.431-1.169-5.783h-.02l-1.264 5.783H7.39l-1.824-8.497h1.59l1.088 5.783h.02l1.311-5.783h1.487l1.177 5.854h.02l1.242-5.854h1.561l-2.027 8.497zm8.755 0-.542-1.891h-2.861l-.417 1.891h-1.59l2.056-8.497h2.509l2.5 8.497zm-2.397-6.403-.694 3.118h2.159l-.796-3.118z"/></svg>
+  
+  <span class="md-ellipsis">
+    Emscripten (WebAssembly)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -634,6 +649,79 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windowing-and-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windowing and input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1467,6 +1555,68 @@ We are migrating to a new documentation engine. Please report presentation issue
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windowing-and-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windowing and input
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Files
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1508,6 +1658,72 @@ applications due to new technologies like WebAssembly System Interface (WASI) an
 <p class="admonition-title">Early Access Feature</p>
 <p>At the moment, support of WebAssembly in AUI Framework is in early stage and lacks a lot of features.</p>
 </div>
+<h2 id="building">Building<a class="headerlink" href="#building" title="Permanent link">#</a></h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">source</span><span class="w"> </span>~/emsdk/emsdk_env.sh
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>emcmake<span class="w"> </span>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>build-web<span class="w"> </span>-G<span class="w"> </span>Ninja<span class="w"> </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ninja<span class="w"> </span>-C<span class="w"> </span>build-web
+</span></code></pre></div>
+<p>The build produces <code>&lt;target&gt;.html</code>, <code>.js</code> and <code>.wasm</code> (and <code>.data</code>, if the application preloads files). Serve them over
+HTTP (<code>python3 -m http.server</code>); <code>file://</code> does not work. A cross build needs a host <code>aui.toolbox</code>: pass
+<code>-DAUI_TOOLBOX_EXE=/path/to/aui.toolbox</code> if AUI.Boot fails to build it.</p>
+<p>AUI and all its dependencies are compiled with native WebAssembly exceptions and <code>setjmp</code>/<code>longjmp</code>
+(<code>-fwasm-exceptions -sSUPPORT_LONGJMP=wasm</code>); <code>aui.core</code> passes these flags to the application as well. Mixing them
+with JavaScript-based exceptions fails to link.</p>
+<h2 id="threads">Threads<a class="headerlink" href="#threads" title="Permanent link">#</a></h2>
+<p>AUI targets the browser main thread without pthreads: pthreads need a cross-origin isolated page (COOP/COEP headers),
+which most static hostings do not provide. Hence:</p>
+<ul>
+<li><code><a href="../athreadpool/#AThreadPool::global">AThreadPool::global()</a></code> has no workers. Its tasks are run by the event loop between frames, and a future waited for
+  runs its task right away. <code><a href="../aui_threadpool/">AUI_THREADPOOL</a> { ... }</code> and <code>*future</code> keep working, but the work is done on the UI thread;</li>
+<li><code><a href="../atimer/">ATimer</a></code> is driven by the event loop as well;</li>
+<li><code>std::thread</code> and <code>std::async(std::launch::async, ...)</code> throw. Do the work inline under <code>AUI_PLATFORM_EMSCRIPTEN</code>.</li>
+</ul>
+<p>Heavy work that the browser can do by itself (decoding images, <code>fetch</code>, compression streams, a Web Worker of your own)
+does not have to block the frame. <code>aui::js::promise&lt;T&gt;</code> (<code>AUI/Platform/emscripten/JsPromise.h</code>) makes an <code><a href="../afuture/">AFuture</a>&lt;T&gt;</code>
+out of a JavaScript promise:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">EM_JS</span><span class="p">(</span><span class="kt">void</span><span class="p">,</span><span class="w"> </span><span class="n">fetchBytes</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">url</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UTF8ToString</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Module</span><span class="p">.</span><span class="n">auiSettle</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">signal</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">fetch</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">signal</span><span class="w"> </span><span class="p">}).</span><span class="n">then</span><span class="p">((</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">arrayBuffer</span><span class="p">()));</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">});</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n"><a href="../afuture/">AFuture</a></span><span class="o">&lt;</span><span class="n"><a href="../abytebuffer/">AByteBuffer</a></span><span class="o">&gt;</span><span class="w"> </span><span class="n">download</span><span class="p">(</span><span class="n"><a href="../astring/">AString</a></span><span class="w"> </span><span class="n">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">url</span><span class="p">.</span><span class="n">toStdString</span><span class="p">();</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">aui</span><span class="o">::</span><span class="n">js</span><span class="o">::</span><span class="n">promise</span><span class="o">&lt;</span><span class="n"><a href="../abytebuffer/">AByteBuffer</a></span><span class="o">&gt;</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">fetchBytes</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>The promise may resolve with anything JSON can hold plus binary <a href="../data/">data</a> (<code>ArrayBuffer</code>, typed arrays). It arrives as
+  <code><a href="../aui_js_value/">aui::js::Value</a></code> (<code>AUI/Js/Value.h</code>), a variant of <code>Undefined</code>, <code>bool</code>, <code>double</code>, <a href="../astring/">AString</a>, <a href="../abytebuffer/">AByteBuffer</a>, an array and
+  an object, and <code><a href="../aui_js_converter/">aui::js::Converter</a>&lt;T&gt;</code> turns it into <code>T</code>: numbers, <a href="../astring/">AString</a>, <a href="../abytebuffer/">AByteBuffer</a>, <code><a href="../aoptional/">AOptional</a></code>, <code><a href="../avector/">AVector</a></code>,
+  <code><a href="../amap/">AMap</a>&lt;<a href="../astring/">AString</a>, T&gt;</code>, <code>std::tuple</code> for an array of a fixed length. <code>promise&lt;&gt;</code> gives the Value as it is, <code>promise&lt;void&gt;</code>
+  ignores it. A value of another type fails the future with a message that says where: <code>[2]: expected bytes, got
+  string</code>.</li>
+<li>Binary <a href="../data/">data</a> is copied into the wasm heap once and adopted by <a href="../abytebuffer/">AByteBuffer</a> (<code><a href="../abytebuffer/#AByteBuffer::adopt">AByteBuffer::adopt</a></code>), without another
+  copy. What JavaScript allocated is freed by C++ even if nobody waits for the result anymore.</li>
+<li><code>work</code> may be a function that takes an <code>AbortSignal</code>: when the last <a href="../afuture/">AFuture</a> is destroyed, the signal is aborted.</li>
+<li>A rejection fails the future with <a href="../aexception/">AException</a> carrying the reason as text.</li>
+<li>The future is settled on the main thread by a promise reaction, so do not block on it with <code>*future</code>: <code>co_await</code> it
+  or subscribe with <code>onValue</code>.</li>
+</ul>
+<h2 id="windowing-and-input">Windowing and input<a class="headerlink" href="#windowing-and-input" title="Permanent link">#</a></h2>
+<p>The window is the page: it always takes the whole <code>#canvas</code> and follows the browser window size and the device pixel
+ratio (<code><a href="../awindow/">AWindow</a>::getDpiRatio</code>, browser zoom included). Make the canvas cover the page from its top left corner.</p>
+<p>Mouse, wheel, touch (multitouch, as finger pointers) and keyboard events are supported. Browser shortcuts (Ctrl/Cmd
+combinations, F1–F12) are not intercepted.</p>
+<p>The WebGL 2 context is preferred, with a fallback to WebGL 1. The drawing buffer is preserved, so the window contents
+can be read back (screenshots).</p>
+<h2 id="audio">Audio<a class="headerlink" href="#audio" title="Permanent link">#</a></h2>
+<p><code><a href="../iaudioplayer/">IAudioPlayer</a></code> plays through Web Audio. The browser starts <a href="../audio/">audio</a> only after a user gesture, so the first sound may wait
+for the first click or tap; <a href="../audio/">audio</a> is suspended while the page is hidden.</p>
+<h2 id="fonts">Fonts<a class="headerlink" href="#fonts" title="Permanent link">#</a></h2>
+<p>There are no system fonts in the browser. For glyphs your fonts lack (i.e., CJK, symbols, emoji) preload fallback fonts
+to <code>/usr/share/fonts</code>, they are tried in the file name order:</p>
+<div class="language-cmake highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">target_link_options</span><span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span><span class="w"> </span><span class="s">PRIVATE</span><span class="w"> </span><span class="s2">&quot;--preload-file=${CMAKE_CURRENT_SOURCE_DIR}/fonts@/usr/share/fonts&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">#</a></h2>
+<p>The filesystem is in memory and is lost when the page is closed. To keep files, mount
+<a href="https://emscripten.org/docs/api_reference/Filesystem-API.html#filesystem-api-idbfs">IDBFS</a> (linked by <code>aui.core</code>) in a
+<code>--pre-js</code> script and call <code>FS.syncfs</code> after writing.</p>
 
 
 

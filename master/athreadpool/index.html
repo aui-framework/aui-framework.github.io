@@ -1354,6 +1354,15 @@ We are migrating to a new documentation engine. Please report presentation issue
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#AThreadPool::runQueuedTasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      runQueuedTasks
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1581,6 +1590,17 @@ has to be stopped before that object is destroyed, see AAsyncHolder.</p>
 </dl>
 <p>Parallels work of some range, grouping tasks per thread (i.e. for 8 items on a 4-<a href="../core/">core</a> processor each <a href="../core/">core</a> will
 process 2 items)</p>
+<div style="position:absolute;opacity:0">
+<h3 AThreadPool::runQueuedTasks_ id="AThreadPool::runQueuedTasks">runQueuedTasks<a class="headerlink" href="#AThreadPool::runQueuedTasks" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">AThreadPool</span><span class="o">::</span><span class="n">runQueuedTasks</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Runs the queued tasks on the calling thread until the queues are empty.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>For a pool without workers. On <a href="../emscripten/">emscripten</a> (no pthreads) the global pool has none and the event loop calls this
+every frame; a future waited for runs its task right away (AFutureWait::ALLOW_TASK_EXECUTION_IF_NOT_PICKED_UP).</p>
 
 
 

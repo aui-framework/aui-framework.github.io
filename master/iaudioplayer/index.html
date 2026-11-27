@@ -1415,6 +1415,15 @@ We are migrating to a new documentation engine. Please report presentation issue
 </li>
         
           <li class="md-nav__item">
+  <a href="#IAudioPlayer::setVolumeSmoothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      setVolumeSmoothing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#IAudioPlayer::stop" class="md-nav__link">
     <span class="md-ellipsis">
       stop
@@ -1638,10 +1647,21 @@ sound stream would be rewind.</p>
 </div></dd>
 </dl>
 <div style="position:absolute;opacity:0">
+<h3 IAudioPlayer::setVolumeSmoothing_ id="IAudioPlayer::setVolumeSmoothing">setVolumeSmoothing<a class="headerlink" href="#IAudioPlayer::setVolumeSmoothing" title="Permanent link">#</a></h3>
+</div>
+<hr />
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">setVolumeSmoothing</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="w"> </span><span class="n">smoothing</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Sets the time over which volume changes are smoothed.</p>
+<dl class="doxygen-dl">
+</dl>
+<p>Volume changes are ramped linearly over this time to avoid clicks (zipper noise) when the volume is changed in
+steps, e.g., by a fade timer. Zero applies volume changes instantly. Defaults to 40 ms.</p>
+<div style="position:absolute;opacity:0">
 <h3 IAudioPlayer::stop_ id="IAudioPlayer::stop">stop<a class="headerlink" href="#IAudioPlayer::stop" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">stop</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">stop</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Pauses <a href="../audio/">audio</a> playback without keeping playback progress.</p>
 <dl class="doxygen-dl">
@@ -1650,7 +1670,7 @@ sound stream would be rewind.</p>
 <h3 IAudioPlayer::volume_ id="IAudioPlayer::volume">volume<a class="headerlink" href="#IAudioPlayer::volume" title="Permanent link">#</a></h3>
 </div>
 <hr />
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">aui</span><span class="o">::</span><span class="n"><a href="../audio/">audio</a></span><span class="o">::</span><span class="n">VolumeLevel</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">volume</span><span class="p">()</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">aui</span><span class="o">::</span><span class="n"><a href="../audio/">audio</a></span><span class="o">::</span><span class="n">VolumeLevel</span><span class="w"> </span><span class="n">IAudioPlayer</span><span class="o">::</span><span class="n">volume</span><span class="p">()</span>
 </span></code></pre></div>
 <dl class="doxygen-dl">
 <dt>Returns</dt>
